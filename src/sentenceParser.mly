@@ -25,7 +25,7 @@
 /* ------------------------------------------------------------------------ */
 /* Tokens. */
 
-%token COLON EOF EOL
+%token COLON EQUALS EOF EOL
 %token<SentenceParserAux.raw_symbol> TERMINAL
 %token<SentenceParserAux.raw_symbol> NONTERMINAL
 %token<string> COMMENT

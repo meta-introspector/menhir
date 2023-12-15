@@ -67,8 +67,10 @@ rule lex = parse
   | eof
       { EOF }
   (* A colon. *)
-  | ':'
+  | ":"
       { COLON }
+  | "="
+      { EQUALS }
   | _
       { error2 lexbuf "unexpected character.\n\
                        (I believe I am reading a sentence, but may be off.)" }
