@@ -1,0 +1,62 @@
+val stack_ctx_words : int
+type t =
+    Domain_young_limit
+  | Domain_young_ptr
+  | Domain_young_start
+  | Domain_young_end
+  | Domain_young_trigger
+  | Domain_current_stack
+  | Domain_exn_handler
+  | Domain_action_pending
+  | Domain_c_stack
+  | Domain_stack_cache
+  | Domain_gc_regs_buckets
+  | Domain_gc_regs
+  | Domain_minor_tables
+  | Domain_mark_stack
+  | Domain_marking_done
+  | Domain_sweeping_done
+  | Domain_allocated_words
+  | Domain_swept_words
+  | Domain_major_slice_epoch
+  | Domain_local_roots
+  | Domain_ephe_info
+  | Domain_final_info
+  | Domain_backtrace_pos
+  | Domain_backtrace_active
+  | Domain_backtrace_buffer
+  | Domain_backtrace_last_exn
+  | Domain_compare_unordered
+  | Domain_oo_next_id_local
+  | Domain_requested_major_slice
+  | Domain_requested_global_major_slice
+  | Domain_requested_minor_gc
+  | Domain_requested_external_interrupt
+  | Domain_parser_trace
+  | Domain_minor_heap_wsz
+  | Domain_shared_heap
+  | Domain_id
+  | Domain_unique_id
+  | Domain_dls_root
+  | Domain_extra_heap_resources
+  | Domain_extra_heap_resources_minor
+  | Domain_dependent_size
+  | Domain_dependent_allocated
+  | Domain_slice_target
+  | Domain_slice_budget
+  | Domain_major_work_done_between_slices
+  | Domain_extern_state
+  | Domain_intern_state
+  | Domain_stat_minor_words
+  | Domain_stat_promoted_words
+  | Domain_stat_major_words
+  | Domain_stat_forced_major_collections
+  | Domain_stat_blocks_marked
+  | Domain_inside_stw_handler
+  | Domain_trap_sp_off
+  | Domain_trap_barrier_off
+  | Domain_trap_barrier_block
+  | Domain_external_raise
+  | Domain_extra_params("DEBUG:rule", [(("stack_ctx_words", 330), ((Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -5), 0, (("utils/domainstate.mli", 1, 0, 0), ("utils/domainstate.mli", 1, 0, 25), 0), 0, Tag1 ("Domainstate", 0)), 0); Tag1 (("t", 331), (0, 0, Tag1 ([(("Domain_young_limit", 271), (0), 0, (("utils/domainstate.mli", 3, 35, 35), ("utils/domainstate.mli", 3, 35, 55), 0), 0, Tag1 ("Domainstate", 2)); (("Domain_young_ptr", 272), (0), 0, (("utils/domainstate.mli", 4, 56, 56), ("utils/domainstate.mli", 4, 56, 74), 0), 0, Tag1 ("Domainstate", 3)); (("Domain_young_start", 273), (0), 0, (("utils/domainstate.mli", 5, 75, 75), ("utils/domainstate.mli", 5, 75, 95), 0), 0, Tag1 ("Domainstate", 4)); (("Domain_young_end", 274), (0), 0, (("utils/domainstate.mli", 6, 96, 96), ("utils/domainstate.mli", 6, 96, 114), 0), 0, Tag1 ("Domainstate", 5)); (("Domain_young_trigger", 275), (0), 0, (("utils/domainstate.mli", 7, 115, 115), ("utils/domainstate.mli", 7, 115, 137), 0), 0, Tag1 ("Domainstate", 6)); (("Domain_current_stack", 276), (0), 0, (("utils/domainstate.mli", 8, 138, 138), ("utils/domainstate.mli", 8, 138, 160), 0), 0, Tag1 ("Domainstate", 7)); (("Domain_exn_handler", 277), (0), 0, (("utils/domainstate.mli", 9, 161, 161), ("utils/domainstate.mli", 9, 161, 181), 0), 0, Tag1 ("Domainstate", 8)); (("Domain_action_pending", 278), (0), 0, (("utils/domainstate.mli", 10, 182, 182), ("utils/domainstate.mli", 10, 182, 205), 0), 0, Tag1 ("Domainstate", 9)); (("Domain_c_stack", 279), (0), 0, (("utils/domainstate.mli", 11, 206, 206), ("utils/domainstate.mli", 11, 206, 222), 0), 0, Tag1 ("Domainstate", 10)); (("Domain_stack_cache", 280), (0), 0, (("utils/domainstate.mli", 12, 223, 223), ("utils/domainstate.mli", 12, 223, 243), 0), 0, Tag1 ("Domainstate", 11)); (("Domain_gc_regs_buckets", 281), (0), 0, (("utils/domainstate.mli", 13, 244, 244), ("utils/domainstate.mli", 13, 244, 268), 0), 0, Tag1 ("Domainstate", 12)); (("Domain_gc_regs", 282), (0), 0, (("utils/domainstate.mli", 14, 269, 269), ("utils/domainstate.mli", 14, 269, 285), 0), 0, Tag1 ("Domainstate", 13)); (("Domain_minor_tables", 283), (0), 0, (("utils/domainstate.mli", 15, 286, 286), ("utils/domainstate.mli", 15, 286, 307), 0), 0, Tag1 ("Domainstate", 14)); (("Domain_mark_stack", 284), (0), 0, (("utils/domainstate.mli", 16, 308, 308), ("utils/domainstate.mli", 16, 308, 327), 0), 0, Tag1 ("Domainstate", 15)); (("Domain_marking_done", 285), (0), 0, (("utils/domainstate.mli", 17, 328, 328), ("utils/domainstate.mli", 17, 328, 349), 0), 0, Tag1 ("Domainstate", 16)); (("Domain_sweeping_done", 286), (0), 0, (("utils/domainstate.mli", 18, 350, 350), ("utils/domainstate.mli", 18, 350, 372), 0), 0, Tag1 ("Domainstate", 17)); (("Domain_allocated_words", 287), (0), 0, (("utils/domainstate.mli", 19, 373, 373), ("utils/domainstate.mli", 19, 373, 397), 0), 0, Tag1 ("Domainstate", 18)); (("Domain_swept_words", 288), (0), 0, (("utils/domainstate.mli", 20, 398, 398), ("utils/domainstate.mli", 20, 398, 418), 0), 0, Tag1 ("Domainstate", 19)); (("Domain_major_slice_epoch", 289), (0), 0, (("utils/domainstate.mli", 21, 419, 419), ("utils/domainstate.mli", 21, 419, 445), 0), 0, Tag1 ("Domainstate", 20)); (("Domain_local_roots", 290), (0), 0, (("utils/domainstate.mli", 22, 446, 446), ("utils/domainstate.mli", 22, 446, 466), 0), 0, Tag1 ("Domainstate", 21)); (("Domain_ephe_info", 291), (0), 0, (("utils/domainstate.mli", 23, 467, 467), ("utils/domainstate.mli", 23, 467, 485), 0), 0, Tag1 ("Domainstate", 22)); (("Domain_final_info", 292), (0), 0, (("utils/domainstate.mli", 24, 486, 486), ("utils/domainstate.mli", 24, 486, 505), 0), 0, Tag1 ("Domainstate", 23)); (("Domain_backtrace_pos", 293), (0), 0, (("utils/domainstate.mli", 25, 506, 506), ("utils/domainstate.mli", 25, 506, 528), 0), 0, Tag1 ("Domainstate", 24)); (("Domain_backtrace_active", 294), (0), 0, (("utils/domainstate.mli", 26, 529, 529), ("utils/domainstate.mli", 26, 529, 554), 0), 0, Tag1 ("Domainstate", 25)); (("Domain_backtrace_buffer", 295), (0), 0, (("utils/domainstate.mli", 27, 555, 555), ("utils/domainstate.mli", 27, 555, 580), 0), 0, Tag1 ("Domainstate", 26)); (("Domain_backtrace_last_exn", 296), (0), 0, (("utils/domainstate.mli", 28, 581, 581), ("utils/domainstate.mli", 28, 581, 608), 0), 0, Tag1 ("Domainstate", 27)); (("Domain_compare_unordered", 297), (0), 0, (("utils/domainstate.mli", 29, 609, 609), ("utils/domainstate.mli", 29, 609, 635), 0), 0, Tag1 ("Domainstate", 28)); (("Domain_oo_next_id_local", 298), (0), 0, (("utils/domainstate.mli", 30, 636, 636), ("utils/domainstate.mli", 30, 636, 661), 0), 0, Tag1 ("Domainstate", 29)); (("Domain_requested_major_slice", 299), (0), 0, (("utils/domainstate.mli", 31, 662, 662), ("utils/domainstate.mli", 31, 662, 692), 0), 0, Tag1 ("Domainstate", 30)); (("Domain_requested_global_major_slice", 300), (0), 0, (("utils/domainstate.mli", 32, 693, 693), ("utils/domainstate.mli", 32, 693, 730), 0), 0, Tag1 ("Domainstate", 31)); (("Domain_requested_minor_gc", 301), (0), 0, (("utils/domainstate.mli", 33, 731, 731), ("utils/domainstate.mli", 33, 731, 758), 0), 0, Tag1 ("Domainstate", 32)); (("Domain_requested_external_interrupt", 302), (0), 0, (("utils/domainstate.mli", 34, 759, 759), ("utils/domainstate.mli", 34, 759, 796), 0), 0, Tag1 ("Domainstate", 33)); (("Domain_parser_trace", 303), (0), 0, (("utils/domainstate.mli", 35, 797, 797), ("utils/domainstate.mli", 35, 797, 818), 0), 0, Tag1 ("Domainstate", 34)); (("Domain_minor_heap_wsz", 304), (0), 0, (("utils/domainstate.mli", 36, 819, 819), ("utils/domainstate.mli", 36, 819, 842), 0), 0, Tag1 ("Domainstate", 35)); (("Domain_shared_heap", 305), (0), 0, (("utils/domainstate.mli", 37, 843, 843), ("utils/domainstate.mli", 37, 843, 863), 0), 0, Tag1 ("Domainstate", 36)); (("Domain_id", 306), (0), 0, (("utils/domainstate.mli", 38, 864, 864), ("utils/domainstate.mli", 38, 864, 875), 0), 0, Tag1 ("Domainstate", 37)); (("Domain_unique_id", 307), (0), 0, (("utils/domainstate.mli", 39, 876, 876), ("utils/domainstate.mli", 39, 876, 894), 0), 0, Tag1 ("Domainstate", 38)); (("Domain_dls_root", 308), (0), 0, (("utils/domainstate.mli", 40, 895, 895), ("utils/domainstate.mli", 40, 895, 912), 0), 0, Tag1 ("Domainstate", 39)); (("Domain_extra_heap_resources", 309), (0), 0, (("utils/domainstate.mli", 41, 913, 913), ("utils/domainstate.mli", 41, 913, 942), 0), 0, Tag1 ("Domainstate", 40)); (("Domain_extra_heap_resources_minor", 310), (0), 0, (("utils/domainstate.mli", 42, 943, 943), ("utils/domainstate.mli", 42, 943, 978), 0), 0, Tag1 ("Domainstate", 41)); (("Domain_dependent_size", 311), (0), 0, (("utils/domainstate.mli", 43, 979, 979), ("utils/domainstate.mli", 43, 979, 1002), 0), 0, Tag1 ("Domainstate", 42)); (("Domain_dependent_allocated", 312), (0), 0, (("utils/domainstate.mli", 44, 1003, 1003), ("utils/domainstate.mli", 44, 1003, 1031), 0), 0, Tag1 ("Domainstate", 43)); (("Domain_slice_target", 313), (0), 0, (("utils/domainstate.mli", 45, 1032, 1032), ("utils/domainstate.mli", 45, 1032, 1053), 0), 0, Tag1 ("Domainstate", 44)); (("Domain_slice_budget", 314), (0), 0, (("utils/domainstate.mli", 46, 1054, 1054), ("utils/domainstate.mli", 46, 1054, 1075), 0), 0, Tag1 ("Domainstate", 45)); (("Domain_major_work_done_between_slices", 315), (0), 0, (("utils/domainstate.mli", 47, 1076, 1076), ("utils/domainstate.mli", 47, 1076, 1115), 0), 0, Tag1 ("Domainstate", 46)); (("Domain_extern_state", 316), (0), 0, (("utils/domainstate.mli", 48, 1116, 1116), ("utils/domainstate.mli", 48, 1116, 1137), 0), 0, Tag1 ("Domainstate", 47)); (("Domain_intern_state", 317), (0), 0, (("utils/domainstate.mli", 49, 1138, 1138), ("utils/domainstate.mli", 49, 1138, 1159), 0), 0, Tag1 ("Domainstate", 48)); (("Domain_stat_minor_words", 318), (0), 0, (("utils/domainstate.mli", 50, 1160, 1160), ("utils/domainstate.mli", 50, 1160, 1185), 0), 0, Tag1 ("Domainstate", 49)); (("Domain_stat_promoted_words", 319), (0), 0, (("utils/domainstate.mli", 51, 1186, 1186), ("utils/domainstate.mli", 51, 1186, 1214), 0), 0, Tag1 ("Domainstate", 50)); (("Domain_stat_major_words", 320), (0), 0, (("utils/domainstate.mli", 52, 1215, 1215), ("utils/domainstate.mli", 52, 1215, 1240), 0), 0, Tag1 ("Domainstate", 51)); (("Domain_stat_forced_major_collections", 321), (0), 0, (("utils/domainstate.mli", 53, 1241, 1241), ("utils/domainstate.mli", 53, 1241, 1279), 0), 0, Tag1 ("Domainstate", 52)); (("Domain_stat_blocks_marked", 322), (0), 0, (("utils/domainstate.mli", 54, 1280, 1280), ("utils/domainstate.mli", 54, 1280, 1307), 0), 0, Tag1 ("Domainstate", 53)); (("Domain_inside_stw_handler", 323), (0), 0, (("utils/domainstate.mli", 55, 1308, 1308), ("utils/domainstate.mli", 55, 1308, 1335), 0), 0, Tag1 ("Domainstate", 54)); (("Domain_trap_sp_off", 324), (0), 0, (("utils/domainstate.mli", 56, 1336, 1336), ("utils/domainstate.mli", 56, 1336, 1356), 0), 0, Tag1 ("Domainstate", 55)); (("Domain_trap_barrier_off", 325), (0), 0, (("utils/domainstate.mli", 57, 1357, 1357), ("utils/domainstate.mli", 57, 1357, 1382), 0), 0, Tag1 ("Domainstate", 56)); (("Domain_trap_barrier_block", 326), (0), 0, (("utils/domainstate.mli", 58, 1383, 1383), ("utils/domainstate.mli", 58, 1383, 1410), 0), 0, Tag1 ("Domainstate", 57)); (("Domain_external_raise", 327), (0), 0, (("utils/domainstate.mli", 59, 1411, 1411), ("utils/domainstate.mli", 59, 1411, 1434), 0), 0, Tag1 ("Domainstate", 58)); (("Domain_extra_params", 328), (0), 0, (("utils/domainstate.mli", 60, 1435, 1435), ("utils/domainstate.mli", 60, 1435, 1456), 0), 0, Tag1 ("Domainstate", 59))], 0), 1, 0, 0, 0, 0, 0, (("utils/domainstate.mli", 2, 26, 26), ("utils/domainstate.mli", 60, 1435, 1456), 0), 0, 1, 0, Tag1 ("Domainstate", 1)), 1, 0); (("idx_of_field", 332), ((Tag1 (0, (Tag3 ((("t", 331)), 0, (0)), 100000000, 0, -4), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -3), 0), 100000000, 0, -2), 0, (("utils/domainstate.mli", 61, 1457, 1457), ("utils/domainstate.mli", 61, 1457, 1484), 0), 0, Tag1 ("Domainstate", 60)), 0)], "Domainstate", [("Domainstate", (".#\196I\188B\246=1\203\245\167\003C}d")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [(0)])
+
+val idx_of_field : t -> int

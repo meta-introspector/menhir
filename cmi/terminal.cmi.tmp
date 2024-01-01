@@ -1,0 +1,47 @@
+type color =
+    [ `BLACK
+    | `BLUE
+    | `CYAN
+    | `DEFAULT
+    | `GREEN
+    | `INDEX of int
+    | `LIGHT_BLACK
+    | `LIGHT_BLUE
+    | `LIGHT_CYAN
+    | `LIGHT_GREEN
+    | `LIGHT_MAGENTA
+    | `LIGHT_RED
+    | `LIGHT_WHITE
+    | `LIGHT_YELLOW
+    | `MAGENTA
+    | `RED
+    | `RGB of int * int * int
+    | `WHITE
+    | `YELLOW ]
+type style = {
+  fg_color : color option;
+  bg_color : color option;
+  bold : bool option;
+  italic : bool option;
+  underline : bool option;
+  negative : bool option;
+  prefix : string option;
+  suffix : string option;
+}
+val make :
+  ?fg_color:color ->
+  ?bg_color:color ->
+  ?bold:bool ->
+  ?italic:bool ->
+  ?underline:bool ->
+  ?negative:bool ->
+  ?style:style -> ?prefix:string -> ?suffix:string -> unit -> style
+val merge : style -> style -> style
+val diff : style -> style -> style
+val repr : style -> int list
+val eval : style -> string
+val reset : string
+val reset_style : style
+val has_style : Unix.file_descr -> bool
+("DEBUG:rule", [Tag1 (("color", 504), (0, 0, 0, 1, ((Tag8 (([("BLACK", (0)); ("BLUE", (0)); ("CYAN", (0)); ("DEFAULT", (0)); ("GREEN", (0)); ("INDEX", (((Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -78)))); ("LIGHT_BLACK", (0)); ("LIGHT_BLUE", (0)); ("LIGHT_CYAN", (0)); ("LIGHT_GREEN", (0)); ("LIGHT_MAGENTA", (0)); ("LIGHT_RED", (0)); ("LIGHT_WHITE", (0)); ("LIGHT_YELLOW", (0)); ("MAGENTA", (0)); ("RED", (0)); ("RGB", (((Tag2 ([(Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -80); (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -81); (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -82)]), 100000000, 0, -79)))); ("WHITE", (0)); ("YELLOW", (0))], (0, 100000000, 0, -77), 1, 0, 0)), 100000000, 0, -76)), 0, 0, 0, 0, (("clib/terminal.mli", 11, 676, 676), ("clib/terminal.mli", 31, 936, 937), 0), 0, 0, 0, Tag1 ("Terminal", 0)), 1, 0); Tag1 (("style", 505), (0, 0, [[(("fg_color", 271), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((("color", 504)), 0, (0)), 100000000, 0, -61)], (0)), 100000000, 0, -60), (("clib/terminal.mli", 34, 954, 956), ("clib/terminal.mli", 34, 954, 980), 0), 0, Tag1 ("Terminal", 2)); (("bg_color", 272), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((("color", 504)), 0, (0)), 100000000, 0, -63)], (0)), 100000000, 0, -62), (("clib/terminal.mli", 35, 981, 983), ("clib/terminal.mli", 35, 981, 1007), 0), 0, Tag1 ("Terminal", 3)); (("bold", 273), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -65)], (0)), 100000000, 0, -64), (("clib/terminal.mli", 36, 1008, 1010), ("clib/terminal.mli", 36, 1008, 1029), 0), 0, Tag1 ("Terminal", 4)); (("italic", 274), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -67)], (0)), 100000000, 0, -66), (("clib/terminal.mli", 37, 1030, 1032), ("clib/terminal.mli", 37, 1030, 1053), 0), 0, Tag1 ("Terminal", 5)); (("underline", 275), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -69)], (0)), 100000000, 0, -68), (("clib/terminal.mli", 38, 1054, 1056), ("clib/terminal.mli", 38, 1054, 1080), 0), 0, Tag1 ("Terminal", 6)); (("negative", 276), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -71)], (0)), 100000000, 0, -70), (("clib/terminal.mli", 39, 1081, 1083), ("clib/terminal.mli", 39, 1081, 1106), 0), 0, Tag1 ("Terminal", 7)); (("prefix", 277), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -73)], (0)), 100000000, 0, -72), (("clib/terminal.mli", 40, 1107, 1109), ("clib/terminal.mli", 40, 1107, 1132), 0), 0, Tag1 ("Terminal", 8)); (("suffix", 278), 0, (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -75)], (0)), 100000000, 0, -74), (("clib/terminal.mli", 41, 1133, 1135), ("clib/terminal.mli", 41, 1133, 1158), 0), 0, Tag1 ("Terminal", 9))]], 1, 0, 0, 0, 0, 0, (("clib/terminal.mli", 33, 939, 939), ("clib/terminal.mli", 42, 1159, 1160), 0), 0, 0, 0, Tag1 ("Terminal", 1)), 1, 0); (("make", 506), ((Tag1 (Tag1 ("fg_color"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((("color", 504)), 0, (0)), 100000000, 0, -59)], (0)), 100000000, 0, -58), (Tag1 (Tag1 ("bg_color"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((("color", 504)), 0, (0)), 100000000, 0, -57)], (0)), 100000000, 0, -56), (Tag1 (Tag1 ("bold"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -55)], (0)), 100000000, 0, -54), (Tag1 (Tag1 ("italic"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -53)], (0)), 100000000, 0, -52), (Tag1 (Tag1 ("underline"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -51)], (0)), 100000000, 0, -50), (Tag1 (Tag1 ("negative"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -49)], (0)), 100000000, 0, -48), (Tag1 (Tag1 ("style"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -47)], (0)), 100000000, 0, -46), (Tag1 (Tag1 ("prefix"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -45)], (0)), 100000000, 0, -44), (Tag1 (Tag1 ("suffix"), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -43)], (0)), 100000000, 0, -42), (Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -41), (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -40), 0), 100000000, 0, -39), 0), 100000000, 0, -38), 0), 100000000, 0, -37), 0), 100000000, 0, -36), 0), 100000000, 0, -35), 0), 100000000, 0, -34), 0), 100000000, 0, -33), 0), 100000000, 0, -32), 0), 100000000, 0, -31), 0), 100000000, 0, -30), 0, (("clib/terminal.mli", 44, 1162, 1162), ("clib/terminal.mli", 47, 1298, 1349), 0), 0, Tag1 ("Terminal", 10)), 0); (("merge", 507), ((Tag1 (0, (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -29), (Tag1 (0, (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -28), (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -27), 0), 100000000, 0, -26), 0), 100000000, 0, -25), 0, (("clib/terminal.mli", 51, 1458, 1458), ("clib/terminal.mli", 51, 1458, 1493), 0), 0, Tag1 ("Terminal", 11)), 0); (("diff", 508), ((Tag1 (0, (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -24), (Tag1 (0, (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -23), (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -22), 0), 100000000, 0, -21), 0), 100000000, 0, -20), 0, (("clib/terminal.mli", 54, 1574, 1574), ("clib/terminal.mli", 54, 1574, 1608), 0), 0, Tag1 ("Terminal", 12)), 0); (("repr", 509), ((Tag1 (0, (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -19), (Tag3 ((Tag3 ("list", 9)), [(Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -18)], (0)), 100000000, 0, -17), 0), 100000000, 0, -16), 0, (("clib/terminal.mli", 57, 1677, 1677), ("clib/terminal.mli", 57, 1677, 1705), 0), 0, Tag1 ("Terminal", 13)), 0); (("eval", 510), ((Tag1 (0, (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -15), (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -14), 0), 100000000, 0, -13), 0, (("clib/terminal.mli", 60, 1767, 1767), ("clib/terminal.mli", 60, 1767, 1793), 0), 0, Tag1 ("Terminal", 14)), 0); (("reset", 511), ((Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -12), 0, (("clib/terminal.mli", 63, 1844, 1844), ("clib/terminal.mli", 63, 1844, 1862), 0), 0, Tag1 ("Terminal", 15)), 0); (("reset_style", 512), ((Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -11), 0, (("clib/terminal.mli", 66, 1915, 1915), ("clib/terminal.mli", 66, 1915, 1938), 0), 0, Tag1 ("Terminal", 16)), 0); (("has_style", 513), ((Tag1 (0, (Tag3 (Tag1 ((Tag2 ("Unix")), "file_descr"), 0, (0)), 100000000, 0, -10), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -9), 0), 100000000, 0, -8), 0, (("clib/terminal.mli", 69, 1965, 1965), ("clib/terminal.mli", 69, 1965, 2004), 0), 0, Tag1 ("Terminal", 17)), 0); (("parse", 514), ((Tag1 (0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -7), (Tag3 ((Tag3 ("list", 9)), [(Tag2 ([(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -5); (Tag3 ((("style", 505)), 0, (0)), 100000000, 0, -6)]), 100000000, 0, -4)], (0)), 100000000, 0, -3), 0), 100000000, 0, -2), 0, (("clib/terminal.mli", 73, 2113, 2113), ("clib/terminal.mli", 73, 2113, 2156), 0), 0, Tag1 ("Terminal", 18)), 0)], "Terminal", [("Terminal", ("\252\223\226\251]\005mqa_\217\139\181\217w\252")); ("Unix", (":B72R\011\005Sj\189)\011\239PH\254")); ("Stdlib__Complex", ("\230N\233\014\221\199\177\014\200\251\226l\017$\015\142")); ("Stdlib__Bigarray", ("|\145\154\248\018\173\141\251\0003\184\221\224\208\140\007")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [(0)])
+val parse : string -> (string * style) list

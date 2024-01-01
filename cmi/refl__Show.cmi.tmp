@@ -1,0 +1,129 @@
+module Printer : sig type 'a t = Format.formatter -> 'a -> unit end
+module Printers :
+  sig
+    module T : sig type 'a t = 'a Printer.t end
+    type ('a, 'occurrence) item =
+      ('a, 'occurrence) Refl__Tools.Vector(Printer).item =
+        None : ('b, [ `Absent ]) item
+      | Some : 'a T.t -> ('a, 'c) item
+    type ('sequence, 'occurrences) t =
+      ('sequence, 'occurrences) Refl__Tools.Vector(Printer).t =
+        [] : (unit, unit) t
+      | (::) : ('head, 'occurrence) item *
+          ('tail, 'occurrences) t -> ('head * 'tail,
+                                      'occurrence * 'occurrences)
+                                     t
+    val get :
+      ('index, 'sequence, 'value, 'positive, 'occurrences)
+      Refl__.Desc.variable -> ('sequence, 'occurrences) t -> 'value T.t
+    val make_transfer :
+      ('source, 'sub, 'arg) Refl__.Desc.transfer_arguments ->
+      ('sequence, 'source) t ->
+      (('sequence, 'arg) t, ('sub, [ `Absent ]) Refl__.Desc.eq) result
+    type ('arity, 'rec_group, 'kinds) make =
+      ('arity, 'rec_group, 'kinds) Refl__Tools.Vector(Printer).make = {
+      f :
+        'a 'structure 'ap 'an 'ad 'gadt.
+          ('a, 'structure, 'arity, 'rec_group, 'kinds, 'ap, 'an, 'ad, 'gadt)
+          Refl__.Desc.desc -> ('arity, 'ad) t -> 'a T.t;
+    }
+    val make :
+      ('arity, 'rec_group, 'kinds) make ->
+      ('types, 'structures, 'arity, 'rec_group, 'kinds, 'arguments, 'gadt)
+      Refl__.Desc.vector ->
+      ('positive, 'negative, 'direct, 'subpositive, 'subnegative, 'subdirect,
+       'arguments)
+      Refl__.Desc.transfer_skip ->
+      ('arity, 'direct) t -> ('types, 'subdirect) t
+    type 'presence any =
+      'presence Refl__Tools.Vector(Printer).any =
+        None : [ `Absent ] any
+      | Some : { item : 'a. 'a T.t; } -> 'b any
+    val append :
+      'presence any ->
+      ('presence, 'directs) Refl__.Desc.presences ->
+      ('count, 'directs) Refl__.Desc.length ->
+      ('directs, 'direct, 'subdirect) Refl__.Desc.append ->
+      ('count, 'types) Refl__.Desc.length ->
+      ('types, 'arity, 'subarity) Refl__.Desc.append ->
+      ('arity, 'direct) t -> ('subarity, 'subdirect) t
+    val to_sequence :
+      [ `Present ] any ->
+      ('sequence, 'occurrences) t -> 'sequence Refl__.Desc.Sequence(T).t
+  end
+module PrinterSequence :
+  sig
+    type 'a t =
+      'a Refl__Desc.Sequence(Printers.T).t =
+        [] : unit t
+      | (::) : 'head Printers.T.t * 'tail t -> ('head * 'tail) t
+  end
+type ('a, 'arity, 'b) Refl__.Desc.typed_attribute_kind +=
+    Attribute_printer :
+      ('a, 'arity, 'a Printer.t) Refl__.Desc.typed_attribute_kind
+  | Attribute_polyprinter :
+      ('a, 'arity, 'arity PrinterSequence.t -> 'a Printer.t)
+      Refl__.Desc.typed_attribute_kind
+type 'kinds value =
+    Value : {
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        Refl__.Desc.desc;
+      value : 'a; printers : ('arity, 'direct) Printers.t;
+    } -> 'kinds value
+val pp :
+  ('a, 'structure, 'arity, 'rec_group,
+   [> `Array
+    | `Arrow
+    | `Attributes
+    | `Bool
+    | `Bytes
+    | `Char
+    | `Constr
+    | `Exists
+    | `Float
+    | `Int
+    | `Int32
+    | `Int64
+    | `Lazy
+    | `MapOpaque
+    | `Nativeint
+    | `Object
+    | `Opaque
+    | `Poly
+    | `Record
+    | `String
+    | `Tuple
+    | `Variable
+    | `Variant ],
+   'positive, 'negative, 'direct, 'gadt)
+  Refl__.Desc.desc -> ('arity, 'direct) Printers.t -> 'a Printer.t
+val show :
+  ('a, 'b, 'c, 'd,
+   [> `Array
+    | `Arrow
+    | `Attributes
+    | `Bool
+    | `Bytes
+    | `Char
+    | `Constr
+    | `Exists
+    | `Float
+    | `Int
+    | `Int32
+    | `Int64
+    | `Lazy
+    | `MapOpaque
+    | `Nativeint
+    | `Object
+    | `Opaque
+    | `Poly
+    | `Record
+    | `String
+    | `Tuple
+    | `Variable
+    | `Variant ],
+   'e, 'f, 'g, 'h)
+  Refl__.Desc.desc ->("DEBUG:rule", [Tag3 (("Printer", 1745), 0, (Tag1 ([Tag1 (("t", 1753), ([((("a")), 100000000, 0, -62)], 1, 0, 1, ((Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Stdlib")), "Format"), "formatter"), 0, (0)), 100000000, 0, -63), (Tag1 (0, ((("a")), 100000000, 0, -62), (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -61), 0), 100000000, 0, -60), 0), 100000000, 0, -59)), [46], [0], 0, 0, (("runtime/show.ml", 6, 47, 49), ("runtime/show.ml", 6, 47, 91), 0), 0, 0, 0, Tag1 ("Refl__Show", 37)), 1, 0)]), 0, (("runtime/show.ml", 5, 23, 23), ("runtime/show.ml", 7, 92, 95), 0), Tag1 ("Refl__Show", 38)), 0, 0); Tag3 (("Printers", 1746), 0, (Tag1 ([Tag3 (("T", 1754), 0, (Tag1 ([Tag1 (("t", 1764), ([((("a")), 100000000, 0, -194)], 1, 0, 1, ((Tag3 (Tag1 ((("Printer", 1745)), "t"), [((("a")), 100000000, 0, -194)], (0)), 100000000, 0, -193)), [7], [2], 0, 0, (("runtime/desc.ml", 45, 1724, 1726), ("runtime/desc.ml", 45, 1724, 1735), 0), 0, 0, 0, Tag1 ("Refl__Desc", 27)), 1, 0)]), 0, (("runtime/tools.ml", 277, 8782, 8797), ("runtime/tools.ml", 277, 8782, 8798), 0), Tag1 ("Refl__Tools", 652)), 0, 0); Tag1 (("item", 1755), ([((("a")), 100000000, 0, -183); ((("occurrence")), 100000000, 0, -184)], 2, Tag1 ([(("None", 804), (0), ((Tag3 ((("item", 1755)), [((0), 100000000, 0, -186); (Tag8 (([("Absent", (0))], (0, 100000000, 0, -188), 1, 0, 0)), 100000000, 0, -187)], (0)), 100000000, 0, -185)), (("runtime/tools.ml", 226, 7216, 7220), ("runtime/tools.ml", 226, 7216, 7248), 0), 0, Tag1 ("Refl__Tools", 629)); (("Some", 805), ([(Tag3 (Tag1 ((("T", 1754)), "t"), [((("a")), 100000000, 0, -190)], (0)), 100000000, 0, -192)]), ((Tag3 ((("item", 1755)), [((("a")), 100000000, 0, -190); ((0), 100000000, 0, -191)], (0)), 100000000, 0, -189)), (("runtime/tools.ml", 227, 7249, 7253), ("runtime/tools.ml", 227, 7249, 7284), 0), 0, Tag1 ("Refl__Tools", 630))], 0), 1, ((Tag3 (Tag1 (Tag2 (Tag1 ((Tag2 ("Refl__Tools")), "Vector"), (("Printer", 1745))), "item"), [((("a")), 100000000, 0, -183); ((("occurrence")), 100000000, 0, -184)], (0)), 100000000, 0, -182)), [15; 63], [0; 0], 0, 0, (("runtime/tools.ml", 225, 7184, 7186), ("runtime/tools.ml", 227, 7249, 7284), 0), 0, 0, 0, Tag1 ("Refl__Tools", 628)), 1, 0); Tag1 (("t", 1756), ([((("sequence")), 100000000, 0, -168); ((("occurrences")), 100000000, 0, -169)], 2, Tag1 ([(("[]", 808), (0), ((Tag3 ((("t", 1756)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -171); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -172)], (0)), 100000000, 0, -170)), (("runtime/tools.ml", 230, 7323, 7327), ("runtime/tools.ml", 230, 7323, 7348), 0), 0, Tag1 ("Refl__Tools", 632)); (("::", 809), ([(Tag3 ((("item", 1755)), [((("head")), 100000000, 0, -175); ((("occurrence")), 100000000, 0, -178)], (0)), 100000000, 0, -180); (Tag3 ((("t", 1756)), [((("tail")), 100000000, 0, -176); ((("occurrences")), 100000000, 0, -179)], (0)), 100000000, 0, -181)]), ((Tag3 ((("t", 1756)), [(Tag2 ([((("head")), 100000000, 0, -175); ((("tail")), 100000000, 0, -176)]), 100000000, 0, -174); (Tag2 ([((("occurrence")), 100000000, 0, -178); ((("occurrences")), 100000000, 0, -179)]), 100000000, 0, -177)], (0)), 100000000, 0, -173)), (("runtime/tools.ml", 231, 7349, 7353), ("runtime/tools.ml", 232, 7417, 7470), 0), 0, Tag1 ("Refl__Tools", 633))], 0), 1, ((Tag3 (Tag1 (Tag2 (Tag1 ((Tag2 ("Refl__Tools")), "Vector"), (("Printer", 1745))), "t"), [((("sequence")), 100000000, 0, -168); ((("occurrences")), 100000000, 0, -169)], (0)), 100000000, 0, -167)), [63; 63], [0; 0], 0, 0, (("runtime/tools.ml", 229, 7286, 7288), ("runtime/tools.ml", 232, 7417, 7470), 0), 0, 0, 0, Tag1 ("Refl__Tools", 631)), 1, 0); (("get", 1757), ((Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "variable"), [((("index")), 100000000, 0, -165); ((("sequence")), 100000000, 0, -162); ((("value")), 100000000, 0, -160); ((("positive")), 100000000, 0, -166); ((("occurrences")), 100000000, 0, -163)], (0)), 100000000, 0, -164), (Tag1 (0, (Tag3 ((("t", 1756)), [((("sequence")), 100000000, 0, -162); ((("occurrences")), 100000000, 0, -163)], (0)), 100000000, 0, -161), (Tag3 (Tag1 ((("T", 1754)), "t"), [((("value")), 100000000, 0, -160)], (0)), 100000000, 0, -159), 0), 100000000, 0, -158), 0), 100000000, 0, -157), 0, (("runtime/tools.ml", 234, 7472, 7474), ("runtime/tools.ml", 236, 7553, 7600), 0), 0, Tag1 ("Refl__Tools", 634)), 0); (("make_transfer", 1758), ((Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "transfer_arguments"), [((("source")), 100000000, 0, -155); ((("sub")), 100000000, 0, -151); ((("arg")), 100000000, 0, -149)], (0)), 100000000, 0, -156), (Tag1 (0, (Tag3 ((("t", 1756)), [((("sequence")), 100000000, 0, -148); ((("source")), 100000000, 0, -155)], (0)), 100000000, 0, -154), (Tag3 (Tag1 ((Tag2 ("Stdlib")), "result"), [(Tag3 ((("t", 1756)), [((("sequence")), 100000000, 0, -148); ((("arg")), 100000000, 0, -149)], (0)), 100000000, 0, -147); (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "eq"), [((("sub")), 100000000, 0, -151); (Tag8 (([("Absent", (0))], (0, 100000000, 0, -153), 1, 0, 0)), 100000000, 0, -152)], (0)), 100000000, 0, -150)], (0)), 100000000, 0, -146), 0), 100000000, 0, -145), 0), 100000000, 0, -144), 0, (("runtime/tools.ml", 238, 7602, 7604), ("runtime/tools.ml", 240, 7698, 7752), 0), 0, Tag1 ("Refl__Tools", 635)), 0); Tag1 (("make", 1759), ([((("arity")), 100000000, 0, -129); ((("rec_group")), 100000000, 0, -130); ((("kinds")), 100000000, 0, -131)], 3, [[(("f", 813), 0, (Tag10 ((Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "desc"), [(Tag9 (("a")), 100000000, 0, -133); (Tag9 (("structure")), 100000000, 0, -134); ((("arity")), 100000000, 0, -129); ((("rec_group")), 100000000, 0, -130); ((("kinds")), 100000000, 0, -131); (Tag9 (("ap")), 100000000, 0, -135); (Tag9 (("an")), 100000000, 0, -136); (Tag9 (("ad")), 100000000, 0, -137); (Tag9 (("gadt")), 100000000, 0, -138)], (0)), 100000000, 0, -143), (Tag1 (0, (Tag3 ((("t", 1756)), [((("arity")), 100000000, 0, -129); (Tag9 (("ad")), 100000000, 0, -137)], (0)), 100000000, 0, -142), (Tag3 (Tag1 ((("T", 1754)), "t"), [(Tag9 (("a")), 100000000, 0, -133)], (0)), 100000000, 0, -141), 0), 100000000, 0, -140), 0), 100000000, 0, -139), [(Tag9 (("a")), 100000000, 0, -133); (Tag9 (("structure")), 100000000, 0, -134); (Tag9 (("ap")), 100000000, 0, -135); (Tag9 (("an")), 100000000, 0, -136); (Tag9 (("ad")), 100000000, 0, -137); (Tag9 (("gadt")), 100000000, 0, -138)]), 100000000, 0, -132), (("runtime/tools.ml", 243, 7799, 7805), ("runtime/tools.ml", 245, 7918, 7962), 0), 0, Tag1 ("Refl__Tools", 637))]], 1, ((Tag3 (Tag1 (Tag2 (Tag1 ((Tag2 ("Refl__Tools")), "Vector"), (("Printer", 1745))), "make"), [((("arity")), 100000000, 0, -129); ((("rec_group")), 100000000, 0, -130); ((("kinds")), 100000000, 0, -131)], (0)), 100000000, 0, -128)), [63; 15; 63], [0; 0; 0], 0, 0, (("runtime/tools.ml", 242, 7754, 7756), ("runtime/tools.ml", 246, 7963, 7968), 0), 0, 0, 1, Tag1 ("Refl__Tools", 636)), 1, 0); (("make", 1760), ((Tag1 (0, (Tag3 ((("make", 1759)), [((("arity")), 100000000, 0, -114); ((("rec_group")), 100000000, 0, -124); ((("kinds")), 100000000, 0, -125)], (0)), 100000000, 0, -127), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "vector"), [((("types")), 100000000, 0, -111); ((("structures")), 100000000, 0, -123); ((("arity")), 100000000, 0, -114); ((("rec_group")), 100000000, 0, -124); ((("kinds")), 100000000, 0, -125); ((("arguments")), 100000000, 0, -121); ((("gadt")), 100000000, 0, -126)], (0)), 100000000, 0, -122), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "transfer_skip"), [((("positive")), 100000000, 0, -117); ((("negative")), 100000000, 0, -118); ((("direct")), 100000000, 0, -115); ((("subpositive")), 100000000, 0, -119); ((("subnegative")), 100000000, 0, -120); ((("subdirect")), 100000000, 0, -112); ((("arguments")), 100000000, 0, -121)], (0)), 100000000, 0, -116), (Tag1 (0, (Tag3 ((("t", 1756)), [((("arity")), 100000000, 0, -114); ((("direct")), 100000000, 0, -115)], (0)), 100000000, 0, -113), (Tag3 ((("t", 1756)), [((("types")), 100000000, 0, -111); ((("subdirect")), 100000000, 0, -112)], (0)), 100000000, 0, -110), 0), 100000000, 0, -109), 0), 100000000, 0, -108), 0), 100000000, 0, -107), 0), 100000000, 0, -106), 0, (("runtime/tools.ml", 248, 7970, 7972), ("runtime/tools.ml", 255, 8251, 8277), 0), 0, Tag1 ("Refl__Tools", 638)), 0); Tag1 (("any", 1761), ([((("presence")), 100000000, 0, -97)], 1, Tag1 ([(("None", 816), (0), ((Tag3 ((("any", 1761)), [(Tag8 (([("Absent", (0))], (0, 100000000, 0, -100), 1, 0, 0)), 100000000, 0, -99)], (0)), 100000000, 0, -98)), (("runtime/tools.ml", 258, 8302, 8306), ("runtime/tools.ml", 258, 8302, 8328), 0), 0, Tag1 ("Refl__Tools", 640)); (("Some", 817), Tag1 ([(("item", 818), 0, (Tag10 ((Tag3 (Tag1 ((("T", 1754)), "t"), [(Tag9 (("a")), 100000000, 0, -104)], (0)), 100000000, 0, -105), [(Tag9 (("a")), 100000000, 0, -104)]), 100000000, 0, -103), (("runtime/tools.ml", 260, 8344, 8354), ("runtime/tools.ml", 260, 8344, 8373), 0), 0, Tag1 ("Refl__Tools", 641))]), ((Tag3 ((("any", 1761)), [((0), 100000000, 0, -102)], (0)), 100000000, 0, -101)), (("runtime/tools.ml", 259, 8329, 8333), ("runtime/tools.ml", 261, 8374, 8392), 0), 0, Tag1 ("Refl__Tools", 642))], 0), 1, ((Tag3 (Tag1 (Tag2 (Tag1 ((Tag2 ("Refl__Tools")), "Vector"), (("Printer", 1745))), "any"), [((("presence")), 100000000, 0, -97)], (0)), 100000000, 0, -96)), [63], [0], 0, 0, (("runtime/tools.ml", 257, 8279, 8281), ("runtime/tools.ml", 261, 8374, 8392), 0), 0, 0, 0, Tag1 ("Refl__Tools", 639)), 1, 0); (("append", 1762), ((Tag1 (0, (Tag3 ((("any", 1761)), [((("presence")), 100000000, 0, -94)], (0)), 100000000, 0, -95), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "presences"), [((("presence")), 100000000, 0, -94); ((("directs")), 100000000, 0, -91)], (0)), 100000000, 0, -93), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "length"), [((("count")), 100000000, 0, -89); ((("directs")), 100000000, 0, -91)], (0)), 100000000, 0, -92), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "append"), [((("directs")), 100000000, 0, -91); ((("direct")), 100000000, 0, -85); ((("subdirect")), 100000000, 0, -82)], (0)), 100000000, 0, -90), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "length"), [((("count")), 100000000, 0, -89); ((("types")), 100000000, 0, -87)], (0)), 100000000, 0, -88), (Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "append"), [((("types")), 100000000, 0, -87); ((("arity")), 100000000, 0, -84); ((("subarity")), 100000000, 0, -81)], (0)), 100000000, 0, -86), (Tag1 (0, (Tag3 ((("t", 1756)), [((("arity")), 100000000, 0, -84); ((("direct")), 100000000, 0, -85)], (0)), 100000000, 0, -83), (Tag3 ((("t", 1756)), [((("subarity")), 100000000, 0, -81); ((("subdirect")), 100000000, 0, -82)], (0)), 100000000, 0, -80), 0), 100000000, 0, -79), 0), 100000000, 0, -78), 0), 100000000, 0, -77), 0), 100000000, 0, -76), 0), 100000000, 0, -75), 0), 100000000, 0, -74), 0), 100000000, 0, -73), 0, (("runtime/tools.ml", 263, 8394, 8396), ("runtime/tools.ml", 271, 8649, 8678), 0), 0, Tag1 ("Refl__Tools", 649)), 0); (("to_sequence", 1763), ((Tag1 (0, (Tag3 ((("any", 1761)), [(Tag8 (([("Present", (0))], (0, 100000000, 0, -72), 1, 0, 0)), 100000000, 0, -71)], (0)), 100000000, 0, -70), (Tag1 (0, (Tag3 ((("t", 1756)), [((("sequence")), 100000000, 0, -67); ((("occurrences")), 100000000, 0, -69)], (0)), 100000000, 0, -68), (Tag3 (Tag1 (Tag2 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "Sequence"), (("T", 1754))), "t"), [((("sequence")), 100000000, 0, -67)], (0)), 100000000, 0, -66), 0), 100000000, 0, -65), 0), 100000000, 0, -64), 0, (("runtime/tools.ml", 273, 8680, 8682), ("runtime/tools.ml", 274, 8700, 8776), 0), 0, Tag1 ("Refl__Tools", 650)), 0)]), 0, (("runtime/show.ml", 9, 97, 97), ("runtime/show.ml", 9, 97, 131), 0), Tag1 ("Refl__Show", 76)), 0, 0); Tag3 (("PrinterSequence", 1747), 0, (Tag1 ([Tag1 (("t", 1765), ([((0), 100000000, 0, -196)], 1, Tag1 ([(("[]", 315), (0), ((Tag3 ((("t", 1765)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -198)], (0)), 100000000, 0, -197)), (("runtime/desc.ml", 50, 1796, 1800), ("runtime/desc.ml", 50, 1796, 1813), 0), 0, Tag1 ("Refl__Desc", 31)); (("::", 316), ([(Tag3 (Tag1 (Tag1 ((("Printers", 1746)), "T"), "t"), [((("head")), 100000000, 0, -201)], (0)), 100000000, 0, -203); (Tag3 ((("t", 1765)), [((("tail")), 100000000, 0, -202)], (0)), 100000000, 0, -204)]), ((Tag3 ((("t", 1765)), [(Tag2 ([((("head")), 100000000, 0, -201); ((("tail")), 100000000, 0, -202)]), 100000000, 0, -200)], (0)), 100000000, 0, -199)), (("runtime/desc.ml", 51, 1814, 1818), ("runtime/desc.ml", 51, 1814, 1867), 0), 0, Tag1 ("Refl__Desc", 32))], 0), 1, ((Tag3 (Tag1 (Tag2 (Tag1 ((Tag2 ("Refl__Desc")), "Sequence"), Tag1 ((("Printers", 1746)), "T")), "t"), [((0), 100000000, 0, -196)], (0)), 100000000, 0, -195)), [63], [0], 0, 0, (("runtime/desc.ml", 49, 1783, 1785), ("runtime/desc.ml", 51, 1814, 1867), 0), 0, 0, 0, Tag1 ("Refl__Desc", 30)), 1, 0)]), 0, (("runtime/show.ml", 11, 133, 133), ("runtime/show.ml", 11, 133, 179), 0), Tag1 ("Refl__Show", 78)), 0, 0); Tag2 (("Attribute_printer", 1748), (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "typed_attribute_kind"), [((("a")), 100000000, 0, -52); ((("arity")), 100000000, 0, -53); ((("b")), 100000000, 0, -54)], (0), ((Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "typed_attribute_kind"), [((("a")), 100000000, 0, -56); ((("arity")), 100000000, 0, -57); (Tag3 (Tag1 ((("Printer", 1745)), "t"), [((("a")), 100000000, 0, -56)], (0)), 100000000, 0, -58)], (0)), 100000000, 0, -55)), 1, (("_none_", 0, 0, -1), ("_none_", 0, 0, -1), 1), 0, Tag1 ("Refl__Show", 79)), 0, 0); Tag2 (("Attribute_polyprinter", 1749), (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "typed_attribute_kind"), [((("a")), 100000000, 0, -52); ((("arity")), 100000000, 0, -53); ((("b")), 100000000, 0, -54)], (0), ((Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "typed_attribute_kind"), [((("a")), 100000000, 0, -47); ((("arity")), 100000000, 0, -48); (Tag1 (0, (Tag3 (Tag1 ((("PrinterSequence", 1747)), "t"), [((("arity")), 100000000, 0, -48)], (0)), 100000000, 0, -51), (Tag3 (Tag1 ((("Printer", 1745)), "t"), [((("a")), 100000000, 0, -47)], (0)), 100000000, 0, -50), 0), 100000000, 0, -49)], (0)), 100000000, 0, -46)), 1, (("_none_", 0, 0, -1), ("_none_", 0, 0, -1), 1), 0, Tag1 ("Refl__Show", 80)), 1, 0); Tag1 (("value", 1750), ([((("kinds")), 100000000, 0, -45)], 1, Tag1 ([(("Value", 832), Tag1 ([(("desc", 833), 0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "desc"), [((("a")), 100000000, 0, -36); ((("structure")), 100000000, 0, -37); ((("arity")), 100000000, 0, -38); ((("rec_group")), 100000000, 0, -39); ((("kinds")), 100000000, 0, -34); ((("positive")), 100000000, 0, -40); ((("negative")), 100000000, 0, -41); ((("direct")), 100000000, 0, -42); ((("gadt")), 100000000, 0, -43)], (0)), 100000000, 0, -35), (("runtime/show.ml", 21, 450, 456), ("runtime/show.ml", 23, 538, 569), 0), 0, Tag1 ("Refl__Show", 82)); (("value", 834), 0, ((("a")), 100000000, 0, -36), (("runtime/show.ml", 24, 570, 576), ("runtime/show.ml", 24, 570, 587), 0), 0, Tag1 ("Refl__Show", 83)); (("printers", 835), 0, (Tag3 (Tag1 ((("Printers", 1746)), "t"), [((("arity")), 100000000, 0, -38); ((("direct")), 100000000, 0, -42)], (0)), 100000000, 0, -44), (("runtime/show.ml", 25, 588, 594), ("runtime/show.ml", 25, 588, 634), 0), 0, Tag1 ("Refl__Show", 84))]), ((Tag3 ((("value", 1750)), [((("kinds")), 100000000, 0, -34)], (0)), 100000000, 0, -33)), (("runtime/show.ml", 20, 436, 438), ("runtime/show.ml", 27, 644, 662), 0), 0, Tag1 ("Refl__Show", 85))], 0), 1, 0, [63], [0], 0, 0, (("runtime/show.ml", 19, 416, 416), ("runtime/show.ml", 27, 644, 662), 0), 0, 0, 0, Tag1 ("Refl__Show", 81)), 1, 0); (("pp", 1751), ((Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "desc"), [((("a")), 100000000, 0, -21); ((("structure")), 100000000, 0, -26); ((("arity")), 100000000, 0, -23); ((("rec_group")), 100000000, 0, -27); (Tag8 (([("Array", (0)); ("Arrow", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Exists", (0)); ("Float", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Lazy", (0)); ("MapOpaque", (0)); ("Nativeint", (0)); ("Object", (0)); ("Opaque", (0)); ("Poly", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Variable", (0)); ("Variant", (0))], ((0), 100000000, 0, -29), 0, 0, 0)), 100000000, 0, -28); ((("positive")), 100000000, 0, -30); ((("negative")), 100000000, 0, -31); ((("direct")), 100000000, 0, -24); ((("gadt")), 100000000, 0, -32)], (0)), 100000000, 0, -25), (Tag1 (0, (Tag3 (Tag1 ((("Printers", 1746)), "t"), [((("arity")), 100000000, 0, -23); ((("direct")), 100000000, 0, -24)], (0)), 100000000, 0, -22), (Tag3 (Tag1 ((("Printer", 1745)), "t"), [((("a")), 100000000, 0, -21)], (0)), 100000000, 0, -20), 0), 100000000, 0, -19), 0), 100000000, 0, -18), 0, (("runtime/show.ml", 29, 664, 672), ("runtime/show.ml", 29, 664, 674), 0), 0, Tag1 ("Refl__Show", 93)), 0); (("show", 1752), ((Tag1 (0, (Tag3 (Tag1 (Tag1 ((Tag2 ("Refl__")), "Desc"), "desc"), [((0), 100000000, 0, -6); ((0), 100000000, 0, -11); ((0), 100000000, 0, -8); ((0), 100000000, 0, -12); (Tag8 (([("Array", (0)); ("Arrow", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Exists", (0)); ("Float", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Lazy", (0)); ("MapOpaque", (0)); ("Nativeint", (0)); ("Object", (0)); ("Opaque", (0)); ("Poly", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Variable", (0)); ("Variant", (0))], ((0), 100000000, 0, -14), 0, 0, 0)), 100000000, 0, -13); ((0), 100000000, 0, -15); ((0), 100000000, 0, -16); ((0), 100000000, 0, -9); ((0), 100000000, 0, -17)], (0)), 100000000, 0, -10), (Tag1 (0, (Tag3 (Tag1 ((("Printers", 1746)), "t"), [((0), 100000000, 0, -8); ((0), 100000000, 0, -9)], (0)), 100000000, 0, -7), (Tag1 (0, ((0), 100000000, 0, -6), (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -5), 0), 100000000, 0, -4), 0), 100000000, 0, -3), 0), 100000000, 0, -2), 0, (("runtime/show.ml", 314, 11115, 11119), ("runtime/show.ml", 314, 11115, 11123), 0), 0, Tag1 ("Refl__Show", 549)), 0)], "Refl__Show", [("Refl__Show", ("]\014\128\185\233\015\194\164\184d\213a\223\161\135\236")); ("Traverse__Values", ("}\239\001\023\024&\227\167Sl\002\148\026\190\180\025")); ("Traverse__Modules", ("=\175q\026#\242\139\b\202\252\139\207\195\170\254\202")); ("Traverse__Interface", ("\252\146\219\195\199\167\234\143+\145l\200\254\244s}")); ("Traverse__", ("y\220\011\221C%Ob7%t,\252N21")); ("Traverse", ("\019\209\190\177II\1552 \b\174\006\b\1643\152")); ("Stdlib__Uchar", ("\189\n\181\141\022k\137kQ\201Sc\030:9\197")); ("Stdlib__String", ("\141~|\209P5\220]\146\029\153\133\161\247\208\163")); ("Stdlib__Seq", ("\228i\134Z1(\187\131\141\237X\149\233\233\229l")); ("Stdlib__Nativeint", ("\167\207\224\147\233+\024lx\0055\142\141v\252\138")); ("Stdlib__List", ("\137\146X\127&\164\235\254\165w$\144\178T\179(")); ("Stdlib__Lazy", ("\1479\177F\251W\183>\15140\213\255\214\197.")); ("Stdlib__Int64", ("@\131\210+\255\138\197\014D\252\211\025\244\201Z\031")); ("Stdlib__Int32", ("\248;\\\021<\200_/\205{`[Cd\to")); ("Stdlib__Format", ("\148\215\2499\234\007\000\024\174\164\005\134\243\025\164\238")); ("Stdlib__Either", ("Lz\172\233\0020\189\133M\ts\199\228V\239\b")); ("Stdlib__Domain", ("\021\235G\146\n\199fL\019C`\168{A\239(")); ("Stdlib__Bytes", ("C\134\194)\175\222\137p\205\246\244\r\241\164P\209")); ("Stdlib__Buffer", ("\017 \159E\224\025<e\221\243\250B\230,\163Q")); ("Stdlib__Array", ("R\228O\222\160>\1728\n\221\218\027\240\242\017 ")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("Stdcompat__stdlib_s", ("?\143\027\238\145\138\139e`\216P\248\156\178=\206")); ("Stdcompat__init", ("r\254q\255\217]\232\239'\192d\165\222\016\157\133")); ("Stdcompat", ("\139\1989\181:\137\230\132\240\223\206\210Y\135S\\")); ("Refl__Tools", ("i\215\207\166d\225\190DU\241\194\224\137P\158e")); ("Refl__Desc", ("\221\150mt\149.2\132\189\244\007\164&\203\225\172")); ("Refl__", ("i\003\196\150\161\159\229g\157\181\149\015g%\221\240")); ("CamlinternalLazy", ("$R\130\004\165\140)\018\167x\018\240\162C\152V")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [(0)])
+ ('c, 'g) Printers.t -> 'a -> string

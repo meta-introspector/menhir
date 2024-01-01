@@ -1,0 +1,65 @@
+module Make :
+  functor (M : Fix__.Sigs.IMPERATIVE_MAPS) ->
+    sig
+      type t = M.key
+      val encode : t -> int
+      val current : unit -> int
+      val has_been_encoded : t -> bool
+      module Done :
+        functor () ->
+          sig
+            type t = t/2
+            val n : int
+            val encode : t -> int
+            val decode : int -> t
+          end
+    end
+module ForOrderedType :
+  functor (T : Fix__.Sigs.OrderedType) ->
+    sig
+      type t = T.t
+      val encode : t -> int
+      val current : unit -> int
+      val has_been_encoded : t -> bool
+      module Done :
+        functor () ->
+          sig
+            type t = t/2
+            val n : int
+            val encode : t -> int
+            val decode : int -> t
+          end
+    end
+module ForHashedType :
+  functor (T : Fix__.Sigs.HashedType) ->
+    sig
+      type t = T.t
+      val encode : t -> int
+      val current : unit -> int
+      val has_been_encoded : t -> bool
+      module Done :
+        functor () ->
+          sig
+            type t = t/2
+            val n : int
+            val encode : t -> int
+            val decode : int -> t
+          end
+    end
+module ForType :
+  functor (T : Fix__.Sigs.TYPE) ->
+    sig
+      type t = T.t
+      val encode : t -> int
+      val current : unit -> int
+      val has_been_encoded : t -> bool
+      module Done :
+        functor () ->
+          sig
+            type t = t/2
+            val n : int
+            val encode : t -> int
+            val decode : int -> t
+          end("DEBUG:rule", [Tag3 (("Make", 515), 0, (Tag2 (((("M", 522)), (Tag1 (Tag1 ((Tag2 ("Fix__")), "Sigs"), "IMPERATIVE_MAPS"))), Tag1 ([Tag1 (("t", 523), (0, 0, 0, 1, ((Tag3 (Tag1 ((("M", 522)), "key"), 0, (0)), 100000000, 0, -11)), 0, 0, 0, 0, (("src/Numbering.mli", 26, 1482, 1514), ("src/Numbering.mli", 26, 1482, 1528), 0), 0, 0, 0, Tag1 ("Fix__Numbering", 1)), 1, 0); (("encode", 524), ((Tag1 (0, (Tag3 ((("t", 523)), 0, (0)), 100000000, 0, -10), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -9), 0), 100000000, 0, -8), 0, (("src/Sigs.ml", 387, 13379, 13381), ("src/Sigs.ml", 387, 13379, 13401), 0), 0, Tag1 ("Fix__Sigs", 74)), 0); (("current", 525), ((Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -7), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -6), 0), 100000000, 0, -5), 0, (("src/Sigs.ml", 391, 13527, 13529), ("src/Sigs.ml", 391, 13527, 13553), 0), 0, Tag1 ("Fix__Sigs", 75)), 0); (("has_been_encoded", 526), ((Tag1 (0, (Tag3 ((("t", 523)), 0, (0)), 100000000, 0, -4), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -3), 0), 100000000, 0, -2), 0, (("src/Sigs.ml", 395, 13648, 13650), ("src/Sigs.ml", 395, 13648, 13681), 0), 0, Tag1 ("Fix__Sigs", 76)), 0); Tag3 (("Done", 527), 0, (Tag2 (0, Tag1 ([Tag1 (("t", 528), (0, 0, 0, 1, ((Tag3 ((("t", 523)), 0, (0)), 100000000, 0, -19)), 0, 0, 0, 0, (("src/Sigs.ml", 432, 14884, 14918), ("src/Sigs.ml", 432, 14884, 14928), 0), 0, 0, 0, Tag1 ("Fix__Sigs", 83)), 1, 0); (("n", 529), ((Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -18), 0, (("src/Sigs.ml", 408, 14023, 14025), ("src/Sigs.ml", 408, 14023, 14035), 0), 0, Tag1 ("Fix__Sigs", 79)), 0); (("encode", 530), ((Tag1 (0, (Tag3 ((("t", 528)), 0, (0)), 100000000, 0, -17), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -16), 0), 100000000, 0, -15), 0, (("src/Sigs.ml", 412, 14132, 14134), ("src/Sigs.ml", 412, 14132, 14154), 0), 0, Tag1 ("Fix__Sigs", 80)), 0); (("decode", 531), ((Tag1 (0, (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -14), (Tag3 ((("t", 528)), 0, (0)), 100000000, 0, -13), 0), 100000000, 0, -12), 0, (("src/Sigs.ml", 416, 14256, 14258), ("src/Sigs.ml", 416, 14256, 14278), 0), 0, Tag1 ("Fix__Sigs", 81)), 0)])), 0, (("src/Sigs.ml", 432, 14884, 14886), ("src/Sigs.ml", 432, 14884, 14928), 0), Tag1 ("Fix__Sigs", 84)), 0, 0)])), 0, (("src/Numbering.mli", 24, 1446, 1446), ("src/Numbering.mli", 26, 1482, 1528), 0), Tag1 ("Fix__Numbering", 2)), 0, 0); Tag3 (("ForOrderedType", 516), 0, (Tag2 (((("T", 521)), (Tag1 (Tag1 ((Tag2 ("Fix__")), "Sigs"), "OrderedType"))), Tag1 ([Tag1 (("t", 532), (0, 0, 0, 1, ((Tag3 (Tag1 ((("T", 521)), "t"), 0, (0)), 100000000, 0, -29)), 0, 0, 0, 0, (("src/Numbering.mli", 32, 1670, 1702), ("src/Numbering.mli", 32, 1670, 1714), 0), 0, 0, 0, Tag1 ("Fix__Numbering", 4)), 1, 0); (("encode", 533), ((Tag1 (0, (Tag3 ((("t", 532)), 0, (0)), 100000000, 0, -28), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -27), 0), 100000000, 0, -26), 0, (("src/Sigs.ml", 387, 13379, 13381), ("src/Sigs.ml", 387, 13379, 13401), 0), 0, Tag1 ("Fix__Sigs", 74)), 0); (("current", 534), ((Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -25), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -24), 0), 100000000, 0, -23), 0, (("src/Sigs.ml", 391, 13527, 13529), ("src/Sigs.ml", 391, 13527, 13553), 0), 0, Tag1 ("Fix__Sigs", 75)), 0); (("has_been_encoded", 535), ((Tag1 (0, (Tag3 ((("t", 532)), 0, (0)), 100000000, 0, -22), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -21), 0), 100000000, 0, -20), 0, (("src/Sigs.ml", 395, 13648, 13650), ("src/Sigs.ml", 395, 13648, 13681), 0), 0, Tag1 ("Fix__Sigs", 76)), 0); Tag3 (("Done", 536), 0, (Tag2 (0, Tag1 ([Tag1 (("t", 537), (0, 0, 0, 1, ((Tag3 ((("t", 532)), 0, (0)), 100000000, 0, -37)), 0, 0, 0, 0, (("src/Sigs.ml", 432, 14884, 14918), ("src/Sigs.ml", 432, 14884, 14928), 0), 0, 0, 0, Tag1 ("Fix__Sigs", 83)), 1, 0); (("n", 538), ((Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -36), 0, (("src/Sigs.ml", 408, 14023, 14025), ("src/Sigs.ml", 408, 14023, 14035), 0), 0, Tag1 ("Fix__Sigs", 79)), 0); (("encode", 539), ((Tag1 (0, (Tag3 ((("t", 537)), 0, (0)), 100000000, 0, -35), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -34), 0), 100000000, 0, -33), 0, (("src/Sigs.ml", 412, 14132, 14134), ("src/Sigs.ml", 412, 14132, 14154), 0), 0, Tag1 ("Fix__Sigs", 80)), 0); (("decode", 540), ((Tag1 (0, (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -32), (Tag3 ((("t", 537)), 0, (0)), 100000000, 0, -31), 0), 100000000, 0, -30), 0, (("src/Sigs.ml", 416, 14256, 14258), ("src/Sigs.ml", 416, 14256, 14278), 0), 0, Tag1 ("Fix__Sigs", 81)), 0)])), 0, (("src/Sigs.ml", 432, 14884, 14886), ("src/Sigs.ml", 432, 14884, 14928), 0), Tag1 ("Fix__Sigs", 84)), 0, 0)])), 0, (("src/Numbering.mli", 30, 1628, 1628), ("src/Numbering.mli", 32, 1670, 1714), 0), Tag1 ("Fix__Numbering", 5)), 0, 0); Tag3 (("ForHashedType", 517), 0, (Tag2 (((("T", 520)), (Tag1 (Tag1 ((Tag2 ("Fix__")), "Sigs"), "HashedType"))), Tag1 ([Tag1 (("t", 541), (0, 0, 0, 1, ((Tag3 (Tag1 ((("T", 520)), "t"), 0, (0)), 100000000, 0, -47)), 0, 0, 0, 0, (("src/Numbering.mli", 38, 1852, 1884), ("src/Numbering.mli", 38, 1852, 1896), 0), 0, 0, 0, Tag1 ("Fix__Numbering", 7)), 1, 0); (("encode", 542), ((Tag1 (0, (Tag3 ((("t", 541)), 0, (0)), 100000000, 0, -46), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -45), 0), 100000000, 0, -44), 0, (("src/Sigs.ml", 387, 13379, 13381), ("src/Sigs.ml", 387, 13379, 13401), 0), 0, Tag1 ("Fix__Sigs", 74)), 0); (("current", 543), ((Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -43), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -42), 0), 100000000, 0, -41), 0, (("src/Sigs.ml", 391, 13527, 13529), ("src/Sigs.ml", 391, 13527, 13553), 0), 0, Tag1 ("Fix__Sigs", 75)), 0); (("has_been_encoded", 544), ((Tag1 (0, (Tag3 ((("t", 541)), 0, (0)), 100000000, 0, -40), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -39), 0), 100000000, 0, -38), 0, (("src/Sigs.ml", 395, 13648, 13650), ("src/Sigs.ml", 395, 13648, 13681), 0), 0, Tag1 ("Fix__Sigs", 76)), 0); Tag3 (("Done", 545), 0, (Tag2 (0, Tag1 ([Tag1 (("t", 546), (0, 0, 0, 1, ((Tag3 ((("t", 541)), 0, (0)), 100000000, 0, -55)), 0, 0, 0, 0, (("src/Sigs.ml", 432, 14884, 14918), ("src/Sigs.ml", 432, 14884, 14928), 0), 0, 0, 0, Tag1 ("Fix__Sigs", 83)), 1, 0); (("n", 547), ((Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -54), 0, (("src/Sigs.ml", 408, 14023, 14025), ("src/Sigs.ml", 408, 14023, 14035), 0), 0, Tag1 ("Fix__Sigs", 79)), 0); (("encode", 548), ((Tag1 (0, (Tag3 ((("t", 546)), 0, (0)), 100000000, 0, -53), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -52), 0), 100000000, 0, -51), 0, (("src/Sigs.ml", 412, 14132, 14134), ("src/Sigs.ml", 412, 14132, 14154), 0), 0, Tag1 ("Fix__Sigs", 80)), 0); (("decode", 549), ((Tag1 (0, (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -50), (Tag3 ((("t", 546)), 0, (0)), 100000000, 0, -49), 0), 100000000, 0, -48), 0, (("src/Sigs.ml", 416, 14256, 14258), ("src/Sigs.ml", 416, 14256, 14278), 0), 0, Tag1 ("Fix__Sigs", 81)), 0)])), 0, (("src/Sigs.ml", 432, 14884, 14886), ("src/Sigs.ml", 432, 14884, 14928), 0), Tag1 ("Fix__Sigs", 84)), 0, 0)])), 0, (("src/Numbering.mli", 36, 1812, 1812), ("src/Numbering.mli", 38, 1852, 1896), 0), Tag1 ("Fix__Numbering", 8)), 0, 0); Tag3 (("ForType", 518), 0, (Tag2 (((("T", 519)), (Tag1 (Tag1 ((Tag2 ("Fix__")), "Sigs"), "TYPE"))), Tag1 ([Tag1 (("t", 550), (0, 0, 0, 1, ((Tag3 (Tag1 ((("T", 519)), "t"), 0, (0)), 100000000, 0, -65)), 0, 0, 0, 0, (("src/Numbering.mli", 44, 2074, 2106), ("src/Numbering.mli", 44, 2074, 2118), 0), 0, 0, 0, Tag1 ("Fix__Numbering", 10)), 1, 0); (("encode", 551), ((Tag1 (0, (Tag3 ((("t", 550)), 0, (0)), 100000000, 0, -64), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -63), 0), 100000000, 0, -62), 0, (("src/Sigs.ml", 387, 13379, 13381), ("src/Sigs.ml", 387, 13379, 13401), 0), 0, Tag1 ("Fix__Sigs", 74)), 0); (("current", 552), ((Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -61), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -60), 0), 100000000, 0, -59), 0, (("src/Sigs.ml", 391, 13527, 13529), ("src/Sigs.ml", 391, 13527, 13553), 0), 0, Tag1 ("Fix__Sigs", 75)), 0); (("has_been_encoded", 553), ((Tag1 (0, (Tag3 ((("t", 550)), 0, (0)), 100000000, 0, -58), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -57), 0), 100000000, 0, -56), 0, (("src/Sigs.ml", 395, 13648, 13650), ("src/Sigs.ml", 395, 13648, 13681), 0), 0, Tag1 ("Fix__Sigs", 76)), 0); Tag3 (("Done", 554), 0, (Tag2 (0, Tag1 ([Tag1 (("t", 555), (0, 0, 0, 1, ((Tag3 ((("t", 550)), 0, (0)), 100000000, 0, -73)), 0, 0, 0, 0, (("src/Sigs.ml", 432, 14884, 14918), ("src/Sigs.ml", 432, 14884, 14928), 0), 0, 0, 0, Tag1 ("Fix__Sigs", 83)), 1, 0); (("n", 556), ((Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -72), 0, (("src/Sigs.ml", 408, 14023, 14025), ("src/Sigs.ml", 408, 14023, 14035), 0), 0, Tag1 ("Fix__Sigs", 79)), 0); (("encode", 557), ((Tag1 (0, (Tag3 ((("t", 555)), 0, (0)), 100000000, 0, -71), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -70), 0), 100000000, 0, -69), 0, (("src/Sigs.ml", 412, 14132, 14134), ("src/Sigs.ml", 412, 14132, 14154), 0), 0, Tag1 ("Fix__Sigs", 80)), 0); (("decode", 558), ((Tag1 (0, (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -68), (Tag3 ((("t", 555)), 0, (0)), 100000000, 0, -67), 0), 100000000, 0, -66), 0, (("src/Sigs.ml", 416, 14256, 14258), ("src/Sigs.ml", 416, 14256, 14278), 0), 0, Tag1 ("Fix__Sigs", 81)), 0)])), 0, (("src/Sigs.ml", 432, 14884, 14886), ("src/Sigs.ml", 432, 14884, 14928), 0), Tag1 ("Fix__Sigs", 84)), 0, 0)])), 0, (("src/Numbering.mli", 42, 2046, 2046), ("src/Numbering.mli", 44, 2074, 2118), 0), Tag1 ("Fix__Numbering", 11)), 0, 0)], "Fix__Numbering", [("Fix__Numbering", ("\133\023\127K\215\250b?\148?:\216~\132\222\204")); ("Stdlib__Seq", ("\228i\134Z1(\187\131\141\237X\149\233\233\229l")); ("Stdlib__Map", ("\193\011\137as\170,TM\229U\178\142\233\000P")); ("Stdlib__Hashtbl", ("\192HX\254\200gh\2475\187\130\178U-8h")); ("Stdlib__Either", ("Lz\172\233\0020\189\133M\ts\199\228V\239\b")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("Fix__Sigs", (")\t\216|\023F\223*n\133c\172iG\005\154")); ("Fix__", ("\229-\006A\166\175\208\201Y\246\249k\r\n\155i")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [(0)])
+
+    end

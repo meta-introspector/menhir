@@ -1,0 +1,842 @@
+type ('a, 'b) eq = Eq : ('a, 'a) eq
+type ('a, 'b, 'c) builtin_desc =
+    Bool : (bool, [ `Bool ], [> `Bool ]) builtin_desc
+  | Bytes : (bytes, [ `Bytes ], [> `Bytes ]) builtin_desc
+  | Char : (char, [ `Char ], [> `Char ]) builtin_desc
+  | Float : (float, [ `Float ], [> `Float ]) builtin_desc
+  | Int : (int, [ `Int ], [> `Int ]) builtin_desc
+  | Int32 : (int32, [ `Int32 ], [> `Int32 ]) builtin_desc
+  | Int64 : (int64, [ `Int64 ], [> `Int64 ]) builtin_desc
+  | Nativeint : (nativeint, [ `Nativeint ], [> `Nativeint ]) builtin_desc
+  | String : (string, [ `String ], [> `String ]) builtin_desc
+type ('index, 'items, 'value, 'tail) selection =
+    Start : ([ `Zero ], 'sequence, 'a, 'sequence) selection
+  | Next :
+      ('index, 'sequence, 'b, 'head * 'tail) selection -> ([ `Succ of 'index
+                                                           ], 'sequence,
+                                                           'head, 'tail)
+                                                          selection
+type ('index, 'items, 'value, 'tail) binary_selection =
+    BinaryStart : ([ `Start ], 'sequence, 'a, 'sequence) binary_selection
+  | Zero :
+      ('index, 'sequence, 'c, 'zero * 'one) binary_selection -> ([ `Zero of
+                                                                    'index ],
+                                                                 'sequence,
+                                                                 'b, 'zero)
+                                                                binary_selection
+  | One :
+      ('index, 'sequence, 'e, 'zero * 'one) binary_selection -> ([ `One of
+                                                                    'index ],
+                                                                 'sequence,
+                                                                 'd, 'one)
+                                                                binary_selection
+  | Select :
+      ('index, 'sequence, 'f, 'contents ref) binary_selection -> ([ `Select of
+                                                                    'index ],
+                                                                  'sequence,
+                                                                  'contents,
+                                                                  unit)
+                                                                 binary_selection
+type 'cases choice =
+    CFirst : 'types -> ('types * 'a) choice
+  | CNext : 'cases choice -> ('b * 'cases) choice
+type 'cases binary_choice =
+    CEnd : 'types -> 'types ref binary_choice
+  | CZero : 'cases binary_choice -> ('cases * 'a) binary_choice
+  | COne : 'cases binary_choice -> ('b * 'cases) binary_choice
+module type UnaryTypeS = sig type 'a t end
+module Sequence :
+  functor (T : UnaryTypeS) ->
+    sig
+      type _ t =
+          [] : unit t
+        | (::) : 'head T.t * 'tail t -> ('head * 'tail) t
+    end
+module Delay : sig type 'a t = unit -> 'a end
+module Delays :
+  sig
+    type 'a t =
+      'a Sequence(Delay).t =
+        [] : unit t
+      | (::) : 'head Delay.t * 'tail t -> ('head * 'tail) t
+  end
+type ('index, 'arity, 'a, 'positive, 'direct) variable =
+    VFirst :
+      ([ `Zero ], 'value * 'b, 'value, [ `Present ] * 'c, [ `Present ] * 'd)
+      variable
+  | VNext :
+      ('index, 'sequence, 'value, 'positive, 'direct) variable -> ([ 
+                                                                   `Succ of
+                                                                    'index ],
+                                                                   'e *
+                                                                   'sequence,
+                                                                   'value,
+                                                                   'f *
+                                                                   'positive,
+                                                                   'g *
+                                                                   'direct)
+                                                                  variable
+type ('count, 'types) length =
+    Zero : ([ `Zero ], unit) length
+  | Succ :
+      ('length, 'types) length -> ([ `Succ of 'length ], 'a * 'types) length
+type ('a, 'b, 'c) append =
+    Nil : (unit, 'a, 'a) append
+  | Add : ('a, 'b, 'c) append -> ('head * 'a, 'b, 'head * 'c) append
+type ('global, 'local) presence =
+    Present : ([> `Present ], [ `Present ]) presence
+  | Absent : ('a, [ `Absent ]) presence
+type ('presence, 'directs) presences =
+    Presences : ('a, unit) presences
+  | AddPresent :
+      ('presence, 'directs) presences -> ([> `Present ] as 'presence,
+                                          [ `Present ] * 'directs)
+                                         presences
+  | AddAbsent :
+      ('presence, 'directs) presences -> ('presence, [ `Absent ] * 'directs)
+                                         presences
+type ('constraints, 'exists) gadt_constraints = ..
+type ('constraints, 'exists) gadt_constraints += NoConstraints
+type ('gadt, 'sub_gadt) sub_gadt_ext = ..
+type ('gadt, 'sub_gadt) sub_gadt = {
+  sub_gadt_ext : ('gadt, 'sub_gadt) sub_gadt_ext;
+  sub_gadt_functional :
+    'gadt0 'sub_gadt0 'sub_gadt1.
+      ('gadt0, 'sub_gadt0) sub_gadt_ext ->
+      ('gadt0, 'sub_gadt1) sub_gadt_ext -> ('sub_gadt0, 'sub_gadt1) eq;
+}
+type ('count, 'local, 'positive, 'negative, 'direct, 'positives, 'negatives,
+      'directs, 'subpositive, 'subnegative, 'subdirect)
+     subvariables = {
+  presences : ('local, 'directs) presences;
+  positive_count : ('count, 'positives) length;
+  positive : ('positives, 'positive, 'subpositive) append;
+  negative_count : ('count, 'negatives) length;
+  negative : ('negatives, 'negative, 'subnegative) append;
+  direct_count : ('count, 'directs) length;
+  direct : ('directs, 'direct, 'subdirect) append;
+}
+module Kinds :
+  sig
+    type builtin =
+        [ `Bool
+        | `Bytes
+        | `Char
+        | `Float
+        | `Int
+        | `Int32
+        | `Int64
+        | `Nativeint
+        | `String
+        | `Unit ]
+    type structural_without_object =
+        [ `Array
+        | `Attributes
+        | `Constr
+        | `Name
+        | `Record
+        | `Tuple
+        | `Variant ]
+    type structural =
+        [ `Array
+        | `Attributes
+        | `Constr
+        | `Name
+        | `Object
+        | `Record
+        | `Tuple
+        | `Variant ]
+    type strictly_liftable =
+        [ `Absent
+        | `Array
+        | `Attributes
+        | `Bool
+        | `Bytes
+        | `Char
+        | `Constr
+        | `Exists
+        | `Float
+        | `GADT
+        | `Int
+        | `Int32
+        | `Int64
+        | `Lazy
+        | `Name
+        | `Nativeint
+        | `Record
+        | `String
+        | `Tuple
+        | `Unit
+        | `Variable
+        | `Variant ]
+    type comparable =
+        [ `Absent
+        | `Array
+        | `Attributes
+        | `Bool
+        | `Bytes
+        | `Char
+        | `Constr
+        | `Exists
+        | `Float
+        | `GADT
+        | `Int
+        | `Int32
+        | `Int64
+        | `Lazy
+        | `MapOpaque
+        | `Name
+        | `Nativeint
+        | `Object
+        | `Opaque
+        | `Record
+        | `String
+        | `Tuple
+        | `Unit
+        | `Variable
+        | `Variant ]
+    type arrow = [ `Arrow | `Labelled_arrow ]
+    type liftable =
+        [ `Absent
+        | `Array
+        | `Arrow
+        | `Attributes
+        | `Bool
+        | `Bytes
+        | `Char
+        | `Constr
+        | `Exists
+        | `Float
+        | `GADT
+        | `Int
+        | `Int32
+        | `Int64
+        | `Labelled_arrow
+        | `Lazy
+        | `MapOpaque
+        | `Name
+        | `Nativeint
+        | `Object
+        | `Opaque
+        | `Record
+        | `String
+        | `Tuple
+        | `Unit
+        | `Variable
+        | `Variant ]
+    type visitable =
+        [ `Array
+        | `Attributes
+        | `Bool
+        | `Bytes
+        | `Char
+        | `Constr
+        | `Float
+        | `GADT
+        | `Int
+        | `Int32
+        | `Int64
+        | `Lazy
+        | `MapOpaque
+        | `Name
+        | `Nativeint
+        | `Opaque
+        | `Record
+        | `String
+        | `Tuple
+        | `Unit
+        | `Variable
+        | `Variant ]
+    type all =
+        [ `Absent
+        | `Array
+        | `Arrow
+        | `Attributes
+        | `Bool
+        | `Bytes
+        | `Char
+        | `Constr
+        | `Exists
+        | `Float
+        | `GADT
+        | `Int
+        | `Int32
+        | `Int64
+        | `Labelled_arrow
+        | `Lazy
+        | `MapOpaque
+        | `Name
+        | `Nativeint
+        | `Object
+        | `Opaque
+        | `Poly
+        | `Present
+        | `Record
+        | `String
+        | `Tuple
+        | `Unit
+        | `Variable
+        | `Variant ]
+  end
+type ('a, 'arity, 'attribute) typed_attribute_kind = ..
+type _ refl = ..
+type ('source, 'sub, 'arg) transfer_argument =
+    Transfer : ('a, 'a, [ `Present ]) transfer_argument
+  | Skip : ('b, 'c, [ `Absent ]) transfer_argument
+type ('source, 'sub, 'arg) transfer_arguments =
+    VTANil : (unit, 'a, unit) transfer_arguments
+  | VTACons : { head : ('source, 'sub, 'arg) transfer_argument;
+      tail : ('sources, 'sub, 'args) transfer_arguments;
+    } -> ('source * 'sources, 'sub, 'arg * 'args) transfer_arguments
+type ('p, 'n, 'sp, 'sn, 'ap, 'an) transfer_matrix = {
+  pp : ('p, 'sp, 'ap) transfer_arguments;
+  pn : ('p, 'sn, 'an) transfer_arguments;
+  np : ('n, 'sp, 'an) transfer_arguments;
+  nn : ('n, 'sn, 'ap) transfer_arguments;
+}
+type ('positive, 'negative, 'direct, 'subpositive, 'subnegative, 'subdirect,
+      'variables)
+     transfer =
+    VTNil : ('a, 'b, 'c, unit, unit, unit, unit) transfer
+  | VTCons : {
+      head :
+        ('p, 'n, 'sp, 'sn, 'ap, 'an) transfer_matrix *
+        ('d, 'sd, 'ad) transfer_arguments;
+      tail : ('p, 'n, 'd, 'sps, 'sns, 'sds, 'variables) transfer;
+    } -> ('p, 'n, 'd, 'sp * 'sps, 'sn * 'sns, 'sd * 'sds,
+          ('ap * 'an * 'ad) * 'variables)
+         transfer
+type ('a, 'b) skip = VKeep : ('a, 'a) skip | VSkip : ('a, [ `Absent ]) skip
+type ('variables, 'skip_variables) skip_vector =
+    SKNil : (unit, unit) skip_vector
+  | SKCons : { head : unit -> ('hd, 'skip_hd) skip;
+      tail : ('a, 'b) skip_vector;
+    } -> ('hd * 'a, 'skip_hd * 'b) skip_vector
+type ('positive, 'negative, 'direct, 'skip_positive, 'skip_negative,
+      'skip_direct, 'variables)
+     transfer_skip =
+    Transfer_skip : {
+      transfer_vector :
+        ('positive, 'negative, 'direct, 'subpositive, 'subnegative,
+         'subdirect, 'variables)
+        transfer;
+      skip_positive : ('subpositive, 'skip_positive) skip_vector;
+      skip_negative : ('subnegative, 'skip_negative) skip_vector;
+      skip_direct : ('subdirect, 'skip_direct) skip_vector;
+    } -> ('positive, 'negative, 'direct, 'skip_positive, 'skip_negative,
+          'skip_direct, 'variables)
+         transfer_skip
+type ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+      'direct, 'gadt)
+     desc =
+    Variable :
+      ('index, 'arity, 'a, 'positive, 'direct) variable -> ('a,
+                                                            [ `Variable of
+                                                                'index ],
+                                                            'arity,
+                                                            'rec_group,
+                                                            [> `Variable ],
+                                                            'positive, 'c,
+                                                            'direct, 'd)
+                                                           desc
+  | Builtin :
+      ('a, 'structure, 'kinds) builtin_desc -> ('a,
+                                                [ `Builtin of 'structure ],
+                                                'arity, 'rec_group, 'kinds,
+                                                'e, 'f, 'g, 'h)
+                                               desc
+  | Array :
+      ('a, 'structure, 'arity, 'rec_group, 'kinds, 'negative, 'positive,
+       'negative, 'gadt)
+      desc -> ('a array, [ `Array of 'structure ], 'arity, 'rec_group,
+               [> `Array ] as 'kinds, 'negative, 'positive, 'negative, 'gadt)
+              desc
+  | Arrow : {
+      parameter :
+        ('a, 'a_structure, 'arity, 'rec_group, 'kinds, 'negative, 'positive,
+         'negative, 'gadt)
+        desc;
+      result :
+        ('b, 'b_structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'positive, 'gadt)
+        desc;
+    } -> ('a -> 'b, [ `Arrow of 'a_structure -> 'b_structure ], 'arity,
+          'rec_group, [> `Arrow ] as 'kinds, 'positive, 'negative, 'i, 'gadt)
+         desc
+  | LabelledArrow : { label : string; optional : bool;
+      parameter :
+        ('a, 'a_structure, 'arity, 'rec_group, 'kinds, 'negative, 'positive,
+         'negative, 'gadt)
+        desc;
+      result :
+        ('b, 'b_structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'positive, 'gadt)
+        desc;
+      wrap : ('a -> 'b) -> 'arrow; unwrap : 'arrow -> 'a -> 'b;
+    } -> ('arrow, [ `LabelledArrow of 'a_structure -> 'b_structure ], 'arity,
+          'rec_group, [> `Arrow ] as 'kinds, 'positive, 'negative, 'j, 'gadt)
+         desc
+  | Constr : {
+      constructors :
+        ('cases, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        constructors;
+      construct : 'cases binary_choice -> 'a;
+      destruct : 'a -> 'cases binary_choice;
+    } -> ('a, [ `Constr of 'structures ], 'arity, 'rec_group,
+          [> `Constr ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Variant : {
+      constructors :
+        ('k * 'l, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        variant_constructors;
+      construct : ('k * 'l) choice -> 'a; destruct : 'a -> ('k * 'l) choice;
+    } -> ('a, [ `Variant of 'structures ], 'arity, 'rec_group,
+          [> `Variant ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Tuple : {
+      structure :
+        ('m * ('n * 'o), 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        tuple_structure;
+      construct : 'm * ('n * 'o) -> 'a; destruct : 'a -> 'm * ('n * 'o);
+    } -> ('a, [ `Tuple of 'structures ], 'arity, 'rec_group,
+          [> `Tuple ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Record : {
+      structure :
+        ('p * 'q, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        record_structure;
+      construct : 'p * 'q -> 'a; destruct : 'a -> 'p * 'q;
+    } -> ('a, [ `Record of 'structures ], 'arity, 'rec_group,
+          [> `Record ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Object : {
+      methods :
+        ('methods, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        object_methods;
+      construct : 'methods Delays.t -> 'a;
+      destruct : 'a -> 'methods Delays.t;
+    } -> (< .. > as 'a, [ `Object of 'structures ], 'arity, 'rec_group,
+          [> `Object ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Lazy :
+      ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+       'direct, 'gadt)
+      desc -> ('a Lazy.t, [ `Lazy of 'structure ], 'arity, 'rec_group,
+               [> `Lazy ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+              desc
+  | Apply : {
+      arguments :
+        ('types, 'structures, 'arity, 'rec_group, 'kinds, 'variables, 'gadt)
+        vector;
+      desc :
+        ('a, 'structure, 'types, 'rec_group, 'kinds, 'subpositive,
+         'subnegative, 'subdirect, 'gadt)
+        desc;
+      transfer :
+        ('positive, 'negative, 'direct, 'subpositive, 'subnegative,
+         'subdirect, 'variables)
+        transfer_skip;
+    } -> ('a,
+          [ `Apply of
+              'structure * 'structures * 'subpositive * 'subnegative *
+              'subdirect * 'variables ],
+          'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | MapOpaque : {
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, Kinds.all, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+    } -> ('a, [ `MapOpaque of 'structure * 'direct ], 'arity, 'rec_group,
+          [> `MapOpaque ], 'positive, 'negative, 'r, 'gadt)
+         desc
+  | Opaque :
+      ([ `Succ of 'index ], 'gadt, 'a, 't) selection -> ('a,
+                                                         [ `Opaque of 'index
+                                                         ], 'arity,
+                                                         'rec_group,
+                                                         [> `Opaque ],
+                                                         'positive,
+                                                         'negative, 's,
+                                                         'gadt)
+                                                        desc
+  | Rec : {
+      index :
+        ([ `Select of 'index ], 'rec_group, 'length * 'structure, 'u)
+        binary_selection;
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+    } -> ('a, [ `Rec of 'index ], 'arity, 'rec_group, 'kinds, 'positive,
+          'negative, 'direct, 'gadt)
+         desc
+  | RecGroup : {
+      desc :
+        ('a, 'structure, 'arity, 'new_rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        desc;
+    } -> ('a, [ `RecGroup of 'structure * 'new_rec_group ], 'arity,
+          'rec_group, 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | SelectGADT : {
+      index : ([ `Succ of 'index ], 'gadt, 'sub_gadt, 'v) selection;
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'sub_gadt)
+        desc;
+    } -> ('a, [ `SelectGADT of 'structure * 'index ], 'arity, 'rec_group,
+          'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | SubGADT : { sub_gadt : ('gadt, 'sub_gadt) sub_gadt;
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'sub_gadt)
+        desc;
+    } -> ('a, [ `SubGADT of 'structure ], 'arity, 'rec_group, 'kinds,
+          'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Attributes : {
+      attributes :
+        ('a, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+         'gadt)
+        attributes;
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+    } -> ('a, [ `Attributes of 'structure ], 'arity, 'rec_group,
+          [> `Attributes ] as 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         desc
+  | Name : { name : string; refl : 'a refl;
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'sub_gadt)
+        desc;
+    } -> ('a, [ `Name of 'structure ], 'arity, 'rec_group, 'kinds, 'positive,
+          'negative, 'direct, 'sub_gadt)
+         desc
+and ('cases, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    constructors =
+    CLeaf :
+      ('types_and_eqs, 'structure, 'arity, 'rec_group, 'kinds, 'positive,
+       'negative, 'direct, 'gadt)
+      constructor -> ('types_and_eqs ref, 'structure ref, 'arity, 'rec_group,
+                      'kinds, 'positive, 'negative, 'direct, 'gadt)
+                     constructors
+  | CNode : {
+      zero :
+        ('cases0, 'structures0, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        constructors;
+      one :
+        ('cases1, 'structures1, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        constructors;
+    } -> ('cases0 * 'cases1, 'structures0 * 'structures1, 'arity, 'rec_group,
+          'kinds, 'positive, 'negative, 'direct, 'gadt)
+         constructors
+and ('types_and_eqs, 'structure, 'arity, 'rec_group, 'kinds, 'positive,
+     'negative, 'direct, 'gadt)
+    constructor =
+    Constructor : { name : string;
+      kind :
+        ('types, 'structure_types, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        constructor_kind;
+      eqs : ('eqs, 'structure_eqs, 'kinds, 'gadt) constructor_eqs;
+      attributes :
+        ('types, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+         'gadt)
+        attributes;
+    } -> ('types * 'eqs,
+          [ `Constructor of 'structure_types * 'structure_eqs ], 'arity,
+          'rec_group, 'kinds, 'positive, 'negative, 'direct, 'gadt)
+         constructor
+  | Exists : { name : string;
+      selection : ([ `Succ of 'index ], 'gadt, 'constraints, 'a) selection;
+      presence : ('kinds, 'local) presence;
+      variables :
+        ('count, 'local, 'positive, 'negative, 'direct, 'positives,
+         'negatives, 'directs, 'subpositive, 'subnegative, 'subdirect)
+        subvariables;
+      construct :
+        'exists 'subarity.
+          ('count, 'exists) length ->
+          ('constraints, 'exists) gadt_constraints ->
+          ('exists, 'arity, 'subarity) append ->
+          ('value, 'structure, 'subarity, 'rec_group, 'kinds, 'subpositive,
+           'subnegative, 'subdirect, 'gadt)
+          exists_construct;
+      destruct :
+        'value ->
+        ('count, 'constraints, 'value, 'structure, 'arity, 'rec_group,
+         'kinds, 'subpositive, 'subnegative, 'subdirect, 'gadt)
+        exists_destruct;
+    } -> ('value,
+          [ `Exists of
+              'index * 'count * 'structure * 'local * 'positives *
+              'negatives * 'directs ],
+          'arity, 'rec_group, [> `Exists ] as 'kinds, 'positive, 'negative,
+          'direct, 'gadt)
+         constructor
+and ('value, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    exists_construct =
+    ExistsConstruct : {
+      kind :
+        ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        constructor_kind;
+      construct : 'types -> 'value;
+    } -> ('value, 'structure, 'arity, 'rec_group, 'kinds, 'positive,
+          'negative, 'direct, 'gadt)
+         exists_construct
+and ('count, 'constraints, 'value, 'structure, 'arity, 'rec_group, 'kinds,
+     'positive, 'negative, 'direct, 'gadt)
+    exists_destruct =
+    ExistsDestruct : { exists_count : ('count, 'exists) length;
+      exists : ('exists, 'arity, 'subarity) append;
+      constraints : ('constraints, 'exists) gadt_constraints;
+      kind :
+        ('types, 'structure, 'subarity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        constructor_kind;
+      values : 'types;
+    } -> ('count, 'constraints, 'value, 'structure, 'arity, 'rec_group,
+          'kinds, 'positive, 'negative, 'direct, 'gadt)
+         exists_destruct
+and ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    constructor_kind =
+    CTuple :
+      ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+       'direct, 'gadt)
+      tuple_structure -> ('types, [ `Tuple of 'structure ], 'arity,
+                          'rec_group, 'kinds, 'positive, 'negative, 'direct,
+                          'gadt)
+                         constructor_kind
+  | CRecord :
+      ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+       'direct, 'gadt)
+      record_structure -> ('types, [ `Record of 'structure ], 'arity,
+                           'rec_group, 'kinds, 'positive, 'negative, 'direct,
+                           'gadt)
+                          constructor_kind
+and ('types, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    tuple_structure =
+    TNil :
+      (unit, unit, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+       'gadt)
+      tuple_structure
+  | TCons : {
+      head :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+      tail :
+        ('types, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        tuple_structure;
+    } -> ('a * 'types, 'structure * 'structures, 'arity, 'rec_group, 'kinds,
+          'positive, 'negative, 'direct, 'gadt)
+         tuple_structure
+and ('types, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    record_structure =
+    RNil :
+      (unit, unit, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+       'gadt)
+      record_structure
+  | RCons : {
+      head :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        record_field;
+      tail :
+        ('types, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        record_structure;
+    } -> ('a * 'types, 'structure * 'structures, 'arity, 'rec_group, 'kinds,
+          'positive, 'negative, 'direct, 'gadt)
+         record_structure
+and ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    record_field =
+    Mono : { label : string;
+      desc :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+      attributes :
+        ('a, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+         'gadt)
+        attributes;
+    } -> ('a, [ `Mono of 'structure ], 'arity, 'rec_group, 'kinds, 'positive,
+          'negative, 'direct, 'gadt)
+         record_field
+  | Poly : { label : string;
+      variables :
+        ('count, [ `Absent ], 'positive, 'negative, 'direct, 'positives,
+         'negatives, 'directs, 'subpositive, 'subnegative, 'subdirect)
+        subvariables;
+      destruct :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'subpositive,
+         'subnegative, 'subdirect, 'gadt, 'count)
+        forall_destruct;
+      construct :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'subpositive,
+         'subnegative, 'subdirect, 'gadt, 'count)
+        forall_construct -> 'a;
+    } -> ('a,
+          [ `Poly of 'structure * 'count * 'positives * 'negatives * 'directs
+          ], 'arity, 'rec_group, [> `Poly ] as 'kinds, 'positive, 'negative,
+          'direct, 'gadt)
+         record_field
+and ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt, 'count)
+    forall_construct = {
+  forall_construct :
+    'forall 'b 'subarity.
+      ('count, 'forall) length ->
+      ('forall, 'arity, 'subarity) append ->
+      ('b, 'structure, 'subarity, 'rec_group, 'kinds, 'positive, 'negative,
+       'direct, 'gadt)
+      desc -> 'b;
+}
+and ('a, 'structure, 'arity, 'rec_group, 'kinds, 'subpositive, 'subnegative,
+     'subdirect, 'gadt, 'count)
+    forall_destruct = {
+  forall_destruct :
+    'forall 'subarity.
+      ('count, 'forall) length ->
+      ('forall, 'arity, 'subarity) append ->
+      ('a, 'structure, 'subarity, 'rec_group, 'kinds, 'subpositive,
+       'subnegative, 'subdirect, 'gadt)
+      forall_destruct_result;
+}
+and ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    forall_destruct_result =
+    ForallDestruct : {
+      desc :
+        ('b, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+      destruct : 'a -> 'b;
+    } -> ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+          'direct, 'gadt)
+         forall_destruct_result
+and ('cases, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    variant_constructors =
+    VCNil :
+      (unit, unit, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+       'gadt)
+      variant_constructors
+  | VCCons : {
+      head :
+        ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        variant_constructor;
+      tail :
+        ('cases, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        variant_constructors;
+    } -> ('types * 'cases, 'structure * 'structures, 'arity, 'rec_group,
+          'kinds, 'positive, 'negative, 'direct, 'gadt)
+         variant_constructors
+and ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    variant_constructor =
+    VConstructor : { name : string;
+      argument :
+        ('types, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        variant_argument;
+    } -> ('types, [ `Constr of 'structures ], 'arity, 'rec_group, 'kinds,
+          'positive, 'negative, 'direct, 'gadt)
+         variant_constructor
+  | VInherit :
+      ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+       'direct, 'gadt)
+      desc -> ('a, [ `Inherit of 'structure ], 'arity, 'rec_group, 'kinds,
+               'positive, 'negative, 'direct, 'gadt)
+              variant_constructor
+and ('types, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    variant_argument =
+    VNone :
+      (unit, unit, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+       'gadt)
+      variant_argument
+  | VSome :
+      ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+       'direct, 'gadt)
+      desc -> ('a * unit, 'structure * unit, 'arity, 'rec_group, 'kinds,
+               'positive, 'negative, 'direct, 'gadt)
+              variant_argument
+and ('methods, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    object_methods =
+    ONil :
+      (unit, unit, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct,
+       'gadt)
+      object_methods
+  | OCons : {
+      head :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        object_method;
+      tail :
+        ('methods, 'structures, 'arity, 'rec_group, 'kinds, 'positive,
+         'negative, 'direct, 'gadt)
+        object_methods;
+    } -> ('a * 'methods, 'structure * 'structures, 'arity, 'rec_group,
+          'kinds, 'positive, 'negative, 'direct, 'gadt)
+         object_methods
+and ('types, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+     'direct, 'gadt)
+    object_method =
+    OMethod : { name : string;
+      desc :
+        ('a, 'structures, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+    } -> ('a, [ `Method of 'structures ], 'arity, 'rec_group, 'kinds,
+          'positive, 'negative, 'direct, 'gadt)
+         object_method
+and ('types, 'structures, 'arity, 'rec_group, 'kinds, 'variables, 'gadt)
+    vector =
+    VNil : (unit, unit, 'arity, 'rec_group, 'kinds, unit, 'gadt) vector
+  | VCons : {
+      head :
+        ('a, 'structure, 'arity, 'rec_group, 'kinds, 'positive, 'negative,
+         'direct, 'gadt)
+        desc;
+      tail :
+        ('types, 'structures, 'arity, 'rec_group, 'kinds, 'variables, 'gadt)
+        vector;
+    } -> ('a * 'types, 'structure * 'structures, 'arity, 'rec_group, 'kinds,
+          ('positive * 'negative * 'direct) * 'variables, 'gadt)
+         vector
+and ('eqs, 'structure_eqs, 'kinds, 'gadt) constructor_eqs =
+    ENil : (unit, unit, 'kinds, 'gadt) constructor_eqs
+  | ECons : { head : ([ `Succ of 'index ], 'gadt, 'eq, 'a) selection;
+      tail : ('eqs, 'structure_eqs, 'kinds, 'gadt) constructor_eqs;
+    } -> ('eq * 'eqs, 'index * 'structure_eqs, [> `GADT ] as 'kinds, 'gadt)
+         constructor_eqs
+and ('a, 'arity, 'rec_group, 'kinds, 'positive, 'negative, 'direct, 'gadt)
+    attributes = {
+  typed :
+    'attribute.
+      ('a, 'arity, 'attribute) typed_attribute_kind -> 'attribute option;("DEBUG:rule", [Tag1 (("eq", 569), ([((("a")), 100000000, 0, -1379); ((("b")), 100000000, 0, -1380)], 2, Tag1 ([(("Eq", 285), (0), ((Tag3 ((("eq", 569)), [((("a")), 100000000, 0, -1378); ((("a")), 100000000, 0, -1378)], (0)), 100000000, 0, -1377)), (("runtime/desc.ml", 2, 19, 21), ("runtime/desc.ml", 2, 19, 39), 0), 0, Tag1 ("Refl__Desc", 1))], 0), 1, 0, [15; 15], [0; 0], 0, 0, (("runtime/desc.ml", 1, 0, 0), ("runtime/desc.ml", 2, 19, 39), 0), 0, 1, 0, Tag1 ("Refl__Desc", 0)), 1, 0); Tag1 (("builtin_desc", 570), ([((("a")), 100000000, 0, -1374); ((("b")), 100000000, 0, -1375); ((("c")), 100000000, 0, -1376)], 3, Tag1 ([(("Bool", 287), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -1321); (Tag8 (([("Bool", (0))], (0, 100000000, 0, -1323), 1, 0, 0)), 100000000, 0, -1322); (Tag8 (([("Bool", (0))], ((0), 100000000, 0, -1325), 0, 0, 0)), 100000000, 0, -1324)], (0)), 100000000, 0, -1320)), (("runtime/desc.ml", 5, 74, 76), ("runtime/desc.ml", 5, 74, 124), 0), 0, Tag1 ("Refl__Desc", 3)); (("Bytes", 288), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("bytes", 3)), 0, (0)), 100000000, 0, -1327); (Tag8 (([("Bytes", (0))], (0, 100000000, 0, -1329), 1, 0, 0)), 100000000, 0, -1328); (Tag8 (([("Bytes", (0))], ((0), 100000000, 0, -1331), 0, 0, 0)), 100000000, 0, -1330)], (0)), 100000000, 0, -1326)), (("runtime/desc.ml", 6, 125, 127), ("runtime/desc.ml", 6, 125, 179), 0), 0, Tag1 ("Refl__Desc", 4)); (("Char", 289), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("char", 2)), 0, (0)), 100000000, 0, -1333); (Tag8 (([("Char", (0))], (0, 100000000, 0, -1335), 1, 0, 0)), 100000000, 0, -1334); (Tag8 (([("Char", (0))], ((0), 100000000, 0, -1337), 0, 0, 0)), 100000000, 0, -1336)], (0)), 100000000, 0, -1332)), (("runtime/desc.ml", 7, 180, 182), ("runtime/desc.ml", 7, 180, 230), 0), 0, Tag1 ("Refl__Desc", 5)); (("Float", 290), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("float", 4)), 0, (0)), 100000000, 0, -1339); (Tag8 (([("Float", (0))], (0, 100000000, 0, -1341), 1, 0, 0)), 100000000, 0, -1340); (Tag8 (([("Float", (0))], ((0), 100000000, 0, -1343), 0, 0, 0)), 100000000, 0, -1342)], (0)), 100000000, 0, -1338)), (("runtime/desc.ml", 8, 231, 233), ("runtime/desc.ml", 8, 231, 285), 0), 0, Tag1 ("Refl__Desc", 6)); (("Int", 291), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -1345); (Tag8 (([("Int", (0))], (0, 100000000, 0, -1347), 1, 0, 0)), 100000000, 0, -1346); (Tag8 (([("Int", (0))], ((0), 100000000, 0, -1349), 0, 0, 0)), 100000000, 0, -1348)], (0)), 100000000, 0, -1344)), (("runtime/desc.ml", 9, 286, 288), ("runtime/desc.ml", 9, 286, 332), 0), 0, Tag1 ("Refl__Desc", 7)); (("Int32", 292), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("int32", 12)), 0, (0)), 100000000, 0, -1351); (Tag8 (([("Int32", (0))], (0, 100000000, 0, -1353), 1, 0, 0)), 100000000, 0, -1352); (Tag8 (([("Int32", (0))], ((0), 100000000, 0, -1355), 0, 0, 0)), 100000000, 0, -1354)], (0)), 100000000, 0, -1350)), (("runtime/desc.ml", 10, 333, 335), ("runtime/desc.ml", 10, 333, 387), 0), 0, Tag1 ("Refl__Desc", 8)); (("Int64", 293), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("int64", 13)), 0, (0)), 100000000, 0, -1357); (Tag8 (([("Int64", (0))], (0, 100000000, 0, -1359), 1, 0, 0)), 100000000, 0, -1358); (Tag8 (([("Int64", (0))], ((0), 100000000, 0, -1361), 0, 0, 0)), 100000000, 0, -1360)], (0)), 100000000, 0, -1356)), (("runtime/desc.ml", 11, 388, 390), ("runtime/desc.ml", 11, 388, 442), 0), 0, Tag1 ("Refl__Desc", 9)); (("Nativeint", 294), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("nativeint", 11)), 0, (0)), 100000000, 0, -1363); (Tag8 (([("Nativeint", (0))], (0, 100000000, 0, -1365), 1, 0, 0)), 100000000, 0, -1364); (Tag8 (([("Nativeint", (0))], ((0), 100000000, 0, -1367), 0, 0, 0)), 100000000, 0, -1366)], (0)), 100000000, 0, -1362)), (("runtime/desc.ml", 12, 443, 445), ("runtime/desc.ml", 12, 443, 513), 0), 0, Tag1 ("Refl__Desc", 10)); (("String", 295), (0), ((Tag3 ((("builtin_desc", 570)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -1369); (Tag8 (([("String", (0))], (0, 100000000, 0, -1371), 1, 0, 0)), 100000000, 0, -1370); (Tag8 (([("String", (0))], ((0), 100000000, 0, -1373), 0, 0, 0)), 100000000, 0, -1372)], (0)), 100000000, 0, -1368)), (("runtime/desc.ml", 13, 514, 516), ("runtime/desc.ml", 13, 514, 572), 0), 0, Tag1 ("Refl__Desc", 11))], 0), 1, 0, [63; 63; 63], [0; 0; 0], 0, 0, (("runtime/desc.ml", 4, 41, 41), ("runtime/desc.ml", 13, 514, 572), 0), 0, 1, 0, Tag1 ("Refl__Desc", 2)), 1, 0); Tag1 (("selection", 571), ([((("index")), 100000000, 0, -1316); ((("items")), 100000000, 0, -1317); ((("value")), 100000000, 0, -1318); ((("tail")), 100000000, 0, -1319)], 4, Tag1 ([(("Start", 297), (0), ((Tag3 ((("selection", 571)), [(Tag8 (([("Zero", (0))], (0, 100000000, 0, -1303), 1, 0, 0)), 100000000, 0, -1302); ((("sequence")), 100000000, 0, -1304); ((0), 100000000, 0, -1305); ((("sequence")), 100000000, 0, -1304)], (0)), 100000000, 0, -1301)), (("runtime/desc.ml", 16, 623, 625), ("runtime/desc.ml", 17, 635, 685), 0), 0, Tag1 ("Refl__Desc", 13)); (("Next", 298), ([(Tag3 ((("selection", 571)), [((("index")), 100000000, 0, -1309); ((("sequence")), 100000000, 0, -1310); ((0), 100000000, 0, -1314); (Tag2 ([((("head")), 100000000, 0, -1311); ((("tail")), 100000000, 0, -1312)]), 100000000, 0, -1315)], (0)), 100000000, 0, -1313)]), ((Tag3 ((("selection", 571)), [(Tag8 (([("Succ", ((((("index")), 100000000, 0, -1309))))], (0, 100000000, 0, -1308), 1, 0, 0)), 100000000, 0, -1307); ((("sequence")), 100000000, 0, -1310); ((("head")), 100000000, 0, -1311); ((("tail")), 100000000, 0, -1312)], (0)), 100000000, 0, -1306)), (("runtime/desc.ml", 18, 686, 688), ("runtime/desc.ml", 20, 754, 816), 0), 0, Tag1 ("Refl__Desc", 14))], 0), 1, 0, [63; 15; 15; 15], [0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 15, 574, 574), ("runtime/desc.ml", 20, 754, 816), 0), 0, 0, 0, Tag1 ("Refl__Desc", 12)), 1, 0); Tag1 (("binary_selection", 572), ([((("index")), 100000000, 0, -1297); ((("items")), 100000000, 0, -1298); ((("value")), 100000000, 0, -1299); ((("tail")), 100000000, 0, -1300)], 4, Tag1 ([(("BinaryStart", 300), (0), ((Tag3 ((("binary_selection", 572)), [(Tag8 (([("Start", (0))], (0, 100000000, 0, -1262), 1, 0, 0)), 100000000, 0, -1261); ((("sequence")), 100000000, 0, -1263); ((0), 100000000, 0, -1264); ((("sequence")), 100000000, 0, -1263)], (0)), 100000000, 0, -1260)), (("runtime/desc.ml", 23, 874, 876), ("runtime/desc.ml", 24, 892, 950), 0), 0, Tag1 ("Refl__Desc", 16)); (("Zero", 301), ([(Tag3 ((("binary_selection", 572)), [((("index")), 100000000, 0, -1268); ((("sequence")), 100000000, 0, -1269); ((0), 100000000, 0, -1273); (Tag2 ([((("zero")), 100000000, 0, -1271); ((("one")), 100000000, 0, -1275)]), 100000000, 0, -1274)], (0)), 100000000, 0, -1272)]), ((Tag3 ((("binary_selection", 572)), [(Tag8 (([("Zero", ((((("index")), 100000000, 0, -1268))))], (0, 100000000, 0, -1267), 1, 0, 0)), 100000000, 0, -1266); ((("sequence")), 100000000, 0, -1269); ((0), 100000000, 0, -1270); ((("zero")), 100000000, 0, -1271)], (0)), 100000000, 0, -1265)), (("runtime/desc.ml", 25, 951, 953), ("runtime/desc.ml", 27, 1025, 1090), 0), 0, Tag1 ("Refl__Desc", 17)); (("One", 302), ([(Tag3 ((("binary_selection", 572)), [((("index")), 100000000, 0, -1279); ((("sequence")), 100000000, 0, -1280); ((0), 100000000, 0, -1284); (Tag2 ([((("zero")), 100000000, 0, -1286); ((("one")), 100000000, 0, -1282)]), 100000000, 0, -1285)], (0)), 100000000, 0, -1283)]), ((Tag3 ((("binary_selection", 572)), [(Tag8 (([("One", ((((("index")), 100000000, 0, -1279))))], (0, 100000000, 0, -1278), 1, 0, 0)), 100000000, 0, -1277); ((("sequence")), 100000000, 0, -1280); ((0), 100000000, 0, -1281); ((("one")), 100000000, 0, -1282)], (0)), 100000000, 0, -1276)), (("runtime/desc.ml", 28, 1091, 1093), ("runtime/desc.ml", 30, 1164, 1227), 0), 0, Tag1 ("Refl__Desc", 18)); (("Select", 303), ([(Tag3 ((("binary_selection", 572)), [((("index")), 100000000, 0, -1290); ((("sequence")), 100000000, 0, -1291); ((0), 100000000, 0, -1295); (Tag3 (Tag1 ((Tag2 ("Stdlib")), "ref"), [((("contents")), 100000000, 0, -1292)], (0)), 100000000, 0, -1296)], (0)), 100000000, 0, -1294)]), ((Tag3 ((("binary_selection", 572)), [(Tag8 (([("Select", ((((("index")), 100000000, 0, -1290))))], (0, 100000000, 0, -1289), 1, 0, 0)), 100000000, 0, -1288); ((("sequence")), 100000000, 0, -1291); ((("contents")), 100000000, 0, -1292); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1293)], (0)), 100000000, 0, -1287)), (("runtime/desc.ml", 31, 1228, 1230), ("runtime/desc.ml", 33, 1305, 1379), 0), 0, Tag1 ("Refl__Desc", 19))], 0), 1, 0, [63; 15; 63; 63], [0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 22, 818, 818), ("runtime/desc.ml", 33, 1305, 1379), 0), 0, 0, 0, Tag1 ("Refl__Desc", 15)), 1, 0); Tag1 (("choice", 573), ([((("cases")), 100000000, 0, -1259)], 1, Tag1 ([(("CFirst", 305), ([((("types")), 100000000, 0, -1252)]), ((Tag3 ((("choice", 573)), [(Tag2 ([((("types")), 100000000, 0, -1252); ((0), 100000000, 0, -1253)]), 100000000, 0, -1251)], (0)), 100000000, 0, -1250)), (("runtime/desc.ml", 36, 1402, 1404), ("runtime/desc.ml", 36, 1402, 1444), 0), 0, Tag1 ("Refl__Desc", 21)); (("CNext", 306), ([(Tag3 ((("choice", 573)), [((("cases")), 100000000, 0, -1257)], (0)), 100000000, 0, -1258)]), ((Tag3 ((("choice", 573)), [(Tag2 ([((0), 100000000, 0, -1256); ((("cases")), 100000000, 0, -1257)]), 100000000, 0, -1255)], (0)), 100000000, 0, -1254)), (("runtime/desc.ml", 37, 1445, 1447), ("runtime/desc.ml", 37, 1445, 1493), 0), 0, Tag1 ("Refl__Desc", 22))], 0), 1, 0, [63], [0], 0, 0, (("runtime/desc.ml", 35, 1381, 1381), ("runtime/desc.ml", 37, 1445, 1493), 0), 0, 0, 0, Tag1 ("Refl__Desc", 20)), 1, 0); Tag1 (("binary_choice", 574), ([((("cases")), 100000000, 0, -1249)], 1, Tag1 ([(("CEnd", 308), ([((("types")), 100000000, 0, -1238)]), ((Tag3 ((("binary_choice", 574)), [(Tag3 (Tag1 ((Tag2 ("Stdlib")), "ref"), [((("types")), 100000000, 0, -1238)], (0)), 100000000, 0, -1237)], (0)), 100000000, 0, -1236)), (("runtime/desc.ml", 40, 1523, 1525), ("runtime/desc.ml", 40, 1523, 1568), 0), 0, Tag1 ("Refl__Desc", 24)); (("CZero", 309), ([(Tag3 ((("binary_choice", 574)), [((("cases")), 100000000, 0, -1241)], (0)), 100000000, 0, -1243)]), ((Tag3 ((("binary_choice", 574)), [(Tag2 ([((("cases")), 100000000, 0, -1241); ((0), 100000000, 0, -1242)]), 100000000, 0, -1240)], (0)), 100000000, 0, -1239)), (("runtime/desc.ml", 41, 1569, 1571), ("runtime/desc.ml", 41, 1569, 1631), 0), 0, Tag1 ("Refl__Desc", 25)); (("COne", 310), ([(Tag3 ((("binary_choice", 574)), [((("cases")), 100000000, 0, -1247)], (0)), 100000000, 0, -1248)]), ((Tag3 ((("binary_choice", 574)), [(Tag2 ([((0), 100000000, 0, -1246); ((("cases")), 100000000, 0, -1247)]), 100000000, 0, -1245)], (0)), 100000000, 0, -1244)), (("runtime/desc.ml", 42, 1632, 1634), ("runtime/desc.ml", 42, 1632, 1693), 0), 0, Tag1 ("Refl__Desc", 26))], 0), 1, 0, [63], [0], 0, 0, (("runtime/desc.ml", 39, 1495, 1495), ("runtime/desc.ml", 42, 1632, 1693), 0), 0, 0, 0, Tag1 ("Refl__Desc", 23)), 1, 0); Tag4 (("UnaryTypeS", 575), ((Tag1 ([Tag1 (("t", 620), ([((("a")), 100000000, 0, -1381)], 1, 0, 1, 0, [7], [2], 0, 0, (("runtime/desc.ml", 45, 1724, 1726), ("runtime/desc.ml", 45, 1724, 1735), 0), 0, 0, 0, Tag1 ("Refl__Desc", 27)), 1, 0)])), 0, (("runtime/desc.ml", 44, 1695, 1695), ("runtime/desc.ml", 46, 1736, 1739), 0), Tag1 ("Refl__Desc", 28)), 0); Tag3 (("Sequence", 576), 0, (Tag2 (((("T", 619)), ((("UnaryTypeS", 575)))), Tag1 ([Tag1 (("t", 621), ([((("_")), 100000000, 0, -1390)], 1, Tag1 ([(("[]", 315), (0), ((Tag3 ((("t", 621)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1383)], (0)), 100000000, 0, -1382)), (("runtime/desc.ml", 50, 1796, 1800), ("runtime/desc.ml", 50, 1796, 1813), 0), 0, Tag1 ("Refl__Desc", 31)); (("::", 316), ([(Tag3 (Tag1 ((("T", 619)), "t"), [((("head")), 100000000, 0, -1386)], (0)), 100000000, 0, -1388); (Tag3 ((("t", 621)), [((("tail")), 100000000, 0, -1387)], (0)), 100000000, 0, -1389)]), ((Tag3 ((("t", 621)), [(Tag2 ([((("head")), 100000000, 0, -1386); ((("tail")), 100000000, 0, -1387)]), 100000000, 0, -1385)], (0)), 100000000, 0, -1384)), (("runtime/desc.ml", 51, 1814, 1818), ("runtime/desc.ml", 51, 1814, 1867), 0), 0, Tag1 ("Refl__Desc", 32))], 0), 1, 0, [63], [0], 0, 0, (("runtime/desc.ml", 49, 1783, 1785), ("runtime/desc.ml", 51, 1814, 1867), 0), 0, 0, 0, Tag1 ("Refl__Desc", 30)), 1, 0)])), 0, (("runtime/desc.ml", 48, 1741, 1741), ("runtime/desc.ml", 52, 1868, 1871), 0), Tag1 ("Refl__Desc", 33)), 0, 0); Tag3 (("Delay", 577), 0, (Tag1 ([Tag1 (("t", 622), ([((("a")), 100000000, 0, -1392)], 1, 0, 1, ((Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1393), ((("a")), 100000000, 0, -1392), 0), 100000000, 0, -1391)), [25], [0], 0, 0, (("runtime/desc.ml", 55, 1895, 1897), ("runtime/desc.ml", 55, 1895, 1919), 0), 0, 0, 0, Tag1 ("Refl__Desc", 34)), 1, 0)]), 0, (("runtime/desc.ml", 54, 1873, 1873), ("runtime/desc.ml", 56, 1920, 1923), 0), Tag1 ("Refl__Desc", 35)), 0, 0); Tag3 (("Delays", 578), 0, (Tag1 ([Tag1 (("t", 623), ([((0), 100000000, 0, -1395)], 1, Tag1 ([(("[]", 315), (0), ((Tag3 ((("t", 623)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1397)], (0)), 100000000, 0, -1396)), (("runtime/desc.ml", 50, 1796, 1800), ("runtime/desc.ml", 50, 1796, 1813), 0), 0, Tag1 ("Refl__Desc", 31)); (("::", 316), ([(Tag3 (Tag1 ((("Delay", 577)), "t"), [((("head")), 100000000, 0, -1400)], (0)), 100000000, 0, -1402); (Tag3 ((("t", 623)), [((("tail")), 100000000, 0, -1401)], (0)), 100000000, 0, -1403)]), ((Tag3 ((("t", 623)), [(Tag2 ([((("head")), 100000000, 0, -1400); ((("tail")), 100000000, 0, -1401)]), 100000000, 0, -1399)], (0)), 100000000, 0, -1398)), (("runtime/desc.ml", 51, 1814, 1818), ("runtime/desc.ml", 51, 1814, 1867), 0), 0, Tag1 ("Refl__Desc", 32))], 0), 1, ((Tag3 (Tag1 (Tag2 ((("Sequence", 576)), (("Delay", 577))), "t"), [((0), 100000000, 0, -1395)], (0)), 100000000, 0, -1394)), [63], [0], 0, 0, (("runtime/desc.ml", 49, 1783, 1785), ("runtime/desc.ml", 51, 1814, 1867), 0), 0, 0, 0, Tag1 ("Refl__Desc", 30)), 1, 0)]), 0, (("runtime/desc.ml", 58, 1925, 1925), ("runtime/desc.ml", 58, 1925, 1957), 0), Tag1 ("Refl__Desc", 36)), 0, 0); Tag1 (("variable", 579), ([((("index")), 100000000, 0, -1231); ((("arity")), 100000000, 0, -1232); ((("a")), 100000000, 0, -1233); ((("positive")), 100000000, 0, -1234); ((("direct")), 100000000, 0, -1235)], 5, Tag1 ([(("VFirst", 323), (0), ((Tag3 ((("variable", 579)), [(Tag8 (([("Zero", (0))], (0, 100000000, 0, -1204), 1, 0, 0)), 100000000, 0, -1203); (Tag2 ([((("value")), 100000000, 0, -1206); ((0), 100000000, 0, -1207)]), 100000000, 0, -1205); ((("value")), 100000000, 0, -1206); (Tag2 ([(Tag8 (([("Present", (0))], (0, 100000000, 0, -1210), 1, 0, 0)), 100000000, 0, -1209); ((0), 100000000, 0, -1211)]), 100000000, 0, -1208); (Tag2 ([(Tag8 (([("Present", (0))], (0, 100000000, 0, -1214), 1, 0, 0)), 100000000, 0, -1213); ((0), 100000000, 0, -1215)]), 100000000, 0, -1212)], (0)), 100000000, 0, -1202)), (("runtime/desc.ml", 61, 2016, 2018), ("runtime/desc.ml", 62, 2029, 2105), 0), 0, Tag1 ("Refl__Desc", 38)); (("VNext", 324), ([(Tag3 ((("variable", 579)), [((("index")), 100000000, 0, -1219); ((("sequence")), 100000000, 0, -1222); ((("value")), 100000000, 0, -1223); ((("positive")), 100000000, 0, -1226); ((("direct")), 100000000, 0, -1229)], (0)), 100000000, 0, -1230)]), ((Tag3 ((("variable", 579)), [(Tag8 (([("Succ", ((((("index")), 100000000, 0, -1219))))], (0, 100000000, 0, -1218), 1, 0, 0)), 100000000, 0, -1217); (Tag2 ([((0), 100000000, 0, -1221); ((("sequence")), 100000000, 0, -1222)]), 100000000, 0, -1220); ((("value")), 100000000, 0, -1223); (Tag2 ([((0), 100000000, 0, -1225); ((("positive")), 100000000, 0, -1226)]), 100000000, 0, -1224); (Tag2 ([((0), 100000000, 0, -1228); ((("direct")), 100000000, 0, -1229)]), 100000000, 0, -1227)], (0)), 100000000, 0, -1216)), (("runtime/desc.ml", 63, 2106, 2108), ("runtime/desc.ml", 66, 2261, 2277), 0), 0, Tag1 ("Refl__Desc", 39))], 0), 1, 0, [63; 63; 15; 63; 63], [0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 60, 1959, 1959), ("runtime/desc.ml", 66, 2261, 2277), 0), 0, 0, 0, Tag1 ("Refl__Desc", 37)), 1, 0); Tag1 (("length", 580), ([((("count")), 100000000, 0, -1200); ((("types")), 100000000, 0, -1201)], 2, Tag1 ([(("Zero", 326), (0), ((Tag3 ((("length", 580)), [(Tag8 (([("Zero", (0))], (0, 100000000, 0, -1190), 1, 0, 0)), 100000000, 0, -1189); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1191)], (0)), 100000000, 0, -1188)), (("runtime/desc.ml", 69, 2310, 2312), ("runtime/desc.ml", 69, 2310, 2343), 0), 0, Tag1 ("Refl__Desc", 41)); (("Succ", 327), ([(Tag3 ((("length", 580)), [((("length")), 100000000, 0, -1195); ((("types")), 100000000, 0, -1198)], (0)), 100000000, 0, -1199)]), ((Tag3 ((("length", 580)), [(Tag8 (([("Succ", ((((("length")), 100000000, 0, -1195))))], (0, 100000000, 0, -1194), 1, 0, 0)), 100000000, 0, -1193); (Tag2 ([((0), 100000000, 0, -1197); ((("types")), 100000000, 0, -1198)]), 100000000, 0, -1196)], (0)), 100000000, 0, -1192)), (("runtime/desc.ml", 70, 2344, 2346), ("runtime/desc.ml", 70, 2344, 2422), 0), 0, Tag1 ("Refl__Desc", 42))], 0), 1, 0, [63; 63], [0; 0], 0, 0, (("runtime/desc.ml", 68, 2279, 2279), ("runtime/desc.ml", 70, 2344, 2422), 0), 0, 0, 0, Tag1 ("Refl__Desc", 40)), 1, 0); Tag1 (("append", 581), ([((("a")), 100000000, 0, -1185); ((("b")), 100000000, 0, -1186); ((("c")), 100000000, 0, -1187)], 3, Tag1 ([(("Nil", 329), (0), ((Tag3 ((("append", 581)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1175); ((("a")), 100000000, 0, -1176); ((("a")), 100000000, 0, -1176)], (0)), 100000000, 0, -1174)), (("runtime/desc.ml", 73, 2451, 2453), ("runtime/desc.ml", 73, 2451, 2482), 0), 0, Tag1 ("Refl__Desc", 44)); (("Add", 330), ([(Tag3 ((("append", 581)), [((("a")), 100000000, 0, -1180); ((("b")), 100000000, 0, -1181); ((("c")), 100000000, 0, -1183)], (0)), 100000000, 0, -1184)]), ((Tag3 ((("append", 581)), [(Tag2 ([((("head")), 100000000, 0, -1179); ((("a")), 100000000, 0, -1180)]), 100000000, 0, -1178); ((("b")), 100000000, 0, -1181); (Tag2 ([((("head")), 100000000, 0, -1179); ((("c")), 100000000, 0, -1183)]), 100000000, 0, -1182)], (0)), 100000000, 0, -1177)), (("runtime/desc.ml", 74, 2483, 2485), ("runtime/desc.ml", 76, 2522, 2565), 0), 0, Tag1 ("Refl__Desc", 45))], 0), 1, 0, [63; 15; 63], [0; 0; 0], 0, 0, (("runtime/desc.ml", 72, 2424, 2424), ("runtime/desc.ml", 76, 2522, 2565), 0), 0, 0, 0, Tag1 ("Refl__Desc", 43)), 1, 0); Tag1 (("presence", 582), ([((("global")), 100000000, 0, -1172); ((("local")), 100000000, 0, -1173)], 2, Tag1 ([(("Present", 332), (0), ((Tag3 ((("presence", 582)), [(Tag8 (([("Present", (0))], ((0), 100000000, 0, -1165), 0, 0, 0)), 100000000, 0, -1164); (Tag8 (([("Present", (0))], (0, 100000000, 0, -1167), 1, 0, 0)), 100000000, 0, -1166)], (0)), 100000000, 0, -1163)), (("runtime/desc.ml", 79, 2601, 2603), ("runtime/desc.ml", 79, 2601, 2650), 0), 0, Tag1 ("Refl__Desc", 47)); (("Absent", 333), (0), ((Tag3 ((("presence", 582)), [((0), 100000000, 0, -1169); (Tag8 (([("Absent", (0))], (0, 100000000, 0, -1171), 1, 0, 0)), 100000000, 0, -1170)], (0)), 100000000, 0, -1168)), (("runtime/desc.ml", 80, 2651, 2653), ("runtime/desc.ml", 80, 2651, 2687), 0), 0, Tag1 ("Refl__Desc", 48))], 0), 1, 0, [63; 63], [0; 0], 0, 0, (("runtime/desc.ml", 78, 2567, 2567), ("runtime/desc.ml", 80, 2651, 2687), 0), 0, 1, 0, Tag1 ("Refl__Desc", 46)), 1, 0); Tag1 (("presences", 583), ([((("presence")), 100000000, 0, -1161); ((("directs")), 100000000, 0, -1162)], 2, Tag1 ([(("Presences", 335), (0), ((Tag3 ((("presences", 583)), [((0), 100000000, 0, -1144); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1145)], (0)), 100000000, 0, -1143)), (("runtime/desc.ml", 83, 2728, 2730), ("runtime/desc.ml", 83, 2728, 2763), 0), 0, Tag1 ("Refl__Desc", 50)); (("AddPresent", 336), ([(Tag3 ((("presences", 583)), [(Tag8 (([("Present", (0))], ((("presence")), 100000000, 0, -1148), 0, 0, 0)), 100000000, 0, -1147); ((("directs")), 100000000, 0, -1152)], (0)), 100000000, 0, -1153)]), ((Tag3 ((("presences", 583)), [(Tag8 (([("Present", (0))], ((("presence")), 100000000, 0, -1148), 0, 0, 0)), 100000000, 0, -1147); (Tag2 ([(Tag8 (([("Present", (0))], (0, 100000000, 0, -1151), 1, 0, 0)), 100000000, 0, -1150); ((("directs")), 100000000, 0, -1152)]), 100000000, 0, -1149)], (0)), 100000000, 0, -1146)), (("runtime/desc.ml", 84, 2764, 2766), ("runtime/desc.ml", 86, 2822, 2888), 0), 0, Tag1 ("Refl__Desc", 51)); (("AddAbsent", 337), ([(Tag3 ((("presences", 583)), [((("presence")), 100000000, 0, -1155); ((("directs")), 100000000, 0, -1159)], (0)), 100000000, 0, -1160)]), ((Tag3 ((("presences", 583)), [((("presence")), 100000000, 0, -1155); (Tag2 ([(Tag8 (([("Absent", (0))], (0, 100000000, 0, -1158), 1, 0, 0)), 100000000, 0, -1157); ((("directs")), 100000000, 0, -1159)]), 100000000, 0, -1156)], (0)), 100000000, 0, -1154)), (("runtime/desc.ml", 87, 2889, 2891), ("runtime/desc.ml", 89, 2946, 2995), 0), 0, Tag1 ("Refl__Desc", 52))], 0), 1, 0, [63; 63], [0; 0], 0, 0, (("runtime/desc.ml", 82, 2689, 2689), ("runtime/desc.ml", 89, 2946, 2995), 0), 0, 0, 0, Tag1 ("Refl__Desc", 49)), 1, 0); Tag1 (("gadt_constraints", 584), ([((("constraints")), 100000000, 0, -1141); ((("exists")), 100000000, 0, -1142)], 2, 1, 1, 0, [15; 15], [0; 0], 0, 0, (("runtime/desc.ml", 91, 2997, 2997), ("runtime/desc.ml", 91, 2997, 3047), 0), 0, 0, 0, Tag1 ("Refl__Desc", 53)), 1, 0); Tag2 (("NoConstraints", 585), ((("gadt_constraints", 584)), [((("constraints")), 100000000, 0, -1139); ((("exists")), 100000000, 0, -1140)], (0), 0, 1, (("_none_", 0, 0, -1), ("_none_", 0, 0, -1), 1), 0, Tag1 ("Refl__Desc", 54)), 0, 0); Tag1 (("sub_gadt_ext", 586), ([((("gadt")), 100000000, 0, -1137); ((("sub_gadt")), 100000000, 0, -1138)], 2, 1, 1, 0, [15; 15], [0; 0], 0, 0, (("runtime/desc.ml", 96, 3117, 3117), ("runtime/desc.ml", 96, 3117, 3158), 0), 0, 0, 0, Tag1 ("Refl__Desc", 55)), 1, 0); Tag1 (("sub_gadt", 587), ([((("gadt")), 100000000, 0, -1126); ((("sub_gadt")), 100000000, 0, -1127)], 2, [[(("sub_gadt_ext", 342), 0, (Tag3 ((("sub_gadt_ext", 586)), [((("gadt")), 100000000, 0, -1126); ((("sub_gadt")), 100000000, 0, -1127)], (0)), 100000000, 0, -1125), (("runtime/desc.ml", 99, 3197, 3201), ("runtime/desc.ml", 99, 3197, 3248), 0), 0, Tag1 ("Refl__Desc", 57)); (("sub_gadt_functional", 343), 0, (Tag10 ((Tag1 (0, (Tag3 ((("sub_gadt_ext", 586)), [(Tag9 (("gadt")), 100000000, 0, -1129); (Tag9 (("sub_gadt0")), 100000000, 0, -1130)], (0)), 100000000, 0, -1136), (Tag1 (0, (Tag3 ((("sub_gadt_ext", 586)), [(Tag9 (("gadt")), 100000000, 0, -1129); (Tag9 (("sub_gadt1")), 100000000, 0, -1131)], (0)), 100000000, 0, -1135), (Tag3 ((("eq", 569)), [(Tag9 (("sub_gadt0")), 100000000, 0, -1130); (Tag9 (("sub_gadt1")), 100000000, 0, -1131)], (0)), 100000000, 0, -1134), 0), 100000000, 0, -1133), 0), 100000000, 0, -1132), [(Tag9 (("gadt")), 100000000, 0, -1129); (Tag9 (("sub_gadt0")), 100000000, 0, -1130); (Tag9 (("sub_gadt1")), 100000000, 0, -1131)]), 100000000, 0, -1128), (("runtime/desc.ml", 100, 3249, 3253), ("runtime/desc.ml", 102, 3383, 3417), 0), 0, Tag1 ("Refl__Desc", 58))]], 1, 0, [15; 15], [0; 0], 0, 0, (("runtime/desc.ml", 98, 3160, 3160), ("runtime/desc.ml", 103, 3418, 3421), 0), 0, 0, 0, Tag1 ("Refl__Desc", 56)), 1, 0); Tag1 (("subvariables", 588), ([((("count")), 100000000, 0, -1111); ((("local")), 100000000, 0, -1108); ((("positive")), 100000000, 0, -1114); ((("negative")), 100000000, 0, -1119); ((("direct")), 100000000, 0, -1123); ((("positives")), 100000000, 0, -1112); ((("negatives")), 100000000, 0, -1117); ((("directs")), 100000000, 0, -1109); ((("subpositive")), 100000000, 0, -1115); ((("subnegative")), 100000000, 0, -1120); ((("subdirect")), 100000000, 0, -1124)], 11, [[(("presences", 345), 0, (Tag3 ((("presences", 583)), [((("local")), 100000000, 0, -1108); ((("directs")), 100000000, 0, -1109)], (0)), 100000000, 0, -1107), (("runtime/desc.ml", 107, 3574, 3578), ("runtime/desc.ml", 107, 3574, 3619), 0), 0, Tag1 ("Refl__Desc", 60)); (("positive_count", 346), 0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -1111); ((("positives")), 100000000, 0, -1112)], (0)), 100000000, 0, -1110), (("runtime/desc.ml", 108, 3620, 3624), ("runtime/desc.ml", 108, 3620, 3669), 0), 0, Tag1 ("Refl__Desc", 61)); (("positive", 347), 0, (Tag3 ((("append", 581)), [((("positives")), 100000000, 0, -1112); ((("positive")), 100000000, 0, -1114); ((("subpositive")), 100000000, 0, -1115)], (0)), 100000000, 0, -1113), (("runtime/desc.ml", 109, 3670, 3674), ("runtime/desc.ml", 109, 3670, 3730), 0), 0, Tag1 ("Refl__Desc", 62)); (("negative_count", 348), 0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -1111); ((("negatives")), 100000000, 0, -1117)], (0)), 100000000, 0, -1116), (("runtime/desc.ml", 110, 3731, 3735), ("runtime/desc.ml", 110, 3731, 3780), 0), 0, Tag1 ("Refl__Desc", 63)); (("negative", 349), 0, (Tag3 ((("append", 581)), [((("negatives")), 100000000, 0, -1117); ((("negative")), 100000000, 0, -1119); ((("subnegative")), 100000000, 0, -1120)], (0)), 100000000, 0, -1118), (("runtime/desc.ml", 111, 3781, 3785), ("runtime/desc.ml", 111, 3781, 3841), 0), 0, Tag1 ("Refl__Desc", 64)); (("direct_count", 350), 0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -1111); ((("directs")), 100000000, 0, -1109)], (0)), 100000000, 0, -1121), (("runtime/desc.ml", 112, 3842, 3846), ("runtime/desc.ml", 112, 3842, 3887), 0), 0, Tag1 ("Refl__Desc", 65)); (("direct", 351), 0, (Tag3 ((("append", 581)), [((("directs")), 100000000, 0, -1109); ((("direct")), 100000000, 0, -1123); ((("subdirect")), 100000000, 0, -1124)], (0)), 100000000, 0, -1122), (("runtime/desc.ml", 113, 3888, 3892), ("runtime/desc.ml", 113, 3888, 3940), 0), 0, Tag1 ("Refl__Desc", 66))]], 1, 0, [63; 63; 15; 15; 15; 63; 63; 63; 63; 63; 63], [0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 105, 3423, 3423), ("runtime/desc.ml", 114, 3941, 3944), 0), 0, 0, 0, Tag1 ("Refl__Desc", 59)), 1, 0); Tag3 (("Kinds", 589), 0, (Tag1 ([Tag1 (("builtin", 624), (0, 0, 0, 1, ((Tag8 (([("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Float", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Nativeint", (0)); ("String", (0)); ("Unit", (0))], (0, 100000000, 0, -1421), 1, 0, 0)), 100000000, 0, -1420)), 0, 0, 0, 0, (("runtime/desc.ml", 117, 3968, 3970), ("runtime/desc.ml", 119, 4064, 4088), 0), 0, 1, 0, Tag1 ("Refl__Desc", 67)), 1, 0); Tag1 (("structural_without_object", 625), (0, 0, 0, 1, ((Tag8 (([("Array", (0)); ("Attributes", (0)); ("Constr", (0)); ("Name", (0)); ("Record", (0)); ("Tuple", (0)); ("Variant", (0))], (0, 100000000, 0, -1419), 1, 0, 0)), 100000000, 0, -1418)), 0, 0, 0, 0, (("runtime/desc.ml", 121, 4090, 4092), ("runtime/desc.ml", 122, 4125, 4201), 0), 0, 1, 0, Tag1 ("Refl__Desc", 68)), 1, 0); Tag1 (("structural", 626), (0, 0, 0, 1, ((Tag8 (([("Array", (0)); ("Attributes", (0)); ("Constr", (0)); ("Name", (0)); ("Object", (0)); ("Record", (0)); ("Tuple", (0)); ("Variant", (0))], (0, 100000000, 0, -1417), 1, 0, 0)), 100000000, 0, -1416)), 0, 0, 0, 0, (("runtime/desc.ml", 124, 4203, 4205), ("runtime/desc.ml", 124, 4203, 4260), 0), 0, 1, 0, Tag1 ("Refl__Desc", 69)), 1, 0); Tag1 (("strictly_liftable", 627), (0, 0, 0, 1, ((Tag8 (([("Absent", (0)); ("Array", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Exists", (0)); ("Float", (0)); ("GADT", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Lazy", (0)); ("Name", (0)); ("Nativeint", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Unit", (0)); ("Variable", (0)); ("Variant", (0))], (0, 100000000, 0, -1415), 1, 0, 0)), 100000000, 0, -1414)), 0, 0, 0, 0, (("runtime/desc.ml", 126, 4262, 4264), ("runtime/desc.ml", 128, 4360, 4387), 0), 0, 1, 0, Tag1 ("Refl__Desc", 70)), 1, 0); Tag1 (("comparable", 628), (0, 0, 0, 1, ((Tag8 (([("Absent", (0)); ("Array", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Exists", (0)); ("Float", (0)); ("GADT", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Lazy", (0)); ("MapOpaque", (0)); ("Name", (0)); ("Nativeint", (0)); ("Object", (0)); ("Opaque", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Unit", (0)); ("Variable", (0)); ("Variant", (0))], (0, 100000000, 0, -1413), 1, 0, 0)), 100000000, 0, -1412)), 0, 0, 0, 0, (("runtime/desc.ml", 130, 4389, 4391), ("runtime/desc.ml", 130, 4389, 4462), 0), 0, 1, 0, Tag1 ("Refl__Desc", 71)), 1, 0); Tag1 (("arrow", 629), (0, 0, 0, 1, ((Tag8 (([("Arrow", (0)); ("Labelled_arrow", (0))], (0, 100000000, 0, -1411), 1, 0, 0)), 100000000, 0, -1410)), 0, 0, 0, 0, (("runtime/desc.ml", 132, 4464, 4466), ("runtime/desc.ml", 132, 4464, 4505), 0), 0, 1, 0, Tag1 ("Refl__Desc", 72)), 1, 0); Tag1 (("liftable", 630), (0, 0, 0, 1, ((Tag8 (([("Absent", (0)); ("Array", (0)); ("Arrow", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Exists", (0)); ("Float", (0)); ("GADT", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Labelled_arrow", (0)); ("Lazy", (0)); ("MapOpaque", (0)); ("Name", (0)); ("Nativeint", (0)); ("Object", (0)); ("Opaque", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Unit", (0)); ("Variable", (0)); ("Variant", (0))], (0, 100000000, 0, -1409), 1, 0, 0)), 100000000, 0, -1408)), 0, 0, 0, 0, (("runtime/desc.ml", 134, 4507, 4509), ("runtime/desc.ml", 134, 4507, 4546), 0), 0, 1, 0, Tag1 ("Refl__Desc", 73)), 1, 0); Tag1 (("visitable", 631), (0, 0, 0, 1, ((Tag8 (([("Array", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Float", (0)); ("GADT", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Lazy", (0)); ("MapOpaque", (0)); ("Name", (0)); ("Nativeint", (0)); ("Opaque", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Unit", (0)); ("Variable", (0)); ("Variant", (0))], (0, 100000000, 0, -1407), 1, 0, 0)), 100000000, 0, -1406)), 0, 0, 0, 0, (("runtime/desc.ml", 136, 4548, 4550), ("runtime/desc.ml", 138, 4638, 4668), 0), 0, 1, 0, Tag1 ("Refl__Desc", 74)), 1, 0); Tag1 (("all", 632), (0, 0, 0, 1, ((Tag8 (([("Absent", (0)); ("Array", (0)); ("Arrow", (0)); ("Attributes", (0)); ("Bool", (0)); ("Bytes", (0)); ("Char", (0)); ("Constr", (0)); ("Exists", (0)); ("Float", (0)); ("GADT", (0)); ("Int", (0)); ("Int32", (0)); ("Int64", (0)); ("Labelled_arrow", (0)); ("Lazy", (0)); ("MapOpaque", (0)); ("Name", (0)); ("Nativeint", (0)); ("Object", (0)); ("Opaque", (0)); ("Poly", (0)); ("Present", (0)); ("Record", (0)); ("String", (0)); ("Tuple", (0)); ("Unit", (0)); ("Variable", (0)); ("Variant", (0))], (0, 100000000, 0, -1405), 1, 0, 0)), 100000000, 0, -1404)), 0, 0, 0, 0, (("runtime/desc.ml", 140, 4670, 4672), ("runtime/desc.ml", 140, 4670, 4712), 0), 0, 1, 0, Tag1 ("Refl__Desc", 75)), 1, 0)]), 0, (("runtime/desc.ml", 116, 3946, 3946), ("runtime/desc.ml", 141, 4713, 4716), 0), Tag1 ("Refl__Desc", 76)), 0, 0); Tag1 (("typed_attribute_kind", 590), ([((("a")), 100000000, 0, -1104); ((("arity")), 100000000, 0, -1105); ((("attribute")), 100000000, 0, -1106)], 3, 1, 1, 0, [15; 15; 15], [0; 0; 0], 0, 0, (("runtime/desc.ml", 143, 4718, 4718), ("runtime/desc.ml", 143, 4718, 4773), 0), 0, 0, 0, Tag1 ("Refl__Desc", 77)), 1, 0); Tag1 (("refl", 591), ([((("_")), 100000000, 0, -1103)], 1, 1, 1, 0, [15], [0], 0, 0, (("runtime/desc.ml", 145, 4775, 4775), ("runtime/desc.ml", 145, 4775, 4791), 0), 0, 0, 0, Tag1 ("Refl__Desc", 78)), 1, 0); Tag1 (("transfer_argument", 592), ([((("source")), 100000000, 0, -1100); ((("sub")), 100000000, 0, -1101); ((("arg")), 100000000, 0, -1102)], 3, Tag1 ([(("Transfer", 365), (0), ((Tag3 ((("transfer_argument", 592)), [((("a")), 100000000, 0, -1092); ((("a")), 100000000, 0, -1092); (Tag8 (([("Present", (0))], (0, 100000000, 0, -1094), 1, 0, 0)), 100000000, 0, -1093)], (0)), 100000000, 0, -1091)), (("runtime/desc.ml", 148, 4840, 4842), ("runtime/desc.ml", 148, 4840, 4893), 0), 0, Tag1 ("Refl__Desc", 80)); (("Skip", 366), (0), ((Tag3 ((("transfer_argument", 592)), [((0), 100000000, 0, -1096); ((0), 100000000, 0, -1097); (Tag8 (([("Absent", (0))], (0, 100000000, 0, -1099), 1, 0, 0)), 100000000, 0, -1098)], (0)), 100000000, 0, -1095)), (("runtime/desc.ml", 149, 4894, 4896), ("runtime/desc.ml", 149, 4894, 4940), 0), 0, Tag1 ("Refl__Desc", 81))], 0), 1, 0, [15; 15; 63], [0; 0; 0], 0, 0, (("runtime/desc.ml", 147, 4793, 4793), ("runtime/desc.ml", 149, 4894, 4940), 0), 0, 1, 0, Tag1 ("Refl__Desc", 79)), 1, 0); Tag1 (("transfer_arguments", 593), ([((("source")), 100000000, 0, -1088); ((("sub")), 100000000, 0, -1089); ((("arg")), 100000000, 0, -1090)], 3, Tag1 ([(("VTANil", 368), (0), ((Tag3 ((("transfer_arguments", 593)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1075); ((0), 100000000, 0, -1076); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1077)], (0)), 100000000, 0, -1074)), (("runtime/desc.ml", 152, 4990, 4992), ("runtime/desc.ml", 152, 4990, 5037), 0), 0, Tag1 ("Refl__Desc", 83)); (("VTACons", 369), Tag1 ([(("head", 370), 0, (Tag3 ((("transfer_argument", 592)), [((("source")), 100000000, 0, -1080); ((("sub")), 100000000, 0, -1082); ((("arg")), 100000000, 0, -1084)], (0)), 100000000, 0, -1086), (("runtime/desc.ml", 154, 5052, 5060), ("runtime/desc.ml", 154, 5052, 5107), 0), 0, Tag1 ("Refl__Desc", 84)); (("tail", 371), 0, (Tag3 ((("transfer_arguments", 593)), [((("sources")), 100000000, 0, -1081); ((("sub")), 100000000, 0, -1082); ((("args")), 100000000, 0, -1085)], (0)), 100000000, 0, -1087), (("runtime/desc.ml", 155, 5108, 5116), ("runtime/desc.ml", 155, 5108, 5165), 0), 0, Tag1 ("Refl__Desc", 85))]), ((Tag3 ((("transfer_arguments", 593)), [(Tag2 ([((("source")), 100000000, 0, -1080); ((("sources")), 100000000, 0, -1081)]), 100000000, 0, -1079); ((("sub")), 100000000, 0, -1082); (Tag2 ([((("arg")), 100000000, 0, -1084); ((("args")), 100000000, 0, -1085)]), 100000000, 0, -1083)], (0)), 100000000, 0, -1078)), (("runtime/desc.ml", 153, 5038, 5040), ("runtime/desc.ml", 156, 5171, 5238), 0), 0, Tag1 ("Refl__Desc", 86))], 0), 1, 0, [63; 15; 63], [0; 0; 0], 0, 0, (("runtime/desc.ml", 151, 4942, 4942), ("runtime/desc.ml", 156, 5171, 5238), 0), 0, 0, 0, Tag1 ("Refl__Desc", 82)), 1, 0); Tag1 (("transfer_matrix", 594), ([((("p")), 100000000, 0, -1065); ((("n")), 100000000, 0, -1072); ((("sp")), 100000000, 0, -1066); ((("sn")), 100000000, 0, -1069); ((("ap")), 100000000, 0, -1067); ((("an")), 100000000, 0, -1070)], 6, [[(("pp", 373), 0, (Tag3 ((("transfer_arguments", 593)), [((("p")), 100000000, 0, -1065); ((("sp")), 100000000, 0, -1066); ((("ap")), 100000000, 0, -1067)], (0)), 100000000, 0, -1064), (("runtime/desc.ml", 159, 5294, 5298), ("runtime/desc.ml", 159, 5294, 5337), 0), 0, Tag1 ("Refl__Desc", 94)); (("pn", 374), 0, (Tag3 ((("transfer_arguments", 593)), [((("p")), 100000000, 0, -1065); ((("sn")), 100000000, 0, -1069); ((("an")), 100000000, 0, -1070)], (0)), 100000000, 0, -1068), (("runtime/desc.ml", 160, 5338, 5342), ("runtime/desc.ml", 160, 5338, 5381), 0), 0, Tag1 ("Refl__Desc", 95)); (("np", 375), 0, (Tag3 ((("transfer_arguments", 593)), [((("n")), 100000000, 0, -1072); ((("sp")), 100000000, 0, -1066); ((("an")), 100000000, 0, -1070)], (0)), 100000000, 0, -1071), (("runtime/desc.ml", 161, 5382, 5386), ("runtime/desc.ml", 161, 5382, 5425), 0), 0, Tag1 ("Refl__Desc", 96)); (("nn", 376), 0, (Tag3 ((("transfer_arguments", 593)), [((("n")), 100000000, 0, -1072); ((("sn")), 100000000, 0, -1069); ((("ap")), 100000000, 0, -1067)], (0)), 100000000, 0, -1073), (("runtime/desc.ml", 162, 5426, 5430), ("runtime/desc.ml", 162, 5426, 5469), 0), 0, Tag1 ("Refl__Desc", 97))]], 1, 0, [63; 63; 15; 15; 63; 63], [0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 158, 5240, 5240), ("runtime/desc.ml", 163, 5470, 5473), 0), 0, 0, 0, Tag1 ("Refl__Desc", 93)), 1, 0); Tag1 (("transfer", 595), ([((("positive")), 100000000, 0, -1057); ((("negative")), 100000000, 0, -1058); ((("direct")), 100000000, 0, -1059); ((("subpositive")), 100000000, 0, -1060); ((("subnegative")), 100000000, 0, -1061); ((("subdirect")), 100000000, 0, -1062); ((("variables")), 100000000, 0, -1063)], 7, Tag1 ([(("VTNil", 378), (0), ((Tag3 ((("transfer", 595)), [((0), 100000000, 0, -1027); ((0), 100000000, 0, -1028); ((0), 100000000, 0, -1029); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1030); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1031); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1032); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1033)], (0)), 100000000, 0, -1026)), (("runtime/desc.ml", 167, 5581, 5583), ("runtime/desc.ml", 167, 5581, 5635), 0), 0, Tag1 ("Refl__Desc", 99)); (("VTCons", 379), Tag1 ([(("head", 380), 0, (Tag2 ([(Tag3 ((("transfer_matrix", 594)), [((("p")), 100000000, 0, -1035); ((("n")), 100000000, 0, -1036); ((("sp")), 100000000, 0, -1039); ((("sn")), 100000000, 0, -1042); ((("ap")), 100000000, 0, -1049); ((("an")), 100000000, 0, -1050)], (0)), 100000000, 0, -1054); (Tag3 ((("transfer_arguments", 593)), [((("d")), 100000000, 0, -1037); ((("sd")), 100000000, 0, -1045); ((("ad")), 100000000, 0, -1051)], (0)), 100000000, 0, -1055)]), 100000000, 0, -1053), (("runtime/desc.ml", 169, 5649, 5657), ("runtime/desc.ml", 171, 5721, 5765), 0), 0, Tag1 ("Refl__Desc", 100)); (("tail", 381), 0, (Tag3 ((("transfer", 595)), [((("p")), 100000000, 0, -1035); ((("n")), 100000000, 0, -1036); ((("d")), 100000000, 0, -1037); ((("sps")), 100000000, 0, -1040); ((("sns")), 100000000, 0, -1043); ((("sds")), 100000000, 0, -1046); ((("variables")), 100000000, 0, -1052)], (0)), 100000000, 0, -1056), (("runtime/desc.ml", 172, 5766, 5774), ("runtime/desc.ml", 173, 5781, 5842), 0), 0, Tag1 ("Refl__Desc", 101))]), ((Tag3 ((("transfer", 595)), [((("p")), 100000000, 0, -1035); ((("n")), 100000000, 0, -1036); ((("d")), 100000000, 0, -1037); (Tag2 ([((("sp")), 100000000, 0, -1039); ((("sps")), 100000000, 0, -1040)]), 100000000, 0, -1038); (Tag2 ([((("sn")), 100000000, 0, -1042); ((("sns")), 100000000, 0, -1043)]), 100000000, 0, -1041); (Tag2 ([((("sd")), 100000000, 0, -1045); ((("sds")), 100000000, 0, -1046)]), 100000000, 0, -1044); (Tag2 ([(Tag2 ([((("ap")), 100000000, 0, -1049); ((("an")), 100000000, 0, -1050); ((("ad")), 100000000, 0, -1051)]), 100000000, 0, -1048); ((("variables")), 100000000, 0, -1052)]), 100000000, 0, -1047)], (0)), 100000000, 0, -1034)), (("runtime/desc.ml", 168, 5636, 5638), ("runtime/desc.ml", 175, 5903, 5951), 0), 0, Tag1 ("Refl__Desc", 102))], 0), 1, 0, [63; 63; 63; 63; 63; 63; 63], [0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 165, 5475, 5475), ("runtime/desc.ml", 175, 5903, 5951), 0), 0, 0, 0, Tag1 ("Refl__Desc", 98)), 1, 0); Tag1 (("skip", 596), ([((("a")), 100000000, 0, -1024); ((("b")), 100000000, 0, -1025)], 2, Tag1 ([(("VKeep", 383), (0), ((Tag3 ((("skip", 596)), [((("a")), 100000000, 0, -1019); ((("a")), 100000000, 0, -1019)], (0)), 100000000, 0, -1018)), (("runtime/desc.ml", 178, 5974, 5976), ("runtime/desc.ml", 178, 5974, 5999), 0), 0, Tag1 ("Refl__Desc", 110)); (("VSkip", 384), (0), ((Tag3 ((("skip", 596)), [((("a")), 100000000, 0, -1021); (Tag8 (([("Absent", (0))], (0, 100000000, 0, -1023), 1, 0, 0)), 100000000, 0, -1022)], (0)), 100000000, 0, -1020)), (("runtime/desc.ml", 179, 6000, 6002), ("runtime/desc.ml", 179, 6000, 6032), 0), 0, Tag1 ("Refl__Desc", 111))], 0), 1, 0, [15; 63], [0; 0], 0, 0, (("runtime/desc.ml", 177, 5953, 5953), ("runtime/desc.ml", 179, 6000, 6032), 0), 0, 1, 0, Tag1 ("Refl__Desc", 109)), 1, 0); Tag1 (("skip_vector", 597), ([((("variables")), 100000000, 0, -1016); ((("skip_variables")), 100000000, 0, -1017)], 2, Tag1 ([(("SKNil", 386), (0), ((Tag3 ((("skip_vector", 597)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1003); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1004)], (0)), 100000000, 0, -1002)), (("runtime/desc.ml", 182, 6083, 6085), ("runtime/desc.ml", 182, 6083, 6119), 0), 0, Tag1 ("Refl__Desc", 113)); (("SKCons", 387), Tag1 ([(("head", 388), 0, (Tag1 (0, (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -1014), (Tag3 ((("skip", 596)), [((("hd")), 100000000, 0, -1007); ((("skip_hd")), 100000000, 0, -1010)], (0)), 100000000, 0, -1013), 0), 100000000, 0, -1012), (("runtime/desc.ml", 184, 6133, 6141), ("runtime/desc.ml", 184, 6133, 6177), 0), 0, Tag1 ("Refl__Desc", 114)); (("tail", 389), 0, (Tag3 ((("skip_vector", 597)), [((("a")), 100000000, 0, -1008); ((("b")), 100000000, 0, -1011)], (0)), 100000000, 0, -1015), (("runtime/desc.ml", 185, 6178, 6186), ("runtime/desc.ml", 185, 6178, 6213), 0), 0, Tag1 ("Refl__Desc", 115))]), ((Tag3 ((("skip_vector", 597)), [(Tag2 ([((("hd")), 100000000, 0, -1007); ((("a")), 100000000, 0, -1008)]), 100000000, 0, -1006); (Tag2 ([((("skip_hd")), 100000000, 0, -1010); ((("b")), 100000000, 0, -1011)]), 100000000, 0, -1009)], (0)), 100000000, 0, -1005)), (("runtime/desc.ml", 183, 6120, 6122), ("runtime/desc.ml", 186, 6219, 6264), 0), 0, Tag1 ("Refl__Desc", 116))], 0), 1, 0, [63; 63], [0; 0], 0, 0, (("runtime/desc.ml", 181, 6034, 6034), ("runtime/desc.ml", 186, 6219, 6264), 0), 0, 0, 0, Tag1 ("Refl__Desc", 112)), 1, 0); Tag1 (("transfer_skip", 598), ([((("positive")), 100000000, 0, -995); ((("negative")), 100000000, 0, -996); ((("direct")), 100000000, 0, -997); ((("skip_positive")), 100000000, 0, -998); ((("skip_negative")), 100000000, 0, -999); ((("skip_direct")), 100000000, 0, -1000); ((("variables")), 100000000, 0, -1001)], 7, Tag1 ([(("Transfer_skip", 391), Tag1 ([(("transfer_vector", 392), 0, (Tag3 ((("transfer", 595)), [((("positive")), 100000000, 0, -981); ((("negative")), 100000000, 0, -982); ((("direct")), 100000000, 0, -983); ((("subpositive")), 100000000, 0, -989); ((("subnegative")), 100000000, 0, -990); ((("subdirect")), 100000000, 0, -991); ((("variables")), 100000000, 0, -987)], (0)), 100000000, 0, -988), (("runtime/desc.ml", 191, 6405, 6409), ("runtime/desc.ml", 193, 6505, 6533), 0), 0, Tag1 ("Refl__Desc", 124)); (("skip_positive", 393), 0, (Tag3 ((("skip_vector", 597)), [((("subpositive")), 100000000, 0, -989); ((("skip_positive")), 100000000, 0, -984)], (0)), 100000000, 0, -992), (("runtime/desc.ml", 194, 6534, 6538), ("runtime/desc.ml", 194, 6534, 6597), 0), 0, Tag1 ("Refl__Desc", 125)); (("skip_negative", 394), 0, (Tag3 ((("skip_vector", 597)), [((("subnegative")), 100000000, 0, -990); ((("skip_negative")), 100000000, 0, -985)], (0)), 100000000, 0, -993), (("runtime/desc.ml", 195, 6598, 6602), ("runtime/desc.ml", 195, 6598, 6661), 0), 0, Tag1 ("Refl__Desc", 126)); (("skip_direct", 395), 0, (Tag3 ((("skip_vector", 597)), [((("subdirect")), 100000000, 0, -991); ((("skip_direct")), 100000000, 0, -986)], (0)), 100000000, 0, -994), (("runtime/desc.ml", 196, 6662, 6666), ("runtime/desc.ml", 196, 6662, 6719), 0), 0, Tag1 ("Refl__Desc", 127))]), ((Tag3 ((("transfer_skip", 598)), [((("positive")), 100000000, 0, -981); ((("negative")), 100000000, 0, -982); ((("direct")), 100000000, 0, -983); ((("skip_positive")), 100000000, 0, -984); ((("skip_negative")), 100000000, 0, -985); ((("skip_direct")), 100000000, 0, -986); ((("variables")), 100000000, 0, -987)], (0)), 100000000, 0, -980)), (("runtime/desc.ml", 190, 6383, 6385), ("runtime/desc.ml", 198, 6791, 6836), 0), 0, Tag1 ("Refl__Desc", 128))], 0), 1, 0, [63; 63; 63; 63; 63; 63; 63], [0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 188, 6266, 6266), ("runtime/desc.ml", 198, 6791, 6836), 0), 0, 0, 0, Tag1 ("Refl__Desc", 123)), 1, 0); Tag1 (("desc", 599), ([((("a")), 100000000, 0, -971); ((("structure")), 100000000, 0, -972); ((("arity")), 100000000, 0, -973); ((("rec_group")), 100000000, 0, -974); ((("kinds")), 100000000, 0, -975); ((("positive")), 100000000, 0, -976); ((("negative")), 100000000, 0, -977); ((("direct")), 100000000, 0, -978); ((("gadt")), 100000000, 0, -979)], 9, Tag1 ([(("Variable", 416), ([(Tag3 ((("variable", 579)), [((("index")), 100000000, 0, -619); ((("arity")), 100000000, 0, -620); ((("a")), 100000000, 0, -616); ((("positive")), 100000000, 0, -624); ((("direct")), 100000000, 0, -626)], (0)), 100000000, 0, -628)]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -616); (Tag8 (([("Variable", ((((("index")), 100000000, 0, -619))))], (0, 100000000, 0, -618), 1, 0, 0)), 100000000, 0, -617); ((("arity")), 100000000, 0, -620); ((("rec_group")), 100000000, 0, -621); (Tag8 (([("Variable", (0))], ((0), 100000000, 0, -623), 0, 0, 0)), 100000000, 0, -622); ((("positive")), 100000000, 0, -624); ((0), 100000000, 0, -625); ((("direct")), 100000000, 0, -626); ((0), 100000000, 0, -627)], (0)), 100000000, 0, -615)), (("runtime/desc.ml", 203, 6939, 6941), ("runtime/desc.ml", 206, 7082, 7120), 0), 0, Tag1 ("Refl__Desc", 155)); (("Builtin", 417), ([(Tag3 ((("builtin_desc", 570)), [((("a")), 100000000, 0, -630); ((("structure")), 100000000, 0, -633); ((("kinds")), 100000000, 0, -636)], (0)), 100000000, 0, -641)]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -630); (Tag8 (([("Builtin", ((((("structure")), 100000000, 0, -633))))], (0, 100000000, 0, -632), 1, 0, 0)), 100000000, 0, -631); ((("arity")), 100000000, 0, -634); ((("rec_group")), 100000000, 0, -635); ((("kinds")), 100000000, 0, -636); ((0), 100000000, 0, -637); ((0), 100000000, 0, -638); ((0), 100000000, 0, -639); ((0), 100000000, 0, -640)], (0)), 100000000, 0, -629)), (("runtime/desc.ml", 207, 7121, 7123), ("runtime/desc.ml", 210, 7259, 7271), 0), 0, Tag1 ("Refl__Desc", 156)); (("Array", 418), ([(Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -644); ((("structure")), 100000000, 0, -647); ((("arity")), 100000000, 0, -648); ((("rec_group")), 100000000, 0, -649); (Tag8 (([("Array", (0))], ((("kinds")), 100000000, 0, -651), 0, 0, 0)), 100000000, 0, -650); ((("negative")), 100000000, 0, -652); ((("positive")), 100000000, 0, -653); ((("negative")), 100000000, 0, -652); ((("gadt")), 100000000, 0, -654)], (0)), 100000000, 0, -655)]), ((Tag3 ((("desc", 599)), [(Tag3 ((Tag3 ("array", 8)), [((("a")), 100000000, 0, -644)], (0)), 100000000, 0, -643); (Tag8 (([("Array", ((((("structure")), 100000000, 0, -647))))], (0, 100000000, 0, -646), 1, 0, 0)), 100000000, 0, -645); ((("arity")), 100000000, 0, -648); ((("rec_group")), 100000000, 0, -649); (Tag8 (([("Array", (0))], ((("kinds")), 100000000, 0, -651), 0, 0, 0)), 100000000, 0, -650); ((("negative")), 100000000, 0, -652); ((("positive")), 100000000, 0, -653); ((("negative")), 100000000, 0, -652); ((("gadt")), 100000000, 0, -654)], (0)), 100000000, 0, -642)), (("runtime/desc.ml", 211, 7272, 7274), ("runtime/desc.ml", 215, 7452, 7526), 0), 0, Tag1 ("Refl__Desc", 157)); (("Arrow", 419), Tag1 ([(("parameter", 420), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -659); ((("a_structure")), 100000000, 0, -664); ((("arity")), 100000000, 0, -665); ((("rec_group")), 100000000, 0, -666); (Tag8 (([("Arrow", (0))], ((("kinds")), 100000000, 0, -668), 0, 0, 0)), 100000000, 0, -667); ((("negative")), 100000000, 0, -670); ((("positive")), 100000000, 0, -669); ((("negative")), 100000000, 0, -670); ((("gadt")), 100000000, 0, -672)], (0)), 100000000, 0, -673), (("runtime/desc.ml", 217, 7541, 7549), ("runtime/desc.ml", 219, 7640, 7675), 0), 0, Tag1 ("Refl__Desc", 158)); (("result", 421), 0, (Tag3 ((("desc", 599)), [((("b")), 100000000, 0, -658); ((("b_structure")), 100000000, 0, -663); ((("arity")), 100000000, 0, -665); ((("rec_group")), 100000000, 0, -666); (Tag8 (([("Arrow", (0))], ((("kinds")), 100000000, 0, -668), 0, 0, 0)), 100000000, 0, -667); ((("positive")), 100000000, 0, -669); ((("negative")), 100000000, 0, -670); ((("positive")), 100000000, 0, -669); ((("gadt")), 100000000, 0, -672)], (0)), 100000000, 0, -674), (("runtime/desc.ml", 220, 7676, 7684), ("runtime/desc.ml", 222, 7772, 7807), 0), 0, Tag1 ("Refl__Desc", 159))]), ((Tag3 ((("desc", 599)), [(Tag1 (0, ((("a")), 100000000, 0, -659), ((("b")), 100000000, 0, -658), 0), 100000000, 0, -657); (Tag8 (([("Arrow", (((Tag1 (0, ((("a_structure")), 100000000, 0, -664), ((("b_structure")), 100000000, 0, -663), 0), 100000000, 0, -662))))], (0, 100000000, 0, -661), 1, 0, 0)), 100000000, 0, -660); ((("arity")), 100000000, 0, -665); ((("rec_group")), 100000000, 0, -666); (Tag8 (([("Arrow", (0))], ((("kinds")), 100000000, 0, -668), 0, 0, 0)), 100000000, 0, -667); ((("positive")), 100000000, 0, -669); ((("negative")), 100000000, 0, -670); ((0), 100000000, 0, -671); ((("gadt")), 100000000, 0, -672)], (0)), 100000000, 0, -656)), (("runtime/desc.ml", 216, 7527, 7529), ("runtime/desc.ml", 226, 7964, 7978), 0), 0, Tag1 ("Refl__Desc", 160)); (("LabelledArrow", 422), Tag1 ([(("label", 423), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -690), (("runtime/desc.ml", 228, 8001, 8009), ("runtime/desc.ml", 228, 8001, 8024), 0), 0, Tag1 ("Refl__Desc", 161)); (("optional", 424), 0, (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -691), (("runtime/desc.ml", 229, 8025, 8033), ("runtime/desc.ml", 229, 8025, 8049), 0), 0, Tag1 ("Refl__Desc", 162)); (("parameter", 425), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -693); ((("a_structure")), 100000000, 0, -681); ((("arity")), 100000000, 0, -682); ((("rec_group")), 100000000, 0, -683); (Tag8 (([("Arrow", (0))], ((("kinds")), 100000000, 0, -685), 0, 0, 0)), 100000000, 0, -684); ((("negative")), 100000000, 0, -687); ((("positive")), 100000000, 0, -686); ((("negative")), 100000000, 0, -687); ((("gadt")), 100000000, 0, -689)], (0)), 100000000, 0, -692), (("runtime/desc.ml", 230, 8050, 8058), ("runtime/desc.ml", 232, 8149, 8184), 0), 0, Tag1 ("Refl__Desc", 163)); (("result", 426), 0, (Tag3 ((("desc", 599)), [((("b")), 100000000, 0, -695); ((("b_structure")), 100000000, 0, -680); ((("arity")), 100000000, 0, -682); ((("rec_group")), 100000000, 0, -683); (Tag8 (([("Arrow", (0))], ((("kinds")), 100000000, 0, -685), 0, 0, 0)), 100000000, 0, -684); ((("positive")), 100000000, 0, -686); ((("negative")), 100000000, 0, -687); ((("positive")), 100000000, 0, -686); ((("gadt")), 100000000, 0, -689)], (0)), 100000000, 0, -694), (("runtime/desc.ml", 233, 8185, 8193), ("runtime/desc.ml", 235, 8281, 8316), 0), 0, Tag1 ("Refl__Desc", 164)); (("wrap", 427), 0, (Tag1 (0, (Tag1 (0, ((("a")), 100000000, 0, -693), ((("b")), 100000000, 0, -695), 0), 100000000, 0, -697), ((("arrow")), 100000000, 0, -676), 0), 100000000, 0, -696), (("runtime/desc.ml", 236, 8317, 8325), ("runtime/desc.ml", 236, 8317, 8355), 0), 0, Tag1 ("Refl__Desc", 165)); (("unwrap", 428), 0, (Tag1 (0, ((("arrow")), 100000000, 0, -676), (Tag1 (0, ((("a")), 100000000, 0, -693), ((("b")), 100000000, 0, -695), 0), 100000000, 0, -699), 0), 100000000, 0, -698), (("runtime/desc.ml", 237, 8356, 8364), ("runtime/desc.ml", 237, 8356, 8396), 0), 0, Tag1 ("Refl__Desc", 166))]), ((Tag3 ((("desc", 599)), [((("arrow")), 100000000, 0, -676); (Tag8 (([("LabelledArrow", (((Tag1 (0, ((("a_structure")), 100000000, 0, -681), ((("b_structure")), 100000000, 0, -680), 0), 100000000, 0, -679))))], (0, 100000000, 0, -678), 1, 0, 0)), 100000000, 0, -677); ((("arity")), 100000000, 0, -682); ((("rec_group")), 100000000, 0, -683); (Tag8 (([("Arrow", (0))], ((("kinds")), 100000000, 0, -685), 0, 0, 0)), 100000000, 0, -684); ((("positive")), 100000000, 0, -686); ((("negative")), 100000000, 0, -687); ((0), 100000000, 0, -688); ((("gadt")), 100000000, 0, -689)], (0)), 100000000, 0, -675)), (("runtime/desc.ml", 227, 7979, 7981), ("runtime/desc.ml", 241, 8559, 8573), 0), 0, Tag1 ("Refl__Desc", 167)); (("Constr", 429), Tag1 ([(("constructors", 430), 0, (Tag3 ((("constructors", 600)), [((("cases")), 100000000, 0, -714); ((("structures")), 100000000, 0, -704); ((("arity")), 100000000, 0, -705); ((("rec_group")), 100000000, 0, -706); (Tag8 (([("Constr", (0))], ((("kinds")), 100000000, 0, -708), 0, 0, 0)), 100000000, 0, -707); ((("positive")), 100000000, 0, -709); ((("negative")), 100000000, 0, -710); ((("direct")), 100000000, 0, -711); ((("gadt")), 100000000, 0, -712)], (0)), 100000000, 0, -713), (("runtime/desc.ml", 243, 8589, 8597), ("runtime/desc.ml", 245, 8672, 8735), 0), 0, Tag1 ("Refl__Desc", 168)); (("construct", 431), 0, (Tag1 (0, (Tag3 ((("binary_choice", 574)), [((("cases")), 100000000, 0, -714)], (0)), 100000000, 0, -716), ((("a")), 100000000, 0, -701), 0), 100000000, 0, -715), (("runtime/desc.ml", 246, 8736, 8744), ("runtime/desc.ml", 246, 8736, 8783), 0), 0, Tag1 ("Refl__Desc", 169)); (("destruct", 432), 0, (Tag1 (0, ((("a")), 100000000, 0, -701), (Tag3 ((("binary_choice", 574)), [((("cases")), 100000000, 0, -714)], (0)), 100000000, 0, -718), 0), 100000000, 0, -717), (("runtime/desc.ml", 247, 8784, 8792), ("runtime/desc.ml", 247, 8784, 8830), 0), 0, Tag1 ("Refl__Desc", 170))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -701); (Tag8 (([("Constr", ((((("structures")), 100000000, 0, -704))))], (0, 100000000, 0, -703), 1, 0, 0)), 100000000, 0, -702); ((("arity")), 100000000, 0, -705); ((("rec_group")), 100000000, 0, -706); (Tag8 (([("Constr", (0))], ((("kinds")), 100000000, 0, -708), 0, 0, 0)), 100000000, 0, -707); ((("positive")), 100000000, 0, -709); ((("negative")), 100000000, 0, -710); ((("direct")), 100000000, 0, -711); ((("gadt")), 100000000, 0, -712)], (0)), 100000000, 0, -700)), (("runtime/desc.ml", 242, 8574, 8576), ("runtime/desc.ml", 250, 8901, 8976), 0), 0, Tag1 ("Refl__Desc", 171)); (("Variant", 433), Tag1 ([(("constructors", 434), 0, (Tag3 ((("variant_constructors", 611)), [(Tag2 ([((0), 100000000, 0, -734); ((0), 100000000, 0, -735)]), 100000000, 0, -733); ((("structures")), 100000000, 0, -723); ((("arity")), 100000000, 0, -724); ((("rec_group")), 100000000, 0, -725); (Tag8 (([("Variant", (0))], ((("kinds")), 100000000, 0, -727), 0, 0, 0)), 100000000, 0, -726); ((("positive")), 100000000, 0, -728); ((("negative")), 100000000, 0, -729); ((("direct")), 100000000, 0, -730); ((("gadt")), 100000000, 0, -731)], (0)), 100000000, 0, -732), (("runtime/desc.ml", 252, 8993, 9001), ("runtime/desc.ml", 254, 9087, 9158), 0), 0, Tag1 ("Refl__Desc", 172)); (("construct", 435), 0, (Tag1 (0, (Tag3 ((("choice", 573)), [(Tag2 ([((0), 100000000, 0, -734); ((0), 100000000, 0, -735)]), 100000000, 0, -733)], (0)), 100000000, 0, -737), ((("a")), 100000000, 0, -720), 0), 100000000, 0, -736), (("runtime/desc.ml", 255, 9159, 9167), ("runtime/desc.ml", 255, 9159, 9199), 0), 0, Tag1 ("Refl__Desc", 173)); (("destruct", 436), 0, (Tag1 (0, ((("a")), 100000000, 0, -720), (Tag3 ((("choice", 573)), [(Tag2 ([((0), 100000000, 0, -734); ((0), 100000000, 0, -735)]), 100000000, 0, -733)], (0)), 100000000, 0, -739), 0), 100000000, 0, -738), (("runtime/desc.ml", 256, 9200, 9208), ("runtime/desc.ml", 256, 9200, 9239), 0), 0, Tag1 ("Refl__Desc", 174))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -720); (Tag8 (([("Variant", ((((("structures")), 100000000, 0, -723))))], (0, 100000000, 0, -722), 1, 0, 0)), 100000000, 0, -721); ((("arity")), 100000000, 0, -724); ((("rec_group")), 100000000, 0, -725); (Tag8 (([("Variant", (0))], ((("kinds")), 100000000, 0, -727), 0, 0, 0)), 100000000, 0, -726); ((("positive")), 100000000, 0, -728); ((("negative")), 100000000, 0, -729); ((("direct")), 100000000, 0, -730); ((("gadt")), 100000000, 0, -731)], (0)), 100000000, 0, -719)), (("runtime/desc.ml", 251, 8977, 8979), ("runtime/desc.ml", 259, 9311, 9387), 0), 0, Tag1 ("Refl__Desc", 175)); (("Tuple", 437), Tag1 ([(("structure", 438), 0, (Tag3 ((("tuple_structure", 605)), [(Tag2 ([((0), 100000000, 0, -755); (Tag2 ([((0), 100000000, 0, -757); ((0), 100000000, 0, -758)]), 100000000, 0, -756)]), 100000000, 0, -754); ((("structures")), 100000000, 0, -744); ((("arity")), 100000000, 0, -745); ((("rec_group")), 100000000, 0, -746); (Tag8 (([("Tuple", (0))], ((("kinds")), 100000000, 0, -748), 0, 0, 0)), 100000000, 0, -747); ((("positive")), 100000000, 0, -749); ((("negative")), 100000000, 0, -750); ((("direct")), 100000000, 0, -751); ((("gadt")), 100000000, 0, -752)], (0)), 100000000, 0, -753), (("runtime/desc.ml", 261, 9402, 9410), ("runtime/desc.ml", 263, 9499, 9565), 0), 0, Tag1 ("Refl__Desc", 176)); (("construct", 439), 0, (Tag1 (0, (Tag2 ([((0), 100000000, 0, -755); (Tag2 ([((0), 100000000, 0, -757); ((0), 100000000, 0, -758)]), 100000000, 0, -756)]), 100000000, 0, -754), ((("a")), 100000000, 0, -741), 0), 100000000, 0, -759), (("runtime/desc.ml", 264, 9566, 9574), ("runtime/desc.ml", 264, 9566, 9599), 0), 0, Tag1 ("Refl__Desc", 177)); (("destruct", 440), 0, (Tag1 (0, ((("a")), 100000000, 0, -741), (Tag2 ([((0), 100000000, 0, -755); (Tag2 ([((0), 100000000, 0, -757); ((0), 100000000, 0, -758)]), 100000000, 0, -756)]), 100000000, 0, -754), 0), 100000000, 0, -760), (("runtime/desc.ml", 265, 9600, 9608), ("runtime/desc.ml", 265, 9600, 9632), 0), 0, Tag1 ("Refl__Desc", 178))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -741); (Tag8 (([("Tuple", ((((("structures")), 100000000, 0, -744))))], (0, 100000000, 0, -743), 1, 0, 0)), 100000000, 0, -742); ((("arity")), 100000000, 0, -745); ((("rec_group")), 100000000, 0, -746); (Tag8 (([("Tuple", (0))], ((("kinds")), 100000000, 0, -748), 0, 0, 0)), 100000000, 0, -747); ((("positive")), 100000000, 0, -749); ((("negative")), 100000000, 0, -750); ((("direct")), 100000000, 0, -751); ((("gadt")), 100000000, 0, -752)], (0)), 100000000, 0, -740)), (("runtime/desc.ml", 260, 9388, 9390), ("runtime/desc.ml", 268, 9702, 9776), 0), 0, Tag1 ("Refl__Desc", 179)); (("Record", 441), Tag1 ([(("structure", 442), 0, (Tag3 ((("record_structure", 606)), [(Tag2 ([((0), 100000000, 0, -776); ((0), 100000000, 0, -777)]), 100000000, 0, -775); ((("structures")), 100000000, 0, -765); ((("arity")), 100000000, 0, -766); ((("rec_group")), 100000000, 0, -767); (Tag8 (([("Record", (0))], ((("kinds")), 100000000, 0, -769), 0, 0, 0)), 100000000, 0, -768); ((("positive")), 100000000, 0, -770); ((("negative")), 100000000, 0, -771); ((("direct")), 100000000, 0, -772); ((("gadt")), 100000000, 0, -773)], (0)), 100000000, 0, -774), (("runtime/desc.ml", 270, 9792, 9800), ("runtime/desc.ml", 272, 9883, 9950), 0), 0, Tag1 ("Refl__Desc", 180)); (("construct", 443), 0, (Tag1 (0, (Tag2 ([((0), 100000000, 0, -776); ((0), 100000000, 0, -777)]), 100000000, 0, -775), ((("a")), 100000000, 0, -762), 0), 100000000, 0, -778), (("runtime/desc.ml", 273, 9951, 9959), ("runtime/desc.ml", 273, 9951, 9984), 0), 0, Tag1 ("Refl__Desc", 181)); (("destruct", 444), 0, (Tag1 (0, ((("a")), 100000000, 0, -762), (Tag2 ([((0), 100000000, 0, -776); ((0), 100000000, 0, -777)]), 100000000, 0, -775), 0), 100000000, 0, -779), (("runtime/desc.ml", 274, 9985, 9993), ("runtime/desc.ml", 274, 9985, 10017), 0), 0, Tag1 ("Refl__Desc", 182))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -762); (Tag8 (([("Record", ((((("structures")), 100000000, 0, -765))))], (0, 100000000, 0, -764), 1, 0, 0)), 100000000, 0, -763); ((("arity")), 100000000, 0, -766); ((("rec_group")), 100000000, 0, -767); (Tag8 (([("Record", (0))], ((("kinds")), 100000000, 0, -769), 0, 0, 0)), 100000000, 0, -768); ((("positive")), 100000000, 0, -770); ((("negative")), 100000000, 0, -771); ((("direct")), 100000000, 0, -772); ((("gadt")), 100000000, 0, -773)], (0)), 100000000, 0, -761)), (("runtime/desc.ml", 269, 9777, 9779), ("runtime/desc.ml", 277, 10088, 10163), 0), 0, Tag1 ("Refl__Desc", 183)); (("Object", 445), Tag1 ([(("methods", 446), 0, (Tag3 ((("object_methods", 614)), [((("methods")), 100000000, 0, -795); ((("structures")), 100000000, 0, -785); ((("arity")), 100000000, 0, -786); ((("rec_group")), 100000000, 0, -787); (Tag8 (([("Object", (0))], ((("kinds")), 100000000, 0, -789), 0, 0, 0)), 100000000, 0, -788); ((("positive")), 100000000, 0, -790); ((("negative")), 100000000, 0, -791); ((("direct")), 100000000, 0, -792); ((("gadt")), 100000000, 0, -793)], (0)), 100000000, 0, -794), (("runtime/desc.ml", 279, 10179, 10187), ("runtime/desc.ml", 281, 10270, 10324), 0), 0, Tag1 ("Refl__Desc", 184)); (("construct", 447), 0, (Tag1 (0, (Tag3 (Tag1 ((("Delays", 578)), "t"), [((("methods")), 100000000, 0, -795)], (0)), 100000000, 0, -797), (Tag4 (((("a")), 100000000, 0, -782), (0)), 100000000, 0, -781), 0), 100000000, 0, -796), (("runtime/desc.ml", 282, 10325, 10333), ("runtime/desc.ml", 282, 10325, 10369), 0), 0, Tag1 ("Refl__Desc", 185)); (("destruct", 448), 0, (Tag1 (0, (Tag4 (((("a")), 100000000, 0, -782), (0)), 100000000, 0, -781), (Tag3 (Tag1 ((("Delays", 578)), "t"), [((("methods")), 100000000, 0, -795)], (0)), 100000000, 0, -799), 0), 100000000, 0, -798), (("runtime/desc.ml", 283, 10370, 10378), ("runtime/desc.ml", 283, 10370, 10413), 0), 0, Tag1 ("Refl__Desc", 186))]), ((Tag3 ((("desc", 599)), [(Tag4 (((("a")), 100000000, 0, -782), (0)), 100000000, 0, -781); (Tag8 (([("Object", ((((("structures")), 100000000, 0, -785))))], (0, 100000000, 0, -784), 1, 0, 0)), 100000000, 0, -783); ((("arity")), 100000000, 0, -786); ((("rec_group")), 100000000, 0, -787); (Tag8 (([("Object", (0))], ((("kinds")), 100000000, 0, -789), 0, 0, 0)), 100000000, 0, -788); ((("positive")), 100000000, 0, -790); ((("negative")), 100000000, 0, -791); ((("direct")), 100000000, 0, -792); ((("gadt")), 100000000, 0, -793)], (0)), 100000000, 0, -780)), (("runtime/desc.ml", 278, 10164, 10166), ("runtime/desc.ml", 286, 10494, 10569), 0), 0, Tag1 ("Refl__Desc", 187)); (("Lazy", 449), ([(Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -802); ((("structure")), 100000000, 0, -805); ((("arity")), 100000000, 0, -806); ((("rec_group")), 100000000, 0, -807); (Tag8 (([("Lazy", (0))], ((("kinds")), 100000000, 0, -809), 0, 0, 0)), 100000000, 0, -808); ((("positive")), 100000000, 0, -810); ((("negative")), 100000000, 0, -811); ((("direct")), 100000000, 0, -812); ((("gadt")), 100000000, 0, -813)], (0)), 100000000, 0, -814)]), ((Tag3 ((("desc", 599)), [(Tag3 (Tag1 (Tag1 ((Tag2 ("Stdlib")), "Lazy"), "t"), [((("a")), 100000000, 0, -802)], (0)), 100000000, 0, -801); (Tag8 (([("Lazy", ((((("structure")), 100000000, 0, -805))))], (0, 100000000, 0, -804), 1, 0, 0)), 100000000, 0, -803); ((("arity")), 100000000, 0, -806); ((("rec_group")), 100000000, 0, -807); (Tag8 (([("Lazy", (0))], ((("kinds")), 100000000, 0, -809), 0, 0, 0)), 100000000, 0, -808); ((("positive")), 100000000, 0, -810); ((("negative")), 100000000, 0, -811); ((("direct")), 100000000, 0, -812); ((("gadt")), 100000000, 0, -813)], (0)), 100000000, 0, -800)), (("runtime/desc.ml", 287, 10570, 10572), ("runtime/desc.ml", 291, 10749, 10822), 0), 0, Tag1 ("Refl__Desc", 188)); (("Apply", 459), Tag1 ([(("arguments", 460), 0, (Tag3 ((("vector", 616)), [((("types")), 100000000, 0, -834); ((("structures")), 100000000, 0, -821); ((("arity")), 100000000, 0, -826); ((("rec_group")), 100000000, 0, -827); ((("kinds")), 100000000, 0, -828); ((("variables")), 100000000, 0, -825); ((("gadt")), 100000000, 0, -832)], (0)), 100000000, 0, -833), (("runtime/desc.ml", 293, 10837, 10845), ("runtime/desc.ml", 295, 10929, 10955), 0), 0, Tag1 ("Refl__Desc", 189)); (("desc", 461), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -816); ((("structure")), 100000000, 0, -820); ((("types")), 100000000, 0, -834); ((("rec_group")), 100000000, 0, -827); ((("kinds")), 100000000, 0, -828); ((("subpositive")), 100000000, 0, -822); ((("subnegative")), 100000000, 0, -823); ((("subdirect")), 100000000, 0, -824); ((("gadt")), 100000000, 0, -832)], (0)), 100000000, 0, -835), (("runtime/desc.ml", 296, 10956, 10964), ("runtime/desc.ml", 298, 11040, 11090), 0), 0, Tag1 ("Refl__Desc", 190)); (("transfer", 462), 0, (Tag3 ((("transfer_skip", 598)), [((("positive")), 100000000, 0, -829); ((("negative")), 100000000, 0, -830); ((("direct")), 100000000, 0, -831); ((("subpositive")), 100000000, 0, -822); ((("subnegative")), 100000000, 0, -823); ((("subdirect")), 100000000, 0, -824); ((("variables")), 100000000, 0, -825)], (0)), 100000000, 0, -836), (("runtime/desc.ml", 299, 11091, 11099), ("runtime/desc.ml", 301, 11180, 11230), 0), 0, Tag1 ("Refl__Desc", 191))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -816); (Tag8 (([("Apply", (((Tag2 ([((("structure")), 100000000, 0, -820); ((("structures")), 100000000, 0, -821); ((("subpositive")), 100000000, 0, -822); ((("subnegative")), 100000000, 0, -823); ((("subdirect")), 100000000, 0, -824); ((("variables")), 100000000, 0, -825)]), 100000000, 0, -819))))], (0, 100000000, 0, -818), 1, 0, 0)), 100000000, 0, -817); ((("arity")), 100000000, 0, -826); ((("rec_group")), 100000000, 0, -827); ((("kinds")), 100000000, 0, -828); ((("positive")), 100000000, 0, -829); ((("negative")), 100000000, 0, -830); ((("direct")), 100000000, 0, -831); ((("gadt")), 100000000, 0, -832)], (0)), 100000000, 0, -815)), (("runtime/desc.ml", 292, 10823, 10825), ("runtime/desc.ml", 307, 11447, 11461), 0), 0, Tag1 ("Refl__Desc", 192)); (("MapOpaque", 463), Tag1 ([(("desc", 464), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -838); ((("structure")), 100000000, 0, -842); ((("arity")), 100000000, 0, -844); ((("rec_group")), 100000000, 0, -845); (Tag3 (Tag1 ((("Kinds", 589)), "all"), 0, (0)), 100000000, 0, -853); ((("positive")), 100000000, 0, -848); ((("negative")), 100000000, 0, -849); ((("direct")), 100000000, 0, -843); ((("gadt")), 100000000, 0, -851)], (0)), 100000000, 0, -852), (("runtime/desc.ml", 309, 11480, 11488), ("runtime/desc.ml", 311, 11564, 11608), 0), 0, Tag1 ("Refl__Desc", 193))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -838); (Tag8 (([("MapOpaque", (((Tag2 ([((("structure")), 100000000, 0, -842); ((("direct")), 100000000, 0, -843)]), 100000000, 0, -841))))], (0, 100000000, 0, -840), 1, 0, 0)), 100000000, 0, -839); ((("arity")), 100000000, 0, -844); ((("rec_group")), 100000000, 0, -845); (Tag8 (([("MapOpaque", (0))], ((0), 100000000, 0, -847), 0, 0, 0)), 100000000, 0, -846); ((("positive")), 100000000, 0, -848); ((("negative")), 100000000, 0, -849); ((0), 100000000, 0, -850); ((("gadt")), 100000000, 0, -851)], (0)), 100000000, 0, -837)), (("runtime/desc.ml", 308, 11462, 11464), ("runtime/desc.ml", 314, 11679, 11753), 0), 0, Tag1 ("Refl__Desc", 194)); (("Opaque", 465), ([(Tag3 ((("selection", 571)), [(Tag8 (([("Succ", ((((("index")), 100000000, 0, -858))))], (0, 100000000, 0, -869), 1, 0, 0)), 100000000, 0, -868); ((("gadt")), 100000000, 0, -866); ((("a")), 100000000, 0, -855); ((0), 100000000, 0, -870)], (0)), 100000000, 0, -867)]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -855); (Tag8 (([("Opaque", ((((("index")), 100000000, 0, -858))))], (0, 100000000, 0, -857), 1, 0, 0)), 100000000, 0, -856); ((("arity")), 100000000, 0, -859); ((("rec_group")), 100000000, 0, -860); (Tag8 (([("Opaque", (0))], ((0), 100000000, 0, -862), 0, 0, 0)), 100000000, 0, -861); ((("positive")), 100000000, 0, -863); ((("negative")), 100000000, 0, -864); ((0), 100000000, 0, -865); ((("gadt")), 100000000, 0, -866)], (0)), 100000000, 0, -854)), (("runtime/desc.ml", 315, 11754, 11756), ("runtime/desc.ml", 318, 11862, 11933), 0), 0, Tag1 ("Refl__Desc", 195)); (("Rec", 466), Tag1 ([(("index", 467), 0, (Tag3 ((("binary_selection", 572)), [(Tag8 (([("Select", ((((("index")), 100000000, 0, -875))))], (0, 100000000, 0, -885), 1, 0, 0)), 100000000, 0, -884); ((("rec_group")), 100000000, 0, -877); (Tag2 ([((("length")), 100000000, 0, -887); ((("structure")), 100000000, 0, -888)]), 100000000, 0, -886); ((0), 100000000, 0, -889)], (0)), 100000000, 0, -883), (("runtime/desc.ml", 320, 11946, 11954), ("runtime/desc.ml", 322, 12031, 12060), 0), 0, Tag1 ("Refl__Desc", 196)); (("desc", 468), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -872); ((("structure")), 100000000, 0, -888); ((("arity")), 100000000, 0, -876); ((("rec_group")), 100000000, 0, -877); ((("kinds")), 100000000, 0, -878); ((("positive")), 100000000, 0, -879); ((("negative")), 100000000, 0, -880); ((("direct")), 100000000, 0, -881); ((("gadt")), 100000000, 0, -882)], (0)), 100000000, 0, -890), (("runtime/desc.ml", 323, 12061, 12069), ("runtime/desc.ml", 325, 12142, 12186), 0), 0, Tag1 ("Refl__Desc", 197))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -872); (Tag8 (([("Rec", ((((("index")), 100000000, 0, -875))))], (0, 100000000, 0, -874), 1, 0, 0)), 100000000, 0, -873); ((("arity")), 100000000, 0, -876); ((("rec_group")), 100000000, 0, -877); ((("kinds")), 100000000, 0, -878); ((("positive")), 100000000, 0, -879); ((("negative")), 100000000, 0, -880); ((("direct")), 100000000, 0, -881); ((("gadt")), 100000000, 0, -882)], (0)), 100000000, 0, -871)), (("runtime/desc.ml", 319, 11934, 11936), ("runtime/desc.ml", 328, 12268, 12309), 0), 0, Tag1 ("Refl__Desc", 198)); (("RecGroup", 469), Tag1 ([(("desc", 470), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -892); ((("structure")), 100000000, 0, -896); ((("arity")), 100000000, 0, -898); ((("new_rec_group")), 100000000, 0, -897); ((("kinds")), 100000000, 0, -900); ((("positive")), 100000000, 0, -901); ((("negative")), 100000000, 0, -902); ((("direct")), 100000000, 0, -903); ((("gadt")), 100000000, 0, -904)], (0)), 100000000, 0, -905), (("runtime/desc.ml", 330, 12327, 12335), ("runtime/desc.ml", 332, 12412, 12456), 0), 0, Tag1 ("Refl__Desc", 199))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -892); (Tag8 (([("RecGroup", (((Tag2 ([((("structure")), 100000000, 0, -896); ((("new_rec_group")), 100000000, 0, -897)]), 100000000, 0, -895))))], (0, 100000000, 0, -894), 1, 0, 0)), 100000000, 0, -893); ((("arity")), 100000000, 0, -898); ((("rec_group")), 100000000, 0, -899); ((("kinds")), 100000000, 0, -900); ((("positive")), 100000000, 0, -901); ((("negative")), 100000000, 0, -902); ((("direct")), 100000000, 0, -903); ((("gadt")), 100000000, 0, -904)], (0)), 100000000, 0, -891)), (("runtime/desc.ml", 329, 12310, 12312), ("runtime/desc.ml", 338, 12605, 12679), 0), 0, Tag1 ("Refl__Desc", 200)); (("SelectGADT", 471), Tag1 ([(("index", 472), 0, (Tag3 ((("selection", 571)), [(Tag8 (([("Succ", ((((("index")), 100000000, 0, -912))))], (0, 100000000, 0, -922), 1, 0, 0)), 100000000, 0, -921); ((("gadt")), 100000000, 0, -919); ((("sub_gadt")), 100000000, 0, -923); ((0), 100000000, 0, -924)], (0)), 100000000, 0, -920), (("runtime/desc.ml", 340, 12699, 12707), ("runtime/desc.ml", 340, 12699, 12766), 0), 0, Tag1 ("Refl__Desc", 201)); (("desc", 473), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -907); ((("structure")), 100000000, 0, -911); ((("arity")), 100000000, 0, -913); ((("rec_group")), 100000000, 0, -914); ((("kinds")), 100000000, 0, -915); ((("positive")), 100000000, 0, -916); ((("negative")), 100000000, 0, -917); ((("direct")), 100000000, 0, -918); ((("sub_gadt")), 100000000, 0, -923)], (0)), 100000000, 0, -925), (("runtime/desc.ml", 341, 12767, 12775), ("runtime/desc.ml", 343, 12848, 12896), 0), 0, Tag1 ("Refl__Desc", 202))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -907); (Tag8 (([("SelectGADT", (((Tag2 ([((("structure")), 100000000, 0, -911); ((("index")), 100000000, 0, -912)]), 100000000, 0, -910))))], (0, 100000000, 0, -909), 1, 0, 0)), 100000000, 0, -908); ((("arity")), 100000000, 0, -913); ((("rec_group")), 100000000, 0, -914); ((("kinds")), 100000000, 0, -915); ((("positive")), 100000000, 0, -916); ((("negative")), 100000000, 0, -917); ((("direct")), 100000000, 0, -918); ((("gadt")), 100000000, 0, -919)], (0)), 100000000, 0, -906)), (("runtime/desc.ml", 339, 12680, 12682), ("runtime/desc.ml", 346, 12979, 13039), 0), 0, Tag1 ("Refl__Desc", 203)); (("SubGADT", 474), Tag1 ([(("sub_gadt", 475), 0, (Tag3 ((("sub_gadt", 587)), [((("gadt")), 100000000, 0, -937); ((("sub_gadt")), 100000000, 0, -939)], (0)), 100000000, 0, -938), (("runtime/desc.ml", 348, 13056, 13064), ("runtime/desc.ml", 348, 13056, 13103), 0), 0, Tag1 ("Refl__Desc", 204)); (("desc", 476), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -927); ((("structure")), 100000000, 0, -930); ((("arity")), 100000000, 0, -931); ((("rec_group")), 100000000, 0, -932); ((("kinds")), 100000000, 0, -933); ((("positive")), 100000000, 0, -934); ((("negative")), 100000000, 0, -935); ((("direct")), 100000000, 0, -936); ((("sub_gadt")), 100000000, 0, -939)], (0)), 100000000, 0, -940), (("runtime/desc.ml", 349, 13104, 13112), ("runtime/desc.ml", 351, 13185, 13233), 0), 0, Tag1 ("Refl__Desc", 205))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -927); (Tag8 (([("SubGADT", ((((("structure")), 100000000, 0, -930))))], (0, 100000000, 0, -929), 1, 0, 0)), 100000000, 0, -928); ((("arity")), 100000000, 0, -931); ((("rec_group")), 100000000, 0, -932); ((("kinds")), 100000000, 0, -933); ((("positive")), 100000000, 0, -934); ((("negative")), 100000000, 0, -935); ((("direct")), 100000000, 0, -936); ((("gadt")), 100000000, 0, -937)], (0)), 100000000, 0, -926)), (("runtime/desc.ml", 347, 13040, 13042), ("runtime/desc.ml", 354, 13304, 13364), 0), 0, Tag1 ("Refl__Desc", 206)); (("Attributes", 477), Tag1 ([(("attributes", 478), 0, (Tag3 ((("attributes", 618)), [((("a")), 100000000, 0, -942); ((("arity")), 100000000, 0, -946); ((("rec_group")), 100000000, 0, -947); (Tag8 (([("Attributes", (0))], ((("kinds")), 100000000, 0, -949), 0, 0, 0)), 100000000, 0, -948); ((("positive")), 100000000, 0, -950); ((("negative")), 100000000, 0, -951); ((("direct")), 100000000, 0, -952); ((("gadt")), 100000000, 0, -953)], (0)), 100000000, 0, -954), (("runtime/desc.ml", 356, 13384, 13392), ("runtime/desc.ml", 358, 13459, 13509), 0), 0, Tag1 ("Refl__Desc", 207)); (("desc", 479), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -942); ((("structure")), 100000000, 0, -945); ((("arity")), 100000000, 0, -946); ((("rec_group")), 100000000, 0, -947); (Tag8 (([("Attributes", (0))], ((("kinds")), 100000000, 0, -949), 0, 0, 0)), 100000000, 0, -948); ((("positive")), 100000000, 0, -950); ((("negative")), 100000000, 0, -951); ((("direct")), 100000000, 0, -952); ((("gadt")), 100000000, 0, -953)], (0)), 100000000, 0, -955), (("runtime/desc.ml", 359, 13510, 13518), ("runtime/desc.ml", 361, 13591, 13635), 0), 0, Tag1 ("Refl__Desc", 208))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -942); (Tag8 (([("Attributes", ((((("structure")), 100000000, 0, -945))))], (0, 100000000, 0, -944), 1, 0, 0)), 100000000, 0, -943); ((("arity")), 100000000, 0, -946); ((("rec_group")), 100000000, 0, -947); (Tag8 (([("Attributes", (0))], ((("kinds")), 100000000, 0, -949), 0, 0, 0)), 100000000, 0, -948); ((("positive")), 100000000, 0, -950); ((("negative")), 100000000, 0, -951); ((("direct")), 100000000, 0, -952); ((("gadt")), 100000000, 0, -953)], (0)), 100000000, 0, -941)), (("runtime/desc.ml", 355, 13365, 13367), ("runtime/desc.ml", 364, 13709, 13788), 0), 0, Tag1 ("Refl__Desc", 209)); (("Name", 480), Tag1 ([(("name", 481), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -968), (("runtime/desc.ml", 366, 13802, 13810), ("runtime/desc.ml", 366, 13802, 13824), 0), 0, Tag1 ("Refl__Desc", 210)); (("refl", 482), 0, (Tag3 ((("refl", 591)), [((("a")), 100000000, 0, -957)], (0)), 100000000, 0, -969), (("runtime/desc.ml", 367, 13825, 13833), ("runtime/desc.ml", 367, 13825, 13848), 0), 0, Tag1 ("Refl__Desc", 211)); (("desc", 483), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -957); ((("structure")), 100000000, 0, -960); ((("arity")), 100000000, 0, -961); ((("rec_group")), 100000000, 0, -962); ((("kinds")), 100000000, 0, -963); ((("positive")), 100000000, 0, -964); ((("negative")), 100000000, 0, -965); ((("direct")), 100000000, 0, -966); ((("sub_gadt")), 100000000, 0, -967)], (0)), 100000000, 0, -970), (("runtime/desc.ml", 368, 13849, 13857), ("runtime/desc.ml", 370, 13930, 13978), 0), 0, Tag1 ("Refl__Desc", 212))]), ((Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -957); (Tag8 (([("Name", ((((("structure")), 100000000, 0, -960))))], (0, 100000000, 0, -959), 1, 0, 0)), 100000000, 0, -958); ((("arity")), 100000000, 0, -961); ((("rec_group")), 100000000, 0, -962); ((("kinds")), 100000000, 0, -963); ((("positive")), 100000000, 0, -964); ((("negative")), 100000000, 0, -965); ((("direct")), 100000000, 0, -966); ((("sub_gadt")), 100000000, 0, -967)], (0)), 100000000, 0, -956)), (("runtime/desc.ml", 365, 13789, 13791), ("runtime/desc.ml", 373, 14065, 14109), 0), 0, Tag1 ("Refl__Desc", 213))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 200, 6838, 6838), ("runtime/desc.ml", 373, 14065, 14109), 0), 0, 0, 0, Tag1 ("Refl__Desc", 135)), 1, 0); Tag1 (("constructors", 600), ([((("cases")), 100000000, 0, -606); ((("structures")), 100000000, 0, -607); ((("arity")), 100000000, 0, -608); ((("rec_group")), 100000000, 0, -609); ((("kinds")), 100000000, 0, -610); ((("positive")), 100000000, 0, -611); ((("negative")), 100000000, 0, -612); ((("direct")), 100000000, 0, -613); ((("gadt")), 100000000, 0, -614)], 9, Tag1 ([(("CLeaf", 484), ([(Tag3 ((("constructor", 601)), [((("types_and_eqs")), 100000000, 0, -579); ((("structure")), 100000000, 0, -581); ((("arity")), 100000000, 0, -582); ((("rec_group")), 100000000, 0, -583); ((("kinds")), 100000000, 0, -584); ((("positive")), 100000000, 0, -585); ((("negative")), 100000000, 0, -586); ((("direct")), 100000000, 0, -587); ((("gadt")), 100000000, 0, -588)], (0)), 100000000, 0, -589)]), ((Tag3 ((("constructors", 600)), [(Tag3 (Tag1 ((Tag2 ("Stdlib")), "ref"), [((("types_and_eqs")), 100000000, 0, -579)], (0)), 100000000, 0, -578); (Tag3 (Tag1 ((Tag2 ("Stdlib")), "ref"), [((("structure")), 100000000, 0, -581)], (0)), 100000000, 0, -580); ((("arity")), 100000000, 0, -582); ((("rec_group")), 100000000, 0, -583); ((("kinds")), 100000000, 0, -584); ((("positive")), 100000000, 0, -585); ((("negative")), 100000000, 0, -586); ((("direct")), 100000000, 0, -587); ((("gadt")), 100000000, 0, -588)], (0)), 100000000, 0, -577)), (("runtime/desc.ml", 377, 14224, 14226), ("runtime/desc.ml", 381, 14432, 14491), 0), 0, Tag1 ("Refl__Desc", 214)); (("CNode", 485), Tag1 ([(("zero", 486), 0, (Tag3 ((("constructors", 600)), [((("cases0")), 100000000, 0, -592); ((("structures0")), 100000000, 0, -595); ((("arity")), 100000000, 0, -597); ((("rec_group")), 100000000, 0, -598); ((("kinds")), 100000000, 0, -599); ((("positive")), 100000000, 0, -600); ((("negative")), 100000000, 0, -601); ((("direct")), 100000000, 0, -602); ((("gadt")), 100000000, 0, -603)], (0)), 100000000, 0, -604), (("runtime/desc.ml", 383, 14506, 14514), ("runtime/desc.ml", 385, 14594, 14646), 0), 0, Tag1 ("Refl__Desc", 215)); (("one", 487), 0, (Tag3 ((("constructors", 600)), [((("cases1")), 100000000, 0, -593); ((("structures1")), 100000000, 0, -596); ((("arity")), 100000000, 0, -597); ((("rec_group")), 100000000, 0, -598); ((("kinds")), 100000000, 0, -599); ((("positive")), 100000000, 0, -600); ((("negative")), 100000000, 0, -601); ((("direct")), 100000000, 0, -602); ((("gadt")), 100000000, 0, -603)], (0)), 100000000, 0, -605), (("runtime/desc.ml", 386, 14647, 14655), ("runtime/desc.ml", 388, 14734, 14786), 0), 0, Tag1 ("Refl__Desc", 216))]), ((Tag3 ((("constructors", 600)), [(Tag2 ([((("cases0")), 100000000, 0, -592); ((("cases1")), 100000000, 0, -593)]), 100000000, 0, -591); (Tag2 ([((("structures0")), 100000000, 0, -595); ((("structures1")), 100000000, 0, -596)]), 100000000, 0, -594); ((("arity")), 100000000, 0, -597); ((("rec_group")), 100000000, 0, -598); ((("kinds")), 100000000, 0, -599); ((("positive")), 100000000, 0, -600); ((("negative")), 100000000, 0, -601); ((("direct")), 100000000, 0, -602); ((("gadt")), 100000000, 0, -603)], (0)), 100000000, 0, -590)), (("runtime/desc.ml", 382, 14492, 14494), ("runtime/desc.ml", 391, 14875, 14943), 0), 0, Tag1 ("Refl__Desc", 217))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 375, 14111, 14111), ("runtime/desc.ml", 391, 14875, 14943), 0), 0, 0, 0, Tag1 ("Refl__Desc", 136)), 2, 0); Tag1 (("constructor", 601), ([((("types_and_eqs")), 100000000, 0, -568); ((("structure")), 100000000, 0, -569); ((("arity")), 100000000, 0, -570); ((("rec_group")), 100000000, 0, -571); ((("kinds")), 100000000, 0, -572); ((("positive")), 100000000, 0, -573); ((("negative")), 100000000, 0, -574); ((("direct")), 100000000, 0, -575); ((("gadt")), 100000000, 0, -576)], 9, Tag1 ([(("Constructor", 488), Tag1 ([(("name", 489), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -521), (("runtime/desc.ml", 396, 15084, 15092), ("runtime/desc.ml", 396, 15084, 15106), 0), 0, Tag1 ("Refl__Desc", 218)); (("kind", 490), 0, (Tag3 ((("constructor_kind", 604)), [((("types")), 100000000, 0, -507); ((("structure_types")), 100000000, 0, -512); ((("arity")), 100000000, 0, -514); ((("rec_group")), 100000000, 0, -515); ((("kinds")), 100000000, 0, -516); ((("positive")), 100000000, 0, -517); ((("negative")), 100000000, 0, -518); ((("direct")), 100000000, 0, -519); ((("gadt")), 100000000, 0, -520)], (0)), 100000000, 0, -522), (("runtime/desc.ml", 397, 15107, 15115), ("runtime/desc.ml", 399, 15198, 15254), 0), 0, Tag1 ("Refl__Desc", 219)); (("eqs", 491), 0, (Tag3 ((("constructor_eqs", 617)), [((("eqs")), 100000000, 0, -508); ((("structure_eqs")), 100000000, 0, -513); ((("kinds")), 100000000, 0, -516); ((("gadt")), 100000000, 0, -520)], (0)), 100000000, 0, -523), (("runtime/desc.ml", 400, 15255, 15263), ("runtime/desc.ml", 400, 15255, 15323), 0), 0, Tag1 ("Refl__Desc", 220)); (("attributes", 492), 0, (Tag3 ((("attributes", 618)), [((("types")), 100000000, 0, -507); ((("arity")), 100000000, 0, -514); ((("rec_group")), 100000000, 0, -515); ((("kinds")), 100000000, 0, -516); ((("positive")), 100000000, 0, -517); ((("negative")), 100000000, 0, -518); ((("direct")), 100000000, 0, -519); ((("gadt")), 100000000, 0, -520)], (0)), 100000000, 0, -524), (("runtime/desc.ml", 401, 15324, 15332), ("runtime/desc.ml", 403, 15403, 15453), 0), 0, Tag1 ("Refl__Desc", 221))]), ((Tag3 ((("constructor", 601)), [(Tag2 ([((("types")), 100000000, 0, -507); ((("eqs")), 100000000, 0, -508)]), 100000000, 0, -506); (Tag8 (([("Constructor", (((Tag2 ([((("structure_types")), 100000000, 0, -512); ((("structure_eqs")), 100000000, 0, -513)]), 100000000, 0, -511))))], (0, 100000000, 0, -510), 1, 0, 0)), 100000000, 0, -509); ((("arity")), 100000000, 0, -514); ((("rec_group")), 100000000, 0, -515); ((("kinds")), 100000000, 0, -516); ((("positive")), 100000000, 0, -517); ((("negative")), 100000000, 0, -518); ((("direct")), 100000000, 0, -519); ((("gadt")), 100000000, 0, -520)], (0)), 100000000, 0, -505)), (("runtime/desc.ml", 395, 15064, 15066), ("runtime/desc.ml", 407, 15618, 15639), 0), 0, Tag1 ("Refl__Desc", 222)); (("Exists", 493), Tag1 ([(("name", 494), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -545), (("runtime/desc.ml", 409, 15655, 15663), ("runtime/desc.ml", 409, 15655, 15677), 0), 0, Tag1 ("Refl__Desc", 223)); (("selection", 495), 0, (Tag3 ((("selection", 571)), [(Tag8 (([("Succ", ((((("index")), 100000000, 0, -530))))], (0, 100000000, 0, -548), 1, 0, 0)), 100000000, 0, -547); ((("gadt")), 100000000, 0, -544); ((("constraints")), 100000000, 0, -549); ((0), 100000000, 0, -550)], (0)), 100000000, 0, -546), (("runtime/desc.ml", 410, 15678, 15686), ("runtime/desc.ml", 410, 15678, 15752), 0), 0, Tag1 ("Refl__Desc", 224)); (("presence", 496), 0, (Tag3 ((("presence", 582)), [(Tag8 (([("Exists", (0))], ((("kinds")), 100000000, 0, -540), 0, 0, 0)), 100000000, 0, -539); ((("local")), 100000000, 0, -533)], (0)), 100000000, 0, -551), (("runtime/desc.ml", 411, 15753, 15761), ("runtime/desc.ml", 411, 15753, 15798), 0), 0, Tag1 ("Refl__Desc", 225)); (("variables", 497), 0, (Tag3 ((("subvariables", 588)), [((("count")), 100000000, 0, -531); ((("local")), 100000000, 0, -533); ((("positive")), 100000000, 0, -541); ((("negative")), 100000000, 0, -542); ((("direct")), 100000000, 0, -543); ((("positives")), 100000000, 0, -534); ((("negatives")), 100000000, 0, -535); ((("directs")), 100000000, 0, -536); ((("subpositive")), 100000000, 0, -553); ((("subnegative")), 100000000, 0, -554); ((("subdirect")), 100000000, 0, -555)], (0)), 100000000, 0, -552), (("runtime/desc.ml", 412, 15799, 15807), ("runtime/desc.ml", 415, 15951, 15988), 0), 0, Tag1 ("Refl__Desc", 226)); (("construct", 498), 0, (Tag10 ((Tag1 (0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -531); (Tag9 (("exists")), 100000000, 0, -557)], (0)), 100000000, 0, -565), (Tag1 (0, (Tag3 ((("gadt_constraints", 584)), [((("constraints")), 100000000, 0, -549); (Tag9 (("exists")), 100000000, 0, -557)], (0)), 100000000, 0, -564), (Tag1 (0, (Tag3 ((("append", 581)), [(Tag9 (("exists")), 100000000, 0, -557); ((("arity")), 100000000, 0, -537); (Tag9 (("subarity")), 100000000, 0, -558)], (0)), 100000000, 0, -563), (Tag3 ((("exists_construct", 602)), [((("value")), 100000000, 0, -526); ((("structure")), 100000000, 0, -532); (Tag9 (("subarity")), 100000000, 0, -558); ((("rec_group")), 100000000, 0, -538); (Tag8 (([("Exists", (0))], ((("kinds")), 100000000, 0, -540), 0, 0, 0)), 100000000, 0, -539); ((("subpositive")), 100000000, 0, -553); ((("subnegative")), 100000000, 0, -554); ((("subdirect")), 100000000, 0, -555); ((("gadt")), 100000000, 0, -544)], (0)), 100000000, 0, -562), 0), 100000000, 0, -561), 0), 100000000, 0, -560), 0), 100000000, 0, -559), [(Tag9 (("exists")), 100000000, 0, -557); (Tag9 (("subarity")), 100000000, 0, -558)]), 100000000, 0, -556), (("runtime/desc.ml", 416, 15989, 15997), ("runtime/desc.ml", 423, 16301, 16332), 0), 0, Tag1 ("Refl__Desc", 227)); (("destruct", 499), 0, (Tag1 (0, ((("value")), 100000000, 0, -526), (Tag3 ((("exists_destruct", 603)), [((("count")), 100000000, 0, -531); ((("constraints")), 100000000, 0, -549); ((("value")), 100000000, 0, -526); ((("structure")), 100000000, 0, -532); ((("arity")), 100000000, 0, -537); ((("rec_group")), 100000000, 0, -538); (Tag8 (([("Exists", (0))], ((("kinds")), 100000000, 0, -540), 0, 0, 0)), 100000000, 0, -539); ((("subpositive")), 100000000, 0, -553); ((("subnegative")), 100000000, 0, -554); ((("subdirect")), 100000000, 0, -555); ((("gadt")), 100000000, 0, -544)], (0)), 100000000, 0, -567), 0), 100000000, 0, -566), (("runtime/desc.ml", 424, 16333, 16341), ("runtime/desc.ml", 427, 16453, 16528), 0), 0, Tag1 ("Refl__Desc", 228))]), ((Tag3 ((("constructor", 601)), [((("value")), 100000000, 0, -526); (Tag8 (([("Exists", (((Tag2 ([((("index")), 100000000, 0, -530); ((("count")), 100000000, 0, -531); ((("structure")), 100000000, 0, -532); ((("local")), 100000000, 0, -533); ((("positives")), 100000000, 0, -534); ((("negatives")), 100000000, 0, -535); ((("directs")), 100000000, 0, -536)]), 100000000, 0, -529))))], (0, 100000000, 0, -528), 1, 0, 0)), 100000000, 0, -527); ((("arity")), 100000000, 0, -537); ((("rec_group")), 100000000, 0, -538); (Tag8 (([("Exists", (0))], ((("kinds")), 100000000, 0, -540), 0, 0, 0)), 100000000, 0, -539); ((("positive")), 100000000, 0, -541); ((("negative")), 100000000, 0, -542); ((("direct")), 100000000, 0, -543); ((("gadt")), 100000000, 0, -544)], (0)), 100000000, 0, -525)), (("runtime/desc.ml", 408, 15640, 15642), ("runtime/desc.ml", 433, 16724, 16770), 0), 0, Tag1 ("Refl__Desc", 229))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 393, 14945, 14945), ("runtime/desc.ml", 433, 16724, 16770), 0), 0, 0, 0, Tag1 ("Refl__Desc", 137)), 2, 0); Tag1 (("exists_construct", 602), ([((("value")), 100000000, 0, -496); ((("structure")), 100000000, 0, -497); ((("arity")), 100000000, 0, -498); ((("rec_group")), 100000000, 0, -499); ((("kinds")), 100000000, 0, -500); ((("positive")), 100000000, 0, -501); ((("negative")), 100000000, 0, -502); ((("direct")), 100000000, 0, -503); ((("gadt")), 100000000, 0, -504)], 9, Tag1 ([(("ExistsConstruct", 500), Tag1 ([(("kind", 501), 0, (Tag3 ((("constructor_kind", 604)), [((("types")), 100000000, 0, -494); ((("structure")), 100000000, 0, -485); ((("arity")), 100000000, 0, -486); ((("rec_group")), 100000000, 0, -487); ((("kinds")), 100000000, 0, -488); ((("positive")), 100000000, 0, -489); ((("negative")), 100000000, 0, -490); ((("direct")), 100000000, 0, -491); ((("gadt")), 100000000, 0, -492)], (0)), 100000000, 0, -493), (("runtime/desc.ml", 438, 16912, 16920), ("runtime/desc.ml", 439, 16987, 17041), 0), 0, Tag1 ("Refl__Desc", 230)); (("construct", 502), 0, (Tag1 (0, ((("types")), 100000000, 0, -494), ((("value")), 100000000, 0, -484), 0), 100000000, 0, -495), (("runtime/desc.ml", 440, 17042, 17050), ("runtime/desc.ml", 440, 17042, 17079), 0), 0, Tag1 ("Refl__Desc", 231))]), ((Tag3 ((("exists_construct", 602)), [((("value")), 100000000, 0, -484); ((("structure")), 100000000, 0, -485); ((("arity")), 100000000, 0, -486); ((("rec_group")), 100000000, 0, -487); ((("kinds")), 100000000, 0, -488); ((("positive")), 100000000, 0, -489); ((("negative")), 100000000, 0, -490); ((("direct")), 100000000, 0, -491); ((("gadt")), 100000000, 0, -492)], (0)), 100000000, 0, -483)), (("runtime/desc.ml", 437, 16888, 16890), ("runtime/desc.ml", 443, 17159, 17212), 0), 0, Tag1 ("Refl__Desc", 232))], 0), 1, 0, [31; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 435, 16772, 16772), ("runtime/desc.ml", 443, 17159, 17212), 0), 0, 0, 0, Tag1 ("Refl__Desc", 138)), 2, 0); Tag1 (("exists_destruct", 603), ([((("count")), 100000000, 0, -472); ((("constraints")), 100000000, 0, -473); ((("value")), 100000000, 0, -474); ((("structure")), 100000000, 0, -475); ((("arity")), 100000000, 0, -476); ((("rec_group")), 100000000, 0, -477); ((("kinds")), 100000000, 0, -478); ((("positive")), 100000000, 0, -479); ((("negative")), 100000000, 0, -480); ((("direct")), 100000000, 0, -481); ((("gadt")), 100000000, 0, -482)], 11, Tag1 ([(("ExistsDestruct", 503), Tag1 ([(("exists_count", 504), 0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -454); ((("exists")), 100000000, 0, -466)], (0)), 100000000, 0, -465), (("runtime/desc.ml", 448, 17374, 17382), ("runtime/desc.ml", 448, 17374, 17422), 0), 0, Tag1 ("Refl__Desc", 233)); (("exists", 505), 0, (Tag3 ((("append", 581)), [((("exists")), 100000000, 0, -466); ((("arity")), 100000000, 0, -458); ((("subarity")), 100000000, 0, -468)], (0)), 100000000, 0, -467), (("runtime/desc.ml", 449, 17423, 17431), ("runtime/desc.ml", 449, 17423, 17476), 0), 0, Tag1 ("Refl__Desc", 234)); (("constraints", 506), 0, (Tag3 ((("gadt_constraints", 584)), [((("constraints")), 100000000, 0, -455); ((("exists")), 100000000, 0, -466)], (0)), 100000000, 0, -469), (("runtime/desc.ml", 450, 17477, 17485), ("runtime/desc.ml", 450, 17477, 17540), 0), 0, Tag1 ("Refl__Desc", 235)); (("kind", 507), 0, (Tag3 ((("constructor_kind", 604)), [((("types")), 100000000, 0, -471); ((("structure")), 100000000, 0, -457); ((("subarity")), 100000000, 0, -468); ((("rec_group")), 100000000, 0, -459); ((("kinds")), 100000000, 0, -460); ((("positive")), 100000000, 0, -461); ((("negative")), 100000000, 0, -462); ((("direct")), 100000000, 0, -463); ((("gadt")), 100000000, 0, -464)], (0)), 100000000, 0, -470), (("runtime/desc.ml", 451, 17541, 17549), ("runtime/desc.ml", 452, 17619, 17673), 0), 0, Tag1 ("Refl__Desc", 236)); (("values", 508), 0, ((("types")), 100000000, 0, -471), (("runtime/desc.ml", 453, 17674, 17682), ("runtime/desc.ml", 453, 17674, 17698), 0), 0, Tag1 ("Refl__Desc", 237))]), ((Tag3 ((("exists_destruct", 603)), [((("count")), 100000000, 0, -454); ((("constraints")), 100000000, 0, -455); ((("value")), 100000000, 0, -456); ((("structure")), 100000000, 0, -457); ((("arity")), 100000000, 0, -458); ((("rec_group")), 100000000, 0, -459); ((("kinds")), 100000000, 0, -460); ((("positive")), 100000000, 0, -461); ((("negative")), 100000000, 0, -462); ((("direct")), 100000000, 0, -463); ((("gadt")), 100000000, 0, -464)], (0)), 100000000, 0, -453)), (("runtime/desc.ml", 447, 17351, 17353), ("runtime/desc.ml", 456, 17789, 17852), 0), 0, Tag1 ("Refl__Desc", 238))], 0), 1, 0, [63; 15; 15; 63; 15; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 445, 17214, 17214), ("runtime/desc.ml", 456, 17789, 17852), 0), 0, 0, 0, Tag1 ("Refl__Desc", 139)), 2, 0); Tag1 (("constructor_kind", 604), ([((("types")), 100000000, 0, -444); ((("structure")), 100000000, 0, -445); ((("arity")), 100000000, 0, -446); ((("rec_group")), 100000000, 0, -447); ((("kinds")), 100000000, 0, -448); ((("positive")), 100000000, 0, -449); ((("negative")), 100000000, 0, -450); ((("direct")), 100000000, 0, -451); ((("gadt")), 100000000, 0, -452)], 9, Tag1 ([(("CTuple", 509), ([(Tag3 ((("tuple_structure", 605)), [((("types")), 100000000, 0, -419); ((("structure")), 100000000, 0, -422); ((("arity")), 100000000, 0, -423); ((("rec_group")), 100000000, 0, -424); ((("kinds")), 100000000, 0, -425); ((("positive")), 100000000, 0, -426); ((("negative")), 100000000, 0, -427); ((("direct")), 100000000, 0, -428); ((("gadt")), 100000000, 0, -429)], (0)), 100000000, 0, -430)]), ((Tag3 ((("constructor_kind", 604)), [((("types")), 100000000, 0, -419); (Tag8 (([("Tuple", ((((("structure")), 100000000, 0, -422))))], (0, 100000000, 0, -421), 1, 0, 0)), 100000000, 0, -420); ((("arity")), 100000000, 0, -423); ((("rec_group")), 100000000, 0, -424); ((("kinds")), 100000000, 0, -425); ((("positive")), 100000000, 0, -426); ((("negative")), 100000000, 0, -427); ((("direct")), 100000000, 0, -428); ((("gadt")), 100000000, 0, -429)], (0)), 100000000, 0, -418)), (("runtime/desc.ml", 460, 17970, 17972), ("runtime/desc.ml", 466, 18224, 18248), 0), 0, Tag1 ("Refl__Desc", 239)); (("CRecord", 510), ([(Tag3 ((("record_structure", 606)), [((("types")), 100000000, 0, -432); ((("structure")), 100000000, 0, -435); ((("arity")), 100000000, 0, -436); ((("rec_group")), 100000000, 0, -437); ((("kinds")), 100000000, 0, -438); ((("positive")), 100000000, 0, -439); ((("negative")), 100000000, 0, -440); ((("direct")), 100000000, 0, -441); ((("gadt")), 100000000, 0, -442)], (0)), 100000000, 0, -443)]), ((Tag3 ((("constructor_kind", 604)), [((("types")), 100000000, 0, -432); (Tag8 (([("Record", ((((("structure")), 100000000, 0, -435))))], (0, 100000000, 0, -434), 1, 0, 0)), 100000000, 0, -433); ((("arity")), 100000000, 0, -436); ((("rec_group")), 100000000, 0, -437); ((("kinds")), 100000000, 0, -438); ((("positive")), 100000000, 0, -439); ((("negative")), 100000000, 0, -440); ((("direct")), 100000000, 0, -441); ((("gadt")), 100000000, 0, -442)], (0)), 100000000, 0, -431)), (("runtime/desc.ml", 467, 18249, 18251), ("runtime/desc.ml", 473, 18506, 18530), 0), 0, Tag1 ("Refl__Desc", 240))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 458, 17854, 17854), ("runtime/desc.ml", 473, 18506, 18530), 0), 0, 0, 0, Tag1 ("Refl__Desc", 140)), 2, 0); Tag1 (("tuple_structure", 605), ([((("types")), 100000000, 0, -409); ((("structures")), 100000000, 0, -410); ((("arity")), 100000000, 0, -411); ((("rec_group")), 100000000, 0, -412); ((("kinds")), 100000000, 0, -413); ((("positive")), 100000000, 0, -414); ((("negative")), 100000000, 0, -415); ((("direct")), 100000000, 0, -416); ((("gadt")), 100000000, 0, -417)], 9, Tag1 ([(("TNil", 511), (0), ((Tag3 ((("tuple_structure", 605)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -384); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -385); ((("arity")), 100000000, 0, -386); ((("rec_group")), 100000000, 0, -387); ((("kinds")), 100000000, 0, -388); ((("positive")), 100000000, 0, -389); ((("negative")), 100000000, 0, -390); ((("direct")), 100000000, 0, -391); ((("gadt")), 100000000, 0, -392)], (0)), 100000000, 0, -383)), (("runtime/desc.ml", 478, 18654, 18656), ("runtime/desc.ml", 480, 18743, 18773), 0), 0, Tag1 ("Refl__Desc", 241)); (("TCons", 512), Tag1 ([(("head", 513), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -395); ((("structure")), 100000000, 0, -398); ((("arity")), 100000000, 0, -400); ((("rec_group")), 100000000, 0, -401); ((("kinds")), 100000000, 0, -402); ((("positive")), 100000000, 0, -403); ((("negative")), 100000000, 0, -404); ((("direct")), 100000000, 0, -405); ((("gadt")), 100000000, 0, -406)], (0)), 100000000, 0, -407), (("runtime/desc.ml", 482, 18788, 18796), ("runtime/desc.ml", 484, 18880, 18912), 0), 0, Tag1 ("Refl__Desc", 242)); (("tail", 514), 0, (Tag3 ((("tuple_structure", 605)), [((("types")), 100000000, 0, -396); ((("structures")), 100000000, 0, -399); ((("arity")), 100000000, 0, -400); ((("rec_group")), 100000000, 0, -401); ((("kinds")), 100000000, 0, -402); ((("positive")), 100000000, 0, -403); ((("negative")), 100000000, 0, -404); ((("direct")), 100000000, 0, -405); ((("gadt")), 100000000, 0, -406)], (0)), 100000000, 0, -408), (("runtime/desc.ml", 485, 18913, 18921), ("runtime/desc.ml", 487, 18999, 19054), 0), 0, Tag1 ("Refl__Desc", 243))]), ((Tag3 ((("tuple_structure", 605)), [(Tag2 ([((("a")), 100000000, 0, -395); ((("types")), 100000000, 0, -396)]), 100000000, 0, -394); (Tag2 ([((("structure")), 100000000, 0, -398); ((("structures")), 100000000, 0, -399)]), 100000000, 0, -397); ((("arity")), 100000000, 0, -400); ((("rec_group")), 100000000, 0, -401); ((("kinds")), 100000000, 0, -402); ((("positive")), 100000000, 0, -403); ((("negative")), 100000000, 0, -404); ((("direct")), 100000000, 0, -405); ((("gadt")), 100000000, 0, -406)], (0)), 100000000, 0, -393)), (("runtime/desc.ml", 481, 18774, 18776), ("runtime/desc.ml", 490, 19134, 19205), 0), 0, Tag1 ("Refl__Desc", 244))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 475, 18532, 18532), ("runtime/desc.ml", 490, 19134, 19205), 0), 0, 0, 0, Tag1 ("Refl__Desc", 141)), 2, 0); Tag1 (("record_structure", 606), ([((("types")), 100000000, 0, -374); ((("structures")), 100000000, 0, -375); ((("arity")), 100000000, 0, -376); ((("rec_group")), 100000000, 0, -377); ((("kinds")), 100000000, 0, -378); ((("positive")), 100000000, 0, -379); ((("negative")), 100000000, 0, -380); ((("direct")), 100000000, 0, -381); ((("gadt")), 100000000, 0, -382)], 9, Tag1 ([(("RNil", 515), (0), ((Tag3 ((("record_structure", 606)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -349); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -350); ((("arity")), 100000000, 0, -351); ((("rec_group")), 100000000, 0, -352); ((("kinds")), 100000000, 0, -353); ((("positive")), 100000000, 0, -354); ((("negative")), 100000000, 0, -355); ((("direct")), 100000000, 0, -356); ((("gadt")), 100000000, 0, -357)], (0)), 100000000, 0, -348)), (("runtime/desc.ml", 495, 19330, 19332), ("runtime/desc.ml", 497, 19419, 19450), 0), 0, Tag1 ("Refl__Desc", 245)); (("RCons", 516), Tag1 ([(("head", 517), 0, (Tag3 ((("record_field", 607)), [((("a")), 100000000, 0, -360); ((("structure")), 100000000, 0, -363); ((("arity")), 100000000, 0, -365); ((("rec_group")), 100000000, 0, -366); ((("kinds")), 100000000, 0, -367); ((("positive")), 100000000, 0, -368); ((("negative")), 100000000, 0, -369); ((("direct")), 100000000, 0, -370); ((("gadt")), 100000000, 0, -371)], (0)), 100000000, 0, -372), (("runtime/desc.ml", 499, 19465, 19473), ("runtime/desc.ml", 501, 19557, 19598), 0), 0, Tag1 ("Refl__Desc", 246)); (("tail", 518), 0, (Tag3 ((("record_structure", 606)), [((("types")), 100000000, 0, -361); ((("structures")), 100000000, 0, -364); ((("arity")), 100000000, 0, -365); ((("rec_group")), 100000000, 0, -366); ((("kinds")), 100000000, 0, -367); ((("positive")), 100000000, 0, -368); ((("negative")), 100000000, 0, -369); ((("direct")), 100000000, 0, -370); ((("gadt")), 100000000, 0, -371)], (0)), 100000000, 0, -373), (("runtime/desc.ml", 502, 19599, 19607), ("runtime/desc.ml", 504, 19685, 19741), 0), 0, Tag1 ("Refl__Desc", 247))]), ((Tag3 ((("record_structure", 606)), [(Tag2 ([((("a")), 100000000, 0, -360); ((("types")), 100000000, 0, -361)]), 100000000, 0, -359); (Tag2 ([((("structure")), 100000000, 0, -363); ((("structures")), 100000000, 0, -364)]), 100000000, 0, -362); ((("arity")), 100000000, 0, -365); ((("rec_group")), 100000000, 0, -366); ((("kinds")), 100000000, 0, -367); ((("positive")), 100000000, 0, -368); ((("negative")), 100000000, 0, -369); ((("direct")), 100000000, 0, -370); ((("gadt")), 100000000, 0, -371)], (0)), 100000000, 0, -358)), (("runtime/desc.ml", 498, 19451, 19453), ("runtime/desc.ml", 507, 19821, 19893), 0), 0, Tag1 ("Refl__Desc", 248))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 492, 19207, 19207), ("runtime/desc.ml", 507, 19821, 19893), 0), 0, 0, 0, Tag1 ("Refl__Desc", 142)), 2, 0); Tag1 (("record_field", 607), ([((("a")), 100000000, 0, -339); ((("structure")), 100000000, 0, -340); ((("arity")), 100000000, 0, -341); ((("rec_group")), 100000000, 0, -342); ((("kinds")), 100000000, 0, -343); ((("positive")), 100000000, 0, -344); ((("negative")), 100000000, 0, -345); ((("direct")), 100000000, 0, -346); ((("gadt")), 100000000, 0, -347)], 9, Tag1 ([(("Mono", 519), Tag1 ([(("label", 520), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -308), (("runtime/desc.ml", 512, 20016, 20024), ("runtime/desc.ml", 512, 20016, 20039), 0), 0, Tag1 ("Refl__Desc", 249)); (("desc", 521), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -297); ((("structure")), 100000000, 0, -300); ((("arity")), 100000000, 0, -301); ((("rec_group")), 100000000, 0, -302); ((("kinds")), 100000000, 0, -303); ((("positive")), 100000000, 0, -304); ((("negative")), 100000000, 0, -305); ((("direct")), 100000000, 0, -306); ((("gadt")), 100000000, 0, -307)], (0)), 100000000, 0, -309), (("runtime/desc.ml", 513, 20040, 20048), ("runtime/desc.ml", 515, 20132, 20164), 0), 0, Tag1 ("Refl__Desc", 250)); (("attributes", 522), 0, (Tag3 ((("attributes", 618)), [((("a")), 100000000, 0, -297); ((("arity")), 100000000, 0, -301); ((("rec_group")), 100000000, 0, -302); ((("kinds")), 100000000, 0, -303); ((("positive")), 100000000, 0, -304); ((("negative")), 100000000, 0, -305); ((("direct")), 100000000, 0, -306); ((("gadt")), 100000000, 0, -307)], (0)), 100000000, 0, -310), (("runtime/desc.ml", 516, 20165, 20173), ("runtime/desc.ml", 518, 20251, 20290), 0), 0, Tag1 ("Refl__Desc", 251))]), ((Tag3 ((("record_field", 607)), [((("a")), 100000000, 0, -297); (Tag8 (([("Mono", ((((("structure")), 100000000, 0, -300))))], (0, 100000000, 0, -299), 1, 0, 0)), 100000000, 0, -298); ((("arity")), 100000000, 0, -301); ((("rec_group")), 100000000, 0, -302); ((("kinds")), 100000000, 0, -303); ((("positive")), 100000000, 0, -304); ((("negative")), 100000000, 0, -305); ((("direct")), 100000000, 0, -306); ((("gadt")), 100000000, 0, -307)], (0)), 100000000, 0, -296)), (("runtime/desc.ml", 511, 20003, 20005), ("runtime/desc.ml", 521, 20377, 20426), 0), 0, Tag1 ("Refl__Desc", 252)); (("Poly", 523), Tag1 ([(("label", 524), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -329), (("runtime/desc.ml", 523, 20440, 20448), ("runtime/desc.ml", 523, 20440, 20463), 0), 0, Tag1 ("Refl__Desc", 253)); (("variables", 525), 0, (Tag3 ((("subvariables", 588)), [((("count")), 100000000, 0, -317); (Tag8 (([("Absent", (0))], (0, 100000000, 0, -332), 1, 0, 0)), 100000000, 0, -331); ((("positive")), 100000000, 0, -325); ((("negative")), 100000000, 0, -326); ((("direct")), 100000000, 0, -327); ((("positives")), 100000000, 0, -318); ((("negatives")), 100000000, 0, -319); ((("directs")), 100000000, 0, -320); ((("subpositive")), 100000000, 0, -333); ((("subnegative")), 100000000, 0, -334); ((("subdirect")), 100000000, 0, -335)], (0)), 100000000, 0, -330), (("runtime/desc.ml", 524, 20464, 20472), ("runtime/desc.ml", 527, 20619, 20656), 0), 0, Tag1 ("Refl__Desc", 254)); (("destruct", 526), 0, (Tag3 ((("forall_destruct", 609)), [((("a")), 100000000, 0, -312); ((("structure")), 100000000, 0, -316); ((("arity")), 100000000, 0, -321); ((("rec_group")), 100000000, 0, -322); (Tag8 (([("Poly", (0))], ((("kinds")), 100000000, 0, -324), 0, 0, 0)), 100000000, 0, -323); ((("subpositive")), 100000000, 0, -333); ((("subnegative")), 100000000, 0, -334); ((("subdirect")), 100000000, 0, -335); ((("gadt")), 100000000, 0, -328); ((("count")), 100000000, 0, -317)], (0)), 100000000, 0, -336), (("runtime/desc.ml", 528, 20657, 20665), ("runtime/desc.ml", 530, 20745, 20814), 0), 0, Tag1 ("Refl__Desc", 255)); (("construct", 527), 0, (Tag1 (0, (Tag3 ((("forall_construct", 608)), [((("a")), 100000000, 0, -312); ((("structure")), 100000000, 0, -316); ((("arity")), 100000000, 0, -321); ((("rec_group")), 100000000, 0, -322); (Tag8 (([("Poly", (0))], ((("kinds")), 100000000, 0, -324), 0, 0, 0)), 100000000, 0, -323); ((("subpositive")), 100000000, 0, -333); ((("subnegative")), 100000000, 0, -334); ((("subdirect")), 100000000, 0, -335); ((("gadt")), 100000000, 0, -328); ((("count")), 100000000, 0, -317)], (0)), 100000000, 0, -338), ((("a")), 100000000, 0, -312), 0), 100000000, 0, -337), (("runtime/desc.ml", 531, 20815, 20823), ("runtime/desc.ml", 534, 20977, 20989), 0), 0, Tag1 ("Refl__Desc", 256))]), ((Tag3 ((("record_field", 607)), [((("a")), 100000000, 0, -312); (Tag8 (([("Poly", (((Tag2 ([((("structure")), 100000000, 0, -316); ((("count")), 100000000, 0, -317); ((("positives")), 100000000, 0, -318); ((("negatives")), 100000000, 0, -319); ((("directs")), 100000000, 0, -320)]), 100000000, 0, -315))))], (0, 100000000, 0, -314), 1, 0, 0)), 100000000, 0, -313); ((("arity")), 100000000, 0, -321); ((("rec_group")), 100000000, 0, -322); (Tag8 (([("Poly", (0))], ((("kinds")), 100000000, 0, -324), 0, 0, 0)), 100000000, 0, -323); ((("positive")), 100000000, 0, -325); ((("negative")), 100000000, 0, -326); ((("direct")), 100000000, 0, -327); ((("gadt")), 100000000, 0, -328)], (0)), 100000000, 0, -311)), (("runtime/desc.ml", 522, 20427, 20429), ("runtime/desc.ml", 539, 21166, 21204), 0), 0, Tag1 ("Refl__Desc", 257))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 509, 19895, 19895), ("runtime/desc.ml", 539, 21166, 21204), 0), 0, 0, 0, Tag1 ("Refl__Desc", 143)), 2, 0); Tag1 (("forall_construct", 608), ([((("a")), 100000000, 0, -295); ((("structure")), 100000000, 0, -284); ((("arity")), 100000000, 0, -292); ((("rec_group")), 100000000, 0, -285); ((("kinds")), 100000000, 0, -286); ((("positive")), 100000000, 0, -287); ((("negative")), 100000000, 0, -288); ((("direct")), 100000000, 0, -289); ((("gadt")), 100000000, 0, -290); ((("count")), 100000000, 0, -294)], 10, [[(("forall_construct", 528), 0, (Tag10 ((Tag1 (0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -294); (Tag9 (("forall")), 100000000, 0, -277)], (0)), 100000000, 0, -293), (Tag1 (0, (Tag3 ((("append", 581)), [(Tag9 (("forall")), 100000000, 0, -277); ((("arity")), 100000000, 0, -292); (Tag9 (("subarity")), 100000000, 0, -279)], (0)), 100000000, 0, -291), (Tag1 (0, (Tag3 ((("desc", 599)), [(Tag9 (("b")), 100000000, 0, -278); ((("structure")), 100000000, 0, -284); (Tag9 (("subarity")), 100000000, 0, -279); ((("rec_group")), 100000000, 0, -285); ((("kinds")), 100000000, 0, -286); ((("positive")), 100000000, 0, -287); ((("negative")), 100000000, 0, -288); ((("direct")), 100000000, 0, -289); ((("gadt")), 100000000, 0, -290)], (0)), 100000000, 0, -283), (Tag9 (("b")), 100000000, 0, -278), 0), 100000000, 0, -282), 0), 100000000, 0, -281), 0), 100000000, 0, -280), [(Tag9 (("forall")), 100000000, 0, -277); (Tag9 (("b")), 100000000, 0, -278); (Tag9 (("subarity")), 100000000, 0, -279)]), 100000000, 0, -276), (("runtime/desc.ml", 543, 21328, 21336), ("runtime/desc.ml", 549, 21591, 21604), 0), 0, Tag1 ("Refl__Desc", 258))]], 1, 0, [8; 63; 15; 15; 63; 63; 63; 63; 15; 63], [0; 0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 541, 21206, 21206), ("runtime/desc.ml", 550, 21605, 21612), 0), 0, 0, 1, Tag1 ("Refl__Desc", 144)), 2, 0); Tag1 (("forall_destruct", 609), ([((("a")), 100000000, 0, -264); ((("structure")), 100000000, 0, -265); ((("arity")), 100000000, 0, -273); ((("rec_group")), 100000000, 0, -266); ((("kinds")), 100000000, 0, -267); ((("subpositive")), 100000000, 0, -268); ((("subnegative")), 100000000, 0, -269); ((("subdirect")), 100000000, 0, -270); ((("gadt")), 100000000, 0, -271); ((("count")), 100000000, 0, -275)], 10, [[(("forall_destruct", 529), 0, (Tag10 ((Tag1 (0, (Tag3 ((("length", 580)), [((("count")), 100000000, 0, -275); (Tag9 (("forall")), 100000000, 0, -259)], (0)), 100000000, 0, -274), (Tag1 (0, (Tag3 ((("append", 581)), [(Tag9 (("forall")), 100000000, 0, -259); ((("arity")), 100000000, 0, -273); (Tag9 (("subarity")), 100000000, 0, -260)], (0)), 100000000, 0, -272), (Tag3 ((("forall_destruct_result", 610)), [((("a")), 100000000, 0, -264); ((("structure")), 100000000, 0, -265); (Tag9 (("subarity")), 100000000, 0, -260); ((("rec_group")), 100000000, 0, -266); ((("kinds")), 100000000, 0, -267); ((("subpositive")), 100000000, 0, -268); ((("subnegative")), 100000000, 0, -269); ((("subdirect")), 100000000, 0, -270); ((("gadt")), 100000000, 0, -271)], (0)), 100000000, 0, -263), 0), 100000000, 0, -262), 0), 100000000, 0, -261), [(Tag9 (("forall")), 100000000, 0, -259); (Tag9 (("subarity")), 100000000, 0, -260)]), 100000000, 0, -258), (("runtime/desc.ml", 554, 21744, 21752), ("runtime/desc.ml", 559, 21959, 22027), 0), 0, Tag1 ("Refl__Desc", 259))]], 1, 0, [47; 63; 15; 15; 63; 63; 63; 63; 15; 63], [0; 0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 552, 21614, 21614), ("runtime/desc.ml", 560, 22028, 22035), 0), 0, 0, 1, Tag1 ("Refl__Desc", 145)), 2, 0); Tag1 (("forall_destruct_result", 610), ([((("a")), 100000000, 0, -249); ((("structure")), 100000000, 0, -250); ((("arity")), 100000000, 0, -251); ((("rec_group")), 100000000, 0, -252); ((("kinds")), 100000000, 0, -253); ((("positive")), 100000000, 0, -254); ((("negative")), 100000000, 0, -255); ((("direct")), 100000000, 0, -256); ((("gadt")), 100000000, 0, -257)], 9, Tag1 ([(("ForallDestruct", 530), Tag1 ([(("desc", 531), 0, (Tag3 ((("desc", 599)), [((("b")), 100000000, 0, -247); ((("structure")), 100000000, 0, -238); ((("arity")), 100000000, 0, -239); ((("rec_group")), 100000000, 0, -240); ((("kinds")), 100000000, 0, -241); ((("positive")), 100000000, 0, -242); ((("negative")), 100000000, 0, -243); ((("direct")), 100000000, 0, -244); ((("gadt")), 100000000, 0, -245)], (0)), 100000000, 0, -246), (("runtime/desc.ml", 565, 22178, 22186), ("runtime/desc.ml", 566, 22249, 22291), 0), 0, Tag1 ("Refl__Desc", 260)); (("destruct", 532), 0, (Tag1 (0, ((("a")), 100000000, 0, -237), ((("b")), 100000000, 0, -247), 0), 100000000, 0, -248), (("runtime/desc.ml", 567, 22292, 22300), ("runtime/desc.ml", 567, 22292, 22320), 0), 0, Tag1 ("Refl__Desc", 261))]), ((Tag3 ((("forall_destruct_result", 610)), [((("a")), 100000000, 0, -237); ((("structure")), 100000000, 0, -238); ((("arity")), 100000000, 0, -239); ((("rec_group")), 100000000, 0, -240); ((("kinds")), 100000000, 0, -241); ((("positive")), 100000000, 0, -242); ((("negative")), 100000000, 0, -243); ((("direct")), 100000000, 0, -244); ((("gadt")), 100000000, 0, -245)], (0)), 100000000, 0, -236)), (("runtime/desc.ml", 564, 22155, 22157), ("runtime/desc.ml", 570, 22407, 22455), 0), 0, Tag1 ("Refl__Desc", 262))], 0), 1, 0, [47; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 562, 22037, 22037), ("runtime/desc.ml", 570, 22407, 22455), 0), 0, 0, 0, Tag1 ("Refl__Desc", 146)), 2, 0); Tag1 (("variant_constructors", 611), ([((("cases")), 100000000, 0, -227); ((("structures")), 100000000, 0, -228); ((("arity")), 100000000, 0, -229); ((("rec_group")), 100000000, 0, -230); ((("kinds")), 100000000, 0, -231); ((("positive")), 100000000, 0, -232); ((("negative")), 100000000, 0, -233); ((("direct")), 100000000, 0, -234); ((("gadt")), 100000000, 0, -235)], 9, Tag1 ([(("VCNil", 533), (0), ((Tag3 ((("variant_constructors", 611)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -202); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -203); ((("arity")), 100000000, 0, -204); ((("rec_group")), 100000000, 0, -205); ((("kinds")), 100000000, 0, -206); ((("positive")), 100000000, 0, -207); ((("negative")), 100000000, 0, -208); ((("direct")), 100000000, 0, -209); ((("gadt")), 100000000, 0, -210)], (0)), 100000000, 0, -201)), (("runtime/desc.ml", 574, 22578, 22580), ("runtime/desc.ml", 576, 22668, 22703), 0), 0, Tag1 ("Refl__Desc", 263)); (("VCCons", 534), Tag1 ([(("head", 535), 0, (Tag3 ((("variant_constructor", 612)), [((("types")), 100000000, 0, -213); ((("structure")), 100000000, 0, -216); ((("arity")), 100000000, 0, -218); ((("rec_group")), 100000000, 0, -219); ((("kinds")), 100000000, 0, -220); ((("positive")), 100000000, 0, -221); ((("negative")), 100000000, 0, -222); ((("direct")), 100000000, 0, -223); ((("gadt")), 100000000, 0, -224)], (0)), 100000000, 0, -225), (("runtime/desc.ml", 578, 22719, 22727), ("runtime/desc.ml", 580, 22804, 22863), 0), 0, Tag1 ("Refl__Desc", 264)); (("tail", 536), 0, (Tag3 ((("variant_constructors", 611)), [((("cases")), 100000000, 0, -214); ((("structures")), 100000000, 0, -217); ((("arity")), 100000000, 0, -218); ((("rec_group")), 100000000, 0, -219); ((("kinds")), 100000000, 0, -220); ((("positive")), 100000000, 0, -221); ((("negative")), 100000000, 0, -222); ((("direct")), 100000000, 0, -223); ((("gadt")), 100000000, 0, -224)], (0)), 100000000, 0, -226), (("runtime/desc.ml", 581, 22864, 22872), ("runtime/desc.ml", 583, 22950, 23010), 0), 0, Tag1 ("Refl__Desc", 265))]), ((Tag3 ((("variant_constructors", 611)), [(Tag2 ([((("types")), 100000000, 0, -213); ((("cases")), 100000000, 0, -214)]), 100000000, 0, -212); (Tag2 ([((("structure")), 100000000, 0, -216); ((("structures")), 100000000, 0, -217)]), 100000000, 0, -215); ((("arity")), 100000000, 0, -218); ((("rec_group")), 100000000, 0, -219); ((("kinds")), 100000000, 0, -220); ((("positive")), 100000000, 0, -221); ((("negative")), 100000000, 0, -222); ((("direct")), 100000000, 0, -223); ((("gadt")), 100000000, 0, -224)], (0)), 100000000, 0, -211)), (("runtime/desc.ml", 577, 22704, 22706), ("runtime/desc.ml", 586, 23094, 23170), 0), 0, Tag1 ("Refl__Desc", 266))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 572, 22457, 22457), ("runtime/desc.ml", 586, 23094, 23170), 0), 0, 0, 0, Tag1 ("Refl__Desc", 147)), 2, 0); Tag1 (("variant_constructor", 612), ([((("types")), 100000000, 0, -192); ((("structure")), 100000000, 0, -193); ((("arity")), 100000000, 0, -194); ((("rec_group")), 100000000, 0, -195); ((("kinds")), 100000000, 0, -196); ((("positive")), 100000000, 0, -197); ((("negative")), 100000000, 0, -198); ((("direct")), 100000000, 0, -199); ((("gadt")), 100000000, 0, -200)], 9, Tag1 ([(("VConstructor", 537), Tag1 ([(("name", 538), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -177), (("runtime/desc.ml", 591, 23312, 23320), ("runtime/desc.ml", 591, 23312, 23334), 0), 0, Tag1 ("Refl__Desc", 267)); (("argument", 539), 0, (Tag3 ((("variant_argument", 613)), [((("types")), 100000000, 0, -166); ((("structures")), 100000000, 0, -169); ((("arity")), 100000000, 0, -170); ((("rec_group")), 100000000, 0, -171); ((("kinds")), 100000000, 0, -172); ((("positive")), 100000000, 0, -173); ((("negative")), 100000000, 0, -174); ((("direct")), 100000000, 0, -175); ((("gadt")), 100000000, 0, -176)], (0)), 100000000, 0, -178), (("runtime/desc.ml", 592, 23335, 23343), ("runtime/desc.ml", 594, 23425, 23481), 0), 0, Tag1 ("Refl__Desc", 268))]), ((Tag3 ((("variant_constructor", 612)), [((("types")), 100000000, 0, -166); (Tag8 (([("Constr", ((((("structures")), 100000000, 0, -169))))], (0, 100000000, 0, -168), 1, 0, 0)), 100000000, 0, -167); ((("arity")), 100000000, 0, -170); ((("rec_group")), 100000000, 0, -171); ((("kinds")), 100000000, 0, -172); ((("positive")), 100000000, 0, -173); ((("negative")), 100000000, 0, -174); ((("direct")), 100000000, 0, -175); ((("gadt")), 100000000, 0, -176)], (0)), 100000000, 0, -165)), (("runtime/desc.ml", 590, 23291, 23293), ("runtime/desc.ml", 597, 23564, 23631), 0), 0, Tag1 ("Refl__Desc", 269)); (("VInherit", 540), ([(Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -180); ((("structure")), 100000000, 0, -183); ((("arity")), 100000000, 0, -184); ((("rec_group")), 100000000, 0, -185); ((("kinds")), 100000000, 0, -186); ((("positive")), 100000000, 0, -187); ((("negative")), 100000000, 0, -188); ((("direct")), 100000000, 0, -189); ((("gadt")), 100000000, 0, -190)], (0)), 100000000, 0, -191)]), ((Tag3 ((("variant_constructor", 612)), [((("a")), 100000000, 0, -180); (Tag8 (([("Inherit", ((((("structure")), 100000000, 0, -183))))], (0, 100000000, 0, -182), 1, 0, 0)), 100000000, 0, -181); ((("arity")), 100000000, 0, -184); ((("rec_group")), 100000000, 0, -185); ((("kinds")), 100000000, 0, -186); ((("positive")), 100000000, 0, -187); ((("negative")), 100000000, 0, -188); ((("direct")), 100000000, 0, -189); ((("gadt")), 100000000, 0, -190)], (0)), 100000000, 0, -179)), (("runtime/desc.ml", 598, 23632, 23634), ("runtime/desc.ml", 602, 23819, 23886), 0), 0, Tag1 ("Refl__Desc", 270))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 588, 23172, 23172), ("runtime/desc.ml", 602, 23819, 23886), 0), 0, 0, 0, Tag1 ("Refl__Desc", 148)), 2, 0); Tag1 (("variant_argument", 613), ([((("types")), 100000000, 0, -156); ((("structures")), 100000000, 0, -157); ((("arity")), 100000000, 0, -158); ((("rec_group")), 100000000, 0, -159); ((("kinds")), 100000000, 0, -160); ((("positive")), 100000000, 0, -161); ((("negative")), 100000000, 0, -162); ((("direct")), 100000000, 0, -163); ((("gadt")), 100000000, 0, -164)], 9, Tag1 ([(("VNone", 541), (0), ((Tag3 ((("variant_argument", 613)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -132); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -133); ((("arity")), 100000000, 0, -134); ((("rec_group")), 100000000, 0, -135); ((("kinds")), 100000000, 0, -136); ((("positive")), 100000000, 0, -137); ((("negative")), 100000000, 0, -138); ((("direct")), 100000000, 0, -139); ((("gadt")), 100000000, 0, -140)], (0)), 100000000, 0, -131)), (("runtime/desc.ml", 606, 24005, 24007), ("runtime/desc.ml", 608, 24095, 24126), 0), 0, Tag1 ("Refl__Desc", 271)); (("VSome", 542), ([(Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -143); ((("structure")), 100000000, 0, -146); ((("arity")), 100000000, 0, -148); ((("rec_group")), 100000000, 0, -149); ((("kinds")), 100000000, 0, -150); ((("positive")), 100000000, 0, -151); ((("negative")), 100000000, 0, -152); ((("direct")), 100000000, 0, -153); ((("gadt")), 100000000, 0, -154)], (0)), 100000000, 0, -155)]), ((Tag3 ((("variant_argument", 613)), [(Tag2 ([((("a")), 100000000, 0, -143); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -144)]), 100000000, 0, -142); (Tag2 ([((("structure")), 100000000, 0, -146); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -147)]), 100000000, 0, -145); ((("arity")), 100000000, 0, -148); ((("rec_group")), 100000000, 0, -149); ((("kinds")), 100000000, 0, -150); ((("positive")), 100000000, 0, -151); ((("negative")), 100000000, 0, -152); ((("direct")), 100000000, 0, -153); ((("gadt")), 100000000, 0, -154)], (0)), 100000000, 0, -141)), (("runtime/desc.ml", 609, 24127, 24129), ("runtime/desc.ml", 613, 24322, 24375), 0), 0, Tag1 ("Refl__Desc", 272))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 604, 23888, 23888), ("runtime/desc.ml", 613, 24322, 24375), 0), 0, 0, 0, Tag1 ("Refl__Desc", 149)), 2, 0); Tag1 (("object_methods", 614), ([((("methods")), 100000000, 0, -122); ((("structures")), 100000000, 0, -123); ((("arity")), 100000000, 0, -124); ((("rec_group")), 100000000, 0, -125); ((("kinds")), 100000000, 0, -126); ((("positive")), 100000000, 0, -127); ((("negative")), 100000000, 0, -128); ((("direct")), 100000000, 0, -129); ((("gadt")), 100000000, 0, -130)], 9, Tag1 ([(("ONil", 543), (0), ((Tag3 ((("object_methods", 614)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -97); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -98); ((("arity")), 100000000, 0, -99); ((("rec_group")), 100000000, 0, -100); ((("kinds")), 100000000, 0, -101); ((("positive")), 100000000, 0, -102); ((("negative")), 100000000, 0, -103); ((("direct")), 100000000, 0, -104); ((("gadt")), 100000000, 0, -105)], (0)), 100000000, 0, -96)), (("runtime/desc.ml", 617, 24494, 24496), ("runtime/desc.ml", 619, 24583, 24612), 0), 0, Tag1 ("Refl__Desc", 273)); (("OCons", 544), Tag1 ([(("head", 545), 0, (Tag3 ((("object_method", 615)), [((("a")), 100000000, 0, -108); ((("structure")), 100000000, 0, -111); ((("arity")), 100000000, 0, -113); ((("rec_group")), 100000000, 0, -114); ((("kinds")), 100000000, 0, -115); ((("positive")), 100000000, 0, -116); ((("negative")), 100000000, 0, -117); ((("direct")), 100000000, 0, -118); ((("gadt")), 100000000, 0, -119)], (0)), 100000000, 0, -120), (("runtime/desc.ml", 621, 24627, 24635), ("runtime/desc.ml", 623, 24708, 24761), 0), 0, Tag1 ("Refl__Desc", 274)); (("tail", 546), 0, (Tag3 ((("object_methods", 614)), [((("methods")), 100000000, 0, -109); ((("structures")), 100000000, 0, -112); ((("arity")), 100000000, 0, -113); ((("rec_group")), 100000000, 0, -114); ((("kinds")), 100000000, 0, -115); ((("positive")), 100000000, 0, -116); ((("negative")), 100000000, 0, -117); ((("direct")), 100000000, 0, -118); ((("gadt")), 100000000, 0, -119)], (0)), 100000000, 0, -121), (("runtime/desc.ml", 624, 24762, 24770), ("runtime/desc.ml", 626, 24850, 24904), 0), 0, Tag1 ("Refl__Desc", 275))]), ((Tag3 ((("object_methods", 614)), [(Tag2 ([((("a")), 100000000, 0, -108); ((("methods")), 100000000, 0, -109)]), 100000000, 0, -107); (Tag2 ([((("structure")), 100000000, 0, -111); ((("structures")), 100000000, 0, -112)]), 100000000, 0, -110); ((("arity")), 100000000, 0, -113); ((("rec_group")), 100000000, 0, -114); ((("kinds")), 100000000, 0, -115); ((("positive")), 100000000, 0, -116); ((("negative")), 100000000, 0, -117); ((("direct")), 100000000, 0, -118); ((("gadt")), 100000000, 0, -119)], (0)), 100000000, 0, -106)), (("runtime/desc.ml", 620, 24613, 24615), ("runtime/desc.ml", 629, 24986, 25056), 0), 0, Tag1 ("Refl__Desc", 276))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 615, 24377, 24377), ("runtime/desc.ml", 629, 24986, 25056), 0), 0, 0, 0, Tag1 ("Refl__Desc", 150)), 2, 0); Tag1 (("object_method", 615), ([((("types")), 100000000, 0, -87); ((("structure")), 100000000, 0, -88); ((("arity")), 100000000, 0, -89); ((("rec_group")), 100000000, 0, -90); ((("kinds")), 100000000, 0, -91); ((("positive")), 100000000, 0, -92); ((("negative")), 100000000, 0, -93); ((("direct")), 100000000, 0, -94); ((("gadt")), 100000000, 0, -95)], 9, Tag1 ([(("OMethod", 547), Tag1 ([(("name", 548), 0, (Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -85), (("runtime/desc.ml", 634, 25187, 25195), ("runtime/desc.ml", 634, 25187, 25209), 0), 0, Tag1 ("Refl__Desc", 277)); (("desc", 549), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -74); ((("structures")), 100000000, 0, -77); ((("arity")), 100000000, 0, -78); ((("rec_group")), 100000000, 0, -79); ((("kinds")), 100000000, 0, -80); ((("positive")), 100000000, 0, -81); ((("negative")), 100000000, 0, -82); ((("direct")), 100000000, 0, -83); ((("gadt")), 100000000, 0, -84)], (0)), 100000000, 0, -86), (("runtime/desc.ml", 635, 25210, 25218), ("runtime/desc.ml", 637, 25292, 25336), 0), 0, Tag1 ("Refl__Desc", 278))]), ((Tag3 ((("object_method", 615)), [((("a")), 100000000, 0, -74); (Tag8 (([("Method", ((((("structures")), 100000000, 0, -77))))], (0, 100000000, 0, -76), 1, 0, 0)), 100000000, 0, -75); ((("arity")), 100000000, 0, -78); ((("rec_group")), 100000000, 0, -79); ((("kinds")), 100000000, 0, -80); ((("positive")), 100000000, 0, -81); ((("negative")), 100000000, 0, -82); ((("direct")), 100000000, 0, -83); ((("gadt")), 100000000, 0, -84)], (0)), 100000000, 0, -73)), (("runtime/desc.ml", 633, 25171, 25173), ("runtime/desc.ml", 640, 25415, 25476), 0), 0, Tag1 ("Refl__Desc", 279))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 631, 25058, 25058), ("runtime/desc.ml", 640, 25415, 25476), 0), 0, 0, 0, Tag1 ("Refl__Desc", 151)), 2, 0); Tag1 (("vector", 616), ([((("types")), 100000000, 0, -66); ((("structures")), 100000000, 0, -67); ((("arity")), 100000000, 0, -68); ((("rec_group")), 100000000, 0, -69); ((("kinds")), 100000000, 0, -70); ((("variables")), 100000000, 0, -71); ((("gadt")), 100000000, 0, -72)], 7, Tag1 ([(("VNil", 550), (0), ((Tag3 ((("vector", 616)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -40); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -41); ((("arity")), 100000000, 0, -42); ((("rec_group")), 100000000, 0, -43); ((("kinds")), 100000000, 0, -44); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -45); ((("gadt")), 100000000, 0, -46)], (0)), 100000000, 0, -39)), (("runtime/desc.ml", 651, 25821, 25823), ("runtime/desc.ml", 651, 25821, 25892), 0), 0, Tag1 ("Refl__Desc", 280)); (("VCons", 551), Tag1 ([(("head", 552), 0, (Tag3 ((("desc", 599)), [((("a")), 100000000, 0, -49); ((("structure")), 100000000, 0, -52); ((("arity")), 100000000, 0, -54); ((("rec_group")), 100000000, 0, -55); ((("kinds")), 100000000, 0, -56); ((("positive")), 100000000, 0, -59); ((("negative")), 100000000, 0, -60); ((("direct")), 100000000, 0, -61); ((("gadt")), 100000000, 0, -63)], (0)), 100000000, 0, -64), (("runtime/desc.ml", 653, 25907, 25915), ("runtime/desc.ml", 655, 25999, 26032), 0), 0, Tag1 ("Refl__Desc", 281)); (("tail", 553), 0, (Tag3 ((("vector", 616)), [((("types")), 100000000, 0, -50); ((("structures")), 100000000, 0, -53); ((("arity")), 100000000, 0, -54); ((("rec_group")), 100000000, 0, -55); ((("kinds")), 100000000, 0, -56); ((("variables")), 100000000, 0, -62); ((("gadt")), 100000000, 0, -63)], (0)), 100000000, 0, -65), (("runtime/desc.ml", 656, 26033, 26041), ("runtime/desc.ml", 658, 26120, 26146), 0), 0, Tag1 ("Refl__Desc", 282))]), ((Tag3 ((("vector", 616)), [(Tag2 ([((("a")), 100000000, 0, -49); ((("types")), 100000000, 0, -50)]), 100000000, 0, -48); (Tag2 ([((("structure")), 100000000, 0, -52); ((("structures")), 100000000, 0, -53)]), 100000000, 0, -51); ((("arity")), 100000000, 0, -54); ((("rec_group")), 100000000, 0, -55); ((("kinds")), 100000000, 0, -56); (Tag2 ([(Tag2 ([((("positive")), 100000000, 0, -59); ((("negative")), 100000000, 0, -60); ((("direct")), 100000000, 0, -61)]), 100000000, 0, -58); ((("variables")), 100000000, 0, -62)]), 100000000, 0, -57); ((("gadt")), 100000000, 0, -63)], (0)), 100000000, 0, -47)), (("runtime/desc.ml", 652, 25893, 25895), ("runtime/desc.ml", 662, 26299, 26315), 0), 0, Tag1 ("Refl__Desc", 283))], 0), 1, 0, [63; 63; 63; 15; 63; 63; 15], [0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 649, 25733, 25733), ("runtime/desc.ml", 662, 26299, 26315), 0), 0, 0, 0, Tag1 ("Refl__Desc", 152)), 2, 0); Tag1 (("constructor_eqs", 617), ([((("eqs")), 100000000, 0, -35); ((("structure_eqs")), 100000000, 0, -36); ((("kinds")), 100000000, 0, -37); ((("gadt")), 100000000, 0, -38)], 4, Tag1 ([(("ENil", 554), (0), ((Tag3 ((("constructor_eqs", 617)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -16); (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -17); ((("kinds")), 100000000, 0, -18); ((("gadt")), 100000000, 0, -19)], (0)), 100000000, 0, -15)), (("runtime/desc.ml", 665, 26377, 26379), ("runtime/desc.ml", 666, 26388, 26437), 0), 0, Tag1 ("Refl__Desc", 284)); (("ECons", 555), Tag1 ([(("head", 556), 0, (Tag3 ((("selection", 571)), [(Tag8 (([("Succ", ((((("index")), 100000000, 0, -25))))], (0, 100000000, 0, -32), 1, 0, 0)), 100000000, 0, -31); ((("gadt")), 100000000, 0, -29); ((("eq")), 100000000, 0, -22); ((0), 100000000, 0, -33)], (0)), 100000000, 0, -30), (("runtime/desc.ml", 668, 26452, 26460), ("runtime/desc.ml", 668, 26452, 26512), 0), 0, Tag1 ("Refl__Desc", 285)); (("tail", 557), 0, (Tag3 ((("constructor_eqs", 617)), [((("eqs")), 100000000, 0, -23); ((("structure_eqs")), 100000000, 0, -26); (Tag8 (([("GADT", (0))], ((("kinds")), 100000000, 0, -28), 0, 0, 0)), 100000000, 0, -27); ((("gadt")), 100000000, 0, -29)], (0)), 100000000, 0, -34), (("runtime/desc.ml", 669, 26513, 26521), ("runtime/desc.ml", 669, 26513, 26582), 0), 0, Tag1 ("Refl__Desc", 286))]), ((Tag3 ((("constructor_eqs", 617)), [(Tag2 ([((("eq")), 100000000, 0, -22); ((("eqs")), 100000000, 0, -23)]), 100000000, 0, -21); (Tag2 ([((("index")), 100000000, 0, -25); ((("structure_eqs")), 100000000, 0, -26)]), 100000000, 0, -24); (Tag8 (([("GADT", (0))], ((("kinds")), 100000000, 0, -28), 0, 0, 0)), 100000000, 0, -27); ((("gadt")), 100000000, 0, -29)], (0)), 100000000, 0, -20)), (("runtime/desc.ml", 667, 26438, 26440), ("runtime/desc.ml", 672, 26670, 26697), 0), 0, Tag1 ("Refl__Desc", 287))], 0), 1, 0, [63; 63; 63; 15], [0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 664, 26317, 26317), ("runtime/desc.ml", 672, 26670, 26697), 0), 0, 0, 0, Tag1 ("Refl__Desc", 153)), 2, 0); Tag1 (("attributes", 618), ([((("a")), 100000000, 0, -7); ((("arity")), 100000000, 0, -8); ((("rec_group")), 100000000, 0, -9); ((("kinds")), 100000000, 0, -10); ((("positive")), 100000000, 0, -11); ((("negative")), 100000000, 0, -12); ((("direct")), 100000000, 0, -13); ((("gadt")), 100000000, 0, -14)], 8, [[(("typed", 558), 0, (Tag10 ((Tag1 (0, (Tag3 ((("typed_attribute_kind", 590)), [((("a")), 100000000, 0, -7); ((("arity")), 100000000, 0, -8); (Tag9 (("attribute")), 100000000, 0, -3)], (0)), 100000000, 0, -6), (Tag3 ((Tag3 ("option", 10)), [(Tag9 (("attribute")), 100000000, 0, -3)], (0)), 100000000, 0, -5), 0), 100000000, 0, -4), [(Tag9 (("attribute")), 100000000, 0, -3)]), 100000000, 0, -2), (("runtime/desc.ml", 676, 26795, 26799), ("runtime/desc.ml", 678, 26826, 26899), 0), 0, Tag1 ("Refl__Desc", 288))]], 1, 0, [15; 15; 8; 8; 8; 8; 8; 8], [0; 0; 0; 0; 0; 0; 0; 0], 0, 0, (("runtime/desc.ml", 674, 26699, 26699), ("runtime/desc.ml", 679, 26900, 26903), 0), 0, 0, 1, Tag1 ("Refl__Desc", 154)), 2, 0)], "Refl__Desc", [("Refl__Desc", ("\221\150mt\149.2\132\189\244\007\164&\203\225\172")); ("Stdlib__Lazy", ("\1479\177F\251W\183>\15140\213\255\214\197.")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("Refl__", ("i\003\196\150\161\159\229g\157\181\149\015g%\221\240")); ("CamlinternalLazy", ("$R\130\004\165\140)\018\167x\018\240\162C\152V")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [(0)])
+
+}

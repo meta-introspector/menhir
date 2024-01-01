@@ -1,0 +1,99 @@
+main: INT DIV TIMES
+##
+## Ends in an error in state: 10.
+##
+## expr -> expr DIV . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## expr DIV
+##
+
+After a '/' operator, an expression is expected.
+
+#@ WARNING:
+#@ The following sentence has been copied from "lhs07.messages".
+#@ It is redundant with a sentence that appears earlier in this file,
+#@ so one of them must be removed.
+main: INT DIV TIMES
+##
+## Ends in an error in state: 10.
+##
+## expr -> expr DIV . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## expr DIV
+##
+# This comment is attached to INT DIV TIMES.
+
+# All of these sentences correspond to a situation where we have just read a
+# (unary or binary) arithmetic operator.
+
+After an arithmetic operator, an expression is expected.
+
+main: INT TIMES TIMES
+##
+## Ends in an error in state: 5.
+##
+## expr -> expr TIMES . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## expr TIMES
+##
+
+After a '*' operator, an expression is expected.
+
+#@ WARNING:
+#@ The following sentence has been copied from "lhs07.messages".
+#@ It is redundant with a sentence that appears earlier in this file,
+#@ so one of them must be removed.
+main: INT TIMES TIMES
+##
+## Ends in an error in state: 5.
+##
+## expr -> expr TIMES . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## expr TIMES
+##
+# This comment is attached to INT TIMES TIMES.
+
+# All of these sentences correspond to a situation where we have just read a
+# (unary or binary) arithmetic operator.
+
+After an arithmetic operator, an expression is expected.
+
+main: INT MINUS TIMES
+##
+## Ends in an error in state: 12.
+##
+## expr -> expr MINUS . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## expr MINUS
+##
+# This comment is attached to INT MINUS TIMES.
+main: INT PLUS TIMES
+##
+## Ends in an error in state: 8.
+##
+## expr -> expr PLUS . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## expr PLUS
+##
+# This comment is attached to INT PLUS TIMES.
+main: MINUS TIMES
+##
+## Ends in an error in state: 1.
+##
+## expr -> MINUS . expr [ TIMES RPAREN PLUS MINUS EOF DIV ]
+##
+## The known suffix of the stack is as follows:
+## MINUS
+##
+# This comment is attached to MINUS TIMES.
+
+# All of these sentences correspond to a situation where we have just read a
+# (unary or binary) arithmetic operator.
+
+After an arithmetic operator, an expression is expected.

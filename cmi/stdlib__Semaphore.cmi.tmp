@@ -1,0 +1,18 @@
+module Counting :
+  sig
+    type t
+    val make : int -> t
+    val release : t -> unit
+    val acquire : t -> unit
+    val try_acquire : t -> bool
+    val get_value : t -> int
+  end
+module Binary :
+  sig
+    type t
+    val make : bool -> t
+    val release : t -> unit
+    val acquire : t -> unit
+    val try_acquire : t -> bool("DEBUG:rule", [Tag3 (("Counting", 282), 0, (Tag1 ([Tag1 (("t", 284), (0, 0, 0, 1, 0, 0, 0, 0, 0, (("semaphore.mli", 46, 2068, 2068), ("semaphore.mli", 46, 2068, 2074), 0), 0, 0, 0, Tag1 ("Stdlib__Semaphore", 0)), 1, 0); (("make", 285), ((Tag1 (0, (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -16), (Tag3 ((("t", 284)), 0, (0)), 100000000, 0, -15), 0), 100000000, 0, -14), 0, (("semaphore.mli", 49, 2116, 2116), ("semaphore.mli", 49, 2116, 2135), 0), 0, Tag1 ("Stdlib__Semaphore", 1)), 0); (("release", 286), ((Tag1 (0, (Tag3 ((("t", 284)), 0, (0)), 100000000, 0, -13), (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -12), 0), 100000000, 0, -11), 0, (("semaphore.mli", 56, 2298, 2298), ("semaphore.mli", 56, 2298, 2321), 0), 0, Tag1 ("Stdlib__Semaphore", 2)), 0); (("acquire", 287), ((Tag1 (0, (Tag3 ((("t", 284)), 0, (0)), 100000000, 0, -10), (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -9), 0), 100000000, 0, -8), 0, (("semaphore.mli", 66, 2686, 2686), ("semaphore.mli", 66, 2686, 2709), 0), 0, Tag1 ("Stdlib__Semaphore", 3)), 0); (("try_acquire", 288), ((Tag1 (0, (Tag3 ((("t", 284)), 0, (0)), 100000000, 0, -7), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -6), 0), 100000000, 0, -5), 0, (("semaphore.mli", 71, 2863, 2863), ("semaphore.mli", 71, 2863, 2890), 0), 0, Tag1 ("Stdlib__Semaphore", 4)), 0); (("get_value", 289), ((Tag1 (0, (Tag3 ((("t", 284)), 0, (0)), 100000000, 0, -4), (Tag3 ((Tag3 ("int", 1)), 0, (0)), 100000000, 0, -3), 0), 100000000, 0, -2), 0, (("semaphore.mli", 77, 3081, 3081), ("semaphore.mli", 77, 3081, 3105), 0), 0, Tag1 ("Stdlib__Semaphore", 5)), 0)]), 0, (("semaphore.mli", 44, 2045, 2045), ("semaphore.mli", 85, 3405, 3408), 0), Tag1 ("Stdlib__Semaphore", 6)), 0, 0); Tag3 (("Binary", 283), 0, (Tag1 ([Tag1 (("t", 290), (0, 0, 0, 1, 0, 0, 0, 0, 0, (("semaphore.mli", 112, 4397, 4397), ("semaphore.mli", 112, 4397, 4403), 0), 0, 0, 0, Tag1 ("Stdlib__Semaphore", 7)), 1, 0); (("make", 291), ((Tag1 (0, (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -28), (Tag3 ((("t", 290)), 0, (0)), 100000000, 0, -27), 0), 100000000, 0, -26), 0, (("semaphore.mli", 115, 4443, 4443), ("semaphore.mli", 115, 4443, 4463), 0), 0, Tag1 ("Stdlib__Semaphore", 8)), 0); (("release", 292), ((Tag1 (0, (Tag3 ((("t", 290)), 0, (0)), 100000000, 0, -25), (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -24), 0), 100000000, 0, -23), 0, (("semaphore.mli", 122, 4689, 4689), ("semaphore.mli", 122, 4689, 4712), 0), 0, Tag1 ("Stdlib__Semaphore", 9)), 0); (("acquire", 293), ((Tag1 (0, (Tag3 ((("t", 290)), 0, (0)), 100000000, 0, -22), (Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -21), 0), 100000000, 0, -20), 0, (("semaphore.mli", 128, 4880, 4880), ("semaphore.mli", 128, 4880, 4903), 0), 0, Tag1 ("Stdlib__Semaphore", 10)), 0); (("try_acquire", 294), ((Tag1 (0, (Tag3 ((("t", 290)), 0, (0)), 100000000, 0, -19), (Tag3 ((Tag3 ("bool", 5)), 0, (0)), 100000000, 0, -18), 0), 100000000, 0, -17), 0, (("semaphore.mli", 134, 5052, 5052), ("semaphore.mli", 134, 5052, 5079), 0), 0, Tag1 ("Stdlib__Semaphore", 11)), 0)]), 0, (("semaphore.mli", 110, 4376, 4376), ("semaphore.mli", 140, 5264, 5267), 0), Tag1 ("Stdlib__Semaphore", 12)), 0, 0)], "Stdlib__Semaphore", [("Stdlib__Semaphore", ("\198\230\135\212\135\218*_\2514\210\131S\142\238\240")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [(0)])
+
+  end
