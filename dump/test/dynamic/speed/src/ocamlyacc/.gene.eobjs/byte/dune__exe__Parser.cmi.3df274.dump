@@ -1,0 +1,170 @@
+[
+  signature_item (test/dynamic/speed/src/ocamlyacc/parser.mli[1,0+0]..[13,199+7])
+    Psig_type Rec
+    [
+      type_declaration "token" (test/dynamic/speed/src/ocamlyacc/parser.mli[1,0+5]..[1,0+10]) (test/dynamic/speed/src/ocamlyacc/parser.mli[1,0+0]..[13,199+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[2,13+2]..[6,138+1])
+                "INT" (test/dynamic/speed/src/ocamlyacc/parser.mli[2,13+4]..[2,13+7])
+                [
+                  core_type (test/dynamic/speed/src/ocamlyacc/parser.mly[1,76+8]..[1,76+11])
+                    Ptyp_constr "int" (test/dynamic/speed/src/ocamlyacc/parser.mly[1,76+8]..[1,76+11])
+                    []
+                ]
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[7,140+2]..[7,140+8])
+                "PLUS" (test/dynamic/speed/src/ocamlyacc/parser.mli[7,140+4]..[7,140+8])
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[8,149+2]..[8,149+9])
+                "MINUS" (test/dynamic/speed/src/ocamlyacc/parser.mli[8,149+4]..[8,149+9])
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[9,159+2]..[9,159+9])
+                "TIMES" (test/dynamic/speed/src/ocamlyacc/parser.mli[9,159+4]..[9,159+9])
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[10,169+2]..[10,169+7])
+                "DIV" (test/dynamic/speed/src/ocamlyacc/parser.mli[10,169+4]..[10,169+7])
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[11,177+2]..[11,177+10])
+                "LPAREN" (test/dynamic/speed/src/ocamlyacc/parser.mli[11,177+4]..[11,177+10])
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[12,188+2]..[12,188+10])
+                "RPAREN" (test/dynamic/speed/src/ocamlyacc/parser.mli[12,188+4]..[12,188+10])
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[13,199+2]..[13,199+7])
+                "EOL" (test/dynamic/speed/src/ocamlyacc/parser.mli[13,199+4]..[13,199+7])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (test/dynamic/speed/src/ocamlyacc/parser.mli[15,208+0]..[16,219+51])
+    Psig_value
+    value_description "main" (test/dynamic/speed/src/ocamlyacc/parser.mli[15,208+4]..[15,208+8]) (test/dynamic/speed/src/ocamlyacc/parser.mli[15,208+0]..[16,219+51])
+      core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+2]..[16,219+51])
+        Ptyp_arrow
+        Nolabel
+        core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+3]..[16,219+26])
+          Ptyp_arrow
+          Nolabel
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+3]..[16,219+16])
+            Ptyp_constr "Lexing.lexbuf" (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+3]..[16,219+16])
+            []
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+21]..[16,219+26])
+            Ptyp_constr "token" (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+21]..[16,219+26])
+            []
+        core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+31]..[16,219+51])
+          Ptyp_arrow
+          Nolabel
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+31]..[16,219+44])
+            Ptyp_constr "Lexing.lexbuf" (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+31]..[16,219+44])
+            []
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+48]..[16,219+51])
+            Ptyp_constr "int" (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+48]..[16,219+51])
+            []
+      []
+]
+
+type token =
+  | INT of int 
+  | PLUS 
+  | MINUS 
+  | TIMES 
+  | DIV 
+  | LPAREN 
+  | RPAREN 
+  | EOL 
+val main : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> int
+[
+  signature_item (test/dynamic/speed/src/ocamlyacc/parser.mli[1,0+0]..test/dynamic/speed/src/ocamlyacc/parser.mli[13,199+7])
+    Tsig_type Rec
+    [
+      type_declaration token/272 (test/dynamic/speed/src/ocamlyacc/parser.mli[1,0+0]..test/dynamic/speed/src/ocamlyacc/parser.mli[13,199+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[2,13+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[6,138+1])
+                INT/273
+                [
+                  core_type (test/dynamic/speed/src/ocamlyacc/parser.mly[1,76+8]..test/dynamic/speed/src/ocamlyacc/parser.mly[1,76+11])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[7,140+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[7,140+8])
+                PLUS/274
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[8,149+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[8,149+9])
+                MINUS/275
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[9,159+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[9,159+9])
+                TIMES/276
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[10,169+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[10,169+7])
+                DIV/277
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[11,177+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[11,177+10])
+                LPAREN/278
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[12,188+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[12,188+10])
+                RPAREN/279
+                []
+                None
+              (test/dynamic/speed/src/ocamlyacc/parser.mli[13,199+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[13,199+7])
+                EOL/280
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (test/dynamic/speed/src/ocamlyacc/parser.mli[15,208+0]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+51])
+    Tsig_value
+    value_description main/305 (test/dynamic/speed/src/ocamlyacc/parser.mli[15,208+0]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+51])
+      core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+2]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+51])
+        Ttyp_arrow
+        Nolabel
+        core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+3]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+26])
+          Ttyp_arrow
+          Nolabel
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+3]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+16])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+21]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+26])
+            Ttyp_constr "token/272"
+            []
+        core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+31]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+51])
+          Ttyp_arrow
+          Nolabel
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+31]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+44])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+48]..test/dynamic/speed/src/ocamlyacc/parser.mli[16,219+51])
+            Ttyp_constr "int/1!"
+            []
+      []
+]
+

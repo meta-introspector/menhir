@@ -1,0 +1,15 @@
+0.028s 21.5MB 3.31MB 5.07MB src/stage1/cst.ml
+  0.001s 0.05MB ------ ------ parsing
+    0.001s 0.05MB ------ ------ parser
+  0.014s 11.2MB 2.65MB 4.41MB typing
+  0.001s 2.00MB 0.03MB 4.44MB transl
+  0.008s 4.27MB 0.15MB 4.60MB generate
+    0.002s 2.27MB 0.15MB 4.60MB compile_phrases
+      ------ 0.18MB ------ ------ cse
+      ------ 0.09MB ------ ------ liveness
+      ------ 2.00MB 0.15MB 4.60MB spill
+      0.001s ------ ------ ------ regalloc
+    0.004s ------ ------ ------ assemble
+    0.001s 2.00MB ------ ------ other
+  0.006s 3.99MB 0.46MB 5.07MB other
+0.013s 3.08MB 1.76MB ------ other

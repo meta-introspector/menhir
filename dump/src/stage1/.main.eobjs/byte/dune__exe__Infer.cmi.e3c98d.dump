@@ -1,0 +1,178 @@
+[
+  signature_item (src/infer.mli[14,996+0]..[14,996+16])
+    Psig_open Fresh "BasicSyntax" (src/infer.mli[14,996+5]..[14,996+16])
+  signature_item (src/infer.mli[19,1110+0]..[19,1110+27])
+    Psig_value
+    value_description "ntvar" (src/infer.mli[19,1110+4]..[19,1110+9]) (src/infer.mli[19,1110+0]..[19,1110+27])
+      core_type (src/infer.mli[19,1110+11]..[19,1110+27])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/infer.mli[19,1110+11]..[19,1110+17])
+          Ptyp_constr "string" (src/infer.mli[19,1110+11]..[19,1110+17])
+          []
+        core_type (src/infer.mli[19,1110+21]..[19,1110+27])
+          Ptyp_constr "IL.typ" (src/infer.mli[19,1110+21]..[19,1110+27])
+          []
+      []
+  signature_item (src/infer.mli[25,1339+0]..[25,1339+29])
+    Psig_value
+    value_description "infer" (src/infer.mli[25,1339+4]..[25,1339+9]) (src/infer.mli[25,1339+0]..[25,1339+29])
+      core_type (src/infer.mli[25,1339+11]..[25,1339+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/infer.mli[25,1339+11]..[25,1339+18])
+          Ptyp_constr "grammar" (src/infer.mli[25,1339+11]..[25,1339+18])
+          []
+        core_type (src/infer.mli[25,1339+22]..[25,1339+29])
+          Ptyp_constr "grammar" (src/infer.mli[25,1339+22]..[25,1339+29])
+          []
+      []
+  signature_item (src/infer.mli[32,1672+0]..[32,1672+45])
+    Psig_value
+    value_description "depend" (src/infer.mli[32,1672+4]..[32,1672+10]) (src/infer.mli[32,1672+0]..[32,1672+45])
+      core_type (src/infer.mli[32,1672+12]..[32,1672+45])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/infer.mli[32,1672+12]..[32,1672+16])
+          Ptyp_constr "bool" (src/infer.mli[32,1672+12]..[32,1672+16])
+          []
+        core_type (src/infer.mli[32,1672+20]..[32,1672+45])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/infer.mli[32,1672+20]..[32,1672+27])
+            Ptyp_constr "grammar" (src/infer.mli[32,1672+20]..[32,1672+27])
+            []
+          core_type (src/infer.mli[32,1672+31]..[32,1672+45])
+            Ptyp_var never_returns
+      []
+  signature_item (src/infer.mli[39,1959+0]..[39,1959+52])
+    Psig_value
+    value_description "write_query" (src/infer.mli[39,1959+4]..[39,1959+15]) (src/infer.mli[39,1959+0]..[39,1959+52])
+      core_type (src/infer.mli[39,1959+17]..[39,1959+52])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/infer.mli[39,1959+17]..[39,1959+23])
+          Ptyp_constr "string" (src/infer.mli[39,1959+17]..[39,1959+23])
+          []
+        core_type (src/infer.mli[39,1959+27]..[39,1959+52])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/infer.mli[39,1959+27]..[39,1959+34])
+            Ptyp_constr "grammar" (src/infer.mli[39,1959+27]..[39,1959+34])
+            []
+          core_type (src/infer.mli[39,1959+38]..[39,1959+52])
+            Ptyp_var never_returns
+      []
+  signature_item (src/infer.mli[45,2225+0]..[45,2225+44])
+    Psig_value
+    value_description "read_reply" (src/infer.mli[45,2225+4]..[45,2225+14]) (src/infer.mli[45,2225+0]..[45,2225+44])
+      core_type (src/infer.mli[45,2225+16]..[45,2225+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/infer.mli[45,2225+16]..[45,2225+22])
+          Ptyp_constr "string" (src/infer.mli[45,2225+16]..[45,2225+22])
+          []
+        core_type (src/infer.mli[45,2225+26]..[45,2225+44])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/infer.mli[45,2225+26]..[45,2225+33])
+            Ptyp_constr "grammar" (src/infer.mli[45,2225+26]..[45,2225+33])
+            []
+          core_type (src/infer.mli[45,2225+37]..[45,2225+44])
+            Ptyp_constr "grammar" (src/infer.mli[45,2225+37]..[45,2225+44])
+            []
+      []
+]
+
+open BasicSyntax
+val ntvar : string -> IL.typ
+val infer : grammar -> grammar
+val depend : bool -> grammar -> 'never_returns
+val write_query : string -> grammar -> 'never_returns
+val read_reply : string -> grammar -> grammar
+[
+  signature_item (src/infer.mli[14,996+0]..src/infer.mli[14,996+16])
+    Tsig_open Fresh "Dune__exe!.BasicSyntax"
+  signature_item (src/infer.mli[19,1110+0]..src/infer.mli[19,1110+27])
+    Tsig_value
+    value_description ntvar/443 (src/infer.mli[19,1110+0]..src/infer.mli[19,1110+27])
+      core_type (src/infer.mli[19,1110+11]..src/infer.mli[19,1110+27])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/infer.mli[19,1110+11]..src/infer.mli[19,1110+17])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/infer.mli[19,1110+21]..src/infer.mli[19,1110+27])
+          Ttyp_constr "Dune__exe!.IL.typ"
+          []
+      []
+  signature_item (src/infer.mli[25,1339+0]..src/infer.mli[25,1339+29])
+    Tsig_value
+    value_description infer/444 (src/infer.mli[25,1339+0]..src/infer.mli[25,1339+29])
+      core_type (src/infer.mli[25,1339+11]..src/infer.mli[25,1339+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/infer.mli[25,1339+11]..src/infer.mli[25,1339+18])
+          Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+          []
+        core_type (src/infer.mli[25,1339+22]..src/infer.mli[25,1339+29])
+          Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+          []
+      []
+  signature_item (src/infer.mli[32,1672+0]..src/infer.mli[32,1672+45])
+    Tsig_value
+    value_description depend/445 (src/infer.mli[32,1672+0]..src/infer.mli[32,1672+45])
+      core_type (src/infer.mli[32,1672+12]..src/infer.mli[32,1672+45])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/infer.mli[32,1672+12]..src/infer.mli[32,1672+16])
+          Ttyp_constr "bool/5!"
+          []
+        core_type (src/infer.mli[32,1672+20]..src/infer.mli[32,1672+45])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/infer.mli[32,1672+20]..src/infer.mli[32,1672+27])
+            Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+            []
+          core_type (src/infer.mli[32,1672+31]..src/infer.mli[32,1672+45])
+            Ttyp_var never_returns
+      []
+  signature_item (src/infer.mli[39,1959+0]..src/infer.mli[39,1959+52])
+    Tsig_value
+    value_description write_query/446 (src/infer.mli[39,1959+0]..src/infer.mli[39,1959+52])
+      core_type (src/infer.mli[39,1959+17]..src/infer.mli[39,1959+52])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/infer.mli[39,1959+17]..src/infer.mli[39,1959+23])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/infer.mli[39,1959+27]..src/infer.mli[39,1959+52])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/infer.mli[39,1959+27]..src/infer.mli[39,1959+34])
+            Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+            []
+          core_type (src/infer.mli[39,1959+38]..src/infer.mli[39,1959+52])
+            Ttyp_var never_returns
+      []
+  signature_item (src/infer.mli[45,2225+0]..src/infer.mli[45,2225+44])
+    Tsig_value
+    value_description read_reply/447 (src/infer.mli[45,2225+0]..src/infer.mli[45,2225+44])
+      core_type (src/infer.mli[45,2225+16]..src/infer.mli[45,2225+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/infer.mli[45,2225+16]..src/infer.mli[45,2225+22])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/infer.mli[45,2225+26]..src/infer.mli[45,2225+44])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/infer.mli[45,2225+26]..src/infer.mli[45,2225+33])
+            Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+            []
+          core_type (src/infer.mli[45,2225+37]..src/infer.mli[45,2225+44])
+            Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+            []
+      []
+]
+

@@ -1,0 +1,17 @@
+0.043s 29.9MB 1.84MB 3.63MB src/stage3/AtomicBitSet.ml
+  0.002s 0.05MB ------ ------ parsing
+    0.002s 0.05MB ------ ------ parser
+  0.012s 7.98MB 1.09MB 2.88MB typing
+  0.001s ------ ------ ------ transl
+  0.013s 6.42MB 0.34MB 3.22MB generate
+    ------ 0.08MB ------ ------ cmm
+    0.005s 4.14MB 0.28MB 3.16MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.001s 2.00MB 0.12MB 3.00MB liveness
+      0.001s 0.14MB ------ ------ spill
+      0.001s 2.00MB 0.15MB 3.16MB regalloc
+      0.001s ------ ------ ------ other
+    0.006s ------ ------ ------ assemble
+    0.003s 2.19MB 0.06MB 3.22MB other
+  0.016s 15.4MB 0.40MB 3.63MB other
+0.016s 3.07MB 1.79MB ------ other

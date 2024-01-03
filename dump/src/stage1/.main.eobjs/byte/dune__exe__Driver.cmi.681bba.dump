@@ -1,0 +1,58 @@
+[
+  signature_item (src/Driver.mli[17,1127+0]..[18,1141+77])
+    Psig_value
+    value_description "grammar" (src/Driver.mli[17,1127+4]..[17,1127+11]) (src/Driver.mli[17,1127+0]..[18,1141+77])
+      core_type (src/Driver.mli[18,1141+2]..[18,1141+77])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/Driver.mli[18,1141+3]..[18,1141+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/Driver.mli[18,1141+3]..[18,1141+16])
+            Ptyp_constr "Lexing.lexbuf" (src/Driver.mli[18,1141+3]..[18,1141+16])
+            []
+          core_type (src/Driver.mli[18,1141+21]..[18,1141+33])
+            Ptyp_constr "Parser.token" (src/Driver.mli[18,1141+21]..[18,1141+33])
+            []
+        core_type (src/Driver.mli[18,1141+38]..[18,1141+77])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/Driver.mli[18,1141+38]..[18,1141+51])
+            Ptyp_constr "Lexing.lexbuf" (src/Driver.mli[18,1141+38]..[18,1141+51])
+            []
+          core_type (src/Driver.mli[18,1141+55]..[18,1141+77])
+            Ptyp_constr "Syntax.partial_grammar" (src/Driver.mli[18,1141+55]..[18,1141+77])
+            []
+      []
+]
+
+val grammar :
+  (Lexing.lexbuf -> Parser.token) -> Lexing.lexbuf -> Syntax.partial_grammar
+[
+  signature_item (src/Driver.mli[17,1127+0]..src/Driver.mli[18,1141+77])
+    Tsig_value
+    value_description grammar/457 (src/Driver.mli[17,1127+0]..src/Driver.mli[18,1141+77])
+      core_type (src/Driver.mli[18,1141+2]..src/Driver.mli[18,1141+77])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/Driver.mli[18,1141+3]..src/Driver.mli[18,1141+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/Driver.mli[18,1141+3]..src/Driver.mli[18,1141+16])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (src/Driver.mli[18,1141+21]..src/Driver.mli[18,1141+33])
+            Ttyp_constr "Dune__exe!.Parser.token"
+            []
+        core_type (src/Driver.mli[18,1141+38]..src/Driver.mli[18,1141+77])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/Driver.mli[18,1141+38]..src/Driver.mli[18,1141+51])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (src/Driver.mli[18,1141+55]..src/Driver.mli[18,1141+77])
+            Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+            []
+      []
+]
+

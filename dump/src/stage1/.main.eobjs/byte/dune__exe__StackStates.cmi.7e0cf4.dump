@@ -1,0 +1,461 @@
+[
+  signature_item (src/StackStates.mli[14,1002+0]..[14,1002+12])
+    Psig_open Fresh "Grammar" (src/StackStates.mli[14,1002+5]..[14,1002+12])
+  signature_item (src/StackStates.mli[26,1581+0]..[72,3440+3])
+    Psig_module "Run" (src/StackStates.mli[26,1581+7]..[26,1581+10])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackStates.mli[16,1016+0]..[25,1570+10])
+            Pstr_eval
+            expression (src/StackStates.mli[16,1016+0]..[25,1570+10])
+              Pexp_constant PConst_string("This module performs a static analysis of the LR(1) automaton in order to\n   determine which states might possibly be held in the known suffix of the\n   stack at every state.\n\n   We assume that the known suffix of the stack, a sequence of symbols, has\n   already been computed at every state. All that is needed, actually, is\n   the size of the known suffix, given by the function [stack_height]. This\n   size information must be consistent: the size at a state [s] must be no\n   greater than the minimum of the sizes at the predecessors of [s], plus\n   one. ",(src/StackStates.mli[16,1016+0]..[25,1570+10]),None)
+        ]
+    module_type (src/StackStates.mli[26,1581+11]..[72,3440+3])
+      Pmty_functor "S" (src/StackStates.mli[26,1581+12]..[26,1581+13])
+      module_type (src/StackStates.mli[26,1581+16]..[40,2096+3])
+        Pmty_signature
+        [
+          signature_item (src/StackStates.mli[30,1693+2]..[30,1693+35])
+            Psig_value
+            value_description "stack_height" (src/StackStates.mli[30,1693+6]..[30,1693+18]) (src/StackStates.mli[30,1693+2]..[30,1693+35])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[28,1602+2]..[29,1671+21])
+                    Pstr_eval
+                    expression (src/StackStates.mli[28,1602+2]..[29,1671+21])
+                      Pexp_constant PConst_string("[stack_height s] is the height of the known suffix of the stack\n     at state [s]. ",(src/StackStates.mli[28,1602+2]..[29,1671+21]),None)
+                ]
+              core_type (src/StackStates.mli[30,1693+20]..[30,1693+35])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[30,1693+20]..[30,1693+28])
+                  Ptyp_constr "Lr1.node" (src/StackStates.mli[30,1693+20]..[30,1693+28])
+                  []
+                core_type (src/StackStates.mli[30,1693+32]..[30,1693+35])
+                  Ptyp_constr "int" (src/StackStates.mli[30,1693+32]..[30,1693+35])
+                  []
+              []
+          signature_item (src/StackStates.mli[34,1866+2]..[34,1866+48])
+            Psig_value
+            value_description "production_height" (src/StackStates.mli[34,1866+6]..[34,1866+23]) (src/StackStates.mli[34,1866+2]..[34,1866+48])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[32,1730+2]..[33,1807+58])
+                    Pstr_eval
+                    expression (src/StackStates.mli[32,1730+2]..[33,1807+58])
+                      Pexp_constant PConst_string("[production_height prod] is the height of the known suffix of the stack\n     at a state where production [prod] can be reduced. ",(src/StackStates.mli[32,1730+2]..[33,1807+58]),None)
+                ]
+              core_type (src/StackStates.mli[34,1866+25]..[34,1866+48])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[34,1866+25]..[34,1866+41])
+                  Ptyp_constr "Production.index" (src/StackStates.mli[34,1866+25]..[34,1866+41])
+                  []
+                core_type (src/StackStates.mli[34,1866+45]..[34,1866+48])
+                  Ptyp_constr "int" (src/StackStates.mli[34,1866+45]..[34,1866+48])
+                  []
+              []
+          signature_item (src/StackStates.mli[38,2055+2]..[38,2055+39])
+            Psig_value
+            value_description "goto_height" (src/StackStates.mli[38,2055+6]..[38,2055+17]) (src/StackStates.mli[38,2055+2]..[38,2055+39])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[36,1916+2]..[37,1990+64])
+                    Pstr_eval
+                    expression (src/StackStates.mli[36,1916+2]..[37,1990+64])
+                      Pexp_constant PConst_string("[goto_height nt] is the height of the known suffix of the stack at a\n     state where an edge labeled [nt] has just been followed. ",(src/StackStates.mli[36,1916+2]..[37,1990+64]),None)
+                ]
+              core_type (src/StackStates.mli[38,2055+19]..[38,2055+39])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[38,2055+19]..[38,2055+32])
+                  Ptyp_constr "Nonterminal.t" (src/StackStates.mli[38,2055+19]..[38,2055+32])
+                  []
+                core_type (src/StackStates.mli[38,2055+36]..[38,2055+39])
+                  Ptyp_constr "int" (src/StackStates.mli[38,2055+36]..[38,2055+39])
+                  []
+              []
+        ]
+      module_type (src/StackStates.mli[40,2096+7]..[72,3440+3])
+        Pmty_signature
+        [
+          signature_item (src/StackStates.mli[46,2372+2]..[47,2390+23])
+            Psig_type Rec
+            [
+              type_declaration "property" (src/StackStates.mli[46,2372+7]..[46,2372+15]) (src/StackStates.mli[46,2372+2]..[47,2390+23])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.mli[42,2108+2]..[45,2337+34])
+                      Pstr_eval
+                      expression (src/StackStates.mli[42,2108+2]..[45,2337+34])
+                        Pexp_constant PConst_string("A property is a description of the known suffix of the stack at state\n     [s]. It is represented as an array. By convention, the top of the stack\n     is the end of the array. Each array element is a set of states that may\n     appear in this stack cell. ",(src/StackStates.mli[42,2108+2]..[45,2337+34]),None)
+                  ]
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (src/StackStates.mli[47,2390+4]..[47,2390+23])
+                      Ptyp_constr "array" (src/StackStates.mli[47,2390+18]..[47,2390+23])
+                      [
+                        core_type (src/StackStates.mli[47,2390+4]..[47,2390+17])
+                          Ptyp_constr "Lr1.NodeSet.t" (src/StackStates.mli[47,2390+4]..[47,2390+17])
+                          []
+                      ]
+            ]
+          signature_item (src/StackStates.mli[50,2450+2]..[50,2450+31])
+            Psig_value
+            value_description "print" (src/StackStates.mli[50,2450+6]..[50,2450+11]) (src/StackStates.mli[50,2450+2]..[50,2450+31])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[49,2415+2]..[49,2415+34])
+                    Pstr_eval
+                    expression (src/StackStates.mli[49,2415+2]..[49,2415+34])
+                      Pexp_constant PConst_string("[print] prints a property. ",(src/StackStates.mli[49,2415+2]..[49,2415+34]),None)
+                ]
+              core_type (src/StackStates.mli[50,2450+13]..[50,2450+31])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[50,2450+13]..[50,2450+21])
+                  Ptyp_constr "property" (src/StackStates.mli[50,2450+13]..[50,2450+21])
+                  []
+                core_type (src/StackStates.mli[50,2450+25]..[50,2450+31])
+                  Ptyp_constr "string" (src/StackStates.mli[50,2450+25]..[50,2450+31])
+                  []
+              []
+          signature_item (src/StackStates.mli[53,2555+2]..[53,2555+40])
+            Psig_value
+            value_description "stack_states" (src/StackStates.mli[53,2555+6]..[53,2555+18]) (src/StackStates.mli[53,2555+2]..[53,2555+40])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[52,2483+2]..[52,2483+71])
+                    Pstr_eval
+                    expression (src/StackStates.mli[52,2483+2]..[52,2483+71])
+                      Pexp_constant PConst_string("[stack_states s] is the known suffix of the stack at state [s]. ",(src/StackStates.mli[52,2483+2]..[52,2483+71]),None)
+                ]
+              core_type (src/StackStates.mli[53,2555+20]..[53,2555+40])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[53,2555+20]..[53,2555+28])
+                  Ptyp_constr "Lr1.node" (src/StackStates.mli[53,2555+20]..[53,2555+28])
+                  []
+                core_type (src/StackStates.mli[53,2555+32]..[53,2555+40])
+                  Ptyp_constr "property" (src/StackStates.mli[53,2555+32]..[53,2555+40])
+                  []
+              []
+          signature_item (src/StackStates.mli[59,2858+2]..[59,2858+53])
+            Psig_value
+            value_description "production_states" (src/StackStates.mli[59,2858+6]..[59,2858+23]) (src/StackStates.mli[59,2858+2]..[59,2858+53])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[55,2597+2]..[58,2812+45])
+                    Pstr_eval
+                    expression (src/StackStates.mli[55,2597+2]..[58,2812+45])
+                      Pexp_constant PConst_string("[production_states prod] is the known suffix of the stack at a state\n     where production [prod] can be reduced. In the short invariant, the\n     length of this suffix is [Production.length prod]. In the long\n     invariant, its length can be greater. ",(src/StackStates.mli[55,2597+2]..[58,2812+45]),None)
+                ]
+              core_type (src/StackStates.mli[59,2858+25]..[59,2858+53])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[59,2858+25]..[59,2858+41])
+                  Ptyp_constr "Production.index" (src/StackStates.mli[59,2858+25]..[59,2858+41])
+                  []
+                core_type (src/StackStates.mli[59,2858+45]..[59,2858+53])
+                  Ptyp_constr "property" (src/StackStates.mli[59,2858+45]..[59,2858+53])
+                  []
+              []
+          signature_item (src/StackStates.mli[65,3158+2]..[65,3158+44])
+            Psig_value
+            value_description "goto_states" (src/StackStates.mli[65,3158+6]..[65,3158+17]) (src/StackStates.mli[65,3158+2]..[65,3158+44])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[61,2913+2]..[64,3141+16])
+                    Pstr_eval
+                    expression (src/StackStates.mli[61,2913+2]..[64,3141+16])
+                      Pexp_constant PConst_string("[goto_states nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. If [long] is false, then the\n     length of this suffix is [1]. If [long] is true, then its length can be\n     greater. ",(src/StackStates.mli[61,2913+2]..[64,3141+16]),None)
+                ]
+              core_type (src/StackStates.mli[65,3158+19]..[65,3158+44])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[65,3158+19]..[65,3158+32])
+                  Ptyp_constr "Nonterminal.t" (src/StackStates.mli[65,3158+19]..[65,3158+32])
+                  []
+                core_type (src/StackStates.mli[65,3158+36]..[65,3158+44])
+                  Ptyp_constr "property" (src/StackStates.mli[65,3158+36]..[65,3158+44])
+                  []
+              []
+          signature_item (src/StackStates.mli[70,3397+2]..[70,3397+41])
+            Psig_value
+            value_description "dump" (src/StackStates.mli[70,3397+6]..[70,3397+10]) (src/StackStates.mli[70,3397+2]..[70,3397+41])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[67,3204+2]..[69,3339+57])
+                    Pstr_eval
+                    expression (src/StackStates.mli[67,3204+2]..[69,3339+57])
+                      Pexp_constant PConst_string("[dump prefix f] dumps the result of the analysis to the output\n     channel [f], in an unspecified format. The string [prefix] is\n     emitted at the beginning of every line of output. ",(src/StackStates.mli[67,3204+2]..[69,3339+57]),None)
+                ]
+              core_type (src/StackStates.mli[70,3397+12]..[70,3397+41])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[70,3397+12]..[70,3397+18])
+                  Ptyp_constr "string" (src/StackStates.mli[70,3397+12]..[70,3397+18])
+                  []
+                core_type (src/StackStates.mli[70,3397+22]..[70,3397+41])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.mli[70,3397+22]..[70,3397+33])
+                    Ptyp_constr "out_channel" (src/StackStates.mli[70,3397+22]..[70,3397+33])
+                    []
+                  core_type (src/StackStates.mli[70,3397+37]..[70,3397+41])
+                    Ptyp_constr "unit" (src/StackStates.mli[70,3397+37]..[70,3397+41])
+                    []
+              []
+        ]
+]
+
+open Grammar
+module Run :
+functor (S :
+  sig
+    val stack_height : Lr1.node -> int[@@ocaml.doc
+                                        "[stack_height s] is the height of the known suffix of the stack\n     at state [s]. "]
+    val production_height : Production.index -> int[@@ocaml.doc
+                                                     "[production_height prod] is the height of the known suffix of the stack\n     at a state where production [prod] can be reduced. "]
+    val goto_height : Nonterminal.t -> int[@@ocaml.doc
+                                            "[goto_height nt] is the height of the known suffix of the stack at a\n     state where an edge labeled [nt] has just been followed. "]
+  end) ->
+  sig
+    type property = Lr1.NodeSet.t array[@@ocaml.doc
+                                         "A property is a description of the known suffix of the stack at state\n     [s]. It is represented as an array. By convention, the top of the stack\n     is the end of the array. Each array element is a set of states that may\n     appear in this stack cell. "]
+    val print : property -> string[@@ocaml.doc "[print] prints a property. "]
+    val stack_states : Lr1.node -> property[@@ocaml.doc
+                                             "[stack_states s] is the known suffix of the stack at state [s]. "]
+    val production_states : Production.index -> property[@@ocaml.doc
+                                                          "[production_states prod] is the known suffix of the stack at a state\n     where production [prod] can be reduced. In the short invariant, the\n     length of this suffix is [Production.length prod]. In the long\n     invariant, its length can be greater. "]
+    val goto_states : Nonterminal.t -> property[@@ocaml.doc
+                                                 "[goto_states nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. If [long] is false, then the\n     length of this suffix is [1]. If [long] is true, then its length can be\n     greater. "]
+    val dump : string -> out_channel -> unit[@@ocaml.doc
+                                              "[dump prefix f] dumps the result of the analysis to the output\n     channel [f], in an unspecified format. The string [prefix] is\n     emitted at the beginning of every line of output. "]
+  end[@@ocaml.doc
+       "This module performs a static analysis of the LR(1) automaton in order to\n   determine which states might possibly be held in the known suffix of the\n   stack at every state.\n\n   We assume that the known suffix of the stack, a sequence of symbols, has\n   already been computed at every state. All that is needed, actually, is\n   the size of the known suffix, given by the function [stack_height]. This\n   size information must be consistent: the size at a state [s] must be no\n   greater than the minimum of the sizes at the predecessors of [s], plus\n   one. "]
+[
+  signature_item (src/StackStates.mli[14,1002+0]..src/StackStates.mli[14,1002+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/StackStates.mli[26,1581+0]..src/StackStates.mli[72,3440+3])
+    Tsig_module "Run/670"
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackStates.mli[16,1016+0]..[25,1570+10])
+            Pstr_eval
+            expression (src/StackStates.mli[16,1016+0]..[25,1570+10])
+              Pexp_constant PConst_string("This module performs a static analysis of the LR(1) automaton in order to\n   determine which states might possibly be held in the known suffix of the\n   stack at every state.\n\n   We assume that the known suffix of the stack, a sequence of symbols, has\n   already been computed at every state. All that is needed, actually, is\n   the size of the known suffix, given by the function [stack_height]. This\n   size information must be consistent: the size at a state [s] must be no\n   greater than the minimum of the sizes at the predecessors of [s], plus\n   one. ",(src/StackStates.mli[16,1016+0]..[25,1570+10]),None)
+        ]
+    module_type (src/StackStates.mli[26,1581+11]..src/StackStates.mli[72,3440+3])
+      Tmty_functor "S/528"
+      module_type (src/StackStates.mli[26,1581+16]..src/StackStates.mli[40,2096+3])
+        Tmty_signature
+        [
+          signature_item (src/StackStates.mli[30,1693+2]..src/StackStates.mli[30,1693+35])
+            Tsig_value
+            value_description stack_height/454 (src/StackStates.mli[30,1693+2]..src/StackStates.mli[30,1693+35])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[28,1602+2]..[29,1671+21])
+                    Pstr_eval
+                    expression (src/StackStates.mli[28,1602+2]..[29,1671+21])
+                      Pexp_constant PConst_string("[stack_height s] is the height of the known suffix of the stack\n     at state [s]. ",(src/StackStates.mli[28,1602+2]..[29,1671+21]),None)
+                ]
+              core_type (src/StackStates.mli[30,1693+20]..src/StackStates.mli[30,1693+35])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[30,1693+20]..src/StackStates.mli[30,1693+28])
+                  Ttyp_constr "Dune__exe!.Lr1.node"
+                  []
+                core_type (src/StackStates.mli[30,1693+32]..src/StackStates.mli[30,1693+35])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+          signature_item (src/StackStates.mli[34,1866+2]..src/StackStates.mli[34,1866+48])
+            Tsig_value
+            value_description production_height/506 (src/StackStates.mli[34,1866+2]..src/StackStates.mli[34,1866+48])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[32,1730+2]..[33,1807+58])
+                    Pstr_eval
+                    expression (src/StackStates.mli[32,1730+2]..[33,1807+58])
+                      Pexp_constant PConst_string("[production_height prod] is the height of the known suffix of the stack\n     at a state where production [prod] can be reduced. ",(src/StackStates.mli[32,1730+2]..[33,1807+58]),None)
+                ]
+              core_type (src/StackStates.mli[34,1866+25]..src/StackStates.mli[34,1866+48])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[34,1866+25]..src/StackStates.mli[34,1866+41])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+                core_type (src/StackStates.mli[34,1866+45]..src/StackStates.mli[34,1866+48])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+          signature_item (src/StackStates.mli[38,2055+2]..src/StackStates.mli[38,2055+39])
+            Tsig_value
+            value_description goto_height/527 (src/StackStates.mli[38,2055+2]..src/StackStates.mli[38,2055+39])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[36,1916+2]..[37,1990+64])
+                    Pstr_eval
+                    expression (src/StackStates.mli[36,1916+2]..[37,1990+64])
+                      Pexp_constant PConst_string("[goto_height nt] is the height of the known suffix of the stack at a\n     state where an edge labeled [nt] has just been followed. ",(src/StackStates.mli[36,1916+2]..[37,1990+64]),None)
+                ]
+              core_type (src/StackStates.mli[38,2055+19]..src/StackStates.mli[38,2055+39])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[38,2055+19]..src/StackStates.mli[38,2055+32])
+                  Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                  []
+                core_type (src/StackStates.mli[38,2055+36]..src/StackStates.mli[38,2055+39])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+        ]
+      module_type (src/StackStates.mli[40,2096+7]..src/StackStates.mli[72,3440+3])
+        Tmty_signature
+        [
+          signature_item (src/StackStates.mli[46,2372+2]..src/StackStates.mli[47,2390+23])
+            Tsig_type Rec
+            [
+              type_declaration property/529 (src/StackStates.mli[46,2372+2]..src/StackStates.mli[47,2390+23])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.mli[42,2108+2]..[45,2337+34])
+                      Pstr_eval
+                      expression (src/StackStates.mli[42,2108+2]..[45,2337+34])
+                        Pexp_constant PConst_string("A property is a description of the known suffix of the stack at state\n     [s]. It is represented as an array. By convention, the top of the stack\n     is the end of the array. Each array element is a set of states that may\n     appear in this stack cell. ",(src/StackStates.mli[42,2108+2]..[45,2337+34]),None)
+                  ]
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (src/StackStates.mli[47,2390+4]..src/StackStates.mli[47,2390+23])
+                      Ttyp_constr "array/8!"
+                      [
+                        core_type (src/StackStates.mli[47,2390+4]..src/StackStates.mli[47,2390+17])
+                          Ttyp_constr "Dune__exe!.Lr1.NodeSet.t"
+                          []
+                      ]
+            ]
+          signature_item (src/StackStates.mli[50,2450+2]..src/StackStates.mli[50,2450+31])
+            Tsig_value
+            value_description print/665 (src/StackStates.mli[50,2450+2]..src/StackStates.mli[50,2450+31])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[49,2415+2]..[49,2415+34])
+                    Pstr_eval
+                    expression (src/StackStates.mli[49,2415+2]..[49,2415+34])
+                      Pexp_constant PConst_string("[print] prints a property. ",(src/StackStates.mli[49,2415+2]..[49,2415+34]),None)
+                ]
+              core_type (src/StackStates.mli[50,2450+13]..src/StackStates.mli[50,2450+31])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[50,2450+13]..src/StackStates.mli[50,2450+21])
+                  Ttyp_constr "property/529"
+                  []
+                core_type (src/StackStates.mli[50,2450+25]..src/StackStates.mli[50,2450+31])
+                  Ttyp_constr "string/15!"
+                  []
+              []
+          signature_item (src/StackStates.mli[53,2555+2]..src/StackStates.mli[53,2555+40])
+            Tsig_value
+            value_description stack_states/666 (src/StackStates.mli[53,2555+2]..src/StackStates.mli[53,2555+40])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[52,2483+2]..[52,2483+71])
+                    Pstr_eval
+                    expression (src/StackStates.mli[52,2483+2]..[52,2483+71])
+                      Pexp_constant PConst_string("[stack_states s] is the known suffix of the stack at state [s]. ",(src/StackStates.mli[52,2483+2]..[52,2483+71]),None)
+                ]
+              core_type (src/StackStates.mli[53,2555+20]..src/StackStates.mli[53,2555+40])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[53,2555+20]..src/StackStates.mli[53,2555+28])
+                  Ttyp_constr "Dune__exe!.Lr1.node"
+                  []
+                core_type (src/StackStates.mli[53,2555+32]..src/StackStates.mli[53,2555+40])
+                  Ttyp_constr "property/529"
+                  []
+              []
+          signature_item (src/StackStates.mli[59,2858+2]..src/StackStates.mli[59,2858+53])
+            Tsig_value
+            value_description production_states/667 (src/StackStates.mli[59,2858+2]..src/StackStates.mli[59,2858+53])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[55,2597+2]..[58,2812+45])
+                    Pstr_eval
+                    expression (src/StackStates.mli[55,2597+2]..[58,2812+45])
+                      Pexp_constant PConst_string("[production_states prod] is the known suffix of the stack at a state\n     where production [prod] can be reduced. In the short invariant, the\n     length of this suffix is [Production.length prod]. In the long\n     invariant, its length can be greater. ",(src/StackStates.mli[55,2597+2]..[58,2812+45]),None)
+                ]
+              core_type (src/StackStates.mli[59,2858+25]..src/StackStates.mli[59,2858+53])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[59,2858+25]..src/StackStates.mli[59,2858+41])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+                core_type (src/StackStates.mli[59,2858+45]..src/StackStates.mli[59,2858+53])
+                  Ttyp_constr "property/529"
+                  []
+              []
+          signature_item (src/StackStates.mli[65,3158+2]..src/StackStates.mli[65,3158+44])
+            Tsig_value
+            value_description goto_states/668 (src/StackStates.mli[65,3158+2]..src/StackStates.mli[65,3158+44])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[61,2913+2]..[64,3141+16])
+                    Pstr_eval
+                    expression (src/StackStates.mli[61,2913+2]..[64,3141+16])
+                      Pexp_constant PConst_string("[goto_states nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. If [long] is false, then the\n     length of this suffix is [1]. If [long] is true, then its length can be\n     greater. ",(src/StackStates.mli[61,2913+2]..[64,3141+16]),None)
+                ]
+              core_type (src/StackStates.mli[65,3158+19]..src/StackStates.mli[65,3158+44])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[65,3158+19]..src/StackStates.mli[65,3158+32])
+                  Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                  []
+                core_type (src/StackStates.mli[65,3158+36]..src/StackStates.mli[65,3158+44])
+                  Ttyp_constr "property/529"
+                  []
+              []
+          signature_item (src/StackStates.mli[70,3397+2]..src/StackStates.mli[70,3397+41])
+            Tsig_value
+            value_description dump/669 (src/StackStates.mli[70,3397+2]..src/StackStates.mli[70,3397+41])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackStates.mli[67,3204+2]..[69,3339+57])
+                    Pstr_eval
+                    expression (src/StackStates.mli[67,3204+2]..[69,3339+57])
+                      Pexp_constant PConst_string("[dump prefix f] dumps the result of the analysis to the output\n     channel [f], in an unspecified format. The string [prefix] is\n     emitted at the beginning of every line of output. ",(src/StackStates.mli[67,3204+2]..[69,3339+57]),None)
+                ]
+              core_type (src/StackStates.mli[70,3397+12]..src/StackStates.mli[70,3397+41])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackStates.mli[70,3397+12]..src/StackStates.mli[70,3397+18])
+                  Ttyp_constr "string/15!"
+                  []
+                core_type (src/StackStates.mli[70,3397+22]..src/StackStates.mli[70,3397+41])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.mli[70,3397+22]..src/StackStates.mli[70,3397+33])
+                    Ttyp_constr "Stdlib!.out_channel"
+                    []
+                  core_type (src/StackStates.mli[70,3397+37]..src/StackStates.mli[70,3397+41])
+                    Ttyp_constr "unit/6!"
+                    []
+              []
+        ]
+]
+

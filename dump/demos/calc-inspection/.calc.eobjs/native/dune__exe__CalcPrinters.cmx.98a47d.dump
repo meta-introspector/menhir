@@ -1,0 +1,1172 @@
+[
+  structure_item (demos/calc-inspection/CalcPrinters.ml[1,0+0]..[1,0+29])
+    Pstr_open Fresh
+    module_expr (demos/calc-inspection/CalcPrinters.ml[1,0+5]..[1,0+29])
+      Pmod_ident "Parser.MenhirInterpreter" (demos/calc-inspection/CalcPrinters.ml[1,0+5]..[1,0+29])
+  structure_item (demos/calc-inspection/CalcPrinters.ml[6,137+0]..[29,526+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[6,137+4]..[6,137+16])
+          Ppat_var "print_symbol" (demos/calc-inspection/CalcPrinters.ml[6,137+4]..[6,137+16])
+        expression (demos/calc-inspection/CalcPrinters.ml[6,137+17]..[29,526+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-inspection/CalcPrinters.ml[6,137+17]..[6,137+23])
+            Ppat_var "symbol" (demos/calc-inspection/CalcPrinters.ml[6,137+17]..[6,137+23])
+          expression (demos/calc-inspection/CalcPrinters.ml[6,137+24]..[29,526+13])
+            Pexp_constraint
+            expression (demos/calc-inspection/CalcPrinters.ml[7,172+2]..[29,526+13])
+              Pexp_match
+              expression (demos/calc-inspection/CalcPrinters.ml[7,172+8]..[7,172+14])
+                Pexp_ident "symbol" (demos/calc-inspection/CalcPrinters.ml[7,172+8]..[7,172+14])
+              [
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[8,192+4]..[8,192+17])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[8,192+4]..[8,192+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[8,192+6]..[8,192+17])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[8,192+7]..[8,192+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[8,192+9]..[8,192+16])
+                            Ppat_construct "T_TIMES" (demos/calc-inspection/CalcPrinters.ml[8,192+9]..[8,192+16])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[9,213+6]..[9,213+9])
+                    Pexp_constant PConst_string("*",(demos/calc-inspection/CalcPrinters.ml[9,213+7]..[9,213+8]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[10,223+4]..[10,223+18])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[10,223+4]..[10,223+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[10,223+6]..[10,223+18])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[10,223+7]..[10,223+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[10,223+9]..[10,223+17])
+                            Ppat_construct "T_RPAREN" (demos/calc-inspection/CalcPrinters.ml[10,223+9]..[10,223+17])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[11,245+6]..[11,245+9])
+                    Pexp_constant PConst_string(")",(demos/calc-inspection/CalcPrinters.ml[11,245+7]..[11,245+8]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[12,255+4]..[12,255+16])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[12,255+4]..[12,255+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[12,255+6]..[12,255+16])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[12,255+7]..[12,255+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[12,255+9]..[12,255+15])
+                            Ppat_construct "T_PLUS" (demos/calc-inspection/CalcPrinters.ml[12,255+9]..[12,255+15])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[13,275+6]..[13,275+9])
+                    Pexp_constant PConst_string("+",(demos/calc-inspection/CalcPrinters.ml[13,275+7]..[13,275+8]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[14,285+4]..[14,285+17])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[14,285+4]..[14,285+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[14,285+6]..[14,285+17])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[14,285+7]..[14,285+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[14,285+9]..[14,285+16])
+                            Ppat_construct "T_MINUS" (demos/calc-inspection/CalcPrinters.ml[14,285+9]..[14,285+16])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[15,306+6]..[15,306+9])
+                    Pexp_constant PConst_string("-",(demos/calc-inspection/CalcPrinters.ml[15,306+7]..[15,306+8]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[16,316+4]..[16,316+18])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[16,316+4]..[16,316+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[16,316+6]..[16,316+18])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[16,316+7]..[16,316+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[16,316+9]..[16,316+17])
+                            Ppat_construct "T_LPAREN" (demos/calc-inspection/CalcPrinters.ml[16,316+9]..[16,316+17])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[17,338+6]..[17,338+9])
+                    Pexp_constant PConst_string("(",(demos/calc-inspection/CalcPrinters.ml[17,338+7]..[17,338+8]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[18,348+4]..[18,348+15])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[18,348+4]..[18,348+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[18,348+6]..[18,348+15])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[18,348+7]..[18,348+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[18,348+9]..[18,348+14])
+                            Ppat_construct "T_INT" (demos/calc-inspection/CalcPrinters.ml[18,348+9]..[18,348+14])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[19,367+6]..[19,367+11])
+                    Pexp_constant PConst_string("INT",(demos/calc-inspection/CalcPrinters.ml[19,367+7]..[19,367+10]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[20,379+4]..[20,379+16])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[20,379+4]..[20,379+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[20,379+6]..[20,379+16])
+                        Ppat_construct "N" (demos/calc-inspection/CalcPrinters.ml[20,379+7]..[20,379+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[20,379+9]..[20,379+15])
+                            Ppat_construct "N_expr" (demos/calc-inspection/CalcPrinters.ml[20,379+9]..[20,379+15])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[21,399+6]..[21,399+12])
+                    Pexp_constant PConst_string("expr",(demos/calc-inspection/CalcPrinters.ml[21,399+7]..[21,399+11]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[22,412+4]..[22,412+16])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[22,412+4]..[22,412+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[22,412+6]..[22,412+16])
+                        Ppat_construct "N" (demos/calc-inspection/CalcPrinters.ml[22,412+7]..[22,412+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[22,412+9]..[22,412+15])
+                            Ppat_construct "N_main" (demos/calc-inspection/CalcPrinters.ml[22,412+9]..[22,412+15])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[23,432+6]..[23,432+12])
+                    Pexp_constant PConst_string("main",(demos/calc-inspection/CalcPrinters.ml[23,432+7]..[23,432+11]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[24,445+4]..[24,445+15])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[24,445+4]..[24,445+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[24,445+6]..[24,445+15])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[24,445+7]..[24,445+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[24,445+9]..[24,445+14])
+                            Ppat_construct "T_EOL" (demos/calc-inspection/CalcPrinters.ml[24,445+9]..[24,445+14])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[25,464+6]..[25,464+11])
+                    Pexp_constant PConst_string("EOL",(demos/calc-inspection/CalcPrinters.ml[25,464+7]..[25,464+10]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[26,476+4]..[26,476+15])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[26,476+4]..[26,476+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[26,476+6]..[26,476+15])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[26,476+7]..[26,476+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[26,476+9]..[26,476+14])
+                            Ppat_construct "T_DIV" (demos/calc-inspection/CalcPrinters.ml[26,476+9]..[26,476+14])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[27,495+6]..[27,495+9])
+                    Pexp_constant PConst_string("/",(demos/calc-inspection/CalcPrinters.ml[27,495+7]..[27,495+8]),None)
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[28,505+4]..[28,505+17])
+                    Ppat_construct "X" (demos/calc-inspection/CalcPrinters.ml[28,505+4]..[28,505+5])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[28,505+6]..[28,505+17])
+                        Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[28,505+7]..[28,505+8])
+                        Some
+                          []
+                          pattern (demos/calc-inspection/CalcPrinters.ml[28,505+9]..[28,505+16])
+                            Ppat_construct "T_error" (demos/calc-inspection/CalcPrinters.ml[28,505+9]..[28,505+16])
+                            None
+                  expression (demos/calc-inspection/CalcPrinters.ml[29,526+6]..[29,526+13])
+                    Pexp_constant PConst_string("error",(demos/calc-inspection/CalcPrinters.ml[29,526+7]..[29,526+12]),None)
+              ]
+            core_type (demos/calc-inspection/CalcPrinters.ml[6,137+26]..[6,137+32])
+              Ptyp_constr "string" (demos/calc-inspection/CalcPrinters.ml[6,137+26]..[6,137+32])
+              []
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[35,720+0]..[60,1228+17])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[35,720+4]..[35,720+17])
+          Ppat_var "print_element" (demos/calc-inspection/CalcPrinters.ml[35,720+4]..[35,720+17])
+        expression (demos/calc-inspection/CalcPrinters.ml[35,720+18]..[60,1228+17]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-inspection/CalcPrinters.ml[35,720+18]..[35,720+19])
+            Ppat_var "e" (demos/calc-inspection/CalcPrinters.ml[35,720+18]..[35,720+19])
+          expression (demos/calc-inspection/CalcPrinters.ml[35,720+20]..[60,1228+17])
+            Pexp_constraint
+            expression (demos/calc-inspection/CalcPrinters.ml[36,751+2]..[60,1228+17])
+              Pexp_match
+              expression (demos/calc-inspection/CalcPrinters.ml[36,751+8]..[36,751+9])
+                Pexp_ident "e" (demos/calc-inspection/CalcPrinters.ml[36,751+8]..[36,751+9])
+              [
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[37,766+4]..[37,766+24])
+                    Ppat_construct "Element" (demos/calc-inspection/CalcPrinters.ml[37,766+4]..[37,766+11])
+                    Some
+                      []
+                      pattern (demos/calc-inspection/CalcPrinters.ml[37,766+12]..[37,766+24])
+                        Ppat_tuple
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+13]..[37,766+14])
+                            Ppat_var "s" (demos/calc-inspection/CalcPrinters.ml[37,766+13]..[37,766+14])
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+16]..[37,766+17])
+                            Ppat_var "v" (demos/calc-inspection/CalcPrinters.ml[37,766+16]..[37,766+17])
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+19]..[37,766+20])
+                            Ppat_any
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+22]..[37,766+23])
+                            Ppat_any
+                        ]
+                  expression (demos/calc-inspection/CalcPrinters.ml[38,794+6]..[60,1228+17])
+                    Pexp_match
+                    expression (demos/calc-inspection/CalcPrinters.ml[38,794+12]..[38,794+29])
+                      Pexp_apply
+                      expression (demos/calc-inspection/CalcPrinters.ml[38,794+12]..[38,794+27])
+                        Pexp_ident "incoming_symbol" (demos/calc-inspection/CalcPrinters.ml[38,794+12]..[38,794+27])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-inspection/CalcPrinters.ml[38,794+28]..[38,794+29])
+                            Pexp_ident "s" (demos/calc-inspection/CalcPrinters.ml[38,794+28]..[38,794+29])
+                      ]
+                    [
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[39,829+8]..[39,829+17])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[39,829+8]..[39,829+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[39,829+10]..[39,829+17])
+                              Ppat_construct "T_TIMES" (demos/calc-inspection/CalcPrinters.ml[39,829+10]..[39,829+17])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[40,850+10]..[40,850+13])
+                          Pexp_constant PConst_string("*",(demos/calc-inspection/CalcPrinters.ml[40,850+11]..[40,850+12]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[41,864+8]..[41,864+18])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[41,864+8]..[41,864+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[41,864+10]..[41,864+18])
+                              Ppat_construct "T_RPAREN" (demos/calc-inspection/CalcPrinters.ml[41,864+10]..[41,864+18])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[42,886+10]..[42,886+13])
+                          Pexp_constant PConst_string(")",(demos/calc-inspection/CalcPrinters.ml[42,886+11]..[42,886+12]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[43,900+8]..[43,900+16])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[43,900+8]..[43,900+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[43,900+10]..[43,900+16])
+                              Ppat_construct "T_PLUS" (demos/calc-inspection/CalcPrinters.ml[43,900+10]..[43,900+16])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[44,920+10]..[44,920+13])
+                          Pexp_constant PConst_string("+",(demos/calc-inspection/CalcPrinters.ml[44,920+11]..[44,920+12]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[45,934+8]..[45,934+17])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[45,934+8]..[45,934+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[45,934+10]..[45,934+17])
+                              Ppat_construct "T_MINUS" (demos/calc-inspection/CalcPrinters.ml[45,934+10]..[45,934+17])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[46,955+10]..[46,955+13])
+                          Pexp_constant PConst_string("-",(demos/calc-inspection/CalcPrinters.ml[46,955+11]..[46,955+12]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[47,969+8]..[47,969+18])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[47,969+8]..[47,969+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[47,969+10]..[47,969+18])
+                              Ppat_construct "T_LPAREN" (demos/calc-inspection/CalcPrinters.ml[47,969+10]..[47,969+18])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[48,991+10]..[48,991+13])
+                          Pexp_constant PConst_string("(",(demos/calc-inspection/CalcPrinters.ml[48,991+11]..[48,991+12]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[49,1005+8]..[49,1005+15])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[49,1005+8]..[49,1005+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[49,1005+10]..[49,1005+15])
+                              Ppat_construct "T_INT" (demos/calc-inspection/CalcPrinters.ml[49,1005+10]..[49,1005+15])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[50,1024+10]..[50,1024+25])
+                          Pexp_apply
+                          expression (demos/calc-inspection/CalcPrinters.ml[50,1024+10]..[50,1024+23])
+                            Pexp_ident "string_of_int" (demos/calc-inspection/CalcPrinters.ml[50,1024+10]..[50,1024+23])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-inspection/CalcPrinters.ml[50,1024+24]..[50,1024+25])
+                                Pexp_ident "v" (demos/calc-inspection/CalcPrinters.ml[50,1024+24]..[50,1024+25])
+                          ]
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[51,1050+8]..[51,1050+16])
+                          Ppat_construct "N" (demos/calc-inspection/CalcPrinters.ml[51,1050+8]..[51,1050+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[51,1050+10]..[51,1050+16])
+                              Ppat_construct "N_expr" (demos/calc-inspection/CalcPrinters.ml[51,1050+10]..[51,1050+16])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[52,1070+10]..[52,1070+25])
+                          Pexp_apply
+                          expression (demos/calc-inspection/CalcPrinters.ml[52,1070+10]..[52,1070+23])
+                            Pexp_ident "string_of_int" (demos/calc-inspection/CalcPrinters.ml[52,1070+10]..[52,1070+23])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-inspection/CalcPrinters.ml[52,1070+24]..[52,1070+25])
+                                Pexp_ident "v" (demos/calc-inspection/CalcPrinters.ml[52,1070+24]..[52,1070+25])
+                          ]
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[53,1096+8]..[53,1096+16])
+                          Ppat_construct "N" (demos/calc-inspection/CalcPrinters.ml[53,1096+8]..[53,1096+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[53,1096+10]..[53,1096+16])
+                              Ppat_construct "N_main" (demos/calc-inspection/CalcPrinters.ml[53,1096+10]..[53,1096+16])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[54,1116+10]..[54,1116+25])
+                          Pexp_apply
+                          expression (demos/calc-inspection/CalcPrinters.ml[54,1116+10]..[54,1116+23])
+                            Pexp_ident "string_of_int" (demos/calc-inspection/CalcPrinters.ml[54,1116+10]..[54,1116+23])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-inspection/CalcPrinters.ml[54,1116+24]..[54,1116+25])
+                                Pexp_ident "v" (demos/calc-inspection/CalcPrinters.ml[54,1116+24]..[54,1116+25])
+                          ]
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[55,1142+8]..[55,1142+15])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[55,1142+8]..[55,1142+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[55,1142+10]..[55,1142+15])
+                              Ppat_construct "T_EOL" (demos/calc-inspection/CalcPrinters.ml[55,1142+10]..[55,1142+15])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[56,1161+10]..[56,1161+12])
+                          Pexp_constant PConst_string("",(demos/calc-inspection/CalcPrinters.ml[56,1161+11]..[56,1161+11]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[57,1174+8]..[57,1174+15])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[57,1174+8]..[57,1174+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[57,1174+10]..[57,1174+15])
+                              Ppat_construct "T_DIV" (demos/calc-inspection/CalcPrinters.ml[57,1174+10]..[57,1174+15])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[58,1193+10]..[58,1193+13])
+                          Pexp_constant PConst_string("/",(demos/calc-inspection/CalcPrinters.ml[58,1193+11]..[58,1193+12]),None)
+                      <case>
+                        pattern (demos/calc-inspection/CalcPrinters.ml[59,1207+8]..[59,1207+17])
+                          Ppat_construct "T" (demos/calc-inspection/CalcPrinters.ml[59,1207+8]..[59,1207+9])
+                          Some
+                            []
+                            pattern (demos/calc-inspection/CalcPrinters.ml[59,1207+10]..[59,1207+17])
+                              Ppat_construct "T_error" (demos/calc-inspection/CalcPrinters.ml[59,1207+10]..[59,1207+17])
+                              None
+                        expression (demos/calc-inspection/CalcPrinters.ml[60,1228+10]..[60,1228+17])
+                          Pexp_constant PConst_string("error",(demos/calc-inspection/CalcPrinters.ml[60,1228+11]..[60,1228+16]),None)
+                    ]
+              ]
+            core_type (demos/calc-inspection/CalcPrinters.ml[35,720+22]..[35,720+28])
+              Ptyp_constr "string" (demos/calc-inspection/CalcPrinters.ml[35,720+22]..[35,720+28])
+              []
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[64,1276+0]..[64,1276+24])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[64,1276+4]..[64,1276+9])
+          Ppat_var "print" (demos/calc-inspection/CalcPrinters.ml[64,1276+4]..[64,1276+9])
+        expression (demos/calc-inspection/CalcPrinters.ml[64,1276+12]..[64,1276+24])
+          Pexp_ident "prerr_string" (demos/calc-inspection/CalcPrinters.ml[64,1276+12]..[64,1276+24])
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[65,1301+0]..[65,1301+43])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[65,1301+4]..[65,1301+16])
+          Ppat_var "print_symbol" (demos/calc-inspection/CalcPrinters.ml[65,1301+4]..[65,1301+16])
+        expression (demos/calc-inspection/CalcPrinters.ml[65,1301+17]..[65,1301+43]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-inspection/CalcPrinters.ml[65,1301+17]..[65,1301+18])
+            Ppat_var "s" (demos/calc-inspection/CalcPrinters.ml[65,1301+17]..[65,1301+18])
+          expression (demos/calc-inspection/CalcPrinters.ml[65,1301+21]..[65,1301+43])
+            Pexp_apply
+            expression (demos/calc-inspection/CalcPrinters.ml[65,1301+21]..[65,1301+26])
+              Pexp_ident "print" (demos/calc-inspection/CalcPrinters.ml[65,1301+21]..[65,1301+26])
+            [
+              <arg>
+              Nolabel
+                expression (demos/calc-inspection/CalcPrinters.ml[65,1301+27]..[65,1301+43])
+                  Pexp_apply
+                  expression (demos/calc-inspection/CalcPrinters.ml[65,1301+28]..[65,1301+40])
+                    Pexp_ident "print_symbol" (demos/calc-inspection/CalcPrinters.ml[65,1301+28]..[65,1301+40])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-inspection/CalcPrinters.ml[65,1301+41]..[65,1301+42])
+                        Pexp_ident "s" (demos/calc-inspection/CalcPrinters.ml[65,1301+41]..[65,1301+42])
+                  ]
+            ]
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[66,1345+0]..[66,1345+59])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[66,1345+4]..[66,1345+17])
+          Ppat_var "print_element" (demos/calc-inspection/CalcPrinters.ml[66,1345+4]..[66,1345+17])
+        expression (demos/calc-inspection/CalcPrinters.ml[66,1345+20]..[66,1345+59])
+          Pexp_construct "Some" (demos/calc-inspection/CalcPrinters.ml[66,1345+20]..[66,1345+24])
+          Some
+            expression (demos/calc-inspection/CalcPrinters.ml[66,1345+25]..[66,1345+59])
+              Pexp_fun
+              Nolabel
+              None
+              pattern (demos/calc-inspection/CalcPrinters.ml[66,1345+30]..[66,1345+31])
+                Ppat_var "s" (demos/calc-inspection/CalcPrinters.ml[66,1345+30]..[66,1345+31])
+              expression (demos/calc-inspection/CalcPrinters.ml[66,1345+35]..[66,1345+58])
+                Pexp_apply
+                expression (demos/calc-inspection/CalcPrinters.ml[66,1345+35]..[66,1345+40])
+                  Pexp_ident "print" (demos/calc-inspection/CalcPrinters.ml[66,1345+35]..[66,1345+40])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-inspection/CalcPrinters.ml[66,1345+41]..[66,1345+58])
+                      Pexp_apply
+                      expression (demos/calc-inspection/CalcPrinters.ml[66,1345+42]..[66,1345+55])
+                        Pexp_ident "print_element" (demos/calc-inspection/CalcPrinters.ml[66,1345+42]..[66,1345+55])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-inspection/CalcPrinters.ml[66,1345+56]..[66,1345+57])
+                            Pexp_ident "s" (demos/calc-inspection/CalcPrinters.ml[66,1345+56]..[66,1345+57])
+                      ]
+                ]
+    ]
+]
+
+open Parser.MenhirInterpreter
+let print_symbol symbol =
+  (match symbol with
+   | X (T (T_TIMES)) -> "*"
+   | X (T (T_RPAREN)) -> ")"
+   | X (T (T_PLUS)) -> "+"
+   | X (T (T_MINUS)) -> "-"
+   | X (T (T_LPAREN)) -> "("
+   | X (T (T_INT)) -> "INT"
+   | X (N (N_expr)) -> "expr"
+   | X (N (N_main)) -> "main"
+   | X (T (T_EOL)) -> "EOL"
+   | X (T (T_DIV)) -> "/"
+   | X (T (T_error)) -> "error" : string)
+let print_element e =
+  (match e with
+   | Element (s, v, _, _) ->
+       (match incoming_symbol s with
+        | T (T_TIMES) -> "*"
+        | T (T_RPAREN) -> ")"
+        | T (T_PLUS) -> "+"
+        | T (T_MINUS) -> "-"
+        | T (T_LPAREN) -> "("
+        | T (T_INT) -> string_of_int v
+        | N (N_expr) -> string_of_int v
+        | N (N_main) -> string_of_int v
+        | T (T_EOL) -> ""
+        | T (T_DIV) -> "/"
+        | T (T_error) -> "error") : string)
+let print = prerr_string
+let print_symbol s = print (print_symbol s)
+let print_element = Some (fun s -> print (print_element s))
+[
+  structure_item (demos/calc-inspection/CalcPrinters.ml[1,0+0]..demos/calc-inspection/CalcPrinters.ml[1,0+29])
+    Tstr_open Fresh
+    module_expr (demos/calc-inspection/CalcPrinters.ml[1,0+5]..demos/calc-inspection/CalcPrinters.ml[1,0+29])
+      Tmod_ident "Dune__exe!.Parser.MenhirInterpreter"
+  structure_item (demos/calc-inspection/CalcPrinters.ml[6,137+0]..demos/calc-inspection/CalcPrinters.ml[29,526+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[6,137+4]..demos/calc-inspection/CalcPrinters.ml[6,137+16])
+          Tpat_var "print_symbol/337"
+        expression (demos/calc-inspection/CalcPrinters.ml[6,137+17]..demos/calc-inspection/CalcPrinters.ml[29,526+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-inspection/CalcPrinters.ml[6,137+17]..demos/calc-inspection/CalcPrinters.ml[6,137+23])
+                Tpat_var "symbol/339"
+              expression (demos/calc-inspection/CalcPrinters.ml[7,172+2]..demos/calc-inspection/CalcPrinters.ml[29,526+13])
+                extra
+                  Texp_constraint
+                  core_type (demos/calc-inspection/CalcPrinters.ml[6,137+26]..demos/calc-inspection/CalcPrinters.ml[6,137+32])
+                    Ttyp_constr "string/15!"
+                    []
+                Texp_match
+                expression (demos/calc-inspection/CalcPrinters.ml[7,172+8]..demos/calc-inspection/CalcPrinters.ml[7,172+14])
+                  Texp_ident "symbol/339"
+                [
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[8,192+4]..demos/calc-inspection/CalcPrinters.ml[8,192+17])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[8,192+4]..demos/calc-inspection/CalcPrinters.ml[8,192+17])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[8,192+6]..demos/calc-inspection/CalcPrinters.ml[8,192+17])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[8,192+9]..demos/calc-inspection/CalcPrinters.ml[8,192+16])
+                                Tpat_construct "T_TIMES"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[9,213+6]..demos/calc-inspection/CalcPrinters.ml[9,213+9])
+                      Texp_constant Const_string("*",(demos/calc-inspection/CalcPrinters.ml[9,213+7]..demos/calc-inspection/CalcPrinters.ml[9,213+8]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[10,223+4]..demos/calc-inspection/CalcPrinters.ml[10,223+18])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[10,223+4]..demos/calc-inspection/CalcPrinters.ml[10,223+18])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[10,223+6]..demos/calc-inspection/CalcPrinters.ml[10,223+18])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[10,223+9]..demos/calc-inspection/CalcPrinters.ml[10,223+17])
+                                Tpat_construct "T_RPAREN"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[11,245+6]..demos/calc-inspection/CalcPrinters.ml[11,245+9])
+                      Texp_constant Const_string(")",(demos/calc-inspection/CalcPrinters.ml[11,245+7]..demos/calc-inspection/CalcPrinters.ml[11,245+8]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[12,255+4]..demos/calc-inspection/CalcPrinters.ml[12,255+16])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[12,255+4]..demos/calc-inspection/CalcPrinters.ml[12,255+16])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[12,255+6]..demos/calc-inspection/CalcPrinters.ml[12,255+16])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[12,255+9]..demos/calc-inspection/CalcPrinters.ml[12,255+15])
+                                Tpat_construct "T_PLUS"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[13,275+6]..demos/calc-inspection/CalcPrinters.ml[13,275+9])
+                      Texp_constant Const_string("+",(demos/calc-inspection/CalcPrinters.ml[13,275+7]..demos/calc-inspection/CalcPrinters.ml[13,275+8]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[14,285+4]..demos/calc-inspection/CalcPrinters.ml[14,285+17])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[14,285+4]..demos/calc-inspection/CalcPrinters.ml[14,285+17])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[14,285+6]..demos/calc-inspection/CalcPrinters.ml[14,285+17])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[14,285+9]..demos/calc-inspection/CalcPrinters.ml[14,285+16])
+                                Tpat_construct "T_MINUS"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[15,306+6]..demos/calc-inspection/CalcPrinters.ml[15,306+9])
+                      Texp_constant Const_string("-",(demos/calc-inspection/CalcPrinters.ml[15,306+7]..demos/calc-inspection/CalcPrinters.ml[15,306+8]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[16,316+4]..demos/calc-inspection/CalcPrinters.ml[16,316+18])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[16,316+4]..demos/calc-inspection/CalcPrinters.ml[16,316+18])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[16,316+6]..demos/calc-inspection/CalcPrinters.ml[16,316+18])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[16,316+9]..demos/calc-inspection/CalcPrinters.ml[16,316+17])
+                                Tpat_construct "T_LPAREN"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[17,338+6]..demos/calc-inspection/CalcPrinters.ml[17,338+9])
+                      Texp_constant Const_string("(",(demos/calc-inspection/CalcPrinters.ml[17,338+7]..demos/calc-inspection/CalcPrinters.ml[17,338+8]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[18,348+4]..demos/calc-inspection/CalcPrinters.ml[18,348+15])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[18,348+4]..demos/calc-inspection/CalcPrinters.ml[18,348+15])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[18,348+6]..demos/calc-inspection/CalcPrinters.ml[18,348+15])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[18,348+9]..demos/calc-inspection/CalcPrinters.ml[18,348+14])
+                                Tpat_construct "T_INT"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[19,367+6]..demos/calc-inspection/CalcPrinters.ml[19,367+11])
+                      Texp_constant Const_string("INT",(demos/calc-inspection/CalcPrinters.ml[19,367+7]..demos/calc-inspection/CalcPrinters.ml[19,367+10]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[20,379+4]..demos/calc-inspection/CalcPrinters.ml[20,379+16])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[20,379+4]..demos/calc-inspection/CalcPrinters.ml[20,379+16])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[20,379+6]..demos/calc-inspection/CalcPrinters.ml[20,379+16])
+                            Tpat_construct "N"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[20,379+9]..demos/calc-inspection/CalcPrinters.ml[20,379+15])
+                                Tpat_construct "N_expr"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[21,399+6]..demos/calc-inspection/CalcPrinters.ml[21,399+12])
+                      Texp_constant Const_string("expr",(demos/calc-inspection/CalcPrinters.ml[21,399+7]..demos/calc-inspection/CalcPrinters.ml[21,399+11]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[22,412+4]..demos/calc-inspection/CalcPrinters.ml[22,412+16])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[22,412+4]..demos/calc-inspection/CalcPrinters.ml[22,412+16])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[22,412+6]..demos/calc-inspection/CalcPrinters.ml[22,412+16])
+                            Tpat_construct "N"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[22,412+9]..demos/calc-inspection/CalcPrinters.ml[22,412+15])
+                                Tpat_construct "N_main"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[23,432+6]..demos/calc-inspection/CalcPrinters.ml[23,432+12])
+                      Texp_constant Const_string("main",(demos/calc-inspection/CalcPrinters.ml[23,432+7]..demos/calc-inspection/CalcPrinters.ml[23,432+11]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[24,445+4]..demos/calc-inspection/CalcPrinters.ml[24,445+15])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[24,445+4]..demos/calc-inspection/CalcPrinters.ml[24,445+15])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[24,445+6]..demos/calc-inspection/CalcPrinters.ml[24,445+15])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[24,445+9]..demos/calc-inspection/CalcPrinters.ml[24,445+14])
+                                Tpat_construct "T_EOL"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[25,464+6]..demos/calc-inspection/CalcPrinters.ml[25,464+11])
+                      Texp_constant Const_string("EOL",(demos/calc-inspection/CalcPrinters.ml[25,464+7]..demos/calc-inspection/CalcPrinters.ml[25,464+10]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[26,476+4]..demos/calc-inspection/CalcPrinters.ml[26,476+15])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[26,476+4]..demos/calc-inspection/CalcPrinters.ml[26,476+15])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[26,476+6]..demos/calc-inspection/CalcPrinters.ml[26,476+15])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[26,476+9]..demos/calc-inspection/CalcPrinters.ml[26,476+14])
+                                Tpat_construct "T_DIV"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[27,495+6]..demos/calc-inspection/CalcPrinters.ml[27,495+9])
+                      Texp_constant Const_string("/",(demos/calc-inspection/CalcPrinters.ml[27,495+7]..demos/calc-inspection/CalcPrinters.ml[27,495+8]),None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[28,505+4]..demos/calc-inspection/CalcPrinters.ml[28,505+17])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[28,505+4]..demos/calc-inspection/CalcPrinters.ml[28,505+17])
+                        Tpat_construct "X"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[28,505+6]..demos/calc-inspection/CalcPrinters.ml[28,505+17])
+                            Tpat_construct "T"
+                            [
+                              pattern (demos/calc-inspection/CalcPrinters.ml[28,505+9]..demos/calc-inspection/CalcPrinters.ml[28,505+16])
+                                Tpat_construct "T_error"
+                                []
+                                None
+                            ]
+                            None
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[29,526+6]..demos/calc-inspection/CalcPrinters.ml[29,526+13])
+                      Texp_constant Const_string("error",(demos/calc-inspection/CalcPrinters.ml[29,526+7]..demos/calc-inspection/CalcPrinters.ml[29,526+12]),None)
+                ]
+          ]
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[35,720+0]..demos/calc-inspection/CalcPrinters.ml[60,1228+17])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[35,720+4]..demos/calc-inspection/CalcPrinters.ml[35,720+17])
+          Tpat_var "print_element/413"
+        expression (demos/calc-inspection/CalcPrinters.ml[35,720+18]..demos/calc-inspection/CalcPrinters.ml[60,1228+17]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-inspection/CalcPrinters.ml[35,720+18]..demos/calc-inspection/CalcPrinters.ml[35,720+19])
+                Tpat_var "e/415"
+              expression (demos/calc-inspection/CalcPrinters.ml[36,751+2]..demos/calc-inspection/CalcPrinters.ml[60,1228+17])
+                extra
+                  Texp_constraint
+                  core_type (demos/calc-inspection/CalcPrinters.ml[35,720+22]..demos/calc-inspection/CalcPrinters.ml[35,720+28])
+                    Ttyp_constr "string/15!"
+                    []
+                Texp_match
+                expression (demos/calc-inspection/CalcPrinters.ml[36,751+8]..demos/calc-inspection/CalcPrinters.ml[36,751+9])
+                  Texp_ident "e/415"
+                [
+                  <case>
+                    pattern (demos/calc-inspection/CalcPrinters.ml[37,766+4]..demos/calc-inspection/CalcPrinters.ml[37,766+24])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcPrinters.ml[37,766+4]..demos/calc-inspection/CalcPrinters.ml[37,766+24])
+                        Tpat_construct "Element"
+                        [
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+13]..demos/calc-inspection/CalcPrinters.ml[37,766+14])
+                            Tpat_var "s/417"
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+16]..demos/calc-inspection/CalcPrinters.ml[37,766+17])
+                            Tpat_var "v/418"
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+19]..demos/calc-inspection/CalcPrinters.ml[37,766+20])
+                            Tpat_any
+                          pattern (demos/calc-inspection/CalcPrinters.ml[37,766+22]..demos/calc-inspection/CalcPrinters.ml[37,766+23])
+                            Tpat_any
+                        ]
+                        None
+                    expression (demos/calc-inspection/CalcPrinters.ml[38,794+6]..demos/calc-inspection/CalcPrinters.ml[60,1228+17])
+                      Texp_match
+                      expression (demos/calc-inspection/CalcPrinters.ml[38,794+12]..demos/calc-inspection/CalcPrinters.ml[38,794+29])
+                        Texp_apply
+                        expression (demos/calc-inspection/CalcPrinters.ml[38,794+12]..demos/calc-inspection/CalcPrinters.ml[38,794+27])
+                          Texp_ident "Dune__exe!.Parser.MenhirInterpreter.incoming_symbol"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-inspection/CalcPrinters.ml[38,794+28]..demos/calc-inspection/CalcPrinters.ml[38,794+29])
+                              Texp_ident "s/417"
+                        ]
+                      [
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[39,829+8]..demos/calc-inspection/CalcPrinters.ml[39,829+17])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[39,829+8]..demos/calc-inspection/CalcPrinters.ml[39,829+17])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[39,829+10]..demos/calc-inspection/CalcPrinters.ml[39,829+17])
+                                  Tpat_construct "T_TIMES"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[40,850+10]..demos/calc-inspection/CalcPrinters.ml[40,850+13])
+                            Texp_constant Const_string("*",(demos/calc-inspection/CalcPrinters.ml[40,850+11]..demos/calc-inspection/CalcPrinters.ml[40,850+12]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[41,864+8]..demos/calc-inspection/CalcPrinters.ml[41,864+18])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[41,864+8]..demos/calc-inspection/CalcPrinters.ml[41,864+18])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[41,864+10]..demos/calc-inspection/CalcPrinters.ml[41,864+18])
+                                  Tpat_construct "T_RPAREN"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[42,886+10]..demos/calc-inspection/CalcPrinters.ml[42,886+13])
+                            Texp_constant Const_string(")",(demos/calc-inspection/CalcPrinters.ml[42,886+11]..demos/calc-inspection/CalcPrinters.ml[42,886+12]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[43,900+8]..demos/calc-inspection/CalcPrinters.ml[43,900+16])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[43,900+8]..demos/calc-inspection/CalcPrinters.ml[43,900+16])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[43,900+10]..demos/calc-inspection/CalcPrinters.ml[43,900+16])
+                                  Tpat_construct "T_PLUS"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[44,920+10]..demos/calc-inspection/CalcPrinters.ml[44,920+13])
+                            Texp_constant Const_string("+",(demos/calc-inspection/CalcPrinters.ml[44,920+11]..demos/calc-inspection/CalcPrinters.ml[44,920+12]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[45,934+8]..demos/calc-inspection/CalcPrinters.ml[45,934+17])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[45,934+8]..demos/calc-inspection/CalcPrinters.ml[45,934+17])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[45,934+10]..demos/calc-inspection/CalcPrinters.ml[45,934+17])
+                                  Tpat_construct "T_MINUS"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[46,955+10]..demos/calc-inspection/CalcPrinters.ml[46,955+13])
+                            Texp_constant Const_string("-",(demos/calc-inspection/CalcPrinters.ml[46,955+11]..demos/calc-inspection/CalcPrinters.ml[46,955+12]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[47,969+8]..demos/calc-inspection/CalcPrinters.ml[47,969+18])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[47,969+8]..demos/calc-inspection/CalcPrinters.ml[47,969+18])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[47,969+10]..demos/calc-inspection/CalcPrinters.ml[47,969+18])
+                                  Tpat_construct "T_LPAREN"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[48,991+10]..demos/calc-inspection/CalcPrinters.ml[48,991+13])
+                            Texp_constant Const_string("(",(demos/calc-inspection/CalcPrinters.ml[48,991+11]..demos/calc-inspection/CalcPrinters.ml[48,991+12]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[49,1005+8]..demos/calc-inspection/CalcPrinters.ml[49,1005+15])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[49,1005+8]..demos/calc-inspection/CalcPrinters.ml[49,1005+15])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[49,1005+10]..demos/calc-inspection/CalcPrinters.ml[49,1005+15])
+                                  Tpat_construct "T_INT"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[50,1024+10]..demos/calc-inspection/CalcPrinters.ml[50,1024+25])
+                            Texp_apply
+                            expression (demos/calc-inspection/CalcPrinters.ml[50,1024+10]..demos/calc-inspection/CalcPrinters.ml[50,1024+23])
+                              Texp_ident "Stdlib!.string_of_int"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-inspection/CalcPrinters.ml[50,1024+24]..demos/calc-inspection/CalcPrinters.ml[50,1024+25])
+                                  Texp_ident "v/418"
+                            ]
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[51,1050+8]..demos/calc-inspection/CalcPrinters.ml[51,1050+16])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[51,1050+8]..demos/calc-inspection/CalcPrinters.ml[51,1050+16])
+                              Tpat_construct "N"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[51,1050+10]..demos/calc-inspection/CalcPrinters.ml[51,1050+16])
+                                  Tpat_construct "N_expr"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[52,1070+10]..demos/calc-inspection/CalcPrinters.ml[52,1070+25])
+                            Texp_apply
+                            expression (demos/calc-inspection/CalcPrinters.ml[52,1070+10]..demos/calc-inspection/CalcPrinters.ml[52,1070+23])
+                              Texp_ident "Stdlib!.string_of_int"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-inspection/CalcPrinters.ml[52,1070+24]..demos/calc-inspection/CalcPrinters.ml[52,1070+25])
+                                  Texp_ident "v/418"
+                            ]
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[53,1096+8]..demos/calc-inspection/CalcPrinters.ml[53,1096+16])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[53,1096+8]..demos/calc-inspection/CalcPrinters.ml[53,1096+16])
+                              Tpat_construct "N"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[53,1096+10]..demos/calc-inspection/CalcPrinters.ml[53,1096+16])
+                                  Tpat_construct "N_main"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[54,1116+10]..demos/calc-inspection/CalcPrinters.ml[54,1116+25])
+                            Texp_apply
+                            expression (demos/calc-inspection/CalcPrinters.ml[54,1116+10]..demos/calc-inspection/CalcPrinters.ml[54,1116+23])
+                              Texp_ident "Stdlib!.string_of_int"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-inspection/CalcPrinters.ml[54,1116+24]..demos/calc-inspection/CalcPrinters.ml[54,1116+25])
+                                  Texp_ident "v/418"
+                            ]
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[55,1142+8]..demos/calc-inspection/CalcPrinters.ml[55,1142+15])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[55,1142+8]..demos/calc-inspection/CalcPrinters.ml[55,1142+15])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[55,1142+10]..demos/calc-inspection/CalcPrinters.ml[55,1142+15])
+                                  Tpat_construct "T_EOL"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[56,1161+10]..demos/calc-inspection/CalcPrinters.ml[56,1161+12])
+                            Texp_constant Const_string("",(demos/calc-inspection/CalcPrinters.ml[56,1161+11]..demos/calc-inspection/CalcPrinters.ml[56,1161+11]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[57,1174+8]..demos/calc-inspection/CalcPrinters.ml[57,1174+15])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[57,1174+8]..demos/calc-inspection/CalcPrinters.ml[57,1174+15])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[57,1174+10]..demos/calc-inspection/CalcPrinters.ml[57,1174+15])
+                                  Tpat_construct "T_DIV"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[58,1193+10]..demos/calc-inspection/CalcPrinters.ml[58,1193+13])
+                            Texp_constant Const_string("/",(demos/calc-inspection/CalcPrinters.ml[58,1193+11]..demos/calc-inspection/CalcPrinters.ml[58,1193+12]),None)
+                        <case>
+                          pattern (demos/calc-inspection/CalcPrinters.ml[59,1207+8]..demos/calc-inspection/CalcPrinters.ml[59,1207+17])
+                            Tpat_value
+                            pattern (demos/calc-inspection/CalcPrinters.ml[59,1207+8]..demos/calc-inspection/CalcPrinters.ml[59,1207+17])
+                              Tpat_construct "T"
+                              [
+                                pattern (demos/calc-inspection/CalcPrinters.ml[59,1207+10]..demos/calc-inspection/CalcPrinters.ml[59,1207+17])
+                                  Tpat_construct "T_error"
+                                  []
+                                  None
+                              ]
+                              None
+                          expression (demos/calc-inspection/CalcPrinters.ml[60,1228+10]..demos/calc-inspection/CalcPrinters.ml[60,1228+17])
+                            Texp_constant Const_string("error",(demos/calc-inspection/CalcPrinters.ml[60,1228+11]..demos/calc-inspection/CalcPrinters.ml[60,1228+16]),None)
+                      ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[64,1276+0]..demos/calc-inspection/CalcPrinters.ml[64,1276+24])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[64,1276+4]..demos/calc-inspection/CalcPrinters.ml[64,1276+9])
+          Tpat_var "print/419"
+        expression (demos/calc-inspection/CalcPrinters.ml[64,1276+12]..demos/calc-inspection/CalcPrinters.ml[64,1276+24])
+          Texp_ident "Stdlib!.prerr_string"
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[65,1301+0]..demos/calc-inspection/CalcPrinters.ml[65,1301+43])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[65,1301+4]..demos/calc-inspection/CalcPrinters.ml[65,1301+16])
+          Tpat_var "print_symbol/420"
+        expression (demos/calc-inspection/CalcPrinters.ml[65,1301+17]..demos/calc-inspection/CalcPrinters.ml[65,1301+43]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-inspection/CalcPrinters.ml[65,1301+17]..demos/calc-inspection/CalcPrinters.ml[65,1301+18])
+                Tpat_var "s/421"
+              expression (demos/calc-inspection/CalcPrinters.ml[65,1301+21]..demos/calc-inspection/CalcPrinters.ml[65,1301+43])
+                Texp_apply
+                expression (demos/calc-inspection/CalcPrinters.ml[65,1301+21]..demos/calc-inspection/CalcPrinters.ml[65,1301+26])
+                  Texp_ident "print/419"
+                [
+                  <arg>
+                    Nolabel
+                    expression (demos/calc-inspection/CalcPrinters.ml[65,1301+27]..demos/calc-inspection/CalcPrinters.ml[65,1301+43])
+                      Texp_apply
+                      expression (demos/calc-inspection/CalcPrinters.ml[65,1301+28]..demos/calc-inspection/CalcPrinters.ml[65,1301+40])
+                        Texp_ident "print_symbol/337"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-inspection/CalcPrinters.ml[65,1301+41]..demos/calc-inspection/CalcPrinters.ml[65,1301+42])
+                            Texp_ident "s/421"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-inspection/CalcPrinters.ml[66,1345+0]..demos/calc-inspection/CalcPrinters.ml[66,1345+59])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcPrinters.ml[66,1345+4]..demos/calc-inspection/CalcPrinters.ml[66,1345+17])
+          Tpat_var "print_element/422"
+        expression (demos/calc-inspection/CalcPrinters.ml[66,1345+20]..demos/calc-inspection/CalcPrinters.ml[66,1345+59])
+          Texp_construct "Some"
+          [
+            expression (demos/calc-inspection/CalcPrinters.ml[66,1345+25]..demos/calc-inspection/CalcPrinters.ml[66,1345+59])
+              Texp_function
+              Nolabel
+              [
+                <case>
+                  pattern (demos/calc-inspection/CalcPrinters.ml[66,1345+30]..demos/calc-inspection/CalcPrinters.ml[66,1345+31])
+                    Tpat_var "s/423"
+                  expression (demos/calc-inspection/CalcPrinters.ml[66,1345+35]..demos/calc-inspection/CalcPrinters.ml[66,1345+58])
+                    Texp_apply
+                    expression (demos/calc-inspection/CalcPrinters.ml[66,1345+35]..demos/calc-inspection/CalcPrinters.ml[66,1345+40])
+                      Texp_ident "print/419"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-inspection/CalcPrinters.ml[66,1345+41]..demos/calc-inspection/CalcPrinters.ml[66,1345+58])
+                          Texp_apply
+                          expression (demos/calc-inspection/CalcPrinters.ml[66,1345+42]..demos/calc-inspection/CalcPrinters.ml[66,1345+55])
+                            Texp_ident "print_element/413"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (demos/calc-inspection/CalcPrinters.ml[66,1345+56]..demos/calc-inspection/CalcPrinters.ml[66,1345+57])
+                                Texp_ident "s/423"
+                          ]
+                    ]
+              ]
+          ]
+    ]
+]
+
+{<Dune__exe__CalcPrinters>
+ "print"[value] -> <Dune__exe__CalcPrinters.70>;
+ "print_element"[value] -> <Dune__exe__CalcPrinters.73>;
+ "print_symbol"[value] -> <Dune__exe__CalcPrinters.71>;
+ }
+
+(seq
+  (let
+    (print_symbol/337 =
+       (function symbol/339
+         (let (*match*/2056 =a (field_imm 0 symbol/339))
+           (switch* *match*/2056
+            case tag 0:
+             (let (*match*/2058 =a (field_imm 0 *match*/2056))
+               (switch* *match*/2058
+                case int 0: "error"
+                case int 1: "*"
+                case int 2: ")"
+                case int 3: "+"
+                case int 4: "-"
+                case int 5: "("
+                case int 6: "INT"
+                case int 7: "EOL"
+                case int 8: "/"))
+            case tag 1:
+             (let (*match*/2057 =a (field_imm 0 *match*/2056))
+               (if *match*/2057 "expr" "main"))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__CalcPrinters!)
+      print_symbol/337))
+  (let
+    (print_element/413 =
+       (function e/415
+         (let
+           (*match*/2063 =a (field_imm 3 e/415)
+            *match*/2062 =a (field_imm 2 e/415)
+            v/418 =a (field_imm 1 e/415)
+            s/417 =a (field_imm 0 e/415)
+            *match*/2059 =
+              (apply (field_imm 28 (field_imm 2 (global Dune__exe__Parser!)))
+                s/417))
+           (switch* *match*/2059
+            case tag 0:
+             (let (*match*/2061 =a (field_imm 0 *match*/2059))
+               (switch* *match*/2061
+                case int 0: "error"
+                case int 1: "*"
+                case int 2: ")"
+                case int 3: "+"
+                case int 4: "-"
+                case int 5: "("
+                case int 6: (apply (field_imm 32 (global Stdlib!)) v/418)
+                case int 7: ""
+                case int 8: "/"))
+            case tag 1:
+             (let (*match*/2060 =a (field_imm 0 *match*/2059))
+               (apply (field_imm 32 (global Stdlib!)) v/418))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__CalcPrinters!)
+      print_element/413))
+  (let (print/419 = (field_imm 48 (global Stdlib!)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__CalcPrinters!) print/419))
+  (let
+    (print_symbol/420 =
+       (function s/421 : int
+         (apply (field_imm 0 (global Dune__exe__CalcPrinters!))
+           (apply (field_imm 3 (global Dune__exe__CalcPrinters!)) s/421))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__CalcPrinters!)
+      print_symbol/420))
+  (let
+    (print_element/422 =
+       (makeblock 0
+         (function s/423 : int
+           (apply (field_imm 0 (global Dune__exe__CalcPrinters!))
+             (apply (field_imm 4 (global Dune__exe__CalcPrinters!)) s/423)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__CalcPrinters!)
+      print_element/422))
+  0)
+(seq
+  (let
+    (print_symbol/337 =
+       (function symbol/339
+         (let (*match*/2056 =a (field_imm 0 symbol/339))
+           (switch* *match*/2056
+            case tag 0:
+             (switch* (field_imm 0 *match*/2056)
+              case int 0: "error"
+              case int 1: "*"
+              case int 2: ")"
+              case int 3: "+"
+              case int 4: "-"
+              case int 5: "("
+              case int 6: "INT"
+              case int 7: "EOL"
+              case int 8: "/")
+            case tag 1: (if (field_imm 0 *match*/2056) "expr" "main")))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__CalcPrinters!)
+      print_symbol/337))
+  (let
+    (print_element/413 =
+       (function e/415
+         (let
+           (v/418 =a (field_imm 1 e/415)
+            *match*/2059 =
+              (apply (field_imm 28 (field_imm 2 (global Dune__exe__Parser!)))
+                (field_imm 0 e/415)))
+           (switch* *match*/2059
+            case tag 0:
+             (switch* (field_imm 0 *match*/2059)
+              case int 0: "error"
+              case int 1: "*"
+              case int 2: ")"
+              case int 3: "+"
+              case int 4: "-"
+              case int 5: "("
+              case int 6: (apply (field_imm 32 (global Stdlib!)) v/418)
+              case int 7: ""
+              case int 8: "/")
+            case tag 1: (apply (field_imm 32 (global Stdlib!)) v/418)))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__CalcPrinters!)
+      print_element/413))
+  (let (print/419 = (field_imm 48 (global Stdlib!)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__CalcPrinters!) print/419))
+  (let
+    (print_symbol/420 =
+       (function s/421 : int
+         (apply (field_imm 0 (global Dune__exe__CalcPrinters!))
+           (apply (field_imm 3 (global Dune__exe__CalcPrinters!)) s/421))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__CalcPrinters!)
+      print_symbol/420))
+  (let
+    (print_element/422 =
+       (makeblock 0
+         (function s/423 : int
+           (apply (field_imm 0 (global Dune__exe__CalcPrinters!))
+             (apply (field_imm 4 (global Dune__exe__CalcPrinters!)) s/423)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__CalcPrinters!)
+      print_element/422))
+  0)

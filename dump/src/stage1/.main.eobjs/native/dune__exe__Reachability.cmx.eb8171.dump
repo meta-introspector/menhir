@@ -1,0 +1,1400 @@
+[
+  structure_item (src/reachability.ml[14,1002+0]..[14,1002+16])
+    Pstr_open Fresh
+    module_expr (src/reachability.ml[14,1002+5]..[14,1002+16])
+      Pmod_ident "BasicSyntax" (src/reachability.ml[14,1002+5]..[14,1002+16])
+  structure_item (src/reachability.ml[16,1020+0]..[33,1583+50])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/reachability.ml[16,1020+8]..[16,1020+13])
+          Ppat_var "visit" (src/reachability.ml[16,1020+8]..[16,1020+13])
+        expression (src/reachability.ml[16,1020+14]..[27,1428+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/reachability.ml[16,1020+14]..[16,1020+21])
+            Ppat_var "grammar" (src/reachability.ml[16,1020+14]..[16,1020+21])
+          expression (src/reachability.ml[16,1020+22]..[27,1428+11]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/reachability.ml[16,1020+22]..[16,1020+29])
+              Ppat_var "visited" (src/reachability.ml[16,1020+22]..[16,1020+29])
+            expression (src/reachability.ml[16,1020+30]..[27,1428+11]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/reachability.ml[16,1020+30]..[16,1020+36])
+                Ppat_var "symbol" (src/reachability.ml[16,1020+30]..[16,1020+36])
+              expression (src/reachability.ml[17,1059+2]..[27,1428+11])
+                Pexp_try
+                expression (src/reachability.ml[18,1065+4]..[23,1287+13])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/reachability.ml[18,1065+8]..[18,1065+12])
+                        Ppat_var "rule" (src/reachability.ml[18,1065+8]..[18,1065+12])
+                      expression (src/reachability.ml[18,1065+15]..[18,1065+50])
+                        Pexp_apply
+                        expression (src/reachability.ml[18,1065+15]..[18,1065+29])
+                          Pexp_ident "StringMap.find" (src/reachability.ml[18,1065+15]..[18,1065+29])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/reachability.ml[18,1065+30]..[18,1065+36])
+                              Pexp_ident "symbol" (src/reachability.ml[18,1065+30]..[18,1065+36])
+                          <arg>
+                          Nolabel
+                            expression (src/reachability.ml[18,1065+37]..[18,1065+50])
+                              Pexp_field
+                              expression (src/reachability.ml[18,1065+37]..[18,1065+44])
+                                Pexp_ident "grammar" (src/reachability.ml[18,1065+37]..[18,1065+44])
+                              "rules" (src/reachability.ml[18,1065+45]..[18,1065+50])
+                        ]
+                  ]
+                  expression (src/reachability.ml[19,1119+4]..[23,1287+13])
+                    Pexp_ifthenelse
+                    expression (src/reachability.ml[19,1119+7]..[19,1119+41])
+                      Pexp_apply
+                      expression (src/reachability.ml[19,1119+7]..[19,1119+10])
+                        Pexp_ident "not" (src/reachability.ml[19,1119+7]..[19,1119+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/reachability.ml[19,1119+11]..[19,1119+41])
+                            Pexp_apply
+                            expression (src/reachability.ml[19,1119+12]..[19,1119+25])
+                              Pexp_ident "StringSet.mem" (src/reachability.ml[19,1119+12]..[19,1119+25])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/reachability.ml[19,1119+26]..[19,1119+32])
+                                  Pexp_ident "symbol" (src/reachability.ml[19,1119+26]..[19,1119+32])
+                              <arg>
+                              Nolabel
+                                expression (src/reachability.ml[19,1119+33]..[19,1119+40])
+                                  Pexp_ident "visited" (src/reachability.ml[19,1119+33]..[19,1119+40])
+                            ]
+                      ]
+                    expression (src/reachability.ml[20,1166+6]..[21,1218+59])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/reachability.ml[20,1166+10]..[20,1166+17])
+                            Ppat_var "visited" (src/reachability.ml[20,1166+10]..[20,1166+17])
+                          expression (src/reachability.ml[20,1166+20]..[20,1166+48])
+                            Pexp_apply
+                            expression (src/reachability.ml[20,1166+20]..[20,1166+33])
+                              Pexp_ident "StringSet.add" (src/reachability.ml[20,1166+20]..[20,1166+33])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/reachability.ml[20,1166+34]..[20,1166+40])
+                                  Pexp_ident "symbol" (src/reachability.ml[20,1166+34]..[20,1166+40])
+                              <arg>
+                              Nolabel
+                                expression (src/reachability.ml[20,1166+41]..[20,1166+48])
+                                  Pexp_ident "visited" (src/reachability.ml[20,1166+41]..[20,1166+48])
+                            ]
+                      ]
+                      expression (src/reachability.ml[21,1218+6]..[21,1218+59])
+                        Pexp_apply
+                        expression (src/reachability.ml[21,1218+6]..[21,1218+20])
+                          Pexp_ident "List.fold_left" (src/reachability.ml[21,1218+6]..[21,1218+20])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/reachability.ml[21,1218+21]..[21,1218+37])
+                              Pexp_apply
+                              expression (src/reachability.ml[21,1218+22]..[21,1218+28])
+                                Pexp_ident "visitb" (src/reachability.ml[21,1218+22]..[21,1218+28])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/reachability.ml[21,1218+29]..[21,1218+36])
+                                    Pexp_ident "grammar" (src/reachability.ml[21,1218+29]..[21,1218+36])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (src/reachability.ml[21,1218+38]..[21,1218+45])
+                              Pexp_ident "visited" (src/reachability.ml[21,1218+38]..[21,1218+45])
+                          <arg>
+                          Nolabel
+                            expression (src/reachability.ml[21,1218+46]..[21,1218+59])
+                              Pexp_field
+                              expression (src/reachability.ml[21,1218+46]..[21,1218+50])
+                                Pexp_ident "rule" (src/reachability.ml[21,1218+46]..[21,1218+50])
+                              "branches" (src/reachability.ml[21,1218+51]..[21,1218+59])
+                        ]
+                    Some
+                      expression (src/reachability.ml[23,1287+6]..[23,1287+13])
+                        Pexp_ident "visited" (src/reachability.ml[23,1287+6]..[23,1287+13])
+                [
+                  <case>
+                    pattern (src/reachability.ml[24,1301+7]..[24,1301+16])
+                      Ppat_construct "Not_found" (src/reachability.ml[24,1301+7]..[24,1301+16])
+                      None
+                    expression (src/reachability.ml[26,1358+4]..[27,1428+11])
+                      Pexp_sequence
+                      expression (src/reachability.ml[26,1358+4]..[26,1358+68])
+                        Pexp_assert
+                        expression (src/reachability.ml[26,1358+11]..[26,1358+68])
+                          Pexp_apply
+                          expression (src/reachability.ml[26,1358+29]..[26,1358+31])
+                            Pexp_ident "||" (src/reachability.ml[26,1358+29]..[26,1358+31])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[26,1358+12]..[26,1358+28])
+                                Pexp_apply
+                                expression (src/reachability.ml[26,1358+19]..[26,1358+20])
+                                  Pexp_ident "=" (src/reachability.ml[26,1358+19]..[26,1358+20])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[26,1358+12]..[26,1358+18])
+                                      Pexp_ident "symbol" (src/reachability.ml[26,1358+12]..[26,1358+18])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[26,1358+21]..[26,1358+28])
+                                      Pexp_constant PConst_string("error",(src/reachability.ml[26,1358+22]..[26,1358+27]),None)
+                                ]
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[26,1358+32]..[26,1358+67])
+                                Pexp_apply
+                                expression (src/reachability.ml[26,1358+32]..[26,1358+45])
+                                  Pexp_ident "StringMap.mem" (src/reachability.ml[26,1358+32]..[26,1358+45])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[26,1358+46]..[26,1358+52])
+                                      Pexp_ident "symbol" (src/reachability.ml[26,1358+46]..[26,1358+52])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[26,1358+53]..[26,1358+67])
+                                      Pexp_field
+                                      expression (src/reachability.ml[26,1358+53]..[26,1358+60])
+                                        Pexp_ident "grammar" (src/reachability.ml[26,1358+53]..[26,1358+60])
+                                      "tokens" (src/reachability.ml[26,1358+61]..[26,1358+67])
+                                ]
+                          ]
+                      expression (src/reachability.ml[27,1428+4]..[27,1428+11])
+                        Pexp_ident "visited" (src/reachability.ml[27,1428+4]..[27,1428+11])
+                ]
+      <def>
+        pattern (src/reachability.ml[29,1441+4]..[29,1441+10])
+          Ppat_var "visitb" (src/reachability.ml[29,1441+4]..[29,1441+10])
+        expression (src/reachability.ml[29,1441+11]..[30,1494+49]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/reachability.ml[29,1441+11]..[29,1441+18])
+            Ppat_var "grammar" (src/reachability.ml[29,1441+11]..[29,1441+18])
+          expression (src/reachability.ml[29,1441+19]..[30,1494+49]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/reachability.ml[29,1441+19]..[29,1441+26])
+              Ppat_var "visited" (src/reachability.ml[29,1441+19]..[29,1441+26])
+            expression (src/reachability.ml[29,1441+27]..[30,1494+49]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/reachability.ml[29,1441+27]..[29,1441+50])
+                Ppat_record Closed
+                [
+                  "producers" (src/reachability.ml[29,1441+29]..[29,1441+38])
+                    pattern (src/reachability.ml[29,1441+41]..[29,1441+48])
+                      Ppat_var "symbols" (src/reachability.ml[29,1441+41]..[29,1441+48])
+                ]
+              expression (src/reachability.ml[30,1494+2]..[30,1494+49])
+                Pexp_apply
+                expression (src/reachability.ml[30,1494+2]..[30,1494+16])
+                  Pexp_ident "List.fold_left" (src/reachability.ml[30,1494+2]..[30,1494+16])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/reachability.ml[30,1494+17]..[30,1494+33])
+                      Pexp_apply
+                      expression (src/reachability.ml[30,1494+18]..[30,1494+24])
+                        Pexp_ident "visits" (src/reachability.ml[30,1494+18]..[30,1494+24])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/reachability.ml[30,1494+25]..[30,1494+32])
+                            Pexp_ident "grammar" (src/reachability.ml[30,1494+25]..[30,1494+32])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/reachability.ml[30,1494+34]..[30,1494+41])
+                      Pexp_ident "visited" (src/reachability.ml[30,1494+34]..[30,1494+41])
+                  <arg>
+                  Nolabel
+                    expression (src/reachability.ml[30,1494+42]..[30,1494+49])
+                      Pexp_ident "symbols" (src/reachability.ml[30,1494+42]..[30,1494+49])
+                ]
+      <def>
+        pattern (src/reachability.ml[32,1545+4]..[32,1545+10])
+          Ppat_var "visits" (src/reachability.ml[32,1545+4]..[32,1545+10])
+        expression (src/reachability.ml[32,1545+11]..[33,1583+50]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/reachability.ml[32,1545+11]..[32,1545+18])
+            Ppat_var "grammar" (src/reachability.ml[32,1545+11]..[32,1545+18])
+          expression (src/reachability.ml[32,1545+19]..[33,1583+50]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/reachability.ml[32,1545+19]..[32,1545+26])
+              Ppat_var "visited" (src/reachability.ml[32,1545+19]..[32,1545+26])
+            expression (src/reachability.ml[32,1545+27]..[33,1583+50]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/reachability.ml[32,1545+27]..[32,1545+35])
+                Ppat_var "producer" (src/reachability.ml[32,1545+27]..[32,1545+35])
+              expression (src/reachability.ml[33,1583+2]..[33,1583+50])
+                Pexp_apply
+                expression (src/reachability.ml[33,1583+2]..[33,1583+7])
+                  Pexp_ident "visit" (src/reachability.ml[33,1583+2]..[33,1583+7])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/reachability.ml[33,1583+8]..[33,1583+15])
+                      Pexp_ident "grammar" (src/reachability.ml[33,1583+8]..[33,1583+15])
+                  <arg>
+                  Nolabel
+                    expression (src/reachability.ml[33,1583+16]..[33,1583+23])
+                      Pexp_ident "visited" (src/reachability.ml[33,1583+16]..[33,1583+23])
+                  <arg>
+                  Nolabel
+                    expression (src/reachability.ml[33,1583+24]..[33,1583+50])
+                      Pexp_apply
+                      expression (src/reachability.ml[33,1583+25]..[33,1583+40])
+                        Pexp_ident "producer_symbol" (src/reachability.ml[33,1583+25]..[33,1583+40])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/reachability.ml[33,1583+41]..[33,1583+49])
+                            Pexp_ident "producer" (src/reachability.ml[33,1583+41]..[33,1583+49])
+                      ]
+                ]
+    ]
+  structure_item (src/reachability.ml[35,1635+0]..[55,2400+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/reachability.ml[35,1635+4]..[35,1635+8])
+          Ppat_var "trim" (src/reachability.ml[35,1635+4]..[35,1635+8])
+        expression (src/reachability.ml[35,1635+9]..[55,2400+5]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/reachability.ml[35,1635+9]..[35,1635+16])
+            Ppat_var "grammar" (src/reachability.ml[35,1635+9]..[35,1635+16])
+          expression (src/reachability.ml[36,1654+2]..[55,2400+5])
+            Pexp_ifthenelse
+            expression (src/reachability.ml[36,1654+5]..[36,1654+49])
+              Pexp_apply
+              expression (src/reachability.ml[36,1654+46]..[36,1654+47])
+                Pexp_ident "=" (src/reachability.ml[36,1654+46]..[36,1654+47])
+              [
+                <arg>
+                Nolabel
+                  expression (src/reachability.ml[36,1654+5]..[36,1654+45])
+                    Pexp_apply
+                    expression (src/reachability.ml[36,1654+5]..[36,1654+23])
+                      Pexp_ident "StringSet.cardinal" (src/reachability.ml[36,1654+5]..[36,1654+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/reachability.ml[36,1654+24]..[36,1654+45])
+                          Pexp_field
+                          expression (src/reachability.ml[36,1654+24]..[36,1654+31])
+                            Pexp_ident "grammar" (src/reachability.ml[36,1654+24]..[36,1654+31])
+                          "start_symbols" (src/reachability.ml[36,1654+32]..[36,1654+45])
+                    ]
+                <arg>
+                Nolabel
+                  expression (src/reachability.ml[36,1654+48]..[36,1654+49])
+                    Pexp_constant PConst_int (0,None)
+              ]
+            expression (src/reachability.ml[37,1709+4]..[37,1709+55])
+              Pexp_apply
+              expression (src/reachability.ml[37,1709+4]..[37,1709+15])
+                Pexp_ident "Error.error" (src/reachability.ml[37,1709+4]..[37,1709+15])
+              [
+                <arg>
+                Nolabel
+                  expression (src/reachability.ml[37,1709+16]..[37,1709+18])
+                    Pexp_construct "[]" (src/reachability.ml[37,1709+16]..[37,1709+18])
+                    None
+                <arg>
+                Nolabel
+                  expression (src/reachability.ml[37,1709+19]..[37,1709+55])
+                    Pexp_constant PConst_string("no start symbol has been declared.",(src/reachability.ml[37,1709+20]..[37,1709+54]),None)
+              ]
+            Some
+              expression (src/reachability.ml[39,1772+4]..[55,2400+5])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/reachability.ml[39,1772+8]..[39,1772+17])
+                      Ppat_var "reachable" (src/reachability.ml[39,1772+8]..[39,1772+17])
+                    expression (src/reachability.ml[40,1792+6]..[42,1873+45])
+                      Pexp_apply
+                      expression (src/reachability.ml[40,1792+6]..[40,1792+20])
+                        Pexp_ident "StringSet.fold" (src/reachability.ml[40,1792+6]..[40,1792+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/reachability.ml[40,1792+21]..[42,1873+7])
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/reachability.ml[40,1792+26]..[40,1792+32])
+                              Ppat_var "symbol" (src/reachability.ml[40,1792+26]..[40,1792+32])
+                            expression (src/reachability.ml[40,1792+33]..[41,1836+36]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/reachability.ml[40,1792+33]..[40,1792+40])
+                                Ppat_var "visited" (src/reachability.ml[40,1792+33]..[40,1792+40])
+                              expression (src/reachability.ml[41,1836+8]..[41,1836+36])
+                                Pexp_apply
+                                expression (src/reachability.ml[41,1836+8]..[41,1836+13])
+                                  Pexp_ident "visit" (src/reachability.ml[41,1836+8]..[41,1836+13])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[41,1836+14]..[41,1836+21])
+                                      Pexp_ident "grammar" (src/reachability.ml[41,1836+14]..[41,1836+21])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[41,1836+22]..[41,1836+29])
+                                      Pexp_ident "visited" (src/reachability.ml[41,1836+22]..[41,1836+29])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[41,1836+30]..[41,1836+36])
+                                      Pexp_ident "symbol" (src/reachability.ml[41,1836+30]..[41,1836+36])
+                                ]
+                        <arg>
+                        Nolabel
+                          expression (src/reachability.ml[42,1873+8]..[42,1873+29])
+                            Pexp_field
+                            expression (src/reachability.ml[42,1873+8]..[42,1873+15])
+                              Pexp_ident "grammar" (src/reachability.ml[42,1873+8]..[42,1873+15])
+                            "start_symbols" (src/reachability.ml[42,1873+16]..[42,1873+29])
+                        <arg>
+                        Nolabel
+                          expression (src/reachability.ml[42,1873+30]..[42,1873+45])
+                            Pexp_ident "StringSet.empty" (src/reachability.ml[42,1873+30]..[42,1873+45])
+                      ]
+                ]
+                expression (src/reachability.ml[44,1926+4]..[55,2400+5])
+                  Pexp_sequence
+                  expression (src/reachability.ml[44,1926+4]..[50,2166+19])
+                    Pexp_apply
+                    expression (src/reachability.ml[44,1926+4]..[44,1926+18])
+                      Pexp_ident "StringMap.iter" (src/reachability.ml[44,1926+4]..[44,1926+18])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/reachability.ml[44,1926+19]..[50,2166+5])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/reachability.ml[44,1926+24]..[44,1926+30])
+                            Ppat_var "symbol" (src/reachability.ml[44,1926+24]..[44,1926+30])
+                          expression (src/reachability.ml[44,1926+31]..[49,2144+21]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/reachability.ml[44,1926+31]..[44,1926+35])
+                              Ppat_var "rule" (src/reachability.ml[44,1926+31]..[44,1926+35])
+                            expression (src/reachability.ml[45,1965+6]..[49,2144+21])
+                              Pexp_ifthenelse
+                              expression (src/reachability.ml[45,1965+9]..[45,1965+45])
+                                Pexp_apply
+                                expression (src/reachability.ml[45,1965+9]..[45,1965+12])
+                                  Pexp_ident "not" (src/reachability.ml[45,1965+9]..[45,1965+12])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[45,1965+13]..[45,1965+45])
+                                      Pexp_apply
+                                      expression (src/reachability.ml[45,1965+14]..[45,1965+27])
+                                        Pexp_ident "StringSet.mem" (src/reachability.ml[45,1965+14]..[45,1965+27])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/reachability.ml[45,1965+28]..[45,1965+34])
+                                            Pexp_ident "symbol" (src/reachability.ml[45,1965+28]..[45,1965+34])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/reachability.ml[45,1965+35]..[45,1965+44])
+                                            Pexp_ident "reachable" (src/reachability.ml[45,1965+35]..[45,1965+44])
+                                      ]
+                                ]
+                              expression (src/reachability.ml[46,2016+8]..[49,2144+21])
+                                Pexp_apply
+                                expression (src/reachability.ml[46,2016+8]..[46,2016+29])
+                                  Pexp_ident "Error.grammar_warning" (src/reachability.ml[46,2016+8]..[46,2016+29])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[47,2046+10]..[47,2046+24])
+                                      Pexp_field
+                                      expression (src/reachability.ml[47,2046+10]..[47,2046+14])
+                                        Pexp_ident "rule" (src/reachability.ml[47,2046+10]..[47,2046+14])
+                                      "positions" (src/reachability.ml[47,2046+15]..[47,2046+24])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[48,2071+13]..[48,2071+72])
+                                      Pexp_constant PConst_string("symbol %s is unreachable from any of the start symbol(s).",(src/reachability.ml[48,2071+14]..[48,2071+71]),None)
+                                  <arg>
+                                  Nolabel
+                                    expression (src/reachability.ml[49,2144+15]..[49,2144+21])
+                                      Pexp_ident "symbol" (src/reachability.ml[49,2144+15]..[49,2144+21])
+                                ]
+                              None
+                      <arg>
+                      Nolabel
+                        expression (src/reachability.ml[50,2166+6]..[50,2166+19])
+                          Pexp_field
+                          expression (src/reachability.ml[50,2166+6]..[50,2166+13])
+                            Pexp_ident "grammar" (src/reachability.ml[50,2166+6]..[50,2166+13])
+                          "rules" (src/reachability.ml[50,2166+14]..[50,2166+19])
+                    ]
+                  expression (src/reachability.ml[51,2187+4]..[55,2400+5])
+                    Pexp_record
+                    [
+                      "rules" (src/reachability.ml[52,2206+6]..[52,2206+11])
+                        expression (src/reachability.ml[52,2206+14]..[52,2206+56])
+                          Pexp_apply
+                          expression (src/reachability.ml[52,2206+14]..[52,2206+32])
+                            Pexp_ident "StringMap.restrict" (src/reachability.ml[52,2206+14]..[52,2206+32])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[52,2206+33]..[52,2206+42])
+                                Pexp_ident "reachable" (src/reachability.ml[52,2206+33]..[52,2206+42])
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[52,2206+43]..[52,2206+56])
+                                Pexp_field
+                                expression (src/reachability.ml[52,2206+43]..[52,2206+50])
+                                  Pexp_ident "grammar" (src/reachability.ml[52,2206+43]..[52,2206+50])
+                                "rules" (src/reachability.ml[52,2206+51]..[52,2206+56])
+                          ]
+                      "types" (src/reachability.ml[53,2264+6]..[53,2264+11])
+                        expression (src/reachability.ml[53,2264+14]..[53,2264+56])
+                          Pexp_apply
+                          expression (src/reachability.ml[53,2264+14]..[53,2264+32])
+                            Pexp_ident "StringMap.restrict" (src/reachability.ml[53,2264+14]..[53,2264+32])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[53,2264+33]..[53,2264+42])
+                                Pexp_ident "reachable" (src/reachability.ml[53,2264+33]..[53,2264+42])
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[53,2264+43]..[53,2264+56])
+                                Pexp_field
+                                expression (src/reachability.ml[53,2264+43]..[53,2264+50])
+                                  Pexp_ident "grammar" (src/reachability.ml[53,2264+43]..[53,2264+50])
+                                "types" (src/reachability.ml[53,2264+51]..[53,2264+56])
+                          ]
+                      "on_error_reduce" (src/reachability.ml[54,2322+6]..[54,2322+21])
+                        expression (src/reachability.ml[54,2322+24]..[54,2322+76])
+                          Pexp_apply
+                          expression (src/reachability.ml[54,2322+24]..[54,2322+42])
+                            Pexp_ident "StringMap.restrict" (src/reachability.ml[54,2322+24]..[54,2322+42])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[54,2322+43]..[54,2322+52])
+                                Pexp_ident "reachable" (src/reachability.ml[54,2322+43]..[54,2322+52])
+                            <arg>
+                            Nolabel
+                              expression (src/reachability.ml[54,2322+53]..[54,2322+76])
+                                Pexp_field
+                                expression (src/reachability.ml[54,2322+53]..[54,2322+60])
+                                  Pexp_ident "grammar" (src/reachability.ml[54,2322+53]..[54,2322+60])
+                                "on_error_reduce" (src/reachability.ml[54,2322+61]..[54,2322+76])
+                          ]
+                    ]
+                    Some
+                      expression (src/reachability.ml[51,2187+6]..[51,2187+13])
+                        Pexp_ident "grammar" (src/reachability.ml[51,2187+6]..[51,2187+13])
+    ]
+]
+
+open BasicSyntax
+let rec visit grammar visited symbol =
+  try
+    let rule = StringMap.find symbol grammar.rules in
+    if not (StringSet.mem symbol visited)
+    then
+      let visited = StringSet.add symbol visited in
+      List.fold_left (visitb grammar) visited rule.branches
+    else visited
+  with
+  | Not_found ->
+      (assert ((symbol = "error") || (StringMap.mem symbol grammar.tokens));
+       visited)
+and visitb grammar visited { producers = symbols } =
+  List.fold_left (visits grammar) visited symbols
+and visits grammar visited producer =
+  visit grammar visited (producer_symbol producer)
+let trim grammar =
+  if (StringSet.cardinal grammar.start_symbols) = 0
+  then Error.error [] "no start symbol has been declared."
+  else
+    (let reachable =
+       StringSet.fold
+         (fun symbol -> fun visited -> visit grammar visited symbol)
+         grammar.start_symbols StringSet.empty in
+     StringMap.iter
+       (fun symbol ->
+          fun rule ->
+            if not (StringSet.mem symbol reachable)
+            then
+              Error.grammar_warning rule.positions
+                "symbol %s is unreachable from any of the start symbol(s)."
+                symbol) grammar.rules;
+     {
+       grammar with
+       rules = (StringMap.restrict reachable grammar.rules);
+       types = (StringMap.restrict reachable grammar.types);
+       on_error_reduce =
+         (StringMap.restrict reachable grammar.on_error_reduce)
+     })
+[
+  structure_item (src/reachability.ml[14,1002+0]..src/reachability.ml[14,1002+16])
+    Tstr_open Fresh
+    module_expr (src/reachability.ml[14,1002+5]..src/reachability.ml[14,1002+16])
+      Tmod_ident "Dune__exe!.BasicSyntax"
+  structure_item (src/reachability.ml[16,1020+0]..src/reachability.ml[33,1583+50])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/reachability.ml[16,1020+8]..src/reachability.ml[16,1020+13])
+          Tpat_var "visit/416"
+        expression (src/reachability.ml[16,1020+14]..src/reachability.ml[27,1428+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/reachability.ml[16,1020+14]..src/reachability.ml[16,1020+21])
+                Tpat_var "grammar/419"
+              expression (src/reachability.ml[16,1020+22]..src/reachability.ml[27,1428+11]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/reachability.ml[16,1020+22]..src/reachability.ml[16,1020+29])
+                      Tpat_var "visited/420"
+                    expression (src/reachability.ml[16,1020+30]..src/reachability.ml[27,1428+11]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/reachability.ml[16,1020+30]..src/reachability.ml[16,1020+36])
+                            Tpat_var "symbol/421"
+                          expression (src/reachability.ml[17,1059+2]..src/reachability.ml[27,1428+11])
+                            Texp_try
+                            expression (src/reachability.ml[18,1065+4]..src/reachability.ml[23,1287+13])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/reachability.ml[18,1065+8]..src/reachability.ml[18,1065+12])
+                                    Tpat_var "rule/422"
+                                  expression (src/reachability.ml[18,1065+15]..src/reachability.ml[18,1065+50])
+                                    Texp_apply
+                                    expression (src/reachability.ml[18,1065+15]..src/reachability.ml[18,1065+29])
+                                      Texp_ident "Dune__exe!.StringMap.find"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/reachability.ml[18,1065+30]..src/reachability.ml[18,1065+36])
+                                          Texp_ident "symbol/421"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/reachability.ml[18,1065+37]..src/reachability.ml[18,1065+50])
+                                          Texp_field
+                                          expression (src/reachability.ml[18,1065+37]..src/reachability.ml[18,1065+44])
+                                            Texp_ident "grammar/419"
+                                          "rules"
+                                    ]
+                              ]
+                              expression (src/reachability.ml[19,1119+4]..src/reachability.ml[23,1287+13])
+                                Texp_ifthenelse
+                                expression (src/reachability.ml[19,1119+7]..src/reachability.ml[19,1119+41])
+                                  Texp_apply
+                                  expression (src/reachability.ml[19,1119+7]..src/reachability.ml[19,1119+10])
+                                    Texp_ident "Stdlib!.not"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[19,1119+11]..src/reachability.ml[19,1119+41])
+                                        Texp_apply
+                                        expression (src/reachability.ml[19,1119+12]..src/reachability.ml[19,1119+25])
+                                          Texp_ident "Dune__exe!.StringSet.mem"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/reachability.ml[19,1119+26]..src/reachability.ml[19,1119+32])
+                                              Texp_ident "symbol/421"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/reachability.ml[19,1119+33]..src/reachability.ml[19,1119+40])
+                                              Texp_ident "visited/420"
+                                        ]
+                                  ]
+                                expression (src/reachability.ml[20,1166+6]..src/reachability.ml[21,1218+59])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/reachability.ml[20,1166+10]..src/reachability.ml[20,1166+17])
+                                        Tpat_var "visited/611"
+                                      expression (src/reachability.ml[20,1166+20]..src/reachability.ml[20,1166+48])
+                                        Texp_apply
+                                        expression (src/reachability.ml[20,1166+20]..src/reachability.ml[20,1166+33])
+                                          Texp_ident "Dune__exe!.StringSet.add"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/reachability.ml[20,1166+34]..src/reachability.ml[20,1166+40])
+                                              Texp_ident "symbol/421"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/reachability.ml[20,1166+41]..src/reachability.ml[20,1166+48])
+                                              Texp_ident "visited/420"
+                                        ]
+                                  ]
+                                  expression (src/reachability.ml[21,1218+6]..src/reachability.ml[21,1218+59])
+                                    Texp_apply
+                                    expression (src/reachability.ml[21,1218+6]..src/reachability.ml[21,1218+20])
+                                      Texp_ident "Stdlib!.List.fold_left"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/reachability.ml[21,1218+21]..src/reachability.ml[21,1218+37])
+                                          Texp_apply
+                                          expression (src/reachability.ml[21,1218+22]..src/reachability.ml[21,1218+28])
+                                            Texp_ident "visitb/417"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/reachability.ml[21,1218+29]..src/reachability.ml[21,1218+36])
+                                                Texp_ident "grammar/419"
+                                          ]
+                                      <arg>
+                                        Nolabel
+                                        expression (src/reachability.ml[21,1218+38]..src/reachability.ml[21,1218+45])
+                                          Texp_ident "visited/611"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/reachability.ml[21,1218+46]..src/reachability.ml[21,1218+59])
+                                          Texp_field
+                                          expression (src/reachability.ml[21,1218+46]..src/reachability.ml[21,1218+50])
+                                            Texp_ident "rule/422"
+                                          "branches"
+                                    ]
+                                Some
+                                  expression (src/reachability.ml[23,1287+6]..src/reachability.ml[23,1287+13])
+                                    Texp_ident "visited/420"
+                            [
+                              <case>
+                                pattern (src/reachability.ml[24,1301+7]..src/reachability.ml[24,1301+16])
+                                  Tpat_construct "Not_found"
+                                  []
+                                  None
+                                expression (src/reachability.ml[26,1358+4]..src/reachability.ml[27,1428+11])
+                                  Texp_sequence
+                                  expression (src/reachability.ml[26,1358+4]..src/reachability.ml[26,1358+68])
+                                    Texp_assert                                    expression (src/reachability.ml[26,1358+11]..src/reachability.ml[26,1358+68])
+                                      Texp_apply
+                                      expression (src/reachability.ml[26,1358+29]..src/reachability.ml[26,1358+31])
+                                        Texp_ident "Stdlib!.||"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/reachability.ml[26,1358+12]..src/reachability.ml[26,1358+28])
+                                            Texp_apply
+                                            expression (src/reachability.ml[26,1358+19]..src/reachability.ml[26,1358+20])
+                                              Texp_ident "Stdlib!.="
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[26,1358+12]..src/reachability.ml[26,1358+18])
+                                                  Texp_ident "symbol/421"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[26,1358+21]..src/reachability.ml[26,1358+28])
+                                                  Texp_constant Const_string("error",(src/reachability.ml[26,1358+22]..src/reachability.ml[26,1358+27]),None)
+                                            ]
+                                        <arg>
+                                          Nolabel
+                                          expression (src/reachability.ml[26,1358+32]..src/reachability.ml[26,1358+67])
+                                            Texp_apply
+                                            expression (src/reachability.ml[26,1358+32]..src/reachability.ml[26,1358+45])
+                                              Texp_ident "Dune__exe!.StringMap.mem"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[26,1358+46]..src/reachability.ml[26,1358+52])
+                                                  Texp_ident "symbol/421"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[26,1358+53]..src/reachability.ml[26,1358+67])
+                                                  Texp_field
+                                                  expression (src/reachability.ml[26,1358+53]..src/reachability.ml[26,1358+60])
+                                                    Texp_ident "grammar/419"
+                                                  "tokens"
+                                            ]
+                                      ]
+                                  expression (src/reachability.ml[27,1428+4]..src/reachability.ml[27,1428+11])
+                                    Texp_ident "visited/420"
+                            ]
+                      ]
+                ]
+          ]
+      <def>
+        pattern (src/reachability.ml[29,1441+4]..src/reachability.ml[29,1441+10])
+          Tpat_var "visitb/417"
+        expression (src/reachability.ml[29,1441+11]..src/reachability.ml[30,1494+49]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/reachability.ml[29,1441+11]..src/reachability.ml[29,1441+18])
+                Tpat_var "grammar/698"
+              expression (src/reachability.ml[29,1441+19]..src/reachability.ml[30,1494+49]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/reachability.ml[29,1441+19]..src/reachability.ml[29,1441+26])
+                      Tpat_var "visited/699"
+                    expression (src/reachability.ml[29,1441+27]..src/reachability.ml[30,1494+49]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/reachability.ml[29,1441+27]..src/reachability.ml[29,1441+50])
+                            Tpat_record
+                            [
+                              "producers"
+                                pattern (src/reachability.ml[29,1441+41]..src/reachability.ml[29,1441+48])
+                                  Tpat_var "symbols/700"
+                            ]
+                          expression (src/reachability.ml[30,1494+2]..src/reachability.ml[30,1494+49])
+                            Texp_apply
+                            expression (src/reachability.ml[30,1494+2]..src/reachability.ml[30,1494+16])
+                              Texp_ident "Stdlib!.List.fold_left"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/reachability.ml[30,1494+17]..src/reachability.ml[30,1494+33])
+                                  Texp_apply
+                                  expression (src/reachability.ml[30,1494+18]..src/reachability.ml[30,1494+24])
+                                    Texp_ident "visits/418"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[30,1494+25]..src/reachability.ml[30,1494+32])
+                                        Texp_ident "grammar/698"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/reachability.ml[30,1494+34]..src/reachability.ml[30,1494+41])
+                                  Texp_ident "visited/699"
+                              <arg>
+                                Nolabel
+                                expression (src/reachability.ml[30,1494+42]..src/reachability.ml[30,1494+49])
+                                  Texp_ident "symbols/700"
+                            ]
+                      ]
+                ]
+          ]
+      <def>
+        pattern (src/reachability.ml[32,1545+4]..src/reachability.ml[32,1545+10])
+          Tpat_var "visits/418"
+        expression (src/reachability.ml[32,1545+11]..src/reachability.ml[33,1583+50]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/reachability.ml[32,1545+11]..src/reachability.ml[32,1545+18])
+                Tpat_var "grammar/702"
+              expression (src/reachability.ml[32,1545+19]..src/reachability.ml[33,1583+50]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/reachability.ml[32,1545+19]..src/reachability.ml[32,1545+26])
+                      Tpat_var "visited/703"
+                    expression (src/reachability.ml[32,1545+27]..src/reachability.ml[33,1583+50]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/reachability.ml[32,1545+27]..src/reachability.ml[32,1545+35])
+                            Tpat_var "producer/704"
+                          expression (src/reachability.ml[33,1583+2]..src/reachability.ml[33,1583+50])
+                            Texp_apply
+                            expression (src/reachability.ml[33,1583+2]..src/reachability.ml[33,1583+7])
+                              Texp_ident "visit/416"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/reachability.ml[33,1583+8]..src/reachability.ml[33,1583+15])
+                                  Texp_ident "grammar/702"
+                              <arg>
+                                Nolabel
+                                expression (src/reachability.ml[33,1583+16]..src/reachability.ml[33,1583+23])
+                                  Texp_ident "visited/703"
+                              <arg>
+                                Nolabel
+                                expression (src/reachability.ml[33,1583+24]..src/reachability.ml[33,1583+50])
+                                  Texp_apply
+                                  expression (src/reachability.ml[33,1583+25]..src/reachability.ml[33,1583+40])
+                                    Texp_ident "Dune__exe!.BasicSyntax.producer_symbol"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[33,1583+41]..src/reachability.ml[33,1583+49])
+                                        Texp_ident "producer/704"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/reachability.ml[35,1635+0]..src/reachability.ml[55,2400+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/reachability.ml[35,1635+4]..src/reachability.ml[35,1635+8])
+          Tpat_var "trim/740"
+        expression (src/reachability.ml[35,1635+9]..src/reachability.ml[55,2400+5]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/reachability.ml[35,1635+9]..src/reachability.ml[35,1635+16])
+                Tpat_var "grammar/742"
+              expression (src/reachability.ml[36,1654+2]..src/reachability.ml[55,2400+5])
+                Texp_ifthenelse
+                expression (src/reachability.ml[36,1654+5]..src/reachability.ml[36,1654+49])
+                  Texp_apply
+                  expression (src/reachability.ml[36,1654+46]..src/reachability.ml[36,1654+47])
+                    Texp_ident "Stdlib!.="
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/reachability.ml[36,1654+5]..src/reachability.ml[36,1654+45])
+                        Texp_apply
+                        expression (src/reachability.ml[36,1654+5]..src/reachability.ml[36,1654+23])
+                          Texp_ident "Dune__exe!.StringSet.cardinal"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/reachability.ml[36,1654+24]..src/reachability.ml[36,1654+45])
+                              Texp_field
+                              expression (src/reachability.ml[36,1654+24]..src/reachability.ml[36,1654+31])
+                                Texp_ident "grammar/742"
+                              "start_symbols"
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (src/reachability.ml[36,1654+48]..src/reachability.ml[36,1654+49])
+                        Texp_constant Const_int 0
+                  ]
+                expression (src/reachability.ml[37,1709+4]..src/reachability.ml[37,1709+55])
+                  Texp_apply
+                  expression (src/reachability.ml[37,1709+4]..src/reachability.ml[37,1709+15])
+                    Texp_ident "Dune__exe!.Error.error"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/reachability.ml[37,1709+16]..src/reachability.ml[37,1709+18])
+                        Texp_construct "[]"
+                        []
+                    <arg>
+                      Nolabel
+                      expression (src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55])
+                        Texp_construct "CamlinternalFormatBasics.Format"
+                        [
+                          expression (src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55]) ghost
+                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                            [
+                              expression (src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55]) ghost
+                                Texp_constant Const_string("no start symbol has been declared.",(src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55]) ghost,None)
+                              expression (src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55]) ghost
+                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                []
+                            ]
+                          expression (src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55]) ghost
+                            Texp_constant Const_string("no start symbol has been declared.",(src/reachability.ml[37,1709+19]..src/reachability.ml[37,1709+55]) ghost,None)
+                        ]
+                  ]
+                Some
+                  expression (src/reachability.ml[39,1772+4]..src/reachability.ml[55,2400+5])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/reachability.ml[39,1772+8]..src/reachability.ml[39,1772+17])
+                          Tpat_var "reachable/816"
+                        expression (src/reachability.ml[40,1792+6]..src/reachability.ml[42,1873+45])
+                          Texp_apply
+                          expression (src/reachability.ml[40,1792+6]..src/reachability.ml[40,1792+20])
+                            Texp_ident "Dune__exe!.StringSet.fold"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/reachability.ml[40,1792+21]..src/reachability.ml[42,1873+7])
+                                Texp_function
+                                Nolabel
+                                [
+                                  <case>
+                                    pattern (src/reachability.ml[40,1792+26]..src/reachability.ml[40,1792+32])
+                                      Tpat_var "symbol/817"
+                                    expression (src/reachability.ml[40,1792+33]..src/reachability.ml[41,1836+36]) ghost
+                                      Texp_function
+                                      Nolabel
+                                      [
+                                        <case>
+                                          pattern (src/reachability.ml[40,1792+33]..src/reachability.ml[40,1792+40])
+                                            Tpat_var "visited/818"
+                                          expression (src/reachability.ml[41,1836+8]..src/reachability.ml[41,1836+36])
+                                            Texp_apply
+                                            expression (src/reachability.ml[41,1836+8]..src/reachability.ml[41,1836+13])
+                                              Texp_ident "visit/416"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[41,1836+14]..src/reachability.ml[41,1836+21])
+                                                  Texp_ident "grammar/742"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[41,1836+22]..src/reachability.ml[41,1836+29])
+                                                  Texp_ident "visited/818"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[41,1836+30]..src/reachability.ml[41,1836+36])
+                                                  Texp_ident "symbol/817"
+                                            ]
+                                      ]
+                                ]
+                            <arg>
+                              Nolabel
+                              expression (src/reachability.ml[42,1873+8]..src/reachability.ml[42,1873+29])
+                                Texp_field
+                                expression (src/reachability.ml[42,1873+8]..src/reachability.ml[42,1873+15])
+                                  Texp_ident "grammar/742"
+                                "start_symbols"
+                            <arg>
+                              Nolabel
+                              expression (src/reachability.ml[42,1873+30]..src/reachability.ml[42,1873+45])
+                                Texp_ident "Dune__exe!.StringSet.empty"
+                          ]
+                    ]
+                    expression (src/reachability.ml[44,1926+4]..src/reachability.ml[55,2400+5])
+                      Texp_sequence
+                      expression (src/reachability.ml[44,1926+4]..src/reachability.ml[50,2166+19])
+                        Texp_apply
+                        expression (src/reachability.ml[44,1926+4]..src/reachability.ml[44,1926+18])
+                          Texp_ident "Dune__exe!.StringMap.iter"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/reachability.ml[44,1926+19]..src/reachability.ml[50,2166+5])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/reachability.ml[44,1926+24]..src/reachability.ml[44,1926+30])
+                                    Tpat_var "symbol/819"
+                                  expression (src/reachability.ml[44,1926+31]..src/reachability.ml[49,2144+21]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/reachability.ml[44,1926+31]..src/reachability.ml[44,1926+35])
+                                          Tpat_var "rule/820"
+                                        expression (src/reachability.ml[45,1965+6]..src/reachability.ml[49,2144+21])
+                                          Texp_ifthenelse
+                                          expression (src/reachability.ml[45,1965+9]..src/reachability.ml[45,1965+45])
+                                            Texp_apply
+                                            expression (src/reachability.ml[45,1965+9]..src/reachability.ml[45,1965+12])
+                                              Texp_ident "Stdlib!.not"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[45,1965+13]..src/reachability.ml[45,1965+45])
+                                                  Texp_apply
+                                                  expression (src/reachability.ml[45,1965+14]..src/reachability.ml[45,1965+27])
+                                                    Texp_ident "Dune__exe!.StringSet.mem"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/reachability.ml[45,1965+28]..src/reachability.ml[45,1965+34])
+                                                        Texp_ident "symbol/819"
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/reachability.ml[45,1965+35]..src/reachability.ml[45,1965+44])
+                                                        Texp_ident "reachable/816"
+                                                  ]
+                                            ]
+                                          expression (src/reachability.ml[46,2016+8]..src/reachability.ml[49,2144+21])
+                                            Texp_apply
+                                            expression (src/reachability.ml[46,2016+8]..src/reachability.ml[46,2016+29])
+                                              Texp_ident "Dune__exe!.Error.grammar_warning"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[47,2046+10]..src/reachability.ml[47,2046+24])
+                                                  Texp_field
+                                                  expression (src/reachability.ml[47,2046+10]..src/reachability.ml[47,2046+14])
+                                                    Texp_ident "rule/820"
+                                                  "positions"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72])
+                                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                                  [
+                                                    expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                      [
+                                                        expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                          Texp_constant Const_string("symbol ",(src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost,None)
+                                                        expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String"
+                                                          [
+                                                            expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                              []
+                                                            expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                              [
+                                                                expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                                  Texp_constant Const_string(" is unreachable from any of the start symbol(s).",(src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost,None)
+                                                                expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                  []
+                                                              ]
+                                                          ]
+                                                      ]
+                                                    expression (src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost
+                                                      Texp_constant Const_string("symbol %s is unreachable from any of the start symbol(s).",(src/reachability.ml[48,2071+13]..src/reachability.ml[48,2071+72]) ghost,None)
+                                                  ]
+                                              <arg>
+                                                Nolabel
+                                                expression (src/reachability.ml[49,2144+15]..src/reachability.ml[49,2144+21])
+                                                  Texp_ident "symbol/819"
+                                            ]
+                                          None
+                                    ]
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/reachability.ml[50,2166+6]..src/reachability.ml[50,2166+19])
+                              Texp_field
+                              expression (src/reachability.ml[50,2166+6]..src/reachability.ml[50,2166+13])
+                                Texp_ident "grammar/742"
+                              "rules"
+                        ]
+                      expression (src/reachability.ml[51,2187+4]..src/reachability.ml[55,2400+5])
+                        Texp_record
+                          fields =
+                            [
+                              <kept>                              <kept>                              <kept>                              <kept>                              "types"
+                                expression (src/reachability.ml[53,2264+14]..src/reachability.ml[53,2264+56])
+                                  Texp_apply
+                                  expression (src/reachability.ml[53,2264+14]..src/reachability.ml[53,2264+32])
+                                    Texp_ident "Dune__exe!.StringMap.restrict"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[53,2264+33]..src/reachability.ml[53,2264+42])
+                                        Texp_ident "reachable/816"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[53,2264+43]..src/reachability.ml[53,2264+56])
+                                        Texp_field
+                                        expression (src/reachability.ml[53,2264+43]..src/reachability.ml[53,2264+50])
+                                          Texp_ident "grammar/742"
+                                        "types"
+                                  ]
+                              <kept>                              "on_error_reduce"
+                                expression (src/reachability.ml[54,2322+24]..src/reachability.ml[54,2322+76])
+                                  Texp_apply
+                                  expression (src/reachability.ml[54,2322+24]..src/reachability.ml[54,2322+42])
+                                    Texp_ident "Dune__exe!.StringMap.restrict"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[54,2322+43]..src/reachability.ml[54,2322+52])
+                                        Texp_ident "reachable/816"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[54,2322+53]..src/reachability.ml[54,2322+76])
+                                        Texp_field
+                                        expression (src/reachability.ml[54,2322+53]..src/reachability.ml[54,2322+60])
+                                          Texp_ident "grammar/742"
+                                        "on_error_reduce"
+                                  ]
+                              <kept>                              "rules"
+                                expression (src/reachability.ml[52,2206+14]..src/reachability.ml[52,2206+56])
+                                  Texp_apply
+                                  expression (src/reachability.ml[52,2206+14]..src/reachability.ml[52,2206+32])
+                                    Texp_ident "Dune__exe!.StringMap.restrict"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[52,2206+33]..src/reachability.ml[52,2206+42])
+                                        Texp_ident "reachable/816"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/reachability.ml[52,2206+43]..src/reachability.ml[52,2206+56])
+                                        Texp_field
+                                        expression (src/reachability.ml[52,2206+43]..src/reachability.ml[52,2206+50])
+                                          Texp_ident "grammar/742"
+                                        "rules"
+                                  ]
+                            ]
+                          representation =
+                            Record_regular
+                          extended_expression =
+                            Some
+                              expression (src/reachability.ml[51,2187+6]..src/reachability.ml[51,2187+13])
+                                Texp_ident "grammar/742"
+          ]
+    ]
+]
+
+{<Dune__exe__Reachability>
+ "trim"[value] -> <Dune__exe__Reachability.14>;
+ }
+
+(seq
+  (letrec
+    (visit/416
+       (function grammar/419 visited/420 symbol/421
+         (try
+           (let
+             (rule/422 =
+                (apply (field_imm 15 (global Dune__exe__StringMap!))
+                  symbol/421 (field_imm 8 grammar/419)))
+             (if
+               (not
+                 (apply (field_imm 29 (global Dune__exe__StringSet!))
+                   symbol/421 visited/420))
+               (let
+                 (visited/611 =
+                    (apply (field_imm 1 (global Dune__exe__StringSet!))
+                      symbol/421 visited/420))
+                 (apply (field_imm 25 (global Stdlib__List!))
+                   (apply visitb/417 grammar/419) visited/611
+                   (field_imm 0 rule/422)))
+               visited/420))
+          with exn/1359
+           (catch
+             (if (== exn/1359 (field_imm 7 (global Stdlib!)))
+               (seq
+                 (if
+                   (|| (caml_string_equal symbol/421 "error")
+                     (apply (field_imm 29 (global Dune__exe__StringMap!))
+                       symbol/421 (field_imm 5 grammar/419)))
+                   0
+                   (raise
+                     (makeblock 0 (global Assert_failure/28!)
+                       [0: "src/reachability.ml" 26 4])))
+                 visited/420)
+               (exit 1))
+            with (1) (reraise exn/1359))))
+      visitb/417
+        (function grammar/698 visited/699 param/701
+          (let
+            (*match*/1363 =a (field_imm 4 param/701)
+             *match*/1362 =a (field_imm 3 param/701)
+             *match*/1361 =a (field_imm 2 param/701)
+             symbols/700 =a (field_imm 1 param/701)
+             *match*/1360 =a (field_imm 0 param/701))
+            (apply (field_imm 25 (global Stdlib__List!))
+              (apply visits/418 grammar/698) visited/699 symbols/700)))
+      visits/418
+        (function grammar/702 visited/703 producer/704
+          (apply visit/416 grammar/702 visited/703
+            (apply (field_imm 2 (global Dune__exe__BasicSyntax!))
+              producer/704))))
+    (seq
+      (setfield_ptr(root-init) 1 (global Dune__exe__Reachability!) visit/416)
+      (setfield_ptr(root-init) 2 (global Dune__exe__Reachability!)
+        visitb/417)
+      (setfield_ptr(root-init) 3 (global Dune__exe__Reachability!)
+        visits/418)))
+  (let
+    (trim/740 =
+       (function grammar/742
+         (if
+           (==
+             (apply (field_imm 8 (global Dune__exe__StringSet!))
+               (field_imm 3 grammar/742))
+             0)
+           (apply (field_imm 5 (global Dune__exe__Error!)) 0
+             [0:
+              [11: "no start symbol has been declared." 0]
+              "no start symbol has been declared."])
+           (let
+             (reachable/816 =
+                (apply (field_imm 23 (global Dune__exe__StringSet!))
+                  (function symbol/817 visited/818
+                    (apply (field_imm 1 (global Dune__exe__Reachability!))
+                      grammar/742 visited/818 symbol/817))
+                  (field_imm 3 grammar/742)
+                  (field_imm 0 (global Dune__exe__StringSet!))))
+             (seq
+               (apply (field_imm 21 (global Dune__exe__StringMap!))
+                 (function symbol/819 rule/820 : int
+                   (if
+                     (not
+                       (apply (field_imm 29 (global Dune__exe__StringSet!))
+                         symbol/819 reachable/816))
+                     (apply (field_imm 13 (global Dune__exe__Error!))
+                       (field_imm 1 rule/820)
+                       [0:
+                        [11:
+                         "symbol "
+                         [2:
+                          0
+                          [11:
+                           " is unreachable from any of the start symbol(s)."
+                           0]]]
+                        "symbol %s is unreachable from any of the start symbol(s)."]
+                       symbol/819)
+                     0))
+                 (field_imm 8 grammar/742))
+               (let (init/1364 = grammar/742)
+                 (makeblock 0 (field_imm 0 init/1364) (field_imm 1 init/1364)
+                   (field_imm 2 init/1364) (field_imm 3 init/1364)
+                   (apply (field_imm 41 (global Dune__exe__StringMap!))
+                     reachable/816 (field_imm 4 grammar/742))
+                   (field_imm 5 init/1364)
+                   (apply (field_imm 41 (global Dune__exe__StringMap!))
+                     reachable/816 (field_imm 6 grammar/742))
+                   (field_imm 7 init/1364)
+                   (apply (field_imm 41 (global Dune__exe__StringMap!))
+                     reachable/816 (field_imm 8 grammar/742)))))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Reachability!) trim/740))
+  0)
+(seq
+  (letrec
+    (visit/416
+       (function grammar/419 visited/420 symbol/421
+         (try
+           (let
+             (rule/422 =
+                (apply (field_imm 15 (global Dune__exe__StringMap!))
+                  symbol/421 (field_imm 8 grammar/419)))
+             (if
+               (not
+                 (apply (field_imm 29 (global Dune__exe__StringSet!))
+                   symbol/421 visited/420))
+               (let
+                 (visited/611 =
+                    (apply (field_imm 1 (global Dune__exe__StringSet!))
+                      symbol/421 visited/420))
+                 (apply (field_imm 25 (global Stdlib__List!))
+                   (apply visitb/417 grammar/419) visited/611
+                   (field_imm 0 rule/422)))
+               visited/420))
+          with exn/1359
+           (if (== exn/1359 (field_imm 7 (global Stdlib!)))
+             (seq
+               (if
+                 (|| (caml_string_equal symbol/421 "error")
+                   (apply (field_imm 29 (global Dune__exe__StringMap!))
+                     symbol/421 (field_imm 5 grammar/419)))
+                 0
+                 (raise
+                   (makeblock 0 (global Assert_failure/28!)
+                     [0: "src/reachability.ml" 26 4])))
+               visited/420)
+             (reraise exn/1359))))
+      visitb/417
+        (function grammar/698 visited/699 param/701
+          (apply (field_imm 25 (global Stdlib__List!))
+            (apply visits/418 grammar/698) visited/699
+            (field_imm 1 param/701)))
+      visits/418
+        (function grammar/702 visited/703 producer/704
+          (apply visit/416 grammar/702 visited/703
+            (apply (field_imm 2 (global Dune__exe__BasicSyntax!))
+              producer/704))))
+    (seq
+      (setfield_ptr(root-init) 1 (global Dune__exe__Reachability!) visit/416)
+      (setfield_ptr(root-init) 2 (global Dune__exe__Reachability!)
+        visitb/417)
+      (setfield_ptr(root-init) 3 (global Dune__exe__Reachability!)
+        visits/418)))
+  (let
+    (trim/740 =
+       (function grammar/742
+         (if
+           (==
+             (apply (field_imm 8 (global Dune__exe__StringSet!))
+               (field_imm 3 grammar/742))
+             0)
+           (apply (field_imm 5 (global Dune__exe__Error!)) 0
+             [0:
+              [11: "no start symbol has been declared." 0]
+              "no start symbol has been declared."])
+           (let
+             (reachable/816 =
+                (apply (field_imm 23 (global Dune__exe__StringSet!))
+                  (function symbol/817 visited/818
+                    (apply (field_imm 1 (global Dune__exe__Reachability!))
+                      grammar/742 visited/818 symbol/817))
+                  (field_imm 3 grammar/742)
+                  (field_imm 0 (global Dune__exe__StringSet!))))
+             (seq
+               (apply (field_imm 21 (global Dune__exe__StringMap!))
+                 (function symbol/819 rule/820 : int
+                   (if
+                     (not
+                       (apply (field_imm 29 (global Dune__exe__StringSet!))
+                         symbol/819 reachable/816))
+                     (apply (field_imm 13 (global Dune__exe__Error!))
+                       (field_imm 1 rule/820)
+                       [0:
+                        [11:
+                         "symbol "
+                         [2:
+                          0
+                          [11:
+                           " is unreachable from any of the start symbol(s)."
+                           0]]]
+                        "symbol %s is unreachable from any of the start symbol(s)."]
+                       symbol/819)
+                     0))
+                 (field_imm 8 grammar/742))
+               (makeblock 0 (field_imm 0 grammar/742)
+                 (field_imm 1 grammar/742) (field_imm 2 grammar/742)
+                 (field_imm 3 grammar/742)
+                 (apply (field_imm 41 (global Dune__exe__StringMap!))
+                   reachable/816 (field_imm 4 grammar/742))
+                 (field_imm 5 grammar/742)
+                 (apply (field_imm 41 (global Dune__exe__StringMap!))
+                   reachable/816 (field_imm 6 grammar/742))
+                 (field_imm 7 grammar/742)
+                 (apply (field_imm 41 (global Dune__exe__StringMap!))
+                   reachable/816 (field_imm 8 grammar/742))))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Reachability!) trim/740))
+  0)

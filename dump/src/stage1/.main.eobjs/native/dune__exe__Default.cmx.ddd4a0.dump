@@ -1,0 +1,1654 @@
+[
+  structure_item (src/default.ml[14,997+0]..[14,997+12])
+    Pstr_open Fresh
+    module_expr (src/default.ml[14,997+5]..[14,997+12])
+      Pmod_ident "Grammar" (src/default.ml[14,997+5]..[14,997+12])
+  structure_item (src/default.ml[15,1010+0]..[15,1010+19])
+    Pstr_module
+    "C" (src/default.ml[15,1010+7]..[15,1010+8])
+      module_expr (src/default.ml[15,1010+11]..[15,1010+19])
+        Pmod_ident "Conflict" (src/default.ml[15,1010+11]..[15,1010+19])
+  structure_item (src/default.ml[60,3564+0]..[73,4007+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[60,3564+4]..[60,3564+25])
+          Ppat_var "has_default_reduction" (src/default.ml[60,3564+4]..[60,3564+25])
+        core_type (src/default.ml[60,3564+28]..[60,3564+81])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/default.ml[60,3564+28]..[60,3564+36])
+            Ptyp_constr "Lr1.node" (src/default.ml[60,3564+28]..[60,3564+36])
+            []
+          core_type (src/default.ml[60,3564+40]..[60,3564+81])
+            Ptyp_constr "option" (src/default.ml[60,3564+75]..[60,3564+81])
+            [
+              core_type (src/default.ml[60,3564+41]..[60,3564+73])
+                Ptyp_tuple
+                [
+                  core_type (src/default.ml[60,3564+41]..[60,3564+57])
+                    Ptyp_constr "Production.index" (src/default.ml[60,3564+41]..[60,3564+57])
+                    []
+                  core_type (src/default.ml[60,3564+60]..[60,3564+73])
+                    Ptyp_constr "TerminalSet.t" (src/default.ml[60,3564+60]..[60,3564+73])
+                    []
+                ]
+            ]
+        expression (src/default.ml[61,3648+2]..[73,4007+3])
+          Pexp_apply
+          expression (src/default.ml[61,3648+2]..[61,3648+14])
+            Pexp_ident "Lr1.tabulate" (src/default.ml[61,3648+2]..[61,3648+14])
+          [
+            <arg>
+            Nolabel
+              expression (src/default.ml[61,3648+15]..[73,4007+3])
+                Pexp_fun
+                Nolabel
+                None
+                pattern (src/default.ml[61,3648+20]..[61,3648+21])
+                  Ppat_var "s" (src/default.ml[61,3648+20]..[61,3648+21])
+                expression (src/default.ml[62,3673+4]..[72,3987+19])
+                  Pexp_ifthenelse
+                  expression (src/default.ml[62,3673+7]..[62,3673+37])
+                    Pexp_apply
+                    expression (src/default.ml[62,3673+7]..[62,3673+35])
+                      Pexp_ident "Lr1.forbid_default_reduction" (src/default.ml[62,3673+7]..[62,3673+35])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[62,3673+36]..[62,3673+37])
+                          Pexp_ident "s" (src/default.ml[62,3673+36]..[62,3673+37])
+                    ]
+                  expression (src/default.ml[63,3716+6]..[63,3716+10])
+                    Pexp_construct "None" (src/default.ml[63,3716+6]..[63,3716+10])
+                    None
+                  Some
+                    expression (src/default.ml[65,3736+6]..[72,3987+19])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/default.ml[65,3736+10]..[65,3736+19])
+                            Ppat_var "reduction" (src/default.ml[65,3736+10]..[65,3736+19])
+                          expression (src/default.ml[65,3736+22]..[65,3736+80])
+                            Pexp_apply
+                            expression (src/default.ml[65,3736+22]..[65,3736+48])
+                              Pexp_ident "ProductionMap.is_singleton" (src/default.ml[65,3736+22]..[65,3736+48])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/default.ml[65,3736+49]..[65,3736+80])
+                                  Pexp_apply
+                                  expression (src/default.ml[65,3736+50]..[65,3736+60])
+                                    Pexp_ident "Lr0.invert" (src/default.ml[65,3736+50]..[65,3736+60])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/default.ml[65,3736+61]..[65,3736+79])
+                                        Pexp_apply
+                                        expression (src/default.ml[65,3736+62]..[65,3736+76])
+                                          Pexp_ident "Lr1.reductions" (src/default.ml[65,3736+62]..[65,3736+76])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/default.ml[65,3736+77]..[65,3736+78])
+                                              Pexp_ident "s" (src/default.ml[65,3736+77]..[65,3736+78])
+                                        ]
+                                  ]
+                            ]
+                      ]
+                      expression (src/default.ml[66,3820+6]..[72,3987+19])
+                        Pexp_match
+                        expression (src/default.ml[66,3820+12]..[66,3820+21])
+                          Pexp_ident "reduction" (src/default.ml[66,3820+12]..[66,3820+21])
+                        [
+                          <case>
+                            pattern (src/default.ml[67,3847+8]..[67,3847+14])
+                              Ppat_construct "Some" (src/default.ml[67,3847+8]..[67,3847+12])
+                              Some
+                                []
+                                pattern (src/default.ml[67,3847+13]..[67,3847+14])
+                                  Ppat_any
+                            expression (src/default.ml[68,3865+10]..[70,3951+19])
+                              Pexp_ifthenelse
+                              expression (src/default.ml[68,3865+13]..[68,3865+60])
+                                Pexp_apply
+                                expression (src/default.ml[68,3865+13]..[68,3865+40])
+                                  Pexp_ident "SymbolMap.purelynonterminal" (src/default.ml[68,3865+13]..[68,3865+40])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/default.ml[68,3865+41]..[68,3865+60])
+                                      Pexp_apply
+                                      expression (src/default.ml[68,3865+42]..[68,3865+57])
+                                        Pexp_ident "Lr1.transitions" (src/default.ml[68,3865+42]..[68,3865+57])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/default.ml[68,3865+58]..[68,3865+59])
+                                            Pexp_ident "s" (src/default.ml[68,3865+58]..[68,3865+59])
+                                      ]
+                                ]
+                              expression (src/default.ml[69,3926+15]..[69,3926+24])
+                                Pexp_ident "reduction" (src/default.ml[69,3926+15]..[69,3926+24])
+                              Some
+                                expression (src/default.ml[70,3951+15]..[70,3951+19])
+                                  Pexp_construct "None" (src/default.ml[70,3951+15]..[70,3951+19])
+                                  None
+                          <case>
+                            pattern (src/default.ml[71,3971+8]..[71,3971+12])
+                              Ppat_construct "None" (src/default.ml[71,3971+8]..[71,3971+12])
+                              None
+                            expression (src/default.ml[72,3987+10]..[72,3987+19])
+                              Pexp_ident "reduction" (src/default.ml[72,3987+10]..[72,3987+19])
+                        ]
+          ]
+    ]
+  structure_item (src/default.ml[75,4012+0]..[84,4225+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[75,4012+4]..[75,4012+6])
+          Ppat_construct "()" (src/default.ml[75,4012+4]..[75,4012+6])
+          None
+        expression (src/default.ml[76,4021+2]..[84,4225+19])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (src/default.ml[76,4021+6]..[76,4021+11])
+                Ppat_var "count" (src/default.ml[76,4021+6]..[76,4021+11])
+              expression (src/default.ml[77,4035+4]..[79,4111+5])
+                Pexp_apply
+                expression (src/default.ml[77,4035+4]..[77,4035+11])
+                  Pexp_ident "Lr1.sum" (src/default.ml[77,4035+4]..[77,4035+11])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/default.ml[77,4035+12]..[79,4111+5])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/default.ml[77,4035+17]..[77,4035+18])
+                        Ppat_var "s" (src/default.ml[77,4035+17]..[77,4035+18])
+                      expression (src/default.ml[78,4057+6]..[78,4057+53])
+                        Pexp_ifthenelse
+                        expression (src/default.ml[78,4057+9]..[78,4057+39])
+                          Pexp_apply
+                          expression (src/default.ml[78,4057+33]..[78,4057+34])
+                            Pexp_ident "=" (src/default.ml[78,4057+33]..[78,4057+34])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/default.ml[78,4057+9]..[78,4057+32])
+                                Pexp_apply
+                                expression (src/default.ml[78,4057+9]..[78,4057+30])
+                                  Pexp_ident "has_default_reduction" (src/default.ml[78,4057+9]..[78,4057+30])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/default.ml[78,4057+31]..[78,4057+32])
+                                      Pexp_ident "s" (src/default.ml[78,4057+31]..[78,4057+32])
+                                ]
+                            <arg>
+                            Nolabel
+                              expression (src/default.ml[78,4057+35]..[78,4057+39])
+                                Pexp_construct "None" (src/default.ml[78,4057+35]..[78,4057+39])
+                                None
+                          ]
+                        expression (src/default.ml[78,4057+45]..[78,4057+46])
+                          Pexp_constant PConst_int (0,None)
+                        Some
+                          expression (src/default.ml[78,4057+52]..[78,4057+53])
+                            Pexp_constant PConst_int (1,None)
+                ]
+          ]
+          expression (src/default.ml[81,4122+2]..[84,4225+19])
+            Pexp_apply
+            expression (src/default.ml[81,4122+2]..[81,4122+12])
+              Pexp_ident "Error.logC" (src/default.ml[81,4122+2]..[81,4122+12])
+            [
+              <arg>
+              Nolabel
+                expression (src/default.ml[81,4122+13]..[81,4122+14])
+                  Pexp_constant PConst_int (1,None)
+              <arg>
+              Nolabel
+                expression (src/default.ml[81,4122+15]..[84,4225+19])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/default.ml[81,4122+20]..[81,4122+21])
+                    Ppat_var "f" (src/default.ml[81,4122+20]..[81,4122+21])
+                  expression (src/default.ml[82,4147+4]..[84,4225+18])
+                    Pexp_apply
+                    expression (src/default.ml[82,4147+4]..[82,4147+18])
+                      Pexp_ident "Printf.fprintf" (src/default.ml[82,4147+4]..[82,4147+18])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[82,4147+19]..[82,4147+20])
+                          Pexp_ident "f" (src/default.ml[82,4147+19]..[82,4147+20])
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[83,4168+7]..[83,4168+56])
+                          Pexp_constant PConst_string("%d out of %d states have a default reduction.\n",(src/default.ml[83,4168+8]..[83,4168+55]),None)
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[84,4225+7]..[84,4225+12])
+                          Pexp_ident "count" (src/default.ml[84,4225+7]..[84,4225+12])
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[84,4225+13]..[84,4225+18])
+                          Pexp_ident "Lr1.n" (src/default.ml[84,4225+13]..[84,4225+18])
+                    ]
+            ]
+    ]
+  structure_item (src/default.ml[86,4246+0]..[87,4255+42])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[86,4246+4]..[86,4246+6])
+          Ppat_construct "()" (src/default.ml[86,4246+4]..[86,4246+6])
+          None
+        expression (src/default.ml[87,4255+2]..[87,4255+42])
+          Pexp_apply
+          expression (src/default.ml[87,4255+2]..[87,4255+11])
+            Pexp_ident "Time.tick" (src/default.ml[87,4255+2]..[87,4255+11])
+          [
+            <arg>
+            Nolabel
+              expression (src/default.ml[87,4255+12]..[87,4255+42])
+                Pexp_constant PConst_string("Computing default reductions",(src/default.ml[87,4255+13]..[87,4255+41]),None)
+          ]
+    ]
+  structure_item (src/default.ml[98,4708+0]..[103,4852+6])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[98,4708+4]..[98,4708+17])
+          Ppat_var "reductions_on" (src/default.ml[98,4708+4]..[98,4708+17])
+        expression (src/default.ml[98,4708+18]..[103,4852+6]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/default.ml[98,4708+18]..[98,4708+19])
+            Ppat_var "s" (src/default.ml[98,4708+18]..[98,4708+19])
+          expression (src/default.ml[98,4708+20]..[103,4852+6]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/default.ml[98,4708+20]..[98,4708+21])
+              Ppat_var "z" (src/default.ml[98,4708+20]..[98,4708+21])
+            expression (src/default.ml[98,4708+22]..[103,4852+6])
+              Pexp_constraint
+              expression (src/default.ml[99,4756+2]..[103,4852+6])
+                Pexp_sequence
+                expression (src/default.ml[99,4756+2]..[99,4756+26])
+                  Pexp_assert
+                  expression (src/default.ml[99,4756+9]..[99,4756+26])
+                    Pexp_apply
+                    expression (src/default.ml[99,4756+10]..[99,4756+23])
+                      Pexp_ident "Terminal.real" (src/default.ml[99,4756+10]..[99,4756+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[99,4756+24]..[99,4756+25])
+                          Pexp_ident "z" (src/default.ml[99,4756+24]..[99,4756+25])
+                    ]
+                expression (src/default.ml[100,4784+2]..[103,4852+6])
+                  Pexp_try
+                  expression (src/default.ml[101,4790+4]..[101,4790+41])
+                    Pexp_apply
+                    expression (src/default.ml[101,4790+4]..[101,4790+20])
+                      Pexp_ident "TerminalMap.find" (src/default.ml[101,4790+4]..[101,4790+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[101,4790+21]..[101,4790+22])
+                          Pexp_ident "z" (src/default.ml[101,4790+21]..[101,4790+22])
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[101,4790+23]..[101,4790+41])
+                          Pexp_apply
+                          expression (src/default.ml[101,4790+24]..[101,4790+38])
+                            Pexp_ident "Lr1.reductions" (src/default.ml[101,4790+24]..[101,4790+38])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/default.ml[101,4790+39]..[101,4790+40])
+                                Pexp_ident "s" (src/default.ml[101,4790+39]..[101,4790+40])
+                          ]
+                    ]
+                  [
+                    <case>
+                      pattern (src/default.ml[102,4832+7]..[102,4832+16])
+                        Ppat_construct "Not_found" (src/default.ml[102,4832+7]..[102,4832+16])
+                        None
+                      expression (src/default.ml[103,4852+4]..[103,4852+6])
+                        Pexp_construct "[]" (src/default.ml[103,4852+4]..[103,4852+6])
+                        None
+                  ]
+              core_type (src/default.ml[98,4708+24]..[98,4708+45])
+                Ptyp_constr "list" (src/default.ml[98,4708+41]..[98,4708+45])
+                [
+                  core_type (src/default.ml[98,4708+24]..[98,4708+40])
+                    Ptyp_constr "Production.index" (src/default.ml[98,4708+24]..[98,4708+40])
+                    []
+                ]
+    ]
+  structure_item (src/default.ml[109,5081+0]..[120,5371+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[109,5081+4]..[109,5081+17])
+          Ppat_var "has_reduction" (src/default.ml[109,5081+4]..[109,5081+17])
+        expression (src/default.ml[109,5081+18]..[120,5371+14]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/default.ml[109,5081+18]..[109,5081+19])
+            Ppat_var "s" (src/default.ml[109,5081+18]..[109,5081+19])
+          expression (src/default.ml[109,5081+20]..[120,5371+14]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/default.ml[109,5081+20]..[109,5081+21])
+              Ppat_var "z" (src/default.ml[109,5081+20]..[109,5081+21])
+            expression (src/default.ml[109,5081+22]..[120,5371+14])
+              Pexp_constraint
+              expression (src/default.ml[110,5131+2]..[120,5371+14])
+                Pexp_sequence
+                expression (src/default.ml[110,5131+2]..[110,5131+26])
+                  Pexp_assert
+                  expression (src/default.ml[110,5131+9]..[110,5131+26])
+                    Pexp_apply
+                    expression (src/default.ml[110,5131+10]..[110,5131+23])
+                      Pexp_ident "Terminal.real" (src/default.ml[110,5131+10]..[110,5131+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[110,5131+24]..[110,5131+25])
+                          Pexp_ident "z" (src/default.ml[110,5131+24]..[110,5131+25])
+                    ]
+                expression (src/default.ml[111,5159+2]..[120,5371+14])
+                  Pexp_match
+                  expression (src/default.ml[111,5159+8]..[111,5159+31])
+                    Pexp_apply
+                    expression (src/default.ml[111,5159+8]..[111,5159+29])
+                      Pexp_ident "has_default_reduction" (src/default.ml[111,5159+8]..[111,5159+29])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[111,5159+30]..[111,5159+31])
+                          Pexp_ident "s" (src/default.ml[111,5159+30]..[111,5159+31])
+                    ]
+                  [
+                    <case>
+                      pattern (src/default.ml[112,5196+4]..[112,5196+18])
+                        Ppat_construct "Some" (src/default.ml[112,5196+4]..[112,5196+8])
+                        Some
+                          []
+                          pattern (src/default.ml[112,5196+9]..[112,5196+18])
+                            Ppat_tuple
+                            [
+                              pattern (src/default.ml[112,5196+10]..[112,5196+14])
+                                Ppat_var "prod" (src/default.ml[112,5196+10]..[112,5196+14])
+                              pattern (src/default.ml[112,5196+16]..[112,5196+17])
+                                Ppat_any
+                            ]
+                      expression (src/default.ml[113,5218+6]..[113,5218+15])
+                        Pexp_construct "Some" (src/default.ml[113,5218+6]..[113,5218+10])
+                        Some
+                          expression (src/default.ml[113,5218+11]..[113,5218+15])
+                            Pexp_ident "prod" (src/default.ml[113,5218+11]..[113,5218+15])
+                    <case>
+                      pattern (src/default.ml[114,5234+4]..[114,5234+8])
+                        Ppat_construct "None" (src/default.ml[114,5234+4]..[114,5234+8])
+                        None
+                      expression (src/default.ml[115,5246+6]..[120,5371+14])
+                        Pexp_match
+                        expression (src/default.ml[115,5246+12]..[115,5246+29])
+                          Pexp_apply
+                          expression (src/default.ml[115,5246+12]..[115,5246+25])
+                            Pexp_ident "reductions_on" (src/default.ml[115,5246+12]..[115,5246+25])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/default.ml[115,5246+26]..[115,5246+27])
+                                Pexp_ident "s" (src/default.ml[115,5246+26]..[115,5246+27])
+                            <arg>
+                            Nolabel
+                              expression (src/default.ml[115,5246+28]..[115,5246+29])
+                                Pexp_ident "z" (src/default.ml[115,5246+28]..[115,5246+29])
+                          ]
+                        [
+                          <case>
+                            pattern (src/default.ml[116,5281+8]..[116,5281+21])
+                              Ppat_construct "::" (src/default.ml[116,5281+13]..[116,5281+15])
+                              Some
+                                []
+                                pattern (src/default.ml[116,5281+8]..[116,5281+21]) ghost
+                                  Ppat_tuple
+                                  [
+                                    pattern (src/default.ml[116,5281+8]..[116,5281+12])
+                                      Ppat_var "prod" (src/default.ml[116,5281+8]..[116,5281+12])
+                                    pattern (src/default.ml[116,5281+16]..[116,5281+21])
+                                      Ppat_var "prods" (src/default.ml[116,5281+16]..[116,5281+21])
+                                  ]
+                            expression (src/default.ml[117,5306+10]..[118,5337+19])
+                              Pexp_sequence
+                              expression (src/default.ml[117,5306+10]..[117,5306+29])
+                                Pexp_assert
+                                expression (src/default.ml[117,5306+17]..[117,5306+29])
+                                  Pexp_apply
+                                  expression (src/default.ml[117,5306+24]..[117,5306+25])
+                                    Pexp_ident "=" (src/default.ml[117,5306+24]..[117,5306+25])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/default.ml[117,5306+18]..[117,5306+23])
+                                        Pexp_ident "prods" (src/default.ml[117,5306+18]..[117,5306+23])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/default.ml[117,5306+26]..[117,5306+28])
+                                        Pexp_construct "[]" (src/default.ml[117,5306+26]..[117,5306+28])
+                                        None
+                                  ]
+                              expression (src/default.ml[118,5337+10]..[118,5337+19])
+                                Pexp_construct "Some" (src/default.ml[118,5337+10]..[118,5337+14])
+                                Some
+                                  expression (src/default.ml[118,5337+15]..[118,5337+19])
+                                    Pexp_ident "prod" (src/default.ml[118,5337+15]..[118,5337+19])
+                          <case>
+                            pattern (src/default.ml[119,5357+8]..[119,5357+10])
+                              Ppat_construct "[]" (src/default.ml[119,5357+8]..[119,5357+10])
+                              None
+                            expression (src/default.ml[120,5371+10]..[120,5371+14])
+                              Pexp_construct "None" (src/default.ml[120,5371+10]..[120,5371+14])
+                              None
+                        ]
+                  ]
+              core_type (src/default.ml[109,5081+24]..[109,5081+47])
+                Ptyp_constr "option" (src/default.ml[109,5081+41]..[109,5081+47])
+                [
+                  core_type (src/default.ml[109,5081+24]..[109,5081+40])
+                    Ptyp_constr "Production.index" (src/default.ml[109,5081+24]..[109,5081+40])
+                    []
+                ]
+    ]
+  structure_item (src/default.ml[125,5513+0]..[132,5681+58])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[125,5513+4]..[125,5513+19])
+          Ppat_var "causes_an_error" (src/default.ml[125,5513+4]..[125,5513+19])
+        expression (src/default.ml[125,5513+20]..[132,5681+58]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/default.ml[125,5513+20]..[125,5513+21])
+            Ppat_var "s" (src/default.ml[125,5513+20]..[125,5513+21])
+          expression (src/default.ml[125,5513+22]..[132,5681+58]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/default.ml[125,5513+22]..[125,5513+23])
+              Ppat_var "z" (src/default.ml[125,5513+22]..[125,5513+23])
+            expression (src/default.ml[125,5513+24]..[132,5681+58])
+              Pexp_constraint
+              expression (src/default.ml[126,5546+2]..[132,5681+58])
+                Pexp_sequence
+                expression (src/default.ml[126,5546+2]..[126,5546+26])
+                  Pexp_assert
+                  expression (src/default.ml[126,5546+9]..[126,5546+26])
+                    Pexp_apply
+                    expression (src/default.ml[126,5546+10]..[126,5546+23])
+                      Pexp_ident "Terminal.real" (src/default.ml[126,5546+10]..[126,5546+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[126,5546+24]..[126,5546+25])
+                          Pexp_ident "z" (src/default.ml[126,5546+24]..[126,5546+25])
+                    ]
+                expression (src/default.ml[127,5574+2]..[132,5681+58])
+                  Pexp_match
+                  expression (src/default.ml[127,5574+8]..[127,5574+31])
+                    Pexp_apply
+                    expression (src/default.ml[127,5574+8]..[127,5574+29])
+                      Pexp_ident "has_default_reduction" (src/default.ml[127,5574+8]..[127,5574+29])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/default.ml[127,5574+30]..[127,5574+31])
+                          Pexp_ident "s" (src/default.ml[127,5574+30]..[127,5574+31])
+                    ]
+                  [
+                    <case>
+                      pattern (src/default.ml[128,5611+4]..[128,5611+10])
+                        Ppat_construct "Some" (src/default.ml[128,5611+4]..[128,5611+8])
+                        Some
+                          []
+                          pattern (src/default.ml[128,5611+9]..[128,5611+10])
+                            Ppat_any
+                      expression (src/default.ml[129,5625+6]..[129,5625+11])
+                        Pexp_construct "false" (src/default.ml[129,5625+6]..[129,5625+11])
+                        None
+                    <case>
+                      pattern (src/default.ml[130,5637+4]..[130,5637+8])
+                        Ppat_construct "None" (src/default.ml[130,5637+4]..[130,5637+8])
+                        None
+                      expression (src/default.ml[131,5649+6]..[132,5681+58])
+                        Pexp_apply
+                        expression (src/default.ml[131,5649+29]..[131,5649+31])
+                          Pexp_ident "&&" (src/default.ml[131,5649+29]..[131,5649+31])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/default.ml[131,5649+6]..[131,5649+28])
+                              Pexp_apply
+                              expression (src/default.ml[131,5649+24]..[131,5649+25])
+                                Pexp_ident "=" (src/default.ml[131,5649+24]..[131,5649+25])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/default.ml[131,5649+6]..[131,5649+23])
+                                    Pexp_apply
+                                    expression (src/default.ml[131,5649+6]..[131,5649+19])
+                                      Pexp_ident "reductions_on" (src/default.ml[131,5649+6]..[131,5649+19])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/default.ml[131,5649+20]..[131,5649+21])
+                                          Pexp_ident "s" (src/default.ml[131,5649+20]..[131,5649+21])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/default.ml[131,5649+22]..[131,5649+23])
+                                          Pexp_ident "z" (src/default.ml[131,5649+22]..[131,5649+23])
+                                    ]
+                                <arg>
+                                Nolabel
+                                  expression (src/default.ml[131,5649+26]..[131,5649+28])
+                                    Pexp_construct "[]" (src/default.ml[131,5649+26]..[131,5649+28])
+                                    None
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (src/default.ml[132,5681+6]..[132,5681+58])
+                              Pexp_apply
+                              expression (src/default.ml[132,5681+6]..[132,5681+9])
+                                Pexp_ident "not" (src/default.ml[132,5681+6]..[132,5681+9])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/default.ml[132,5681+10]..[132,5681+58])
+                                    Pexp_apply
+                                    expression (src/default.ml[132,5681+11]..[132,5681+24])
+                                      Pexp_ident "SymbolMap.mem" (src/default.ml[132,5681+11]..[132,5681+24])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/default.ml[132,5681+25]..[132,5681+37])
+                                          Pexp_construct "Symbol.T" (src/default.ml[132,5681+26]..[132,5681+34])
+                                          Some
+                                            expression (src/default.ml[132,5681+35]..[132,5681+36])
+                                              Pexp_ident "z" (src/default.ml[132,5681+35]..[132,5681+36])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/default.ml[132,5681+38]..[132,5681+57])
+                                          Pexp_apply
+                                          expression (src/default.ml[132,5681+39]..[132,5681+54])
+                                            Pexp_ident "Lr1.transitions" (src/default.ml[132,5681+39]..[132,5681+54])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/default.ml[132,5681+55]..[132,5681+56])
+                                                Pexp_ident "s" (src/default.ml[132,5681+55]..[132,5681+56])
+                                          ]
+                                    ]
+                              ]
+                        ]
+                  ]
+              core_type (src/default.ml[125,5513+26]..[125,5513+30])
+                Ptyp_constr "bool" (src/default.ml[125,5513+26]..[125,5513+30])
+                []
+    ]
+]
+
+open Grammar
+module C = Conflict
+let has_default_reduction :
+  Lr1.node -> (Production.index * TerminalSet.t) option =
+  Lr1.tabulate
+    (fun s ->
+       if Lr1.forbid_default_reduction s
+       then None
+       else
+         (let reduction =
+            ProductionMap.is_singleton (Lr0.invert (Lr1.reductions s)) in
+          match reduction with
+          | Some _ ->
+              if SymbolMap.purelynonterminal (Lr1.transitions s)
+              then reduction
+              else None
+          | None -> reduction))
+let () =
+  let count =
+    Lr1.sum (fun s -> if (has_default_reduction s) = None then 0 else 1) in
+  Error.logC 1
+    (fun f ->
+       Printf.fprintf f "%d out of %d states have a default reduction.\n"
+         count Lr1.n)
+let () = Time.tick "Computing default reductions"
+let reductions_on s z =
+  (assert (Terminal.real z);
+   (try TerminalMap.find z (Lr1.reductions s) with | Not_found -> []) : 
+  Production.index list)
+let has_reduction s z =
+  (assert (Terminal.real z);
+   (match has_default_reduction s with
+    | Some (prod, _) -> Some prod
+    | None ->
+        (match reductions_on s z with
+         | prod::prods -> (assert (prods = []); Some prod)
+         | [] -> None)) : Production.index option)
+let causes_an_error s z =
+  (assert (Terminal.real z);
+   (match has_default_reduction s with
+    | Some _ -> false
+    | None ->
+        ((reductions_on s z) = []) &&
+          (not (SymbolMap.mem (Symbol.T z) (Lr1.transitions s)))) : bool)
+[
+  structure_item (src/default.ml[14,997+0]..src/default.ml[14,997+12])
+    Tstr_open Fresh
+    module_expr (src/default.ml[14,997+5]..src/default.ml[14,997+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/default.ml[15,1010+0]..src/default.ml[15,1010+19])
+    Tstr_module
+    C/413
+      module_expr (src/default.ml[15,1010+11]..src/default.ml[15,1010+19])
+        Tmod_ident "Dune__exe!.Conflict"
+  structure_item (src/default.ml[60,3564+0]..src/default.ml[73,4007+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[60,3564+4]..src/default.ml[60,3564+25])
+          extra
+            Tpat_extra_constraint
+            core_type (src/default.ml[60,3564+28]..src/default.ml[60,3564+81])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/default.ml[60,3564+28]..src/default.ml[60,3564+36])
+                Ttyp_constr "Dune__exe!.Lr1.node"
+                []
+              core_type (src/default.ml[60,3564+40]..src/default.ml[60,3564+81])
+                Ttyp_constr "option/10!"
+                [
+                  core_type (src/default.ml[60,3564+41]..src/default.ml[60,3564+73])
+                    Ttyp_tuple
+                    [
+                      core_type (src/default.ml[60,3564+41]..src/default.ml[60,3564+57])
+                        Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                        []
+                      core_type (src/default.ml[60,3564+60]..src/default.ml[60,3564+73])
+                        Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                        []
+                    ]
+                ]
+          Tpat_alias "has_default_reduction/528"
+          pattern (src/default.ml[60,3564+4]..src/default.ml[60,3564+25])
+            Tpat_any
+        expression (src/default.ml[61,3648+2]..src/default.ml[73,4007+3])
+          extra
+            Texp_constraint
+            core_type (src/default.ml[60,3564+28]..src/default.ml[60,3564+81])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/default.ml[60,3564+28]..src/default.ml[60,3564+36])
+                Ttyp_constr "Dune__exe!.Lr1.node"
+                []
+              core_type (src/default.ml[60,3564+40]..src/default.ml[60,3564+81])
+                Ttyp_constr "option/10!"
+                [
+                  core_type (src/default.ml[60,3564+41]..src/default.ml[60,3564+73])
+                    Ttyp_tuple
+                    [
+                      core_type (src/default.ml[60,3564+41]..src/default.ml[60,3564+57])
+                        Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                        []
+                      core_type (src/default.ml[60,3564+60]..src/default.ml[60,3564+73])
+                        Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                        []
+                    ]
+                ]
+          Texp_apply
+          expression (src/default.ml[61,3648+2]..src/default.ml[61,3648+14])
+            Texp_ident "Dune__exe!.Lr1.tabulate"
+          [
+            <arg>
+              Nolabel
+              expression (src/default.ml[61,3648+15]..src/default.ml[73,4007+3])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/default.ml[61,3648+20]..src/default.ml[61,3648+21])
+                      Tpat_var "s/529"
+                    expression (src/default.ml[62,3673+4]..src/default.ml[72,3987+19])
+                      Texp_ifthenelse
+                      expression (src/default.ml[62,3673+7]..src/default.ml[62,3673+37])
+                        Texp_apply
+                        expression (src/default.ml[62,3673+7]..src/default.ml[62,3673+35])
+                          Texp_ident "Dune__exe!.Lr1.forbid_default_reduction"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/default.ml[62,3673+36]..src/default.ml[62,3673+37])
+                              Texp_ident "s/529"
+                        ]
+                      expression (src/default.ml[63,3716+6]..src/default.ml[63,3716+10])
+                        Texp_construct "None"
+                        []
+                      Some
+                        expression (src/default.ml[65,3736+6]..src/default.ml[72,3987+19])
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/default.ml[65,3736+10]..src/default.ml[65,3736+19])
+                                Tpat_var "reduction/571"
+                              expression (src/default.ml[65,3736+22]..src/default.ml[65,3736+80])
+                                Texp_apply
+                                expression (src/default.ml[65,3736+22]..src/default.ml[65,3736+48])
+                                  Texp_ident "Dune__exe!.Grammar.ProductionMap.is_singleton"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/default.ml[65,3736+49]..src/default.ml[65,3736+80])
+                                      Texp_apply
+                                      expression (src/default.ml[65,3736+50]..src/default.ml[65,3736+60])
+                                        Texp_ident "Dune__exe!.Lr0.invert"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/default.ml[65,3736+61]..src/default.ml[65,3736+79])
+                                            Texp_apply
+                                            expression (src/default.ml[65,3736+62]..src/default.ml[65,3736+76])
+                                              Texp_ident "Dune__exe!.Lr1.reductions"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/default.ml[65,3736+77]..src/default.ml[65,3736+78])
+                                                  Texp_ident "s/529"
+                                            ]
+                                      ]
+                                ]
+                          ]
+                          expression (src/default.ml[66,3820+6]..src/default.ml[72,3987+19])
+                            Texp_match
+                            expression (src/default.ml[66,3820+12]..src/default.ml[66,3820+21])
+                              Texp_ident "reduction/571"
+                            [
+                              <case>
+                                pattern (src/default.ml[67,3847+8]..src/default.ml[67,3847+14])
+                                  Tpat_value
+                                  pattern (src/default.ml[67,3847+8]..src/default.ml[67,3847+14])
+                                    Tpat_construct "Some"
+                                    [
+                                      pattern (src/default.ml[67,3847+13]..src/default.ml[67,3847+14])
+                                        Tpat_any
+                                    ]
+                                    None
+                                expression (src/default.ml[68,3865+10]..src/default.ml[70,3951+19])
+                                  Texp_ifthenelse
+                                  expression (src/default.ml[68,3865+13]..src/default.ml[68,3865+60])
+                                    Texp_apply
+                                    expression (src/default.ml[68,3865+13]..src/default.ml[68,3865+40])
+                                      Texp_ident "Dune__exe!.Grammar.SymbolMap.purelynonterminal"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/default.ml[68,3865+41]..src/default.ml[68,3865+60])
+                                          Texp_apply
+                                          expression (src/default.ml[68,3865+42]..src/default.ml[68,3865+57])
+                                            Texp_ident "Dune__exe!.Lr1.transitions"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/default.ml[68,3865+58]..src/default.ml[68,3865+59])
+                                                Texp_ident "s/529"
+                                          ]
+                                    ]
+                                  expression (src/default.ml[69,3926+15]..src/default.ml[69,3926+24])
+                                    Texp_ident "reduction/571"
+                                  Some
+                                    expression (src/default.ml[70,3951+15]..src/default.ml[70,3951+19])
+                                      Texp_construct "None"
+                                      []
+                              <case>
+                                pattern (src/default.ml[71,3971+8]..src/default.ml[71,3971+12])
+                                  Tpat_value
+                                  pattern (src/default.ml[71,3971+8]..src/default.ml[71,3971+12])
+                                    Tpat_construct "None"
+                                    []
+                                    None
+                                expression (src/default.ml[72,3987+10]..src/default.ml[72,3987+19])
+                                  Texp_ident "reduction/571"
+                            ]
+                ]
+          ]
+    ]
+  structure_item (src/default.ml[75,4012+0]..src/default.ml[84,4225+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[75,4012+4]..src/default.ml[75,4012+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/default.ml[76,4021+2]..src/default.ml[84,4225+19])
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (src/default.ml[76,4021+6]..src/default.ml[76,4021+11])
+                Tpat_var "count/874"
+              expression (src/default.ml[77,4035+4]..src/default.ml[79,4111+5])
+                Texp_apply
+                expression (src/default.ml[77,4035+4]..src/default.ml[77,4035+11])
+                  Texp_ident "Dune__exe!.Lr1.sum"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/default.ml[77,4035+12]..src/default.ml[79,4111+5])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/default.ml[77,4035+17]..src/default.ml[77,4035+18])
+                            Tpat_var "s/875"
+                          expression (src/default.ml[78,4057+6]..src/default.ml[78,4057+53])
+                            Texp_ifthenelse
+                            expression (src/default.ml[78,4057+9]..src/default.ml[78,4057+39])
+                              Texp_apply
+                              expression (src/default.ml[78,4057+33]..src/default.ml[78,4057+34])
+                                Texp_ident "Stdlib!.="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/default.ml[78,4057+9]..src/default.ml[78,4057+32])
+                                    Texp_apply
+                                    expression (src/default.ml[78,4057+9]..src/default.ml[78,4057+30])
+                                      Texp_ident "has_default_reduction/528"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/default.ml[78,4057+31]..src/default.ml[78,4057+32])
+                                          Texp_ident "s/875"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/default.ml[78,4057+35]..src/default.ml[78,4057+39])
+                                    Texp_construct "None"
+                                    []
+                              ]
+                            expression (src/default.ml[78,4057+45]..src/default.ml[78,4057+46])
+                              Texp_constant Const_int 0
+                            Some
+                              expression (src/default.ml[78,4057+52]..src/default.ml[78,4057+53])
+                                Texp_constant Const_int 1
+                      ]
+                ]
+          ]
+          expression (src/default.ml[81,4122+2]..src/default.ml[84,4225+19])
+            Texp_apply
+            expression (src/default.ml[81,4122+2]..src/default.ml[81,4122+12])
+              Texp_ident "Dune__exe!.Error.logC"
+            [
+              <arg>
+                Nolabel
+                expression (src/default.ml[81,4122+13]..src/default.ml[81,4122+14])
+                  Texp_constant Const_int 1
+              <arg>
+                Nolabel
+                expression (src/default.ml[81,4122+15]..src/default.ml[84,4225+19])
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (src/default.ml[81,4122+20]..src/default.ml[81,4122+21])
+                        Tpat_var "f/891"
+                      expression (src/default.ml[82,4147+4]..src/default.ml[84,4225+18])
+                        Texp_apply
+                        expression (src/default.ml[82,4147+4]..src/default.ml[82,4147+18])
+                          Texp_ident "Stdlib!.Printf.fprintf"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/default.ml[82,4147+19]..src/default.ml[82,4147+20])
+                              Texp_ident "f/891"
+                          <arg>
+                            Nolabel
+                            expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Int"
+                                  [
+                                    expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Int_d"
+                                      []
+                                    expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                      []
+                                    expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_precision"
+                                      []
+                                    expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                          Texp_constant Const_string(" out of ",(src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost,None)
+                                        expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int"
+                                          [
+                                            expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Int_d"
+                                              []
+                                            expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                              []
+                                            expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_precision"
+                                              []
+                                            expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                                              [
+                                                expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                                  Texp_constant Const_string(" states have a default reduction.\n",(src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost,None)
+                                                expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                  []
+                                              ]
+                                          ]
+                                      ]
+                                  ]
+                                expression (src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost
+                                  Texp_constant Const_string("%d out of %d states have a default reduction.\n",(src/default.ml[83,4168+7]..src/default.ml[83,4168+56]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/default.ml[84,4225+7]..src/default.ml[84,4225+12])
+                              Texp_ident "count/874"
+                          <arg>
+                            Nolabel
+                            expression (src/default.ml[84,4225+13]..src/default.ml[84,4225+18])
+                              Texp_ident "Dune__exe!.Lr1.n"
+                        ]
+                  ]
+            ]
+    ]
+  structure_item (src/default.ml[86,4246+0]..src/default.ml[87,4255+42])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[86,4246+4]..src/default.ml[86,4246+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/default.ml[87,4255+2]..src/default.ml[87,4255+42])
+          Texp_apply
+          expression (src/default.ml[87,4255+2]..src/default.ml[87,4255+11])
+            Texp_ident "Dune__exe!.Time.tick"
+          [
+            <arg>
+              Nolabel
+              expression (src/default.ml[87,4255+12]..src/default.ml[87,4255+42])
+                Texp_constant Const_string("Computing default reductions",(src/default.ml[87,4255+13]..src/default.ml[87,4255+41]),None)
+          ]
+    ]
+  structure_item (src/default.ml[98,4708+0]..src/default.ml[103,4852+6])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[98,4708+4]..src/default.ml[98,4708+17])
+          Tpat_var "reductions_on/933"
+        expression (src/default.ml[98,4708+18]..src/default.ml[103,4852+6]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/default.ml[98,4708+18]..src/default.ml[98,4708+19])
+                Tpat_var "s/935"
+              expression (src/default.ml[98,4708+20]..src/default.ml[103,4852+6]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/default.ml[98,4708+20]..src/default.ml[98,4708+21])
+                      Tpat_var "z/936"
+                    expression (src/default.ml[99,4756+2]..src/default.ml[103,4852+6])
+                      extra
+                        Texp_constraint
+                        core_type (src/default.ml[98,4708+24]..src/default.ml[98,4708+45])
+                          Ttyp_constr "list/9!"
+                          [
+                            core_type (src/default.ml[98,4708+24]..src/default.ml[98,4708+40])
+                              Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                              []
+                          ]
+                      Texp_sequence
+                      expression (src/default.ml[99,4756+2]..src/default.ml[99,4756+26])
+                        Texp_assert                        expression (src/default.ml[99,4756+9]..src/default.ml[99,4756+26])
+                          Texp_apply
+                          expression (src/default.ml[99,4756+10]..src/default.ml[99,4756+23])
+                            Texp_ident "Dune__exe!.Grammar.Terminal.real"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[99,4756+24]..src/default.ml[99,4756+25])
+                                Texp_ident "z/936"
+                          ]
+                      expression (src/default.ml[100,4784+2]..src/default.ml[103,4852+6])
+                        Texp_try
+                        expression (src/default.ml[101,4790+4]..src/default.ml[101,4790+41])
+                          Texp_apply
+                          expression (src/default.ml[101,4790+4]..src/default.ml[101,4790+20])
+                            Texp_ident "Dune__exe!.Grammar.TerminalMap.find"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[101,4790+21]..src/default.ml[101,4790+22])
+                                Texp_ident "z/936"
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[101,4790+23]..src/default.ml[101,4790+41])
+                                Texp_apply
+                                expression (src/default.ml[101,4790+24]..src/default.ml[101,4790+38])
+                                  Texp_ident "Dune__exe!.Lr1.reductions"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/default.ml[101,4790+39]..src/default.ml[101,4790+40])
+                                      Texp_ident "s/935"
+                                ]
+                          ]
+                        [
+                          <case>
+                            pattern (src/default.ml[102,4832+7]..src/default.ml[102,4832+16])
+                              Tpat_construct "Not_found"
+                              []
+                              None
+                            expression (src/default.ml[103,4852+4]..src/default.ml[103,4852+6])
+                              Texp_construct "[]"
+                              []
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/default.ml[109,5081+0]..src/default.ml[120,5371+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[109,5081+4]..src/default.ml[109,5081+17])
+          Tpat_var "has_reduction/996"
+        expression (src/default.ml[109,5081+18]..src/default.ml[120,5371+14]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/default.ml[109,5081+18]..src/default.ml[109,5081+19])
+                Tpat_var "s/998"
+              expression (src/default.ml[109,5081+20]..src/default.ml[120,5371+14]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/default.ml[109,5081+20]..src/default.ml[109,5081+21])
+                      Tpat_var "z/999"
+                    expression (src/default.ml[110,5131+2]..src/default.ml[120,5371+14])
+                      extra
+                        Texp_constraint
+                        core_type (src/default.ml[109,5081+24]..src/default.ml[109,5081+47])
+                          Ttyp_constr "option/10!"
+                          [
+                            core_type (src/default.ml[109,5081+24]..src/default.ml[109,5081+40])
+                              Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                              []
+                          ]
+                      Texp_sequence
+                      expression (src/default.ml[110,5131+2]..src/default.ml[110,5131+26])
+                        Texp_assert                        expression (src/default.ml[110,5131+9]..src/default.ml[110,5131+26])
+                          Texp_apply
+                          expression (src/default.ml[110,5131+10]..src/default.ml[110,5131+23])
+                            Texp_ident "Dune__exe!.Grammar.Terminal.real"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[110,5131+24]..src/default.ml[110,5131+25])
+                                Texp_ident "z/999"
+                          ]
+                      expression (src/default.ml[111,5159+2]..src/default.ml[120,5371+14])
+                        Texp_match
+                        expression (src/default.ml[111,5159+8]..src/default.ml[111,5159+31])
+                          Texp_apply
+                          expression (src/default.ml[111,5159+8]..src/default.ml[111,5159+29])
+                            Texp_ident "has_default_reduction/528"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[111,5159+30]..src/default.ml[111,5159+31])
+                                Texp_ident "s/998"
+                          ]
+                        [
+                          <case>
+                            pattern (src/default.ml[112,5196+4]..src/default.ml[112,5196+18])
+                              Tpat_value
+                              pattern (src/default.ml[112,5196+4]..src/default.ml[112,5196+18])
+                                Tpat_construct "Some"
+                                [
+                                  pattern (src/default.ml[112,5196+9]..src/default.ml[112,5196+18])
+                                    Tpat_tuple
+                                    [
+                                      pattern (src/default.ml[112,5196+10]..src/default.ml[112,5196+14])
+                                        Tpat_var "prod/1000"
+                                      pattern (src/default.ml[112,5196+16]..src/default.ml[112,5196+17])
+                                        Tpat_any
+                                    ]
+                                ]
+                                None
+                            expression (src/default.ml[113,5218+6]..src/default.ml[113,5218+15])
+                              Texp_construct "Some"
+                              [
+                                expression (src/default.ml[113,5218+11]..src/default.ml[113,5218+15])
+                                  Texp_ident "prod/1000"
+                              ]
+                          <case>
+                            pattern (src/default.ml[114,5234+4]..src/default.ml[114,5234+8])
+                              Tpat_value
+                              pattern (src/default.ml[114,5234+4]..src/default.ml[114,5234+8])
+                                Tpat_construct "None"
+                                []
+                                None
+                            expression (src/default.ml[115,5246+6]..src/default.ml[120,5371+14])
+                              Texp_match
+                              expression (src/default.ml[115,5246+12]..src/default.ml[115,5246+29])
+                                Texp_apply
+                                expression (src/default.ml[115,5246+12]..src/default.ml[115,5246+25])
+                                  Texp_ident "reductions_on/933"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/default.ml[115,5246+26]..src/default.ml[115,5246+27])
+                                      Texp_ident "s/998"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/default.ml[115,5246+28]..src/default.ml[115,5246+29])
+                                      Texp_ident "z/999"
+                                ]
+                              [
+                                <case>
+                                  pattern (src/default.ml[116,5281+8]..src/default.ml[116,5281+21])
+                                    Tpat_value
+                                    pattern (src/default.ml[116,5281+8]..src/default.ml[116,5281+21])
+                                      Tpat_construct "::"
+                                      [
+                                        pattern (src/default.ml[116,5281+8]..src/default.ml[116,5281+12])
+                                          Tpat_var "prod/1001"
+                                        pattern (src/default.ml[116,5281+16]..src/default.ml[116,5281+21])
+                                          Tpat_var "prods/1002"
+                                      ]
+                                      None
+                                  expression (src/default.ml[117,5306+10]..src/default.ml[118,5337+19])
+                                    Texp_sequence
+                                    expression (src/default.ml[117,5306+10]..src/default.ml[117,5306+29])
+                                      Texp_assert                                      expression (src/default.ml[117,5306+17]..src/default.ml[117,5306+29])
+                                        Texp_apply
+                                        expression (src/default.ml[117,5306+24]..src/default.ml[117,5306+25])
+                                          Texp_ident "Stdlib!.="
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/default.ml[117,5306+18]..src/default.ml[117,5306+23])
+                                              Texp_ident "prods/1002"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/default.ml[117,5306+26]..src/default.ml[117,5306+28])
+                                              Texp_construct "[]"
+                                              []
+                                        ]
+                                    expression (src/default.ml[118,5337+10]..src/default.ml[118,5337+19])
+                                      Texp_construct "Some"
+                                      [
+                                        expression (src/default.ml[118,5337+15]..src/default.ml[118,5337+19])
+                                          Texp_ident "prod/1001"
+                                      ]
+                                <case>
+                                  pattern (src/default.ml[119,5357+8]..src/default.ml[119,5357+10])
+                                    Tpat_value
+                                    pattern (src/default.ml[119,5357+8]..src/default.ml[119,5357+10])
+                                      Tpat_construct "[]"
+                                      []
+                                      None
+                                  expression (src/default.ml[120,5371+10]..src/default.ml[120,5371+14])
+                                    Texp_construct "None"
+                                    []
+                              ]
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/default.ml[125,5513+0]..src/default.ml[132,5681+58])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/default.ml[125,5513+4]..src/default.ml[125,5513+19])
+          Tpat_var "causes_an_error/1003"
+        expression (src/default.ml[125,5513+20]..src/default.ml[132,5681+58]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/default.ml[125,5513+20]..src/default.ml[125,5513+21])
+                Tpat_var "s/1005"
+              expression (src/default.ml[125,5513+22]..src/default.ml[132,5681+58]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/default.ml[125,5513+22]..src/default.ml[125,5513+23])
+                      Tpat_var "z/1006"
+                    expression (src/default.ml[126,5546+2]..src/default.ml[132,5681+58])
+                      extra
+                        Texp_constraint
+                        core_type (src/default.ml[125,5513+26]..src/default.ml[125,5513+30])
+                          Ttyp_constr "bool/5!"
+                          []
+                      Texp_sequence
+                      expression (src/default.ml[126,5546+2]..src/default.ml[126,5546+26])
+                        Texp_assert                        expression (src/default.ml[126,5546+9]..src/default.ml[126,5546+26])
+                          Texp_apply
+                          expression (src/default.ml[126,5546+10]..src/default.ml[126,5546+23])
+                            Texp_ident "Dune__exe!.Grammar.Terminal.real"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[126,5546+24]..src/default.ml[126,5546+25])
+                                Texp_ident "z/1006"
+                          ]
+                      expression (src/default.ml[127,5574+2]..src/default.ml[132,5681+58])
+                        Texp_match
+                        expression (src/default.ml[127,5574+8]..src/default.ml[127,5574+31])
+                          Texp_apply
+                          expression (src/default.ml[127,5574+8]..src/default.ml[127,5574+29])
+                            Texp_ident "has_default_reduction/528"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/default.ml[127,5574+30]..src/default.ml[127,5574+31])
+                                Texp_ident "s/1005"
+                          ]
+                        [
+                          <case>
+                            pattern (src/default.ml[128,5611+4]..src/default.ml[128,5611+10])
+                              Tpat_value
+                              pattern (src/default.ml[128,5611+4]..src/default.ml[128,5611+10])
+                                Tpat_construct "Some"
+                                [
+                                  pattern (src/default.ml[128,5611+9]..src/default.ml[128,5611+10])
+                                    Tpat_any
+                                ]
+                                None
+                            expression (src/default.ml[129,5625+6]..src/default.ml[129,5625+11])
+                              Texp_construct "false"
+                              []
+                          <case>
+                            pattern (src/default.ml[130,5637+4]..src/default.ml[130,5637+8])
+                              Tpat_value
+                              pattern (src/default.ml[130,5637+4]..src/default.ml[130,5637+8])
+                                Tpat_construct "None"
+                                []
+                                None
+                            expression (src/default.ml[131,5649+6]..src/default.ml[132,5681+58])
+                              Texp_apply
+                              expression (src/default.ml[131,5649+29]..src/default.ml[131,5649+31])
+                                Texp_ident "Stdlib!.&&"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/default.ml[131,5649+6]..src/default.ml[131,5649+28])
+                                    Texp_apply
+                                    expression (src/default.ml[131,5649+24]..src/default.ml[131,5649+25])
+                                      Texp_ident "Stdlib!.="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/default.ml[131,5649+6]..src/default.ml[131,5649+23])
+                                          Texp_apply
+                                          expression (src/default.ml[131,5649+6]..src/default.ml[131,5649+19])
+                                            Texp_ident "reductions_on/933"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/default.ml[131,5649+20]..src/default.ml[131,5649+21])
+                                                Texp_ident "s/1005"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/default.ml[131,5649+22]..src/default.ml[131,5649+23])
+                                                Texp_ident "z/1006"
+                                          ]
+                                      <arg>
+                                        Nolabel
+                                        expression (src/default.ml[131,5649+26]..src/default.ml[131,5649+28])
+                                          Texp_construct "[]"
+                                          []
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/default.ml[132,5681+6]..src/default.ml[132,5681+58])
+                                    Texp_apply
+                                    expression (src/default.ml[132,5681+6]..src/default.ml[132,5681+9])
+                                      Texp_ident "Stdlib!.not"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/default.ml[132,5681+10]..src/default.ml[132,5681+58])
+                                          Texp_apply
+                                          expression (src/default.ml[132,5681+11]..src/default.ml[132,5681+24])
+                                            Texp_ident "Dune__exe!.Grammar.SymbolMap.mem"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/default.ml[132,5681+25]..src/default.ml[132,5681+37])
+                                                Texp_construct "Symbol.T"
+                                                [
+                                                  expression (src/default.ml[132,5681+35]..src/default.ml[132,5681+36])
+                                                    Texp_ident "z/1006"
+                                                ]
+                                            <arg>
+                                              Nolabel
+                                              expression (src/default.ml[132,5681+38]..src/default.ml[132,5681+57])
+                                                Texp_apply
+                                                expression (src/default.ml[132,5681+39]..src/default.ml[132,5681+54])
+                                                  Texp_ident "Dune__exe!.Lr1.transitions"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/default.ml[132,5681+55]..src/default.ml[132,5681+56])
+                                                      Texp_ident "s/1005"
+                                                ]
+                                          ]
+                                    ]
+                              ]
+                        ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Default>
+ "causes_an_error"[value] -> <Dune__exe__Default.16>;
+ "has_default_reduction"[value] -> <Dune__exe__Default.1>;
+ "has_reduction"[value] -> <Dune__exe__Default.10>;
+ }
+
+(seq
+  (let
+    (has_default_reduction/528 =
+       (apply (field_imm 27 (global Dune__exe__Lr1!))
+         (function s/529
+           (if (apply (field_imm 21 (global Dune__exe__Lr1!)) s/529) 0
+             (let
+               (reduction/571 =
+                  (apply
+                    (field_imm 10 (field_imm 9 (global Dune__exe__Grammar!)))
+                    (apply (field_imm 30 (global Dune__exe__Lr0!))
+                      (apply (field_imm 20 (global Dune__exe__Lr1!)) s/529))))
+               (if (isint reduction/571) reduction/571
+                 (let (*match*/1550 =a (field_imm 0 reduction/571))
+                   (if
+                     (apply
+                       (field_imm 45
+                         (field_imm 7 (global Dune__exe__Grammar!)))
+                       (apply (field_imm 19 (global Dune__exe__Lr1!)) s/529))
+                     reduction/571 0))))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Default!)
+      has_default_reduction/528))
+  (let
+    (*match*/1553 =
+       (let
+         (count/874 =[int]
+            (apply (field_imm 28 (global Dune__exe__Lr1!))
+              (function s/875 : int
+                (if
+                  (==
+                    (apply (field_imm 0 (global Dune__exe__Default!)) s/875)
+                    0)
+                  0 1))))
+         (apply (field_imm 4 (global Dune__exe__Error!)) 1
+           (function f/891 : int
+             (apply (field_imm 0 (global Stdlib__Printf!)) f/891
+               [0:
+                [4:
+                 0 0 0
+                 [11:
+                  " out of "
+                  [4: 0 0 0 [11: " states have a default reduction.\n" 0]]]]
+                "%d out of %d states have a default reduction.\n"]
+               count/874 (field_imm 8 (global Dune__exe__Lr1!)))))))
+    0)
+  (let
+    (*match*/1555 =
+       (apply (field_imm 0 (global Dune__exe__Time!))
+         "Computing default reductions"))
+    0)
+  (let
+    (reductions_on/933 =
+       (function s/935 z/936
+         (seq
+           (if
+             (apply (field_imm 13 (field_imm 2 (global Dune__exe__Grammar!)))
+               z/936)
+             0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/default.ml" 99 2])))
+           (try
+             (apply (field_imm 2 (field_imm 4 (global Dune__exe__Grammar!)))
+               z/936 (apply (field_imm 20 (global Dune__exe__Lr1!)) s/935))
+            with exn/1556
+             (catch
+               (if (== exn/1556 (field_imm 7 (global Stdlib!))) 0 (exit 10))
+              with (10) (reraise exn/1556))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Default!)
+      reductions_on/933))
+  (let
+    (has_reduction/996 =
+       (function s/998 z/999
+         (seq
+           (if
+             (apply (field_imm 13 (field_imm 2 (global Dune__exe__Grammar!)))
+               z/999)
+             0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/default.ml" 110 2])))
+           (let
+             (*match*/1558 =
+                (apply (field_imm 0 (global Dune__exe__Default!)) s/998))
+             (if (isint *match*/1558)
+               (let
+                 (*match*/1557 =
+                    (apply (field_imm 3 (global Dune__exe__Default!)) s/998
+                      z/999))
+                 (if (isint *match*/1557) 0
+                   (let
+                     (prods/1002 =a (field_imm 1 *match*/1557)
+                      prod/1001 =a (field_imm 0 *match*/1557))
+                     (seq
+                       (if (== prods/1002 0) 0
+                         (raise
+                           (makeblock 0 (global Assert_failure/28!)
+                             [0: "src/default.ml" 117 10])))
+                       (makeblock 0 prod/1001)))))
+               (let
+                 (*match*/1559 =a (field_imm 0 *match*/1558)
+                  *match*/1560 =a (field_imm 1 *match*/1559)
+                  prod/1000 =a (field_imm 0 *match*/1559))
+                 (makeblock 0 prod/1000)))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Default!)
+      has_reduction/996))
+  (let
+    (causes_an_error/1003 =
+       (function s/1005 z/1006 : int
+         (seq
+           (if
+             (apply (field_imm 13 (field_imm 2 (global Dune__exe__Grammar!)))
+               z/1006)
+             0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/default.ml" 126 2])))
+           (let
+             (*match*/1561 =
+                (apply (field_imm 0 (global Dune__exe__Default!)) s/1005))
+             (if (isint *match*/1561)
+               (&&
+                 (==
+                   (apply (field_imm 3 (global Dune__exe__Default!)) s/1005
+                     z/1006)
+                   0)
+                 (not
+                   (apply
+                     (field_imm 31
+                       (field_imm 7 (global Dune__exe__Grammar!)))
+                     (makeblock 1 z/1006)
+                     (apply (field_imm 19 (global Dune__exe__Lr1!)) s/1005))))
+               (let (*match*/1562 =a (field_imm 0 *match*/1561)) 0))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Default!)
+      causes_an_error/1003))
+  0)
+(seq
+  (let
+    (has_default_reduction/528 =
+       (apply (field_imm 27 (global Dune__exe__Lr1!))
+         (function s/529
+           (if (apply (field_imm 21 (global Dune__exe__Lr1!)) s/529) 0
+             (let
+               (reduction/571 =
+                  (apply
+                    (field_imm 10 (field_imm 9 (global Dune__exe__Grammar!)))
+                    (apply (field_imm 30 (global Dune__exe__Lr0!))
+                      (apply (field_imm 20 (global Dune__exe__Lr1!)) s/529))))
+               (if (isint reduction/571) reduction/571
+                 (if
+                   (apply
+                     (field_imm 45
+                       (field_imm 7 (global Dune__exe__Grammar!)))
+                     (apply (field_imm 19 (global Dune__exe__Lr1!)) s/529))
+                   reduction/571 0)))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Default!)
+      has_default_reduction/528))
+  (let
+    (*match*/1553 =
+       (let
+         (count/874 =[int]
+            (apply (field_imm 28 (global Dune__exe__Lr1!))
+              (function s/875 : int
+                (if
+                  (==
+                    (apply (field_imm 0 (global Dune__exe__Default!)) s/875)
+                    0)
+                  0 1))))
+         (apply (field_imm 4 (global Dune__exe__Error!)) 1
+           (function f/891 : int
+             (apply (field_imm 0 (global Stdlib__Printf!)) f/891
+               [0:
+                [4:
+                 0 0 0
+                 [11:
+                  " out of "
+                  [4: 0 0 0 [11: " states have a default reduction.\n" 0]]]]
+                "%d out of %d states have a default reduction.\n"]
+               count/874 (field_imm 8 (global Dune__exe__Lr1!)))))))
+    0)
+  (let
+    (*match*/1555 =
+       (apply (field_imm 0 (global Dune__exe__Time!))
+         "Computing default reductions"))
+    0)
+  (let
+    (reductions_on/933 =
+       (function s/935 z/936
+         (seq
+           (if
+             (apply (field_imm 13 (field_imm 2 (global Dune__exe__Grammar!)))
+               z/936)
+             0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/default.ml" 99 2])))
+           (try
+             (apply (field_imm 2 (field_imm 4 (global Dune__exe__Grammar!)))
+               z/936 (apply (field_imm 20 (global Dune__exe__Lr1!)) s/935))
+            with exn/1556
+             (if (== exn/1556 (field_imm 7 (global Stdlib!))) 0
+               (reraise exn/1556))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Default!)
+      reductions_on/933))
+  (let
+    (has_reduction/996 =
+       (function s/998 z/999
+         (seq
+           (if
+             (apply (field_imm 13 (field_imm 2 (global Dune__exe__Grammar!)))
+               z/999)
+             0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/default.ml" 110 2])))
+           (let
+             (*match*/1558 =
+                (apply (field_imm 0 (global Dune__exe__Default!)) s/998))
+             (if (isint *match*/1558)
+               (let
+                 (*match*/1557 =
+                    (apply (field_imm 3 (global Dune__exe__Default!)) s/998
+                      z/999))
+                 (if (isint *match*/1557) 0
+                   (seq
+                     (if (== (field_imm 1 *match*/1557) 0) 0
+                       (raise
+                         (makeblock 0 (global Assert_failure/28!)
+                           [0: "src/default.ml" 117 10])))
+                     (makeblock 0 (field_imm 0 *match*/1557)))))
+               (makeblock 0 (field_imm 0 (field_imm 0 *match*/1558))))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Default!)
+      has_reduction/996))
+  (let
+    (causes_an_error/1003 =
+       (function s/1005 z/1006 : int
+         (seq
+           (if
+             (apply (field_imm 13 (field_imm 2 (global Dune__exe__Grammar!)))
+               z/1006)
+             0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/default.ml" 126 2])))
+           (let
+             (*match*/1561 =
+                (apply (field_imm 0 (global Dune__exe__Default!)) s/1005))
+             (if (isint *match*/1561)
+               (&&
+                 (==
+                   (apply (field_imm 3 (global Dune__exe__Default!)) s/1005
+                     z/1006)
+                   0)
+                 (not
+                   (apply
+                     (field_imm 31
+                       (field_imm 7 (global Dune__exe__Grammar!)))
+                     (makeblock 1 z/1006)
+                     (apply (field_imm 19 (global Dune__exe__Lr1!)) s/1005))))
+               0)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Default!)
+      causes_an_error/1003))
+  0)

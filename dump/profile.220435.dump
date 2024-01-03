@@ -1,0 +1,22 @@
+0.080s  181MB 9.76MB 11.5MB src/stage1/lexer.ml
+  0.003s 5.40MB 0.72MB 2.49MB parsing
+    0.003s 5.40MB 0.72MB 2.49MB parser
+  0.028s 56.6MB 4.28MB 6.77MB typing
+  0.003s 6.22MB 0.18MB 6.95MB transl
+  0.029s 47.3MB 3.71MB 10.6MB generate
+    0.013s 24.7MB 2.06MB 9.02MB compile_phrases
+      0.002s 4.44MB 0.43MB 7.39MB selection
+      ------ 2.00MB 0.15MB 7.55MB polling
+      0.001s 4.00MB 0.34MB 7.89MB cse
+      0.001s 2.00MB 0.12MB 8.02MB liveness
+      ------ 0.13MB ------ ------ deadcode
+      0.001s 2.19MB 0.43MB 8.46MB spill
+      0.001s 2.00MB 0.06MB 8.52MB split
+      0.005s 7.60MB 0.50MB 9.02MB regalloc
+      ------ 0.17MB ------ ------ linearize
+      0.001s 0.17MB ------ ------ emit
+      0.001s ------ ------ ------ other
+    0.007s ------ ------ ------ assemble
+    0.009s 22.6MB 1.65MB 10.6MB other
+  0.018s 66.1MB 0.85MB 11.5MB other
+0.006s 3.08MB 1.76MB ------ other

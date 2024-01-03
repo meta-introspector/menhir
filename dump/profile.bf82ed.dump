@@ -1,0 +1,19 @@
+0.126s 61.5MB 4.47MB 6.26MB src/stage3/newRuleSyntax.ml
+  0.004s 2.05MB 0.40MB 2.19MB parsing
+    0.004s 2.05MB 0.40MB 2.19MB parser
+  0.050s 20.7MB 2.53MB 4.72MB typing
+  0.004s 2.00MB ------ ------ transl
+  0.036s 17.1MB 1.31MB 6.04MB generate
+    0.016s 8.80MB 0.93MB 5.66MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.002s 2.23MB 0.34MB 5.07MB cse
+      0.001s ------ ------ ------ liveness
+      0.002s 2.07MB 0.12MB 5.19MB spill
+      0.005s 2.00MB 0.21MB 5.41MB regalloc
+      0.002s 2.00MB 0.25MB 5.66MB linearize
+      0.002s 0.49MB ------ ------ emit
+      0.001s ------ ------ ------ other
+    0.008s ------ ------ ------ assemble
+    0.012s 8.35MB 0.37MB 6.04MB other
+  0.032s 19.6MB 0.21MB 6.26MB other
+0.016s 3.07MB 1.79MB ------ other

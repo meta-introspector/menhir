@@ -1,0 +1,1188 @@
+[
+  structure_item (src/FixSolver.ml[14,999+0]..[68,2069+3])
+    Pstr_module
+    "Make" (src/FixSolver.ml[14,999+7]..[14,999+11])
+      module_expr (src/FixSolver.ml[15,1011+0]..[68,2069+3])
+        Pmod_functor "M" (src/FixSolver.ml[15,1011+1]..[15,1011+2])
+        module_type (src/FixSolver.ml[15,1011+5]..[15,1011+24])
+          Pmty_ident "Fix.IMPERATIVE_MAPS" (src/FixSolver.ml[15,1011+5]..[15,1011+24])
+        module_expr (src/FixSolver.ml[16,1037+0]..[68,2069+3])
+          Pmod_functor "P" (src/FixSolver.ml[16,1037+1]..[16,1037+2])
+          module_type (src/FixSolver.ml[16,1037+5]..[16,1037+29])
+            Pmty_ident "Fix.MINIMAL_SEMI_LATTICE" (src/FixSolver.ml[16,1037+5]..[16,1037+29])
+          module_expr (src/FixSolver.ml[17,1068+2]..[68,2069+3])
+            Pmod_structure
+            [
+              structure_item (src/FixSolver.ml[19,1078+2]..[20,1096+9])
+                Pstr_type Rec
+                [
+                  type_declaration "variable" (src/FixSolver.ml[19,1078+7]..[19,1078+15]) (src/FixSolver.ml[19,1078+2]..[20,1096+9])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/FixSolver.ml[20,1096+4]..[20,1096+9])
+                          Ptyp_constr "M.key" (src/FixSolver.ml[20,1096+4]..[20,1096+9])
+                          []
+                ]
+              structure_item (src/FixSolver.ml[22,1107+2]..[23,1125+14])
+                Pstr_type Rec
+                [
+                  type_declaration "property" (src/FixSolver.ml[22,1107+7]..[22,1107+15]) (src/FixSolver.ml[22,1107+2]..[23,1125+14])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/FixSolver.ml[23,1125+4]..[23,1125+14])
+                          Ptyp_constr "P.property" (src/FixSolver.ml[23,1125+4]..[23,1125+14])
+                          []
+                ]
+              structure_item (src/FixSolver.ml[25,1141+2]..[26,1154+14])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[25,1141+6]..[25,1141+10])
+                      Ppat_var "join" (src/FixSolver.ml[25,1141+6]..[25,1141+10])
+                    expression (src/FixSolver.ml[26,1154+4]..[26,1154+14])
+                      Pexp_ident "P.leq_join" (src/FixSolver.ml[26,1154+4]..[26,1154+14])
+                ]
+              structure_item (src/FixSolver.ml[30,1240+2]..[31,1274+14])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[30,1240+6]..[30,1240+11])
+                      Ppat_var "upper" (src/FixSolver.ml[30,1240+6]..[30,1240+11])
+                    core_type (src/FixSolver.ml[30,1240+14]..[30,1240+31])
+                      Ptyp_constr "M.t" (src/FixSolver.ml[30,1240+28]..[30,1240+31])
+                      [
+                        core_type (src/FixSolver.ml[30,1240+14]..[30,1240+27])
+                          Ptyp_constr "list" (src/FixSolver.ml[30,1240+23]..[30,1240+27])
+                          [
+                            core_type (src/FixSolver.ml[30,1240+14]..[30,1240+22])
+                              Ptyp_constr "variable" (src/FixSolver.ml[30,1240+14]..[30,1240+22])
+                              []
+                          ]
+                      ]
+                    expression (src/FixSolver.ml[31,1274+4]..[31,1274+14])
+                      Pexp_apply
+                      expression (src/FixSolver.ml[31,1274+4]..[31,1274+12])
+                        Pexp_ident "M.create" (src/FixSolver.ml[31,1274+4]..[31,1274+12])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/FixSolver.ml[31,1274+12]..[31,1274+14])
+                            Pexp_construct "()" (src/FixSolver.ml[31,1274+12]..[31,1274+14])
+                            None
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[33,1290+2]..[34,1311+43])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[33,1290+6]..[33,1290+16])
+                      Ppat_var "successors" (src/FixSolver.ml[33,1290+6]..[33,1290+16])
+                    expression (src/FixSolver.ml[33,1290+17]..[34,1311+43]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/FixSolver.ml[33,1290+17]..[33,1290+18])
+                        Ppat_var "x" (src/FixSolver.ml[33,1290+17]..[33,1290+18])
+                      expression (src/FixSolver.ml[34,1311+4]..[34,1311+43])
+                        Pexp_try
+                        expression (src/FixSolver.ml[34,1311+8]..[34,1311+22])
+                          Pexp_apply
+                          expression (src/FixSolver.ml[34,1311+8]..[34,1311+14])
+                            Pexp_ident "M.find" (src/FixSolver.ml[34,1311+8]..[34,1311+14])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/FixSolver.ml[34,1311+15]..[34,1311+16])
+                                Pexp_ident "x" (src/FixSolver.ml[34,1311+15]..[34,1311+16])
+                            <arg>
+                            Nolabel
+                              expression (src/FixSolver.ml[34,1311+17]..[34,1311+22])
+                                Pexp_ident "upper" (src/FixSolver.ml[34,1311+17]..[34,1311+22])
+                          ]
+                        [
+                          <case>
+                            pattern (src/FixSolver.ml[34,1311+28]..[34,1311+37])
+                              Ppat_construct "Not_found" (src/FixSolver.ml[34,1311+28]..[34,1311+37])
+                              None
+                            expression (src/FixSolver.ml[34,1311+41]..[34,1311+43])
+                              Pexp_construct "[]" (src/FixSolver.ml[34,1311+41]..[34,1311+43])
+                              None
+                        ]
+                ]
+              structure_item (src/FixSolver.ml[36,1356+2]..[37,1382+37])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[36,1356+6]..[36,1356+19])
+                      Ppat_var "record_VarVar" (src/FixSolver.ml[36,1356+6]..[36,1356+19])
+                    expression (src/FixSolver.ml[36,1356+20]..[37,1382+37]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/FixSolver.ml[36,1356+20]..[36,1356+21])
+                        Ppat_var "x" (src/FixSolver.ml[36,1356+20]..[36,1356+21])
+                      expression (src/FixSolver.ml[36,1356+22]..[37,1382+37]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/FixSolver.ml[36,1356+22]..[36,1356+23])
+                          Ppat_var "y" (src/FixSolver.ml[36,1356+22]..[36,1356+23])
+                        expression (src/FixSolver.ml[37,1382+4]..[37,1382+37])
+                          Pexp_apply
+                          expression (src/FixSolver.ml[37,1382+4]..[37,1382+9])
+                            Pexp_ident "M.add" (src/FixSolver.ml[37,1382+4]..[37,1382+9])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/FixSolver.ml[37,1382+10]..[37,1382+11])
+                                Pexp_ident "x" (src/FixSolver.ml[37,1382+10]..[37,1382+11])
+                            <arg>
+                            Nolabel
+                              expression (src/FixSolver.ml[37,1382+12]..[37,1382+31])
+                                Pexp_construct "::" (src/FixSolver.ml[37,1382+15]..[37,1382+17])
+                                Some
+                                  expression (src/FixSolver.ml[37,1382+13]..[37,1382+30]) ghost
+                                    Pexp_tuple
+                                    [
+                                      expression (src/FixSolver.ml[37,1382+13]..[37,1382+14])
+                                        Pexp_ident "y" (src/FixSolver.ml[37,1382+13]..[37,1382+14])
+                                      expression (src/FixSolver.ml[37,1382+18]..[37,1382+30])
+                                        Pexp_apply
+                                        expression (src/FixSolver.ml[37,1382+18]..[37,1382+28])
+                                          Pexp_ident "successors" (src/FixSolver.ml[37,1382+18]..[37,1382+28])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/FixSolver.ml[37,1382+29]..[37,1382+30])
+                                              Pexp_ident "x" (src/FixSolver.ml[37,1382+29]..[37,1382+30])
+                                        ]
+                                    ]
+                            <arg>
+                            Nolabel
+                              expression (src/FixSolver.ml[37,1382+32]..[37,1382+37])
+                                Pexp_ident "upper" (src/FixSolver.ml[37,1382+32]..[37,1382+37])
+                          ]
+                ]
+              structure_item (src/FixSolver.ml[41,1486+2]..[42,1515+14])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[41,1486+6]..[41,1486+11])
+                      Ppat_var "lower" (src/FixSolver.ml[41,1486+6]..[41,1486+11])
+                    core_type (src/FixSolver.ml[41,1486+14]..[41,1486+26])
+                      Ptyp_constr "M.t" (src/FixSolver.ml[41,1486+23]..[41,1486+26])
+                      [
+                        core_type (src/FixSolver.ml[41,1486+14]..[41,1486+22])
+                          Ptyp_constr "property" (src/FixSolver.ml[41,1486+14]..[41,1486+22])
+                          []
+                      ]
+                    expression (src/FixSolver.ml[42,1515+4]..[42,1515+14])
+                      Pexp_apply
+                      expression (src/FixSolver.ml[42,1515+4]..[42,1515+12])
+                        Pexp_ident "M.create" (src/FixSolver.ml[42,1515+4]..[42,1515+12])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/FixSolver.ml[42,1515+12]..[42,1515+14])
+                            Pexp_construct "()" (src/FixSolver.ml[42,1515+12]..[42,1515+14])
+                            None
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[44,1531+2]..[49,1651+32])
+                Pstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[44,1531+6]..[44,1531+19])
+                      Ppat_var "record_ConVar" (src/FixSolver.ml[44,1531+6]..[44,1531+19])
+                    expression (src/FixSolver.ml[44,1531+20]..[49,1651+32]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/FixSolver.ml[44,1531+20]..[44,1531+21])
+                        Ppat_var "p" (src/FixSolver.ml[44,1531+20]..[44,1531+21])
+                      expression (src/FixSolver.ml[44,1531+22]..[49,1651+32]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/FixSolver.ml[44,1531+22]..[44,1531+23])
+                          Ppat_var "y" (src/FixSolver.ml[44,1531+22]..[44,1531+23])
+                        expression (src/FixSolver.ml[45,1557+4]..[49,1651+32])
+                          Pexp_match
+                          expression (src/FixSolver.ml[45,1557+10]..[45,1557+24])
+                            Pexp_apply
+                            expression (src/FixSolver.ml[45,1557+10]..[45,1557+16])
+                              Pexp_ident "M.find" (src/FixSolver.ml[45,1557+10]..[45,1557+16])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/FixSolver.ml[45,1557+17]..[45,1557+18])
+                                  Pexp_ident "y" (src/FixSolver.ml[45,1557+17]..[45,1557+18])
+                              <arg>
+                              Nolabel
+                                expression (src/FixSolver.ml[45,1557+19]..[45,1557+24])
+                                  Pexp_ident "lower" (src/FixSolver.ml[45,1557+19]..[45,1557+24])
+                            ]
+                          [
+                            <case>
+                              pattern (src/FixSolver.ml[46,1587+6]..[46,1587+25])
+                                Ppat_exception
+                                pattern (src/FixSolver.ml[46,1587+16]..[46,1587+25])
+                                  Ppat_construct "Not_found" (src/FixSolver.ml[46,1587+16]..[46,1587+25])
+                                  None
+                              expression (src/FixSolver.ml[47,1616+8]..[47,1616+23])
+                                Pexp_apply
+                                expression (src/FixSolver.ml[47,1616+8]..[47,1616+13])
+                                  Pexp_ident "M.add" (src/FixSolver.ml[47,1616+8]..[47,1616+13])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/FixSolver.ml[47,1616+14]..[47,1616+15])
+                                      Pexp_ident "y" (src/FixSolver.ml[47,1616+14]..[47,1616+15])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/FixSolver.ml[47,1616+16]..[47,1616+17])
+                                      Pexp_ident "p" (src/FixSolver.ml[47,1616+16]..[47,1616+17])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/FixSolver.ml[47,1616+18]..[47,1616+23])
+                                      Pexp_ident "lower" (src/FixSolver.ml[47,1616+18]..[47,1616+23])
+                                ]
+                            <case>
+                              pattern (src/FixSolver.ml[48,1640+6]..[48,1640+7])
+                                Ppat_var "q" (src/FixSolver.ml[48,1640+6]..[48,1640+7])
+                              expression (src/FixSolver.ml[49,1651+8]..[49,1651+32])
+                                Pexp_apply
+                                expression (src/FixSolver.ml[49,1651+8]..[49,1651+13])
+                                  Pexp_ident "M.add" (src/FixSolver.ml[49,1651+8]..[49,1651+13])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/FixSolver.ml[49,1651+14]..[49,1651+15])
+                                      Pexp_ident "y" (src/FixSolver.ml[49,1651+14]..[49,1651+15])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/FixSolver.ml[49,1651+16]..[49,1651+26])
+                                      Pexp_apply
+                                      expression (src/FixSolver.ml[49,1651+17]..[49,1651+21])
+                                        Pexp_ident "join" (src/FixSolver.ml[49,1651+17]..[49,1651+21])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/FixSolver.ml[49,1651+22]..[49,1651+23])
+                                            Pexp_ident "p" (src/FixSolver.ml[49,1651+22]..[49,1651+23])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/FixSolver.ml[49,1651+24]..[49,1651+25])
+                                            Pexp_ident "q" (src/FixSolver.ml[49,1651+24]..[49,1651+25])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (src/FixSolver.ml[49,1651+27]..[49,1651+32])
+                                      Pexp_ident "lower" (src/FixSolver.ml[49,1651+27]..[49,1651+32])
+                                ]
+                          ]
+                ]
+              structure_item (src/FixSolver.ml[53,1716+2]..[66,2062+5])
+                Pstr_module
+                "Solve" (src/FixSolver.ml[53,1716+9]..[53,1716+14])
+                  module_expr (src/FixSolver.ml[53,1716+15]..[66,2062+5])
+                    Pmod_functor ()
+                    module_expr (src/FixSolver.ml[53,1716+20]..[66,2062+5])
+                      Pmod_structure
+                      [
+                        structure_item (src/FixSolver.ml[55,1744+4]..[62,2014+7])
+                          Pstr_module
+                          "G" (src/FixSolver.ml[55,1744+11]..[55,1744+12])
+                            module_expr (src/FixSolver.ml[55,1744+15]..[62,2014+7])
+                              Pmod_structure
+                              [
+                                structure_item (src/FixSolver.ml[56,1766+6]..[56,1766+37])
+                                  Pstr_type Nonrec
+                                  [
+                                    type_declaration "variable" (src/FixSolver.ml[56,1766+18]..[56,1766+26]) (src/FixSolver.ml[56,1766+6]..[56,1766+37])
+                                      ptype_params =
+                                        []
+                                      ptype_cstrs =
+                                        []
+                                      ptype_kind =
+                                        Ptype_abstract
+                                      ptype_private = Public
+                                      ptype_manifest =
+                                        Some
+                                          core_type (src/FixSolver.ml[56,1766+29]..[56,1766+37])
+                                            Ptyp_constr "variable" (src/FixSolver.ml[56,1766+29]..[56,1766+37])
+                                            []
+                                  ]
+                                structure_item (src/FixSolver.ml[57,1804+6]..[57,1804+37])
+                                  Pstr_type Nonrec
+                                  [
+                                    type_declaration "property" (src/FixSolver.ml[57,1804+18]..[57,1804+26]) (src/FixSolver.ml[57,1804+6]..[57,1804+37])
+                                      ptype_params =
+                                        []
+                                      ptype_cstrs =
+                                        []
+                                      ptype_kind =
+                                        Ptype_abstract
+                                      ptype_private = Public
+                                      ptype_manifest =
+                                        Some
+                                          core_type (src/FixSolver.ml[57,1804+29]..[57,1804+37])
+                                            Ptyp_constr "property" (src/FixSolver.ml[57,1804+29]..[57,1804+37])
+                                            []
+                                  ]
+                                structure_item (src/FixSolver.ml[58,1842+6]..[59,1878+31])
+                                  Pstr_value Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/FixSolver.ml[58,1842+10]..[58,1842+22])
+                                        Ppat_var "foreach_root" (src/FixSolver.ml[58,1842+10]..[58,1842+22])
+                                      expression (src/FixSolver.ml[58,1842+23]..[59,1878+31]) ghost
+                                        Pexp_fun
+                                        Nolabel
+                                        None
+                                        pattern (src/FixSolver.ml[58,1842+23]..[58,1842+33])
+                                          Ppat_var "contribute" (src/FixSolver.ml[58,1842+23]..[58,1842+33])
+                                        expression (src/FixSolver.ml[59,1878+8]..[59,1878+31])
+                                          Pexp_apply
+                                          expression (src/FixSolver.ml[59,1878+8]..[59,1878+14])
+                                            Pexp_ident "M.iter" (src/FixSolver.ml[59,1878+8]..[59,1878+14])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/FixSolver.ml[59,1878+15]..[59,1878+25])
+                                                Pexp_ident "contribute" (src/FixSolver.ml[59,1878+15]..[59,1878+25])
+                                            <arg>
+                                            Nolabel
+                                              expression (src/FixSolver.ml[59,1878+26]..[59,1878+31])
+                                                Pexp_ident "lower" (src/FixSolver.ml[59,1878+26]..[59,1878+31])
+                                          ]
+                                  ]
+                                structure_item (src/FixSolver.ml[60,1910+6]..[61,1955+58])
+                                  Pstr_value Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/FixSolver.ml[60,1910+10]..[60,1910+27])
+                                        Ppat_var "foreach_successor" (src/FixSolver.ml[60,1910+10]..[60,1910+27])
+                                      expression (src/FixSolver.ml[60,1910+28]..[61,1955+58]) ghost
+                                        Pexp_fun
+                                        Nolabel
+                                        None
+                                        pattern (src/FixSolver.ml[60,1910+28]..[60,1910+29])
+                                          Ppat_var "x" (src/FixSolver.ml[60,1910+28]..[60,1910+29])
+                                        expression (src/FixSolver.ml[60,1910+30]..[61,1955+58]) ghost
+                                          Pexp_fun
+                                          Nolabel
+                                          None
+                                          pattern (src/FixSolver.ml[60,1910+30]..[60,1910+31])
+                                            Ppat_var "p" (src/FixSolver.ml[60,1910+30]..[60,1910+31])
+                                          expression (src/FixSolver.ml[60,1910+32]..[61,1955+58]) ghost
+                                            Pexp_fun
+                                            Nolabel
+                                            None
+                                            pattern (src/FixSolver.ml[60,1910+32]..[60,1910+42])
+                                              Ppat_var "contribute" (src/FixSolver.ml[60,1910+32]..[60,1910+42])
+                                            expression (src/FixSolver.ml[61,1955+8]..[61,1955+58])
+                                              Pexp_apply
+                                              expression (src/FixSolver.ml[61,1955+8]..[61,1955+17])
+                                                Pexp_ident "List.iter" (src/FixSolver.ml[61,1955+8]..[61,1955+17])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/FixSolver.ml[61,1955+18]..[61,1955+43])
+                                                    Pexp_fun
+                                                    Nolabel
+                                                    None
+                                                    pattern (src/FixSolver.ml[61,1955+23]..[61,1955+24])
+                                                      Ppat_var "y" (src/FixSolver.ml[61,1955+23]..[61,1955+24])
+                                                    expression (src/FixSolver.ml[61,1955+28]..[61,1955+42])
+                                                      Pexp_apply
+                                                      expression (src/FixSolver.ml[61,1955+28]..[61,1955+38])
+                                                        Pexp_ident "contribute" (src/FixSolver.ml[61,1955+28]..[61,1955+38])
+                                                      [
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/FixSolver.ml[61,1955+39]..[61,1955+40])
+                                                            Pexp_ident "y" (src/FixSolver.ml[61,1955+39]..[61,1955+40])
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/FixSolver.ml[61,1955+41]..[61,1955+42])
+                                                            Pexp_ident "p" (src/FixSolver.ml[61,1955+41]..[61,1955+42])
+                                                      ]
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/FixSolver.ml[61,1955+44]..[61,1955+58])
+                                                    Pexp_apply
+                                                    expression (src/FixSolver.ml[61,1955+45]..[61,1955+55])
+                                                      Pexp_ident "successors" (src/FixSolver.ml[61,1955+45]..[61,1955+55])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/FixSolver.ml[61,1955+56]..[61,1955+57])
+                                                          Pexp_ident "x" (src/FixSolver.ml[61,1955+56]..[61,1955+57])
+                                                    ]
+                                              ]
+                                  ]
+                              ]
+                        structure_item (src/FixSolver.ml[64,2023+4]..[64,2023+37])
+                          Pstr_include                          module_expr (src/FixSolver.ml[64,2023+12]..[64,2023+37])
+                            Pmod_apply
+                            module_expr (src/FixSolver.ml[64,2023+12]..[64,2023+34])
+                              Pmod_apply
+                              module_expr (src/FixSolver.ml[64,2023+12]..[64,2023+31])
+                                Pmod_apply
+                                module_expr (src/FixSolver.ml[64,2023+12]..[64,2023+28])
+                                  Pmod_ident "Fix.DataFlow.Run" (src/FixSolver.ml[64,2023+12]..[64,2023+28])
+                                module_expr (src/FixSolver.ml[64,2023+29]..[64,2023+30])
+                                  Pmod_ident "M" (src/FixSolver.ml[64,2023+29]..[64,2023+30])
+                              module_expr (src/FixSolver.ml[64,2023+32]..[64,2023+33])
+                                Pmod_ident "P" (src/FixSolver.ml[64,2023+32]..[64,2023+33])
+                            module_expr (src/FixSolver.ml[64,2023+35]..[64,2023+36])
+                              Pmod_ident "G" (src/FixSolver.ml[64,2023+35]..[64,2023+36])
+                      ]
+            ]
+]
+
+module Make(M:Fix.IMPERATIVE_MAPS)(P:Fix.MINIMAL_SEMI_LATTICE) =
+  struct
+    type variable = M.key
+    type property = P.property
+    let join = P.leq_join
+    let upper : variable list M.t = M.create ()
+    let successors x = try M.find x upper with | Not_found -> []
+    let record_VarVar x y = M.add x (y :: (successors x)) upper
+    let lower : property M.t = M.create ()
+    let record_ConVar p y =
+      match M.find y lower with
+      | exception Not_found -> M.add y p lower
+      | q -> M.add y (join p q) lower
+    module Solve() =
+      struct
+        module G =
+          struct
+            type nonrec variable = variable
+            type nonrec property = property
+            let foreach_root contribute = M.iter contribute lower
+            let foreach_successor x p contribute =
+              List.iter (fun y -> contribute y p) (successors x)
+          end
+        include (((Fix.DataFlow.Run)(M))(P))(G)
+      end
+  end
+[
+  structure_item (src/FixSolver.ml[14,999+0]..src/FixSolver.ml[68,2069+3])
+    Tstr_module
+    Make/725
+      module_expr (src/FixSolver.ml[15,1011+0]..src/FixSolver.ml[68,2069+3])
+        Tmod_functor "M/521"
+        module_type (src/FixSolver.ml[15,1011+5]..src/FixSolver.ml[15,1011+24])
+          Tmty_ident "Dune__exe!.Fix.IMPERATIVE_MAPS"
+        module_expr (src/FixSolver.ml[16,1037+0]..src/FixSolver.ml[68,2069+3])
+          Tmod_functor "P/524"
+          module_type (src/FixSolver.ml[16,1037+5]..src/FixSolver.ml[16,1037+29])
+            Tmty_ident "Dune__exe!.Fix.MINIMAL_SEMI_LATTICE"
+          module_expr (src/FixSolver.ml[17,1068+2]..src/FixSolver.ml[68,2069+3])
+            Tmod_structure
+            [
+              structure_item (src/FixSolver.ml[19,1078+2]..src/FixSolver.ml[20,1096+9])
+                Tstr_type Rec
+                [
+                  type_declaration variable/525 (src/FixSolver.ml[19,1078+2]..src/FixSolver.ml[20,1096+9])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/FixSolver.ml[20,1096+4]..src/FixSolver.ml[20,1096+9])
+                          Ttyp_constr "M/521.key"
+                          []
+                ]
+              structure_item (src/FixSolver.ml[22,1107+2]..src/FixSolver.ml[23,1125+14])
+                Tstr_type Rec
+                [
+                  type_declaration property/526 (src/FixSolver.ml[22,1107+2]..src/FixSolver.ml[23,1125+14])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/FixSolver.ml[23,1125+4]..src/FixSolver.ml[23,1125+14])
+                          Ttyp_constr "P/524.property"
+                          []
+                ]
+              structure_item (src/FixSolver.ml[25,1141+2]..src/FixSolver.ml[26,1154+14])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[25,1141+6]..src/FixSolver.ml[25,1141+10])
+                      Tpat_var "join/527"
+                    expression (src/FixSolver.ml[26,1154+4]..src/FixSolver.ml[26,1154+14])
+                      Texp_ident "P/524.leq_join"
+                ]
+              structure_item (src/FixSolver.ml[30,1240+2]..src/FixSolver.ml[31,1274+14])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[30,1240+6]..src/FixSolver.ml[30,1240+11])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/FixSolver.ml[30,1240+14]..src/FixSolver.ml[30,1240+31])
+                          Ttyp_constr "M/521.t"
+                          [
+                            core_type (src/FixSolver.ml[30,1240+14]..src/FixSolver.ml[30,1240+27])
+                              Ttyp_constr "list/9!"
+                              [
+                                core_type (src/FixSolver.ml[30,1240+14]..src/FixSolver.ml[30,1240+22])
+                                  Ttyp_constr "variable/525"
+                                  []
+                              ]
+                          ]
+                      Tpat_alias "upper/528"
+                      pattern (src/FixSolver.ml[30,1240+6]..src/FixSolver.ml[30,1240+11])
+                        Tpat_any
+                    expression (src/FixSolver.ml[31,1274+4]..src/FixSolver.ml[31,1274+14])
+                      extra
+                        Texp_constraint
+                        core_type (src/FixSolver.ml[30,1240+14]..src/FixSolver.ml[30,1240+31])
+                          Ttyp_constr "M/521.t"
+                          [
+                            core_type (src/FixSolver.ml[30,1240+14]..src/FixSolver.ml[30,1240+27])
+                              Ttyp_constr "list/9!"
+                              [
+                                core_type (src/FixSolver.ml[30,1240+14]..src/FixSolver.ml[30,1240+22])
+                                  Ttyp_constr "variable/525"
+                                  []
+                              ]
+                          ]
+                      Texp_apply
+                      expression (src/FixSolver.ml[31,1274+4]..src/FixSolver.ml[31,1274+12])
+                        Texp_ident "M/521.create"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/FixSolver.ml[31,1274+12]..src/FixSolver.ml[31,1274+14])
+                            Texp_construct "()"
+                            []
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[33,1290+2]..src/FixSolver.ml[34,1311+43])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[33,1290+6]..src/FixSolver.ml[33,1290+16])
+                      Tpat_var "successors/529"
+                    expression (src/FixSolver.ml[33,1290+17]..src/FixSolver.ml[34,1311+43]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/FixSolver.ml[33,1290+17]..src/FixSolver.ml[33,1290+18])
+                            Tpat_var "x/531"
+                          expression (src/FixSolver.ml[34,1311+4]..src/FixSolver.ml[34,1311+43])
+                            Texp_try
+                            expression (src/FixSolver.ml[34,1311+8]..src/FixSolver.ml[34,1311+22])
+                              Texp_apply
+                              expression (src/FixSolver.ml[34,1311+8]..src/FixSolver.ml[34,1311+14])
+                                Texp_ident "M/521.find"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/FixSolver.ml[34,1311+15]..src/FixSolver.ml[34,1311+16])
+                                    Texp_ident "x/531"
+                                <arg>
+                                  Nolabel
+                                  expression (src/FixSolver.ml[34,1311+17]..src/FixSolver.ml[34,1311+22])
+                                    Texp_ident "upper/528"
+                              ]
+                            [
+                              <case>
+                                pattern (src/FixSolver.ml[34,1311+28]..src/FixSolver.ml[34,1311+37])
+                                  Tpat_construct "Not_found"
+                                  []
+                                  None
+                                expression (src/FixSolver.ml[34,1311+41]..src/FixSolver.ml[34,1311+43])
+                                  Texp_construct "[]"
+                                  []
+                            ]
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[36,1356+2]..src/FixSolver.ml[37,1382+37])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[36,1356+6]..src/FixSolver.ml[36,1356+19])
+                      Tpat_var "record_VarVar/532"
+                    expression (src/FixSolver.ml[36,1356+20]..src/FixSolver.ml[37,1382+37]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/FixSolver.ml[36,1356+20]..src/FixSolver.ml[36,1356+21])
+                            Tpat_var "x/534"
+                          expression (src/FixSolver.ml[36,1356+22]..src/FixSolver.ml[37,1382+37]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/FixSolver.ml[36,1356+22]..src/FixSolver.ml[36,1356+23])
+                                  Tpat_var "y/535"
+                                expression (src/FixSolver.ml[37,1382+4]..src/FixSolver.ml[37,1382+37])
+                                  Texp_apply
+                                  expression (src/FixSolver.ml[37,1382+4]..src/FixSolver.ml[37,1382+9])
+                                    Texp_ident "M/521.add"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/FixSolver.ml[37,1382+10]..src/FixSolver.ml[37,1382+11])
+                                        Texp_ident "x/534"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/FixSolver.ml[37,1382+12]..src/FixSolver.ml[37,1382+31])
+                                        Texp_construct "::"
+                                        [
+                                          expression (src/FixSolver.ml[37,1382+13]..src/FixSolver.ml[37,1382+14])
+                                            Texp_ident "y/535"
+                                          expression (src/FixSolver.ml[37,1382+18]..src/FixSolver.ml[37,1382+30])
+                                            Texp_apply
+                                            expression (src/FixSolver.ml[37,1382+18]..src/FixSolver.ml[37,1382+28])
+                                              Texp_ident "successors/529"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/FixSolver.ml[37,1382+29]..src/FixSolver.ml[37,1382+30])
+                                                  Texp_ident "x/534"
+                                            ]
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/FixSolver.ml[37,1382+32]..src/FixSolver.ml[37,1382+37])
+                                        Texp_ident "upper/528"
+                                  ]
+                            ]
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[41,1486+2]..src/FixSolver.ml[42,1515+14])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[41,1486+6]..src/FixSolver.ml[41,1486+11])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/FixSolver.ml[41,1486+14]..src/FixSolver.ml[41,1486+26])
+                          Ttyp_constr "M/521.t"
+                          [
+                            core_type (src/FixSolver.ml[41,1486+14]..src/FixSolver.ml[41,1486+22])
+                              Ttyp_constr "property/526"
+                              []
+                          ]
+                      Tpat_alias "lower/536"
+                      pattern (src/FixSolver.ml[41,1486+6]..src/FixSolver.ml[41,1486+11])
+                        Tpat_any
+                    expression (src/FixSolver.ml[42,1515+4]..src/FixSolver.ml[42,1515+14])
+                      extra
+                        Texp_constraint
+                        core_type (src/FixSolver.ml[41,1486+14]..src/FixSolver.ml[41,1486+26])
+                          Ttyp_constr "M/521.t"
+                          [
+                            core_type (src/FixSolver.ml[41,1486+14]..src/FixSolver.ml[41,1486+22])
+                              Ttyp_constr "property/526"
+                              []
+                          ]
+                      Texp_apply
+                      expression (src/FixSolver.ml[42,1515+4]..src/FixSolver.ml[42,1515+12])
+                        Texp_ident "M/521.create"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/FixSolver.ml[42,1515+12]..src/FixSolver.ml[42,1515+14])
+                            Texp_construct "()"
+                            []
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[44,1531+2]..src/FixSolver.ml[49,1651+32])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/FixSolver.ml[44,1531+6]..src/FixSolver.ml[44,1531+19])
+                      Tpat_var "record_ConVar/537"
+                    expression (src/FixSolver.ml[44,1531+20]..src/FixSolver.ml[49,1651+32]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/FixSolver.ml[44,1531+20]..src/FixSolver.ml[44,1531+21])
+                            Tpat_var "p/539"
+                          expression (src/FixSolver.ml[44,1531+22]..src/FixSolver.ml[49,1651+32]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/FixSolver.ml[44,1531+22]..src/FixSolver.ml[44,1531+23])
+                                  Tpat_var "y/540"
+                                expression (src/FixSolver.ml[45,1557+4]..src/FixSolver.ml[49,1651+32])
+                                  Texp_match
+                                  expression (src/FixSolver.ml[45,1557+10]..src/FixSolver.ml[45,1557+24])
+                                    Texp_apply
+                                    expression (src/FixSolver.ml[45,1557+10]..src/FixSolver.ml[45,1557+16])
+                                      Texp_ident "M/521.find"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/FixSolver.ml[45,1557+17]..src/FixSolver.ml[45,1557+18])
+                                          Texp_ident "y/540"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/FixSolver.ml[45,1557+19]..src/FixSolver.ml[45,1557+24])
+                                          Texp_ident "lower/536"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (src/FixSolver.ml[46,1587+6]..src/FixSolver.ml[46,1587+25])
+                                        Tpat_exception
+                                        pattern (src/FixSolver.ml[46,1587+16]..src/FixSolver.ml[46,1587+25])
+                                          Tpat_construct "Not_found"
+                                          []
+                                          None
+                                      expression (src/FixSolver.ml[47,1616+8]..src/FixSolver.ml[47,1616+23])
+                                        Texp_apply
+                                        expression (src/FixSolver.ml[47,1616+8]..src/FixSolver.ml[47,1616+13])
+                                          Texp_ident "M/521.add"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/FixSolver.ml[47,1616+14]..src/FixSolver.ml[47,1616+15])
+                                              Texp_ident "y/540"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/FixSolver.ml[47,1616+16]..src/FixSolver.ml[47,1616+17])
+                                              Texp_ident "p/539"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/FixSolver.ml[47,1616+18]..src/FixSolver.ml[47,1616+23])
+                                              Texp_ident "lower/536"
+                                        ]
+                                    <case>
+                                      pattern (src/FixSolver.ml[48,1640+6]..src/FixSolver.ml[48,1640+7])
+                                        Tpat_value
+                                        pattern (src/FixSolver.ml[48,1640+6]..src/FixSolver.ml[48,1640+7])
+                                          Tpat_var "q/541"
+                                      expression (src/FixSolver.ml[49,1651+8]..src/FixSolver.ml[49,1651+32])
+                                        Texp_apply
+                                        expression (src/FixSolver.ml[49,1651+8]..src/FixSolver.ml[49,1651+13])
+                                          Texp_ident "M/521.add"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/FixSolver.ml[49,1651+14]..src/FixSolver.ml[49,1651+15])
+                                              Texp_ident "y/540"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/FixSolver.ml[49,1651+16]..src/FixSolver.ml[49,1651+26])
+                                              Texp_apply
+                                              expression (src/FixSolver.ml[49,1651+17]..src/FixSolver.ml[49,1651+21])
+                                                Texp_ident "join/527"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/FixSolver.ml[49,1651+22]..src/FixSolver.ml[49,1651+23])
+                                                    Texp_ident "p/539"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/FixSolver.ml[49,1651+24]..src/FixSolver.ml[49,1651+25])
+                                                    Texp_ident "q/541"
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/FixSolver.ml[49,1651+27]..src/FixSolver.ml[49,1651+32])
+                                              Texp_ident "lower/536"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+              structure_item (src/FixSolver.ml[53,1716+2]..src/FixSolver.ml[66,2062+5])
+                Tstr_module
+                Solve/724
+                  module_expr (src/FixSolver.ml[53,1716+15]..src/FixSolver.ml[66,2062+5])
+                    Tmod_functor ()
+                    module_expr (src/FixSolver.ml[53,1716+20]..src/FixSolver.ml[66,2062+5])
+                      Tmod_structure
+                      [
+                        structure_item (src/FixSolver.ml[55,1744+4]..src/FixSolver.ml[62,2014+7])
+                          Tstr_module
+                          G/619
+                            module_expr (src/FixSolver.ml[55,1744+15]..src/FixSolver.ml[62,2014+7])
+                              Tmod_structure
+                              [
+                                structure_item (src/FixSolver.ml[56,1766+6]..src/FixSolver.ml[56,1766+37])
+                                  Tstr_type Nonrec
+                                  [
+                                    type_declaration variable/542 (src/FixSolver.ml[56,1766+6]..src/FixSolver.ml[56,1766+37])
+                                      ptype_params =
+                                        []
+                                      ptype_cstrs =
+                                        []
+                                      ptype_kind =
+                                        Ttype_abstract
+                                      ptype_private = Public
+                                      ptype_manifest =
+                                        Some
+                                          core_type (src/FixSolver.ml[56,1766+29]..src/FixSolver.ml[56,1766+37])
+                                            Ttyp_constr "variable/525"
+                                            []
+                                  ]
+                                structure_item (src/FixSolver.ml[57,1804+6]..src/FixSolver.ml[57,1804+37])
+                                  Tstr_type Nonrec
+                                  [
+                                    type_declaration property/543 (src/FixSolver.ml[57,1804+6]..src/FixSolver.ml[57,1804+37])
+                                      ptype_params =
+                                        []
+                                      ptype_cstrs =
+                                        []
+                                      ptype_kind =
+                                        Ttype_abstract
+                                      ptype_private = Public
+                                      ptype_manifest =
+                                        Some
+                                          core_type (src/FixSolver.ml[57,1804+29]..src/FixSolver.ml[57,1804+37])
+                                            Ttyp_constr "property/526"
+                                            []
+                                  ]
+                                structure_item (src/FixSolver.ml[58,1842+6]..src/FixSolver.ml[59,1878+31])
+                                  Tstr_value Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/FixSolver.ml[58,1842+10]..src/FixSolver.ml[58,1842+22])
+                                        Tpat_var "foreach_root/544"
+                                      expression (src/FixSolver.ml[58,1842+23]..src/FixSolver.ml[59,1878+31]) ghost
+                                        Texp_function
+                                        Nolabel
+                                        [
+                                          <case>
+                                            pattern (src/FixSolver.ml[58,1842+23]..src/FixSolver.ml[58,1842+33])
+                                              Tpat_var "contribute/546"
+                                            expression (src/FixSolver.ml[59,1878+8]..src/FixSolver.ml[59,1878+31])
+                                              Texp_apply
+                                              expression (src/FixSolver.ml[59,1878+8]..src/FixSolver.ml[59,1878+14])
+                                                Texp_ident "M/521.iter"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/FixSolver.ml[59,1878+15]..src/FixSolver.ml[59,1878+25])
+                                                    Texp_ident "contribute/546"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/FixSolver.ml[59,1878+26]..src/FixSolver.ml[59,1878+31])
+                                                    Texp_ident "lower/536"
+                                              ]
+                                        ]
+                                  ]
+                                structure_item (src/FixSolver.ml[60,1910+6]..src/FixSolver.ml[61,1955+58])
+                                  Tstr_value Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/FixSolver.ml[60,1910+10]..src/FixSolver.ml[60,1910+27])
+                                        Tpat_var "foreach_successor/547"
+                                      expression (src/FixSolver.ml[60,1910+28]..src/FixSolver.ml[61,1955+58]) ghost
+                                        Texp_function
+                                        Nolabel
+                                        [
+                                          <case>
+                                            pattern (src/FixSolver.ml[60,1910+28]..src/FixSolver.ml[60,1910+29])
+                                              Tpat_var "x/549"
+                                            expression (src/FixSolver.ml[60,1910+30]..src/FixSolver.ml[61,1955+58]) ghost
+                                              Texp_function
+                                              Nolabel
+                                              [
+                                                <case>
+                                                  pattern (src/FixSolver.ml[60,1910+30]..src/FixSolver.ml[60,1910+31])
+                                                    Tpat_var "p/550"
+                                                  expression (src/FixSolver.ml[60,1910+32]..src/FixSolver.ml[61,1955+58]) ghost
+                                                    Texp_function
+                                                    Nolabel
+                                                    [
+                                                      <case>
+                                                        pattern (src/FixSolver.ml[60,1910+32]..src/FixSolver.ml[60,1910+42])
+                                                          Tpat_var "contribute/551"
+                                                        expression (src/FixSolver.ml[61,1955+8]..src/FixSolver.ml[61,1955+58])
+                                                          Texp_apply
+                                                          expression (src/FixSolver.ml[61,1955+8]..src/FixSolver.ml[61,1955+17])
+                                                            Texp_ident "Stdlib!.List.iter"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/FixSolver.ml[61,1955+18]..src/FixSolver.ml[61,1955+43])
+                                                                Texp_function
+                                                                Nolabel
+                                                                [
+                                                                  <case>
+                                                                    pattern (src/FixSolver.ml[61,1955+23]..src/FixSolver.ml[61,1955+24])
+                                                                      Tpat_var "y/618"
+                                                                    expression (src/FixSolver.ml[61,1955+28]..src/FixSolver.ml[61,1955+42])
+                                                                      Texp_apply
+                                                                      expression (src/FixSolver.ml[61,1955+28]..src/FixSolver.ml[61,1955+38])
+                                                                        Texp_ident "contribute/551"
+                                                                      [
+                                                                        <arg>
+                                                                          Nolabel
+                                                                          expression (src/FixSolver.ml[61,1955+39]..src/FixSolver.ml[61,1955+40])
+                                                                            Texp_ident "y/618"
+                                                                        <arg>
+                                                                          Nolabel
+                                                                          expression (src/FixSolver.ml[61,1955+41]..src/FixSolver.ml[61,1955+42])
+                                                                            Texp_ident "p/550"
+                                                                      ]
+                                                                ]
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/FixSolver.ml[61,1955+44]..src/FixSolver.ml[61,1955+58])
+                                                                Texp_apply
+                                                                expression (src/FixSolver.ml[61,1955+45]..src/FixSolver.ml[61,1955+55])
+                                                                  Texp_ident "successors/529"
+                                                                [
+                                                                  <arg>
+                                                                    Nolabel
+                                                                    expression (src/FixSolver.ml[61,1955+56]..src/FixSolver.ml[61,1955+57])
+                                                                      Texp_ident "x/549"
+                                                                ]
+                                                          ]
+                                                    ]
+                                              ]
+                                        ]
+                                  ]
+                              ]
+                        structure_item (src/FixSolver.ml[64,2023+4]..src/FixSolver.ml[64,2023+37])
+                          Tstr_include                          module_expr (src/FixSolver.ml[64,2023+12]..src/FixSolver.ml[64,2023+37])
+                            Tmod_apply
+                            module_expr (src/FixSolver.ml[64,2023+12]..src/FixSolver.ml[64,2023+34])
+                              Tmod_apply
+                              module_expr (src/FixSolver.ml[64,2023+12]..src/FixSolver.ml[64,2023+31])
+                                Tmod_apply
+                                module_expr (src/FixSolver.ml[64,2023+12]..src/FixSolver.ml[64,2023+28])
+                                  module_expr (src/FixSolver.ml[64,2023+12]..src/FixSolver.ml[64,2023+28])
+                                    Tmod_ident "Dune__exe!.Fix.DataFlow.Run"
+                                module_expr (src/FixSolver.ml[64,2023+29]..src/FixSolver.ml[64,2023+30])
+                                  Tmod_ident "M/521"
+                              module_expr (src/FixSolver.ml[64,2023+32]..src/FixSolver.ml[64,2023+33])
+                                Tmod_ident "P/524"
+                            module_expr (src/FixSolver.ml[64,2023+35]..src/FixSolver.ml[64,2023+36])
+                              Tmod_ident "G/619"
+                      ]
+            ]
+]
+
+{<Dune__exe__FixSolver>
+ "Make"[module] ->
+   Abs<Dune__exe__FixSolver.27>
+      (M/521, P/524,
+       {
+        "Solve"[module] ->
+          Abs<Dune__exe__FixSolver.26>
+             (()/1,
+              {
+               "property"[type] ->
+                 CU Dune__exe . "Fix"[module] . "DataFlow"[module] .
+                 "Run"[module](M/521<Dune__exe__FixSolver.0>)(
+                 P/524<Dune__exe__FixSolver.1>)(
+                 {<Dune__exe__FixSolver.25>
+                  "foreach_root"[value] -> <Dune__exe__FixSolver.18>;
+                  "foreach_successor"[value] -> <Dune__exe__FixSolver.20>;
+                  "property"[type] -> <Dune__exe__FixSolver.17>;
+                  "variable"[type] -> <Dune__exe__FixSolver.16>;
+                  })
+                 . "property"[type];
+               "solution"[value] ->
+                 CU Dune__exe . "Fix"[module] . "DataFlow"[module] .
+                 "Run"[module](M/521<Dune__exe__FixSolver.0>)(
+                 P/524<Dune__exe__FixSolver.1>)(
+                 {<Dune__exe__FixSolver.25>
+                  "foreach_root"[value] -> <Dune__exe__FixSolver.18>;
+                  "foreach_successor"[value] -> <Dune__exe__FixSolver.20>;
+                  "property"[type] -> <Dune__exe__FixSolver.17>;
+                  "variable"[type] -> <Dune__exe__FixSolver.16>;
+                  })
+                 . "solution"[value];
+               "variable"[type] ->
+                 CU Dune__exe . "Fix"[module] . "DataFlow"[module] .
+                 "Run"[module](M/521<Dune__exe__FixSolver.0>)(
+                 P/524<Dune__exe__FixSolver.1>)(
+                 {<Dune__exe__FixSolver.25>
+                  "foreach_root"[value] -> <Dune__exe__FixSolver.18>;
+                  "foreach_successor"[value] -> <Dune__exe__FixSolver.20>;
+                  "property"[type] -> <Dune__exe__FixSolver.17>;
+                  "variable"[type] -> <Dune__exe__FixSolver.16>;
+                  })
+                 . "variable"[type];
+               });
+        "property"[type] -> <Dune__exe__FixSolver.3>;
+        "record_ConVar"[value] -> <Dune__exe__FixSolver.12>;
+        "record_VarVar"[value] -> <Dune__exe__FixSolver.8>;
+        "variable"[type] -> <Dune__exe__FixSolver.2>;
+        });
+ }
+
+(let
+  (Make/725 =
+     (function M/1369 P/1368 is_a_functor
+       (let
+         (M/521 =a M/1369
+          P/524 =a P/1368
+          join/527 = (field_imm 0 P/524)
+          upper/528 = (apply (field_imm 0 M/521) 0)
+          successors/529 =
+            (function x/531
+              (try (apply (field_imm 2 M/521) x/531 upper/528) with exn/1360
+                (catch
+                  (if (== exn/1360 (field_imm 7 (global Stdlib!))) 0
+                    (exit 1))
+                 with (1) (reraise exn/1360))))
+          record_VarVar/532 =
+            (function x/534 y/535 : int
+              (apply (field_imm 1 M/521) x/534
+                (makeblock 0 y/535 (apply successors/529 x/534)) upper/528))
+          lower/536 = (apply (field_imm 0 M/521) 0)
+          record_ConVar/537 =
+            (function p/539 y/540 : int
+              (catch
+                (try (exit 2 (apply (field_imm 2 M/521) y/540 lower/536))
+                 with exn/1361
+                  (catch
+                    (if (== exn/1361 (field_imm 7 (global Stdlib!)))
+                      (apply (field_imm 1 M/521) y/540 p/539 lower/536)
+                      (exit 3))
+                   with (3) (reraise exn/1361)))
+               with (2 q/541)
+                (apply (field_imm 1 M/521) y/540 (apply join/527 p/539 q/541)
+                  lower/536)))
+          Solve/724 =
+            (function */1365 is_a_functor
+              (let
+                (*/1362 =a */1365
+                 G/619 =
+                   (let
+                     (foreach_root/544 =
+                        (function contribute/546 : int
+                          (apply (field_imm 4 M/521) contribute/546
+                            lower/536))
+                      foreach_successor/547 =
+                        (function x/549 p/550 contribute/551 : int
+                          (apply (field_imm 17 (global Stdlib__List!))
+                            (function y/618 : int
+                              (apply contribute/551 y/618 p/550))
+                            (apply successors/529 x/549))))
+                     (makeblock 0 foreach_root/544 foreach_successor/547))
+                 include/1363 =
+                   (apply
+                     (apply
+                       (apply
+                         (let
+                           (let/1364 =
+                              (field_imm 0 (global Vendored_fix__DataFlow!)))
+                           (field_imm 0 (global Vendored_fix__DataFlow!)))
+                         (makeblock 0 (field_mut 0 M/521) (field_mut 1 M/521)
+                           (field_mut 2 M/521)))
+                       P/524)
+                     G/619)
+                 solution/723 =a (field_mut 0 include/1363))
+                (makeblock 0 G/619 solution/723))))
+         (makeblock 0 join/527 upper/528 successors/529 record_VarVar/532
+           lower/536 record_ConVar/537 Solve/724))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__FixSolver!)
+      (function funarg/1370 funarg/1371 is_a_functor stub
+        (let (let/1372 = (apply Make/725 funarg/1370 funarg/1371))
+          (makeblock 0 (field_mut 5 let/1372) (field_mut 3 let/1372)
+            (let (let/1374 =a (field_mut 6 let/1372))
+              (function funarg/1373 is_a_functor stub
+                (let (let/1375 = (apply let/1374 funarg/1373))
+                  (makeblock 0 (field_mut 1 let/1375)))))))))
+    0))
+(let
+  (Make/725 =
+     (function M/1369 P/1368 is_a_functor
+       (let
+         (join/527 = (field_imm 0 P/1368)
+          upper/528 = (apply (field_imm 0 M/1369) 0)
+          successors/529 =
+            (function x/531
+              (try (apply (field_imm 2 M/1369) x/531 upper/528) with exn/1360
+                (if (== exn/1360 (field_imm 7 (global Stdlib!))) 0
+                  (reraise exn/1360))))
+          record_VarVar/532 =
+            (function x/534 y/535 : int
+              (apply (field_imm 1 M/1369) x/534
+                (makeblock 0 y/535 (apply successors/529 x/534)) upper/528))
+          lower/536 = (apply (field_imm 0 M/1369) 0)
+          record_ConVar/537 =
+            (function p/539 y/540 : int
+              (catch
+                (try (exit 2 (apply (field_imm 2 M/1369) y/540 lower/536))
+                 with exn/1361
+                  (if (== exn/1361 (field_imm 7 (global Stdlib!)))
+                    (apply (field_imm 1 M/1369) y/540 p/539 lower/536)
+                    (reraise exn/1361)))
+               with (2 q/541)
+                (apply (field_imm 1 M/1369) y/540
+                  (apply join/527 p/539 q/541) lower/536)))
+          Solve/724 =
+            (function */1365 is_a_functor
+              (let
+                (G/619 =
+                   (let
+                     (foreach_root/544 =
+                        (function contribute/546 : int
+                          (apply (field_imm 4 M/1369) contribute/546
+                            lower/536))
+                      foreach_successor/547 =
+                        (function x/549 p/550 contribute/551 : int
+                          (apply (field_imm 17 (global Stdlib__List!))
+                            (function y/618 : int
+                              (apply contribute/551 y/618 p/550))
+                            (apply successors/529 x/549))))
+                     (makeblock 0 foreach_root/544 foreach_successor/547))
+                 include/1363 =
+                   (apply
+                     (apply
+                       (apply
+                         (let
+                           (let/1364 =
+                              (field_imm 0 (global Vendored_fix__DataFlow!)))
+                           (field_imm 0 (global Vendored_fix__DataFlow!)))
+                         (makeblock 0 (field_mut 0 M/1369)
+                           (field_mut 1 M/1369) (field_mut 2 M/1369)))
+                       P/1368)
+                     G/619))
+                (makeblock 0 G/619 (field_mut 0 include/1363)))))
+         (makeblock 0 join/527 upper/528 successors/529 record_VarVar/532
+           lower/536 record_ConVar/537 Solve/724))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__FixSolver!)
+      (function funarg/1370 funarg/1371 is_a_functor stub
+        (let (let/1372 = (apply Make/725 funarg/1370 funarg/1371))
+          (makeblock 0 (field_mut 5 let/1372) (field_mut 3 let/1372)
+            (let (let/1374 =a (field_mut 6 let/1372))
+              (function funarg/1373 is_a_functor stub
+                (let (let/1375 = (apply let/1374 funarg/1373))
+                  (makeblock 0 (field_mut 1 let/1375)))))))))
+    0))

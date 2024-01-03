@@ -1,0 +1,777 @@
+[
+  structure_item (test/dynamic/semantics/calc/calc.ml[1,42+0]..[10,319+91])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[1,42+4]..[1,42+11])
+          Ppat_var "process" (test/dynamic/semantics/calc/calc.ml[1,42+4]..[1,42+11])
+        expression (test/dynamic/semantics/calc/calc.ml[1,42+12]..[10,319+91]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/semantics/calc/calc.ml[1,42+12]..[1,42+27])
+            Ppat_constraint
+            pattern (test/dynamic/semantics/calc/calc.ml[1,42+13]..[1,42+17])
+              Ppat_var "line" (test/dynamic/semantics/calc/calc.ml[1,42+13]..[1,42+17])
+            core_type (test/dynamic/semantics/calc/calc.ml[1,42+20]..[1,42+26])
+              Ptyp_constr "string" (test/dynamic/semantics/calc/calc.ml[1,42+20]..[1,42+26])
+              []
+          expression (test/dynamic/semantics/calc/calc.ml[2,72+2]..[10,319+91])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (test/dynamic/semantics/calc/calc.ml[2,72+6]..[2,72+13])
+                  Ppat_var "linebuf" (test/dynamic/semantics/calc/calc.ml[2,72+6]..[2,72+13])
+                expression (test/dynamic/semantics/calc/calc.ml[2,72+16]..[2,72+39])
+                  Pexp_apply
+                  expression (test/dynamic/semantics/calc/calc.ml[2,72+16]..[2,72+34])
+                    Pexp_ident "Lexing.from_string" (test/dynamic/semantics/calc/calc.ml[2,72+16]..[2,72+34])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/semantics/calc/calc.ml[2,72+35]..[2,72+39])
+                        Pexp_ident "line" (test/dynamic/semantics/calc/calc.ml[2,72+35]..[2,72+39])
+                  ]
+            ]
+            expression (test/dynamic/semantics/calc/calc.ml[3,115+2]..[10,319+91])
+              Pexp_try
+              expression (test/dynamic/semantics/calc/calc.ml[5,169+4]..[5,169+60])
+                Pexp_apply
+                expression (test/dynamic/semantics/calc/calc.ml[5,169+4]..[5,169+17])
+                  Pexp_ident "Printf.printf" (test/dynamic/semantics/calc/calc.ml[5,169+4]..[5,169+17])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..[5,169+26])
+                      Pexp_constant PConst_string("%d\n%!",(test/dynamic/semantics/calc/calc.ml[5,169+19]..[5,169+25]),None)
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/semantics/calc/calc.ml[5,169+27]..[5,169+60])
+                      Pexp_apply
+                      expression (test/dynamic/semantics/calc/calc.ml[5,169+28]..[5,169+39])
+                        Pexp_ident "Parser.main" (test/dynamic/semantics/calc/calc.ml[5,169+28]..[5,169+39])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/semantics/calc/calc.ml[5,169+40]..[5,169+51])
+                            Pexp_ident "Lexer.token" (test/dynamic/semantics/calc/calc.ml[5,169+40]..[5,169+51])
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/semantics/calc/calc.ml[5,169+52]..[5,169+59])
+                            Pexp_ident "linebuf" (test/dynamic/semantics/calc/calc.ml[5,169+52]..[5,169+59])
+                      ]
+                ]
+              [
+                <case>
+                  pattern (test/dynamic/semantics/calc/calc.ml[7,237+4]..[7,237+19])
+                    Ppat_construct "Lexer.Error" (test/dynamic/semantics/calc/calc.ml[7,237+4]..[7,237+15])
+                    Some
+                      []
+                      pattern (test/dynamic/semantics/calc/calc.ml[7,237+16]..[7,237+19])
+                        Ppat_var "msg" (test/dynamic/semantics/calc/calc.ml[7,237+16]..[7,237+19])
+                  expression (test/dynamic/semantics/calc/calc.ml[8,260+6]..[8,260+38])
+                    Pexp_apply
+                    expression (test/dynamic/semantics/calc/calc.ml[8,260+6]..[8,260+20])
+                      Pexp_ident "Printf.fprintf" (test/dynamic/semantics/calc/calc.ml[8,260+6]..[8,260+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[8,260+21]..[8,260+27])
+                          Pexp_ident "stderr" (test/dynamic/semantics/calc/calc.ml[8,260+21]..[8,260+27])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..[8,260+34])
+                          Pexp_constant PConst_string("%s%!",(test/dynamic/semantics/calc/calc.ml[8,260+29]..[8,260+33]),None)
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[8,260+35]..[8,260+38])
+                          Pexp_ident "msg" (test/dynamic/semantics/calc/calc.ml[8,260+35]..[8,260+38])
+                    ]
+                <case>
+                  pattern (test/dynamic/semantics/calc/calc.ml[9,299+4]..[9,299+16])
+                    Ppat_construct "Parser.Error" (test/dynamic/semantics/calc/calc.ml[9,299+4]..[9,299+16])
+                    None
+                  expression (test/dynamic/semantics/calc/calc.ml[10,319+6]..[10,319+91])
+                    Pexp_apply
+                    expression (test/dynamic/semantics/calc/calc.ml[10,319+6]..[10,319+20])
+                      Pexp_ident "Printf.fprintf" (test/dynamic/semantics/calc/calc.ml[10,319+6]..[10,319+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[10,319+21]..[10,319+27])
+                          Pexp_ident "stderr" (test/dynamic/semantics/calc/calc.ml[10,319+21]..[10,319+27])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..[10,319+61])
+                          Pexp_constant PConst_string("At offset %d: syntax error.\n%!",(test/dynamic/semantics/calc/calc.ml[10,319+29]..[10,319+60]),None)
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[10,319+62]..[10,319+91])
+                          Pexp_apply
+                          expression (test/dynamic/semantics/calc/calc.ml[10,319+63]..[10,319+82])
+                            Pexp_ident "Lexing.lexeme_start" (test/dynamic/semantics/calc/calc.ml[10,319+63]..[10,319+82])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (test/dynamic/semantics/calc/calc.ml[10,319+83]..[10,319+90])
+                                Pexp_ident "linebuf" (test/dynamic/semantics/calc/calc.ml[10,319+83]..[10,319+90])
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (test/dynamic/semantics/calc/calc.ml[12,412+0]..[17,523+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[12,412+4]..[12,412+11])
+          Ppat_var "process" (test/dynamic/semantics/calc/calc.ml[12,412+4]..[12,412+11])
+        expression (test/dynamic/semantics/calc/calc.ml[12,412+12]..[17,523+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/semantics/calc/calc.ml[12,412+12]..[12,412+43])
+            Ppat_constraint
+            pattern (test/dynamic/semantics/calc/calc.ml[12,412+13]..[12,412+26])
+              Ppat_var "optional_line" (test/dynamic/semantics/calc/calc.ml[12,412+13]..[12,412+26])
+            core_type (test/dynamic/semantics/calc/calc.ml[12,412+29]..[12,412+42])
+              Ptyp_constr "option" (test/dynamic/semantics/calc/calc.ml[12,412+36]..[12,412+42])
+              [
+                core_type (test/dynamic/semantics/calc/calc.ml[12,412+29]..[12,412+35])
+                  Ptyp_constr "string" (test/dynamic/semantics/calc/calc.ml[12,412+29]..[12,412+35])
+                  []
+              ]
+          expression (test/dynamic/semantics/calc/calc.ml[13,458+2]..[17,523+18])
+            Pexp_match
+            expression (test/dynamic/semantics/calc/calc.ml[13,458+8]..[13,458+21])
+              Pexp_ident "optional_line" (test/dynamic/semantics/calc/calc.ml[13,458+8]..[13,458+21])
+            [
+              <case>
+                pattern (test/dynamic/semantics/calc/calc.ml[14,485+4]..[14,485+8])
+                  Ppat_construct "None" (test/dynamic/semantics/calc/calc.ml[14,485+4]..[14,485+8])
+                  None
+                expression (test/dynamic/semantics/calc/calc.ml[15,497+6]..[15,497+8])
+                  Pexp_construct "()" (test/dynamic/semantics/calc/calc.ml[15,497+6]..[15,497+8])
+                  None
+              <case>
+                pattern (test/dynamic/semantics/calc/calc.ml[16,506+4]..[16,506+13])
+                  Ppat_construct "Some" (test/dynamic/semantics/calc/calc.ml[16,506+4]..[16,506+8])
+                  Some
+                    []
+                    pattern (test/dynamic/semantics/calc/calc.ml[16,506+9]..[16,506+13])
+                      Ppat_var "line" (test/dynamic/semantics/calc/calc.ml[16,506+9]..[16,506+13])
+                expression (test/dynamic/semantics/calc/calc.ml[17,523+6]..[17,523+18])
+                  Pexp_apply
+                  expression (test/dynamic/semantics/calc/calc.ml[17,523+6]..[17,523+13])
+                    Pexp_ident "process" (test/dynamic/semantics/calc/calc.ml[17,523+6]..[17,523+13])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/semantics/calc/calc.ml[17,523+14]..[17,523+18])
+                        Pexp_ident "line" (test/dynamic/semantics/calc/calc.ml[17,523+14]..[17,523+18])
+                  ]
+            ]
+    ]
+  structure_item (test/dynamic/semantics/calc/calc.ml[19,543+0]..[24,700+18])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[19,543+8]..[19,543+14])
+          Ppat_var "repeat" (test/dynamic/semantics/calc/calc.ml[19,543+8]..[19,543+14])
+        expression (test/dynamic/semantics/calc/calc.ml[19,543+15]..[24,700+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/semantics/calc/calc.ml[19,543+15]..[19,543+22])
+            Ppat_var "channel" (test/dynamic/semantics/calc/calc.ml[19,543+15]..[19,543+22])
+          expression (test/dynamic/semantics/calc/calc.ml[21,602+2]..[24,700+18])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (test/dynamic/semantics/calc/calc.ml[21,602+6]..[21,602+29])
+                  Ppat_tuple
+                  [
+                    pattern (test/dynamic/semantics/calc/calc.ml[21,602+6]..[21,602+19])
+                      Ppat_var "optional_line" (test/dynamic/semantics/calc/calc.ml[21,602+6]..[21,602+19])
+                    pattern (test/dynamic/semantics/calc/calc.ml[21,602+21]..[21,602+29])
+                      Ppat_var "continue" (test/dynamic/semantics/calc/calc.ml[21,602+21]..[21,602+29])
+                  ]
+                expression (test/dynamic/semantics/calc/calc.ml[21,602+32]..[21,602+50])
+                  Pexp_apply
+                  expression (test/dynamic/semantics/calc/calc.ml[21,602+32]..[21,602+42])
+                    Pexp_ident "Lexer.line" (test/dynamic/semantics/calc/calc.ml[21,602+32]..[21,602+42])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/semantics/calc/calc.ml[21,602+43]..[21,602+50])
+                        Pexp_ident "channel" (test/dynamic/semantics/calc/calc.ml[21,602+43]..[21,602+50])
+                  ]
+            ]
+            expression (test/dynamic/semantics/calc/calc.ml[22,656+2]..[24,700+18])
+              Pexp_sequence
+              expression (test/dynamic/semantics/calc/calc.ml[22,656+2]..[22,656+23])
+                Pexp_apply
+                expression (test/dynamic/semantics/calc/calc.ml[22,656+2]..[22,656+9])
+                  Pexp_ident "process" (test/dynamic/semantics/calc/calc.ml[22,656+2]..[22,656+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/semantics/calc/calc.ml[22,656+10]..[22,656+23])
+                      Pexp_ident "optional_line" (test/dynamic/semantics/calc/calc.ml[22,656+10]..[22,656+23])
+                ]
+              expression (test/dynamic/semantics/calc/calc.ml[23,681+2]..[24,700+18])
+                Pexp_ifthenelse
+                expression (test/dynamic/semantics/calc/calc.ml[23,681+5]..[23,681+13])
+                  Pexp_ident "continue" (test/dynamic/semantics/calc/calc.ml[23,681+5]..[23,681+13])
+                expression (test/dynamic/semantics/calc/calc.ml[24,700+4]..[24,700+18])
+                  Pexp_apply
+                  expression (test/dynamic/semantics/calc/calc.ml[24,700+4]..[24,700+10])
+                    Pexp_ident "repeat" (test/dynamic/semantics/calc/calc.ml[24,700+4]..[24,700+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/semantics/calc/calc.ml[24,700+11]..[24,700+18])
+                        Pexp_ident "channel" (test/dynamic/semantics/calc/calc.ml[24,700+11]..[24,700+18])
+                  ]
+                None
+    ]
+  structure_item (test/dynamic/semantics/calc/calc.ml[26,722+0]..[27,731+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[26,722+4]..[26,722+6])
+          Ppat_construct "()" (test/dynamic/semantics/calc/calc.ml[26,722+4]..[26,722+6])
+          None
+        expression (test/dynamic/semantics/calc/calc.ml[27,731+2]..[27,731+36])
+          Pexp_apply
+          expression (test/dynamic/semantics/calc/calc.ml[27,731+2]..[27,731+8])
+            Pexp_ident "repeat" (test/dynamic/semantics/calc/calc.ml[27,731+2]..[27,731+8])
+          [
+            <arg>
+            Nolabel
+              expression (test/dynamic/semantics/calc/calc.ml[27,731+9]..[27,731+36])
+                Pexp_apply
+                expression (test/dynamic/semantics/calc/calc.ml[27,731+10]..[27,731+29])
+                  Pexp_ident "Lexing.from_channel" (test/dynamic/semantics/calc/calc.ml[27,731+10]..[27,731+29])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/semantics/calc/calc.ml[27,731+30]..[27,731+35])
+                      Pexp_ident "stdin" (test/dynamic/semantics/calc/calc.ml[27,731+30]..[27,731+35])
+                ]
+          ]
+    ]
+]
+
+let process (line : string) =
+  let linebuf = Lexing.from_string line in
+  try Printf.printf "%d\n%!" (Parser.main Lexer.token linebuf)
+  with | Lexer.Error msg -> Printf.fprintf stderr "%s%!" msg
+  | Parser.Error ->
+      Printf.fprintf stderr "At offset %d: syntax error.\n%!"
+        (Lexing.lexeme_start linebuf)
+let process (optional_line : string option) =
+  match optional_line with | None -> () | Some line -> process line
+let rec repeat channel =
+  let (optional_line, continue) = Lexer.line channel in
+  process optional_line; if continue then repeat channel
+let () = repeat (Lexing.from_channel stdin)
+[
+  structure_item (test/dynamic/semantics/calc/calc.ml[1,42+0]..test/dynamic/semantics/calc/calc.ml[10,319+91])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[1,42+4]..test/dynamic/semantics/calc/calc.ml[1,42+11])
+          Tpat_var "process/272"
+        expression (test/dynamic/semantics/calc/calc.ml[1,42+12]..test/dynamic/semantics/calc/calc.ml[10,319+91]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/semantics/calc/calc.ml[1,42+13]..test/dynamic/semantics/calc/calc.ml[1,42+17])
+                extra
+                  Tpat_extra_constraint
+                  core_type (test/dynamic/semantics/calc/calc.ml[1,42+20]..test/dynamic/semantics/calc/calc.ml[1,42+26])
+                    Ttyp_constr "string/15!"
+                    []
+                Tpat_alias "line/274"
+                pattern (test/dynamic/semantics/calc/calc.ml[1,42+13]..test/dynamic/semantics/calc/calc.ml[1,42+17])
+                  Tpat_any
+              expression (test/dynamic/semantics/calc/calc.ml[2,72+2]..test/dynamic/semantics/calc/calc.ml[10,319+91])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/semantics/calc/calc.ml[2,72+6]..test/dynamic/semantics/calc/calc.ml[2,72+13])
+                      Tpat_var "linebuf/275"
+                    expression (test/dynamic/semantics/calc/calc.ml[2,72+16]..test/dynamic/semantics/calc/calc.ml[2,72+39])
+                      Texp_apply
+                      expression (test/dynamic/semantics/calc/calc.ml[2,72+16]..test/dynamic/semantics/calc/calc.ml[2,72+34])
+                        Texp_ident "Stdlib!.Lexing.from_string"
+                      [
+                        <arg>
+                          Optional "with_positions"
+                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                            Texp_construct "None"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/semantics/calc/calc.ml[2,72+35]..test/dynamic/semantics/calc/calc.ml[2,72+39])
+                            Texp_ident "line/274"
+                      ]
+                ]
+                expression (test/dynamic/semantics/calc/calc.ml[3,115+2]..test/dynamic/semantics/calc/calc.ml[10,319+91])
+                  Texp_try
+                  expression (test/dynamic/semantics/calc/calc.ml[5,169+4]..test/dynamic/semantics/calc/calc.ml[5,169+60])
+                    Texp_apply
+                    expression (test/dynamic/semantics/calc/calc.ml[5,169+4]..test/dynamic/semantics/calc/calc.ml[5,169+17])
+                      Texp_ident "Stdlib!.Printf.printf"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26])
+                          Texp_construct "CamlinternalFormatBasics.Format"
+                          [
+                            expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                              Texp_construct "CamlinternalFormatBasics.Int"
+                              [
+                                expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Int_d"
+                                  []
+                                expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                  []
+                                expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.No_precision"
+                                  []
+                                expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                  [
+                                    expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                      Texp_constant Const_char 0a
+                                    expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Flush"
+                                      [
+                                        expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                  ]
+                              ]
+                            expression (test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost
+                              Texp_constant Const_string("%d\n%!",(test/dynamic/semantics/calc/calc.ml[5,169+18]..test/dynamic/semantics/calc/calc.ml[5,169+26]) ghost,None)
+                          ]
+                      <arg>
+                        Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[5,169+27]..test/dynamic/semantics/calc/calc.ml[5,169+60])
+                          Texp_apply
+                          expression (test/dynamic/semantics/calc/calc.ml[5,169+28]..test/dynamic/semantics/calc/calc.ml[5,169+39])
+                            Texp_ident "Dune__exe!.Parser.main"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/semantics/calc/calc.ml[5,169+40]..test/dynamic/semantics/calc/calc.ml[5,169+51])
+                                Texp_ident "Dune__exe!.Lexer.token"
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/semantics/calc/calc.ml[5,169+52]..test/dynamic/semantics/calc/calc.ml[5,169+59])
+                                Texp_ident "linebuf/275"
+                          ]
+                    ]
+                  [
+                    <case>
+                      pattern (test/dynamic/semantics/calc/calc.ml[7,237+4]..test/dynamic/semantics/calc/calc.ml[7,237+19])
+                        Tpat_construct "Lexer.Error"
+                        [
+                          pattern (test/dynamic/semantics/calc/calc.ml[7,237+16]..test/dynamic/semantics/calc/calc.ml[7,237+19])
+                            Tpat_var "msg/376"
+                        ]
+                        None
+                      expression (test/dynamic/semantics/calc/calc.ml[8,260+6]..test/dynamic/semantics/calc/calc.ml[8,260+38])
+                        Texp_apply
+                        expression (test/dynamic/semantics/calc/calc.ml[8,260+6]..test/dynamic/semantics/calc/calc.ml[8,260+20])
+                          Texp_ident "Stdlib!.Printf.fprintf"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/semantics/calc/calc.ml[8,260+21]..test/dynamic/semantics/calc/calc.ml[8,260+27])
+                              Texp_ident "Stdlib!.stderr"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String"
+                                  [
+                                    expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                      []
+                                    expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Flush"
+                                      [
+                                        expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                  ]
+                                expression (test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34]) ghost
+                                  Texp_constant Const_string("%s%!",(test/dynamic/semantics/calc/calc.ml[8,260+28]..test/dynamic/semantics/calc/calc.ml[8,260+34]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/semantics/calc/calc.ml[8,260+35]..test/dynamic/semantics/calc/calc.ml[8,260+38])
+                              Texp_ident "msg/376"
+                        ]
+                    <case>
+                      pattern (test/dynamic/semantics/calc/calc.ml[9,299+4]..test/dynamic/semantics/calc/calc.ml[9,299+16])
+                        Tpat_construct "Parser.Error"
+                        []
+                        None
+                      expression (test/dynamic/semantics/calc/calc.ml[10,319+6]..test/dynamic/semantics/calc/calc.ml[10,319+91])
+                        Texp_apply
+                        expression (test/dynamic/semantics/calc/calc.ml[10,319+6]..test/dynamic/semantics/calc/calc.ml[10,319+20])
+                          Texp_ident "Stdlib!.Printf.fprintf"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/semantics/calc/calc.ml[10,319+21]..test/dynamic/semantics/calc/calc.ml[10,319+27])
+                              Texp_ident "Stdlib!.stderr"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                  [
+                                    expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                      Texp_constant Const_string("At offset ",(test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost,None)
+                                    expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                      [
+                                        expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                          []
+                                        expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                          []
+                                        expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                          []
+                                        expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                              Texp_constant Const_string(": syntax error.\n",(test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost,None)
+                                            expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Flush"
+                                              [
+                                                expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                  []
+                                              ]
+                                          ]
+                                      ]
+                                  ]
+                                expression (test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost
+                                  Texp_constant Const_string("At offset %d: syntax error.\n%!",(test/dynamic/semantics/calc/calc.ml[10,319+28]..test/dynamic/semantics/calc/calc.ml[10,319+61]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/semantics/calc/calc.ml[10,319+62]..test/dynamic/semantics/calc/calc.ml[10,319+91])
+                              Texp_apply
+                              expression (test/dynamic/semantics/calc/calc.ml[10,319+63]..test/dynamic/semantics/calc/calc.ml[10,319+82])
+                                Texp_ident "Stdlib!.Lexing.lexeme_start"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (test/dynamic/semantics/calc/calc.ml[10,319+83]..test/dynamic/semantics/calc/calc.ml[10,319+90])
+                                    Texp_ident "linebuf/275"
+                              ]
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (test/dynamic/semantics/calc/calc.ml[12,412+0]..test/dynamic/semantics/calc/calc.ml[17,523+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[12,412+4]..test/dynamic/semantics/calc/calc.ml[12,412+11])
+          Tpat_var "process/377"
+        expression (test/dynamic/semantics/calc/calc.ml[12,412+12]..test/dynamic/semantics/calc/calc.ml[17,523+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/semantics/calc/calc.ml[12,412+13]..test/dynamic/semantics/calc/calc.ml[12,412+26])
+                extra
+                  Tpat_extra_constraint
+                  core_type (test/dynamic/semantics/calc/calc.ml[12,412+29]..test/dynamic/semantics/calc/calc.ml[12,412+42])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (test/dynamic/semantics/calc/calc.ml[12,412+29]..test/dynamic/semantics/calc/calc.ml[12,412+35])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                Tpat_alias "optional_line/378"
+                pattern (test/dynamic/semantics/calc/calc.ml[12,412+13]..test/dynamic/semantics/calc/calc.ml[12,412+26])
+                  Tpat_any
+              expression (test/dynamic/semantics/calc/calc.ml[13,458+2]..test/dynamic/semantics/calc/calc.ml[17,523+18])
+                Texp_match
+                expression (test/dynamic/semantics/calc/calc.ml[13,458+8]..test/dynamic/semantics/calc/calc.ml[13,458+21])
+                  Texp_ident "optional_line/378"
+                [
+                  <case>
+                    pattern (test/dynamic/semantics/calc/calc.ml[14,485+4]..test/dynamic/semantics/calc/calc.ml[14,485+8])
+                      Tpat_value
+                      pattern (test/dynamic/semantics/calc/calc.ml[14,485+4]..test/dynamic/semantics/calc/calc.ml[14,485+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (test/dynamic/semantics/calc/calc.ml[15,497+6]..test/dynamic/semantics/calc/calc.ml[15,497+8])
+                      Texp_construct "()"
+                      []
+                  <case>
+                    pattern (test/dynamic/semantics/calc/calc.ml[16,506+4]..test/dynamic/semantics/calc/calc.ml[16,506+13])
+                      Tpat_value
+                      pattern (test/dynamic/semantics/calc/calc.ml[16,506+4]..test/dynamic/semantics/calc/calc.ml[16,506+13])
+                        Tpat_construct "Some"
+                        [
+                          pattern (test/dynamic/semantics/calc/calc.ml[16,506+9]..test/dynamic/semantics/calc/calc.ml[16,506+13])
+                            Tpat_var "line/379"
+                        ]
+                        None
+                    expression (test/dynamic/semantics/calc/calc.ml[17,523+6]..test/dynamic/semantics/calc/calc.ml[17,523+18])
+                      Texp_apply
+                      expression (test/dynamic/semantics/calc/calc.ml[17,523+6]..test/dynamic/semantics/calc/calc.ml[17,523+13])
+                        Texp_ident "process/272"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/semantics/calc/calc.ml[17,523+14]..test/dynamic/semantics/calc/calc.ml[17,523+18])
+                            Texp_ident "line/379"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/dynamic/semantics/calc/calc.ml[19,543+0]..test/dynamic/semantics/calc/calc.ml[24,700+18])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[19,543+8]..test/dynamic/semantics/calc/calc.ml[19,543+14])
+          Tpat_var "repeat/380"
+        expression (test/dynamic/semantics/calc/calc.ml[19,543+15]..test/dynamic/semantics/calc/calc.ml[24,700+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/semantics/calc/calc.ml[19,543+15]..test/dynamic/semantics/calc/calc.ml[19,543+22])
+                Tpat_var "channel/381"
+              expression (test/dynamic/semantics/calc/calc.ml[21,602+2]..test/dynamic/semantics/calc/calc.ml[24,700+18])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/semantics/calc/calc.ml[21,602+6]..test/dynamic/semantics/calc/calc.ml[21,602+29])
+                      Tpat_tuple
+                      [
+                        pattern (test/dynamic/semantics/calc/calc.ml[21,602+6]..test/dynamic/semantics/calc/calc.ml[21,602+19])
+                          Tpat_var "optional_line/382"
+                        pattern (test/dynamic/semantics/calc/calc.ml[21,602+21]..test/dynamic/semantics/calc/calc.ml[21,602+29])
+                          Tpat_var "continue/383"
+                      ]
+                    expression (test/dynamic/semantics/calc/calc.ml[21,602+32]..test/dynamic/semantics/calc/calc.ml[21,602+50])
+                      Texp_apply
+                      expression (test/dynamic/semantics/calc/calc.ml[21,602+32]..test/dynamic/semantics/calc/calc.ml[21,602+42])
+                        Texp_ident "Dune__exe!.Lexer.line"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/semantics/calc/calc.ml[21,602+43]..test/dynamic/semantics/calc/calc.ml[21,602+50])
+                            Texp_ident "channel/381"
+                      ]
+                ]
+                expression (test/dynamic/semantics/calc/calc.ml[22,656+2]..test/dynamic/semantics/calc/calc.ml[24,700+18])
+                  Texp_sequence
+                  expression (test/dynamic/semantics/calc/calc.ml[22,656+2]..test/dynamic/semantics/calc/calc.ml[22,656+23])
+                    Texp_apply
+                    expression (test/dynamic/semantics/calc/calc.ml[22,656+2]..test/dynamic/semantics/calc/calc.ml[22,656+9])
+                      Texp_ident "process/377"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (test/dynamic/semantics/calc/calc.ml[22,656+10]..test/dynamic/semantics/calc/calc.ml[22,656+23])
+                          Texp_ident "optional_line/382"
+                    ]
+                  expression (test/dynamic/semantics/calc/calc.ml[23,681+2]..test/dynamic/semantics/calc/calc.ml[24,700+18])
+                    Texp_ifthenelse
+                    expression (test/dynamic/semantics/calc/calc.ml[23,681+5]..test/dynamic/semantics/calc/calc.ml[23,681+13])
+                      Texp_ident "continue/383"
+                    expression (test/dynamic/semantics/calc/calc.ml[24,700+4]..test/dynamic/semantics/calc/calc.ml[24,700+18])
+                      Texp_apply
+                      expression (test/dynamic/semantics/calc/calc.ml[24,700+4]..test/dynamic/semantics/calc/calc.ml[24,700+10])
+                        Texp_ident "repeat/380"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/semantics/calc/calc.ml[24,700+11]..test/dynamic/semantics/calc/calc.ml[24,700+18])
+                            Texp_ident "channel/381"
+                      ]
+                    None
+          ]
+    ]
+  structure_item (test/dynamic/semantics/calc/calc.ml[26,722+0]..test/dynamic/semantics/calc/calc.ml[27,731+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/semantics/calc/calc.ml[26,722+4]..test/dynamic/semantics/calc/calc.ml[26,722+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (test/dynamic/semantics/calc/calc.ml[27,731+2]..test/dynamic/semantics/calc/calc.ml[27,731+36])
+          Texp_apply
+          expression (test/dynamic/semantics/calc/calc.ml[27,731+2]..test/dynamic/semantics/calc/calc.ml[27,731+8])
+            Texp_ident "repeat/380"
+          [
+            <arg>
+              Nolabel
+              expression (test/dynamic/semantics/calc/calc.ml[27,731+9]..test/dynamic/semantics/calc/calc.ml[27,731+36])
+                Texp_apply
+                expression (test/dynamic/semantics/calc/calc.ml[27,731+10]..test/dynamic/semantics/calc/calc.ml[27,731+29])
+                  Texp_ident "Stdlib!.Lexing.from_channel"
+                [
+                  <arg>
+                    Optional "with_positions"
+                    expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                      Texp_construct "None"
+                      []
+                  <arg>
+                    Nolabel
+                    expression (test/dynamic/semantics/calc/calc.ml[27,731+30]..test/dynamic/semantics/calc/calc.ml[27,731+35])
+                      Texp_ident "Stdlib!.stdin"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Calc>
+ "process"[value] -> <Dune__exe__Calc.4>;
+ "repeat"[value] -> <Dune__exe__Calc.7>;
+ }
+
+(seq
+  (let
+    (process/272 =
+       (function line/274 : int
+         (let
+           (linebuf/275 =
+              (apply (field_imm 2 (global Stdlib__Lexing!)) 0 line/274))
+           (try
+             (apply (field_imm 1 (global Stdlib__Printf!))
+               [0: [4: 0 0 0 [12: '\n' [10: 0]]] "%d\n%!"]
+               (apply (field_imm 1 (global Dune__exe__Parser!))
+                 (field_imm 4 (global Dune__exe__Lexer!)) linebuf/275))
+            with exn/465
+             (catch
+               (catch
+                 (let (tag/466 =a (field_imm 0 exn/465))
+                   (if (== tag/466 (field_imm 0 (global Dune__exe__Lexer!)))
+                     (let (msg/376 =a (field_imm 1 exn/465))
+                       (apply (field_imm 0 (global Stdlib__Printf!))
+                         (field_imm 39 (global Stdlib!))
+                         [0: [2: 0 [10: 0]] "%s%!"] msg/376))
+                     (exit 2)))
+                with (2)
+                 (if (== exn/465 (field_imm 0 (global Dune__exe__Parser!)))
+                   (apply (field_imm 0 (global Stdlib__Printf!))
+                     (field_imm 39 (global Stdlib!))
+                     [0:
+                      [11:
+                       "At offset "
+                       [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                      "At offset %d: syntax error.\n%!"]
+                     (apply (field_imm 9 (global Stdlib__Lexing!))
+                       linebuf/275))
+                   (exit 1)))
+              with (1) (reraise exn/465))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) process/272))
+  (let
+    (process/377 =
+       (function optional_line/378 : int
+         (if (isint optional_line/378) 0
+           (let (line/379 =a (field_imm 0 optional_line/378))
+             (apply (field_imm 2 (global Dune__exe__Calc!)) line/379)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Calc!) process/377))
+  (letrec
+    (repeat/380
+       (function channel/381 : int
+         (let
+           (*match*/470 =
+              (apply (field_imm 2 (global Dune__exe__Lexer!)) channel/381)
+            continue/383 =a (field_imm 1 *match*/470)
+            optional_line/382 =a (field_imm 0 *match*/470))
+           (seq
+             (apply (field_imm 0 (global Dune__exe__Calc!))
+               optional_line/382)
+             (if continue/383 (apply repeat/380 channel/381) 0)))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Calc!) repeat/380))
+  (let
+    (*match*/472 =
+       (apply (field_imm 1 (global Dune__exe__Calc!))
+         (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+           (field_imm 37 (global Stdlib!)))))
+    0)
+  0)
+(seq
+  (let
+    (process/272 =
+       (function line/274 : int
+         (let
+           (linebuf/275 =
+              (apply (field_imm 2 (global Stdlib__Lexing!)) 0 line/274))
+           (try
+             (apply (field_imm 1 (global Stdlib__Printf!))
+               [0: [4: 0 0 0 [12: '\n' [10: 0]]] "%d\n%!"]
+               (apply (field_imm 1 (global Dune__exe__Parser!))
+                 (field_imm 4 (global Dune__exe__Lexer!)) linebuf/275))
+            with exn/465
+             (if
+               (== (field_imm 0 exn/465)
+                 (field_imm 0 (global Dune__exe__Lexer!)))
+               (apply (field_imm 0 (global Stdlib__Printf!))
+                 (field_imm 39 (global Stdlib!)) [0: [2: 0 [10: 0]] "%s%!"]
+                 (field_imm 1 exn/465))
+               (if (== exn/465 (field_imm 0 (global Dune__exe__Parser!)))
+                 (apply (field_imm 0 (global Stdlib__Printf!))
+                   (field_imm 39 (global Stdlib!))
+                   [0:
+                    [11:
+                     "At offset "
+                     [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                    "At offset %d: syntax error.\n%!"]
+                   (apply (field_imm 9 (global Stdlib__Lexing!)) linebuf/275))
+                 (reraise exn/465)))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) process/272))
+  (let
+    (process/377 =
+       (function optional_line/378 : int
+         (if (isint optional_line/378) 0
+           (apply (field_imm 2 (global Dune__exe__Calc!))
+             (field_imm 0 optional_line/378)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Calc!) process/377))
+  (letrec
+    (repeat/380
+       (function channel/381 : int
+         (let
+           (*match*/470 =
+              (apply (field_imm 2 (global Dune__exe__Lexer!)) channel/381))
+           (seq
+             (apply (field_imm 0 (global Dune__exe__Calc!))
+               (field_imm 0 *match*/470))
+             (if (field_imm 1 *match*/470) (apply repeat/380 channel/381) 0)))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Calc!) repeat/380))
+  (let
+    (*match*/472 =
+       (apply (field_imm 1 (global Dune__exe__Calc!))
+         (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+           (field_imm 37 (global Stdlib!)))))
+    0)
+  0)

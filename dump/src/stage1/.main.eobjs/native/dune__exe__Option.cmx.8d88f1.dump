@@ -1,0 +1,1344 @@
+[
+  structure_item (src/option.ml[14,996+0]..[18,1057+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[14,996+4]..[14,996+11])
+          Ppat_var "defined" (src/option.ml[14,996+4]..[14,996+11])
+        expression (src/option.ml[14,996+14]..[18,1057+10])
+          Pexp_function
+          [
+            <case>
+              pattern (src/option.ml[15,1019+4]..[15,1019+8])
+                Ppat_construct "None" (src/option.ml[15,1019+4]..[15,1019+8])
+                None
+              expression (src/option.ml[16,1031+6]..[16,1031+11])
+                Pexp_construct "false" (src/option.ml[16,1031+6]..[16,1031+11])
+                None
+            <case>
+              pattern (src/option.ml[17,1043+4]..[17,1043+10])
+                Ppat_construct "Some" (src/option.ml[17,1043+4]..[17,1043+8])
+                Some
+                  []
+                  pattern (src/option.ml[17,1043+9]..[17,1043+10])
+                    Ppat_any
+              expression (src/option.ml[18,1057+6]..[18,1057+10])
+                Pexp_construct "true" (src/option.ml[18,1057+6]..[18,1057+10])
+                None
+          ]
+    ]
+  structure_item (src/option.ml[20,1069+0]..[24,1127+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[20,1069+4]..[20,1069+7])
+          Ppat_var "map" (src/option.ml[20,1069+4]..[20,1069+7])
+        expression (src/option.ml[20,1069+8]..[24,1127+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/option.ml[20,1069+8]..[20,1069+9])
+            Ppat_var "f" (src/option.ml[20,1069+8]..[20,1069+9])
+          expression (src/option.ml[20,1069+12]..[24,1127+16])
+            Pexp_function
+            [
+              <case>
+                pattern (src/option.ml[21,1090+4]..[21,1090+8])
+                  Ppat_construct "None" (src/option.ml[21,1090+4]..[21,1090+8])
+                  None
+                expression (src/option.ml[22,1102+6]..[22,1102+10])
+                  Pexp_construct "None" (src/option.ml[22,1102+6]..[22,1102+10])
+                  None
+              <case>
+                pattern (src/option.ml[23,1113+4]..[23,1113+10])
+                  Ppat_construct "Some" (src/option.ml[23,1113+4]..[23,1113+8])
+                  Some
+                    []
+                    pattern (src/option.ml[23,1113+9]..[23,1113+10])
+                      Ppat_var "x" (src/option.ml[23,1113+9]..[23,1113+10])
+                expression (src/option.ml[24,1127+6]..[24,1127+16])
+                  Pexp_construct "Some" (src/option.ml[24,1127+6]..[24,1127+10])
+                  Some
+                    expression (src/option.ml[24,1127+11]..[24,1127+16])
+                      Pexp_apply
+                      expression (src/option.ml[24,1127+12]..[24,1127+13])
+                        Pexp_ident "f" (src/option.ml[24,1127+12]..[24,1127+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/option.ml[24,1127+14]..[24,1127+15])
+                            Pexp_ident "x" (src/option.ml[24,1127+14]..[24,1127+15])
+                      ]
+            ]
+    ]
+  structure_item (src/option.ml[26,1145+0]..[31,1210+9])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[26,1145+4]..[26,1145+8])
+          Ppat_var "iter" (src/option.ml[26,1145+4]..[26,1145+8])
+        expression (src/option.ml[26,1145+9]..[31,1210+9]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/option.ml[26,1145+9]..[26,1145+10])
+            Ppat_var "f" (src/option.ml[26,1145+9]..[26,1145+10])
+          expression (src/option.ml[26,1145+11]..[31,1210+9]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/option.ml[26,1145+11]..[26,1145+12])
+              Ppat_var "o" (src/option.ml[26,1145+11]..[26,1145+12])
+            expression (src/option.ml[27,1160+2]..[31,1210+9])
+              Pexp_match
+              expression (src/option.ml[27,1160+8]..[27,1160+9])
+                Pexp_ident "o" (src/option.ml[27,1160+8]..[27,1160+9])
+              [
+                <case>
+                  pattern (src/option.ml[28,1175+4]..[28,1175+8])
+                    Ppat_construct "None" (src/option.ml[28,1175+4]..[28,1175+8])
+                    None
+                  expression (src/option.ml[29,1187+6]..[29,1187+8])
+                    Pexp_construct "()" (src/option.ml[29,1187+6]..[29,1187+8])
+                    None
+                <case>
+                  pattern (src/option.ml[30,1196+4]..[30,1196+10])
+                    Ppat_construct "Some" (src/option.ml[30,1196+4]..[30,1196+8])
+                    Some
+                      []
+                      pattern (src/option.ml[30,1196+9]..[30,1196+10])
+                        Ppat_var "x" (src/option.ml[30,1196+9]..[30,1196+10])
+                  expression (src/option.ml[31,1210+6]..[31,1210+9])
+                    Pexp_apply
+                    expression (src/option.ml[31,1210+6]..[31,1210+7])
+                      Pexp_ident "f" (src/option.ml[31,1210+6]..[31,1210+7])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/option.ml[31,1210+8]..[31,1210+9])
+                          Pexp_ident "x" (src/option.ml[31,1210+8]..[31,1210+9])
+                    ]
+              ]
+    ]
+  structure_item (src/option.ml[33,1221+0]..[38,1293+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[33,1221+4]..[33,1221+8])
+          Ppat_var "fold" (src/option.ml[33,1221+4]..[33,1221+8])
+        expression (src/option.ml[33,1221+9]..[38,1293+14]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/option.ml[33,1221+9]..[33,1221+10])
+            Ppat_var "f" (src/option.ml[33,1221+9]..[33,1221+10])
+          expression (src/option.ml[33,1221+11]..[38,1293+14]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/option.ml[33,1221+11]..[33,1221+12])
+              Ppat_var "o" (src/option.ml[33,1221+11]..[33,1221+12])
+            expression (src/option.ml[33,1221+13]..[38,1293+14]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/option.ml[33,1221+13]..[33,1221+17])
+                Ppat_var "accu" (src/option.ml[33,1221+13]..[33,1221+17])
+              expression (src/option.ml[34,1241+2]..[38,1293+14])
+                Pexp_match
+                expression (src/option.ml[34,1241+8]..[34,1241+9])
+                  Pexp_ident "o" (src/option.ml[34,1241+8]..[34,1241+9])
+                [
+                  <case>
+                    pattern (src/option.ml[35,1256+4]..[35,1256+8])
+                      Ppat_construct "None" (src/option.ml[35,1256+4]..[35,1256+8])
+                      None
+                    expression (src/option.ml[36,1268+6]..[36,1268+10])
+                      Pexp_ident "accu" (src/option.ml[36,1268+6]..[36,1268+10])
+                  <case>
+                    pattern (src/option.ml[37,1279+4]..[37,1279+10])
+                      Ppat_construct "Some" (src/option.ml[37,1279+4]..[37,1279+8])
+                      Some
+                        []
+                        pattern (src/option.ml[37,1279+9]..[37,1279+10])
+                          Ppat_var "x" (src/option.ml[37,1279+9]..[37,1279+10])
+                    expression (src/option.ml[38,1293+6]..[38,1293+14])
+                      Pexp_apply
+                      expression (src/option.ml[38,1293+6]..[38,1293+7])
+                        Pexp_ident "f" (src/option.ml[38,1293+6]..[38,1293+7])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/option.ml[38,1293+8]..[38,1293+9])
+                            Pexp_ident "x" (src/option.ml[38,1293+8]..[38,1293+9])
+                        <arg>
+                        Nolabel
+                          expression (src/option.ml[38,1293+10]..[38,1293+14])
+                            Pexp_ident "accu" (src/option.ml[38,1293+10]..[38,1293+14])
+                      ]
+                ]
+    ]
+  structure_item (src/option.ml[40,1309+0]..[44,1364+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[40,1309+4]..[40,1309+9])
+          Ppat_var "force" (src/option.ml[40,1309+4]..[40,1309+9])
+        expression (src/option.ml[40,1309+12]..[44,1364+18])
+          Pexp_function
+          [
+            <case>
+              pattern (src/option.ml[41,1330+4]..[41,1330+10])
+                Ppat_construct "Some" (src/option.ml[41,1330+4]..[41,1330+8])
+                Some
+                  []
+                  pattern (src/option.ml[41,1330+9]..[41,1330+10])
+                    Ppat_var "x" (src/option.ml[41,1330+9]..[41,1330+10])
+              expression (src/option.ml[42,1344+6]..[42,1344+7])
+                Pexp_ident "x" (src/option.ml[42,1344+6]..[42,1344+7])
+            <case>
+              pattern (src/option.ml[43,1352+4]..[43,1352+8])
+                Ppat_construct "None" (src/option.ml[43,1352+4]..[43,1352+8])
+                None
+              expression (src/option.ml[44,1364+6]..[44,1364+18])
+                Pexp_assert
+                expression (src/option.ml[44,1364+13]..[44,1364+18])
+                  Pexp_construct "false" (src/option.ml[44,1364+13]..[44,1364+18])
+                  None
+          ]
+    ]
+  structure_item (src/option.ml[46,1384+0]..[51,1508+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[46,1384+4]..[46,1384+11])
+          Ppat_var "project" (src/option.ml[46,1384+4]..[46,1384+11])
+        expression (src/option.ml[46,1384+14]..[51,1508+12])
+          Pexp_function
+          [
+            <case>
+              pattern (src/option.ml[47,1407+4]..[47,1407+10])
+                Ppat_construct "Some" (src/option.ml[47,1407+4]..[47,1407+8])
+                Some
+                  []
+                  pattern (src/option.ml[47,1407+9]..[47,1407+10])
+                    Ppat_var "x" (src/option.ml[47,1407+9]..[47,1407+10])
+              expression (src/option.ml[48,1421+6]..[48,1421+7])
+                Pexp_ident "x" (src/option.ml[48,1421+6]..[48,1421+7])
+            <case>
+              pattern (src/option.ml[49,1429+4]..[49,1429+8])
+                Ppat_construct "None" (src/option.ml[49,1429+4]..[49,1429+8])
+                None
+              expression (src/option.ml[51,1508+6]..[51,1508+12])
+                Pexp_apply
+                expression (src/option.ml[51,1508+6]..[51,1508+10])
+                  Pexp_ident "exit" (src/option.ml[51,1508+6]..[51,1508+10])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/option.ml[51,1508+11]..[51,1508+12])
+                      Pexp_constant PConst_int (1,None)
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[53,1522+0]..[61,1674+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[53,1522+4]..[53,1522+9])
+          Ppat_var "equal" (src/option.ml[53,1522+4]..[53,1522+9])
+        expression (src/option.ml[53,1522+10]..[61,1674+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/option.ml[53,1522+10]..[53,1522+15])
+            Ppat_var "equal" (src/option.ml[53,1522+10]..[53,1522+15])
+          expression (src/option.ml[53,1522+16]..[61,1674+11]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/option.ml[53,1522+16]..[53,1522+18])
+              Ppat_var "o1" (src/option.ml[53,1522+16]..[53,1522+18])
+            expression (src/option.ml[53,1522+19]..[61,1674+11]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/option.ml[53,1522+19]..[53,1522+21])
+                Ppat_var "o2" (src/option.ml[53,1522+19]..[53,1522+21])
+              expression (src/option.ml[54,1546+2]..[61,1674+11])
+                Pexp_match
+                expression (src/option.ml[54,1546+8]..[54,1546+14])
+                  Pexp_tuple
+                  [
+                    expression (src/option.ml[54,1546+8]..[54,1546+10])
+                      Pexp_ident "o1" (src/option.ml[54,1546+8]..[54,1546+10])
+                    expression (src/option.ml[54,1546+12]..[54,1546+14])
+                      Pexp_ident "o2" (src/option.ml[54,1546+12]..[54,1546+14])
+                  ]
+                [
+                  <case>
+                    pattern (src/option.ml[55,1566+4]..[55,1566+14])
+                      Ppat_tuple
+                      [
+                        pattern (src/option.ml[55,1566+4]..[55,1566+8])
+                          Ppat_construct "None" (src/option.ml[55,1566+4]..[55,1566+8])
+                          None
+                        pattern (src/option.ml[55,1566+10]..[55,1566+14])
+                          Ppat_construct "None" (src/option.ml[55,1566+10]..[55,1566+14])
+                          None
+                      ]
+                    expression (src/option.ml[56,1584+6]..[56,1584+10])
+                      Pexp_construct "true" (src/option.ml[56,1584+6]..[56,1584+10])
+                      None
+                  <case>
+                    pattern (src/option.ml[57,1595+4]..[57,1595+20])
+                      Ppat_tuple
+                      [
+                        pattern (src/option.ml[57,1595+4]..[57,1595+11])
+                          Ppat_construct "Some" (src/option.ml[57,1595+4]..[57,1595+8])
+                          Some
+                            []
+                            pattern (src/option.ml[57,1595+9]..[57,1595+11])
+                              Ppat_var "x1" (src/option.ml[57,1595+9]..[57,1595+11])
+                        pattern (src/option.ml[57,1595+13]..[57,1595+20])
+                          Ppat_construct "Some" (src/option.ml[57,1595+13]..[57,1595+17])
+                          Some
+                            []
+                            pattern (src/option.ml[57,1595+18]..[57,1595+20])
+                              Ppat_var "x2" (src/option.ml[57,1595+18]..[57,1595+20])
+                      ]
+                    expression (src/option.ml[58,1619+6]..[58,1619+17])
+                      Pexp_apply
+                      expression (src/option.ml[58,1619+6]..[58,1619+11])
+                        Pexp_ident "equal" (src/option.ml[58,1619+6]..[58,1619+11])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/option.ml[58,1619+12]..[58,1619+14])
+                            Pexp_ident "x1" (src/option.ml[58,1619+12]..[58,1619+14])
+                        <arg>
+                        Nolabel
+                          expression (src/option.ml[58,1619+15]..[58,1619+17])
+                            Pexp_ident "x2" (src/option.ml[58,1619+15]..[58,1619+17])
+                      ]
+                  <case>
+                    pattern (src/option.ml[59,1637+4]..[60,1654+16])
+                      Ppat_or
+                      pattern (src/option.ml[59,1637+4]..[59,1637+16])
+                        Ppat_tuple
+                        [
+                          pattern (src/option.ml[59,1637+4]..[59,1637+8])
+                            Ppat_construct "None" (src/option.ml[59,1637+4]..[59,1637+8])
+                            None
+                          pattern (src/option.ml[59,1637+10]..[59,1637+16])
+                            Ppat_construct "Some" (src/option.ml[59,1637+10]..[59,1637+14])
+                            Some
+                              []
+                              pattern (src/option.ml[59,1637+15]..[59,1637+16])
+                                Ppat_any
+                        ]
+                      pattern (src/option.ml[60,1654+4]..[60,1654+16])
+                        Ppat_tuple
+                        [
+                          pattern (src/option.ml[60,1654+4]..[60,1654+10])
+                            Ppat_construct "Some" (src/option.ml[60,1654+4]..[60,1654+8])
+                            Some
+                              []
+                              pattern (src/option.ml[60,1654+9]..[60,1654+10])
+                                Ppat_any
+                          pattern (src/option.ml[60,1654+12]..[60,1654+16])
+                            Ppat_construct "None" (src/option.ml[60,1654+12]..[60,1654+16])
+                            None
+                        ]
+                    expression (src/option.ml[61,1674+6]..[61,1674+11])
+                      Pexp_construct "false" (src/option.ml[61,1674+6]..[61,1674+11])
+                      None
+                ]
+    ]
+  structure_item (src/option.ml[63,1687+0]..[67,1751+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[63,1687+4]..[63,1687+8])
+          Ppat_var "hash" (src/option.ml[63,1687+4]..[63,1687+8])
+        expression (src/option.ml[63,1687+9]..[67,1751+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/option.ml[63,1687+9]..[63,1687+13])
+            Ppat_var "hash" (src/option.ml[63,1687+9]..[63,1687+13])
+          expression (src/option.ml[63,1687+16]..[67,1751+23])
+            Pexp_function
+            [
+              <case>
+                pattern (src/option.ml[64,1712+4]..[64,1712+10])
+                  Ppat_construct "Some" (src/option.ml[64,1712+4]..[64,1712+8])
+                  Some
+                    []
+                    pattern (src/option.ml[64,1712+9]..[64,1712+10])
+                      Ppat_var "x" (src/option.ml[64,1712+9]..[64,1712+10])
+                expression (src/option.ml[65,1726+6]..[65,1726+12])
+                  Pexp_apply
+                  expression (src/option.ml[65,1726+6]..[65,1726+10])
+                    Pexp_ident "hash" (src/option.ml[65,1726+6]..[65,1726+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/option.ml[65,1726+11]..[65,1726+12])
+                        Pexp_ident "x" (src/option.ml[65,1726+11]..[65,1726+12])
+                  ]
+              <case>
+                pattern (src/option.ml[66,1739+4]..[66,1739+8])
+                  Ppat_construct "None" (src/option.ml[66,1739+4]..[66,1739+8])
+                  None
+                expression (src/option.ml[67,1751+6]..[67,1751+23])
+                  Pexp_apply
+                  expression (src/option.ml[67,1751+6]..[67,1751+18])
+                    Pexp_ident "Hashtbl.hash" (src/option.ml[67,1751+6]..[67,1751+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/option.ml[67,1751+19]..[67,1751+23])
+                        Pexp_construct "None" (src/option.ml[67,1751+19]..[67,1751+23])
+                        None
+                  ]
+            ]
+    ]
+  structure_item (src/option.ml[69,1776+0]..[74,1848+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[69,1776+4]..[69,1776+9])
+          Ppat_var "value" (src/option.ml[69,1776+4]..[69,1776+9])
+        expression (src/option.ml[69,1776+10]..[74,1848+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/option.ml[69,1776+10]..[69,1776+11])
+            Ppat_var "o" (src/option.ml[69,1776+10]..[69,1776+11])
+          expression (src/option.ml[69,1776+12]..[74,1848+13]) ghost
+            Pexp_fun
+            Labelled "default"
+            None
+            pattern (src/option.ml[69,1776+13]..[69,1776+20])
+              Ppat_var "default" (src/option.ml[69,1776+13]..[69,1776+20])
+            expression (src/option.ml[70,1799+2]..[74,1848+13])
+              Pexp_match
+              expression (src/option.ml[70,1799+8]..[70,1799+9])
+                Pexp_ident "o" (src/option.ml[70,1799+8]..[70,1799+9])
+              [
+                <case>
+                  pattern (src/option.ml[71,1814+4]..[71,1814+10])
+                    Ppat_construct "Some" (src/option.ml[71,1814+4]..[71,1814+8])
+                    Some
+                      []
+                      pattern (src/option.ml[71,1814+9]..[71,1814+10])
+                        Ppat_var "x" (src/option.ml[71,1814+9]..[71,1814+10])
+                  expression (src/option.ml[72,1828+6]..[72,1828+7])
+                    Pexp_ident "x" (src/option.ml[72,1828+6]..[72,1828+7])
+                <case>
+                  pattern (src/option.ml[73,1836+4]..[73,1836+8])
+                    Ppat_construct "None" (src/option.ml[73,1836+4]..[73,1836+8])
+                    None
+                  expression (src/option.ml[74,1848+6]..[74,1848+13])
+                    Pexp_ident "default" (src/option.ml[74,1848+6]..[74,1848+13])
+              ]
+    ]
+  structure_item (src/option.ml[76,1863+0]..[82,1965+8])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/option.ml[76,1863+8]..[76,1863+19])
+          Ppat_var "first_value" (src/option.ml[76,1863+8]..[76,1863+19])
+        expression (src/option.ml[76,1863+22]..[82,1965+8])
+          Pexp_function
+          [
+            <case>
+              pattern (src/option.ml[77,1894+2]..[77,1894+13])
+                Ppat_construct "::" (src/option.ml[77,1894+9]..[77,1894+11])
+                Some
+                  []
+                  pattern (src/option.ml[77,1894+2]..[77,1894+13]) ghost
+                    Ppat_tuple
+                    [
+                      pattern (src/option.ml[77,1894+2]..[77,1894+8])
+                        Ppat_construct "Some" (src/option.ml[77,1894+2]..[77,1894+6])
+                        Some
+                          []
+                          pattern (src/option.ml[77,1894+7]..[77,1894+8])
+                            Ppat_var "e" (src/option.ml[77,1894+7]..[77,1894+8])
+                      pattern (src/option.ml[77,1894+12]..[77,1894+13])
+                        Ppat_any
+                    ]
+              expression (src/option.ml[78,1911+4]..[78,1911+10])
+                Pexp_construct "Some" (src/option.ml[78,1911+4]..[78,1911+8])
+                Some
+                  expression (src/option.ml[78,1911+9]..[78,1911+10])
+                    Pexp_ident "e" (src/option.ml[78,1911+9]..[78,1911+10])
+            <case>
+              pattern (src/option.ml[79,1922+2]..[79,1922+12])
+                Ppat_construct "::" (src/option.ml[79,1922+7]..[79,1922+9])
+                Some
+                  []
+                  pattern (src/option.ml[79,1922+2]..[79,1922+12]) ghost
+                    Ppat_tuple
+                    [
+                      pattern (src/option.ml[79,1922+2]..[79,1922+6])
+                        Ppat_construct "None" (src/option.ml[79,1922+2]..[79,1922+6])
+                        None
+                      pattern (src/option.ml[79,1922+10]..[79,1922+12])
+                        Ppat_var "li" (src/option.ml[79,1922+10]..[79,1922+12])
+                    ]
+              expression (src/option.ml[80,1938+4]..[80,1938+18])
+                Pexp_apply
+                expression (src/option.ml[80,1938+4]..[80,1938+15])
+                  Pexp_ident "first_value" (src/option.ml[80,1938+4]..[80,1938+15])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/option.ml[80,1938+16]..[80,1938+18])
+                      Pexp_ident "li" (src/option.ml[80,1938+16]..[80,1938+18])
+                ]
+            <case>
+              pattern (src/option.ml[81,1957+2]..[81,1957+4])
+                Ppat_construct "[]" (src/option.ml[81,1957+2]..[81,1957+4])
+                None
+              expression (src/option.ml[82,1965+4]..[82,1965+8])
+                Pexp_construct "None" (src/option.ml[82,1965+4]..[82,1965+8])
+                None
+          ]
+    ]
+  structure_item (src/option.ml[84,1975+0]..[84,1975+50])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[84,1975+4]..[84,1975+12])
+          Ppat_var "simplify" (src/option.ml[84,1975+4]..[84,1975+12])
+        expression (src/option.ml[84,1975+15]..[84,1975+50])
+          Pexp_function
+          [
+            <case>
+              pattern (src/option.ml[84,1975+24]..[84,1975+28])
+                Ppat_construct "None" (src/option.ml[84,1975+24]..[84,1975+28])
+                None
+              expression (src/option.ml[84,1975+32]..[84,1975+36])
+                Pexp_construct "None" (src/option.ml[84,1975+32]..[84,1975+36])
+                None
+            <case>
+              pattern (src/option.ml[84,1975+39]..[84,1975+45])
+                Ppat_construct "Some" (src/option.ml[84,1975+39]..[84,1975+43])
+                Some
+                  []
+                  pattern (src/option.ml[84,1975+44]..[84,1975+45])
+                    Ppat_var "o" (src/option.ml[84,1975+44]..[84,1975+45])
+              expression (src/option.ml[84,1975+49]..[84,1975+50])
+                Pexp_ident "o" (src/option.ml[84,1975+49]..[84,1975+50])
+          ]
+    ]
+]
+
+let defined = function | None -> false | Some _ -> true
+let map f = function | None -> None | Some x -> Some (f x)
+let iter f o = match o with | None -> () | Some x -> f x
+let fold f o accu = match o with | None -> accu | Some x -> f x accu
+let force = function | Some x -> x | None -> assert false
+let project = function | Some x -> x | None -> exit 1
+let equal equal o1 o2 =
+  match (o1, o2) with
+  | (None, None) -> true
+  | (Some x1, Some x2) -> equal x1 x2
+  | (None, Some _) | (Some _, None) -> false
+let hash hash = function | Some x -> hash x | None -> Hashtbl.hash None
+let value o ~default  = match o with | Some x -> x | None -> default
+let rec first_value =
+  function
+  | (Some e)::_ -> Some e
+  | (None)::li -> first_value li
+  | [] -> None
+let simplify = function | None -> None | Some o -> o
+[
+  structure_item (src/option.ml[14,996+0]..src/option.ml[18,1057+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[14,996+4]..src/option.ml[14,996+11])
+          Tpat_var "defined/396"
+        expression (src/option.ml[14,996+14]..src/option.ml[18,1057+10])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[15,1019+4]..src/option.ml[15,1019+8])
+                Tpat_construct "None"
+                []
+                None
+              expression (src/option.ml[16,1031+6]..src/option.ml[16,1031+11])
+                Texp_construct "false"
+                []
+            <case>
+              pattern (src/option.ml[17,1043+4]..src/option.ml[17,1043+10])
+                Tpat_construct "Some"
+                [
+                  pattern (src/option.ml[17,1043+9]..src/option.ml[17,1043+10])
+                    Tpat_any
+                ]
+                None
+              expression (src/option.ml[18,1057+6]..src/option.ml[18,1057+10])
+                Texp_construct "true"
+                []
+          ]
+    ]
+  structure_item (src/option.ml[20,1069+0]..src/option.ml[24,1127+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[20,1069+4]..src/option.ml[20,1069+7])
+          Tpat_var "map/399"
+        expression (src/option.ml[20,1069+8]..src/option.ml[24,1127+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[20,1069+8]..src/option.ml[20,1069+9])
+                Tpat_var "f/401"
+              expression (src/option.ml[20,1069+12]..src/option.ml[24,1127+16])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/option.ml[21,1090+4]..src/option.ml[21,1090+8])
+                      Tpat_construct "None"
+                      []
+                      None
+                    expression (src/option.ml[22,1102+6]..src/option.ml[22,1102+10])
+                      Texp_construct "None"
+                      []
+                  <case>
+                    pattern (src/option.ml[23,1113+4]..src/option.ml[23,1113+10])
+                      Tpat_construct "Some"
+                      [
+                        pattern (src/option.ml[23,1113+9]..src/option.ml[23,1113+10])
+                          Tpat_var "x/402"
+                      ]
+                      None
+                    expression (src/option.ml[24,1127+6]..src/option.ml[24,1127+16])
+                      Texp_construct "Some"
+                      [
+                        expression (src/option.ml[24,1127+11]..src/option.ml[24,1127+16])
+                          Texp_apply
+                          expression (src/option.ml[24,1127+12]..src/option.ml[24,1127+13])
+                            Texp_ident "f/401"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/option.ml[24,1127+14]..src/option.ml[24,1127+15])
+                                Texp_ident "x/402"
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[26,1145+0]..src/option.ml[31,1210+9])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[26,1145+4]..src/option.ml[26,1145+8])
+          Tpat_var "iter/404"
+        expression (src/option.ml[26,1145+9]..src/option.ml[31,1210+9]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[26,1145+9]..src/option.ml[26,1145+10])
+                Tpat_var "f/406"
+              expression (src/option.ml[26,1145+11]..src/option.ml[31,1210+9]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/option.ml[26,1145+11]..src/option.ml[26,1145+12])
+                      Tpat_var "o/407"
+                    expression (src/option.ml[27,1160+2]..src/option.ml[31,1210+9])
+                      Texp_match
+                      expression (src/option.ml[27,1160+8]..src/option.ml[27,1160+9])
+                        Texp_ident "o/407"
+                      [
+                        <case>
+                          pattern (src/option.ml[28,1175+4]..src/option.ml[28,1175+8])
+                            Tpat_value
+                            pattern (src/option.ml[28,1175+4]..src/option.ml[28,1175+8])
+                              Tpat_construct "None"
+                              []
+                              None
+                          expression (src/option.ml[29,1187+6]..src/option.ml[29,1187+8])
+                            Texp_construct "()"
+                            []
+                        <case>
+                          pattern (src/option.ml[30,1196+4]..src/option.ml[30,1196+10])
+                            Tpat_value
+                            pattern (src/option.ml[30,1196+4]..src/option.ml[30,1196+10])
+                              Tpat_construct "Some"
+                              [
+                                pattern (src/option.ml[30,1196+9]..src/option.ml[30,1196+10])
+                                  Tpat_var "x/408"
+                              ]
+                              None
+                          expression (src/option.ml[31,1210+6]..src/option.ml[31,1210+9])
+                            Texp_apply
+                            expression (src/option.ml[31,1210+6]..src/option.ml[31,1210+7])
+                              Texp_ident "f/406"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/option.ml[31,1210+8]..src/option.ml[31,1210+9])
+                                  Texp_ident "x/408"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[33,1221+0]..src/option.ml[38,1293+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[33,1221+4]..src/option.ml[33,1221+8])
+          Tpat_var "fold/409"
+        expression (src/option.ml[33,1221+9]..src/option.ml[38,1293+14]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[33,1221+9]..src/option.ml[33,1221+10])
+                Tpat_var "f/411"
+              expression (src/option.ml[33,1221+11]..src/option.ml[38,1293+14]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/option.ml[33,1221+11]..src/option.ml[33,1221+12])
+                      Tpat_var "o/412"
+                    expression (src/option.ml[33,1221+13]..src/option.ml[38,1293+14]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/option.ml[33,1221+13]..src/option.ml[33,1221+17])
+                            Tpat_var "accu/413"
+                          expression (src/option.ml[34,1241+2]..src/option.ml[38,1293+14])
+                            Texp_match
+                            expression (src/option.ml[34,1241+8]..src/option.ml[34,1241+9])
+                              Texp_ident "o/412"
+                            [
+                              <case>
+                                pattern (src/option.ml[35,1256+4]..src/option.ml[35,1256+8])
+                                  Tpat_value
+                                  pattern (src/option.ml[35,1256+4]..src/option.ml[35,1256+8])
+                                    Tpat_construct "None"
+                                    []
+                                    None
+                                expression (src/option.ml[36,1268+6]..src/option.ml[36,1268+10])
+                                  Texp_ident "accu/413"
+                              <case>
+                                pattern (src/option.ml[37,1279+4]..src/option.ml[37,1279+10])
+                                  Tpat_value
+                                  pattern (src/option.ml[37,1279+4]..src/option.ml[37,1279+10])
+                                    Tpat_construct "Some"
+                                    [
+                                      pattern (src/option.ml[37,1279+9]..src/option.ml[37,1279+10])
+                                        Tpat_var "x/414"
+                                    ]
+                                    None
+                                expression (src/option.ml[38,1293+6]..src/option.ml[38,1293+14])
+                                  Texp_apply
+                                  expression (src/option.ml[38,1293+6]..src/option.ml[38,1293+7])
+                                    Texp_ident "f/411"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/option.ml[38,1293+8]..src/option.ml[38,1293+9])
+                                        Texp_ident "x/414"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/option.ml[38,1293+10]..src/option.ml[38,1293+14])
+                                        Texp_ident "accu/413"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[40,1309+0]..src/option.ml[44,1364+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[40,1309+4]..src/option.ml[40,1309+9])
+          Tpat_var "force/415"
+        expression (src/option.ml[40,1309+12]..src/option.ml[44,1364+18])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[41,1330+4]..src/option.ml[41,1330+10])
+                Tpat_construct "Some"
+                [
+                  pattern (src/option.ml[41,1330+9]..src/option.ml[41,1330+10])
+                    Tpat_var "x/417"
+                ]
+                None
+              expression (src/option.ml[42,1344+6]..src/option.ml[42,1344+7])
+                Texp_ident "x/417"
+            <case>
+              pattern (src/option.ml[43,1352+4]..src/option.ml[43,1352+8])
+                Tpat_construct "None"
+                []
+                None
+              expression (src/option.ml[44,1364+6]..src/option.ml[44,1364+18])
+                Texp_assert                expression (src/option.ml[44,1364+13]..src/option.ml[44,1364+18])
+                  Texp_construct "false"
+                  []
+          ]
+    ]
+  structure_item (src/option.ml[46,1384+0]..src/option.ml[51,1508+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[46,1384+4]..src/option.ml[46,1384+11])
+          Tpat_var "project/419"
+        expression (src/option.ml[46,1384+14]..src/option.ml[51,1508+12])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[47,1407+4]..src/option.ml[47,1407+10])
+                Tpat_construct "Some"
+                [
+                  pattern (src/option.ml[47,1407+9]..src/option.ml[47,1407+10])
+                    Tpat_var "x/421"
+                ]
+                None
+              expression (src/option.ml[48,1421+6]..src/option.ml[48,1421+7])
+                Texp_ident "x/421"
+            <case>
+              pattern (src/option.ml[49,1429+4]..src/option.ml[49,1429+8])
+                Tpat_construct "None"
+                []
+                None
+              expression (src/option.ml[51,1508+6]..src/option.ml[51,1508+12])
+                Texp_apply
+                expression (src/option.ml[51,1508+6]..src/option.ml[51,1508+10])
+                  Texp_ident "Stdlib!.exit"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/option.ml[51,1508+11]..src/option.ml[51,1508+12])
+                      Texp_constant Const_int 1
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[53,1522+0]..src/option.ml[61,1674+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[53,1522+4]..src/option.ml[53,1522+9])
+          Tpat_var "equal/423"
+        expression (src/option.ml[53,1522+10]..src/option.ml[61,1674+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[53,1522+10]..src/option.ml[53,1522+15])
+                Tpat_var "equal/425"
+              expression (src/option.ml[53,1522+16]..src/option.ml[61,1674+11]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/option.ml[53,1522+16]..src/option.ml[53,1522+18])
+                      Tpat_var "o1/426"
+                    expression (src/option.ml[53,1522+19]..src/option.ml[61,1674+11]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/option.ml[53,1522+19]..src/option.ml[53,1522+21])
+                            Tpat_var "o2/427"
+                          expression (src/option.ml[54,1546+2]..src/option.ml[61,1674+11])
+                            Texp_match
+                            expression (src/option.ml[54,1546+8]..src/option.ml[54,1546+14])
+                              Texp_tuple
+                              [
+                                expression (src/option.ml[54,1546+8]..src/option.ml[54,1546+10])
+                                  Texp_ident "o1/426"
+                                expression (src/option.ml[54,1546+12]..src/option.ml[54,1546+14])
+                                  Texp_ident "o2/427"
+                              ]
+                            [
+                              <case>
+                                pattern (src/option.ml[55,1566+4]..src/option.ml[55,1566+14])
+                                  Tpat_value
+                                  pattern (src/option.ml[55,1566+4]..src/option.ml[55,1566+14])
+                                    Tpat_tuple
+                                    [
+                                      pattern (src/option.ml[55,1566+4]..src/option.ml[55,1566+8])
+                                        Tpat_construct "None"
+                                        []
+                                        None
+                                      pattern (src/option.ml[55,1566+10]..src/option.ml[55,1566+14])
+                                        Tpat_construct "None"
+                                        []
+                                        None
+                                    ]
+                                expression (src/option.ml[56,1584+6]..src/option.ml[56,1584+10])
+                                  Texp_construct "true"
+                                  []
+                              <case>
+                                pattern (src/option.ml[57,1595+4]..src/option.ml[57,1595+20])
+                                  Tpat_value
+                                  pattern (src/option.ml[57,1595+4]..src/option.ml[57,1595+20])
+                                    Tpat_tuple
+                                    [
+                                      pattern (src/option.ml[57,1595+4]..src/option.ml[57,1595+11])
+                                        Tpat_construct "Some"
+                                        [
+                                          pattern (src/option.ml[57,1595+9]..src/option.ml[57,1595+11])
+                                            Tpat_var "x1/428"
+                                        ]
+                                        None
+                                      pattern (src/option.ml[57,1595+13]..src/option.ml[57,1595+20])
+                                        Tpat_construct "Some"
+                                        [
+                                          pattern (src/option.ml[57,1595+18]..src/option.ml[57,1595+20])
+                                            Tpat_var "x2/429"
+                                        ]
+                                        None
+                                    ]
+                                expression (src/option.ml[58,1619+6]..src/option.ml[58,1619+17])
+                                  Texp_apply
+                                  expression (src/option.ml[58,1619+6]..src/option.ml[58,1619+11])
+                                    Texp_ident "equal/425"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/option.ml[58,1619+12]..src/option.ml[58,1619+14])
+                                        Texp_ident "x1/428"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/option.ml[58,1619+15]..src/option.ml[58,1619+17])
+                                        Texp_ident "x2/429"
+                                  ]
+                              <case>
+                                pattern (src/option.ml[59,1637+4]..src/option.ml[60,1654+16])
+                                  Tpat_or
+                                  pattern (src/option.ml[59,1637+4]..src/option.ml[59,1637+16])
+                                    Tpat_value
+                                    pattern (src/option.ml[59,1637+4]..src/option.ml[59,1637+16])
+                                      Tpat_tuple
+                                      [
+                                        pattern (src/option.ml[59,1637+4]..src/option.ml[59,1637+8])
+                                          Tpat_construct "None"
+                                          []
+                                          None
+                                        pattern (src/option.ml[59,1637+10]..src/option.ml[59,1637+16])
+                                          Tpat_construct "Some"
+                                          [
+                                            pattern (src/option.ml[59,1637+15]..src/option.ml[59,1637+16])
+                                              Tpat_any
+                                          ]
+                                          None
+                                      ]
+                                  pattern (src/option.ml[60,1654+4]..src/option.ml[60,1654+16])
+                                    Tpat_value
+                                    pattern (src/option.ml[60,1654+4]..src/option.ml[60,1654+16])
+                                      Tpat_tuple
+                                      [
+                                        pattern (src/option.ml[60,1654+4]..src/option.ml[60,1654+10])
+                                          Tpat_construct "Some"
+                                          [
+                                            pattern (src/option.ml[60,1654+9]..src/option.ml[60,1654+10])
+                                              Tpat_any
+                                          ]
+                                          None
+                                        pattern (src/option.ml[60,1654+12]..src/option.ml[60,1654+16])
+                                          Tpat_construct "None"
+                                          []
+                                          None
+                                      ]
+                                expression (src/option.ml[61,1674+6]..src/option.ml[61,1674+11])
+                                  Texp_construct "false"
+                                  []
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[63,1687+0]..src/option.ml[67,1751+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[63,1687+4]..src/option.ml[63,1687+8])
+          Tpat_var "hash/430"
+        expression (src/option.ml[63,1687+9]..src/option.ml[67,1751+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[63,1687+9]..src/option.ml[63,1687+13])
+                Tpat_var "hash/432"
+              expression (src/option.ml[63,1687+16]..src/option.ml[67,1751+23])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/option.ml[64,1712+4]..src/option.ml[64,1712+10])
+                      Tpat_construct "Some"
+                      [
+                        pattern (src/option.ml[64,1712+9]..src/option.ml[64,1712+10])
+                          Tpat_var "x/433"
+                      ]
+                      None
+                    expression (src/option.ml[65,1726+6]..src/option.ml[65,1726+12])
+                      Texp_apply
+                      expression (src/option.ml[65,1726+6]..src/option.ml[65,1726+10])
+                        Texp_ident "hash/432"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/option.ml[65,1726+11]..src/option.ml[65,1726+12])
+                            Texp_ident "x/433"
+                      ]
+                  <case>
+                    pattern (src/option.ml[66,1739+4]..src/option.ml[66,1739+8])
+                      Tpat_construct "None"
+                      []
+                      None
+                    expression (src/option.ml[67,1751+6]..src/option.ml[67,1751+23])
+                      Texp_apply
+                      expression (src/option.ml[67,1751+6]..src/option.ml[67,1751+18])
+                        Texp_ident "Stdlib!.Hashtbl.hash"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/option.ml[67,1751+19]..src/option.ml[67,1751+23])
+                            Texp_construct "None"
+                            []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[69,1776+0]..src/option.ml[74,1848+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[69,1776+4]..src/option.ml[69,1776+9])
+          Tpat_var "value/474"
+        expression (src/option.ml[69,1776+10]..src/option.ml[74,1848+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[69,1776+10]..src/option.ml[69,1776+11])
+                Tpat_var "o/476"
+              expression (src/option.ml[69,1776+12]..src/option.ml[74,1848+13]) ghost
+                Texp_function
+                Labelled "default"
+                [
+                  <case>
+                    pattern (src/option.ml[69,1776+13]..src/option.ml[69,1776+20])
+                      Tpat_var "default/477"
+                    expression (src/option.ml[70,1799+2]..src/option.ml[74,1848+13])
+                      Texp_match
+                      expression (src/option.ml[70,1799+8]..src/option.ml[70,1799+9])
+                        Texp_ident "o/476"
+                      [
+                        <case>
+                          pattern (src/option.ml[71,1814+4]..src/option.ml[71,1814+10])
+                            Tpat_value
+                            pattern (src/option.ml[71,1814+4]..src/option.ml[71,1814+10])
+                              Tpat_construct "Some"
+                              [
+                                pattern (src/option.ml[71,1814+9]..src/option.ml[71,1814+10])
+                                  Tpat_var "x/478"
+                              ]
+                              None
+                          expression (src/option.ml[72,1828+6]..src/option.ml[72,1828+7])
+                            Texp_ident "x/478"
+                        <case>
+                          pattern (src/option.ml[73,1836+4]..src/option.ml[73,1836+8])
+                            Tpat_value
+                            pattern (src/option.ml[73,1836+4]..src/option.ml[73,1836+8])
+                              Tpat_construct "None"
+                              []
+                              None
+                          expression (src/option.ml[74,1848+6]..src/option.ml[74,1848+13])
+                            Texp_ident "default/477"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/option.ml[76,1863+0]..src/option.ml[82,1965+8])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/option.ml[76,1863+8]..src/option.ml[76,1863+19])
+          Tpat_var "first_value/479"
+        expression (src/option.ml[76,1863+22]..src/option.ml[82,1965+8])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[77,1894+2]..src/option.ml[77,1894+13])
+                Tpat_construct "::"
+                [
+                  pattern (src/option.ml[77,1894+2]..src/option.ml[77,1894+8])
+                    Tpat_construct "Some"
+                    [
+                      pattern (src/option.ml[77,1894+7]..src/option.ml[77,1894+8])
+                        Tpat_var "e/480"
+                    ]
+                    None
+                  pattern (src/option.ml[77,1894+12]..src/option.ml[77,1894+13])
+                    Tpat_any
+                ]
+                None
+              expression (src/option.ml[78,1911+4]..src/option.ml[78,1911+10])
+                Texp_construct "Some"
+                [
+                  expression (src/option.ml[78,1911+9]..src/option.ml[78,1911+10])
+                    Texp_ident "e/480"
+                ]
+            <case>
+              pattern (src/option.ml[79,1922+2]..src/option.ml[79,1922+12])
+                Tpat_construct "::"
+                [
+                  pattern (src/option.ml[79,1922+2]..src/option.ml[79,1922+6])
+                    Tpat_construct "None"
+                    []
+                    None
+                  pattern (src/option.ml[79,1922+10]..src/option.ml[79,1922+12])
+                    Tpat_var "li/481"
+                ]
+                None
+              expression (src/option.ml[80,1938+4]..src/option.ml[80,1938+18])
+                Texp_apply
+                expression (src/option.ml[80,1938+4]..src/option.ml[80,1938+15])
+                  Texp_ident "first_value/479"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/option.ml[80,1938+16]..src/option.ml[80,1938+18])
+                      Texp_ident "li/481"
+                ]
+            <case>
+              pattern (src/option.ml[81,1957+2]..src/option.ml[81,1957+4])
+                Tpat_construct "[]"
+                []
+                None
+              expression (src/option.ml[82,1965+4]..src/option.ml[82,1965+8])
+                Texp_construct "None"
+                []
+          ]
+    ]
+  structure_item (src/option.ml[84,1975+0]..src/option.ml[84,1975+50])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/option.ml[84,1975+4]..src/option.ml[84,1975+12])
+          Tpat_var "simplify/483"
+        expression (src/option.ml[84,1975+15]..src/option.ml[84,1975+50])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/option.ml[84,1975+24]..src/option.ml[84,1975+28])
+                Tpat_construct "None"
+                []
+                None
+              expression (src/option.ml[84,1975+32]..src/option.ml[84,1975+36])
+                Texp_construct "None"
+                []
+            <case>
+              pattern (src/option.ml[84,1975+39]..src/option.ml[84,1975+45])
+                Tpat_construct "Some"
+                [
+                  pattern (src/option.ml[84,1975+44]..src/option.ml[84,1975+45])
+                    Tpat_var "o/485"
+                ]
+                None
+              expression (src/option.ml[84,1975+49]..src/option.ml[84,1975+50])
+                Texp_ident "o/485"
+          ]
+    ]
+]
+
+{<Dune__exe__Option>
+ "defined"[value] -> <Dune__exe__Option.0>;
+ "equal"[value] -> <Dune__exe__Option.17>;
+ "first_value"[value] -> <Dune__exe__Option.30>;
+ "fold"[value] -> <Dune__exe__Option.8>;
+ "force"[value] -> <Dune__exe__Option.13>;
+ "hash"[value] -> <Dune__exe__Option.23>;
+ "iter"[value] -> <Dune__exe__Option.4>;
+ "map"[value] -> <Dune__exe__Option.1>;
+ "project"[value] -> <Dune__exe__Option.15>;
+ "simplify"[value] -> <Dune__exe__Option.33>;
+ "value"[value] -> <Dune__exe__Option.26>;
+ }
+
+(seq
+  (let
+    (defined/396 =
+       (function param/398 : int
+         (if (isint param/398) 0
+           (let (*match*/915 =a (field_imm 0 param/398)) 1))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Option!) defined/396))
+  (let
+    (map/399 =
+       (function f/401 param/403
+         (if (isint param/403) 0
+           (let (x/402 =a (field_imm 0 param/403))
+             (makeblock 0 (apply f/401 x/402))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Option!) map/399))
+  (let
+    (iter/404 =
+       (function f/406 o/407 : int
+         (if (isint o/407) 0
+           (let (x/408 =a (field_imm 0 o/407)) (apply f/406 x/408)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Option!) iter/404))
+  (let
+    (fold/409 =
+       (function f/411 o/412 accu/413
+         (if (isint o/412) accu/413
+           (let (x/414 =a (field_imm 0 o/412)) (apply f/411 x/414 accu/413)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Option!) fold/409))
+  (let
+    (force/415 =
+       (function param/418
+         (if (isint param/418)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/option.ml" 44 6]))
+           (let (x/417 =a (field_imm 0 param/418)) x/417))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Option!) force/415))
+  (let
+    (project/419 =
+       (function param/422
+         (if (isint param/422) (apply (field_imm 98 (global Stdlib!)) 1)
+           (let (x/421 =a (field_imm 0 param/422)) x/421))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Option!) project/419))
+  (let
+    (equal/423 =
+       (function equal/425 o1/426 o2/427 : int
+         (catch
+           (if (isint o1/426)
+             (if (isint o2/427) 1
+               (let (*match*/916 =a (field_imm 0 o2/427)) (exit 1)))
+             (if (isint o2/427) (exit 1)
+               (let
+                 (x2/429 =a (field_imm 0 o2/427)
+                  x1/428 =a (field_imm 0 o1/426))
+                 (apply equal/425 x1/428 x2/429))))
+          with (1) 0)))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Option!) equal/423))
+  (let
+    (hash/430 =
+       (function hash/432 param/473 : int
+         (if (isint param/473)
+           (apply (field_imm 27 (global Stdlib__Hashtbl!)) 0)
+           (let (x/433 =a (field_imm 0 param/473)) (apply hash/432 x/433)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Option!) hash/430))
+  (let
+    (value/474 =
+       (function o/476 default/477
+         (if (isint o/476) default/477
+           (let (x/478 =a (field_imm 0 o/476)) x/478))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Option!) value/474))
+  (letrec
+    (first_value/479
+       (function param/482
+         (if (isint param/482) 0
+           (let (*match*/917 =a (field_imm 0 param/482))
+             (if (isint *match*/917)
+               (let (li/481 =a (field_imm 1 param/482))
+                 (apply first_value/479 li/481))
+               (let
+                 (*match*/918 =a (field_imm 1 param/482)
+                  e/480 =a (field_imm 0 *match*/917))
+                 (makeblock 0 e/480)))))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Option!) first_value/479))
+  (let
+    (simplify/483 =
+       (function param/486
+         (if (isint param/486) 0
+           (let (o/485 =a (field_imm 0 param/486)) o/485))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Option!) simplify/483))
+  0)
+(seq
+  (let (defined/396 = (function param/398 : int (if (isint param/398) 0 1)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Option!) defined/396))
+  (let
+    (map/399 =
+       (function f/401 param/403
+         (if (isint param/403) 0
+           (makeblock 0 (apply f/401 (field_imm 0 param/403))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Option!) map/399))
+  (let
+    (iter/404 =
+       (function f/406 o/407 : int
+         (if (isint o/407) 0 (apply f/406 (field_imm 0 o/407)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Option!) iter/404))
+  (let
+    (fold/409 =
+       (function f/411 o/412 accu/413
+         (if (isint o/412) accu/413
+           (apply f/411 (field_imm 0 o/412) accu/413))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Option!) fold/409))
+  (let
+    (force/415 =
+       (function param/418
+         (if (isint param/418)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/option.ml" 44 6]))
+           (field_imm 0 param/418))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Option!) force/415))
+  (let
+    (project/419 =
+       (function param/422
+         (if (isint param/422) (apply (field_imm 98 (global Stdlib!)) 1)
+           (field_imm 0 param/422))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Option!) project/419))
+  (let
+    (equal/423 =
+       (function equal/425 o1/426 o2/427 : int
+         (catch
+           (if (isint o1/426) (if (isint o2/427) 1 (exit 1))
+             (if (isint o2/427) (exit 1)
+               (apply equal/425 (field_imm 0 o1/426) (field_imm 0 o2/427))))
+          with (1) 0)))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Option!) equal/423))
+  (let
+    (hash/430 =
+       (function hash/432 param/473 : int
+         (if (isint param/473)
+           (apply (field_imm 27 (global Stdlib__Hashtbl!)) 0)
+           (apply hash/432 (field_imm 0 param/473)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Option!) hash/430))
+  (let
+    (value/474 =
+       (function o/476 default/477
+         (if (isint o/476) default/477 (field_imm 0 o/476))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Option!) value/474))
+  (letrec
+    (first_value/479
+       (function param/482
+         (if (isint param/482) 0
+           (let (*match*/917 =a (field_imm 0 param/482))
+             (if (isint *match*/917)
+               (apply first_value/479 (field_imm 1 param/482))
+               (makeblock 0 (field_imm 0 *match*/917)))))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Option!) first_value/479))
+  (let
+    (simplify/483 =
+       (function param/486 (if (isint param/486) 0 (field_imm 0 param/486))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Option!) simplify/483))
+  0)

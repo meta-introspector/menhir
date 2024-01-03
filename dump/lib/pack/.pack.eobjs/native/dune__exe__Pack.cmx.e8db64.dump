@@ -1,0 +1,1821 @@
+[
+  structure_item (lib/pack/pack.ml[10,387+0]..[11,399+45])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[10,387+4]..[10,387+6])
+          Ppat_var "up" (lib/pack/pack.ml[10,387+4]..[10,387+6])
+        expression (lib/pack/pack.ml[10,387+7]..[11,399+45]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/pack/pack.ml[10,387+7]..[10,387+9])
+            Ppat_var "fn" (lib/pack/pack.ml[10,387+7]..[10,387+9])
+          expression (lib/pack/pack.ml[11,399+2]..[11,399+45])
+            Pexp_apply
+            expression (lib/pack/pack.ml[11,399+2]..[11,399+17])
+              Pexp_ident "Filename.concat" (lib/pack/pack.ml[11,399+2]..[11,399+17])
+            [
+              <arg>
+              Nolabel
+                expression (lib/pack/pack.ml[11,399+18]..[11,399+42])
+                  Pexp_ident "Filename.parent_dir_name" (lib/pack/pack.ml[11,399+18]..[11,399+42])
+              <arg>
+              Nolabel
+                expression (lib/pack/pack.ml[11,399+43]..[11,399+45])
+                  Pexp_ident "fn" (lib/pack/pack.ml[11,399+43]..[11,399+45])
+            ]
+    ]
+  structure_item (lib/pack/pack.ml[17,608+0]..[25,813+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[17,608+4]..[17,608+12])
+          Ppat_var "cat_file" (lib/pack/pack.ml[17,608+4]..[17,608+12])
+        expression (lib/pack/pack.ml[17,608+13]..[25,813+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (lib/pack/pack.ml[17,608+13]..[17,608+15])
+            Ppat_var "oc" (lib/pack/pack.ml[17,608+13]..[17,608+15])
+          expression (lib/pack/pack.ml[17,608+16]..[25,813+13]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (lib/pack/pack.ml[17,608+16]..[17,608+18])
+              Ppat_var "fn" (lib/pack/pack.ml[17,608+16]..[17,608+18])
+            expression (lib/pack/pack.ml[18,629+2]..[25,813+13])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/pack/pack.ml[18,629+6]..[18,629+8])
+                    Ppat_var "ic" (lib/pack/pack.ml[18,629+6]..[18,629+8])
+                  expression (lib/pack/pack.ml[18,629+11]..[18,629+21])
+                    Pexp_apply
+                    expression (lib/pack/pack.ml[18,629+11]..[18,629+18])
+                      Pexp_ident "open_in" (lib/pack/pack.ml[18,629+11]..[18,629+18])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/pack/pack.ml[18,629+19]..[18,629+21])
+                          Pexp_ident "fn" (lib/pack/pack.ml[18,629+19]..[18,629+21])
+                    ]
+              ]
+              expression (lib/pack/pack.ml[19,654+2]..[25,813+13])
+                Pexp_let Rec
+                [
+                  <def>
+                    pattern (lib/pack/pack.ml[19,654+10]..[19,654+14])
+                      Ppat_var "loop" (lib/pack/pack.ml[19,654+10]..[19,654+14])
+                    expression (lib/pack/pack.ml[19,654+15]..[22,763+33]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/pack/pack.ml[19,654+15]..[19,654+17])
+                        Ppat_construct "()" (lib/pack/pack.ml[19,654+15]..[19,654+17])
+                        None
+                      expression (lib/pack/pack.ml[20,674+4]..[22,763+33])
+                        Pexp_match
+                        expression (lib/pack/pack.ml[20,674+10]..[20,674+23])
+                          Pexp_apply
+                          expression (lib/pack/pack.ml[20,674+10]..[20,674+20])
+                            Pexp_ident "input_line" (lib/pack/pack.ml[20,674+10]..[20,674+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[20,674+21]..[20,674+23])
+                                Pexp_ident "ic" (lib/pack/pack.ml[20,674+21]..[20,674+23])
+                          ]
+                        [
+                          <case>
+                            pattern (lib/pack/pack.ml[21,703+6]..[21,703+7])
+                              Ppat_var "s" (lib/pack/pack.ml[21,703+6]..[21,703+7])
+                            expression (lib/pack/pack.ml[21,703+11]..[21,703+59])
+                              Pexp_sequence
+                              expression (lib/pack/pack.ml[21,703+11]..[21,703+29])
+                                Pexp_apply
+                                expression (lib/pack/pack.ml[21,703+11]..[21,703+24])
+                                  Pexp_ident "output_string" (lib/pack/pack.ml[21,703+11]..[21,703+24])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/pack/pack.ml[21,703+25]..[21,703+27])
+                                      Pexp_ident "oc" (lib/pack/pack.ml[21,703+25]..[21,703+27])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/pack/pack.ml[21,703+28]..[21,703+29])
+                                      Pexp_ident "s" (lib/pack/pack.ml[21,703+28]..[21,703+29])
+                                ]
+                              expression (lib/pack/pack.ml[21,703+31]..[21,703+59])
+                                Pexp_sequence
+                                expression (lib/pack/pack.ml[21,703+31]..[21,703+50])
+                                  Pexp_apply
+                                  expression (lib/pack/pack.ml[21,703+31]..[21,703+42])
+                                    Pexp_ident "output_char" (lib/pack/pack.ml[21,703+31]..[21,703+42])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/pack/pack.ml[21,703+43]..[21,703+45])
+                                        Pexp_ident "oc" (lib/pack/pack.ml[21,703+43]..[21,703+45])
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/pack/pack.ml[21,703+46]..[21,703+50])
+                                        Pexp_constant PConst_char 0a
+                                  ]
+                                expression (lib/pack/pack.ml[21,703+52]..[21,703+59])
+                                  Pexp_apply
+                                  expression (lib/pack/pack.ml[21,703+52]..[21,703+56])
+                                    Pexp_ident "loop" (lib/pack/pack.ml[21,703+52]..[21,703+56])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/pack/pack.ml[21,703+57]..[21,703+59])
+                                        Pexp_construct "()" (lib/pack/pack.ml[21,703+57]..[21,703+59])
+                                        None
+                                  ]
+                          <case>
+                            pattern (lib/pack/pack.ml[22,763+6]..[22,763+27])
+                              Ppat_exception
+                              pattern (lib/pack/pack.ml[22,763+16]..[22,763+27])
+                                Ppat_construct "End_of_file" (lib/pack/pack.ml[22,763+16]..[22,763+27])
+                                None
+                            expression (lib/pack/pack.ml[22,763+31]..[22,763+33])
+                              Pexp_construct "()" (lib/pack/pack.ml[22,763+31]..[22,763+33])
+                              None
+                        ]
+                ]
+                expression (lib/pack/pack.ml[24,802+2]..[25,813+13])
+                  Pexp_sequence
+                  expression (lib/pack/pack.ml[24,802+2]..[24,802+9])
+                    Pexp_apply
+                    expression (lib/pack/pack.ml[24,802+2]..[24,802+6])
+                      Pexp_ident "loop" (lib/pack/pack.ml[24,802+2]..[24,802+6])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/pack/pack.ml[24,802+7]..[24,802+9])
+                          Pexp_construct "()" (lib/pack/pack.ml[24,802+7]..[24,802+9])
+                          None
+                    ]
+                  expression (lib/pack/pack.ml[25,813+2]..[25,813+13])
+                    Pexp_apply
+                    expression (lib/pack/pack.ml[25,813+2]..[25,813+10])
+                      Pexp_ident "close_in" (lib/pack/pack.ml[25,813+2]..[25,813+10])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/pack/pack.ml[25,813+11]..[25,813+13])
+                          Pexp_ident "ic" (lib/pack/pack.ml[25,813+11]..[25,813+13])
+                    ]
+    ]
+  structure_item (lib/pack/pack.ml[32,1033+0]..[49,1437+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[32,1033+4]..[32,1033+21])
+          Ppat_var "menhirLib_modules" (lib/pack/pack.ml[32,1033+4]..[32,1033+21])
+        core_type (lib/pack/pack.ml[32,1033+24]..[32,1033+35])
+          Ptyp_constr "list" (lib/pack/pack.ml[32,1033+31]..[32,1033+35])
+          [
+            core_type (lib/pack/pack.ml[32,1033+24]..[32,1033+30])
+              Ptyp_constr "string" (lib/pack/pack.ml[32,1033+24]..[32,1033+30])
+              []
+          ]
+        expression (lib/pack/pack.ml[33,1071+2]..[49,1437+3])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (lib/pack/pack.ml[33,1071+6]..[33,1071+8])
+                Ppat_var "ic" (lib/pack/pack.ml[33,1071+6]..[33,1071+8])
+              expression (lib/pack/pack.ml[33,1071+11]..[33,1071+37])
+                Pexp_apply
+                expression (lib/pack/pack.ml[33,1071+11]..[33,1071+18])
+                  Pexp_ident "open_in" (lib/pack/pack.ml[33,1071+11]..[33,1071+18])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[33,1071+19]..[33,1071+37])
+                      Pexp_constant PConst_string("menhirLib.mlpack",(lib/pack/pack.ml[33,1071+20]..[33,1071+36]),None)
+                ]
+          ]
+          expression (lib/pack/pack.ml[34,1112+2]..[49,1437+3])
+            Pexp_let Rec
+            [
+              <def>
+                pattern (lib/pack/pack.ml[34,1112+10]..[34,1112+14])
+                  Ppat_var "loop" (lib/pack/pack.ml[34,1112+10]..[34,1112+14])
+                expression (lib/pack/pack.ml[34,1112+15]..[45,1378+17]) ghost
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (lib/pack/pack.ml[34,1112+15]..[34,1112+19])
+                    Ppat_var "accu" (lib/pack/pack.ml[34,1112+15]..[34,1112+19])
+                  expression (lib/pack/pack.ml[35,1134+4]..[45,1378+17])
+                    Pexp_match
+                    expression (lib/pack/pack.ml[35,1134+10]..[35,1134+23])
+                      Pexp_apply
+                      expression (lib/pack/pack.ml[35,1134+10]..[35,1134+20])
+                        Pexp_ident "input_line" (lib/pack/pack.ml[35,1134+10]..[35,1134+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (lib/pack/pack.ml[35,1134+21]..[35,1134+23])
+                            Pexp_ident "ic" (lib/pack/pack.ml[35,1134+21]..[35,1134+23])
+                      ]
+                    [
+                      <case>
+                        pattern (lib/pack/pack.ml[36,1163+6]..[36,1163+27])
+                          Ppat_exception
+                          pattern (lib/pack/pack.ml[36,1163+16]..[36,1163+27])
+                            Ppat_construct "End_of_file" (lib/pack/pack.ml[36,1163+16]..[36,1163+27])
+                            None
+                        expression (lib/pack/pack.ml[36,1163+31]..[36,1163+44])
+                          Pexp_apply
+                          expression (lib/pack/pack.ml[36,1163+31]..[36,1163+39])
+                            Pexp_ident "List.rev" (lib/pack/pack.ml[36,1163+31]..[36,1163+39])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[36,1163+40]..[36,1163+44])
+                                Pexp_ident "accu" (lib/pack/pack.ml[36,1163+40]..[36,1163+44])
+                          ]
+                      <case>
+                        pattern (lib/pack/pack.ml[37,1208+6]..[37,1208+7])
+                          Ppat_var "s" (lib/pack/pack.ml[37,1208+6]..[37,1208+7])
+                        expression (lib/pack/pack.ml[38,1219+8]..[45,1378+17])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (lib/pack/pack.ml[38,1219+12]..[38,1219+13])
+                                Ppat_var "s" (lib/pack/pack.ml[38,1219+12]..[38,1219+13])
+                              expression (lib/pack/pack.ml[38,1219+16]..[38,1219+29])
+                                Pexp_apply
+                                expression (lib/pack/pack.ml[38,1219+16]..[38,1219+27])
+                                  Pexp_ident "String.trim" (lib/pack/pack.ml[38,1219+16]..[38,1219+27])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/pack/pack.ml[38,1219+28]..[38,1219+29])
+                                      Pexp_ident "s" (lib/pack/pack.ml[38,1219+28]..[38,1219+29])
+                                ]
+                          ]
+                          expression (lib/pack/pack.ml[39,1252+8]..[45,1378+17])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (lib/pack/pack.ml[39,1252+12]..[39,1252+16])
+                                  Ppat_var "accu" (lib/pack/pack.ml[39,1252+12]..[39,1252+16])
+                                expression (lib/pack/pack.ml[40,1271+10]..[43,1350+16])
+                                  Pexp_ifthenelse
+                                  expression (lib/pack/pack.ml[40,1271+13]..[40,1271+36])
+                                    Pexp_apply
+                                    expression (lib/pack/pack.ml[40,1271+21]..[40,1271+23])
+                                      Pexp_ident "&&" (lib/pack/pack.ml[40,1271+21]..[40,1271+23])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/pack/pack.ml[40,1271+13]..[40,1271+20])
+                                          Pexp_apply
+                                          expression (lib/pack/pack.ml[40,1271+15]..[40,1271+17])
+                                            Pexp_ident "<>" (lib/pack/pack.ml[40,1271+15]..[40,1271+17])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[40,1271+13]..[40,1271+14])
+                                                Pexp_ident "s" (lib/pack/pack.ml[40,1271+13]..[40,1271+14])
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[40,1271+18]..[40,1271+20])
+                                                Pexp_constant PConst_string("",(lib/pack/pack.ml[40,1271+19]..[40,1271+19]),None)
+                                          ]
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/pack/pack.ml[40,1271+24]..[40,1271+36])
+                                          Pexp_apply
+                                          expression (lib/pack/pack.ml[40,1271+30]..[40,1271+32])
+                                            Pexp_ident "<>" (lib/pack/pack.ml[40,1271+30]..[40,1271+32])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[40,1271+24]..[40,1271+29])
+                                                Pexp_apply
+                                                expression (lib/pack/pack.ml[40,1271+24]..[40,1271+29]) ghost
+                                                  Pexp_ident "String.get" (lib/pack/pack.ml[40,1271+24]..[40,1271+29]) ghost
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (lib/pack/pack.ml[40,1271+24]..[40,1271+25])
+                                                      Pexp_ident "s" (lib/pack/pack.ml[40,1271+24]..[40,1271+25])
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (lib/pack/pack.ml[40,1271+27]..[40,1271+28])
+                                                      Pexp_constant PConst_int (0,None)
+                                                ]
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[40,1271+33]..[40,1271+36])
+                                                Pexp_constant PConst_char 23
+                                          ]
+                                    ]
+                                  expression (lib/pack/pack.ml[41,1313+12]..[41,1313+21])
+                                    Pexp_construct "::" (lib/pack/pack.ml[41,1313+14]..[41,1313+16])
+                                    Some
+                                      expression (lib/pack/pack.ml[41,1313+12]..[41,1313+21]) ghost
+                                        Pexp_tuple
+                                        [
+                                          expression (lib/pack/pack.ml[41,1313+12]..[41,1313+13])
+                                            Pexp_ident "s" (lib/pack/pack.ml[41,1313+12]..[41,1313+13])
+                                          expression (lib/pack/pack.ml[41,1313+17]..[41,1313+21])
+                                            Pexp_ident "accu" (lib/pack/pack.ml[41,1313+17]..[41,1313+21])
+                                        ]
+                                  Some
+                                    expression (lib/pack/pack.ml[43,1350+12]..[43,1350+16])
+                                      Pexp_ident "accu" (lib/pack/pack.ml[43,1350+12]..[43,1350+16])
+                            ]
+                            expression (lib/pack/pack.ml[45,1378+8]..[45,1378+17])
+                              Pexp_apply
+                              expression (lib/pack/pack.ml[45,1378+8]..[45,1378+12])
+                                Pexp_ident "loop" (lib/pack/pack.ml[45,1378+8]..[45,1378+12])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/pack/pack.ml[45,1378+13]..[45,1378+17])
+                                    Pexp_ident "accu" (lib/pack/pack.ml[45,1378+13]..[45,1378+17])
+                              ]
+                    ]
+            ]
+            expression (lib/pack/pack.ml[47,1401+2]..[49,1437+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (lib/pack/pack.ml[47,1401+6]..[47,1401+7])
+                    Ppat_var "r" (lib/pack/pack.ml[47,1401+6]..[47,1401+7])
+                  expression (lib/pack/pack.ml[47,1401+10]..[47,1401+17])
+                    Pexp_apply
+                    expression (lib/pack/pack.ml[47,1401+10]..[47,1401+14])
+                      Pexp_ident "loop" (lib/pack/pack.ml[47,1401+10]..[47,1401+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (lib/pack/pack.ml[47,1401+15]..[47,1401+17])
+                          Pexp_construct "[]" (lib/pack/pack.ml[47,1401+15]..[47,1401+17])
+                          None
+                    ]
+              ]
+              expression (lib/pack/pack.ml[48,1422+2]..[49,1437+3])
+                Pexp_sequence
+                expression (lib/pack/pack.ml[48,1422+2]..[48,1422+13])
+                  Pexp_apply
+                  expression (lib/pack/pack.ml[48,1422+2]..[48,1422+10])
+                    Pexp_ident "close_in" (lib/pack/pack.ml[48,1422+2]..[48,1422+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/pack/pack.ml[48,1422+11]..[48,1422+13])
+                        Pexp_ident "ic" (lib/pack/pack.ml[48,1422+11]..[48,1422+13])
+                  ]
+                expression (lib/pack/pack.ml[49,1437+2]..[49,1437+3])
+                  Pexp_ident "r" (lib/pack/pack.ml[49,1437+2]..[49,1437+3])
+    ]
+  structure_item (lib/pack/pack.ml[59,1862+0]..[67,2110+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[59,1862+4]..[59,1862+6])
+          Ppat_construct "()" (lib/pack/pack.ml[59,1862+4]..[59,1862+6])
+          None
+        expression (lib/pack/pack.ml[60,1871+2]..[67,2110+14])
+          Pexp_sequence
+          expression (lib/pack/pack.ml[60,1871+2]..[60,1871+42])
+            Pexp_apply
+            expression (lib/pack/pack.ml[60,1871+2]..[60,1871+15])
+              Pexp_ident "print_endline" (lib/pack/pack.ml[60,1871+2]..[60,1871+15])
+            [
+              <arg>
+              Nolabel
+                expression (lib/pack/pack.ml[60,1871+16]..[60,1871+42])
+                  Pexp_constant PConst_string("Creating menhirLib.ml...",(lib/pack/pack.ml[60,1871+17]..[60,1871+41]),None)
+            ]
+          expression (lib/pack/pack.ml[61,1915+2]..[67,2110+14])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (lib/pack/pack.ml[61,1915+6]..[61,1915+8])
+                  Ppat_var "oc" (lib/pack/pack.ml[61,1915+6]..[61,1915+8])
+                expression (lib/pack/pack.ml[61,1915+11]..[61,1915+34])
+                  Pexp_apply
+                  expression (lib/pack/pack.ml[61,1915+11]..[61,1915+19])
+                    Pexp_ident "open_out" (lib/pack/pack.ml[61,1915+11]..[61,1915+19])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/pack/pack.ml[61,1915+20]..[61,1915+34])
+                        Pexp_constant PConst_string("menhirLib.ml",(lib/pack/pack.ml[61,1915+21]..[61,1915+33]),None)
+                  ]
+            ]
+            expression (lib/pack/pack.ml[62,1953+2]..[67,2110+14])
+              Pexp_sequence
+              expression (lib/pack/pack.ml[62,1953+2]..[66,2087+21])
+                Pexp_apply
+                expression (lib/pack/pack.ml[62,1953+2]..[62,1953+11])
+                  Pexp_ident "List.iter" (lib/pack/pack.ml[62,1953+2]..[62,1953+11])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[62,1953+12]..[66,2087+3])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/pack/pack.ml[62,1953+17]..[62,1953+18])
+                        Ppat_var "m" (lib/pack/pack.ml[62,1953+17]..[62,1953+18])
+                      expression (lib/pack/pack.ml[63,1975+4]..[65,2057+29])
+                        Pexp_sequence
+                        expression (lib/pack/pack.ml[63,1975+4]..[63,1975+46])
+                          Pexp_apply
+                          expression (lib/pack/pack.ml[63,1975+4]..[63,1975+18])
+                            Pexp_ident "Printf.fprintf" (lib/pack/pack.ml[63,1975+4]..[63,1975+18])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[63,1975+19]..[63,1975+21])
+                                Pexp_ident "oc" (lib/pack/pack.ml[63,1975+19]..[63,1975+21])
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[63,1975+22]..[63,1975+44])
+                                Pexp_constant PConst_string("module %s = struct\n",(lib/pack/pack.ml[63,1975+23]..[63,1975+43]),None)
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[63,1975+45]..[63,1975+46])
+                                Pexp_ident "m" (lib/pack/pack.ml[63,1975+45]..[63,1975+46])
+                          ]
+                        expression (lib/pack/pack.ml[64,2023+4]..[65,2057+29])
+                          Pexp_sequence
+                          expression (lib/pack/pack.ml[64,2023+4]..[64,2023+32])
+                            Pexp_apply
+                            expression (lib/pack/pack.ml[64,2023+4]..[64,2023+12])
+                              Pexp_ident "cat_file" (lib/pack/pack.ml[64,2023+4]..[64,2023+12])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/pack/pack.ml[64,2023+13]..[64,2023+15])
+                                  Pexp_ident "oc" (lib/pack/pack.ml[64,2023+13]..[64,2023+15])
+                              <arg>
+                              Nolabel
+                                expression (lib/pack/pack.ml[64,2023+16]..[64,2023+32])
+                                  Pexp_apply
+                                  expression (lib/pack/pack.ml[64,2023+17]..[64,2023+19])
+                                    Pexp_ident "up" (lib/pack/pack.ml[64,2023+17]..[64,2023+19])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (lib/pack/pack.ml[64,2023+20]..[64,2023+31])
+                                        Pexp_apply
+                                        expression (lib/pack/pack.ml[64,2023+23]..[64,2023+24])
+                                          Pexp_ident "^" (lib/pack/pack.ml[64,2023+23]..[64,2023+24])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/pack/pack.ml[64,2023+21]..[64,2023+22])
+                                              Pexp_ident "m" (lib/pack/pack.ml[64,2023+21]..[64,2023+22])
+                                          <arg>
+                                          Nolabel
+                                            expression (lib/pack/pack.ml[64,2023+25]..[64,2023+30])
+                                              Pexp_constant PConst_string(".ml",(lib/pack/pack.ml[64,2023+26]..[64,2023+29]),None)
+                                        ]
+                                  ]
+                            ]
+                          expression (lib/pack/pack.ml[65,2057+4]..[65,2057+29])
+                            Pexp_apply
+                            expression (lib/pack/pack.ml[65,2057+4]..[65,2057+18])
+                              Pexp_ident "Printf.fprintf" (lib/pack/pack.ml[65,2057+4]..[65,2057+18])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/pack/pack.ml[65,2057+19]..[65,2057+21])
+                                  Pexp_ident "oc" (lib/pack/pack.ml[65,2057+19]..[65,2057+21])
+                              <arg>
+                              Nolabel
+                                expression (lib/pack/pack.ml[65,2057+22]..[65,2057+29])
+                                  Pexp_constant PConst_string("end\n",(lib/pack/pack.ml[65,2057+23]..[65,2057+28]),None)
+                            ]
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[66,2087+4]..[66,2087+21])
+                      Pexp_ident "menhirLib_modules" (lib/pack/pack.ml[66,2087+4]..[66,2087+21])
+                ]
+              expression (lib/pack/pack.ml[67,2110+2]..[67,2110+14])
+                Pexp_apply
+                expression (lib/pack/pack.ml[67,2110+2]..[67,2110+11])
+                  Pexp_ident "close_out" (lib/pack/pack.ml[67,2110+2]..[67,2110+11])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[67,2110+12]..[67,2110+14])
+                      Pexp_ident "oc" (lib/pack/pack.ml[67,2110+12]..[67,2110+14])
+                ]
+    ]
+  structure_item (lib/pack/pack.ml[74,2378+0]..[85,2732+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[74,2378+4]..[74,2378+6])
+          Ppat_construct "()" (lib/pack/pack.ml[74,2378+4]..[74,2378+6])
+          None
+        expression (lib/pack/pack.ml[75,2387+2]..[85,2732+14])
+          Pexp_sequence
+          expression (lib/pack/pack.ml[75,2387+2]..[75,2387+43])
+            Pexp_apply
+            expression (lib/pack/pack.ml[75,2387+2]..[75,2387+15])
+              Pexp_ident "print_endline" (lib/pack/pack.ml[75,2387+2]..[75,2387+15])
+            [
+              <arg>
+              Nolabel
+                expression (lib/pack/pack.ml[75,2387+16]..[75,2387+43])
+                  Pexp_constant PConst_string("Creating menhirLib.mli...",(lib/pack/pack.ml[75,2387+17]..[75,2387+42]),None)
+            ]
+          expression (lib/pack/pack.ml[76,2432+2]..[85,2732+14])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (lib/pack/pack.ml[76,2432+6]..[76,2432+8])
+                  Ppat_var "oc" (lib/pack/pack.ml[76,2432+6]..[76,2432+8])
+                expression (lib/pack/pack.ml[76,2432+11]..[76,2432+35])
+                  Pexp_apply
+                  expression (lib/pack/pack.ml[76,2432+11]..[76,2432+19])
+                    Pexp_ident "open_out" (lib/pack/pack.ml[76,2432+11]..[76,2432+19])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (lib/pack/pack.ml[76,2432+20]..[76,2432+35])
+                        Pexp_constant PConst_string("menhirLib.mli",(lib/pack/pack.ml[76,2432+21]..[76,2432+34]),None)
+                  ]
+            ]
+            expression (lib/pack/pack.ml[77,2471+2]..[85,2732+14])
+              Pexp_sequence
+              expression (lib/pack/pack.ml[77,2471+2]..[84,2707+23])
+                Pexp_apply
+                expression (lib/pack/pack.ml[77,2471+2]..[77,2471+11])
+                  Pexp_ident "List.iter" (lib/pack/pack.ml[77,2471+2]..[77,2471+11])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[77,2471+12]..[84,2707+5])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (lib/pack/pack.ml[77,2471+17]..[77,2471+18])
+                        Ppat_var "m" (lib/pack/pack.ml[77,2471+17]..[77,2471+18])
+                      expression (lib/pack/pack.ml[78,2493+6]..[83,2675+31])
+                        Pexp_sequence
+                        expression (lib/pack/pack.ml[78,2493+6]..[78,2493+45])
+                          Pexp_apply
+                          expression (lib/pack/pack.ml[78,2493+6]..[78,2493+20])
+                            Pexp_ident "Printf.fprintf" (lib/pack/pack.ml[78,2493+6]..[78,2493+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[78,2493+21]..[78,2493+23])
+                                Pexp_ident "oc" (lib/pack/pack.ml[78,2493+21]..[78,2493+23])
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[78,2493+24]..[78,2493+43])
+                                Pexp_constant PConst_string("module %s : sig\n",(lib/pack/pack.ml[78,2493+25]..[78,2493+42]),None)
+                            <arg>
+                            Nolabel
+                              expression (lib/pack/pack.ml[78,2493+44]..[78,2493+45])
+                                Pexp_ident "m" (lib/pack/pack.ml[78,2493+44]..[78,2493+45])
+                          ]
+                        expression (lib/pack/pack.ml[79,2540+6]..[83,2675+31])
+                          Pexp_sequence
+                          expression (lib/pack/pack.ml[79,2540+6]..[82,2637+36])
+                            Pexp_ifthenelse
+                            expression (lib/pack/pack.ml[79,2540+9]..[79,2540+42])
+                              Pexp_apply
+                              expression (lib/pack/pack.ml[79,2540+9]..[79,2540+24])
+                                Pexp_ident "Sys.file_exists" (lib/pack/pack.ml[79,2540+9]..[79,2540+24])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/pack/pack.ml[79,2540+25]..[79,2540+42])
+                                    Pexp_apply
+                                    expression (lib/pack/pack.ml[79,2540+26]..[79,2540+28])
+                                      Pexp_ident "up" (lib/pack/pack.ml[79,2540+26]..[79,2540+28])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/pack/pack.ml[79,2540+29]..[79,2540+41])
+                                          Pexp_apply
+                                          expression (lib/pack/pack.ml[79,2540+32]..[79,2540+33])
+                                            Pexp_ident "^" (lib/pack/pack.ml[79,2540+32]..[79,2540+33])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[79,2540+30]..[79,2540+31])
+                                                Pexp_ident "m" (lib/pack/pack.ml[79,2540+30]..[79,2540+31])
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[79,2540+34]..[79,2540+40])
+                                                Pexp_constant PConst_string(".mli",(lib/pack/pack.ml[79,2540+35]..[79,2540+39]),None)
+                                          ]
+                                    ]
+                              ]
+                            expression (lib/pack/pack.ml[80,2588+8]..[80,2588+37])
+                              Pexp_apply
+                              expression (lib/pack/pack.ml[80,2588+8]..[80,2588+16])
+                                Pexp_ident "cat_file" (lib/pack/pack.ml[80,2588+8]..[80,2588+16])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (lib/pack/pack.ml[80,2588+17]..[80,2588+19])
+                                    Pexp_ident "oc" (lib/pack/pack.ml[80,2588+17]..[80,2588+19])
+                                <arg>
+                                Nolabel
+                                  expression (lib/pack/pack.ml[80,2588+20]..[80,2588+37])
+                                    Pexp_apply
+                                    expression (lib/pack/pack.ml[80,2588+21]..[80,2588+23])
+                                      Pexp_ident "up" (lib/pack/pack.ml[80,2588+21]..[80,2588+23])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (lib/pack/pack.ml[80,2588+24]..[80,2588+36])
+                                          Pexp_apply
+                                          expression (lib/pack/pack.ml[80,2588+27]..[80,2588+28])
+                                            Pexp_ident "^" (lib/pack/pack.ml[80,2588+27]..[80,2588+28])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[80,2588+25]..[80,2588+26])
+                                                Pexp_ident "m" (lib/pack/pack.ml[80,2588+25]..[80,2588+26])
+                                            <arg>
+                                            Nolabel
+                                              expression (lib/pack/pack.ml[80,2588+29]..[80,2588+35])
+                                                Pexp_constant PConst_string(".mli",(lib/pack/pack.ml[80,2588+30]..[80,2588+34]),None)
+                                          ]
+                                    ]
+                              ]
+                            Some
+                              expression (lib/pack/pack.ml[82,2637+8]..[82,2637+36])
+                                Pexp_apply
+                                expression (lib/pack/pack.ml[82,2637+8]..[82,2637+16])
+                                  Pexp_ident "cat_file" (lib/pack/pack.ml[82,2637+8]..[82,2637+16])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/pack/pack.ml[82,2637+17]..[82,2637+19])
+                                      Pexp_ident "oc" (lib/pack/pack.ml[82,2637+17]..[82,2637+19])
+                                  <arg>
+                                  Nolabel
+                                    expression (lib/pack/pack.ml[82,2637+20]..[82,2637+36])
+                                      Pexp_apply
+                                      expression (lib/pack/pack.ml[82,2637+21]..[82,2637+23])
+                                        Pexp_ident "up" (lib/pack/pack.ml[82,2637+21]..[82,2637+23])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (lib/pack/pack.ml[82,2637+24]..[82,2637+35])
+                                            Pexp_apply
+                                            expression (lib/pack/pack.ml[82,2637+27]..[82,2637+28])
+                                              Pexp_ident "^" (lib/pack/pack.ml[82,2637+27]..[82,2637+28])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (lib/pack/pack.ml[82,2637+25]..[82,2637+26])
+                                                  Pexp_ident "m" (lib/pack/pack.ml[82,2637+25]..[82,2637+26])
+                                              <arg>
+                                              Nolabel
+                                                expression (lib/pack/pack.ml[82,2637+29]..[82,2637+34])
+                                                  Pexp_constant PConst_string(".ml",(lib/pack/pack.ml[82,2637+30]..[82,2637+33]),None)
+                                            ]
+                                      ]
+                                ]
+                          expression (lib/pack/pack.ml[83,2675+6]..[83,2675+31])
+                            Pexp_apply
+                            expression (lib/pack/pack.ml[83,2675+6]..[83,2675+20])
+                              Pexp_ident "Printf.fprintf" (lib/pack/pack.ml[83,2675+6]..[83,2675+20])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (lib/pack/pack.ml[83,2675+21]..[83,2675+23])
+                                  Pexp_ident "oc" (lib/pack/pack.ml[83,2675+21]..[83,2675+23])
+                              <arg>
+                              Nolabel
+                                expression (lib/pack/pack.ml[83,2675+24]..[83,2675+31])
+                                  Pexp_constant PConst_string("end\n",(lib/pack/pack.ml[83,2675+25]..[83,2675+30]),None)
+                            ]
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[84,2707+6]..[84,2707+23])
+                      Pexp_ident "menhirLib_modules" (lib/pack/pack.ml[84,2707+6]..[84,2707+23])
+                ]
+              expression (lib/pack/pack.ml[85,2732+2]..[85,2732+14])
+                Pexp_apply
+                expression (lib/pack/pack.ml[85,2732+2]..[85,2732+11])
+                  Pexp_ident "close_out" (lib/pack/pack.ml[85,2732+2]..[85,2732+11])
+                [
+                  <arg>
+                  Nolabel
+                    expression (lib/pack/pack.ml[85,2732+12]..[85,2732+14])
+                      Pexp_ident "oc" (lib/pack/pack.ml[85,2732+12]..[85,2732+14])
+                ]
+    ]
+]
+
+let up fn = Filename.concat Filename.parent_dir_name fn
+let cat_file oc fn =
+  let ic = open_in fn in
+  let rec loop () =
+    match input_line ic with
+    | s -> (output_string oc s; output_char oc '\n'; loop ())
+    | exception End_of_file -> () in
+  loop (); close_in ic
+let menhirLib_modules : string list =
+  let ic = open_in "menhirLib.mlpack" in
+  let rec loop accu =
+    match input_line ic with
+    | exception End_of_file -> List.rev accu
+    | s ->
+        let s = String.trim s in
+        let accu = if (s <> "") && ((s.[0]) <> '#') then s :: accu else accu in
+        loop accu in
+  let r = loop [] in close_in ic; r
+let () =
+  print_endline "Creating menhirLib.ml...";
+  (let oc = open_out "menhirLib.ml" in
+   List.iter
+     (fun m ->
+        Printf.fprintf oc "module %s = struct\n" m;
+        cat_file oc (up (m ^ ".ml"));
+        Printf.fprintf oc "end\n") menhirLib_modules;
+   close_out oc)
+let () =
+  print_endline "Creating menhirLib.mli...";
+  (let oc = open_out "menhirLib.mli" in
+   List.iter
+     (fun m ->
+        Printf.fprintf oc "module %s : sig\n" m;
+        if Sys.file_exists (up (m ^ ".mli"))
+        then cat_file oc (up (m ^ ".mli"))
+        else cat_file oc (up (m ^ ".ml"));
+        Printf.fprintf oc "end\n") menhirLib_modules;
+   close_out oc)
+[
+  structure_item (lib/pack/pack.ml[10,387+0]..lib/pack/pack.ml[11,399+45])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[10,387+4]..lib/pack/pack.ml[10,387+6])
+          Tpat_var "up/269"
+        expression (lib/pack/pack.ml[10,387+7]..lib/pack/pack.ml[11,399+45]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/pack/pack.ml[10,387+7]..lib/pack/pack.ml[10,387+9])
+                Tpat_var "fn/271"
+              expression (lib/pack/pack.ml[11,399+2]..lib/pack/pack.ml[11,399+45])
+                Texp_apply
+                expression (lib/pack/pack.ml[11,399+2]..lib/pack/pack.ml[11,399+17])
+                  Texp_ident "Stdlib!.Filename.concat"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[11,399+18]..lib/pack/pack.ml[11,399+42])
+                      Texp_ident "Stdlib!.Filename.parent_dir_name"
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[11,399+43]..lib/pack/pack.ml[11,399+45])
+                      Texp_ident "fn/271"
+                ]
+          ]
+    ]
+  structure_item (lib/pack/pack.ml[17,608+0]..lib/pack/pack.ml[25,813+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[17,608+4]..lib/pack/pack.ml[17,608+12])
+          Tpat_var "cat_file/294"
+        expression (lib/pack/pack.ml[17,608+13]..lib/pack/pack.ml[25,813+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (lib/pack/pack.ml[17,608+13]..lib/pack/pack.ml[17,608+15])
+                Tpat_var "oc/296"
+              expression (lib/pack/pack.ml[17,608+16]..lib/pack/pack.ml[25,813+13]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (lib/pack/pack.ml[17,608+16]..lib/pack/pack.ml[17,608+18])
+                      Tpat_var "fn/297"
+                    expression (lib/pack/pack.ml[18,629+2]..lib/pack/pack.ml[25,813+13])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (lib/pack/pack.ml[18,629+6]..lib/pack/pack.ml[18,629+8])
+                            Tpat_var "ic/298"
+                          expression (lib/pack/pack.ml[18,629+11]..lib/pack/pack.ml[18,629+21])
+                            Texp_apply
+                            expression (lib/pack/pack.ml[18,629+11]..lib/pack/pack.ml[18,629+18])
+                              Texp_ident "Stdlib!.open_in"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/pack/pack.ml[18,629+19]..lib/pack/pack.ml[18,629+21])
+                                  Texp_ident "fn/297"
+                            ]
+                      ]
+                      expression (lib/pack/pack.ml[19,654+2]..lib/pack/pack.ml[25,813+13])
+                        Texp_let Rec
+                        [
+                          <def>
+                            pattern (lib/pack/pack.ml[19,654+10]..lib/pack/pack.ml[19,654+14])
+                              Tpat_var "loop/299"
+                            expression (lib/pack/pack.ml[19,654+15]..lib/pack/pack.ml[22,763+33]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (lib/pack/pack.ml[19,654+15]..lib/pack/pack.ml[19,654+17])
+                                    Tpat_construct "()"
+                                    []
+                                    None
+                                  expression (lib/pack/pack.ml[20,674+4]..lib/pack/pack.ml[22,763+33])
+                                    Texp_match
+                                    expression (lib/pack/pack.ml[20,674+10]..lib/pack/pack.ml[20,674+23])
+                                      Texp_apply
+                                      expression (lib/pack/pack.ml[20,674+10]..lib/pack/pack.ml[20,674+20])
+                                        Texp_ident "Stdlib!.input_line"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/pack/pack.ml[20,674+21]..lib/pack/pack.ml[20,674+23])
+                                            Texp_ident "ic/298"
+                                      ]
+                                    [
+                                      <case>
+                                        pattern (lib/pack/pack.ml[21,703+6]..lib/pack/pack.ml[21,703+7])
+                                          Tpat_value
+                                          pattern (lib/pack/pack.ml[21,703+6]..lib/pack/pack.ml[21,703+7])
+                                            Tpat_var "s/300"
+                                        expression (lib/pack/pack.ml[21,703+11]..lib/pack/pack.ml[21,703+59])
+                                          Texp_sequence
+                                          expression (lib/pack/pack.ml[21,703+11]..lib/pack/pack.ml[21,703+29])
+                                            Texp_apply
+                                            expression (lib/pack/pack.ml[21,703+11]..lib/pack/pack.ml[21,703+24])
+                                              Texp_ident "Stdlib!.output_string"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/pack/pack.ml[21,703+25]..lib/pack/pack.ml[21,703+27])
+                                                  Texp_ident "oc/296"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/pack/pack.ml[21,703+28]..lib/pack/pack.ml[21,703+29])
+                                                  Texp_ident "s/300"
+                                            ]
+                                          expression (lib/pack/pack.ml[21,703+31]..lib/pack/pack.ml[21,703+59])
+                                            Texp_sequence
+                                            expression (lib/pack/pack.ml[21,703+31]..lib/pack/pack.ml[21,703+50])
+                                              Texp_apply
+                                              expression (lib/pack/pack.ml[21,703+31]..lib/pack/pack.ml[21,703+42])
+                                                Texp_ident "Stdlib!.output_char"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[21,703+43]..lib/pack/pack.ml[21,703+45])
+                                                    Texp_ident "oc/296"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[21,703+46]..lib/pack/pack.ml[21,703+50])
+                                                    Texp_constant Const_char 0a
+                                              ]
+                                            expression (lib/pack/pack.ml[21,703+52]..lib/pack/pack.ml[21,703+59])
+                                              Texp_apply
+                                              expression (lib/pack/pack.ml[21,703+52]..lib/pack/pack.ml[21,703+56])
+                                                Texp_ident "loop/299"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[21,703+57]..lib/pack/pack.ml[21,703+59])
+                                                    Texp_construct "()"
+                                                    []
+                                              ]
+                                      <case>
+                                        pattern (lib/pack/pack.ml[22,763+6]..lib/pack/pack.ml[22,763+27])
+                                          Tpat_exception
+                                          pattern (lib/pack/pack.ml[22,763+16]..lib/pack/pack.ml[22,763+27])
+                                            Tpat_construct "End_of_file"
+                                            []
+                                            None
+                                        expression (lib/pack/pack.ml[22,763+31]..lib/pack/pack.ml[22,763+33])
+                                          Texp_construct "()"
+                                          []
+                                    ]
+                              ]
+                        ]
+                        expression (lib/pack/pack.ml[24,802+2]..lib/pack/pack.ml[25,813+13])
+                          Texp_sequence
+                          expression (lib/pack/pack.ml[24,802+2]..lib/pack/pack.ml[24,802+9])
+                            Texp_apply
+                            expression (lib/pack/pack.ml[24,802+2]..lib/pack/pack.ml[24,802+6])
+                              Texp_ident "loop/299"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/pack/pack.ml[24,802+7]..lib/pack/pack.ml[24,802+9])
+                                  Texp_construct "()"
+                                  []
+                            ]
+                          expression (lib/pack/pack.ml[25,813+2]..lib/pack/pack.ml[25,813+13])
+                            Texp_apply
+                            expression (lib/pack/pack.ml[25,813+2]..lib/pack/pack.ml[25,813+10])
+                              Texp_ident "Stdlib!.close_in"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (lib/pack/pack.ml[25,813+11]..lib/pack/pack.ml[25,813+13])
+                                  Texp_ident "ic/298"
+                            ]
+                ]
+          ]
+    ]
+  structure_item (lib/pack/pack.ml[32,1033+0]..lib/pack/pack.ml[49,1437+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[32,1033+4]..lib/pack/pack.ml[32,1033+21])
+          extra
+            Tpat_extra_constraint
+            core_type (lib/pack/pack.ml[32,1033+24]..lib/pack/pack.ml[32,1033+35])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/pack/pack.ml[32,1033+24]..lib/pack/pack.ml[32,1033+30])
+                  Ttyp_constr "string/15!"
+                  []
+              ]
+          Tpat_alias "menhirLib_modules/302"
+          pattern (lib/pack/pack.ml[32,1033+4]..lib/pack/pack.ml[32,1033+21])
+            Tpat_any
+        expression (lib/pack/pack.ml[33,1071+2]..lib/pack/pack.ml[49,1437+3])
+          extra
+            Texp_constraint
+            core_type (lib/pack/pack.ml[32,1033+24]..lib/pack/pack.ml[32,1033+35])
+              Ttyp_constr "list/9!"
+              [
+                core_type (lib/pack/pack.ml[32,1033+24]..lib/pack/pack.ml[32,1033+30])
+                  Ttyp_constr "string/15!"
+                  []
+              ]
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (lib/pack/pack.ml[33,1071+6]..lib/pack/pack.ml[33,1071+8])
+                Tpat_var "ic/303"
+              expression (lib/pack/pack.ml[33,1071+11]..lib/pack/pack.ml[33,1071+37])
+                Texp_apply
+                expression (lib/pack/pack.ml[33,1071+11]..lib/pack/pack.ml[33,1071+18])
+                  Texp_ident "Stdlib!.open_in"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[33,1071+19]..lib/pack/pack.ml[33,1071+37])
+                      Texp_constant Const_string("menhirLib.mlpack",(lib/pack/pack.ml[33,1071+20]..lib/pack/pack.ml[33,1071+36]),None)
+                ]
+          ]
+          expression (lib/pack/pack.ml[34,1112+2]..lib/pack/pack.ml[49,1437+3])
+            Texp_let Rec
+            [
+              <def>
+                pattern (lib/pack/pack.ml[34,1112+10]..lib/pack/pack.ml[34,1112+14])
+                  Tpat_var "loop/304"
+                expression (lib/pack/pack.ml[34,1112+15]..lib/pack/pack.ml[45,1378+17]) ghost
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (lib/pack/pack.ml[34,1112+15]..lib/pack/pack.ml[34,1112+19])
+                        Tpat_var "accu/305"
+                      expression (lib/pack/pack.ml[35,1134+4]..lib/pack/pack.ml[45,1378+17])
+                        Texp_match
+                        expression (lib/pack/pack.ml[35,1134+10]..lib/pack/pack.ml[35,1134+23])
+                          Texp_apply
+                          expression (lib/pack/pack.ml[35,1134+10]..lib/pack/pack.ml[35,1134+20])
+                            Texp_ident "Stdlib!.input_line"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (lib/pack/pack.ml[35,1134+21]..lib/pack/pack.ml[35,1134+23])
+                                Texp_ident "ic/303"
+                          ]
+                        [
+                          <case>
+                            pattern (lib/pack/pack.ml[36,1163+6]..lib/pack/pack.ml[36,1163+27])
+                              Tpat_exception
+                              pattern (lib/pack/pack.ml[36,1163+16]..lib/pack/pack.ml[36,1163+27])
+                                Tpat_construct "End_of_file"
+                                []
+                                None
+                            expression (lib/pack/pack.ml[36,1163+31]..lib/pack/pack.ml[36,1163+44])
+                              Texp_apply
+                              expression (lib/pack/pack.ml[36,1163+31]..lib/pack/pack.ml[36,1163+39])
+                                Texp_ident "Stdlib!.List.rev"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[36,1163+40]..lib/pack/pack.ml[36,1163+44])
+                                    Texp_ident "accu/305"
+                              ]
+                          <case>
+                            pattern (lib/pack/pack.ml[37,1208+6]..lib/pack/pack.ml[37,1208+7])
+                              Tpat_value
+                              pattern (lib/pack/pack.ml[37,1208+6]..lib/pack/pack.ml[37,1208+7])
+                                Tpat_var "s/306"
+                            expression (lib/pack/pack.ml[38,1219+8]..lib/pack/pack.ml[45,1378+17])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (lib/pack/pack.ml[38,1219+12]..lib/pack/pack.ml[38,1219+13])
+                                    Tpat_var "s/373"
+                                  expression (lib/pack/pack.ml[38,1219+16]..lib/pack/pack.ml[38,1219+29])
+                                    Texp_apply
+                                    expression (lib/pack/pack.ml[38,1219+16]..lib/pack/pack.ml[38,1219+27])
+                                      Texp_ident "Stdlib!.String.trim"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/pack/pack.ml[38,1219+28]..lib/pack/pack.ml[38,1219+29])
+                                          Texp_ident "s/306"
+                                    ]
+                              ]
+                              expression (lib/pack/pack.ml[39,1252+8]..lib/pack/pack.ml[45,1378+17])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (lib/pack/pack.ml[39,1252+12]..lib/pack/pack.ml[39,1252+16])
+                                      Tpat_var "accu/443"
+                                    expression (lib/pack/pack.ml[40,1271+10]..lib/pack/pack.ml[43,1350+16])
+                                      Texp_ifthenelse
+                                      expression (lib/pack/pack.ml[40,1271+13]..lib/pack/pack.ml[40,1271+36])
+                                        Texp_apply
+                                        expression (lib/pack/pack.ml[40,1271+21]..lib/pack/pack.ml[40,1271+23])
+                                          Texp_ident "Stdlib!.&&"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/pack/pack.ml[40,1271+13]..lib/pack/pack.ml[40,1271+20])
+                                              Texp_apply
+                                              expression (lib/pack/pack.ml[40,1271+15]..lib/pack/pack.ml[40,1271+17])
+                                                Texp_ident "Stdlib!.<>"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[40,1271+13]..lib/pack/pack.ml[40,1271+14])
+                                                    Texp_ident "s/373"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[40,1271+18]..lib/pack/pack.ml[40,1271+20])
+                                                    Texp_constant Const_string("",(lib/pack/pack.ml[40,1271+19]..lib/pack/pack.ml[40,1271+19]),None)
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/pack/pack.ml[40,1271+24]..lib/pack/pack.ml[40,1271+36])
+                                              Texp_apply
+                                              expression (lib/pack/pack.ml[40,1271+30]..lib/pack/pack.ml[40,1271+32])
+                                                Texp_ident "Stdlib!.<>"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[40,1271+24]..lib/pack/pack.ml[40,1271+29])
+                                                    Texp_apply
+                                                    expression (lib/pack/pack.ml[40,1271+24]..lib/pack/pack.ml[40,1271+29]) ghost
+                                                      Texp_ident "Stdlib!.String.get"
+                                                    [
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (lib/pack/pack.ml[40,1271+24]..lib/pack/pack.ml[40,1271+25])
+                                                          Texp_ident "s/373"
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (lib/pack/pack.ml[40,1271+27]..lib/pack/pack.ml[40,1271+28])
+                                                          Texp_constant Const_int 0
+                                                    ]
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[40,1271+33]..lib/pack/pack.ml[40,1271+36])
+                                                    Texp_constant Const_char 23
+                                              ]
+                                        ]
+                                      expression (lib/pack/pack.ml[41,1313+12]..lib/pack/pack.ml[41,1313+21])
+                                        Texp_construct "::"
+                                        [
+                                          expression (lib/pack/pack.ml[41,1313+12]..lib/pack/pack.ml[41,1313+13])
+                                            Texp_ident "s/373"
+                                          expression (lib/pack/pack.ml[41,1313+17]..lib/pack/pack.ml[41,1313+21])
+                                            Texp_ident "accu/305"
+                                        ]
+                                      Some
+                                        expression (lib/pack/pack.ml[43,1350+12]..lib/pack/pack.ml[43,1350+16])
+                                          Texp_ident "accu/305"
+                                ]
+                                expression (lib/pack/pack.ml[45,1378+8]..lib/pack/pack.ml[45,1378+17])
+                                  Texp_apply
+                                  expression (lib/pack/pack.ml[45,1378+8]..lib/pack/pack.ml[45,1378+12])
+                                    Texp_ident "loop/304"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/pack/pack.ml[45,1378+13]..lib/pack/pack.ml[45,1378+17])
+                                        Texp_ident "accu/443"
+                                  ]
+                        ]
+                  ]
+            ]
+            expression (lib/pack/pack.ml[47,1401+2]..lib/pack/pack.ml[49,1437+3])
+              Texp_let Nonrec
+              [
+                <def>
+                  pattern (lib/pack/pack.ml[47,1401+6]..lib/pack/pack.ml[47,1401+7])
+                    Tpat_var "r/444"
+                  expression (lib/pack/pack.ml[47,1401+10]..lib/pack/pack.ml[47,1401+17])
+                    Texp_apply
+                    expression (lib/pack/pack.ml[47,1401+10]..lib/pack/pack.ml[47,1401+14])
+                      Texp_ident "loop/304"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (lib/pack/pack.ml[47,1401+15]..lib/pack/pack.ml[47,1401+17])
+                          Texp_construct "[]"
+                          []
+                    ]
+              ]
+              expression (lib/pack/pack.ml[48,1422+2]..lib/pack/pack.ml[49,1437+3])
+                Texp_sequence
+                expression (lib/pack/pack.ml[48,1422+2]..lib/pack/pack.ml[48,1422+13])
+                  Texp_apply
+                  expression (lib/pack/pack.ml[48,1422+2]..lib/pack/pack.ml[48,1422+10])
+                    Texp_ident "Stdlib!.close_in"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/pack/pack.ml[48,1422+11]..lib/pack/pack.ml[48,1422+13])
+                        Texp_ident "ic/303"
+                  ]
+                expression (lib/pack/pack.ml[49,1437+2]..lib/pack/pack.ml[49,1437+3])
+                  Texp_ident "r/444"
+    ]
+  structure_item (lib/pack/pack.ml[59,1862+0]..lib/pack/pack.ml[67,2110+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[59,1862+4]..lib/pack/pack.ml[59,1862+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/pack/pack.ml[60,1871+2]..lib/pack/pack.ml[67,2110+14])
+          Texp_sequence
+          expression (lib/pack/pack.ml[60,1871+2]..lib/pack/pack.ml[60,1871+42])
+            Texp_apply
+            expression (lib/pack/pack.ml[60,1871+2]..lib/pack/pack.ml[60,1871+15])
+              Texp_ident "Stdlib!.print_endline"
+            [
+              <arg>
+                Nolabel
+                expression (lib/pack/pack.ml[60,1871+16]..lib/pack/pack.ml[60,1871+42])
+                  Texp_constant Const_string("Creating menhirLib.ml...",(lib/pack/pack.ml[60,1871+17]..lib/pack/pack.ml[60,1871+41]),None)
+            ]
+          expression (lib/pack/pack.ml[61,1915+2]..lib/pack/pack.ml[67,2110+14])
+            Texp_let Nonrec
+            [
+              <def>
+                pattern (lib/pack/pack.ml[61,1915+6]..lib/pack/pack.ml[61,1915+8])
+                  Tpat_var "oc/445"
+                expression (lib/pack/pack.ml[61,1915+11]..lib/pack/pack.ml[61,1915+34])
+                  Texp_apply
+                  expression (lib/pack/pack.ml[61,1915+11]..lib/pack/pack.ml[61,1915+19])
+                    Texp_ident "Stdlib!.open_out"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/pack/pack.ml[61,1915+20]..lib/pack/pack.ml[61,1915+34])
+                        Texp_constant Const_string("menhirLib.ml",(lib/pack/pack.ml[61,1915+21]..lib/pack/pack.ml[61,1915+33]),None)
+                  ]
+            ]
+            expression (lib/pack/pack.ml[62,1953+2]..lib/pack/pack.ml[67,2110+14])
+              Texp_sequence
+              expression (lib/pack/pack.ml[62,1953+2]..lib/pack/pack.ml[66,2087+21])
+                Texp_apply
+                expression (lib/pack/pack.ml[62,1953+2]..lib/pack/pack.ml[62,1953+11])
+                  Texp_ident "Stdlib!.List.iter"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[62,1953+12]..lib/pack/pack.ml[66,2087+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/pack/pack.ml[62,1953+17]..lib/pack/pack.ml[62,1953+18])
+                            Tpat_var "m/446"
+                          expression (lib/pack/pack.ml[63,1975+4]..lib/pack/pack.ml[65,2057+29])
+                            Texp_sequence
+                            expression (lib/pack/pack.ml[63,1975+4]..lib/pack/pack.ml[63,1975+46])
+                              Texp_apply
+                              expression (lib/pack/pack.ml[63,1975+4]..lib/pack/pack.ml[63,1975+18])
+                                Texp_ident "Stdlib!.Printf.fprintf"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[63,1975+19]..lib/pack/pack.ml[63,1975+21])
+                                    Texp_ident "oc/445"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44])
+                                    Texp_construct "CamlinternalFormatBasics.Format"
+                                    [
+                                      expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                        [
+                                          expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                            Texp_constant Const_string("module ",(lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost,None)
+                                          expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String"
+                                            [
+                                              expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                []
+                                              expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                [
+                                                  expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                                    Texp_constant Const_string(" = struct\n",(lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost,None)
+                                                  expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                        ]
+                                      expression (lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost
+                                        Texp_constant Const_string("module %s = struct\n",(lib/pack/pack.ml[63,1975+22]..lib/pack/pack.ml[63,1975+44]) ghost,None)
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[63,1975+45]..lib/pack/pack.ml[63,1975+46])
+                                    Texp_ident "m/446"
+                              ]
+                            expression (lib/pack/pack.ml[64,2023+4]..lib/pack/pack.ml[65,2057+29])
+                              Texp_sequence
+                              expression (lib/pack/pack.ml[64,2023+4]..lib/pack/pack.ml[64,2023+32])
+                                Texp_apply
+                                expression (lib/pack/pack.ml[64,2023+4]..lib/pack/pack.ml[64,2023+12])
+                                  Texp_ident "cat_file/294"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/pack/pack.ml[64,2023+13]..lib/pack/pack.ml[64,2023+15])
+                                      Texp_ident "oc/445"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/pack/pack.ml[64,2023+16]..lib/pack/pack.ml[64,2023+32])
+                                      Texp_apply
+                                      expression (lib/pack/pack.ml[64,2023+17]..lib/pack/pack.ml[64,2023+19])
+                                        Texp_ident "up/269"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (lib/pack/pack.ml[64,2023+20]..lib/pack/pack.ml[64,2023+31])
+                                            Texp_apply
+                                            expression (lib/pack/pack.ml[64,2023+23]..lib/pack/pack.ml[64,2023+24])
+                                              Texp_ident "Stdlib!.^"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/pack/pack.ml[64,2023+21]..lib/pack/pack.ml[64,2023+22])
+                                                  Texp_ident "m/446"
+                                              <arg>
+                                                Nolabel
+                                                expression (lib/pack/pack.ml[64,2023+25]..lib/pack/pack.ml[64,2023+30])
+                                                  Texp_constant Const_string(".ml",(lib/pack/pack.ml[64,2023+26]..lib/pack/pack.ml[64,2023+29]),None)
+                                            ]
+                                      ]
+                                ]
+                              expression (lib/pack/pack.ml[65,2057+4]..lib/pack/pack.ml[65,2057+29])
+                                Texp_apply
+                                expression (lib/pack/pack.ml[65,2057+4]..lib/pack/pack.ml[65,2057+18])
+                                  Texp_ident "Stdlib!.Printf.fprintf"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/pack/pack.ml[65,2057+19]..lib/pack/pack.ml[65,2057+21])
+                                      Texp_ident "oc/445"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29])
+                                      Texp_construct "CamlinternalFormatBasics.Format"
+                                      [
+                                        expression (lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29]) ghost
+                                              Texp_constant Const_string("end\n",(lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29]) ghost,None)
+                                            expression (lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                              []
+                                          ]
+                                        expression (lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29]) ghost
+                                          Texp_constant Const_string("end\n",(lib/pack/pack.ml[65,2057+22]..lib/pack/pack.ml[65,2057+29]) ghost,None)
+                                      ]
+                                ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[66,2087+4]..lib/pack/pack.ml[66,2087+21])
+                      Texp_ident "menhirLib_modules/302"
+                ]
+              expression (lib/pack/pack.ml[67,2110+2]..lib/pack/pack.ml[67,2110+14])
+                Texp_apply
+                expression (lib/pack/pack.ml[67,2110+2]..lib/pack/pack.ml[67,2110+11])
+                  Texp_ident "Stdlib!.close_out"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[67,2110+12]..lib/pack/pack.ml[67,2110+14])
+                      Texp_ident "oc/445"
+                ]
+    ]
+  structure_item (lib/pack/pack.ml[74,2378+0]..lib/pack/pack.ml[85,2732+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (lib/pack/pack.ml[74,2378+4]..lib/pack/pack.ml[74,2378+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (lib/pack/pack.ml[75,2387+2]..lib/pack/pack.ml[85,2732+14])
+          Texp_sequence
+          expression (lib/pack/pack.ml[75,2387+2]..lib/pack/pack.ml[75,2387+43])
+            Texp_apply
+            expression (lib/pack/pack.ml[75,2387+2]..lib/pack/pack.ml[75,2387+15])
+              Texp_ident "Stdlib!.print_endline"
+            [
+              <arg>
+                Nolabel
+                expression (lib/pack/pack.ml[75,2387+16]..lib/pack/pack.ml[75,2387+43])
+                  Texp_constant Const_string("Creating menhirLib.mli...",(lib/pack/pack.ml[75,2387+17]..lib/pack/pack.ml[75,2387+42]),None)
+            ]
+          expression (lib/pack/pack.ml[76,2432+2]..lib/pack/pack.ml[85,2732+14])
+            Texp_let Nonrec
+            [
+              <def>
+                pattern (lib/pack/pack.ml[76,2432+6]..lib/pack/pack.ml[76,2432+8])
+                  Tpat_var "oc/483"
+                expression (lib/pack/pack.ml[76,2432+11]..lib/pack/pack.ml[76,2432+35])
+                  Texp_apply
+                  expression (lib/pack/pack.ml[76,2432+11]..lib/pack/pack.ml[76,2432+19])
+                    Texp_ident "Stdlib!.open_out"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (lib/pack/pack.ml[76,2432+20]..lib/pack/pack.ml[76,2432+35])
+                        Texp_constant Const_string("menhirLib.mli",(lib/pack/pack.ml[76,2432+21]..lib/pack/pack.ml[76,2432+34]),None)
+                  ]
+            ]
+            expression (lib/pack/pack.ml[77,2471+2]..lib/pack/pack.ml[85,2732+14])
+              Texp_sequence
+              expression (lib/pack/pack.ml[77,2471+2]..lib/pack/pack.ml[84,2707+23])
+                Texp_apply
+                expression (lib/pack/pack.ml[77,2471+2]..lib/pack/pack.ml[77,2471+11])
+                  Texp_ident "Stdlib!.List.iter"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[77,2471+12]..lib/pack/pack.ml[84,2707+5])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (lib/pack/pack.ml[77,2471+17]..lib/pack/pack.ml[77,2471+18])
+                            Tpat_var "m/484"
+                          expression (lib/pack/pack.ml[78,2493+6]..lib/pack/pack.ml[83,2675+31])
+                            Texp_sequence
+                            expression (lib/pack/pack.ml[78,2493+6]..lib/pack/pack.ml[78,2493+45])
+                              Texp_apply
+                              expression (lib/pack/pack.ml[78,2493+6]..lib/pack/pack.ml[78,2493+20])
+                                Texp_ident "Stdlib!.Printf.fprintf"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[78,2493+21]..lib/pack/pack.ml[78,2493+23])
+                                    Texp_ident "oc/483"
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43])
+                                    Texp_construct "CamlinternalFormatBasics.Format"
+                                    [
+                                      expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                        [
+                                          expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                            Texp_constant Const_string("module ",(lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost,None)
+                                          expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String"
+                                            [
+                                              expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                []
+                                              expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                [
+                                                  expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                                    Texp_constant Const_string(" : sig\n",(lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost,None)
+                                                  expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                        ]
+                                      expression (lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost
+                                        Texp_constant Const_string("module %s : sig\n",(lib/pack/pack.ml[78,2493+24]..lib/pack/pack.ml[78,2493+43]) ghost,None)
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (lib/pack/pack.ml[78,2493+44]..lib/pack/pack.ml[78,2493+45])
+                                    Texp_ident "m/484"
+                              ]
+                            expression (lib/pack/pack.ml[79,2540+6]..lib/pack/pack.ml[83,2675+31])
+                              Texp_sequence
+                              expression (lib/pack/pack.ml[79,2540+6]..lib/pack/pack.ml[82,2637+36])
+                                Texp_ifthenelse
+                                expression (lib/pack/pack.ml[79,2540+9]..lib/pack/pack.ml[79,2540+42])
+                                  Texp_apply
+                                  expression (lib/pack/pack.ml[79,2540+9]..lib/pack/pack.ml[79,2540+24])
+                                    Texp_ident "Stdlib!.Sys.file_exists"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/pack/pack.ml[79,2540+25]..lib/pack/pack.ml[79,2540+42])
+                                        Texp_apply
+                                        expression (lib/pack/pack.ml[79,2540+26]..lib/pack/pack.ml[79,2540+28])
+                                          Texp_ident "up/269"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/pack/pack.ml[79,2540+29]..lib/pack/pack.ml[79,2540+41])
+                                              Texp_apply
+                                              expression (lib/pack/pack.ml[79,2540+32]..lib/pack/pack.ml[79,2540+33])
+                                                Texp_ident "Stdlib!.^"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[79,2540+30]..lib/pack/pack.ml[79,2540+31])
+                                                    Texp_ident "m/484"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[79,2540+34]..lib/pack/pack.ml[79,2540+40])
+                                                    Texp_constant Const_string(".mli",(lib/pack/pack.ml[79,2540+35]..lib/pack/pack.ml[79,2540+39]),None)
+                                              ]
+                                        ]
+                                  ]
+                                expression (lib/pack/pack.ml[80,2588+8]..lib/pack/pack.ml[80,2588+37])
+                                  Texp_apply
+                                  expression (lib/pack/pack.ml[80,2588+8]..lib/pack/pack.ml[80,2588+16])
+                                    Texp_ident "cat_file/294"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/pack/pack.ml[80,2588+17]..lib/pack/pack.ml[80,2588+19])
+                                        Texp_ident "oc/483"
+                                    <arg>
+                                      Nolabel
+                                      expression (lib/pack/pack.ml[80,2588+20]..lib/pack/pack.ml[80,2588+37])
+                                        Texp_apply
+                                        expression (lib/pack/pack.ml[80,2588+21]..lib/pack/pack.ml[80,2588+23])
+                                          Texp_ident "up/269"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (lib/pack/pack.ml[80,2588+24]..lib/pack/pack.ml[80,2588+36])
+                                              Texp_apply
+                                              expression (lib/pack/pack.ml[80,2588+27]..lib/pack/pack.ml[80,2588+28])
+                                                Texp_ident "Stdlib!.^"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[80,2588+25]..lib/pack/pack.ml[80,2588+26])
+                                                    Texp_ident "m/484"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (lib/pack/pack.ml[80,2588+29]..lib/pack/pack.ml[80,2588+35])
+                                                    Texp_constant Const_string(".mli",(lib/pack/pack.ml[80,2588+30]..lib/pack/pack.ml[80,2588+34]),None)
+                                              ]
+                                        ]
+                                  ]
+                                Some
+                                  expression (lib/pack/pack.ml[82,2637+8]..lib/pack/pack.ml[82,2637+36])
+                                    Texp_apply
+                                    expression (lib/pack/pack.ml[82,2637+8]..lib/pack/pack.ml[82,2637+16])
+                                      Texp_ident "cat_file/294"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/pack/pack.ml[82,2637+17]..lib/pack/pack.ml[82,2637+19])
+                                          Texp_ident "oc/483"
+                                      <arg>
+                                        Nolabel
+                                        expression (lib/pack/pack.ml[82,2637+20]..lib/pack/pack.ml[82,2637+36])
+                                          Texp_apply
+                                          expression (lib/pack/pack.ml[82,2637+21]..lib/pack/pack.ml[82,2637+23])
+                                            Texp_ident "up/269"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (lib/pack/pack.ml[82,2637+24]..lib/pack/pack.ml[82,2637+35])
+                                                Texp_apply
+                                                expression (lib/pack/pack.ml[82,2637+27]..lib/pack/pack.ml[82,2637+28])
+                                                  Texp_ident "Stdlib!.^"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/pack/pack.ml[82,2637+25]..lib/pack/pack.ml[82,2637+26])
+                                                      Texp_ident "m/484"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (lib/pack/pack.ml[82,2637+29]..lib/pack/pack.ml[82,2637+34])
+                                                      Texp_constant Const_string(".ml",(lib/pack/pack.ml[82,2637+30]..lib/pack/pack.ml[82,2637+33]),None)
+                                                ]
+                                          ]
+                                    ]
+                              expression (lib/pack/pack.ml[83,2675+6]..lib/pack/pack.ml[83,2675+31])
+                                Texp_apply
+                                expression (lib/pack/pack.ml[83,2675+6]..lib/pack/pack.ml[83,2675+20])
+                                  Texp_ident "Stdlib!.Printf.fprintf"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/pack/pack.ml[83,2675+21]..lib/pack/pack.ml[83,2675+23])
+                                      Texp_ident "oc/483"
+                                  <arg>
+                                    Nolabel
+                                    expression (lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31])
+                                      Texp_construct "CamlinternalFormatBasics.Format"
+                                      [
+                                        expression (lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31]) ghost
+                                              Texp_constant Const_string("end\n",(lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31]) ghost,None)
+                                            expression (lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                              []
+                                          ]
+                                        expression (lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31]) ghost
+                                          Texp_constant Const_string("end\n",(lib/pack/pack.ml[83,2675+24]..lib/pack/pack.ml[83,2675+31]) ghost,None)
+                                      ]
+                                ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[84,2707+6]..lib/pack/pack.ml[84,2707+23])
+                      Texp_ident "menhirLib_modules/302"
+                ]
+              expression (lib/pack/pack.ml[85,2732+2]..lib/pack/pack.ml[85,2732+14])
+                Texp_apply
+                expression (lib/pack/pack.ml[85,2732+2]..lib/pack/pack.ml[85,2732+11])
+                  Texp_ident "Stdlib!.close_out"
+                [
+                  <arg>
+                    Nolabel
+                    expression (lib/pack/pack.ml[85,2732+12]..lib/pack/pack.ml[85,2732+14])
+                      Texp_ident "oc/483"
+                ]
+    ]
+]
+
+{<Dune__exe__Pack>
+ "cat_file"[value] -> <Dune__exe__Pack.2>;
+ "menhirLib_modules"[value] -> <Dune__exe__Pack.8>;
+ "up"[value] -> <Dune__exe__Pack.0>;
+ }
+
+(seq
+  (let
+    (up/269 =
+       (function fn/271
+         (apply (field_imm 3 (global Stdlib__Filename!))
+           (field_imm 1 (global Stdlib__Filename!)) fn/271)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Pack!) up/269))
+  (let
+    (cat_file/294 =
+       (function oc/296 fn/297 : int
+         (let (ic/298 = (apply (field_imm 78 (global Stdlib!)) fn/297))
+           (letrec
+             (loop/299
+                (function param/301[int] : int
+                  (catch
+                    (try
+                      (exit 1 (apply (field_imm 82 (global Stdlib!)) ic/298))
+                     with exn/632
+                      (catch
+                        (if (== exn/632 (field_imm 11 (global Stdlib!))) 0
+                          (exit 2))
+                       with (2) (reraise exn/632)))
+                   with (1 s/300)
+                    (seq (apply (field_imm 65 (global Stdlib!)) oc/296 s/300)
+                      (apply (field_imm 64 (global Stdlib!)) oc/296 '\n')
+                      (apply loop/299 0)))))
+             (seq (apply loop/299 0)
+               (apply (field_imm 92 (global Stdlib!)) ic/298))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Pack!) cat_file/294))
+  (let
+    (menhirLib_modules/302 =
+       (let
+         (ic/303 = (apply (field_imm 78 (global Stdlib!)) "menhirLib.mlpack"))
+         (letrec
+           (loop/304
+              (function accu/305
+                (catch
+                  (try
+                    (exit 3 (apply (field_imm 82 (global Stdlib!)) ic/303))
+                   with exn/633
+                    (catch
+                      (if (== exn/633 (field_imm 11 (global Stdlib!)))
+                        (apply (field_imm 9 (global Stdlib__List!)) accu/305)
+                        (exit 4))
+                     with (4) (reraise exn/633)))
+                 with (3 s/306)
+                  (let
+                    (s/373 =
+                       (apply (field_imm 23 (global Stdlib__String!)) s/306)
+                     accu/443 =
+                       (if
+                         (&& (caml_string_notequal s/373 "")
+                           (!= (string.get s/373 0) '#'))
+                         (makeblock 0 s/373 accu/305) accu/305))
+                    (apply loop/304 accu/443)))))
+           (let (r/444 = (apply loop/304 0))
+             (seq (apply (field_imm 92 (global Stdlib!)) ic/303) r/444)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Pack!)
+      menhirLib_modules/302))
+  (let
+    (*match*/636 =
+       (seq
+         (apply (field_imm 45 (global Stdlib!)) "Creating menhirLib.ml...")
+         (let
+           (oc/445 = (apply (field_imm 59 (global Stdlib!)) "menhirLib.ml"))
+           (seq
+             (apply (field_imm 17 (global Stdlib__List!))
+               (function m/446 : int
+                 (seq
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/445
+                     [0:
+                      [11: "module " [2: 0 [11: " = struct\n" 0]]]
+                      "module %s = struct\n"]
+                     m/446)
+                   (apply (field_imm 1 (global Dune__exe__Pack!)) oc/445
+                     (apply (field_imm 0 (global Dune__exe__Pack!))
+                       (apply (field_imm 27 (global Stdlib!)) m/446 ".ml")))
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/445
+                     [0: [11: "end\n" 0] "end\n"])))
+               (field_imm 2 (global Dune__exe__Pack!)))
+             (apply (field_imm 75 (global Stdlib!)) oc/445)))))
+    0)
+  (let
+    (*match*/638 =
+       (seq
+         (apply (field_imm 45 (global Stdlib!)) "Creating menhirLib.mli...")
+         (let
+           (oc/483 = (apply (field_imm 59 (global Stdlib!)) "menhirLib.mli"))
+           (seq
+             (apply (field_imm 17 (global Stdlib__List!))
+               (function m/484 : int
+                 (seq
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/483
+                     [0:
+                      [11: "module " [2: 0 [11: " : sig\n" 0]]]
+                      "module %s : sig\n"]
+                     m/484)
+                   (if
+                     (caml_sys_file_exists
+                       (apply (field_imm 0 (global Dune__exe__Pack!))
+                         (apply (field_imm 27 (global Stdlib!)) m/484 ".mli")))
+                     (apply (field_imm 1 (global Dune__exe__Pack!)) oc/483
+                       (apply (field_imm 0 (global Dune__exe__Pack!))
+                         (apply (field_imm 27 (global Stdlib!)) m/484 ".mli")))
+                     (apply (field_imm 1 (global Dune__exe__Pack!)) oc/483
+                       (apply (field_imm 0 (global Dune__exe__Pack!))
+                         (apply (field_imm 27 (global Stdlib!)) m/484 ".ml"))))
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/483
+                     [0: [11: "end\n" 0] "end\n"])))
+               (field_imm 2 (global Dune__exe__Pack!)))
+             (apply (field_imm 75 (global Stdlib!)) oc/483)))))
+    0)
+  0)
+(seq
+  (let
+    (up/269 =
+       (function fn/271
+         (apply (field_imm 3 (global Stdlib__Filename!))
+           (field_imm 1 (global Stdlib__Filename!)) fn/271)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Pack!) up/269))
+  (let
+    (cat_file/294 =
+       (function oc/296 fn/297 : int
+         (let (ic/298 = (apply (field_imm 78 (global Stdlib!)) fn/297))
+           (letrec
+             (loop/299
+                (function param/301[int] : int
+                  (catch
+                    (try
+                      (exit 1 (apply (field_imm 82 (global Stdlib!)) ic/298))
+                     with exn/632
+                      (if (== exn/632 (field_imm 11 (global Stdlib!))) 0
+                        (reraise exn/632)))
+                   with (1 s/300)
+                    (seq (apply (field_imm 65 (global Stdlib!)) oc/296 s/300)
+                      (apply (field_imm 64 (global Stdlib!)) oc/296 '\n')
+                      (apply loop/299 0)))))
+             (seq (apply loop/299 0)
+               (apply (field_imm 92 (global Stdlib!)) ic/298))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Pack!) cat_file/294))
+  (let
+    (menhirLib_modules/302 =
+       (let
+         (ic/303 = (apply (field_imm 78 (global Stdlib!)) "menhirLib.mlpack"))
+         (letrec
+           (loop/304
+              (function accu/305
+                (catch
+                  (try
+                    (exit 3 (apply (field_imm 82 (global Stdlib!)) ic/303))
+                   with exn/633
+                    (if (== exn/633 (field_imm 11 (global Stdlib!)))
+                      (apply (field_imm 9 (global Stdlib__List!)) accu/305)
+                      (reraise exn/633)))
+                 with (3 s/306)
+                  (let
+                    (s/373 =
+                       (apply (field_imm 23 (global Stdlib__String!)) s/306)
+                     accu/443 =
+                       (if
+                         (&& (caml_string_notequal s/373 "")
+                           (!= (string.get s/373 0) '#'))
+                         (makeblock 0 s/373 accu/305) accu/305))
+                    (apply loop/304 accu/443)))))
+           (let (r/444 = (apply loop/304 0))
+             (seq (apply (field_imm 92 (global Stdlib!)) ic/303) r/444)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Pack!)
+      menhirLib_modules/302))
+  (let
+    (*match*/636 =
+       (seq
+         (apply (field_imm 45 (global Stdlib!)) "Creating menhirLib.ml...")
+         (let
+           (oc/445 = (apply (field_imm 59 (global Stdlib!)) "menhirLib.ml"))
+           (seq
+             (apply (field_imm 17 (global Stdlib__List!))
+               (function m/446 : int
+                 (seq
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/445
+                     [0:
+                      [11: "module " [2: 0 [11: " = struct\n" 0]]]
+                      "module %s = struct\n"]
+                     m/446)
+                   (apply (field_imm 1 (global Dune__exe__Pack!)) oc/445
+                     (apply (field_imm 0 (global Dune__exe__Pack!))
+                       (apply (field_imm 27 (global Stdlib!)) m/446 ".ml")))
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/445
+                     [0: [11: "end\n" 0] "end\n"])))
+               (field_imm 2 (global Dune__exe__Pack!)))
+             (apply (field_imm 75 (global Stdlib!)) oc/445)))))
+    0)
+  (let
+    (*match*/638 =
+       (seq
+         (apply (field_imm 45 (global Stdlib!)) "Creating menhirLib.mli...")
+         (let
+           (oc/483 = (apply (field_imm 59 (global Stdlib!)) "menhirLib.mli"))
+           (seq
+             (apply (field_imm 17 (global Stdlib__List!))
+               (function m/484 : int
+                 (seq
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/483
+                     [0:
+                      [11: "module " [2: 0 [11: " : sig\n" 0]]]
+                      "module %s : sig\n"]
+                     m/484)
+                   (if
+                     (caml_sys_file_exists
+                       (apply (field_imm 0 (global Dune__exe__Pack!))
+                         (apply (field_imm 27 (global Stdlib!)) m/484 ".mli")))
+                     (apply (field_imm 1 (global Dune__exe__Pack!)) oc/483
+                       (apply (field_imm 0 (global Dune__exe__Pack!))
+                         (apply (field_imm 27 (global Stdlib!)) m/484 ".mli")))
+                     (apply (field_imm 1 (global Dune__exe__Pack!)) oc/483
+                       (apply (field_imm 0 (global Dune__exe__Pack!))
+                         (apply (field_imm 27 (global Stdlib!)) m/484 ".ml"))))
+                   (apply (field_imm 0 (global Stdlib__Printf!)) oc/483
+                     [0: [11: "end\n" 0] "end\n"])))
+               (field_imm 2 (global Dune__exe__Pack!)))
+             (apply (field_imm 75 (global Stdlib!)) oc/483)))))
+    0)
+  0)

@@ -1,0 +1,2654 @@
+[
+  structure_item (src/resizableArray.ml[17,1108+0]..[28,1538+3])
+    Pstr_type Rec
+    [
+      type_declaration "t" (src/resizableArray.ml[17,1108+8]..[17,1108+9]) (src/resizableArray.ml[17,1108+0]..[28,1538+3])
+        ptype_params =
+          [
+            core_type (src/resizableArray.ml[17,1108+5]..[17,1108+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/resizableArray.ml[20,1233+4]..[20,1233+16])
+                Immutable
+                "default" (src/resizableArray.ml[20,1233+4]..[20,1233+11])                core_type (src/resizableArray.ml[20,1233+13]..[20,1233+15])
+                  Ptyp_var a
+              (src/resizableArray.ml[23,1361+4]..[23,1361+20])
+                Immutable
+                "init" (src/resizableArray.ml[23,1361+4]..[23,1361+8])                core_type (src/resizableArray.ml[23,1361+10]..[23,1361+19])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/resizableArray.ml[23,1361+10]..[23,1361+13])
+                    Ptyp_constr "int" (src/resizableArray.ml[23,1361+10]..[23,1361+13])
+                    []
+                  core_type (src/resizableArray.ml[23,1361+17]..[23,1361+19])
+                    Ptyp_var a
+              (src/resizableArray.ml[25,1424+4]..[25,1424+22])
+                Mutable
+                "size" (src/resizableArray.ml[25,1424+12]..[25,1424+16])                core_type (src/resizableArray.ml[25,1424+18]..[25,1424+21])
+                  Ptyp_constr "int" (src/resizableArray.ml[25,1424+18]..[25,1424+21])
+                  []
+              (src/resizableArray.ml[27,1510+4]..[27,1510+27])
+                Mutable
+                "table" (src/resizableArray.ml[27,1510+12]..[27,1510+17])                core_type (src/resizableArray.ml[27,1510+19]..[27,1510+27])
+                  Ptyp_constr "array" (src/resizableArray.ml[27,1510+22]..[27,1510+27])
+                  [
+                    core_type (src/resizableArray.ml[27,1510+19]..[27,1510+21])
+                      Ptyp_var a
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/resizableArray.ml[30,1543+0]..[36,1794+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[30,1543+4]..[30,1543+8])
+          Ppat_var "make" (src/resizableArray.ml[30,1543+4]..[30,1543+8])
+        expression (src/resizableArray.ml[30,1543+9]..[36,1794+36]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[30,1543+9]..[30,1543+17])
+            Ppat_var "capacity" (src/resizableArray.ml[30,1543+9]..[30,1543+17])
+          expression (src/resizableArray.ml[30,1543+18]..[36,1794+36]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[30,1543+18]..[30,1543+25])
+              Ppat_var "default" (src/resizableArray.ml[30,1543+18]..[30,1543+25])
+            expression (src/resizableArray.ml[30,1543+26]..[36,1794+36]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/resizableArray.ml[30,1543+26]..[30,1543+30])
+                Ppat_var "init" (src/resizableArray.ml[30,1543+26]..[30,1543+30])
+              expression (src/resizableArray.ml[33,1666+2]..[36,1794+36])
+                Pexp_sequence
+                expression (src/resizableArray.ml[33,1666+2]..[33,1666+24])
+                  Pexp_assert
+                  expression (src/resizableArray.ml[33,1666+9]..[33,1666+24])
+                    Pexp_apply
+                    expression (src/resizableArray.ml[33,1666+19]..[33,1666+21])
+                      Pexp_ident ">=" (src/resizableArray.ml[33,1666+19]..[33,1666+21])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[33,1666+10]..[33,1666+18])
+                          Pexp_ident "capacity" (src/resizableArray.ml[33,1666+10]..[33,1666+18])
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[33,1666+22]..[33,1666+23])
+                          Pexp_constant PConst_int (0,None)
+                    ]
+                expression (src/resizableArray.ml[34,1692+2]..[36,1794+36])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/resizableArray.ml[34,1692+6]..[34,1692+14])
+                        Ppat_var "capacity" (src/resizableArray.ml[34,1692+6]..[34,1692+14])
+                      expression (src/resizableArray.ml[34,1692+17]..[34,1692+53])
+                        Pexp_ifthenelse
+                        expression (src/resizableArray.ml[34,1692+20]..[34,1692+32])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[34,1692+29]..[34,1692+30])
+                            Pexp_ident "=" (src/resizableArray.ml[34,1692+29]..[34,1692+30])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[34,1692+20]..[34,1692+28])
+                                Pexp_ident "capacity" (src/resizableArray.ml[34,1692+20]..[34,1692+28])
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[34,1692+31]..[34,1692+32])
+                                Pexp_constant PConst_int (0,None)
+                          ]
+                        expression (src/resizableArray.ml[34,1692+38]..[34,1692+39])
+                          Pexp_constant PConst_int (1,None)
+                        Some
+                          expression (src/resizableArray.ml[34,1692+45]..[34,1692+53])
+                            Pexp_ident "capacity" (src/resizableArray.ml[34,1692+45]..[34,1692+53])
+                  ]
+                  expression (src/resizableArray.ml[35,1749+2]..[36,1794+36])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/resizableArray.ml[35,1749+6]..[35,1749+11])
+                          Ppat_var "table" (src/resizableArray.ml[35,1749+6]..[35,1749+11])
+                        expression (src/resizableArray.ml[35,1749+14]..[35,1749+41])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[35,1749+14]..[35,1749+24])
+                            Pexp_ident "Array.make" (src/resizableArray.ml[35,1749+14]..[35,1749+24])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[35,1749+25]..[35,1749+33])
+                                Pexp_ident "capacity" (src/resizableArray.ml[35,1749+25]..[35,1749+33])
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[35,1749+34]..[35,1749+41])
+                                Pexp_ident "default" (src/resizableArray.ml[35,1749+34]..[35,1749+41])
+                          ]
+                    ]
+                    expression (src/resizableArray.ml[36,1794+2]..[36,1794+36])
+                      Pexp_record
+                      [
+                        "default" (src/resizableArray.ml[36,1794+4]..[36,1794+11]) ghost
+                          expression (src/resizableArray.ml[36,1794+4]..[36,1794+11])
+                            Pexp_ident "default" (src/resizableArray.ml[36,1794+4]..[36,1794+11])
+                        "init" (src/resizableArray.ml[36,1794+13]..[36,1794+17]) ghost
+                          expression (src/resizableArray.ml[36,1794+13]..[36,1794+17])
+                            Pexp_ident "init" (src/resizableArray.ml[36,1794+13]..[36,1794+17])
+                        "size" (src/resizableArray.ml[36,1794+19]..[36,1794+23])
+                          expression (src/resizableArray.ml[36,1794+26]..[36,1794+27])
+                            Pexp_constant PConst_int (0,None)
+                        "table" (src/resizableArray.ml[36,1794+29]..[36,1794+34]) ghost
+                          expression (src/resizableArray.ml[36,1794+29]..[36,1794+34])
+                            Pexp_ident "table" (src/resizableArray.ml[36,1794+29]..[36,1794+34])
+                      ]
+                      None
+    ]
+  structure_item (src/resizableArray.ml[38,1832+0]..[39,1861+42])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[38,1832+4]..[38,1832+9])
+          Ppat_var "make_" (src/resizableArray.ml[38,1832+4]..[38,1832+9])
+        expression (src/resizableArray.ml[38,1832+10]..[39,1861+42]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[38,1832+10]..[38,1832+18])
+            Ppat_var "capacity" (src/resizableArray.ml[38,1832+10]..[38,1832+18])
+          expression (src/resizableArray.ml[38,1832+19]..[39,1861+42]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[38,1832+19]..[38,1832+26])
+              Ppat_var "default" (src/resizableArray.ml[38,1832+19]..[38,1832+26])
+            expression (src/resizableArray.ml[39,1861+2]..[39,1861+42])
+              Pexp_apply
+              expression (src/resizableArray.ml[39,1861+2]..[39,1861+6])
+                Pexp_ident "make" (src/resizableArray.ml[39,1861+2]..[39,1861+6])
+              [
+                <arg>
+                Nolabel
+                  expression (src/resizableArray.ml[39,1861+7]..[39,1861+15])
+                    Pexp_ident "capacity" (src/resizableArray.ml[39,1861+7]..[39,1861+15])
+                <arg>
+                Nolabel
+                  expression (src/resizableArray.ml[39,1861+16]..[39,1861+23])
+                    Pexp_ident "default" (src/resizableArray.ml[39,1861+16]..[39,1861+23])
+                <arg>
+                Nolabel
+                  expression (src/resizableArray.ml[39,1861+24]..[39,1861+42])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/resizableArray.ml[39,1861+29]..[39,1861+30])
+                      Ppat_any
+                    expression (src/resizableArray.ml[39,1861+34]..[39,1861+41])
+                      Pexp_ident "default" (src/resizableArray.ml[39,1861+34]..[39,1861+41])
+              ]
+    ]
+  structure_item (src/resizableArray.ml[41,1905+0]..[42,1920+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[41,1905+4]..[41,1905+10])
+          Ppat_var "length" (src/resizableArray.ml[41,1905+4]..[41,1905+10])
+        expression (src/resizableArray.ml[41,1905+11]..[42,1920+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[41,1905+11]..[41,1905+12])
+            Ppat_var "a" (src/resizableArray.ml[41,1905+11]..[41,1905+12])
+          expression (src/resizableArray.ml[42,1920+2]..[42,1920+8])
+            Pexp_field
+            expression (src/resizableArray.ml[42,1920+2]..[42,1920+3])
+              Pexp_ident "a" (src/resizableArray.ml[42,1920+2]..[42,1920+3])
+            "size" (src/resizableArray.ml[42,1920+4]..[42,1920+8])
+    ]
+  structure_item (src/resizableArray.ml[44,1930+0]..[46,1977+30])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[44,1930+4]..[44,1930+7])
+          Ppat_var "get" (src/resizableArray.ml[44,1930+4]..[44,1930+7])
+        expression (src/resizableArray.ml[44,1930+8]..[46,1977+30]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[44,1930+8]..[44,1930+9])
+            Ppat_var "a" (src/resizableArray.ml[44,1930+8]..[44,1930+9])
+          expression (src/resizableArray.ml[44,1930+10]..[46,1977+30]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[44,1930+10]..[44,1930+11])
+              Ppat_var "i" (src/resizableArray.ml[44,1930+10]..[44,1930+11])
+            expression (src/resizableArray.ml[45,1944+2]..[46,1977+30])
+              Pexp_sequence
+              expression (src/resizableArray.ml[45,1944+2]..[45,1944+31])
+                Pexp_assert
+                expression (src/resizableArray.ml[45,1944+9]..[45,1944+31])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[45,1944+17]..[45,1944+19])
+                    Pexp_ident "&&" (src/resizableArray.ml[45,1944+17]..[45,1944+19])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[45,1944+10]..[45,1944+16])
+                        Pexp_apply
+                        expression (src/resizableArray.ml[45,1944+12]..[45,1944+14])
+                          Pexp_ident "<=" (src/resizableArray.ml[45,1944+12]..[45,1944+14])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[45,1944+10]..[45,1944+11])
+                              Pexp_constant PConst_int (0,None)
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[45,1944+15]..[45,1944+16])
+                              Pexp_ident "i" (src/resizableArray.ml[45,1944+15]..[45,1944+16])
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[45,1944+20]..[45,1944+30])
+                        Pexp_apply
+                        expression (src/resizableArray.ml[45,1944+22]..[45,1944+23])
+                          Pexp_ident "<" (src/resizableArray.ml[45,1944+22]..[45,1944+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[45,1944+20]..[45,1944+21])
+                              Pexp_ident "i" (src/resizableArray.ml[45,1944+20]..[45,1944+21])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[45,1944+24]..[45,1944+30])
+                              Pexp_field
+                              expression (src/resizableArray.ml[45,1944+24]..[45,1944+25])
+                                Pexp_ident "a" (src/resizableArray.ml[45,1944+24]..[45,1944+25])
+                              "size" (src/resizableArray.ml[45,1944+26]..[45,1944+30])
+                        ]
+                  ]
+              expression (src/resizableArray.ml[46,1977+2]..[46,1977+30])
+                Pexp_apply
+                expression (src/resizableArray.ml[46,1977+2]..[46,1977+18])
+                  Pexp_ident "Array.unsafe_get" (src/resizableArray.ml[46,1977+2]..[46,1977+18])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/resizableArray.ml[46,1977+19]..[46,1977+26])
+                      Pexp_field
+                      expression (src/resizableArray.ml[46,1977+19]..[46,1977+20])
+                        Pexp_ident "a" (src/resizableArray.ml[46,1977+19]..[46,1977+20])
+                      "table" (src/resizableArray.ml[46,1977+21]..[46,1977+26])
+                  <arg>
+                  Nolabel
+                    expression (src/resizableArray.ml[46,1977+27]..[46,1977+30])
+                      Pexp_ident "i" (src/resizableArray.ml[46,1977+28]..[46,1977+29])
+                ]
+    ]
+  structure_item (src/resizableArray.ml[48,2009+0]..[50,2058+32])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[48,2009+4]..[48,2009+7])
+          Ppat_var "set" (src/resizableArray.ml[48,2009+4]..[48,2009+7])
+        expression (src/resizableArray.ml[48,2009+8]..[50,2058+32]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[48,2009+8]..[48,2009+9])
+            Ppat_var "a" (src/resizableArray.ml[48,2009+8]..[48,2009+9])
+          expression (src/resizableArray.ml[48,2009+10]..[50,2058+32]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[48,2009+10]..[48,2009+11])
+              Ppat_var "i" (src/resizableArray.ml[48,2009+10]..[48,2009+11])
+            expression (src/resizableArray.ml[48,2009+12]..[50,2058+32]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/resizableArray.ml[48,2009+12]..[48,2009+13])
+                Ppat_var "x" (src/resizableArray.ml[48,2009+12]..[48,2009+13])
+              expression (src/resizableArray.ml[49,2025+2]..[50,2058+32])
+                Pexp_sequence
+                expression (src/resizableArray.ml[49,2025+2]..[49,2025+31])
+                  Pexp_assert
+                  expression (src/resizableArray.ml[49,2025+9]..[49,2025+31])
+                    Pexp_apply
+                    expression (src/resizableArray.ml[49,2025+17]..[49,2025+19])
+                      Pexp_ident "&&" (src/resizableArray.ml[49,2025+17]..[49,2025+19])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[49,2025+10]..[49,2025+16])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[49,2025+12]..[49,2025+14])
+                            Pexp_ident "<=" (src/resizableArray.ml[49,2025+12]..[49,2025+14])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[49,2025+10]..[49,2025+11])
+                                Pexp_constant PConst_int (0,None)
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[49,2025+15]..[49,2025+16])
+                                Pexp_ident "i" (src/resizableArray.ml[49,2025+15]..[49,2025+16])
+                          ]
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[49,2025+20]..[49,2025+30])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[49,2025+22]..[49,2025+23])
+                            Pexp_ident "<" (src/resizableArray.ml[49,2025+22]..[49,2025+23])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[49,2025+20]..[49,2025+21])
+                                Pexp_ident "i" (src/resizableArray.ml[49,2025+20]..[49,2025+21])
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[49,2025+24]..[49,2025+30])
+                                Pexp_field
+                                expression (src/resizableArray.ml[49,2025+24]..[49,2025+25])
+                                  Pexp_ident "a" (src/resizableArray.ml[49,2025+24]..[49,2025+25])
+                                "size" (src/resizableArray.ml[49,2025+26]..[49,2025+30])
+                          ]
+                    ]
+                expression (src/resizableArray.ml[50,2058+2]..[50,2058+32])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[50,2058+2]..[50,2058+18])
+                    Pexp_ident "Array.unsafe_set" (src/resizableArray.ml[50,2058+2]..[50,2058+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[50,2058+19]..[50,2058+26])
+                        Pexp_field
+                        expression (src/resizableArray.ml[50,2058+19]..[50,2058+20])
+                          Pexp_ident "a" (src/resizableArray.ml[50,2058+19]..[50,2058+20])
+                        "table" (src/resizableArray.ml[50,2058+21]..[50,2058+26])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[50,2058+27]..[50,2058+30])
+                        Pexp_ident "i" (src/resizableArray.ml[50,2058+28]..[50,2058+29])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[50,2058+31]..[50,2058+32])
+                        Pexp_ident "x" (src/resizableArray.ml[50,2058+31]..[50,2058+32])
+                  ]
+    ]
+  structure_item (src/resizableArray.ml[52,2092+0]..[55,2214+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[52,2092+4]..[52,2092+10])
+          Ppat_var "shrink" (src/resizableArray.ml[52,2092+4]..[52,2092+10])
+        expression (src/resizableArray.ml[52,2092+11]..[55,2214+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[52,2092+11]..[52,2092+12])
+            Ppat_var "a" (src/resizableArray.ml[52,2092+11]..[52,2092+12])
+          expression (src/resizableArray.ml[52,2092+13]..[55,2214+13]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[52,2092+13]..[52,2092+14])
+              Ppat_var "s" (src/resizableArray.ml[52,2092+13]..[52,2092+14])
+            expression (src/resizableArray.ml[54,2167+2]..[55,2214+13])
+              Pexp_sequence
+              expression (src/resizableArray.ml[54,2167+2]..[54,2167+45])
+                Pexp_apply
+                expression (src/resizableArray.ml[54,2167+2]..[54,2167+12])
+                  Pexp_ident "Array.fill" (src/resizableArray.ml[54,2167+2]..[54,2167+12])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/resizableArray.ml[54,2167+13]..[54,2167+20])
+                      Pexp_field
+                      expression (src/resizableArray.ml[54,2167+13]..[54,2167+14])
+                        Pexp_ident "a" (src/resizableArray.ml[54,2167+13]..[54,2167+14])
+                      "table" (src/resizableArray.ml[54,2167+15]..[54,2167+20])
+                  <arg>
+                  Nolabel
+                    expression (src/resizableArray.ml[54,2167+21]..[54,2167+22])
+                      Pexp_ident "s" (src/resizableArray.ml[54,2167+21]..[54,2167+22])
+                  <arg>
+                  Nolabel
+                    expression (src/resizableArray.ml[54,2167+23]..[54,2167+35])
+                      Pexp_apply
+                      expression (src/resizableArray.ml[54,2167+31]..[54,2167+32])
+                        Pexp_ident "-" (src/resizableArray.ml[54,2167+31]..[54,2167+32])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[54,2167+24]..[54,2167+30])
+                            Pexp_field
+                            expression (src/resizableArray.ml[54,2167+24]..[54,2167+25])
+                              Pexp_ident "a" (src/resizableArray.ml[54,2167+24]..[54,2167+25])
+                            "size" (src/resizableArray.ml[54,2167+26]..[54,2167+30])
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[54,2167+33]..[54,2167+34])
+                            Pexp_ident "s" (src/resizableArray.ml[54,2167+33]..[54,2167+34])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/resizableArray.ml[54,2167+36]..[54,2167+45])
+                      Pexp_field
+                      expression (src/resizableArray.ml[54,2167+36]..[54,2167+37])
+                        Pexp_ident "a" (src/resizableArray.ml[54,2167+36]..[54,2167+37])
+                      "default" (src/resizableArray.ml[54,2167+38]..[54,2167+45])
+                ]
+              expression (src/resizableArray.ml[55,2214+2]..[55,2214+13])
+                Pexp_setfield
+                expression (src/resizableArray.ml[55,2214+2]..[55,2214+3])
+                  Pexp_ident "a" (src/resizableArray.ml[55,2214+2]..[55,2214+3])
+                "size" (src/resizableArray.ml[55,2214+4]..[55,2214+8])
+                expression (src/resizableArray.ml[55,2214+12]..[55,2214+13])
+                  Pexp_ident "s" (src/resizableArray.ml[55,2214+12]..[55,2214+13])
+    ]
+  structure_item (src/resizableArray.ml[57,2229+0]..[74,2860+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[57,2229+4]..[57,2229+8])
+          Ppat_var "grow" (src/resizableArray.ml[57,2229+4]..[57,2229+8])
+        expression (src/resizableArray.ml[57,2229+9]..[74,2860+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[57,2229+9]..[57,2229+10])
+            Ppat_var "a" (src/resizableArray.ml[57,2229+9]..[57,2229+10])
+          expression (src/resizableArray.ml[57,2229+11]..[74,2860+13]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[57,2229+11]..[57,2229+12])
+              Ppat_var "s" (src/resizableArray.ml[57,2229+11]..[57,2229+12])
+            expression (src/resizableArray.ml[59,2307+2]..[74,2860+13])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/resizableArray.ml[59,2307+6]..[59,2307+7])
+                    Ppat_var "n" (src/resizableArray.ml[59,2307+6]..[59,2307+7])
+                  expression (src/resizableArray.ml[59,2307+10]..[59,2307+30])
+                    Pexp_apply
+                    expression (src/resizableArray.ml[59,2307+10]..[59,2307+22])
+                      Pexp_ident "Array.length" (src/resizableArray.ml[59,2307+10]..[59,2307+22])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[59,2307+23]..[59,2307+30])
+                          Pexp_field
+                          expression (src/resizableArray.ml[59,2307+23]..[59,2307+24])
+                            Pexp_ident "a" (src/resizableArray.ml[59,2307+23]..[59,2307+24])
+                          "table" (src/resizableArray.ml[59,2307+25]..[59,2307+30])
+                    ]
+              ]
+              expression (src/resizableArray.ml[60,2341+2]..[74,2860+13])
+                Pexp_sequence
+                expression (src/resizableArray.ml[60,2341+2]..[66,2618+5])
+                  Pexp_ifthenelse
+                  expression (src/resizableArray.ml[60,2341+5]..[60,2341+10])
+                    Pexp_apply
+                    expression (src/resizableArray.ml[60,2341+7]..[60,2341+8])
+                      Pexp_ident ">" (src/resizableArray.ml[60,2341+7]..[60,2341+8])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[60,2341+5]..[60,2341+6])
+                          Pexp_ident "s" (src/resizableArray.ml[60,2341+5]..[60,2341+6])
+                      <arg>
+                      Nolabel
+                        expression (src/resizableArray.ml[60,2341+9]..[60,2341+10])
+                          Pexp_ident "n" (src/resizableArray.ml[60,2341+9]..[60,2341+10])
+                    ]
+                  expression (src/resizableArray.ml[60,2341+16]..[66,2618+5])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/resizableArray.ml[63,2505+8]..[63,2505+13])
+                          Ppat_var "table" (src/resizableArray.ml[63,2505+8]..[63,2505+13])
+                        expression (src/resizableArray.ml[63,2505+16]..[63,2505+52])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[63,2505+16]..[63,2505+26])
+                            Pexp_ident "Array.make" (src/resizableArray.ml[63,2505+16]..[63,2505+26])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[63,2505+27]..[63,2505+42])
+                                Pexp_apply
+                                expression (src/resizableArray.ml[63,2505+28]..[63,2505+31])
+                                  Pexp_ident "max" (src/resizableArray.ml[63,2505+28]..[63,2505+31])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/resizableArray.ml[63,2505+32]..[63,2505+39])
+                                      Pexp_apply
+                                      expression (src/resizableArray.ml[63,2505+35]..[63,2505+36])
+                                        Pexp_ident "*" (src/resizableArray.ml[63,2505+35]..[63,2505+36])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/resizableArray.ml[63,2505+33]..[63,2505+34])
+                                            Pexp_constant PConst_int (2,None)
+                                        <arg>
+                                        Nolabel
+                                          expression (src/resizableArray.ml[63,2505+37]..[63,2505+38])
+                                            Pexp_ident "n" (src/resizableArray.ml[63,2505+37]..[63,2505+38])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (src/resizableArray.ml[63,2505+40]..[63,2505+41])
+                                      Pexp_ident "s" (src/resizableArray.ml[63,2505+40]..[63,2505+41])
+                                ]
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[63,2505+43]..[63,2505+52])
+                                Pexp_field
+                                expression (src/resizableArray.ml[63,2505+43]..[63,2505+44])
+                                  Pexp_ident "a" (src/resizableArray.ml[63,2505+43]..[63,2505+44])
+                                "default" (src/resizableArray.ml[63,2505+45]..[63,2505+52])
+                          ]
+                    ]
+                    expression (src/resizableArray.ml[64,2561+4]..[65,2597+20])
+                      Pexp_sequence
+                      expression (src/resizableArray.ml[64,2561+4]..[64,2561+34])
+                        Pexp_apply
+                        expression (src/resizableArray.ml[64,2561+4]..[64,2561+14])
+                          Pexp_ident "Array.blit" (src/resizableArray.ml[64,2561+4]..[64,2561+14])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[64,2561+15]..[64,2561+22])
+                              Pexp_field
+                              expression (src/resizableArray.ml[64,2561+15]..[64,2561+16])
+                                Pexp_ident "a" (src/resizableArray.ml[64,2561+15]..[64,2561+16])
+                              "table" (src/resizableArray.ml[64,2561+17]..[64,2561+22])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[64,2561+23]..[64,2561+24])
+                              Pexp_constant PConst_int (0,None)
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[64,2561+25]..[64,2561+30])
+                              Pexp_ident "table" (src/resizableArray.ml[64,2561+25]..[64,2561+30])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[64,2561+31]..[64,2561+32])
+                              Pexp_constant PConst_int (0,None)
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[64,2561+33]..[64,2561+34])
+                              Pexp_ident "n" (src/resizableArray.ml[64,2561+33]..[64,2561+34])
+                        ]
+                      expression (src/resizableArray.ml[65,2597+4]..[65,2597+20])
+                        Pexp_setfield
+                        expression (src/resizableArray.ml[65,2597+4]..[65,2597+5])
+                          Pexp_ident "a" (src/resizableArray.ml[65,2597+4]..[65,2597+5])
+                        "table" (src/resizableArray.ml[65,2597+6]..[65,2597+11])
+                        expression (src/resizableArray.ml[65,2597+15]..[65,2597+20])
+                          Pexp_ident "table" (src/resizableArray.ml[65,2597+15]..[65,2597+20])
+                  None
+                expression (src/resizableArray.ml[68,2699+2]..[74,2860+13])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/resizableArray.ml[68,2699+6]..[68,2699+10])
+                        Ppat_var "init" (src/resizableArray.ml[68,2699+6]..[68,2699+10])
+                      expression (src/resizableArray.ml[68,2699+13]..[68,2699+19])
+                        Pexp_field
+                        expression (src/resizableArray.ml[68,2699+13]..[68,2699+14])
+                          Pexp_ident "a" (src/resizableArray.ml[68,2699+13]..[68,2699+14])
+                        "init" (src/resizableArray.ml[68,2699+15]..[68,2699+19])
+                    <def>
+                      pattern (src/resizableArray.ml[69,2719+6]..[69,2719+11])
+                        Ppat_var "table" (src/resizableArray.ml[69,2719+6]..[69,2719+11])
+                      expression (src/resizableArray.ml[69,2719+14]..[69,2719+21])
+                        Pexp_field
+                        expression (src/resizableArray.ml[69,2719+14]..[69,2719+15])
+                          Pexp_ident "a" (src/resizableArray.ml[69,2719+14]..[69,2719+15])
+                        "table" (src/resizableArray.ml[69,2719+16]..[69,2719+21])
+                  ]
+                  expression (src/resizableArray.ml[70,2744+2]..[74,2860+13])
+                    Pexp_sequence
+                    expression (src/resizableArray.ml[70,2744+2]..[72,2811+6])
+                      Pexp_for Up
+                      pattern (src/resizableArray.ml[70,2744+6]..[70,2744+7])
+                        Ppat_var "i" (src/resizableArray.ml[70,2744+6]..[70,2744+7])
+                      expression (src/resizableArray.ml[70,2744+10]..[70,2744+16])
+                        Pexp_field
+                        expression (src/resizableArray.ml[70,2744+10]..[70,2744+11])
+                          Pexp_ident "a" (src/resizableArray.ml[70,2744+10]..[70,2744+11])
+                        "size" (src/resizableArray.ml[70,2744+12]..[70,2744+16])
+                      expression (src/resizableArray.ml[70,2744+20]..[70,2744+25])
+                        Pexp_apply
+                        expression (src/resizableArray.ml[70,2744+22]..[70,2744+23])
+                          Pexp_ident "-" (src/resizableArray.ml[70,2744+22]..[70,2744+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[70,2744+20]..[70,2744+21])
+                              Pexp_ident "s" (src/resizableArray.ml[70,2744+20]..[70,2744+21])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[70,2744+24]..[70,2744+25])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+                      expression (src/resizableArray.ml[71,2773+4]..[71,2773+37])
+                        Pexp_apply
+                        expression (src/resizableArray.ml[71,2773+4]..[71,2773+20])
+                          Pexp_ident "Array.unsafe_set" (src/resizableArray.ml[71,2773+4]..[71,2773+20])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[71,2773+21]..[71,2773+26])
+                              Pexp_ident "table" (src/resizableArray.ml[71,2773+21]..[71,2773+26])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[71,2773+27]..[71,2773+28])
+                              Pexp_ident "i" (src/resizableArray.ml[71,2773+27]..[71,2773+28])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[71,2773+29]..[71,2773+37])
+                              Pexp_apply
+                              expression (src/resizableArray.ml[71,2773+30]..[71,2773+34])
+                                Pexp_ident "init" (src/resizableArray.ml[71,2773+30]..[71,2773+34])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/resizableArray.ml[71,2773+35]..[71,2773+36])
+                                    Pexp_ident "i" (src/resizableArray.ml[71,2773+35]..[71,2773+36])
+                              ]
+                        ]
+                    expression (src/resizableArray.ml[74,2860+2]..[74,2860+13])
+                      Pexp_setfield
+                      expression (src/resizableArray.ml[74,2860+2]..[74,2860+3])
+                        Pexp_ident "a" (src/resizableArray.ml[74,2860+2]..[74,2860+3])
+                      "size" (src/resizableArray.ml[74,2860+4]..[74,2860+8])
+                      expression (src/resizableArray.ml[74,2860+12]..[74,2860+13])
+                        Pexp_ident "s" (src/resizableArray.ml[74,2860+12]..[74,2860+13])
+    ]
+  structure_item (src/resizableArray.ml[76,2875+0]..[81,2973+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[76,2875+4]..[76,2875+10])
+          Ppat_var "resize" (src/resizableArray.ml[76,2875+4]..[76,2875+10])
+        expression (src/resizableArray.ml[76,2875+11]..[81,2973+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[76,2875+11]..[76,2875+12])
+            Ppat_var "a" (src/resizableArray.ml[76,2875+11]..[76,2875+12])
+          expression (src/resizableArray.ml[76,2875+13]..[81,2973+12]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[76,2875+13]..[76,2875+14])
+              Ppat_var "s" (src/resizableArray.ml[76,2875+13]..[76,2875+14])
+            expression (src/resizableArray.ml[77,2892+2]..[81,2973+12])
+              Pexp_sequence
+              expression (src/resizableArray.ml[77,2892+2]..[77,2892+17])
+                Pexp_assert
+                expression (src/resizableArray.ml[77,2892+9]..[77,2892+17])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[77,2892+12]..[77,2892+14])
+                    Pexp_ident "<=" (src/resizableArray.ml[77,2892+12]..[77,2892+14])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[77,2892+10]..[77,2892+11])
+                        Pexp_constant PConst_int (0,None)
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[77,2892+15]..[77,2892+16])
+                        Pexp_ident "s" (src/resizableArray.ml[77,2892+15]..[77,2892+16])
+                  ]
+              expression (src/resizableArray.ml[78,2911+2]..[81,2973+12])
+                Pexp_ifthenelse
+                expression (src/resizableArray.ml[78,2911+5]..[78,2911+15])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[78,2911+7]..[78,2911+8])
+                    Pexp_ident "<" (src/resizableArray.ml[78,2911+7]..[78,2911+8])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[78,2911+5]..[78,2911+6])
+                        Pexp_ident "s" (src/resizableArray.ml[78,2911+5]..[78,2911+6])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[78,2911+9]..[78,2911+15])
+                        Pexp_field
+                        expression (src/resizableArray.ml[78,2911+9]..[78,2911+10])
+                          Pexp_ident "a" (src/resizableArray.ml[78,2911+9]..[78,2911+10])
+                        "size" (src/resizableArray.ml[78,2911+11]..[78,2911+15])
+                  ]
+                expression (src/resizableArray.ml[79,2932+4]..[79,2932+14])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[79,2932+4]..[79,2932+10])
+                    Pexp_ident "shrink" (src/resizableArray.ml[79,2932+4]..[79,2932+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[79,2932+11]..[79,2932+12])
+                        Pexp_ident "a" (src/resizableArray.ml[79,2932+11]..[79,2932+12])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[79,2932+13]..[79,2932+14])
+                        Pexp_ident "s" (src/resizableArray.ml[79,2932+13]..[79,2932+14])
+                  ]
+                Some
+                  expression (src/resizableArray.ml[80,2947+7]..[81,2973+12])
+                    Pexp_ifthenelse
+                    expression (src/resizableArray.ml[80,2947+10]..[80,2947+20])
+                      Pexp_apply
+                      expression (src/resizableArray.ml[80,2947+12]..[80,2947+13])
+                        Pexp_ident ">" (src/resizableArray.ml[80,2947+12]..[80,2947+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[80,2947+10]..[80,2947+11])
+                            Pexp_ident "s" (src/resizableArray.ml[80,2947+10]..[80,2947+11])
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[80,2947+14]..[80,2947+20])
+                            Pexp_field
+                            expression (src/resizableArray.ml[80,2947+14]..[80,2947+15])
+                              Pexp_ident "a" (src/resizableArray.ml[80,2947+14]..[80,2947+15])
+                            "size" (src/resizableArray.ml[80,2947+16]..[80,2947+20])
+                      ]
+                    expression (src/resizableArray.ml[81,2973+4]..[81,2973+12])
+                      Pexp_apply
+                      expression (src/resizableArray.ml[81,2973+4]..[81,2973+8])
+                        Pexp_ident "grow" (src/resizableArray.ml[81,2973+4]..[81,2973+8])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[81,2973+9]..[81,2973+10])
+                            Pexp_ident "a" (src/resizableArray.ml[81,2973+9]..[81,2973+10])
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[81,2973+11]..[81,2973+12])
+                            Pexp_ident "s" (src/resizableArray.ml[81,2973+11]..[81,2973+12])
+                      ]
+                    None
+    ]
+  structure_item (src/resizableArray.ml[83,2987+0]..[99,3577+32])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[83,2987+4]..[83,2987+8])
+          Ppat_var "push" (src/resizableArray.ml[83,2987+4]..[83,2987+8])
+        expression (src/resizableArray.ml[83,2987+9]..[99,3577+32]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[83,2987+9]..[83,2987+10])
+            Ppat_var "a" (src/resizableArray.ml[83,2987+9]..[83,2987+10])
+          expression (src/resizableArray.ml[83,2987+11]..[99,3577+32]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/resizableArray.ml[83,2987+11]..[83,2987+12])
+              Ppat_var "x" (src/resizableArray.ml[83,2987+11]..[83,2987+12])
+            expression (src/resizableArray.ml[84,3002+2]..[99,3577+32])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/resizableArray.ml[84,3002+6]..[84,3002+7])
+                    Ppat_var "s" (src/resizableArray.ml[84,3002+6]..[84,3002+7])
+                  expression (src/resizableArray.ml[84,3002+10]..[84,3002+16])
+                    Pexp_field
+                    expression (src/resizableArray.ml[84,3002+10]..[84,3002+11])
+                      Pexp_ident "a" (src/resizableArray.ml[84,3002+10]..[84,3002+11])
+                    "size" (src/resizableArray.ml[84,3002+12]..[84,3002+16])
+              ]
+              expression (src/resizableArray.ml[85,3076+2]..[99,3577+32])
+                Pexp_sequence
+                expression (src/resizableArray.ml[85,3076+2]..[98,3570+5])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/resizableArray.ml[86,3158+8]..[86,3158+9])
+                        Ppat_var "s" (src/resizableArray.ml[86,3158+8]..[86,3158+9])
+                      expression (src/resizableArray.ml[86,3158+12]..[86,3158+17])
+                        Pexp_apply
+                        expression (src/resizableArray.ml[86,3158+14]..[86,3158+15])
+                          Pexp_ident "+" (src/resizableArray.ml[86,3158+14]..[86,3158+15])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[86,3158+12]..[86,3158+13])
+                              Pexp_ident "s" (src/resizableArray.ml[86,3158+12]..[86,3158+13])
+                          <arg>
+                          Nolabel
+                            expression (src/resizableArray.ml[86,3158+16]..[86,3158+17])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+                  ]
+                  expression (src/resizableArray.ml[87,3179+4]..[97,3554+15])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/resizableArray.ml[87,3179+8]..[87,3179+9])
+                          Ppat_var "n" (src/resizableArray.ml[87,3179+8]..[87,3179+9])
+                        expression (src/resizableArray.ml[87,3179+12]..[87,3179+32])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[87,3179+12]..[87,3179+24])
+                            Pexp_ident "Array.length" (src/resizableArray.ml[87,3179+12]..[87,3179+24])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[87,3179+25]..[87,3179+32])
+                                Pexp_field
+                                expression (src/resizableArray.ml[87,3179+25]..[87,3179+26])
+                                  Pexp_ident "a" (src/resizableArray.ml[87,3179+25]..[87,3179+26])
+                                "table" (src/resizableArray.ml[87,3179+27]..[87,3179+32])
+                          ]
+                    ]
+                    expression (src/resizableArray.ml[88,3215+4]..[97,3554+15])
+                      Pexp_sequence
+                      expression (src/resizableArray.ml[88,3215+4]..[94,3426+7])
+                        Pexp_ifthenelse
+                        expression (src/resizableArray.ml[88,3215+7]..[88,3215+12])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[88,3215+9]..[88,3215+10])
+                            Pexp_ident ">" (src/resizableArray.ml[88,3215+9]..[88,3215+10])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[88,3215+7]..[88,3215+8])
+                                Pexp_ident "s" (src/resizableArray.ml[88,3215+7]..[88,3215+8])
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[88,3215+11]..[88,3215+12])
+                                Pexp_ident "n" (src/resizableArray.ml[88,3215+11]..[88,3215+12])
+                          ]
+                        expression (src/resizableArray.ml[88,3215+18]..[94,3426+7])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/resizableArray.ml[91,3315+10]..[91,3315+15])
+                                Ppat_var "table" (src/resizableArray.ml[91,3315+10]..[91,3315+15])
+                              expression (src/resizableArray.ml[91,3315+18]..[91,3315+46])
+                                Pexp_apply
+                                expression (src/resizableArray.ml[91,3315+18]..[91,3315+28])
+                                  Pexp_ident "Array.make" (src/resizableArray.ml[91,3315+18]..[91,3315+28])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/resizableArray.ml[91,3315+29]..[91,3315+36])
+                                      Pexp_apply
+                                      expression (src/resizableArray.ml[91,3315+32]..[91,3315+33])
+                                        Pexp_ident "*" (src/resizableArray.ml[91,3315+32]..[91,3315+33])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/resizableArray.ml[91,3315+30]..[91,3315+31])
+                                            Pexp_constant PConst_int (2,None)
+                                        <arg>
+                                        Nolabel
+                                          expression (src/resizableArray.ml[91,3315+34]..[91,3315+35])
+                                            Pexp_ident "n" (src/resizableArray.ml[91,3315+34]..[91,3315+35])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (src/resizableArray.ml[91,3315+37]..[91,3315+46])
+                                      Pexp_field
+                                      expression (src/resizableArray.ml[91,3315+37]..[91,3315+38])
+                                        Pexp_ident "a" (src/resizableArray.ml[91,3315+37]..[91,3315+38])
+                                      "default" (src/resizableArray.ml[91,3315+39]..[91,3315+46])
+                                ]
+                          ]
+                          expression (src/resizableArray.ml[92,3365+6]..[93,3403+22])
+                            Pexp_sequence
+                            expression (src/resizableArray.ml[92,3365+6]..[92,3365+36])
+                              Pexp_apply
+                              expression (src/resizableArray.ml[92,3365+6]..[92,3365+16])
+                                Pexp_ident "Array.blit" (src/resizableArray.ml[92,3365+6]..[92,3365+16])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/resizableArray.ml[92,3365+17]..[92,3365+24])
+                                    Pexp_field
+                                    expression (src/resizableArray.ml[92,3365+17]..[92,3365+18])
+                                      Pexp_ident "a" (src/resizableArray.ml[92,3365+17]..[92,3365+18])
+                                    "table" (src/resizableArray.ml[92,3365+19]..[92,3365+24])
+                                <arg>
+                                Nolabel
+                                  expression (src/resizableArray.ml[92,3365+25]..[92,3365+26])
+                                    Pexp_constant PConst_int (0,None)
+                                <arg>
+                                Nolabel
+                                  expression (src/resizableArray.ml[92,3365+27]..[92,3365+32])
+                                    Pexp_ident "table" (src/resizableArray.ml[92,3365+27]..[92,3365+32])
+                                <arg>
+                                Nolabel
+                                  expression (src/resizableArray.ml[92,3365+33]..[92,3365+34])
+                                    Pexp_constant PConst_int (0,None)
+                                <arg>
+                                Nolabel
+                                  expression (src/resizableArray.ml[92,3365+35]..[92,3365+36])
+                                    Pexp_ident "n" (src/resizableArray.ml[92,3365+35]..[92,3365+36])
+                              ]
+                            expression (src/resizableArray.ml[93,3403+6]..[93,3403+22])
+                              Pexp_setfield
+                              expression (src/resizableArray.ml[93,3403+6]..[93,3403+7])
+                                Pexp_ident "a" (src/resizableArray.ml[93,3403+6]..[93,3403+7])
+                              "table" (src/resizableArray.ml[93,3403+8]..[93,3403+13])
+                              expression (src/resizableArray.ml[93,3403+17]..[93,3403+22])
+                                Pexp_ident "table" (src/resizableArray.ml[93,3403+17]..[93,3403+22])
+                        None
+                      expression (src/resizableArray.ml[97,3554+4]..[97,3554+15])
+                        Pexp_setfield
+                        expression (src/resizableArray.ml[97,3554+4]..[97,3554+5])
+                          Pexp_ident "a" (src/resizableArray.ml[97,3554+4]..[97,3554+5])
+                        "size" (src/resizableArray.ml[97,3554+6]..[97,3554+10])
+                        expression (src/resizableArray.ml[97,3554+14]..[97,3554+15])
+                          Pexp_ident "s" (src/resizableArray.ml[97,3554+14]..[97,3554+15])
+                expression (src/resizableArray.ml[99,3577+2]..[99,3577+32])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[99,3577+2]..[99,3577+18])
+                    Pexp_ident "Array.unsafe_set" (src/resizableArray.ml[99,3577+2]..[99,3577+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[99,3577+19]..[99,3577+26])
+                        Pexp_field
+                        expression (src/resizableArray.ml[99,3577+19]..[99,3577+20])
+                          Pexp_ident "a" (src/resizableArray.ml[99,3577+19]..[99,3577+20])
+                        "table" (src/resizableArray.ml[99,3577+21]..[99,3577+26])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[99,3577+27]..[99,3577+30])
+                        Pexp_ident "s" (src/resizableArray.ml[99,3577+28]..[99,3577+29])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[99,3577+31]..[99,3577+32])
+                        Pexp_ident "x" (src/resizableArray.ml[99,3577+31]..[99,3577+32])
+                  ]
+    ]
+  structure_item (src/resizableArray.ml[101,3653+0]..[109,3961+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[101,3653+4]..[101,3653+7])
+          Ppat_var "pop" (src/resizableArray.ml[101,3653+4]..[101,3653+7])
+        expression (src/resizableArray.ml[101,3653+8]..[109,3961+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[101,3653+8]..[101,3653+9])
+            Ppat_var "a" (src/resizableArray.ml[101,3653+8]..[101,3653+9])
+          expression (src/resizableArray.ml[102,3665+2]..[109,3961+3])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/resizableArray.ml[102,3665+6]..[102,3665+7])
+                  Ppat_var "s" (src/resizableArray.ml[102,3665+6]..[102,3665+7])
+                expression (src/resizableArray.ml[102,3665+10]..[102,3665+16])
+                  Pexp_field
+                  expression (src/resizableArray.ml[102,3665+10]..[102,3665+11])
+                    Pexp_ident "a" (src/resizableArray.ml[102,3665+10]..[102,3665+11])
+                  "size" (src/resizableArray.ml[102,3665+12]..[102,3665+16])
+            ]
+            expression (src/resizableArray.ml[103,3739+2]..[109,3961+3])
+              Pexp_sequence
+              expression (src/resizableArray.ml[103,3739+2]..[103,3739+16])
+                Pexp_assert
+                expression (src/resizableArray.ml[103,3739+9]..[103,3739+16])
+                  Pexp_apply
+                  expression (src/resizableArray.ml[103,3739+12]..[103,3739+13])
+                    Pexp_ident ">" (src/resizableArray.ml[103,3739+12]..[103,3739+13])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[103,3739+10]..[103,3739+11])
+                        Pexp_ident "s" (src/resizableArray.ml[103,3739+10]..[103,3739+11])
+                    <arg>
+                    Nolabel
+                      expression (src/resizableArray.ml[103,3739+14]..[103,3739+15])
+                        Pexp_constant PConst_int (0,None)
+                  ]
+              expression (src/resizableArray.ml[104,3757+2]..[109,3961+3])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/resizableArray.ml[104,3757+6]..[104,3757+7])
+                      Ppat_var "s" (src/resizableArray.ml[104,3757+6]..[104,3757+7])
+                    expression (src/resizableArray.ml[104,3757+10]..[104,3757+15])
+                      Pexp_apply
+                      expression (src/resizableArray.ml[104,3757+12]..[104,3757+13])
+                        Pexp_ident "-" (src/resizableArray.ml[104,3757+12]..[104,3757+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[104,3757+10]..[104,3757+11])
+                            Pexp_ident "s" (src/resizableArray.ml[104,3757+10]..[104,3757+11])
+                        <arg>
+                        Nolabel
+                          expression (src/resizableArray.ml[104,3757+14]..[104,3757+15])
+                            Pexp_constant PConst_int (1,None)
+                      ]
+                ]
+                expression (src/resizableArray.ml[105,3776+2]..[109,3961+3])
+                  Pexp_sequence
+                  expression (src/resizableArray.ml[105,3776+2]..[105,3776+13])
+                    Pexp_setfield
+                    expression (src/resizableArray.ml[105,3776+2]..[105,3776+3])
+                      Pexp_ident "a" (src/resizableArray.ml[105,3776+2]..[105,3776+3])
+                    "size" (src/resizableArray.ml[105,3776+4]..[105,3776+8])
+                    expression (src/resizableArray.ml[105,3776+12]..[105,3776+13])
+                      Pexp_ident "s" (src/resizableArray.ml[105,3776+12]..[105,3776+13])
+                  expression (src/resizableArray.ml[106,3791+2]..[109,3961+3])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/resizableArray.ml[106,3791+6]..[106,3791+11])
+                          Ppat_var "table" (src/resizableArray.ml[106,3791+6]..[106,3791+11])
+                        expression (src/resizableArray.ml[106,3791+14]..[106,3791+21])
+                          Pexp_field
+                          expression (src/resizableArray.ml[106,3791+14]..[106,3791+15])
+                            Pexp_ident "a" (src/resizableArray.ml[106,3791+14]..[106,3791+15])
+                          "table" (src/resizableArray.ml[106,3791+16]..[106,3791+21])
+                    ]
+                    expression (src/resizableArray.ml[107,3816+2]..[109,3961+3])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/resizableArray.ml[107,3816+6]..[107,3816+7])
+                            Ppat_var "x" (src/resizableArray.ml[107,3816+6]..[107,3816+7])
+                          expression (src/resizableArray.ml[107,3816+10]..[107,3816+36])
+                            Pexp_apply
+                            expression (src/resizableArray.ml[107,3816+10]..[107,3816+26])
+                              Pexp_ident "Array.unsafe_get" (src/resizableArray.ml[107,3816+10]..[107,3816+26])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/resizableArray.ml[107,3816+27]..[107,3816+32])
+                                  Pexp_ident "table" (src/resizableArray.ml[107,3816+27]..[107,3816+32])
+                              <arg>
+                              Nolabel
+                                expression (src/resizableArray.ml[107,3816+33]..[107,3816+36])
+                                  Pexp_ident "s" (src/resizableArray.ml[107,3816+34]..[107,3816+35])
+                            ]
+                      ]
+                      expression (src/resizableArray.ml[108,3887+2]..[109,3961+3])
+                        Pexp_sequence
+                        expression (src/resizableArray.ml[108,3887+2]..[108,3887+38])
+                          Pexp_apply
+                          expression (src/resizableArray.ml[108,3887+2]..[108,3887+18])
+                            Pexp_ident "Array.unsafe_set" (src/resizableArray.ml[108,3887+2]..[108,3887+18])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[108,3887+19]..[108,3887+24])
+                                Pexp_ident "table" (src/resizableArray.ml[108,3887+19]..[108,3887+24])
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[108,3887+25]..[108,3887+28])
+                                Pexp_ident "s" (src/resizableArray.ml[108,3887+26]..[108,3887+27])
+                            <arg>
+                            Nolabel
+                              expression (src/resizableArray.ml[108,3887+29]..[108,3887+38])
+                                Pexp_field
+                                expression (src/resizableArray.ml[108,3887+29]..[108,3887+30])
+                                  Pexp_ident "a" (src/resizableArray.ml[108,3887+29]..[108,3887+30])
+                                "default" (src/resizableArray.ml[108,3887+31]..[108,3887+38])
+                          ]
+                        expression (src/resizableArray.ml[109,3961+2]..[109,3961+3])
+                          Pexp_ident "x" (src/resizableArray.ml[109,3961+2]..[109,3961+3])
+    ]
+  structure_item (src/resizableArray.ml[111,3966+0]..[112,3982+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[111,3966+4]..[111,3966+11])
+          Ppat_var "default" (src/resizableArray.ml[111,3966+4]..[111,3966+11])
+        expression (src/resizableArray.ml[111,3966+12]..[112,3982+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/resizableArray.ml[111,3966+12]..[111,3966+13])
+            Ppat_var "a" (src/resizableArray.ml[111,3966+12]..[111,3966+13])
+          expression (src/resizableArray.ml[112,3982+2]..[112,3982+11])
+            Pexp_field
+            expression (src/resizableArray.ml[112,3982+2]..[112,3982+3])
+              Pexp_ident "a" (src/resizableArray.ml[112,3982+2]..[112,3982+3])
+            "default" (src/resizableArray.ml[112,3982+4]..[112,3982+11])
+    ]
+]
+
+type 'a t =
+  {
+  default: 'a ;
+  init: int -> 'a ;
+  mutable size: int ;
+  mutable table: 'a array }
+let make capacity default init =
+  assert (capacity >= 0);
+  (let capacity = if capacity = 0 then 1 else capacity in
+   let table = Array.make capacity default in
+   { default; init; size = 0; table })
+let make_ capacity default = make capacity default (fun _ -> default)
+let length a = a.size
+let get a i = assert ((0 <= i) && (i < a.size)); Array.unsafe_get a.table i
+let set a i x =
+  assert ((0 <= i) && (i < a.size)); Array.unsafe_set a.table i x
+let shrink a s = Array.fill a.table s (a.size - s) a.default; a.size <- s
+let grow a s =
+  let n = Array.length a.table in
+  if s > n
+  then
+    (let table = Array.make (max (2 * n) s) a.default in
+     Array.blit a.table 0 table 0 n; a.table <- table);
+  (let init = a.init
+   and table = a.table in
+   for i = a.size to s - 1 do Array.unsafe_set table i (init i) done;
+   a.size <- s)
+let resize a s =
+  assert (0 <= s);
+  if s < a.size then shrink a s else if s > a.size then grow a s
+let push a x =
+  let s = a.size in
+  (let s = s + 1 in
+   let n = Array.length a.table in
+   if s > n
+   then
+     (let table = Array.make (2 * n) a.default in
+      Array.blit a.table 0 table 0 n; a.table <- table);
+   a.size <- s);
+  Array.unsafe_set a.table s x
+let pop a =
+  let s = a.size in
+  assert (s > 0);
+  (let s = s - 1 in
+   a.size <- s;
+   (let table = a.table in
+    let x = Array.unsafe_get table s in Array.unsafe_set table s a.default; x))
+let default a = a.default
+[
+  structure_item (src/resizableArray.ml[17,1108+0]..src/resizableArray.ml[28,1538+3])
+    Tstr_type Rec
+    [
+      type_declaration t/396 (src/resizableArray.ml[17,1108+0]..src/resizableArray.ml[28,1538+3])
+        ptype_params =
+          [
+            core_type (src/resizableArray.ml[17,1108+5]..src/resizableArray.ml[17,1108+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/resizableArray.ml[20,1233+4]..src/resizableArray.ml[20,1233+16])
+                Immutable
+                default/397                core_type (src/resizableArray.ml[20,1233+13]..src/resizableArray.ml[20,1233+15])
+                  Ttyp_poly
+                  core_type (src/resizableArray.ml[20,1233+13]..src/resizableArray.ml[20,1233+15])
+                    Ttyp_var a
+              (src/resizableArray.ml[23,1361+4]..src/resizableArray.ml[23,1361+20])
+                Immutable
+                init/398                core_type (src/resizableArray.ml[23,1361+10]..src/resizableArray.ml[23,1361+19])
+                  Ttyp_poly
+                  core_type (src/resizableArray.ml[23,1361+10]..src/resizableArray.ml[23,1361+19])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/resizableArray.ml[23,1361+10]..src/resizableArray.ml[23,1361+13])
+                      Ttyp_constr "int/1!"
+                      []
+                    core_type (src/resizableArray.ml[23,1361+17]..src/resizableArray.ml[23,1361+19])
+                      Ttyp_var a
+              (src/resizableArray.ml[25,1424+4]..src/resizableArray.ml[25,1424+22])
+                Mutable
+                size/399                core_type (src/resizableArray.ml[25,1424+18]..src/resizableArray.ml[25,1424+21])
+                  Ttyp_poly
+                  core_type (src/resizableArray.ml[25,1424+18]..src/resizableArray.ml[25,1424+21])
+                    Ttyp_constr "int/1!"
+                    []
+              (src/resizableArray.ml[27,1510+4]..src/resizableArray.ml[27,1510+27])
+                Mutable
+                table/400                core_type (src/resizableArray.ml[27,1510+19]..src/resizableArray.ml[27,1510+27])
+                  Ttyp_poly
+                  core_type (src/resizableArray.ml[27,1510+19]..src/resizableArray.ml[27,1510+27])
+                    Ttyp_constr "array/8!"
+                    [
+                      core_type (src/resizableArray.ml[27,1510+19]..src/resizableArray.ml[27,1510+21])
+                        Ttyp_var a
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/resizableArray.ml[30,1543+0]..src/resizableArray.ml[36,1794+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[30,1543+4]..src/resizableArray.ml[30,1543+8])
+          Tpat_var "make/401"
+        expression (src/resizableArray.ml[30,1543+9]..src/resizableArray.ml[36,1794+36]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[30,1543+9]..src/resizableArray.ml[30,1543+17])
+                Tpat_var "capacity/403"
+              expression (src/resizableArray.ml[30,1543+18]..src/resizableArray.ml[36,1794+36]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[30,1543+18]..src/resizableArray.ml[30,1543+25])
+                      Tpat_var "default/404"
+                    expression (src/resizableArray.ml[30,1543+26]..src/resizableArray.ml[36,1794+36]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/resizableArray.ml[30,1543+26]..src/resizableArray.ml[30,1543+30])
+                            Tpat_var "init/405"
+                          expression (src/resizableArray.ml[33,1666+2]..src/resizableArray.ml[36,1794+36])
+                            Texp_sequence
+                            expression (src/resizableArray.ml[33,1666+2]..src/resizableArray.ml[33,1666+24])
+                              Texp_assert                              expression (src/resizableArray.ml[33,1666+9]..src/resizableArray.ml[33,1666+24])
+                                Texp_apply
+                                expression (src/resizableArray.ml[33,1666+19]..src/resizableArray.ml[33,1666+21])
+                                  Texp_ident "Stdlib!.>="
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[33,1666+10]..src/resizableArray.ml[33,1666+18])
+                                      Texp_ident "capacity/403"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[33,1666+22]..src/resizableArray.ml[33,1666+23])
+                                      Texp_constant Const_int 0
+                                ]
+                            expression (src/resizableArray.ml[34,1692+2]..src/resizableArray.ml[36,1794+36])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/resizableArray.ml[34,1692+6]..src/resizableArray.ml[34,1692+14])
+                                    Tpat_var "capacity/406"
+                                  expression (src/resizableArray.ml[34,1692+17]..src/resizableArray.ml[34,1692+53])
+                                    Texp_ifthenelse
+                                    expression (src/resizableArray.ml[34,1692+20]..src/resizableArray.ml[34,1692+32])
+                                      Texp_apply
+                                      expression (src/resizableArray.ml[34,1692+29]..src/resizableArray.ml[34,1692+30])
+                                        Texp_ident "Stdlib!.="
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[34,1692+20]..src/resizableArray.ml[34,1692+28])
+                                            Texp_ident "capacity/403"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[34,1692+31]..src/resizableArray.ml[34,1692+32])
+                                            Texp_constant Const_int 0
+                                      ]
+                                    expression (src/resizableArray.ml[34,1692+38]..src/resizableArray.ml[34,1692+39])
+                                      Texp_constant Const_int 1
+                                    Some
+                                      expression (src/resizableArray.ml[34,1692+45]..src/resizableArray.ml[34,1692+53])
+                                        Texp_ident "capacity/403"
+                              ]
+                              expression (src/resizableArray.ml[35,1749+2]..src/resizableArray.ml[36,1794+36])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/resizableArray.ml[35,1749+6]..src/resizableArray.ml[35,1749+11])
+                                      Tpat_var "table/407"
+                                    expression (src/resizableArray.ml[35,1749+14]..src/resizableArray.ml[35,1749+41])
+                                      Texp_apply
+                                      expression (src/resizableArray.ml[35,1749+14]..src/resizableArray.ml[35,1749+24])
+                                        Texp_ident "Stdlib!.Array.make"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[35,1749+25]..src/resizableArray.ml[35,1749+33])
+                                            Texp_ident "capacity/406"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[35,1749+34]..src/resizableArray.ml[35,1749+41])
+                                            Texp_ident "default/404"
+                                      ]
+                                ]
+                                expression (src/resizableArray.ml[36,1794+2]..src/resizableArray.ml[36,1794+36])
+                                  Texp_record
+                                    fields =
+                                      [
+                                        "default"
+                                          expression (src/resizableArray.ml[36,1794+4]..src/resizableArray.ml[36,1794+11])
+                                            Texp_ident "default/404"
+                                        "init"
+                                          expression (src/resizableArray.ml[36,1794+13]..src/resizableArray.ml[36,1794+17])
+                                            Texp_ident "init/405"
+                                        "size"
+                                          expression (src/resizableArray.ml[36,1794+26]..src/resizableArray.ml[36,1794+27])
+                                            Texp_constant Const_int 0
+                                        "table"
+                                          expression (src/resizableArray.ml[36,1794+29]..src/resizableArray.ml[36,1794+34])
+                                            Texp_ident "table/407"
+                                      ]
+                                    representation =
+                                      Record_regular
+                                    extended_expression =
+                                      None
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[38,1832+0]..src/resizableArray.ml[39,1861+42])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[38,1832+4]..src/resizableArray.ml[38,1832+9])
+          Tpat_var "make_/456"
+        expression (src/resizableArray.ml[38,1832+10]..src/resizableArray.ml[39,1861+42]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[38,1832+10]..src/resizableArray.ml[38,1832+18])
+                Tpat_var "capacity/458"
+              expression (src/resizableArray.ml[38,1832+19]..src/resizableArray.ml[39,1861+42]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[38,1832+19]..src/resizableArray.ml[38,1832+26])
+                      Tpat_var "default/459"
+                    expression (src/resizableArray.ml[39,1861+2]..src/resizableArray.ml[39,1861+42])
+                      Texp_apply
+                      expression (src/resizableArray.ml[39,1861+2]..src/resizableArray.ml[39,1861+6])
+                        Texp_ident "make/401"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/resizableArray.ml[39,1861+7]..src/resizableArray.ml[39,1861+15])
+                            Texp_ident "capacity/458"
+                        <arg>
+                          Nolabel
+                          expression (src/resizableArray.ml[39,1861+16]..src/resizableArray.ml[39,1861+23])
+                            Texp_ident "default/459"
+                        <arg>
+                          Nolabel
+                          expression (src/resizableArray.ml[39,1861+24]..src/resizableArray.ml[39,1861+42])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/resizableArray.ml[39,1861+29]..src/resizableArray.ml[39,1861+30])
+                                  Tpat_any
+                                expression (src/resizableArray.ml[39,1861+34]..src/resizableArray.ml[39,1861+41])
+                                  Texp_ident "default/459"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[41,1905+0]..src/resizableArray.ml[42,1920+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[41,1905+4]..src/resizableArray.ml[41,1905+10])
+          Tpat_var "length/461"
+        expression (src/resizableArray.ml[41,1905+11]..src/resizableArray.ml[42,1920+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[41,1905+11]..src/resizableArray.ml[41,1905+12])
+                Tpat_var "a/463"
+              expression (src/resizableArray.ml[42,1920+2]..src/resizableArray.ml[42,1920+8])
+                Texp_field
+                expression (src/resizableArray.ml[42,1920+2]..src/resizableArray.ml[42,1920+3])
+                  Texp_ident "a/463"
+                "size"
+          ]
+    ]
+  structure_item (src/resizableArray.ml[44,1930+0]..src/resizableArray.ml[46,1977+30])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[44,1930+4]..src/resizableArray.ml[44,1930+7])
+          Tpat_var "get/464"
+        expression (src/resizableArray.ml[44,1930+8]..src/resizableArray.ml[46,1977+30]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[44,1930+8]..src/resizableArray.ml[44,1930+9])
+                Tpat_var "a/466"
+              expression (src/resizableArray.ml[44,1930+10]..src/resizableArray.ml[46,1977+30]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[44,1930+10]..src/resizableArray.ml[44,1930+11])
+                      Tpat_var "i/467"
+                    expression (src/resizableArray.ml[45,1944+2]..src/resizableArray.ml[46,1977+30])
+                      Texp_sequence
+                      expression (src/resizableArray.ml[45,1944+2]..src/resizableArray.ml[45,1944+31])
+                        Texp_assert                        expression (src/resizableArray.ml[45,1944+9]..src/resizableArray.ml[45,1944+31])
+                          Texp_apply
+                          expression (src/resizableArray.ml[45,1944+17]..src/resizableArray.ml[45,1944+19])
+                            Texp_ident "Stdlib!.&&"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[45,1944+10]..src/resizableArray.ml[45,1944+16])
+                                Texp_apply
+                                expression (src/resizableArray.ml[45,1944+12]..src/resizableArray.ml[45,1944+14])
+                                  Texp_ident "Stdlib!.<="
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[45,1944+10]..src/resizableArray.ml[45,1944+11])
+                                      Texp_constant Const_int 0
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[45,1944+15]..src/resizableArray.ml[45,1944+16])
+                                      Texp_ident "i/467"
+                                ]
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[45,1944+20]..src/resizableArray.ml[45,1944+30])
+                                Texp_apply
+                                expression (src/resizableArray.ml[45,1944+22]..src/resizableArray.ml[45,1944+23])
+                                  Texp_ident "Stdlib!.<"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[45,1944+20]..src/resizableArray.ml[45,1944+21])
+                                      Texp_ident "i/467"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[45,1944+24]..src/resizableArray.ml[45,1944+30])
+                                      Texp_field
+                                      expression (src/resizableArray.ml[45,1944+24]..src/resizableArray.ml[45,1944+25])
+                                        Texp_ident "a/466"
+                                      "size"
+                                ]
+                          ]
+                      expression (src/resizableArray.ml[46,1977+2]..src/resizableArray.ml[46,1977+30])
+                        Texp_apply
+                        expression (src/resizableArray.ml[46,1977+2]..src/resizableArray.ml[46,1977+18])
+                          Texp_ident "Stdlib!.Array.unsafe_get"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/resizableArray.ml[46,1977+19]..src/resizableArray.ml[46,1977+26])
+                              Texp_field
+                              expression (src/resizableArray.ml[46,1977+19]..src/resizableArray.ml[46,1977+20])
+                                Texp_ident "a/466"
+                              "table"
+                          <arg>
+                            Nolabel
+                            expression (src/resizableArray.ml[46,1977+27]..src/resizableArray.ml[46,1977+30])
+                              Texp_ident "i/467"
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[48,2009+0]..src/resizableArray.ml[50,2058+32])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[48,2009+4]..src/resizableArray.ml[48,2009+7])
+          Tpat_var "set/468"
+        expression (src/resizableArray.ml[48,2009+8]..src/resizableArray.ml[50,2058+32]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[48,2009+8]..src/resizableArray.ml[48,2009+9])
+                Tpat_var "a/470"
+              expression (src/resizableArray.ml[48,2009+10]..src/resizableArray.ml[50,2058+32]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[48,2009+10]..src/resizableArray.ml[48,2009+11])
+                      Tpat_var "i/471"
+                    expression (src/resizableArray.ml[48,2009+12]..src/resizableArray.ml[50,2058+32]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/resizableArray.ml[48,2009+12]..src/resizableArray.ml[48,2009+13])
+                            Tpat_var "x/472"
+                          expression (src/resizableArray.ml[49,2025+2]..src/resizableArray.ml[50,2058+32])
+                            Texp_sequence
+                            expression (src/resizableArray.ml[49,2025+2]..src/resizableArray.ml[49,2025+31])
+                              Texp_assert                              expression (src/resizableArray.ml[49,2025+9]..src/resizableArray.ml[49,2025+31])
+                                Texp_apply
+                                expression (src/resizableArray.ml[49,2025+17]..src/resizableArray.ml[49,2025+19])
+                                  Texp_ident "Stdlib!.&&"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[49,2025+10]..src/resizableArray.ml[49,2025+16])
+                                      Texp_apply
+                                      expression (src/resizableArray.ml[49,2025+12]..src/resizableArray.ml[49,2025+14])
+                                        Texp_ident "Stdlib!.<="
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[49,2025+10]..src/resizableArray.ml[49,2025+11])
+                                            Texp_constant Const_int 0
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[49,2025+15]..src/resizableArray.ml[49,2025+16])
+                                            Texp_ident "i/471"
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[49,2025+20]..src/resizableArray.ml[49,2025+30])
+                                      Texp_apply
+                                      expression (src/resizableArray.ml[49,2025+22]..src/resizableArray.ml[49,2025+23])
+                                        Texp_ident "Stdlib!.<"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[49,2025+20]..src/resizableArray.ml[49,2025+21])
+                                            Texp_ident "i/471"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[49,2025+24]..src/resizableArray.ml[49,2025+30])
+                                            Texp_field
+                                            expression (src/resizableArray.ml[49,2025+24]..src/resizableArray.ml[49,2025+25])
+                                              Texp_ident "a/470"
+                                            "size"
+                                      ]
+                                ]
+                            expression (src/resizableArray.ml[50,2058+2]..src/resizableArray.ml[50,2058+32])
+                              Texp_apply
+                              expression (src/resizableArray.ml[50,2058+2]..src/resizableArray.ml[50,2058+18])
+                                Texp_ident "Stdlib!.Array.unsafe_set"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[50,2058+19]..src/resizableArray.ml[50,2058+26])
+                                    Texp_field
+                                    expression (src/resizableArray.ml[50,2058+19]..src/resizableArray.ml[50,2058+20])
+                                      Texp_ident "a/470"
+                                    "table"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[50,2058+27]..src/resizableArray.ml[50,2058+30])
+                                    Texp_ident "i/471"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[50,2058+31]..src/resizableArray.ml[50,2058+32])
+                                    Texp_ident "x/472"
+                              ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[52,2092+0]..src/resizableArray.ml[55,2214+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[52,2092+4]..src/resizableArray.ml[52,2092+10])
+          Tpat_var "shrink/473"
+        expression (src/resizableArray.ml[52,2092+11]..src/resizableArray.ml[55,2214+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[52,2092+11]..src/resizableArray.ml[52,2092+12])
+                Tpat_var "a/475"
+              expression (src/resizableArray.ml[52,2092+13]..src/resizableArray.ml[55,2214+13]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[52,2092+13]..src/resizableArray.ml[52,2092+14])
+                      Tpat_var "s/476"
+                    expression (src/resizableArray.ml[54,2167+2]..src/resizableArray.ml[55,2214+13])
+                      Texp_sequence
+                      expression (src/resizableArray.ml[54,2167+2]..src/resizableArray.ml[54,2167+45])
+                        Texp_apply
+                        expression (src/resizableArray.ml[54,2167+2]..src/resizableArray.ml[54,2167+12])
+                          Texp_ident "Stdlib!.Array.fill"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/resizableArray.ml[54,2167+13]..src/resizableArray.ml[54,2167+20])
+                              Texp_field
+                              expression (src/resizableArray.ml[54,2167+13]..src/resizableArray.ml[54,2167+14])
+                                Texp_ident "a/475"
+                              "table"
+                          <arg>
+                            Nolabel
+                            expression (src/resizableArray.ml[54,2167+21]..src/resizableArray.ml[54,2167+22])
+                              Texp_ident "s/476"
+                          <arg>
+                            Nolabel
+                            expression (src/resizableArray.ml[54,2167+23]..src/resizableArray.ml[54,2167+35])
+                              Texp_apply
+                              expression (src/resizableArray.ml[54,2167+31]..src/resizableArray.ml[54,2167+32])
+                                Texp_ident "Stdlib!.-"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[54,2167+24]..src/resizableArray.ml[54,2167+30])
+                                    Texp_field
+                                    expression (src/resizableArray.ml[54,2167+24]..src/resizableArray.ml[54,2167+25])
+                                      Texp_ident "a/475"
+                                    "size"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[54,2167+33]..src/resizableArray.ml[54,2167+34])
+                                    Texp_ident "s/476"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/resizableArray.ml[54,2167+36]..src/resizableArray.ml[54,2167+45])
+                              Texp_field
+                              expression (src/resizableArray.ml[54,2167+36]..src/resizableArray.ml[54,2167+37])
+                                Texp_ident "a/475"
+                              "default"
+                        ]
+                      expression (src/resizableArray.ml[55,2214+2]..src/resizableArray.ml[55,2214+13])
+                        Texp_setfield
+                        expression (src/resizableArray.ml[55,2214+2]..src/resizableArray.ml[55,2214+3])
+                          Texp_ident "a/475"
+                        "size"
+                        expression (src/resizableArray.ml[55,2214+12]..src/resizableArray.ml[55,2214+13])
+                          Texp_ident "s/476"
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[57,2229+0]..src/resizableArray.ml[74,2860+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[57,2229+4]..src/resizableArray.ml[57,2229+8])
+          Tpat_var "grow/477"
+        expression (src/resizableArray.ml[57,2229+9]..src/resizableArray.ml[74,2860+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[57,2229+9]..src/resizableArray.ml[57,2229+10])
+                Tpat_var "a/479"
+              expression (src/resizableArray.ml[57,2229+11]..src/resizableArray.ml[74,2860+13]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[57,2229+11]..src/resizableArray.ml[57,2229+12])
+                      Tpat_var "s/480"
+                    expression (src/resizableArray.ml[59,2307+2]..src/resizableArray.ml[74,2860+13])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/resizableArray.ml[59,2307+6]..src/resizableArray.ml[59,2307+7])
+                            Tpat_var "n/481"
+                          expression (src/resizableArray.ml[59,2307+10]..src/resizableArray.ml[59,2307+30])
+                            Texp_apply
+                            expression (src/resizableArray.ml[59,2307+10]..src/resizableArray.ml[59,2307+22])
+                              Texp_ident "Stdlib!.Array.length"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/resizableArray.ml[59,2307+23]..src/resizableArray.ml[59,2307+30])
+                                  Texp_field
+                                  expression (src/resizableArray.ml[59,2307+23]..src/resizableArray.ml[59,2307+24])
+                                    Texp_ident "a/479"
+                                  "table"
+                            ]
+                      ]
+                      expression (src/resizableArray.ml[60,2341+2]..src/resizableArray.ml[74,2860+13])
+                        Texp_sequence
+                        expression (src/resizableArray.ml[60,2341+2]..src/resizableArray.ml[66,2618+5])
+                          Texp_ifthenelse
+                          expression (src/resizableArray.ml[60,2341+5]..src/resizableArray.ml[60,2341+10])
+                            Texp_apply
+                            expression (src/resizableArray.ml[60,2341+7]..src/resizableArray.ml[60,2341+8])
+                              Texp_ident "Stdlib!.>"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/resizableArray.ml[60,2341+5]..src/resizableArray.ml[60,2341+6])
+                                  Texp_ident "s/480"
+                              <arg>
+                                Nolabel
+                                expression (src/resizableArray.ml[60,2341+9]..src/resizableArray.ml[60,2341+10])
+                                  Texp_ident "n/481"
+                            ]
+                          expression (src/resizableArray.ml[60,2341+16]..src/resizableArray.ml[66,2618+5])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/resizableArray.ml[63,2505+8]..src/resizableArray.ml[63,2505+13])
+                                  Tpat_var "table/482"
+                                expression (src/resizableArray.ml[63,2505+16]..src/resizableArray.ml[63,2505+52])
+                                  Texp_apply
+                                  expression (src/resizableArray.ml[63,2505+16]..src/resizableArray.ml[63,2505+26])
+                                    Texp_ident "Stdlib!.Array.make"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/resizableArray.ml[63,2505+27]..src/resizableArray.ml[63,2505+42])
+                                        Texp_apply
+                                        expression (src/resizableArray.ml[63,2505+28]..src/resizableArray.ml[63,2505+31])
+                                          Texp_ident "Stdlib!.max"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/resizableArray.ml[63,2505+32]..src/resizableArray.ml[63,2505+39])
+                                              Texp_apply
+                                              expression (src/resizableArray.ml[63,2505+35]..src/resizableArray.ml[63,2505+36])
+                                                Texp_ident "Stdlib!.*"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/resizableArray.ml[63,2505+33]..src/resizableArray.ml[63,2505+34])
+                                                    Texp_constant Const_int 2
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/resizableArray.ml[63,2505+37]..src/resizableArray.ml[63,2505+38])
+                                                    Texp_ident "n/481"
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/resizableArray.ml[63,2505+40]..src/resizableArray.ml[63,2505+41])
+                                              Texp_ident "s/480"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/resizableArray.ml[63,2505+43]..src/resizableArray.ml[63,2505+52])
+                                        Texp_field
+                                        expression (src/resizableArray.ml[63,2505+43]..src/resizableArray.ml[63,2505+44])
+                                          Texp_ident "a/479"
+                                        "default"
+                                  ]
+                            ]
+                            expression (src/resizableArray.ml[64,2561+4]..src/resizableArray.ml[65,2597+20])
+                              Texp_sequence
+                              expression (src/resizableArray.ml[64,2561+4]..src/resizableArray.ml[64,2561+34])
+                                Texp_apply
+                                expression (src/resizableArray.ml[64,2561+4]..src/resizableArray.ml[64,2561+14])
+                                  Texp_ident "Stdlib!.Array.blit"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[64,2561+15]..src/resizableArray.ml[64,2561+22])
+                                      Texp_field
+                                      expression (src/resizableArray.ml[64,2561+15]..src/resizableArray.ml[64,2561+16])
+                                        Texp_ident "a/479"
+                                      "table"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[64,2561+23]..src/resizableArray.ml[64,2561+24])
+                                      Texp_constant Const_int 0
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[64,2561+25]..src/resizableArray.ml[64,2561+30])
+                                      Texp_ident "table/482"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[64,2561+31]..src/resizableArray.ml[64,2561+32])
+                                      Texp_constant Const_int 0
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[64,2561+33]..src/resizableArray.ml[64,2561+34])
+                                      Texp_ident "n/481"
+                                ]
+                              expression (src/resizableArray.ml[65,2597+4]..src/resizableArray.ml[65,2597+20])
+                                Texp_setfield
+                                expression (src/resizableArray.ml[65,2597+4]..src/resizableArray.ml[65,2597+5])
+                                  Texp_ident "a/479"
+                                "table"
+                                expression (src/resizableArray.ml[65,2597+15]..src/resizableArray.ml[65,2597+20])
+                                  Texp_ident "table/482"
+                          None
+                        expression (src/resizableArray.ml[68,2699+2]..src/resizableArray.ml[74,2860+13])
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/resizableArray.ml[68,2699+6]..src/resizableArray.ml[68,2699+10])
+                                Tpat_var "init/483"
+                              expression (src/resizableArray.ml[68,2699+13]..src/resizableArray.ml[68,2699+19])
+                                Texp_field
+                                expression (src/resizableArray.ml[68,2699+13]..src/resizableArray.ml[68,2699+14])
+                                  Texp_ident "a/479"
+                                "init"
+                            <def>
+                              pattern (src/resizableArray.ml[69,2719+6]..src/resizableArray.ml[69,2719+11])
+                                Tpat_var "table/484"
+                              expression (src/resizableArray.ml[69,2719+14]..src/resizableArray.ml[69,2719+21])
+                                Texp_field
+                                expression (src/resizableArray.ml[69,2719+14]..src/resizableArray.ml[69,2719+15])
+                                  Texp_ident "a/479"
+                                "table"
+                          ]
+                          expression (src/resizableArray.ml[70,2744+2]..src/resizableArray.ml[74,2860+13])
+                            Texp_sequence
+                            expression (src/resizableArray.ml[70,2744+2]..src/resizableArray.ml[72,2811+6])
+                              Texp_for "i/485" Up
+                              expression (src/resizableArray.ml[70,2744+10]..src/resizableArray.ml[70,2744+16])
+                                Texp_field
+                                expression (src/resizableArray.ml[70,2744+10]..src/resizableArray.ml[70,2744+11])
+                                  Texp_ident "a/479"
+                                "size"
+                              expression (src/resizableArray.ml[70,2744+20]..src/resizableArray.ml[70,2744+25])
+                                Texp_apply
+                                expression (src/resizableArray.ml[70,2744+22]..src/resizableArray.ml[70,2744+23])
+                                  Texp_ident "Stdlib!.-"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[70,2744+20]..src/resizableArray.ml[70,2744+21])
+                                      Texp_ident "s/480"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[70,2744+24]..src/resizableArray.ml[70,2744+25])
+                                      Texp_constant Const_int 1
+                                ]
+                              expression (src/resizableArray.ml[71,2773+4]..src/resizableArray.ml[71,2773+37])
+                                Texp_apply
+                                expression (src/resizableArray.ml[71,2773+4]..src/resizableArray.ml[71,2773+20])
+                                  Texp_ident "Stdlib!.Array.unsafe_set"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[71,2773+21]..src/resizableArray.ml[71,2773+26])
+                                      Texp_ident "table/484"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[71,2773+27]..src/resizableArray.ml[71,2773+28])
+                                      Texp_ident "i/485"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[71,2773+29]..src/resizableArray.ml[71,2773+37])
+                                      Texp_apply
+                                      expression (src/resizableArray.ml[71,2773+30]..src/resizableArray.ml[71,2773+34])
+                                        Texp_ident "init/483"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[71,2773+35]..src/resizableArray.ml[71,2773+36])
+                                            Texp_ident "i/485"
+                                      ]
+                                ]
+                            expression (src/resizableArray.ml[74,2860+2]..src/resizableArray.ml[74,2860+13])
+                              Texp_setfield
+                              expression (src/resizableArray.ml[74,2860+2]..src/resizableArray.ml[74,2860+3])
+                                Texp_ident "a/479"
+                              "size"
+                              expression (src/resizableArray.ml[74,2860+12]..src/resizableArray.ml[74,2860+13])
+                                Texp_ident "s/480"
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[76,2875+0]..src/resizableArray.ml[81,2973+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[76,2875+4]..src/resizableArray.ml[76,2875+10])
+          Tpat_var "resize/486"
+        expression (src/resizableArray.ml[76,2875+11]..src/resizableArray.ml[81,2973+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[76,2875+11]..src/resizableArray.ml[76,2875+12])
+                Tpat_var "a/488"
+              expression (src/resizableArray.ml[76,2875+13]..src/resizableArray.ml[81,2973+12]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[76,2875+13]..src/resizableArray.ml[76,2875+14])
+                      Tpat_var "s/489"
+                    expression (src/resizableArray.ml[77,2892+2]..src/resizableArray.ml[81,2973+12])
+                      Texp_sequence
+                      expression (src/resizableArray.ml[77,2892+2]..src/resizableArray.ml[77,2892+17])
+                        Texp_assert                        expression (src/resizableArray.ml[77,2892+9]..src/resizableArray.ml[77,2892+17])
+                          Texp_apply
+                          expression (src/resizableArray.ml[77,2892+12]..src/resizableArray.ml[77,2892+14])
+                            Texp_ident "Stdlib!.<="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[77,2892+10]..src/resizableArray.ml[77,2892+11])
+                                Texp_constant Const_int 0
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[77,2892+15]..src/resizableArray.ml[77,2892+16])
+                                Texp_ident "s/489"
+                          ]
+                      expression (src/resizableArray.ml[78,2911+2]..src/resizableArray.ml[81,2973+12])
+                        Texp_ifthenelse
+                        expression (src/resizableArray.ml[78,2911+5]..src/resizableArray.ml[78,2911+15])
+                          Texp_apply
+                          expression (src/resizableArray.ml[78,2911+7]..src/resizableArray.ml[78,2911+8])
+                            Texp_ident "Stdlib!.<"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[78,2911+5]..src/resizableArray.ml[78,2911+6])
+                                Texp_ident "s/489"
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[78,2911+9]..src/resizableArray.ml[78,2911+15])
+                                Texp_field
+                                expression (src/resizableArray.ml[78,2911+9]..src/resizableArray.ml[78,2911+10])
+                                  Texp_ident "a/488"
+                                "size"
+                          ]
+                        expression (src/resizableArray.ml[79,2932+4]..src/resizableArray.ml[79,2932+14])
+                          Texp_apply
+                          expression (src/resizableArray.ml[79,2932+4]..src/resizableArray.ml[79,2932+10])
+                            Texp_ident "shrink/473"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[79,2932+11]..src/resizableArray.ml[79,2932+12])
+                                Texp_ident "a/488"
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[79,2932+13]..src/resizableArray.ml[79,2932+14])
+                                Texp_ident "s/489"
+                          ]
+                        Some
+                          expression (src/resizableArray.ml[80,2947+7]..src/resizableArray.ml[81,2973+12])
+                            Texp_ifthenelse
+                            expression (src/resizableArray.ml[80,2947+10]..src/resizableArray.ml[80,2947+20])
+                              Texp_apply
+                              expression (src/resizableArray.ml[80,2947+12]..src/resizableArray.ml[80,2947+13])
+                                Texp_ident "Stdlib!.>"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[80,2947+10]..src/resizableArray.ml[80,2947+11])
+                                    Texp_ident "s/489"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[80,2947+14]..src/resizableArray.ml[80,2947+20])
+                                    Texp_field
+                                    expression (src/resizableArray.ml[80,2947+14]..src/resizableArray.ml[80,2947+15])
+                                      Texp_ident "a/488"
+                                    "size"
+                              ]
+                            expression (src/resizableArray.ml[81,2973+4]..src/resizableArray.ml[81,2973+12])
+                              Texp_apply
+                              expression (src/resizableArray.ml[81,2973+4]..src/resizableArray.ml[81,2973+8])
+                                Texp_ident "grow/477"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[81,2973+9]..src/resizableArray.ml[81,2973+10])
+                                    Texp_ident "a/488"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[81,2973+11]..src/resizableArray.ml[81,2973+12])
+                                    Texp_ident "s/489"
+                              ]
+                            None
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[83,2987+0]..src/resizableArray.ml[99,3577+32])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[83,2987+4]..src/resizableArray.ml[83,2987+8])
+          Tpat_var "push/490"
+        expression (src/resizableArray.ml[83,2987+9]..src/resizableArray.ml[99,3577+32]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[83,2987+9]..src/resizableArray.ml[83,2987+10])
+                Tpat_var "a/492"
+              expression (src/resizableArray.ml[83,2987+11]..src/resizableArray.ml[99,3577+32]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/resizableArray.ml[83,2987+11]..src/resizableArray.ml[83,2987+12])
+                      Tpat_var "x/493"
+                    expression (src/resizableArray.ml[84,3002+2]..src/resizableArray.ml[99,3577+32])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/resizableArray.ml[84,3002+6]..src/resizableArray.ml[84,3002+7])
+                            Tpat_var "s/494"
+                          expression (src/resizableArray.ml[84,3002+10]..src/resizableArray.ml[84,3002+16])
+                            Texp_field
+                            expression (src/resizableArray.ml[84,3002+10]..src/resizableArray.ml[84,3002+11])
+                              Texp_ident "a/492"
+                            "size"
+                      ]
+                      expression (src/resizableArray.ml[85,3076+2]..src/resizableArray.ml[99,3577+32])
+                        Texp_sequence
+                        expression (src/resizableArray.ml[85,3076+2]..src/resizableArray.ml[98,3570+5])
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/resizableArray.ml[86,3158+8]..src/resizableArray.ml[86,3158+9])
+                                Tpat_var "s/495"
+                              expression (src/resizableArray.ml[86,3158+12]..src/resizableArray.ml[86,3158+17])
+                                Texp_apply
+                                expression (src/resizableArray.ml[86,3158+14]..src/resizableArray.ml[86,3158+15])
+                                  Texp_ident "Stdlib!.+"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[86,3158+12]..src/resizableArray.ml[86,3158+13])
+                                      Texp_ident "s/494"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[86,3158+16]..src/resizableArray.ml[86,3158+17])
+                                      Texp_constant Const_int 1
+                                ]
+                          ]
+                          expression (src/resizableArray.ml[87,3179+4]..src/resizableArray.ml[97,3554+15])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/resizableArray.ml[87,3179+8]..src/resizableArray.ml[87,3179+9])
+                                  Tpat_var "n/496"
+                                expression (src/resizableArray.ml[87,3179+12]..src/resizableArray.ml[87,3179+32])
+                                  Texp_apply
+                                  expression (src/resizableArray.ml[87,3179+12]..src/resizableArray.ml[87,3179+24])
+                                    Texp_ident "Stdlib!.Array.length"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/resizableArray.ml[87,3179+25]..src/resizableArray.ml[87,3179+32])
+                                        Texp_field
+                                        expression (src/resizableArray.ml[87,3179+25]..src/resizableArray.ml[87,3179+26])
+                                          Texp_ident "a/492"
+                                        "table"
+                                  ]
+                            ]
+                            expression (src/resizableArray.ml[88,3215+4]..src/resizableArray.ml[97,3554+15])
+                              Texp_sequence
+                              expression (src/resizableArray.ml[88,3215+4]..src/resizableArray.ml[94,3426+7])
+                                Texp_ifthenelse
+                                expression (src/resizableArray.ml[88,3215+7]..src/resizableArray.ml[88,3215+12])
+                                  Texp_apply
+                                  expression (src/resizableArray.ml[88,3215+9]..src/resizableArray.ml[88,3215+10])
+                                    Texp_ident "Stdlib!.>"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/resizableArray.ml[88,3215+7]..src/resizableArray.ml[88,3215+8])
+                                        Texp_ident "s/495"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/resizableArray.ml[88,3215+11]..src/resizableArray.ml[88,3215+12])
+                                        Texp_ident "n/496"
+                                  ]
+                                expression (src/resizableArray.ml[88,3215+18]..src/resizableArray.ml[94,3426+7])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/resizableArray.ml[91,3315+10]..src/resizableArray.ml[91,3315+15])
+                                        Tpat_var "table/497"
+                                      expression (src/resizableArray.ml[91,3315+18]..src/resizableArray.ml[91,3315+46])
+                                        Texp_apply
+                                        expression (src/resizableArray.ml[91,3315+18]..src/resizableArray.ml[91,3315+28])
+                                          Texp_ident "Stdlib!.Array.make"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/resizableArray.ml[91,3315+29]..src/resizableArray.ml[91,3315+36])
+                                              Texp_apply
+                                              expression (src/resizableArray.ml[91,3315+32]..src/resizableArray.ml[91,3315+33])
+                                                Texp_ident "Stdlib!.*"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/resizableArray.ml[91,3315+30]..src/resizableArray.ml[91,3315+31])
+                                                    Texp_constant Const_int 2
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/resizableArray.ml[91,3315+34]..src/resizableArray.ml[91,3315+35])
+                                                    Texp_ident "n/496"
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/resizableArray.ml[91,3315+37]..src/resizableArray.ml[91,3315+46])
+                                              Texp_field
+                                              expression (src/resizableArray.ml[91,3315+37]..src/resizableArray.ml[91,3315+38])
+                                                Texp_ident "a/492"
+                                              "default"
+                                        ]
+                                  ]
+                                  expression (src/resizableArray.ml[92,3365+6]..src/resizableArray.ml[93,3403+22])
+                                    Texp_sequence
+                                    expression (src/resizableArray.ml[92,3365+6]..src/resizableArray.ml[92,3365+36])
+                                      Texp_apply
+                                      expression (src/resizableArray.ml[92,3365+6]..src/resizableArray.ml[92,3365+16])
+                                        Texp_ident "Stdlib!.Array.blit"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[92,3365+17]..src/resizableArray.ml[92,3365+24])
+                                            Texp_field
+                                            expression (src/resizableArray.ml[92,3365+17]..src/resizableArray.ml[92,3365+18])
+                                              Texp_ident "a/492"
+                                            "table"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[92,3365+25]..src/resizableArray.ml[92,3365+26])
+                                            Texp_constant Const_int 0
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[92,3365+27]..src/resizableArray.ml[92,3365+32])
+                                            Texp_ident "table/497"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[92,3365+33]..src/resizableArray.ml[92,3365+34])
+                                            Texp_constant Const_int 0
+                                        <arg>
+                                          Nolabel
+                                          expression (src/resizableArray.ml[92,3365+35]..src/resizableArray.ml[92,3365+36])
+                                            Texp_ident "n/496"
+                                      ]
+                                    expression (src/resizableArray.ml[93,3403+6]..src/resizableArray.ml[93,3403+22])
+                                      Texp_setfield
+                                      expression (src/resizableArray.ml[93,3403+6]..src/resizableArray.ml[93,3403+7])
+                                        Texp_ident "a/492"
+                                      "table"
+                                      expression (src/resizableArray.ml[93,3403+17]..src/resizableArray.ml[93,3403+22])
+                                        Texp_ident "table/497"
+                                None
+                              expression (src/resizableArray.ml[97,3554+4]..src/resizableArray.ml[97,3554+15])
+                                Texp_setfield
+                                expression (src/resizableArray.ml[97,3554+4]..src/resizableArray.ml[97,3554+5])
+                                  Texp_ident "a/492"
+                                "size"
+                                expression (src/resizableArray.ml[97,3554+14]..src/resizableArray.ml[97,3554+15])
+                                  Texp_ident "s/495"
+                        expression (src/resizableArray.ml[99,3577+2]..src/resizableArray.ml[99,3577+32])
+                          Texp_apply
+                          expression (src/resizableArray.ml[99,3577+2]..src/resizableArray.ml[99,3577+18])
+                            Texp_ident "Stdlib!.Array.unsafe_set"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[99,3577+19]..src/resizableArray.ml[99,3577+26])
+                                Texp_field
+                                expression (src/resizableArray.ml[99,3577+19]..src/resizableArray.ml[99,3577+20])
+                                  Texp_ident "a/492"
+                                "table"
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[99,3577+27]..src/resizableArray.ml[99,3577+30])
+                                Texp_ident "s/494"
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[99,3577+31]..src/resizableArray.ml[99,3577+32])
+                                Texp_ident "x/493"
+                          ]
+                ]
+          ]
+    ]
+  structure_item (src/resizableArray.ml[101,3653+0]..src/resizableArray.ml[109,3961+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[101,3653+4]..src/resizableArray.ml[101,3653+7])
+          Tpat_var "pop/498"
+        expression (src/resizableArray.ml[101,3653+8]..src/resizableArray.ml[109,3961+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[101,3653+8]..src/resizableArray.ml[101,3653+9])
+                Tpat_var "a/500"
+              expression (src/resizableArray.ml[102,3665+2]..src/resizableArray.ml[109,3961+3])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/resizableArray.ml[102,3665+6]..src/resizableArray.ml[102,3665+7])
+                      Tpat_var "s/501"
+                    expression (src/resizableArray.ml[102,3665+10]..src/resizableArray.ml[102,3665+16])
+                      Texp_field
+                      expression (src/resizableArray.ml[102,3665+10]..src/resizableArray.ml[102,3665+11])
+                        Texp_ident "a/500"
+                      "size"
+                ]
+                expression (src/resizableArray.ml[103,3739+2]..src/resizableArray.ml[109,3961+3])
+                  Texp_sequence
+                  expression (src/resizableArray.ml[103,3739+2]..src/resizableArray.ml[103,3739+16])
+                    Texp_assert                    expression (src/resizableArray.ml[103,3739+9]..src/resizableArray.ml[103,3739+16])
+                      Texp_apply
+                      expression (src/resizableArray.ml[103,3739+12]..src/resizableArray.ml[103,3739+13])
+                        Texp_ident "Stdlib!.>"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/resizableArray.ml[103,3739+10]..src/resizableArray.ml[103,3739+11])
+                            Texp_ident "s/501"
+                        <arg>
+                          Nolabel
+                          expression (src/resizableArray.ml[103,3739+14]..src/resizableArray.ml[103,3739+15])
+                            Texp_constant Const_int 0
+                      ]
+                  expression (src/resizableArray.ml[104,3757+2]..src/resizableArray.ml[109,3961+3])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/resizableArray.ml[104,3757+6]..src/resizableArray.ml[104,3757+7])
+                          Tpat_var "s/502"
+                        expression (src/resizableArray.ml[104,3757+10]..src/resizableArray.ml[104,3757+15])
+                          Texp_apply
+                          expression (src/resizableArray.ml[104,3757+12]..src/resizableArray.ml[104,3757+13])
+                            Texp_ident "Stdlib!.-"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[104,3757+10]..src/resizableArray.ml[104,3757+11])
+                                Texp_ident "s/501"
+                            <arg>
+                              Nolabel
+                              expression (src/resizableArray.ml[104,3757+14]..src/resizableArray.ml[104,3757+15])
+                                Texp_constant Const_int 1
+                          ]
+                    ]
+                    expression (src/resizableArray.ml[105,3776+2]..src/resizableArray.ml[109,3961+3])
+                      Texp_sequence
+                      expression (src/resizableArray.ml[105,3776+2]..src/resizableArray.ml[105,3776+13])
+                        Texp_setfield
+                        expression (src/resizableArray.ml[105,3776+2]..src/resizableArray.ml[105,3776+3])
+                          Texp_ident "a/500"
+                        "size"
+                        expression (src/resizableArray.ml[105,3776+12]..src/resizableArray.ml[105,3776+13])
+                          Texp_ident "s/502"
+                      expression (src/resizableArray.ml[106,3791+2]..src/resizableArray.ml[109,3961+3])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/resizableArray.ml[106,3791+6]..src/resizableArray.ml[106,3791+11])
+                              Tpat_var "table/503"
+                            expression (src/resizableArray.ml[106,3791+14]..src/resizableArray.ml[106,3791+21])
+                              Texp_field
+                              expression (src/resizableArray.ml[106,3791+14]..src/resizableArray.ml[106,3791+15])
+                                Texp_ident "a/500"
+                              "table"
+                        ]
+                        expression (src/resizableArray.ml[107,3816+2]..src/resizableArray.ml[109,3961+3])
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/resizableArray.ml[107,3816+6]..src/resizableArray.ml[107,3816+7])
+                                Tpat_var "x/504"
+                              expression (src/resizableArray.ml[107,3816+10]..src/resizableArray.ml[107,3816+36])
+                                Texp_apply
+                                expression (src/resizableArray.ml[107,3816+10]..src/resizableArray.ml[107,3816+26])
+                                  Texp_ident "Stdlib!.Array.unsafe_get"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[107,3816+27]..src/resizableArray.ml[107,3816+32])
+                                      Texp_ident "table/503"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/resizableArray.ml[107,3816+33]..src/resizableArray.ml[107,3816+36])
+                                      Texp_ident "s/502"
+                                ]
+                          ]
+                          expression (src/resizableArray.ml[108,3887+2]..src/resizableArray.ml[109,3961+3])
+                            Texp_sequence
+                            expression (src/resizableArray.ml[108,3887+2]..src/resizableArray.ml[108,3887+38])
+                              Texp_apply
+                              expression (src/resizableArray.ml[108,3887+2]..src/resizableArray.ml[108,3887+18])
+                                Texp_ident "Stdlib!.Array.unsafe_set"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[108,3887+19]..src/resizableArray.ml[108,3887+24])
+                                    Texp_ident "table/503"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[108,3887+25]..src/resizableArray.ml[108,3887+28])
+                                    Texp_ident "s/502"
+                                <arg>
+                                  Nolabel
+                                  expression (src/resizableArray.ml[108,3887+29]..src/resizableArray.ml[108,3887+38])
+                                    Texp_field
+                                    expression (src/resizableArray.ml[108,3887+29]..src/resizableArray.ml[108,3887+30])
+                                      Texp_ident "a/500"
+                                    "default"
+                              ]
+                            expression (src/resizableArray.ml[109,3961+2]..src/resizableArray.ml[109,3961+3])
+                              Texp_ident "x/504"
+          ]
+    ]
+  structure_item (src/resizableArray.ml[111,3966+0]..src/resizableArray.ml[112,3982+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/resizableArray.ml[111,3966+4]..src/resizableArray.ml[111,3966+11])
+          Tpat_var "default/505"
+        expression (src/resizableArray.ml[111,3966+12]..src/resizableArray.ml[112,3982+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/resizableArray.ml[111,3966+12]..src/resizableArray.ml[111,3966+13])
+                Tpat_var "a/507"
+              expression (src/resizableArray.ml[112,3982+2]..src/resizableArray.ml[112,3982+11])
+                Texp_field
+                expression (src/resizableArray.ml[112,3982+2]..src/resizableArray.ml[112,3982+3])
+                  Texp_ident "a/507"
+                "default"
+          ]
+    ]
+]
+
+{<Dune__exe__ResizableArray>
+ "default"[value] -> <Dune__exe__ResizableArray.50>;
+ "get"[value] -> <Dune__exe__ResizableArray.16>;
+ "length"[value] -> <Dune__exe__ResizableArray.14>;
+ "make"[value] -> <Dune__exe__ResizableArray.5>;
+ "make_"[value] -> <Dune__exe__ResizableArray.11>;
+ "pop"[value] -> <Dune__exe__ResizableArray.44>;
+ "push"[value] -> <Dune__exe__ResizableArray.37>;
+ "resize"[value] -> <Dune__exe__ResizableArray.34>;
+ "set"[value] -> <Dune__exe__ResizableArray.19>;
+ "t"[type] -> <Dune__exe__ResizableArray.0>;
+ }
+
+(seq
+  (let
+    (make/401 =
+       (function capacity/403[int] default/404 init/405
+         (seq
+           (if (>= capacity/403 0) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 33 2])))
+           (let
+             (capacity/406 =[int] (if (== capacity/403 0) 1 capacity/403)
+              table/407 = (caml_make_vect capacity/406 default/404))
+             (makemutable 0 (*,*,int,*) default/404 init/405 0 table/407)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__ResizableArray!) make/401))
+  (let
+    (make_/456 =
+       (function capacity/458[int] default/459
+         (apply (field_imm 0 (global Dune__exe__ResizableArray!))
+           capacity/458 default/459 (function param/460[int] default/459))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__ResizableArray!) make_/456))
+  (let (length/461 = (function a/463 : int (field_int 2 a/463)))
+    (setfield_ptr(root-init) 2 (global Dune__exe__ResizableArray!)
+      length/461))
+  (let
+    (get/464 =
+       (function a/466 i/467[int]
+         (seq
+           (if (&& (<= 0 i/467) (< i/467 (field_int 2 a/466))) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 45 2])))
+           (array.unsafe_get[gen] (field_mut 3 a/466) i/467))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__ResizableArray!) get/464))
+  (let
+    (set/468 =
+       (function a/470 i/471[int] x/472 : int
+         (seq
+           (if (&& (<= 0 i/471) (< i/471 (field_int 2 a/470))) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 49 2])))
+           (array.unsafe_set[gen] (field_mut 3 a/470) i/471 x/472))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__ResizableArray!) set/468))
+  (let
+    (shrink/473 =
+       (function a/475 s/476[int] : int
+         (seq
+           (apply (field_imm 6 (global Stdlib__Array!)) (field_mut 3 a/475)
+             s/476 (- (field_int 2 a/475) s/476) (field_imm 0 a/475))
+           (setfield_imm 2 a/475 s/476))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__ResizableArray!)
+      shrink/473))
+  (let
+    (grow/477 =
+       (function a/479 s/480[int] : int
+         (let (n/481 =[int] (array.length[gen] (field_mut 3 a/479)))
+           (seq
+             (if (> s/480 n/481)
+               (let
+                 (table/482 =
+                    (caml_make_vect
+                      (apply (field_imm 16 (global Stdlib!)) (* 2 n/481)
+                        s/480)
+                      (field_imm 0 a/479)))
+                 (seq
+                   (apply (field_imm 7 (global Stdlib__Array!))
+                     (field_mut 3 a/479) 0 table/482 0 n/481)
+                   (setfield_ptr 3 a/479 table/482)))
+               0)
+             (let
+               (init/483 = (field_imm 1 a/479)
+                table/484 = (field_mut 3 a/479))
+               (seq
+                 (for i/485 (field_int 2 a/479) to (- s/480 1)
+                   (array.unsafe_set[gen] table/484 i/485
+                     (apply init/483 i/485)))
+                 (setfield_imm 2 a/479 s/480)))))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__ResizableArray!) grow/477))
+  (let
+    (resize/486 =
+       (function a/488 s/489[int] : int
+         (seq
+           (if (<= 0 s/489) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 77 2])))
+           (if (< s/489 (field_int 2 a/488))
+             (apply (field_imm 9 (global Dune__exe__ResizableArray!)) a/488
+               s/489)
+             (if (> s/489 (field_int 2 a/488))
+               (apply (field_imm 10 (global Dune__exe__ResizableArray!))
+                 a/488 s/489)
+               0)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__ResizableArray!)
+      resize/486))
+  (let
+    (push/490 =
+       (function a/492 x/493 : int
+         (let (s/494 =[int] (field_int 2 a/492))
+           (seq
+             (let
+               (s/495 =[int] (+ s/494 1)
+                n/496 =[int] (array.length[gen] (field_mut 3 a/492)))
+               (seq
+                 (if (> s/495 n/496)
+                   (let
+                     (table/497 =
+                        (caml_make_vect (* 2 n/496) (field_imm 0 a/492)))
+                     (seq
+                       (apply (field_imm 7 (global Stdlib__Array!))
+                         (field_mut 3 a/492) 0 table/497 0 n/496)
+                       (setfield_ptr 3 a/492 table/497)))
+                   0)
+                 (setfield_imm 2 a/492 s/495)))
+             (array.unsafe_set[gen] (field_mut 3 a/492) s/494 x/493)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__ResizableArray!) push/490))
+  (let
+    (pop/498 =
+       (function a/500
+         (let (s/501 =[int] (field_int 2 a/500))
+           (seq
+             (if (> s/501 0) 0
+               (raise
+                 (makeblock 0 (global Assert_failure/28!)
+                   [0: "src/resizableArray.ml" 103 2])))
+             (let (s/502 =[int] (- s/501 1))
+               (seq (setfield_imm 2 a/500 s/502)
+                 (let
+                   (table/503 = (field_mut 3 a/500)
+                    x/504 = (array.unsafe_get[gen] table/503 s/502))
+                   (seq
+                     (array.unsafe_set[gen] table/503 s/502
+                       (field_imm 0 a/500))
+                     x/504))))))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__ResizableArray!) pop/498))
+  (let (default/505 = (function a/507 (field_imm 0 a/507)))
+    (setfield_ptr(root-init) 8 (global Dune__exe__ResizableArray!)
+      default/505))
+  0)
+(seq
+  (let
+    (make/401 =
+       (function capacity/403[int] default/404 init/405
+         (seq
+           (if (>= capacity/403 0) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 33 2])))
+           (let
+             (capacity/406 =[int] (if (== capacity/403 0) 1 capacity/403)
+              table/407 = (caml_make_vect capacity/406 default/404))
+             (makemutable 0 (*,*,int,*) default/404 init/405 0 table/407)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__ResizableArray!) make/401))
+  (let
+    (make_/456 =
+       (function capacity/458[int] default/459
+         (apply (field_imm 0 (global Dune__exe__ResizableArray!))
+           capacity/458 default/459 (function param/460[int] default/459))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__ResizableArray!) make_/456))
+  (let (length/461 = (function a/463 : int (field_int 2 a/463)))
+    (setfield_ptr(root-init) 2 (global Dune__exe__ResizableArray!)
+      length/461))
+  (let
+    (get/464 =
+       (function a/466 i/467[int]
+         (seq
+           (if (&& (<= 0 i/467) (< i/467 (field_int 2 a/466))) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 45 2])))
+           (array.unsafe_get[gen] (field_mut 3 a/466) i/467))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__ResizableArray!) get/464))
+  (let
+    (set/468 =
+       (function a/470 i/471[int] x/472 : int
+         (seq
+           (if (&& (<= 0 i/471) (< i/471 (field_int 2 a/470))) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 49 2])))
+           (array.unsafe_set[gen] (field_mut 3 a/470) i/471 x/472))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__ResizableArray!) set/468))
+  (let
+    (shrink/473 =
+       (function a/475 s/476[int] : int
+         (seq
+           (apply (field_imm 6 (global Stdlib__Array!)) (field_mut 3 a/475)
+             s/476 (- (field_int 2 a/475) s/476) (field_imm 0 a/475))
+           (setfield_imm 2 a/475 s/476))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__ResizableArray!)
+      shrink/473))
+  (let
+    (grow/477 =
+       (function a/479 s/480[int] : int
+         (let (n/481 =[int] (array.length[gen] (field_mut 3 a/479)))
+           (seq
+             (if (> s/480 n/481)
+               (let
+                 (table/482 =
+                    (caml_make_vect
+                      (apply (field_imm 16 (global Stdlib!)) (* 2 n/481)
+                        s/480)
+                      (field_imm 0 a/479)))
+                 (seq
+                   (apply (field_imm 7 (global Stdlib__Array!))
+                     (field_mut 3 a/479) 0 table/482 0 n/481)
+                   (setfield_ptr 3 a/479 table/482)))
+               0)
+             (let
+               (init/483 = (field_imm 1 a/479)
+                table/484 = (field_mut 3 a/479))
+               (seq
+                 (for i/485 (field_int 2 a/479) to (- s/480 1)
+                   (array.unsafe_set[gen] table/484 i/485
+                     (apply init/483 i/485)))
+                 (setfield_imm 2 a/479 s/480)))))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__ResizableArray!) grow/477))
+  (let
+    (resize/486 =
+       (function a/488 s/489[int] : int
+         (seq
+           (if (<= 0 s/489) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/resizableArray.ml" 77 2])))
+           (if (< s/489 (field_int 2 a/488))
+             (apply (field_imm 9 (global Dune__exe__ResizableArray!)) a/488
+               s/489)
+             (if (> s/489 (field_int 2 a/488))
+               (apply (field_imm 10 (global Dune__exe__ResizableArray!))
+                 a/488 s/489)
+               0)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__ResizableArray!)
+      resize/486))
+  (let
+    (push/490 =
+       (function a/492 x/493 : int
+         (let (s/494 =[int] (field_int 2 a/492))
+           (seq
+             (let
+               (s/495 =[int] (+ s/494 1)
+                n/496 =[int] (array.length[gen] (field_mut 3 a/492)))
+               (seq
+                 (if (> s/495 n/496)
+                   (let
+                     (table/497 =
+                        (caml_make_vect (* 2 n/496) (field_imm 0 a/492)))
+                     (seq
+                       (apply (field_imm 7 (global Stdlib__Array!))
+                         (field_mut 3 a/492) 0 table/497 0 n/496)
+                       (setfield_ptr 3 a/492 table/497)))
+                   0)
+                 (setfield_imm 2 a/492 s/495)))
+             (array.unsafe_set[gen] (field_mut 3 a/492) s/494 x/493)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__ResizableArray!) push/490))
+  (let
+    (pop/498 =
+       (function a/500
+         (let (s/501 =[int] (field_int 2 a/500))
+           (seq
+             (if (> s/501 0) 0
+               (raise
+                 (makeblock 0 (global Assert_failure/28!)
+                   [0: "src/resizableArray.ml" 103 2])))
+             (let (s/502 =[int] (- s/501 1))
+               (seq (setfield_imm 2 a/500 s/502)
+                 (let
+                   (table/503 = (field_mut 3 a/500)
+                    x/504 = (array.unsafe_get[gen] table/503 s/502))
+                   (seq
+                     (array.unsafe_set[gen] table/503 s/502
+                       (field_imm 0 a/500))
+                     x/504))))))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__ResizableArray!) pop/498))
+  (let (default/505 = (function a/507 (field_imm 0 a/507)))
+    (setfield_ptr(root-init) 8 (global Dune__exe__ResizableArray!)
+      default/505))
+  0)

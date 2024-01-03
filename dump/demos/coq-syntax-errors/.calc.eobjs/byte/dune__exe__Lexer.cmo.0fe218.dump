@@ -1,0 +1,453 @@
+[
+  structure_item (demos/coq-syntax-errors/lexer.mll[2,42+2]..[2,42+13])
+    Pstr_open Fresh
+    module_expr (demos/coq-syntax-errors/lexer.mll[2,42+7]..[2,42+13])
+      Pmod_ident "Lexing" (demos/coq-syntax-errors/lexer.mll[2,42+7]..[2,42+13])
+  structure_item (demos/coq-syntax-errors/lexer.mll[3,56+2]..[3,56+13])
+    Pstr_open Fresh
+    module_expr (demos/coq-syntax-errors/lexer.mll[3,56+7]..[3,56+13])
+      Pmod_ident "Parser" (demos/coq-syntax-errors/lexer.mll[3,56+7]..[3,56+13])
+  structure_item (demos/coq-syntax-errors/lexer.mll[5,71+2]..[5,71+67])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/coq-syntax-errors/lexer.mll[5,71+6]..[5,71+18])
+          Ppat_var "get_position" (demos/coq-syntax-errors/lexer.mll[5,71+6]..[5,71+18])
+        expression (demos/coq-syntax-errors/lexer.mll[5,71+19]..[5,71+67]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/coq-syntax-errors/lexer.mll[5,71+19]..[5,71+25])
+            Ppat_var "lexbuf" (demos/coq-syntax-errors/lexer.mll[5,71+19]..[5,71+25])
+          expression (demos/coq-syntax-errors/lexer.mll[5,71+28]..[5,71+67])
+            Pexp_tuple
+            [
+              expression (demos/coq-syntax-errors/lexer.mll[5,71+29]..[5,71+47])
+                Pexp_field
+                expression (demos/coq-syntax-errors/lexer.mll[5,71+29]..[5,71+35])
+                  Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[5,71+29]..[5,71+35])
+                "lex_start_p" (demos/coq-syntax-errors/lexer.mll[5,71+36]..[5,71+47])
+              expression (demos/coq-syntax-errors/lexer.mll[5,71+49]..[5,71+66])
+                Pexp_field
+                expression (demos/coq-syntax-errors/lexer.mll[5,71+49]..[5,71+55])
+                  Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[5,71+49]..[5,71+55])
+                "lex_curr_p" (demos/coq-syntax-errors/lexer.mll[5,71+56]..[5,71+66])
+            ]
+    ]
+  structure_item (demos/coq-syntax-errors/lexer.mll[7,140+2]..[7,140+27])
+    Pstr_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/coq-syntax-errors/lexer.mll[7,140+2]..[7,140+27])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              [
+                core_type (demos/coq-syntax-errors/lexer.mll[7,140+21]..[7,140+27])
+                  Ptyp_constr "string" (demos/coq-syntax-errors/lexer.mll[7,140+21]..[7,140+27])
+                  []
+              ]
+              None
+  structure_item (demos/coq-syntax-errors/lexer.ml[12,210+0]..[104,5549+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/coq-syntax-errors/lexer.ml[12,210+4]..[12,210+22])
+          Ppat_var "__ocaml_lex_tables" (demos/coq-syntax-errors/lexer.ml[12,210+4]..[12,210+22])
+        expression (demos/coq-syntax-errors/lexer.ml[12,210+25]..[104,5549+1])
+          Pexp_record
+          [
+            "Lexing.lex_base" (demos/coq-syntax-errors/lexer.ml[13,237+2]..[13,237+17])
+              expression (demos/coq-syntax-errors/lexer.ml[14,257+3]..[15,327+37])
+                Pexp_constant PConst_string("\000\000\245\255\246\255\247\255\248\255\249\255\250\255\251\255\252\255\n\000\254\255\255\255",(demos/coq-syntax-errors/lexer.ml[14,257+4]..[15,327+36]),None)
+            "Lexing.lex_backtrk" (demos/coq-syntax-errors/lexer.ml[16,366+2]..[16,366+20])
+              expression (demos/coq-syntax-errors/lexer.ml[17,389+3]..[18,459+37])
+                Pexp_constant PConst_string("\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\002\000\255\255\255\255",(demos/coq-syntax-errors/lexer.ml[17,389+4]..[18,459+36]),None)
+            "Lexing.lex_default" (demos/coq-syntax-errors/lexer.ml[19,498+2]..[19,498+20])
+              expression (demos/coq-syntax-errors/lexer.ml[20,521+3]..[21,591+37])
+                Pexp_constant PConst_string("\001\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000",(demos/coq-syntax-errors/lexer.ml[20,521+4]..[21,591+36]),None)
+            "Lexing.lex_trans" (demos/coq-syntax-errors/lexer.ml[22,630+2]..[22,630+18])
+              expression (demos/coq-syntax-errors/lexer.ml[23,651+3]..[56,2961+29])
+                Pexp_constant PConst_string("\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\011\000\n\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\011\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\003\000\006\000\b\000\000\000\007\000\000\000\005\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000",(demos/coq-syntax-errors/lexer.ml[23,651+4]..[56,2961+28]),None)
+            "Lexing.lex_check" (demos/coq-syntax-errors/lexer.ml[57,2992+2]..[57,2992+18])
+              expression (demos/coq-syntax-errors/lexer.ml[58,3013+3]..[91,5323+29])
+                Pexp_constant PConst_string("\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255",(demos/coq-syntax-errors/lexer.ml[58,3013+4]..[91,5323+28]),None)
+            "Lexing.lex_base_code" (demos/coq-syntax-errors/lexer.ml[92,5354+2]..[92,5354+22])
+              expression (demos/coq-syntax-errors/lexer.ml[93,5379+3]..[93,5379+5])
+                Pexp_constant PConst_string("",(demos/coq-syntax-errors/lexer.ml[93,5379+4]..[93,5379+4]),None)
+            "Lexing.lex_backtrk_code" (demos/coq-syntax-errors/lexer.ml[94,5386+2]..[94,5386+25])
+              expression (demos/coq-syntax-errors/lexer.ml[95,5414+3]..[95,5414+5])
+                Pexp_constant PConst_string("",(demos/coq-syntax-errors/lexer.ml[95,5414+4]..[95,5414+4]),None)
+            "Lexing.lex_default_code" (demos/coq-syntax-errors/lexer.ml[96,5421+2]..[96,5421+25])
+              expression (demos/coq-syntax-errors/lexer.ml[97,5449+3]..[97,5449+5])
+                Pexp_constant PConst_string("",(demos/coq-syntax-errors/lexer.ml[97,5449+4]..[97,5449+4]),None)
+            "Lexing.lex_trans_code" (demos/coq-syntax-errors/lexer.ml[98,5456+2]..[98,5456+23])
+              expression (demos/coq-syntax-errors/lexer.ml[99,5482+3]..[99,5482+5])
+                Pexp_constant PConst_string("",(demos/coq-syntax-errors/lexer.ml[99,5482+4]..[99,5482+4]),None)
+            "Lexing.lex_check_code" (demos/coq-syntax-errors/lexer.ml[100,5489+2]..[100,5489+23])
+              expression (demos/coq-syntax-errors/lexer.ml[101,5515+3]..[101,5515+5])
+                Pexp_constant PConst_string("",(demos/coq-syntax-errors/lexer.ml[101,5515+4]..[101,5515+4]),None)
+            "Lexing.lex_code" (demos/coq-syntax-errors/lexer.ml[102,5522+2]..[102,5522+17])
+              expression (demos/coq-syntax-errors/lexer.ml[103,5542+3]..[103,5542+5])
+                Pexp_constant PConst_string("",(demos/coq-syntax-errors/lexer.ml[103,5542+4]..[103,5542+4]),None)
+          ]
+          None
+    ]
+  structure_item (demos/coq-syntax-errors/lexer.ml[106,5552+0]..[167,7278+52])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (demos/coq-syntax-errors/lexer.ml[106,5552+8]..[106,5552+13])
+          Ppat_var "token" (demos/coq-syntax-errors/lexer.ml[106,5552+8]..[106,5552+13])
+        expression (demos/coq-syntax-errors/lexer.ml[106,5552+14]..[107,5575+33]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/coq-syntax-errors/lexer.ml[106,5552+14]..[106,5552+20])
+            Ppat_var "lexbuf" (demos/coq-syntax-errors/lexer.ml[106,5552+14]..[106,5552+20])
+          expression (demos/coq-syntax-errors/lexer.ml[107,5575+3]..[107,5575+33])
+            Pexp_apply
+            expression (demos/coq-syntax-errors/lexer.ml[107,5575+3]..[107,5575+24])
+              Pexp_ident "__ocaml_lex_token_rec" (demos/coq-syntax-errors/lexer.ml[107,5575+3]..[107,5575+24])
+            [
+              <arg>
+              Nolabel
+                expression (demos/coq-syntax-errors/lexer.ml[107,5575+25]..[107,5575+31])
+                  Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.ml[107,5575+25]..[107,5575+31])
+              <arg>
+              Nolabel
+                expression (demos/coq-syntax-errors/lexer.ml[107,5575+32]..[107,5575+33])
+                  Pexp_constant PConst_int (0,None)
+            ]
+      <def>
+        pattern (demos/coq-syntax-errors/lexer.ml[108,5609+4]..[108,5609+25])
+          Ppat_var "__ocaml_lex_token_rec" (demos/coq-syntax-errors/lexer.ml[108,5609+4]..[108,5609+25])
+        expression (demos/coq-syntax-errors/lexer.ml[108,5609+26]..[167,7278+52]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/coq-syntax-errors/lexer.ml[108,5609+26]..[108,5609+32])
+            Ppat_var "lexbuf" (demos/coq-syntax-errors/lexer.ml[108,5609+26]..[108,5609+32])
+          expression (demos/coq-syntax-errors/lexer.ml[108,5609+33]..[167,7278+52]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (demos/coq-syntax-errors/lexer.ml[108,5609+33]..[108,5609+50])
+              Ppat_var "__ocaml_lex_state" (demos/coq-syntax-errors/lexer.ml[108,5609+33]..[108,5609+50])
+            expression (demos/coq-syntax-errors/lexer.ml[109,5662+2]..[167,7278+52])
+              Pexp_match
+              expression (demos/coq-syntax-errors/lexer.ml[109,5662+8]..[109,5662+65])
+                Pexp_apply
+                expression (demos/coq-syntax-errors/lexer.ml[109,5662+8]..[109,5662+21])
+                  Pexp_ident "Lexing.engine" (demos/coq-syntax-errors/lexer.ml[109,5662+8]..[109,5662+21])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/coq-syntax-errors/lexer.ml[109,5662+22]..[109,5662+40])
+                      Pexp_ident "__ocaml_lex_tables" (demos/coq-syntax-errors/lexer.ml[109,5662+22]..[109,5662+40])
+                  <arg>
+                  Nolabel
+                    expression (demos/coq-syntax-errors/lexer.ml[109,5662+41]..[109,5662+58])
+                      Pexp_ident "__ocaml_lex_state" (demos/coq-syntax-errors/lexer.ml[109,5662+41]..[109,5662+58])
+                  <arg>
+                  Nolabel
+                    expression (demos/coq-syntax-errors/lexer.ml[109,5662+59]..[109,5662+65])
+                      Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.ml[109,5662+59]..[109,5662+65])
+                ]
+              [
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[110,5733+8]..[110,5733+9])
+                    Ppat_constant PConst_int (0,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[13,5787+4]..[13,5787+20])
+                    Pexp_apply
+                    expression (demos/coq-syntax-errors/lexer.mll[13,5787+6]..[13,5787+11])
+                      Pexp_ident "token" (demos/coq-syntax-errors/lexer.mll[13,5787+6]..[13,5787+11])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/coq-syntax-errors/lexer.mll[13,5787+12]..[13,5787+18])
+                          Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[13,5787+12]..[13,5787+18])
+                    ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[115,5850+4]..[115,5850+5])
+                    Ppat_constant PConst_int (1,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[15,5900+4]..[15,5900+37])
+                    Pexp_sequence
+                    expression (demos/coq-syntax-errors/lexer.mll[15,5900+6]..[15,5900+21])
+                      Pexp_apply
+                      expression (demos/coq-syntax-errors/lexer.mll[15,5900+6]..[15,5900+14])
+                        Pexp_ident "new_line" (demos/coq-syntax-errors/lexer.mll[15,5900+6]..[15,5900+14])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/coq-syntax-errors/lexer.mll[15,5900+15]..[15,5900+21])
+                            Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[15,5900+15]..[15,5900+21])
+                      ]
+                    expression (demos/coq-syntax-errors/lexer.mll[15,5900+23]..[15,5900+35])
+                      Pexp_apply
+                      expression (demos/coq-syntax-errors/lexer.mll[15,5900+23]..[15,5900+28])
+                        Pexp_ident "token" (demos/coq-syntax-errors/lexer.mll[15,5900+23]..[15,5900+28])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/coq-syntax-errors/lexer.mll[15,5900+29]..[15,5900+35])
+                            Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[15,5900+29]..[15,5900+35])
+                      ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[120,5980+4]..[120,5980+5])
+                    Ppat_constant PConst_int (2,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[17,6030+4]..[17,6030+52])
+                    Pexp_construct "NUM" (demos/coq-syntax-errors/lexer.mll[17,6030+6]..[17,6030+9])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[17,6030+10]..[17,6030+50])
+                        Pexp_tuple
+                        [
+                          expression (demos/coq-syntax-errors/lexer.mll[17,6030+11]..[17,6030+26])
+                            Pexp_apply
+                            expression (demos/coq-syntax-errors/lexer.mll[17,6030+12]..[17,6030+18])
+                              Pexp_ident "lexeme" (demos/coq-syntax-errors/lexer.mll[17,6030+12]..[17,6030+18])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (demos/coq-syntax-errors/lexer.mll[17,6030+19]..[17,6030+25])
+                                  Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[17,6030+19]..[17,6030+25])
+                            ]
+                          expression (demos/coq-syntax-errors/lexer.mll[17,6030+28]..[17,6030+49])
+                            Pexp_apply
+                            expression (demos/coq-syntax-errors/lexer.mll[17,6030+29]..[17,6030+41])
+                              Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[17,6030+29]..[17,6030+41])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (demos/coq-syntax-errors/lexer.mll[17,6030+42]..[17,6030+48])
+                                  Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[17,6030+42]..[17,6030+48])
+                            ]
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[125,6125+4]..[125,6125+5])
+                    Ppat_constant PConst_int (3,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[19,6175+4]..[19,6175+33])
+                    Pexp_construct "ADD" (demos/coq-syntax-errors/lexer.mll[19,6175+6]..[19,6175+9])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[19,6175+10]..[19,6175+31])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[19,6175+11]..[19,6175+23])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[19,6175+11]..[19,6175+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[19,6175+24]..[19,6175+30])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[19,6175+24]..[19,6175+30])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[130,6251+4]..[130,6251+5])
+                    Ppat_constant PConst_int (4,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[21,6301+4]..[21,6301+33])
+                    Pexp_construct "SUB" (demos/coq-syntax-errors/lexer.mll[21,6301+6]..[21,6301+9])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[21,6301+10]..[21,6301+31])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[21,6301+11]..[21,6301+23])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[21,6301+11]..[21,6301+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[21,6301+24]..[21,6301+30])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[21,6301+24]..[21,6301+30])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[135,6377+4]..[135,6377+5])
+                    Ppat_constant PConst_int (5,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[23,6427+4]..[23,6427+33])
+                    Pexp_construct "MUL" (demos/coq-syntax-errors/lexer.mll[23,6427+6]..[23,6427+9])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[23,6427+10]..[23,6427+31])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[23,6427+11]..[23,6427+23])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[23,6427+11]..[23,6427+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[23,6427+24]..[23,6427+30])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[23,6427+24]..[23,6427+30])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[140,6503+4]..[140,6503+5])
+                    Ppat_constant PConst_int (6,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[25,6553+4]..[25,6553+33])
+                    Pexp_construct "DIV" (demos/coq-syntax-errors/lexer.mll[25,6553+6]..[25,6553+9])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[25,6553+10]..[25,6553+31])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[25,6553+11]..[25,6553+23])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[25,6553+11]..[25,6553+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[25,6553+24]..[25,6553+30])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[25,6553+24]..[25,6553+30])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[145,6629+4]..[145,6629+5])
+                    Ppat_constant PConst_int (7,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[27,6679+4]..[27,6679+36])
+                    Pexp_construct "LPAREN" (demos/coq-syntax-errors/lexer.mll[27,6679+6]..[27,6679+12])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[27,6679+13]..[27,6679+34])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[27,6679+14]..[27,6679+26])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[27,6679+14]..[27,6679+26])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[27,6679+27]..[27,6679+33])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[27,6679+27]..[27,6679+33])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[150,6758+4]..[150,6758+5])
+                    Ppat_constant PConst_int (8,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[29,6808+4]..[29,6808+36])
+                    Pexp_construct "RPAREN" (demos/coq-syntax-errors/lexer.mll[29,6808+6]..[29,6808+12])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[29,6808+13]..[29,6808+34])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[29,6808+14]..[29,6808+26])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[29,6808+14]..[29,6808+26])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[29,6808+27]..[29,6808+33])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[29,6808+27]..[29,6808+33])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[155,6887+4]..[155,6887+5])
+                    Ppat_constant PConst_int (9,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[31,6937+4]..[31,6937+33])
+                    Pexp_construct "EOF" (demos/coq-syntax-errors/lexer.mll[31,6937+6]..[31,6937+9])
+                    Some
+                      expression (demos/coq-syntax-errors/lexer.mll[31,6937+10]..[31,6937+31])
+                        Pexp_apply
+                        expression (demos/coq-syntax-errors/lexer.mll[31,6937+11]..[31,6937+23])
+                          Pexp_ident "get_position" (demos/coq-syntax-errors/lexer.mll[31,6937+11]..[31,6937+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (demos/coq-syntax-errors/lexer.mll[31,6937+24]..[31,6937+30])
+                              Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[31,6937+24]..[31,6937+30])
+                        ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[160,7013+4]..[160,7013+6])
+                    Ppat_constant PConst_int (10,None)
+                  expression (demos/coq-syntax-errors/lexer.mll[33,7064+4]..[34,7139+37])
+                    Pexp_apply
+                    expression (demos/coq-syntax-errors/lexer.mll[33,7064+6]..[33,7064+11])
+                      Pexp_ident "raise" (demos/coq-syntax-errors/lexer.mll[33,7064+6]..[33,7064+11])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/coq-syntax-errors/lexer.mll[33,7064+12]..[34,7139+35])
+                          Pexp_construct "Error" (demos/coq-syntax-errors/lexer.mll[33,7064+13]..[33,7064+18])
+                          Some
+                            expression (demos/coq-syntax-errors/lexer.mll[33,7064+19]..[34,7139+34])
+                              Pexp_apply
+                              expression (demos/coq-syntax-errors/lexer.mll[33,7064+20]..[33,7064+34])
+                                Pexp_ident "Printf.sprintf" (demos/coq-syntax-errors/lexer.mll[33,7064+20]..[33,7064+34])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (demos/coq-syntax-errors/lexer.mll[33,7064+35]..[33,7064+74])
+                                    Pexp_constant PConst_string("At offset %d: unexpected character.\n",(demos/coq-syntax-errors/lexer.mll[33,7064+36]..[33,7064+73]),None)
+                                <arg>
+                                Nolabel
+                                  expression (demos/coq-syntax-errors/lexer.mll[34,7139+5]..[34,7139+33])
+                                    Pexp_apply
+                                    expression (demos/coq-syntax-errors/lexer.mll[34,7139+6]..[34,7139+25])
+                                      Pexp_ident "Lexing.lexeme_start" (demos/coq-syntax-errors/lexer.mll[34,7139+6]..[34,7139+25])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (demos/coq-syntax-errors/lexer.mll[34,7139+26]..[34,7139+32])
+                                          Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.mll[34,7139+26]..[34,7139+32])
+                                    ]
+                              ]
+                    ]
+                <case>
+                  pattern (demos/coq-syntax-errors/lexer.ml[166,7219+4]..[166,7219+21])
+                    Ppat_var "__ocaml_lex_state" (demos/coq-syntax-errors/lexer.ml[166,7219+4]..[166,7219+21])
+                  expression (demos/coq-syntax-errors/lexer.ml[166,7219+25]..[167,7278+52])
+                    Pexp_sequence
+                    expression (demos/coq-syntax-errors/lexer.ml[166,7219+25]..[166,7219+57])
+                      Pexp_apply
+                      expression (demos/coq-syntax-errors/lexer.ml[166,7219+25]..[166,7219+50])
+                        Pexp_field
+                        expression (demos/coq-syntax-errors/lexer.ml[166,7219+25]..[166,7219+31])
+                          Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.ml[166,7219+25]..[166,7219+31])
+                        "Lexing.refill_buff" (demos/coq-syntax-errors/lexer.ml[166,7219+32]..[166,7219+50])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/coq-syntax-errors/lexer.ml[166,7219+51]..[166,7219+57])
+                            Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.ml[166,7219+51]..[166,7219+57])
+                      ]
+                    expression (demos/coq-syntax-errors/lexer.ml[167,7278+6]..[167,7278+52])
+                      Pexp_apply
+                      expression (demos/coq-syntax-errors/lexer.ml[167,7278+6]..[167,7278+27])
+                        Pexp_ident "__ocaml_lex_token_rec" (demos/coq-syntax-errors/lexer.ml[167,7278+6]..[167,7278+27])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/coq-syntax-errors/lexer.ml[167,7278+28]..[167,7278+34])
+                            Pexp_ident "lexbuf" (demos/coq-syntax-errors/lexer.ml[167,7278+28]..[167,7278+34])
+                        <arg>
+                        Nolabel
+                          expression (demos/coq-syntax-errors/lexer.ml[167,7278+35]..[167,7278+52])
+                            Pexp_ident "__ocaml_lex_state" (demos/coq-syntax-errors/lexer.ml[167,7278+35]..[167,7278+52])
+                      ]
+              ]
+    ]
+]
+
+open Lexing
+open Parser
+let get_position lexbuf = ((lexbuf.lex_start_p), (lexbuf.lex_curr_p))
+exception Error of string 
+let __ocaml_lex_tables =
+  {
+    Lexing.lex_base =
+      "\000\000\245\255\246\255\247\255\248\255\249\255\250\255\251\255\252\255\n\000\254\255\255\255";
+    Lexing.lex_backtrk =
+      "\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\002\000\255\255\255\255";
+    Lexing.lex_default =
+      "\001\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000";
+    Lexing.lex_trans =
+      "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\011\000\n\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\011\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\003\000\006\000\b\000\000\000\007\000\000\000\005\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000";
+    Lexing.lex_check =
+      "\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255";
+    Lexing.lex_base_code = "";
+    Lexing.lex_backtrk_code = "";
+    Lexing.lex_default_code = "";
+    Lexing.lex_trans_code = "";
+    Lexing.lex_check_code = "";
+    Lexing.lex_code = ""
+  }
+let rec token lexbuf = __ocaml_lex_token_rec lexbuf 0
+and __ocaml_lex_token_rec lexbuf __ocaml_lex_state =
+  match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
+  | 0 -> token lexbuf
+  | 1 -> (new_line lexbuf; token lexbuf)
+  | 2 -> NUM ((lexeme lexbuf), (get_position lexbuf))
+  | 3 -> ADD (get_position lexbuf)
+  | 4 -> SUB (get_position lexbuf)
+  | 5 -> MUL (get_position lexbuf)
+  | 6 -> DIV (get_position lexbuf)
+  | 7 -> LPAREN (get_position lexbuf)
+  | 8 -> RPAREN (get_position lexbuf)
+  | 9 -> EOF (get_position lexbuf)
+  | 10 ->
+      raise
+        (Error
+           (Printf.sprintf "At offset %d: unexpected character.\n"
+              (Lexing.lexeme_start lexbuf)))
+  | __ocaml_lex_state ->
+      (lexbuf.Lexing.refill_buff lexbuf;
+       __ocaml_lex_token_rec lexbuf __ocaml_lex_state)

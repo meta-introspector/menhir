@@ -1,0 +1,137 @@
+[
+  structure_item (src/lookahead.ml[18,1153+0]..[33,1503+3])
+    Pstr_modtype "S" (src/lookahead.ml[18,1153+12]..[18,1153+13])
+      module_type (src/lookahead.ml[18,1153+16]..[33,1503+3])
+        Pmty_signature
+        [
+          signature_item (src/lookahead.ml[21,1210+2]..[21,1210+8])
+            Psig_type Rec
+            [
+              type_declaration "t" (src/lookahead.ml[21,1210+7]..[21,1210+8]) (src/lookahead.ml[21,1210+2]..[21,1210+8])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (src/lookahead.ml[25,1304+2]..[25,1304+14])
+            Psig_value
+            value_description "empty" (src/lookahead.ml[25,1304+6]..[25,1304+11]) (src/lookahead.ml[25,1304+2]..[25,1304+14])
+              core_type (src/lookahead.ml[25,1304+13]..[25,1304+14])
+                Ptyp_constr "t" (src/lookahead.ml[25,1304+13]..[25,1304+14])
+                []
+              []
+          signature_item (src/lookahead.ml[28,1374+2]..[28,1374+42])
+            Psig_value
+            value_description "constant" (src/lookahead.ml[28,1374+6]..[28,1374+14]) (src/lookahead.ml[28,1374+2]..[28,1374+42])
+              core_type (src/lookahead.ml[28,1374+16]..[28,1374+42])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/lookahead.ml[28,1374+16]..[28,1374+37])
+                  Ptyp_constr "Grammar.TerminalSet.t" (src/lookahead.ml[28,1374+16]..[28,1374+37])
+                  []
+                core_type (src/lookahead.ml[28,1374+41]..[28,1374+42])
+                  Ptyp_constr "t" (src/lookahead.ml[28,1374+41]..[28,1374+42])
+                  []
+              []
+          signature_item (src/lookahead.ml[31,1477+2]..[31,1477+24])
+            Psig_value
+            value_description "union" (src/lookahead.ml[31,1477+6]..[31,1477+11]) (src/lookahead.ml[31,1477+2]..[31,1477+24])
+              core_type (src/lookahead.ml[31,1477+13]..[31,1477+24])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/lookahead.ml[31,1477+13]..[31,1477+14])
+                  Ptyp_constr "t" (src/lookahead.ml[31,1477+13]..[31,1477+14])
+                  []
+                core_type (src/lookahead.ml[31,1477+18]..[31,1477+24])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/lookahead.ml[31,1477+18]..[31,1477+19])
+                    Ptyp_constr "t" (src/lookahead.ml[31,1477+18]..[31,1477+19])
+                    []
+                  core_type (src/lookahead.ml[31,1477+23]..[31,1477+24])
+                    Ptyp_constr "t" (src/lookahead.ml[31,1477+23]..[31,1477+24])
+                    []
+              []
+        ]
+]
+
+module type S  =
+  sig
+    type t
+    val empty : t
+    val constant : Grammar.TerminalSet.t -> t
+    val union : t -> t -> t
+  end
+[
+  structure_item (src/lookahead.ml[18,1153+0]..src/lookahead.ml[33,1503+3])
+    Tstr_modtype "S/456"
+      module_type (src/lookahead.ml[18,1153+16]..src/lookahead.ml[33,1503+3])
+        Tmty_signature
+        [
+          signature_item (src/lookahead.ml[21,1210+2]..src/lookahead.ml[21,1210+8])
+            Tsig_type Rec
+            [
+              type_declaration t/396 (src/lookahead.ml[21,1210+2]..src/lookahead.ml[21,1210+8])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (src/lookahead.ml[25,1304+2]..src/lookahead.ml[25,1304+14])
+            Tsig_value
+            value_description empty/397 (src/lookahead.ml[25,1304+2]..src/lookahead.ml[25,1304+14])
+              core_type (src/lookahead.ml[25,1304+13]..src/lookahead.ml[25,1304+14])
+                Ttyp_constr "t/396"
+                []
+              []
+          signature_item (src/lookahead.ml[28,1374+2]..src/lookahead.ml[28,1374+42])
+            Tsig_value
+            value_description constant/454 (src/lookahead.ml[28,1374+2]..src/lookahead.ml[28,1374+42])
+              core_type (src/lookahead.ml[28,1374+16]..src/lookahead.ml[28,1374+42])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/lookahead.ml[28,1374+16]..src/lookahead.ml[28,1374+37])
+                  Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                  []
+                core_type (src/lookahead.ml[28,1374+41]..src/lookahead.ml[28,1374+42])
+                  Ttyp_constr "t/396"
+                  []
+              []
+          signature_item (src/lookahead.ml[31,1477+2]..src/lookahead.ml[31,1477+24])
+            Tsig_value
+            value_description union/455 (src/lookahead.ml[31,1477+2]..src/lookahead.ml[31,1477+24])
+              core_type (src/lookahead.ml[31,1477+13]..src/lookahead.ml[31,1477+24])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/lookahead.ml[31,1477+13]..src/lookahead.ml[31,1477+14])
+                  Ttyp_constr "t/396"
+                  []
+                core_type (src/lookahead.ml[31,1477+18]..src/lookahead.ml[31,1477+24])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/lookahead.ml[31,1477+18]..src/lookahead.ml[31,1477+19])
+                    Ttyp_constr "t/396"
+                    []
+                  core_type (src/lookahead.ml[31,1477+23]..src/lookahead.ml[31,1477+24])
+                    Ttyp_constr "t/396"
+                    []
+              []
+        ]
+]
+
+{<Dune__exe__Lookahead>
+ "S"[module type] -> <Dune__exe__Lookahead.4>;
+ }
+
+0
+0

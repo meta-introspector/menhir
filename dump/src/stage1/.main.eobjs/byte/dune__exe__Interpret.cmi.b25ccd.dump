@@ -1,0 +1,177 @@
+[
+  signature_item (src/interpret.mli[18,1231+0]..[18,1231+21])
+    Psig_value
+    value_description "run" (src/interpret.mli[18,1231+4]..[18,1231+7]) (src/interpret.mli[18,1231+0]..[18,1231+21])
+      core_type (src/interpret.mli[18,1231+9]..[18,1231+21])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/interpret.mli[18,1231+9]..[18,1231+13])
+          Ptyp_constr "unit" (src/interpret.mli[18,1231+9]..[18,1231+13])
+          []
+        core_type (src/interpret.mli[18,1231+17]..[18,1231+21])
+          Ptyp_constr "unit" (src/interpret.mli[18,1231+17]..[18,1231+21])
+          []
+      []
+  signature_item (src/interpret.mli[26,1640+0]..[26,1640+12])
+    Psig_open Fresh "Grammar" (src/interpret.mli[26,1640+5]..[26,1640+12])
+  signature_item (src/interpret.mli[28,1654+0]..[29,1679+71])
+    Psig_value
+    value_description "print_messages_item" (src/interpret.mli[28,1654+4]..[28,1654+23]) (src/interpret.mli[28,1654+0]..[29,1679+71])
+      core_type (src/interpret.mli[29,1679+2]..[29,1679+71])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/interpret.mli[29,1679+2]..[29,1679+63])
+          Ptyp_tuple
+          [
+            core_type (src/interpret.mli[29,1679+2]..[29,1679+15])
+              Ptyp_constr "Nonterminal.t" (src/interpret.mli[29,1679+2]..[29,1679+15])
+              []
+            core_type (src/interpret.mli[29,1679+18]..[29,1679+33])
+              Ptyp_constr "list" (src/interpret.mli[29,1679+29]..[29,1679+33])
+              [
+                core_type (src/interpret.mli[29,1679+18]..[29,1679+28])
+                  Ptyp_constr "Terminal.t" (src/interpret.mli[29,1679+18]..[29,1679+28])
+                  []
+              ]
+            core_type (src/interpret.mli[29,1679+36]..[29,1679+63])
+              Ptyp_constr "ReferenceInterpreter.target" (src/interpret.mli[29,1679+36]..[29,1679+63])
+              []
+          ]
+        core_type (src/interpret.mli[29,1679+67]..[29,1679+71])
+          Ptyp_constr "unit" (src/interpret.mli[29,1679+67]..[29,1679+71])
+          []
+      []
+  signature_item (src/interpret.mli[35,1975+0]..[35,1975+21])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/interpret.mli[35,1975+0]..[35,1975+21])
+          pext_name = "EndOfStream"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (src/interpret.mli[37,1998+0]..[37,1998+76])
+    Psig_value
+    value_description "stream" (src/interpret.mli[37,1998+4]..[37,1998+10]) (src/interpret.mli[37,1998+0]..[37,1998+76])
+      core_type (src/interpret.mli[37,1998+12]..[37,1998+76])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/interpret.mli[37,1998+12]..[37,1998+27])
+          Ptyp_constr "list" (src/interpret.mli[37,1998+23]..[37,1998+27])
+          [
+            core_type (src/interpret.mli[37,1998+12]..[37,1998+22])
+              Ptyp_constr "Terminal.t" (src/interpret.mli[37,1998+12]..[37,1998+22])
+              []
+          ]
+        core_type (src/interpret.mli[37,1998+31]..[37,1998+76])
+          Ptyp_tuple
+          [
+            core_type (src/interpret.mli[37,1998+32]..[37,1998+59])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/interpret.mli[37,1998+32]..[37,1998+45])
+                Ptyp_constr "Lexing.lexbuf" (src/interpret.mli[37,1998+32]..[37,1998+45])
+                []
+              core_type (src/interpret.mli[37,1998+49]..[37,1998+59])
+                Ptyp_constr "Terminal.t" (src/interpret.mli[37,1998+49]..[37,1998+59])
+                []
+            core_type (src/interpret.mli[37,1998+63]..[37,1998+76])
+              Ptyp_constr "Lexing.lexbuf" (src/interpret.mli[37,1998+63]..[37,1998+76])
+              []
+          ]
+      []
+]
+
+val run : unit -> unit
+open Grammar
+val print_messages_item :
+  (Nonterminal.t * Terminal.t list * ReferenceInterpreter.target) -> unit
+exception EndOfStream 
+val stream :
+  Terminal.t list -> ((Lexing.lexbuf -> Terminal.t) * Lexing.lexbuf)
+[
+  signature_item (src/interpret.mli[18,1231+0]..src/interpret.mli[18,1231+21])
+    Tsig_value
+    value_description run/396 (src/interpret.mli[18,1231+0]..src/interpret.mli[18,1231+21])
+      core_type (src/interpret.mli[18,1231+9]..src/interpret.mli[18,1231+21])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/interpret.mli[18,1231+9]..src/interpret.mli[18,1231+13])
+          Ttyp_constr "unit/6!"
+          []
+        core_type (src/interpret.mli[18,1231+17]..src/interpret.mli[18,1231+21])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/interpret.mli[26,1640+0]..src/interpret.mli[26,1640+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/interpret.mli[28,1654+0]..src/interpret.mli[29,1679+71])
+    Tsig_value
+    value_description print_messages_item/485 (src/interpret.mli[28,1654+0]..src/interpret.mli[29,1679+71])
+      core_type (src/interpret.mli[29,1679+2]..src/interpret.mli[29,1679+71])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/interpret.mli[29,1679+2]..src/interpret.mli[29,1679+63])
+          Ttyp_tuple
+          [
+            core_type (src/interpret.mli[29,1679+2]..src/interpret.mli[29,1679+15])
+              Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+              []
+            core_type (src/interpret.mli[29,1679+18]..src/interpret.mli[29,1679+33])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/interpret.mli[29,1679+18]..src/interpret.mli[29,1679+28])
+                  Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                  []
+              ]
+            core_type (src/interpret.mli[29,1679+36]..src/interpret.mli[29,1679+63])
+              Ttyp_constr "Dune__exe!.ReferenceInterpreter.target"
+              []
+          ]
+        core_type (src/interpret.mli[29,1679+67]..src/interpret.mli[29,1679+71])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/interpret.mli[35,1975+0]..src/interpret.mli[35,1975+21])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/interpret.mli[35,1975+0]..src/interpret.mli[35,1975+21])
+          pext_name = "EndOfStream/486"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (src/interpret.mli[37,1998+0]..src/interpret.mli[37,1998+76])
+    Tsig_value
+    value_description stream/511 (src/interpret.mli[37,1998+0]..src/interpret.mli[37,1998+76])
+      core_type (src/interpret.mli[37,1998+12]..src/interpret.mli[37,1998+76])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/interpret.mli[37,1998+12]..src/interpret.mli[37,1998+27])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/interpret.mli[37,1998+12]..src/interpret.mli[37,1998+22])
+              Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+              []
+          ]
+        core_type (src/interpret.mli[37,1998+31]..src/interpret.mli[37,1998+76])
+          Ttyp_tuple
+          [
+            core_type (src/interpret.mli[37,1998+32]..src/interpret.mli[37,1998+59])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/interpret.mli[37,1998+32]..src/interpret.mli[37,1998+45])
+                Ttyp_constr "Stdlib!.Lexing.lexbuf"
+                []
+              core_type (src/interpret.mli[37,1998+49]..src/interpret.mli[37,1998+59])
+                Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                []
+            core_type (src/interpret.mli[37,1998+63]..src/interpret.mli[37,1998+76])
+              Ttyp_constr "Stdlib!.Lexing.lexbuf"
+              []
+          ]
+      []
+]
+

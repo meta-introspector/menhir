@@ -1,0 +1,1651 @@
+[
+  structure_item (src/LowIntegerPriorityQueue.ml[17,1145+0]..[17,1145+31])
+    Pstr_module
+    "MyArray" (src/LowIntegerPriorityQueue.ml[17,1145+7]..[17,1145+14])
+      module_expr (src/LowIntegerPriorityQueue.ml[17,1145+17]..[17,1145+31])
+        Pmod_ident "ResizableArray" (src/LowIntegerPriorityQueue.ml[17,1145+17]..[17,1145+31])
+  structure_item (src/LowIntegerPriorityQueue.ml[18,1177+0]..[18,1177+31])
+    Pstr_module
+    "MyStack" (src/LowIntegerPriorityQueue.ml[18,1177+7]..[18,1177+14])
+      module_expr (src/LowIntegerPriorityQueue.ml[18,1177+17]..[18,1177+31])
+        Pmod_ident "ResizableArray" (src/LowIntegerPriorityQueue.ml[18,1177+17]..[18,1177+31])
+  structure_item (src/LowIntegerPriorityQueue.ml[20,1210+0]..[37,1863+1])
+    Pstr_type Rec
+    [
+      type_declaration "t" (src/LowIntegerPriorityQueue.ml[20,1210+8]..[20,1210+9]) (src/LowIntegerPriorityQueue.ml[20,1210+0]..[37,1863+1])
+        ptype_params =
+          [
+            core_type (src/LowIntegerPriorityQueue.ml[20,1210+5]..[20,1210+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/LowIntegerPriorityQueue.ml[27,1532+2]..[27,1532+28])
+                Immutable
+                "a" (src/LowIntegerPriorityQueue.ml[27,1532+2]..[27,1532+3])                core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..[27,1532+27])
+                  Ptyp_constr "MyArray.t" (src/LowIntegerPriorityQueue.ml[27,1532+18]..[27,1532+27])
+                  [
+                    core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..[27,1532+17])
+                      Ptyp_constr "MyStack.t" (src/LowIntegerPriorityQueue.ml[27,1532+8]..[27,1532+17])
+                      [
+                        core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..[27,1532+7])
+                          Ptyp_var a
+                      ]
+                  ]
+              (src/LowIntegerPriorityQueue.ml[31,1702+2]..[31,1702+20])
+                Mutable
+                "best" (src/LowIntegerPriorityQueue.ml[31,1702+10]..[31,1702+14])                core_type (src/LowIntegerPriorityQueue.ml[31,1702+16]..[31,1702+19])
+                  Ptyp_constr "int" (src/LowIntegerPriorityQueue.ml[31,1702+16]..[31,1702+19])
+                  []
+              (src/LowIntegerPriorityQueue.ml[35,1837+2]..[35,1837+24])
+                Mutable
+                "cardinal" (src/LowIntegerPriorityQueue.ml[35,1837+10]..[35,1837+18])                core_type (src/LowIntegerPriorityQueue.ml[35,1837+20]..[35,1837+23])
+                  Ptyp_constr "int" (src/LowIntegerPriorityQueue.ml[35,1837+20]..[35,1837+23])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[39,1866+0]..[46,2274+31])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[39,1866+4]..[39,1866+10])
+          Ppat_var "create" (src/LowIntegerPriorityQueue.ml[39,1866+4]..[39,1866+10])
+        expression (src/LowIntegerPriorityQueue.ml[39,1866+11]..[46,2274+31]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[39,1866+11]..[39,1866+18])
+            Ppat_var "default" (src/LowIntegerPriorityQueue.ml[39,1866+11]..[39,1866+18])
+          expression (src/LowIntegerPriorityQueue.ml[44,2160+2]..[46,2274+31])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/LowIntegerPriorityQueue.ml[44,2160+6]..[44,2160+11])
+                  Ppat_var "dummy" (src/LowIntegerPriorityQueue.ml[44,2160+6]..[44,2160+11])
+                expression (src/LowIntegerPriorityQueue.ml[44,2160+14]..[44,2160+37])
+                  Pexp_apply
+                  expression (src/LowIntegerPriorityQueue.ml[44,2160+14]..[44,2160+27])
+                    Pexp_ident "MyStack.make_" (src/LowIntegerPriorityQueue.ml[44,2160+14]..[44,2160+27])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/LowIntegerPriorityQueue.ml[44,2160+28]..[44,2160+29])
+                        Pexp_constant PConst_int (0,None)
+                    <arg>
+                    Nolabel
+                      expression (src/LowIntegerPriorityQueue.ml[44,2160+30]..[44,2160+37])
+                        Pexp_ident "default" (src/LowIntegerPriorityQueue.ml[44,2160+30]..[44,2160+37])
+                  ]
+            ]
+            expression (src/LowIntegerPriorityQueue.ml[45,2201+2]..[46,2274+31])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/LowIntegerPriorityQueue.ml[45,2201+6]..[45,2201+7])
+                    Ppat_var "a" (src/LowIntegerPriorityQueue.ml[45,2201+6]..[45,2201+7])
+                  expression (src/LowIntegerPriorityQueue.ml[45,2201+10]..[45,2201+69])
+                    Pexp_apply
+                    expression (src/LowIntegerPriorityQueue.ml[45,2201+10]..[45,2201+22])
+                      Pexp_ident "MyArray.make" (src/LowIntegerPriorityQueue.ml[45,2201+10]..[45,2201+22])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[45,2201+23]..[45,2201+25])
+                          Pexp_constant PConst_int (16,None)
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[45,2201+26]..[45,2201+31])
+                          Pexp_ident "dummy" (src/LowIntegerPriorityQueue.ml[45,2201+26]..[45,2201+31])
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[45,2201+32]..[45,2201+69])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/LowIntegerPriorityQueue.ml[45,2201+37]..[45,2201+38])
+                            Ppat_any
+                          expression (src/LowIntegerPriorityQueue.ml[45,2201+42]..[45,2201+68])
+                            Pexp_apply
+                            expression (src/LowIntegerPriorityQueue.ml[45,2201+42]..[45,2201+55])
+                              Pexp_ident "MyStack.make_" (src/LowIntegerPriorityQueue.ml[45,2201+42]..[45,2201+55])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[45,2201+56]..[45,2201+60])
+                                  Pexp_constant PConst_int (1024,None)
+                              <arg>
+                              Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[45,2201+61]..[45,2201+68])
+                                  Pexp_ident "default" (src/LowIntegerPriorityQueue.ml[45,2201+61]..[45,2201+68])
+                            ]
+                    ]
+              ]
+              expression (src/LowIntegerPriorityQueue.ml[46,2274+2]..[46,2274+31])
+                Pexp_record
+                [
+                  "a" (src/LowIntegerPriorityQueue.ml[46,2274+4]..[46,2274+5]) ghost
+                    expression (src/LowIntegerPriorityQueue.ml[46,2274+4]..[46,2274+5])
+                      Pexp_ident "a" (src/LowIntegerPriorityQueue.ml[46,2274+4]..[46,2274+5])
+                  "best" (src/LowIntegerPriorityQueue.ml[46,2274+7]..[46,2274+11])
+                    expression (src/LowIntegerPriorityQueue.ml[46,2274+14]..[46,2274+15])
+                      Pexp_constant PConst_int (0,None)
+                  "cardinal" (src/LowIntegerPriorityQueue.ml[46,2274+17]..[46,2274+25])
+                    expression (src/LowIntegerPriorityQueue.ml[46,2274+28]..[46,2274+29])
+                      Pexp_constant PConst_int (0,None)
+                ]
+                None
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[48,2307+0]..[62,2858+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[48,2307+4]..[48,2307+7])
+          Ppat_var "add" (src/LowIntegerPriorityQueue.ml[48,2307+4]..[48,2307+7])
+        expression (src/LowIntegerPriorityQueue.ml[48,2307+8]..[62,2858+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[48,2307+8]..[48,2307+9])
+            Ppat_var "q" (src/LowIntegerPriorityQueue.ml[48,2307+8]..[48,2307+9])
+          expression (src/LowIntegerPriorityQueue.ml[48,2307+10]..[62,2858+22]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/LowIntegerPriorityQueue.ml[48,2307+10]..[48,2307+11])
+              Ppat_var "x" (src/LowIntegerPriorityQueue.ml[48,2307+10]..[48,2307+11])
+            expression (src/LowIntegerPriorityQueue.ml[48,2307+12]..[62,2858+22]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/LowIntegerPriorityQueue.ml[48,2307+12]..[48,2307+20])
+                Ppat_var "priority" (src/LowIntegerPriorityQueue.ml[48,2307+12]..[48,2307+20])
+              expression (src/LowIntegerPriorityQueue.ml[49,2330+2]..[62,2858+22])
+                Pexp_sequence
+                expression (src/LowIntegerPriorityQueue.ml[49,2330+2]..[49,2330+24])
+                  Pexp_assert
+                  expression (src/LowIntegerPriorityQueue.ml[49,2330+9]..[49,2330+24])
+                    Pexp_apply
+                    expression (src/LowIntegerPriorityQueue.ml[49,2330+12]..[49,2330+14])
+                      Pexp_ident "<=" (src/LowIntegerPriorityQueue.ml[49,2330+12]..[49,2330+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[49,2330+10]..[49,2330+11])
+                          Pexp_constant PConst_int (0,None)
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[49,2330+15]..[49,2330+23])
+                          Pexp_ident "priority" (src/LowIntegerPriorityQueue.ml[49,2330+15]..[49,2330+23])
+                    ]
+                expression (src/LowIntegerPriorityQueue.ml[50,2356+2]..[62,2858+22])
+                  Pexp_sequence
+                  expression (src/LowIntegerPriorityQueue.ml[50,2356+2]..[50,2356+30])
+                    Pexp_setfield
+                    expression (src/LowIntegerPriorityQueue.ml[50,2356+2]..[50,2356+3])
+                      Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[50,2356+2]..[50,2356+3])
+                    "cardinal" (src/LowIntegerPriorityQueue.ml[50,2356+4]..[50,2356+12])
+                    expression (src/LowIntegerPriorityQueue.ml[50,2356+16]..[50,2356+30])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[50,2356+27]..[50,2356+28])
+                        Pexp_ident "+" (src/LowIntegerPriorityQueue.ml[50,2356+27]..[50,2356+28])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[50,2356+16]..[50,2356+26])
+                            Pexp_field
+                            expression (src/LowIntegerPriorityQueue.ml[50,2356+16]..[50,2356+17])
+                              Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[50,2356+16]..[50,2356+17])
+                            "cardinal" (src/LowIntegerPriorityQueue.ml[50,2356+18]..[50,2356+26])
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[50,2356+29]..[50,2356+30])
+                            Pexp_constant PConst_int (1,None)
+                      ]
+                  expression (src/LowIntegerPriorityQueue.ml[52,2430+2]..[62,2858+22])
+                    Pexp_sequence
+                    expression (src/LowIntegerPriorityQueue.ml[52,2430+2]..[53,2471+37])
+                      Pexp_ifthenelse
+                      expression (src/LowIntegerPriorityQueue.ml[52,2430+5]..[52,2430+35])
+                        Pexp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[52,2430+24]..[52,2430+26])
+                          Pexp_ident "<=" (src/LowIntegerPriorityQueue.ml[52,2430+24]..[52,2430+26])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[52,2430+5]..[52,2430+23])
+                              Pexp_apply
+                              expression (src/LowIntegerPriorityQueue.ml[52,2430+5]..[52,2430+19])
+                                Pexp_ident "MyArray.length" (src/LowIntegerPriorityQueue.ml[52,2430+5]..[52,2430+19])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/LowIntegerPriorityQueue.ml[52,2430+20]..[52,2430+23])
+                                    Pexp_field
+                                    expression (src/LowIntegerPriorityQueue.ml[52,2430+20]..[52,2430+21])
+                                      Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[52,2430+20]..[52,2430+21])
+                                    "a" (src/LowIntegerPriorityQueue.ml[52,2430+22]..[52,2430+23])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[52,2430+27]..[52,2430+35])
+                              Pexp_ident "priority" (src/LowIntegerPriorityQueue.ml[52,2430+27]..[52,2430+35])
+                        ]
+                      expression (src/LowIntegerPriorityQueue.ml[53,2471+4]..[53,2471+37])
+                        Pexp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[53,2471+4]..[53,2471+18])
+                          Pexp_ident "MyArray.resize" (src/LowIntegerPriorityQueue.ml[53,2471+4]..[53,2471+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[53,2471+19]..[53,2471+22])
+                              Pexp_field
+                              expression (src/LowIntegerPriorityQueue.ml[53,2471+19]..[53,2471+20])
+                                Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[53,2471+19]..[53,2471+20])
+                              "a" (src/LowIntegerPriorityQueue.ml[53,2471+21]..[53,2471+22])
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[53,2471+23]..[53,2471+37])
+                              Pexp_apply
+                              expression (src/LowIntegerPriorityQueue.ml[53,2471+33]..[53,2471+34])
+                                Pexp_ident "+" (src/LowIntegerPriorityQueue.ml[53,2471+33]..[53,2471+34])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/LowIntegerPriorityQueue.ml[53,2471+24]..[53,2471+32])
+                                    Pexp_ident "priority" (src/LowIntegerPriorityQueue.ml[53,2471+24]..[53,2471+32])
+                                <arg>
+                                Nolabel
+                                  expression (src/LowIntegerPriorityQueue.ml[53,2471+35]..[53,2471+36])
+                                    Pexp_constant PConst_int (1,None)
+                              ]
+                        ]
+                      None
+                    expression (src/LowIntegerPriorityQueue.ml[55,2560+2]..[62,2858+22])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/LowIntegerPriorityQueue.ml[55,2560+6]..[55,2560+8])
+                            Ppat_var "xs" (src/LowIntegerPriorityQueue.ml[55,2560+6]..[55,2560+8])
+                          expression (src/LowIntegerPriorityQueue.ml[55,2560+11]..[55,2560+35])
+                            Pexp_apply
+                            expression (src/LowIntegerPriorityQueue.ml[55,2560+11]..[55,2560+22])
+                              Pexp_ident "MyArray.get" (src/LowIntegerPriorityQueue.ml[55,2560+11]..[55,2560+22])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[55,2560+23]..[55,2560+26])
+                                  Pexp_field
+                                  expression (src/LowIntegerPriorityQueue.ml[55,2560+23]..[55,2560+24])
+                                    Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[55,2560+23]..[55,2560+24])
+                                  "a" (src/LowIntegerPriorityQueue.ml[55,2560+25]..[55,2560+26])
+                              <arg>
+                              Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[55,2560+27]..[55,2560+35])
+                                  Pexp_ident "priority" (src/LowIntegerPriorityQueue.ml[55,2560+27]..[55,2560+35])
+                            ]
+                      ]
+                      expression (src/LowIntegerPriorityQueue.ml[58,2657+2]..[62,2858+22])
+                        Pexp_sequence
+                        expression (src/LowIntegerPriorityQueue.ml[58,2657+2]..[58,2657+19])
+                          Pexp_apply
+                          expression (src/LowIntegerPriorityQueue.ml[58,2657+2]..[58,2657+14])
+                            Pexp_ident "MyStack.push" (src/LowIntegerPriorityQueue.ml[58,2657+2]..[58,2657+14])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[58,2657+15]..[58,2657+17])
+                                Pexp_ident "xs" (src/LowIntegerPriorityQueue.ml[58,2657+15]..[58,2657+17])
+                            <arg>
+                            Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[58,2657+18]..[58,2657+19])
+                                Pexp_ident "x" (src/LowIntegerPriorityQueue.ml[58,2657+18]..[58,2657+19])
+                          ]
+                        expression (src/LowIntegerPriorityQueue.ml[61,2830+2]..[62,2858+22])
+                          Pexp_ifthenelse
+                          expression (src/LowIntegerPriorityQueue.ml[61,2830+5]..[61,2830+22])
+                            Pexp_apply
+                            expression (src/LowIntegerPriorityQueue.ml[61,2830+14]..[61,2830+15])
+                              Pexp_ident "<" (src/LowIntegerPriorityQueue.ml[61,2830+14]..[61,2830+15])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[61,2830+5]..[61,2830+13])
+                                  Pexp_ident "priority" (src/LowIntegerPriorityQueue.ml[61,2830+5]..[61,2830+13])
+                              <arg>
+                              Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[61,2830+16]..[61,2830+22])
+                                  Pexp_field
+                                  expression (src/LowIntegerPriorityQueue.ml[61,2830+16]..[61,2830+17])
+                                    Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[61,2830+16]..[61,2830+17])
+                                  "best" (src/LowIntegerPriorityQueue.ml[61,2830+18]..[61,2830+22])
+                            ]
+                          expression (src/LowIntegerPriorityQueue.ml[62,2858+4]..[62,2858+22])
+                            Pexp_setfield
+                            expression (src/LowIntegerPriorityQueue.ml[62,2858+4]..[62,2858+5])
+                              Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[62,2858+4]..[62,2858+5])
+                            "best" (src/LowIntegerPriorityQueue.ml[62,2858+6]..[62,2858+10])
+                            expression (src/LowIntegerPriorityQueue.ml[62,2858+14]..[62,2858+22])
+                              Pexp_ident "priority" (src/LowIntegerPriorityQueue.ml[62,2858+14]..[62,2858+22])
+                          None
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[64,2882+0]..[65,2899+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[64,2882+4]..[64,2882+12])
+          Ppat_var "is_empty" (src/LowIntegerPriorityQueue.ml[64,2882+4]..[64,2882+12])
+        expression (src/LowIntegerPriorityQueue.ml[64,2882+13]..[65,2899+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[64,2882+13]..[64,2882+14])
+            Ppat_var "q" (src/LowIntegerPriorityQueue.ml[64,2882+13]..[64,2882+14])
+          expression (src/LowIntegerPriorityQueue.ml[65,2899+2]..[65,2899+16])
+            Pexp_apply
+            expression (src/LowIntegerPriorityQueue.ml[65,2899+13]..[65,2899+14])
+              Pexp_ident "=" (src/LowIntegerPriorityQueue.ml[65,2899+13]..[65,2899+14])
+            [
+              <arg>
+              Nolabel
+                expression (src/LowIntegerPriorityQueue.ml[65,2899+2]..[65,2899+12])
+                  Pexp_field
+                  expression (src/LowIntegerPriorityQueue.ml[65,2899+2]..[65,2899+3])
+                    Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[65,2899+2]..[65,2899+3])
+                  "cardinal" (src/LowIntegerPriorityQueue.ml[65,2899+4]..[65,2899+12])
+              <arg>
+              Nolabel
+                expression (src/LowIntegerPriorityQueue.ml[65,2899+15]..[65,2899+16])
+                  Pexp_constant PConst_int (0,None)
+            ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[67,2917+0]..[68,2934+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[67,2917+4]..[67,2917+12])
+          Ppat_var "cardinal" (src/LowIntegerPriorityQueue.ml[67,2917+4]..[67,2917+12])
+        expression (src/LowIntegerPriorityQueue.ml[67,2917+13]..[68,2934+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[67,2917+13]..[67,2917+14])
+            Ppat_var "q" (src/LowIntegerPriorityQueue.ml[67,2917+13]..[67,2917+14])
+          expression (src/LowIntegerPriorityQueue.ml[68,2934+2]..[68,2934+12])
+            Pexp_field
+            expression (src/LowIntegerPriorityQueue.ml[68,2934+2]..[68,2934+3])
+              Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[68,2934+2]..[68,2934+3])
+            "cardinal" (src/LowIntegerPriorityQueue.ml[68,2934+4]..[68,2934+12])
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[70,2948+0]..[92,4007+5])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[70,2948+8]..[70,2948+23])
+          Ppat_var "remove_nonempty" (src/LowIntegerPriorityQueue.ml[70,2948+8]..[70,2948+23])
+        expression (src/LowIntegerPriorityQueue.ml[70,2948+24]..[92,4007+5]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[70,2948+24]..[70,2948+25])
+            Ppat_var "q" (src/LowIntegerPriorityQueue.ml[70,2948+24]..[70,2948+25])
+          expression (src/LowIntegerPriorityQueue.ml[75,3253+2]..[92,4007+5])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/LowIntegerPriorityQueue.ml[75,3253+6]..[75,3253+8])
+                  Ppat_var "xs" (src/LowIntegerPriorityQueue.ml[75,3253+6]..[75,3253+8])
+                expression (src/LowIntegerPriorityQueue.ml[75,3253+11]..[75,3253+33])
+                  Pexp_apply
+                  expression (src/LowIntegerPriorityQueue.ml[75,3253+11]..[75,3253+22])
+                    Pexp_ident "MyArray.get" (src/LowIntegerPriorityQueue.ml[75,3253+11]..[75,3253+22])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/LowIntegerPriorityQueue.ml[75,3253+23]..[75,3253+26])
+                        Pexp_field
+                        expression (src/LowIntegerPriorityQueue.ml[75,3253+23]..[75,3253+24])
+                          Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[75,3253+23]..[75,3253+24])
+                        "a" (src/LowIntegerPriorityQueue.ml[75,3253+25]..[75,3253+26])
+                    <arg>
+                    Nolabel
+                      expression (src/LowIntegerPriorityQueue.ml[75,3253+27]..[75,3253+33])
+                        Pexp_field
+                        expression (src/LowIntegerPriorityQueue.ml[75,3253+27]..[75,3253+28])
+                          Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[75,3253+27]..[75,3253+28])
+                        "best" (src/LowIntegerPriorityQueue.ml[75,3253+29]..[75,3253+33])
+                  ]
+            ]
+            expression (src/LowIntegerPriorityQueue.ml[76,3290+2]..[92,4007+5])
+              Pexp_ifthenelse
+              expression (src/LowIntegerPriorityQueue.ml[76,3290+5]..[76,3290+26])
+                Pexp_apply
+                expression (src/LowIntegerPriorityQueue.ml[76,3290+23]..[76,3290+24])
+                  Pexp_ident "=" (src/LowIntegerPriorityQueue.ml[76,3290+23]..[76,3290+24])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/LowIntegerPriorityQueue.ml[76,3290+5]..[76,3290+22])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[76,3290+5]..[76,3290+19])
+                        Pexp_ident "MyStack.length" (src/LowIntegerPriorityQueue.ml[76,3290+5]..[76,3290+19])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[76,3290+20]..[76,3290+22])
+                            Pexp_ident "xs" (src/LowIntegerPriorityQueue.ml[76,3290+20]..[76,3290+22])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/LowIntegerPriorityQueue.ml[76,3290+25]..[76,3290+26])
+                      Pexp_constant PConst_int (0,None)
+                ]
+              expression (src/LowIntegerPriorityQueue.ml[76,3290+32]..[85,3753+5])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/LowIntegerPriorityQueue.ml[81,3632+8]..[81,3632+13])
+                      Ppat_var "dummy" (src/LowIntegerPriorityQueue.ml[81,3632+8]..[81,3632+13])
+                    expression (src/LowIntegerPriorityQueue.ml[81,3632+16]..[81,3632+35])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[81,3632+16]..[81,3632+31])
+                        Pexp_ident "MyArray.default" (src/LowIntegerPriorityQueue.ml[81,3632+16]..[81,3632+31])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[81,3632+32]..[81,3632+35])
+                            Pexp_field
+                            expression (src/LowIntegerPriorityQueue.ml[81,3632+32]..[81,3632+33])
+                              Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[81,3632+32]..[81,3632+33])
+                            "a" (src/LowIntegerPriorityQueue.ml[81,3632+34]..[81,3632+35])
+                      ]
+                ]
+                expression (src/LowIntegerPriorityQueue.ml[82,3671+4]..[84,3731+21])
+                  Pexp_sequence
+                  expression (src/LowIntegerPriorityQueue.ml[82,3671+4]..[82,3671+32])
+                    Pexp_apply
+                    expression (src/LowIntegerPriorityQueue.ml[82,3671+4]..[82,3671+15])
+                      Pexp_ident "MyArray.set" (src/LowIntegerPriorityQueue.ml[82,3671+4]..[82,3671+15])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[82,3671+16]..[82,3671+19])
+                          Pexp_field
+                          expression (src/LowIntegerPriorityQueue.ml[82,3671+16]..[82,3671+17])
+                            Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[82,3671+16]..[82,3671+17])
+                          "a" (src/LowIntegerPriorityQueue.ml[82,3671+18]..[82,3671+19])
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[82,3671+20]..[82,3671+26])
+                          Pexp_field
+                          expression (src/LowIntegerPriorityQueue.ml[82,3671+20]..[82,3671+21])
+                            Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[82,3671+20]..[82,3671+21])
+                          "best" (src/LowIntegerPriorityQueue.ml[82,3671+22]..[82,3671+26])
+                      <arg>
+                      Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[82,3671+27]..[82,3671+32])
+                          Pexp_ident "dummy" (src/LowIntegerPriorityQueue.ml[82,3671+27]..[82,3671+32])
+                    ]
+                  expression (src/LowIntegerPriorityQueue.ml[83,3705+4]..[84,3731+21])
+                    Pexp_sequence
+                    expression (src/LowIntegerPriorityQueue.ml[83,3705+4]..[83,3705+24])
+                      Pexp_setfield
+                      expression (src/LowIntegerPriorityQueue.ml[83,3705+4]..[83,3705+5])
+                        Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[83,3705+4]..[83,3705+5])
+                      "best" (src/LowIntegerPriorityQueue.ml[83,3705+6]..[83,3705+10])
+                      expression (src/LowIntegerPriorityQueue.ml[83,3705+14]..[83,3705+24])
+                        Pexp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[83,3705+21]..[83,3705+22])
+                          Pexp_ident "+" (src/LowIntegerPriorityQueue.ml[83,3705+21]..[83,3705+22])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[83,3705+14]..[83,3705+20])
+                              Pexp_field
+                              expression (src/LowIntegerPriorityQueue.ml[83,3705+14]..[83,3705+15])
+                                Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[83,3705+14]..[83,3705+15])
+                              "best" (src/LowIntegerPriorityQueue.ml[83,3705+16]..[83,3705+20])
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[83,3705+23]..[83,3705+24])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+                    expression (src/LowIntegerPriorityQueue.ml[84,3731+4]..[84,3731+21])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[84,3731+4]..[84,3731+19])
+                        Pexp_ident "remove_nonempty" (src/LowIntegerPriorityQueue.ml[84,3731+4]..[84,3731+19])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[84,3731+20]..[84,3731+21])
+                            Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[84,3731+20]..[84,3731+21])
+                      ]
+              Some
+                expression (src/LowIntegerPriorityQueue.ml[86,3759+7]..[92,4007+5])
+                  Pexp_sequence
+                  expression (src/LowIntegerPriorityQueue.ml[87,3772+4]..[87,3772+32])
+                    Pexp_setfield
+                    expression (src/LowIntegerPriorityQueue.ml[87,3772+4]..[87,3772+5])
+                      Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[87,3772+4]..[87,3772+5])
+                    "cardinal" (src/LowIntegerPriorityQueue.ml[87,3772+6]..[87,3772+14])
+                    expression (src/LowIntegerPriorityQueue.ml[87,3772+18]..[87,3772+32])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[87,3772+29]..[87,3772+30])
+                        Pexp_ident "-" (src/LowIntegerPriorityQueue.ml[87,3772+29]..[87,3772+30])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[87,3772+18]..[87,3772+28])
+                            Pexp_field
+                            expression (src/LowIntegerPriorityQueue.ml[87,3772+18]..[87,3772+19])
+                              Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[87,3772+18]..[87,3772+19])
+                            "cardinal" (src/LowIntegerPriorityQueue.ml[87,3772+20]..[87,3772+28])
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[87,3772+31]..[87,3772+32])
+                            Pexp_constant PConst_int (1,None)
+                      ]
+                  expression (src/LowIntegerPriorityQueue.ml[88,3806+4]..[88,3806+25])
+                    Pexp_construct "Some" (src/LowIntegerPriorityQueue.ml[88,3806+4]..[88,3806+8])
+                    Some
+                      expression (src/LowIntegerPriorityQueue.ml[88,3806+9]..[88,3806+25])
+                        Pexp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[88,3806+10]..[88,3806+21])
+                          Pexp_ident "MyStack.pop" (src/LowIntegerPriorityQueue.ml[88,3806+10]..[88,3806+21])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[88,3806+22]..[88,3806+24])
+                              Pexp_ident "xs" (src/LowIntegerPriorityQueue.ml[88,3806+22]..[88,3806+24])
+                        ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[94,4014+0]..[98,4070+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[94,4014+4]..[94,4014+10])
+          Ppat_var "remove" (src/LowIntegerPriorityQueue.ml[94,4014+4]..[94,4014+10])
+        expression (src/LowIntegerPriorityQueue.ml[94,4014+11]..[98,4070+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[94,4014+11]..[94,4014+12])
+            Ppat_var "q" (src/LowIntegerPriorityQueue.ml[94,4014+11]..[94,4014+12])
+          expression (src/LowIntegerPriorityQueue.ml[95,4029+2]..[98,4070+21])
+            Pexp_ifthenelse
+            expression (src/LowIntegerPriorityQueue.ml[95,4029+5]..[95,4029+19])
+              Pexp_apply
+              expression (src/LowIntegerPriorityQueue.ml[95,4029+16]..[95,4029+17])
+                Pexp_ident "=" (src/LowIntegerPriorityQueue.ml[95,4029+16]..[95,4029+17])
+              [
+                <arg>
+                Nolabel
+                  expression (src/LowIntegerPriorityQueue.ml[95,4029+5]..[95,4029+15])
+                    Pexp_field
+                    expression (src/LowIntegerPriorityQueue.ml[95,4029+5]..[95,4029+6])
+                      Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[95,4029+5]..[95,4029+6])
+                    "cardinal" (src/LowIntegerPriorityQueue.ml[95,4029+7]..[95,4029+15])
+                <arg>
+                Nolabel
+                  expression (src/LowIntegerPriorityQueue.ml[95,4029+18]..[95,4029+19])
+                    Pexp_constant PConst_int (0,None)
+              ]
+            expression (src/LowIntegerPriorityQueue.ml[96,4054+4]..[96,4054+8])
+              Pexp_construct "None" (src/LowIntegerPriorityQueue.ml[96,4054+4]..[96,4054+8])
+              None
+            Some
+              expression (src/LowIntegerPriorityQueue.ml[98,4070+4]..[98,4070+21])
+                Pexp_apply
+                expression (src/LowIntegerPriorityQueue.ml[98,4070+4]..[98,4070+19])
+                  Pexp_ident "remove_nonempty" (src/LowIntegerPriorityQueue.ml[98,4070+4]..[98,4070+19])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/LowIntegerPriorityQueue.ml[98,4070+20]..[98,4070+21])
+                      Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[98,4070+20]..[98,4070+21])
+                ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[100,4093+0]..[106,4182+16])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[100,4093+8]..[100,4093+14])
+          Ppat_var "repeat" (src/LowIntegerPriorityQueue.ml[100,4093+8]..[100,4093+14])
+        expression (src/LowIntegerPriorityQueue.ml[100,4093+15]..[106,4182+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/LowIntegerPriorityQueue.ml[100,4093+15]..[100,4093+16])
+            Ppat_var "q" (src/LowIntegerPriorityQueue.ml[100,4093+15]..[100,4093+16])
+          expression (src/LowIntegerPriorityQueue.ml[100,4093+17]..[106,4182+16]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/LowIntegerPriorityQueue.ml[100,4093+17]..[100,4093+18])
+              Ppat_var "f" (src/LowIntegerPriorityQueue.ml[100,4093+17]..[100,4093+18])
+            expression (src/LowIntegerPriorityQueue.ml[101,4114+2]..[106,4182+16])
+              Pexp_match
+              expression (src/LowIntegerPriorityQueue.ml[101,4114+8]..[101,4114+16])
+                Pexp_apply
+                expression (src/LowIntegerPriorityQueue.ml[101,4114+8]..[101,4114+14])
+                  Pexp_ident "remove" (src/LowIntegerPriorityQueue.ml[101,4114+8]..[101,4114+14])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/LowIntegerPriorityQueue.ml[101,4114+15]..[101,4114+16])
+                      Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[101,4114+15]..[101,4114+16])
+                ]
+              [
+                <case>
+                  pattern (src/LowIntegerPriorityQueue.ml[102,4136+4]..[102,4136+8])
+                    Ppat_construct "None" (src/LowIntegerPriorityQueue.ml[102,4136+4]..[102,4136+8])
+                    None
+                  expression (src/LowIntegerPriorityQueue.ml[103,4148+6]..[103,4148+8])
+                    Pexp_construct "()" (src/LowIntegerPriorityQueue.ml[103,4148+6]..[103,4148+8])
+                    None
+                <case>
+                  pattern (src/LowIntegerPriorityQueue.ml[104,4157+4]..[104,4157+10])
+                    Ppat_construct "Some" (src/LowIntegerPriorityQueue.ml[104,4157+4]..[104,4157+8])
+                    Some
+                      []
+                      pattern (src/LowIntegerPriorityQueue.ml[104,4157+9]..[104,4157+10])
+                        Ppat_var "x" (src/LowIntegerPriorityQueue.ml[104,4157+9]..[104,4157+10])
+                  expression (src/LowIntegerPriorityQueue.ml[105,4171+6]..[106,4182+16])
+                    Pexp_sequence
+                    expression (src/LowIntegerPriorityQueue.ml[105,4171+6]..[105,4171+9])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[105,4171+6]..[105,4171+7])
+                        Pexp_ident "f" (src/LowIntegerPriorityQueue.ml[105,4171+6]..[105,4171+7])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[105,4171+8]..[105,4171+9])
+                            Pexp_ident "x" (src/LowIntegerPriorityQueue.ml[105,4171+8]..[105,4171+9])
+                      ]
+                    expression (src/LowIntegerPriorityQueue.ml[106,4182+6]..[106,4182+16])
+                      Pexp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[106,4182+6]..[106,4182+12])
+                        Pexp_ident "repeat" (src/LowIntegerPriorityQueue.ml[106,4182+6]..[106,4182+12])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[106,4182+13]..[106,4182+14])
+                            Pexp_ident "q" (src/LowIntegerPriorityQueue.ml[106,4182+13]..[106,4182+14])
+                        <arg>
+                        Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[106,4182+15]..[106,4182+16])
+                            Pexp_ident "f" (src/LowIntegerPriorityQueue.ml[106,4182+15]..[106,4182+16])
+                      ]
+              ]
+    ]
+]
+
+module MyArray = ResizableArray
+module MyStack = ResizableArray
+type 'a t =
+  {
+  a: 'a MyStack.t MyArray.t ;
+  mutable best: int ;
+  mutable cardinal: int }
+let create default =
+  let dummy = MyStack.make_ 0 default in
+  let a = MyArray.make 16 dummy (fun _ -> MyStack.make_ 1024 default) in
+  { a; best = 0; cardinal = 0 }
+let add q x priority =
+  assert (0 <= priority);
+  q.cardinal <- (q.cardinal + 1);
+  if (MyArray.length q.a) <= priority then MyArray.resize q.a (priority + 1);
+  (let xs = MyArray.get q.a priority in
+   MyStack.push xs x; if priority < q.best then q.best <- priority)
+let is_empty q = q.cardinal = 0
+let cardinal q = q.cardinal
+let rec remove_nonempty q =
+  let xs = MyArray.get q.a q.best in
+  if (MyStack.length xs) = 0
+  then
+    let dummy = MyArray.default q.a in
+    (MyArray.set q.a q.best dummy; q.best <- (q.best + 1); remove_nonempty q)
+  else (q.cardinal <- (q.cardinal - 1); Some (MyStack.pop xs))
+let remove q = if q.cardinal = 0 then None else remove_nonempty q
+let rec repeat q f =
+  match remove q with | None -> () | Some x -> (f x; repeat q f)
+[
+  structure_item (src/LowIntegerPriorityQueue.ml[17,1145+0]..src/LowIntegerPriorityQueue.ml[17,1145+31])
+    Tstr_module
+    MyArray/397
+      module_expr (src/LowIntegerPriorityQueue.ml[17,1145+17]..src/LowIntegerPriorityQueue.ml[17,1145+31])
+        Tmod_ident "Dune__exe!.ResizableArray"
+  structure_item (src/LowIntegerPriorityQueue.ml[18,1177+0]..src/LowIntegerPriorityQueue.ml[18,1177+31])
+    Tstr_module
+    MyStack/398
+      module_expr (src/LowIntegerPriorityQueue.ml[18,1177+17]..src/LowIntegerPriorityQueue.ml[18,1177+31])
+        Tmod_ident "Dune__exe!.ResizableArray"
+  structure_item (src/LowIntegerPriorityQueue.ml[20,1210+0]..src/LowIntegerPriorityQueue.ml[37,1863+1])
+    Tstr_type Rec
+    [
+      type_declaration t/399 (src/LowIntegerPriorityQueue.ml[20,1210+0]..src/LowIntegerPriorityQueue.ml[37,1863+1])
+        ptype_params =
+          [
+            core_type (src/LowIntegerPriorityQueue.ml[20,1210+5]..src/LowIntegerPriorityQueue.ml[20,1210+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/LowIntegerPriorityQueue.ml[27,1532+2]..src/LowIntegerPriorityQueue.ml[27,1532+28])
+                Immutable
+                a/410                core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..src/LowIntegerPriorityQueue.ml[27,1532+27])
+                  Ttyp_poly
+                  core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..src/LowIntegerPriorityQueue.ml[27,1532+27])
+                    Ttyp_constr "MyArray/397.t"
+                    [
+                      core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..src/LowIntegerPriorityQueue.ml[27,1532+17])
+                        Ttyp_constr "MyStack/398.t"
+                        [
+                          core_type (src/LowIntegerPriorityQueue.ml[27,1532+5]..src/LowIntegerPriorityQueue.ml[27,1532+7])
+                            Ttyp_var a
+                        ]
+                    ]
+              (src/LowIntegerPriorityQueue.ml[31,1702+2]..src/LowIntegerPriorityQueue.ml[31,1702+20])
+                Mutable
+                best/411                core_type (src/LowIntegerPriorityQueue.ml[31,1702+16]..src/LowIntegerPriorityQueue.ml[31,1702+19])
+                  Ttyp_poly
+                  core_type (src/LowIntegerPriorityQueue.ml[31,1702+16]..src/LowIntegerPriorityQueue.ml[31,1702+19])
+                    Ttyp_constr "int/1!"
+                    []
+              (src/LowIntegerPriorityQueue.ml[35,1837+2]..src/LowIntegerPriorityQueue.ml[35,1837+24])
+                Mutable
+                cardinal/412                core_type (src/LowIntegerPriorityQueue.ml[35,1837+20]..src/LowIntegerPriorityQueue.ml[35,1837+23])
+                  Ttyp_poly
+                  core_type (src/LowIntegerPriorityQueue.ml[35,1837+20]..src/LowIntegerPriorityQueue.ml[35,1837+23])
+                    Ttyp_constr "int/1!"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[39,1866+0]..src/LowIntegerPriorityQueue.ml[46,2274+31])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[39,1866+4]..src/LowIntegerPriorityQueue.ml[39,1866+10])
+          Tpat_var "create/423"
+        expression (src/LowIntegerPriorityQueue.ml[39,1866+11]..src/LowIntegerPriorityQueue.ml[46,2274+31]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[39,1866+11]..src/LowIntegerPriorityQueue.ml[39,1866+18])
+                Tpat_var "default/425"
+              expression (src/LowIntegerPriorityQueue.ml[44,2160+2]..src/LowIntegerPriorityQueue.ml[46,2274+31])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/LowIntegerPriorityQueue.ml[44,2160+6]..src/LowIntegerPriorityQueue.ml[44,2160+11])
+                      Tpat_var "dummy/426"
+                    expression (src/LowIntegerPriorityQueue.ml[44,2160+14]..src/LowIntegerPriorityQueue.ml[44,2160+37])
+                      Texp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[44,2160+14]..src/LowIntegerPriorityQueue.ml[44,2160+27])
+                        Texp_ident "MyStack/398.make_"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[44,2160+28]..src/LowIntegerPriorityQueue.ml[44,2160+29])
+                            Texp_constant Const_int 0
+                        <arg>
+                          Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[44,2160+30]..src/LowIntegerPriorityQueue.ml[44,2160+37])
+                            Texp_ident "default/425"
+                      ]
+                ]
+                expression (src/LowIntegerPriorityQueue.ml[45,2201+2]..src/LowIntegerPriorityQueue.ml[46,2274+31])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/LowIntegerPriorityQueue.ml[45,2201+6]..src/LowIntegerPriorityQueue.ml[45,2201+7])
+                        Tpat_var "a/427"
+                      expression (src/LowIntegerPriorityQueue.ml[45,2201+10]..src/LowIntegerPriorityQueue.ml[45,2201+69])
+                        Texp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[45,2201+10]..src/LowIntegerPriorityQueue.ml[45,2201+22])
+                          Texp_ident "MyArray/397.make"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[45,2201+23]..src/LowIntegerPriorityQueue.ml[45,2201+25])
+                              Texp_constant Const_int 16
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[45,2201+26]..src/LowIntegerPriorityQueue.ml[45,2201+31])
+                              Texp_ident "dummy/426"
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[45,2201+32]..src/LowIntegerPriorityQueue.ml[45,2201+69])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/LowIntegerPriorityQueue.ml[45,2201+37]..src/LowIntegerPriorityQueue.ml[45,2201+38])
+                                    Tpat_any
+                                  expression (src/LowIntegerPriorityQueue.ml[45,2201+42]..src/LowIntegerPriorityQueue.ml[45,2201+68])
+                                    Texp_apply
+                                    expression (src/LowIntegerPriorityQueue.ml[45,2201+42]..src/LowIntegerPriorityQueue.ml[45,2201+55])
+                                      Texp_ident "MyStack/398.make_"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/LowIntegerPriorityQueue.ml[45,2201+56]..src/LowIntegerPriorityQueue.ml[45,2201+60])
+                                          Texp_constant Const_int 1024
+                                      <arg>
+                                        Nolabel
+                                        expression (src/LowIntegerPriorityQueue.ml[45,2201+61]..src/LowIntegerPriorityQueue.ml[45,2201+68])
+                                          Texp_ident "default/425"
+                                    ]
+                              ]
+                        ]
+                  ]
+                  expression (src/LowIntegerPriorityQueue.ml[46,2274+2]..src/LowIntegerPriorityQueue.ml[46,2274+31])
+                    Texp_record
+                      fields =
+                        [
+                          "a"
+                            expression (src/LowIntegerPriorityQueue.ml[46,2274+4]..src/LowIntegerPriorityQueue.ml[46,2274+5])
+                              Texp_ident "a/427"
+                          "best"
+                            expression (src/LowIntegerPriorityQueue.ml[46,2274+14]..src/LowIntegerPriorityQueue.ml[46,2274+15])
+                              Texp_constant Const_int 0
+                          "cardinal"
+                            expression (src/LowIntegerPriorityQueue.ml[46,2274+28]..src/LowIntegerPriorityQueue.ml[46,2274+29])
+                              Texp_constant Const_int 0
+                        ]
+                      representation =
+                        Record_regular
+                      extended_expression =
+                        None
+          ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[48,2307+0]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[48,2307+4]..src/LowIntegerPriorityQueue.ml[48,2307+7])
+          Tpat_var "add/429"
+        expression (src/LowIntegerPriorityQueue.ml[48,2307+8]..src/LowIntegerPriorityQueue.ml[62,2858+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[48,2307+8]..src/LowIntegerPriorityQueue.ml[48,2307+9])
+                Tpat_var "q/431"
+              expression (src/LowIntegerPriorityQueue.ml[48,2307+10]..src/LowIntegerPriorityQueue.ml[62,2858+22]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/LowIntegerPriorityQueue.ml[48,2307+10]..src/LowIntegerPriorityQueue.ml[48,2307+11])
+                      Tpat_var "x/432"
+                    expression (src/LowIntegerPriorityQueue.ml[48,2307+12]..src/LowIntegerPriorityQueue.ml[62,2858+22]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/LowIntegerPriorityQueue.ml[48,2307+12]..src/LowIntegerPriorityQueue.ml[48,2307+20])
+                            Tpat_var "priority/433"
+                          expression (src/LowIntegerPriorityQueue.ml[49,2330+2]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                            Texp_sequence
+                            expression (src/LowIntegerPriorityQueue.ml[49,2330+2]..src/LowIntegerPriorityQueue.ml[49,2330+24])
+                              Texp_assert                              expression (src/LowIntegerPriorityQueue.ml[49,2330+9]..src/LowIntegerPriorityQueue.ml[49,2330+24])
+                                Texp_apply
+                                expression (src/LowIntegerPriorityQueue.ml[49,2330+12]..src/LowIntegerPriorityQueue.ml[49,2330+14])
+                                  Texp_ident "Stdlib!.<="
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/LowIntegerPriorityQueue.ml[49,2330+10]..src/LowIntegerPriorityQueue.ml[49,2330+11])
+                                      Texp_constant Const_int 0
+                                  <arg>
+                                    Nolabel
+                                    expression (src/LowIntegerPriorityQueue.ml[49,2330+15]..src/LowIntegerPriorityQueue.ml[49,2330+23])
+                                      Texp_ident "priority/433"
+                                ]
+                            expression (src/LowIntegerPriorityQueue.ml[50,2356+2]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                              Texp_sequence
+                              expression (src/LowIntegerPriorityQueue.ml[50,2356+2]..src/LowIntegerPriorityQueue.ml[50,2356+30])
+                                Texp_setfield
+                                expression (src/LowIntegerPriorityQueue.ml[50,2356+2]..src/LowIntegerPriorityQueue.ml[50,2356+3])
+                                  Texp_ident "q/431"
+                                "cardinal"
+                                expression (src/LowIntegerPriorityQueue.ml[50,2356+16]..src/LowIntegerPriorityQueue.ml[50,2356+30])
+                                  Texp_apply
+                                  expression (src/LowIntegerPriorityQueue.ml[50,2356+27]..src/LowIntegerPriorityQueue.ml[50,2356+28])
+                                    Texp_ident "Stdlib!.+"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/LowIntegerPriorityQueue.ml[50,2356+16]..src/LowIntegerPriorityQueue.ml[50,2356+26])
+                                        Texp_field
+                                        expression (src/LowIntegerPriorityQueue.ml[50,2356+16]..src/LowIntegerPriorityQueue.ml[50,2356+17])
+                                          Texp_ident "q/431"
+                                        "cardinal"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/LowIntegerPriorityQueue.ml[50,2356+29]..src/LowIntegerPriorityQueue.ml[50,2356+30])
+                                        Texp_constant Const_int 1
+                                  ]
+                              expression (src/LowIntegerPriorityQueue.ml[52,2430+2]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                                Texp_sequence
+                                expression (src/LowIntegerPriorityQueue.ml[52,2430+2]..src/LowIntegerPriorityQueue.ml[53,2471+37])
+                                  Texp_ifthenelse
+                                  expression (src/LowIntegerPriorityQueue.ml[52,2430+5]..src/LowIntegerPriorityQueue.ml[52,2430+35])
+                                    Texp_apply
+                                    expression (src/LowIntegerPriorityQueue.ml[52,2430+24]..src/LowIntegerPriorityQueue.ml[52,2430+26])
+                                      Texp_ident "Stdlib!.<="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/LowIntegerPriorityQueue.ml[52,2430+5]..src/LowIntegerPriorityQueue.ml[52,2430+23])
+                                          Texp_apply
+                                          expression (src/LowIntegerPriorityQueue.ml[52,2430+5]..src/LowIntegerPriorityQueue.ml[52,2430+19])
+                                            Texp_ident "MyArray/397.length"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/LowIntegerPriorityQueue.ml[52,2430+20]..src/LowIntegerPriorityQueue.ml[52,2430+23])
+                                                Texp_field
+                                                expression (src/LowIntegerPriorityQueue.ml[52,2430+20]..src/LowIntegerPriorityQueue.ml[52,2430+21])
+                                                  Texp_ident "q/431"
+                                                "a"
+                                          ]
+                                      <arg>
+                                        Nolabel
+                                        expression (src/LowIntegerPriorityQueue.ml[52,2430+27]..src/LowIntegerPriorityQueue.ml[52,2430+35])
+                                          Texp_ident "priority/433"
+                                    ]
+                                  expression (src/LowIntegerPriorityQueue.ml[53,2471+4]..src/LowIntegerPriorityQueue.ml[53,2471+37])
+                                    Texp_apply
+                                    expression (src/LowIntegerPriorityQueue.ml[53,2471+4]..src/LowIntegerPriorityQueue.ml[53,2471+18])
+                                      Texp_ident "MyArray/397.resize"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/LowIntegerPriorityQueue.ml[53,2471+19]..src/LowIntegerPriorityQueue.ml[53,2471+22])
+                                          Texp_field
+                                          expression (src/LowIntegerPriorityQueue.ml[53,2471+19]..src/LowIntegerPriorityQueue.ml[53,2471+20])
+                                            Texp_ident "q/431"
+                                          "a"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/LowIntegerPriorityQueue.ml[53,2471+23]..src/LowIntegerPriorityQueue.ml[53,2471+37])
+                                          Texp_apply
+                                          expression (src/LowIntegerPriorityQueue.ml[53,2471+33]..src/LowIntegerPriorityQueue.ml[53,2471+34])
+                                            Texp_ident "Stdlib!.+"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/LowIntegerPriorityQueue.ml[53,2471+24]..src/LowIntegerPriorityQueue.ml[53,2471+32])
+                                                Texp_ident "priority/433"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/LowIntegerPriorityQueue.ml[53,2471+35]..src/LowIntegerPriorityQueue.ml[53,2471+36])
+                                                Texp_constant Const_int 1
+                                          ]
+                                    ]
+                                  None
+                                expression (src/LowIntegerPriorityQueue.ml[55,2560+2]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/LowIntegerPriorityQueue.ml[55,2560+6]..src/LowIntegerPriorityQueue.ml[55,2560+8])
+                                        Tpat_var "xs/434"
+                                      expression (src/LowIntegerPriorityQueue.ml[55,2560+11]..src/LowIntegerPriorityQueue.ml[55,2560+35])
+                                        Texp_apply
+                                        expression (src/LowIntegerPriorityQueue.ml[55,2560+11]..src/LowIntegerPriorityQueue.ml[55,2560+22])
+                                          Texp_ident "MyArray/397.get"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/LowIntegerPriorityQueue.ml[55,2560+23]..src/LowIntegerPriorityQueue.ml[55,2560+26])
+                                              Texp_field
+                                              expression (src/LowIntegerPriorityQueue.ml[55,2560+23]..src/LowIntegerPriorityQueue.ml[55,2560+24])
+                                                Texp_ident "q/431"
+                                              "a"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/LowIntegerPriorityQueue.ml[55,2560+27]..src/LowIntegerPriorityQueue.ml[55,2560+35])
+                                              Texp_ident "priority/433"
+                                        ]
+                                  ]
+                                  expression (src/LowIntegerPriorityQueue.ml[58,2657+2]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                                    Texp_sequence
+                                    expression (src/LowIntegerPriorityQueue.ml[58,2657+2]..src/LowIntegerPriorityQueue.ml[58,2657+19])
+                                      Texp_apply
+                                      expression (src/LowIntegerPriorityQueue.ml[58,2657+2]..src/LowIntegerPriorityQueue.ml[58,2657+14])
+                                        Texp_ident "MyStack/398.push"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/LowIntegerPriorityQueue.ml[58,2657+15]..src/LowIntegerPriorityQueue.ml[58,2657+17])
+                                            Texp_ident "xs/434"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/LowIntegerPriorityQueue.ml[58,2657+18]..src/LowIntegerPriorityQueue.ml[58,2657+19])
+                                            Texp_ident "x/432"
+                                      ]
+                                    expression (src/LowIntegerPriorityQueue.ml[61,2830+2]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                                      Texp_ifthenelse
+                                      expression (src/LowIntegerPriorityQueue.ml[61,2830+5]..src/LowIntegerPriorityQueue.ml[61,2830+22])
+                                        Texp_apply
+                                        expression (src/LowIntegerPriorityQueue.ml[61,2830+14]..src/LowIntegerPriorityQueue.ml[61,2830+15])
+                                          Texp_ident "Stdlib!.<"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/LowIntegerPriorityQueue.ml[61,2830+5]..src/LowIntegerPriorityQueue.ml[61,2830+13])
+                                              Texp_ident "priority/433"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/LowIntegerPriorityQueue.ml[61,2830+16]..src/LowIntegerPriorityQueue.ml[61,2830+22])
+                                              Texp_field
+                                              expression (src/LowIntegerPriorityQueue.ml[61,2830+16]..src/LowIntegerPriorityQueue.ml[61,2830+17])
+                                                Texp_ident "q/431"
+                                              "best"
+                                        ]
+                                      expression (src/LowIntegerPriorityQueue.ml[62,2858+4]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                                        Texp_setfield
+                                        expression (src/LowIntegerPriorityQueue.ml[62,2858+4]..src/LowIntegerPriorityQueue.ml[62,2858+5])
+                                          Texp_ident "q/431"
+                                        "best"
+                                        expression (src/LowIntegerPriorityQueue.ml[62,2858+14]..src/LowIntegerPriorityQueue.ml[62,2858+22])
+                                          Texp_ident "priority/433"
+                                      None
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[64,2882+0]..src/LowIntegerPriorityQueue.ml[65,2899+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[64,2882+4]..src/LowIntegerPriorityQueue.ml[64,2882+12])
+          Tpat_var "is_empty/435"
+        expression (src/LowIntegerPriorityQueue.ml[64,2882+13]..src/LowIntegerPriorityQueue.ml[65,2899+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[64,2882+13]..src/LowIntegerPriorityQueue.ml[64,2882+14])
+                Tpat_var "q/437"
+              expression (src/LowIntegerPriorityQueue.ml[65,2899+2]..src/LowIntegerPriorityQueue.ml[65,2899+16])
+                Texp_apply
+                expression (src/LowIntegerPriorityQueue.ml[65,2899+13]..src/LowIntegerPriorityQueue.ml[65,2899+14])
+                  Texp_ident "Stdlib!.="
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/LowIntegerPriorityQueue.ml[65,2899+2]..src/LowIntegerPriorityQueue.ml[65,2899+12])
+                      Texp_field
+                      expression (src/LowIntegerPriorityQueue.ml[65,2899+2]..src/LowIntegerPriorityQueue.ml[65,2899+3])
+                        Texp_ident "q/437"
+                      "cardinal"
+                  <arg>
+                    Nolabel
+                    expression (src/LowIntegerPriorityQueue.ml[65,2899+15]..src/LowIntegerPriorityQueue.ml[65,2899+16])
+                      Texp_constant Const_int 0
+                ]
+          ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[67,2917+0]..src/LowIntegerPriorityQueue.ml[68,2934+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[67,2917+4]..src/LowIntegerPriorityQueue.ml[67,2917+12])
+          Tpat_var "cardinal/438"
+        expression (src/LowIntegerPriorityQueue.ml[67,2917+13]..src/LowIntegerPriorityQueue.ml[68,2934+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[67,2917+13]..src/LowIntegerPriorityQueue.ml[67,2917+14])
+                Tpat_var "q/440"
+              expression (src/LowIntegerPriorityQueue.ml[68,2934+2]..src/LowIntegerPriorityQueue.ml[68,2934+12])
+                Texp_field
+                expression (src/LowIntegerPriorityQueue.ml[68,2934+2]..src/LowIntegerPriorityQueue.ml[68,2934+3])
+                  Texp_ident "q/440"
+                "cardinal"
+          ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[70,2948+0]..src/LowIntegerPriorityQueue.ml[92,4007+5])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[70,2948+8]..src/LowIntegerPriorityQueue.ml[70,2948+23])
+          Tpat_var "remove_nonempty/441"
+        expression (src/LowIntegerPriorityQueue.ml[70,2948+24]..src/LowIntegerPriorityQueue.ml[92,4007+5]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[70,2948+24]..src/LowIntegerPriorityQueue.ml[70,2948+25])
+                Tpat_var "q/442"
+              expression (src/LowIntegerPriorityQueue.ml[75,3253+2]..src/LowIntegerPriorityQueue.ml[92,4007+5])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/LowIntegerPriorityQueue.ml[75,3253+6]..src/LowIntegerPriorityQueue.ml[75,3253+8])
+                      Tpat_var "xs/443"
+                    expression (src/LowIntegerPriorityQueue.ml[75,3253+11]..src/LowIntegerPriorityQueue.ml[75,3253+33])
+                      Texp_apply
+                      expression (src/LowIntegerPriorityQueue.ml[75,3253+11]..src/LowIntegerPriorityQueue.ml[75,3253+22])
+                        Texp_ident "MyArray/397.get"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[75,3253+23]..src/LowIntegerPriorityQueue.ml[75,3253+26])
+                            Texp_field
+                            expression (src/LowIntegerPriorityQueue.ml[75,3253+23]..src/LowIntegerPriorityQueue.ml[75,3253+24])
+                              Texp_ident "q/442"
+                            "a"
+                        <arg>
+                          Nolabel
+                          expression (src/LowIntegerPriorityQueue.ml[75,3253+27]..src/LowIntegerPriorityQueue.ml[75,3253+33])
+                            Texp_field
+                            expression (src/LowIntegerPriorityQueue.ml[75,3253+27]..src/LowIntegerPriorityQueue.ml[75,3253+28])
+                              Texp_ident "q/442"
+                            "best"
+                      ]
+                ]
+                expression (src/LowIntegerPriorityQueue.ml[76,3290+2]..src/LowIntegerPriorityQueue.ml[92,4007+5])
+                  Texp_ifthenelse
+                  expression (src/LowIntegerPriorityQueue.ml[76,3290+5]..src/LowIntegerPriorityQueue.ml[76,3290+26])
+                    Texp_apply
+                    expression (src/LowIntegerPriorityQueue.ml[76,3290+23]..src/LowIntegerPriorityQueue.ml[76,3290+24])
+                      Texp_ident "Stdlib!.="
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[76,3290+5]..src/LowIntegerPriorityQueue.ml[76,3290+22])
+                          Texp_apply
+                          expression (src/LowIntegerPriorityQueue.ml[76,3290+5]..src/LowIntegerPriorityQueue.ml[76,3290+19])
+                            Texp_ident "MyStack/398.length"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[76,3290+20]..src/LowIntegerPriorityQueue.ml[76,3290+22])
+                                Texp_ident "xs/443"
+                          ]
+                      <arg>
+                        Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[76,3290+25]..src/LowIntegerPriorityQueue.ml[76,3290+26])
+                          Texp_constant Const_int 0
+                    ]
+                  expression (src/LowIntegerPriorityQueue.ml[76,3290+32]..src/LowIntegerPriorityQueue.ml[85,3753+5])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/LowIntegerPriorityQueue.ml[81,3632+8]..src/LowIntegerPriorityQueue.ml[81,3632+13])
+                          Tpat_var "dummy/444"
+                        expression (src/LowIntegerPriorityQueue.ml[81,3632+16]..src/LowIntegerPriorityQueue.ml[81,3632+35])
+                          Texp_apply
+                          expression (src/LowIntegerPriorityQueue.ml[81,3632+16]..src/LowIntegerPriorityQueue.ml[81,3632+31])
+                            Texp_ident "MyArray/397.default"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[81,3632+32]..src/LowIntegerPriorityQueue.ml[81,3632+35])
+                                Texp_field
+                                expression (src/LowIntegerPriorityQueue.ml[81,3632+32]..src/LowIntegerPriorityQueue.ml[81,3632+33])
+                                  Texp_ident "q/442"
+                                "a"
+                          ]
+                    ]
+                    expression (src/LowIntegerPriorityQueue.ml[82,3671+4]..src/LowIntegerPriorityQueue.ml[84,3731+21])
+                      Texp_sequence
+                      expression (src/LowIntegerPriorityQueue.ml[82,3671+4]..src/LowIntegerPriorityQueue.ml[82,3671+32])
+                        Texp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[82,3671+4]..src/LowIntegerPriorityQueue.ml[82,3671+15])
+                          Texp_ident "MyArray/397.set"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[82,3671+16]..src/LowIntegerPriorityQueue.ml[82,3671+19])
+                              Texp_field
+                              expression (src/LowIntegerPriorityQueue.ml[82,3671+16]..src/LowIntegerPriorityQueue.ml[82,3671+17])
+                                Texp_ident "q/442"
+                              "a"
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[82,3671+20]..src/LowIntegerPriorityQueue.ml[82,3671+26])
+                              Texp_field
+                              expression (src/LowIntegerPriorityQueue.ml[82,3671+20]..src/LowIntegerPriorityQueue.ml[82,3671+21])
+                                Texp_ident "q/442"
+                              "best"
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[82,3671+27]..src/LowIntegerPriorityQueue.ml[82,3671+32])
+                              Texp_ident "dummy/444"
+                        ]
+                      expression (src/LowIntegerPriorityQueue.ml[83,3705+4]..src/LowIntegerPriorityQueue.ml[84,3731+21])
+                        Texp_sequence
+                        expression (src/LowIntegerPriorityQueue.ml[83,3705+4]..src/LowIntegerPriorityQueue.ml[83,3705+24])
+                          Texp_setfield
+                          expression (src/LowIntegerPriorityQueue.ml[83,3705+4]..src/LowIntegerPriorityQueue.ml[83,3705+5])
+                            Texp_ident "q/442"
+                          "best"
+                          expression (src/LowIntegerPriorityQueue.ml[83,3705+14]..src/LowIntegerPriorityQueue.ml[83,3705+24])
+                            Texp_apply
+                            expression (src/LowIntegerPriorityQueue.ml[83,3705+21]..src/LowIntegerPriorityQueue.ml[83,3705+22])
+                              Texp_ident "Stdlib!.+"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[83,3705+14]..src/LowIntegerPriorityQueue.ml[83,3705+20])
+                                  Texp_field
+                                  expression (src/LowIntegerPriorityQueue.ml[83,3705+14]..src/LowIntegerPriorityQueue.ml[83,3705+15])
+                                    Texp_ident "q/442"
+                                  "best"
+                              <arg>
+                                Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[83,3705+23]..src/LowIntegerPriorityQueue.ml[83,3705+24])
+                                  Texp_constant Const_int 1
+                            ]
+                        expression (src/LowIntegerPriorityQueue.ml[84,3731+4]..src/LowIntegerPriorityQueue.ml[84,3731+21])
+                          Texp_apply
+                          expression (src/LowIntegerPriorityQueue.ml[84,3731+4]..src/LowIntegerPriorityQueue.ml[84,3731+19])
+                            Texp_ident "remove_nonempty/441"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[84,3731+20]..src/LowIntegerPriorityQueue.ml[84,3731+21])
+                                Texp_ident "q/442"
+                          ]
+                  Some
+                    expression (src/LowIntegerPriorityQueue.ml[86,3759+7]..src/LowIntegerPriorityQueue.ml[92,4007+5])
+                      Texp_sequence
+                      expression (src/LowIntegerPriorityQueue.ml[87,3772+4]..src/LowIntegerPriorityQueue.ml[87,3772+32])
+                        Texp_setfield
+                        expression (src/LowIntegerPriorityQueue.ml[87,3772+4]..src/LowIntegerPriorityQueue.ml[87,3772+5])
+                          Texp_ident "q/442"
+                        "cardinal"
+                        expression (src/LowIntegerPriorityQueue.ml[87,3772+18]..src/LowIntegerPriorityQueue.ml[87,3772+32])
+                          Texp_apply
+                          expression (src/LowIntegerPriorityQueue.ml[87,3772+29]..src/LowIntegerPriorityQueue.ml[87,3772+30])
+                            Texp_ident "Stdlib!.-"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[87,3772+18]..src/LowIntegerPriorityQueue.ml[87,3772+28])
+                                Texp_field
+                                expression (src/LowIntegerPriorityQueue.ml[87,3772+18]..src/LowIntegerPriorityQueue.ml[87,3772+19])
+                                  Texp_ident "q/442"
+                                "cardinal"
+                            <arg>
+                              Nolabel
+                              expression (src/LowIntegerPriorityQueue.ml[87,3772+31]..src/LowIntegerPriorityQueue.ml[87,3772+32])
+                                Texp_constant Const_int 1
+                          ]
+                      expression (src/LowIntegerPriorityQueue.ml[88,3806+4]..src/LowIntegerPriorityQueue.ml[88,3806+25])
+                        Texp_construct "Some"
+                        [
+                          expression (src/LowIntegerPriorityQueue.ml[88,3806+9]..src/LowIntegerPriorityQueue.ml[88,3806+25])
+                            Texp_apply
+                            expression (src/LowIntegerPriorityQueue.ml[88,3806+10]..src/LowIntegerPriorityQueue.ml[88,3806+21])
+                              Texp_ident "MyStack/398.pop"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/LowIntegerPriorityQueue.ml[88,3806+22]..src/LowIntegerPriorityQueue.ml[88,3806+24])
+                                  Texp_ident "xs/443"
+                            ]
+                        ]
+          ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[94,4014+0]..src/LowIntegerPriorityQueue.ml[98,4070+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[94,4014+4]..src/LowIntegerPriorityQueue.ml[94,4014+10])
+          Tpat_var "remove/445"
+        expression (src/LowIntegerPriorityQueue.ml[94,4014+11]..src/LowIntegerPriorityQueue.ml[98,4070+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[94,4014+11]..src/LowIntegerPriorityQueue.ml[94,4014+12])
+                Tpat_var "q/447"
+              expression (src/LowIntegerPriorityQueue.ml[95,4029+2]..src/LowIntegerPriorityQueue.ml[98,4070+21])
+                Texp_ifthenelse
+                expression (src/LowIntegerPriorityQueue.ml[95,4029+5]..src/LowIntegerPriorityQueue.ml[95,4029+19])
+                  Texp_apply
+                  expression (src/LowIntegerPriorityQueue.ml[95,4029+16]..src/LowIntegerPriorityQueue.ml[95,4029+17])
+                    Texp_ident "Stdlib!.="
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/LowIntegerPriorityQueue.ml[95,4029+5]..src/LowIntegerPriorityQueue.ml[95,4029+15])
+                        Texp_field
+                        expression (src/LowIntegerPriorityQueue.ml[95,4029+5]..src/LowIntegerPriorityQueue.ml[95,4029+6])
+                          Texp_ident "q/447"
+                        "cardinal"
+                    <arg>
+                      Nolabel
+                      expression (src/LowIntegerPriorityQueue.ml[95,4029+18]..src/LowIntegerPriorityQueue.ml[95,4029+19])
+                        Texp_constant Const_int 0
+                  ]
+                expression (src/LowIntegerPriorityQueue.ml[96,4054+4]..src/LowIntegerPriorityQueue.ml[96,4054+8])
+                  Texp_construct "None"
+                  []
+                Some
+                  expression (src/LowIntegerPriorityQueue.ml[98,4070+4]..src/LowIntegerPriorityQueue.ml[98,4070+21])
+                    Texp_apply
+                    expression (src/LowIntegerPriorityQueue.ml[98,4070+4]..src/LowIntegerPriorityQueue.ml[98,4070+19])
+                      Texp_ident "remove_nonempty/441"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/LowIntegerPriorityQueue.ml[98,4070+20]..src/LowIntegerPriorityQueue.ml[98,4070+21])
+                          Texp_ident "q/447"
+                    ]
+          ]
+    ]
+  structure_item (src/LowIntegerPriorityQueue.ml[100,4093+0]..src/LowIntegerPriorityQueue.ml[106,4182+16])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/LowIntegerPriorityQueue.ml[100,4093+8]..src/LowIntegerPriorityQueue.ml[100,4093+14])
+          Tpat_var "repeat/448"
+        expression (src/LowIntegerPriorityQueue.ml[100,4093+15]..src/LowIntegerPriorityQueue.ml[106,4182+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/LowIntegerPriorityQueue.ml[100,4093+15]..src/LowIntegerPriorityQueue.ml[100,4093+16])
+                Tpat_var "q/449"
+              expression (src/LowIntegerPriorityQueue.ml[100,4093+17]..src/LowIntegerPriorityQueue.ml[106,4182+16]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/LowIntegerPriorityQueue.ml[100,4093+17]..src/LowIntegerPriorityQueue.ml[100,4093+18])
+                      Tpat_var "f/450"
+                    expression (src/LowIntegerPriorityQueue.ml[101,4114+2]..src/LowIntegerPriorityQueue.ml[106,4182+16])
+                      Texp_match
+                      expression (src/LowIntegerPriorityQueue.ml[101,4114+8]..src/LowIntegerPriorityQueue.ml[101,4114+16])
+                        Texp_apply
+                        expression (src/LowIntegerPriorityQueue.ml[101,4114+8]..src/LowIntegerPriorityQueue.ml[101,4114+14])
+                          Texp_ident "remove/445"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/LowIntegerPriorityQueue.ml[101,4114+15]..src/LowIntegerPriorityQueue.ml[101,4114+16])
+                              Texp_ident "q/449"
+                        ]
+                      [
+                        <case>
+                          pattern (src/LowIntegerPriorityQueue.ml[102,4136+4]..src/LowIntegerPriorityQueue.ml[102,4136+8])
+                            Tpat_value
+                            pattern (src/LowIntegerPriorityQueue.ml[102,4136+4]..src/LowIntegerPriorityQueue.ml[102,4136+8])
+                              Tpat_construct "None"
+                              []
+                              None
+                          expression (src/LowIntegerPriorityQueue.ml[103,4148+6]..src/LowIntegerPriorityQueue.ml[103,4148+8])
+                            Texp_construct "()"
+                            []
+                        <case>
+                          pattern (src/LowIntegerPriorityQueue.ml[104,4157+4]..src/LowIntegerPriorityQueue.ml[104,4157+10])
+                            Tpat_value
+                            pattern (src/LowIntegerPriorityQueue.ml[104,4157+4]..src/LowIntegerPriorityQueue.ml[104,4157+10])
+                              Tpat_construct "Some"
+                              [
+                                pattern (src/LowIntegerPriorityQueue.ml[104,4157+9]..src/LowIntegerPriorityQueue.ml[104,4157+10])
+                                  Tpat_var "x/451"
+                              ]
+                              None
+                          expression (src/LowIntegerPriorityQueue.ml[105,4171+6]..src/LowIntegerPriorityQueue.ml[106,4182+16])
+                            Texp_sequence
+                            expression (src/LowIntegerPriorityQueue.ml[105,4171+6]..src/LowIntegerPriorityQueue.ml[105,4171+9])
+                              Texp_apply
+                              expression (src/LowIntegerPriorityQueue.ml[105,4171+6]..src/LowIntegerPriorityQueue.ml[105,4171+7])
+                                Texp_ident "f/450"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/LowIntegerPriorityQueue.ml[105,4171+8]..src/LowIntegerPriorityQueue.ml[105,4171+9])
+                                    Texp_ident "x/451"
+                              ]
+                            expression (src/LowIntegerPriorityQueue.ml[106,4182+6]..src/LowIntegerPriorityQueue.ml[106,4182+16])
+                              Texp_apply
+                              expression (src/LowIntegerPriorityQueue.ml[106,4182+6]..src/LowIntegerPriorityQueue.ml[106,4182+12])
+                                Texp_ident "repeat/448"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/LowIntegerPriorityQueue.ml[106,4182+13]..src/LowIntegerPriorityQueue.ml[106,4182+14])
+                                    Texp_ident "q/449"
+                                <arg>
+                                  Nolabel
+                                  expression (src/LowIntegerPriorityQueue.ml[106,4182+15]..src/LowIntegerPriorityQueue.ml[106,4182+16])
+                                    Texp_ident "f/450"
+                              ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__LowIntegerPriorityQueue>
+ "add"[value] -> <Dune__exe__LowIntegerPriorityQueue.10>;
+ "cardinal"[value] -> <Dune__exe__LowIntegerPriorityQueue.17>;
+ "create"[value] -> <Dune__exe__LowIntegerPriorityQueue.6>;
+ "is_empty"[value] -> <Dune__exe__LowIntegerPriorityQueue.15>;
+ "remove"[value] -> <Dune__exe__LowIntegerPriorityQueue.23>;
+ "repeat"[value] -> <Dune__exe__LowIntegerPriorityQueue.25>;
+ "t"[type] -> <Dune__exe__LowIntegerPriorityQueue.2>;
+ }
+
+(seq
+  (let
+    (create/423 =
+       (function default/425
+         (let
+           (dummy/426 =
+              (apply (field_imm 1 (global Dune__exe__ResizableArray!)) 0
+                default/425)
+            a/427 =
+              (apply (field_imm 0 (global Dune__exe__ResizableArray!)) 16
+                dummy/426
+                (function param/428[int]
+                  (apply (field_imm 1 (global Dune__exe__ResizableArray!))
+                    1024 default/425))))
+           (makemutable 0 (*,int,int) a/427 0 0))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__LowIntegerPriorityQueue!)
+      create/423))
+  (let
+    (add/429 =
+       (function q/431 x/432 priority/433[int] : int
+         (seq
+           (if (<= 0 priority/433) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/LowIntegerPriorityQueue.ml" 49 2])))
+           (setfield_imm 2 q/431 (+ (field_int 2 q/431) 1))
+           (if
+             (<=
+               (apply (field_imm 2 (global Dune__exe__ResizableArray!))
+                 (field_imm 0 q/431))
+               priority/433)
+             (apply (field_imm 3 (global Dune__exe__ResizableArray!))
+               (field_imm 0 q/431) (+ priority/433 1))
+             0)
+           (let
+             (xs/434 =
+                (apply (field_imm 4 (global Dune__exe__ResizableArray!))
+                  (field_imm 0 q/431) priority/433))
+             (seq
+               (apply (field_imm 6 (global Dune__exe__ResizableArray!))
+                 xs/434 x/432)
+               (if (< priority/433 (field_int 1 q/431))
+                 (setfield_imm 1 q/431 priority/433) 0))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__LowIntegerPriorityQueue!)
+      add/429))
+  (let (is_empty/435 = (function q/437 : int (== (field_int 2 q/437) 0)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__LowIntegerPriorityQueue!)
+      is_empty/435))
+  (let (cardinal/438 = (function q/440 : int (field_int 2 q/440)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__LowIntegerPriorityQueue!)
+      cardinal/438))
+  (letrec
+    (remove_nonempty/441
+       (function q/442
+         (let
+           (xs/443 =
+              (apply (field_imm 4 (global Dune__exe__ResizableArray!))
+                (field_imm 0 q/442) (field_int 1 q/442)))
+           (if
+             (==
+               (apply (field_imm 2 (global Dune__exe__ResizableArray!))
+                 xs/443)
+               0)
+             (let
+               (dummy/444 =
+                  (apply (field_imm 8 (global Dune__exe__ResizableArray!))
+                    (field_imm 0 q/442)))
+               (seq
+                 (apply (field_imm 5 (global Dune__exe__ResizableArray!))
+                   (field_imm 0 q/442) (field_int 1 q/442) dummy/444)
+                 (setfield_imm 1 q/442 (+ (field_int 1 q/442) 1))
+                 (apply remove_nonempty/441 q/442)))
+             (seq (setfield_imm 2 q/442 (- (field_int 2 q/442) 1))
+               (makeblock 0
+                 (apply (field_imm 7 (global Dune__exe__ResizableArray!))
+                   xs/443)))))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__LowIntegerPriorityQueue!)
+      remove_nonempty/441))
+  (let
+    (remove/445 =
+       (function q/447
+         (if (== (field_int 2 q/447) 0) 0
+           (apply (field_imm 6 (global Dune__exe__LowIntegerPriorityQueue!))
+             q/447))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__LowIntegerPriorityQueue!)
+      remove/445))
+  (letrec
+    (repeat/448
+       (function q/449 f/450 : int
+         (let
+           (*match*/885 =
+              (apply
+                (field_imm 2 (global Dune__exe__LowIntegerPriorityQueue!))
+                q/449))
+           (if (isint *match*/885) 0
+             (let (x/451 =a (field_imm 0 *match*/885))
+               (seq (apply f/450 x/451) (apply repeat/448 q/449 f/450)))))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__LowIntegerPriorityQueue!)
+      repeat/448))
+  0)
+(seq
+  (let
+    (create/423 =
+       (function default/425
+         (let
+           (dummy/426 =
+              (apply (field_imm 1 (global Dune__exe__ResizableArray!)) 0
+                default/425)
+            a/427 =
+              (apply (field_imm 0 (global Dune__exe__ResizableArray!)) 16
+                dummy/426
+                (function param/428[int]
+                  (apply (field_imm 1 (global Dune__exe__ResizableArray!))
+                    1024 default/425))))
+           (makemutable 0 (*,int,int) a/427 0 0))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__LowIntegerPriorityQueue!)
+      create/423))
+  (let
+    (add/429 =
+       (function q/431 x/432 priority/433[int] : int
+         (seq
+           (if (<= 0 priority/433) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/LowIntegerPriorityQueue.ml" 49 2])))
+           (setfield_imm 2 q/431 (+ (field_int 2 q/431) 1))
+           (if
+             (<=
+               (apply (field_imm 2 (global Dune__exe__ResizableArray!))
+                 (field_imm 0 q/431))
+               priority/433)
+             (apply (field_imm 3 (global Dune__exe__ResizableArray!))
+               (field_imm 0 q/431) (+ priority/433 1))
+             0)
+           (let
+             (xs/434 =
+                (apply (field_imm 4 (global Dune__exe__ResizableArray!))
+                  (field_imm 0 q/431) priority/433))
+             (seq
+               (apply (field_imm 6 (global Dune__exe__ResizableArray!))
+                 xs/434 x/432)
+               (if (< priority/433 (field_int 1 q/431))
+                 (setfield_imm 1 q/431 priority/433) 0))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__LowIntegerPriorityQueue!)
+      add/429))
+  (let (is_empty/435 = (function q/437 : int (== (field_int 2 q/437) 0)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__LowIntegerPriorityQueue!)
+      is_empty/435))
+  (let (cardinal/438 = (function q/440 : int (field_int 2 q/440)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__LowIntegerPriorityQueue!)
+      cardinal/438))
+  (letrec
+    (remove_nonempty/441
+       (function q/442
+         (let
+           (xs/443 =
+              (apply (field_imm 4 (global Dune__exe__ResizableArray!))
+                (field_imm 0 q/442) (field_int 1 q/442)))
+           (if
+             (==
+               (apply (field_imm 2 (global Dune__exe__ResizableArray!))
+                 xs/443)
+               0)
+             (let
+               (dummy/444 =
+                  (apply (field_imm 8 (global Dune__exe__ResizableArray!))
+                    (field_imm 0 q/442)))
+               (seq
+                 (apply (field_imm 5 (global Dune__exe__ResizableArray!))
+                   (field_imm 0 q/442) (field_int 1 q/442) dummy/444)
+                 (setfield_imm 1 q/442 (+ (field_int 1 q/442) 1))
+                 (apply remove_nonempty/441 q/442)))
+             (seq (setfield_imm 2 q/442 (- (field_int 2 q/442) 1))
+               (makeblock 0
+                 (apply (field_imm 7 (global Dune__exe__ResizableArray!))
+                   xs/443)))))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__LowIntegerPriorityQueue!)
+      remove_nonempty/441))
+  (let
+    (remove/445 =
+       (function q/447
+         (if (== (field_int 2 q/447) 0) 0
+           (apply (field_imm 6 (global Dune__exe__LowIntegerPriorityQueue!))
+             q/447))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__LowIntegerPriorityQueue!)
+      remove/445))
+  (letrec
+    (repeat/448
+       (function q/449 f/450 : int
+         (let
+           (*match*/885 =
+              (apply
+                (field_imm 2 (global Dune__exe__LowIntegerPriorityQueue!))
+                q/449))
+           (if (isint *match*/885) 0
+             (seq (apply f/450 (field_imm 0 *match*/885))
+               (apply repeat/448 q/449 f/450))))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__LowIntegerPriorityQueue!)
+      repeat/448))
+  0)

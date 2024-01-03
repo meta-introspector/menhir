@@ -1,0 +1,76 @@
+[
+  signature_item (src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33])
+        Pstr_eval
+        expression (src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33])
+          Pexp_constant PConst_string("This module generates random sentences that are well-formed according to\n   the grammar.\n\n   If the grammar is not LR(1), these sentences are *not* necessarily accepted\n   by the automaton.\n\n   The distribution of sentences is *not* uniform.\n\n   The goal length is not necessarily obeyed exactly; the generator produces a\n   sentence whose length is at most [goal].\n\n   The time complexity is roughly linear with respect to the goal length.\n\n   Because we do not wish to generate sentences that contain the [error]\n   pseudo-token, any production that contains this token is ignored. This can\n   cause a problem if the goal can be achieved only via such a production.\n   This is hopefully unlikely. ",(src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33]),None)
+    ]
+  signature_item (src/RandomSentenceGenerator.mli[32,1720+0]..[32,1720+12])
+    Psig_open Fresh "Grammar" (src/RandomSentenceGenerator.mli[32,1720+5]..[32,1720+12])
+  signature_item (src/RandomSentenceGenerator.mli[34,1734+0]..[34,1734+56])
+    Psig_value
+    value_description "nonterminal" (src/RandomSentenceGenerator.mli[34,1734+4]..[34,1734+15]) (src/RandomSentenceGenerator.mli[34,1734+0]..[34,1734+56])
+      core_type (src/RandomSentenceGenerator.mli[34,1734+17]..[34,1734+56])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/RandomSentenceGenerator.mli[34,1734+17]..[34,1734+30])
+          Ptyp_constr "Nonterminal.t" (src/RandomSentenceGenerator.mli[34,1734+17]..[34,1734+30])
+          []
+        core_type (src/RandomSentenceGenerator.mli[34,1734+34]..[34,1734+56])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/RandomSentenceGenerator.mli[34,1734+34]..[34,1734+37])
+            Ptyp_constr "int" (src/RandomSentenceGenerator.mli[34,1734+34]..[34,1734+37])
+            []
+          core_type (src/RandomSentenceGenerator.mli[34,1734+41]..[34,1734+56])
+            Ptyp_constr "list" (src/RandomSentenceGenerator.mli[34,1734+52]..[34,1734+56])
+            [
+              core_type (src/RandomSentenceGenerator.mli[34,1734+41]..[34,1734+51])
+                Ptyp_constr "Terminal.t" (src/RandomSentenceGenerator.mli[34,1734+41]..[34,1734+51])
+                []
+            ]
+      []
+]
+
+[@@@ocaml.text
+  "This module generates random sentences that are well-formed according to\n   the grammar.\n\n   If the grammar is not LR(1), these sentences are *not* necessarily accepted\n   by the automaton.\n\n   The distribution of sentences is *not* uniform.\n\n   The goal length is not necessarily obeyed exactly; the generator produces a\n   sentence whose length is at most [goal].\n\n   The time complexity is roughly linear with respect to the goal length.\n\n   Because we do not wish to generate sentences that contain the [error]\n   pseudo-token, any production that contains this token is ignored. This can\n   cause a problem if the goal can be achieved only via such a production.\n   This is hopefully unlikely. "]
+open Grammar
+val nonterminal : Nonterminal.t -> int -> Terminal.t list
+[
+  signature_item (src/RandomSentenceGenerator.mli[14,1014+0]..src/RandomSentenceGenerator.mli[30,1685+33])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33])
+        Pstr_eval
+        expression (src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33])
+          Pexp_constant PConst_string("This module generates random sentences that are well-formed according to\n   the grammar.\n\n   If the grammar is not LR(1), these sentences are *not* necessarily accepted\n   by the automaton.\n\n   The distribution of sentences is *not* uniform.\n\n   The goal length is not necessarily obeyed exactly; the generator produces a\n   sentence whose length is at most [goal].\n\n   The time complexity is roughly linear with respect to the goal length.\n\n   Because we do not wish to generate sentences that contain the [error]\n   pseudo-token, any production that contains this token is ignored. This can\n   cause a problem if the goal can be achieved only via such a production.\n   This is hopefully unlikely. ",(src/RandomSentenceGenerator.mli[14,1014+0]..[30,1685+33]),None)
+    ]
+  signature_item (src/RandomSentenceGenerator.mli[32,1720+0]..src/RandomSentenceGenerator.mli[32,1720+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/RandomSentenceGenerator.mli[34,1734+0]..src/RandomSentenceGenerator.mli[34,1734+56])
+    Tsig_value
+    value_description nonterminal/480 (src/RandomSentenceGenerator.mli[34,1734+0]..src/RandomSentenceGenerator.mli[34,1734+56])
+      core_type (src/RandomSentenceGenerator.mli[34,1734+17]..src/RandomSentenceGenerator.mli[34,1734+56])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/RandomSentenceGenerator.mli[34,1734+17]..src/RandomSentenceGenerator.mli[34,1734+30])
+          Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+          []
+        core_type (src/RandomSentenceGenerator.mli[34,1734+34]..src/RandomSentenceGenerator.mli[34,1734+56])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/RandomSentenceGenerator.mli[34,1734+34]..src/RandomSentenceGenerator.mli[34,1734+37])
+            Ttyp_constr "int/1!"
+            []
+          core_type (src/RandomSentenceGenerator.mli[34,1734+41]..src/RandomSentenceGenerator.mli[34,1734+56])
+            Ttyp_constr "list/9!"
+            [
+              core_type (src/RandomSentenceGenerator.mli[34,1734+41]..src/RandomSentenceGenerator.mli[34,1734+51])
+                Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                []
+            ]
+      []
+]
+

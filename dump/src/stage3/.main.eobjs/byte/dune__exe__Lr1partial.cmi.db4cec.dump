@@ -1,0 +1,156 @@
+[
+  signature_item (src/lr1partial.mli[14,1001+0]..[14,1001+12])
+    Psig_open Fresh "Grammar" (src/lr1partial.mli[14,1001+5]..[14,1001+12])
+  signature_item (src/lr1partial.mli[22,1369+0]..[22,1369+14])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/lr1partial.mli[22,1369+0]..[22,1369+14])
+          pext_name = "Oops"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (src/lr1partial.mli[24,1385+0]..[54,2161+3])
+    Psig_module "Run" (src/lr1partial.mli[24,1385+7]..[24,1385+10])
+    module_type (src/lr1partial.mli[24,1385+11]..[54,2161+3])
+      Pmty_functor "X" (src/lr1partial.mli[24,1385+12]..[24,1385+13])
+      module_type (src/lr1partial.mli[24,1385+16]..[35,1591+3])
+        Pmty_signature
+        [
+          signature_item (src/lr1partial.mli[28,1455+2]..[28,1455+27])
+            Psig_value
+            value_description "tokens" (src/lr1partial.mli[28,1455+6]..[28,1455+12]) (src/lr1partial.mli[28,1455+2]..[28,1455+27])
+              core_type (src/lr1partial.mli[28,1455+14]..[28,1455+27])
+                Ptyp_constr "TerminalSet.t" (src/lr1partial.mli[28,1455+14]..[28,1455+27])
+                []
+              []
+          signature_item (src/lr1partial.mli[33,1569+2]..[33,1569+20])
+            Psig_value
+            value_description "goal" (src/lr1partial.mli[33,1569+6]..[33,1569+10]) (src/lr1partial.mli[33,1569+2]..[33,1569+20])
+              core_type (src/lr1partial.mli[33,1569+12]..[33,1569+20])
+                Ptyp_constr "Lr1.node" (src/lr1partial.mli[33,1569+12]..[33,1569+20])
+                []
+              []
+        ]
+      module_type (src/lr1partial.mli[35,1591+7]..[54,2161+3])
+        Pmty_signature
+        [
+          signature_item (src/lr1partial.mli[44,1985+2]..[44,1985+20])
+            Psig_value
+            value_description "source" (src/lr1partial.mli[44,1985+6]..[44,1985+12]) (src/lr1partial.mli[44,1985+2]..[44,1985+20])
+              core_type (src/lr1partial.mli[44,1985+14]..[44,1985+20])
+                Ptyp_constr "Item.t" (src/lr1partial.mli[44,1985+14]..[44,1985+20])
+                []
+              []
+          signature_item (src/lr1partial.mli[46,2007+2]..[46,2007+26])
+            Psig_value
+            value_description "path" (src/lr1partial.mli[46,2007+6]..[46,2007+10]) (src/lr1partial.mli[46,2007+2]..[46,2007+26])
+              core_type (src/lr1partial.mli[46,2007+12]..[46,2007+26])
+                Ptyp_constr "array" (src/lr1partial.mli[46,2007+21]..[46,2007+26])
+                [
+                  core_type (src/lr1partial.mli[46,2007+12]..[46,2007+20])
+                    Ptyp_constr "Symbol.t" (src/lr1partial.mli[46,2007+12]..[46,2007+20])
+                    []
+                ]
+              []
+          signature_item (src/lr1partial.mli[48,2035+2]..[48,2035+32])
+            Psig_value
+            value_description "goal" (src/lr1partial.mli[48,2035+6]..[48,2035+10]) (src/lr1partial.mli[48,2035+2]..[48,2035+32])
+              core_type (src/lr1partial.mli[48,2035+12]..[48,2035+32])
+                Ptyp_constr "Lr0.concretelr1state" (src/lr1partial.mli[48,2035+12]..[48,2035+32])
+                []
+              []
+          signature_item (src/lr1partial.mli[52,2136+2]..[52,2136+23])
+            Psig_value
+            value_description "token" (src/lr1partial.mli[52,2136+6]..[52,2136+11]) (src/lr1partial.mli[52,2136+2]..[52,2136+23])
+              core_type (src/lr1partial.mli[52,2136+13]..[52,2136+23])
+                Ptyp_constr "Terminal.t" (src/lr1partial.mli[52,2136+13]..[52,2136+23])
+                []
+              []
+        ]
+]
+
+open Grammar
+exception Oops 
+module Run :
+functor (X : sig val tokens : TerminalSet.t val goal : Lr1.node end) ->
+  sig
+    val source : Item.t
+    val path : Symbol.t array
+    val goal : Lr0.concretelr1state
+    val token : Terminal.t
+  end
+[
+  signature_item (src/lr1partial.mli[14,1001+0]..src/lr1partial.mli[14,1001+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/lr1partial.mli[22,1369+0]..src/lr1partial.mli[22,1369+14])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/lr1partial.mli[22,1369+0]..src/lr1partial.mli[22,1369+14])
+          pext_name = "Oops/414"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (src/lr1partial.mli[24,1385+0]..src/lr1partial.mli[54,2161+3])
+    Tsig_module "Run/594"
+    module_type (src/lr1partial.mli[24,1385+11]..src/lr1partial.mli[54,2161+3])
+      Tmty_functor "X/497"
+      module_type (src/lr1partial.mli[24,1385+16]..src/lr1partial.mli[35,1591+3])
+        Tmty_signature
+        [
+          signature_item (src/lr1partial.mli[28,1455+2]..src/lr1partial.mli[28,1455+27])
+            Tsig_value
+            value_description tokens/454 (src/lr1partial.mli[28,1455+2]..src/lr1partial.mli[28,1455+27])
+              core_type (src/lr1partial.mli[28,1455+14]..src/lr1partial.mli[28,1455+27])
+                Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                []
+              []
+          signature_item (src/lr1partial.mli[33,1569+2]..src/lr1partial.mli[33,1569+20])
+            Tsig_value
+            value_description goal/496 (src/lr1partial.mli[33,1569+2]..src/lr1partial.mli[33,1569+20])
+              core_type (src/lr1partial.mli[33,1569+12]..src/lr1partial.mli[33,1569+20])
+                Ttyp_constr "Dune__exe!.Lr1.node"
+                []
+              []
+        ]
+      module_type (src/lr1partial.mli[35,1591+7]..src/lr1partial.mli[54,2161+3])
+        Tmty_signature
+        [
+          signature_item (src/lr1partial.mli[44,1985+2]..src/lr1partial.mli[44,1985+20])
+            Tsig_value
+            value_description source/512 (src/lr1partial.mli[44,1985+2]..src/lr1partial.mli[44,1985+20])
+              core_type (src/lr1partial.mli[44,1985+14]..src/lr1partial.mli[44,1985+20])
+                Ttyp_constr "Dune__exe!.Item.t"
+                []
+              []
+          signature_item (src/lr1partial.mli[46,2007+2]..src/lr1partial.mli[46,2007+26])
+            Tsig_value
+            value_description path/524 (src/lr1partial.mli[46,2007+2]..src/lr1partial.mli[46,2007+26])
+              core_type (src/lr1partial.mli[46,2007+12]..src/lr1partial.mli[46,2007+26])
+                Ttyp_constr "array/8!"
+                [
+                  core_type (src/lr1partial.mli[46,2007+12]..src/lr1partial.mli[46,2007+20])
+                    Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+                    []
+                ]
+              []
+          signature_item (src/lr1partial.mli[48,2035+2]..src/lr1partial.mli[48,2035+32])
+            Tsig_value
+            value_description goal/563 (src/lr1partial.mli[48,2035+2]..src/lr1partial.mli[48,2035+32])
+              core_type (src/lr1partial.mli[48,2035+12]..src/lr1partial.mli[48,2035+32])
+                Ttyp_constr "Dune__exe!.Lr0.concretelr1state"
+                []
+              []
+          signature_item (src/lr1partial.mli[52,2136+2]..src/lr1partial.mli[52,2136+23])
+            Tsig_value
+            value_description token/593 (src/lr1partial.mli[52,2136+2]..src/lr1partial.mli[52,2136+23])
+              core_type (src/lr1partial.mli[52,2136+13]..src/lr1partial.mli[52,2136+23])
+                Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                []
+              []
+        ]
+]
+

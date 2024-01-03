@@ -1,0 +1,1119 @@
+[
+  structure_item (src/MList.ml[14,995+0]..[14,995+12])
+    Pstr_include    module_expr (src/MList.ml[14,995+8]..[14,995+12])
+      Pmod_ident "List" (src/MList.ml[14,995+8]..[14,995+12])
+  structure_item (src/MList.ml[18,1138+0]..[22,1195+6])
+    Pstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/MList.ml[16,1009+0]..[17,1077+60])
+                Pstr_eval
+                expression (src/MList.ml[16,1009+0]..[17,1077+60])
+                  Pexp_constant PConst_string(" A list subject to a condition. (Be careful, though: the list is\n   of course constructed even if the condition is false.) ",(src/MList.ml[16,1009+0]..[17,1077+60]),None)
+            ]
+        pattern (src/MList.ml[18,1138+4]..[18,1138+7])
+          Ppat_var "ifn" (src/MList.ml[18,1138+4]..[18,1138+7])
+        expression (src/MList.ml[18,1138+8]..[22,1195+6]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/MList.ml[18,1138+8]..[18,1138+17])
+            Ppat_var "condition" (src/MList.ml[18,1138+8]..[18,1138+17])
+          expression (src/MList.ml[18,1138+18]..[22,1195+6]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/MList.ml[18,1138+18]..[18,1138+20])
+              Ppat_var "xs" (src/MList.ml[18,1138+18]..[18,1138+20])
+            expression (src/MList.ml[19,1161+2]..[22,1195+6])
+              Pexp_ifthenelse
+              expression (src/MList.ml[19,1161+5]..[19,1161+14])
+                Pexp_ident "condition" (src/MList.ml[19,1161+5]..[19,1161+14])
+              expression (src/MList.ml[20,1181+4]..[20,1181+6])
+                Pexp_ident "xs" (src/MList.ml[20,1181+4]..[20,1181+6])
+              Some
+                expression (src/MList.ml[22,1195+4]..[22,1195+6])
+                  Pexp_construct "[]" (src/MList.ml[22,1195+4]..[22,1195+6])
+                  None
+    ]
+  structure_item (src/MList.ml[26,1338+0]..[30,1397+6])
+    Pstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/MList.ml[24,1203+0]..[25,1271+66])
+                Pstr_eval
+                expression (src/MList.ml[24,1203+0]..[25,1271+66])
+                  Pexp_constant PConst_string(" A list subject to a condition. (Be careful, though: the list is\n         of course constructed even if the condition is false.) ",(src/MList.ml[24,1203+0]..[25,1271+66]),None)
+            ]
+        pattern (src/MList.ml[26,1338+4]..[26,1338+7])
+          Ppat_var "if1" (src/MList.ml[26,1338+4]..[26,1338+7])
+        expression (src/MList.ml[26,1338+8]..[30,1397+6]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/MList.ml[26,1338+8]..[26,1338+17])
+            Ppat_var "condition" (src/MList.ml[26,1338+8]..[26,1338+17])
+          expression (src/MList.ml[26,1338+18]..[30,1397+6]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/MList.ml[26,1338+18]..[26,1338+19])
+              Ppat_var "x" (src/MList.ml[26,1338+18]..[26,1338+19])
+            expression (src/MList.ml[27,1360+2]..[30,1397+6])
+              Pexp_ifthenelse
+              expression (src/MList.ml[27,1360+5]..[27,1360+14])
+                Pexp_ident "condition" (src/MList.ml[27,1360+5]..[27,1360+14])
+              expression (src/MList.ml[28,1380+4]..[28,1380+9])
+                Pexp_construct "::" (src/MList.ml[28,1380+6]..[28,1380+9]) ghost
+                Some
+                  expression (src/MList.ml[28,1380+6]..[28,1380+9]) ghost
+                    Pexp_tuple
+                    [
+                      expression (src/MList.ml[28,1380+6]..[28,1380+7])
+                        Pexp_ident "x" (src/MList.ml[28,1380+6]..[28,1380+7])
+                      expression (src/MList.ml[28,1380+8]..[28,1380+9]) ghost
+                        Pexp_construct "[]" (src/MList.ml[28,1380+8]..[28,1380+9]) ghost
+                        None
+                    ]
+              Some
+                expression (src/MList.ml[30,1397+4]..[30,1397+6])
+                  Pexp_construct "[]" (src/MList.ml[30,1397+4]..[30,1397+6])
+                  None
+    ]
+  structure_item (src/MList.ml[34,1507+0]..[38,1570+6])
+    Pstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/MList.ml[32,1405+0]..[33,1469+37])
+                Pstr_eval
+                expression (src/MList.ml[32,1405+0]..[33,1469+37])
+                  Pexp_constant PConst_string(" A lazy version of [ifn], where the list is constructed only\n         if the condition is true. ",(src/MList.ml[32,1405+0]..[33,1469+37]),None)
+            ]
+        pattern (src/MList.ml[34,1507+4]..[34,1507+11])
+          Ppat_var "ifnlazy" (src/MList.ml[34,1507+4]..[34,1507+11])
+        expression (src/MList.ml[34,1507+12]..[38,1570+6]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/MList.ml[34,1507+12]..[34,1507+21])
+            Ppat_var "condition" (src/MList.ml[34,1507+12]..[34,1507+21])
+          expression (src/MList.ml[34,1507+22]..[38,1570+6]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/MList.ml[34,1507+22]..[34,1507+24])
+              Ppat_var "xs" (src/MList.ml[34,1507+22]..[34,1507+24])
+            expression (src/MList.ml[35,1534+2]..[38,1570+6])
+              Pexp_ifthenelse
+              expression (src/MList.ml[35,1534+5]..[35,1534+14])
+                Pexp_ident "condition" (src/MList.ml[35,1534+5]..[35,1534+14])
+              expression (src/MList.ml[36,1554+4]..[36,1554+8])
+                Pexp_apply
+                expression (src/MList.ml[36,1554+4]..[36,1554+6])
+                  Pexp_ident "xs" (src/MList.ml[36,1554+4]..[36,1554+6])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/MList.ml[36,1554+6]..[36,1554+8])
+                      Pexp_construct "()" (src/MList.ml[36,1554+6]..[36,1554+8])
+                      None
+                ]
+              Some
+                expression (src/MList.ml[38,1570+4]..[38,1570+6])
+                  Pexp_construct "[]" (src/MList.ml[38,1570+4]..[38,1570+6])
+                  None
+    ]
+  structure_item (src/MList.ml[40,1578+0]..[41,1591+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/MList.ml[40,1578+4]..[40,1578+7])
+          Ppat_var "sum" (src/MList.ml[40,1578+4]..[40,1578+7])
+        expression (src/MList.ml[40,1578+8]..[41,1591+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/MList.ml[40,1578+8]..[40,1578+10])
+            Ppat_var "li" (src/MList.ml[40,1578+8]..[40,1578+10])
+          expression (src/MList.ml[41,1591+2]..[41,1591+20])
+            Pexp_apply
+            expression (src/MList.ml[41,1591+2]..[41,1591+11])
+              Pexp_ident "fold_left" (src/MList.ml[41,1591+2]..[41,1591+11])
+            [
+              <arg>
+              Nolabel
+                expression (src/MList.ml[41,1591+12]..[41,1591+15])
+                  Pexp_ident "+" (src/MList.ml[41,1591+12]..[41,1591+15])
+              <arg>
+              Nolabel
+                expression (src/MList.ml[41,1591+16]..[41,1591+17])
+                  Pexp_constant PConst_int (0,None)
+              <arg>
+              Nolabel
+                expression (src/MList.ml[41,1591+18]..[41,1591+20])
+                  Pexp_ident "li" (src/MList.ml[41,1591+18]..[41,1591+20])
+            ]
+    ]
+]
+
+include List
+let ifn condition xs = if condition then xs else [][@@ocaml.doc
+                                                     " A list subject to a condition. (Be careful, though: the list is\n   of course constructed even if the condition is false.) "]
+let if1 condition x = if condition then [x] else [][@@ocaml.doc
+                                                     " A list subject to a condition. (Be careful, though: the list is\n         of course constructed even if the condition is false.) "]
+let ifnlazy condition xs = if condition then xs () else [][@@ocaml.doc
+                                                            " A lazy version of [ifn], where the list is constructed only\n         if the condition is true. "]
+let sum li = fold_left (+) 0 li
+[
+  structure_item (src/MList.ml[14,995+0]..src/MList.ml[14,995+12])
+    Tstr_include    module_expr (src/MList.ml[14,995+8]..src/MList.ml[14,995+12])
+      module_expr (src/MList.ml[14,995+8]..src/MList.ml[14,995+12])
+        Tmod_ident "Stdlib!.List"
+  structure_item (src/MList.ml[18,1138+0]..src/MList.ml[22,1195+6])
+    Tstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/MList.ml[16,1009+0]..[17,1077+60])
+                Pstr_eval
+                expression (src/MList.ml[16,1009+0]..[17,1077+60])
+                  Pexp_constant PConst_string(" A list subject to a condition. (Be careful, though: the list is\n   of course constructed even if the condition is false.) ",(src/MList.ml[16,1009+0]..[17,1077+60]),None)
+            ]
+        pattern (src/MList.ml[18,1138+4]..src/MList.ml[18,1138+7])
+          Tpat_var "ifn/528"
+        expression (src/MList.ml[18,1138+8]..src/MList.ml[22,1195+6]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/MList.ml[18,1138+8]..src/MList.ml[18,1138+17])
+                Tpat_var "condition/530"
+              expression (src/MList.ml[18,1138+18]..src/MList.ml[22,1195+6]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/MList.ml[18,1138+18]..src/MList.ml[18,1138+20])
+                      Tpat_var "xs/531"
+                    expression (src/MList.ml[19,1161+2]..src/MList.ml[22,1195+6])
+                      Texp_ifthenelse
+                      expression (src/MList.ml[19,1161+5]..src/MList.ml[19,1161+14])
+                        Texp_ident "condition/530"
+                      expression (src/MList.ml[20,1181+4]..src/MList.ml[20,1181+6])
+                        Texp_ident "xs/531"
+                      Some
+                        expression (src/MList.ml[22,1195+4]..src/MList.ml[22,1195+6])
+                          Texp_construct "[]"
+                          []
+                ]
+          ]
+    ]
+  structure_item (src/MList.ml[26,1338+0]..src/MList.ml[30,1397+6])
+    Tstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/MList.ml[24,1203+0]..[25,1271+66])
+                Pstr_eval
+                expression (src/MList.ml[24,1203+0]..[25,1271+66])
+                  Pexp_constant PConst_string(" A list subject to a condition. (Be careful, though: the list is\n         of course constructed even if the condition is false.) ",(src/MList.ml[24,1203+0]..[25,1271+66]),None)
+            ]
+        pattern (src/MList.ml[26,1338+4]..src/MList.ml[26,1338+7])
+          Tpat_var "if1/532"
+        expression (src/MList.ml[26,1338+8]..src/MList.ml[30,1397+6]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/MList.ml[26,1338+8]..src/MList.ml[26,1338+17])
+                Tpat_var "condition/534"
+              expression (src/MList.ml[26,1338+18]..src/MList.ml[30,1397+6]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/MList.ml[26,1338+18]..src/MList.ml[26,1338+19])
+                      Tpat_var "x/535"
+                    expression (src/MList.ml[27,1360+2]..src/MList.ml[30,1397+6])
+                      Texp_ifthenelse
+                      expression (src/MList.ml[27,1360+5]..src/MList.ml[27,1360+14])
+                        Texp_ident "condition/534"
+                      expression (src/MList.ml[28,1380+4]..src/MList.ml[28,1380+9])
+                        Texp_construct "::"
+                        [
+                          expression (src/MList.ml[28,1380+6]..src/MList.ml[28,1380+7])
+                            Texp_ident "x/535"
+                          expression (src/MList.ml[28,1380+8]..src/MList.ml[28,1380+9]) ghost
+                            Texp_construct "[]"
+                            []
+                        ]
+                      Some
+                        expression (src/MList.ml[30,1397+4]..src/MList.ml[30,1397+6])
+                          Texp_construct "[]"
+                          []
+                ]
+          ]
+    ]
+  structure_item (src/MList.ml[34,1507+0]..src/MList.ml[38,1570+6])
+    Tstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/MList.ml[32,1405+0]..[33,1469+37])
+                Pstr_eval
+                expression (src/MList.ml[32,1405+0]..[33,1469+37])
+                  Pexp_constant PConst_string(" A lazy version of [ifn], where the list is constructed only\n         if the condition is true. ",(src/MList.ml[32,1405+0]..[33,1469+37]),None)
+            ]
+        pattern (src/MList.ml[34,1507+4]..src/MList.ml[34,1507+11])
+          Tpat_var "ifnlazy/536"
+        expression (src/MList.ml[34,1507+12]..src/MList.ml[38,1570+6]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/MList.ml[34,1507+12]..src/MList.ml[34,1507+21])
+                Tpat_var "condition/538"
+              expression (src/MList.ml[34,1507+22]..src/MList.ml[38,1570+6]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/MList.ml[34,1507+22]..src/MList.ml[34,1507+24])
+                      Tpat_var "xs/539"
+                    expression (src/MList.ml[35,1534+2]..src/MList.ml[38,1570+6])
+                      Texp_ifthenelse
+                      expression (src/MList.ml[35,1534+5]..src/MList.ml[35,1534+14])
+                        Texp_ident "condition/538"
+                      expression (src/MList.ml[36,1554+4]..src/MList.ml[36,1554+8])
+                        Texp_apply
+                        expression (src/MList.ml[36,1554+4]..src/MList.ml[36,1554+6])
+                          Texp_ident "xs/539"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/MList.ml[36,1554+6]..src/MList.ml[36,1554+8])
+                              Texp_construct "()"
+                              []
+                        ]
+                      Some
+                        expression (src/MList.ml[38,1570+4]..src/MList.ml[38,1570+6])
+                          Texp_construct "[]"
+                          []
+                ]
+          ]
+    ]
+  structure_item (src/MList.ml[40,1578+0]..src/MList.ml[41,1591+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/MList.ml[40,1578+4]..src/MList.ml[40,1578+7])
+          Tpat_var "sum/540"
+        expression (src/MList.ml[40,1578+8]..src/MList.ml[41,1591+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/MList.ml[40,1578+8]..src/MList.ml[40,1578+10])
+                Tpat_var "li/542"
+              expression (src/MList.ml[41,1591+2]..src/MList.ml[41,1591+20])
+                Texp_apply
+                expression (src/MList.ml[41,1591+2]..src/MList.ml[41,1591+11])
+                  Texp_ident "fold_left/488"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/MList.ml[41,1591+12]..src/MList.ml[41,1591+15])
+                      Texp_ident "Stdlib!.+"
+                  <arg>
+                    Nolabel
+                    expression (src/MList.ml[41,1591+16]..src/MList.ml[41,1591+17])
+                      Texp_constant Const_int 0
+                  <arg>
+                    Nolabel
+                    expression (src/MList.ml[41,1591+18]..src/MList.ml[41,1591+20])
+                      Texp_ident "li/542"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__MList>
+ "append"[value] -> CU Stdlib . "List"[module] . "append"[value];
+ "assoc"[value] -> CU Stdlib . "List"[module] . "assoc"[value];
+ "assoc_opt"[value] -> CU Stdlib . "List"[module] . "assoc_opt"[value];
+ "assq"[value] -> CU Stdlib . "List"[module] . "assq"[value];
+ "assq_opt"[value] -> CU Stdlib . "List"[module] . "assq_opt"[value];
+ "combine"[value] -> CU Stdlib . "List"[module] . "combine"[value];
+ "compare"[value] -> CU Stdlib . "List"[module] . "compare"[value];
+ "compare_length_with"[value] ->
+   CU Stdlib . "List"[module] . "compare_length_with"[value];
+ "compare_lengths"[value] ->
+   CU Stdlib . "List"[module] . "compare_lengths"[value];
+ "concat"[value] -> CU Stdlib . "List"[module] . "concat"[value];
+ "concat_map"[value] -> CU Stdlib . "List"[module] . "concat_map"[value];
+ "cons"[value] -> CU Stdlib . "List"[module] . "cons"[value];
+ "equal"[value] -> CU Stdlib . "List"[module] . "equal"[value];
+ "exists"[value] -> CU Stdlib . "List"[module] . "exists"[value];
+ "exists2"[value] -> CU Stdlib . "List"[module] . "exists2"[value];
+ "fast_sort"[value] -> CU Stdlib . "List"[module] . "fast_sort"[value];
+ "filter"[value] -> CU Stdlib . "List"[module] . "filter"[value];
+ "filter_map"[value] -> CU Stdlib . "List"[module] . "filter_map"[value];
+ "filteri"[value] -> CU Stdlib . "List"[module] . "filteri"[value];
+ "find"[value] -> CU Stdlib . "List"[module] . "find"[value];
+ "find_all"[value] -> CU Stdlib . "List"[module] . "find_all"[value];
+ "find_index"[value] -> CU Stdlib . "List"[module] . "find_index"[value];
+ "find_map"[value] -> CU Stdlib . "List"[module] . "find_map"[value];
+ "find_mapi"[value] -> CU Stdlib . "List"[module] . "find_mapi"[value];
+ "find_opt"[value] -> CU Stdlib . "List"[module] . "find_opt"[value];
+ "flatten"[value] -> CU Stdlib . "List"[module] . "flatten"[value];
+ "fold_left"[value] -> CU Stdlib . "List"[module] . "fold_left"[value];
+ "fold_left2"[value] -> CU Stdlib . "List"[module] . "fold_left2"[value];
+ "fold_left_map"[value] ->
+   CU Stdlib . "List"[module] . "fold_left_map"[value];
+ "fold_right"[value] -> CU Stdlib . "List"[module] . "fold_right"[value];
+ "fold_right2"[value] -> CU Stdlib . "List"[module] . "fold_right2"[value];
+ "for_all"[value] -> CU Stdlib . "List"[module] . "for_all"[value];
+ "for_all2"[value] -> CU Stdlib . "List"[module] . "for_all2"[value];
+ "hd"[value] -> CU Stdlib . "List"[module] . "hd"[value];
+ "if1"[value] -> <Dune__exe__MList.3>;
+ "ifn"[value] -> <Dune__exe__MList.0>;
+ "ifnlazy"[value] -> <Dune__exe__MList.6>;
+ "init"[value] -> CU Stdlib . "List"[module] . "init"[value];
+ "is_empty"[value] -> CU Stdlib . "List"[module] . "is_empty"[value];
+ "iter"[value] -> CU Stdlib . "List"[module] . "iter"[value];
+ "iter2"[value] -> CU Stdlib . "List"[module] . "iter2"[value];
+ "iteri"[value] -> CU Stdlib . "List"[module] . "iteri"[value];
+ "length"[value] -> CU Stdlib . "List"[module] . "length"[value];
+ "map"[value] -> CU Stdlib . "List"[module] . "map"[value];
+ "map2"[value] -> CU Stdlib . "List"[module] . "map2"[value];
+ "mapi"[value] -> CU Stdlib . "List"[module] . "mapi"[value];
+ "mem"[value] -> CU Stdlib . "List"[module] . "mem"[value];
+ "mem_assoc"[value] -> CU Stdlib . "List"[module] . "mem_assoc"[value];
+ "mem_assq"[value] -> CU Stdlib . "List"[module] . "mem_assq"[value];
+ "memq"[value] -> CU Stdlib . "List"[module] . "memq"[value];
+ "merge"[value] -> CU Stdlib . "List"[module] . "merge"[value];
+ "nth"[value] -> CU Stdlib . "List"[module] . "nth"[value];
+ "nth_opt"[value] -> CU Stdlib . "List"[module] . "nth_opt"[value];
+ "of_seq"[value] -> CU Stdlib . "List"[module] . "of_seq"[value];
+ "partition"[value] -> CU Stdlib . "List"[module] . "partition"[value];
+ "partition_map"[value] ->
+   CU Stdlib . "List"[module] . "partition_map"[value];
+ "remove_assoc"[value] -> CU Stdlib . "List"[module] . "remove_assoc"[value];
+ "remove_assq"[value] -> CU Stdlib . "List"[module] . "remove_assq"[value];
+ "rev"[value] -> CU Stdlib . "List"[module] . "rev"[value];
+ "rev_append"[value] -> CU Stdlib . "List"[module] . "rev_append"[value];
+ "rev_map"[value] -> CU Stdlib . "List"[module] . "rev_map"[value];
+ "rev_map2"[value] -> CU Stdlib . "List"[module] . "rev_map2"[value];
+ "sort"[value] -> CU Stdlib . "List"[module] . "sort"[value];
+ "sort_uniq"[value] -> CU Stdlib . "List"[module] . "sort_uniq"[value];
+ "split"[value] -> CU Stdlib . "List"[module] . "split"[value];
+ "stable_sort"[value] -> CU Stdlib . "List"[module] . "stable_sort"[value];
+ "sum"[value] -> <Dune__exe__MList.9>;
+ "t"[type] -> CU Stdlib . "List"[module] . "t"[type];
+ "tl"[value] -> CU Stdlib . "List"[module] . "tl"[value];
+ "to_seq"[value] -> CU Stdlib . "List"[module] . "to_seq"[value];
+ }
+
+(let
+  (include/1182 =
+     (let (let/1185 = (global Stdlib__List!)) (global Stdlib__List!))
+   length/463 =a (field_mut 0 include/1182))
+  (seq (setfield_ptr(root-init) 0 (global Dune__exe__MList!) length/463)
+    (let (compare_lengths/464 =a (field_mut 1 include/1182))
+      (seq
+        (setfield_ptr(root-init) 1 (global Dune__exe__MList!)
+          compare_lengths/464)
+        (let (compare_length_with/465 =a (field_mut 2 include/1182))
+          (seq
+            (setfield_ptr(root-init) 2 (global Dune__exe__MList!)
+              compare_length_with/465)
+            (let (is_empty/466 =a (field_mut 3 include/1182))
+              (seq
+                (setfield_ptr(root-init) 3 (global Dune__exe__MList!)
+                  is_empty/466)
+                (let (cons/467 =a (field_mut 4 include/1182))
+                  (seq
+                    (setfield_ptr(root-init) 4 (global Dune__exe__MList!)
+                      cons/467)
+                    (let (hd/468 =a (field_mut 5 include/1182))
+                      (seq
+                        (setfield_ptr(root-init) 5 (global Dune__exe__MList!)
+                          hd/468)
+                        (let (tl/469 =a (field_mut 6 include/1182))
+                          (seq
+                            (setfield_ptr(root-init) 6
+                              (global Dune__exe__MList!) tl/469)
+                            (let (nth/470 =a (field_mut 7 include/1182))
+                              (seq
+                                (setfield_ptr(root-init) 7
+                                  (global Dune__exe__MList!) nth/470)
+                                (let
+                                  (nth_opt/471 =a (field_mut 8 include/1182))
+                                  (seq
+                                    (setfield_ptr(root-init) 8
+                                      (global Dune__exe__MList!) nth_opt/471)
+                                    (let
+                                      (rev/472 =a (field_mut 9 include/1182))
+                                      (seq
+                                        (setfield_ptr(root-init) 9
+                                          (global Dune__exe__MList!) rev/472)
+                                        (let
+                                          (init/473 =a
+                                             (field_mut 10 include/1182))
+                                          (seq
+                                            (setfield_ptr(root-init) 10
+                                              (global Dune__exe__MList!)
+                                              init/473)
+                                            (let
+                                              (append/474 =a
+                                                 (field_mut 11 include/1182))
+                                              (seq
+                                                (setfield_ptr(root-init) 11
+                                                  (global Dune__exe__MList!)
+                                                  append/474)
+                                                (let
+                                                  (rev_append/475 =a
+                                                     (field_mut 12
+                                                       include/1182))
+                                                  (seq
+                                                    (setfield_ptr(root-init) 12
+                                                      (global Dune__exe__MList!)
+                                                      rev_append/475)
+                                                    (let
+                                                      (concat/476 =a
+                                                         (field_mut 13
+                                                           include/1182))
+                                                      (seq
+                                                        (setfield_ptr(root-init) 13
+                                                          (global Dune__exe__MList!)
+                                                          concat/476)
+                                                        (let
+                                                          (flatten/477 =a
+                                                             (field_mut 14
+                                                               include/1182))
+                                                          (seq
+                                                            (setfield_ptr(root-init) 14
+                                                              (global Dune__exe__MList!)
+                                                              flatten/477)
+                                                            (let
+                                                              (equal/478 =a
+                                                                 (field_mut 15
+                                                                   include/1182))
+                                                              (seq
+                                                                (setfield_ptr(root-init) 15
+                                                                  (global Dune__exe__MList!)
+                                                                  equal/478)
+                                                                (let
+                                                                  (compare/479 =a
+                                                                    (field_mut 16
+                                                                    include/1182))
+                                                                  (seq
+                                                                    (setfield_ptr(root-init) 16
+                                                                    (global Dune__exe__MList!)
+                                                                    compare/479)
+                                                                    (let
+                                                                    (iter/480 =a
+                                                                    (field_mut 17
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 17
+                                                                    (global Dune__exe__MList!)
+                                                                    iter/480)
+                                                                    (let
+                                                                    (iteri/481 =a
+                                                                    (field_mut 18
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 18
+                                                                    (global Dune__exe__MList!)
+                                                                    iteri/481)
+                                                                    (let
+                                                                    (map/482 =a
+                                                                    (field_mut 19
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 19
+                                                                    (global Dune__exe__MList!)
+                                                                    map/482)
+                                                                    (let
+                                                                    (mapi/483 =a
+                                                                    (field_mut 20
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 20
+                                                                    (global Dune__exe__MList!)
+                                                                    mapi/483)
+                                                                    (let
+                                                                    (rev_map/484 =a
+                                                                    (field_mut 21
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 21
+                                                                    (global Dune__exe__MList!)
+                                                                    rev_map/484)
+                                                                    (let
+                                                                    (filter_map/485 =a
+                                                                    (field_mut 22
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 22
+                                                                    (global Dune__exe__MList!)
+                                                                    filter_map/485)
+                                                                    (let
+                                                                    (concat_map/486 =a
+                                                                    (field_mut 23
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 23
+                                                                    (global Dune__exe__MList!)
+                                                                    concat_map/486)
+                                                                    (let
+                                                                    (fold_left_map/487 =a
+                                                                    (field_mut 24
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 24
+                                                                    (global Dune__exe__MList!)
+                                                                    fold_left_map/487)
+                                                                    (let
+                                                                    (fold_left/488 =a
+                                                                    (field_mut 25
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 25
+                                                                    (global Dune__exe__MList!)
+                                                                    fold_left/488)
+                                                                    (let
+                                                                    (fold_right/489 =a
+                                                                    (field_mut 26
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 26
+                                                                    (global Dune__exe__MList!)
+                                                                    fold_right/489)
+                                                                    (let
+                                                                    (iter2/490 =a
+                                                                    (field_mut 27
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 27
+                                                                    (global Dune__exe__MList!)
+                                                                    iter2/490)
+                                                                    (let
+                                                                    (map2/491 =a
+                                                                    (field_mut 28
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 28
+                                                                    (global Dune__exe__MList!)
+                                                                    map2/491)
+                                                                    (let
+                                                                    (rev_map2/492 =a
+                                                                    (field_mut 29
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 29
+                                                                    (global Dune__exe__MList!)
+                                                                    rev_map2/492)
+                                                                    (let
+                                                                    (fold_left2/493 =a
+                                                                    (field_mut 30
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 30
+                                                                    (global Dune__exe__MList!)
+                                                                    fold_left2/493)
+                                                                    (let
+                                                                    (fold_right2/494 =a
+                                                                    (field_mut 31
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 31
+                                                                    (global Dune__exe__MList!)
+                                                                    fold_right2/494)
+                                                                    (let
+                                                                    (for_all/495 =a
+                                                                    (field_mut 32
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 32
+                                                                    (global Dune__exe__MList!)
+                                                                    for_all/495)
+                                                                    (let
+                                                                    (exists/496 =a
+                                                                    (field_mut 33
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 33
+                                                                    (global Dune__exe__MList!)
+                                                                    exists/496)
+                                                                    (let
+                                                                    (for_all2/497 =a
+                                                                    (field_mut 34
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 34
+                                                                    (global Dune__exe__MList!)
+                                                                    for_all2/497)
+                                                                    (let
+                                                                    (exists2/498 =a
+                                                                    (field_mut 35
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 35
+                                                                    (global Dune__exe__MList!)
+                                                                    exists2/498)
+                                                                    (let
+                                                                    (mem/499 =a
+                                                                    (field_mut 36
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 36
+                                                                    (global Dune__exe__MList!)
+                                                                    mem/499)
+                                                                    (let
+                                                                    (memq/500 =a
+                                                                    (field_mut 37
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 37
+                                                                    (global Dune__exe__MList!)
+                                                                    memq/500)
+                                                                    (let
+                                                                    (find/501 =a
+                                                                    (field_mut 38
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 38
+                                                                    (global Dune__exe__MList!)
+                                                                    find/501)
+                                                                    (let
+                                                                    (find_opt/502 =a
+                                                                    (field_mut 39
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 39
+                                                                    (global Dune__exe__MList!)
+                                                                    find_opt/502)
+                                                                    (let
+                                                                    (find_index/503 =a
+                                                                    (field_mut 40
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 40
+                                                                    (global Dune__exe__MList!)
+                                                                    find_index/503)
+                                                                    (let
+                                                                    (find_map/504 =a
+                                                                    (field_mut 41
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 41
+                                                                    (global Dune__exe__MList!)
+                                                                    find_map/504)
+                                                                    (let
+                                                                    (find_mapi/505 =a
+                                                                    (field_mut 42
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 42
+                                                                    (global Dune__exe__MList!)
+                                                                    find_mapi/505)
+                                                                    (let
+                                                                    (filter/506 =a
+                                                                    (field_mut 43
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 43
+                                                                    (global Dune__exe__MList!)
+                                                                    filter/506)
+                                                                    (let
+                                                                    (find_all/507 =a
+                                                                    (field_mut 44
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 44
+                                                                    (global Dune__exe__MList!)
+                                                                    find_all/507)
+                                                                    (let
+                                                                    (filteri/508 =a
+                                                                    (field_mut 45
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 45
+                                                                    (global Dune__exe__MList!)
+                                                                    filteri/508)
+                                                                    (let
+                                                                    (partition/509 =a
+                                                                    (field_mut 46
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 46
+                                                                    (global Dune__exe__MList!)
+                                                                    partition/509)
+                                                                    (let
+                                                                    (partition_map/510 =a
+                                                                    (field_mut 47
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 47
+                                                                    (global Dune__exe__MList!)
+                                                                    partition_map/510)
+                                                                    (let
+                                                                    (assoc/511 =a
+                                                                    (field_mut 48
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 48
+                                                                    (global Dune__exe__MList!)
+                                                                    assoc/511)
+                                                                    (let
+                                                                    (assoc_opt/512 =a
+                                                                    (field_mut 49
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 49
+                                                                    (global Dune__exe__MList!)
+                                                                    assoc_opt/512)
+                                                                    (let
+                                                                    (assq/513 =a
+                                                                    (field_mut 50
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 50
+                                                                    (global Dune__exe__MList!)
+                                                                    assq/513)
+                                                                    (let
+                                                                    (assq_opt/514 =a
+                                                                    (field_mut 51
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 51
+                                                                    (global Dune__exe__MList!)
+                                                                    assq_opt/514)
+                                                                    (let
+                                                                    (mem_assoc/515 =a
+                                                                    (field_mut 52
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 52
+                                                                    (global Dune__exe__MList!)
+                                                                    mem_assoc/515)
+                                                                    (let
+                                                                    (mem_assq/516 =a
+                                                                    (field_mut 53
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 53
+                                                                    (global Dune__exe__MList!)
+                                                                    mem_assq/516)
+                                                                    (let
+                                                                    (remove_assoc/517 =a
+                                                                    (field_mut 54
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 54
+                                                                    (global Dune__exe__MList!)
+                                                                    remove_assoc/517)
+                                                                    (let
+                                                                    (remove_assq/518 =a
+                                                                    (field_mut 55
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 55
+                                                                    (global Dune__exe__MList!)
+                                                                    remove_assq/518)
+                                                                    (let
+                                                                    (split/519 =a
+                                                                    (field_mut 56
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 56
+                                                                    (global Dune__exe__MList!)
+                                                                    split/519)
+                                                                    (let
+                                                                    (combine/520 =a
+                                                                    (field_mut 57
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 57
+                                                                    (global Dune__exe__MList!)
+                                                                    combine/520)
+                                                                    (let
+                                                                    (sort/521 =a
+                                                                    (field_mut 58
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 58
+                                                                    (global Dune__exe__MList!)
+                                                                    sort/521)
+                                                                    (let
+                                                                    (stable_sort/522 =a
+                                                                    (field_mut 59
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 59
+                                                                    (global Dune__exe__MList!)
+                                                                    stable_sort/522)
+                                                                    (let
+                                                                    (fast_sort/523 =a
+                                                                    (field_mut 60
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 60
+                                                                    (global Dune__exe__MList!)
+                                                                    fast_sort/523)
+                                                                    (let
+                                                                    (sort_uniq/524 =a
+                                                                    (field_mut 61
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 61
+                                                                    (global Dune__exe__MList!)
+                                                                    sort_uniq/524)
+                                                                    (let
+                                                                    (merge/525 =a
+                                                                    (field_mut 62
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 62
+                                                                    (global Dune__exe__MList!)
+                                                                    merge/525)
+                                                                    (let
+                                                                    (to_seq/526 =a
+                                                                    (field_mut 63
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 63
+                                                                    (global Dune__exe__MList!)
+                                                                    to_seq/526)
+                                                                    (let
+                                                                    (of_seq/527 =a
+                                                                    (field_mut 64
+                                                                    include/1182))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 64
+                                                                    (global Dune__exe__MList!)
+                                                                    of_seq/527)
+                                                                    (let
+                                                                    (ifn/528 =
+                                                                    (function
+                                                                    condition/530[int]
+                                                                    xs/531
+                                                                    (if
+                                                                    condition/530
+                                                                    xs/531 0)))
+                                                                    (setfield_ptr(root-init) 65
+                                                                    (global Dune__exe__MList!)
+                                                                    ifn/528))
+                                                                    (let
+                                                                    (if1/532 =
+                                                                    (function
+                                                                    condition/534[int]
+                                                                    x/535
+                                                                    (if
+                                                                    condition/534
+                                                                    (makeblock 0
+                                                                    x/535 0)
+                                                                    0)))
+                                                                    (setfield_ptr(root-init) 66
+                                                                    (global Dune__exe__MList!)
+                                                                    if1/532))
+                                                                    (let
+                                                                    (ifnlazy/536 =
+                                                                    (function
+                                                                    condition/538[int]
+                                                                    xs/539
+                                                                    (if
+                                                                    condition/538
+                                                                    (apply
+                                                                    xs/539 0)
+                                                                    0)))
+                                                                    (setfield_ptr(root-init) 67
+                                                                    (global Dune__exe__MList!)
+                                                                    ifnlazy/536))
+                                                                    (let
+                                                                    (sum/540 =
+                                                                    (function
+                                                                    li/542
+                                                                    : int
+                                                                    (apply
+                                                                    (field_imm 25
+                                                                    (global Dune__exe__MList!))
+                                                                    (function
+                                                                    prim/1184
+                                                                    prim/1183
+                                                                    stub
+                                                                    (+
+                                                                    prim/1184
+                                                                    prim/1183))
+                                                                    0 li/542)))
+                                                                    (setfield_ptr(root-init) 68
+                                                                    (global Dune__exe__MList!)
+                                                                    sum/540))
+                                                                    0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+(let
+  (include/1182 =
+     (let (let/1185 = (global Stdlib__List!)) (global Stdlib__List!)))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__MList!)
+      (field_mut 0 include/1182))
+    (setfield_ptr(root-init) 1 (global Dune__exe__MList!)
+      (field_mut 1 include/1182))
+    (setfield_ptr(root-init) 2 (global Dune__exe__MList!)
+      (field_mut 2 include/1182))
+    (setfield_ptr(root-init) 3 (global Dune__exe__MList!)
+      (field_mut 3 include/1182))
+    (setfield_ptr(root-init) 4 (global Dune__exe__MList!)
+      (field_mut 4 include/1182))
+    (setfield_ptr(root-init) 5 (global Dune__exe__MList!)
+      (field_mut 5 include/1182))
+    (setfield_ptr(root-init) 6 (global Dune__exe__MList!)
+      (field_mut 6 include/1182))
+    (setfield_ptr(root-init) 7 (global Dune__exe__MList!)
+      (field_mut 7 include/1182))
+    (setfield_ptr(root-init) 8 (global Dune__exe__MList!)
+      (field_mut 8 include/1182))
+    (setfield_ptr(root-init) 9 (global Dune__exe__MList!)
+      (field_mut 9 include/1182))
+    (setfield_ptr(root-init) 10 (global Dune__exe__MList!)
+      (field_mut 10 include/1182))
+    (setfield_ptr(root-init) 11 (global Dune__exe__MList!)
+      (field_mut 11 include/1182))
+    (setfield_ptr(root-init) 12 (global Dune__exe__MList!)
+      (field_mut 12 include/1182))
+    (setfield_ptr(root-init) 13 (global Dune__exe__MList!)
+      (field_mut 13 include/1182))
+    (setfield_ptr(root-init) 14 (global Dune__exe__MList!)
+      (field_mut 14 include/1182))
+    (setfield_ptr(root-init) 15 (global Dune__exe__MList!)
+      (field_mut 15 include/1182))
+    (setfield_ptr(root-init) 16 (global Dune__exe__MList!)
+      (field_mut 16 include/1182))
+    (setfield_ptr(root-init) 17 (global Dune__exe__MList!)
+      (field_mut 17 include/1182))
+    (setfield_ptr(root-init) 18 (global Dune__exe__MList!)
+      (field_mut 18 include/1182))
+    (setfield_ptr(root-init) 19 (global Dune__exe__MList!)
+      (field_mut 19 include/1182))
+    (setfield_ptr(root-init) 20 (global Dune__exe__MList!)
+      (field_mut 20 include/1182))
+    (setfield_ptr(root-init) 21 (global Dune__exe__MList!)
+      (field_mut 21 include/1182))
+    (setfield_ptr(root-init) 22 (global Dune__exe__MList!)
+      (field_mut 22 include/1182))
+    (setfield_ptr(root-init) 23 (global Dune__exe__MList!)
+      (field_mut 23 include/1182))
+    (setfield_ptr(root-init) 24 (global Dune__exe__MList!)
+      (field_mut 24 include/1182))
+    (setfield_ptr(root-init) 25 (global Dune__exe__MList!)
+      (field_mut 25 include/1182))
+    (setfield_ptr(root-init) 26 (global Dune__exe__MList!)
+      (field_mut 26 include/1182))
+    (setfield_ptr(root-init) 27 (global Dune__exe__MList!)
+      (field_mut 27 include/1182))
+    (setfield_ptr(root-init) 28 (global Dune__exe__MList!)
+      (field_mut 28 include/1182))
+    (setfield_ptr(root-init) 29 (global Dune__exe__MList!)
+      (field_mut 29 include/1182))
+    (setfield_ptr(root-init) 30 (global Dune__exe__MList!)
+      (field_mut 30 include/1182))
+    (setfield_ptr(root-init) 31 (global Dune__exe__MList!)
+      (field_mut 31 include/1182))
+    (setfield_ptr(root-init) 32 (global Dune__exe__MList!)
+      (field_mut 32 include/1182))
+    (setfield_ptr(root-init) 33 (global Dune__exe__MList!)
+      (field_mut 33 include/1182))
+    (setfield_ptr(root-init) 34 (global Dune__exe__MList!)
+      (field_mut 34 include/1182))
+    (setfield_ptr(root-init) 35 (global Dune__exe__MList!)
+      (field_mut 35 include/1182))
+    (setfield_ptr(root-init) 36 (global Dune__exe__MList!)
+      (field_mut 36 include/1182))
+    (setfield_ptr(root-init) 37 (global Dune__exe__MList!)
+      (field_mut 37 include/1182))
+    (setfield_ptr(root-init) 38 (global Dune__exe__MList!)
+      (field_mut 38 include/1182))
+    (setfield_ptr(root-init) 39 (global Dune__exe__MList!)
+      (field_mut 39 include/1182))
+    (setfield_ptr(root-init) 40 (global Dune__exe__MList!)
+      (field_mut 40 include/1182))
+    (setfield_ptr(root-init) 41 (global Dune__exe__MList!)
+      (field_mut 41 include/1182))
+    (setfield_ptr(root-init) 42 (global Dune__exe__MList!)
+      (field_mut 42 include/1182))
+    (setfield_ptr(root-init) 43 (global Dune__exe__MList!)
+      (field_mut 43 include/1182))
+    (setfield_ptr(root-init) 44 (global Dune__exe__MList!)
+      (field_mut 44 include/1182))
+    (setfield_ptr(root-init) 45 (global Dune__exe__MList!)
+      (field_mut 45 include/1182))
+    (setfield_ptr(root-init) 46 (global Dune__exe__MList!)
+      (field_mut 46 include/1182))
+    (setfield_ptr(root-init) 47 (global Dune__exe__MList!)
+      (field_mut 47 include/1182))
+    (setfield_ptr(root-init) 48 (global Dune__exe__MList!)
+      (field_mut 48 include/1182))
+    (setfield_ptr(root-init) 49 (global Dune__exe__MList!)
+      (field_mut 49 include/1182))
+    (setfield_ptr(root-init) 50 (global Dune__exe__MList!)
+      (field_mut 50 include/1182))
+    (setfield_ptr(root-init) 51 (global Dune__exe__MList!)
+      (field_mut 51 include/1182))
+    (setfield_ptr(root-init) 52 (global Dune__exe__MList!)
+      (field_mut 52 include/1182))
+    (setfield_ptr(root-init) 53 (global Dune__exe__MList!)
+      (field_mut 53 include/1182))
+    (setfield_ptr(root-init) 54 (global Dune__exe__MList!)
+      (field_mut 54 include/1182))
+    (setfield_ptr(root-init) 55 (global Dune__exe__MList!)
+      (field_mut 55 include/1182))
+    (setfield_ptr(root-init) 56 (global Dune__exe__MList!)
+      (field_mut 56 include/1182))
+    (setfield_ptr(root-init) 57 (global Dune__exe__MList!)
+      (field_mut 57 include/1182))
+    (setfield_ptr(root-init) 58 (global Dune__exe__MList!)
+      (field_mut 58 include/1182))
+    (setfield_ptr(root-init) 59 (global Dune__exe__MList!)
+      (field_mut 59 include/1182))
+    (setfield_ptr(root-init) 60 (global Dune__exe__MList!)
+      (field_mut 60 include/1182))
+    (setfield_ptr(root-init) 61 (global Dune__exe__MList!)
+      (field_mut 61 include/1182))
+    (setfield_ptr(root-init) 62 (global Dune__exe__MList!)
+      (field_mut 62 include/1182))
+    (setfield_ptr(root-init) 63 (global Dune__exe__MList!)
+      (field_mut 63 include/1182))
+    (setfield_ptr(root-init) 64 (global Dune__exe__MList!)
+      (field_mut 64 include/1182))
+    (let
+      (ifn/528 =
+         (function condition/530[int] xs/531 (if condition/530 xs/531 0)))
+      (setfield_ptr(root-init) 65 (global Dune__exe__MList!) ifn/528))
+    (let
+      (if1/532 =
+         (function condition/534[int] x/535
+           (if condition/534 (makeblock 0 x/535 0) 0)))
+      (setfield_ptr(root-init) 66 (global Dune__exe__MList!) if1/532))
+    (let
+      (ifnlazy/536 =
+         (function condition/538[int] xs/539
+           (if condition/538 (apply xs/539 0) 0)))
+      (setfield_ptr(root-init) 67 (global Dune__exe__MList!) ifnlazy/536))
+    (let
+      (sum/540 =
+         (function li/542 : int
+           (apply (field_imm 25 (global Dune__exe__MList!))
+             (function prim/1184 prim/1183 stub (+ prim/1184 prim/1183)) 0
+             li/542)))
+      (setfield_ptr(root-init) 68 (global Dune__exe__MList!) sum/540))
+    0))

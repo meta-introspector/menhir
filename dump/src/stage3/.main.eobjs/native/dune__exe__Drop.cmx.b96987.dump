@@ -1,0 +1,2945 @@
+[
+  structure_item (src/Drop.ml[14,994+0]..[14,994+27])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[14,994+4]..[14,994+9])
+          Ppat_var "value" (src/Drop.ml[14,994+4]..[14,994+9])
+        expression (src/Drop.ml[14,994+12]..[14,994+27])
+          Pexp_ident "Positions.value" (src/Drop.ml[14,994+12]..[14,994+27])
+    ]
+  structure_item (src/Drop.ml[16,1040+0]..[16,1040+17])
+    Pstr_module
+    "S" (src/Drop.ml[16,1040+7]..[16,1040+8])
+      module_expr (src/Drop.ml[16,1040+11]..[16,1040+17])
+        Pmod_ident "Syntax" (src/Drop.ml[16,1040+11]..[16,1040+17])
+  structure_item (src/Drop.ml[18,1076+0]..[18,1076+22])
+    Pstr_module
+    "T" (src/Drop.ml[18,1076+7]..[18,1076+8])
+      module_expr (src/Drop.ml[18,1076+11]..[18,1076+22])
+        Pmod_ident "BasicSyntax" (src/Drop.ml[18,1076+11]..[18,1076+22])
+  structure_item (src/Drop.ml[24,1233+0]..[32,1488+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[24,1233+4]..[24,1233+18])
+          Ppat_var "drop_parameter" (src/Drop.ml[24,1233+4]..[24,1233+18])
+        expression (src/Drop.ml[24,1233+19]..[32,1488+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[24,1233+19]..[24,1233+40])
+            Ppat_constraint
+            pattern (src/Drop.ml[24,1233+20]..[24,1233+25])
+              Ppat_var "param" (src/Drop.ml[24,1233+20]..[24,1233+25])
+            core_type (src/Drop.ml[24,1233+28]..[24,1233+39])
+              Ptyp_constr "S.parameter" (src/Drop.ml[24,1233+28]..[24,1233+39])
+              []
+          expression (src/Drop.ml[24,1233+41]..[32,1488+18])
+            Pexp_constraint
+            expression (src/Drop.ml[25,1287+2]..[32,1488+18])
+              Pexp_match
+              expression (src/Drop.ml[25,1287+8]..[25,1287+13])
+                Pexp_ident "param" (src/Drop.ml[25,1287+8]..[25,1287+13])
+              [
+                <case>
+                  pattern (src/Drop.ml[26,1306+4]..[26,1306+22])
+                    Ppat_construct "S.ParameterVar" (src/Drop.ml[26,1306+4]..[26,1306+18])
+                    Some
+                      []
+                      pattern (src/Drop.ml[26,1306+19]..[26,1306+22])
+                        Ppat_var "sym" (src/Drop.ml[26,1306+19]..[26,1306+22])
+                  expression (src/Drop.ml[27,1332+6]..[27,1332+15])
+                    Pexp_apply
+                    expression (src/Drop.ml[27,1332+6]..[27,1332+11])
+                      Pexp_ident "value" (src/Drop.ml[27,1332+6]..[27,1332+11])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/Drop.ml[27,1332+12]..[27,1332+15])
+                          Pexp_ident "sym" (src/Drop.ml[27,1332+12]..[27,1332+15])
+                    ]
+                <case>
+                  pattern (src/Drop.ml[28,1348+4]..[28,1348+20])
+                    Ppat_construct "S.ParameterApp" (src/Drop.ml[28,1348+4]..[28,1348+18])
+                    Some
+                      []
+                      pattern (src/Drop.ml[28,1348+19]..[28,1348+20])
+                        Ppat_any
+                  expression (src/Drop.ml[30,1439+6]..[30,1439+18])
+                    Pexp_assert
+                    expression (src/Drop.ml[30,1439+13]..[30,1439+18])
+                      Pexp_construct "false" (src/Drop.ml[30,1439+13]..[30,1439+18])
+                      None
+                <case>
+                  pattern (src/Drop.ml[31,1458+4]..[31,1458+26])
+                    Ppat_construct "S.ParameterAnonymous" (src/Drop.ml[31,1458+4]..[31,1458+24])
+                    Some
+                      []
+                      pattern (src/Drop.ml[31,1458+25]..[31,1458+26])
+                        Ppat_any
+                  expression (src/Drop.ml[32,1488+6]..[32,1488+18])
+                    Pexp_assert
+                    expression (src/Drop.ml[32,1488+13]..[32,1488+18])
+                      Pexp_construct "false" (src/Drop.ml[32,1488+13]..[32,1488+18])
+                      None
+              ]
+            core_type (src/Drop.ml[24,1233+43]..[24,1233+51])
+              Ptyp_constr "S.symbol" (src/Drop.ml[24,1233+43]..[24,1233+51])
+              []
+    ]
+  structure_item (src/Drop.ml[34,1508+0]..[39,1695+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[34,1508+4]..[34,1508+17])
+          Ppat_var "drop_producer" (src/Drop.ml[34,1508+4]..[34,1508+17])
+        expression (src/Drop.ml[34,1508+18]..[39,1695+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[34,1508+18]..[34,1508+51])
+            Ppat_constraint
+            pattern (src/Drop.ml[34,1508+19]..[34,1508+37])
+              Ppat_tuple
+              [
+                pattern (src/Drop.ml[34,1508+20]..[34,1508+22])
+                  Ppat_var "id" (src/Drop.ml[34,1508+20]..[34,1508+22])
+                pattern (src/Drop.ml[34,1508+24]..[34,1508+29])
+                  Ppat_var "param" (src/Drop.ml[34,1508+24]..[34,1508+29])
+                pattern (src/Drop.ml[34,1508+31]..[34,1508+36])
+                  Ppat_var "attrs" (src/Drop.ml[34,1508+31]..[34,1508+36])
+              ]
+            core_type (src/Drop.ml[34,1508+40]..[34,1508+50])
+              Ptyp_constr "S.producer" (src/Drop.ml[34,1508+40]..[34,1508+50])
+              []
+          expression (src/Drop.ml[34,1508+52]..[39,1695+3])
+            Pexp_constraint
+            expression (src/Drop.ml[35,1575+2]..[39,1695+3])
+              Pexp_record
+              [
+                "T.producer_identifier" (src/Drop.ml[36,1579+4]..[36,1579+25])
+                  expression (src/Drop.ml[36,1579+28]..[36,1579+30])
+                    Pexp_ident "id" (src/Drop.ml[36,1579+28]..[36,1579+30])
+                "T.producer_symbol" (src/Drop.ml[37,1611+4]..[37,1611+21])
+                  expression (src/Drop.ml[37,1611+28]..[37,1611+48])
+                    Pexp_apply
+                    expression (src/Drop.ml[37,1611+28]..[37,1611+42])
+                      Pexp_ident "drop_parameter" (src/Drop.ml[37,1611+28]..[37,1611+42])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/Drop.ml[37,1611+43]..[37,1611+48])
+                          Pexp_ident "param" (src/Drop.ml[37,1611+43]..[37,1611+48])
+                    ]
+                "T.producer_attributes" (src/Drop.ml[38,1661+4]..[38,1661+25])
+                  expression (src/Drop.ml[38,1661+28]..[38,1661+33])
+                    Pexp_ident "attrs" (src/Drop.ml[38,1661+28]..[38,1661+33])
+              ]
+              None
+            core_type (src/Drop.ml[34,1508+54]..[34,1508+64])
+              Ptyp_constr "T.producer" (src/Drop.ml[34,1508+54]..[34,1508+64])
+              []
+    ]
+  structure_item (src/Drop.ml[41,1700+0]..[48,2094+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[41,1700+4]..[41,1700+15])
+          Ppat_var "drop_branch" (src/Drop.ml[41,1700+4]..[41,1700+15])
+        expression (src/Drop.ml[41,1700+16]..[48,2094+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[41,1700+16]..[41,1700+49])
+            Ppat_constraint
+            pattern (src/Drop.ml[41,1700+17]..[41,1700+23])
+              Ppat_var "branch" (src/Drop.ml[41,1700+17]..[41,1700+23])
+            core_type (src/Drop.ml[41,1700+26]..[41,1700+48])
+              Ptyp_constr "S.parameterized_branch" (src/Drop.ml[41,1700+26]..[41,1700+48])
+              []
+          expression (src/Drop.ml[41,1700+50]..[48,2094+3])
+            Pexp_constraint
+            expression (src/Drop.ml[42,1763+2]..[48,2094+3])
+              Pexp_record
+              [
+                "T.branch_position" (src/Drop.ml[43,1767+4]..[43,1767+21])
+                  expression (src/Drop.ml[43,1767+32]..[43,1767+59])
+                    Pexp_field
+                    expression (src/Drop.ml[43,1767+32]..[43,1767+38])
+                      Pexp_ident "branch" (src/Drop.ml[43,1767+32]..[43,1767+38])
+                    "S.pr_branch_position" (src/Drop.ml[43,1767+39]..[43,1767+59])
+                "T.producers" (src/Drop.ml[44,1828+4]..[44,1828+15])
+                  expression (src/Drop.ml[44,1828+32]..[44,1828+76])
+                    Pexp_apply
+                    expression (src/Drop.ml[44,1828+32]..[44,1828+40])
+                      Pexp_ident "List.map" (src/Drop.ml[44,1828+32]..[44,1828+40])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/Drop.ml[44,1828+41]..[44,1828+54])
+                          Pexp_ident "drop_producer" (src/Drop.ml[44,1828+41]..[44,1828+54])
+                      <arg>
+                      Nolabel
+                        expression (src/Drop.ml[44,1828+55]..[44,1828+76])
+                          Pexp_field
+                          expression (src/Drop.ml[44,1828+55]..[44,1828+61])
+                            Pexp_ident "branch" (src/Drop.ml[44,1828+55]..[44,1828+61])
+                          "S.pr_producers" (src/Drop.ml[44,1828+62]..[44,1828+76])
+                    ]
+                "T.action" (src/Drop.ml[45,1906+4]..[45,1906+12])
+                  expression (src/Drop.ml[45,1906+32]..[45,1906+50])
+                    Pexp_field
+                    expression (src/Drop.ml[45,1906+32]..[45,1906+38])
+                      Pexp_ident "branch" (src/Drop.ml[45,1906+32]..[45,1906+38])
+                    "S.pr_action" (src/Drop.ml[45,1906+39]..[45,1906+50])
+                "T.branch_prec_annotation" (src/Drop.ml[46,1958+4]..[46,1958+28])
+                  expression (src/Drop.ml[46,1958+32]..[46,1958+66])
+                    Pexp_field
+                    expression (src/Drop.ml[46,1958+32]..[46,1958+38])
+                      Pexp_ident "branch" (src/Drop.ml[46,1958+32]..[46,1958+38])
+                    "S.pr_branch_prec_annotation" (src/Drop.ml[46,1958+39]..[46,1958+66])
+                "T.branch_production_level" (src/Drop.ml[47,2026+4]..[47,2026+29])
+                  expression (src/Drop.ml[47,2026+32]..[47,2026+67])
+                    Pexp_field
+                    expression (src/Drop.ml[47,2026+32]..[47,2026+38])
+                      Pexp_ident "branch" (src/Drop.ml[47,2026+32]..[47,2026+38])
+                    "S.pr_branch_production_level" (src/Drop.ml[47,2026+39]..[47,2026+67])
+              ]
+              None
+            core_type (src/Drop.ml[41,1700+52]..[41,1700+60])
+              Ptyp_constr "T.branch" (src/Drop.ml[41,1700+52]..[41,1700+60])
+              []
+    ]
+  structure_item (src/Drop.ml[50,2099+0]..[59,2479+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[50,2099+4]..[50,2099+13])
+          Ppat_var "drop_rule" (src/Drop.ml[50,2099+4]..[50,2099+13])
+        expression (src/Drop.ml[50,2099+14]..[59,2479+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[50,2099+14]..[50,2099+43])
+            Ppat_constraint
+            pattern (src/Drop.ml[50,2099+15]..[50,2099+19])
+              Ppat_var "rule" (src/Drop.ml[50,2099+15]..[50,2099+19])
+            core_type (src/Drop.ml[50,2099+22]..[50,2099+42])
+              Ptyp_constr "S.parameterized_rule" (src/Drop.ml[50,2099+22]..[50,2099+42])
+              []
+          expression (src/Drop.ml[50,2099+44]..[59,2479+3])
+            Pexp_constraint
+            expression (src/Drop.ml[52,2217+2]..[59,2479+3])
+              Pexp_sequence
+              expression (src/Drop.ml[52,2217+2]..[52,2217+36])
+                Pexp_assert
+                expression (src/Drop.ml[52,2217+9]..[52,2217+36])
+                  Pexp_apply
+                  expression (src/Drop.ml[52,2217+31]..[52,2217+32])
+                    Pexp_ident "=" (src/Drop.ml[52,2217+31]..[52,2217+32])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/Drop.ml[52,2217+10]..[52,2217+30])
+                        Pexp_field
+                        expression (src/Drop.ml[52,2217+10]..[52,2217+14])
+                          Pexp_ident "rule" (src/Drop.ml[52,2217+10]..[52,2217+14])
+                        "S.pr_parameters" (src/Drop.ml[52,2217+15]..[52,2217+30])
+                    <arg>
+                    Nolabel
+                      expression (src/Drop.ml[52,2217+33]..[52,2217+35])
+                        Pexp_construct "[]" (src/Drop.ml[52,2217+33]..[52,2217+35])
+                        None
+                  ]
+              expression (src/Drop.ml[54,2294+2]..[59,2479+3])
+                Pexp_record
+                [
+                  "T.branches" (src/Drop.ml[55,2298+4]..[55,2298+14])
+                    expression (src/Drop.ml[55,2298+17]..[55,2298+56])
+                      Pexp_apply
+                      expression (src/Drop.ml[55,2298+17]..[55,2298+25])
+                        Pexp_ident "List.map" (src/Drop.ml[55,2298+17]..[55,2298+25])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/Drop.ml[55,2298+26]..[55,2298+37])
+                            Pexp_ident "drop_branch" (src/Drop.ml[55,2298+26]..[55,2298+37])
+                        <arg>
+                        Nolabel
+                          expression (src/Drop.ml[55,2298+38]..[55,2298+56])
+                            Pexp_field
+                            expression (src/Drop.ml[55,2298+38]..[55,2298+42])
+                              Pexp_ident "rule" (src/Drop.ml[55,2298+38]..[55,2298+42])
+                            "S.pr_branches" (src/Drop.ml[55,2298+43]..[55,2298+56])
+                      ]
+                  "T.positions" (src/Drop.ml[56,2356+4]..[56,2356+15])
+                    expression (src/Drop.ml[56,2356+18]..[56,2356+37])
+                      Pexp_field
+                      expression (src/Drop.ml[56,2356+18]..[56,2356+22])
+                        Pexp_ident "rule" (src/Drop.ml[56,2356+18]..[56,2356+22])
+                      "S.pr_positions" (src/Drop.ml[56,2356+23]..[56,2356+37])
+                  "T.inline_flag" (src/Drop.ml[57,2395+4]..[57,2395+17])
+                    expression (src/Drop.ml[57,2395+20]..[57,2395+41])
+                      Pexp_field
+                      expression (src/Drop.ml[57,2395+20]..[57,2395+24])
+                        Pexp_ident "rule" (src/Drop.ml[57,2395+20]..[57,2395+24])
+                      "S.pr_inline_flag" (src/Drop.ml[57,2395+25]..[57,2395+41])
+                  "T.attributes" (src/Drop.ml[58,2438+4]..[58,2438+16])
+                    expression (src/Drop.ml[58,2438+19]..[58,2438+39])
+                      Pexp_field
+                      expression (src/Drop.ml[58,2438+19]..[58,2438+23])
+                        Pexp_ident "rule" (src/Drop.ml[58,2438+19]..[58,2438+23])
+                      "S.pr_attributes" (src/Drop.ml[58,2438+24]..[58,2438+39])
+                ]
+                None
+            core_type (src/Drop.ml[50,2099+46]..[50,2099+52])
+              Ptyp_constr "T.rule" (src/Drop.ml[50,2099+46]..[50,2099+52])
+              []
+    ]
+  structure_item (src/Drop.ml[66,2709+0]..[90,3641+42])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[66,2709+4]..[66,2709+21])
+          Ppat_var "drop_declarations" (src/Drop.ml[66,2709+4]..[66,2709+21])
+        expression (src/Drop.ml[67,2731+2]..[90,3641+42]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[67,2731+2]..[67,2731+17])
+            Ppat_constraint
+            pattern (src/Drop.ml[67,2731+3]..[67,2731+7])
+              Ppat_var "kind" (src/Drop.ml[67,2731+3]..[67,2731+7])
+            core_type (src/Drop.ml[67,2731+10]..[67,2731+16])
+              Ptyp_constr "string" (src/Drop.ml[67,2731+10]..[67,2731+16])
+              []
+          expression (src/Drop.ml[68,2749+2]..[90,3641+42]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/Drop.ml[68,2749+2]..[68,2749+24])
+              Ppat_constraint
+              pattern (src/Drop.ml[68,2749+3]..[68,2749+4])
+                Ppat_var "f" (src/Drop.ml[68,2749+3]..[68,2749+4])
+              core_type (src/Drop.ml[68,2749+7]..[68,2749+23])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/Drop.ml[68,2749+7]..[68,2749+13])
+                  Ptyp_var info1
+                core_type (src/Drop.ml[68,2749+17]..[68,2749+23])
+                  Ptyp_var info2
+            expression (src/Drop.ml[69,2774+2]..[90,3641+42]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/Drop.ml[69,2774+2]..[69,2774+39])
+                Ppat_constraint
+                pattern (src/Drop.ml[69,2774+3]..[69,2774+8])
+                  Ppat_var "decls" (src/Drop.ml[69,2774+3]..[69,2774+8])
+                core_type (src/Drop.ml[69,2774+11]..[69,2774+38])
+                  Ptyp_constr "list" (src/Drop.ml[69,2774+34]..[69,2774+38])
+                  [
+                    core_type (src/Drop.ml[69,2774+12]..[69,2774+32])
+                      Ptyp_tuple
+                      [
+                        core_type (src/Drop.ml[69,2774+12]..[69,2774+23])
+                          Ptyp_constr "S.parameter" (src/Drop.ml[69,2774+12]..[69,2774+23])
+                          []
+                        core_type (src/Drop.ml[69,2774+26]..[69,2774+32])
+                          Ptyp_var info1
+                      ]
+                  ]
+              expression (src/Drop.ml[70,2814+0]..[90,3641+42])
+                Pexp_constraint
+                expression (src/Drop.ml[77,3161+2]..[90,3641+42])
+                  Pexp_apply
+                  expression (src/Drop.ml[90,3641+2]..[90,3641+4])
+                    Pexp_ident "|>" (src/Drop.ml[90,3641+2]..[90,3641+4])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/Drop.ml[77,3161+2]..[88,3578+25])
+                        Pexp_apply
+                        expression (src/Drop.ml[77,3161+2]..[77,3161+16])
+                          Pexp_ident "List.fold_left" (src/Drop.ml[77,3161+2]..[77,3161+16])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[77,3161+17]..[88,3578+3])
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/Drop.ml[77,3161+22]..[77,3161+26])
+                                Ppat_var "accu" (src/Drop.ml[77,3161+22]..[77,3161+26])
+                              expression (src/Drop.ml[77,3161+27]..[87,3512+65]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/Drop.ml[77,3161+27]..[77,3161+40])
+                                  Ppat_tuple
+                                  [
+                                    pattern (src/Drop.ml[77,3161+28]..[77,3161+33])
+                                      Ppat_var "param" (src/Drop.ml[77,3161+28]..[77,3161+33])
+                                    pattern (src/Drop.ml[77,3161+35]..[77,3161+39])
+                                      Ppat_var "info" (src/Drop.ml[77,3161+35]..[77,3161+39])
+                                  ]
+                                expression (src/Drop.ml[78,3205+4]..[87,3512+65])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/Drop.ml[78,3205+8]..[78,3205+14])
+                                        Ppat_var "symbol" (src/Drop.ml[78,3205+8]..[78,3205+14])
+                                      expression (src/Drop.ml[78,3205+17]..[78,3205+37])
+                                        Pexp_apply
+                                        expression (src/Drop.ml[78,3205+17]..[78,3205+31])
+                                          Pexp_ident "drop_parameter" (src/Drop.ml[78,3205+17]..[78,3205+31])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/Drop.ml[78,3205+32]..[78,3205+37])
+                                              Pexp_ident "param" (src/Drop.ml[78,3205+32]..[78,3205+37])
+                                        ]
+                                  ]
+                                  expression (src/Drop.ml[79,3246+4]..[87,3512+65])
+                                    Pexp_sequence
+                                    expression (src/Drop.ml[79,3246+4]..[86,3503+7])
+                                      Pexp_match
+                                      expression (src/Drop.ml[79,3246+16]..[79,3246+42])
+                                        Pexp_apply
+                                        expression (src/Drop.ml[79,3246+16]..[79,3246+30])
+                                          Pexp_ident "StringMap.find" (src/Drop.ml[79,3246+16]..[79,3246+30])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/Drop.ml[79,3246+31]..[79,3246+37])
+                                              Pexp_ident "symbol" (src/Drop.ml[79,3246+31]..[79,3246+37])
+                                          <arg>
+                                          Nolabel
+                                            expression (src/Drop.ml[79,3246+38]..[79,3246+42])
+                                              Pexp_ident "accu" (src/Drop.ml[79,3246+38]..[79,3246+42])
+                                        ]
+                                      [
+                                        <case>
+                                          pattern (src/Drop.ml[80,3294+6]..[80,3294+25])
+                                            Ppat_exception
+                                            pattern (src/Drop.ml[80,3294+16]..[80,3294+25])
+                                              Ppat_construct "Not_found" (src/Drop.ml[80,3294+16]..[80,3294+25])
+                                              None
+                                          expression (src/Drop.ml[81,3323+8]..[81,3323+10])
+                                            Pexp_construct "()" (src/Drop.ml[81,3323+8]..[81,3323+10])
+                                            None
+                                        <case>
+                                          pattern (src/Drop.ml[82,3334+6]..[82,3334+19])
+                                            Ppat_tuple
+                                            [
+                                              pattern (src/Drop.ml[82,3334+7]..[82,3334+8])
+                                                Ppat_any
+                                              pattern (src/Drop.ml[82,3334+10]..[82,3334+18])
+                                                Ppat_var "position" (src/Drop.ml[82,3334+10]..[82,3334+18])
+                                            ]
+                                          expression (src/Drop.ml[83,3357+8]..[85,3481+21])
+                                            Pexp_apply
+                                            expression (src/Drop.ml[83,3357+8]..[83,3357+19])
+                                              Pexp_ident "Error.error" (src/Drop.ml[83,3357+8]..[83,3357+19])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/Drop.ml[83,3357+20]..[83,3357+57])
+                                                  Pexp_construct "::" (src/Drop.ml[83,3357+21]..[83,3357+57]) ghost
+                                                  Some
+                                                    expression (src/Drop.ml[83,3357+21]..[83,3357+57]) ghost
+                                                      Pexp_tuple
+                                                      [
+                                                        expression (src/Drop.ml[83,3357+21]..[83,3357+29])
+                                                          Pexp_ident "position" (src/Drop.ml[83,3357+21]..[83,3357+29])
+                                                        expression (src/Drop.ml[83,3357+31]..[83,3357+57]) ghost
+                                                          Pexp_construct "::" (src/Drop.ml[83,3357+31]..[83,3357+57]) ghost
+                                                          Some
+                                                            expression (src/Drop.ml[83,3357+31]..[83,3357+57]) ghost
+                                                              Pexp_tuple
+                                                              [
+                                                                expression (src/Drop.ml[83,3357+31]..[83,3357+56])
+                                                                  Pexp_apply
+                                                                  expression (src/Drop.ml[83,3357+31]..[83,3357+50])
+                                                                    Pexp_ident "Parameters.position" (src/Drop.ml[83,3357+31]..[83,3357+50])
+                                                                  [
+                                                                    <arg>
+                                                                    Nolabel
+                                                                      expression (src/Drop.ml[83,3357+51]..[83,3357+56])
+Pexp_ident "param" (src/Drop.ml[83,3357+51]..[83,3357+56])
+                                                                  ]
+                                                                expression (src/Drop.ml[83,3357+56]..[83,3357+57]) ghost
+                                                                  Pexp_construct "[]" (src/Drop.ml[83,3357+56]..[83,3357+57]) ghost
+                                                                  None
+                                                              ]
+                                                      ]
+                                              <arg>
+                                              Nolabel
+                                                expression (src/Drop.ml[84,3415+10]..[84,3415+65])
+                                                  Pexp_constant PConst_string("there are multiple %s declarations for the symbol %s.",(src/Drop.ml[84,3415+11]..[84,3415+64]),None)
+                                              <arg>
+                                              Nolabel
+                                                expression (src/Drop.ml[85,3481+10]..[85,3481+14])
+                                                  Pexp_ident "kind" (src/Drop.ml[85,3481+10]..[85,3481+14])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/Drop.ml[85,3481+15]..[85,3481+21])
+                                                  Pexp_ident "symbol" (src/Drop.ml[85,3481+15]..[85,3481+21])
+                                            ]
+                                      ]
+                                    expression (src/Drop.ml[87,3512+4]..[87,3512+65])
+                                      Pexp_apply
+                                      expression (src/Drop.ml[87,3512+4]..[87,3512+17])
+                                        Pexp_ident "StringMap.add" (src/Drop.ml[87,3512+4]..[87,3512+17])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/Drop.ml[87,3512+18]..[87,3512+24])
+                                            Pexp_ident "symbol" (src/Drop.ml[87,3512+18]..[87,3512+24])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/Drop.ml[87,3512+25]..[87,3512+60])
+                                            Pexp_tuple
+                                            [
+                                              expression (src/Drop.ml[87,3512+26]..[87,3512+32])
+                                                Pexp_apply
+                                                expression (src/Drop.ml[87,3512+26]..[87,3512+27])
+                                                  Pexp_ident "f" (src/Drop.ml[87,3512+26]..[87,3512+27])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/Drop.ml[87,3512+28]..[87,3512+32])
+                                                      Pexp_ident "info" (src/Drop.ml[87,3512+28]..[87,3512+32])
+                                                ]
+                                              expression (src/Drop.ml[87,3512+34]..[87,3512+59])
+                                                Pexp_apply
+                                                expression (src/Drop.ml[87,3512+34]..[87,3512+53])
+                                                  Pexp_ident "Parameters.position" (src/Drop.ml[87,3512+34]..[87,3512+53])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/Drop.ml[87,3512+54]..[87,3512+59])
+                                                      Pexp_ident "param" (src/Drop.ml[87,3512+54]..[87,3512+59])
+                                                ]
+                                            ]
+                                        <arg>
+                                        Nolabel
+                                          expression (src/Drop.ml[87,3512+61]..[87,3512+65])
+                                            Pexp_ident "accu" (src/Drop.ml[87,3512+61]..[87,3512+65])
+                                      ]
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[88,3578+4]..[88,3578+19])
+                              Pexp_ident "StringMap.empty" (src/Drop.ml[88,3578+4]..[88,3578+19])
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[88,3578+20]..[88,3578+25])
+                              Pexp_ident "decls" (src/Drop.ml[88,3578+20]..[88,3578+25])
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (src/Drop.ml[90,3641+5]..[90,3641+42])
+                        Pexp_apply
+                        expression (src/Drop.ml[90,3641+5]..[90,3641+18])
+                          Pexp_ident "StringMap.map" (src/Drop.ml[90,3641+5]..[90,3641+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[90,3641+19]..[90,3641+42])
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/Drop.ml[90,3641+24]..[90,3641+33])
+                                Ppat_tuple
+                                [
+                                  pattern (src/Drop.ml[90,3641+25]..[90,3641+29])
+                                    Ppat_var "info" (src/Drop.ml[90,3641+25]..[90,3641+29])
+                                  pattern (src/Drop.ml[90,3641+31]..[90,3641+32])
+                                    Ppat_any
+                                ]
+                              expression (src/Drop.ml[90,3641+37]..[90,3641+41])
+                                Pexp_ident "info" (src/Drop.ml[90,3641+37]..[90,3641+41])
+                        ]
+                  ]
+                core_type (src/Drop.ml[70,2814+2]..[70,2814+20])
+                  Ptyp_constr "StringMap.t" (src/Drop.ml[70,2814+9]..[70,2814+20])
+                  [
+                    core_type (src/Drop.ml[70,2814+2]..[70,2814+8])
+                      Ptyp_var info2
+                  ]
+    ]
+  structure_item (src/Drop.ml[92,3685+0]..[93,3714+33])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[92,3685+4]..[92,3685+26])
+          Ppat_var "drop_type_declarations" (src/Drop.ml[92,3685+4]..[92,3685+26])
+        expression (src/Drop.ml[93,3714+2]..[93,3714+33])
+          Pexp_apply
+          expression (src/Drop.ml[93,3714+2]..[93,3714+19])
+            Pexp_ident "drop_declarations" (src/Drop.ml[93,3714+2]..[93,3714+19])
+          [
+            <arg>
+            Nolabel
+              expression (src/Drop.ml[93,3714+20]..[93,3714+27])
+                Pexp_constant PConst_string("%type",(src/Drop.ml[93,3714+21]..[93,3714+26]),None)
+            <arg>
+            Nolabel
+              expression (src/Drop.ml[93,3714+28]..[93,3714+33])
+                Pexp_ident "value" (src/Drop.ml[93,3714+28]..[93,3714+33])
+          ]
+    ]
+  structure_item (src/Drop.ml[95,3749+0]..[96,3789+51])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[95,3749+4]..[95,3749+37])
+          Ppat_var "drop_on_error_reduce_declarations" (src/Drop.ml[95,3749+4]..[95,3749+37])
+        expression (src/Drop.ml[96,3789+2]..[96,3789+51])
+          Pexp_apply
+          expression (src/Drop.ml[96,3789+2]..[96,3789+19])
+            Pexp_ident "drop_declarations" (src/Drop.ml[96,3789+2]..[96,3789+19])
+          [
+            <arg>
+            Nolabel
+              expression (src/Drop.ml[96,3789+20]..[96,3789+38])
+                Pexp_constant PConst_string("%on_error_reduce",(src/Drop.ml[96,3789+21]..[96,3789+37]),None)
+            <arg>
+            Nolabel
+              expression (src/Drop.ml[96,3789+39]..[96,3789+51])
+                Pexp_fun
+                Nolabel
+                None
+                pattern (src/Drop.ml[96,3789+44]..[96,3789+45])
+                  Ppat_var "x" (src/Drop.ml[96,3789+44]..[96,3789+45])
+                expression (src/Drop.ml[96,3789+49]..[96,3789+50])
+                  Pexp_ident "x" (src/Drop.ml[96,3789+49]..[96,3789+50])
+          ]
+    ]
+  structure_item (src/Drop.ml[104,4144+0]..[119,4872+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[104,4144+4]..[104,4144+17])
+          Ppat_var "add_attribute" (src/Drop.ml[104,4144+4]..[104,4144+17])
+        expression (src/Drop.ml[104,4144+18]..[119,4872+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[104,4144+18]..[104,4144+33])
+            Ppat_constraint
+            pattern (src/Drop.ml[104,4144+19]..[104,4144+20])
+              Ppat_var "g" (src/Drop.ml[104,4144+19]..[104,4144+20])
+            core_type (src/Drop.ml[104,4144+23]..[104,4144+32])
+              Ptyp_constr "T.grammar" (src/Drop.ml[104,4144+23]..[104,4144+32])
+              []
+          expression (src/Drop.ml[104,4144+34]..[119,4872+22]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/Drop.ml[104,4144+34]..[104,4144+39])
+              Ppat_var "param" (src/Drop.ml[104,4144+34]..[104,4144+39])
+            expression (src/Drop.ml[104,4144+40]..[119,4872+22]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/Drop.ml[104,4144+40]..[104,4144+44])
+                Ppat_var "attr" (src/Drop.ml[104,4144+40]..[104,4144+44])
+              expression (src/Drop.ml[104,4144+45]..[119,4872+22])
+                Pexp_constraint
+                expression (src/Drop.ml[105,4203+2]..[119,4872+22])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/Drop.ml[105,4203+6]..[105,4203+12])
+                        Ppat_var "symbol" (src/Drop.ml[105,4203+6]..[105,4203+12])
+                      expression (src/Drop.ml[105,4203+15]..[105,4203+35])
+                        Pexp_apply
+                        expression (src/Drop.ml[105,4203+15]..[105,4203+29])
+                          Pexp_ident "drop_parameter" (src/Drop.ml[105,4203+15]..[105,4203+29])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[105,4203+30]..[105,4203+35])
+                              Pexp_ident "param" (src/Drop.ml[105,4203+30]..[105,4203+35])
+                        ]
+                  ]
+                  expression (src/Drop.ml[106,4242+2]..[119,4872+22])
+                    Pexp_match
+                    expression (src/Drop.ml[106,4242+8]..[106,4242+40])
+                      Pexp_apply
+                      expression (src/Drop.ml[106,4242+8]..[106,4242+22])
+                        Pexp_ident "StringMap.find" (src/Drop.ml[106,4242+8]..[106,4242+22])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/Drop.ml[106,4242+23]..[106,4242+29])
+                            Pexp_ident "symbol" (src/Drop.ml[106,4242+23]..[106,4242+29])
+                        <arg>
+                        Nolabel
+                          expression (src/Drop.ml[106,4242+30]..[106,4242+40])
+                            Pexp_field
+                            expression (src/Drop.ml[106,4242+30]..[106,4242+31])
+                              Pexp_ident "g" (src/Drop.ml[106,4242+30]..[106,4242+31])
+                            "T.tokens" (src/Drop.ml[106,4242+32]..[106,4242+40])
+                      ]
+                    [
+                      <case>
+                        pattern (src/Drop.ml[107,4288+4]..[107,4288+9])
+                          Ppat_var "props" (src/Drop.ml[107,4288+4]..[107,4288+9])
+                        expression (src/Drop.ml[109,4340+6]..[110,4424+65])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/Drop.ml[109,4340+10]..[109,4340+15])
+                                Ppat_var "props" (src/Drop.ml[109,4340+10]..[109,4340+15])
+                              expression (src/Drop.ml[109,4340+18]..[109,4340+80])
+                                Pexp_record
+                                [
+                                  "S.tk_attributes" (src/Drop.ml[109,4340+31]..[109,4340+46])
+                                    expression (src/Drop.ml[109,4340+49]..[109,4340+78])
+                                      Pexp_construct "::" (src/Drop.ml[109,4340+54]..[109,4340+56])
+                                      Some
+                                        expression (src/Drop.ml[109,4340+49]..[109,4340+78]) ghost
+                                          Pexp_tuple
+                                          [
+                                            expression (src/Drop.ml[109,4340+49]..[109,4340+53])
+                                              Pexp_ident "attr" (src/Drop.ml[109,4340+49]..[109,4340+53])
+                                            expression (src/Drop.ml[109,4340+57]..[109,4340+78])
+                                              Pexp_field
+                                              expression (src/Drop.ml[109,4340+57]..[109,4340+62])
+                                                Pexp_ident "props" (src/Drop.ml[109,4340+57]..[109,4340+62])
+                                              "S.tk_attributes" (src/Drop.ml[109,4340+63]..[109,4340+78])
+                                          ]
+                                ]
+                                Some
+                                  expression (src/Drop.ml[109,4340+20]..[109,4340+25])
+                                    Pexp_ident "props" (src/Drop.ml[109,4340+20]..[109,4340+25])
+                          ]
+                          expression (src/Drop.ml[110,4424+6]..[110,4424+65])
+                            Pexp_record
+                            [
+                              "T.tokens" (src/Drop.ml[110,4424+15]..[110,4424+23])
+                                expression (src/Drop.ml[110,4424+26]..[110,4424+63])
+                                  Pexp_apply
+                                  expression (src/Drop.ml[110,4424+26]..[110,4424+39])
+                                    Pexp_ident "StringMap.add" (src/Drop.ml[110,4424+26]..[110,4424+39])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/Drop.ml[110,4424+40]..[110,4424+46])
+                                        Pexp_ident "symbol" (src/Drop.ml[110,4424+40]..[110,4424+46])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/Drop.ml[110,4424+47]..[110,4424+52])
+                                        Pexp_ident "props" (src/Drop.ml[110,4424+47]..[110,4424+52])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/Drop.ml[110,4424+53]..[110,4424+63])
+                                        Pexp_field
+                                        expression (src/Drop.ml[110,4424+53]..[110,4424+54])
+                                          Pexp_ident "g" (src/Drop.ml[110,4424+53]..[110,4424+54])
+                                        "T.tokens" (src/Drop.ml[110,4424+55]..[110,4424+63])
+                                  ]
+                            ]
+                            Some
+                              expression (src/Drop.ml[110,4424+8]..[110,4424+9])
+                                Pexp_ident "g" (src/Drop.ml[110,4424+8]..[110,4424+9])
+                      <case>
+                        pattern (src/Drop.ml[111,4490+4]..[111,4490+23])
+                          Ppat_exception
+                          pattern (src/Drop.ml[111,4490+14]..[111,4490+23])
+                            Ppat_construct "Not_found" (src/Drop.ml[111,4490+14]..[111,4490+23])
+                            None
+                        expression (src/Drop.ml[112,4517+6]..[119,4872+22])
+                          Pexp_match
+                          expression (src/Drop.ml[112,4517+12]..[112,4517+43])
+                            Pexp_apply
+                            expression (src/Drop.ml[112,4517+12]..[112,4517+26])
+                              Pexp_ident "StringMap.find" (src/Drop.ml[112,4517+12]..[112,4517+26])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/Drop.ml[112,4517+27]..[112,4517+33])
+                                  Pexp_ident "symbol" (src/Drop.ml[112,4517+27]..[112,4517+33])
+                              <arg>
+                              Nolabel
+                                expression (src/Drop.ml[112,4517+34]..[112,4517+43])
+                                  Pexp_field
+                                  expression (src/Drop.ml[112,4517+34]..[112,4517+35])
+                                    Pexp_ident "g" (src/Drop.ml[112,4517+34]..[112,4517+35])
+                                  "T.rules" (src/Drop.ml[112,4517+36]..[112,4517+43])
+                            ]
+                          [
+                            <case>
+                              pattern (src/Drop.ml[113,4566+8]..[113,4566+12])
+                                Ppat_var "rule" (src/Drop.ml[113,4566+8]..[113,4566+12])
+                              expression (src/Drop.ml[115,4628+10]..[116,4707+66])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/Drop.ml[115,4628+14]..[115,4628+18])
+                                      Ppat_var "rule" (src/Drop.ml[115,4628+14]..[115,4628+18])
+                                    expression (src/Drop.ml[115,4628+21]..[115,4628+75])
+                                      Pexp_record
+                                      [
+                                        "T.attributes" (src/Drop.ml[115,4628+33]..[115,4628+45])
+                                          expression (src/Drop.ml[115,4628+48]..[115,4628+73])
+                                            Pexp_construct "::" (src/Drop.ml[115,4628+53]..[115,4628+55])
+                                            Some
+                                              expression (src/Drop.ml[115,4628+48]..[115,4628+73]) ghost
+                                                Pexp_tuple
+                                                [
+                                                  expression (src/Drop.ml[115,4628+48]..[115,4628+52])
+                                                    Pexp_ident "attr" (src/Drop.ml[115,4628+48]..[115,4628+52])
+                                                  expression (src/Drop.ml[115,4628+56]..[115,4628+73])
+                                                    Pexp_field
+                                                    expression (src/Drop.ml[115,4628+56]..[115,4628+60])
+                                                      Pexp_ident "rule" (src/Drop.ml[115,4628+56]..[115,4628+60])
+                                                    "T.attributes" (src/Drop.ml[115,4628+61]..[115,4628+73])
+                                                ]
+                                      ]
+                                      Some
+                                        expression (src/Drop.ml[115,4628+23]..[115,4628+27])
+                                          Pexp_ident "rule" (src/Drop.ml[115,4628+23]..[115,4628+27])
+                                ]
+                                expression (src/Drop.ml[116,4707+10]..[116,4707+66])
+                                  Pexp_record
+                                  [
+                                    "T.rules" (src/Drop.ml[116,4707+19]..[116,4707+26])
+                                      expression (src/Drop.ml[116,4707+29]..[116,4707+64])
+                                        Pexp_apply
+                                        expression (src/Drop.ml[116,4707+29]..[116,4707+42])
+                                          Pexp_ident "StringMap.add" (src/Drop.ml[116,4707+29]..[116,4707+42])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/Drop.ml[116,4707+43]..[116,4707+49])
+                                              Pexp_ident "symbol" (src/Drop.ml[116,4707+43]..[116,4707+49])
+                                          <arg>
+                                          Nolabel
+                                            expression (src/Drop.ml[116,4707+50]..[116,4707+54])
+                                              Pexp_ident "rule" (src/Drop.ml[116,4707+50]..[116,4707+54])
+                                          <arg>
+                                          Nolabel
+                                            expression (src/Drop.ml[116,4707+55]..[116,4707+64])
+                                              Pexp_field
+                                              expression (src/Drop.ml[116,4707+55]..[116,4707+56])
+                                                Pexp_ident "g" (src/Drop.ml[116,4707+55]..[116,4707+56])
+                                              "T.rules" (src/Drop.ml[116,4707+57]..[116,4707+64])
+                                        ]
+                                  ]
+                                  Some
+                                    expression (src/Drop.ml[116,4707+12]..[116,4707+13])
+                                      Pexp_ident "g" (src/Drop.ml[116,4707+12]..[116,4707+13])
+                            <case>
+                              pattern (src/Drop.ml[117,4774+8]..[117,4774+27])
+                                Ppat_exception
+                                pattern (src/Drop.ml[117,4774+18]..[117,4774+27])
+                                  Ppat_construct "Not_found" (src/Drop.ml[117,4774+18]..[117,4774+27])
+                                  None
+                              expression (src/Drop.ml[119,4872+10]..[119,4872+22])
+                                Pexp_assert
+                                expression (src/Drop.ml[119,4872+17]..[119,4872+22])
+                                  Pexp_construct "false" (src/Drop.ml[119,4872+17]..[119,4872+22])
+                                  None
+                          ]
+                    ]
+                core_type (src/Drop.ml[104,4144+47]..[104,4144+56])
+                  Ptyp_constr "T.grammar" (src/Drop.ml[104,4144+47]..[104,4144+56])
+                  []
+    ]
+  structure_item (src/Drop.ml[121,4896+0]..[126,5049+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[121,4896+4]..[121,4896+18])
+          Ppat_var "add_attributes" (src/Drop.ml[121,4896+4]..[121,4896+18])
+        expression (src/Drop.ml[121,4896+19]..[126,5049+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[121,4896+19]..[121,4896+20])
+            Ppat_var "g" (src/Drop.ml[121,4896+19]..[121,4896+20])
+          expression (src/Drop.ml[121,4896+21]..[126,5049+12]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/Drop.ml[121,4896+21]..[121,4896+36])
+              Ppat_tuple
+              [
+                pattern (src/Drop.ml[121,4896+22]..[121,4896+28])
+                  Ppat_var "params" (src/Drop.ml[121,4896+22]..[121,4896+28])
+                pattern (src/Drop.ml[121,4896+30]..[121,4896+35])
+                  Ppat_var "attrs" (src/Drop.ml[121,4896+30]..[121,4896+35])
+              ]
+            expression (src/Drop.ml[122,4935+2]..[126,5049+12])
+              Pexp_apply
+              expression (src/Drop.ml[122,4935+2]..[122,4935+16])
+                Pexp_ident "List.fold_left" (src/Drop.ml[122,4935+2]..[122,4935+16])
+              [
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[122,4935+17]..[126,5049+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/Drop.ml[122,4935+22]..[122,4935+23])
+                      Ppat_var "g" (src/Drop.ml[122,4935+22]..[122,4935+23])
+                    expression (src/Drop.ml[122,4935+24]..[125,5035+13]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/Drop.ml[122,4935+24]..[122,4935+29])
+                        Ppat_var "param" (src/Drop.ml[122,4935+24]..[122,4935+29])
+                      expression (src/Drop.ml[123,4968+4]..[125,5035+13])
+                        Pexp_apply
+                        expression (src/Drop.ml[123,4968+4]..[123,4968+18])
+                          Pexp_ident "List.fold_left" (src/Drop.ml[123,4968+4]..[123,4968+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[123,4968+19]..[125,5035+5])
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/Drop.ml[123,4968+24]..[123,4968+25])
+                                Ppat_var "g" (src/Drop.ml[123,4968+24]..[123,4968+25])
+                              expression (src/Drop.ml[123,4968+26]..[124,5002+32]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/Drop.ml[123,4968+26]..[123,4968+30])
+                                  Ppat_var "attr" (src/Drop.ml[123,4968+26]..[123,4968+30])
+                                expression (src/Drop.ml[124,5002+6]..[124,5002+32])
+                                  Pexp_apply
+                                  expression (src/Drop.ml[124,5002+6]..[124,5002+19])
+                                    Pexp_ident "add_attribute" (src/Drop.ml[124,5002+6]..[124,5002+19])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/Drop.ml[124,5002+20]..[124,5002+21])
+                                        Pexp_ident "g" (src/Drop.ml[124,5002+20]..[124,5002+21])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/Drop.ml[124,5002+22]..[124,5002+27])
+                                        Pexp_ident "param" (src/Drop.ml[124,5002+22]..[124,5002+27])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/Drop.ml[124,5002+28]..[124,5002+32])
+                                        Pexp_ident "attr" (src/Drop.ml[124,5002+28]..[124,5002+32])
+                                  ]
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[125,5035+6]..[125,5035+7])
+                              Pexp_ident "g" (src/Drop.ml[125,5035+6]..[125,5035+7])
+                          <arg>
+                          Nolabel
+                            expression (src/Drop.ml[125,5035+8]..[125,5035+13])
+                              Pexp_ident "attrs" (src/Drop.ml[125,5035+8]..[125,5035+13])
+                        ]
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[126,5049+4]..[126,5049+5])
+                    Pexp_ident "g" (src/Drop.ml[126,5049+4]..[126,5049+5])
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[126,5049+6]..[126,5049+12])
+                    Pexp_ident "params" (src/Drop.ml[126,5049+6]..[126,5049+12])
+              ]
+    ]
+  structure_item (src/Drop.ml[128,5063+0]..[129,5135+39])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[128,5063+4]..[128,5063+18])
+          Ppat_var "add_attributes" (src/Drop.ml[128,5063+4]..[128,5063+18])
+        expression (src/Drop.ml[128,5063+19]..[129,5135+39]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[128,5063+19]..[128,5063+67])
+            Ppat_constraint
+            pattern (src/Drop.ml[128,5063+20]..[128,5063+25])
+              Ppat_var "decls" (src/Drop.ml[128,5063+20]..[128,5063+25])
+            core_type (src/Drop.ml[128,5063+28]..[128,5063+66])
+              Ptyp_constr "list" (src/Drop.ml[128,5063+62]..[128,5063+66])
+              [
+                core_type (src/Drop.ml[128,5063+29]..[128,5063+60])
+                  Ptyp_tuple
+                  [
+                    core_type (src/Drop.ml[128,5063+29]..[128,5063+45])
+                      Ptyp_constr "list" (src/Drop.ml[128,5063+41]..[128,5063+45])
+                      [
+                        core_type (src/Drop.ml[128,5063+29]..[128,5063+40])
+                          Ptyp_constr "S.parameter" (src/Drop.ml[128,5063+29]..[128,5063+40])
+                          []
+                      ]
+                    core_type (src/Drop.ml[128,5063+48]..[128,5063+60])
+                      Ptyp_constr "S.attributes" (src/Drop.ml[128,5063+48]..[128,5063+60])
+                      []
+                  ]
+              ]
+          expression (src/Drop.ml[128,5063+68]..[129,5135+39]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/Drop.ml[128,5063+68]..[128,5063+69])
+              Ppat_var "g" (src/Drop.ml[128,5063+68]..[128,5063+69])
+            expression (src/Drop.ml[129,5135+2]..[129,5135+39])
+              Pexp_apply
+              expression (src/Drop.ml[129,5135+2]..[129,5135+16])
+                Pexp_ident "List.fold_left" (src/Drop.ml[129,5135+2]..[129,5135+16])
+              [
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[129,5135+17]..[129,5135+31])
+                    Pexp_ident "add_attributes" (src/Drop.ml[129,5135+17]..[129,5135+31])
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[129,5135+32]..[129,5135+33])
+                    Pexp_ident "g" (src/Drop.ml[129,5135+32]..[129,5135+33])
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[129,5135+34]..[129,5135+39])
+                    Pexp_ident "decls" (src/Drop.ml[129,5135+34]..[129,5135+39])
+              ]
+    ]
+  structure_item (src/Drop.ml[135,5290+0]..[146,5807+45])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[135,5290+4]..[135,5290+8])
+          Ppat_var "drop" (src/Drop.ml[135,5290+4]..[135,5290+8])
+        expression (src/Drop.ml[135,5290+9]..[146,5807+45]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Drop.ml[135,5290+9]..[135,5290+24])
+            Ppat_constraint
+            pattern (src/Drop.ml[135,5290+10]..[135,5290+11])
+              Ppat_var "g" (src/Drop.ml[135,5290+10]..[135,5290+11])
+            core_type (src/Drop.ml[135,5290+14]..[135,5290+23])
+              Ptyp_constr "S.grammar" (src/Drop.ml[135,5290+14]..[135,5290+23])
+              []
+          expression (src/Drop.ml[135,5290+25]..[146,5807+45])
+            Pexp_constraint
+            expression (src/Drop.ml[136,5329+2]..[146,5807+45])
+              Pexp_apply
+              expression (src/Drop.ml[146,5807+4]..[146,5807+6])
+                Pexp_ident "|>" (src/Drop.ml[146,5807+4]..[146,5807+6])
+              [
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[136,5329+2]..[146,5807+3])
+                    Pexp_record
+                    [
+                      "T.preludes" (src/Drop.ml[137,5333+4]..[137,5333+14])
+                        expression (src/Drop.ml[137,5333+24]..[137,5333+38])
+                          Pexp_field
+                          expression (src/Drop.ml[137,5333+24]..[137,5333+25])
+                            Pexp_ident "g" (src/Drop.ml[137,5333+24]..[137,5333+25])
+                          "S.p_preludes" (src/Drop.ml[137,5333+26]..[137,5333+38])
+                      "T.postludes" (src/Drop.ml[138,5373+4]..[138,5373+15])
+                        expression (src/Drop.ml[138,5373+24]..[138,5373+39])
+                          Pexp_field
+                          expression (src/Drop.ml[138,5373+24]..[138,5373+25])
+                            Pexp_ident "g" (src/Drop.ml[138,5373+24]..[138,5373+25])
+                          "S.p_postludes" (src/Drop.ml[138,5373+26]..[138,5373+39])
+                      "T.parameters" (src/Drop.ml[139,5414+4]..[139,5414+16])
+                        expression (src/Drop.ml[139,5414+24]..[139,5414+40])
+                          Pexp_field
+                          expression (src/Drop.ml[139,5414+24]..[139,5414+25])
+                            Pexp_ident "g" (src/Drop.ml[139,5414+24]..[139,5414+25])
+                          "S.p_parameters" (src/Drop.ml[139,5414+26]..[139,5414+40])
+                      "T.start_symbols" (src/Drop.ml[140,5456+4]..[140,5456+19])
+                        expression (src/Drop.ml[140,5456+24]..[140,5456+60])
+                          Pexp_apply
+                          expression (src/Drop.ml[140,5456+24]..[140,5456+40])
+                            Pexp_ident "StringMap.domain" (src/Drop.ml[140,5456+24]..[140,5456+40])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/Drop.ml[140,5456+41]..[140,5456+60])
+                                Pexp_field
+                                expression (src/Drop.ml[140,5456+41]..[140,5456+42])
+                                  Pexp_ident "g" (src/Drop.ml[140,5456+41]..[140,5456+42])
+                                "S.p_start_symbols" (src/Drop.ml[140,5456+43]..[140,5456+60])
+                          ]
+                      "T.types" (src/Drop.ml[141,5518+4]..[141,5518+11])
+                        expression (src/Drop.ml[141,5518+24]..[141,5518+58])
+                          Pexp_apply
+                          expression (src/Drop.ml[141,5518+24]..[141,5518+46])
+                            Pexp_ident "drop_type_declarations" (src/Drop.ml[141,5518+24]..[141,5518+46])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/Drop.ml[141,5518+47]..[141,5518+58])
+                                Pexp_field
+                                expression (src/Drop.ml[141,5518+47]..[141,5518+48])
+                                  Pexp_ident "g" (src/Drop.ml[141,5518+47]..[141,5518+48])
+                                "S.p_types" (src/Drop.ml[141,5518+49]..[141,5518+58])
+                          ]
+                      "T.tokens" (src/Drop.ml[142,5578+4]..[142,5578+12])
+                        expression (src/Drop.ml[142,5578+24]..[142,5578+36])
+                          Pexp_field
+                          expression (src/Drop.ml[142,5578+24]..[142,5578+25])
+                            Pexp_ident "g" (src/Drop.ml[142,5578+24]..[142,5578+25])
+                          "S.p_tokens" (src/Drop.ml[142,5578+26]..[142,5578+36])
+                      "T.on_error_reduce" (src/Drop.ml[143,5616+4]..[143,5616+21])
+                        expression (src/Drop.ml[143,5616+24]..[143,5616+79])
+                          Pexp_apply
+                          expression (src/Drop.ml[143,5616+24]..[143,5616+57])
+                            Pexp_ident "drop_on_error_reduce_declarations" (src/Drop.ml[143,5616+24]..[143,5616+57])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/Drop.ml[143,5616+58]..[143,5616+79])
+                                Pexp_field
+                                expression (src/Drop.ml[143,5616+58]..[143,5616+59])
+                                  Pexp_ident "g" (src/Drop.ml[143,5616+58]..[143,5616+59])
+                                "S.p_on_error_reduce" (src/Drop.ml[143,5616+60]..[143,5616+79])
+                          ]
+                      "T.gr_attributes" (src/Drop.ml[144,5697+4]..[144,5697+19])
+                        expression (src/Drop.ml[144,5697+24]..[144,5697+48])
+                          Pexp_field
+                          expression (src/Drop.ml[144,5697+24]..[144,5697+25])
+                            Pexp_ident "g" (src/Drop.ml[144,5697+24]..[144,5697+25])
+                          "S.p_grammar_attributes" (src/Drop.ml[144,5697+26]..[144,5697+48])
+                      "T.rules" (src/Drop.ml[145,5747+4]..[145,5747+11])
+                        expression (src/Drop.ml[145,5747+24]..[145,5747+59])
+                          Pexp_apply
+                          expression (src/Drop.ml[145,5747+24]..[145,5747+37])
+                            Pexp_ident "StringMap.map" (src/Drop.ml[145,5747+24]..[145,5747+37])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/Drop.ml[145,5747+38]..[145,5747+47])
+                                Pexp_ident "drop_rule" (src/Drop.ml[145,5747+38]..[145,5747+47])
+                            <arg>
+                            Nolabel
+                              expression (src/Drop.ml[145,5747+48]..[145,5747+59])
+                                Pexp_field
+                                expression (src/Drop.ml[145,5747+48]..[145,5747+49])
+                                  Pexp_ident "g" (src/Drop.ml[145,5747+48]..[145,5747+49])
+                                "S.p_rules" (src/Drop.ml[145,5747+50]..[145,5747+59])
+                          ]
+                    ]
+                    None
+                <arg>
+                Nolabel
+                  expression (src/Drop.ml[146,5807+7]..[146,5807+45])
+                    Pexp_apply
+                    expression (src/Drop.ml[146,5807+7]..[146,5807+21])
+                      Pexp_ident "add_attributes" (src/Drop.ml[146,5807+7]..[146,5807+21])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/Drop.ml[146,5807+22]..[146,5807+45])
+                          Pexp_field
+                          expression (src/Drop.ml[146,5807+22]..[146,5807+23])
+                            Pexp_ident "g" (src/Drop.ml[146,5807+22]..[146,5807+23])
+                          "S.p_symbol_attributes" (src/Drop.ml[146,5807+24]..[146,5807+45])
+                    ]
+              ]
+            core_type (src/Drop.ml[135,5290+27]..[135,5290+36])
+              Ptyp_constr "T.grammar" (src/Drop.ml[135,5290+27]..[135,5290+36])
+              []
+    ]
+]
+
+let value = Positions.value
+module S = Syntax
+module T = BasicSyntax
+let drop_parameter (param : S.parameter) =
+  (match param with
+   | S.ParameterVar sym -> value sym
+   | S.ParameterApp _ -> assert false
+   | S.ParameterAnonymous _ -> assert false : S.symbol)
+let drop_producer ((id, param, attrs) : S.producer) =
+  ({
+     T.producer_identifier = id;
+     T.producer_symbol = (drop_parameter param);
+     T.producer_attributes = attrs
+   } : T.producer)
+let drop_branch (branch : S.parameterized_branch) =
+  ({
+     T.branch_position = (branch.S.pr_branch_position);
+     T.producers = (List.map drop_producer branch.S.pr_producers);
+     T.action = (branch.S.pr_action);
+     T.branch_prec_annotation = (branch.S.pr_branch_prec_annotation);
+     T.branch_production_level = (branch.S.pr_branch_production_level)
+   } : T.branch)
+let drop_rule (rule : S.parameterized_rule) =
+  (assert (rule.S.pr_parameters = []);
+   {
+     T.branches = (List.map drop_branch rule.S.pr_branches);
+     T.positions = (rule.S.pr_positions);
+     T.inline_flag = (rule.S.pr_inline_flag);
+     T.attributes = (rule.S.pr_attributes)
+   } : T.rule)
+let drop_declarations (kind : string) (f : 'info1 -> 'info2)
+  (decls : (S.parameter * 'info1) list) =
+  ((List.fold_left
+      (fun accu ->
+         fun (param, info) ->
+           let symbol = drop_parameter param in
+           (match StringMap.find symbol accu with
+            | exception Not_found -> ()
+            | (_, position) ->
+                Error.error [position; Parameters.position param]
+                  "there are multiple %s declarations for the symbol %s."
+                  kind symbol);
+           StringMap.add symbol ((f info), (Parameters.position param)) accu)
+      StringMap.empty decls)
+     |> (StringMap.map (fun (info, _) -> info)) : 'info2 StringMap.t)
+let drop_type_declarations = drop_declarations "%type" value
+let drop_on_error_reduce_declarations =
+  drop_declarations "%on_error_reduce" (fun x -> x)
+let add_attribute (g : T.grammar) param attr =
+  (let symbol = drop_parameter param in
+   match StringMap.find symbol g.T.tokens with
+   | props ->
+       let props =
+         { props with S.tk_attributes = (attr :: (props.S.tk_attributes)) } in
+       { g with T.tokens = (StringMap.add symbol props g.T.tokens) }
+   | exception Not_found ->
+       (match StringMap.find symbol g.T.rules with
+        | rule ->
+            let rule =
+              { rule with T.attributes = (attr :: (rule.T.attributes)) } in
+            { g with T.rules = (StringMap.add symbol rule g.T.rules) }
+        | exception Not_found -> assert false) : T.grammar)
+let add_attributes g (params, attrs) =
+  List.fold_left
+    (fun g ->
+       fun param ->
+         List.fold_left (fun g -> fun attr -> add_attribute g param attr) g
+           attrs) g params
+let add_attributes (decls : (S.parameter list * S.attributes) list) g =
+  List.fold_left add_attributes g decls
+let drop (g : S.grammar) =
+  ({
+     T.preludes = (g.S.p_preludes);
+     T.postludes = (g.S.p_postludes);
+     T.parameters = (g.S.p_parameters);
+     T.start_symbols = (StringMap.domain g.S.p_start_symbols);
+     T.types = (drop_type_declarations g.S.p_types);
+     T.tokens = (g.S.p_tokens);
+     T.on_error_reduce =
+       (drop_on_error_reduce_declarations g.S.p_on_error_reduce);
+     T.gr_attributes = (g.S.p_grammar_attributes);
+     T.rules = (StringMap.map drop_rule g.S.p_rules)
+   } |> (add_attributes g.S.p_symbol_attributes) : T.grammar)
+[
+  structure_item (src/Drop.ml[14,994+0]..src/Drop.ml[14,994+27])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[14,994+4]..src/Drop.ml[14,994+9])
+          Tpat_var "value/397"
+        expression (src/Drop.ml[14,994+12]..src/Drop.ml[14,994+27])
+          Texp_ident "Dune__exe!.Positions.value"
+    ]
+  structure_item (src/Drop.ml[16,1040+0]..src/Drop.ml[16,1040+17])
+    Tstr_module
+    S/433
+      module_expr (src/Drop.ml[16,1040+11]..src/Drop.ml[16,1040+17])
+        Tmod_ident "Dune__exe!.Syntax"
+  structure_item (src/Drop.ml[18,1076+0]..src/Drop.ml[18,1076+22])
+    Tstr_module
+    T/434
+      module_expr (src/Drop.ml[18,1076+11]..src/Drop.ml[18,1076+22])
+        Tmod_ident "Dune__exe!.BasicSyntax"
+  structure_item (src/Drop.ml[24,1233+0]..src/Drop.ml[32,1488+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[24,1233+4]..src/Drop.ml[24,1233+18])
+          Tpat_var "drop_parameter/435"
+        expression (src/Drop.ml[24,1233+19]..src/Drop.ml[32,1488+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[24,1233+20]..src/Drop.ml[24,1233+25])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[24,1233+28]..src/Drop.ml[24,1233+39])
+                    Ttyp_constr "S/433.parameter"
+                    []
+                Tpat_alias "param/472"
+                pattern (src/Drop.ml[24,1233+20]..src/Drop.ml[24,1233+25])
+                  Tpat_any
+              expression (src/Drop.ml[25,1287+2]..src/Drop.ml[32,1488+18])
+                extra
+                  Texp_constraint
+                  core_type (src/Drop.ml[24,1233+43]..src/Drop.ml[24,1233+51])
+                    Ttyp_constr "S/433.symbol"
+                    []
+                Texp_match
+                expression (src/Drop.ml[25,1287+8]..src/Drop.ml[25,1287+13])
+                  Texp_ident "param/472"
+                [
+                  <case>
+                    pattern (src/Drop.ml[26,1306+4]..src/Drop.ml[26,1306+22])
+                      Tpat_value
+                      pattern (src/Drop.ml[26,1306+4]..src/Drop.ml[26,1306+22])
+                        Tpat_construct "S.ParameterVar"
+                        [
+                          pattern (src/Drop.ml[26,1306+19]..src/Drop.ml[26,1306+22])
+                            Tpat_var "sym/508"
+                        ]
+                        None
+                    expression (src/Drop.ml[27,1332+6]..src/Drop.ml[27,1332+15])
+                      Texp_apply
+                      expression (src/Drop.ml[27,1332+6]..src/Drop.ml[27,1332+11])
+                        Texp_ident "value/397"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[27,1332+12]..src/Drop.ml[27,1332+15])
+                            Texp_ident "sym/508"
+                      ]
+                  <case>
+                    pattern (src/Drop.ml[28,1348+4]..src/Drop.ml[28,1348+20])
+                      Tpat_value
+                      pattern (src/Drop.ml[28,1348+4]..src/Drop.ml[28,1348+20])
+                        Tpat_construct "S.ParameterApp"
+                        [
+                          pattern (src/Drop.ml[28,1348+19]..src/Drop.ml[28,1348+20])
+                            Tpat_any
+                          pattern (src/Drop.ml[28,1348+19]..src/Drop.ml[28,1348+20])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/Drop.ml[30,1439+6]..src/Drop.ml[30,1439+18])
+                      Texp_assert                      expression (src/Drop.ml[30,1439+13]..src/Drop.ml[30,1439+18])
+                        Texp_construct "false"
+                        []
+                  <case>
+                    pattern (src/Drop.ml[31,1458+4]..src/Drop.ml[31,1458+26])
+                      Tpat_value
+                      pattern (src/Drop.ml[31,1458+4]..src/Drop.ml[31,1458+26])
+                        Tpat_construct "S.ParameterAnonymous"
+                        [
+                          pattern (src/Drop.ml[31,1458+25]..src/Drop.ml[31,1458+26])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/Drop.ml[32,1488+6]..src/Drop.ml[32,1488+18])
+                      Texp_assert                      expression (src/Drop.ml[32,1488+13]..src/Drop.ml[32,1488+18])
+                        Texp_construct "false"
+                        []
+                ]
+          ]
+    ]
+  structure_item (src/Drop.ml[34,1508+0]..src/Drop.ml[39,1695+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[34,1508+4]..src/Drop.ml[34,1508+17])
+          Tpat_var "drop_producer/544"
+        expression (src/Drop.ml[34,1508+18]..src/Drop.ml[39,1695+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[34,1508+19]..src/Drop.ml[34,1508+37])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[34,1508+40]..src/Drop.ml[34,1508+50])
+                    Ttyp_constr "S/433.producer"
+                    []
+                Tpat_tuple
+                [
+                  pattern (src/Drop.ml[34,1508+20]..src/Drop.ml[34,1508+22])
+                    Tpat_var "id/546"
+                  pattern (src/Drop.ml[34,1508+24]..src/Drop.ml[34,1508+29])
+                    Tpat_var "param/547"
+                  pattern (src/Drop.ml[34,1508+31]..src/Drop.ml[34,1508+36])
+                    Tpat_var "attrs/548"
+                ]
+              expression (src/Drop.ml[35,1575+2]..src/Drop.ml[39,1695+3])
+                extra
+                  Texp_constraint
+                  core_type (src/Drop.ml[34,1508+54]..src/Drop.ml[34,1508+64])
+                    Ttyp_constr "T/434.producer"
+                    []
+                Texp_record
+                  fields =
+                    [
+                      "T.producer_identifier"
+                        expression (src/Drop.ml[36,1579+28]..src/Drop.ml[36,1579+30])
+                          Texp_ident "id/546"
+                      "T.producer_symbol"
+                        expression (src/Drop.ml[37,1611+28]..src/Drop.ml[37,1611+48])
+                          Texp_apply
+                          expression (src/Drop.ml[37,1611+28]..src/Drop.ml[37,1611+42])
+                            Texp_ident "drop_parameter/435"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/Drop.ml[37,1611+43]..src/Drop.ml[37,1611+48])
+                                Texp_ident "param/547"
+                          ]
+                      "T.producer_attributes"
+                        expression (src/Drop.ml[38,1661+28]..src/Drop.ml[38,1661+33])
+                          Texp_ident "attrs/548"
+                    ]
+                  representation =
+                    Record_regular
+                  extended_expression =
+                    None
+          ]
+    ]
+  structure_item (src/Drop.ml[41,1700+0]..src/Drop.ml[48,2094+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[41,1700+4]..src/Drop.ml[41,1700+15])
+          Tpat_var "drop_branch/590"
+        expression (src/Drop.ml[41,1700+16]..src/Drop.ml[48,2094+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[41,1700+17]..src/Drop.ml[41,1700+23])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[41,1700+26]..src/Drop.ml[41,1700+48])
+                    Ttyp_constr "S/433.parameterized_branch"
+                    []
+                Tpat_alias "branch/592"
+                pattern (src/Drop.ml[41,1700+17]..src/Drop.ml[41,1700+23])
+                  Tpat_any
+              expression (src/Drop.ml[42,1763+2]..src/Drop.ml[48,2094+3])
+                extra
+                  Texp_constraint
+                  core_type (src/Drop.ml[41,1700+52]..src/Drop.ml[41,1700+60])
+                    Ttyp_constr "T/434.branch"
+                    []
+                Texp_record
+                  fields =
+                    [
+                      "T.branch_position"
+                        expression (src/Drop.ml[43,1767+32]..src/Drop.ml[43,1767+59])
+                          Texp_field
+                          expression (src/Drop.ml[43,1767+32]..src/Drop.ml[43,1767+38])
+                            Texp_ident "branch/592"
+                          "S.pr_branch_position"
+                      "T.producers"
+                        expression (src/Drop.ml[44,1828+32]..src/Drop.ml[44,1828+76])
+                          Texp_apply
+                          expression (src/Drop.ml[44,1828+32]..src/Drop.ml[44,1828+40])
+                            Texp_ident "Stdlib!.List.map"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/Drop.ml[44,1828+41]..src/Drop.ml[44,1828+54])
+                                Texp_ident "drop_producer/544"
+                            <arg>
+                              Nolabel
+                              expression (src/Drop.ml[44,1828+55]..src/Drop.ml[44,1828+76])
+                                Texp_field
+                                expression (src/Drop.ml[44,1828+55]..src/Drop.ml[44,1828+61])
+                                  Texp_ident "branch/592"
+                                "S.pr_producers"
+                          ]
+                      "T.action"
+                        expression (src/Drop.ml[45,1906+32]..src/Drop.ml[45,1906+50])
+                          Texp_field
+                          expression (src/Drop.ml[45,1906+32]..src/Drop.ml[45,1906+38])
+                            Texp_ident "branch/592"
+                          "S.pr_action"
+                      "T.branch_prec_annotation"
+                        expression (src/Drop.ml[46,1958+32]..src/Drop.ml[46,1958+66])
+                          Texp_field
+                          expression (src/Drop.ml[46,1958+32]..src/Drop.ml[46,1958+38])
+                            Texp_ident "branch/592"
+                          "S.pr_branch_prec_annotation"
+                      "T.branch_production_level"
+                        expression (src/Drop.ml[47,2026+32]..src/Drop.ml[47,2026+67])
+                          Texp_field
+                          expression (src/Drop.ml[47,2026+32]..src/Drop.ml[47,2026+38])
+                            Texp_ident "branch/592"
+                          "S.pr_branch_production_level"
+                    ]
+                  representation =
+                    Record_regular
+                  extended_expression =
+                    None
+          ]
+    ]
+  structure_item (src/Drop.ml[50,2099+0]..src/Drop.ml[59,2479+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[50,2099+4]..src/Drop.ml[50,2099+13])
+          Tpat_var "drop_rule/695"
+        expression (src/Drop.ml[50,2099+14]..src/Drop.ml[59,2479+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[50,2099+15]..src/Drop.ml[50,2099+19])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[50,2099+22]..src/Drop.ml[50,2099+42])
+                    Ttyp_constr "S/433.parameterized_rule"
+                    []
+                Tpat_alias "rule/697"
+                pattern (src/Drop.ml[50,2099+15]..src/Drop.ml[50,2099+19])
+                  Tpat_any
+              expression (src/Drop.ml[52,2217+2]..src/Drop.ml[59,2479+3])
+                extra
+                  Texp_constraint
+                  core_type (src/Drop.ml[50,2099+46]..src/Drop.ml[50,2099+52])
+                    Ttyp_constr "T/434.rule"
+                    []
+                Texp_sequence
+                expression (src/Drop.ml[52,2217+2]..src/Drop.ml[52,2217+36])
+                  Texp_assert                  expression (src/Drop.ml[52,2217+9]..src/Drop.ml[52,2217+36])
+                    Texp_apply
+                    expression (src/Drop.ml[52,2217+31]..src/Drop.ml[52,2217+32])
+                      Texp_ident "Stdlib!.="
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/Drop.ml[52,2217+10]..src/Drop.ml[52,2217+30])
+                          Texp_field
+                          expression (src/Drop.ml[52,2217+10]..src/Drop.ml[52,2217+14])
+                            Texp_ident "rule/697"
+                          "S.pr_parameters"
+                      <arg>
+                        Nolabel
+                        expression (src/Drop.ml[52,2217+33]..src/Drop.ml[52,2217+35])
+                          Texp_construct "[]"
+                          []
+                    ]
+                expression (src/Drop.ml[54,2294+2]..src/Drop.ml[59,2479+3])
+                  Texp_record
+                    fields =
+                      [
+                        "T.branches"
+                          expression (src/Drop.ml[55,2298+17]..src/Drop.ml[55,2298+56])
+                            Texp_apply
+                            expression (src/Drop.ml[55,2298+17]..src/Drop.ml[55,2298+25])
+                              Texp_ident "Stdlib!.List.map"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/Drop.ml[55,2298+26]..src/Drop.ml[55,2298+37])
+                                  Texp_ident "drop_branch/590"
+                              <arg>
+                                Nolabel
+                                expression (src/Drop.ml[55,2298+38]..src/Drop.ml[55,2298+56])
+                                  Texp_field
+                                  expression (src/Drop.ml[55,2298+38]..src/Drop.ml[55,2298+42])
+                                    Texp_ident "rule/697"
+                                  "S.pr_branches"
+                            ]
+                        "T.positions"
+                          expression (src/Drop.ml[56,2356+18]..src/Drop.ml[56,2356+37])
+                            Texp_field
+                            expression (src/Drop.ml[56,2356+18]..src/Drop.ml[56,2356+22])
+                              Texp_ident "rule/697"
+                            "S.pr_positions"
+                        "T.inline_flag"
+                          expression (src/Drop.ml[57,2395+20]..src/Drop.ml[57,2395+41])
+                            Texp_field
+                            expression (src/Drop.ml[57,2395+20]..src/Drop.ml[57,2395+24])
+                              Texp_ident "rule/697"
+                            "S.pr_inline_flag"
+                        "T.attributes"
+                          expression (src/Drop.ml[58,2438+19]..src/Drop.ml[58,2438+39])
+                            Texp_field
+                            expression (src/Drop.ml[58,2438+19]..src/Drop.ml[58,2438+23])
+                              Texp_ident "rule/697"
+                            "S.pr_attributes"
+                      ]
+                    representation =
+                      Record_regular
+                    extended_expression =
+                      None
+          ]
+    ]
+  structure_item (src/Drop.ml[66,2709+0]..src/Drop.ml[90,3641+42])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[66,2709+4]..src/Drop.ml[66,2709+21])
+          Tpat_var "drop_declarations/698"
+        expression (src/Drop.ml[67,2731+2]..src/Drop.ml[90,3641+42]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[67,2731+3]..src/Drop.ml[67,2731+7])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[67,2731+10]..src/Drop.ml[67,2731+16])
+                    Ttyp_constr "string/15!"
+                    []
+                Tpat_alias "kind/700"
+                pattern (src/Drop.ml[67,2731+3]..src/Drop.ml[67,2731+7])
+                  Tpat_any
+              expression (src/Drop.ml[68,2749+2]..src/Drop.ml[90,3641+42]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Drop.ml[68,2749+3]..src/Drop.ml[68,2749+4])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/Drop.ml[68,2749+7]..src/Drop.ml[68,2749+23])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/Drop.ml[68,2749+7]..src/Drop.ml[68,2749+13])
+                            Ttyp_var info1
+                          core_type (src/Drop.ml[68,2749+17]..src/Drop.ml[68,2749+23])
+                            Ttyp_var info2
+                      Tpat_alias "f/701"
+                      pattern (src/Drop.ml[68,2749+3]..src/Drop.ml[68,2749+4])
+                        Tpat_any
+                    expression (src/Drop.ml[69,2774+2]..src/Drop.ml[90,3641+42]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/Drop.ml[69,2774+3]..src/Drop.ml[69,2774+8])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (src/Drop.ml[69,2774+11]..src/Drop.ml[69,2774+38])
+                                Ttyp_constr "list/9!"
+                                [
+                                  core_type (src/Drop.ml[69,2774+12]..src/Drop.ml[69,2774+32])
+                                    Ttyp_tuple
+                                    [
+                                      core_type (src/Drop.ml[69,2774+12]..src/Drop.ml[69,2774+23])
+                                        Ttyp_constr "S/433.parameter"
+                                        []
+                                      core_type (src/Drop.ml[69,2774+26]..src/Drop.ml[69,2774+32])
+                                        Ttyp_var info1
+                                    ]
+                                ]
+                            Tpat_alias "decls/702"
+                            pattern (src/Drop.ml[69,2774+3]..src/Drop.ml[69,2774+8])
+                              Tpat_any
+                          expression (src/Drop.ml[77,3161+2]..src/Drop.ml[90,3641+42])
+                            extra
+                              Texp_constraint
+                              core_type (src/Drop.ml[70,2814+2]..src/Drop.ml[70,2814+20])
+                                Ttyp_constr "Dune__exe!.StringMap.t"
+                                [
+                                  core_type (src/Drop.ml[70,2814+2]..src/Drop.ml[70,2814+8])
+                                    Ttyp_var info2
+                                ]
+                            Texp_apply
+                            expression (src/Drop.ml[90,3641+5]..src/Drop.ml[90,3641+42])
+                              Texp_apply
+                              expression (src/Drop.ml[90,3641+5]..src/Drop.ml[90,3641+18])
+                                Texp_ident "Dune__exe!.StringMap.map"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/Drop.ml[90,3641+19]..src/Drop.ml[90,3641+42])
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/Drop.ml[90,3641+24]..src/Drop.ml[90,3641+33])
+                                          Tpat_tuple
+                                          [
+                                            pattern (src/Drop.ml[90,3641+25]..src/Drop.ml[90,3641+29])
+                                              Tpat_var "info/799"
+                                            pattern (src/Drop.ml[90,3641+31]..src/Drop.ml[90,3641+32])
+                                              Tpat_any
+                                          ]
+                                        expression (src/Drop.ml[90,3641+37]..src/Drop.ml[90,3641+41])
+                                          Texp_ident "info/799"
+                                    ]
+                              ]
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/Drop.ml[77,3161+2]..src/Drop.ml[88,3578+25])
+                                  Texp_apply
+                                  expression (src/Drop.ml[77,3161+2]..src/Drop.ml[77,3161+16])
+                                    Texp_ident "Stdlib!.List.fold_left"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/Drop.ml[77,3161+17]..src/Drop.ml[88,3578+3])
+                                        Texp_function
+                                        Nolabel
+                                        [
+                                          <case>
+                                            pattern (src/Drop.ml[77,3161+22]..src/Drop.ml[77,3161+26])
+                                              Tpat_var "accu/801"
+                                            expression (src/Drop.ml[77,3161+27]..src/Drop.ml[87,3512+65]) ghost
+                                              Texp_function
+                                              Nolabel
+                                              [
+                                                <case>
+                                                  pattern (src/Drop.ml[77,3161+27]..src/Drop.ml[77,3161+40])
+                                                    Tpat_tuple
+                                                    [
+                                                      pattern (src/Drop.ml[77,3161+28]..src/Drop.ml[77,3161+33])
+                                                        Tpat_var "param/802"
+                                                      pattern (src/Drop.ml[77,3161+35]..src/Drop.ml[77,3161+39])
+                                                        Tpat_var "info/803"
+                                                    ]
+                                                  expression (src/Drop.ml[78,3205+4]..src/Drop.ml[87,3512+65])
+                                                    Texp_let Nonrec
+                                                    [
+                                                      <def>
+                                                        pattern (src/Drop.ml[78,3205+8]..src/Drop.ml[78,3205+14])
+                                                          Tpat_var "symbol/804"
+                                                        expression (src/Drop.ml[78,3205+17]..src/Drop.ml[78,3205+37])
+                                                          Texp_apply
+                                                          expression (src/Drop.ml[78,3205+17]..src/Drop.ml[78,3205+31])
+                                                            Texp_ident "drop_parameter/435"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/Drop.ml[78,3205+32]..src/Drop.ml[78,3205+37])
+                                                                Texp_ident "param/802"
+                                                          ]
+                                                    ]
+                                                    expression (src/Drop.ml[79,3246+4]..src/Drop.ml[87,3512+65])
+                                                      Texp_sequence
+                                                      expression (src/Drop.ml[79,3246+4]..src/Drop.ml[86,3503+7])
+                                                        Texp_match
+                                                        expression (src/Drop.ml[79,3246+16]..src/Drop.ml[79,3246+42])
+                                                          Texp_apply
+                                                          expression (src/Drop.ml[79,3246+16]..src/Drop.ml[79,3246+30])
+                                                            Texp_ident "Dune__exe!.StringMap.find"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/Drop.ml[79,3246+31]..src/Drop.ml[79,3246+37])
+                                                                Texp_ident "symbol/804"
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/Drop.ml[79,3246+38]..src/Drop.ml[79,3246+42])
+                                                                Texp_ident "accu/801"
+                                                          ]
+                                                        [
+                                                          <case>
+                                                            pattern (src/Drop.ml[80,3294+6]..src/Drop.ml[80,3294+25])
+                                                              Tpat_exception
+                                                              pattern (src/Drop.ml[80,3294+16]..src/Drop.ml[80,3294+25])
+                                                                Tpat_construct "Not_found"
+                                                                []
+                                                                None
+                                                            expression (src/Drop.ml[81,3323+8]..src/Drop.ml[81,3323+10])
+                                                              Texp_construct "()"
+                                                              []
+                                                          <case>
+                                                            pattern (src/Drop.ml[82,3334+6]..src/Drop.ml[82,3334+19])
+                                                              Tpat_value
+                                                              pattern (src/Drop.ml[82,3334+6]..src/Drop.ml[82,3334+19])
+                                                                Tpat_tuple
+                                                                [
+                                                                  pattern (src/Drop.ml[82,3334+7]..src/Drop.ml[82,3334+8])
+                                                                    Tpat_any
+                                                                  pattern (src/Drop.ml[82,3334+10]..src/Drop.ml[82,3334+18])
+                                                                    Tpat_var "position/805"
+                                                                ]
+                                                            expression (src/Drop.ml[83,3357+8]..src/Drop.ml[85,3481+21])
+                                                              Texp_apply
+                                                              expression (src/Drop.ml[83,3357+8]..src/Drop.ml[83,3357+19])
+                                                                Texp_ident "Dune__exe!.Error.error"
+                                                              [
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/Drop.ml[83,3357+20]..src/Drop.ml[83,3357+57])
+                                                                    Texp_construct "::"
+                                                                    [
+                                                                      expression (src/Drop.ml[83,3357+21]..src/Drop.ml[83,3357+29])
+                                                                        Texp_ident "position/805"
+                                                                      expression (src/Drop.ml[83,3357+31]..src/Drop.ml[83,3357+57]) ghost
+                                                                        Texp_construct "::"
+                                                                        [
+                                                                          expression (src/Drop.ml[83,3357+31]..src/Drop.ml[83,3357+56])
+                                                                            Texp_apply
+                                                                            expression (src/Drop.ml[83,3357+31]..src/Drop.ml[83,3357+50])
+                                                                              Texp_ident "Dune__exe!.Parameters.position"
+                                                                            [
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/Drop.ml[83,3357+51]..src/Drop.ml[83,3357+56])
+                                                                                  Texp_ident "param/802"
+                                                                            ]
+                                                                          expression (src/Drop.ml[83,3357+56]..src/Drop.ml[83,3357+57]) ghost
+                                                                            Texp_construct "[]"
+                                                                            []
+                                                                        ]
+                                                                    ]
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65])
+                                                                    Texp_construct "CamlinternalFormatBasics.Format"
+                                                                    [
+                                                                      expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                                        [
+                                                                          expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                            Texp_constant Const_string("there are multiple ",(src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost,None)
+                                                                          expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                            Texp_construct "CamlinternalFormatBasics.String"
+                                                                            [
+                                                                              expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                                []
+                                                                              expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                                                [
+                                                                                  expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                    Texp_constant Const_string(" declarations for the symbol ",(src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost,None)
+                                                                                  expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                    Texp_construct "CamlinternalFormatBasics.String"
+                                                                                    [
+                                                                                      expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                                        []
+                                                                                      expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                        Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                                                        [
+                                                                                          expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                            Texp_constant Const_char 2e
+                                                                                          expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                                            []
+                                                                                        ]
+                                                                                    ]
+                                                                                ]
+                                                                            ]
+                                                                        ]
+                                                                      expression (src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost
+                                                                        Texp_constant Const_string("there are multiple %s declarations for the symbol %s.",(src/Drop.ml[84,3415+10]..src/Drop.ml[84,3415+65]) ghost,None)
+                                                                    ]
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/Drop.ml[85,3481+10]..src/Drop.ml[85,3481+14])
+                                                                    Texp_ident "kind/700"
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/Drop.ml[85,3481+15]..src/Drop.ml[85,3481+21])
+                                                                    Texp_ident "symbol/804"
+                                                              ]
+                                                        ]
+                                                      expression (src/Drop.ml[87,3512+4]..src/Drop.ml[87,3512+65])
+                                                        Texp_apply
+                                                        expression (src/Drop.ml[87,3512+4]..src/Drop.ml[87,3512+17])
+                                                          Texp_ident "Dune__exe!.StringMap.add"
+                                                        [
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/Drop.ml[87,3512+18]..src/Drop.ml[87,3512+24])
+                                                              Texp_ident "symbol/804"
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/Drop.ml[87,3512+25]..src/Drop.ml[87,3512+60])
+                                                              Texp_tuple
+                                                              [
+                                                                expression (src/Drop.ml[87,3512+26]..src/Drop.ml[87,3512+32])
+                                                                  Texp_apply
+                                                                  expression (src/Drop.ml[87,3512+26]..src/Drop.ml[87,3512+27])
+                                                                    Texp_ident "f/701"
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/Drop.ml[87,3512+28]..src/Drop.ml[87,3512+32])
+                                                                        Texp_ident "info/803"
+                                                                  ]
+                                                                expression (src/Drop.ml[87,3512+34]..src/Drop.ml[87,3512+59])
+                                                                  Texp_apply
+                                                                  expression (src/Drop.ml[87,3512+34]..src/Drop.ml[87,3512+53])
+                                                                    Texp_ident "Dune__exe!.Parameters.position"
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/Drop.ml[87,3512+54]..src/Drop.ml[87,3512+59])
+                                                                        Texp_ident "param/802"
+                                                                  ]
+                                                              ]
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/Drop.ml[87,3512+61]..src/Drop.ml[87,3512+65])
+                                                              Texp_ident "accu/801"
+                                                        ]
+                                              ]
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/Drop.ml[88,3578+4]..src/Drop.ml[88,3578+19])
+                                        Texp_ident "Dune__exe!.StringMap.empty"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/Drop.ml[88,3578+20]..src/Drop.ml[88,3578+25])
+                                        Texp_ident "decls/702"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Drop.ml[92,3685+0]..src/Drop.ml[93,3714+33])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[92,3685+4]..src/Drop.ml[92,3685+26])
+          Tpat_var "drop_type_declarations/860"
+        expression (src/Drop.ml[93,3714+2]..src/Drop.ml[93,3714+33])
+          Texp_apply
+          expression (src/Drop.ml[93,3714+2]..src/Drop.ml[93,3714+19])
+            Texp_ident "drop_declarations/698"
+          [
+            <arg>
+              Nolabel
+              expression (src/Drop.ml[93,3714+20]..src/Drop.ml[93,3714+27])
+                Texp_constant Const_string("%type",(src/Drop.ml[93,3714+21]..src/Drop.ml[93,3714+26]),None)
+            <arg>
+              Nolabel
+              expression (src/Drop.ml[93,3714+28]..src/Drop.ml[93,3714+33])
+                Texp_ident "value/397"
+          ]
+    ]
+  structure_item (src/Drop.ml[95,3749+0]..src/Drop.ml[96,3789+51])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[95,3749+4]..src/Drop.ml[95,3749+37])
+          Tpat_var "drop_on_error_reduce_declarations/861"
+        expression (src/Drop.ml[96,3789+2]..src/Drop.ml[96,3789+51])
+          Texp_apply
+          expression (src/Drop.ml[96,3789+2]..src/Drop.ml[96,3789+19])
+            Texp_ident "drop_declarations/698"
+          [
+            <arg>
+              Nolabel
+              expression (src/Drop.ml[96,3789+20]..src/Drop.ml[96,3789+38])
+                Texp_constant Const_string("%on_error_reduce",(src/Drop.ml[96,3789+21]..src/Drop.ml[96,3789+37]),None)
+            <arg>
+              Nolabel
+              expression (src/Drop.ml[96,3789+39]..src/Drop.ml[96,3789+51])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Drop.ml[96,3789+44]..src/Drop.ml[96,3789+45])
+                      Tpat_var "x/862"
+                    expression (src/Drop.ml[96,3789+49]..src/Drop.ml[96,3789+50])
+                      Texp_ident "x/862"
+                ]
+          ]
+    ]
+  structure_item (src/Drop.ml[104,4144+0]..src/Drop.ml[119,4872+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[104,4144+4]..src/Drop.ml[104,4144+17])
+          Tpat_var "add_attribute/863"
+        expression (src/Drop.ml[104,4144+18]..src/Drop.ml[119,4872+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[104,4144+19]..src/Drop.ml[104,4144+20])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[104,4144+23]..src/Drop.ml[104,4144+32])
+                    Ttyp_constr "T/434.grammar"
+                    []
+                Tpat_alias "g/865"
+                pattern (src/Drop.ml[104,4144+19]..src/Drop.ml[104,4144+20])
+                  Tpat_any
+              expression (src/Drop.ml[104,4144+34]..src/Drop.ml[119,4872+22]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Drop.ml[104,4144+34]..src/Drop.ml[104,4144+39])
+                      Tpat_var "param/866"
+                    expression (src/Drop.ml[104,4144+40]..src/Drop.ml[119,4872+22]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/Drop.ml[104,4144+40]..src/Drop.ml[104,4144+44])
+                            Tpat_var "attr/867"
+                          expression (src/Drop.ml[105,4203+2]..src/Drop.ml[119,4872+22])
+                            extra
+                              Texp_constraint
+                              core_type (src/Drop.ml[104,4144+47]..src/Drop.ml[104,4144+56])
+                                Ttyp_constr "T/434.grammar"
+                                []
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/Drop.ml[105,4203+6]..src/Drop.ml[105,4203+12])
+                                  Tpat_var "symbol/868"
+                                expression (src/Drop.ml[105,4203+15]..src/Drop.ml[105,4203+35])
+                                  Texp_apply
+                                  expression (src/Drop.ml[105,4203+15]..src/Drop.ml[105,4203+29])
+                                    Texp_ident "drop_parameter/435"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/Drop.ml[105,4203+30]..src/Drop.ml[105,4203+35])
+                                        Texp_ident "param/866"
+                                  ]
+                            ]
+                            expression (src/Drop.ml[106,4242+2]..src/Drop.ml[119,4872+22])
+                              Texp_match
+                              expression (src/Drop.ml[106,4242+8]..src/Drop.ml[106,4242+40])
+                                Texp_apply
+                                expression (src/Drop.ml[106,4242+8]..src/Drop.ml[106,4242+22])
+                                  Texp_ident "Dune__exe!.StringMap.find"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[106,4242+23]..src/Drop.ml[106,4242+29])
+                                      Texp_ident "symbol/868"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[106,4242+30]..src/Drop.ml[106,4242+40])
+                                      Texp_field
+                                      expression (src/Drop.ml[106,4242+30]..src/Drop.ml[106,4242+31])
+                                        Texp_ident "g/865"
+                                      "T.tokens"
+                                ]
+                              [
+                                <case>
+                                  pattern (src/Drop.ml[107,4288+4]..src/Drop.ml[107,4288+9])
+                                    Tpat_value
+                                    pattern (src/Drop.ml[107,4288+4]..src/Drop.ml[107,4288+9])
+                                      Tpat_var "props/869"
+                                  expression (src/Drop.ml[109,4340+6]..src/Drop.ml[110,4424+65])
+                                    Texp_let Nonrec
+                                    [
+                                      <def>
+                                        pattern (src/Drop.ml[109,4340+10]..src/Drop.ml[109,4340+15])
+                                          Tpat_var "props/870"
+                                        expression (src/Drop.ml[109,4340+18]..src/Drop.ml[109,4340+80])
+                                          Texp_record
+                                            fields =
+                                              [
+                                                <kept>                                                <kept>                                                <kept>                                                <kept>                                                "S.tk_attributes"
+                                                  expression (src/Drop.ml[109,4340+49]..src/Drop.ml[109,4340+78])
+                                                    Texp_construct "::"
+                                                    [
+                                                      expression (src/Drop.ml[109,4340+49]..src/Drop.ml[109,4340+53])
+                                                        Texp_ident "attr/867"
+                                                      expression (src/Drop.ml[109,4340+57]..src/Drop.ml[109,4340+78])
+                                                        Texp_field
+                                                        expression (src/Drop.ml[109,4340+57]..src/Drop.ml[109,4340+62])
+                                                          Texp_ident "props/869"
+                                                        "S.tk_attributes"
+                                                    ]
+                                                <kept>                                                <kept>                                                <kept>                                              ]
+                                            representation =
+                                              Record_regular
+                                            extended_expression =
+                                              Some
+                                                expression (src/Drop.ml[109,4340+20]..src/Drop.ml[109,4340+25])
+                                                  Texp_ident "props/869"
+                                    ]
+                                    expression (src/Drop.ml[110,4424+6]..src/Drop.ml[110,4424+65])
+                                      Texp_record
+                                        fields =
+                                          [
+                                            <kept>                                            <kept>                                            <kept>                                            <kept>                                            <kept>                                            "T.tokens"
+                                              expression (src/Drop.ml[110,4424+26]..src/Drop.ml[110,4424+63])
+                                                Texp_apply
+                                                expression (src/Drop.ml[110,4424+26]..src/Drop.ml[110,4424+39])
+                                                  Texp_ident "Dune__exe!.StringMap.add"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/Drop.ml[110,4424+40]..src/Drop.ml[110,4424+46])
+                                                      Texp_ident "symbol/868"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/Drop.ml[110,4424+47]..src/Drop.ml[110,4424+52])
+                                                      Texp_ident "props/870"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/Drop.ml[110,4424+53]..src/Drop.ml[110,4424+63])
+                                                      Texp_field
+                                                      expression (src/Drop.ml[110,4424+53]..src/Drop.ml[110,4424+54])
+                                                        Texp_ident "g/865"
+                                                      "T.tokens"
+                                                ]
+                                            <kept>                                            <kept>                                            <kept>                                          ]
+                                        representation =
+                                          Record_regular
+                                        extended_expression =
+                                          Some
+                                            expression (src/Drop.ml[110,4424+8]..src/Drop.ml[110,4424+9])
+                                              Texp_ident "g/865"
+                                <case>
+                                  pattern (src/Drop.ml[111,4490+4]..src/Drop.ml[111,4490+23])
+                                    Tpat_exception
+                                    pattern (src/Drop.ml[111,4490+14]..src/Drop.ml[111,4490+23])
+                                      Tpat_construct "Not_found"
+                                      []
+                                      None
+                                  expression (src/Drop.ml[112,4517+6]..src/Drop.ml[119,4872+22])
+                                    Texp_match
+                                    expression (src/Drop.ml[112,4517+12]..src/Drop.ml[112,4517+43])
+                                      Texp_apply
+                                      expression (src/Drop.ml[112,4517+12]..src/Drop.ml[112,4517+26])
+                                        Texp_ident "Dune__exe!.StringMap.find"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/Drop.ml[112,4517+27]..src/Drop.ml[112,4517+33])
+                                            Texp_ident "symbol/868"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/Drop.ml[112,4517+34]..src/Drop.ml[112,4517+43])
+                                            Texp_field
+                                            expression (src/Drop.ml[112,4517+34]..src/Drop.ml[112,4517+35])
+                                              Texp_ident "g/865"
+                                            "T.rules"
+                                      ]
+                                    [
+                                      <case>
+                                        pattern (src/Drop.ml[113,4566+8]..src/Drop.ml[113,4566+12])
+                                          Tpat_value
+                                          pattern (src/Drop.ml[113,4566+8]..src/Drop.ml[113,4566+12])
+                                            Tpat_var "rule/871"
+                                        expression (src/Drop.ml[115,4628+10]..src/Drop.ml[116,4707+66])
+                                          Texp_let Nonrec
+                                          [
+                                            <def>
+                                              pattern (src/Drop.ml[115,4628+14]..src/Drop.ml[115,4628+18])
+                                                Tpat_var "rule/872"
+                                              expression (src/Drop.ml[115,4628+21]..src/Drop.ml[115,4628+75])
+                                                Texp_record
+                                                  fields =
+                                                    [
+                                                      <kept>                                                      <kept>                                                      <kept>                                                      "T.attributes"
+                                                        expression (src/Drop.ml[115,4628+48]..src/Drop.ml[115,4628+73])
+                                                          Texp_construct "::"
+                                                          [
+                                                            expression (src/Drop.ml[115,4628+48]..src/Drop.ml[115,4628+52])
+                                                              Texp_ident "attr/867"
+                                                            expression (src/Drop.ml[115,4628+56]..src/Drop.ml[115,4628+73])
+                                                              Texp_field
+                                                              expression (src/Drop.ml[115,4628+56]..src/Drop.ml[115,4628+60])
+                                                                Texp_ident "rule/871"
+                                                              "T.attributes"
+                                                          ]
+                                                    ]
+                                                  representation =
+                                                    Record_regular
+                                                  extended_expression =
+                                                    Some
+                                                      expression (src/Drop.ml[115,4628+23]..src/Drop.ml[115,4628+27])
+                                                        Texp_ident "rule/871"
+                                          ]
+                                          expression (src/Drop.ml[116,4707+10]..src/Drop.ml[116,4707+66])
+                                            Texp_record
+                                              fields =
+                                                [
+                                                  <kept>                                                  <kept>                                                  <kept>                                                  <kept>                                                  <kept>                                                  <kept>                                                  <kept>                                                  <kept>                                                  "T.rules"
+                                                    expression (src/Drop.ml[116,4707+29]..src/Drop.ml[116,4707+64])
+                                                      Texp_apply
+                                                      expression (src/Drop.ml[116,4707+29]..src/Drop.ml[116,4707+42])
+                                                        Texp_ident "Dune__exe!.StringMap.add"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/Drop.ml[116,4707+43]..src/Drop.ml[116,4707+49])
+                                                            Texp_ident "symbol/868"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/Drop.ml[116,4707+50]..src/Drop.ml[116,4707+54])
+                                                            Texp_ident "rule/872"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/Drop.ml[116,4707+55]..src/Drop.ml[116,4707+64])
+                                                            Texp_field
+                                                            expression (src/Drop.ml[116,4707+55]..src/Drop.ml[116,4707+56])
+                                                              Texp_ident "g/865"
+                                                            "T.rules"
+                                                      ]
+                                                ]
+                                              representation =
+                                                Record_regular
+                                              extended_expression =
+                                                Some
+                                                  expression (src/Drop.ml[116,4707+12]..src/Drop.ml[116,4707+13])
+                                                    Texp_ident "g/865"
+                                      <case>
+                                        pattern (src/Drop.ml[117,4774+8]..src/Drop.ml[117,4774+27])
+                                          Tpat_exception
+                                          pattern (src/Drop.ml[117,4774+18]..src/Drop.ml[117,4774+27])
+                                            Tpat_construct "Not_found"
+                                            []
+                                            None
+                                        expression (src/Drop.ml[119,4872+10]..src/Drop.ml[119,4872+22])
+                                          Texp_assert                                          expression (src/Drop.ml[119,4872+17]..src/Drop.ml[119,4872+22])
+                                            Texp_construct "false"
+                                            []
+                                    ]
+                              ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Drop.ml[121,4896+0]..src/Drop.ml[126,5049+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[121,4896+4]..src/Drop.ml[121,4896+18])
+          Tpat_var "add_attributes/873"
+        expression (src/Drop.ml[121,4896+19]..src/Drop.ml[126,5049+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[121,4896+19]..src/Drop.ml[121,4896+20])
+                Tpat_var "g/875"
+              expression (src/Drop.ml[121,4896+21]..src/Drop.ml[126,5049+12]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Drop.ml[121,4896+21]..src/Drop.ml[121,4896+36])
+                      Tpat_tuple
+                      [
+                        pattern (src/Drop.ml[121,4896+22]..src/Drop.ml[121,4896+28])
+                          Tpat_var "params/876"
+                        pattern (src/Drop.ml[121,4896+30]..src/Drop.ml[121,4896+35])
+                          Tpat_var "attrs/877"
+                      ]
+                    expression (src/Drop.ml[122,4935+2]..src/Drop.ml[126,5049+12])
+                      Texp_apply
+                      expression (src/Drop.ml[122,4935+2]..src/Drop.ml[122,4935+16])
+                        Texp_ident "Stdlib!.List.fold_left"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[122,4935+17]..src/Drop.ml[126,5049+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/Drop.ml[122,4935+22]..src/Drop.ml[122,4935+23])
+                                  Tpat_var "g/878"
+                                expression (src/Drop.ml[122,4935+24]..src/Drop.ml[125,5035+13]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/Drop.ml[122,4935+24]..src/Drop.ml[122,4935+29])
+                                        Tpat_var "param/879"
+                                      expression (src/Drop.ml[123,4968+4]..src/Drop.ml[125,5035+13])
+                                        Texp_apply
+                                        expression (src/Drop.ml[123,4968+4]..src/Drop.ml[123,4968+18])
+                                          Texp_ident "Stdlib!.List.fold_left"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/Drop.ml[123,4968+19]..src/Drop.ml[125,5035+5])
+                                              Texp_function
+                                              Nolabel
+                                              [
+                                                <case>
+                                                  pattern (src/Drop.ml[123,4968+24]..src/Drop.ml[123,4968+25])
+                                                    Tpat_var "g/880"
+                                                  expression (src/Drop.ml[123,4968+26]..src/Drop.ml[124,5002+32]) ghost
+                                                    Texp_function
+                                                    Nolabel
+                                                    [
+                                                      <case>
+                                                        pattern (src/Drop.ml[123,4968+26]..src/Drop.ml[123,4968+30])
+                                                          Tpat_var "attr/881"
+                                                        expression (src/Drop.ml[124,5002+6]..src/Drop.ml[124,5002+32])
+                                                          Texp_apply
+                                                          expression (src/Drop.ml[124,5002+6]..src/Drop.ml[124,5002+19])
+                                                            Texp_ident "add_attribute/863"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/Drop.ml[124,5002+20]..src/Drop.ml[124,5002+21])
+                                                                Texp_ident "g/880"
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/Drop.ml[124,5002+22]..src/Drop.ml[124,5002+27])
+                                                                Texp_ident "param/879"
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/Drop.ml[124,5002+28]..src/Drop.ml[124,5002+32])
+                                                                Texp_ident "attr/881"
+                                                          ]
+                                                    ]
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/Drop.ml[125,5035+6]..src/Drop.ml[125,5035+7])
+                                              Texp_ident "g/878"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/Drop.ml[125,5035+8]..src/Drop.ml[125,5035+13])
+                                              Texp_ident "attrs/877"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[126,5049+4]..src/Drop.ml[126,5049+5])
+                            Texp_ident "g/875"
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[126,5049+6]..src/Drop.ml[126,5049+12])
+                            Texp_ident "params/876"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Drop.ml[128,5063+0]..src/Drop.ml[129,5135+39])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[128,5063+4]..src/Drop.ml[128,5063+18])
+          Tpat_var "add_attributes/883"
+        expression (src/Drop.ml[128,5063+19]..src/Drop.ml[129,5135+39]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[128,5063+20]..src/Drop.ml[128,5063+25])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[128,5063+28]..src/Drop.ml[128,5063+66])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/Drop.ml[128,5063+29]..src/Drop.ml[128,5063+60])
+                        Ttyp_tuple
+                        [
+                          core_type (src/Drop.ml[128,5063+29]..src/Drop.ml[128,5063+45])
+                            Ttyp_constr "list/9!"
+                            [
+                              core_type (src/Drop.ml[128,5063+29]..src/Drop.ml[128,5063+40])
+                                Ttyp_constr "S/433.parameter"
+                                []
+                            ]
+                          core_type (src/Drop.ml[128,5063+48]..src/Drop.ml[128,5063+60])
+                            Ttyp_constr "S/433.attributes"
+                            []
+                        ]
+                    ]
+                Tpat_alias "decls/884"
+                pattern (src/Drop.ml[128,5063+20]..src/Drop.ml[128,5063+25])
+                  Tpat_any
+              expression (src/Drop.ml[128,5063+68]..src/Drop.ml[129,5135+39]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Drop.ml[128,5063+68]..src/Drop.ml[128,5063+69])
+                      Tpat_var "g/885"
+                    expression (src/Drop.ml[129,5135+2]..src/Drop.ml[129,5135+39])
+                      Texp_apply
+                      expression (src/Drop.ml[129,5135+2]..src/Drop.ml[129,5135+16])
+                        Texp_ident "Stdlib!.List.fold_left"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[129,5135+17]..src/Drop.ml[129,5135+31])
+                            Texp_ident "add_attributes/873"
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[129,5135+32]..src/Drop.ml[129,5135+33])
+                            Texp_ident "g/885"
+                        <arg>
+                          Nolabel
+                          expression (src/Drop.ml[129,5135+34]..src/Drop.ml[129,5135+39])
+                            Texp_ident "decls/884"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Drop.ml[135,5290+0]..src/Drop.ml[146,5807+45])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Drop.ml[135,5290+4]..src/Drop.ml[135,5290+8])
+          Tpat_var "drop/886"
+        expression (src/Drop.ml[135,5290+9]..src/Drop.ml[146,5807+45]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Drop.ml[135,5290+10]..src/Drop.ml[135,5290+11])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/Drop.ml[135,5290+14]..src/Drop.ml[135,5290+23])
+                    Ttyp_constr "S/433.grammar"
+                    []
+                Tpat_alias "g/888"
+                pattern (src/Drop.ml[135,5290+10]..src/Drop.ml[135,5290+11])
+                  Tpat_any
+              expression (src/Drop.ml[136,5329+2]..src/Drop.ml[146,5807+45])
+                extra
+                  Texp_constraint
+                  core_type (src/Drop.ml[135,5290+27]..src/Drop.ml[135,5290+36])
+                    Ttyp_constr "T/434.grammar"
+                    []
+                Texp_apply
+                expression (src/Drop.ml[146,5807+7]..src/Drop.ml[146,5807+45])
+                  Texp_apply
+                  expression (src/Drop.ml[146,5807+7]..src/Drop.ml[146,5807+21])
+                    Texp_ident "add_attributes/883"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/Drop.ml[146,5807+22]..src/Drop.ml[146,5807+45])
+                        Texp_field
+                        expression (src/Drop.ml[146,5807+22]..src/Drop.ml[146,5807+23])
+                          Texp_ident "g/888"
+                        "S.p_symbol_attributes"
+                  ]
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/Drop.ml[136,5329+2]..src/Drop.ml[146,5807+3])
+                      Texp_record
+                        fields =
+                          [
+                            "T.preludes"
+                              expression (src/Drop.ml[137,5333+24]..src/Drop.ml[137,5333+38])
+                                Texp_field
+                                expression (src/Drop.ml[137,5333+24]..src/Drop.ml[137,5333+25])
+                                  Texp_ident "g/888"
+                                "S.p_preludes"
+                            "T.postludes"
+                              expression (src/Drop.ml[138,5373+24]..src/Drop.ml[138,5373+39])
+                                Texp_field
+                                expression (src/Drop.ml[138,5373+24]..src/Drop.ml[138,5373+25])
+                                  Texp_ident "g/888"
+                                "S.p_postludes"
+                            "T.parameters"
+                              expression (src/Drop.ml[139,5414+24]..src/Drop.ml[139,5414+40])
+                                Texp_field
+                                expression (src/Drop.ml[139,5414+24]..src/Drop.ml[139,5414+25])
+                                  Texp_ident "g/888"
+                                "S.p_parameters"
+                            "T.start_symbols"
+                              expression (src/Drop.ml[140,5456+24]..src/Drop.ml[140,5456+60])
+                                Texp_apply
+                                expression (src/Drop.ml[140,5456+24]..src/Drop.ml[140,5456+40])
+                                  Texp_ident "Dune__exe!.StringMap.domain"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[140,5456+41]..src/Drop.ml[140,5456+60])
+                                      Texp_field
+                                      expression (src/Drop.ml[140,5456+41]..src/Drop.ml[140,5456+42])
+                                        Texp_ident "g/888"
+                                      "S.p_start_symbols"
+                                ]
+                            "T.types"
+                              expression (src/Drop.ml[141,5518+24]..src/Drop.ml[141,5518+58])
+                                Texp_apply
+                                expression (src/Drop.ml[141,5518+24]..src/Drop.ml[141,5518+46])
+                                  Texp_ident "drop_type_declarations/860"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[141,5518+47]..src/Drop.ml[141,5518+58])
+                                      Texp_field
+                                      expression (src/Drop.ml[141,5518+47]..src/Drop.ml[141,5518+48])
+                                        Texp_ident "g/888"
+                                      "S.p_types"
+                                ]
+                            "T.tokens"
+                              expression (src/Drop.ml[142,5578+24]..src/Drop.ml[142,5578+36])
+                                Texp_field
+                                expression (src/Drop.ml[142,5578+24]..src/Drop.ml[142,5578+25])
+                                  Texp_ident "g/888"
+                                "S.p_tokens"
+                            "T.on_error_reduce"
+                              expression (src/Drop.ml[143,5616+24]..src/Drop.ml[143,5616+79])
+                                Texp_apply
+                                expression (src/Drop.ml[143,5616+24]..src/Drop.ml[143,5616+57])
+                                  Texp_ident "drop_on_error_reduce_declarations/861"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[143,5616+58]..src/Drop.ml[143,5616+79])
+                                      Texp_field
+                                      expression (src/Drop.ml[143,5616+58]..src/Drop.ml[143,5616+59])
+                                        Texp_ident "g/888"
+                                      "S.p_on_error_reduce"
+                                ]
+                            "T.gr_attributes"
+                              expression (src/Drop.ml[144,5697+24]..src/Drop.ml[144,5697+48])
+                                Texp_field
+                                expression (src/Drop.ml[144,5697+24]..src/Drop.ml[144,5697+25])
+                                  Texp_ident "g/888"
+                                "S.p_grammar_attributes"
+                            "T.rules"
+                              expression (src/Drop.ml[145,5747+24]..src/Drop.ml[145,5747+59])
+                                Texp_apply
+                                expression (src/Drop.ml[145,5747+24]..src/Drop.ml[145,5747+37])
+                                  Texp_ident "Dune__exe!.StringMap.map"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[145,5747+38]..src/Drop.ml[145,5747+47])
+                                      Texp_ident "drop_rule/695"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/Drop.ml[145,5747+48]..src/Drop.ml[145,5747+59])
+                                      Texp_field
+                                      expression (src/Drop.ml[145,5747+48]..src/Drop.ml[145,5747+49])
+                                        Texp_ident "g/888"
+                                      "S.p_rules"
+                                ]
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Drop>
+ "drop"[value] -> <Dune__exe__Drop.47>;
+ }
+
+(seq
+  (let (value/397 = (field_imm 0 (global Dune__exe__Positions!)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Drop!) value/397))
+  (let
+    (drop_parameter/435 =
+       (function param/472
+         (switch* param/472
+          case tag 0:
+           (let (sym/508 =a (field_imm 0 param/472))
+             (apply (field_imm 1 (global Dune__exe__Drop!)) sym/508))
+          case tag 1:
+           (let
+             (*match*/1404 =a (field_imm 1 param/472)
+              *match*/1403 =a (field_imm 0 param/472))
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/Drop.ml" 30 6])))
+          case tag 2:
+           (let (*match*/1405 =a (field_imm 0 param/472))
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/Drop.ml" 32 6]))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Drop!) drop_parameter/435))
+  (let
+    (drop_producer/544 =
+       (function (param/1406, param/1407, param/1408)
+         (let
+           (attrs/548 =a param/1408
+            param/547 =a param/1407
+            id/546 =a param/1406)
+           (makeblock 0 id/546
+             (apply (field_imm 2 (global Dune__exe__Drop!)) param/547)
+             attrs/548))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Drop!) drop_producer/544))
+  (let
+    (drop_branch/590 =
+       (function branch/592
+         (makeblock 0 (field_imm 0 branch/592)
+           (apply (field_imm 19 (global Stdlib__List!))
+             (field_imm 3 (global Dune__exe__Drop!))
+             (field_imm 1 branch/592))
+           (field_imm 2 branch/592) (field_imm 3 branch/592)
+           (field_imm 4 branch/592))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Drop!) drop_branch/590))
+  (let
+    (drop_rule/695 =
+       (function rule/697
+         (seq
+           (if (== (field_imm 5 rule/697) 0) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/Drop.ml" 52 2])))
+           (makeblock 0 (*,*,int,*)
+             (apply (field_imm 19 (global Stdlib__List!))
+               (field_imm 4 (global Dune__exe__Drop!))
+               (field_imm 6 rule/697))
+             (field_imm 3 rule/697) (field_int 1 rule/697)
+             (field_imm 4 rule/697)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Drop!) drop_rule/695))
+  (let
+    (drop_declarations/698 =
+       (function kind/700 f/701 decls/702
+         (apply (field_imm 23 (global Dune__exe__StringMap!))
+           (function (param/1412, param/1413)
+             (let (info/799 =a param/1412) info/799))
+           (apply (field_imm 25 (global Stdlib__List!))
+             (function accu/801 param/859
+               (let
+                 (info/803 =a (field_imm 1 param/859)
+                  param/802 =a (field_imm 0 param/859)
+                  symbol/804 =
+                    (apply (field_imm 2 (global Dune__exe__Drop!)) param/802))
+                 (seq
+                   (catch
+                     (try
+                       (exit 1
+                         (apply (field_imm 15 (global Dune__exe__StringMap!))
+                           symbol/804 accu/801))
+                      with exn/1416
+                       (catch
+                         (if (== exn/1416 (field_imm 7 (global Stdlib!))) 0
+                           (exit 2))
+                        with (2) (reraise exn/1416)))
+                    with (1 val/1414)
+                     (let
+                       (position/805 =a (field_imm 1 val/1414)
+                        *match*/1415 =a (field_imm 0 val/1414))
+                       (apply (field_imm 5 (global Dune__exe__Error!))
+                         (makeblock 0 position/805
+                           (makeblock 0
+                             (apply
+                               (field_imm 11 (global Dune__exe__Parameters!))
+                               param/802)
+                             0))
+                         [0:
+                          [11:
+                           "there are multiple "
+                           [2:
+                            0
+                            [11:
+                             " declarations for the symbol "
+                             [2: 0 [12: '.' 0]]]]]
+                          "there are multiple %s declarations for the symbol %s."]
+                         kind/700 symbol/804)))
+                   (apply (field_imm 1 (global Dune__exe__StringMap!))
+                     symbol/804
+                     (makeblock 0 (apply f/701 info/803)
+                       (apply (field_imm 11 (global Dune__exe__Parameters!))
+                         param/802))
+                     accu/801))))
+             (field_imm 0 (global Dune__exe__StringMap!)) decls/702))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Drop!)
+      drop_declarations/698))
+  (let
+    (drop_type_declarations/860 =
+       (apply (field_imm 6 (global Dune__exe__Drop!)) "%type"
+         (field_imm 1 (global Dune__exe__Drop!))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Drop!)
+      drop_type_declarations/860))
+  (let
+    (drop_on_error_reduce_declarations/861 =
+       (apply (field_imm 6 (global Dune__exe__Drop!)) "%on_error_reduce"
+         (function x/862 x/862)))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Drop!)
+      drop_on_error_reduce_declarations/861))
+  (let
+    (add_attribute/863 =
+       (function g/865 param/866 attr/867
+         (let
+           (symbol/868 =
+              (apply (field_imm 2 (global Dune__exe__Drop!)) param/866))
+           (catch
+             (try
+               (exit 5
+                 (apply (field_imm 15 (global Dune__exe__StringMap!))
+                   symbol/868 (field_imm 5 g/865)))
+              with exn/1422
+               (catch
+                 (if (== exn/1422 (field_imm 7 (global Stdlib!)))
+                   (catch
+                     (try
+                       (exit 3
+                         (apply (field_imm 15 (global Dune__exe__StringMap!))
+                           symbol/868 (field_imm 8 g/865)))
+                      with exn/1421
+                       (catch
+                         (if (== exn/1421 (field_imm 7 (global Stdlib!)))
+                           (raise
+                             (makeblock 0 (global Assert_failure/28!)
+                               [0: "src/Drop.ml" 119 10]))
+                           (exit 4))
+                        with (4) (reraise exn/1421)))
+                    with (3 rule/871)
+                     (let
+                       (rule/872 =
+                          (let (init/1420 = rule/871)
+                            (makeblock 0 (*,*,int,*) (field_imm 0 init/1420)
+                              (field_imm 1 init/1420) (field_int 2 init/1420)
+                              (makeblock 0 attr/867 (field_imm 3 rule/871))))
+                        init/1419 = g/865)
+                       (makeblock 0 (field_imm 0 init/1419)
+                         (field_imm 1 init/1419) (field_imm 2 init/1419)
+                         (field_imm 3 init/1419) (field_imm 4 init/1419)
+                         (field_imm 5 init/1419) (field_imm 6 init/1419)
+                         (field_imm 7 init/1419)
+                         (apply (field_imm 1 (global Dune__exe__StringMap!))
+                           symbol/868 rule/872 (field_imm 8 g/865)))))
+                   (exit 6))
+                with (6) (reraise exn/1422)))
+            with (5 props/869)
+             (let
+               (props/870 =
+                  (let (init/1418 = props/869)
+                    (makemutable 0 (*,*,*,*,*,int,*,int)
+                      (field_imm 0 init/1418) (field_imm 1 init/1418)
+                      (field_imm 2 init/1418) (field_imm 3 init/1418)
+                      (makeblock 0 attr/867 (field_imm 4 props/869))
+                      (field_int 5 init/1418) (field_mut 6 init/1418)
+                      (field_int 7 init/1418)))
+                init/1417 = g/865)
+               (makeblock 0 (field_imm 0 init/1417) (field_imm 1 init/1417)
+                 (field_imm 2 init/1417) (field_imm 3 init/1417)
+                 (field_imm 4 init/1417)
+                 (apply (field_imm 1 (global Dune__exe__StringMap!))
+                   symbol/868 props/870 (field_imm 5 g/865))
+                 (field_imm 6 init/1417) (field_imm 7 init/1417)
+                 (field_imm 8 init/1417)))))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Drop!) add_attribute/863))
+  (let
+    (add_attributes/873 =
+       (function g/875 param/882
+         (let
+           (attrs/877 =a (field_imm 1 param/882)
+            params/876 =a (field_imm 0 param/882))
+           (apply (field_imm 25 (global Stdlib__List!))
+             (function g/878 param/879
+               (apply (field_imm 25 (global Stdlib__List!))
+                 (function g/880 attr/881
+                   (apply (field_imm 9 (global Dune__exe__Drop!)) g/880
+                     param/879 attr/881))
+                 g/878 attrs/877))
+             g/875 params/876))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Drop!) add_attributes/873))
+  (let
+    (add_attributes/883 =
+       (function decls/884 g/885
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 10 (global Dune__exe__Drop!)) g/885 decls/884)))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Drop!) add_attributes/883))
+  (let
+    (drop/886 =
+       (function g/888
+         (apply (field_imm 11 (global Dune__exe__Drop!)) (field_imm 8 g/888)
+           (makeblock 0 (field_imm 0 g/888) (field_imm 1 g/888)
+             (field_imm 2 g/888)
+             (apply (field_imm 43 (global Dune__exe__StringMap!))
+               (field_imm 3 g/888))
+             (apply (field_imm 7 (global Dune__exe__Drop!))
+               (field_imm 4 g/888))
+             (field_imm 5 g/888)
+             (apply (field_imm 8 (global Dune__exe__Drop!))
+               (field_imm 6 g/888))
+             (field_imm 7 g/888)
+             (apply (field_imm 23 (global Dune__exe__StringMap!))
+               (field_imm 5 (global Dune__exe__Drop!)) (field_imm 9 g/888))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Drop!) drop/886))
+  0)
+(seq
+  (let (value/397 = (field_imm 0 (global Dune__exe__Positions!)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Drop!) value/397))
+  (let
+    (drop_parameter/435 =
+       (function param/472
+         (switch* param/472
+          case tag 0:
+           (apply (field_imm 1 (global Dune__exe__Drop!))
+             (field_imm 0 param/472))
+          case tag 1:
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/Drop.ml" 30 6]))
+          case tag 2:
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/Drop.ml" 32 6])))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Drop!) drop_parameter/435))
+  (let
+    (drop_producer/544 =
+       (function (param/1406, param/1407, param/1408)
+         (makeblock 0 param/1406
+           (apply (field_imm 2 (global Dune__exe__Drop!)) param/1407)
+           param/1408)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Drop!) drop_producer/544))
+  (let
+    (drop_branch/590 =
+       (function branch/592
+         (makeblock 0 (field_imm 0 branch/592)
+           (apply (field_imm 19 (global Stdlib__List!))
+             (field_imm 3 (global Dune__exe__Drop!))
+             (field_imm 1 branch/592))
+           (field_imm 2 branch/592) (field_imm 3 branch/592)
+           (field_imm 4 branch/592))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Drop!) drop_branch/590))
+  (let
+    (drop_rule/695 =
+       (function rule/697
+         (seq
+           (if (== (field_imm 5 rule/697) 0) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/Drop.ml" 52 2])))
+           (makeblock 0 (*,*,int,*)
+             (apply (field_imm 19 (global Stdlib__List!))
+               (field_imm 4 (global Dune__exe__Drop!))
+               (field_imm 6 rule/697))
+             (field_imm 3 rule/697) (field_int 1 rule/697)
+             (field_imm 4 rule/697)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Drop!) drop_rule/695))
+  (let
+    (drop_declarations/698 =
+       (function kind/700 f/701 decls/702
+         (apply (field_imm 23 (global Dune__exe__StringMap!))
+           (function (param/1412, param/1413) param/1412)
+           (apply (field_imm 25 (global Stdlib__List!))
+             (function accu/801 param/859
+               (let
+                 (param/802 =a (field_imm 0 param/859)
+                  symbol/804 =
+                    (apply (field_imm 2 (global Dune__exe__Drop!)) param/802))
+                 (seq
+                   (catch
+                     (try
+                       (exit 1
+                         (apply (field_imm 15 (global Dune__exe__StringMap!))
+                           symbol/804 accu/801))
+                      with exn/1416
+                       (if (== exn/1416 (field_imm 7 (global Stdlib!))) 0
+                         (reraise exn/1416)))
+                    with (1 val/1414)
+                     (apply (field_imm 5 (global Dune__exe__Error!))
+                       (makeblock 0 (field_imm 1 val/1414)
+                         (makeblock 0
+                           (apply
+                             (field_imm 11 (global Dune__exe__Parameters!))
+                             param/802)
+                           0))
+                       [0:
+                        [11:
+                         "there are multiple "
+                         [2:
+                          0
+                          [11:
+                           " declarations for the symbol " [2: 0 [12: '.' 0]]]]]
+                        "there are multiple %s declarations for the symbol %s."]
+                       kind/700 symbol/804))
+                   (apply (field_imm 1 (global Dune__exe__StringMap!))
+                     symbol/804
+                     (makeblock 0 (apply f/701 (field_imm 1 param/859))
+                       (apply (field_imm 11 (global Dune__exe__Parameters!))
+                         param/802))
+                     accu/801))))
+             (field_imm 0 (global Dune__exe__StringMap!)) decls/702))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Drop!)
+      drop_declarations/698))
+  (let
+    (drop_type_declarations/860 =
+       (apply (field_imm 6 (global Dune__exe__Drop!)) "%type"
+         (field_imm 1 (global Dune__exe__Drop!))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Drop!)
+      drop_type_declarations/860))
+  (let
+    (drop_on_error_reduce_declarations/861 =
+       (apply (field_imm 6 (global Dune__exe__Drop!)) "%on_error_reduce"
+         (function x/862 x/862)))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Drop!)
+      drop_on_error_reduce_declarations/861))
+  (let
+    (add_attribute/863 =
+       (function g/865 param/866 attr/867
+         (let
+           (symbol/868 =
+              (apply (field_imm 2 (global Dune__exe__Drop!)) param/866))
+           (catch
+             (try
+               (exit 5
+                 (apply (field_imm 15 (global Dune__exe__StringMap!))
+                   symbol/868 (field_imm 5 g/865)))
+              with exn/1422
+               (if (== exn/1422 (field_imm 7 (global Stdlib!)))
+                 (catch
+                   (try
+                     (exit 3
+                       (apply (field_imm 15 (global Dune__exe__StringMap!))
+                         symbol/868 (field_imm 8 g/865)))
+                    with exn/1421
+                     (if (== exn/1421 (field_imm 7 (global Stdlib!)))
+                       (raise
+                         (makeblock 0 (global Assert_failure/28!)
+                           [0: "src/Drop.ml" 119 10]))
+                       (reraise exn/1421)))
+                  with (3 rule/871)
+                   (let
+                     (rule/872 =
+                        (makeblock 0 (*,*,int,*) (field_imm 0 rule/871)
+                          (field_imm 1 rule/871) (field_int 2 rule/871)
+                          (makeblock 0 attr/867 (field_imm 3 rule/871))))
+                     (makeblock 0 (field_imm 0 g/865) (field_imm 1 g/865)
+                       (field_imm 2 g/865) (field_imm 3 g/865)
+                       (field_imm 4 g/865) (field_imm 5 g/865)
+                       (field_imm 6 g/865) (field_imm 7 g/865)
+                       (apply (field_imm 1 (global Dune__exe__StringMap!))
+                         symbol/868 rule/872 (field_imm 8 g/865)))))
+                 (reraise exn/1422)))
+            with (5 props/869)
+             (let
+               (props/870 =
+                  (makemutable 0 (*,*,*,*,*,int,*,int)
+                    (field_imm 0 props/869) (field_imm 1 props/869)
+                    (field_imm 2 props/869) (field_imm 3 props/869)
+                    (makeblock 0 attr/867 (field_imm 4 props/869))
+                    (field_int 5 props/869) (field_mut 6 props/869)
+                    (field_int 7 props/869)))
+               (makeblock 0 (field_imm 0 g/865) (field_imm 1 g/865)
+                 (field_imm 2 g/865) (field_imm 3 g/865) (field_imm 4 g/865)
+                 (apply (field_imm 1 (global Dune__exe__StringMap!))
+                   symbol/868 props/870 (field_imm 5 g/865))
+                 (field_imm 6 g/865) (field_imm 7 g/865) (field_imm 8 g/865)))))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Drop!) add_attribute/863))
+  (let
+    (add_attributes/873 =
+       (function g/875 param/882
+         (let (attrs/877 =a (field_imm 1 param/882))
+           (apply (field_imm 25 (global Stdlib__List!))
+             (function g/878 param/879
+               (apply (field_imm 25 (global Stdlib__List!))
+                 (function g/880 attr/881
+                   (apply (field_imm 9 (global Dune__exe__Drop!)) g/880
+                     param/879 attr/881))
+                 g/878 attrs/877))
+             g/875 (field_imm 0 param/882)))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Drop!) add_attributes/873))
+  (let
+    (add_attributes/883 =
+       (function decls/884 g/885
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 10 (global Dune__exe__Drop!)) g/885 decls/884)))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Drop!) add_attributes/883))
+  (let
+    (drop/886 =
+       (function g/888
+         (apply (field_imm 11 (global Dune__exe__Drop!)) (field_imm 8 g/888)
+           (makeblock 0 (field_imm 0 g/888) (field_imm 1 g/888)
+             (field_imm 2 g/888)
+             (apply (field_imm 43 (global Dune__exe__StringMap!))
+               (field_imm 3 g/888))
+             (apply (field_imm 7 (global Dune__exe__Drop!))
+               (field_imm 4 g/888))
+             (field_imm 5 g/888)
+             (apply (field_imm 8 (global Dune__exe__Drop!))
+               (field_imm 6 g/888))
+             (field_imm 7 g/888)
+             (apply (field_imm 23 (global Dune__exe__StringMap!))
+               (field_imm 5 (global Dune__exe__Drop!)) (field_imm 9 g/888))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Drop!) drop/886))
+  0)

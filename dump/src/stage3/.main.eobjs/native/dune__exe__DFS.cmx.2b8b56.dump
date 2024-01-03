@@ -1,0 +1,1434 @@
+[
+  structure_item (src/DFS.ml[14,993+0]..[48,1626+3])
+    Pstr_module
+    "Run" (src/DFS.ml[14,993+7]..[14,993+10])
+      module_expr (src/DFS.ml[15,1004+0]..[48,1626+3])
+        Pmod_functor "G" (src/DFS.ml[15,1004+1]..[15,1004+2])
+        module_type (src/DFS.ml[15,1004+5]..[20,1150+3])
+          Pmty_signature
+          [
+            signature_item (src/DFS.ml[16,1013+2]..[16,1013+11])
+              Psig_type Rec
+              [
+                type_declaration "node" (src/DFS.ml[16,1013+7]..[16,1013+11]) (src/DFS.ml[16,1013+2]..[16,1013+11])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/DFS.ml[17,1025+2]..[17,1025+12])
+              Psig_type Rec
+              [
+                type_declaration "label" (src/DFS.ml[17,1025+7]..[17,1025+12]) (src/DFS.ml[17,1025+2]..[17,1025+12])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/DFS.ml[18,1038+2]..[18,1038+68])
+              Psig_value
+              value_description "foreach_outgoing_edge" (src/DFS.ml[18,1038+6]..[18,1038+27]) (src/DFS.ml[18,1038+2]..[18,1038+68])
+                core_type (src/DFS.ml[18,1038+29]..[18,1038+68])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/DFS.ml[18,1038+29]..[18,1038+33])
+                    Ptyp_constr "node" (src/DFS.ml[18,1038+29]..[18,1038+33])
+                    []
+                  core_type (src/DFS.ml[18,1038+37]..[18,1038+68])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[18,1038+38]..[18,1038+59])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/DFS.ml[18,1038+38]..[18,1038+43])
+                        Ptyp_constr "label" (src/DFS.ml[18,1038+38]..[18,1038+43])
+                        []
+                      core_type (src/DFS.ml[18,1038+47]..[18,1038+59])
+                        Ptyp_arrow
+                        Nolabel
+                        core_type (src/DFS.ml[18,1038+47]..[18,1038+51])
+                          Ptyp_constr "node" (src/DFS.ml[18,1038+47]..[18,1038+51])
+                          []
+                        core_type (src/DFS.ml[18,1038+55]..[18,1038+59])
+                          Ptyp_constr "unit" (src/DFS.ml[18,1038+55]..[18,1038+59])
+                          []
+                    core_type (src/DFS.ml[18,1038+64]..[18,1038+68])
+                      Ptyp_constr "unit" (src/DFS.ml[18,1038+64]..[18,1038+68])
+                      []
+                []
+            signature_item (src/DFS.ml[19,1107+2]..[19,1107+42])
+              Psig_value
+              value_description "foreach_root" (src/DFS.ml[19,1107+6]..[19,1107+18]) (src/DFS.ml[19,1107+2]..[19,1107+42])
+                core_type (src/DFS.ml[19,1107+20]..[19,1107+42])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/DFS.ml[19,1107+21]..[19,1107+33])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[19,1107+21]..[19,1107+25])
+                      Ptyp_constr "node" (src/DFS.ml[19,1107+21]..[19,1107+25])
+                      []
+                    core_type (src/DFS.ml[19,1107+29]..[19,1107+33])
+                      Ptyp_constr "unit" (src/DFS.ml[19,1107+29]..[19,1107+33])
+                      []
+                  core_type (src/DFS.ml[19,1107+38]..[19,1107+42])
+                    Ptyp_constr "unit" (src/DFS.ml[19,1107+38]..[19,1107+42])
+                    []
+                []
+          ]
+        module_expr (src/DFS.ml[21,1155+0]..[48,1626+3])
+          Pmod_functor "M" (src/DFS.ml[21,1155+1]..[21,1155+2])
+          module_type (src/DFS.ml[21,1155+5]..[24,1223+3])
+            Pmty_signature
+            [
+              signature_item (src/DFS.ml[22,1164+2]..[22,1164+26])
+                Psig_value
+                value_description "mark" (src/DFS.ml[22,1164+6]..[22,1164+10]) (src/DFS.ml[22,1164+2]..[22,1164+26])
+                  core_type (src/DFS.ml[22,1164+12]..[22,1164+26])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[22,1164+12]..[22,1164+18])
+                      Ptyp_constr "G.node" (src/DFS.ml[22,1164+12]..[22,1164+18])
+                      []
+                    core_type (src/DFS.ml[22,1164+22]..[22,1164+26])
+                      Ptyp_constr "unit" (src/DFS.ml[22,1164+22]..[22,1164+26])
+                      []
+                  []
+              signature_item (src/DFS.ml[23,1191+2]..[23,1191+31])
+                Psig_value
+                value_description "is_marked" (src/DFS.ml[23,1191+6]..[23,1191+15]) (src/DFS.ml[23,1191+2]..[23,1191+31])
+                  core_type (src/DFS.ml[23,1191+17]..[23,1191+31])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[23,1191+17]..[23,1191+23])
+                      Ptyp_constr "G.node" (src/DFS.ml[23,1191+17]..[23,1191+23])
+                      []
+                    core_type (src/DFS.ml[23,1191+27]..[23,1191+31])
+                      Ptyp_constr "bool" (src/DFS.ml[23,1191+27]..[23,1191+31])
+                      []
+                  []
+            ]
+          module_expr (src/DFS.ml[25,1228+0]..[48,1626+3])
+            Pmod_functor "D" (src/DFS.ml[25,1228+1]..[25,1228+2])
+            module_type (src/DFS.ml[25,1228+5]..[28,1320+3])
+              Pmty_signature
+              [
+                signature_item (src/DFS.ml[26,1237+2]..[26,1237+30])
+                  Psig_value
+                  value_description "discover" (src/DFS.ml[26,1237+6]..[26,1237+14]) (src/DFS.ml[26,1237+2]..[26,1237+30])
+                    core_type (src/DFS.ml[26,1237+16]..[26,1237+30])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/DFS.ml[26,1237+16]..[26,1237+22])
+                        Ptyp_constr "G.node" (src/DFS.ml[26,1237+16]..[26,1237+22])
+                        []
+                      core_type (src/DFS.ml[26,1237+26]..[26,1237+30])
+                        Ptyp_constr "unit" (src/DFS.ml[26,1237+26]..[26,1237+30])
+                        []
+                    []
+                signature_item (src/DFS.ml[27,1268+2]..[27,1268+51])
+                  Psig_value
+                  value_description "traverse" (src/DFS.ml[27,1268+6]..[27,1268+14]) (src/DFS.ml[27,1268+2]..[27,1268+51])
+                    core_type (src/DFS.ml[27,1268+16]..[27,1268+51])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/DFS.ml[27,1268+16]..[27,1268+22])
+                        Ptyp_constr "G.node" (src/DFS.ml[27,1268+16]..[27,1268+22])
+                        []
+                      core_type (src/DFS.ml[27,1268+26]..[27,1268+51])
+                        Ptyp_arrow
+                        Nolabel
+                        core_type (src/DFS.ml[27,1268+26]..[27,1268+33])
+                          Ptyp_constr "G.label" (src/DFS.ml[27,1268+26]..[27,1268+33])
+                          []
+                        core_type (src/DFS.ml[27,1268+37]..[27,1268+51])
+                          Ptyp_arrow
+                          Nolabel
+                          core_type (src/DFS.ml[27,1268+37]..[27,1268+43])
+                            Ptyp_constr "G.node" (src/DFS.ml[27,1268+37]..[27,1268+43])
+                            []
+                          core_type (src/DFS.ml[27,1268+47]..[27,1268+51])
+                            Ptyp_constr "unit" (src/DFS.ml[27,1268+47]..[27,1268+51])
+                            []
+                    []
+              ]
+            module_expr (src/DFS.ml[29,1325+2]..[48,1626+3])
+              Pmod_structure
+              [
+                structure_item (src/DFS.ml[31,1335+2]..[31,1335+8])
+                  Pstr_open Fresh
+                  module_expr (src/DFS.ml[31,1335+7]..[31,1335+8])
+                    Pmod_ident "G" (src/DFS.ml[31,1335+7]..[31,1335+8])
+                structure_item (src/DFS.ml[32,1344+2]..[32,1344+8])
+                  Pstr_open Fresh
+                  module_expr (src/DFS.ml[32,1344+7]..[32,1344+8])
+                    Pmod_ident "M" (src/DFS.ml[32,1344+7]..[32,1344+8])
+                structure_item (src/DFS.ml[33,1353+2]..[33,1353+8])
+                  Pstr_open Fresh
+                  module_expr (src/DFS.ml[33,1353+7]..[33,1353+8])
+                    Pmod_ident "D" (src/DFS.ml[33,1353+7]..[33,1353+8])
+                structure_item (src/DFS.ml[35,1363+2]..[43,1582+7])
+                  Pstr_value Rec
+                  [
+                    <def>
+                      pattern (src/DFS.ml[35,1363+10]..[35,1363+15])
+                        Ppat_var "visit" (src/DFS.ml[35,1363+10]..[35,1363+15])
+                      expression (src/DFS.ml[35,1363+16]..[43,1582+7]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/DFS.ml[35,1363+16]..[35,1363+20])
+                          Ppat_var "node" (src/DFS.ml[35,1363+16]..[35,1363+20])
+                        expression (src/DFS.ml[36,1386+4]..[43,1582+7])
+                          Pexp_ifthenelse
+                          expression (src/DFS.ml[36,1386+7]..[36,1386+27])
+                            Pexp_apply
+                            expression (src/DFS.ml[36,1386+7]..[36,1386+10])
+                              Pexp_ident "not" (src/DFS.ml[36,1386+7]..[36,1386+10])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/DFS.ml[36,1386+11]..[36,1386+27])
+                                  Pexp_apply
+                                  expression (src/DFS.ml[36,1386+12]..[36,1386+21])
+                                    Pexp_ident "is_marked" (src/DFS.ml[36,1386+12]..[36,1386+21])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/DFS.ml[36,1386+22]..[36,1386+26])
+                                        Pexp_ident "node" (src/DFS.ml[36,1386+22]..[36,1386+26])
+                                  ]
+                            ]
+                          expression (src/DFS.ml[36,1386+33]..[43,1582+7])
+                            Pexp_sequence
+                            expression (src/DFS.ml[37,1425+6]..[37,1425+15])
+                              Pexp_apply
+                              expression (src/DFS.ml[37,1425+6]..[37,1425+10])
+                                Pexp_ident "mark" (src/DFS.ml[37,1425+6]..[37,1425+10])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/DFS.ml[37,1425+11]..[37,1425+15])
+                                    Pexp_ident "node" (src/DFS.ml[37,1425+11]..[37,1425+15])
+                              ]
+                            expression (src/DFS.ml[38,1442+6]..[42,1574+7])
+                              Pexp_sequence
+                              expression (src/DFS.ml[38,1442+6]..[38,1442+19])
+                                Pexp_apply
+                                expression (src/DFS.ml[38,1442+6]..[38,1442+14])
+                                  Pexp_ident "discover" (src/DFS.ml[38,1442+6]..[38,1442+14])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/DFS.ml[38,1442+15]..[38,1442+19])
+                                      Pexp_ident "node" (src/DFS.ml[38,1442+15]..[38,1442+19])
+                                ]
+                              expression (src/DFS.ml[39,1463+6]..[42,1574+7])
+                                Pexp_apply
+                                expression (src/DFS.ml[39,1463+6]..[39,1463+27])
+                                  Pexp_ident "foreach_outgoing_edge" (src/DFS.ml[39,1463+6]..[39,1463+27])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/DFS.ml[39,1463+28]..[39,1463+32])
+                                      Pexp_ident "node" (src/DFS.ml[39,1463+28]..[39,1463+32])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/DFS.ml[39,1463+33]..[42,1574+7])
+                                      Pexp_fun
+                                      Nolabel
+                                      None
+                                      pattern (src/DFS.ml[39,1463+38]..[39,1463+43])
+                                        Ppat_var "label" (src/DFS.ml[39,1463+38]..[39,1463+43])
+                                      expression (src/DFS.ml[39,1463+44]..[41,1553+20]) ghost
+                                        Pexp_fun
+                                        Nolabel
+                                        None
+                                        pattern (src/DFS.ml[39,1463+44]..[39,1463+50])
+                                          Ppat_var "target" (src/DFS.ml[39,1463+44]..[39,1463+50])
+                                        expression (src/DFS.ml[40,1517+8]..[41,1553+20])
+                                          Pexp_sequence
+                                          expression (src/DFS.ml[40,1517+8]..[40,1517+34])
+                                            Pexp_apply
+                                            expression (src/DFS.ml[40,1517+8]..[40,1517+16])
+                                              Pexp_ident "traverse" (src/DFS.ml[40,1517+8]..[40,1517+16])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/DFS.ml[40,1517+17]..[40,1517+21])
+                                                  Pexp_ident "node" (src/DFS.ml[40,1517+17]..[40,1517+21])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/DFS.ml[40,1517+22]..[40,1517+27])
+                                                  Pexp_ident "label" (src/DFS.ml[40,1517+22]..[40,1517+27])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/DFS.ml[40,1517+28]..[40,1517+34])
+                                                  Pexp_ident "target" (src/DFS.ml[40,1517+28]..[40,1517+34])
+                                            ]
+                                          expression (src/DFS.ml[41,1553+8]..[41,1553+20])
+                                            Pexp_apply
+                                            expression (src/DFS.ml[41,1553+8]..[41,1553+13])
+                                              Pexp_ident "visit" (src/DFS.ml[41,1553+8]..[41,1553+13])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/DFS.ml[41,1553+14]..[41,1553+20])
+                                                  Pexp_ident "target" (src/DFS.ml[41,1553+14]..[41,1553+20])
+                                            ]
+                                ]
+                          None
+                  ]
+                structure_item (src/DFS.ml[45,1591+2]..[46,1602+22])
+                  Pstr_value Nonrec
+                  [
+                    <def>
+                      pattern (src/DFS.ml[45,1591+6]..[45,1591+8])
+                        Ppat_construct "()" (src/DFS.ml[45,1591+6]..[45,1591+8])
+                        None
+                      expression (src/DFS.ml[46,1602+4]..[46,1602+22])
+                        Pexp_apply
+                        expression (src/DFS.ml[46,1602+4]..[46,1602+16])
+                          Pexp_ident "foreach_root" (src/DFS.ml[46,1602+4]..[46,1602+16])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/DFS.ml[46,1602+17]..[46,1602+22])
+                              Pexp_ident "visit" (src/DFS.ml[46,1602+17]..[46,1602+22])
+                        ]
+                  ]
+              ]
+  structure_item (src/DFS.ml[50,1631+0]..[59,1813+3])
+    Pstr_module
+    "MarkSet" (src/DFS.ml[50,1631+7]..[50,1631+14])
+      module_expr (src/DFS.ml[50,1631+15]..[59,1813+3])
+        Pmod_functor "S" (src/DFS.ml[50,1631+16]..[50,1631+17])
+        module_type (src/DFS.ml[50,1631+20]..[50,1631+25])
+          Pmty_ident "Set.S" (src/DFS.ml[50,1631+20]..[50,1631+25])
+        module_expr (src/DFS.ml[50,1631+29]..[59,1813+3])
+          Pmod_structure
+          [
+            structure_item (src/DFS.ml[51,1667+2]..[52,1682+15])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[51,1667+6]..[51,1667+12])
+                    Ppat_var "marked" (src/DFS.ml[51,1667+6]..[51,1667+12])
+                  expression (src/DFS.ml[52,1682+4]..[52,1682+15])
+                    Pexp_apply
+                    expression (src/DFS.ml[52,1682+4]..[52,1682+7])
+                      Pexp_ident "ref" (src/DFS.ml[52,1682+4]..[52,1682+7])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/DFS.ml[52,1682+8]..[52,1682+15])
+                          Pexp_ident "S.empty" (src/DFS.ml[52,1682+8]..[52,1682+15])
+                    ]
+              ]
+            structure_item (src/DFS.ml[53,1698+2]..[54,1718+19])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[53,1698+6]..[53,1698+15])
+                    Ppat_var "is_marked" (src/DFS.ml[53,1698+6]..[53,1698+15])
+                  expression (src/DFS.ml[53,1698+16]..[54,1718+19]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/DFS.ml[53,1698+16]..[53,1698+17])
+                      Ppat_var "x" (src/DFS.ml[53,1698+16]..[53,1698+17])
+                    expression (src/DFS.ml[54,1718+4]..[54,1718+19])
+                      Pexp_apply
+                      expression (src/DFS.ml[54,1718+4]..[54,1718+9])
+                        Pexp_ident "S.mem" (src/DFS.ml[54,1718+4]..[54,1718+9])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[54,1718+10]..[54,1718+11])
+                            Pexp_ident "x" (src/DFS.ml[54,1718+10]..[54,1718+11])
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[54,1718+12]..[54,1718+19])
+                            Pexp_apply
+                            expression (src/DFS.ml[54,1718+12]..[54,1718+13])
+                              Pexp_ident "!" (src/DFS.ml[54,1718+12]..[54,1718+13])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/DFS.ml[54,1718+13]..[54,1718+19])
+                                  Pexp_ident "marked" (src/DFS.ml[54,1718+13]..[54,1718+19])
+                            ]
+                      ]
+              ]
+            structure_item (src/DFS.ml[55,1738+2]..[56,1753+29])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[55,1738+6]..[55,1738+10])
+                    Ppat_var "mark" (src/DFS.ml[55,1738+6]..[55,1738+10])
+                  expression (src/DFS.ml[55,1738+11]..[56,1753+29]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/DFS.ml[55,1738+11]..[55,1738+12])
+                      Ppat_var "x" (src/DFS.ml[55,1738+11]..[55,1738+12])
+                    expression (src/DFS.ml[56,1753+4]..[56,1753+29])
+                      Pexp_apply
+                      expression (src/DFS.ml[56,1753+11]..[56,1753+13])
+                        Pexp_ident ":=" (src/DFS.ml[56,1753+11]..[56,1753+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[56,1753+4]..[56,1753+10])
+                            Pexp_ident "marked" (src/DFS.ml[56,1753+4]..[56,1753+10])
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[56,1753+14]..[56,1753+29])
+                            Pexp_apply
+                            expression (src/DFS.ml[56,1753+14]..[56,1753+19])
+                              Pexp_ident "S.add" (src/DFS.ml[56,1753+14]..[56,1753+19])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/DFS.ml[56,1753+20]..[56,1753+21])
+                                  Pexp_ident "x" (src/DFS.ml[56,1753+20]..[56,1753+21])
+                              <arg>
+                              Nolabel
+                                expression (src/DFS.ml[56,1753+22]..[56,1753+29])
+                                  Pexp_apply
+                                  expression (src/DFS.ml[56,1753+22]..[56,1753+23])
+                                    Pexp_ident "!" (src/DFS.ml[56,1753+22]..[56,1753+23])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/DFS.ml[56,1753+23]..[56,1753+29])
+                                        Pexp_ident "marked" (src/DFS.ml[56,1753+23]..[56,1753+29])
+                                  ]
+                            ]
+                      ]
+              ]
+            structure_item (src/DFS.ml[57,1783+2]..[58,1801+11])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[57,1783+6]..[57,1783+12])
+                    Ppat_var "marked" (src/DFS.ml[57,1783+6]..[57,1783+12])
+                  expression (src/DFS.ml[57,1783+13]..[58,1801+11]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/DFS.ml[57,1783+13]..[57,1783+15])
+                      Ppat_construct "()" (src/DFS.ml[57,1783+13]..[57,1783+15])
+                      None
+                    expression (src/DFS.ml[58,1801+4]..[58,1801+11])
+                      Pexp_apply
+                      expression (src/DFS.ml[58,1801+4]..[58,1801+5])
+                        Pexp_ident "!" (src/DFS.ml[58,1801+4]..[58,1801+5])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[58,1801+5]..[58,1801+11])
+                            Pexp_ident "marked" (src/DFS.ml[58,1801+5]..[58,1801+11])
+                      ]
+              ]
+          ]
+  structure_item (src/DFS.ml[61,1818+0]..[74,2069+3])
+    Pstr_module
+    "MarkArray" (src/DFS.ml[61,1818+7]..[61,1818+16])
+      module_expr (src/DFS.ml[61,1818+17]..[74,2069+3])
+        Pmod_functor "G" (src/DFS.ml[61,1818+18]..[61,1818+19])
+        module_type (src/DFS.ml[61,1818+22]..[65,1895+3])
+          Pmty_signature
+          [
+            signature_item (src/DFS.ml[62,1844+2]..[62,1844+11])
+              Psig_type Rec
+              [
+                type_declaration "node" (src/DFS.ml[62,1844+7]..[62,1844+11]) (src/DFS.ml[62,1844+2]..[62,1844+11])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/DFS.ml[63,1856+2]..[63,1856+12])
+              Psig_value
+              value_description "n" (src/DFS.ml[63,1856+6]..[63,1856+7]) (src/DFS.ml[63,1856+2]..[63,1856+12])
+                core_type (src/DFS.ml[63,1856+9]..[63,1856+12])
+                  Ptyp_constr "int" (src/DFS.ml[63,1856+9]..[63,1856+12])
+                  []
+                []
+            signature_item (src/DFS.ml[64,1869+2]..[64,1869+25])
+              Psig_value
+              value_description "number" (src/DFS.ml[64,1869+6]..[64,1869+12]) (src/DFS.ml[64,1869+2]..[64,1869+25])
+                core_type (src/DFS.ml[64,1869+14]..[64,1869+25])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/DFS.ml[64,1869+14]..[64,1869+18])
+                    Ptyp_constr "node" (src/DFS.ml[64,1869+14]..[64,1869+18])
+                    []
+                  core_type (src/DFS.ml[64,1869+22]..[64,1869+25])
+                    Ptyp_constr "int" (src/DFS.ml[64,1869+22]..[64,1869+25])
+                    []
+                []
+          ]
+        module_expr (src/DFS.ml[65,1895+7]..[74,2069+3])
+          Pmod_structure
+          [
+            structure_item (src/DFS.ml[66,1909+2]..[67,1924+24])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[66,1909+6]..[66,1909+12])
+                    Ppat_var "marked" (src/DFS.ml[66,1909+6]..[66,1909+12])
+                  expression (src/DFS.ml[67,1924+4]..[67,1924+24])
+                    Pexp_apply
+                    expression (src/DFS.ml[67,1924+4]..[67,1924+14])
+                      Pexp_ident "Array.make" (src/DFS.ml[67,1924+4]..[67,1924+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/DFS.ml[67,1924+15]..[67,1924+18])
+                          Pexp_ident "G.n" (src/DFS.ml[67,1924+15]..[67,1924+18])
+                      <arg>
+                      Nolabel
+                        expression (src/DFS.ml[67,1924+19]..[67,1924+24])
+                          Pexp_construct "false" (src/DFS.ml[67,1924+19]..[67,1924+24])
+                          None
+                    ]
+              ]
+            structure_item (src/DFS.ml[68,1949+2]..[69,1969+23])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[68,1949+6]..[68,1949+15])
+                    Ppat_var "is_marked" (src/DFS.ml[68,1949+6]..[68,1949+15])
+                  expression (src/DFS.ml[68,1949+16]..[69,1969+23]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/DFS.ml[68,1949+16]..[68,1949+17])
+                      Ppat_var "x" (src/DFS.ml[68,1949+16]..[68,1949+17])
+                    expression (src/DFS.ml[69,1969+4]..[69,1969+23])
+                      Pexp_apply
+                      expression (src/DFS.ml[69,1969+4]..[69,1969+23]) ghost
+                        Pexp_ident "Array.get" (src/DFS.ml[69,1969+4]..[69,1969+23]) ghost
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[69,1969+4]..[69,1969+10])
+                            Pexp_ident "marked" (src/DFS.ml[69,1969+4]..[69,1969+10])
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[69,1969+12]..[69,1969+22])
+                            Pexp_apply
+                            expression (src/DFS.ml[69,1969+12]..[69,1969+20])
+                              Pexp_ident "G.number" (src/DFS.ml[69,1969+12]..[69,1969+20])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/DFS.ml[69,1969+21]..[69,1969+22])
+                                  Pexp_ident "x" (src/DFS.ml[69,1969+21]..[69,1969+22])
+                            ]
+                      ]
+              ]
+            structure_item (src/DFS.ml[70,1993+2]..[71,2008+31])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[70,1993+6]..[70,1993+10])
+                    Ppat_var "mark" (src/DFS.ml[70,1993+6]..[70,1993+10])
+                  expression (src/DFS.ml[70,1993+11]..[71,2008+31]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/DFS.ml[70,1993+11]..[70,1993+12])
+                      Ppat_var "x" (src/DFS.ml[70,1993+11]..[70,1993+12])
+                    expression (src/DFS.ml[71,2008+4]..[71,2008+31])
+                      Pexp_apply
+                      expression (src/DFS.ml[71,2008+4]..[71,2008+31]) ghost
+                        Pexp_ident "Array.set" (src/DFS.ml[71,2008+4]..[71,2008+31]) ghost
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[71,2008+4]..[71,2008+10])
+                            Pexp_ident "marked" (src/DFS.ml[71,2008+4]..[71,2008+10])
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[71,2008+12]..[71,2008+22])
+                            Pexp_apply
+                            expression (src/DFS.ml[71,2008+12]..[71,2008+20])
+                              Pexp_ident "G.number" (src/DFS.ml[71,2008+12]..[71,2008+20])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/DFS.ml[71,2008+21]..[71,2008+22])
+                                  Pexp_ident "x" (src/DFS.ml[71,2008+21]..[71,2008+22])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/DFS.ml[71,2008+27]..[71,2008+31])
+                            Pexp_construct "true" (src/DFS.ml[71,2008+27]..[71,2008+31])
+                            None
+                      ]
+              ]
+            structure_item (src/DFS.ml[72,2040+2]..[73,2058+10])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/DFS.ml[72,2040+6]..[72,2040+12])
+                    Ppat_var "marked" (src/DFS.ml[72,2040+6]..[72,2040+12])
+                  expression (src/DFS.ml[72,2040+13]..[73,2058+10]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/DFS.ml[72,2040+13]..[72,2040+15])
+                      Ppat_construct "()" (src/DFS.ml[72,2040+13]..[72,2040+15])
+                      None
+                    expression (src/DFS.ml[73,2058+4]..[73,2058+10])
+                      Pexp_ident "marked" (src/DFS.ml[73,2058+4]..[73,2058+10])
+              ]
+          ]
+]
+
+module Run(G:sig
+               type node
+               type label
+               val foreach_outgoing_edge :
+                 node -> (label -> node -> unit) -> unit
+               val foreach_root : (node -> unit) -> unit
+             end)(M:sig
+                      val mark : G.node -> unit
+                      val is_marked : G.node -> bool
+                    end)(D:sig
+                             val discover : G.node -> unit
+                             val traverse :
+                               G.node -> G.label -> G.node -> unit
+                           end) =
+  struct
+    open G
+    open M
+    open D
+    let rec visit node =
+      if not (is_marked node)
+      then
+        (mark node;
+         discover node;
+         foreach_outgoing_edge node
+           (fun label ->
+              fun target -> traverse node label target; visit target))
+    let () = foreach_root visit
+  end
+module MarkSet(S:Set.S) =
+  struct
+    let marked = ref S.empty
+    let is_marked x = S.mem x (!marked)
+    let mark x = marked := (S.add x (!marked))
+    let marked () = !marked
+  end
+module MarkArray(G:sig type node val n : int val number : node -> int end) =
+  struct
+    let marked = Array.make G.n false
+    let is_marked x = marked.(G.number x)
+    let mark x = marked.(G.number x) <- true
+    let marked () = marked
+  end
+[
+  structure_item (src/DFS.ml[14,993+0]..src/DFS.ml[48,1626+3])
+    Tstr_module
+    Run/412
+      module_expr (src/DFS.ml[15,1004+0]..src/DFS.ml[48,1626+3])
+        Tmod_functor "G/401"
+        module_type (src/DFS.ml[15,1004+5]..src/DFS.ml[20,1150+3])
+          Tmty_signature
+          [
+            signature_item (src/DFS.ml[16,1013+2]..src/DFS.ml[16,1013+11])
+              Tsig_type Rec
+              [
+                type_declaration node/397 (src/DFS.ml[16,1013+2]..src/DFS.ml[16,1013+11])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/DFS.ml[17,1025+2]..src/DFS.ml[17,1025+12])
+              Tsig_type Rec
+              [
+                type_declaration label/398 (src/DFS.ml[17,1025+2]..src/DFS.ml[17,1025+12])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/DFS.ml[18,1038+2]..src/DFS.ml[18,1038+68])
+              Tsig_value
+              value_description foreach_outgoing_edge/399 (src/DFS.ml[18,1038+2]..src/DFS.ml[18,1038+68])
+                core_type (src/DFS.ml[18,1038+29]..src/DFS.ml[18,1038+68])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/DFS.ml[18,1038+29]..src/DFS.ml[18,1038+33])
+                    Ttyp_constr "node/397"
+                    []
+                  core_type (src/DFS.ml[18,1038+37]..src/DFS.ml[18,1038+68])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[18,1038+38]..src/DFS.ml[18,1038+59])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/DFS.ml[18,1038+38]..src/DFS.ml[18,1038+43])
+                        Ttyp_constr "label/398"
+                        []
+                      core_type (src/DFS.ml[18,1038+47]..src/DFS.ml[18,1038+59])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/DFS.ml[18,1038+47]..src/DFS.ml[18,1038+51])
+                          Ttyp_constr "node/397"
+                          []
+                        core_type (src/DFS.ml[18,1038+55]..src/DFS.ml[18,1038+59])
+                          Ttyp_constr "unit/6!"
+                          []
+                    core_type (src/DFS.ml[18,1038+64]..src/DFS.ml[18,1038+68])
+                      Ttyp_constr "unit/6!"
+                      []
+                []
+            signature_item (src/DFS.ml[19,1107+2]..src/DFS.ml[19,1107+42])
+              Tsig_value
+              value_description foreach_root/400 (src/DFS.ml[19,1107+2]..src/DFS.ml[19,1107+42])
+                core_type (src/DFS.ml[19,1107+20]..src/DFS.ml[19,1107+42])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/DFS.ml[19,1107+21]..src/DFS.ml[19,1107+33])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[19,1107+21]..src/DFS.ml[19,1107+25])
+                      Ttyp_constr "node/397"
+                      []
+                    core_type (src/DFS.ml[19,1107+29]..src/DFS.ml[19,1107+33])
+                      Ttyp_constr "unit/6!"
+                      []
+                  core_type (src/DFS.ml[19,1107+38]..src/DFS.ml[19,1107+42])
+                    Ttyp_constr "unit/6!"
+                    []
+                []
+          ]
+        module_expr (src/DFS.ml[21,1155+0]..src/DFS.ml[48,1626+3])
+          Tmod_functor "M/404"
+          module_type (src/DFS.ml[21,1155+5]..src/DFS.ml[24,1223+3])
+            Tmty_signature
+            [
+              signature_item (src/DFS.ml[22,1164+2]..src/DFS.ml[22,1164+26])
+                Tsig_value
+                value_description mark/402 (src/DFS.ml[22,1164+2]..src/DFS.ml[22,1164+26])
+                  core_type (src/DFS.ml[22,1164+12]..src/DFS.ml[22,1164+26])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[22,1164+12]..src/DFS.ml[22,1164+18])
+                      Ttyp_constr "G/401.node"
+                      []
+                    core_type (src/DFS.ml[22,1164+22]..src/DFS.ml[22,1164+26])
+                      Ttyp_constr "unit/6!"
+                      []
+                  []
+              signature_item (src/DFS.ml[23,1191+2]..src/DFS.ml[23,1191+31])
+                Tsig_value
+                value_description is_marked/403 (src/DFS.ml[23,1191+2]..src/DFS.ml[23,1191+31])
+                  core_type (src/DFS.ml[23,1191+17]..src/DFS.ml[23,1191+31])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/DFS.ml[23,1191+17]..src/DFS.ml[23,1191+23])
+                      Ttyp_constr "G/401.node"
+                      []
+                    core_type (src/DFS.ml[23,1191+27]..src/DFS.ml[23,1191+31])
+                      Ttyp_constr "bool/5!"
+                      []
+                  []
+            ]
+          module_expr (src/DFS.ml[25,1228+0]..src/DFS.ml[48,1626+3])
+            Tmod_functor "D/407"
+            module_type (src/DFS.ml[25,1228+5]..src/DFS.ml[28,1320+3])
+              Tmty_signature
+              [
+                signature_item (src/DFS.ml[26,1237+2]..src/DFS.ml[26,1237+30])
+                  Tsig_value
+                  value_description discover/405 (src/DFS.ml[26,1237+2]..src/DFS.ml[26,1237+30])
+                    core_type (src/DFS.ml[26,1237+16]..src/DFS.ml[26,1237+30])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/DFS.ml[26,1237+16]..src/DFS.ml[26,1237+22])
+                        Ttyp_constr "G/401.node"
+                        []
+                      core_type (src/DFS.ml[26,1237+26]..src/DFS.ml[26,1237+30])
+                        Ttyp_constr "unit/6!"
+                        []
+                    []
+                signature_item (src/DFS.ml[27,1268+2]..src/DFS.ml[27,1268+51])
+                  Tsig_value
+                  value_description traverse/406 (src/DFS.ml[27,1268+2]..src/DFS.ml[27,1268+51])
+                    core_type (src/DFS.ml[27,1268+16]..src/DFS.ml[27,1268+51])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/DFS.ml[27,1268+16]..src/DFS.ml[27,1268+22])
+                        Ttyp_constr "G/401.node"
+                        []
+                      core_type (src/DFS.ml[27,1268+26]..src/DFS.ml[27,1268+51])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/DFS.ml[27,1268+26]..src/DFS.ml[27,1268+33])
+                          Ttyp_constr "G/401.label"
+                          []
+                        core_type (src/DFS.ml[27,1268+37]..src/DFS.ml[27,1268+51])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/DFS.ml[27,1268+37]..src/DFS.ml[27,1268+43])
+                            Ttyp_constr "G/401.node"
+                            []
+                          core_type (src/DFS.ml[27,1268+47]..src/DFS.ml[27,1268+51])
+                            Ttyp_constr "unit/6!"
+                            []
+                    []
+              ]
+            module_expr (src/DFS.ml[29,1325+2]..src/DFS.ml[48,1626+3])
+              Tmod_structure
+              [
+                structure_item (src/DFS.ml[31,1335+2]..src/DFS.ml[31,1335+8])
+                  Tstr_open Fresh
+                  module_expr (src/DFS.ml[31,1335+7]..src/DFS.ml[31,1335+8])
+                    Tmod_ident "G/401"
+                structure_item (src/DFS.ml[32,1344+2]..src/DFS.ml[32,1344+8])
+                  Tstr_open Fresh
+                  module_expr (src/DFS.ml[32,1344+7]..src/DFS.ml[32,1344+8])
+                    Tmod_ident "M/404"
+                structure_item (src/DFS.ml[33,1353+2]..src/DFS.ml[33,1353+8])
+                  Tstr_open Fresh
+                  module_expr (src/DFS.ml[33,1353+7]..src/DFS.ml[33,1353+8])
+                    Tmod_ident "D/407"
+                structure_item (src/DFS.ml[35,1363+2]..src/DFS.ml[43,1582+7])
+                  Tstr_value Rec
+                  [
+                    <def>
+                      pattern (src/DFS.ml[35,1363+10]..src/DFS.ml[35,1363+15])
+                        Tpat_var "visit/408"
+                      expression (src/DFS.ml[35,1363+16]..src/DFS.ml[43,1582+7]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/DFS.ml[35,1363+16]..src/DFS.ml[35,1363+20])
+                              Tpat_var "node/409"
+                            expression (src/DFS.ml[36,1386+4]..src/DFS.ml[43,1582+7])
+                              Texp_ifthenelse
+                              expression (src/DFS.ml[36,1386+7]..src/DFS.ml[36,1386+27])
+                                Texp_apply
+                                expression (src/DFS.ml[36,1386+7]..src/DFS.ml[36,1386+10])
+                                  Texp_ident "Stdlib!.not"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/DFS.ml[36,1386+11]..src/DFS.ml[36,1386+27])
+                                      Texp_apply
+                                      expression (src/DFS.ml[36,1386+12]..src/DFS.ml[36,1386+21])
+                                        Texp_ident "M/404.is_marked"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/DFS.ml[36,1386+22]..src/DFS.ml[36,1386+26])
+                                            Texp_ident "node/409"
+                                      ]
+                                ]
+                              expression (src/DFS.ml[36,1386+33]..src/DFS.ml[43,1582+7])
+                                Texp_sequence
+                                expression (src/DFS.ml[37,1425+6]..src/DFS.ml[37,1425+15])
+                                  Texp_apply
+                                  expression (src/DFS.ml[37,1425+6]..src/DFS.ml[37,1425+10])
+                                    Texp_ident "M/404.mark"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/DFS.ml[37,1425+11]..src/DFS.ml[37,1425+15])
+                                        Texp_ident "node/409"
+                                  ]
+                                expression (src/DFS.ml[38,1442+6]..src/DFS.ml[42,1574+7])
+                                  Texp_sequence
+                                  expression (src/DFS.ml[38,1442+6]..src/DFS.ml[38,1442+19])
+                                    Texp_apply
+                                    expression (src/DFS.ml[38,1442+6]..src/DFS.ml[38,1442+14])
+                                      Texp_ident "D/407.discover"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/DFS.ml[38,1442+15]..src/DFS.ml[38,1442+19])
+                                          Texp_ident "node/409"
+                                    ]
+                                  expression (src/DFS.ml[39,1463+6]..src/DFS.ml[42,1574+7])
+                                    Texp_apply
+                                    expression (src/DFS.ml[39,1463+6]..src/DFS.ml[39,1463+27])
+                                      Texp_ident "G/401.foreach_outgoing_edge"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/DFS.ml[39,1463+28]..src/DFS.ml[39,1463+32])
+                                          Texp_ident "node/409"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/DFS.ml[39,1463+33]..src/DFS.ml[42,1574+7])
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/DFS.ml[39,1463+38]..src/DFS.ml[39,1463+43])
+                                                Tpat_var "label/410"
+                                              expression (src/DFS.ml[39,1463+44]..src/DFS.ml[41,1553+20]) ghost
+                                                Texp_function
+                                                Nolabel
+                                                [
+                                                  <case>
+                                                    pattern (src/DFS.ml[39,1463+44]..src/DFS.ml[39,1463+50])
+                                                      Tpat_var "target/411"
+                                                    expression (src/DFS.ml[40,1517+8]..src/DFS.ml[41,1553+20])
+                                                      Texp_sequence
+                                                      expression (src/DFS.ml[40,1517+8]..src/DFS.ml[40,1517+34])
+                                                        Texp_apply
+                                                        expression (src/DFS.ml[40,1517+8]..src/DFS.ml[40,1517+16])
+                                                          Texp_ident "D/407.traverse"
+                                                        [
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/DFS.ml[40,1517+17]..src/DFS.ml[40,1517+21])
+                                                              Texp_ident "node/409"
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/DFS.ml[40,1517+22]..src/DFS.ml[40,1517+27])
+                                                              Texp_ident "label/410"
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/DFS.ml[40,1517+28]..src/DFS.ml[40,1517+34])
+                                                              Texp_ident "target/411"
+                                                        ]
+                                                      expression (src/DFS.ml[41,1553+8]..src/DFS.ml[41,1553+20])
+                                                        Texp_apply
+                                                        expression (src/DFS.ml[41,1553+8]..src/DFS.ml[41,1553+13])
+                                                          Texp_ident "visit/408"
+                                                        [
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (src/DFS.ml[41,1553+14]..src/DFS.ml[41,1553+20])
+                                                              Texp_ident "target/411"
+                                                        ]
+                                                ]
+                                          ]
+                                    ]
+                              None
+                        ]
+                  ]
+                structure_item (src/DFS.ml[45,1591+2]..src/DFS.ml[46,1602+22])
+                  Tstr_value Nonrec
+                  [
+                    <def>
+                      pattern (src/DFS.ml[45,1591+6]..src/DFS.ml[45,1591+8])
+                        Tpat_construct "()"
+                        []
+                        None
+                      expression (src/DFS.ml[46,1602+4]..src/DFS.ml[46,1602+22])
+                        Texp_apply
+                        expression (src/DFS.ml[46,1602+4]..src/DFS.ml[46,1602+16])
+                          Texp_ident "G/401.foreach_root"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/DFS.ml[46,1602+17]..src/DFS.ml[46,1602+22])
+                              Texp_ident "visit/408"
+                        ]
+                  ]
+              ]
+  structure_item (src/DFS.ml[50,1631+0]..src/DFS.ml[59,1813+3])
+    Tstr_module
+    MarkSet/477
+      module_expr (src/DFS.ml[50,1631+15]..src/DFS.ml[59,1813+3])
+        Tmod_functor "S/467"
+        module_type (src/DFS.ml[50,1631+20]..src/DFS.ml[50,1631+25])
+          Tmty_ident "Stdlib!.Set.S"
+        module_expr (src/DFS.ml[50,1631+29]..src/DFS.ml[59,1813+3])
+          module_expr (src/DFS.ml[50,1631+29]..src/DFS.ml[59,1813+3])
+            Tmod_structure
+            [
+              structure_item (src/DFS.ml[51,1667+2]..src/DFS.ml[52,1682+15])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[51,1667+6]..src/DFS.ml[51,1667+12])
+                      Tpat_var "marked/468"
+                    expression (src/DFS.ml[52,1682+4]..src/DFS.ml[52,1682+15])
+                      Texp_apply
+                      expression (src/DFS.ml[52,1682+4]..src/DFS.ml[52,1682+7])
+                        Texp_ident "Stdlib!.ref"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/DFS.ml[52,1682+8]..src/DFS.ml[52,1682+15])
+                            Texp_ident "S/467.empty"
+                      ]
+                ]
+              structure_item (src/DFS.ml[53,1698+2]..src/DFS.ml[54,1718+19])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[53,1698+6]..src/DFS.ml[53,1698+15])
+                      Tpat_var "is_marked/469"
+                    expression (src/DFS.ml[53,1698+16]..src/DFS.ml[54,1718+19]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/DFS.ml[53,1698+16]..src/DFS.ml[53,1698+17])
+                            Tpat_var "x/471"
+                          expression (src/DFS.ml[54,1718+4]..src/DFS.ml[54,1718+19])
+                            Texp_apply
+                            expression (src/DFS.ml[54,1718+4]..src/DFS.ml[54,1718+9])
+                              Texp_ident "S/467.mem"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[54,1718+10]..src/DFS.ml[54,1718+11])
+                                  Texp_ident "x/471"
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[54,1718+12]..src/DFS.ml[54,1718+19])
+                                  Texp_apply
+                                  expression (src/DFS.ml[54,1718+12]..src/DFS.ml[54,1718+13])
+                                    Texp_ident "Stdlib!.!"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/DFS.ml[54,1718+13]..src/DFS.ml[54,1718+19])
+                                        Texp_ident "marked/468"
+                                  ]
+                            ]
+                      ]
+                ]
+              structure_item (src/DFS.ml[55,1738+2]..src/DFS.ml[56,1753+29])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[55,1738+6]..src/DFS.ml[55,1738+10])
+                      Tpat_var "mark/472"
+                    expression (src/DFS.ml[55,1738+11]..src/DFS.ml[56,1753+29]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/DFS.ml[55,1738+11]..src/DFS.ml[55,1738+12])
+                            Tpat_var "x/474"
+                          expression (src/DFS.ml[56,1753+4]..src/DFS.ml[56,1753+29])
+                            Texp_apply
+                            expression (src/DFS.ml[56,1753+11]..src/DFS.ml[56,1753+13])
+                              Texp_ident "Stdlib!.:="
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[56,1753+4]..src/DFS.ml[56,1753+10])
+                                  Texp_ident "marked/468"
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[56,1753+14]..src/DFS.ml[56,1753+29])
+                                  Texp_apply
+                                  expression (src/DFS.ml[56,1753+14]..src/DFS.ml[56,1753+19])
+                                    Texp_ident "S/467.add"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/DFS.ml[56,1753+20]..src/DFS.ml[56,1753+21])
+                                        Texp_ident "x/474"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/DFS.ml[56,1753+22]..src/DFS.ml[56,1753+29])
+                                        Texp_apply
+                                        expression (src/DFS.ml[56,1753+22]..src/DFS.ml[56,1753+23])
+                                          Texp_ident "Stdlib!.!"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/DFS.ml[56,1753+23]..src/DFS.ml[56,1753+29])
+                                              Texp_ident "marked/468"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+              structure_item (src/DFS.ml[57,1783+2]..src/DFS.ml[58,1801+11])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[57,1783+6]..src/DFS.ml[57,1783+12])
+                      Tpat_var "marked/475"
+                    expression (src/DFS.ml[57,1783+13]..src/DFS.ml[58,1801+11]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/DFS.ml[57,1783+13]..src/DFS.ml[57,1783+15])
+                            Tpat_construct "()"
+                            []
+                            None
+                          expression (src/DFS.ml[58,1801+4]..src/DFS.ml[58,1801+11])
+                            Texp_apply
+                            expression (src/DFS.ml[58,1801+4]..src/DFS.ml[58,1801+5])
+                              Texp_ident "Stdlib!.!"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[58,1801+5]..src/DFS.ml[58,1801+11])
+                                  Texp_ident "marked/468"
+                            ]
+                      ]
+                ]
+            ]
+  structure_item (src/DFS.ml[61,1818+0]..src/DFS.ml[74,2069+3])
+    Tstr_module
+    MarkArray/539
+      module_expr (src/DFS.ml[61,1818+17]..src/DFS.ml[74,2069+3])
+        Tmod_functor "G/481"
+        module_type (src/DFS.ml[61,1818+22]..src/DFS.ml[65,1895+3])
+          Tmty_signature
+          [
+            signature_item (src/DFS.ml[62,1844+2]..src/DFS.ml[62,1844+11])
+              Tsig_type Rec
+              [
+                type_declaration node/478 (src/DFS.ml[62,1844+2]..src/DFS.ml[62,1844+11])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/DFS.ml[63,1856+2]..src/DFS.ml[63,1856+12])
+              Tsig_value
+              value_description n/479 (src/DFS.ml[63,1856+2]..src/DFS.ml[63,1856+12])
+                core_type (src/DFS.ml[63,1856+9]..src/DFS.ml[63,1856+12])
+                  Ttyp_constr "int/1!"
+                  []
+                []
+            signature_item (src/DFS.ml[64,1869+2]..src/DFS.ml[64,1869+25])
+              Tsig_value
+              value_description number/480 (src/DFS.ml[64,1869+2]..src/DFS.ml[64,1869+25])
+                core_type (src/DFS.ml[64,1869+14]..src/DFS.ml[64,1869+25])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/DFS.ml[64,1869+14]..src/DFS.ml[64,1869+18])
+                    Ttyp_constr "node/478"
+                    []
+                  core_type (src/DFS.ml[64,1869+22]..src/DFS.ml[64,1869+25])
+                    Ttyp_constr "int/1!"
+                    []
+                []
+          ]
+        module_expr (src/DFS.ml[65,1895+7]..src/DFS.ml[74,2069+3])
+          module_expr (src/DFS.ml[65,1895+7]..src/DFS.ml[74,2069+3])
+            Tmod_structure
+            [
+              structure_item (src/DFS.ml[66,1909+2]..src/DFS.ml[67,1924+24])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[66,1909+6]..src/DFS.ml[66,1909+12])
+                      Tpat_var "marked/482"
+                    expression (src/DFS.ml[67,1924+4]..src/DFS.ml[67,1924+24])
+                      Texp_apply
+                      expression (src/DFS.ml[67,1924+4]..src/DFS.ml[67,1924+14])
+                        Texp_ident "Stdlib!.Array.make"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/DFS.ml[67,1924+15]..src/DFS.ml[67,1924+18])
+                            Texp_ident "G/481.n"
+                        <arg>
+                          Nolabel
+                          expression (src/DFS.ml[67,1924+19]..src/DFS.ml[67,1924+24])
+                            Texp_construct "false"
+                            []
+                      ]
+                ]
+              structure_item (src/DFS.ml[68,1949+2]..src/DFS.ml[69,1969+23])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[68,1949+6]..src/DFS.ml[68,1949+15])
+                      Tpat_var "is_marked/531"
+                    expression (src/DFS.ml[68,1949+16]..src/DFS.ml[69,1969+23]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/DFS.ml[68,1949+16]..src/DFS.ml[68,1949+17])
+                            Tpat_var "x/533"
+                          expression (src/DFS.ml[69,1969+4]..src/DFS.ml[69,1969+23])
+                            Texp_apply
+                            expression (src/DFS.ml[69,1969+4]..src/DFS.ml[69,1969+23]) ghost
+                              Texp_ident "Stdlib!.Array.get"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[69,1969+4]..src/DFS.ml[69,1969+10])
+                                  Texp_ident "marked/482"
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[69,1969+12]..src/DFS.ml[69,1969+22])
+                                  Texp_apply
+                                  expression (src/DFS.ml[69,1969+12]..src/DFS.ml[69,1969+20])
+                                    Texp_ident "G/481.number"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/DFS.ml[69,1969+21]..src/DFS.ml[69,1969+22])
+                                        Texp_ident "x/533"
+                                  ]
+                            ]
+                      ]
+                ]
+              structure_item (src/DFS.ml[70,1993+2]..src/DFS.ml[71,2008+31])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[70,1993+6]..src/DFS.ml[70,1993+10])
+                      Tpat_var "mark/534"
+                    expression (src/DFS.ml[70,1993+11]..src/DFS.ml[71,2008+31]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/DFS.ml[70,1993+11]..src/DFS.ml[70,1993+12])
+                            Tpat_var "x/536"
+                          expression (src/DFS.ml[71,2008+4]..src/DFS.ml[71,2008+31])
+                            Texp_apply
+                            expression (src/DFS.ml[71,2008+4]..src/DFS.ml[71,2008+31]) ghost
+                              Texp_ident "Stdlib!.Array.set"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[71,2008+4]..src/DFS.ml[71,2008+10])
+                                  Texp_ident "marked/482"
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[71,2008+12]..src/DFS.ml[71,2008+22])
+                                  Texp_apply
+                                  expression (src/DFS.ml[71,2008+12]..src/DFS.ml[71,2008+20])
+                                    Texp_ident "G/481.number"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/DFS.ml[71,2008+21]..src/DFS.ml[71,2008+22])
+                                        Texp_ident "x/536"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/DFS.ml[71,2008+27]..src/DFS.ml[71,2008+31])
+                                  Texp_construct "true"
+                                  []
+                            ]
+                      ]
+                ]
+              structure_item (src/DFS.ml[72,2040+2]..src/DFS.ml[73,2058+10])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/DFS.ml[72,2040+6]..src/DFS.ml[72,2040+12])
+                      Tpat_var "marked/537"
+                    expression (src/DFS.ml[72,2040+13]..src/DFS.ml[73,2058+10]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/DFS.ml[72,2040+13]..src/DFS.ml[72,2040+15])
+                            Tpat_construct "()"
+                            []
+                            None
+                          expression (src/DFS.ml[73,2058+4]..src/DFS.ml[73,2058+10])
+                            Texp_ident "marked/482"
+                      ]
+                ]
+            ]
+]
+
+{<Dune__exe__DFS>
+ "MarkArray"[module] ->
+   Abs<Dune__exe__DFS.34>
+      (G/481,
+       {
+        "is_marked"[value] -> <Dune__exe__DFS.29>;
+        "mark"[value] -> <Dune__exe__DFS.31>;
+        "marked"[value] -> <Dune__exe__DFS.33>;
+        });
+ "MarkSet"[module] ->
+   Abs<Dune__exe__DFS.23>
+      (S/467,
+       {
+        "is_marked"[value] -> <Dune__exe__DFS.18>;
+        "mark"[value] -> <Dune__exe__DFS.20>;
+        "marked"[value] -> <Dune__exe__DFS.22>;
+        });
+ "Run"[module] -> Abs<Dune__exe__DFS.15>(G/401, M/404, D/407, {
+                                                               });
+ }
+
+(let
+  (Run/412 =
+     (function G/1419 M/1418 D/1417 is_a_functor
+       (let (G/401 =a G/1419 M/404 =a M/1418 D/407 =a D/1417)
+         (letrec
+           (visit/408
+              (function node/409 : int
+                (if (not (apply (field_imm 1 M/404) node/409))
+                  (seq (apply (field_imm 0 M/404) node/409)
+                    (apply (field_imm 0 D/407) node/409)
+                    (apply (field_imm 0 G/401) node/409
+                      (function label/410 target/411 : int
+                        (seq
+                          (apply (field_imm 1 D/407) node/409 label/410
+                            target/411)
+                          (apply visit/408 target/411)))))
+                  0)))
+           (let (*match*/1416 = (apply (field_imm 1 G/401) visit/408))
+             (makeblock 0 visit/408))))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__DFS!)
+      (function funarg/1426 funarg/1427 funarg/1428 is_a_functor stub
+        (let (let/1429 = (apply Run/412 funarg/1426 funarg/1427 funarg/1428))
+          (makeblock 0))))
+    (let
+      (MarkSet/477 =
+         (function S/1420 is_a_functor
+           (let
+             (S/467 =a S/1420
+              marked/468 = (makemutable 0 (field_imm 0 S/467))
+              is_marked/469 =
+                (function x/471 : int
+                  (apply (field_imm 30 S/467) x/471 (field_mut 0 marked/468)))
+              mark/472 =
+                (function x/474 : int
+                  (setfield_ptr 0 marked/468
+                    (apply (field_imm 1 S/467) x/474
+                      (field_mut 0 marked/468))))
+              marked/475 = (function param/476[int] (field_mut 0 marked/468)))
+             (makeblock 0 is_marked/469 mark/472 marked/475))))
+      (seq
+        (setfield_ptr(root-init) 1 (global Dune__exe__DFS!)
+          (function funarg/1424 is_a_functor stub
+            (let (let/1425 = (apply MarkSet/477 funarg/1424))
+              (makeblock 0 (field_mut 1 let/1425) (field_mut 0 let/1425)
+                (field_mut 2 let/1425)))))
+        (let
+          (MarkArray/539 =
+             (function G/1421 is_a_functor
+               (let
+                 (G/481 =a G/1421
+                  marked/482 = (caml_make_vect (field_imm 0 G/481) 0)
+                  is_marked/531 =
+                    (function x/533 : int
+                      (array.get[int] marked/482
+                        (apply (field_imm 1 G/481) x/533)))
+                  mark/534 =
+                    (function x/536 : int
+                      (array.set[int] marked/482
+                        (apply (field_imm 1 G/481) x/536) 1))
+                  marked/537 = (function param/538[int] marked/482))
+                 (makeblock 0 is_marked/531 mark/534 marked/537))))
+          (seq
+            (setfield_ptr(root-init) 2 (global Dune__exe__DFS!)
+              (function funarg/1422 is_a_functor stub
+                (let (let/1423 = (apply MarkArray/539 funarg/1422))
+                  (makeblock 0 (field_mut 1 let/1423) (field_mut 0 let/1423)
+                    (field_mut 2 let/1423)))))
+            0))))))
+(let
+  (Run/412 =
+     (function G/1419 M/1418 D/1417 is_a_functor
+       (letrec
+         (visit/408
+            (function node/409 : int
+              (if (not (apply (field_imm 1 M/1418) node/409))
+                (seq (apply (field_imm 0 M/1418) node/409)
+                  (apply (field_imm 0 D/1417) node/409)
+                  (apply (field_imm 0 G/1419) node/409
+                    (function label/410 target/411 : int
+                      (seq
+                        (apply (field_imm 1 D/1417) node/409 label/410
+                          target/411)
+                        (apply visit/408 target/411)))))
+                0)))
+         (let (*match*/1416 = (apply (field_imm 1 G/1419) visit/408))
+           (makeblock 0 visit/408)))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__DFS!)
+      (function funarg/1426 funarg/1427 funarg/1428 is_a_functor stub
+        (let (let/1429 = (apply Run/412 funarg/1426 funarg/1427 funarg/1428))
+          (makeblock 0))))
+    (let
+      (MarkSet/477 =
+         (function S/1420 is_a_functor
+           (let
+             (marked/468 = (makemutable 0 (field_imm 0 S/1420))
+              is_marked/469 =
+                (function x/471 : int
+                  (apply (field_imm 30 S/1420) x/471
+                    (field_mut 0 marked/468)))
+              mark/472 =
+                (function x/474 : int
+                  (setfield_ptr 0 marked/468
+                    (apply (field_imm 1 S/1420) x/474
+                      (field_mut 0 marked/468))))
+              marked/475 = (function param/476[int] (field_mut 0 marked/468)))
+             (makeblock 0 is_marked/469 mark/472 marked/475))))
+      (seq
+        (setfield_ptr(root-init) 1 (global Dune__exe__DFS!)
+          (function funarg/1424 is_a_functor stub
+            (let (let/1425 = (apply MarkSet/477 funarg/1424))
+              (makeblock 0 (field_mut 1 let/1425) (field_mut 0 let/1425)
+                (field_mut 2 let/1425)))))
+        (let
+          (MarkArray/539 =
+             (function G/1421 is_a_functor
+               (let
+                 (marked/482 = (caml_make_vect (field_imm 0 G/1421) 0)
+                  is_marked/531 =
+                    (function x/533 : int
+                      (array.get[int] marked/482
+                        (apply (field_imm 1 G/1421) x/533)))
+                  mark/534 =
+                    (function x/536 : int
+                      (array.set[int] marked/482
+                        (apply (field_imm 1 G/1421) x/536) 1))
+                  marked/537 = (function param/538[int] marked/482))
+                 (makeblock 0 is_marked/531 mark/534 marked/537))))
+          (seq
+            (setfield_ptr(root-init) 2 (global Dune__exe__DFS!)
+              (function funarg/1422 is_a_functor stub
+                (let (let/1423 = (apply MarkArray/539 funarg/1422))
+                  (makeblock 0 (field_mut 1 let/1423) (field_mut 0 let/1423)
+                    (field_mut 2 let/1423)))))
+            0))))))

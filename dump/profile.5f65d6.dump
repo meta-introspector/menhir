@@ -1,0 +1,22 @@
+0.084s  170MB 10.3MB 12.0MB src/stage1/interpret.ml
+  0.003s 5.65MB 0.93MB 2.69MB parsing
+    0.003s 5.65MB 0.93MB 2.69MB parser
+  0.037s 63.2MB 5.71MB 8.41MB typing
+  0.002s 4.12MB 0.18MB 8.60MB transl
+  0.025s 40.6MB 3.12MB 11.7MB generate
+    0.001s 0.24MB ------ ------ cmm
+    0.010s 21.2MB 1.78MB 10.3MB compile_phrases
+      0.001s 0.20MB ------ ------ selection
+      ------ 0.20MB ------ ------ comballoc
+      0.001s 2.00MB 0.18MB 8.79MB cse
+      0.001s 4.23MB 0.31MB 9.10MB liveness
+      0.001s 4.00MB 0.68MB 9.79MB spill
+      0.001s 0.25MB ------ ------ split
+      0.003s 5.81MB 0.25MB 10.0MB regalloc
+      ------ 0.12MB ------ ------ linearize
+      0.001s 4.00MB 0.34MB 10.3MB emit
+      0.001s 0.40MB ------ ------ other
+    0.007s ------ ------ ------ assemble
+    0.007s 19.1MB 1.34MB 11.7MB other
+  0.016s 56.6MB 0.34MB 12.0MB other
+0.009s 3.07MB 1.75MB ------ other

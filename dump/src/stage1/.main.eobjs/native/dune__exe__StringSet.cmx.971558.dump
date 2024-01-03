@@ -1,0 +1,897 @@
+[
+  structure_item (src/stringSet.ml[14,999+0]..[14,999+25])
+    Pstr_include    module_expr (src/stringSet.ml[14,999+8]..[14,999+25])
+      Pmod_apply
+      module_expr (src/stringSet.ml[14,999+8]..[14,999+16])
+        Pmod_ident "Set.Make" (src/stringSet.ml[14,999+8]..[14,999+16])
+      module_expr (src/stringSet.ml[14,999+18]..[14,999+24])
+        Pmod_ident "String" (src/stringSet.ml[14,999+18]..[14,999+24])
+  structure_item (src/stringSet.ml[17,1061+0]..[18,1076+46])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringSet.ml[17,1061+4]..[17,1061+7])
+          Ppat_var "map" (src/stringSet.ml[17,1061+4]..[17,1061+7])
+        expression (src/stringSet.ml[17,1061+8]..[18,1076+46]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringSet.ml[17,1061+8]..[17,1061+9])
+            Ppat_var "f" (src/stringSet.ml[17,1061+8]..[17,1061+9])
+          expression (src/stringSet.ml[17,1061+10]..[18,1076+46]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stringSet.ml[17,1061+10]..[17,1061+12])
+              Ppat_var "xs" (src/stringSet.ml[17,1061+10]..[17,1061+12])
+            expression (src/stringSet.ml[18,1076+2]..[18,1076+46])
+              Pexp_apply
+              expression (src/stringSet.ml[18,1076+2]..[18,1076+6])
+                Pexp_ident "fold" (src/stringSet.ml[18,1076+2]..[18,1076+6])
+              [
+                <arg>
+                Nolabel
+                  expression (src/stringSet.ml[18,1076+7]..[18,1076+37])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/stringSet.ml[18,1076+12]..[18,1076+13])
+                      Ppat_var "x" (src/stringSet.ml[18,1076+12]..[18,1076+13])
+                    expression (src/stringSet.ml[18,1076+14]..[18,1076+36]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/stringSet.ml[18,1076+14]..[18,1076+18])
+                        Ppat_var "accu" (src/stringSet.ml[18,1076+14]..[18,1076+18])
+                      expression (src/stringSet.ml[18,1076+22]..[18,1076+36])
+                        Pexp_apply
+                        expression (src/stringSet.ml[18,1076+22]..[18,1076+25])
+                          Pexp_ident "add" (src/stringSet.ml[18,1076+22]..[18,1076+25])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stringSet.ml[18,1076+26]..[18,1076+31])
+                              Pexp_apply
+                              expression (src/stringSet.ml[18,1076+27]..[18,1076+28])
+                                Pexp_ident "f" (src/stringSet.ml[18,1076+27]..[18,1076+28])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/stringSet.ml[18,1076+29]..[18,1076+30])
+                                    Pexp_ident "x" (src/stringSet.ml[18,1076+29]..[18,1076+30])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (src/stringSet.ml[18,1076+32]..[18,1076+36])
+                              Pexp_ident "accu" (src/stringSet.ml[18,1076+32]..[18,1076+36])
+                        ]
+                <arg>
+                Nolabel
+                  expression (src/stringSet.ml[18,1076+38]..[18,1076+40])
+                    Pexp_ident "xs" (src/stringSet.ml[18,1076+38]..[18,1076+40])
+                <arg>
+                Nolabel
+                  expression (src/stringSet.ml[18,1076+41]..[18,1076+46])
+                    Pexp_ident "empty" (src/stringSet.ml[18,1076+41]..[18,1076+46])
+              ]
+    ]
+  structure_item (src/stringSet.ml[20,1124+0]..[21,1138+69])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringSet.ml[20,1124+4]..[20,1124+9])
+          Ppat_var "print" (src/stringSet.ml[20,1124+4]..[20,1124+9])
+        expression (src/stringSet.ml[20,1124+10]..[21,1138+69]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringSet.ml[20,1124+10]..[20,1124+11])
+            Ppat_var "s" (src/stringSet.ml[20,1124+10]..[20,1124+11])
+          expression (src/stringSet.ml[21,1138+2]..[21,1138+69])
+            Pexp_apply
+            expression (src/stringSet.ml[21,1138+2]..[21,1138+31])
+              Pexp_ident "Misc.separated_iter_to_string" (src/stringSet.ml[21,1138+2]..[21,1138+31])
+            [
+              <arg>
+              Nolabel
+                expression (src/stringSet.ml[21,1138+32]..[21,1138+44])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/stringSet.ml[21,1138+37]..[21,1138+38])
+                    Ppat_var "s" (src/stringSet.ml[21,1138+37]..[21,1138+38])
+                  expression (src/stringSet.ml[21,1138+42]..[21,1138+43])
+                    Pexp_ident "s" (src/stringSet.ml[21,1138+42]..[21,1138+43])
+              <arg>
+              Nolabel
+                expression (src/stringSet.ml[21,1138+45]..[21,1138+49])
+                  Pexp_constant PConst_string(", ",(src/stringSet.ml[21,1138+46]..[21,1138+48]),None)
+              <arg>
+              Nolabel
+                expression (src/stringSet.ml[21,1138+50]..[21,1138+69])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/stringSet.ml[21,1138+55]..[21,1138+56])
+                    Ppat_var "f" (src/stringSet.ml[21,1138+55]..[21,1138+56])
+                  expression (src/stringSet.ml[21,1138+60]..[21,1138+68])
+                    Pexp_apply
+                    expression (src/stringSet.ml[21,1138+60]..[21,1138+64])
+                      Pexp_ident "iter" (src/stringSet.ml[21,1138+60]..[21,1138+64])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/stringSet.ml[21,1138+65]..[21,1138+66])
+                          Pexp_ident "f" (src/stringSet.ml[21,1138+65]..[21,1138+66])
+                      <arg>
+                      Nolabel
+                        expression (src/stringSet.ml[21,1138+67]..[21,1138+68])
+                          Pexp_ident "s" (src/stringSet.ml[21,1138+67]..[21,1138+68])
+                    ]
+            ]
+    ]
+]
+
+include (Set.Make)(String)
+let map f xs = fold (fun x -> fun accu -> add (f x) accu) xs empty
+let print s =
+  Misc.separated_iter_to_string (fun s -> s) ", " (fun f -> iter f s)
+[
+  structure_item (src/stringSet.ml[14,999+0]..src/stringSet.ml[14,999+25])
+    Tstr_include    module_expr (src/stringSet.ml[14,999+8]..src/stringSet.ml[14,999+25])
+      Tmod_apply
+      module_expr (src/stringSet.ml[14,999+8]..src/stringSet.ml[14,999+16])
+        module_expr (src/stringSet.ml[14,999+8]..src/stringSet.ml[14,999+16])
+          Tmod_ident "Stdlib!.Set.Make"
+      module_expr (src/stringSet.ml[14,999+18]..src/stringSet.ml[14,999+24])
+        module_expr (src/stringSet.ml[14,999+18]..src/stringSet.ml[14,999+24])
+          Tmod_ident "Stdlib!.String"
+  structure_item (src/stringSet.ml[17,1061+0]..src/stringSet.ml[18,1076+46])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringSet.ml[17,1061+4]..src/stringSet.ml[17,1061+7])
+          Tpat_var "map/611"
+        expression (src/stringSet.ml[17,1061+8]..src/stringSet.ml[18,1076+46]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringSet.ml[17,1061+8]..src/stringSet.ml[17,1061+9])
+                Tpat_var "f/612"
+              expression (src/stringSet.ml[17,1061+10]..src/stringSet.ml[18,1076+46]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stringSet.ml[17,1061+10]..src/stringSet.ml[17,1061+12])
+                      Tpat_var "xs/613"
+                    expression (src/stringSet.ml[18,1076+2]..src/stringSet.ml[18,1076+46])
+                      Texp_apply
+                      expression (src/stringSet.ml[18,1076+2]..src/stringSet.ml[18,1076+6])
+                        Texp_ident "fold/591"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/stringSet.ml[18,1076+7]..src/stringSet.ml[18,1076+37])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/stringSet.ml[18,1076+12]..src/stringSet.ml[18,1076+13])
+                                  Tpat_var "x/614"
+                                expression (src/stringSet.ml[18,1076+14]..src/stringSet.ml[18,1076+36]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/stringSet.ml[18,1076+14]..src/stringSet.ml[18,1076+18])
+                                        Tpat_var "accu/615"
+                                      expression (src/stringSet.ml[18,1076+22]..src/stringSet.ml[18,1076+36])
+                                        Texp_apply
+                                        expression (src/stringSet.ml[18,1076+22]..src/stringSet.ml[18,1076+25])
+                                          Texp_ident "add/569"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringSet.ml[18,1076+26]..src/stringSet.ml[18,1076+31])
+                                              Texp_apply
+                                              expression (src/stringSet.ml[18,1076+27]..src/stringSet.ml[18,1076+28])
+                                                Texp_ident "f/612"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/stringSet.ml[18,1076+29]..src/stringSet.ml[18,1076+30])
+                                                    Texp_ident "x/614"
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringSet.ml[18,1076+32]..src/stringSet.ml[18,1076+36])
+                                              Texp_ident "accu/615"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/stringSet.ml[18,1076+38]..src/stringSet.ml[18,1076+40])
+                            Texp_ident "xs/613"
+                        <arg>
+                          Nolabel
+                          expression (src/stringSet.ml[18,1076+41]..src/stringSet.ml[18,1076+46])
+                            Texp_ident "empty/568"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/stringSet.ml[20,1124+0]..src/stringSet.ml[21,1138+69])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringSet.ml[20,1124+4]..src/stringSet.ml[20,1124+9])
+          Tpat_var "print/751"
+        expression (src/stringSet.ml[20,1124+10]..src/stringSet.ml[21,1138+69]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringSet.ml[20,1124+10]..src/stringSet.ml[20,1124+11])
+                Tpat_var "s/753"
+              expression (src/stringSet.ml[21,1138+2]..src/stringSet.ml[21,1138+69])
+                Texp_apply
+                expression (src/stringSet.ml[21,1138+2]..src/stringSet.ml[21,1138+31])
+                  Texp_ident "Dune__exe!.Misc.separated_iter_to_string"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/stringSet.ml[21,1138+32]..src/stringSet.ml[21,1138+44])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stringSet.ml[21,1138+37]..src/stringSet.ml[21,1138+38])
+                            Tpat_var "s/790"
+                          expression (src/stringSet.ml[21,1138+42]..src/stringSet.ml[21,1138+43])
+                            Texp_ident "s/790"
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/stringSet.ml[21,1138+45]..src/stringSet.ml[21,1138+49])
+                      Texp_constant Const_string(", ",(src/stringSet.ml[21,1138+46]..src/stringSet.ml[21,1138+48]),None)
+                  <arg>
+                    Nolabel
+                    expression (src/stringSet.ml[21,1138+50]..src/stringSet.ml[21,1138+69])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stringSet.ml[21,1138+55]..src/stringSet.ml[21,1138+56])
+                            Tpat_var "f/791"
+                          expression (src/stringSet.ml[21,1138+60]..src/stringSet.ml[21,1138+68])
+                            Texp_apply
+                            expression (src/stringSet.ml[21,1138+60]..src/stringSet.ml[21,1138+64])
+                              Texp_ident "iter/590"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/stringSet.ml[21,1138+65]..src/stringSet.ml[21,1138+66])
+                                  Texp_ident "f/791"
+                              <arg>
+                                Nolabel
+                                expression (src/stringSet.ml[21,1138+67]..src/stringSet.ml[21,1138+68])
+                                  Texp_ident "s/753"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__StringSet>
+ "add"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add"[value];
+ "add_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add_seq"[value];
+ "cardinal"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "cardinal"[value];
+ "choose"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose"[value];
+ "choose_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose_opt"[value];
+ "compare"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "compare"[value];
+ "diff"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "diff"[value];
+ "disjoint"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "disjoint"[value];
+ "elements"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "elements"[value];
+ "elt"[type] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "elt"[type];
+ "empty"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "empty"[value];
+ "equal"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "equal"[value];
+ "exists"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "exists"[value];
+ "filter"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "filter"[value];
+ "filter_map"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "filter_map"[value];
+ "find"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find"[value];
+ "find_first"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first"[value];
+ "find_first_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first_opt"[value];
+ "find_last"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last"[value];
+ "find_last_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last_opt"[value];
+ "find_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_opt"[value];
+ "fold"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "fold"[value];
+ "for_all"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "for_all"[value];
+ "inter"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "inter"[value];
+ "is_empty"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "is_empty"[value];
+ "iter"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "iter"[value];
+ "map"[value] -> <Dune__exe__StringSet.0>;
+ "max_elt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_elt"[value];
+ "max_elt_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_elt_opt"[value];
+ "mem"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "mem"[value];
+ "min_elt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_elt"[value];
+ "min_elt_opt"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_elt_opt"[value];
+ "of_list"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "of_list"[value];
+ "of_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "of_seq"[value];
+ "partition"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "partition"[value];
+ "print"[value] -> <Dune__exe__StringSet.5>;
+ "remove"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "remove"[value];
+ "singleton"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "singleton"[value];
+ "split"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "split"[value];
+ "subset"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "subset"[value];
+ "t"[type] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "t"[type];
+ "to_list"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_list"[value];
+ "to_rev_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_rev_seq"[value];
+ "to_seq"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq"[value];
+ "to_seq_from"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq_from"[value];
+ "union"[value] ->
+   CU Stdlib . "Set"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "union"[value];
+ }
+
+(let
+  (include/1383 =
+     (apply
+       (let (let/1386 = (field_imm 0 (global Stdlib__Set!)))
+         (field_imm 0 (global Stdlib__Set!)))
+       (let
+         (let/1384 = (global Stdlib__String!)
+          let/1385 =a (global Stdlib__String!))
+         (makeblock 0 (field_mut 9 let/1385))))
+   empty/568 =a (field_mut 0 include/1383))
+  (seq (setfield_ptr(root-init) 0 (global Dune__exe__StringSet!) empty/568)
+    (let (add/569 =a (field_mut 1 include/1383))
+      (seq (setfield_ptr(root-init) 1 (global Dune__exe__StringSet!) add/569)
+        (let (singleton/570 =a (field_mut 2 include/1383))
+          (seq
+            (setfield_ptr(root-init) 2 (global Dune__exe__StringSet!)
+              singleton/570)
+            (let (remove/571 =a (field_mut 3 include/1383))
+              (seq
+                (setfield_ptr(root-init) 3 (global Dune__exe__StringSet!)
+                  remove/571)
+                (let (union/572 =a (field_mut 4 include/1383))
+                  (seq
+                    (setfield_ptr(root-init) 4 (global Dune__exe__StringSet!)
+                      union/572)
+                    (let (inter/573 =a (field_mut 5 include/1383))
+                      (seq
+                        (setfield_ptr(root-init) 5
+                          (global Dune__exe__StringSet!) inter/573)
+                        (let (disjoint/574 =a (field_mut 6 include/1383))
+                          (seq
+                            (setfield_ptr(root-init) 6
+                              (global Dune__exe__StringSet!) disjoint/574)
+                            (let (diff/575 =a (field_mut 7 include/1383))
+                              (seq
+                                (setfield_ptr(root-init) 7
+                                  (global Dune__exe__StringSet!) diff/575)
+                                (let
+                                  (cardinal/576 =a (field_mut 8 include/1383))
+                                  (seq
+                                    (setfield_ptr(root-init) 8
+                                      (global Dune__exe__StringSet!)
+                                      cardinal/576)
+                                    (let
+                                      (elements/577 =a
+                                         (field_mut 9 include/1383))
+                                      (seq
+                                        (setfield_ptr(root-init) 9
+                                          (global Dune__exe__StringSet!)
+                                          elements/577)
+                                        (let
+                                          (min_elt/578 =a
+                                             (field_mut 10 include/1383))
+                                          (seq
+                                            (setfield_ptr(root-init) 10
+                                              (global Dune__exe__StringSet!)
+                                              min_elt/578)
+                                            (let
+                                              (min_elt_opt/579 =a
+                                                 (field_mut 11 include/1383))
+                                              (seq
+                                                (setfield_ptr(root-init) 11
+                                                  (global Dune__exe__StringSet!)
+                                                  min_elt_opt/579)
+                                                (let
+                                                  (max_elt/580 =a
+                                                     (field_mut 12
+                                                       include/1383))
+                                                  (seq
+                                                    (setfield_ptr(root-init) 12
+                                                      (global Dune__exe__StringSet!)
+                                                      max_elt/580)
+                                                    (let
+                                                      (max_elt_opt/581 =a
+                                                         (field_mut 13
+                                                           include/1383))
+                                                      (seq
+                                                        (setfield_ptr(root-init) 13
+                                                          (global Dune__exe__StringSet!)
+                                                          max_elt_opt/581)
+                                                        (let
+                                                          (choose/582 =a
+                                                             (field_mut 14
+                                                               include/1383))
+                                                          (seq
+                                                            (setfield_ptr(root-init) 14
+                                                              (global Dune__exe__StringSet!)
+                                                              choose/582)
+                                                            (let
+                                                              (choose_opt/583 =a
+                                                                 (field_mut 15
+                                                                   include/1383))
+                                                              (seq
+                                                                (setfield_ptr(root-init) 15
+                                                                  (global Dune__exe__StringSet!)
+                                                                  choose_opt/583)
+                                                                (let
+                                                                  (find/584 =a
+                                                                    (field_mut 16
+                                                                    include/1383))
+                                                                  (seq
+                                                                    (setfield_ptr(root-init) 16
+                                                                    (global Dune__exe__StringSet!)
+                                                                    find/584)
+                                                                    (let
+                                                                    (find_opt/585 =a
+                                                                    (field_mut 17
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 17
+                                                                    (global Dune__exe__StringSet!)
+                                                                    find_opt/585)
+                                                                    (let
+                                                                    (find_first/586 =a
+                                                                    (field_mut 18
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 18
+                                                                    (global Dune__exe__StringSet!)
+                                                                    find_first/586)
+                                                                    (let
+                                                                    (find_first_opt/587 =a
+                                                                    (field_mut 19
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 19
+                                                                    (global Dune__exe__StringSet!)
+                                                                    find_first_opt/587)
+                                                                    (let
+                                                                    (find_last/588 =a
+                                                                    (field_mut 20
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 20
+                                                                    (global Dune__exe__StringSet!)
+                                                                    find_last/588)
+                                                                    (let
+                                                                    (find_last_opt/589 =a
+                                                                    (field_mut 21
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 21
+                                                                    (global Dune__exe__StringSet!)
+                                                                    find_last_opt/589)
+                                                                    (let
+                                                                    (iter/590 =a
+                                                                    (field_mut 22
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 22
+                                                                    (global Dune__exe__StringSet!)
+                                                                    iter/590)
+                                                                    (let
+                                                                    (fold/591 =a
+                                                                    (field_mut 23
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 23
+                                                                    (global Dune__exe__StringSet!)
+                                                                    fold/591)
+                                                                    (let
+                                                                    (map/592 =a
+                                                                    (field_mut 24
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 44
+                                                                    (global Dune__exe__StringSet!)
+                                                                    map/592)
+                                                                    (let
+                                                                    (filter/593 =a
+                                                                    (field_mut 25
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 24
+                                                                    (global Dune__exe__StringSet!)
+                                                                    filter/593)
+                                                                    (let
+                                                                    (filter_map/594 =a
+                                                                    (field_mut 26
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 25
+                                                                    (global Dune__exe__StringSet!)
+                                                                    filter_map/594)
+                                                                    (let
+                                                                    (partition/595 =a
+                                                                    (field_mut 27
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 26
+                                                                    (global Dune__exe__StringSet!)
+                                                                    partition/595)
+                                                                    (let
+                                                                    (split/596 =a
+                                                                    (field_mut 28
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 27
+                                                                    (global Dune__exe__StringSet!)
+                                                                    split/596)
+                                                                    (let
+                                                                    (is_empty/597 =a
+                                                                    (field_mut 29
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 28
+                                                                    (global Dune__exe__StringSet!)
+                                                                    is_empty/597)
+                                                                    (let
+                                                                    (mem/598 =a
+                                                                    (field_mut 30
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 29
+                                                                    (global Dune__exe__StringSet!)
+                                                                    mem/598)
+                                                                    (let
+                                                                    (equal/599 =a
+                                                                    (field_mut 31
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 30
+                                                                    (global Dune__exe__StringSet!)
+                                                                    equal/599)
+                                                                    (let
+                                                                    (compare/600 =a
+                                                                    (field_mut 32
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 31
+                                                                    (global Dune__exe__StringSet!)
+                                                                    compare/600)
+                                                                    (let
+                                                                    (subset/601 =a
+                                                                    (field_mut 33
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 32
+                                                                    (global Dune__exe__StringSet!)
+                                                                    subset/601)
+                                                                    (let
+                                                                    (for_all/602 =a
+                                                                    (field_mut 34
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 33
+                                                                    (global Dune__exe__StringSet!)
+                                                                    for_all/602)
+                                                                    (let
+                                                                    (exists/603 =a
+                                                                    (field_mut 35
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 34
+                                                                    (global Dune__exe__StringSet!)
+                                                                    exists/603)
+                                                                    (let
+                                                                    (to_list/604 =a
+                                                                    (field_mut 36
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 35
+                                                                    (global Dune__exe__StringSet!)
+                                                                    to_list/604)
+                                                                    (let
+                                                                    (of_list/605 =a
+                                                                    (field_mut 37
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 36
+                                                                    (global Dune__exe__StringSet!)
+                                                                    of_list/605)
+                                                                    (let
+                                                                    (to_seq_from/606 =a
+                                                                    (field_mut 38
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 37
+                                                                    (global Dune__exe__StringSet!)
+                                                                    to_seq_from/606)
+                                                                    (let
+                                                                    (to_seq/607 =a
+                                                                    (field_mut 39
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 38
+                                                                    (global Dune__exe__StringSet!)
+                                                                    to_seq/607)
+                                                                    (let
+                                                                    (to_rev_seq/608 =a
+                                                                    (field_mut 40
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 39
+                                                                    (global Dune__exe__StringSet!)
+                                                                    to_rev_seq/608)
+                                                                    (let
+                                                                    (add_seq/609 =a
+                                                                    (field_mut 41
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 40
+                                                                    (global Dune__exe__StringSet!)
+                                                                    add_seq/609)
+                                                                    (let
+                                                                    (of_seq/610 =a
+                                                                    (field_mut 42
+                                                                    include/1383))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 41
+                                                                    (global Dune__exe__StringSet!)
+                                                                    of_seq/610)
+                                                                    (let
+                                                                    (map/611 =
+                                                                    (function
+                                                                    f/612
+                                                                    xs/613
+                                                                    (apply
+                                                                    (field_imm 23
+                                                                    (global Dune__exe__StringSet!))
+                                                                    (function
+                                                                    x/614
+                                                                    accu/615
+                                                                    (apply
+                                                                    (field_imm 1
+                                                                    (global Dune__exe__StringSet!))
+                                                                    (apply
+                                                                    f/612
+                                                                    x/614)
+                                                                    accu/615))
+                                                                    xs/613
+                                                                    (field_imm 0
+                                                                    (global Dune__exe__StringSet!)))))
+                                                                    (setfield_ptr(root-init) 42
+                                                                    (global Dune__exe__StringSet!)
+                                                                    map/611))
+                                                                    (let
+                                                                    (print/751 =
+                                                                    (function
+                                                                    s/753
+                                                                    (apply
+                                                                    (field_imm 5
+                                                                    (global Dune__exe__Misc!))
+                                                                    (function
+                                                                    s/790
+                                                                    s/790)
+                                                                    ", "
+                                                                    (function
+                                                                    f/791
+                                                                    : int
+                                                                    (apply
+                                                                    (field_imm 22
+                                                                    (global Dune__exe__StringSet!))
+                                                                    f/791
+                                                                    s/753)))))
+                                                                    (setfield_ptr(root-init) 43
+                                                                    (global Dune__exe__StringSet!)
+                                                                    print/751))
+                                                                    0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+(let
+  (include/1383 =
+     (apply
+       (let (let/1386 = (field_imm 0 (global Stdlib__Set!)))
+         (field_imm 0 (global Stdlib__Set!)))
+       (let (let/1384 = (global Stdlib__String!))
+         (makeblock 0 (field_mut 9 (global Stdlib__String!))))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__StringSet!)
+      (field_mut 0 include/1383))
+    (setfield_ptr(root-init) 1 (global Dune__exe__StringSet!)
+      (field_mut 1 include/1383))
+    (setfield_ptr(root-init) 2 (global Dune__exe__StringSet!)
+      (field_mut 2 include/1383))
+    (setfield_ptr(root-init) 3 (global Dune__exe__StringSet!)
+      (field_mut 3 include/1383))
+    (setfield_ptr(root-init) 4 (global Dune__exe__StringSet!)
+      (field_mut 4 include/1383))
+    (setfield_ptr(root-init) 5 (global Dune__exe__StringSet!)
+      (field_mut 5 include/1383))
+    (setfield_ptr(root-init) 6 (global Dune__exe__StringSet!)
+      (field_mut 6 include/1383))
+    (setfield_ptr(root-init) 7 (global Dune__exe__StringSet!)
+      (field_mut 7 include/1383))
+    (setfield_ptr(root-init) 8 (global Dune__exe__StringSet!)
+      (field_mut 8 include/1383))
+    (setfield_ptr(root-init) 9 (global Dune__exe__StringSet!)
+      (field_mut 9 include/1383))
+    (setfield_ptr(root-init) 10 (global Dune__exe__StringSet!)
+      (field_mut 10 include/1383))
+    (setfield_ptr(root-init) 11 (global Dune__exe__StringSet!)
+      (field_mut 11 include/1383))
+    (setfield_ptr(root-init) 12 (global Dune__exe__StringSet!)
+      (field_mut 12 include/1383))
+    (setfield_ptr(root-init) 13 (global Dune__exe__StringSet!)
+      (field_mut 13 include/1383))
+    (setfield_ptr(root-init) 14 (global Dune__exe__StringSet!)
+      (field_mut 14 include/1383))
+    (setfield_ptr(root-init) 15 (global Dune__exe__StringSet!)
+      (field_mut 15 include/1383))
+    (setfield_ptr(root-init) 16 (global Dune__exe__StringSet!)
+      (field_mut 16 include/1383))
+    (setfield_ptr(root-init) 17 (global Dune__exe__StringSet!)
+      (field_mut 17 include/1383))
+    (setfield_ptr(root-init) 18 (global Dune__exe__StringSet!)
+      (field_mut 18 include/1383))
+    (setfield_ptr(root-init) 19 (global Dune__exe__StringSet!)
+      (field_mut 19 include/1383))
+    (setfield_ptr(root-init) 20 (global Dune__exe__StringSet!)
+      (field_mut 20 include/1383))
+    (setfield_ptr(root-init) 21 (global Dune__exe__StringSet!)
+      (field_mut 21 include/1383))
+    (setfield_ptr(root-init) 22 (global Dune__exe__StringSet!)
+      (field_mut 22 include/1383))
+    (setfield_ptr(root-init) 23 (global Dune__exe__StringSet!)
+      (field_mut 23 include/1383))
+    (setfield_ptr(root-init) 44 (global Dune__exe__StringSet!)
+      (field_mut 24 include/1383))
+    (setfield_ptr(root-init) 24 (global Dune__exe__StringSet!)
+      (field_mut 25 include/1383))
+    (setfield_ptr(root-init) 25 (global Dune__exe__StringSet!)
+      (field_mut 26 include/1383))
+    (setfield_ptr(root-init) 26 (global Dune__exe__StringSet!)
+      (field_mut 27 include/1383))
+    (setfield_ptr(root-init) 27 (global Dune__exe__StringSet!)
+      (field_mut 28 include/1383))
+    (setfield_ptr(root-init) 28 (global Dune__exe__StringSet!)
+      (field_mut 29 include/1383))
+    (setfield_ptr(root-init) 29 (global Dune__exe__StringSet!)
+      (field_mut 30 include/1383))
+    (setfield_ptr(root-init) 30 (global Dune__exe__StringSet!)
+      (field_mut 31 include/1383))
+    (setfield_ptr(root-init) 31 (global Dune__exe__StringSet!)
+      (field_mut 32 include/1383))
+    (setfield_ptr(root-init) 32 (global Dune__exe__StringSet!)
+      (field_mut 33 include/1383))
+    (setfield_ptr(root-init) 33 (global Dune__exe__StringSet!)
+      (field_mut 34 include/1383))
+    (setfield_ptr(root-init) 34 (global Dune__exe__StringSet!)
+      (field_mut 35 include/1383))
+    (setfield_ptr(root-init) 35 (global Dune__exe__StringSet!)
+      (field_mut 36 include/1383))
+    (setfield_ptr(root-init) 36 (global Dune__exe__StringSet!)
+      (field_mut 37 include/1383))
+    (setfield_ptr(root-init) 37 (global Dune__exe__StringSet!)
+      (field_mut 38 include/1383))
+    (setfield_ptr(root-init) 38 (global Dune__exe__StringSet!)
+      (field_mut 39 include/1383))
+    (setfield_ptr(root-init) 39 (global Dune__exe__StringSet!)
+      (field_mut 40 include/1383))
+    (setfield_ptr(root-init) 40 (global Dune__exe__StringSet!)
+      (field_mut 41 include/1383))
+    (setfield_ptr(root-init) 41 (global Dune__exe__StringSet!)
+      (field_mut 42 include/1383))
+    (let
+      (map/611 =
+         (function f/612 xs/613
+           (apply (field_imm 23 (global Dune__exe__StringSet!))
+             (function x/614 accu/615
+               (apply (field_imm 1 (global Dune__exe__StringSet!))
+                 (apply f/612 x/614) accu/615))
+             xs/613 (field_imm 0 (global Dune__exe__StringSet!)))))
+      (setfield_ptr(root-init) 42 (global Dune__exe__StringSet!) map/611))
+    (let
+      (print/751 =
+         (function s/753
+           (apply (field_imm 5 (global Dune__exe__Misc!))
+             (function s/790 s/790) ", "
+             (function f/791 : int
+               (apply (field_imm 22 (global Dune__exe__StringSet!)) f/791
+                 s/753)))))
+      (setfield_ptr(root-init) 43 (global Dune__exe__StringSet!) print/751))
+    0))

@@ -1,0 +1,298 @@
+[
+  structure_item (src/listMonad.ml[14,999+0]..[14,999+19])
+    Pstr_type Rec
+    [
+      type_declaration "m" (src/listMonad.ml[14,999+8]..[14,999+9]) (src/listMonad.ml[14,999+0]..[14,999+19])
+        ptype_params =
+          [
+            core_type (src/listMonad.ml[14,999+5]..[14,999+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/listMonad.ml[14,999+12]..[14,999+19])
+              Ptyp_constr "list" (src/listMonad.ml[14,999+15]..[14,999+19])
+              [
+                core_type (src/listMonad.ml[14,999+12]..[14,999+14])
+                  Ptyp_var a
+              ]
+    ]
+  structure_item (src/listMonad.ml[16,1020+0]..[17,1035+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/listMonad.ml[16,1020+4]..[16,1020+10])
+          Ppat_var "return" (src/listMonad.ml[16,1020+4]..[16,1020+10])
+        expression (src/listMonad.ml[16,1020+11]..[17,1035+7]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/listMonad.ml[16,1020+11]..[16,1020+12])
+            Ppat_var "x" (src/listMonad.ml[16,1020+11]..[16,1020+12])
+          expression (src/listMonad.ml[17,1035+2]..[17,1035+7])
+            Pexp_construct "::" (src/listMonad.ml[17,1035+4]..[17,1035+7]) ghost
+            Some
+              expression (src/listMonad.ml[17,1035+4]..[17,1035+7]) ghost
+                Pexp_tuple
+                [
+                  expression (src/listMonad.ml[17,1035+4]..[17,1035+5])
+                    Pexp_ident "x" (src/listMonad.ml[17,1035+4]..[17,1035+5])
+                  expression (src/listMonad.ml[17,1035+6]..[17,1035+7]) ghost
+                    Pexp_construct "[]" (src/listMonad.ml[17,1035+6]..[17,1035+7]) ghost
+                    None
+                ]
+    ]
+  structure_item (src/listMonad.ml[19,1044+0]..[20,1059+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/listMonad.ml[19,1044+4]..[19,1044+8])
+          Ppat_var "bind" (src/listMonad.ml[19,1044+4]..[19,1044+8])
+        expression (src/listMonad.ml[19,1044+9]..[20,1059+29]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/listMonad.ml[19,1044+9]..[19,1044+10])
+            Ppat_var "l" (src/listMonad.ml[19,1044+9]..[19,1044+10])
+          expression (src/listMonad.ml[19,1044+11]..[20,1059+29]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/listMonad.ml[19,1044+11]..[19,1044+12])
+              Ppat_var "f" (src/listMonad.ml[19,1044+11]..[19,1044+12])
+            expression (src/listMonad.ml[20,1059+2]..[20,1059+29])
+              Pexp_apply
+              expression (src/listMonad.ml[20,1059+2]..[20,1059+14])
+                Pexp_ident "List.flatten" (src/listMonad.ml[20,1059+2]..[20,1059+14])
+              [
+                <arg>
+                Nolabel
+                  expression (src/listMonad.ml[20,1059+15]..[20,1059+29])
+                    Pexp_apply
+                    expression (src/listMonad.ml[20,1059+16]..[20,1059+24])
+                      Pexp_ident "List.map" (src/listMonad.ml[20,1059+16]..[20,1059+24])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/listMonad.ml[20,1059+25]..[20,1059+26])
+                          Pexp_ident "f" (src/listMonad.ml[20,1059+25]..[20,1059+26])
+                      <arg>
+                      Nolabel
+                        expression (src/listMonad.ml[20,1059+27]..[20,1059+28])
+                          Pexp_ident "l" (src/listMonad.ml[20,1059+27]..[20,1059+28])
+                    ]
+              ]
+    ]
+  structure_item (src/listMonad.ml[22,1090+0]..[23,1108+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/listMonad.ml[22,1090+4]..[22,1090+11])
+          Ppat_var ">>=" (src/listMonad.ml[22,1090+4]..[22,1090+11])
+        expression (src/listMonad.ml[22,1090+12]..[23,1108+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/listMonad.ml[22,1090+12]..[22,1090+13])
+            Ppat_var "l" (src/listMonad.ml[22,1090+12]..[22,1090+13])
+          expression (src/listMonad.ml[22,1090+14]..[23,1108+10]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/listMonad.ml[22,1090+14]..[22,1090+15])
+              Ppat_var "f" (src/listMonad.ml[22,1090+14]..[22,1090+15])
+            expression (src/listMonad.ml[23,1108+2]..[23,1108+10])
+              Pexp_apply
+              expression (src/listMonad.ml[23,1108+2]..[23,1108+6])
+                Pexp_ident "bind" (src/listMonad.ml[23,1108+2]..[23,1108+6])
+              [
+                <arg>
+                Nolabel
+                  expression (src/listMonad.ml[23,1108+7]..[23,1108+8])
+                    Pexp_ident "l" (src/listMonad.ml[23,1108+7]..[23,1108+8])
+                <arg>
+                Nolabel
+                  expression (src/listMonad.ml[23,1108+9]..[23,1108+10])
+                    Pexp_ident "f" (src/listMonad.ml[23,1108+9]..[23,1108+10])
+              ]
+    ]
+]
+
+type 'a m = 'a list
+let return x = [x]
+let bind l f = List.flatten (List.map f l)
+let (>>=) l f = bind l f
+[
+  structure_item (src/listMonad.ml[14,999+0]..src/listMonad.ml[14,999+19])
+    Tstr_type Rec
+    [
+      type_declaration m/396 (src/listMonad.ml[14,999+0]..src/listMonad.ml[14,999+19])
+        ptype_params =
+          [
+            core_type (src/listMonad.ml[14,999+5]..src/listMonad.ml[14,999+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/listMonad.ml[14,999+12]..src/listMonad.ml[14,999+19])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/listMonad.ml[14,999+12]..src/listMonad.ml[14,999+14])
+                  Ttyp_var a
+              ]
+    ]
+  structure_item (src/listMonad.ml[16,1020+0]..src/listMonad.ml[17,1035+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/listMonad.ml[16,1020+4]..src/listMonad.ml[16,1020+10])
+          Tpat_var "return/397"
+        expression (src/listMonad.ml[16,1020+11]..src/listMonad.ml[17,1035+7]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/listMonad.ml[16,1020+11]..src/listMonad.ml[16,1020+12])
+                Tpat_var "x/399"
+              expression (src/listMonad.ml[17,1035+2]..src/listMonad.ml[17,1035+7])
+                Texp_construct "::"
+                [
+                  expression (src/listMonad.ml[17,1035+4]..src/listMonad.ml[17,1035+5])
+                    Texp_ident "x/399"
+                  expression (src/listMonad.ml[17,1035+6]..src/listMonad.ml[17,1035+7]) ghost
+                    Texp_construct "[]"
+                    []
+                ]
+          ]
+    ]
+  structure_item (src/listMonad.ml[19,1044+0]..src/listMonad.ml[20,1059+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/listMonad.ml[19,1044+4]..src/listMonad.ml[19,1044+8])
+          Tpat_var "bind/400"
+        expression (src/listMonad.ml[19,1044+9]..src/listMonad.ml[20,1059+29]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/listMonad.ml[19,1044+9]..src/listMonad.ml[19,1044+10])
+                Tpat_var "l/402"
+              expression (src/listMonad.ml[19,1044+11]..src/listMonad.ml[20,1059+29]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/listMonad.ml[19,1044+11]..src/listMonad.ml[19,1044+12])
+                      Tpat_var "f/403"
+                    expression (src/listMonad.ml[20,1059+2]..src/listMonad.ml[20,1059+29])
+                      Texp_apply
+                      expression (src/listMonad.ml[20,1059+2]..src/listMonad.ml[20,1059+14])
+                        Texp_ident "Stdlib!.List.flatten"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/listMonad.ml[20,1059+15]..src/listMonad.ml[20,1059+29])
+                            Texp_apply
+                            expression (src/listMonad.ml[20,1059+16]..src/listMonad.ml[20,1059+24])
+                              Texp_ident "Stdlib!.List.map"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/listMonad.ml[20,1059+25]..src/listMonad.ml[20,1059+26])
+                                  Texp_ident "f/403"
+                              <arg>
+                                Nolabel
+                                expression (src/listMonad.ml[20,1059+27]..src/listMonad.ml[20,1059+28])
+                                  Texp_ident "l/402"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/listMonad.ml[22,1090+0]..src/listMonad.ml[23,1108+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/listMonad.ml[22,1090+4]..src/listMonad.ml[22,1090+11])
+          Tpat_var ">>=/470"
+        expression (src/listMonad.ml[22,1090+12]..src/listMonad.ml[23,1108+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/listMonad.ml[22,1090+12]..src/listMonad.ml[22,1090+13])
+                Tpat_var "l/472"
+              expression (src/listMonad.ml[22,1090+14]..src/listMonad.ml[23,1108+10]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/listMonad.ml[22,1090+14]..src/listMonad.ml[22,1090+15])
+                      Tpat_var "f/473"
+                    expression (src/listMonad.ml[23,1108+2]..src/listMonad.ml[23,1108+10])
+                      Texp_apply
+                      expression (src/listMonad.ml[23,1108+2]..src/listMonad.ml[23,1108+6])
+                        Texp_ident "bind/400"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/listMonad.ml[23,1108+7]..src/listMonad.ml[23,1108+8])
+                            Texp_ident "l/472"
+                        <arg>
+                          Nolabel
+                          expression (src/listMonad.ml[23,1108+9]..src/listMonad.ml[23,1108+10])
+                            Texp_ident "f/473"
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__ListMonad>
+ ">>="[value] -> <Dune__exe__ListMonad.6>;
+ "bind"[value] -> <Dune__exe__ListMonad.3>;
+ "m"[type] -> <Dune__exe__ListMonad.0>;
+ "return"[value] -> <Dune__exe__ListMonad.1>;
+ }
+
+(seq
+  (let (return/397 = (function x/399 (makeblock 0 x/399 0)))
+    (setfield_ptr(root-init) 2 (global Dune__exe__ListMonad!) return/397))
+  (let
+    (bind/400 =
+       (function l/402 f/403
+         (apply (field_imm 14 (global Stdlib__List!))
+           (apply (field_imm 19 (global Stdlib__List!)) f/403 l/402))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__ListMonad!) bind/400))
+  (let
+    (>>=/470 =
+       (function l/472 f/473
+         (apply (field_imm 0 (global Dune__exe__ListMonad!)) l/472 f/473)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__ListMonad!) >>=/470))
+  0)
+(seq
+  (let (return/397 = (function x/399 (makeblock 0 x/399 0)))
+    (setfield_ptr(root-init) 2 (global Dune__exe__ListMonad!) return/397))
+  (let
+    (bind/400 =
+       (function l/402 f/403
+         (apply (field_imm 14 (global Stdlib__List!))
+           (apply (field_imm 19 (global Stdlib__List!)) f/403 l/402))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__ListMonad!) bind/400))
+  (let
+    (>>=/470 =
+       (function l/472 f/473
+         (apply (field_imm 0 (global Dune__exe__ListMonad!)) l/472 f/473)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__ListMonad!) >>=/470))
+  0)

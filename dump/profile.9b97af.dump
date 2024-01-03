@@ -1,0 +1,19 @@
+0.063s 28.5MB 2.65MB 4.44MB src/stage3/expandTokenAliases.ml
+  0.001s 0.05MB ------ ------ parsing
+    0.001s 0.05MB ------ ------ parser
+  0.024s 8.65MB 1.59MB 3.38MB typing
+  0.002s ------ ------ ------ transl
+  0.021s 8.42MB 0.71MB 4.10MB generate
+    0.001s 0.07MB ------ ------ cmm
+    0.009s 4.34MB 0.43MB 3.82MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.001s 2.00MB 0.21MB 3.60MB polling
+      0.001s ------ ------ ------ liveness
+      0.001s 0.16MB ------ ------ spill
+      0.002s ------ ------ ------ regalloc
+      0.002s 2.18MB 0.21MB 3.82MB emit
+      0.001s ------ ------ ------ other
+    0.005s ------ ------ ------ assemble
+    0.006s 4.00MB 0.28MB 4.10MB other
+  0.015s 11.4MB 0.34MB 4.44MB other
+0.018s 3.07MB 1.79MB ------ other

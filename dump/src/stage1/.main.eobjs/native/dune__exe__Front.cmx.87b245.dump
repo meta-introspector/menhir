@@ -1,0 +1,2588 @@
+[
+  structure_item (src/front.ml[20,1192+0]..[29,1583+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[20,1192+4]..[20,1192+30])
+          Ppat_var "load_grammar_from_contents" (src/front.ml[20,1192+4]..[20,1192+30])
+        expression (src/front.ml[20,1192+31]..[29,1583+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/front.ml[20,1192+31]..[20,1192+39])
+            Ppat_var "filename" (src/front.ml[20,1192+31]..[20,1192+39])
+          expression (src/front.ml[20,1192+40]..[29,1583+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/front.ml[20,1192+40]..[20,1192+48])
+              Ppat_var "contents" (src/front.ml[20,1192+40]..[20,1192+48])
+            expression (src/front.ml[21,1243+2]..[29,1583+3])
+              Pexp_sequence
+              expression (src/front.ml[21,1243+2]..[21,1243+35])
+                Pexp_apply
+                expression (src/front.ml[21,1243+2]..[21,1243+26])
+                  Pexp_ident "InputFile.new_input_file" (src/front.ml[21,1243+2]..[21,1243+26])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[21,1243+27]..[21,1243+35])
+                      Pexp_ident "filename" (src/front.ml[21,1243+27]..[21,1243+35])
+                ]
+              expression (src/front.ml[22,1280+2]..[29,1583+3])
+                Pexp_apply
+                expression (src/front.ml[22,1280+2]..[22,1280+30])
+                  Pexp_ident "InputFile.with_file_contents" (src/front.ml[22,1280+2]..[22,1280+30])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[22,1280+31]..[22,1280+39])
+                      Pexp_ident "contents" (src/front.ml[22,1280+31]..[22,1280+39])
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[22,1280+40]..[29,1583+3])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/front.ml[22,1280+45]..[22,1280+47])
+                        Ppat_construct "()" (src/front.ml[22,1280+45]..[22,1280+47])
+                        None
+                      expression (src/front.ml[23,1331+4]..[28,1540+42])
+                        Pexp_open Fresh
+                        module_expr (src/front.ml[23,1331+13]..[23,1331+19])
+                          Pmod_ident "Lexing" (src/front.ml[23,1331+13]..[23,1331+19])
+                        expression (src/front.ml[24,1354+4]..[28,1540+42])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/front.ml[24,1354+8]..[24,1354+14])
+                                Ppat_var "lexbuf" (src/front.ml[24,1354+8]..[24,1354+14])
+                              expression (src/front.ml[24,1354+17]..[24,1354+44])
+                                Pexp_apply
+                                expression (src/front.ml[24,1354+17]..[24,1354+35])
+                                  Pexp_ident "Lexing.from_string" (src/front.ml[24,1354+17]..[24,1354+35])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/front.ml[24,1354+36]..[24,1354+44])
+                                      Pexp_ident "contents" (src/front.ml[24,1354+36]..[24,1354+44])
+                                ]
+                          ]
+                          expression (src/front.ml[25,1402+4]..[28,1540+42])
+                            Pexp_sequence
+                            expression (src/front.ml[25,1402+4]..[25,1402+72])
+                              Pexp_setfield
+                              expression (src/front.ml[25,1402+4]..[25,1402+10])
+                                Pexp_ident "lexbuf" (src/front.ml[25,1402+4]..[25,1402+10])
+                              "lex_curr_p" (src/front.ml[25,1402+11]..[25,1402+21])
+                              expression (src/front.ml[25,1402+25]..[25,1402+72])
+                                Pexp_record
+                                [
+                                  "pos_fname" (src/front.ml[25,1402+50]..[25,1402+59])
+                                    expression (src/front.ml[25,1402+62]..[25,1402+70])
+                                      Pexp_ident "filename" (src/front.ml[25,1402+62]..[25,1402+70])
+                                ]
+                                Some
+                                  expression (src/front.ml[25,1402+27]..[25,1402+44])
+                                    Pexp_field
+                                    expression (src/front.ml[25,1402+27]..[25,1402+33])
+                                      Pexp_ident "lexbuf" (src/front.ml[25,1402+27]..[25,1402+33])
+                                    "lex_curr_p" (src/front.ml[25,1402+34]..[25,1402+44])
+                            expression (src/front.ml[27,1499+4]..[28,1540+42])
+                              Pexp_record
+                              [
+                                "Syntax.pg_filename" (src/front.ml[28,1540+11]..[28,1540+29])
+                                  expression (src/front.ml[28,1540+32]..[28,1540+40])
+                                    Pexp_ident "filename" (src/front.ml[28,1540+32]..[28,1540+40])
+                              ]
+                              Some
+                                expression (src/front.ml[27,1499+6]..[27,1499+40])
+                                  Pexp_apply
+                                  expression (src/front.ml[27,1499+7]..[27,1499+21])
+                                    Pexp_ident "Driver.grammar" (src/front.ml[27,1499+7]..[27,1499+21])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/front.ml[27,1499+22]..[27,1499+32])
+                                        Pexp_ident "Lexer.main" (src/front.ml[27,1499+22]..[27,1499+32])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/front.ml[27,1499+33]..[27,1499+39])
+                                        Pexp_ident "lexbuf" (src/front.ml[27,1499+33]..[27,1499+39])
+                                  ]
+                ]
+    ]
+  structure_item (src/front.ml[31,1588+0]..[36,1822+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[31,1588+4]..[31,1588+18])
+          Ppat_var "check_filename" (src/front.ml[31,1588+4]..[31,1588+18])
+        expression (src/front.ml[31,1588+19]..[36,1822+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/front.ml[31,1588+19]..[31,1588+27])
+            Ppat_var "filename" (src/front.ml[31,1588+19]..[31,1588+27])
+          expression (src/front.ml[32,1618+2]..[36,1822+23])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/front.ml[32,1618+6]..[32,1618+14])
+                  Ppat_var "validExt" (src/front.ml[32,1618+6]..[32,1618+14])
+                expression (src/front.ml[32,1618+17]..[32,1618+55])
+                  Pexp_ifthenelse
+                  expression (src/front.ml[32,1618+20]..[32,1618+32])
+                    Pexp_ident "Settings.coq" (src/front.ml[32,1618+20]..[32,1618+32])
+                  expression (src/front.ml[32,1618+38]..[32,1618+43])
+                    Pexp_constant PConst_string(".vy",(src/front.ml[32,1618+39]..[32,1618+42]),None)
+                  Some
+                    expression (src/front.ml[32,1618+49]..[32,1618+55])
+                      Pexp_constant PConst_string(".mly",(src/front.ml[32,1618+50]..[32,1618+54]),None)
+            ]
+            expression (src/front.ml[33,1677+2]..[36,1822+23])
+              Pexp_ifthenelse
+              expression (src/front.ml[33,1677+5]..[33,1677+50])
+                Pexp_apply
+                expression (src/front.ml[33,1677+5]..[33,1677+8])
+                  Pexp_ident "not" (src/front.ml[33,1677+5]..[33,1677+8])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[33,1677+9]..[33,1677+50])
+                      Pexp_apply
+                      expression (src/front.ml[33,1677+10]..[33,1677+31])
+                        Pexp_ident "Filename.check_suffix" (src/front.ml[33,1677+10]..[33,1677+31])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[33,1677+32]..[33,1677+40])
+                            Pexp_ident "filename" (src/front.ml[33,1677+32]..[33,1677+40])
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[33,1677+41]..[33,1677+49])
+                            Pexp_ident "validExt" (src/front.ml[33,1677+41]..[33,1677+49])
+                      ]
+                ]
+              expression (src/front.ml[34,1733+4]..[36,1822+23])
+                Pexp_apply
+                expression (src/front.ml[34,1733+4]..[34,1733+15])
+                  Pexp_ident "Error.error" (src/front.ml[34,1733+4]..[34,1733+15])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[34,1733+16]..[34,1733+18])
+                      Pexp_construct "[]" (src/front.ml[34,1733+16]..[34,1733+18])
+                      None
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[35,1752+6]..[35,1752+69])
+                      Pexp_constant PConst_string("argument file names should end in %s. \"%s\" is not accepted.",(src/front.ml[35,1752+7]..[35,1752+68]),None)
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[36,1822+6]..[36,1822+14])
+                      Pexp_ident "validExt" (src/front.ml[36,1822+6]..[36,1822+14])
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[36,1822+15]..[36,1822+23])
+                      Pexp_ident "filename" (src/front.ml[36,1822+15]..[36,1822+23])
+                ]
+              None
+    ]
+  structure_item (src/front.ml[38,1847+0]..[44,2066+27])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[38,1847+4]..[38,1847+26])
+          Ppat_var "load_grammar_from_file" (src/front.ml[38,1847+4]..[38,1847+26])
+        expression (src/front.ml[38,1847+27]..[44,2066+27]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/front.ml[38,1847+27]..[38,1847+35])
+            Ppat_var "filename" (src/front.ml[38,1847+27]..[38,1847+35])
+          expression (src/front.ml[38,1847+36]..[44,2066+27])
+            Pexp_constraint
+            expression (src/front.ml[39,1910+2]..[44,2066+27])
+              Pexp_sequence
+              expression (src/front.ml[39,1910+2]..[39,1910+25])
+                Pexp_apply
+                expression (src/front.ml[39,1910+2]..[39,1910+16])
+                  Pexp_ident "check_filename" (src/front.ml[39,1910+2]..[39,1910+16])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[39,1910+17]..[39,1910+25])
+                      Pexp_ident "filename" (src/front.ml[39,1910+17]..[39,1910+25])
+                ]
+              expression (src/front.ml[40,1937+2]..[44,2066+27])
+                Pexp_try
+                expression (src/front.ml[41,1943+4]..[42,1993+48])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/front.ml[41,1943+8]..[41,1943+16])
+                        Ppat_var "contents" (src/front.ml[41,1943+8]..[41,1943+16])
+                      expression (src/front.ml[41,1943+19]..[41,1943+46])
+                        Pexp_apply
+                        expression (src/front.ml[41,1943+19]..[41,1943+37])
+                          Pexp_ident "IO.read_whole_file" (src/front.ml[41,1943+19]..[41,1943+37])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/front.ml[41,1943+38]..[41,1943+46])
+                              Pexp_ident "filename" (src/front.ml[41,1943+38]..[41,1943+46])
+                        ]
+                  ]
+                  expression (src/front.ml[42,1993+4]..[42,1993+48])
+                    Pexp_apply
+                    expression (src/front.ml[42,1993+4]..[42,1993+30])
+                      Pexp_ident "load_grammar_from_contents" (src/front.ml[42,1993+4]..[42,1993+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/front.ml[42,1993+31]..[42,1993+39])
+                          Pexp_ident "filename" (src/front.ml[42,1993+31]..[42,1993+39])
+                      <arg>
+                      Nolabel
+                        expression (src/front.ml[42,1993+40]..[42,1993+48])
+                          Pexp_ident "contents" (src/front.ml[42,1993+40]..[42,1993+48])
+                    ]
+                [
+                  <case>
+                    pattern (src/front.ml[43,2042+7]..[43,2042+20])
+                      Ppat_construct "Sys_error" (src/front.ml[43,2042+7]..[43,2042+16])
+                      Some
+                        []
+                        pattern (src/front.ml[43,2042+17]..[43,2042+20])
+                          Ppat_var "msg" (src/front.ml[43,2042+17]..[43,2042+20])
+                    expression (src/front.ml[44,2066+4]..[44,2066+27])
+                      Pexp_apply
+                      expression (src/front.ml[44,2066+4]..[44,2066+15])
+                        Pexp_ident "Error.error" (src/front.ml[44,2066+4]..[44,2066+15])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[44,2066+16]..[44,2066+18])
+                            Pexp_construct "[]" (src/front.ml[44,2066+16]..[44,2066+18])
+                            None
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[44,2066+19]..[44,2066+23])
+                            Pexp_constant PConst_string("%s",(src/front.ml[44,2066+20]..[44,2066+22]),None)
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[44,2066+24]..[44,2066+27])
+                            Pexp_ident "msg" (src/front.ml[44,2066+24]..[44,2066+27])
+                      ]
+                ]
+            core_type (src/front.ml[38,1847+38]..[38,1847+60])
+              Ptyp_constr "Syntax.partial_grammar" (src/front.ml[38,1847+38]..[38,1847+60])
+              []
+    ]
+  structure_item (src/front.ml[51,2326+0]..[52,2374+52])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[51,2326+4]..[51,2326+12])
+          Ppat_var "grammars" (src/front.ml[51,2326+4]..[51,2326+12])
+        expression (src/front.ml[51,2326+13]..[52,2374+52]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/front.ml[51,2326+13]..[51,2326+15])
+            Ppat_construct "()" (src/front.ml[51,2326+13]..[51,2326+15])
+            None
+          expression (src/front.ml[51,2326+16]..[52,2374+52])
+            Pexp_constraint
+            expression (src/front.ml[52,2374+2]..[52,2374+52])
+              Pexp_apply
+              expression (src/front.ml[52,2374+2]..[52,2374+10])
+                Pexp_ident "List.map" (src/front.ml[52,2374+2]..[52,2374+10])
+              [
+                <arg>
+                Nolabel
+                  expression (src/front.ml[52,2374+11]..[52,2374+33])
+                    Pexp_ident "load_grammar_from_file" (src/front.ml[52,2374+11]..[52,2374+33])
+                <arg>
+                Nolabel
+                  expression (src/front.ml[52,2374+34]..[52,2374+52])
+                    Pexp_ident "Settings.filenames" (src/front.ml[52,2374+34]..[52,2374+52])
+              ]
+            core_type (src/front.ml[51,2326+18]..[51,2326+45])
+              Ptyp_constr "list" (src/front.ml[51,2326+41]..[51,2326+45])
+              [
+                core_type (src/front.ml[51,2326+18]..[51,2326+40])
+                  Ptyp_constr "Syntax.partial_grammar" (src/front.ml[51,2326+18]..[51,2326+40])
+                  []
+              ]
+    ]
+  structure_item (src/front.ml[54,2428+0]..[72,3267+34])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[54,2428+4]..[54,2428+12])
+          Ppat_var "grammars" (src/front.ml[54,2428+4]..[54,2428+12])
+        core_type (src/front.ml[54,2428+15]..[54,2428+42])
+          Ptyp_constr "list" (src/front.ml[54,2428+38]..[54,2428+42])
+          [
+            core_type (src/front.ml[54,2428+15]..[54,2428+37])
+              Ptyp_constr "Syntax.partial_grammar" (src/front.ml[54,2428+15]..[54,2428+37])
+              []
+          ]
+        expression (src/front.ml[55,2473+2]..[72,3267+34])
+          Pexp_ifthenelse
+          expression (src/front.ml[55,2473+5]..[55,2473+39])
+            Pexp_apply
+            expression (src/front.ml[55,2473+24]..[55,2473+26])
+              Pexp_ident "||" (src/front.ml[55,2473+24]..[55,2473+26])
+            [
+              <arg>
+              Nolabel
+                expression (src/front.ml[55,2473+5]..[55,2473+23])
+                  Pexp_ident "Settings.no_stdlib" (src/front.ml[55,2473+5]..[55,2473+23])
+              <arg>
+              Nolabel
+                expression (src/front.ml[55,2473+27]..[55,2473+39])
+                  Pexp_ident "Settings.coq" (src/front.ml[55,2473+27]..[55,2473+39])
+            ]
+          expression (src/front.ml[56,2518+4]..[56,2518+14])
+            Pexp_apply
+            expression (src/front.ml[56,2518+4]..[56,2518+12])
+              Pexp_ident "grammars" (src/front.ml[56,2518+4]..[56,2518+12])
+            [
+              <arg>
+              Nolabel
+                expression (src/front.ml[56,2518+12]..[56,2518+14])
+                  Pexp_construct "()" (src/front.ml[56,2518+12]..[56,2518+14])
+                  None
+            ]
+          Some
+            expression (src/front.ml[67,3137+4]..[72,3267+34])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/front.ml[67,3137+8]..[67,3137+24])
+                    Ppat_var "standard_library" (src/front.ml[67,3137+8]..[67,3137+24])
+                  expression (src/front.ml[68,3164+6]..[70,3230+29])
+                    Pexp_apply
+                    expression (src/front.ml[68,3164+6]..[68,3164+32])
+                      Pexp_ident "load_grammar_from_contents" (src/front.ml[68,3164+6]..[68,3164+32])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/front.ml[69,3197+8]..[69,3197+32])
+                          Pexp_ident "Settings.stdlib_filename" (src/front.ml[69,3197+8]..[69,3197+32])
+                      <arg>
+                      Nolabel
+                        expression (src/front.ml[70,3230+8]..[70,3230+29])
+                          Pexp_ident "Standard_mly.contents" (src/front.ml[70,3230+8]..[70,3230+29])
+                    ]
+              ]
+              expression (src/front.ml[72,3267+4]..[72,3267+34])
+                Pexp_construct "::" (src/front.ml[72,3267+21]..[72,3267+23])
+                Some
+                  expression (src/front.ml[72,3267+4]..[72,3267+34]) ghost
+                    Pexp_tuple
+                    [
+                      expression (src/front.ml[72,3267+4]..[72,3267+20])
+                        Pexp_ident "standard_library" (src/front.ml[72,3267+4]..[72,3267+20])
+                      expression (src/front.ml[72,3267+24]..[72,3267+34])
+                        Pexp_apply
+                        expression (src/front.ml[72,3267+24]..[72,3267+32])
+                          Pexp_ident "grammars" (src/front.ml[72,3267+24]..[72,3267+32])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/front.ml[72,3267+32]..[72,3267+34])
+                              Pexp_construct "()" (src/front.ml[72,3267+32]..[72,3267+34])
+                              None
+                        ]
+                    ]
+    ]
+  structure_item (src/front.ml[74,3303+0]..[75,3312+32])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[74,3303+4]..[74,3303+6])
+          Ppat_construct "()" (src/front.ml[74,3303+4]..[74,3303+6])
+          None
+        expression (src/front.ml[75,3312+2]..[75,3312+32])
+          Pexp_apply
+          expression (src/front.ml[75,3312+2]..[75,3312+11])
+            Pexp_ident "Time.tick" (src/front.ml[75,3312+2]..[75,3312+11])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[75,3312+12]..[75,3312+32])
+                Pexp_constant PConst_string("Lexing and parsing",(src/front.ml[75,3312+13]..[75,3312+31]),None)
+          ]
+    ]
+  structure_item (src/front.ml[81,3461+0]..[82,3506+55])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[81,3461+4]..[81,3461+12])
+          Ppat_var "grammars" (src/front.ml[81,3461+4]..[81,3461+12])
+        core_type (src/front.ml[81,3461+15]..[81,3461+42])
+          Ptyp_constr "list" (src/front.ml[81,3461+38]..[81,3461+42])
+          [
+            core_type (src/front.ml[81,3461+15]..[81,3461+37])
+              Ptyp_constr "Syntax.partial_grammar" (src/front.ml[81,3461+15]..[81,3461+37])
+              []
+          ]
+        expression (src/front.ml[82,3506+2]..[82,3506+55])
+          Pexp_apply
+          expression (src/front.ml[82,3506+2]..[82,3506+10])
+            Pexp_ident "List.map" (src/front.ml[82,3506+2]..[82,3506+10])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[82,3506+11]..[82,3506+46])
+                Pexp_ident "Anonymous.transform_partial_grammar" (src/front.ml[82,3506+11]..[82,3506+46])
+            <arg>
+            Nolabel
+              expression (src/front.ml[82,3506+47]..[82,3506+55])
+                Pexp_ident "grammars" (src/front.ml[82,3506+47]..[82,3506+55])
+          ]
+    ]
+  structure_item (src/front.ml[88,3704+0]..[89,3735+47])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[88,3704+4]..[88,3704+11])
+          Ppat_var "grammar" (src/front.ml[88,3704+4]..[88,3704+11])
+        core_type (src/front.ml[88,3704+14]..[88,3704+28])
+          Ptyp_constr "Syntax.grammar" (src/front.ml[88,3704+14]..[88,3704+28])
+          []
+        expression (src/front.ml[89,3735+2]..[89,3735+47])
+          Pexp_apply
+          expression (src/front.ml[89,3735+2]..[89,3735+38])
+            Pexp_ident "PartialGrammar.join_partial_grammars" (src/front.ml[89,3735+2]..[89,3735+38])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[89,3735+39]..[89,3735+47])
+                Pexp_ident "grammars" (src/front.ml[89,3735+39]..[89,3735+47])
+          ]
+    ]
+  structure_item (src/front.ml[95,3943+0]..[96,3955+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[95,3943+4]..[95,3943+9])
+          Ppat_var "sorts" (src/front.ml[95,3943+4]..[95,3943+9])
+        expression (src/front.ml[96,3955+2]..[96,3955+29])
+          Pexp_apply
+          expression (src/front.ml[96,3955+2]..[96,3955+21])
+            Pexp_ident "SortInference.infer" (src/front.ml[96,3955+2]..[96,3955+21])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[96,3955+22]..[96,3955+29])
+                Pexp_ident "grammar" (src/front.ml[96,3955+22]..[96,3955+29])
+          ]
+    ]
+  structure_item (src/front.ml[103,4213+0]..[118,5069+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[103,4213+4]..[103,4213+11])
+          Ppat_var "grammar" (src/front.ml[103,4213+4]..[103,4213+11])
+        core_type (src/front.ml[103,4213+14]..[103,4213+33])
+          Ptyp_constr "BasicSyntax.grammar" (src/front.ml[103,4213+14]..[103,4213+33])
+          []
+        expression (src/front.ml[104,4249+2]..[118,5069+19])
+          Pexp_letmodule "S" (src/front.ml[104,4249+13]..[104,4249+14])
+          module_expr (src/front.ml[104,4249+17]..[104,4249+35])
+            Pmod_ident "SelectiveExpansion" (src/front.ml[104,4249+17]..[104,4249+35])
+          expression (src/front.ml[108,4455+2]..[118,5069+19])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/front.ml[108,4455+6]..[108,4455+14])
+                  Ppat_var "grammar1" (src/front.ml[108,4455+6]..[108,4455+14])
+                expression (src/front.ml[108,4455+17]..[108,4455+58])
+                  Pexp_apply
+                  expression (src/front.ml[108,4455+17]..[108,4455+25])
+                    Pexp_ident "S.expand" (src/front.ml[108,4455+17]..[108,4455+25])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[108,4455+26]..[108,4455+44])
+                        Pexp_construct "S.ExpandHigherSort" (src/front.ml[108,4455+26]..[108,4455+44])
+                        None
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[108,4455+45]..[108,4455+50])
+                        Pexp_ident "sorts" (src/front.ml[108,4455+45]..[108,4455+50])
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[108,4455+51]..[108,4455+58])
+                        Pexp_ident "grammar" (src/front.ml[108,4455+51]..[108,4455+58])
+                  ]
+            ]
+            expression (src/front.ml[111,4619+2]..[118,5069+19])
+              Pexp_sequence
+              expression (src/front.ml[111,4619+2]..[111,4619+46])
+                Pexp_apply
+                expression (src/front.ml[111,4619+2]..[111,4619+37])
+                  Pexp_ident "CheckSafeParameterizedGrammar.check" (src/front.ml[111,4619+2]..[111,4619+37])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[111,4619+38]..[111,4619+46])
+                      Pexp_ident "grammar1" (src/front.ml[111,4619+38]..[111,4619+46])
+                ]
+              expression (src/front.ml[116,4967+2]..[118,5069+19])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/front.ml[116,4967+6]..[116,4967+13])
+                      Ppat_var "grammar" (src/front.ml[116,4967+6]..[116,4967+13])
+                    expression (src/front.ml[116,4967+16]..[116,4967+50])
+                      Pexp_apply
+                      expression (src/front.ml[116,4967+16]..[116,4967+24])
+                        Pexp_ident "S.expand" (src/front.ml[116,4967+16]..[116,4967+24])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[116,4967+25]..[116,4967+36])
+                            Pexp_construct "S.ExpandAll" (src/front.ml[116,4967+25]..[116,4967+36])
+                            None
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[116,4967+37]..[116,4967+42])
+                            Pexp_ident "sorts" (src/front.ml[116,4967+37]..[116,4967+42])
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[116,4967+43]..[116,4967+50])
+                            Pexp_ident "grammar" (src/front.ml[116,4967+43]..[116,4967+50])
+                      ]
+                ]
+                expression (src/front.ml[118,5069+2]..[118,5069+19])
+                  Pexp_apply
+                  expression (src/front.ml[118,5069+2]..[118,5069+11])
+                    Pexp_ident "Drop.drop" (src/front.ml[118,5069+2]..[118,5069+11])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[118,5069+12]..[118,5069+19])
+                        Pexp_ident "grammar" (src/front.ml[118,5069+12]..[118,5069+19])
+                  ]
+    ]
+  structure_item (src/front.ml[120,5090+0]..[121,5099+35])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[120,5090+4]..[120,5090+6])
+          Ppat_construct "()" (src/front.ml[120,5090+4]..[120,5090+6])
+          None
+        expression (src/front.ml[121,5099+2]..[121,5099+35])
+          Pexp_apply
+          expression (src/front.ml[121,5099+2]..[121,5099+11])
+            Pexp_ident "Time.tick" (src/front.ml[121,5099+2]..[121,5099+11])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[121,5099+12]..[121,5099+35])
+                Pexp_constant PConst_string("Joining and expanding",(src/front.ml[121,5099+13]..[121,5099+34]),None)
+          ]
+    ]
+  structure_item (src/front.ml[128,5334+0]..[129,5343+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[128,5334+4]..[128,5334+6])
+          Ppat_construct "()" (src/front.ml[128,5334+4]..[128,5334+6])
+          None
+        expression (src/front.ml[129,5343+2]..[129,5343+38])
+          Pexp_apply
+          expression (src/front.ml[129,5343+2]..[129,5343+30])
+            Pexp_ident "TokenType.produce_tokentypes" (src/front.ml[129,5343+2]..[129,5343+30])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[129,5343+31]..[129,5343+38])
+                Pexp_ident "grammar" (src/front.ml[129,5343+31]..[129,5343+38])
+          ]
+    ]
+  structure_item (src/front.ml[135,5502+0]..[136,5516+27])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[135,5502+4]..[135,5502+11])
+          Ppat_var "grammar" (src/front.ml[135,5502+4]..[135,5502+11])
+        expression (src/front.ml[136,5516+2]..[136,5516+27])
+          Pexp_apply
+          expression (src/front.ml[136,5516+2]..[136,5516+19])
+            Pexp_ident "Reachability.trim" (src/front.ml[136,5516+2]..[136,5516+19])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[136,5516+20]..[136,5516+27])
+                Pexp_ident "grammar" (src/front.ml[136,5516+20]..[136,5516+27])
+          ]
+    ]
+  structure_item (src/front.ml[138,5545+0]..[139,5554+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[138,5545+4]..[138,5545+6])
+          Ppat_construct "()" (src/front.ml[138,5545+4]..[138,5545+6])
+          None
+        expression (src/front.ml[139,5554+2]..[139,5554+22])
+          Pexp_apply
+          expression (src/front.ml[139,5554+2]..[139,5554+11])
+            Pexp_ident "Time.tick" (src/front.ml[139,5554+2]..[139,5554+11])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[139,5554+12]..[139,5554+22])
+                Pexp_constant PConst_string("Trimming",(src/front.ml[139,5554+13]..[139,5554+21]),None)
+          ]
+    ]
+  structure_item (src/front.ml[166,6872+0]..[184,7533+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[166,6872+4]..[166,6872+42])
+          Ppat_tuple
+          [
+            pattern (src/front.ml[166,6872+4]..[166,6872+11])
+              Ppat_var "grammar" (src/front.ml[166,6872+4]..[166,6872+11])
+            pattern (src/front.ml[166,6872+13]..[166,6872+42])
+              Ppat_var "ocaml_types_have_been_checked" (src/front.ml[166,6872+13]..[166,6872+42])
+          ]
+        expression (src/front.ml[167,6917+2]..[184,7533+3])
+          Pexp_open Fresh
+          module_expr (src/front.ml[167,6917+2]..[167,6917+10])
+            Pmod_ident "Settings" (src/front.ml[167,6917+2]..[167,6917+10])
+          expression (src/front.ml[167,6917+12]..[183,7513+19])
+            Pexp_match
+            expression (src/front.ml[167,6917+18]..[167,6917+23])
+              Pexp_ident "infer" (src/front.ml[167,6917+18]..[167,6917+23])
+            [
+              <case>
+                pattern (src/front.ml[168,6946+4]..[168,6946+10])
+                  Ppat_construct "IMNone" (src/front.ml[168,6946+4]..[168,6946+10])
+                  None
+                expression (src/front.ml[169,6960+6]..[169,6960+20])
+                  Pexp_tuple
+                  [
+                    expression (src/front.ml[169,6960+6]..[169,6960+13])
+                      Pexp_ident "grammar" (src/front.ml[169,6960+6]..[169,6960+13])
+                    expression (src/front.ml[169,6960+15]..[169,6960+20])
+                      Pexp_construct "false" (src/front.ml[169,6960+15]..[169,6960+20])
+                      None
+                  ]
+              <case>
+                pattern (src/front.ml[170,6981+4]..[170,6981+11])
+                  Ppat_construct "IMInfer" (src/front.ml[170,6981+4]..[170,6981+11])
+                  None
+                expression (src/front.ml[171,6996+6]..[173,7091+19])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/front.ml[171,6996+10]..[171,6996+17])
+                        Ppat_var "grammar" (src/front.ml[171,6996+10]..[171,6996+17])
+                      expression (src/front.ml[171,6996+20]..[171,6996+39])
+                        Pexp_apply
+                        expression (src/front.ml[171,6996+20]..[171,6996+31])
+                          Pexp_ident "Infer.infer" (src/front.ml[171,6996+20]..[171,6996+31])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/front.ml[171,6996+32]..[171,6996+39])
+                              Pexp_ident "grammar" (src/front.ml[171,6996+32]..[171,6996+39])
+                        ]
+                  ]
+                  expression (src/front.ml[172,7039+6]..[173,7091+19])
+                    Pexp_sequence
+                    expression (src/front.ml[172,7039+6]..[172,7039+50])
+                      Pexp_apply
+                      expression (src/front.ml[172,7039+6]..[172,7039+15])
+                        Pexp_ident "Time.tick" (src/front.ml[172,7039+6]..[172,7039+15])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[172,7039+16]..[172,7039+50])
+                            Pexp_constant PConst_string("Inferring types for nonterminals",(src/front.ml[172,7039+17]..[172,7039+49]),None)
+                      ]
+                    expression (src/front.ml[173,7091+6]..[173,7091+19])
+                      Pexp_tuple
+                      [
+                        expression (src/front.ml[173,7091+6]..[173,7091+13])
+                          Pexp_ident "grammar" (src/front.ml[173,7091+6]..[173,7091+13])
+                        expression (src/front.ml[173,7091+15]..[173,7091+19])
+                          Pexp_construct "true" (src/front.ml[173,7091+15]..[173,7091+19])
+                          None
+                      ]
+              <case>
+                pattern (src/front.ml[174,7111+4]..[174,7111+15])
+                  Ppat_construct "IMDependRaw" (src/front.ml[174,7111+4]..[174,7111+15])
+                  None
+                expression (src/front.ml[175,7130+6]..[175,7130+32])
+                  Pexp_apply
+                  expression (src/front.ml[175,7130+6]..[175,7130+18])
+                    Pexp_ident "Infer.depend" (src/front.ml[175,7130+6]..[175,7130+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[175,7130+19]..[175,7130+24])
+                        Pexp_construct "false" (src/front.ml[175,7130+19]..[175,7130+24])
+                        None
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[175,7130+25]..[175,7130+32])
+                        Pexp_ident "grammar" (src/front.ml[175,7130+25]..[175,7130+32])
+                  ]
+              <case>
+                pattern (src/front.ml[176,7191+4]..[176,7191+23])
+                  Ppat_construct "IMDependPostprocess" (src/front.ml[176,7191+4]..[176,7191+23])
+                  None
+                expression (src/front.ml[177,7218+6]..[177,7218+31])
+                  Pexp_apply
+                  expression (src/front.ml[177,7218+6]..[177,7218+18])
+                    Pexp_ident "Infer.depend" (src/front.ml[177,7218+6]..[177,7218+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[177,7218+19]..[177,7218+23])
+                        Pexp_construct "true" (src/front.ml[177,7218+19]..[177,7218+23])
+                        None
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[177,7218+24]..[177,7218+31])
+                        Pexp_ident "grammar" (src/front.ml[177,7218+24]..[177,7218+31])
+                  ]
+              <case>
+                pattern (src/front.ml[178,7279+4]..[178,7279+25])
+                  Ppat_construct "IMWriteQuery" (src/front.ml[178,7279+4]..[178,7279+16])
+                  Some
+                    []
+                    pattern (src/front.ml[178,7279+17]..[178,7279+25])
+                      Ppat_var "filename" (src/front.ml[178,7279+17]..[178,7279+25])
+                expression (src/front.ml[179,7308+6]..[179,7308+40])
+                  Pexp_apply
+                  expression (src/front.ml[179,7308+6]..[179,7308+23])
+                    Pexp_ident "Infer.write_query" (src/front.ml[179,7308+6]..[179,7308+23])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[179,7308+24]..[179,7308+32])
+                        Pexp_ident "filename" (src/front.ml[179,7308+24]..[179,7308+32])
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[179,7308+33]..[179,7308+40])
+                        Pexp_ident "grammar" (src/front.ml[179,7308+33]..[179,7308+40])
+                  ]
+              <case>
+                pattern (src/front.ml[180,7369+4]..[180,7369+24])
+                  Ppat_construct "IMReadReply" (src/front.ml[180,7369+4]..[180,7369+15])
+                  Some
+                    []
+                    pattern (src/front.ml[180,7369+16]..[180,7369+24])
+                      Ppat_var "filename" (src/front.ml[180,7369+16]..[180,7369+24])
+                expression (src/front.ml[181,7397+6]..[183,7513+19])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/front.ml[181,7397+10]..[181,7397+17])
+                        Ppat_var "grammar" (src/front.ml[181,7397+10]..[181,7397+17])
+                      expression (src/front.ml[181,7397+20]..[181,7397+53])
+                        Pexp_apply
+                        expression (src/front.ml[181,7397+20]..[181,7397+36])
+                          Pexp_ident "Infer.read_reply" (src/front.ml[181,7397+20]..[181,7397+36])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/front.ml[181,7397+37]..[181,7397+45])
+                              Pexp_ident "filename" (src/front.ml[181,7397+37]..[181,7397+45])
+                          <arg>
+                          Nolabel
+                            expression (src/front.ml[181,7397+46]..[181,7397+53])
+                              Pexp_ident "grammar" (src/front.ml[181,7397+46]..[181,7397+53])
+                        ]
+                  ]
+                  expression (src/front.ml[182,7454+6]..[183,7513+19])
+                    Pexp_sequence
+                    expression (src/front.ml[182,7454+6]..[182,7454+57])
+                      Pexp_apply
+                      expression (src/front.ml[182,7454+6]..[182,7454+15])
+                        Pexp_ident "Time.tick" (src/front.ml[182,7454+6]..[182,7454+15])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/front.ml[182,7454+16]..[182,7454+57])
+                            Pexp_constant PConst_string("Reading inferred types for nonterminals",(src/front.ml[182,7454+17]..[182,7454+56]),None)
+                      ]
+                    expression (src/front.ml[183,7513+6]..[183,7513+19])
+                      Pexp_tuple
+                      [
+                        expression (src/front.ml[183,7513+6]..[183,7513+13])
+                          Pexp_ident "grammar" (src/front.ml[183,7513+6]..[183,7513+13])
+                        expression (src/front.ml[183,7513+15]..[183,7513+19])
+                          Pexp_construct "true" (src/front.ml[183,7513+15]..[183,7513+19])
+                          None
+                      ]
+            ]
+    ]
+  structure_item (src/front.ml[190,7669+0]..[191,7683+41])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[190,7669+4]..[190,7669+11])
+          Ppat_var "grammar" (src/front.ml[190,7669+4]..[190,7669+11])
+        expression (src/front.ml[191,7683+2]..[191,7683+41])
+          Pexp_apply
+          expression (src/front.ml[191,7683+2]..[191,7683+33])
+            Pexp_ident "KeywordExpansion.expand_grammar" (src/front.ml[191,7683+2]..[191,7683+33])
+          [
+            <arg>
+            Nolabel
+              expression (src/front.ml[191,7683+34]..[191,7683+41])
+                Pexp_ident "grammar" (src/front.ml[191,7683+34]..[191,7683+41])
+          ]
+    ]
+  structure_item (src/front.ml[198,7936+0]..[208,8249+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[198,7936+4]..[198,7936+11])
+          Ppat_var "grammar" (src/front.ml[198,7936+4]..[198,7936+11])
+        expression (src/front.ml[199,7950+2]..[208,8249+11])
+          Pexp_ifthenelse
+          expression (src/front.ml[199,7950+5]..[199,7950+20])
+            Pexp_ident "Settings.inline" (src/front.ml[199,7950+5]..[199,7950+20])
+          expression (src/front.ml[199,7950+26]..[206,8236+5])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/front.ml[200,7982+8]..[200,7982+15])
+                  Ppat_var "grammar" (src/front.ml[200,7982+8]..[200,7982+15])
+                expression (src/front.ml[200,7982+18]..[200,7982+41])
+                  Pexp_apply
+                  expression (src/front.ml[200,7982+18]..[200,7982+33])
+                    Pexp_ident "Inlining.inline" (src/front.ml[200,7982+18]..[200,7982+33])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[200,7982+34]..[200,7982+41])
+                        Pexp_ident "grammar" (src/front.ml[200,7982+34]..[200,7982+41])
+                  ]
+            ]
+            expression (src/front.ml[204,8198+4]..[205,8224+11])
+              Pexp_sequence
+              expression (src/front.ml[204,8198+4]..[204,8198+24])
+                Pexp_apply
+                expression (src/front.ml[204,8198+4]..[204,8198+13])
+                  Pexp_ident "Time.tick" (src/front.ml[204,8198+4]..[204,8198+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/front.ml[204,8198+14]..[204,8198+24])
+                      Pexp_constant PConst_string("Inlining",(src/front.ml[204,8198+15]..[204,8198+23]),None)
+                ]
+              expression (src/front.ml[205,8224+4]..[205,8224+11])
+                Pexp_ident "grammar" (src/front.ml[205,8224+4]..[205,8224+11])
+          Some
+            expression (src/front.ml[208,8249+4]..[208,8249+11])
+              Pexp_ident "grammar" (src/front.ml[208,8249+4]..[208,8249+11])
+    ]
+  structure_item (src/front.ml[215,8488+0]..[221,8657+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[215,8488+4]..[215,8488+6])
+          Ppat_construct "()" (src/front.ml[215,8488+4]..[215,8488+6])
+          None
+        expression (src/front.ml[216,8497+2]..[221,8657+8])
+          Pexp_match
+          expression (src/front.ml[216,8497+8]..[216,8497+32])
+            Pexp_ident "Settings.preprocess_mode" (src/front.ml[216,8497+8]..[216,8497+32])
+          [
+            <case>
+              pattern (src/front.ml[217,8535+4]..[217,8535+34])
+                Ppat_construct "Settings.PMOnlyPreprocess" (src/front.ml[217,8535+4]..[217,8535+29])
+                Some
+                  []
+                  pattern (src/front.ml[217,8535+30]..[217,8535+34])
+                    Ppat_var "mode" (src/front.ml[217,8535+30]..[217,8535+34])
+              expression (src/front.ml[218,8573+6]..[219,8619+12])
+                Pexp_sequence
+                expression (src/front.ml[218,8573+6]..[218,8573+44])
+                  Pexp_apply
+                  expression (src/front.ml[218,8573+6]..[218,8573+24])
+                    Pexp_ident "BasicPrinter.print" (src/front.ml[218,8573+6]..[218,8573+24])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[218,8573+25]..[218,8573+29])
+                        Pexp_ident "mode" (src/front.ml[218,8573+25]..[218,8573+29])
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[218,8573+30]..[218,8573+36])
+                        Pexp_ident "stdout" (src/front.ml[218,8573+30]..[218,8573+36])
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[218,8573+37]..[218,8573+44])
+                        Pexp_ident "grammar" (src/front.ml[218,8573+37]..[218,8573+44])
+                  ]
+                expression (src/front.ml[219,8619+6]..[219,8619+12])
+                  Pexp_apply
+                  expression (src/front.ml[219,8619+6]..[219,8619+10])
+                    Pexp_ident "exit" (src/front.ml[219,8619+6]..[219,8619+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/front.ml[219,8619+11]..[219,8619+12])
+                        Pexp_constant PConst_int (0,None)
+                  ]
+            <case>
+              pattern (src/front.ml[220,8632+4]..[220,8632+21])
+                Ppat_construct "Settings.PMNormal" (src/front.ml[220,8632+4]..[220,8632+21])
+                None
+              expression (src/front.ml[221,8657+6]..[221,8657+8])
+                Pexp_construct "()" (src/front.ml[221,8657+6]..[221,8657+8])
+                None
+          ]
+    ]
+]
+
+let load_grammar_from_contents filename contents =
+  InputFile.new_input_file filename;
+  InputFile.with_file_contents contents
+    (fun () ->
+       let open Lexing in
+         let lexbuf = Lexing.from_string contents in
+         lexbuf.lex_curr_p <-
+           { (lexbuf.lex_curr_p) with pos_fname = filename };
+         {
+           (Driver.grammar Lexer.main lexbuf) with
+           Syntax.pg_filename = filename
+         })
+let check_filename filename =
+  let validExt = if Settings.coq then ".vy" else ".mly" in
+  if not (Filename.check_suffix filename validExt)
+  then
+    Error.error []
+      "argument file names should end in %s. \"%s\" is not accepted."
+      validExt filename
+let load_grammar_from_file filename =
+  (check_filename filename;
+   (try
+      let contents = IO.read_whole_file filename in
+      load_grammar_from_contents filename contents
+    with | Sys_error msg -> Error.error [] "%s" msg) : Syntax.partial_grammar)
+let grammars () =
+  (List.map load_grammar_from_file Settings.filenames : Syntax.partial_grammar
+                                                          list)
+let grammars : Syntax.partial_grammar list =
+  if Settings.no_stdlib || Settings.coq
+  then grammars ()
+  else
+    (let standard_library =
+       load_grammar_from_contents Settings.stdlib_filename
+         Standard_mly.contents in
+     standard_library :: (grammars ()))
+let () = Time.tick "Lexing and parsing"
+let grammars : Syntax.partial_grammar list =
+  List.map Anonymous.transform_partial_grammar grammars
+let grammar : Syntax.grammar = PartialGrammar.join_partial_grammars grammars
+let sorts = SortInference.infer grammar
+let grammar : BasicSyntax.grammar =
+  let module S = SelectiveExpansion in
+    let grammar1 = S.expand S.ExpandHigherSort sorts grammar in
+    CheckSafeParameterizedGrammar.check grammar1;
+    (let grammar = S.expand S.ExpandAll sorts grammar in Drop.drop grammar)
+let () = Time.tick "Joining and expanding"
+let () = TokenType.produce_tokentypes grammar
+let grammar = Reachability.trim grammar
+let () = Time.tick "Trimming"
+let (grammar, ocaml_types_have_been_checked) =
+  let open Settings in
+    match infer with
+    | IMNone -> (grammar, false)
+    | IMInfer ->
+        let grammar = Infer.infer grammar in
+        (Time.tick "Inferring types for nonterminals"; (grammar, true))
+    | IMDependRaw -> Infer.depend false grammar
+    | IMDependPostprocess -> Infer.depend true grammar
+    | IMWriteQuery filename -> Infer.write_query filename grammar
+    | IMReadReply filename ->
+        let grammar = Infer.read_reply filename grammar in
+        (Time.tick "Reading inferred types for nonterminals"; (grammar, true))
+let grammar = KeywordExpansion.expand_grammar grammar
+let grammar =
+  if Settings.inline
+  then
+    let grammar = Inlining.inline grammar in (Time.tick "Inlining"; grammar)
+  else grammar
+let () =
+  match Settings.preprocess_mode with
+  | Settings.PMOnlyPreprocess mode ->
+      (BasicPrinter.print mode stdout grammar; exit 0)
+  | Settings.PMNormal -> ()
+[
+  structure_item (src/front.ml[20,1192+0]..src/front.ml[29,1583+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[20,1192+4]..src/front.ml[20,1192+30])
+          Tpat_var "load_grammar_from_contents/396"
+        expression (src/front.ml[20,1192+31]..src/front.ml[29,1583+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/front.ml[20,1192+31]..src/front.ml[20,1192+39])
+                Tpat_var "filename/398"
+              expression (src/front.ml[20,1192+40]..src/front.ml[29,1583+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/front.ml[20,1192+40]..src/front.ml[20,1192+48])
+                      Tpat_var "contents/399"
+                    expression (src/front.ml[21,1243+2]..src/front.ml[29,1583+3])
+                      Texp_sequence
+                      expression (src/front.ml[21,1243+2]..src/front.ml[21,1243+35])
+                        Texp_apply
+                        expression (src/front.ml[21,1243+2]..src/front.ml[21,1243+26])
+                          Texp_ident "Dune__exe!.InputFile.new_input_file"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[21,1243+27]..src/front.ml[21,1243+35])
+                              Texp_ident "filename/398"
+                        ]
+                      expression (src/front.ml[22,1280+2]..src/front.ml[29,1583+3])
+                        Texp_apply
+                        expression (src/front.ml[22,1280+2]..src/front.ml[22,1280+30])
+                          Texp_ident "Dune__exe!.InputFile.with_file_contents"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[22,1280+31]..src/front.ml[22,1280+39])
+                              Texp_ident "contents/399"
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[22,1280+40]..src/front.ml[29,1583+3])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/front.ml[22,1280+45]..src/front.ml[22,1280+47])
+                                    Tpat_construct "()"
+                                    []
+                                    None
+                                  expression (src/front.ml[23,1331+4]..src/front.ml[28,1540+42])
+                                    Texp_open Fresh
+                                    module_expr (src/front.ml[23,1331+13]..src/front.ml[23,1331+19])
+                                      Tmod_ident "Stdlib!.Lexing"
+                                    expression (src/front.ml[24,1354+4]..src/front.ml[28,1540+42])
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (src/front.ml[24,1354+8]..src/front.ml[24,1354+14])
+                                            Tpat_var "lexbuf/433"
+                                          expression (src/front.ml[24,1354+17]..src/front.ml[24,1354+44])
+                                            Texp_apply
+                                            expression (src/front.ml[24,1354+17]..src/front.ml[24,1354+35])
+                                              Texp_ident "Stdlib!.Lexing.from_string"
+                                            [
+                                              <arg>
+                                                Optional "with_positions"
+                                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                                  Texp_construct "None"
+                                                  []
+                                              <arg>
+                                                Nolabel
+                                                expression (src/front.ml[24,1354+36]..src/front.ml[24,1354+44])
+                                                  Texp_ident "contents/399"
+                                            ]
+                                      ]
+                                      expression (src/front.ml[25,1402+4]..src/front.ml[28,1540+42])
+                                        Texp_sequence
+                                        expression (src/front.ml[25,1402+4]..src/front.ml[25,1402+72])
+                                          Texp_setfield
+                                          expression (src/front.ml[25,1402+4]..src/front.ml[25,1402+10])
+                                            Texp_ident "lexbuf/433"
+                                          "lex_curr_p"
+                                          expression (src/front.ml[25,1402+25]..src/front.ml[25,1402+72])
+                                            Texp_record
+                                              fields =
+                                                [
+                                                  "pos_fname"
+                                                    expression (src/front.ml[25,1402+62]..src/front.ml[25,1402+70])
+                                                      Texp_ident "filename/398"
+                                                  <kept>                                                  <kept>                                                  <kept>                                                ]
+                                              representation =
+                                                Record_regular
+                                              extended_expression =
+                                                Some
+                                                  expression (src/front.ml[25,1402+27]..src/front.ml[25,1402+44])
+                                                    Texp_field
+                                                    expression (src/front.ml[25,1402+27]..src/front.ml[25,1402+33])
+                                                      Texp_ident "lexbuf/433"
+                                                    "lex_curr_p"
+                                        expression (src/front.ml[27,1499+4]..src/front.ml[28,1540+42])
+                                          Texp_record
+                                            fields =
+                                              [
+                                                "Syntax.pg_filename"
+                                                  expression (src/front.ml[28,1540+32]..src/front.ml[28,1540+40])
+                                                    Texp_ident "filename/398"
+                                                <kept>                                                <kept>                                                <kept>                                              ]
+                                            representation =
+                                              Record_regular
+                                            extended_expression =
+                                              Some
+                                                expression (src/front.ml[27,1499+6]..src/front.ml[27,1499+40])
+                                                  Texp_apply
+                                                  expression (src/front.ml[27,1499+7]..src/front.ml[27,1499+21])
+                                                    Texp_ident "Dune__exe!.Driver.grammar"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/front.ml[27,1499+22]..src/front.ml[27,1499+32])
+                                                        Texp_ident "Dune__exe!.Lexer.main"
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/front.ml[27,1499+33]..src/front.ml[27,1499+39])
+                                                        Texp_ident "lexbuf/433"
+                                                  ]
+                              ]
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/front.ml[31,1588+0]..src/front.ml[36,1822+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[31,1588+4]..src/front.ml[31,1588+18])
+          Tpat_var "check_filename/652"
+        expression (src/front.ml[31,1588+19]..src/front.ml[36,1822+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/front.ml[31,1588+19]..src/front.ml[31,1588+27])
+                Tpat_var "filename/654"
+              expression (src/front.ml[32,1618+2]..src/front.ml[36,1822+23])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/front.ml[32,1618+6]..src/front.ml[32,1618+14])
+                      Tpat_var "validExt/655"
+                    expression (src/front.ml[32,1618+17]..src/front.ml[32,1618+55])
+                      Texp_ifthenelse
+                      expression (src/front.ml[32,1618+20]..src/front.ml[32,1618+32])
+                        Texp_ident "Dune__exe!.Settings.coq"
+                      expression (src/front.ml[32,1618+38]..src/front.ml[32,1618+43])
+                        Texp_constant Const_string(".vy",(src/front.ml[32,1618+39]..src/front.ml[32,1618+42]),None)
+                      Some
+                        expression (src/front.ml[32,1618+49]..src/front.ml[32,1618+55])
+                          Texp_constant Const_string(".mly",(src/front.ml[32,1618+50]..src/front.ml[32,1618+54]),None)
+                ]
+                expression (src/front.ml[33,1677+2]..src/front.ml[36,1822+23])
+                  Texp_ifthenelse
+                  expression (src/front.ml[33,1677+5]..src/front.ml[33,1677+50])
+                    Texp_apply
+                    expression (src/front.ml[33,1677+5]..src/front.ml[33,1677+8])
+                      Texp_ident "Stdlib!.not"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[33,1677+9]..src/front.ml[33,1677+50])
+                          Texp_apply
+                          expression (src/front.ml[33,1677+10]..src/front.ml[33,1677+31])
+                            Texp_ident "Stdlib!.Filename.check_suffix"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/front.ml[33,1677+32]..src/front.ml[33,1677+40])
+                                Texp_ident "filename/654"
+                            <arg>
+                              Nolabel
+                              expression (src/front.ml[33,1677+41]..src/front.ml[33,1677+49])
+                                Texp_ident "validExt/655"
+                          ]
+                    ]
+                  expression (src/front.ml[34,1733+4]..src/front.ml[36,1822+23])
+                    Texp_apply
+                    expression (src/front.ml[34,1733+4]..src/front.ml[34,1733+15])
+                      Texp_ident "Dune__exe!.Error.error"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[34,1733+16]..src/front.ml[34,1733+18])
+                          Texp_construct "[]"
+                          []
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69])
+                          Texp_construct "CamlinternalFormatBasics.Format"
+                          [
+                            expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                              [
+                                expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                  Texp_constant Const_string("argument file names should end in ",(src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost,None)
+                                expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String"
+                                  [
+                                    expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                      []
+                                    expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                          Texp_constant Const_string(". \"",(src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost,None)
+                                        expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String"
+                                          [
+                                            expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                              []
+                                            expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                                              [
+                                                expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                                  Texp_constant Const_string("\" is not accepted.",(src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost,None)
+                                                expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                  []
+                                              ]
+                                          ]
+                                      ]
+                                  ]
+                              ]
+                            expression (src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost
+                              Texp_constant Const_string("argument file names should end in %s. \"%s\" is not accepted.",(src/front.ml[35,1752+6]..src/front.ml[35,1752+69]) ghost,None)
+                          ]
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[36,1822+6]..src/front.ml[36,1822+14])
+                          Texp_ident "validExt/655"
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[36,1822+15]..src/front.ml[36,1822+23])
+                          Texp_ident "filename/654"
+                    ]
+                  None
+          ]
+    ]
+  structure_item (src/front.ml[38,1847+0]..src/front.ml[44,2066+27])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[38,1847+4]..src/front.ml[38,1847+26])
+          Tpat_var "load_grammar_from_file/776"
+        expression (src/front.ml[38,1847+27]..src/front.ml[44,2066+27]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/front.ml[38,1847+27]..src/front.ml[38,1847+35])
+                Tpat_var "filename/778"
+              expression (src/front.ml[39,1910+2]..src/front.ml[44,2066+27])
+                extra
+                  Texp_constraint
+                  core_type (src/front.ml[38,1847+38]..src/front.ml[38,1847+60])
+                    Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+                    []
+                Texp_sequence
+                expression (src/front.ml[39,1910+2]..src/front.ml[39,1910+25])
+                  Texp_apply
+                  expression (src/front.ml[39,1910+2]..src/front.ml[39,1910+16])
+                    Texp_ident "check_filename/652"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[39,1910+17]..src/front.ml[39,1910+25])
+                        Texp_ident "filename/778"
+                  ]
+                expression (src/front.ml[40,1937+2]..src/front.ml[44,2066+27])
+                  Texp_try
+                  expression (src/front.ml[41,1943+4]..src/front.ml[42,1993+48])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/front.ml[41,1943+8]..src/front.ml[41,1943+16])
+                          Tpat_var "contents/779"
+                        expression (src/front.ml[41,1943+19]..src/front.ml[41,1943+46])
+                          Texp_apply
+                          expression (src/front.ml[41,1943+19]..src/front.ml[41,1943+37])
+                            Texp_ident "Dune__exe!.IO.read_whole_file"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/front.ml[41,1943+38]..src/front.ml[41,1943+46])
+                                Texp_ident "filename/778"
+                          ]
+                    ]
+                    expression (src/front.ml[42,1993+4]..src/front.ml[42,1993+48])
+                      Texp_apply
+                      expression (src/front.ml[42,1993+4]..src/front.ml[42,1993+30])
+                        Texp_ident "load_grammar_from_contents/396"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[42,1993+31]..src/front.ml[42,1993+39])
+                            Texp_ident "filename/778"
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[42,1993+40]..src/front.ml[42,1993+48])
+                            Texp_ident "contents/779"
+                      ]
+                  [
+                    <case>
+                      pattern (src/front.ml[43,2042+7]..src/front.ml[43,2042+20])
+                        Tpat_construct "Sys_error"
+                        [
+                          pattern (src/front.ml[43,2042+17]..src/front.ml[43,2042+20])
+                            Tpat_var "msg/786"
+                        ]
+                        None
+                      expression (src/front.ml[44,2066+4]..src/front.ml[44,2066+27])
+                        Texp_apply
+                        expression (src/front.ml[44,2066+4]..src/front.ml[44,2066+15])
+                          Texp_ident "Dune__exe!.Error.error"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[44,2066+16]..src/front.ml[44,2066+18])
+                              Texp_construct "[]"
+                              []
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[44,2066+19]..src/front.ml[44,2066+23])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (src/front.ml[44,2066+19]..src/front.ml[44,2066+23]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String"
+                                  [
+                                    expression (src/front.ml[44,2066+19]..src/front.ml[44,2066+23]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                      []
+                                    expression (src/front.ml[44,2066+19]..src/front.ml[44,2066+23]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                      []
+                                  ]
+                                expression (src/front.ml[44,2066+19]..src/front.ml[44,2066+23]) ghost
+                                  Texp_constant Const_string("%s",(src/front.ml[44,2066+19]..src/front.ml[44,2066+23]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[44,2066+24]..src/front.ml[44,2066+27])
+                              Texp_ident "msg/786"
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (src/front.ml[51,2326+0]..src/front.ml[52,2374+52])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[51,2326+4]..src/front.ml[51,2326+12])
+          Tpat_var "grammars/787"
+        expression (src/front.ml[51,2326+13]..src/front.ml[52,2374+52]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/front.ml[51,2326+13]..src/front.ml[51,2326+15])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/front.ml[52,2374+2]..src/front.ml[52,2374+52])
+                extra
+                  Texp_constraint
+                  core_type (src/front.ml[51,2326+18]..src/front.ml[51,2326+45])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/front.ml[51,2326+18]..src/front.ml[51,2326+40])
+                        Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+                        []
+                    ]
+                Texp_apply
+                expression (src/front.ml[52,2374+2]..src/front.ml[52,2374+10])
+                  Texp_ident "Stdlib!.List.map"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/front.ml[52,2374+11]..src/front.ml[52,2374+33])
+                      Texp_ident "load_grammar_from_file/776"
+                  <arg>
+                    Nolabel
+                    expression (src/front.ml[52,2374+34]..src/front.ml[52,2374+52])
+                      Texp_ident "Dune__exe!.Settings.filenames"
+                ]
+          ]
+    ]
+  structure_item (src/front.ml[54,2428+0]..src/front.ml[72,3267+34])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[54,2428+4]..src/front.ml[54,2428+12])
+          extra
+            Tpat_extra_constraint
+            core_type (src/front.ml[54,2428+15]..src/front.ml[54,2428+42])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/front.ml[54,2428+15]..src/front.ml[54,2428+37])
+                  Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+                  []
+              ]
+          Tpat_alias "grammars/856"
+          pattern (src/front.ml[54,2428+4]..src/front.ml[54,2428+12])
+            Tpat_any
+        expression (src/front.ml[55,2473+2]..src/front.ml[72,3267+34])
+          extra
+            Texp_constraint
+            core_type (src/front.ml[54,2428+15]..src/front.ml[54,2428+42])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/front.ml[54,2428+15]..src/front.ml[54,2428+37])
+                  Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+                  []
+              ]
+          Texp_ifthenelse
+          expression (src/front.ml[55,2473+5]..src/front.ml[55,2473+39])
+            Texp_apply
+            expression (src/front.ml[55,2473+24]..src/front.ml[55,2473+26])
+              Texp_ident "Stdlib!.||"
+            [
+              <arg>
+                Nolabel
+                expression (src/front.ml[55,2473+5]..src/front.ml[55,2473+23])
+                  Texp_ident "Dune__exe!.Settings.no_stdlib"
+              <arg>
+                Nolabel
+                expression (src/front.ml[55,2473+27]..src/front.ml[55,2473+39])
+                  Texp_ident "Dune__exe!.Settings.coq"
+            ]
+          expression (src/front.ml[56,2518+4]..src/front.ml[56,2518+14])
+            Texp_apply
+            expression (src/front.ml[56,2518+4]..src/front.ml[56,2518+12])
+              Texp_ident "grammars/787"
+            [
+              <arg>
+                Nolabel
+                expression (src/front.ml[56,2518+12]..src/front.ml[56,2518+14])
+                  Texp_construct "()"
+                  []
+            ]
+          Some
+            expression (src/front.ml[67,3137+4]..src/front.ml[72,3267+34])
+              Texp_let Nonrec
+              [
+                <def>
+                  pattern (src/front.ml[67,3137+8]..src/front.ml[67,3137+24])
+                    Tpat_var "standard_library/857"
+                  expression (src/front.ml[68,3164+6]..src/front.ml[70,3230+29])
+                    Texp_apply
+                    expression (src/front.ml[68,3164+6]..src/front.ml[68,3164+32])
+                      Texp_ident "load_grammar_from_contents/396"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[69,3197+8]..src/front.ml[69,3197+32])
+                          Texp_ident "Dune__exe!.Settings.stdlib_filename"
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[70,3230+8]..src/front.ml[70,3230+29])
+                          Texp_ident "Dune__exe!.Standard_mly.contents"
+                    ]
+              ]
+              expression (src/front.ml[72,3267+4]..src/front.ml[72,3267+34])
+                Texp_construct "::"
+                [
+                  expression (src/front.ml[72,3267+4]..src/front.ml[72,3267+20])
+                    Texp_ident "standard_library/857"
+                  expression (src/front.ml[72,3267+24]..src/front.ml[72,3267+34])
+                    Texp_apply
+                    expression (src/front.ml[72,3267+24]..src/front.ml[72,3267+32])
+                      Texp_ident "grammars/787"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/front.ml[72,3267+32]..src/front.ml[72,3267+34])
+                          Texp_construct "()"
+                          []
+                    ]
+                ]
+    ]
+  structure_item (src/front.ml[74,3303+0]..src/front.ml[75,3312+32])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[74,3303+4]..src/front.ml[74,3303+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/front.ml[75,3312+2]..src/front.ml[75,3312+32])
+          Texp_apply
+          expression (src/front.ml[75,3312+2]..src/front.ml[75,3312+11])
+            Texp_ident "Dune__exe!.Time.tick"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[75,3312+12]..src/front.ml[75,3312+32])
+                Texp_constant Const_string("Lexing and parsing",(src/front.ml[75,3312+13]..src/front.ml[75,3312+31]),None)
+          ]
+    ]
+  structure_item (src/front.ml[81,3461+0]..src/front.ml[82,3506+55])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[81,3461+4]..src/front.ml[81,3461+12])
+          extra
+            Tpat_extra_constraint
+            core_type (src/front.ml[81,3461+15]..src/front.ml[81,3461+42])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/front.ml[81,3461+15]..src/front.ml[81,3461+37])
+                  Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+                  []
+              ]
+          Tpat_alias "grammars/864"
+          pattern (src/front.ml[81,3461+4]..src/front.ml[81,3461+12])
+            Tpat_any
+        expression (src/front.ml[82,3506+2]..src/front.ml[82,3506+55])
+          extra
+            Texp_constraint
+            core_type (src/front.ml[81,3461+15]..src/front.ml[81,3461+42])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/front.ml[81,3461+15]..src/front.ml[81,3461+37])
+                  Ttyp_constr "Dune__exe!.Syntax.partial_grammar"
+                  []
+              ]
+          Texp_apply
+          expression (src/front.ml[82,3506+2]..src/front.ml[82,3506+10])
+            Texp_ident "Stdlib!.List.map"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[82,3506+11]..src/front.ml[82,3506+46])
+                Texp_ident "Dune__exe!.Anonymous.transform_partial_grammar"
+            <arg>
+              Nolabel
+              expression (src/front.ml[82,3506+47]..src/front.ml[82,3506+55])
+                Texp_ident "grammars/856"
+          ]
+    ]
+  structure_item (src/front.ml[88,3704+0]..src/front.ml[89,3735+47])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[88,3704+4]..src/front.ml[88,3704+11])
+          extra
+            Tpat_extra_constraint
+            core_type (src/front.ml[88,3704+14]..src/front.ml[88,3704+28])
+              Ttyp_constr "Dune__exe!.Syntax.grammar"
+              []
+          Tpat_alias "grammar/866"
+          pattern (src/front.ml[88,3704+4]..src/front.ml[88,3704+11])
+            Tpat_any
+        expression (src/front.ml[89,3735+2]..src/front.ml[89,3735+47])
+          extra
+            Texp_constraint
+            core_type (src/front.ml[88,3704+14]..src/front.ml[88,3704+28])
+              Ttyp_constr "Dune__exe!.Syntax.grammar"
+              []
+          Texp_apply
+          expression (src/front.ml[89,3735+2]..src/front.ml[89,3735+38])
+            Texp_ident "Dune__exe!.PartialGrammar.join_partial_grammars"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[89,3735+39]..src/front.ml[89,3735+47])
+                Texp_ident "grammars/864"
+          ]
+    ]
+  structure_item (src/front.ml[95,3943+0]..src/front.ml[96,3955+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[95,3943+4]..src/front.ml[95,3943+9])
+          Tpat_var "sorts/868"
+        expression (src/front.ml[96,3955+2]..src/front.ml[96,3955+29])
+          Texp_apply
+          expression (src/front.ml[96,3955+2]..src/front.ml[96,3955+21])
+            Texp_ident "Dune__exe!.SortInference.infer"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[96,3955+22]..src/front.ml[96,3955+29])
+                Texp_ident "grammar/866"
+          ]
+    ]
+  structure_item (src/front.ml[103,4213+0]..src/front.ml[118,5069+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[103,4213+4]..src/front.ml[103,4213+11])
+          extra
+            Tpat_extra_constraint
+            core_type (src/front.ml[103,4213+14]..src/front.ml[103,4213+33])
+              Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+              []
+          Tpat_alias "grammar/987"
+          pattern (src/front.ml[103,4213+4]..src/front.ml[103,4213+11])
+            Tpat_any
+        expression (src/front.ml[104,4249+2]..src/front.ml[118,5069+19])
+          extra
+            Texp_constraint
+            core_type (src/front.ml[103,4213+14]..src/front.ml[103,4213+33])
+              Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+              []
+          Texp_letmodule "S/988"
+          module_expr (src/front.ml[104,4249+17]..src/front.ml[104,4249+35])
+            Tmod_ident "Dune__exe!.SelectiveExpansion"
+          expression (src/front.ml[108,4455+2]..src/front.ml[118,5069+19])
+            Texp_let Nonrec
+            [
+              <def>
+                pattern (src/front.ml[108,4455+6]..src/front.ml[108,4455+14])
+                  Tpat_var "grammar1/989"
+                expression (src/front.ml[108,4455+17]..src/front.ml[108,4455+58])
+                  Texp_apply
+                  expression (src/front.ml[108,4455+17]..src/front.ml[108,4455+25])
+                    Texp_ident "S/988.expand"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[108,4455+26]..src/front.ml[108,4455+44])
+                        Texp_construct "S.ExpandHigherSort"
+                        []
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[108,4455+45]..src/front.ml[108,4455+50])
+                        Texp_ident "sorts/868"
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[108,4455+51]..src/front.ml[108,4455+58])
+                        Texp_ident "grammar/866"
+                  ]
+            ]
+            expression (src/front.ml[111,4619+2]..src/front.ml[118,5069+19])
+              Texp_sequence
+              expression (src/front.ml[111,4619+2]..src/front.ml[111,4619+46])
+                Texp_apply
+                expression (src/front.ml[111,4619+2]..src/front.ml[111,4619+37])
+                  Texp_ident "Dune__exe!.CheckSafeParameterizedGrammar.check"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/front.ml[111,4619+38]..src/front.ml[111,4619+46])
+                      Texp_ident "grammar1/989"
+                ]
+              expression (src/front.ml[116,4967+2]..src/front.ml[118,5069+19])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/front.ml[116,4967+6]..src/front.ml[116,4967+13])
+                      Tpat_var "grammar/995"
+                    expression (src/front.ml[116,4967+16]..src/front.ml[116,4967+50])
+                      Texp_apply
+                      expression (src/front.ml[116,4967+16]..src/front.ml[116,4967+24])
+                        Texp_ident "S/988.expand"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[116,4967+25]..src/front.ml[116,4967+36])
+                            Texp_construct "S.ExpandAll"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[116,4967+37]..src/front.ml[116,4967+42])
+                            Texp_ident "sorts/868"
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[116,4967+43]..src/front.ml[116,4967+50])
+                            Texp_ident "grammar/866"
+                      ]
+                ]
+                expression (src/front.ml[118,5069+2]..src/front.ml[118,5069+19])
+                  Texp_apply
+                  expression (src/front.ml[118,5069+2]..src/front.ml[118,5069+11])
+                    Texp_ident "Dune__exe!.Drop.drop"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[118,5069+12]..src/front.ml[118,5069+19])
+                        Texp_ident "grammar/995"
+                  ]
+    ]
+  structure_item (src/front.ml[120,5090+0]..src/front.ml[121,5099+35])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[120,5090+4]..src/front.ml[120,5090+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/front.ml[121,5099+2]..src/front.ml[121,5099+35])
+          Texp_apply
+          expression (src/front.ml[121,5099+2]..src/front.ml[121,5099+11])
+            Texp_ident "Dune__exe!.Time.tick"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[121,5099+12]..src/front.ml[121,5099+35])
+                Texp_constant Const_string("Joining and expanding",(src/front.ml[121,5099+13]..src/front.ml[121,5099+34]),None)
+          ]
+    ]
+  structure_item (src/front.ml[128,5334+0]..src/front.ml[129,5343+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[128,5334+4]..src/front.ml[128,5334+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/front.ml[129,5343+2]..src/front.ml[129,5343+38])
+          Texp_apply
+          expression (src/front.ml[129,5343+2]..src/front.ml[129,5343+30])
+            Texp_ident "Dune__exe!.TokenType.produce_tokentypes"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[129,5343+31]..src/front.ml[129,5343+38])
+                Texp_ident "grammar/987"
+          ]
+    ]
+  structure_item (src/front.ml[135,5502+0]..src/front.ml[136,5516+27])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[135,5502+4]..src/front.ml[135,5502+11])
+          Tpat_var "grammar/1025"
+        expression (src/front.ml[136,5516+2]..src/front.ml[136,5516+27])
+          Texp_apply
+          expression (src/front.ml[136,5516+2]..src/front.ml[136,5516+19])
+            Texp_ident "Dune__exe!.Reachability.trim"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[136,5516+20]..src/front.ml[136,5516+27])
+                Texp_ident "grammar/987"
+          ]
+    ]
+  structure_item (src/front.ml[138,5545+0]..src/front.ml[139,5554+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[138,5545+4]..src/front.ml[138,5545+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/front.ml[139,5554+2]..src/front.ml[139,5554+22])
+          Texp_apply
+          expression (src/front.ml[139,5554+2]..src/front.ml[139,5554+11])
+            Texp_ident "Dune__exe!.Time.tick"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[139,5554+12]..src/front.ml[139,5554+22])
+                Texp_constant Const_string("Trimming",(src/front.ml[139,5554+13]..src/front.ml[139,5554+21]),None)
+          ]
+    ]
+  structure_item (src/front.ml[166,6872+0]..src/front.ml[184,7533+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[166,6872+4]..src/front.ml[166,6872+42])
+          Tpat_tuple
+          [
+            pattern (src/front.ml[166,6872+4]..src/front.ml[166,6872+11])
+              Tpat_var "grammar/1027"
+            pattern (src/front.ml[166,6872+13]..src/front.ml[166,6872+42])
+              Tpat_var "ocaml_types_have_been_checked/1028"
+          ]
+        expression (src/front.ml[167,6917+2]..src/front.ml[184,7533+3])
+          Texp_open Fresh
+          module_expr (src/front.ml[167,6917+2]..src/front.ml[167,6917+10])
+            Tmod_ident "Dune__exe!.Settings"
+          expression (src/front.ml[167,6917+12]..src/front.ml[183,7513+19])
+            Texp_match
+            expression (src/front.ml[167,6917+18]..src/front.ml[167,6917+23])
+              Texp_ident "Dune__exe!.Settings.infer"
+            [
+              <case>
+                pattern (src/front.ml[168,6946+4]..src/front.ml[168,6946+10])
+                  Tpat_value
+                  pattern (src/front.ml[168,6946+4]..src/front.ml[168,6946+10])
+                    Tpat_construct "IMNone"
+                    []
+                    None
+                expression (src/front.ml[169,6960+6]..src/front.ml[169,6960+20])
+                  Texp_tuple
+                  [
+                    expression (src/front.ml[169,6960+6]..src/front.ml[169,6960+13])
+                      Texp_ident "grammar/1025"
+                    expression (src/front.ml[169,6960+15]..src/front.ml[169,6960+20])
+                      Texp_construct "false"
+                      []
+                  ]
+              <case>
+                pattern (src/front.ml[170,6981+4]..src/front.ml[170,6981+11])
+                  Tpat_value
+                  pattern (src/front.ml[170,6981+4]..src/front.ml[170,6981+11])
+                    Tpat_construct "IMInfer"
+                    []
+                    None
+                expression (src/front.ml[171,6996+6]..src/front.ml[173,7091+19])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/front.ml[171,6996+10]..src/front.ml[171,6996+17])
+                        Tpat_var "grammar/1091"
+                      expression (src/front.ml[171,6996+20]..src/front.ml[171,6996+39])
+                        Texp_apply
+                        expression (src/front.ml[171,6996+20]..src/front.ml[171,6996+31])
+                          Texp_ident "Dune__exe!.Infer.infer"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[171,6996+32]..src/front.ml[171,6996+39])
+                              Texp_ident "grammar/1025"
+                        ]
+                  ]
+                  expression (src/front.ml[172,7039+6]..src/front.ml[173,7091+19])
+                    Texp_sequence
+                    expression (src/front.ml[172,7039+6]..src/front.ml[172,7039+50])
+                      Texp_apply
+                      expression (src/front.ml[172,7039+6]..src/front.ml[172,7039+15])
+                        Texp_ident "Dune__exe!.Time.tick"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[172,7039+16]..src/front.ml[172,7039+50])
+                            Texp_constant Const_string("Inferring types for nonterminals",(src/front.ml[172,7039+17]..src/front.ml[172,7039+49]),None)
+                      ]
+                    expression (src/front.ml[173,7091+6]..src/front.ml[173,7091+19])
+                      Texp_tuple
+                      [
+                        expression (src/front.ml[173,7091+6]..src/front.ml[173,7091+13])
+                          Texp_ident "grammar/1091"
+                        expression (src/front.ml[173,7091+15]..src/front.ml[173,7091+19])
+                          Texp_construct "true"
+                          []
+                      ]
+              <case>
+                pattern (src/front.ml[174,7111+4]..src/front.ml[174,7111+15])
+                  Tpat_value
+                  pattern (src/front.ml[174,7111+4]..src/front.ml[174,7111+15])
+                    Tpat_construct "IMDependRaw"
+                    []
+                    None
+                expression (src/front.ml[175,7130+6]..src/front.ml[175,7130+32])
+                  Texp_apply
+                  expression (src/front.ml[175,7130+6]..src/front.ml[175,7130+18])
+                    Texp_ident "Dune__exe!.Infer.depend"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[175,7130+19]..src/front.ml[175,7130+24])
+                        Texp_construct "false"
+                        []
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[175,7130+25]..src/front.ml[175,7130+32])
+                        Texp_ident "grammar/1025"
+                  ]
+              <case>
+                pattern (src/front.ml[176,7191+4]..src/front.ml[176,7191+23])
+                  Tpat_value
+                  pattern (src/front.ml[176,7191+4]..src/front.ml[176,7191+23])
+                    Tpat_construct "IMDependPostprocess"
+                    []
+                    None
+                expression (src/front.ml[177,7218+6]..src/front.ml[177,7218+31])
+                  Texp_apply
+                  expression (src/front.ml[177,7218+6]..src/front.ml[177,7218+18])
+                    Texp_ident "Dune__exe!.Infer.depend"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[177,7218+19]..src/front.ml[177,7218+23])
+                        Texp_construct "true"
+                        []
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[177,7218+24]..src/front.ml[177,7218+31])
+                        Texp_ident "grammar/1025"
+                  ]
+              <case>
+                pattern (src/front.ml[178,7279+4]..src/front.ml[178,7279+25])
+                  Tpat_value
+                  pattern (src/front.ml[178,7279+4]..src/front.ml[178,7279+25])
+                    Tpat_construct "IMWriteQuery"
+                    [
+                      pattern (src/front.ml[178,7279+17]..src/front.ml[178,7279+25])
+                        Tpat_var "filename/1089"
+                    ]
+                    None
+                expression (src/front.ml[179,7308+6]..src/front.ml[179,7308+40])
+                  Texp_apply
+                  expression (src/front.ml[179,7308+6]..src/front.ml[179,7308+23])
+                    Texp_ident "Dune__exe!.Infer.write_query"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[179,7308+24]..src/front.ml[179,7308+32])
+                        Texp_ident "filename/1089"
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[179,7308+33]..src/front.ml[179,7308+40])
+                        Texp_ident "grammar/1025"
+                  ]
+              <case>
+                pattern (src/front.ml[180,7369+4]..src/front.ml[180,7369+24])
+                  Tpat_value
+                  pattern (src/front.ml[180,7369+4]..src/front.ml[180,7369+24])
+                    Tpat_construct "IMReadReply"
+                    [
+                      pattern (src/front.ml[180,7369+16]..src/front.ml[180,7369+24])
+                        Tpat_var "filename/1090"
+                    ]
+                    None
+                expression (src/front.ml[181,7397+6]..src/front.ml[183,7513+19])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/front.ml[181,7397+10]..src/front.ml[181,7397+17])
+                        Tpat_var "grammar/1097"
+                      expression (src/front.ml[181,7397+20]..src/front.ml[181,7397+53])
+                        Texp_apply
+                        expression (src/front.ml[181,7397+20]..src/front.ml[181,7397+36])
+                          Texp_ident "Dune__exe!.Infer.read_reply"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[181,7397+37]..src/front.ml[181,7397+45])
+                              Texp_ident "filename/1090"
+                          <arg>
+                            Nolabel
+                            expression (src/front.ml[181,7397+46]..src/front.ml[181,7397+53])
+                              Texp_ident "grammar/1025"
+                        ]
+                  ]
+                  expression (src/front.ml[182,7454+6]..src/front.ml[183,7513+19])
+                    Texp_sequence
+                    expression (src/front.ml[182,7454+6]..src/front.ml[182,7454+57])
+                      Texp_apply
+                      expression (src/front.ml[182,7454+6]..src/front.ml[182,7454+15])
+                        Texp_ident "Dune__exe!.Time.tick"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/front.ml[182,7454+16]..src/front.ml[182,7454+57])
+                            Texp_constant Const_string("Reading inferred types for nonterminals",(src/front.ml[182,7454+17]..src/front.ml[182,7454+56]),None)
+                      ]
+                    expression (src/front.ml[183,7513+6]..src/front.ml[183,7513+19])
+                      Texp_tuple
+                      [
+                        expression (src/front.ml[183,7513+6]..src/front.ml[183,7513+13])
+                          Texp_ident "grammar/1097"
+                        expression (src/front.ml[183,7513+15]..src/front.ml[183,7513+19])
+                          Texp_construct "true"
+                          []
+                      ]
+            ]
+    ]
+  structure_item (src/front.ml[190,7669+0]..src/front.ml[191,7683+41])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[190,7669+4]..src/front.ml[190,7669+11])
+          Tpat_var "grammar/1098"
+        expression (src/front.ml[191,7683+2]..src/front.ml[191,7683+41])
+          Texp_apply
+          expression (src/front.ml[191,7683+2]..src/front.ml[191,7683+33])
+            Texp_ident "Dune__exe!.KeywordExpansion.expand_grammar"
+          [
+            <arg>
+              Nolabel
+              expression (src/front.ml[191,7683+34]..src/front.ml[191,7683+41])
+                Texp_ident "grammar/1027"
+          ]
+    ]
+  structure_item (src/front.ml[198,7936+0]..src/front.ml[208,8249+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[198,7936+4]..src/front.ml[198,7936+11])
+          Tpat_var "grammar/1100"
+        expression (src/front.ml[199,7950+2]..src/front.ml[208,8249+11])
+          Texp_ifthenelse
+          expression (src/front.ml[199,7950+5]..src/front.ml[199,7950+20])
+            Texp_ident "Dune__exe!.Settings.inline"
+          expression (src/front.ml[199,7950+26]..src/front.ml[206,8236+5])
+            Texp_let Nonrec
+            [
+              <def>
+                pattern (src/front.ml[200,7982+8]..src/front.ml[200,7982+15])
+                  Tpat_var "grammar/1101"
+                expression (src/front.ml[200,7982+18]..src/front.ml[200,7982+41])
+                  Texp_apply
+                  expression (src/front.ml[200,7982+18]..src/front.ml[200,7982+33])
+                    Texp_ident "Dune__exe!.Inlining.inline"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[200,7982+34]..src/front.ml[200,7982+41])
+                        Texp_ident "grammar/1098"
+                  ]
+            ]
+            expression (src/front.ml[204,8198+4]..src/front.ml[205,8224+11])
+              Texp_sequence
+              expression (src/front.ml[204,8198+4]..src/front.ml[204,8198+24])
+                Texp_apply
+                expression (src/front.ml[204,8198+4]..src/front.ml[204,8198+13])
+                  Texp_ident "Dune__exe!.Time.tick"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/front.ml[204,8198+14]..src/front.ml[204,8198+24])
+                      Texp_constant Const_string("Inlining",(src/front.ml[204,8198+15]..src/front.ml[204,8198+23]),None)
+                ]
+              expression (src/front.ml[205,8224+4]..src/front.ml[205,8224+11])
+                Texp_ident "grammar/1101"
+          Some
+            expression (src/front.ml[208,8249+4]..src/front.ml[208,8249+11])
+              Texp_ident "grammar/1098"
+    ]
+  structure_item (src/front.ml[215,8488+0]..src/front.ml[221,8657+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/front.ml[215,8488+4]..src/front.ml[215,8488+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/front.ml[216,8497+2]..src/front.ml[221,8657+8])
+          Texp_match
+          expression (src/front.ml[216,8497+8]..src/front.ml[216,8497+32])
+            Texp_ident "Dune__exe!.Settings.preprocess_mode"
+          [
+            <case>
+              pattern (src/front.ml[217,8535+4]..src/front.ml[217,8535+34])
+                Tpat_value
+                pattern (src/front.ml[217,8535+4]..src/front.ml[217,8535+34])
+                  Tpat_construct "Settings.PMOnlyPreprocess"
+                  [
+                    pattern (src/front.ml[217,8535+30]..src/front.ml[217,8535+34])
+                      Tpat_var "mode/1103"
+                  ]
+                  None
+              expression (src/front.ml[218,8573+6]..src/front.ml[219,8619+12])
+                Texp_sequence
+                expression (src/front.ml[218,8573+6]..src/front.ml[218,8573+44])
+                  Texp_apply
+                  expression (src/front.ml[218,8573+6]..src/front.ml[218,8573+24])
+                    Texp_ident "Dune__exe!.BasicPrinter.print"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[218,8573+25]..src/front.ml[218,8573+29])
+                        Texp_ident "mode/1103"
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[218,8573+30]..src/front.ml[218,8573+36])
+                        Texp_ident "Stdlib!.stdout"
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[218,8573+37]..src/front.ml[218,8573+44])
+                        Texp_ident "grammar/1100"
+                  ]
+                expression (src/front.ml[219,8619+6]..src/front.ml[219,8619+12])
+                  Texp_apply
+                  expression (src/front.ml[219,8619+6]..src/front.ml[219,8619+10])
+                    Texp_ident "Stdlib!.exit"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/front.ml[219,8619+11]..src/front.ml[219,8619+12])
+                        Texp_constant Const_int 0
+                  ]
+            <case>
+              pattern (src/front.ml[220,8632+4]..src/front.ml[220,8632+21])
+                Tpat_value
+                pattern (src/front.ml[220,8632+4]..src/front.ml[220,8632+21])
+                  Tpat_construct "Settings.PMNormal"
+                  []
+                  None
+              expression (src/front.ml[221,8657+6]..src/front.ml[221,8657+8])
+                Texp_construct "()"
+                []
+          ]
+    ]
+]
+
+{<Dune__exe__Front>
+ "grammar"[value] -> <Dune__exe__Front.29>;
+ "ocaml_types_have_been_checked"[value] -> <Dune__exe__Front.23>;
+ }
+
+(seq
+  (let
+    (load_grammar_from_contents/396 =
+       (function filename/398 contents/399
+         (seq
+           (apply (field_imm 0 (global Dune__exe__InputFile!)) filename/398)
+           (apply (field_imm 6 (global Dune__exe__InputFile!)) contents/399
+             (function param/651[int]
+               (let
+                 (lexbuf/433 =
+                    (apply (field_imm 2 (global Stdlib__Lexing!)) 0
+                      contents/399))
+                 (seq
+                   (setfield_ptr 11 lexbuf/433
+                     (let (init/2816 = (field_mut 11 lexbuf/433))
+                       (makeblock 0 (*,int,int,int) filename/398
+                         (field_int 1 init/2816) (field_int 2 init/2816)
+                         (field_int 3 init/2816))))
+                   (let
+                     (init/2815 =
+                        (apply (field_imm 0 (global Dune__exe__Driver!))
+                          (field_imm 22 (global Dune__exe__Lexer!))
+                          lexbuf/433))
+                     (makeblock 0 filename/398 (field_imm 1 init/2815)
+                       (field_imm 2 init/2815) (field_imm 3 init/2815))))))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Front!)
+      load_grammar_from_contents/396))
+  (let
+    (check_filename/652 =
+       (function filename/654 : int
+         (let
+           (validExt/655 =
+              (if (field_imm 32 (global Dune__exe__Settings!)) ".vy" ".mly"))
+           (if
+             (not
+               (apply (field_imm 6 (global Stdlib__Filename!)) filename/654
+                 validExt/655))
+             (apply (field_imm 5 (global Dune__exe__Error!)) 0
+               [0:
+                [11:
+                 "argument file names should end in "
+                 [2: 0 [11: ". \"" [2: 0 [11: "\" is not accepted." 0]]]]]
+                "argument file names should end in %s. \"%s\" is not accepted."]
+               validExt/655 filename/654)
+             0))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Front!) check_filename/652))
+  (let
+    (load_grammar_from_file/776 =
+       (function filename/778
+         (seq (apply (field_imm 3 (global Dune__exe__Front!)) filename/778)
+           (try
+             (let
+               (contents/779 =
+                  (apply (field_imm 5 (global Dune__exe__IO!)) filename/778))
+               (apply (field_imm 2 (global Dune__exe__Front!)) filename/778
+                 contents/779))
+            with exn/2817
+             (catch
+               (let (tag/2818 =a (field_imm 0 exn/2817))
+                 (if (== tag/2818 (field_imm 10 (global Stdlib!)))
+                   (let (msg/786 =a (field_imm 1 exn/2817))
+                     (apply (field_imm 5 (global Dune__exe__Error!)) 0
+                       [0: [2: 0 0] "%s"] msg/786))
+                   (exit 1)))
+              with (1) (reraise exn/2817))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Front!)
+      load_grammar_from_file/776))
+  (let
+    (grammars/787 =
+       (function param/855[int]
+         (apply (field_imm 19 (global Stdlib__List!))
+           (field_imm 4 (global Dune__exe__Front!))
+           (field_imm 0 (global Dune__exe__Settings!)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Front!) grammars/787))
+  (let
+    (grammars/856 =
+       (if
+         (|| (field_imm 31 (global Dune__exe__Settings!))
+           (field_imm 32 (global Dune__exe__Settings!)))
+         (apply (field_imm 5 (global Dune__exe__Front!)) 0)
+         (let
+           (standard_library/857 =
+              (apply (field_imm 2 (global Dune__exe__Front!))
+                (field_imm 25 (global Dune__exe__Settings!))
+                (field_imm 0 (global Dune__exe__Standard_mly!))))
+           (makeblock 0 standard_library/857
+             (apply (field_imm 5 (global Dune__exe__Front!)) 0)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Front!) grammars/856))
+  (let
+    (*match*/2822 =
+       (apply (field_imm 0 (global Dune__exe__Time!)) "Lexing and parsing"))
+    0)
+  (let
+    (grammars/864 =
+       (apply (field_imm 19 (global Stdlib__List!))
+         (field_imm 0 (global Dune__exe__Anonymous!))
+         (field_imm 6 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Front!) grammars/864))
+  (let
+    (grammar/866 =
+       (apply (field_imm 0 (global Dune__exe__PartialGrammar!))
+         (field_imm 7 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Front!) grammar/866))
+  (let
+    (sorts/868 =
+       (apply (field_imm 0 (global Dune__exe__SortInference!))
+         (field_imm 8 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Front!) sorts/868))
+  (let
+    (grammar/987 =
+       (let
+         (grammar1/989 =
+            (apply (field_imm 0 (global Dune__exe__SelectiveExpansion!)) 0
+              (field_imm 9 (global Dune__exe__Front!))
+              (field_imm 8 (global Dune__exe__Front!))))
+         (seq
+           (apply
+             (field_imm 0 (global Dune__exe__CheckSafeParameterizedGrammar!))
+             grammar1/989)
+           (let
+             (grammar/995 =
+                (apply (field_imm 0 (global Dune__exe__SelectiveExpansion!))
+                  1 (field_imm 9 (global Dune__exe__Front!))
+                  (field_imm 8 (global Dune__exe__Front!))))
+             (apply (field_imm 0 (global Dune__exe__Drop!)) grammar/995)))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Front!) grammar/987))
+  (let
+    (*match*/2827 =
+       (apply (field_imm 0 (global Dune__exe__Time!))
+         "Joining and expanding"))
+    0)
+  (let
+    (*match*/2829 =
+       (apply (field_imm 7 (global Dune__exe__TokenType!))
+         (field_imm 10 (global Dune__exe__Front!))))
+    0)
+  (let
+    (grammar/1025 =
+       (apply (field_imm 0 (global Dune__exe__Reachability!))
+         (field_imm 10 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Front!) grammar/1025))
+  (let
+    (*match*/2831 =
+       (apply (field_imm 0 (global Dune__exe__Time!)) "Trimming"))
+    0)
+  (catch
+    (let (*match*/2832 = (field_imm 10 (global Dune__exe__Settings!)))
+      (switch* *match*/2832
+       case int 0:
+        (let
+          (ocaml_types_have_been_checked/2839 = 0
+           grammar/2838 =a (field_imm 11 (global Dune__exe__Front!)))
+          (exit 27 grammar/2838 ocaml_types_have_been_checked/2839))
+       case int 1:
+        (let
+          (grammar/1091 =
+             (apply (field_imm 1 (global Dune__exe__Infer!))
+               (field_imm 11 (global Dune__exe__Front!))))
+          (seq
+            (apply (field_imm 0 (global Dune__exe__Time!))
+              "Inferring types for nonterminals")
+            (let
+              (ocaml_types_have_been_checked/2841 = 1
+               grammar/2840 =a grammar/1091)
+              (exit 27 grammar/2840 ocaml_types_have_been_checked/2841))))
+       case int 2:
+        (let
+          (*match*/2844 =
+             (apply (field_imm 2 (global Dune__exe__Infer!)) 0
+               (field_imm 11 (global Dune__exe__Front!)))
+           ocaml_types_have_been_checked/2843 =a (field_imm 1 *match*/2844)
+           grammar/2842 =a (field_imm 0 *match*/2844))
+          (exit 27 grammar/2842 ocaml_types_have_been_checked/2843))
+       case int 3:
+        (let
+          (*match*/2847 =
+             (apply (field_imm 2 (global Dune__exe__Infer!)) 1
+               (field_imm 11 (global Dune__exe__Front!)))
+           ocaml_types_have_been_checked/2846 =a (field_imm 1 *match*/2847)
+           grammar/2845 =a (field_imm 0 *match*/2847))
+          (exit 27 grammar/2845 ocaml_types_have_been_checked/2846))
+       case tag 0:
+        (let
+          (filename/1089 =a (field_imm 0 *match*/2832)
+           *match*/2835 =
+             (apply (field_imm 3 (global Dune__exe__Infer!)) filename/1089
+               (field_imm 11 (global Dune__exe__Front!)))
+           ocaml_types_have_been_checked/2834 =a (field_imm 1 *match*/2835)
+           grammar/2833 =a (field_imm 0 *match*/2835))
+          (exit 27 grammar/2833 ocaml_types_have_been_checked/2834))
+       case tag 1:
+        (let
+          (filename/1090 =a (field_imm 0 *match*/2832)
+           grammar/1097 =
+             (apply (field_imm 4 (global Dune__exe__Infer!)) filename/1090
+               (field_imm 11 (global Dune__exe__Front!))))
+          (seq
+            (apply (field_imm 0 (global Dune__exe__Time!))
+              "Reading inferred types for nonterminals")
+            (let
+              (ocaml_types_have_been_checked/2837 = 1
+               grammar/2836 =a grammar/1097)
+              (exit 27 grammar/2836 ocaml_types_have_been_checked/2837))))))
+   with (27 grammar/1027 ocaml_types_have_been_checked/1028[int])
+    (seq (setfield_ptr(root-init) 12 (global Dune__exe__Front!) grammar/1027)
+      (setfield_ptr(root-init) 1 (global Dune__exe__Front!)
+        ocaml_types_have_been_checked/1028)))
+  (let
+    (grammar/1098 =
+       (apply (field_imm 0 (global Dune__exe__KeywordExpansion!))
+         (field_imm 12 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Front!) grammar/1098))
+  (let
+    (grammar/1100 =
+       (if (field_imm 11 (global Dune__exe__Settings!))
+         (let
+           (grammar/1101 =
+              (apply (field_imm 0 (global Dune__exe__Inlining!))
+                (field_imm 13 (global Dune__exe__Front!))))
+           (seq (apply (field_imm 0 (global Dune__exe__Time!)) "Inlining")
+             grammar/1101))
+         (field_imm 13 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Front!) grammar/1100))
+  (let
+    (*match*/2851 =
+       (let (*match*/2848 = (field_imm 9 (global Dune__exe__Settings!)))
+         (if (isint *match*/2848) 0
+           (let (mode/1103 =a (field_imm 0 *match*/2848))
+             (seq
+               (apply (field_imm 0 (global Dune__exe__BasicPrinter!))
+                 mode/1103 (field_imm 38 (global Stdlib!))
+                 (field_imm 0 (global Dune__exe__Front!)))
+               (apply (field_imm 98 (global Stdlib!)) 0))))))
+    0)
+  0)
+(seq
+  (let
+    (load_grammar_from_contents/396 =
+       (function filename/398 contents/399
+         (seq
+           (apply (field_imm 0 (global Dune__exe__InputFile!)) filename/398)
+           (apply (field_imm 6 (global Dune__exe__InputFile!)) contents/399
+             (function param/651[int]
+               (let
+                 (lexbuf/433 =
+                    (apply (field_imm 2 (global Stdlib__Lexing!)) 0
+                      contents/399))
+                 (seq
+                   (setfield_ptr 11 lexbuf/433
+                     (let (init/2816 = (field_mut 11 lexbuf/433))
+                       (makeblock 0 (*,int,int,int) filename/398
+                         (field_int 1 init/2816) (field_int 2 init/2816)
+                         (field_int 3 init/2816))))
+                   (let
+                     (init/2815 =
+                        (apply (field_imm 0 (global Dune__exe__Driver!))
+                          (field_imm 22 (global Dune__exe__Lexer!))
+                          lexbuf/433))
+                     (makeblock 0 filename/398 (field_imm 1 init/2815)
+                       (field_imm 2 init/2815) (field_imm 3 init/2815))))))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Front!)
+      load_grammar_from_contents/396))
+  (let
+    (check_filename/652 =
+       (function filename/654 : int
+         (let
+           (validExt/655 =
+              (if (field_imm 32 (global Dune__exe__Settings!)) ".vy" ".mly"))
+           (if
+             (not
+               (apply (field_imm 6 (global Stdlib__Filename!)) filename/654
+                 validExt/655))
+             (apply (field_imm 5 (global Dune__exe__Error!)) 0
+               [0:
+                [11:
+                 "argument file names should end in "
+                 [2: 0 [11: ". \"" [2: 0 [11: "\" is not accepted." 0]]]]]
+                "argument file names should end in %s. \"%s\" is not accepted."]
+               validExt/655 filename/654)
+             0))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Front!) check_filename/652))
+  (let
+    (load_grammar_from_file/776 =
+       (function filename/778
+         (seq (apply (field_imm 3 (global Dune__exe__Front!)) filename/778)
+           (try
+             (let
+               (contents/779 =
+                  (apply (field_imm 5 (global Dune__exe__IO!)) filename/778))
+               (apply (field_imm 2 (global Dune__exe__Front!)) filename/778
+                 contents/779))
+            with exn/2817
+             (if (== (field_imm 0 exn/2817) (field_imm 10 (global Stdlib!)))
+               (apply (field_imm 5 (global Dune__exe__Error!)) 0
+                 [0: [2: 0 0] "%s"] (field_imm 1 exn/2817))
+               (reraise exn/2817))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Front!)
+      load_grammar_from_file/776))
+  (let
+    (grammars/787 =
+       (function param/855[int]
+         (apply (field_imm 19 (global Stdlib__List!))
+           (field_imm 4 (global Dune__exe__Front!))
+           (field_imm 0 (global Dune__exe__Settings!)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Front!) grammars/787))
+  (let
+    (grammars/856 =
+       (if
+         (|| (field_imm 31 (global Dune__exe__Settings!))
+           (field_imm 32 (global Dune__exe__Settings!)))
+         (apply (field_imm 5 (global Dune__exe__Front!)) 0)
+         (let
+           (standard_library/857 =
+              (apply (field_imm 2 (global Dune__exe__Front!))
+                (field_imm 25 (global Dune__exe__Settings!))
+                (field_imm 0 (global Dune__exe__Standard_mly!))))
+           (makeblock 0 standard_library/857
+             (apply (field_imm 5 (global Dune__exe__Front!)) 0)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Front!) grammars/856))
+  (let
+    (*match*/2822 =
+       (apply (field_imm 0 (global Dune__exe__Time!)) "Lexing and parsing"))
+    0)
+  (let
+    (grammars/864 =
+       (apply (field_imm 19 (global Stdlib__List!))
+         (field_imm 0 (global Dune__exe__Anonymous!))
+         (field_imm 6 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Front!) grammars/864))
+  (let
+    (grammar/866 =
+       (apply (field_imm 0 (global Dune__exe__PartialGrammar!))
+         (field_imm 7 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Front!) grammar/866))
+  (let
+    (sorts/868 =
+       (apply (field_imm 0 (global Dune__exe__SortInference!))
+         (field_imm 8 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Front!) sorts/868))
+  (let
+    (grammar/987 =
+       (let
+         (grammar1/989 =
+            (apply (field_imm 0 (global Dune__exe__SelectiveExpansion!)) 0
+              (field_imm 9 (global Dune__exe__Front!))
+              (field_imm 8 (global Dune__exe__Front!))))
+         (seq
+           (apply
+             (field_imm 0 (global Dune__exe__CheckSafeParameterizedGrammar!))
+             grammar1/989)
+           (let
+             (grammar/995 =
+                (apply (field_imm 0 (global Dune__exe__SelectiveExpansion!))
+                  1 (field_imm 9 (global Dune__exe__Front!))
+                  (field_imm 8 (global Dune__exe__Front!))))
+             (apply (field_imm 0 (global Dune__exe__Drop!)) grammar/995)))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Front!) grammar/987))
+  (let
+    (*match*/2827 =
+       (apply (field_imm 0 (global Dune__exe__Time!))
+         "Joining and expanding"))
+    0)
+  (let
+    (*match*/2829 =
+       (apply (field_imm 7 (global Dune__exe__TokenType!))
+         (field_imm 10 (global Dune__exe__Front!))))
+    0)
+  (let
+    (grammar/1025 =
+       (apply (field_imm 0 (global Dune__exe__Reachability!))
+         (field_imm 10 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Front!) grammar/1025))
+  (let
+    (*match*/2831 =
+       (apply (field_imm 0 (global Dune__exe__Time!)) "Trimming"))
+    0)
+  (catch
+    (let (*match*/2832 = (field_imm 10 (global Dune__exe__Settings!)))
+      (switch* *match*/2832
+       case int 0:
+        (let (ocaml_types_have_been_checked/2839 = 0)
+          (exit 27 (field_imm 11 (global Dune__exe__Front!))
+            ocaml_types_have_been_checked/2839))
+       case int 1:
+        (let
+          (grammar/1091 =
+             (apply (field_imm 1 (global Dune__exe__Infer!))
+               (field_imm 11 (global Dune__exe__Front!))))
+          (seq
+            (apply (field_imm 0 (global Dune__exe__Time!))
+              "Inferring types for nonterminals")
+            (let (ocaml_types_have_been_checked/2841 = 1)
+              (exit 27 grammar/1091 ocaml_types_have_been_checked/2841))))
+       case int 2:
+        (let
+          (*match*/2844 =
+             (apply (field_imm 2 (global Dune__exe__Infer!)) 0
+               (field_imm 11 (global Dune__exe__Front!))))
+          (exit 27 (field_imm 0 *match*/2844) (field_imm 1 *match*/2844)))
+       case int 3:
+        (let
+          (*match*/2847 =
+             (apply (field_imm 2 (global Dune__exe__Infer!)) 1
+               (field_imm 11 (global Dune__exe__Front!))))
+          (exit 27 (field_imm 0 *match*/2847) (field_imm 1 *match*/2847)))
+       case tag 0:
+        (let
+          (*match*/2835 =
+             (apply (field_imm 3 (global Dune__exe__Infer!))
+               (field_imm 0 *match*/2832)
+               (field_imm 11 (global Dune__exe__Front!))))
+          (exit 27 (field_imm 0 *match*/2835) (field_imm 1 *match*/2835)))
+       case tag 1:
+        (let
+          (grammar/1097 =
+             (apply (field_imm 4 (global Dune__exe__Infer!))
+               (field_imm 0 *match*/2832)
+               (field_imm 11 (global Dune__exe__Front!))))
+          (seq
+            (apply (field_imm 0 (global Dune__exe__Time!))
+              "Reading inferred types for nonterminals")
+            (let (ocaml_types_have_been_checked/2837 = 1)
+              (exit 27 grammar/1097 ocaml_types_have_been_checked/2837))))))
+   with (27 grammar/1027 ocaml_types_have_been_checked/1028[int])
+    (seq (setfield_ptr(root-init) 12 (global Dune__exe__Front!) grammar/1027)
+      (setfield_ptr(root-init) 1 (global Dune__exe__Front!)
+        ocaml_types_have_been_checked/1028)))
+  (let
+    (grammar/1098 =
+       (apply (field_imm 0 (global Dune__exe__KeywordExpansion!))
+         (field_imm 12 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Front!) grammar/1098))
+  (let
+    (grammar/1100 =
+       (if (field_imm 11 (global Dune__exe__Settings!))
+         (let
+           (grammar/1101 =
+              (apply (field_imm 0 (global Dune__exe__Inlining!))
+                (field_imm 13 (global Dune__exe__Front!))))
+           (seq (apply (field_imm 0 (global Dune__exe__Time!)) "Inlining")
+             grammar/1101))
+         (field_imm 13 (global Dune__exe__Front!))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Front!) grammar/1100))
+  (let
+    (*match*/2851 =
+       (let (*match*/2848 = (field_imm 9 (global Dune__exe__Settings!)))
+         (if (isint *match*/2848) 0
+           (seq
+             (apply (field_imm 0 (global Dune__exe__BasicPrinter!))
+               (field_imm 0 *match*/2848) (field_imm 38 (global Stdlib!))
+               (field_imm 0 (global Dune__exe__Front!)))
+             (apply (field_imm 98 (global Stdlib!)) 0)))))
+    0)
+  0)

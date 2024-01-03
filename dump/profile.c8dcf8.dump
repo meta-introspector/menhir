@@ -1,0 +1,18 @@
+0.087s 74.6MB 6.12MB 7.88MB src/stage3/inlining.ml
+  0.004s 2.05MB 0.43MB 2.19MB parsing
+    0.004s 2.05MB 0.43MB 2.19MB parser
+  0.041s 27.8MB 3.56MB 5.75MB typing
+  0.002s 2.00MB 0.09MB 5.85MB transl
+  0.023s 18.9MB 1.68MB 7.54MB generate
+    0.011s 10.3MB 1.06MB 6.91MB compile_phrases
+      0.001s 0.27MB ------ ------ selection
+      0.001s 2.00MB 0.31MB 6.16MB cse
+      0.001s ------ ------ ------ liveness
+      0.001s 0.25MB ------ ------ spill
+      0.005s 7.75MB 0.75MB 6.91MB regalloc
+      0.001s 0.11MB ------ ------ emit
+      0.001s ------ ------ ------ other
+    0.006s ------ ------ ------ assemble
+    0.006s 8.56MB 0.62MB 7.54MB other
+  0.017s 23.7MB 0.34MB 7.88MB other
+0.016s 3.07MB 1.75MB ------ other

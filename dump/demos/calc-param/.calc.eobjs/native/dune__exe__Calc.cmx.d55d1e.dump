@@ -1,0 +1,1084 @@
+[
+  structure_item (demos/calc-param/calc.ml[3,57+0]..[17,257+3])
+    Pstr_module
+    "FloatSemantics" (demos/calc-param/calc.ml[3,57+7]..[3,57+21])
+      module_expr (demos/calc-param/calc.ml[3,57+24]..[17,257+3])
+        Pmod_structure
+        [
+          structure_item (demos/calc-param/calc.ml[5,89+2]..[6,105+11])
+            Pstr_type Rec
+            [
+              type_declaration "number" (demos/calc-param/calc.ml[5,89+7]..[5,89+13]) (demos/calc-param/calc.ml[5,89+2]..[6,105+11])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (demos/calc-param/calc.ml[6,105+6]..[6,105+11])
+                      Ptyp_constr "float" (demos/calc-param/calc.ml[6,105+6]..[6,105+11])
+                      []
+            ]
+          structure_item (demos/calc-param/calc.ml[8,118+2]..[9,133+16])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[8,118+6]..[8,118+12])
+                  Ppat_var "inject" (demos/calc-param/calc.ml[8,118+6]..[8,118+12])
+                expression (demos/calc-param/calc.ml[9,133+4]..[9,133+16])
+                  Pexp_ident "float_of_int" (demos/calc-param/calc.ml[9,133+4]..[9,133+16])
+            ]
+          structure_item (demos/calc-param/calc.ml[11,151+2]..[11,151+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[11,151+6]..[11,151+11])
+                  Ppat_var "+" (demos/calc-param/calc.ml[11,151+6]..[11,151+11])
+                expression (demos/calc-param/calc.ml[11,151+14]..[11,151+20])
+                  Pexp_ident "+." (demos/calc-param/calc.ml[11,151+14]..[11,151+20])
+            ]
+          structure_item (demos/calc-param/calc.ml[12,172+2]..[12,172+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[12,172+6]..[12,172+11])
+                  Ppat_var "-" (demos/calc-param/calc.ml[12,172+6]..[12,172+11])
+                expression (demos/calc-param/calc.ml[12,172+14]..[12,172+20])
+                  Pexp_ident "-." (demos/calc-param/calc.ml[12,172+14]..[12,172+20])
+            ]
+          structure_item (demos/calc-param/calc.ml[13,193+2]..[13,193+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[13,193+6]..[13,193+11])
+                  Ppat_var "*" (demos/calc-param/calc.ml[13,193+6]..[13,193+11])
+                expression (demos/calc-param/calc.ml[13,193+14]..[13,193+20])
+                  Pexp_ident "*." (demos/calc-param/calc.ml[13,193+14]..[13,193+20])
+            ]
+          structure_item (demos/calc-param/calc.ml[14,214+2]..[14,214+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[14,214+6]..[14,214+11])
+                  Ppat_var "/" (demos/calc-param/calc.ml[14,214+6]..[14,214+11])
+                expression (demos/calc-param/calc.ml[14,214+14]..[14,214+20])
+                  Pexp_ident "/." (demos/calc-param/calc.ml[14,214+14]..[14,214+20])
+            ]
+          structure_item (demos/calc-param/calc.ml[15,235+2]..[15,235+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[15,235+6]..[15,235+11])
+                  Ppat_var "~-" (demos/calc-param/calc.ml[15,235+6]..[15,235+11])
+                expression (demos/calc-param/calc.ml[15,235+14]..[15,235+20])
+                  Pexp_ident "~-." (demos/calc-param/calc.ml[15,235+14]..[15,235+20])
+            ]
+        ]
+  structure_item (demos/calc-param/calc.ml[21,317+0]..[22,338+29])
+    Pstr_module
+    "FloatParser" (demos/calc-param/calc.ml[21,317+7]..[21,317+18])
+      module_expr (demos/calc-param/calc.ml[22,338+2]..[22,338+29])
+        Pmod_apply
+        module_expr (demos/calc-param/calc.ml[22,338+2]..[22,338+13])
+          Pmod_ident "Parser.Make" (demos/calc-param/calc.ml[22,338+2]..[22,338+13])
+        module_expr (demos/calc-param/calc.ml[22,338+14]..[22,338+28])
+          Pmod_ident "FloatSemantics" (demos/calc-param/calc.ml[22,338+14]..[22,338+28])
+  structure_item (demos/calc-param/calc.ml[26,398+0]..[35,687+91])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[26,398+4]..[26,398+11])
+          Ppat_var "process" (demos/calc-param/calc.ml[26,398+4]..[26,398+11])
+        expression (demos/calc-param/calc.ml[26,398+12]..[35,687+91]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-param/calc.ml[26,398+12]..[26,398+27])
+            Ppat_constraint
+            pattern (demos/calc-param/calc.ml[26,398+13]..[26,398+17])
+              Ppat_var "line" (demos/calc-param/calc.ml[26,398+13]..[26,398+17])
+            core_type (demos/calc-param/calc.ml[26,398+20]..[26,398+26])
+              Ptyp_constr "string" (demos/calc-param/calc.ml[26,398+20]..[26,398+26])
+              []
+          expression (demos/calc-param/calc.ml[27,428+2]..[35,687+91])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[27,428+6]..[27,428+13])
+                  Ppat_var "linebuf" (demos/calc-param/calc.ml[27,428+6]..[27,428+13])
+                expression (demos/calc-param/calc.ml[27,428+16]..[27,428+39])
+                  Pexp_apply
+                  expression (demos/calc-param/calc.ml[27,428+16]..[27,428+34])
+                    Pexp_ident "Lexing.from_string" (demos/calc-param/calc.ml[27,428+16]..[27,428+34])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-param/calc.ml[27,428+35]..[27,428+39])
+                        Pexp_ident "line" (demos/calc-param/calc.ml[27,428+35]..[27,428+39])
+                  ]
+            ]
+            expression (demos/calc-param/calc.ml[28,471+2]..[35,687+91])
+              Pexp_try
+              expression (demos/calc-param/calc.ml[30,525+4]..[30,525+67])
+                Pexp_apply
+                expression (demos/calc-param/calc.ml[30,525+4]..[30,525+17])
+                  Pexp_ident "Printf.printf" (demos/calc-param/calc.ml[30,525+4]..[30,525+17])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-param/calc.ml[30,525+18]..[30,525+28])
+                      Pexp_constant PConst_string("%.6f\n%!",(demos/calc-param/calc.ml[30,525+19]..[30,525+27]),None)
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-param/calc.ml[30,525+29]..[30,525+67])
+                      Pexp_apply
+                      expression (demos/calc-param/calc.ml[30,525+30]..[30,525+46])
+                        Pexp_ident "FloatParser.main" (demos/calc-param/calc.ml[30,525+30]..[30,525+46])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-param/calc.ml[30,525+47]..[30,525+58])
+                            Pexp_ident "Lexer.token" (demos/calc-param/calc.ml[30,525+47]..[30,525+58])
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-param/calc.ml[30,525+59]..[30,525+66])
+                            Pexp_ident "linebuf" (demos/calc-param/calc.ml[30,525+59]..[30,525+66])
+                      ]
+                ]
+              [
+                <case>
+                  pattern (demos/calc-param/calc.ml[32,600+4]..[32,600+19])
+                    Ppat_construct "Lexer.Error" (demos/calc-param/calc.ml[32,600+4]..[32,600+15])
+                    Some
+                      []
+                      pattern (demos/calc-param/calc.ml[32,600+16]..[32,600+19])
+                        Ppat_var "msg" (demos/calc-param/calc.ml[32,600+16]..[32,600+19])
+                  expression (demos/calc-param/calc.ml[33,623+6]..[33,623+38])
+                    Pexp_apply
+                    expression (demos/calc-param/calc.ml[33,623+6]..[33,623+20])
+                      Pexp_ident "Printf.fprintf" (demos/calc-param/calc.ml[33,623+6]..[33,623+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-param/calc.ml[33,623+21]..[33,623+27])
+                          Pexp_ident "stderr" (demos/calc-param/calc.ml[33,623+21]..[33,623+27])
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-param/calc.ml[33,623+28]..[33,623+34])
+                          Pexp_constant PConst_string("%s%!",(demos/calc-param/calc.ml[33,623+29]..[33,623+33]),None)
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-param/calc.ml[33,623+35]..[33,623+38])
+                          Pexp_ident "msg" (demos/calc-param/calc.ml[33,623+35]..[33,623+38])
+                    ]
+                <case>
+                  pattern (demos/calc-param/calc.ml[34,662+4]..[34,662+21])
+                    Ppat_construct "FloatParser.Error" (demos/calc-param/calc.ml[34,662+4]..[34,662+21])
+                    None
+                  expression (demos/calc-param/calc.ml[35,687+6]..[35,687+91])
+                    Pexp_apply
+                    expression (demos/calc-param/calc.ml[35,687+6]..[35,687+20])
+                      Pexp_ident "Printf.fprintf" (demos/calc-param/calc.ml[35,687+6]..[35,687+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-param/calc.ml[35,687+21]..[35,687+27])
+                          Pexp_ident "stderr" (demos/calc-param/calc.ml[35,687+21]..[35,687+27])
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-param/calc.ml[35,687+28]..[35,687+61])
+                          Pexp_constant PConst_string("At offset %d: syntax error.\n%!",(demos/calc-param/calc.ml[35,687+29]..[35,687+60]),None)
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-param/calc.ml[35,687+62]..[35,687+91])
+                          Pexp_apply
+                          expression (demos/calc-param/calc.ml[35,687+63]..[35,687+82])
+                            Pexp_ident "Lexing.lexeme_start" (demos/calc-param/calc.ml[35,687+63]..[35,687+82])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-param/calc.ml[35,687+83]..[35,687+90])
+                                Pexp_ident "linebuf" (demos/calc-param/calc.ml[35,687+83]..[35,687+90])
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (demos/calc-param/calc.ml[37,780+0]..[42,891+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[37,780+4]..[37,780+11])
+          Ppat_var "process" (demos/calc-param/calc.ml[37,780+4]..[37,780+11])
+        expression (demos/calc-param/calc.ml[37,780+12]..[42,891+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-param/calc.ml[37,780+12]..[37,780+43])
+            Ppat_constraint
+            pattern (demos/calc-param/calc.ml[37,780+13]..[37,780+26])
+              Ppat_var "optional_line" (demos/calc-param/calc.ml[37,780+13]..[37,780+26])
+            core_type (demos/calc-param/calc.ml[37,780+29]..[37,780+42])
+              Ptyp_constr "option" (demos/calc-param/calc.ml[37,780+36]..[37,780+42])
+              [
+                core_type (demos/calc-param/calc.ml[37,780+29]..[37,780+35])
+                  Ptyp_constr "string" (demos/calc-param/calc.ml[37,780+29]..[37,780+35])
+                  []
+              ]
+          expression (demos/calc-param/calc.ml[38,826+2]..[42,891+18])
+            Pexp_match
+            expression (demos/calc-param/calc.ml[38,826+8]..[38,826+21])
+              Pexp_ident "optional_line" (demos/calc-param/calc.ml[38,826+8]..[38,826+21])
+            [
+              <case>
+                pattern (demos/calc-param/calc.ml[39,853+4]..[39,853+8])
+                  Ppat_construct "None" (demos/calc-param/calc.ml[39,853+4]..[39,853+8])
+                  None
+                expression (demos/calc-param/calc.ml[40,865+6]..[40,865+8])
+                  Pexp_construct "()" (demos/calc-param/calc.ml[40,865+6]..[40,865+8])
+                  None
+              <case>
+                pattern (demos/calc-param/calc.ml[41,874+4]..[41,874+13])
+                  Ppat_construct "Some" (demos/calc-param/calc.ml[41,874+4]..[41,874+8])
+                  Some
+                    []
+                    pattern (demos/calc-param/calc.ml[41,874+9]..[41,874+13])
+                      Ppat_var "line" (demos/calc-param/calc.ml[41,874+9]..[41,874+13])
+                expression (demos/calc-param/calc.ml[42,891+6]..[42,891+18])
+                  Pexp_apply
+                  expression (demos/calc-param/calc.ml[42,891+6]..[42,891+13])
+                    Pexp_ident "process" (demos/calc-param/calc.ml[42,891+6]..[42,891+13])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-param/calc.ml[42,891+14]..[42,891+18])
+                        Pexp_ident "line" (demos/calc-param/calc.ml[42,891+14]..[42,891+18])
+                  ]
+            ]
+    ]
+  structure_item (demos/calc-param/calc.ml[44,911+0]..[49,1068+18])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[44,911+8]..[44,911+14])
+          Ppat_var "repeat" (demos/calc-param/calc.ml[44,911+8]..[44,911+14])
+        expression (demos/calc-param/calc.ml[44,911+15]..[49,1068+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-param/calc.ml[44,911+15]..[44,911+22])
+            Ppat_var "channel" (demos/calc-param/calc.ml[44,911+15]..[44,911+22])
+          expression (demos/calc-param/calc.ml[46,970+2]..[49,1068+18])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[46,970+6]..[46,970+29])
+                  Ppat_tuple
+                  [
+                    pattern (demos/calc-param/calc.ml[46,970+6]..[46,970+19])
+                      Ppat_var "optional_line" (demos/calc-param/calc.ml[46,970+6]..[46,970+19])
+                    pattern (demos/calc-param/calc.ml[46,970+21]..[46,970+29])
+                      Ppat_var "continue" (demos/calc-param/calc.ml[46,970+21]..[46,970+29])
+                  ]
+                expression (demos/calc-param/calc.ml[46,970+32]..[46,970+50])
+                  Pexp_apply
+                  expression (demos/calc-param/calc.ml[46,970+32]..[46,970+42])
+                    Pexp_ident "Lexer.line" (demos/calc-param/calc.ml[46,970+32]..[46,970+42])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-param/calc.ml[46,970+43]..[46,970+50])
+                        Pexp_ident "channel" (demos/calc-param/calc.ml[46,970+43]..[46,970+50])
+                  ]
+            ]
+            expression (demos/calc-param/calc.ml[47,1024+2]..[49,1068+18])
+              Pexp_sequence
+              expression (demos/calc-param/calc.ml[47,1024+2]..[47,1024+23])
+                Pexp_apply
+                expression (demos/calc-param/calc.ml[47,1024+2]..[47,1024+9])
+                  Pexp_ident "process" (demos/calc-param/calc.ml[47,1024+2]..[47,1024+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-param/calc.ml[47,1024+10]..[47,1024+23])
+                      Pexp_ident "optional_line" (demos/calc-param/calc.ml[47,1024+10]..[47,1024+23])
+                ]
+              expression (demos/calc-param/calc.ml[48,1049+2]..[49,1068+18])
+                Pexp_ifthenelse
+                expression (demos/calc-param/calc.ml[48,1049+5]..[48,1049+13])
+                  Pexp_ident "continue" (demos/calc-param/calc.ml[48,1049+5]..[48,1049+13])
+                expression (demos/calc-param/calc.ml[49,1068+4]..[49,1068+18])
+                  Pexp_apply
+                  expression (demos/calc-param/calc.ml[49,1068+4]..[49,1068+10])
+                    Pexp_ident "repeat" (demos/calc-param/calc.ml[49,1068+4]..[49,1068+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-param/calc.ml[49,1068+11]..[49,1068+18])
+                        Pexp_ident "channel" (demos/calc-param/calc.ml[49,1068+11]..[49,1068+18])
+                  ]
+                None
+    ]
+  structure_item (demos/calc-param/calc.ml[51,1088+0]..[52,1097+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[51,1088+4]..[51,1088+6])
+          Ppat_construct "()" (demos/calc-param/calc.ml[51,1088+4]..[51,1088+6])
+          None
+        expression (demos/calc-param/calc.ml[52,1097+2]..[52,1097+36])
+          Pexp_apply
+          expression (demos/calc-param/calc.ml[52,1097+2]..[52,1097+8])
+            Pexp_ident "repeat" (demos/calc-param/calc.ml[52,1097+2]..[52,1097+8])
+          [
+            <arg>
+            Nolabel
+              expression (demos/calc-param/calc.ml[52,1097+9]..[52,1097+36])
+                Pexp_apply
+                expression (demos/calc-param/calc.ml[52,1097+10]..[52,1097+29])
+                  Pexp_ident "Lexing.from_channel" (demos/calc-param/calc.ml[52,1097+10]..[52,1097+29])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-param/calc.ml[52,1097+30]..[52,1097+35])
+                      Pexp_ident "stdin" (demos/calc-param/calc.ml[52,1097+30]..[52,1097+35])
+                ]
+          ]
+    ]
+]
+
+module FloatSemantics =
+  struct
+    type number = float
+    let inject = float_of_int
+    let (+) = (+.)
+    let (-) = (-.)
+    let ( * ) = ( *. )
+    let (/) = (/.)
+    let (~-) = (~-.)
+  end
+module FloatParser = (Parser.Make)(FloatSemantics)
+let process (line : string) =
+  let linebuf = Lexing.from_string line in
+  try Printf.printf "%.6f\n%!" (FloatParser.main Lexer.token linebuf)
+  with | Lexer.Error msg -> Printf.fprintf stderr "%s%!" msg
+  | FloatParser.Error ->
+      Printf.fprintf stderr "At offset %d: syntax error.\n%!"
+        (Lexing.lexeme_start linebuf)
+let process (optional_line : string option) =
+  match optional_line with | None -> () | Some line -> process line
+let rec repeat channel =
+  let (optional_line, continue) = Lexer.line channel in
+  process optional_line; if continue then repeat channel
+let () = repeat (Lexing.from_channel stdin)
+[
+  structure_item (demos/calc-param/calc.ml[3,57+0]..demos/calc-param/calc.ml[17,257+3])
+    Tstr_module
+    FloatSemantics/280
+      module_expr (demos/calc-param/calc.ml[3,57+24]..demos/calc-param/calc.ml[17,257+3])
+        Tmod_structure
+        [
+          structure_item (demos/calc-param/calc.ml[5,89+2]..demos/calc-param/calc.ml[6,105+11])
+            Tstr_type Rec
+            [
+              type_declaration number/273 (demos/calc-param/calc.ml[5,89+2]..demos/calc-param/calc.ml[6,105+11])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (demos/calc-param/calc.ml[6,105+6]..demos/calc-param/calc.ml[6,105+11])
+                      Ttyp_constr "float/4!"
+                      []
+            ]
+          structure_item (demos/calc-param/calc.ml[8,118+2]..demos/calc-param/calc.ml[9,133+16])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[8,118+6]..demos/calc-param/calc.ml[8,118+12])
+                  Tpat_var "inject/274"
+                expression (demos/calc-param/calc.ml[9,133+4]..demos/calc-param/calc.ml[9,133+16])
+                  Texp_ident "Stdlib!.float_of_int"
+            ]
+          structure_item (demos/calc-param/calc.ml[11,151+2]..demos/calc-param/calc.ml[11,151+20])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[11,151+6]..demos/calc-param/calc.ml[11,151+11])
+                  Tpat_var "+/275"
+                expression (demos/calc-param/calc.ml[11,151+14]..demos/calc-param/calc.ml[11,151+20])
+                  Texp_ident "Stdlib!.+."
+            ]
+          structure_item (demos/calc-param/calc.ml[12,172+2]..demos/calc-param/calc.ml[12,172+20])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[12,172+6]..demos/calc-param/calc.ml[12,172+11])
+                  Tpat_var "-/276"
+                expression (demos/calc-param/calc.ml[12,172+14]..demos/calc-param/calc.ml[12,172+20])
+                  Texp_ident "Stdlib!.-."
+            ]
+          structure_item (demos/calc-param/calc.ml[13,193+2]..demos/calc-param/calc.ml[13,193+20])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[13,193+6]..demos/calc-param/calc.ml[13,193+11])
+                  Tpat_var "*/277"
+                expression (demos/calc-param/calc.ml[13,193+14]..demos/calc-param/calc.ml[13,193+20])
+                  Texp_ident "Stdlib!.*."
+            ]
+          structure_item (demos/calc-param/calc.ml[14,214+2]..demos/calc-param/calc.ml[14,214+20])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[14,214+6]..demos/calc-param/calc.ml[14,214+11])
+                  Tpat_var "//278"
+                expression (demos/calc-param/calc.ml[14,214+14]..demos/calc-param/calc.ml[14,214+20])
+                  Texp_ident "Stdlib!./."
+            ]
+          structure_item (demos/calc-param/calc.ml[15,235+2]..demos/calc-param/calc.ml[15,235+20])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (demos/calc-param/calc.ml[15,235+6]..demos/calc-param/calc.ml[15,235+11])
+                  Tpat_var "~-/279"
+                expression (demos/calc-param/calc.ml[15,235+14]..demos/calc-param/calc.ml[15,235+20])
+                  Texp_ident "Stdlib!.~-."
+            ]
+        ]
+  structure_item (demos/calc-param/calc.ml[21,317+0]..demos/calc-param/calc.ml[22,338+29])
+    Tstr_module
+    FloatParser/299
+      module_expr (demos/calc-param/calc.ml[22,338+2]..demos/calc-param/calc.ml[22,338+29])
+        Tmod_apply
+        module_expr (demos/calc-param/calc.ml[22,338+2]..demos/calc-param/calc.ml[22,338+13])
+          module_expr (demos/calc-param/calc.ml[22,338+2]..demos/calc-param/calc.ml[22,338+13])
+            Tmod_ident "Dune__exe!.Parser.Make"
+        module_expr (demos/calc-param/calc.ml[22,338+14]..demos/calc-param/calc.ml[22,338+28])
+          Tmod_ident "FloatSemantics/280"
+  structure_item (demos/calc-param/calc.ml[26,398+0]..demos/calc-param/calc.ml[35,687+91])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[26,398+4]..demos/calc-param/calc.ml[26,398+11])
+          Tpat_var "process/300"
+        expression (demos/calc-param/calc.ml[26,398+12]..demos/calc-param/calc.ml[35,687+91]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-param/calc.ml[26,398+13]..demos/calc-param/calc.ml[26,398+17])
+                extra
+                  Tpat_extra_constraint
+                  core_type (demos/calc-param/calc.ml[26,398+20]..demos/calc-param/calc.ml[26,398+26])
+                    Ttyp_constr "string/15!"
+                    []
+                Tpat_alias "line/302"
+                pattern (demos/calc-param/calc.ml[26,398+13]..demos/calc-param/calc.ml[26,398+17])
+                  Tpat_any
+              expression (demos/calc-param/calc.ml[27,428+2]..demos/calc-param/calc.ml[35,687+91])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (demos/calc-param/calc.ml[27,428+6]..demos/calc-param/calc.ml[27,428+13])
+                      Tpat_var "linebuf/303"
+                    expression (demos/calc-param/calc.ml[27,428+16]..demos/calc-param/calc.ml[27,428+39])
+                      Texp_apply
+                      expression (demos/calc-param/calc.ml[27,428+16]..demos/calc-param/calc.ml[27,428+34])
+                        Texp_ident "Stdlib!.Lexing.from_string"
+                      [
+                        <arg>
+                          Optional "with_positions"
+                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                            Texp_construct "None"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-param/calc.ml[27,428+35]..demos/calc-param/calc.ml[27,428+39])
+                            Texp_ident "line/302"
+                      ]
+                ]
+                expression (demos/calc-param/calc.ml[28,471+2]..demos/calc-param/calc.ml[35,687+91])
+                  Texp_try
+                  expression (demos/calc-param/calc.ml[30,525+4]..demos/calc-param/calc.ml[30,525+67])
+                    Texp_apply
+                    expression (demos/calc-param/calc.ml[30,525+4]..demos/calc-param/calc.ml[30,525+17])
+                      Texp_ident "Stdlib!.Printf.printf"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28])
+                          Texp_construct "CamlinternalFormatBasics.Format"
+                          [
+                            expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                              Texp_construct "CamlinternalFormatBasics.Float"
+                              [
+                                expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                  Texp_tuple
+                                  [
+                                    expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Float_flag_"
+                                      []
+                                    expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Float_f"
+                                      []
+                                  ]
+                                expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                  []
+                                expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Lit_precision"
+                                  [
+                                    expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                      Texp_constant Const_int 6
+                                  ]
+                                expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                  [
+                                    expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                      Texp_constant Const_char 0a
+                                    expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Flush"
+                                      [
+                                        expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                  ]
+                              ]
+                            expression (demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost
+                              Texp_constant Const_string("%.6f\n%!",(demos/calc-param/calc.ml[30,525+18]..demos/calc-param/calc.ml[30,525+28]) ghost,None)
+                          ]
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-param/calc.ml[30,525+29]..demos/calc-param/calc.ml[30,525+67])
+                          Texp_apply
+                          expression (demos/calc-param/calc.ml[30,525+30]..demos/calc-param/calc.ml[30,525+46])
+                            Texp_ident "FloatParser/299.main"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (demos/calc-param/calc.ml[30,525+47]..demos/calc-param/calc.ml[30,525+58])
+                                Texp_ident "Dune__exe!.Lexer.token"
+                            <arg>
+                              Nolabel
+                              expression (demos/calc-param/calc.ml[30,525+59]..demos/calc-param/calc.ml[30,525+66])
+                                Texp_ident "linebuf/303"
+                          ]
+                    ]
+                  [
+                    <case>
+                      pattern (demos/calc-param/calc.ml[32,600+4]..demos/calc-param/calc.ml[32,600+19])
+                        Tpat_construct "Lexer.Error"
+                        [
+                          pattern (demos/calc-param/calc.ml[32,600+16]..demos/calc-param/calc.ml[32,600+19])
+                            Tpat_var "msg/396"
+                        ]
+                        None
+                      expression (demos/calc-param/calc.ml[33,623+6]..demos/calc-param/calc.ml[33,623+38])
+                        Texp_apply
+                        expression (demos/calc-param/calc.ml[33,623+6]..demos/calc-param/calc.ml[33,623+20])
+                          Texp_ident "Stdlib!.Printf.fprintf"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-param/calc.ml[33,623+21]..demos/calc-param/calc.ml[33,623+27])
+                              Texp_ident "Stdlib!.stderr"
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String"
+                                  [
+                                    expression (demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                      []
+                                    expression (demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Flush"
+                                      [
+                                        expression (demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                  ]
+                                expression (demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34]) ghost
+                                  Texp_constant Const_string("%s%!",(demos/calc-param/calc.ml[33,623+28]..demos/calc-param/calc.ml[33,623+34]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-param/calc.ml[33,623+35]..demos/calc-param/calc.ml[33,623+38])
+                              Texp_ident "msg/396"
+                        ]
+                    <case>
+                      pattern (demos/calc-param/calc.ml[34,662+4]..demos/calc-param/calc.ml[34,662+21])
+                        Tpat_construct "FloatParser.Error"
+                        []
+                        None
+                      expression (demos/calc-param/calc.ml[35,687+6]..demos/calc-param/calc.ml[35,687+91])
+                        Texp_apply
+                        expression (demos/calc-param/calc.ml[35,687+6]..demos/calc-param/calc.ml[35,687+20])
+                          Texp_ident "Stdlib!.Printf.fprintf"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-param/calc.ml[35,687+21]..demos/calc-param/calc.ml[35,687+27])
+                              Texp_ident "Stdlib!.stderr"
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                  [
+                                    expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                      Texp_constant Const_string("At offset ",(demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost,None)
+                                    expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                      [
+                                        expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                          []
+                                        expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                          []
+                                        expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                          []
+                                        expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                              Texp_constant Const_string(": syntax error.\n",(demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost,None)
+                                            expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Flush"
+                                              [
+                                                expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                  []
+                                              ]
+                                          ]
+                                      ]
+                                  ]
+                                expression (demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost
+                                  Texp_constant Const_string("At offset %d: syntax error.\n%!",(demos/calc-param/calc.ml[35,687+28]..demos/calc-param/calc.ml[35,687+61]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-param/calc.ml[35,687+62]..demos/calc-param/calc.ml[35,687+91])
+                              Texp_apply
+                              expression (demos/calc-param/calc.ml[35,687+63]..demos/calc-param/calc.ml[35,687+82])
+                                Texp_ident "Stdlib!.Lexing.lexeme_start"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (demos/calc-param/calc.ml[35,687+83]..demos/calc-param/calc.ml[35,687+90])
+                                    Texp_ident "linebuf/303"
+                              ]
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (demos/calc-param/calc.ml[37,780+0]..demos/calc-param/calc.ml[42,891+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[37,780+4]..demos/calc-param/calc.ml[37,780+11])
+          Tpat_var "process/397"
+        expression (demos/calc-param/calc.ml[37,780+12]..demos/calc-param/calc.ml[42,891+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-param/calc.ml[37,780+13]..demos/calc-param/calc.ml[37,780+26])
+                extra
+                  Tpat_extra_constraint
+                  core_type (demos/calc-param/calc.ml[37,780+29]..demos/calc-param/calc.ml[37,780+42])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (demos/calc-param/calc.ml[37,780+29]..demos/calc-param/calc.ml[37,780+35])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                Tpat_alias "optional_line/398"
+                pattern (demos/calc-param/calc.ml[37,780+13]..demos/calc-param/calc.ml[37,780+26])
+                  Tpat_any
+              expression (demos/calc-param/calc.ml[38,826+2]..demos/calc-param/calc.ml[42,891+18])
+                Texp_match
+                expression (demos/calc-param/calc.ml[38,826+8]..demos/calc-param/calc.ml[38,826+21])
+                  Texp_ident "optional_line/398"
+                [
+                  <case>
+                    pattern (demos/calc-param/calc.ml[39,853+4]..demos/calc-param/calc.ml[39,853+8])
+                      Tpat_value
+                      pattern (demos/calc-param/calc.ml[39,853+4]..demos/calc-param/calc.ml[39,853+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (demos/calc-param/calc.ml[40,865+6]..demos/calc-param/calc.ml[40,865+8])
+                      Texp_construct "()"
+                      []
+                  <case>
+                    pattern (demos/calc-param/calc.ml[41,874+4]..demos/calc-param/calc.ml[41,874+13])
+                      Tpat_value
+                      pattern (demos/calc-param/calc.ml[41,874+4]..demos/calc-param/calc.ml[41,874+13])
+                        Tpat_construct "Some"
+                        [
+                          pattern (demos/calc-param/calc.ml[41,874+9]..demos/calc-param/calc.ml[41,874+13])
+                            Tpat_var "line/399"
+                        ]
+                        None
+                    expression (demos/calc-param/calc.ml[42,891+6]..demos/calc-param/calc.ml[42,891+18])
+                      Texp_apply
+                      expression (demos/calc-param/calc.ml[42,891+6]..demos/calc-param/calc.ml[42,891+13])
+                        Texp_ident "process/300"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-param/calc.ml[42,891+14]..demos/calc-param/calc.ml[42,891+18])
+                            Texp_ident "line/399"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-param/calc.ml[44,911+0]..demos/calc-param/calc.ml[49,1068+18])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[44,911+8]..demos/calc-param/calc.ml[44,911+14])
+          Tpat_var "repeat/400"
+        expression (demos/calc-param/calc.ml[44,911+15]..demos/calc-param/calc.ml[49,1068+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-param/calc.ml[44,911+15]..demos/calc-param/calc.ml[44,911+22])
+                Tpat_var "channel/401"
+              expression (demos/calc-param/calc.ml[46,970+2]..demos/calc-param/calc.ml[49,1068+18])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (demos/calc-param/calc.ml[46,970+6]..demos/calc-param/calc.ml[46,970+29])
+                      Tpat_tuple
+                      [
+                        pattern (demos/calc-param/calc.ml[46,970+6]..demos/calc-param/calc.ml[46,970+19])
+                          Tpat_var "optional_line/402"
+                        pattern (demos/calc-param/calc.ml[46,970+21]..demos/calc-param/calc.ml[46,970+29])
+                          Tpat_var "continue/403"
+                      ]
+                    expression (demos/calc-param/calc.ml[46,970+32]..demos/calc-param/calc.ml[46,970+50])
+                      Texp_apply
+                      expression (demos/calc-param/calc.ml[46,970+32]..demos/calc-param/calc.ml[46,970+42])
+                        Texp_ident "Dune__exe!.Lexer.line"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-param/calc.ml[46,970+43]..demos/calc-param/calc.ml[46,970+50])
+                            Texp_ident "channel/401"
+                      ]
+                ]
+                expression (demos/calc-param/calc.ml[47,1024+2]..demos/calc-param/calc.ml[49,1068+18])
+                  Texp_sequence
+                  expression (demos/calc-param/calc.ml[47,1024+2]..demos/calc-param/calc.ml[47,1024+23])
+                    Texp_apply
+                    expression (demos/calc-param/calc.ml[47,1024+2]..demos/calc-param/calc.ml[47,1024+9])
+                      Texp_ident "process/397"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-param/calc.ml[47,1024+10]..demos/calc-param/calc.ml[47,1024+23])
+                          Texp_ident "optional_line/402"
+                    ]
+                  expression (demos/calc-param/calc.ml[48,1049+2]..demos/calc-param/calc.ml[49,1068+18])
+                    Texp_ifthenelse
+                    expression (demos/calc-param/calc.ml[48,1049+5]..demos/calc-param/calc.ml[48,1049+13])
+                      Texp_ident "continue/403"
+                    expression (demos/calc-param/calc.ml[49,1068+4]..demos/calc-param/calc.ml[49,1068+18])
+                      Texp_apply
+                      expression (demos/calc-param/calc.ml[49,1068+4]..demos/calc-param/calc.ml[49,1068+10])
+                        Texp_ident "repeat/400"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-param/calc.ml[49,1068+11]..demos/calc-param/calc.ml[49,1068+18])
+                            Texp_ident "channel/401"
+                      ]
+                    None
+          ]
+    ]
+  structure_item (demos/calc-param/calc.ml[51,1088+0]..demos/calc-param/calc.ml[52,1097+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-param/calc.ml[51,1088+4]..demos/calc-param/calc.ml[51,1088+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (demos/calc-param/calc.ml[52,1097+2]..demos/calc-param/calc.ml[52,1097+36])
+          Texp_apply
+          expression (demos/calc-param/calc.ml[52,1097+2]..demos/calc-param/calc.ml[52,1097+8])
+            Texp_ident "repeat/400"
+          [
+            <arg>
+              Nolabel
+              expression (demos/calc-param/calc.ml[52,1097+9]..demos/calc-param/calc.ml[52,1097+36])
+                Texp_apply
+                expression (demos/calc-param/calc.ml[52,1097+10]..demos/calc-param/calc.ml[52,1097+29])
+                  Texp_ident "Stdlib!.Lexing.from_channel"
+                [
+                  <arg>
+                    Optional "with_positions"
+                    expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                      Texp_construct "None"
+                      []
+                  <arg>
+                    Nolabel
+                    expression (demos/calc-param/calc.ml[52,1097+30]..demos/calc-param/calc.ml[52,1097+35])
+                      Texp_ident "Stdlib!.stdin"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Calc>
+ "FloatParser"[module] ->
+   CU Dune__exe . "Parser"[module] . "Make"[module](
+   {<Dune__exe__Calc.7>
+    "*"[value] -> <Dune__exe__Calc.4>;
+    "+"[value] -> <Dune__exe__Calc.2>;
+    "-"[value] -> <Dune__exe__Calc.3>;
+    "/"[value] -> <Dune__exe__Calc.5>;
+    "inject"[value] -> <Dune__exe__Calc.1>;
+    "number"[type] -> <Dune__exe__Calc.0>;
+    "~-"[value] -> <Dune__exe__Calc.6>;
+    })<Dune__exe__Calc.8>;
+ "FloatSemantics"[module] ->
+   {<Dune__exe__Calc.7>
+    "*"[value] -> <Dune__exe__Calc.4>;
+    "+"[value] -> <Dune__exe__Calc.2>;
+    "-"[value] -> <Dune__exe__Calc.3>;
+    "/"[value] -> <Dune__exe__Calc.5>;
+    "inject"[value] -> <Dune__exe__Calc.1>;
+    "number"[type] -> <Dune__exe__Calc.0>;
+    "~-"[value] -> <Dune__exe__Calc.6>;
+    };
+ "process"[value] -> <Dune__exe__Calc.13>;
+ "repeat"[value] -> <Dune__exe__Calc.16>;
+ }
+
+(seq
+  (seq
+    (let (inject/274 = (function prim/572 stub (float_of_int prim/572)))
+      (setfield_ptr(root-init) 5 (global Dune__exe__Calc!) inject/274))
+    (let (+/275 = (function prim/574 prim/573 stub (+. prim/574 prim/573)))
+      (setfield_ptr(root-init) 6 (global Dune__exe__Calc!) +/275))
+    (let (-/276 = (function prim/576 prim/575 stub (-. prim/576 prim/575)))
+      (setfield_ptr(root-init) 7 (global Dune__exe__Calc!) -/276))
+    (let (*/277 = (function prim/578 prim/577 stub (*. prim/578 prim/577)))
+      (setfield_ptr(root-init) 8 (global Dune__exe__Calc!) */277))
+    (let (//278 = (function prim/580 prim/579 stub (/. prim/580 prim/579)))
+      (setfield_ptr(root-init) 9 (global Dune__exe__Calc!) //278))
+    (let (~-/279 = (function prim/581 stub (~. prim/581)))
+      (setfield_ptr(root-init) 10 (global Dune__exe__Calc!) ~-/279))
+    0)
+  (let
+    (FloatSemantics/280 =
+       (makeblock 0 (field_imm 5 (global Dune__exe__Calc!))
+         (field_imm 6 (global Dune__exe__Calc!))
+         (field_imm 7 (global Dune__exe__Calc!))
+         (field_imm 8 (global Dune__exe__Calc!))
+         (field_imm 9 (global Dune__exe__Calc!))
+         (field_imm 10 (global Dune__exe__Calc!))))
+    (seq
+      (setfield_ptr(root-init) 0 (global Dune__exe__Calc!)
+        FloatSemantics/280)
+      (let
+        (FloatParser/299 =
+           (apply
+             (let (let/582 = (field_imm 0 (global Dune__exe__Parser!)))
+               (field_imm 0 (global Dune__exe__Parser!)))
+             (field_imm 0 (global Dune__exe__Calc!))))
+        (seq
+          (setfield_ptr(root-init) 1 (global Dune__exe__Calc!)
+            FloatParser/299)
+          (let
+            (process/300 =
+               (function line/302 : int
+                 (let
+                   (linebuf/303 =
+                      (apply (field_imm 2 (global Stdlib__Lexing!)) 0
+                        line/302))
+                   (try
+                     (apply (field_imm 1 (global Stdlib__Printf!))
+                       [0:
+                        [8: [0: 0 0] 0 [0: 6] [12: '\n' [10: 0]]] "%.6f\n%!"]
+                       (apply
+                         (field_imm 1
+                           (field_imm 1 (global Dune__exe__Calc!)))
+                         (field_imm 4 (global Dune__exe__Lexer!))
+                         linebuf/303))
+                    with exn/583
+                     (catch
+                       (catch
+                         (let (tag/584 =a (field_imm 0 exn/583))
+                           (if
+                             (== tag/584
+                               (field_imm 0 (global Dune__exe__Lexer!)))
+                             (let (msg/396 =a (field_imm 1 exn/583))
+                               (apply (field_imm 0 (global Stdlib__Printf!))
+                                 (field_imm 39 (global Stdlib!))
+                                 [0: [2: 0 [10: 0]] "%s%!"] msg/396))
+                             (exit 2)))
+                        with (2)
+                         (if
+                           (== exn/583
+                             (field_imm 0
+                               (field_imm 1 (global Dune__exe__Calc!))))
+                           (apply (field_imm 0 (global Stdlib__Printf!))
+                             (field_imm 39 (global Stdlib!))
+                             [0:
+                              [11:
+                               "At offset "
+                               [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                              "At offset %d: syntax error.\n%!"]
+                             (apply (field_imm 9 (global Stdlib__Lexing!))
+                               linebuf/303))
+                           (exit 1)))
+                      with (1) (reraise exn/583))))))
+            (setfield_ptr(root-init) 4 (global Dune__exe__Calc!) process/300))
+          (let
+            (process/397 =
+               (function optional_line/398 : int
+                 (if (isint optional_line/398) 0
+                   (let (line/399 =a (field_imm 0 optional_line/398))
+                     (apply (field_imm 4 (global Dune__exe__Calc!)) line/399)))))
+            (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) process/397))
+          (letrec
+            (repeat/400
+               (function channel/401 : int
+                 (let
+                   (*match*/588 =
+                      (apply (field_imm 2 (global Dune__exe__Lexer!))
+                        channel/401)
+                    continue/403 =a (field_imm 1 *match*/588)
+                    optional_line/402 =a (field_imm 0 *match*/588))
+                   (seq
+                     (apply (field_imm 2 (global Dune__exe__Calc!))
+                       optional_line/402)
+                     (if continue/403 (apply repeat/400 channel/401) 0)))))
+            (setfield_ptr(root-init) 3 (global Dune__exe__Calc!) repeat/400))
+          (let
+            (*match*/590 =
+               (apply (field_imm 3 (global Dune__exe__Calc!))
+                 (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+                   (field_imm 37 (global Stdlib!)))))
+            0)
+          0)))))
+(seq
+  (seq
+    (let (inject/274 = (function prim/572 stub (float_of_int prim/572)))
+      (setfield_ptr(root-init) 5 (global Dune__exe__Calc!) inject/274))
+    (let (+/275 = (function prim/574 prim/573 stub (+. prim/574 prim/573)))
+      (setfield_ptr(root-init) 6 (global Dune__exe__Calc!) +/275))
+    (let (-/276 = (function prim/576 prim/575 stub (-. prim/576 prim/575)))
+      (setfield_ptr(root-init) 7 (global Dune__exe__Calc!) -/276))
+    (let (*/277 = (function prim/578 prim/577 stub (*. prim/578 prim/577)))
+      (setfield_ptr(root-init) 8 (global Dune__exe__Calc!) */277))
+    (let (//278 = (function prim/580 prim/579 stub (/. prim/580 prim/579)))
+      (setfield_ptr(root-init) 9 (global Dune__exe__Calc!) //278))
+    (let (~-/279 = (function prim/581 stub (~. prim/581)))
+      (setfield_ptr(root-init) 10 (global Dune__exe__Calc!) ~-/279))
+    0)
+  (let
+    (FloatSemantics/280 =
+       (makeblock 0 (field_imm 5 (global Dune__exe__Calc!))
+         (field_imm 6 (global Dune__exe__Calc!))
+         (field_imm 7 (global Dune__exe__Calc!))
+         (field_imm 8 (global Dune__exe__Calc!))
+         (field_imm 9 (global Dune__exe__Calc!))
+         (field_imm 10 (global Dune__exe__Calc!))))
+    (seq
+      (setfield_ptr(root-init) 0 (global Dune__exe__Calc!)
+        FloatSemantics/280)
+      (let
+        (FloatParser/299 =
+           (apply
+             (let (let/582 = (field_imm 0 (global Dune__exe__Parser!)))
+               (field_imm 0 (global Dune__exe__Parser!)))
+             (field_imm 0 (global Dune__exe__Calc!))))
+        (seq
+          (setfield_ptr(root-init) 1 (global Dune__exe__Calc!)
+            FloatParser/299)
+          (let
+            (process/300 =
+               (function line/302 : int
+                 (let
+                   (linebuf/303 =
+                      (apply (field_imm 2 (global Stdlib__Lexing!)) 0
+                        line/302))
+                   (try
+                     (apply (field_imm 1 (global Stdlib__Printf!))
+                       [0:
+                        [8: [0: 0 0] 0 [0: 6] [12: '\n' [10: 0]]] "%.6f\n%!"]
+                       (apply
+                         (field_imm 1
+                           (field_imm 1 (global Dune__exe__Calc!)))
+                         (field_imm 4 (global Dune__exe__Lexer!))
+                         linebuf/303))
+                    with exn/583
+                     (if
+                       (== (field_imm 0 exn/583)
+                         (field_imm 0 (global Dune__exe__Lexer!)))
+                       (apply (field_imm 0 (global Stdlib__Printf!))
+                         (field_imm 39 (global Stdlib!))
+                         [0: [2: 0 [10: 0]] "%s%!"] (field_imm 1 exn/583))
+                       (if
+                         (== exn/583
+                           (field_imm 0
+                             (field_imm 1 (global Dune__exe__Calc!))))
+                         (apply (field_imm 0 (global Stdlib__Printf!))
+                           (field_imm 39 (global Stdlib!))
+                           [0:
+                            [11:
+                             "At offset "
+                             [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                            "At offset %d: syntax error.\n%!"]
+                           (apply (field_imm 9 (global Stdlib__Lexing!))
+                             linebuf/303))
+                         (reraise exn/583)))))))
+            (setfield_ptr(root-init) 4 (global Dune__exe__Calc!) process/300))
+          (let
+            (process/397 =
+               (function optional_line/398 : int
+                 (if (isint optional_line/398) 0
+                   (apply (field_imm 4 (global Dune__exe__Calc!))
+                     (field_imm 0 optional_line/398)))))
+            (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) process/397))
+          (letrec
+            (repeat/400
+               (function channel/401 : int
+                 (let
+                   (*match*/588 =
+                      (apply (field_imm 2 (global Dune__exe__Lexer!))
+                        channel/401))
+                   (seq
+                     (apply (field_imm 2 (global Dune__exe__Calc!))
+                       (field_imm 0 *match*/588))
+                     (if (field_imm 1 *match*/588)
+                       (apply repeat/400 channel/401) 0)))))
+            (setfield_ptr(root-init) 3 (global Dune__exe__Calc!) repeat/400))
+          (let
+            (*match*/590 =
+               (apply (field_imm 3 (global Dune__exe__Calc!))
+                 (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+                   (field_imm 37 (global Stdlib!)))))
+            0)
+          0)))))

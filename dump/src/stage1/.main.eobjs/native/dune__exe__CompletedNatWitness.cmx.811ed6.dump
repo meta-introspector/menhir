@@ -1,0 +1,1975 @@
+[
+  structure_item (src/CompletedNatWitness.ml[14,1009+0]..[16,1050+10])
+    Pstr_type Rec
+    [
+      type_declaration "t" (src/CompletedNatWitness.ml[14,1009+8]..[14,1009+9]) (src/CompletedNatWitness.ml[14,1009+0]..[16,1050+10])
+        ptype_params =
+          [
+            core_type (src/CompletedNatWitness.ml[14,1009+5]..[14,1009+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/CompletedNatWitness.ml[15,1021+0]..[15,1021+28])
+                "Finite" (src/CompletedNatWitness.ml[15,1021+2]..[15,1021+8])
+                [
+                  core_type (src/CompletedNatWitness.ml[15,1021+12]..[15,1021+15])
+                    Ptyp_constr "int" (src/CompletedNatWitness.ml[15,1021+12]..[15,1021+15])
+                    []
+                  core_type (src/CompletedNatWitness.ml[15,1021+18]..[15,1021+28])
+                    Ptyp_constr "Seq.seq" (src/CompletedNatWitness.ml[15,1021+21]..[15,1021+28])
+                    [
+                      core_type (src/CompletedNatWitness.ml[15,1021+18]..[15,1021+20])
+                        Ptyp_var a
+                    ]
+                ]
+                None
+              (src/CompletedNatWitness.ml[16,1050+0]..[16,1050+10])
+                "Infinity" (src/CompletedNatWitness.ml[16,1050+2]..[16,1050+10])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/CompletedNatWitness.ml[18,1062+0]..[25,1201+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[18,1062+4]..[18,1062+9])
+          Ppat_var "equal" (src/CompletedNatWitness.ml[18,1062+4]..[18,1062+9])
+        expression (src/CompletedNatWitness.ml[18,1062+10]..[25,1201+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[18,1062+10]..[18,1062+12])
+            Ppat_var "p1" (src/CompletedNatWitness.ml[18,1062+10]..[18,1062+12])
+          expression (src/CompletedNatWitness.ml[18,1062+13]..[25,1201+11]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/CompletedNatWitness.ml[18,1062+13]..[18,1062+15])
+              Ppat_var "p2" (src/CompletedNatWitness.ml[18,1062+13]..[18,1062+15])
+            expression (src/CompletedNatWitness.ml[19,1080+2]..[25,1201+11])
+              Pexp_match
+              expression (src/CompletedNatWitness.ml[19,1080+8]..[19,1080+14])
+                Pexp_tuple
+                [
+                  expression (src/CompletedNatWitness.ml[19,1080+8]..[19,1080+10])
+                    Pexp_ident "p1" (src/CompletedNatWitness.ml[19,1080+8]..[19,1080+10])
+                  expression (src/CompletedNatWitness.ml[19,1080+12]..[19,1080+14])
+                    Pexp_ident "p2" (src/CompletedNatWitness.ml[19,1080+12]..[19,1080+14])
+                ]
+              [
+                <case>
+                  pattern (src/CompletedNatWitness.ml[20,1100+4]..[20,1100+34])
+                    Ppat_tuple
+                    [
+                      pattern (src/CompletedNatWitness.ml[20,1100+4]..[20,1100+18])
+                        Ppat_construct "Finite" (src/CompletedNatWitness.ml[20,1100+4]..[20,1100+10])
+                        Some
+                          []
+                          pattern (src/CompletedNatWitness.ml[20,1100+11]..[20,1100+18])
+                            Ppat_tuple
+                            [
+                              pattern (src/CompletedNatWitness.ml[20,1100+12]..[20,1100+14])
+                                Ppat_var "i1" (src/CompletedNatWitness.ml[20,1100+12]..[20,1100+14])
+                              pattern (src/CompletedNatWitness.ml[20,1100+16]..[20,1100+17])
+                                Ppat_any
+                            ]
+                      pattern (src/CompletedNatWitness.ml[20,1100+20]..[20,1100+34])
+                        Ppat_construct "Finite" (src/CompletedNatWitness.ml[20,1100+20]..[20,1100+26])
+                        Some
+                          []
+                          pattern (src/CompletedNatWitness.ml[20,1100+27]..[20,1100+34])
+                            Ppat_tuple
+                            [
+                              pattern (src/CompletedNatWitness.ml[20,1100+28]..[20,1100+30])
+                                Ppat_var "i2" (src/CompletedNatWitness.ml[20,1100+28]..[20,1100+30])
+                              pattern (src/CompletedNatWitness.ml[20,1100+32]..[20,1100+33])
+                                Ppat_any
+                            ]
+                    ]
+                  expression (src/CompletedNatWitness.ml[21,1138+6]..[21,1138+13])
+                    Pexp_apply
+                    expression (src/CompletedNatWitness.ml[21,1138+9]..[21,1138+10])
+                      Pexp_ident "=" (src/CompletedNatWitness.ml[21,1138+9]..[21,1138+10])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[21,1138+6]..[21,1138+8])
+                          Pexp_ident "i1" (src/CompletedNatWitness.ml[21,1138+6]..[21,1138+8])
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[21,1138+11]..[21,1138+13])
+                          Pexp_ident "i2" (src/CompletedNatWitness.ml[21,1138+11]..[21,1138+13])
+                    ]
+                <case>
+                  pattern (src/CompletedNatWitness.ml[22,1152+4]..[22,1152+22])
+                    Ppat_tuple
+                    [
+                      pattern (src/CompletedNatWitness.ml[22,1152+4]..[22,1152+12])
+                        Ppat_construct "Infinity" (src/CompletedNatWitness.ml[22,1152+4]..[22,1152+12])
+                        None
+                      pattern (src/CompletedNatWitness.ml[22,1152+14]..[22,1152+22])
+                        Ppat_construct "Infinity" (src/CompletedNatWitness.ml[22,1152+14]..[22,1152+22])
+                        None
+                    ]
+                  expression (src/CompletedNatWitness.ml[23,1178+6]..[23,1178+10])
+                    Pexp_construct "true" (src/CompletedNatWitness.ml[23,1178+6]..[23,1178+10])
+                    None
+                <case>
+                  pattern (src/CompletedNatWitness.ml[24,1189+4]..[24,1189+8])
+                    Ppat_tuple
+                    [
+                      pattern (src/CompletedNatWitness.ml[24,1189+4]..[24,1189+5])
+                        Ppat_any
+                      pattern (src/CompletedNatWitness.ml[24,1189+7]..[24,1189+8])
+                        Ppat_any
+                    ]
+                  expression (src/CompletedNatWitness.ml[25,1201+6]..[25,1201+11])
+                    Pexp_construct "false" (src/CompletedNatWitness.ml[25,1201+6]..[25,1201+11])
+                    None
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[27,1214+0]..[28,1227+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[27,1214+4]..[27,1214+10])
+          Ppat_var "bottom" (src/CompletedNatWitness.ml[27,1214+4]..[27,1214+10])
+        expression (src/CompletedNatWitness.ml[28,1227+2]..[28,1227+10])
+          Pexp_construct "Infinity" (src/CompletedNatWitness.ml[28,1227+2]..[28,1227+10])
+          None
+    ]
+  structure_item (src/CompletedNatWitness.ml[30,1239+0]..[31,1253+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[30,1239+4]..[30,1239+11])
+          Ppat_var "epsilon" (src/CompletedNatWitness.ml[30,1239+4]..[30,1239+11])
+        expression (src/CompletedNatWitness.ml[31,1253+2]..[31,1253+23])
+          Pexp_construct "Finite" (src/CompletedNatWitness.ml[31,1253+2]..[31,1253+8])
+          Some
+            expression (src/CompletedNatWitness.ml[31,1253+9]..[31,1253+23])
+              Pexp_tuple
+              [
+                expression (src/CompletedNatWitness.ml[31,1253+10]..[31,1253+11])
+                  Pexp_constant PConst_int (0,None)
+                expression (src/CompletedNatWitness.ml[31,1253+13]..[31,1253+22])
+                  Pexp_ident "Seq.empty" (src/CompletedNatWitness.ml[31,1253+13]..[31,1253+22])
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[33,1278+0]..[34,1296+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[33,1278+4]..[33,1278+13])
+          Ppat_var "singleton" (src/CompletedNatWitness.ml[33,1278+4]..[33,1278+13])
+        expression (src/CompletedNatWitness.ml[33,1278+14]..[34,1296+29]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[33,1278+14]..[33,1278+15])
+            Ppat_var "x" (src/CompletedNatWitness.ml[33,1278+14]..[33,1278+15])
+          expression (src/CompletedNatWitness.ml[34,1296+2]..[34,1296+29])
+            Pexp_construct "Finite" (src/CompletedNatWitness.ml[34,1296+2]..[34,1296+8])
+            Some
+              expression (src/CompletedNatWitness.ml[34,1296+9]..[34,1296+29])
+                Pexp_tuple
+                [
+                  expression (src/CompletedNatWitness.ml[34,1296+10]..[34,1296+11])
+                    Pexp_constant PConst_int (1,None)
+                  expression (src/CompletedNatWitness.ml[34,1296+13]..[34,1296+28])
+                    Pexp_apply
+                    expression (src/CompletedNatWitness.ml[34,1296+13]..[34,1296+26])
+                      Pexp_ident "Seq.singleton" (src/CompletedNatWitness.ml[34,1296+13]..[34,1296+26])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[34,1296+27]..[34,1296+28])
+                          Pexp_ident "x" (src/CompletedNatWitness.ml[34,1296+27]..[34,1296+28])
+                    ]
+                ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[36,1327+0]..[41,1402+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[36,1327+4]..[36,1327+14])
+          Ppat_var "is_maximal" (src/CompletedNatWitness.ml[36,1327+4]..[36,1327+14])
+        expression (src/CompletedNatWitness.ml[36,1327+15]..[41,1402+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[36,1327+15]..[36,1327+16])
+            Ppat_var "p" (src/CompletedNatWitness.ml[36,1327+15]..[36,1327+16])
+          expression (src/CompletedNatWitness.ml[37,1346+2]..[41,1402+11])
+            Pexp_match
+            expression (src/CompletedNatWitness.ml[37,1346+8]..[37,1346+9])
+              Pexp_ident "p" (src/CompletedNatWitness.ml[37,1346+8]..[37,1346+9])
+            [
+              <case>
+                pattern (src/CompletedNatWitness.ml[38,1361+4]..[38,1361+17])
+                  Ppat_construct "Finite" (src/CompletedNatWitness.ml[38,1361+4]..[38,1361+10])
+                  Some
+                    []
+                    pattern (src/CompletedNatWitness.ml[38,1361+11]..[38,1361+17])
+                      Ppat_tuple
+                      [
+                        pattern (src/CompletedNatWitness.ml[38,1361+12]..[38,1361+13])
+                          Ppat_constant PConst_int (0,None)
+                        pattern (src/CompletedNatWitness.ml[38,1361+15]..[38,1361+16])
+                          Ppat_any
+                      ]
+                expression (src/CompletedNatWitness.ml[39,1382+6]..[39,1382+10])
+                  Pexp_construct "true" (src/CompletedNatWitness.ml[39,1382+6]..[39,1382+10])
+                  None
+              <case>
+                pattern (src/CompletedNatWitness.ml[40,1393+4]..[40,1393+5])
+                  Ppat_any
+                expression (src/CompletedNatWitness.ml[41,1402+6]..[41,1402+11])
+                  Pexp_construct "false" (src/CompletedNatWitness.ml[41,1402+6]..[41,1402+11])
+                  None
+            ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[43,1415+0]..[49,1558+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[43,1415+4]..[43,1415+7])
+          Ppat_var "min" (src/CompletedNatWitness.ml[43,1415+4]..[43,1415+7])
+        expression (src/CompletedNatWitness.ml[43,1415+8]..[49,1558+7]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[43,1415+8]..[43,1415+10])
+            Ppat_var "p1" (src/CompletedNatWitness.ml[43,1415+8]..[43,1415+10])
+          expression (src/CompletedNatWitness.ml[43,1415+11]..[49,1558+7]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/CompletedNatWitness.ml[43,1415+11]..[43,1415+13])
+              Ppat_var "p2" (src/CompletedNatWitness.ml[43,1415+11]..[43,1415+13])
+            expression (src/CompletedNatWitness.ml[44,1431+2]..[49,1558+7])
+              Pexp_match
+              expression (src/CompletedNatWitness.ml[44,1431+8]..[44,1431+14])
+                Pexp_tuple
+                [
+                  expression (src/CompletedNatWitness.ml[44,1431+8]..[44,1431+10])
+                    Pexp_ident "p1" (src/CompletedNatWitness.ml[44,1431+8]..[44,1431+10])
+                  expression (src/CompletedNatWitness.ml[44,1431+12]..[44,1431+14])
+                    Pexp_ident "p2" (src/CompletedNatWitness.ml[44,1431+12]..[44,1431+14])
+                ]
+              [
+                <case>
+                  pattern (src/CompletedNatWitness.ml[45,1451+4]..[45,1451+34])
+                    Ppat_tuple
+                    [
+                      pattern (src/CompletedNatWitness.ml[45,1451+4]..[45,1451+18])
+                        Ppat_construct "Finite" (src/CompletedNatWitness.ml[45,1451+4]..[45,1451+10])
+                        Some
+                          []
+                          pattern (src/CompletedNatWitness.ml[45,1451+11]..[45,1451+18])
+                            Ppat_tuple
+                            [
+                              pattern (src/CompletedNatWitness.ml[45,1451+12]..[45,1451+14])
+                                Ppat_var "i1" (src/CompletedNatWitness.ml[45,1451+12]..[45,1451+14])
+                              pattern (src/CompletedNatWitness.ml[45,1451+16]..[45,1451+17])
+                                Ppat_any
+                            ]
+                      pattern (src/CompletedNatWitness.ml[45,1451+20]..[45,1451+34])
+                        Ppat_construct "Finite" (src/CompletedNatWitness.ml[45,1451+20]..[45,1451+26])
+                        Some
+                          []
+                          pattern (src/CompletedNatWitness.ml[45,1451+27]..[45,1451+34])
+                            Ppat_tuple
+                            [
+                              pattern (src/CompletedNatWitness.ml[45,1451+28]..[45,1451+30])
+                                Ppat_var "i2" (src/CompletedNatWitness.ml[45,1451+28]..[45,1451+30])
+                              pattern (src/CompletedNatWitness.ml[45,1451+32]..[45,1451+33])
+                                Ppat_any
+                            ]
+                    ]
+                  expression (src/CompletedNatWitness.ml[46,1489+6]..[46,1489+33])
+                    Pexp_ifthenelse
+                    expression (src/CompletedNatWitness.ml[46,1489+9]..[46,1489+17])
+                      Pexp_apply
+                      expression (src/CompletedNatWitness.ml[46,1489+12]..[46,1489+14])
+                        Pexp_ident "<=" (src/CompletedNatWitness.ml[46,1489+12]..[46,1489+14])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/CompletedNatWitness.ml[46,1489+9]..[46,1489+11])
+                            Pexp_ident "i1" (src/CompletedNatWitness.ml[46,1489+9]..[46,1489+11])
+                        <arg>
+                        Nolabel
+                          expression (src/CompletedNatWitness.ml[46,1489+15]..[46,1489+17])
+                            Pexp_ident "i2" (src/CompletedNatWitness.ml[46,1489+15]..[46,1489+17])
+                      ]
+                    expression (src/CompletedNatWitness.ml[46,1489+23]..[46,1489+25])
+                      Pexp_ident "p1" (src/CompletedNatWitness.ml[46,1489+23]..[46,1489+25])
+                    Some
+                      expression (src/CompletedNatWitness.ml[46,1489+31]..[46,1489+33])
+                        Pexp_ident "p2" (src/CompletedNatWitness.ml[46,1489+31]..[46,1489+33])
+                <case>
+                  pattern (src/CompletedNatWitness.ml[47,1523+4]..[48,1539+15])
+                    Ppat_or
+                    pattern (src/CompletedNatWitness.ml[47,1523+4]..[47,1523+15])
+                      Ppat_tuple
+                      [
+                        pattern (src/CompletedNatWitness.ml[47,1523+4]..[47,1523+5])
+                          Ppat_var "p" (src/CompletedNatWitness.ml[47,1523+4]..[47,1523+5])
+                        pattern (src/CompletedNatWitness.ml[47,1523+7]..[47,1523+15])
+                          Ppat_construct "Infinity" (src/CompletedNatWitness.ml[47,1523+7]..[47,1523+15])
+                          None
+                      ]
+                    pattern (src/CompletedNatWitness.ml[48,1539+4]..[48,1539+15])
+                      Ppat_tuple
+                      [
+                        pattern (src/CompletedNatWitness.ml[48,1539+4]..[48,1539+12])
+                          Ppat_construct "Infinity" (src/CompletedNatWitness.ml[48,1539+4]..[48,1539+12])
+                          None
+                        pattern (src/CompletedNatWitness.ml[48,1539+14]..[48,1539+15])
+                          Ppat_var "p" (src/CompletedNatWitness.ml[48,1539+14]..[48,1539+15])
+                      ]
+                  expression (src/CompletedNatWitness.ml[49,1558+6]..[49,1558+7])
+                    Pexp_ident "p" (src/CompletedNatWitness.ml[49,1558+6]..[49,1558+7])
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[51,1567+0]..[56,1643+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[51,1567+4]..[51,1567+12])
+          Ppat_var "min_lazy" (src/CompletedNatWitness.ml[51,1567+4]..[51,1567+12])
+        expression (src/CompletedNatWitness.ml[51,1567+13]..[56,1643+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[51,1567+13]..[51,1567+15])
+            Ppat_var "p1" (src/CompletedNatWitness.ml[51,1567+13]..[51,1567+15])
+          expression (src/CompletedNatWitness.ml[51,1567+16]..[56,1643+19]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/CompletedNatWitness.ml[51,1567+16]..[51,1567+18])
+              Ppat_var "p2" (src/CompletedNatWitness.ml[51,1567+16]..[51,1567+18])
+            expression (src/CompletedNatWitness.ml[52,1588+2]..[56,1643+19])
+              Pexp_match
+              expression (src/CompletedNatWitness.ml[52,1588+8]..[52,1588+10])
+                Pexp_ident "p1" (src/CompletedNatWitness.ml[52,1588+8]..[52,1588+10])
+              [
+                <case>
+                  pattern (src/CompletedNatWitness.ml[53,1604+4]..[53,1604+17])
+                    Ppat_construct "Finite" (src/CompletedNatWitness.ml[53,1604+4]..[53,1604+10])
+                    Some
+                      []
+                      pattern (src/CompletedNatWitness.ml[53,1604+11]..[53,1604+17])
+                        Ppat_tuple
+                        [
+                          pattern (src/CompletedNatWitness.ml[53,1604+12]..[53,1604+13])
+                            Ppat_constant PConst_int (0,None)
+                          pattern (src/CompletedNatWitness.ml[53,1604+15]..[53,1604+16])
+                            Ppat_any
+                        ]
+                  expression (src/CompletedNatWitness.ml[54,1625+6]..[54,1625+8])
+                    Pexp_ident "p1" (src/CompletedNatWitness.ml[54,1625+6]..[54,1625+8])
+                <case>
+                  pattern (src/CompletedNatWitness.ml[55,1634+4]..[55,1634+5])
+                    Ppat_any
+                  expression (src/CompletedNatWitness.ml[56,1643+6]..[56,1643+19])
+                    Pexp_apply
+                    expression (src/CompletedNatWitness.ml[56,1643+6]..[56,1643+9])
+                      Pexp_ident "min" (src/CompletedNatWitness.ml[56,1643+6]..[56,1643+9])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[56,1643+10]..[56,1643+12])
+                          Pexp_ident "p1" (src/CompletedNatWitness.ml[56,1643+10]..[56,1643+12])
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[56,1643+13]..[56,1643+19])
+                          Pexp_apply
+                          expression (src/CompletedNatWitness.ml[56,1643+14]..[56,1643+16])
+                            Pexp_ident "p2" (src/CompletedNatWitness.ml[56,1643+14]..[56,1643+16])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/CompletedNatWitness.ml[56,1643+16]..[56,1643+18])
+                                Pexp_construct "()" (src/CompletedNatWitness.ml[56,1643+16]..[56,1643+18])
+                                None
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[58,1664+0]..[63,1797+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[58,1664+4]..[58,1664+7])
+          Ppat_var "add" (src/CompletedNatWitness.ml[58,1664+4]..[58,1664+7])
+        expression (src/CompletedNatWitness.ml[58,1664+8]..[63,1797+14]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[58,1664+8]..[58,1664+10])
+            Ppat_var "p1" (src/CompletedNatWitness.ml[58,1664+8]..[58,1664+10])
+          expression (src/CompletedNatWitness.ml[58,1664+11]..[63,1797+14]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/CompletedNatWitness.ml[58,1664+11]..[58,1664+13])
+              Ppat_var "p2" (src/CompletedNatWitness.ml[58,1664+11]..[58,1664+13])
+            expression (src/CompletedNatWitness.ml[59,1680+2]..[63,1797+14])
+              Pexp_match
+              expression (src/CompletedNatWitness.ml[59,1680+8]..[59,1680+14])
+                Pexp_tuple
+                [
+                  expression (src/CompletedNatWitness.ml[59,1680+8]..[59,1680+10])
+                    Pexp_ident "p1" (src/CompletedNatWitness.ml[59,1680+8]..[59,1680+10])
+                  expression (src/CompletedNatWitness.ml[59,1680+12]..[59,1680+14])
+                    Pexp_ident "p2" (src/CompletedNatWitness.ml[59,1680+12]..[59,1680+14])
+                ]
+              [
+                <case>
+                  pattern (src/CompletedNatWitness.ml[60,1700+4]..[60,1700+38])
+                    Ppat_tuple
+                    [
+                      pattern (src/CompletedNatWitness.ml[60,1700+4]..[60,1700+20])
+                        Ppat_construct "Finite" (src/CompletedNatWitness.ml[60,1700+4]..[60,1700+10])
+                        Some
+                          []
+                          pattern (src/CompletedNatWitness.ml[60,1700+11]..[60,1700+20])
+                            Ppat_tuple
+                            [
+                              pattern (src/CompletedNatWitness.ml[60,1700+12]..[60,1700+14])
+                                Ppat_var "i1" (src/CompletedNatWitness.ml[60,1700+12]..[60,1700+14])
+                              pattern (src/CompletedNatWitness.ml[60,1700+16]..[60,1700+19])
+                                Ppat_var "xs1" (src/CompletedNatWitness.ml[60,1700+16]..[60,1700+19])
+                            ]
+                      pattern (src/CompletedNatWitness.ml[60,1700+22]..[60,1700+38])
+                        Ppat_construct "Finite" (src/CompletedNatWitness.ml[60,1700+22]..[60,1700+28])
+                        Some
+                          []
+                          pattern (src/CompletedNatWitness.ml[60,1700+29]..[60,1700+38])
+                            Ppat_tuple
+                            [
+                              pattern (src/CompletedNatWitness.ml[60,1700+30]..[60,1700+32])
+                                Ppat_var "i2" (src/CompletedNatWitness.ml[60,1700+30]..[60,1700+32])
+                              pattern (src/CompletedNatWitness.ml[60,1700+34]..[60,1700+37])
+                                Ppat_var "xs2" (src/CompletedNatWitness.ml[60,1700+34]..[60,1700+37])
+                            ]
+                    ]
+                  expression (src/CompletedNatWitness.ml[61,1742+6]..[61,1742+42])
+                    Pexp_construct "Finite" (src/CompletedNatWitness.ml[61,1742+6]..[61,1742+12])
+                    Some
+                      expression (src/CompletedNatWitness.ml[61,1742+13]..[61,1742+42])
+                        Pexp_tuple
+                        [
+                          expression (src/CompletedNatWitness.ml[61,1742+14]..[61,1742+21])
+                            Pexp_apply
+                            expression (src/CompletedNatWitness.ml[61,1742+17]..[61,1742+18])
+                              Pexp_ident "+" (src/CompletedNatWitness.ml[61,1742+17]..[61,1742+18])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/CompletedNatWitness.ml[61,1742+14]..[61,1742+16])
+                                  Pexp_ident "i1" (src/CompletedNatWitness.ml[61,1742+14]..[61,1742+16])
+                              <arg>
+                              Nolabel
+                                expression (src/CompletedNatWitness.ml[61,1742+19]..[61,1742+21])
+                                  Pexp_ident "i2" (src/CompletedNatWitness.ml[61,1742+19]..[61,1742+21])
+                            ]
+                          expression (src/CompletedNatWitness.ml[61,1742+23]..[61,1742+41])
+                            Pexp_apply
+                            expression (src/CompletedNatWitness.ml[61,1742+23]..[61,1742+33])
+                              Pexp_ident "Seq.append" (src/CompletedNatWitness.ml[61,1742+23]..[61,1742+33])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/CompletedNatWitness.ml[61,1742+34]..[61,1742+37])
+                                  Pexp_ident "xs1" (src/CompletedNatWitness.ml[61,1742+34]..[61,1742+37])
+                              <arg>
+                              Nolabel
+                                expression (src/CompletedNatWitness.ml[61,1742+38]..[61,1742+41])
+                                  Pexp_ident "xs2" (src/CompletedNatWitness.ml[61,1742+38]..[61,1742+41])
+                            ]
+                        ]
+                <case>
+                  pattern (src/CompletedNatWitness.ml[62,1785+4]..[62,1785+8])
+                    Ppat_tuple
+                    [
+                      pattern (src/CompletedNatWitness.ml[62,1785+4]..[62,1785+5])
+                        Ppat_any
+                      pattern (src/CompletedNatWitness.ml[62,1785+7]..[62,1785+8])
+                        Ppat_any
+                    ]
+                  expression (src/CompletedNatWitness.ml[63,1797+6]..[63,1797+14])
+                    Pexp_construct "Infinity" (src/CompletedNatWitness.ml[63,1797+6]..[63,1797+14])
+                    None
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[65,1813+0]..[70,1890+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[65,1813+4]..[65,1813+12])
+          Ppat_var "add_lazy" (src/CompletedNatWitness.ml[65,1813+4]..[65,1813+12])
+        expression (src/CompletedNatWitness.ml[65,1813+13]..[70,1890+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[65,1813+13]..[65,1813+15])
+            Ppat_var "p1" (src/CompletedNatWitness.ml[65,1813+13]..[65,1813+15])
+          expression (src/CompletedNatWitness.ml[65,1813+16]..[70,1890+19]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/CompletedNatWitness.ml[65,1813+16]..[65,1813+18])
+              Ppat_var "p2" (src/CompletedNatWitness.ml[65,1813+16]..[65,1813+18])
+            expression (src/CompletedNatWitness.ml[66,1834+2]..[70,1890+19])
+              Pexp_match
+              expression (src/CompletedNatWitness.ml[66,1834+8]..[66,1834+10])
+                Pexp_ident "p1" (src/CompletedNatWitness.ml[66,1834+8]..[66,1834+10])
+              [
+                <case>
+                  pattern (src/CompletedNatWitness.ml[67,1850+4]..[67,1850+12])
+                    Ppat_construct "Infinity" (src/CompletedNatWitness.ml[67,1850+4]..[67,1850+12])
+                    None
+                  expression (src/CompletedNatWitness.ml[68,1866+6]..[68,1866+14])
+                    Pexp_construct "Infinity" (src/CompletedNatWitness.ml[68,1866+6]..[68,1866+14])
+                    None
+                <case>
+                  pattern (src/CompletedNatWitness.ml[69,1881+4]..[69,1881+5])
+                    Ppat_any
+                  expression (src/CompletedNatWitness.ml[70,1890+6]..[70,1890+19])
+                    Pexp_apply
+                    expression (src/CompletedNatWitness.ml[70,1890+6]..[70,1890+9])
+                      Pexp_ident "add" (src/CompletedNatWitness.ml[70,1890+6]..[70,1890+9])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[70,1890+10]..[70,1890+12])
+                          Pexp_ident "p1" (src/CompletedNatWitness.ml[70,1890+10]..[70,1890+12])
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[70,1890+13]..[70,1890+19])
+                          Pexp_apply
+                          expression (src/CompletedNatWitness.ml[70,1890+14]..[70,1890+16])
+                            Pexp_ident "p2" (src/CompletedNatWitness.ml[70,1890+14]..[70,1890+16])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/CompletedNatWitness.ml[70,1890+16]..[70,1890+18])
+                                Pexp_construct "()" (src/CompletedNatWitness.ml[70,1890+16]..[70,1890+18])
+                                None
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[72,1911+0]..[81,2176+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[72,1911+4]..[72,1911+9])
+          Ppat_var "print" (src/CompletedNatWitness.ml[72,1911+4]..[72,1911+9])
+        expression (src/CompletedNatWitness.ml[72,1911+10]..[81,2176+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[72,1911+10]..[72,1911+14])
+            Ppat_var "conv" (src/CompletedNatWitness.ml[72,1911+10]..[72,1911+14])
+          expression (src/CompletedNatWitness.ml[72,1911+15]..[81,2176+16]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/CompletedNatWitness.ml[72,1911+15]..[72,1911+16])
+              Ppat_var "p" (src/CompletedNatWitness.ml[72,1911+15]..[72,1911+16])
+            expression (src/CompletedNatWitness.ml[73,1930+2]..[81,2176+16])
+              Pexp_match
+              expression (src/CompletedNatWitness.ml[73,1930+8]..[73,1930+9])
+                Pexp_ident "p" (src/CompletedNatWitness.ml[73,1930+8]..[73,1930+9])
+              [
+                <case>
+                  pattern (src/CompletedNatWitness.ml[74,1945+4]..[74,1945+17])
+                    Ppat_construct "Finite" (src/CompletedNatWitness.ml[74,1945+4]..[74,1945+10])
+                    Some
+                      []
+                      pattern (src/CompletedNatWitness.ml[74,1945+11]..[74,1945+17])
+                        Ppat_tuple
+                        [
+                          pattern (src/CompletedNatWitness.ml[74,1945+12]..[74,1945+13])
+                            Ppat_constant PConst_int (0,None)
+                          pattern (src/CompletedNatWitness.ml[74,1945+15]..[74,1945+16])
+                            Ppat_any
+                        ]
+                  expression (src/CompletedNatWitness.ml[76,2012+6]..[76,2012+30])
+                    Pexp_apply
+                    expression (src/CompletedNatWitness.ml[76,2012+6]..[76,2012+20])
+                      Pexp_ident "Printf.sprintf" (src/CompletedNatWitness.ml[76,2012+6]..[76,2012+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[76,2012+21]..[76,2012+30])
+                          Pexp_constant PConst_string("(* 0 *)",(src/CompletedNatWitness.ml[76,2012+22]..[76,2012+29]),None)
+                    ]
+                <case>
+                  pattern (src/CompletedNatWitness.ml[77,2043+4]..[77,2043+18])
+                    Ppat_construct "Finite" (src/CompletedNatWitness.ml[77,2043+4]..[77,2043+10])
+                    Some
+                      []
+                      pattern (src/CompletedNatWitness.ml[77,2043+11]..[77,2043+18])
+                        Ppat_tuple
+                        [
+                          pattern (src/CompletedNatWitness.ml[77,2043+12]..[77,2043+13])
+                            Ppat_var "i" (src/CompletedNatWitness.ml[77,2043+12]..[77,2043+13])
+                          pattern (src/CompletedNatWitness.ml[77,2043+15]..[77,2043+17])
+                            Ppat_var "xs" (src/CompletedNatWitness.ml[77,2043+15]..[77,2043+17])
+                        ]
+                  expression (src/CompletedNatWitness.ml[78,2065+6]..[79,2102+57])
+                    Pexp_apply
+                    expression (src/CompletedNatWitness.ml[78,2065+35]..[78,2065+36])
+                      Pexp_ident "^" (src/CompletedNatWitness.ml[78,2065+35]..[78,2065+36])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[78,2065+6]..[78,2065+34])
+                          Pexp_apply
+                          expression (src/CompletedNatWitness.ml[78,2065+6]..[78,2065+20])
+                            Pexp_ident "Printf.sprintf" (src/CompletedNatWitness.ml[78,2065+6]..[78,2065+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/CompletedNatWitness.ml[78,2065+21]..[78,2065+32])
+                                Pexp_constant PConst_string("(* %d *) ",(src/CompletedNatWitness.ml[78,2065+22]..[78,2065+31]),None)
+                            <arg>
+                            Nolabel
+                              expression (src/CompletedNatWitness.ml[78,2065+33]..[78,2065+34])
+                                Pexp_ident "i" (src/CompletedNatWitness.ml[78,2065+33]..[78,2065+34])
+                          ]
+                      <arg>
+                      Nolabel
+                        expression (src/CompletedNatWitness.ml[79,2102+6]..[79,2102+57])
+                          Pexp_apply
+                          expression (src/CompletedNatWitness.ml[79,2102+6]..[79,2102+19])
+                            Pexp_ident "String.concat" (src/CompletedNatWitness.ml[79,2102+6]..[79,2102+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/CompletedNatWitness.ml[79,2102+20]..[79,2102+23])
+                                Pexp_constant PConst_string(" ",(src/CompletedNatWitness.ml[79,2102+21]..[79,2102+22]),None)
+                            <arg>
+                            Nolabel
+                              expression (src/CompletedNatWitness.ml[79,2102+24]..[79,2102+57])
+                                Pexp_apply
+                                expression (src/CompletedNatWitness.ml[79,2102+25]..[79,2102+33])
+                                  Pexp_ident "List.map" (src/CompletedNatWitness.ml[79,2102+25]..[79,2102+33])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/CompletedNatWitness.ml[79,2102+34]..[79,2102+38])
+                                      Pexp_ident "conv" (src/CompletedNatWitness.ml[79,2102+34]..[79,2102+38])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/CompletedNatWitness.ml[79,2102+39]..[79,2102+56])
+                                      Pexp_apply
+                                      expression (src/CompletedNatWitness.ml[79,2102+40]..[79,2102+52])
+                                        Pexp_ident "Seq.elements" (src/CompletedNatWitness.ml[79,2102+40]..[79,2102+52])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/CompletedNatWitness.ml[79,2102+53]..[79,2102+55])
+                                            Pexp_ident "xs" (src/CompletedNatWitness.ml[79,2102+53]..[79,2102+55])
+                                      ]
+                                ]
+                          ]
+                    ]
+                <case>
+                  pattern (src/CompletedNatWitness.ml[80,2160+4]..[80,2160+12])
+                    Ppat_construct "Infinity" (src/CompletedNatWitness.ml[80,2160+4]..[80,2160+12])
+                    None
+                  expression (src/CompletedNatWitness.ml[81,2176+6]..[81,2176+16])
+                    Pexp_constant PConst_string("infinity",(src/CompletedNatWitness.ml[81,2176+7]..[81,2176+15]),None)
+              ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[83,2194+0]..[88,2269+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[83,2194+4]..[83,2194+10])
+          Ppat_var "to_int" (src/CompletedNatWitness.ml[83,2194+4]..[83,2194+10])
+        expression (src/CompletedNatWitness.ml[83,2194+11]..[88,2269+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[83,2194+11]..[83,2194+12])
+            Ppat_var "p" (src/CompletedNatWitness.ml[83,2194+11]..[83,2194+12])
+          expression (src/CompletedNatWitness.ml[84,2209+2]..[88,2269+13])
+            Pexp_match
+            expression (src/CompletedNatWitness.ml[84,2209+8]..[84,2209+9])
+              Pexp_ident "p" (src/CompletedNatWitness.ml[84,2209+8]..[84,2209+9])
+            [
+              <case>
+                pattern (src/CompletedNatWitness.ml[85,2224+4]..[85,2224+17])
+                  Ppat_construct "Finite" (src/CompletedNatWitness.ml[85,2224+4]..[85,2224+10])
+                  Some
+                    []
+                    pattern (src/CompletedNatWitness.ml[85,2224+11]..[85,2224+17])
+                      Ppat_tuple
+                      [
+                        pattern (src/CompletedNatWitness.ml[85,2224+12]..[85,2224+13])
+                          Ppat_var "i" (src/CompletedNatWitness.ml[85,2224+12]..[85,2224+13])
+                        pattern (src/CompletedNatWitness.ml[85,2224+15]..[85,2224+16])
+                          Ppat_any
+                      ]
+                expression (src/CompletedNatWitness.ml[86,2245+6]..[86,2245+7])
+                  Pexp_ident "i" (src/CompletedNatWitness.ml[86,2245+6]..[86,2245+7])
+              <case>
+                pattern (src/CompletedNatWitness.ml[87,2253+4]..[87,2253+12])
+                  Ppat_construct "Infinity" (src/CompletedNatWitness.ml[87,2253+4]..[87,2253+12])
+                  None
+                expression (src/CompletedNatWitness.ml[88,2269+6]..[88,2269+13])
+                  Pexp_ident "max_int" (src/CompletedNatWitness.ml[88,2269+6]..[88,2269+13])
+            ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[90,2284+0]..[95,2375+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[90,2284+4]..[90,2284+11])
+          Ppat_var "extract" (src/CompletedNatWitness.ml[90,2284+4]..[90,2284+11])
+        expression (src/CompletedNatWitness.ml[90,2284+12]..[95,2375+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/CompletedNatWitness.ml[90,2284+12]..[90,2284+13])
+            Ppat_var "p" (src/CompletedNatWitness.ml[90,2284+12]..[90,2284+13])
+          expression (src/CompletedNatWitness.ml[91,2300+2]..[95,2375+18])
+            Pexp_match
+            expression (src/CompletedNatWitness.ml[91,2300+8]..[91,2300+9])
+              Pexp_ident "p" (src/CompletedNatWitness.ml[91,2300+8]..[91,2300+9])
+            [
+              <case>
+                pattern (src/CompletedNatWitness.ml[92,2315+4]..[92,2315+18])
+                  Ppat_construct "Finite" (src/CompletedNatWitness.ml[92,2315+4]..[92,2315+10])
+                  Some
+                    []
+                    pattern (src/CompletedNatWitness.ml[92,2315+11]..[92,2315+18])
+                      Ppat_tuple
+                      [
+                        pattern (src/CompletedNatWitness.ml[92,2315+12]..[92,2315+13])
+                          Ppat_any
+                        pattern (src/CompletedNatWitness.ml[92,2315+15]..[92,2315+17])
+                          Ppat_var "xs" (src/CompletedNatWitness.ml[92,2315+15]..[92,2315+17])
+                      ]
+                expression (src/CompletedNatWitness.ml[93,2337+6]..[93,2337+21])
+                  Pexp_apply
+                  expression (src/CompletedNatWitness.ml[93,2337+6]..[93,2337+18])
+                    Pexp_ident "Seq.elements" (src/CompletedNatWitness.ml[93,2337+6]..[93,2337+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/CompletedNatWitness.ml[93,2337+19]..[93,2337+21])
+                        Pexp_ident "xs" (src/CompletedNatWitness.ml[93,2337+19]..[93,2337+21])
+                  ]
+              <case>
+                pattern (src/CompletedNatWitness.ml[94,2359+4]..[94,2359+12])
+                  Ppat_construct "Infinity" (src/CompletedNatWitness.ml[94,2359+4]..[94,2359+12])
+                  None
+                expression (src/CompletedNatWitness.ml[95,2375+6]..[95,2375+18])
+                  Pexp_assert
+                  expression (src/CompletedNatWitness.ml[95,2375+13]..[95,2375+18])
+                    Pexp_construct "false" (src/CompletedNatWitness.ml[95,2375+13]..[95,2375+18])
+                    None
+            ]
+    ]
+]
+
+type 'a t =
+  | Finite of int * 'a Seq.seq 
+  | Infinity 
+let equal p1 p2 =
+  match (p1, p2) with
+  | (Finite (i1, _), Finite (i2, _)) -> i1 = i2
+  | (Infinity, Infinity) -> true
+  | (_, _) -> false
+let bottom = Infinity
+let epsilon = Finite (0, Seq.empty)
+let singleton x = Finite (1, (Seq.singleton x))
+let is_maximal p = match p with | Finite (0, _) -> true | _ -> false
+let min p1 p2 =
+  match (p1, p2) with
+  | (Finite (i1, _), Finite (i2, _)) -> if i1 <= i2 then p1 else p2
+  | (p, Infinity) | (Infinity, p) -> p
+let min_lazy p1 p2 =
+  match p1 with | Finite (0, _) -> p1 | _ -> min p1 (p2 ())
+let add p1 p2 =
+  match (p1, p2) with
+  | (Finite (i1, xs1), Finite (i2, xs2)) ->
+      Finite ((i1 + i2), (Seq.append xs1 xs2))
+  | (_, _) -> Infinity
+let add_lazy p1 p2 =
+  match p1 with | Infinity -> Infinity | _ -> add p1 (p2 ())
+let print conv p =
+  match p with
+  | Finite (0, _) -> Printf.sprintf "(* 0 *)"
+  | Finite (i, xs) ->
+      (Printf.sprintf "(* %d *) " i) ^
+        (String.concat " " (List.map conv (Seq.elements xs)))
+  | Infinity -> "infinity"
+let to_int p = match p with | Finite (i, _) -> i | Infinity -> max_int
+let extract p =
+  match p with | Finite (_, xs) -> Seq.elements xs | Infinity -> assert false
+[
+  structure_item (src/CompletedNatWitness.ml[14,1009+0]..src/CompletedNatWitness.ml[16,1050+10])
+    Tstr_type Rec
+    [
+      type_declaration t/396 (src/CompletedNatWitness.ml[14,1009+0]..src/CompletedNatWitness.ml[16,1050+10])
+        ptype_params =
+          [
+            core_type (src/CompletedNatWitness.ml[14,1009+5]..src/CompletedNatWitness.ml[14,1009+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/CompletedNatWitness.ml[15,1021+0]..src/CompletedNatWitness.ml[15,1021+28])
+                Finite/397
+                [
+                  core_type (src/CompletedNatWitness.ml[15,1021+12]..src/CompletedNatWitness.ml[15,1021+15])
+                    Ttyp_constr "int/1!"
+                    []
+                  core_type (src/CompletedNatWitness.ml[15,1021+18]..src/CompletedNatWitness.ml[15,1021+28])
+                    Ttyp_constr "Dune__exe!.Seq.seq"
+                    [
+                      core_type (src/CompletedNatWitness.ml[15,1021+18]..src/CompletedNatWitness.ml[15,1021+20])
+                        Ttyp_var a
+                    ]
+                ]
+                None
+              (src/CompletedNatWitness.ml[16,1050+0]..src/CompletedNatWitness.ml[16,1050+10])
+                Infinity/405
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/CompletedNatWitness.ml[18,1062+0]..src/CompletedNatWitness.ml[25,1201+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[18,1062+4]..src/CompletedNatWitness.ml[18,1062+9])
+          Tpat_var "equal/413"
+        expression (src/CompletedNatWitness.ml[18,1062+10]..src/CompletedNatWitness.ml[25,1201+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[18,1062+10]..src/CompletedNatWitness.ml[18,1062+12])
+                Tpat_var "p1/415"
+              expression (src/CompletedNatWitness.ml[18,1062+13]..src/CompletedNatWitness.ml[25,1201+11]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[18,1062+13]..src/CompletedNatWitness.ml[18,1062+15])
+                      Tpat_var "p2/416"
+                    expression (src/CompletedNatWitness.ml[19,1080+2]..src/CompletedNatWitness.ml[25,1201+11])
+                      Texp_match
+                      expression (src/CompletedNatWitness.ml[19,1080+8]..src/CompletedNatWitness.ml[19,1080+14])
+                        Texp_tuple
+                        [
+                          expression (src/CompletedNatWitness.ml[19,1080+8]..src/CompletedNatWitness.ml[19,1080+10])
+                            Texp_ident "p1/415"
+                          expression (src/CompletedNatWitness.ml[19,1080+12]..src/CompletedNatWitness.ml[19,1080+14])
+                            Texp_ident "p2/416"
+                        ]
+                      [
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[20,1100+4]..src/CompletedNatWitness.ml[20,1100+34])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[20,1100+4]..src/CompletedNatWitness.ml[20,1100+34])
+                              Tpat_tuple
+                              [
+                                pattern (src/CompletedNatWitness.ml[20,1100+4]..src/CompletedNatWitness.ml[20,1100+18])
+                                  Tpat_construct "Finite"
+                                  [
+                                    pattern (src/CompletedNatWitness.ml[20,1100+12]..src/CompletedNatWitness.ml[20,1100+14])
+                                      Tpat_var "i1/417"
+                                    pattern (src/CompletedNatWitness.ml[20,1100+16]..src/CompletedNatWitness.ml[20,1100+17])
+                                      Tpat_any
+                                  ]
+                                  None
+                                pattern (src/CompletedNatWitness.ml[20,1100+20]..src/CompletedNatWitness.ml[20,1100+34])
+                                  Tpat_construct "Finite"
+                                  [
+                                    pattern (src/CompletedNatWitness.ml[20,1100+28]..src/CompletedNatWitness.ml[20,1100+30])
+                                      Tpat_var "i2/418"
+                                    pattern (src/CompletedNatWitness.ml[20,1100+32]..src/CompletedNatWitness.ml[20,1100+33])
+                                      Tpat_any
+                                  ]
+                                  None
+                              ]
+                          expression (src/CompletedNatWitness.ml[21,1138+6]..src/CompletedNatWitness.ml[21,1138+13])
+                            Texp_apply
+                            expression (src/CompletedNatWitness.ml[21,1138+9]..src/CompletedNatWitness.ml[21,1138+10])
+                              Texp_ident "Stdlib!.="
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[21,1138+6]..src/CompletedNatWitness.ml[21,1138+8])
+                                  Texp_ident "i1/417"
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[21,1138+11]..src/CompletedNatWitness.ml[21,1138+13])
+                                  Texp_ident "i2/418"
+                            ]
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[22,1152+4]..src/CompletedNatWitness.ml[22,1152+22])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[22,1152+4]..src/CompletedNatWitness.ml[22,1152+22])
+                              Tpat_tuple
+                              [
+                                pattern (src/CompletedNatWitness.ml[22,1152+4]..src/CompletedNatWitness.ml[22,1152+12])
+                                  Tpat_construct "Infinity"
+                                  []
+                                  None
+                                pattern (src/CompletedNatWitness.ml[22,1152+14]..src/CompletedNatWitness.ml[22,1152+22])
+                                  Tpat_construct "Infinity"
+                                  []
+                                  None
+                              ]
+                          expression (src/CompletedNatWitness.ml[23,1178+6]..src/CompletedNatWitness.ml[23,1178+10])
+                            Texp_construct "true"
+                            []
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[24,1189+4]..src/CompletedNatWitness.ml[24,1189+8])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[24,1189+4]..src/CompletedNatWitness.ml[24,1189+8])
+                              Tpat_tuple
+                              [
+                                pattern (src/CompletedNatWitness.ml[24,1189+4]..src/CompletedNatWitness.ml[24,1189+5])
+                                  Tpat_any
+                                pattern (src/CompletedNatWitness.ml[24,1189+7]..src/CompletedNatWitness.ml[24,1189+8])
+                                  Tpat_any
+                              ]
+                          expression (src/CompletedNatWitness.ml[25,1201+6]..src/CompletedNatWitness.ml[25,1201+11])
+                            Texp_construct "false"
+                            []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[27,1214+0]..src/CompletedNatWitness.ml[28,1227+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[27,1214+4]..src/CompletedNatWitness.ml[27,1214+10])
+          Tpat_var "bottom/419"
+        expression (src/CompletedNatWitness.ml[28,1227+2]..src/CompletedNatWitness.ml[28,1227+10])
+          Texp_construct "Infinity"
+          []
+    ]
+  structure_item (src/CompletedNatWitness.ml[30,1239+0]..src/CompletedNatWitness.ml[31,1253+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[30,1239+4]..src/CompletedNatWitness.ml[30,1239+11])
+          Tpat_var "epsilon/420"
+        expression (src/CompletedNatWitness.ml[31,1253+2]..src/CompletedNatWitness.ml[31,1253+23])
+          Texp_construct "Finite"
+          [
+            expression (src/CompletedNatWitness.ml[31,1253+10]..src/CompletedNatWitness.ml[31,1253+11])
+              Texp_constant Const_int 0
+            expression (src/CompletedNatWitness.ml[31,1253+13]..src/CompletedNatWitness.ml[31,1253+22])
+              Texp_ident "Dune__exe!.Seq.empty"
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[33,1278+0]..src/CompletedNatWitness.ml[34,1296+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[33,1278+4]..src/CompletedNatWitness.ml[33,1278+13])
+          Tpat_var "singleton/421"
+        expression (src/CompletedNatWitness.ml[33,1278+14]..src/CompletedNatWitness.ml[34,1296+29]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[33,1278+14]..src/CompletedNatWitness.ml[33,1278+15])
+                Tpat_var "x/423"
+              expression (src/CompletedNatWitness.ml[34,1296+2]..src/CompletedNatWitness.ml[34,1296+29])
+                Texp_construct "Finite"
+                [
+                  expression (src/CompletedNatWitness.ml[34,1296+10]..src/CompletedNatWitness.ml[34,1296+11])
+                    Texp_constant Const_int 1
+                  expression (src/CompletedNatWitness.ml[34,1296+13]..src/CompletedNatWitness.ml[34,1296+28])
+                    Texp_apply
+                    expression (src/CompletedNatWitness.ml[34,1296+13]..src/CompletedNatWitness.ml[34,1296+26])
+                      Texp_ident "Dune__exe!.Seq.singleton"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/CompletedNatWitness.ml[34,1296+27]..src/CompletedNatWitness.ml[34,1296+28])
+                          Texp_ident "x/423"
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[36,1327+0]..src/CompletedNatWitness.ml[41,1402+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[36,1327+4]..src/CompletedNatWitness.ml[36,1327+14])
+          Tpat_var "is_maximal/424"
+        expression (src/CompletedNatWitness.ml[36,1327+15]..src/CompletedNatWitness.ml[41,1402+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[36,1327+15]..src/CompletedNatWitness.ml[36,1327+16])
+                Tpat_var "p/426"
+              expression (src/CompletedNatWitness.ml[37,1346+2]..src/CompletedNatWitness.ml[41,1402+11])
+                Texp_match
+                expression (src/CompletedNatWitness.ml[37,1346+8]..src/CompletedNatWitness.ml[37,1346+9])
+                  Texp_ident "p/426"
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[38,1361+4]..src/CompletedNatWitness.ml[38,1361+17])
+                      Tpat_value
+                      pattern (src/CompletedNatWitness.ml[38,1361+4]..src/CompletedNatWitness.ml[38,1361+17])
+                        Tpat_construct "Finite"
+                        [
+                          pattern (src/CompletedNatWitness.ml[38,1361+12]..src/CompletedNatWitness.ml[38,1361+13])
+                            Tpat_constant Const_int 0
+                          pattern (src/CompletedNatWitness.ml[38,1361+15]..src/CompletedNatWitness.ml[38,1361+16])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/CompletedNatWitness.ml[39,1382+6]..src/CompletedNatWitness.ml[39,1382+10])
+                      Texp_construct "true"
+                      []
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[40,1393+4]..src/CompletedNatWitness.ml[40,1393+5])
+                      Tpat_value
+                      pattern (src/CompletedNatWitness.ml[40,1393+4]..src/CompletedNatWitness.ml[40,1393+5])
+                        Tpat_any
+                    expression (src/CompletedNatWitness.ml[41,1402+6]..src/CompletedNatWitness.ml[41,1402+11])
+                      Texp_construct "false"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[43,1415+0]..src/CompletedNatWitness.ml[49,1558+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[43,1415+4]..src/CompletedNatWitness.ml[43,1415+7])
+          Tpat_var "min/427"
+        expression (src/CompletedNatWitness.ml[43,1415+8]..src/CompletedNatWitness.ml[49,1558+7]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[43,1415+8]..src/CompletedNatWitness.ml[43,1415+10])
+                Tpat_var "p1/428"
+              expression (src/CompletedNatWitness.ml[43,1415+11]..src/CompletedNatWitness.ml[49,1558+7]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[43,1415+11]..src/CompletedNatWitness.ml[43,1415+13])
+                      Tpat_var "p2/429"
+                    expression (src/CompletedNatWitness.ml[44,1431+2]..src/CompletedNatWitness.ml[49,1558+7])
+                      Texp_match
+                      expression (src/CompletedNatWitness.ml[44,1431+8]..src/CompletedNatWitness.ml[44,1431+14])
+                        Texp_tuple
+                        [
+                          expression (src/CompletedNatWitness.ml[44,1431+8]..src/CompletedNatWitness.ml[44,1431+10])
+                            Texp_ident "p1/428"
+                          expression (src/CompletedNatWitness.ml[44,1431+12]..src/CompletedNatWitness.ml[44,1431+14])
+                            Texp_ident "p2/429"
+                        ]
+                      [
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[45,1451+4]..src/CompletedNatWitness.ml[45,1451+34])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[45,1451+4]..src/CompletedNatWitness.ml[45,1451+34])
+                              Tpat_tuple
+                              [
+                                pattern (src/CompletedNatWitness.ml[45,1451+4]..src/CompletedNatWitness.ml[45,1451+18])
+                                  Tpat_construct "Finite"
+                                  [
+                                    pattern (src/CompletedNatWitness.ml[45,1451+12]..src/CompletedNatWitness.ml[45,1451+14])
+                                      Tpat_var "i1/430"
+                                    pattern (src/CompletedNatWitness.ml[45,1451+16]..src/CompletedNatWitness.ml[45,1451+17])
+                                      Tpat_any
+                                  ]
+                                  None
+                                pattern (src/CompletedNatWitness.ml[45,1451+20]..src/CompletedNatWitness.ml[45,1451+34])
+                                  Tpat_construct "Finite"
+                                  [
+                                    pattern (src/CompletedNatWitness.ml[45,1451+28]..src/CompletedNatWitness.ml[45,1451+30])
+                                      Tpat_var "i2/431"
+                                    pattern (src/CompletedNatWitness.ml[45,1451+32]..src/CompletedNatWitness.ml[45,1451+33])
+                                      Tpat_any
+                                  ]
+                                  None
+                              ]
+                          expression (src/CompletedNatWitness.ml[46,1489+6]..src/CompletedNatWitness.ml[46,1489+33])
+                            Texp_ifthenelse
+                            expression (src/CompletedNatWitness.ml[46,1489+9]..src/CompletedNatWitness.ml[46,1489+17])
+                              Texp_apply
+                              expression (src/CompletedNatWitness.ml[46,1489+12]..src/CompletedNatWitness.ml[46,1489+14])
+                                Texp_ident "Stdlib!.<="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/CompletedNatWitness.ml[46,1489+9]..src/CompletedNatWitness.ml[46,1489+11])
+                                    Texp_ident "i1/430"
+                                <arg>
+                                  Nolabel
+                                  expression (src/CompletedNatWitness.ml[46,1489+15]..src/CompletedNatWitness.ml[46,1489+17])
+                                    Texp_ident "i2/431"
+                              ]
+                            expression (src/CompletedNatWitness.ml[46,1489+23]..src/CompletedNatWitness.ml[46,1489+25])
+                              Texp_ident "p1/428"
+                            Some
+                              expression (src/CompletedNatWitness.ml[46,1489+31]..src/CompletedNatWitness.ml[46,1489+33])
+                                Texp_ident "p2/429"
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[47,1523+4]..src/CompletedNatWitness.ml[48,1539+15])
+                            Tpat_or
+                            pattern (src/CompletedNatWitness.ml[47,1523+4]..src/CompletedNatWitness.ml[47,1523+15])
+                              Tpat_value
+                              pattern (src/CompletedNatWitness.ml[47,1523+4]..src/CompletedNatWitness.ml[47,1523+15])
+                                Tpat_tuple
+                                [
+                                  pattern (src/CompletedNatWitness.ml[47,1523+4]..src/CompletedNatWitness.ml[47,1523+5])
+                                    Tpat_var "p/432"
+                                  pattern (src/CompletedNatWitness.ml[47,1523+7]..src/CompletedNatWitness.ml[47,1523+15])
+                                    Tpat_construct "Infinity"
+                                    []
+                                    None
+                                ]
+                            pattern (src/CompletedNatWitness.ml[48,1539+4]..src/CompletedNatWitness.ml[48,1539+15])
+                              Tpat_value
+                              pattern (src/CompletedNatWitness.ml[48,1539+4]..src/CompletedNatWitness.ml[48,1539+15])
+                                Tpat_tuple
+                                [
+                                  pattern (src/CompletedNatWitness.ml[48,1539+4]..src/CompletedNatWitness.ml[48,1539+12])
+                                    Tpat_construct "Infinity"
+                                    []
+                                    None
+                                  pattern (src/CompletedNatWitness.ml[48,1539+14]..src/CompletedNatWitness.ml[48,1539+15])
+                                    Tpat_var "p/432"
+                                ]
+                          expression (src/CompletedNatWitness.ml[49,1558+6]..src/CompletedNatWitness.ml[49,1558+7])
+                            Texp_ident "p/432"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[51,1567+0]..src/CompletedNatWitness.ml[56,1643+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[51,1567+4]..src/CompletedNatWitness.ml[51,1567+12])
+          Tpat_var "min_lazy/434"
+        expression (src/CompletedNatWitness.ml[51,1567+13]..src/CompletedNatWitness.ml[56,1643+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[51,1567+13]..src/CompletedNatWitness.ml[51,1567+15])
+                Tpat_var "p1/436"
+              expression (src/CompletedNatWitness.ml[51,1567+16]..src/CompletedNatWitness.ml[56,1643+19]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[51,1567+16]..src/CompletedNatWitness.ml[51,1567+18])
+                      Tpat_var "p2/437"
+                    expression (src/CompletedNatWitness.ml[52,1588+2]..src/CompletedNatWitness.ml[56,1643+19])
+                      Texp_match
+                      expression (src/CompletedNatWitness.ml[52,1588+8]..src/CompletedNatWitness.ml[52,1588+10])
+                        Texp_ident "p1/436"
+                      [
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[53,1604+4]..src/CompletedNatWitness.ml[53,1604+17])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[53,1604+4]..src/CompletedNatWitness.ml[53,1604+17])
+                              Tpat_construct "Finite"
+                              [
+                                pattern (src/CompletedNatWitness.ml[53,1604+12]..src/CompletedNatWitness.ml[53,1604+13])
+                                  Tpat_constant Const_int 0
+                                pattern (src/CompletedNatWitness.ml[53,1604+15]..src/CompletedNatWitness.ml[53,1604+16])
+                                  Tpat_any
+                              ]
+                              None
+                          expression (src/CompletedNatWitness.ml[54,1625+6]..src/CompletedNatWitness.ml[54,1625+8])
+                            Texp_ident "p1/436"
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[55,1634+4]..src/CompletedNatWitness.ml[55,1634+5])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[55,1634+4]..src/CompletedNatWitness.ml[55,1634+5])
+                              Tpat_any
+                          expression (src/CompletedNatWitness.ml[56,1643+6]..src/CompletedNatWitness.ml[56,1643+19])
+                            Texp_apply
+                            expression (src/CompletedNatWitness.ml[56,1643+6]..src/CompletedNatWitness.ml[56,1643+9])
+                              Texp_ident "min/427"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[56,1643+10]..src/CompletedNatWitness.ml[56,1643+12])
+                                  Texp_ident "p1/436"
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[56,1643+13]..src/CompletedNatWitness.ml[56,1643+19])
+                                  Texp_apply
+                                  expression (src/CompletedNatWitness.ml[56,1643+14]..src/CompletedNatWitness.ml[56,1643+16])
+                                    Texp_ident "p2/437"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/CompletedNatWitness.ml[56,1643+16]..src/CompletedNatWitness.ml[56,1643+18])
+                                        Texp_construct "()"
+                                        []
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[58,1664+0]..src/CompletedNatWitness.ml[63,1797+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[58,1664+4]..src/CompletedNatWitness.ml[58,1664+7])
+          Tpat_var "add/438"
+        expression (src/CompletedNatWitness.ml[58,1664+8]..src/CompletedNatWitness.ml[63,1797+14]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[58,1664+8]..src/CompletedNatWitness.ml[58,1664+10])
+                Tpat_var "p1/440"
+              expression (src/CompletedNatWitness.ml[58,1664+11]..src/CompletedNatWitness.ml[63,1797+14]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[58,1664+11]..src/CompletedNatWitness.ml[58,1664+13])
+                      Tpat_var "p2/441"
+                    expression (src/CompletedNatWitness.ml[59,1680+2]..src/CompletedNatWitness.ml[63,1797+14])
+                      Texp_match
+                      expression (src/CompletedNatWitness.ml[59,1680+8]..src/CompletedNatWitness.ml[59,1680+14])
+                        Texp_tuple
+                        [
+                          expression (src/CompletedNatWitness.ml[59,1680+8]..src/CompletedNatWitness.ml[59,1680+10])
+                            Texp_ident "p1/440"
+                          expression (src/CompletedNatWitness.ml[59,1680+12]..src/CompletedNatWitness.ml[59,1680+14])
+                            Texp_ident "p2/441"
+                        ]
+                      [
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[60,1700+4]..src/CompletedNatWitness.ml[60,1700+38])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[60,1700+4]..src/CompletedNatWitness.ml[60,1700+38])
+                              Tpat_tuple
+                              [
+                                pattern (src/CompletedNatWitness.ml[60,1700+4]..src/CompletedNatWitness.ml[60,1700+20])
+                                  Tpat_construct "Finite"
+                                  [
+                                    pattern (src/CompletedNatWitness.ml[60,1700+12]..src/CompletedNatWitness.ml[60,1700+14])
+                                      Tpat_var "i1/442"
+                                    pattern (src/CompletedNatWitness.ml[60,1700+16]..src/CompletedNatWitness.ml[60,1700+19])
+                                      Tpat_var "xs1/443"
+                                  ]
+                                  None
+                                pattern (src/CompletedNatWitness.ml[60,1700+22]..src/CompletedNatWitness.ml[60,1700+38])
+                                  Tpat_construct "Finite"
+                                  [
+                                    pattern (src/CompletedNatWitness.ml[60,1700+30]..src/CompletedNatWitness.ml[60,1700+32])
+                                      Tpat_var "i2/444"
+                                    pattern (src/CompletedNatWitness.ml[60,1700+34]..src/CompletedNatWitness.ml[60,1700+37])
+                                      Tpat_var "xs2/445"
+                                  ]
+                                  None
+                              ]
+                          expression (src/CompletedNatWitness.ml[61,1742+6]..src/CompletedNatWitness.ml[61,1742+42])
+                            Texp_construct "Finite"
+                            [
+                              expression (src/CompletedNatWitness.ml[61,1742+14]..src/CompletedNatWitness.ml[61,1742+21])
+                                Texp_apply
+                                expression (src/CompletedNatWitness.ml[61,1742+17]..src/CompletedNatWitness.ml[61,1742+18])
+                                  Texp_ident "Stdlib!.+"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/CompletedNatWitness.ml[61,1742+14]..src/CompletedNatWitness.ml[61,1742+16])
+                                      Texp_ident "i1/442"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/CompletedNatWitness.ml[61,1742+19]..src/CompletedNatWitness.ml[61,1742+21])
+                                      Texp_ident "i2/444"
+                                ]
+                              expression (src/CompletedNatWitness.ml[61,1742+23]..src/CompletedNatWitness.ml[61,1742+41])
+                                Texp_apply
+                                expression (src/CompletedNatWitness.ml[61,1742+23]..src/CompletedNatWitness.ml[61,1742+33])
+                                  Texp_ident "Dune__exe!.Seq.append"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/CompletedNatWitness.ml[61,1742+34]..src/CompletedNatWitness.ml[61,1742+37])
+                                      Texp_ident "xs1/443"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/CompletedNatWitness.ml[61,1742+38]..src/CompletedNatWitness.ml[61,1742+41])
+                                      Texp_ident "xs2/445"
+                                ]
+                            ]
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[62,1785+4]..src/CompletedNatWitness.ml[62,1785+8])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[62,1785+4]..src/CompletedNatWitness.ml[62,1785+8])
+                              Tpat_tuple
+                              [
+                                pattern (src/CompletedNatWitness.ml[62,1785+4]..src/CompletedNatWitness.ml[62,1785+5])
+                                  Tpat_any
+                                pattern (src/CompletedNatWitness.ml[62,1785+7]..src/CompletedNatWitness.ml[62,1785+8])
+                                  Tpat_any
+                              ]
+                          expression (src/CompletedNatWitness.ml[63,1797+6]..src/CompletedNatWitness.ml[63,1797+14])
+                            Texp_construct "Infinity"
+                            []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[65,1813+0]..src/CompletedNatWitness.ml[70,1890+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[65,1813+4]..src/CompletedNatWitness.ml[65,1813+12])
+          Tpat_var "add_lazy/446"
+        expression (src/CompletedNatWitness.ml[65,1813+13]..src/CompletedNatWitness.ml[70,1890+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[65,1813+13]..src/CompletedNatWitness.ml[65,1813+15])
+                Tpat_var "p1/448"
+              expression (src/CompletedNatWitness.ml[65,1813+16]..src/CompletedNatWitness.ml[70,1890+19]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[65,1813+16]..src/CompletedNatWitness.ml[65,1813+18])
+                      Tpat_var "p2/449"
+                    expression (src/CompletedNatWitness.ml[66,1834+2]..src/CompletedNatWitness.ml[70,1890+19])
+                      Texp_match
+                      expression (src/CompletedNatWitness.ml[66,1834+8]..src/CompletedNatWitness.ml[66,1834+10])
+                        Texp_ident "p1/448"
+                      [
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[67,1850+4]..src/CompletedNatWitness.ml[67,1850+12])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[67,1850+4]..src/CompletedNatWitness.ml[67,1850+12])
+                              Tpat_construct "Infinity"
+                              []
+                              None
+                          expression (src/CompletedNatWitness.ml[68,1866+6]..src/CompletedNatWitness.ml[68,1866+14])
+                            Texp_construct "Infinity"
+                            []
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[69,1881+4]..src/CompletedNatWitness.ml[69,1881+5])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[69,1881+4]..src/CompletedNatWitness.ml[69,1881+5])
+                              Tpat_any
+                          expression (src/CompletedNatWitness.ml[70,1890+6]..src/CompletedNatWitness.ml[70,1890+19])
+                            Texp_apply
+                            expression (src/CompletedNatWitness.ml[70,1890+6]..src/CompletedNatWitness.ml[70,1890+9])
+                              Texp_ident "add/438"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[70,1890+10]..src/CompletedNatWitness.ml[70,1890+12])
+                                  Texp_ident "p1/448"
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[70,1890+13]..src/CompletedNatWitness.ml[70,1890+19])
+                                  Texp_apply
+                                  expression (src/CompletedNatWitness.ml[70,1890+14]..src/CompletedNatWitness.ml[70,1890+16])
+                                    Texp_ident "p2/449"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/CompletedNatWitness.ml[70,1890+16]..src/CompletedNatWitness.ml[70,1890+18])
+                                        Texp_construct "()"
+                                        []
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[72,1911+0]..src/CompletedNatWitness.ml[81,2176+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[72,1911+4]..src/CompletedNatWitness.ml[72,1911+9])
+          Tpat_var "print/450"
+        expression (src/CompletedNatWitness.ml[72,1911+10]..src/CompletedNatWitness.ml[81,2176+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[72,1911+10]..src/CompletedNatWitness.ml[72,1911+14])
+                Tpat_var "conv/452"
+              expression (src/CompletedNatWitness.ml[72,1911+15]..src/CompletedNatWitness.ml[81,2176+16]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[72,1911+15]..src/CompletedNatWitness.ml[72,1911+16])
+                      Tpat_var "p/453"
+                    expression (src/CompletedNatWitness.ml[73,1930+2]..src/CompletedNatWitness.ml[81,2176+16])
+                      Texp_match
+                      expression (src/CompletedNatWitness.ml[73,1930+8]..src/CompletedNatWitness.ml[73,1930+9])
+                        Texp_ident "p/453"
+                      [
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[74,1945+4]..src/CompletedNatWitness.ml[74,1945+17])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[74,1945+4]..src/CompletedNatWitness.ml[74,1945+17])
+                              Tpat_construct "Finite"
+                              [
+                                pattern (src/CompletedNatWitness.ml[74,1945+12]..src/CompletedNatWitness.ml[74,1945+13])
+                                  Tpat_constant Const_int 0
+                                pattern (src/CompletedNatWitness.ml[74,1945+15]..src/CompletedNatWitness.ml[74,1945+16])
+                                  Tpat_any
+                              ]
+                              None
+                          expression (src/CompletedNatWitness.ml[76,2012+6]..src/CompletedNatWitness.ml[76,2012+30])
+                            Texp_apply
+                            expression (src/CompletedNatWitness.ml[76,2012+6]..src/CompletedNatWitness.ml[76,2012+20])
+                              Texp_ident "Stdlib!.Printf.sprintf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30]) ghost
+                                          Texp_constant Const_string("(* 0 *)",(src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30]) ghost,None)
+                                        expression (src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                    expression (src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30]) ghost
+                                      Texp_constant Const_string("(* 0 *)",(src/CompletedNatWitness.ml[76,2012+21]..src/CompletedNatWitness.ml[76,2012+30]) ghost,None)
+                                  ]
+                            ]
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[77,2043+4]..src/CompletedNatWitness.ml[77,2043+18])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[77,2043+4]..src/CompletedNatWitness.ml[77,2043+18])
+                              Tpat_construct "Finite"
+                              [
+                                pattern (src/CompletedNatWitness.ml[77,2043+12]..src/CompletedNatWitness.ml[77,2043+13])
+                                  Tpat_var "i/454"
+                                pattern (src/CompletedNatWitness.ml[77,2043+15]..src/CompletedNatWitness.ml[77,2043+17])
+                                  Tpat_var "xs/455"
+                              ]
+                              None
+                          expression (src/CompletedNatWitness.ml[78,2065+6]..src/CompletedNatWitness.ml[79,2102+57])
+                            Texp_apply
+                            expression (src/CompletedNatWitness.ml[78,2065+35]..src/CompletedNatWitness.ml[78,2065+36])
+                              Texp_ident "Stdlib!.^"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[78,2065+6]..src/CompletedNatWitness.ml[78,2065+34])
+                                  Texp_apply
+                                  expression (src/CompletedNatWitness.ml[78,2065+6]..src/CompletedNatWitness.ml[78,2065+20])
+                                    Texp_ident "Stdlib!.Printf.sprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                Texp_constant Const_string("(* ",(src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost,None)
+                                              expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Int"
+                                                [
+                                                  expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                    []
+                                                  expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                    []
+                                                  expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                    [
+                                                      expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                        Texp_constant Const_string(" *) ",(src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost,None)
+                                                      expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                        []
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost
+                                            Texp_constant Const_string("(* %d *) ",(src/CompletedNatWitness.ml[78,2065+21]..src/CompletedNatWitness.ml[78,2065+32]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/CompletedNatWitness.ml[78,2065+33]..src/CompletedNatWitness.ml[78,2065+34])
+                                        Texp_ident "i/454"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/CompletedNatWitness.ml[79,2102+6]..src/CompletedNatWitness.ml[79,2102+57])
+                                  Texp_apply
+                                  expression (src/CompletedNatWitness.ml[79,2102+6]..src/CompletedNatWitness.ml[79,2102+19])
+                                    Texp_ident "Stdlib!.String.concat"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/CompletedNatWitness.ml[79,2102+20]..src/CompletedNatWitness.ml[79,2102+23])
+                                        Texp_constant Const_string(" ",(src/CompletedNatWitness.ml[79,2102+21]..src/CompletedNatWitness.ml[79,2102+22]),None)
+                                    <arg>
+                                      Nolabel
+                                      expression (src/CompletedNatWitness.ml[79,2102+24]..src/CompletedNatWitness.ml[79,2102+57])
+                                        Texp_apply
+                                        expression (src/CompletedNatWitness.ml[79,2102+25]..src/CompletedNatWitness.ml[79,2102+33])
+                                          Texp_ident "Stdlib!.List.map"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/CompletedNatWitness.ml[79,2102+34]..src/CompletedNatWitness.ml[79,2102+38])
+                                              Texp_ident "conv/452"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/CompletedNatWitness.ml[79,2102+39]..src/CompletedNatWitness.ml[79,2102+56])
+                                              Texp_apply
+                                              expression (src/CompletedNatWitness.ml[79,2102+40]..src/CompletedNatWitness.ml[79,2102+52])
+                                                Texp_ident "Dune__exe!.Seq.elements"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/CompletedNatWitness.ml[79,2102+53]..src/CompletedNatWitness.ml[79,2102+55])
+                                                    Texp_ident "xs/455"
+                                              ]
+                                        ]
+                                  ]
+                            ]
+                        <case>
+                          pattern (src/CompletedNatWitness.ml[80,2160+4]..src/CompletedNatWitness.ml[80,2160+12])
+                            Tpat_value
+                            pattern (src/CompletedNatWitness.ml[80,2160+4]..src/CompletedNatWitness.ml[80,2160+12])
+                              Tpat_construct "Infinity"
+                              []
+                              None
+                          expression (src/CompletedNatWitness.ml[81,2176+6]..src/CompletedNatWitness.ml[81,2176+16])
+                            Texp_constant Const_string("infinity",(src/CompletedNatWitness.ml[81,2176+7]..src/CompletedNatWitness.ml[81,2176+15]),None)
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[83,2194+0]..src/CompletedNatWitness.ml[88,2269+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[83,2194+4]..src/CompletedNatWitness.ml[83,2194+10])
+          Tpat_var "to_int/627"
+        expression (src/CompletedNatWitness.ml[83,2194+11]..src/CompletedNatWitness.ml[88,2269+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[83,2194+11]..src/CompletedNatWitness.ml[83,2194+12])
+                Tpat_var "p/629"
+              expression (src/CompletedNatWitness.ml[84,2209+2]..src/CompletedNatWitness.ml[88,2269+13])
+                Texp_match
+                expression (src/CompletedNatWitness.ml[84,2209+8]..src/CompletedNatWitness.ml[84,2209+9])
+                  Texp_ident "p/629"
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[85,2224+4]..src/CompletedNatWitness.ml[85,2224+17])
+                      Tpat_value
+                      pattern (src/CompletedNatWitness.ml[85,2224+4]..src/CompletedNatWitness.ml[85,2224+17])
+                        Tpat_construct "Finite"
+                        [
+                          pattern (src/CompletedNatWitness.ml[85,2224+12]..src/CompletedNatWitness.ml[85,2224+13])
+                            Tpat_var "i/630"
+                          pattern (src/CompletedNatWitness.ml[85,2224+15]..src/CompletedNatWitness.ml[85,2224+16])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/CompletedNatWitness.ml[86,2245+6]..src/CompletedNatWitness.ml[86,2245+7])
+                      Texp_ident "i/630"
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[87,2253+4]..src/CompletedNatWitness.ml[87,2253+12])
+                      Tpat_value
+                      pattern (src/CompletedNatWitness.ml[87,2253+4]..src/CompletedNatWitness.ml[87,2253+12])
+                        Tpat_construct "Infinity"
+                        []
+                        None
+                    expression (src/CompletedNatWitness.ml[88,2269+6]..src/CompletedNatWitness.ml[88,2269+13])
+                      Texp_ident "Stdlib!.max_int"
+                ]
+          ]
+    ]
+  structure_item (src/CompletedNatWitness.ml[90,2284+0]..src/CompletedNatWitness.ml[95,2375+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/CompletedNatWitness.ml[90,2284+4]..src/CompletedNatWitness.ml[90,2284+11])
+          Tpat_var "extract/631"
+        expression (src/CompletedNatWitness.ml[90,2284+12]..src/CompletedNatWitness.ml[95,2375+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/CompletedNatWitness.ml[90,2284+12]..src/CompletedNatWitness.ml[90,2284+13])
+                Tpat_var "p/633"
+              expression (src/CompletedNatWitness.ml[91,2300+2]..src/CompletedNatWitness.ml[95,2375+18])
+                Texp_match
+                expression (src/CompletedNatWitness.ml[91,2300+8]..src/CompletedNatWitness.ml[91,2300+9])
+                  Texp_ident "p/633"
+                [
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[92,2315+4]..src/CompletedNatWitness.ml[92,2315+18])
+                      Tpat_value
+                      pattern (src/CompletedNatWitness.ml[92,2315+4]..src/CompletedNatWitness.ml[92,2315+18])
+                        Tpat_construct "Finite"
+                        [
+                          pattern (src/CompletedNatWitness.ml[92,2315+12]..src/CompletedNatWitness.ml[92,2315+13])
+                            Tpat_any
+                          pattern (src/CompletedNatWitness.ml[92,2315+15]..src/CompletedNatWitness.ml[92,2315+17])
+                            Tpat_var "xs/634"
+                        ]
+                        None
+                    expression (src/CompletedNatWitness.ml[93,2337+6]..src/CompletedNatWitness.ml[93,2337+21])
+                      Texp_apply
+                      expression (src/CompletedNatWitness.ml[93,2337+6]..src/CompletedNatWitness.ml[93,2337+18])
+                        Texp_ident "Dune__exe!.Seq.elements"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/CompletedNatWitness.ml[93,2337+19]..src/CompletedNatWitness.ml[93,2337+21])
+                            Texp_ident "xs/634"
+                      ]
+                  <case>
+                    pattern (src/CompletedNatWitness.ml[94,2359+4]..src/CompletedNatWitness.ml[94,2359+12])
+                      Tpat_value
+                      pattern (src/CompletedNatWitness.ml[94,2359+4]..src/CompletedNatWitness.ml[94,2359+12])
+                        Tpat_construct "Infinity"
+                        []
+                        None
+                    expression (src/CompletedNatWitness.ml[95,2375+6]..src/CompletedNatWitness.ml[95,2375+18])
+                      Texp_assert                      expression (src/CompletedNatWitness.ml[95,2375+13]..src/CompletedNatWitness.ml[95,2375+18])
+                        Texp_construct "false"
+                        []
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__CompletedNatWitness>
+ "add"[value] -> <Dune__exe__CompletedNatWitness.23>;
+ "add_lazy"[value] -> <Dune__exe__CompletedNatWitness.30>;
+ "bottom"[value] -> <Dune__exe__CompletedNatWitness.8>;
+ "epsilon"[value] -> <Dune__exe__CompletedNatWitness.9>;
+ "equal"[value] -> <Dune__exe__CompletedNatWitness.3>;
+ "extract"[value] -> <Dune__exe__CompletedNatWitness.41>;
+ "is_maximal"[value] -> <Dune__exe__CompletedNatWitness.12>;
+ "min"[value] -> <Dune__exe__CompletedNatWitness.14>;
+ "min_lazy"[value] -> <Dune__exe__CompletedNatWitness.20>;
+ "print"[value] -> <Dune__exe__CompletedNatWitness.33>;
+ "singleton"[value] -> <Dune__exe__CompletedNatWitness.10>;
+ "t"[type] -> <Dune__exe__CompletedNatWitness.0>;
+ "to_int"[value] -> <Dune__exe__CompletedNatWitness.38>;
+ }
+
+(seq
+  (let
+    (equal/413 =
+       (function p1/415 p2/416 : int
+         (catch
+           (if (isint p1/415) (if (isint p2/416) 1 (exit 1))
+             (if (isint p2/416) (exit 1)
+               (let
+                 (*match*/1171 =a (field_imm 1 p2/416)
+                  i2/418 =a (field_imm 0 p2/416)
+                  i1/417 =a (field_imm 0 p1/415))
+                 (== i1/417 i2/418))))
+          with (1) 0)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__CompletedNatWitness!)
+      equal/413))
+  (let (bottom/419 = 0)
+    (setfield_ptr(root-init) 0 (global Dune__exe__CompletedNatWitness!)
+      bottom/419))
+  (let
+    (epsilon/420 =
+       (makeblock 0 (int,*) 0 (field_imm 0 (global Dune__exe__Seq!))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__CompletedNatWitness!)
+      epsilon/420))
+  (let
+    (singleton/421 =
+       (function x/423
+         (makeblock 0 (int,*) 1
+           (apply (field_imm 1 (global Dune__exe__Seq!)) x/423))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__CompletedNatWitness!)
+      singleton/421))
+  (let
+    (is_maximal/424 =
+       (function p/426 : int
+         (catch
+           (if (isint p/426) (exit 2)
+             (let (*match*/1172 =a (field_imm 0 p/426))
+               (if (!= *match*/1172 0) (exit 2)
+                 (let (*match*/1173 =a (field_imm 1 p/426)) 1))))
+          with (2) 0)))
+    (setfield_ptr(root-init) 2 (global Dune__exe__CompletedNatWitness!)
+      is_maximal/424))
+  (let
+    (min/427 =
+       (function p1/428 p2/429
+         (catch
+           (catch
+             (catch
+               (if (isint p1/428) (exit 5)
+                 (if (isint p2/429) (exit 5)
+                   (let
+                     (i2/431 =a (field_imm 0 p2/429)
+                      i1/430 =a (field_imm 0 p1/428))
+                     (if (<= i1/430 i2/431) p1/428 p2/429))))
+              with (5)
+               (if (isint p2/429) (let (p/1175 =a p1/428) (exit 3 p/1175))
+                 (exit 4)))
+            with (4) (let (p/1174 =a p2/429) (exit 3 p/1174)))
+          with (3 p/432) p/432)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__CompletedNatWitness!)
+      min/427))
+  (let
+    (min_lazy/434 =
+       (function p1/436 p2/437
+         (catch
+           (if (isint p1/436) (exit 6)
+             (let (*match*/1178 =a (field_imm 0 p1/436))
+               (if (!= *match*/1178 0) (exit 6)
+                 (let (*match*/1179 =a (field_imm 1 p1/436)) p1/436))))
+          with (6)
+           (apply (field_imm 5 (global Dune__exe__CompletedNatWitness!))
+             p1/436 (apply p2/437 0)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__CompletedNatWitness!)
+      min_lazy/434))
+  (let
+    (add/438 =
+       (function p1/440 p2/441
+         (catch
+           (if (isint p1/440) (exit 7)
+             (if (isint p2/441) (exit 7)
+               (let
+                 (xs2/445 =a (field_imm 1 p2/441)
+                  i2/444 =a (field_imm 0 p2/441)
+                  xs1/443 =a (field_imm 1 p1/440)
+                  i1/442 =a (field_imm 0 p1/440))
+                 (makeblock 0 (int,*) (+ i1/442 i2/444)
+                   (apply (field_imm 2 (global Dune__exe__Seq!)) xs1/443
+                     xs2/445)))))
+          with (7) 0)))
+    (setfield_ptr(root-init) 6 (global Dune__exe__CompletedNatWitness!)
+      add/438))
+  (let
+    (add_lazy/446 =
+       (function p1/448 p2/449
+         (catch (if (isint p1/448) 0 (exit 8)) with (8)
+           (apply (field_imm 6 (global Dune__exe__CompletedNatWitness!))
+             p1/448 (apply p2/449 0)))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__CompletedNatWitness!)
+      add_lazy/446))
+  (let
+    (print/450 =
+       (function conv/452 p/453
+         (if (isint p/453) "infinity"
+           (let (i/454 =a (field_imm 0 p/453))
+             (catch
+               (if (!= i/454 0) (exit 9)
+                 (let (*match*/1180 =a (field_imm 1 p/453))
+                   (apply (field_imm 3 (global Stdlib__Printf!))
+                     [0: [11: "(* 0 *)" 0] "(* 0 *)"])))
+              with (9)
+               (let (xs/455 =a (field_imm 1 p/453))
+                 (apply (field_imm 27 (global Stdlib!))
+                   (apply (field_imm 3 (global Stdlib__Printf!))
+                     [0: [11: "(* " [4: 0 0 0 [11: " *) " 0]]] "(* %d *) "]
+                     i/454)
+                   (apply (field_imm 6 (global Stdlib__String!)) " "
+                     (apply (field_imm 19 (global Stdlib__List!)) conv/452
+                       (apply (field_imm 3 (global Dune__exe__Seq!)) xs/455))))))))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__CompletedNatWitness!)
+      print/450))
+  (let
+    (to_int/627 =
+       (function p/629 : int
+         (if (isint p/629) (field_imm 18 (global Stdlib!))
+           (let
+             (*match*/1181 =a (field_imm 1 p/629)
+              i/630 =a (field_imm 0 p/629))
+             i/630))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__CompletedNatWitness!)
+      to_int/627))
+  (let
+    (extract/631 =
+       (function p/633
+         (if (isint p/633)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/CompletedNatWitness.ml" 95 6]))
+           (let
+             (xs/634 =a (field_imm 1 p/633)
+              *match*/1182 =a (field_imm 0 p/633))
+             (apply (field_imm 3 (global Dune__exe__Seq!)) xs/634)))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__CompletedNatWitness!)
+      extract/631))
+  0)
+(seq
+  (let
+    (equal/413 =
+       (function p1/415 p2/416 : int
+         (catch
+           (if (isint p1/415) (if (isint p2/416) 1 (exit 1))
+             (if (isint p2/416) (exit 1)
+               (== (field_imm 0 p1/415) (field_imm 0 p2/416))))
+          with (1) 0)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__CompletedNatWitness!)
+      equal/413))
+  (let (bottom/419 = 0)
+    (setfield_ptr(root-init) 0 (global Dune__exe__CompletedNatWitness!)
+      bottom/419))
+  (let
+    (epsilon/420 =
+       (makeblock 0 (int,*) 0 (field_imm 0 (global Dune__exe__Seq!))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__CompletedNatWitness!)
+      epsilon/420))
+  (let
+    (singleton/421 =
+       (function x/423
+         (makeblock 0 (int,*) 1
+           (apply (field_imm 1 (global Dune__exe__Seq!)) x/423))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__CompletedNatWitness!)
+      singleton/421))
+  (let
+    (is_maximal/424 =
+       (function p/426 : int
+         (catch
+           (if (isint p/426) (exit 2)
+             (if (!= (field_imm 0 p/426) 0) (exit 2) 1))
+          with (2) 0)))
+    (setfield_ptr(root-init) 2 (global Dune__exe__CompletedNatWitness!)
+      is_maximal/424))
+  (let
+    (min/427 =
+       (function p1/428 p2/429
+         (catch
+           (catch
+             (if (isint p1/428) (exit 5)
+               (if (isint p2/429) (exit 5)
+                 (if (<= (field_imm 0 p1/428) (field_imm 0 p2/429)) p1/428
+                   p2/429)))
+            with (5) (if (isint p2/429) (exit 3 p1/428) (exit 3 p2/429)))
+          with (3 p/432) p/432)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__CompletedNatWitness!)
+      min/427))
+  (let
+    (min_lazy/434 =
+       (function p1/436 p2/437
+         (catch
+           (if (isint p1/436) (exit 6)
+             (if (!= (field_imm 0 p1/436) 0) (exit 6) p1/436))
+          with (6)
+           (apply (field_imm 5 (global Dune__exe__CompletedNatWitness!))
+             p1/436 (apply p2/437 0)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__CompletedNatWitness!)
+      min_lazy/434))
+  (let
+    (add/438 =
+       (function p1/440 p2/441
+         (catch
+           (if (isint p1/440) (exit 7)
+             (if (isint p2/441) (exit 7)
+               (makeblock 0 (int,*)
+                 (+ (field_imm 0 p1/440) (field_imm 0 p2/441))
+                 (apply (field_imm 2 (global Dune__exe__Seq!))
+                   (field_imm 1 p1/440) (field_imm 1 p2/441)))))
+          with (7) 0)))
+    (setfield_ptr(root-init) 6 (global Dune__exe__CompletedNatWitness!)
+      add/438))
+  (let
+    (add_lazy/446 =
+       (function p1/448 p2/449
+         (if (isint p1/448) 0
+           (apply (field_imm 6 (global Dune__exe__CompletedNatWitness!))
+             p1/448 (apply p2/449 0)))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__CompletedNatWitness!)
+      add_lazy/446))
+  (let
+    (print/450 =
+       (function conv/452 p/453
+         (if (isint p/453) "infinity"
+           (let (i/454 =a (field_imm 0 p/453))
+             (if (!= i/454 0)
+               (apply (field_imm 27 (global Stdlib!))
+                 (apply (field_imm 3 (global Stdlib__Printf!))
+                   [0: [11: "(* " [4: 0 0 0 [11: " *) " 0]]] "(* %d *) "]
+                   i/454)
+                 (apply (field_imm 6 (global Stdlib__String!)) " "
+                   (apply (field_imm 19 (global Stdlib__List!)) conv/452
+                     (apply (field_imm 3 (global Dune__exe__Seq!))
+                       (field_imm 1 p/453)))))
+               (apply (field_imm 3 (global Stdlib__Printf!))
+                 [0: [11: "(* 0 *)" 0] "(* 0 *)"]))))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__CompletedNatWitness!)
+      print/450))
+  (let
+    (to_int/627 =
+       (function p/629 : int
+         (if (isint p/629) (field_imm 18 (global Stdlib!))
+           (field_imm 0 p/629))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__CompletedNatWitness!)
+      to_int/627))
+  (let
+    (extract/631 =
+       (function p/633
+         (if (isint p/633)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/CompletedNatWitness.ml" 95 6]))
+           (apply (field_imm 3 (global Dune__exe__Seq!)) (field_imm 1 p/633)))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__CompletedNatWitness!)
+      extract/631))
+  0)

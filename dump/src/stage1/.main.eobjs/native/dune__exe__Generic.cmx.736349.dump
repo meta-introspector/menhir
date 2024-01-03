@@ -1,0 +1,41 @@
+[
+  structure_item (src/Generic.ml[19,1276+0]..[20,1290+9])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Generic.ml[19,1276+4]..[19,1276+11])
+          Ppat_var "compare" (src/Generic.ml[19,1276+4]..[19,1276+11])
+        expression (src/Generic.ml[20,1290+2]..[20,1290+9])
+          Pexp_ident "compare" (src/Generic.ml[20,1290+2]..[20,1290+9])
+    ]
+]
+
+let compare = compare
+[
+  structure_item (src/Generic.ml[19,1276+0]..src/Generic.ml[20,1290+9])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Generic.ml[19,1276+4]..src/Generic.ml[19,1276+11])
+          Tpat_var "compare/396"
+        expression (src/Generic.ml[20,1290+2]..src/Generic.ml[20,1290+9])
+          Texp_ident "Stdlib!.compare"
+    ]
+]
+
+{<Dune__exe__Generic>
+ "compare"[value] -> <Dune__exe__Generic.0>;
+ }
+
+(seq
+  (let
+    (compare/396 =
+       (function prim/816 prim/815 stub (caml_compare prim/816 prim/815)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Generic!) compare/396))
+  0)
+(seq
+  (let
+    (compare/396 =
+       (function prim/816 prim/815 stub (caml_compare prim/816 prim/815)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Generic!) compare/396))
+  0)

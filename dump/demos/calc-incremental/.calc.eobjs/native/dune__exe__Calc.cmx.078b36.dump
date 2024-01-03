@@ -1,0 +1,1784 @@
+[
+  structure_item (demos/calc-incremental/calc.ml[1,0+0]..[1,0+11])
+    Pstr_open Fresh
+    module_expr (demos/calc-incremental/calc.ml[1,0+5]..[1,0+11])
+      Pmod_ident "Lexing" (demos/calc-incremental/calc.ml[1,0+5]..[1,0+11])
+  structure_item (demos/calc-incremental/calc.ml[5,65+0]..[6,76+26])
+    Pstr_module
+    "I" (demos/calc-incremental/calc.ml[5,65+7]..[5,65+8])
+      module_expr (demos/calc-incremental/calc.ml[6,76+2]..[6,76+26])
+        Pmod_ident "Parser.MenhirInterpreter" (demos/calc-incremental/calc.ml[6,76+2]..[6,76+26])
+  structure_item (demos/calc-incremental/calc.ml[15,428+0]..[41,1517+18])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[15,428+8]..[15,428+12])
+          Ppat_var "loop" (demos/calc-incremental/calc.ml[15,428+8]..[15,428+12])
+        expression (demos/calc-incremental/calc.ml[15,428+13]..[41,1517+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[15,428+13]..[15,428+19])
+            Ppat_var "lexbuf" (demos/calc-incremental/calc.ml[15,428+13]..[15,428+19])
+          expression (demos/calc-incremental/calc.ml[15,428+20]..[41,1517+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (demos/calc-incremental/calc.ml[15,428+20]..[15,428+51])
+              Ppat_constraint
+              pattern (demos/calc-incremental/calc.ml[15,428+21]..[15,428+31])
+                Ppat_var "checkpoint" (demos/calc-incremental/calc.ml[15,428+21]..[15,428+31])
+              core_type (demos/calc-incremental/calc.ml[15,428+34]..[15,428+50])
+                Ptyp_constr "I.checkpoint" (demos/calc-incremental/calc.ml[15,428+38]..[15,428+50])
+                [
+                  core_type (demos/calc-incremental/calc.ml[15,428+34]..[15,428+37])
+                    Ptyp_constr "int" (demos/calc-incremental/calc.ml[15,428+34]..[15,428+37])
+                    []
+                ]
+            expression (demos/calc-incremental/calc.ml[16,482+2]..[41,1517+18])
+              Pexp_match
+              expression (demos/calc-incremental/calc.ml[16,482+8]..[16,482+18])
+                Pexp_ident "checkpoint" (demos/calc-incremental/calc.ml[16,482+8]..[16,482+18])
+              [
+                <case>
+                  pattern (demos/calc-incremental/calc.ml[17,506+4]..[17,506+22])
+                    Ppat_construct "I.InputNeeded" (demos/calc-incremental/calc.ml[17,506+4]..[17,506+17])
+                    Some
+                      []
+                      pattern (demos/calc-incremental/calc.ml[17,506+18]..[17,506+22])
+                        Ppat_var "_env" (demos/calc-incremental/calc.ml[17,506+18]..[17,506+22])
+                  expression (demos/calc-incremental/calc.ml[21,695+6]..[25,878+28])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (demos/calc-incremental/calc.ml[21,695+10]..[21,695+15])
+                          Ppat_var "token" (demos/calc-incremental/calc.ml[21,695+10]..[21,695+15])
+                        expression (demos/calc-incremental/calc.ml[21,695+18]..[21,695+36])
+                          Pexp_apply
+                          expression (demos/calc-incremental/calc.ml[21,695+18]..[21,695+29])
+                            Pexp_ident "Lexer.token" (demos/calc-incremental/calc.ml[21,695+18]..[21,695+29])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-incremental/calc.ml[21,695+30]..[21,695+36])
+                                Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[21,695+30]..[21,695+36])
+                          ]
+                    ]
+                    expression (demos/calc-incremental/calc.ml[22,735+6]..[25,878+28])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (demos/calc-incremental/calc.ml[22,735+10]..[22,735+16])
+                            Ppat_var "startp" (demos/calc-incremental/calc.ml[22,735+10]..[22,735+16])
+                          expression (demos/calc-incremental/calc.ml[22,735+19]..[22,735+37])
+                            Pexp_field
+                            expression (demos/calc-incremental/calc.ml[22,735+19]..[22,735+25])
+                              Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[22,735+19]..[22,735+25])
+                            "lex_start_p" (demos/calc-incremental/calc.ml[22,735+26]..[22,735+37])
+                        <def>
+                          pattern (demos/calc-incremental/calc.ml[23,773+10]..[23,773+14])
+                            Ppat_var "endp" (demos/calc-incremental/calc.ml[23,773+10]..[23,773+14])
+                          expression (demos/calc-incremental/calc.ml[23,773+17]..[23,773+34])
+                            Pexp_field
+                            expression (demos/calc-incremental/calc.ml[23,773+17]..[23,773+23])
+                              Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[23,773+17]..[23,773+23])
+                            "lex_curr_p" (demos/calc-incremental/calc.ml[23,773+24]..[23,773+34])
+                      ]
+                      expression (demos/calc-incremental/calc.ml[24,811+6]..[25,878+28])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (demos/calc-incremental/calc.ml[24,811+10]..[24,811+20])
+                              Ppat_var "checkpoint" (demos/calc-incremental/calc.ml[24,811+10]..[24,811+20])
+                            expression (demos/calc-incremental/calc.ml[24,811+23]..[24,811+63])
+                              Pexp_apply
+                              expression (demos/calc-incremental/calc.ml[24,811+23]..[24,811+30])
+                                Pexp_ident "I.offer" (demos/calc-incremental/calc.ml[24,811+23]..[24,811+30])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (demos/calc-incremental/calc.ml[24,811+31]..[24,811+41])
+                                    Pexp_ident "checkpoint" (demos/calc-incremental/calc.ml[24,811+31]..[24,811+41])
+                                <arg>
+                                Nolabel
+                                  expression (demos/calc-incremental/calc.ml[24,811+42]..[24,811+63])
+                                    Pexp_tuple
+                                    [
+                                      expression (demos/calc-incremental/calc.ml[24,811+43]..[24,811+48])
+                                        Pexp_ident "token" (demos/calc-incremental/calc.ml[24,811+43]..[24,811+48])
+                                      expression (demos/calc-incremental/calc.ml[24,811+50]..[24,811+56])
+                                        Pexp_ident "startp" (demos/calc-incremental/calc.ml[24,811+50]..[24,811+56])
+                                      expression (demos/calc-incremental/calc.ml[24,811+58]..[24,811+62])
+                                        Pexp_ident "endp" (demos/calc-incremental/calc.ml[24,811+58]..[24,811+62])
+                                    ]
+                              ]
+                        ]
+                        expression (demos/calc-incremental/calc.ml[25,878+6]..[25,878+28])
+                          Pexp_apply
+                          expression (demos/calc-incremental/calc.ml[25,878+6]..[25,878+10])
+                            Pexp_ident "loop" (demos/calc-incremental/calc.ml[25,878+6]..[25,878+10])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-incremental/calc.ml[25,878+11]..[25,878+17])
+                                Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[25,878+11]..[25,878+17])
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-incremental/calc.ml[25,878+18]..[25,878+28])
+                                Pexp_ident "checkpoint" (demos/calc-incremental/calc.ml[25,878+18]..[25,878+28])
+                          ]
+                <case>
+                  pattern (demos/calc-incremental/calc.ml[26,907+4]..[27,924+21])
+                    Ppat_or
+                    pattern (demos/calc-incremental/calc.ml[26,907+4]..[26,907+16])
+                      Ppat_construct "I.Shifting" (demos/calc-incremental/calc.ml[26,907+4]..[26,907+14])
+                      Some
+                        []
+                        pattern (demos/calc-incremental/calc.ml[26,907+15]..[26,907+16])
+                          Ppat_any
+                    pattern (demos/calc-incremental/calc.ml[27,924+4]..[27,924+21])
+                      Ppat_construct "I.AboutToReduce" (demos/calc-incremental/calc.ml[27,924+4]..[27,924+19])
+                      Some
+                        []
+                        pattern (demos/calc-incremental/calc.ml[27,924+20]..[27,924+21])
+                          Ppat_any
+                  expression (demos/calc-incremental/calc.ml[28,949+6]..[29,995+28])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (demos/calc-incremental/calc.ml[28,949+10]..[28,949+20])
+                          Ppat_var "checkpoint" (demos/calc-incremental/calc.ml[28,949+10]..[28,949+20])
+                        expression (demos/calc-incremental/calc.ml[28,949+23]..[28,949+42])
+                          Pexp_apply
+                          expression (demos/calc-incremental/calc.ml[28,949+23]..[28,949+31])
+                            Pexp_ident "I.resume" (demos/calc-incremental/calc.ml[28,949+23]..[28,949+31])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-incremental/calc.ml[28,949+32]..[28,949+42])
+                                Pexp_ident "checkpoint" (demos/calc-incremental/calc.ml[28,949+32]..[28,949+42])
+                          ]
+                    ]
+                    expression (demos/calc-incremental/calc.ml[29,995+6]..[29,995+28])
+                      Pexp_apply
+                      expression (demos/calc-incremental/calc.ml[29,995+6]..[29,995+10])
+                        Pexp_ident "loop" (demos/calc-incremental/calc.ml[29,995+6]..[29,995+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-incremental/calc.ml[29,995+11]..[29,995+17])
+                            Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[29,995+11]..[29,995+17])
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-incremental/calc.ml[29,995+18]..[29,995+28])
+                            Pexp_ident "checkpoint" (demos/calc-incremental/calc.ml[29,995+18]..[29,995+28])
+                      ]
+                <case>
+                  pattern (demos/calc-incremental/calc.ml[30,1024+4]..[30,1024+24])
+                    Ppat_construct "I.HandlingError" (demos/calc-incremental/calc.ml[30,1024+4]..[30,1024+19])
+                    Some
+                      []
+                      pattern (demos/calc-incremental/calc.ml[30,1024+20]..[30,1024+24])
+                        Ppat_var "_env" (demos/calc-incremental/calc.ml[30,1024+20]..[30,1024+24])
+                  expression (demos/calc-incremental/calc.ml[32,1129+6]..[34,1199+29])
+                    Pexp_apply
+                    expression (demos/calc-incremental/calc.ml[32,1129+6]..[32,1129+20])
+                      Pexp_ident "Printf.fprintf" (demos/calc-incremental/calc.ml[32,1129+6]..[32,1129+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[32,1129+21]..[32,1129+27])
+                          Pexp_ident "stderr" (demos/calc-incremental/calc.ml[32,1129+21]..[32,1129+27])
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[33,1157+8]..[33,1157+41])
+                          Pexp_constant PConst_string("At offset %d: syntax error.\n%!",(demos/calc-incremental/calc.ml[33,1157+9]..[33,1157+40]),None)
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[34,1199+8]..[34,1199+29])
+                          Pexp_apply
+                          expression (demos/calc-incremental/calc.ml[34,1199+9]..[34,1199+21])
+                            Pexp_ident "lexeme_start" (demos/calc-incremental/calc.ml[34,1199+9]..[34,1199+21])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (demos/calc-incremental/calc.ml[34,1199+22]..[34,1199+28])
+                                Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[34,1199+22]..[34,1199+28])
+                          ]
+                    ]
+                <case>
+                  pattern (demos/calc-incremental/calc.ml[35,1229+4]..[35,1229+16])
+                    Ppat_construct "I.Accepted" (demos/calc-incremental/calc.ml[35,1229+4]..[35,1229+14])
+                    Some
+                      []
+                      pattern (demos/calc-incremental/calc.ml[35,1229+15]..[35,1229+16])
+                        Ppat_var "v" (demos/calc-incremental/calc.ml[35,1229+15]..[35,1229+16])
+                  expression (demos/calc-incremental/calc.ml[37,1327+6]..[37,1327+30])
+                    Pexp_apply
+                    expression (demos/calc-incremental/calc.ml[37,1327+6]..[37,1327+19])
+                      Pexp_ident "Printf.printf" (demos/calc-incremental/calc.ml[37,1327+6]..[37,1327+19])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[37,1327+20]..[37,1327+28])
+                          Pexp_constant PConst_string("%d\n%!",(demos/calc-incremental/calc.ml[37,1327+21]..[37,1327+27]),None)
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[37,1327+29]..[37,1327+30])
+                          Pexp_ident "v" (demos/calc-incremental/calc.ml[37,1327+29]..[37,1327+30])
+                    ]
+                <case>
+                  pattern (demos/calc-incremental/calc.ml[38,1358+4]..[38,1358+14])
+                    Ppat_construct "I.Rejected" (demos/calc-incremental/calc.ml[38,1358+4]..[38,1358+14])
+                    None
+                  expression (demos/calc-incremental/calc.ml[41,1517+6]..[41,1517+18])
+                    Pexp_assert
+                    expression (demos/calc-incremental/calc.ml[41,1517+13]..[41,1517+18])
+                      Pexp_construct "false" (demos/calc-incremental/calc.ml[41,1517+13]..[41,1517+18])
+                      None
+              ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[43,1537+0]..[43,1537+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[43,1537+4]..[43,1537+5])
+          Ppat_any
+        expression (demos/calc-incremental/calc.ml[43,1537+8]..[43,1537+12])
+          Pexp_ident "loop" (demos/calc-incremental/calc.ml[43,1537+8]..[43,1537+12])
+    ]
+  structure_item (demos/calc-incremental/calc.ml[51,1898+0]..[53,1996+26])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[51,1898+4]..[51,1898+11])
+          Ppat_var "succeed" (demos/calc-incremental/calc.ml[51,1898+4]..[51,1898+11])
+        expression (demos/calc-incremental/calc.ml[51,1898+12]..[53,1996+26]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[51,1898+12]..[51,1898+21])
+            Ppat_constraint
+            pattern (demos/calc-incremental/calc.ml[51,1898+13]..[51,1898+14])
+              Ppat_var "v" (demos/calc-incremental/calc.ml[51,1898+13]..[51,1898+14])
+            core_type (demos/calc-incremental/calc.ml[51,1898+17]..[51,1898+20])
+              Ptyp_constr "int" (demos/calc-incremental/calc.ml[51,1898+17]..[51,1898+20])
+              []
+          expression (demos/calc-incremental/calc.ml[53,1996+2]..[53,1996+26])
+            Pexp_apply
+            expression (demos/calc-incremental/calc.ml[53,1996+2]..[53,1996+15])
+              Pexp_ident "Printf.printf" (demos/calc-incremental/calc.ml[53,1996+2]..[53,1996+15])
+            [
+              <arg>
+              Nolabel
+                expression (demos/calc-incremental/calc.ml[53,1996+16]..[53,1996+24])
+                  Pexp_constant PConst_string("%d\n%!",(demos/calc-incremental/calc.ml[53,1996+17]..[53,1996+23]),None)
+              <arg>
+              Nolabel
+                expression (demos/calc-incremental/calc.ml[53,1996+25]..[53,1996+26])
+                  Pexp_ident "v" (demos/calc-incremental/calc.ml[53,1996+25]..[53,1996+26])
+            ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[55,2024+0]..[59,2200+25])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[55,2024+4]..[55,2024+8])
+          Ppat_var "fail" (demos/calc-incremental/calc.ml[55,2024+4]..[55,2024+8])
+        expression (demos/calc-incremental/calc.ml[55,2024+9]..[59,2200+25]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[55,2024+9]..[55,2024+15])
+            Ppat_var "lexbuf" (demos/calc-incremental/calc.ml[55,2024+9]..[55,2024+15])
+          expression (demos/calc-incremental/calc.ml[55,2024+16]..[59,2200+25]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (demos/calc-incremental/calc.ml[55,2024+16]..[55,2024+38])
+              Ppat_constraint
+              pattern (demos/calc-incremental/calc.ml[55,2024+17]..[55,2024+18])
+                Ppat_any
+              core_type (demos/calc-incremental/calc.ml[55,2024+21]..[55,2024+37])
+                Ptyp_constr "I.checkpoint" (demos/calc-incremental/calc.ml[55,2024+25]..[55,2024+37])
+                [
+                  core_type (demos/calc-incremental/calc.ml[55,2024+21]..[55,2024+24])
+                    Ptyp_constr "int" (demos/calc-incremental/calc.ml[55,2024+21]..[55,2024+24])
+                    []
+                ]
+            expression (demos/calc-incremental/calc.ml[57,2138+2]..[59,2200+25])
+              Pexp_apply
+              expression (demos/calc-incremental/calc.ml[57,2138+2]..[57,2138+16])
+                Pexp_ident "Printf.fprintf" (demos/calc-incremental/calc.ml[57,2138+2]..[57,2138+16])
+              [
+                <arg>
+                Nolabel
+                  expression (demos/calc-incremental/calc.ml[57,2138+17]..[57,2138+23])
+                    Pexp_ident "stderr" (demos/calc-incremental/calc.ml[57,2138+17]..[57,2138+23])
+                <arg>
+                Nolabel
+                  expression (demos/calc-incremental/calc.ml[58,2162+4]..[58,2162+37])
+                    Pexp_constant PConst_string("At offset %d: syntax error.\n%!",(demos/calc-incremental/calc.ml[58,2162+5]..[58,2162+36]),None)
+                <arg>
+                Nolabel
+                  expression (demos/calc-incremental/calc.ml[59,2200+4]..[59,2200+25])
+                    Pexp_apply
+                    expression (demos/calc-incremental/calc.ml[59,2200+5]..[59,2200+17])
+                      Pexp_ident "lexeme_start" (demos/calc-incremental/calc.ml[59,2200+5]..[59,2200+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[59,2200+18]..[59,2200+24])
+                          Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[59,2200+18]..[59,2200+24])
+                    ]
+              ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[61,2227+0]..[63,2318+53])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[61,2227+4]..[61,2227+8])
+          Ppat_var "loop" (demos/calc-incremental/calc.ml[61,2227+4]..[61,2227+8])
+        expression (demos/calc-incremental/calc.ml[61,2227+9]..[63,2318+53]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[61,2227+9]..[61,2227+15])
+            Ppat_var "lexbuf" (demos/calc-incremental/calc.ml[61,2227+9]..[61,2227+15])
+          expression (demos/calc-incremental/calc.ml[61,2227+16]..[63,2318+53]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (demos/calc-incremental/calc.ml[61,2227+16]..[61,2227+22])
+              Ppat_var "result" (demos/calc-incremental/calc.ml[61,2227+16]..[61,2227+22])
+            expression (demos/calc-incremental/calc.ml[62,2252+2]..[63,2318+53])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (demos/calc-incremental/calc.ml[62,2252+6]..[62,2252+14])
+                    Ppat_var "supplier" (demos/calc-incremental/calc.ml[62,2252+6]..[62,2252+14])
+                  expression (demos/calc-incremental/calc.ml[62,2252+17]..[62,2252+62])
+                    Pexp_apply
+                    expression (demos/calc-incremental/calc.ml[62,2252+17]..[62,2252+43])
+                      Pexp_ident "I.lexer_lexbuf_to_supplier" (demos/calc-incremental/calc.ml[62,2252+17]..[62,2252+43])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[62,2252+44]..[62,2252+55])
+                          Pexp_ident "Lexer.token" (demos/calc-incremental/calc.ml[62,2252+44]..[62,2252+55])
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[62,2252+56]..[62,2252+62])
+                          Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[62,2252+56]..[62,2252+62])
+                    ]
+              ]
+              expression (demos/calc-incremental/calc.ml[63,2318+2]..[63,2318+53])
+                Pexp_apply
+                expression (demos/calc-incremental/calc.ml[63,2318+2]..[63,2318+15])
+                  Pexp_ident "I.loop_handle" (demos/calc-incremental/calc.ml[63,2318+2]..[63,2318+15])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[63,2318+16]..[63,2318+23])
+                      Pexp_ident "succeed" (demos/calc-incremental/calc.ml[63,2318+16]..[63,2318+23])
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[63,2318+24]..[63,2318+37])
+                      Pexp_apply
+                      expression (demos/calc-incremental/calc.ml[63,2318+25]..[63,2318+29])
+                        Pexp_ident "fail" (demos/calc-incremental/calc.ml[63,2318+25]..[63,2318+29])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-incremental/calc.ml[63,2318+30]..[63,2318+36])
+                            Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[63,2318+30]..[63,2318+36])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[63,2318+38]..[63,2318+46])
+                      Pexp_ident "supplier" (demos/calc-incremental/calc.ml[63,2318+38]..[63,2318+46])
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[63,2318+47]..[63,2318+53])
+                      Pexp_ident "result" (demos/calc-incremental/calc.ml[63,2318+47]..[63,2318+53])
+                ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[69,2529+0]..[75,2690+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[69,2529+4]..[69,2529+11])
+          Ppat_var "process" (demos/calc-incremental/calc.ml[69,2529+4]..[69,2529+11])
+        expression (demos/calc-incremental/calc.ml[69,2529+12]..[75,2690+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[69,2529+12]..[69,2529+27])
+            Ppat_constraint
+            pattern (demos/calc-incremental/calc.ml[69,2529+13]..[69,2529+17])
+              Ppat_var "line" (demos/calc-incremental/calc.ml[69,2529+13]..[69,2529+17])
+            core_type (demos/calc-incremental/calc.ml[69,2529+20]..[69,2529+26])
+              Ptyp_constr "string" (demos/calc-incremental/calc.ml[69,2529+20]..[69,2529+26])
+              []
+          expression (demos/calc-incremental/calc.ml[70,2559+2]..[75,2690+38])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (demos/calc-incremental/calc.ml[70,2559+6]..[70,2559+12])
+                  Ppat_var "lexbuf" (demos/calc-incremental/calc.ml[70,2559+6]..[70,2559+12])
+                expression (demos/calc-incremental/calc.ml[70,2559+15]..[70,2559+31])
+                  Pexp_apply
+                  expression (demos/calc-incremental/calc.ml[70,2559+15]..[70,2559+26])
+                    Pexp_ident "from_string" (demos/calc-incremental/calc.ml[70,2559+15]..[70,2559+26])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-incremental/calc.ml[70,2559+27]..[70,2559+31])
+                        Pexp_ident "line" (demos/calc-incremental/calc.ml[70,2559+27]..[70,2559+31])
+                  ]
+            ]
+            expression (demos/calc-incremental/calc.ml[71,2594+2]..[75,2690+38])
+              Pexp_try
+              expression (demos/calc-incremental/calc.ml[72,2600+4]..[72,2600+59])
+                Pexp_apply
+                expression (demos/calc-incremental/calc.ml[72,2600+4]..[72,2600+8])
+                  Pexp_ident "loop" (demos/calc-incremental/calc.ml[72,2600+4]..[72,2600+8])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[72,2600+9]..[72,2600+15])
+                      Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[72,2600+9]..[72,2600+15])
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[72,2600+16]..[72,2600+59])
+                      Pexp_apply
+                      expression (demos/calc-incremental/calc.ml[72,2600+17]..[72,2600+40])
+                        Pexp_ident "Parser.Incremental.main" (demos/calc-incremental/calc.ml[72,2600+17]..[72,2600+40])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (demos/calc-incremental/calc.ml[72,2600+41]..[72,2600+58])
+                            Pexp_field
+                            expression (demos/calc-incremental/calc.ml[72,2600+41]..[72,2600+47])
+                              Pexp_ident "lexbuf" (demos/calc-incremental/calc.ml[72,2600+41]..[72,2600+47])
+                            "lex_curr_p" (demos/calc-incremental/calc.ml[72,2600+48]..[72,2600+58])
+                      ]
+                ]
+              [
+                <case>
+                  pattern (demos/calc-incremental/calc.ml[74,2667+4]..[74,2667+19])
+                    Ppat_construct "Lexer.Error" (demos/calc-incremental/calc.ml[74,2667+4]..[74,2667+15])
+                    Some
+                      []
+                      pattern (demos/calc-incremental/calc.ml[74,2667+16]..[74,2667+19])
+                        Ppat_var "msg" (demos/calc-incremental/calc.ml[74,2667+16]..[74,2667+19])
+                  expression (demos/calc-incremental/calc.ml[75,2690+6]..[75,2690+38])
+                    Pexp_apply
+                    expression (demos/calc-incremental/calc.ml[75,2690+6]..[75,2690+20])
+                      Pexp_ident "Printf.fprintf" (demos/calc-incremental/calc.ml[75,2690+6]..[75,2690+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[75,2690+21]..[75,2690+27])
+                          Pexp_ident "stderr" (demos/calc-incremental/calc.ml[75,2690+21]..[75,2690+27])
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[75,2690+28]..[75,2690+34])
+                          Pexp_constant PConst_string("%s%!",(demos/calc-incremental/calc.ml[75,2690+29]..[75,2690+33]),None)
+                      <arg>
+                      Nolabel
+                        expression (demos/calc-incremental/calc.ml[75,2690+35]..[75,2690+38])
+                          Pexp_ident "msg" (demos/calc-incremental/calc.ml[75,2690+35]..[75,2690+38])
+                    ]
+              ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[81,2866+0]..[86,2977+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[81,2866+4]..[81,2866+11])
+          Ppat_var "process" (demos/calc-incremental/calc.ml[81,2866+4]..[81,2866+11])
+        expression (demos/calc-incremental/calc.ml[81,2866+12]..[86,2977+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[81,2866+12]..[81,2866+43])
+            Ppat_constraint
+            pattern (demos/calc-incremental/calc.ml[81,2866+13]..[81,2866+26])
+              Ppat_var "optional_line" (demos/calc-incremental/calc.ml[81,2866+13]..[81,2866+26])
+            core_type (demos/calc-incremental/calc.ml[81,2866+29]..[81,2866+42])
+              Ptyp_constr "option" (demos/calc-incremental/calc.ml[81,2866+36]..[81,2866+42])
+              [
+                core_type (demos/calc-incremental/calc.ml[81,2866+29]..[81,2866+35])
+                  Ptyp_constr "string" (demos/calc-incremental/calc.ml[81,2866+29]..[81,2866+35])
+                  []
+              ]
+          expression (demos/calc-incremental/calc.ml[82,2912+2]..[86,2977+18])
+            Pexp_match
+            expression (demos/calc-incremental/calc.ml[82,2912+8]..[82,2912+21])
+              Pexp_ident "optional_line" (demos/calc-incremental/calc.ml[82,2912+8]..[82,2912+21])
+            [
+              <case>
+                pattern (demos/calc-incremental/calc.ml[83,2939+4]..[83,2939+8])
+                  Ppat_construct "None" (demos/calc-incremental/calc.ml[83,2939+4]..[83,2939+8])
+                  None
+                expression (demos/calc-incremental/calc.ml[84,2951+6]..[84,2951+8])
+                  Pexp_construct "()" (demos/calc-incremental/calc.ml[84,2951+6]..[84,2951+8])
+                  None
+              <case>
+                pattern (demos/calc-incremental/calc.ml[85,2960+4]..[85,2960+13])
+                  Ppat_construct "Some" (demos/calc-incremental/calc.ml[85,2960+4]..[85,2960+8])
+                  Some
+                    []
+                    pattern (demos/calc-incremental/calc.ml[85,2960+9]..[85,2960+13])
+                      Ppat_var "line" (demos/calc-incremental/calc.ml[85,2960+9]..[85,2960+13])
+                expression (demos/calc-incremental/calc.ml[86,2977+6]..[86,2977+18])
+                  Pexp_apply
+                  expression (demos/calc-incremental/calc.ml[86,2977+6]..[86,2977+13])
+                    Pexp_ident "process" (demos/calc-incremental/calc.ml[86,2977+6]..[86,2977+13])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-incremental/calc.ml[86,2977+14]..[86,2977+18])
+                        Pexp_ident "line" (demos/calc-incremental/calc.ml[86,2977+14]..[86,2977+18])
+                  ]
+            ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[88,2997+0]..[93,3154+18])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[88,2997+8]..[88,2997+14])
+          Ppat_var "repeat" (demos/calc-incremental/calc.ml[88,2997+8]..[88,2997+14])
+        expression (demos/calc-incremental/calc.ml[88,2997+15]..[93,3154+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (demos/calc-incremental/calc.ml[88,2997+15]..[88,2997+22])
+            Ppat_var "channel" (demos/calc-incremental/calc.ml[88,2997+15]..[88,2997+22])
+          expression (demos/calc-incremental/calc.ml[90,3056+2]..[93,3154+18])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (demos/calc-incremental/calc.ml[90,3056+6]..[90,3056+29])
+                  Ppat_tuple
+                  [
+                    pattern (demos/calc-incremental/calc.ml[90,3056+6]..[90,3056+19])
+                      Ppat_var "optional_line" (demos/calc-incremental/calc.ml[90,3056+6]..[90,3056+19])
+                    pattern (demos/calc-incremental/calc.ml[90,3056+21]..[90,3056+29])
+                      Ppat_var "continue" (demos/calc-incremental/calc.ml[90,3056+21]..[90,3056+29])
+                  ]
+                expression (demos/calc-incremental/calc.ml[90,3056+32]..[90,3056+50])
+                  Pexp_apply
+                  expression (demos/calc-incremental/calc.ml[90,3056+32]..[90,3056+42])
+                    Pexp_ident "Lexer.line" (demos/calc-incremental/calc.ml[90,3056+32]..[90,3056+42])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-incremental/calc.ml[90,3056+43]..[90,3056+50])
+                        Pexp_ident "channel" (demos/calc-incremental/calc.ml[90,3056+43]..[90,3056+50])
+                  ]
+            ]
+            expression (demos/calc-incremental/calc.ml[91,3110+2]..[93,3154+18])
+              Pexp_sequence
+              expression (demos/calc-incremental/calc.ml[91,3110+2]..[91,3110+23])
+                Pexp_apply
+                expression (demos/calc-incremental/calc.ml[91,3110+2]..[91,3110+9])
+                  Pexp_ident "process" (demos/calc-incremental/calc.ml[91,3110+2]..[91,3110+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[91,3110+10]..[91,3110+23])
+                      Pexp_ident "optional_line" (demos/calc-incremental/calc.ml[91,3110+10]..[91,3110+23])
+                ]
+              expression (demos/calc-incremental/calc.ml[92,3135+2]..[93,3154+18])
+                Pexp_ifthenelse
+                expression (demos/calc-incremental/calc.ml[92,3135+5]..[92,3135+13])
+                  Pexp_ident "continue" (demos/calc-incremental/calc.ml[92,3135+5]..[92,3135+13])
+                expression (demos/calc-incremental/calc.ml[93,3154+4]..[93,3154+18])
+                  Pexp_apply
+                  expression (demos/calc-incremental/calc.ml[93,3154+4]..[93,3154+10])
+                    Pexp_ident "repeat" (demos/calc-incremental/calc.ml[93,3154+4]..[93,3154+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (demos/calc-incremental/calc.ml[93,3154+11]..[93,3154+18])
+                        Pexp_ident "channel" (demos/calc-incremental/calc.ml[93,3154+11]..[93,3154+18])
+                  ]
+                None
+    ]
+  structure_item (demos/calc-incremental/calc.ml[95,3174+0]..[96,3183+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[95,3174+4]..[95,3174+6])
+          Ppat_construct "()" (demos/calc-incremental/calc.ml[95,3174+4]..[95,3174+6])
+          None
+        expression (demos/calc-incremental/calc.ml[96,3183+2]..[96,3183+29])
+          Pexp_apply
+          expression (demos/calc-incremental/calc.ml[96,3183+2]..[96,3183+8])
+            Pexp_ident "repeat" (demos/calc-incremental/calc.ml[96,3183+2]..[96,3183+8])
+          [
+            <arg>
+            Nolabel
+              expression (demos/calc-incremental/calc.ml[96,3183+9]..[96,3183+29])
+                Pexp_apply
+                expression (demos/calc-incremental/calc.ml[96,3183+10]..[96,3183+22])
+                  Pexp_ident "from_channel" (demos/calc-incremental/calc.ml[96,3183+10]..[96,3183+22])
+                [
+                  <arg>
+                  Nolabel
+                    expression (demos/calc-incremental/calc.ml[96,3183+23]..[96,3183+28])
+                      Pexp_ident "stdin" (demos/calc-incremental/calc.ml[96,3183+23]..[96,3183+28])
+                ]
+          ]
+    ]
+]
+
+open Lexing
+module I = Parser.MenhirInterpreter
+let rec loop lexbuf (checkpoint : int I.checkpoint) =
+  match checkpoint with
+  | I.InputNeeded _env ->
+      let token = Lexer.token lexbuf in
+      let startp = lexbuf.lex_start_p
+      and endp = lexbuf.lex_curr_p in
+      let checkpoint = I.offer checkpoint (token, startp, endp) in
+      loop lexbuf checkpoint
+  | I.Shifting _ | I.AboutToReduce _ ->
+      let checkpoint = I.resume checkpoint in loop lexbuf checkpoint
+  | I.HandlingError _env ->
+      Printf.fprintf stderr "At offset %d: syntax error.\n%!"
+        (lexeme_start lexbuf)
+  | I.Accepted v -> Printf.printf "%d\n%!" v
+  | I.Rejected -> assert false
+let _ = loop
+let succeed (v : int) = Printf.printf "%d\n%!" v
+let fail lexbuf (_ : int I.checkpoint) =
+  Printf.fprintf stderr "At offset %d: syntax error.\n%!"
+    (lexeme_start lexbuf)
+let loop lexbuf result =
+  let supplier = I.lexer_lexbuf_to_supplier Lexer.token lexbuf in
+  I.loop_handle succeed (fail lexbuf) supplier result
+let process (line : string) =
+  let lexbuf = from_string line in
+  try loop lexbuf (Parser.Incremental.main lexbuf.lex_curr_p)
+  with | Lexer.Error msg -> Printf.fprintf stderr "%s%!" msg
+let process (optional_line : string option) =
+  match optional_line with | None -> () | Some line -> process line
+let rec repeat channel =
+  let (optional_line, continue) = Lexer.line channel in
+  process optional_line; if continue then repeat channel
+let () = repeat (from_channel stdin)
+[
+  structure_item (demos/calc-incremental/calc.ml[1,0+0]..demos/calc-incremental/calc.ml[1,0+11])
+    Tstr_open Fresh
+    module_expr (demos/calc-incremental/calc.ml[1,0+5]..demos/calc-incremental/calc.ml[1,0+11])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (demos/calc-incremental/calc.ml[5,65+0]..demos/calc-incremental/calc.ml[6,76+26])
+    Tstr_module
+    I/301
+      module_expr (demos/calc-incremental/calc.ml[6,76+2]..demos/calc-incremental/calc.ml[6,76+26])
+        Tmod_ident "Dune__exe!.Parser.MenhirInterpreter"
+  structure_item (demos/calc-incremental/calc.ml[15,428+0]..demos/calc-incremental/calc.ml[41,1517+18])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[15,428+8]..demos/calc-incremental/calc.ml[15,428+12])
+          Tpat_var "loop/302"
+        expression (demos/calc-incremental/calc.ml[15,428+13]..demos/calc-incremental/calc.ml[41,1517+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[15,428+13]..demos/calc-incremental/calc.ml[15,428+19])
+                Tpat_var "lexbuf/303"
+              expression (demos/calc-incremental/calc.ml[15,428+20]..demos/calc-incremental/calc.ml[41,1517+18]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (demos/calc-incremental/calc.ml[15,428+21]..demos/calc-incremental/calc.ml[15,428+31])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (demos/calc-incremental/calc.ml[15,428+34]..demos/calc-incremental/calc.ml[15,428+50])
+                          Ttyp_constr "I/301.checkpoint"
+                          [
+                            core_type (demos/calc-incremental/calc.ml[15,428+34]..demos/calc-incremental/calc.ml[15,428+37])
+                              Ttyp_constr "int/1!"
+                              []
+                          ]
+                      Tpat_alias "checkpoint/341"
+                      pattern (demos/calc-incremental/calc.ml[15,428+21]..demos/calc-incremental/calc.ml[15,428+31])
+                        Tpat_any
+                    expression (demos/calc-incremental/calc.ml[16,482+2]..demos/calc-incremental/calc.ml[41,1517+18])
+                      Texp_match
+                      expression (demos/calc-incremental/calc.ml[16,482+8]..demos/calc-incremental/calc.ml[16,482+18])
+                        Texp_ident "checkpoint/341"
+                      [
+                        <case>
+                          pattern (demos/calc-incremental/calc.ml[17,506+4]..demos/calc-incremental/calc.ml[17,506+22])
+                            Tpat_value
+                            pattern (demos/calc-incremental/calc.ml[17,506+4]..demos/calc-incremental/calc.ml[17,506+22])
+                              Tpat_construct "I.InputNeeded"
+                              [
+                                pattern (demos/calc-incremental/calc.ml[17,506+18]..demos/calc-incremental/calc.ml[17,506+22])
+                                  Tpat_var "_env/374"
+                              ]
+                              None
+                          expression (demos/calc-incremental/calc.ml[21,695+6]..demos/calc-incremental/calc.ml[25,878+28])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (demos/calc-incremental/calc.ml[21,695+10]..demos/calc-incremental/calc.ml[21,695+15])
+                                  Tpat_var "token/377"
+                                expression (demos/calc-incremental/calc.ml[21,695+18]..demos/calc-incremental/calc.ml[21,695+36])
+                                  Texp_apply
+                                  expression (demos/calc-incremental/calc.ml[21,695+18]..demos/calc-incremental/calc.ml[21,695+29])
+                                    Texp_ident "Dune__exe!.Lexer.token"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (demos/calc-incremental/calc.ml[21,695+30]..demos/calc-incremental/calc.ml[21,695+36])
+                                        Texp_ident "lexbuf/303"
+                                  ]
+                            ]
+                            expression (demos/calc-incremental/calc.ml[22,735+6]..demos/calc-incremental/calc.ml[25,878+28])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (demos/calc-incremental/calc.ml[22,735+10]..demos/calc-incremental/calc.ml[22,735+16])
+                                    Tpat_var "startp/408"
+                                  expression (demos/calc-incremental/calc.ml[22,735+19]..demos/calc-incremental/calc.ml[22,735+37])
+                                    Texp_field
+                                    expression (demos/calc-incremental/calc.ml[22,735+19]..demos/calc-incremental/calc.ml[22,735+25])
+                                      Texp_ident "lexbuf/303"
+                                    "lex_start_p"
+                                <def>
+                                  pattern (demos/calc-incremental/calc.ml[23,773+10]..demos/calc-incremental/calc.ml[23,773+14])
+                                    Tpat_var "endp/409"
+                                  expression (demos/calc-incremental/calc.ml[23,773+17]..demos/calc-incremental/calc.ml[23,773+34])
+                                    Texp_field
+                                    expression (demos/calc-incremental/calc.ml[23,773+17]..demos/calc-incremental/calc.ml[23,773+23])
+                                      Texp_ident "lexbuf/303"
+                                    "lex_curr_p"
+                              ]
+                              expression (demos/calc-incremental/calc.ml[24,811+6]..demos/calc-incremental/calc.ml[25,878+28])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (demos/calc-incremental/calc.ml[24,811+10]..demos/calc-incremental/calc.ml[24,811+20])
+                                      Tpat_var "checkpoint/410"
+                                    expression (demos/calc-incremental/calc.ml[24,811+23]..demos/calc-incremental/calc.ml[24,811+63])
+                                      Texp_apply
+                                      expression (demos/calc-incremental/calc.ml[24,811+23]..demos/calc-incremental/calc.ml[24,811+30])
+                                        Texp_ident "I/301.offer"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (demos/calc-incremental/calc.ml[24,811+31]..demos/calc-incremental/calc.ml[24,811+41])
+                                            Texp_ident "checkpoint/341"
+                                        <arg>
+                                          Nolabel
+                                          expression (demos/calc-incremental/calc.ml[24,811+42]..demos/calc-incremental/calc.ml[24,811+63])
+                                            Texp_tuple
+                                            [
+                                              expression (demos/calc-incremental/calc.ml[24,811+43]..demos/calc-incremental/calc.ml[24,811+48])
+                                                Texp_ident "token/377"
+                                              expression (demos/calc-incremental/calc.ml[24,811+50]..demos/calc-incremental/calc.ml[24,811+56])
+                                                Texp_ident "startp/408"
+                                              expression (demos/calc-incremental/calc.ml[24,811+58]..demos/calc-incremental/calc.ml[24,811+62])
+                                                Texp_ident "endp/409"
+                                            ]
+                                      ]
+                                ]
+                                expression (demos/calc-incremental/calc.ml[25,878+6]..demos/calc-incremental/calc.ml[25,878+28])
+                                  Texp_apply
+                                  expression (demos/calc-incremental/calc.ml[25,878+6]..demos/calc-incremental/calc.ml[25,878+10])
+                                    Texp_ident "loop/302"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (demos/calc-incremental/calc.ml[25,878+11]..demos/calc-incremental/calc.ml[25,878+17])
+                                        Texp_ident "lexbuf/303"
+                                    <arg>
+                                      Nolabel
+                                      expression (demos/calc-incremental/calc.ml[25,878+18]..demos/calc-incremental/calc.ml[25,878+28])
+                                        Texp_ident "checkpoint/410"
+                                  ]
+                        <case>
+                          pattern (demos/calc-incremental/calc.ml[26,907+4]..demos/calc-incremental/calc.ml[27,924+21])
+                            Tpat_or
+                            pattern (demos/calc-incremental/calc.ml[26,907+4]..demos/calc-incremental/calc.ml[26,907+16])
+                              Tpat_value
+                              pattern (demos/calc-incremental/calc.ml[26,907+4]..demos/calc-incremental/calc.ml[26,907+16])
+                                Tpat_construct "I.Shifting"
+                                [
+                                  pattern (demos/calc-incremental/calc.ml[26,907+15]..demos/calc-incremental/calc.ml[26,907+16])
+                                    Tpat_any
+                                  pattern (demos/calc-incremental/calc.ml[26,907+15]..demos/calc-incremental/calc.ml[26,907+16])
+                                    Tpat_any
+                                  pattern (demos/calc-incremental/calc.ml[26,907+15]..demos/calc-incremental/calc.ml[26,907+16])
+                                    Tpat_any
+                                ]
+                                None
+                            pattern (demos/calc-incremental/calc.ml[27,924+4]..demos/calc-incremental/calc.ml[27,924+21])
+                              Tpat_value
+                              pattern (demos/calc-incremental/calc.ml[27,924+4]..demos/calc-incremental/calc.ml[27,924+21])
+                                Tpat_construct "I.AboutToReduce"
+                                [
+                                  pattern (demos/calc-incremental/calc.ml[27,924+20]..demos/calc-incremental/calc.ml[27,924+21])
+                                    Tpat_any
+                                  pattern (demos/calc-incremental/calc.ml[27,924+20]..demos/calc-incremental/calc.ml[27,924+21])
+                                    Tpat_any
+                                ]
+                                None
+                          expression (demos/calc-incremental/calc.ml[28,949+6]..demos/calc-incremental/calc.ml[29,995+28])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (demos/calc-incremental/calc.ml[28,949+10]..demos/calc-incremental/calc.ml[28,949+20])
+                                  Tpat_var "checkpoint/433"
+                                expression (demos/calc-incremental/calc.ml[28,949+23]..demos/calc-incremental/calc.ml[28,949+42])
+                                  Texp_apply
+                                  expression (demos/calc-incremental/calc.ml[28,949+23]..demos/calc-incremental/calc.ml[28,949+31])
+                                    Texp_ident "I/301.resume"
+                                  [
+                                    <arg>
+                                      Optional "strategy"
+                                      expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                        Texp_construct "None"
+                                        []
+                                    <arg>
+                                      Nolabel
+                                      expression (demos/calc-incremental/calc.ml[28,949+32]..demos/calc-incremental/calc.ml[28,949+42])
+                                        Texp_ident "checkpoint/341"
+                                  ]
+                            ]
+                            expression (demos/calc-incremental/calc.ml[29,995+6]..demos/calc-incremental/calc.ml[29,995+28])
+                              Texp_apply
+                              expression (demos/calc-incremental/calc.ml[29,995+6]..demos/calc-incremental/calc.ml[29,995+10])
+                                Texp_ident "loop/302"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (demos/calc-incremental/calc.ml[29,995+11]..demos/calc-incremental/calc.ml[29,995+17])
+                                    Texp_ident "lexbuf/303"
+                                <arg>
+                                  Nolabel
+                                  expression (demos/calc-incremental/calc.ml[29,995+18]..demos/calc-incremental/calc.ml[29,995+28])
+                                    Texp_ident "checkpoint/433"
+                              ]
+                        <case>
+                          pattern (demos/calc-incremental/calc.ml[30,1024+4]..demos/calc-incremental/calc.ml[30,1024+24])
+                            Tpat_value
+                            pattern (demos/calc-incremental/calc.ml[30,1024+4]..demos/calc-incremental/calc.ml[30,1024+24])
+                              Tpat_construct "I.HandlingError"
+                              [
+                                pattern (demos/calc-incremental/calc.ml[30,1024+20]..demos/calc-incremental/calc.ml[30,1024+24])
+                                  Tpat_var "_env/375"
+                              ]
+                              None
+                          expression (demos/calc-incremental/calc.ml[32,1129+6]..demos/calc-incremental/calc.ml[34,1199+29])
+                            Texp_apply
+                            expression (demos/calc-incremental/calc.ml[32,1129+6]..demos/calc-incremental/calc.ml[32,1129+20])
+                              Texp_ident "Stdlib!.Printf.fprintf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[32,1129+21]..demos/calc-incremental/calc.ml[32,1129+27])
+                                  Texp_ident "Stdlib!.stderr"
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                          Texp_constant Const_string("At offset ",(demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost,None)
+                                        expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int"
+                                          [
+                                            expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Int_d"
+                                              []
+                                            expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                              []
+                                            expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_precision"
+                                              []
+                                            expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                                              [
+                                                expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                                  Texp_constant Const_string(": syntax error.\n",(demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost,None)
+                                                expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.Flush"
+                                                  [
+                                                    expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                      []
+                                                  ]
+                                              ]
+                                          ]
+                                      ]
+                                    expression (demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost
+                                      Texp_constant Const_string("At offset %d: syntax error.\n%!",(demos/calc-incremental/calc.ml[33,1157+8]..demos/calc-incremental/calc.ml[33,1157+41]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[34,1199+8]..demos/calc-incremental/calc.ml[34,1199+29])
+                                  Texp_apply
+                                  expression (demos/calc-incremental/calc.ml[34,1199+9]..demos/calc-incremental/calc.ml[34,1199+21])
+                                    Texp_ident "Stdlib!.Lexing.lexeme_start"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (demos/calc-incremental/calc.ml[34,1199+22]..demos/calc-incremental/calc.ml[34,1199+28])
+                                        Texp_ident "lexbuf/303"
+                                  ]
+                            ]
+                        <case>
+                          pattern (demos/calc-incremental/calc.ml[35,1229+4]..demos/calc-incremental/calc.ml[35,1229+16])
+                            Tpat_value
+                            pattern (demos/calc-incremental/calc.ml[35,1229+4]..demos/calc-incremental/calc.ml[35,1229+16])
+                              Tpat_construct "I.Accepted"
+                              [
+                                pattern (demos/calc-incremental/calc.ml[35,1229+15]..demos/calc-incremental/calc.ml[35,1229+16])
+                                  Tpat_var "v/376"
+                              ]
+                              None
+                          expression (demos/calc-incremental/calc.ml[37,1327+6]..demos/calc-incremental/calc.ml[37,1327+30])
+                            Texp_apply
+                            expression (demos/calc-incremental/calc.ml[37,1327+6]..demos/calc-incremental/calc.ml[37,1327+19])
+                              Texp_ident "Stdlib!.Printf.printf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                      [
+                                        expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                          []
+                                        expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                          []
+                                        expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                          []
+                                        expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                          [
+                                            expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                              Texp_constant Const_char 0a
+                                            expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Flush"
+                                              [
+                                                expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                  []
+                                              ]
+                                          ]
+                                      ]
+                                    expression (demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost
+                                      Texp_constant Const_string("%d\n%!",(demos/calc-incremental/calc.ml[37,1327+20]..demos/calc-incremental/calc.ml[37,1327+28]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[37,1327+29]..demos/calc-incremental/calc.ml[37,1327+30])
+                                  Texp_ident "v/376"
+                            ]
+                        <case>
+                          pattern (demos/calc-incremental/calc.ml[38,1358+4]..demos/calc-incremental/calc.ml[38,1358+14])
+                            Tpat_value
+                            pattern (demos/calc-incremental/calc.ml[38,1358+4]..demos/calc-incremental/calc.ml[38,1358+14])
+                              Tpat_construct "I.Rejected"
+                              []
+                              None
+                          expression (demos/calc-incremental/calc.ml[41,1517+6]..demos/calc-incremental/calc.ml[41,1517+18])
+                            Texp_assert                            expression (demos/calc-incremental/calc.ml[41,1517+13]..demos/calc-incremental/calc.ml[41,1517+18])
+                              Texp_construct "false"
+                              []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[43,1537+0]..demos/calc-incremental/calc.ml[43,1537+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[43,1537+4]..demos/calc-incremental/calc.ml[43,1537+5])
+          Tpat_any
+        expression (demos/calc-incremental/calc.ml[43,1537+8]..demos/calc-incremental/calc.ml[43,1537+12])
+          Texp_ident "loop/302"
+    ]
+  structure_item (demos/calc-incremental/calc.ml[51,1898+0]..demos/calc-incremental/calc.ml[53,1996+26])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[51,1898+4]..demos/calc-incremental/calc.ml[51,1898+11])
+          Tpat_var "succeed/470"
+        expression (demos/calc-incremental/calc.ml[51,1898+12]..demos/calc-incremental/calc.ml[53,1996+26]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[51,1898+13]..demos/calc-incremental/calc.ml[51,1898+14])
+                extra
+                  Tpat_extra_constraint
+                  core_type (demos/calc-incremental/calc.ml[51,1898+17]..demos/calc-incremental/calc.ml[51,1898+20])
+                    Ttyp_constr "int/1!"
+                    []
+                Tpat_alias "v/472"
+                pattern (demos/calc-incremental/calc.ml[51,1898+13]..demos/calc-incremental/calc.ml[51,1898+14])
+                  Tpat_any
+              expression (demos/calc-incremental/calc.ml[53,1996+2]..demos/calc-incremental/calc.ml[53,1996+26])
+                Texp_apply
+                expression (demos/calc-incremental/calc.ml[53,1996+2]..demos/calc-incremental/calc.ml[53,1996+15])
+                  Texp_ident "Stdlib!.Printf.printf"
+                [
+                  <arg>
+                    Nolabel
+                    expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24])
+                      Texp_construct "CamlinternalFormatBasics.Format"
+                      [
+                        expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                          Texp_construct "CamlinternalFormatBasics.Int"
+                          [
+                            expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                              Texp_construct "CamlinternalFormatBasics.Int_d"
+                              []
+                            expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                              []
+                            expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                              Texp_construct "CamlinternalFormatBasics.No_precision"
+                              []
+                            expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                              Texp_construct "CamlinternalFormatBasics.Char_literal"
+                              [
+                                expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                                  Texp_constant Const_char 0a
+                                expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Flush"
+                                  [
+                                    expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                      []
+                                  ]
+                              ]
+                          ]
+                        expression (demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost
+                          Texp_constant Const_string("%d\n%!",(demos/calc-incremental/calc.ml[53,1996+16]..demos/calc-incremental/calc.ml[53,1996+24]) ghost,None)
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (demos/calc-incremental/calc.ml[53,1996+25]..demos/calc-incremental/calc.ml[53,1996+26])
+                      Texp_ident "v/472"
+                ]
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[55,2024+0]..demos/calc-incremental/calc.ml[59,2200+25])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[55,2024+4]..demos/calc-incremental/calc.ml[55,2024+8])
+          Tpat_var "fail/473"
+        expression (demos/calc-incremental/calc.ml[55,2024+9]..demos/calc-incremental/calc.ml[59,2200+25]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[55,2024+9]..demos/calc-incremental/calc.ml[55,2024+15])
+                Tpat_var "lexbuf/475"
+              expression (demos/calc-incremental/calc.ml[55,2024+16]..demos/calc-incremental/calc.ml[59,2200+25]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (demos/calc-incremental/calc.ml[55,2024+17]..demos/calc-incremental/calc.ml[55,2024+18])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (demos/calc-incremental/calc.ml[55,2024+21]..demos/calc-incremental/calc.ml[55,2024+37])
+                          Ttyp_constr "I/301.checkpoint"
+                          [
+                            core_type (demos/calc-incremental/calc.ml[55,2024+21]..demos/calc-incremental/calc.ml[55,2024+24])
+                              Ttyp_constr "int/1!"
+                              []
+                          ]
+                      Tpat_any
+                    expression (demos/calc-incremental/calc.ml[57,2138+2]..demos/calc-incremental/calc.ml[59,2200+25])
+                      Texp_apply
+                      expression (demos/calc-incremental/calc.ml[57,2138+2]..demos/calc-incremental/calc.ml[57,2138+16])
+                        Texp_ident "Stdlib!.Printf.fprintf"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[57,2138+17]..demos/calc-incremental/calc.ml[57,2138+23])
+                            Texp_ident "Stdlib!.stderr"
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                [
+                                  expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                    Texp_constant Const_string("At offset ",(demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost,None)
+                                  expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.Int"
+                                    [
+                                      expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.Int_d"
+                                        []
+                                      expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                        []
+                                      expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.No_precision"
+                                        []
+                                      expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                        [
+                                          expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                            Texp_constant Const_string(": syntax error.\n",(demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost,None)
+                                          expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Flush"
+                                            [
+                                              expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                []
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                              expression (demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost
+                                Texp_constant Const_string("At offset %d: syntax error.\n%!",(demos/calc-incremental/calc.ml[58,2162+4]..demos/calc-incremental/calc.ml[58,2162+37]) ghost,None)
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[59,2200+4]..demos/calc-incremental/calc.ml[59,2200+25])
+                            Texp_apply
+                            expression (demos/calc-incremental/calc.ml[59,2200+5]..demos/calc-incremental/calc.ml[59,2200+17])
+                              Texp_ident "Stdlib!.Lexing.lexeme_start"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[59,2200+18]..demos/calc-incremental/calc.ml[59,2200+24])
+                                  Texp_ident "lexbuf/475"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[61,2227+0]..demos/calc-incremental/calc.ml[63,2318+53])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[61,2227+4]..demos/calc-incremental/calc.ml[61,2227+8])
+          Tpat_var "loop/477"
+        expression (demos/calc-incremental/calc.ml[61,2227+9]..demos/calc-incremental/calc.ml[63,2318+53]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[61,2227+9]..demos/calc-incremental/calc.ml[61,2227+15])
+                Tpat_var "lexbuf/478"
+              expression (demos/calc-incremental/calc.ml[61,2227+16]..demos/calc-incremental/calc.ml[63,2318+53]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (demos/calc-incremental/calc.ml[61,2227+16]..demos/calc-incremental/calc.ml[61,2227+22])
+                      Tpat_var "result/479"
+                    expression (demos/calc-incremental/calc.ml[62,2252+2]..demos/calc-incremental/calc.ml[63,2318+53])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (demos/calc-incremental/calc.ml[62,2252+6]..demos/calc-incremental/calc.ml[62,2252+14])
+                            Tpat_var "supplier/480"
+                          expression (demos/calc-incremental/calc.ml[62,2252+17]..demos/calc-incremental/calc.ml[62,2252+62])
+                            Texp_apply
+                            expression (demos/calc-incremental/calc.ml[62,2252+17]..demos/calc-incremental/calc.ml[62,2252+43])
+                              Texp_ident "I/301.lexer_lexbuf_to_supplier"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[62,2252+44]..demos/calc-incremental/calc.ml[62,2252+55])
+                                  Texp_ident "Dune__exe!.Lexer.token"
+                              <arg>
+                                Nolabel
+                                expression (demos/calc-incremental/calc.ml[62,2252+56]..demos/calc-incremental/calc.ml[62,2252+62])
+                                  Texp_ident "lexbuf/478"
+                            ]
+                      ]
+                      expression (demos/calc-incremental/calc.ml[63,2318+2]..demos/calc-incremental/calc.ml[63,2318+53])
+                        Texp_apply
+                        expression (demos/calc-incremental/calc.ml[63,2318+2]..demos/calc-incremental/calc.ml[63,2318+15])
+                          Texp_ident "I/301.loop_handle"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[63,2318+16]..demos/calc-incremental/calc.ml[63,2318+23])
+                              Texp_ident "succeed/470"
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[63,2318+24]..demos/calc-incremental/calc.ml[63,2318+37])
+                              Texp_apply
+                              expression (demos/calc-incremental/calc.ml[63,2318+25]..demos/calc-incremental/calc.ml[63,2318+29])
+                                Texp_ident "fail/473"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (demos/calc-incremental/calc.ml[63,2318+30]..demos/calc-incremental/calc.ml[63,2318+36])
+                                    Texp_ident "lexbuf/478"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[63,2318+38]..demos/calc-incremental/calc.ml[63,2318+46])
+                              Texp_ident "supplier/480"
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[63,2318+47]..demos/calc-incremental/calc.ml[63,2318+53])
+                              Texp_ident "result/479"
+                        ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[69,2529+0]..demos/calc-incremental/calc.ml[75,2690+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[69,2529+4]..demos/calc-incremental/calc.ml[69,2529+11])
+          Tpat_var "process/481"
+        expression (demos/calc-incremental/calc.ml[69,2529+12]..demos/calc-incremental/calc.ml[75,2690+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[69,2529+13]..demos/calc-incremental/calc.ml[69,2529+17])
+                extra
+                  Tpat_extra_constraint
+                  core_type (demos/calc-incremental/calc.ml[69,2529+20]..demos/calc-incremental/calc.ml[69,2529+26])
+                    Ttyp_constr "string/15!"
+                    []
+                Tpat_alias "line/483"
+                pattern (demos/calc-incremental/calc.ml[69,2529+13]..demos/calc-incremental/calc.ml[69,2529+17])
+                  Tpat_any
+              expression (demos/calc-incremental/calc.ml[70,2559+2]..demos/calc-incremental/calc.ml[75,2690+38])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (demos/calc-incremental/calc.ml[70,2559+6]..demos/calc-incremental/calc.ml[70,2559+12])
+                      Tpat_var "lexbuf/484"
+                    expression (demos/calc-incremental/calc.ml[70,2559+15]..demos/calc-incremental/calc.ml[70,2559+31])
+                      Texp_apply
+                      expression (demos/calc-incremental/calc.ml[70,2559+15]..demos/calc-incremental/calc.ml[70,2559+26])
+                        Texp_ident "Stdlib!.Lexing.from_string"
+                      [
+                        <arg>
+                          Optional "with_positions"
+                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                            Texp_construct "None"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[70,2559+27]..demos/calc-incremental/calc.ml[70,2559+31])
+                            Texp_ident "line/483"
+                      ]
+                ]
+                expression (demos/calc-incremental/calc.ml[71,2594+2]..demos/calc-incremental/calc.ml[75,2690+38])
+                  Texp_try
+                  expression (demos/calc-incremental/calc.ml[72,2600+4]..demos/calc-incremental/calc.ml[72,2600+59])
+                    Texp_apply
+                    expression (demos/calc-incremental/calc.ml[72,2600+4]..demos/calc-incremental/calc.ml[72,2600+8])
+                      Texp_ident "loop/477"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-incremental/calc.ml[72,2600+9]..demos/calc-incremental/calc.ml[72,2600+15])
+                          Texp_ident "lexbuf/484"
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-incremental/calc.ml[72,2600+16]..demos/calc-incremental/calc.ml[72,2600+59])
+                          Texp_apply
+                          expression (demos/calc-incremental/calc.ml[72,2600+17]..demos/calc-incremental/calc.ml[72,2600+40])
+                            Texp_ident "Dune__exe!.Parser.Incremental.main"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (demos/calc-incremental/calc.ml[72,2600+41]..demos/calc-incremental/calc.ml[72,2600+58])
+                                Texp_field
+                                expression (demos/calc-incremental/calc.ml[72,2600+41]..demos/calc-incremental/calc.ml[72,2600+47])
+                                  Texp_ident "lexbuf/484"
+                                "lex_curr_p"
+                          ]
+                    ]
+                  [
+                    <case>
+                      pattern (demos/calc-incremental/calc.ml[74,2667+4]..demos/calc-incremental/calc.ml[74,2667+19])
+                        Tpat_construct "Lexer.Error"
+                        [
+                          pattern (demos/calc-incremental/calc.ml[74,2667+16]..demos/calc-incremental/calc.ml[74,2667+19])
+                            Tpat_var "msg/486"
+                        ]
+                        None
+                      expression (demos/calc-incremental/calc.ml[75,2690+6]..demos/calc-incremental/calc.ml[75,2690+38])
+                        Texp_apply
+                        expression (demos/calc-incremental/calc.ml[75,2690+6]..demos/calc-incremental/calc.ml[75,2690+20])
+                          Texp_ident "Stdlib!.Printf.fprintf"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[75,2690+21]..demos/calc-incremental/calc.ml[75,2690+27])
+                              Texp_ident "Stdlib!.stderr"
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34])
+                              Texp_construct "CamlinternalFormatBasics.Format"
+                              [
+                                expression (demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String"
+                                  [
+                                    expression (demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                      []
+                                    expression (demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Flush"
+                                      [
+                                        expression (demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                  ]
+                                expression (demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34]) ghost
+                                  Texp_constant Const_string("%s%!",(demos/calc-incremental/calc.ml[75,2690+28]..demos/calc-incremental/calc.ml[75,2690+34]) ghost,None)
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (demos/calc-incremental/calc.ml[75,2690+35]..demos/calc-incremental/calc.ml[75,2690+38])
+                              Texp_ident "msg/486"
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[81,2866+0]..demos/calc-incremental/calc.ml[86,2977+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[81,2866+4]..demos/calc-incremental/calc.ml[81,2866+11])
+          Tpat_var "process/487"
+        expression (demos/calc-incremental/calc.ml[81,2866+12]..demos/calc-incremental/calc.ml[86,2977+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[81,2866+13]..demos/calc-incremental/calc.ml[81,2866+26])
+                extra
+                  Tpat_extra_constraint
+                  core_type (demos/calc-incremental/calc.ml[81,2866+29]..demos/calc-incremental/calc.ml[81,2866+42])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (demos/calc-incremental/calc.ml[81,2866+29]..demos/calc-incremental/calc.ml[81,2866+35])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                Tpat_alias "optional_line/488"
+                pattern (demos/calc-incremental/calc.ml[81,2866+13]..demos/calc-incremental/calc.ml[81,2866+26])
+                  Tpat_any
+              expression (demos/calc-incremental/calc.ml[82,2912+2]..demos/calc-incremental/calc.ml[86,2977+18])
+                Texp_match
+                expression (demos/calc-incremental/calc.ml[82,2912+8]..demos/calc-incremental/calc.ml[82,2912+21])
+                  Texp_ident "optional_line/488"
+                [
+                  <case>
+                    pattern (demos/calc-incremental/calc.ml[83,2939+4]..demos/calc-incremental/calc.ml[83,2939+8])
+                      Tpat_value
+                      pattern (demos/calc-incremental/calc.ml[83,2939+4]..demos/calc-incremental/calc.ml[83,2939+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (demos/calc-incremental/calc.ml[84,2951+6]..demos/calc-incremental/calc.ml[84,2951+8])
+                      Texp_construct "()"
+                      []
+                  <case>
+                    pattern (demos/calc-incremental/calc.ml[85,2960+4]..demos/calc-incremental/calc.ml[85,2960+13])
+                      Tpat_value
+                      pattern (demos/calc-incremental/calc.ml[85,2960+4]..demos/calc-incremental/calc.ml[85,2960+13])
+                        Tpat_construct "Some"
+                        [
+                          pattern (demos/calc-incremental/calc.ml[85,2960+9]..demos/calc-incremental/calc.ml[85,2960+13])
+                            Tpat_var "line/489"
+                        ]
+                        None
+                    expression (demos/calc-incremental/calc.ml[86,2977+6]..demos/calc-incremental/calc.ml[86,2977+18])
+                      Texp_apply
+                      expression (demos/calc-incremental/calc.ml[86,2977+6]..demos/calc-incremental/calc.ml[86,2977+13])
+                        Texp_ident "process/481"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[86,2977+14]..demos/calc-incremental/calc.ml[86,2977+18])
+                            Texp_ident "line/489"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[88,2997+0]..demos/calc-incremental/calc.ml[93,3154+18])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[88,2997+8]..demos/calc-incremental/calc.ml[88,2997+14])
+          Tpat_var "repeat/490"
+        expression (demos/calc-incremental/calc.ml[88,2997+15]..demos/calc-incremental/calc.ml[93,3154+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-incremental/calc.ml[88,2997+15]..demos/calc-incremental/calc.ml[88,2997+22])
+                Tpat_var "channel/491"
+              expression (demos/calc-incremental/calc.ml[90,3056+2]..demos/calc-incremental/calc.ml[93,3154+18])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (demos/calc-incremental/calc.ml[90,3056+6]..demos/calc-incremental/calc.ml[90,3056+29])
+                      Tpat_tuple
+                      [
+                        pattern (demos/calc-incremental/calc.ml[90,3056+6]..demos/calc-incremental/calc.ml[90,3056+19])
+                          Tpat_var "optional_line/492"
+                        pattern (demos/calc-incremental/calc.ml[90,3056+21]..demos/calc-incremental/calc.ml[90,3056+29])
+                          Tpat_var "continue/493"
+                      ]
+                    expression (demos/calc-incremental/calc.ml[90,3056+32]..demos/calc-incremental/calc.ml[90,3056+50])
+                      Texp_apply
+                      expression (demos/calc-incremental/calc.ml[90,3056+32]..demos/calc-incremental/calc.ml[90,3056+42])
+                        Texp_ident "Dune__exe!.Lexer.line"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[90,3056+43]..demos/calc-incremental/calc.ml[90,3056+50])
+                            Texp_ident "channel/491"
+                      ]
+                ]
+                expression (demos/calc-incremental/calc.ml[91,3110+2]..demos/calc-incremental/calc.ml[93,3154+18])
+                  Texp_sequence
+                  expression (demos/calc-incremental/calc.ml[91,3110+2]..demos/calc-incremental/calc.ml[91,3110+23])
+                    Texp_apply
+                    expression (demos/calc-incremental/calc.ml[91,3110+2]..demos/calc-incremental/calc.ml[91,3110+9])
+                      Texp_ident "process/487"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (demos/calc-incremental/calc.ml[91,3110+10]..demos/calc-incremental/calc.ml[91,3110+23])
+                          Texp_ident "optional_line/492"
+                    ]
+                  expression (demos/calc-incremental/calc.ml[92,3135+2]..demos/calc-incremental/calc.ml[93,3154+18])
+                    Texp_ifthenelse
+                    expression (demos/calc-incremental/calc.ml[92,3135+5]..demos/calc-incremental/calc.ml[92,3135+13])
+                      Texp_ident "continue/493"
+                    expression (demos/calc-incremental/calc.ml[93,3154+4]..demos/calc-incremental/calc.ml[93,3154+18])
+                      Texp_apply
+                      expression (demos/calc-incremental/calc.ml[93,3154+4]..demos/calc-incremental/calc.ml[93,3154+10])
+                        Texp_ident "repeat/490"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (demos/calc-incremental/calc.ml[93,3154+11]..demos/calc-incremental/calc.ml[93,3154+18])
+                            Texp_ident "channel/491"
+                      ]
+                    None
+          ]
+    ]
+  structure_item (demos/calc-incremental/calc.ml[95,3174+0]..demos/calc-incremental/calc.ml[96,3183+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-incremental/calc.ml[95,3174+4]..demos/calc-incremental/calc.ml[95,3174+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (demos/calc-incremental/calc.ml[96,3183+2]..demos/calc-incremental/calc.ml[96,3183+29])
+          Texp_apply
+          expression (demos/calc-incremental/calc.ml[96,3183+2]..demos/calc-incremental/calc.ml[96,3183+8])
+            Texp_ident "repeat/490"
+          [
+            <arg>
+              Nolabel
+              expression (demos/calc-incremental/calc.ml[96,3183+9]..demos/calc-incremental/calc.ml[96,3183+29])
+                Texp_apply
+                expression (demos/calc-incremental/calc.ml[96,3183+10]..demos/calc-incremental/calc.ml[96,3183+22])
+                  Texp_ident "Stdlib!.Lexing.from_channel"
+                [
+                  <arg>
+                    Optional "with_positions"
+                    expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                      Texp_construct "None"
+                      []
+                  <arg>
+                    Nolabel
+                    expression (demos/calc-incremental/calc.ml[96,3183+23]..demos/calc-incremental/calc.ml[96,3183+28])
+                      Texp_ident "Stdlib!.stdin"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Calc>
+ "I"[module] ->
+   (CU Dune__exe . "Parser"[module] .
+   "MenhirInterpreter"[module])<Dune__exe__Calc.0>;
+ "fail"[value] -> <Dune__exe__Calc.14>;
+ "loop"[value] -> <Dune__exe__Calc.16>;
+ "process"[value] -> <Dune__exe__Calc.24>;
+ "repeat"[value] -> <Dune__exe__Calc.27>;
+ "succeed"[value] -> <Dune__exe__Calc.12>;
+ }
+
+(seq
+  (letrec
+    (loop/302
+       (function lexbuf/303 checkpoint/341 : int
+         (catch
+           (switch* checkpoint/341
+            case int 0:
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "demos/calc-incremental/calc.ml" 41 6]))
+            case tag 0:
+             (let
+               (_env/374 =a (field_imm 0 checkpoint/341)
+                token/377 =
+                  (apply (field_imm 4 (global Dune__exe__Lexer!)) lexbuf/303)
+                startp/408 = (field_mut 10 lexbuf/303)
+                endp/409 = (field_mut 11 lexbuf/303)
+                checkpoint/410 =
+                  (apply
+                    (field_imm 0 (field_imm 2 (global Dune__exe__Parser!)))
+                    checkpoint/341
+                    (makeblock 0 token/377 startp/408 endp/409)))
+               (apply loop/302 lexbuf/303 checkpoint/410))
+            case tag 1: (exit 1)
+            case tag 2: (exit 1)
+            case tag 3:
+             (let (_env/375 =a (field_imm 0 checkpoint/341))
+               (apply (field_imm 0 (global Stdlib__Printf!))
+                 (field_imm 39 (global Stdlib!))
+                 [0:
+                  [11:
+                   "At offset " [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                  "At offset %d: syntax error.\n%!"]
+                 (apply (field_imm 9 (global Stdlib__Lexing!)) lexbuf/303)))
+            case tag 4:
+             (let (v/376 =a (field_imm 0 checkpoint/341))
+               (apply (field_imm 1 (global Stdlib__Printf!))
+                 [0: [4: 0 0 0 [12: '\n' [10: 0]]] "%d\n%!"] v/376)))
+          with (1)
+           (let
+             (checkpoint/433 =
+                (apply
+                  (field_imm 1 (field_imm 2 (global Dune__exe__Parser!))) 0
+                  checkpoint/341))
+             (apply loop/302 lexbuf/303 checkpoint/433)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Calc!) loop/302))
+  (field_imm 5 (global Dune__exe__Calc!)) 0
+  (let
+    (succeed/470 =
+       (function v/472[int] : int
+         (apply (field_imm 1 (global Stdlib__Printf!))
+           [0: [4: 0 0 0 [12: '\n' [10: 0]]] "%d\n%!"] v/472)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Calc!) succeed/470))
+  (let
+    (fail/473 =
+       (function lexbuf/475 param/476 : int
+         (apply (field_imm 0 (global Stdlib__Printf!))
+           (field_imm 39 (global Stdlib!))
+           [0:
+            [11: "At offset " [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+            "At offset %d: syntax error.\n%!"]
+           (apply (field_imm 9 (global Stdlib__Lexing!)) lexbuf/475))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Calc!) fail/473))
+  (let
+    (loop/477 =
+       (function lexbuf/478 result/479 : int
+         (let
+           (supplier/480 =
+              (apply (field_imm 2 (field_imm 2 (global Dune__exe__Parser!)))
+                (field_imm 4 (global Dune__exe__Lexer!)) lexbuf/478))
+           (apply (field_imm 4 (field_imm 2 (global Dune__exe__Parser!)))
+             (field_imm 0 (global Dune__exe__Calc!))
+             (apply (field_imm 1 (global Dune__exe__Calc!)) lexbuf/478)
+             supplier/480 result/479))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) loop/477))
+  (let
+    (process/481 =
+       (function line/483 : int
+         (let
+           (lexbuf/484 =
+              (apply (field_imm 2 (global Stdlib__Lexing!)) 0 line/483))
+           (try
+             (apply (field_imm 2 (global Dune__exe__Calc!)) lexbuf/484
+               (apply (field_imm 0 (field_imm 3 (global Dune__exe__Parser!)))
+                 (field_mut 11 lexbuf/484)))
+            with exn/587
+             (catch
+               (let (tag/588 =a (field_imm 0 exn/587))
+                 (if (== tag/588 (field_imm 0 (global Dune__exe__Lexer!)))
+                   (let (msg/486 =a (field_imm 1 exn/587))
+                     (apply (field_imm 0 (global Stdlib__Printf!))
+                       (field_imm 39 (global Stdlib!))
+                       [0: [2: 0 [10: 0]] "%s%!"] msg/486))
+                   (exit 2)))
+              with (2) (reraise exn/587))))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Calc!) process/481))
+  (let
+    (process/487 =
+       (function optional_line/488 : int
+         (if (isint optional_line/488) 0
+           (let (line/489 =a (field_imm 0 optional_line/488))
+             (apply (field_imm 6 (global Dune__exe__Calc!)) line/489)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Calc!) process/487))
+  (letrec
+    (repeat/490
+       (function channel/491 : int
+         (let
+           (*match*/592 =
+              (apply (field_imm 2 (global Dune__exe__Lexer!)) channel/491)
+            continue/493 =a (field_imm 1 *match*/592)
+            optional_line/492 =a (field_imm 0 *match*/592))
+           (seq
+             (apply (field_imm 3 (global Dune__exe__Calc!))
+               optional_line/492)
+             (if continue/493 (apply repeat/490 channel/491) 0)))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Calc!) repeat/490))
+  (let
+    (*match*/594 =
+       (apply (field_imm 4 (global Dune__exe__Calc!))
+         (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+           (field_imm 37 (global Stdlib!)))))
+    0)
+  0)
+(seq
+  (letrec
+    (loop/302
+       (function lexbuf/303 checkpoint/341 : int
+         (catch
+           (switch* checkpoint/341
+            case int 0:
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "demos/calc-incremental/calc.ml" 41 6]))
+            case tag 0:
+             (let
+               (token/377 =
+                  (apply (field_imm 4 (global Dune__exe__Lexer!)) lexbuf/303)
+                startp/408 = (field_mut 10 lexbuf/303)
+                endp/409 = (field_mut 11 lexbuf/303)
+                checkpoint/410 =
+                  (apply
+                    (field_imm 0 (field_imm 2 (global Dune__exe__Parser!)))
+                    checkpoint/341
+                    (makeblock 0 token/377 startp/408 endp/409)))
+               (apply loop/302 lexbuf/303 checkpoint/410))
+            case tag 1: (exit 1)
+            case tag 2: (exit 1)
+            case tag 3:
+             (apply (field_imm 0 (global Stdlib__Printf!))
+               (field_imm 39 (global Stdlib!))
+               [0:
+                [11:
+                 "At offset " [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                "At offset %d: syntax error.\n%!"]
+               (apply (field_imm 9 (global Stdlib__Lexing!)) lexbuf/303))
+            case tag 4:
+             (apply (field_imm 1 (global Stdlib__Printf!))
+               [0: [4: 0 0 0 [12: '\n' [10: 0]]] "%d\n%!"]
+               (field_imm 0 checkpoint/341)))
+          with (1)
+           (let
+             (checkpoint/433 =
+                (apply
+                  (field_imm 1 (field_imm 2 (global Dune__exe__Parser!))) 0
+                  checkpoint/341))
+             (apply loop/302 lexbuf/303 checkpoint/433)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Calc!) loop/302))
+  (field_imm 5 (global Dune__exe__Calc!)) 0
+  (let
+    (succeed/470 =
+       (function v/472[int] : int
+         (apply (field_imm 1 (global Stdlib__Printf!))
+           [0: [4: 0 0 0 [12: '\n' [10: 0]]] "%d\n%!"] v/472)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Calc!) succeed/470))
+  (let
+    (fail/473 =
+       (function lexbuf/475 param/476 : int
+         (apply (field_imm 0 (global Stdlib__Printf!))
+           (field_imm 39 (global Stdlib!))
+           [0:
+            [11: "At offset " [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+            "At offset %d: syntax error.\n%!"]
+           (apply (field_imm 9 (global Stdlib__Lexing!)) lexbuf/475))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Calc!) fail/473))
+  (let
+    (loop/477 =
+       (function lexbuf/478 result/479 : int
+         (let
+           (supplier/480 =
+              (apply (field_imm 2 (field_imm 2 (global Dune__exe__Parser!)))
+                (field_imm 4 (global Dune__exe__Lexer!)) lexbuf/478))
+           (apply (field_imm 4 (field_imm 2 (global Dune__exe__Parser!)))
+             (field_imm 0 (global Dune__exe__Calc!))
+             (apply (field_imm 1 (global Dune__exe__Calc!)) lexbuf/478)
+             supplier/480 result/479))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) loop/477))
+  (let
+    (process/481 =
+       (function line/483 : int
+         (let
+           (lexbuf/484 =
+              (apply (field_imm 2 (global Stdlib__Lexing!)) 0 line/483))
+           (try
+             (apply (field_imm 2 (global Dune__exe__Calc!)) lexbuf/484
+               (apply (field_imm 0 (field_imm 3 (global Dune__exe__Parser!)))
+                 (field_mut 11 lexbuf/484)))
+            with exn/587
+             (if
+               (== (field_imm 0 exn/587)
+                 (field_imm 0 (global Dune__exe__Lexer!)))
+               (apply (field_imm 0 (global Stdlib__Printf!))
+                 (field_imm 39 (global Stdlib!)) [0: [2: 0 [10: 0]] "%s%!"]
+                 (field_imm 1 exn/587))
+               (reraise exn/587))))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Calc!) process/481))
+  (let
+    (process/487 =
+       (function optional_line/488 : int
+         (if (isint optional_line/488) 0
+           (apply (field_imm 6 (global Dune__exe__Calc!))
+             (field_imm 0 optional_line/488)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Calc!) process/487))
+  (letrec
+    (repeat/490
+       (function channel/491 : int
+         (let
+           (*match*/592 =
+              (apply (field_imm 2 (global Dune__exe__Lexer!)) channel/491))
+           (seq
+             (apply (field_imm 3 (global Dune__exe__Calc!))
+               (field_imm 0 *match*/592))
+             (if (field_imm 1 *match*/592) (apply repeat/490 channel/491) 0)))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Calc!) repeat/490))
+  (let
+    (*match*/594 =
+       (apply (field_imm 4 (global Dune__exe__Calc!))
+         (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+           (field_imm 37 (global Stdlib!)))))
+    0)
+  0)

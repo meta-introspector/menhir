@@ -1,0 +1,442 @@
+[
+  signature_item (src/StackSymbols.mli[14,1003+0]..[14,1003+12])
+    Psig_open Fresh "Grammar" (src/StackSymbols.mli[14,1003+5]..[14,1003+12])
+  signature_item (src/StackSymbols.mli[16,1017+0]..[50,2452+3])
+    Psig_modtype "STACK_SYMBOLS" (src/StackSymbols.mli[16,1017+12]..[16,1017+25])
+      module_type (src/StackSymbols.mli[16,1017+28]..[50,2452+3])
+        Pmty_signature
+        [
+          signature_item (src/StackSymbols.mli[21,1246+2]..[22,1264+18])
+            Psig_type Rec
+            [
+              type_declaration "property" (src/StackSymbols.mli[21,1246+7]..[21,1246+15]) (src/StackSymbols.mli[21,1246+2]..[22,1264+18])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackSymbols.mli[18,1050+2]..[20,1200+45])
+                      Pstr_eval
+                      expression (src/StackSymbols.mli[18,1050+2]..[20,1200+45])
+                        Pexp_constant PConst_string("A property is a description of the known suffix of the stack at state\n     [s]. It is represented as an array of symbols. By convention, the top\n     of the stack is the end of the array. ",(src/StackSymbols.mli[18,1050+2]..[20,1200+45]),None)
+                  ]
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (src/StackSymbols.mli[22,1264+4]..[22,1264+18])
+                      Ptyp_constr "array" (src/StackSymbols.mli[22,1264+13]..[22,1264+18])
+                      [
+                        core_type (src/StackSymbols.mli[22,1264+4]..[22,1264+12])
+                          Ptyp_constr "Symbol.t" (src/StackSymbols.mli[22,1264+4]..[22,1264+12])
+                          []
+                      ]
+            ]
+          signature_item (src/StackSymbols.mli[27,1470+2]..[27,1470+41])
+            Psig_value
+            value_description "stack_symbols" (src/StackSymbols.mli[27,1470+6]..[27,1470+19]) (src/StackSymbols.mli[27,1470+2]..[27,1470+41])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[24,1284+2]..[26,1427+42])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[24,1284+2]..[26,1427+42])
+                      Pexp_constant PConst_string("[stack_symbols s] is the known suffix of the stack at state [s]. It\n     is represented as an array of symbols. By convention, the top of\n     the stack is the end of the array. ",(src/StackSymbols.mli[24,1284+2]..[26,1427+42]),None)
+                ]
+              core_type (src/StackSymbols.mli[27,1470+21]..[27,1470+41])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[27,1470+21]..[27,1470+29])
+                  Ptyp_constr "Lr1.node" (src/StackSymbols.mli[27,1470+21]..[27,1470+29])
+                  []
+                core_type (src/StackSymbols.mli[27,1470+33]..[27,1470+41])
+                  Ptyp_constr "property" (src/StackSymbols.mli[27,1470+33]..[27,1470+41])
+                  []
+              []
+          signature_item (src/StackSymbols.mli[30,1575+2]..[30,1575+35])
+            Psig_value
+            value_description "stack_height" (src/StackSymbols.mli[30,1575+6]..[30,1575+18]) (src/StackSymbols.mli[30,1575+2]..[30,1575+35])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[29,1513+2]..[29,1513+61])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[29,1513+2]..[29,1513+61])
+                      Pexp_constant PConst_string("[stack_height s] is [Array.length (stack_symbols s)]. ",(src/StackSymbols.mli[29,1513+2]..[29,1513+61]),None)
+                ]
+              core_type (src/StackSymbols.mli[30,1575+20]..[30,1575+35])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[30,1575+20]..[30,1575+28])
+                  Ptyp_constr "Lr1.node" (src/StackSymbols.mli[30,1575+20]..[30,1575+28])
+                  []
+                core_type (src/StackSymbols.mli[30,1575+32]..[30,1575+35])
+                  Ptyp_constr "int" (src/StackSymbols.mli[30,1575+32]..[30,1575+35])
+                  []
+              []
+          signature_item (src/StackSymbols.mli[36,1874+2]..[36,1874+54])
+            Psig_value
+            value_description "production_symbols" (src/StackSymbols.mli[36,1874+6]..[36,1874+24]) (src/StackSymbols.mli[36,1874+2]..[36,1874+54])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[32,1612+2]..[35,1828+45])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[32,1612+2]..[35,1828+45])
+                      Pexp_constant PConst_string("[production_symbols prod] is the known suffix of the stack at a state\n     where production [prod] can be reduced. In the short invariant, the\n     length of this suffix is [Production.length prod]. In the long\n     invariant, its length can be greater. ",(src/StackSymbols.mli[32,1612+2]..[35,1828+45]),None)
+                ]
+              core_type (src/StackSymbols.mli[36,1874+26]..[36,1874+54])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[36,1874+26]..[36,1874+42])
+                  Ptyp_constr "Production.index" (src/StackSymbols.mli[36,1874+26]..[36,1874+42])
+                  []
+                core_type (src/StackSymbols.mli[36,1874+46]..[36,1874+54])
+                  Ptyp_constr "property" (src/StackSymbols.mli[36,1874+46]..[36,1874+54])
+                  []
+              []
+          signature_item (src/StackSymbols.mli[39,2008+2]..[39,2008+48])
+            Psig_value
+            value_description "production_height" (src/StackSymbols.mli[39,2008+6]..[39,2008+23]) (src/StackSymbols.mli[39,2008+2]..[39,2008+48])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[38,1930+2]..[38,1930+77])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[38,1930+2]..[38,1930+77])
+                      Pexp_constant PConst_string("[production_height prod] is [Array.length (production_symbols prod)]. ",(src/StackSymbols.mli[38,1930+2]..[38,1930+77]),None)
+                ]
+              core_type (src/StackSymbols.mli[39,2008+25]..[39,2008+48])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[39,2008+25]..[39,2008+41])
+                  Ptyp_constr "Production.index" (src/StackSymbols.mli[39,2008+25]..[39,2008+41])
+                  []
+                core_type (src/StackSymbols.mli[39,2008+45]..[39,2008+48])
+                  Ptyp_constr "int" (src/StackSymbols.mli[39,2008+45]..[39,2008+48])
+                  []
+              []
+          signature_item (src/StackSymbols.mli[45,2302+2]..[45,2302+45])
+            Psig_value
+            value_description "goto_symbols" (src/StackSymbols.mli[45,2302+6]..[45,2302+18]) (src/StackSymbols.mli[45,2302+2]..[45,2302+45])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[41,2058+2]..[44,2285+16])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[41,2058+2]..[44,2285+16])
+                      Pexp_constant PConst_string("[goto_symbols nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. In the short invariant, the\n     length of this suffix is [1]. In the long invariant, its length can be\n     greater. ",(src/StackSymbols.mli[41,2058+2]..[44,2285+16]),None)
+                ]
+              core_type (src/StackSymbols.mli[45,2302+20]..[45,2302+45])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[45,2302+20]..[45,2302+33])
+                  Ptyp_constr "Nonterminal.t" (src/StackSymbols.mli[45,2302+20]..[45,2302+33])
+                  []
+                core_type (src/StackSymbols.mli[45,2302+37]..[45,2302+45])
+                  Ptyp_constr "property" (src/StackSymbols.mli[45,2302+37]..[45,2302+45])
+                  []
+              []
+          signature_item (src/StackSymbols.mli[48,2411+2]..[48,2411+39])
+            Psig_value
+            value_description "goto_height" (src/StackSymbols.mli[48,2411+6]..[48,2411+17]) (src/StackSymbols.mli[48,2411+2]..[48,2411+39])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[47,2349+2]..[47,2349+61])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[47,2349+2]..[47,2349+61])
+                      Pexp_constant PConst_string("[goto_height nt] is [Array.length (goto_symbols nt)]. ",(src/StackSymbols.mli[47,2349+2]..[47,2349+61]),None)
+                ]
+              core_type (src/StackSymbols.mli[48,2411+19]..[48,2411+39])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[48,2411+19]..[48,2411+32])
+                  Ptyp_constr "Nonterminal.t" (src/StackSymbols.mli[48,2411+19]..[48,2411+32])
+                  []
+                core_type (src/StackSymbols.mli[48,2411+36]..[48,2411+39])
+                  Ptyp_constr "int" (src/StackSymbols.mli[48,2411+36]..[48,2411+39])
+                  []
+              []
+        ]
+  signature_item (src/StackSymbols.mli[56,2732+0]..[56,2732+29])
+    Psig_module "Run" (src/StackSymbols.mli[56,2732+7]..[56,2732+10])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackSymbols.mli[52,2457+0]..[55,2662+69])
+            Pstr_eval
+            expression (src/StackSymbols.mli[52,2457+0]..[55,2662+69])
+              Pexp_constant PConst_string("This module computes the known suffix of the stack, a sequence of\n   symbols, in each of the automaton's states. The length of this\n   sequence can be predicted based on the LR(0) items present in this\n   state: it is the maximum position of the bullet over all items. ",(src/StackSymbols.mli[52,2457+0]..[55,2662+69]),None)
+        ]
+    module_type (src/StackSymbols.mli[56,2732+11]..[56,2732+29])
+      Pmty_functor ()
+      module_type (src/StackSymbols.mli[56,2732+16]..[56,2732+29])
+        Pmty_ident "STACK_SYMBOLS" (src/StackSymbols.mli[56,2732+16]..[56,2732+29])
+  signature_item (src/StackSymbols.mli[63,3086+0]..[63,3086+30])
+    Psig_module "Long" (src/StackSymbols.mli[63,3086+7]..[63,3086+11])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackSymbols.mli[58,2763+0]..[62,3035+50])
+            Pstr_eval
+            expression (src/StackSymbols.mli[58,2763+0]..[62,3035+50])
+              Pexp_constant PConst_string("This module computes the known suffix of the stack, a sequence of\n   symbols, in each of the automaton's states. The length of this\n   sequence is determined by an analysis of the paths in the LR(0)\n   automaton. At each state, the sequence computed by [Run] is always\n   a suffix of the sequence computed by [Long]. ",(src/StackSymbols.mli[58,2763+0]..[62,3035+50]),None)
+        ]
+    module_type (src/StackSymbols.mli[63,3086+12]..[63,3086+30])
+      Pmty_functor ()
+      module_type (src/StackSymbols.mli[63,3086+17]..[63,3086+30])
+        Pmty_ident "STACK_SYMBOLS" (src/StackSymbols.mli[63,3086+17]..[63,3086+30])
+  signature_item (src/StackSymbols.mli[73,3577+0]..[73,3577+43])
+    Psig_value
+    value_description "print_symbols" (src/StackSymbols.mli[73,3577+4]..[73,3577+17]) (src/StackSymbols.mli[73,3577+0]..[73,3577+43])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackSymbols.mli[71,3477+0]..[72,3548+28])
+            Pstr_eval
+            expression (src/StackSymbols.mli[71,3477+0]..[72,3548+28])
+              Pexp_constant PConst_string("This utility function prints a sequence of symbols. Every symbol is\n   preceded with a space. ",(src/StackSymbols.mli[71,3477+0]..[72,3548+28]),None)
+        ]
+      core_type (src/StackSymbols.mli[73,3577+19]..[73,3577+43])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/StackSymbols.mli[73,3577+19]..[73,3577+33])
+          Ptyp_constr "array" (src/StackSymbols.mli[73,3577+28]..[73,3577+33])
+          [
+            core_type (src/StackSymbols.mli[73,3577+19]..[73,3577+27])
+              Ptyp_constr "Symbol.t" (src/StackSymbols.mli[73,3577+19]..[73,3577+27])
+              []
+          ]
+        core_type (src/StackSymbols.mli[73,3577+37]..[73,3577+43])
+          Ptyp_constr "string" (src/StackSymbols.mli[73,3577+37]..[73,3577+43])
+          []
+      []
+]
+
+open Grammar
+module type STACK_SYMBOLS  =
+  sig
+    type property = Symbol.t array[@@ocaml.doc
+                                    "A property is a description of the known suffix of the stack at state\n     [s]. It is represented as an array of symbols. By convention, the top\n     of the stack is the end of the array. "]
+    val stack_symbols : Lr1.node -> property[@@ocaml.doc
+                                              "[stack_symbols s] is the known suffix of the stack at state [s]. It\n     is represented as an array of symbols. By convention, the top of\n     the stack is the end of the array. "]
+    val stack_height : Lr1.node -> int[@@ocaml.doc
+                                        "[stack_height s] is [Array.length (stack_symbols s)]. "]
+    val production_symbols : Production.index -> property[@@ocaml.doc
+                                                           "[production_symbols prod] is the known suffix of the stack at a state\n     where production [prod] can be reduced. In the short invariant, the\n     length of this suffix is [Production.length prod]. In the long\n     invariant, its length can be greater. "]
+    val production_height : Production.index -> int[@@ocaml.doc
+                                                     "[production_height prod] is [Array.length (production_symbols prod)]. "]
+    val goto_symbols : Nonterminal.t -> property[@@ocaml.doc
+                                                  "[goto_symbols nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. In the short invariant, the\n     length of this suffix is [1]. In the long invariant, its length can be\n     greater. "]
+    val goto_height : Nonterminal.t -> int[@@ocaml.doc
+                                            "[goto_height nt] is [Array.length (goto_symbols nt)]. "]
+  end
+module Run : () -> STACK_SYMBOLS[@@ocaml.doc
+                                  "This module computes the known suffix of the stack, a sequence of\n   symbols, in each of the automaton's states. The length of this\n   sequence can be predicted based on the LR(0) items present in this\n   state: it is the maximum position of the bullet over all items. "]
+module Long : () -> STACK_SYMBOLS[@@ocaml.doc
+                                   "This module computes the known suffix of the stack, a sequence of\n   symbols, in each of the automaton's states. The length of this\n   sequence is determined by an analysis of the paths in the LR(0)\n   automaton. At each state, the sequence computed by [Run] is always\n   a suffix of the sequence computed by [Long]. "]
+val print_symbols : Symbol.t array -> string[@@ocaml.doc
+                                              "This utility function prints a sequence of symbols. Every symbol is\n   preceded with a space. "]
+[
+  signature_item (src/StackSymbols.mli[14,1003+0]..src/StackSymbols.mli[14,1003+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/StackSymbols.mli[16,1017+0]..src/StackSymbols.mli[50,2452+3])
+    Tsig_modtype "STACK_SYMBOLS/555"
+      module_type (src/StackSymbols.mli[16,1017+28]..src/StackSymbols.mli[50,2452+3])
+        Tmty_signature
+        [
+          signature_item (src/StackSymbols.mli[21,1246+2]..src/StackSymbols.mli[22,1264+18])
+            Tsig_type Rec
+            [
+              type_declaration property/414 (src/StackSymbols.mli[21,1246+2]..src/StackSymbols.mli[22,1264+18])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackSymbols.mli[18,1050+2]..[20,1200+45])
+                      Pstr_eval
+                      expression (src/StackSymbols.mli[18,1050+2]..[20,1200+45])
+                        Pexp_constant PConst_string("A property is a description of the known suffix of the stack at state\n     [s]. It is represented as an array of symbols. By convention, the top\n     of the stack is the end of the array. ",(src/StackSymbols.mli[18,1050+2]..[20,1200+45]),None)
+                  ]
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (src/StackSymbols.mli[22,1264+4]..src/StackSymbols.mli[22,1264+18])
+                      Ttyp_constr "array/8!"
+                      [
+                        core_type (src/StackSymbols.mli[22,1264+4]..src/StackSymbols.mli[22,1264+12])
+                          Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+                          []
+                      ]
+            ]
+          signature_item (src/StackSymbols.mli[27,1470+2]..src/StackSymbols.mli[27,1470+41])
+            Tsig_value
+            value_description stack_symbols/495 (src/StackSymbols.mli[27,1470+2]..src/StackSymbols.mli[27,1470+41])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[24,1284+2]..[26,1427+42])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[24,1284+2]..[26,1427+42])
+                      Pexp_constant PConst_string("[stack_symbols s] is the known suffix of the stack at state [s]. It\n     is represented as an array of symbols. By convention, the top of\n     the stack is the end of the array. ",(src/StackSymbols.mli[24,1284+2]..[26,1427+42]),None)
+                ]
+              core_type (src/StackSymbols.mli[27,1470+21]..src/StackSymbols.mli[27,1470+41])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[27,1470+21]..src/StackSymbols.mli[27,1470+29])
+                  Ttyp_constr "Dune__exe!.Lr1.node"
+                  []
+                core_type (src/StackSymbols.mli[27,1470+33]..src/StackSymbols.mli[27,1470+41])
+                  Ttyp_constr "property/414"
+                  []
+              []
+          signature_item (src/StackSymbols.mli[30,1575+2]..src/StackSymbols.mli[30,1575+35])
+            Tsig_value
+            value_description stack_height/496 (src/StackSymbols.mli[30,1575+2]..src/StackSymbols.mli[30,1575+35])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[29,1513+2]..[29,1513+61])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[29,1513+2]..[29,1513+61])
+                      Pexp_constant PConst_string("[stack_height s] is [Array.length (stack_symbols s)]. ",(src/StackSymbols.mli[29,1513+2]..[29,1513+61]),None)
+                ]
+              core_type (src/StackSymbols.mli[30,1575+20]..src/StackSymbols.mli[30,1575+35])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[30,1575+20]..src/StackSymbols.mli[30,1575+28])
+                  Ttyp_constr "Dune__exe!.Lr1.node"
+                  []
+                core_type (src/StackSymbols.mli[30,1575+32]..src/StackSymbols.mli[30,1575+35])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+          signature_item (src/StackSymbols.mli[36,1874+2]..src/StackSymbols.mli[36,1874+54])
+            Tsig_value
+            value_description production_symbols/531 (src/StackSymbols.mli[36,1874+2]..src/StackSymbols.mli[36,1874+54])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[32,1612+2]..[35,1828+45])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[32,1612+2]..[35,1828+45])
+                      Pexp_constant PConst_string("[production_symbols prod] is the known suffix of the stack at a state\n     where production [prod] can be reduced. In the short invariant, the\n     length of this suffix is [Production.length prod]. In the long\n     invariant, its length can be greater. ",(src/StackSymbols.mli[32,1612+2]..[35,1828+45]),None)
+                ]
+              core_type (src/StackSymbols.mli[36,1874+26]..src/StackSymbols.mli[36,1874+54])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[36,1874+26]..src/StackSymbols.mli[36,1874+42])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+                core_type (src/StackSymbols.mli[36,1874+46]..src/StackSymbols.mli[36,1874+54])
+                  Ttyp_constr "property/414"
+                  []
+              []
+          signature_item (src/StackSymbols.mli[39,2008+2]..src/StackSymbols.mli[39,2008+48])
+            Tsig_value
+            value_description production_height/532 (src/StackSymbols.mli[39,2008+2]..src/StackSymbols.mli[39,2008+48])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[38,1930+2]..[38,1930+77])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[38,1930+2]..[38,1930+77])
+                      Pexp_constant PConst_string("[production_height prod] is [Array.length (production_symbols prod)]. ",(src/StackSymbols.mli[38,1930+2]..[38,1930+77]),None)
+                ]
+              core_type (src/StackSymbols.mli[39,2008+25]..src/StackSymbols.mli[39,2008+48])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[39,2008+25]..src/StackSymbols.mli[39,2008+41])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+                core_type (src/StackSymbols.mli[39,2008+45]..src/StackSymbols.mli[39,2008+48])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+          signature_item (src/StackSymbols.mli[45,2302+2]..src/StackSymbols.mli[45,2302+45])
+            Tsig_value
+            value_description goto_symbols/553 (src/StackSymbols.mli[45,2302+2]..src/StackSymbols.mli[45,2302+45])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[41,2058+2]..[44,2285+16])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[41,2058+2]..[44,2285+16])
+                      Pexp_constant PConst_string("[goto_symbols nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. In the short invariant, the\n     length of this suffix is [1]. In the long invariant, its length can be\n     greater. ",(src/StackSymbols.mli[41,2058+2]..[44,2285+16]),None)
+                ]
+              core_type (src/StackSymbols.mli[45,2302+20]..src/StackSymbols.mli[45,2302+45])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[45,2302+20]..src/StackSymbols.mli[45,2302+33])
+                  Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                  []
+                core_type (src/StackSymbols.mli[45,2302+37]..src/StackSymbols.mli[45,2302+45])
+                  Ttyp_constr "property/414"
+                  []
+              []
+          signature_item (src/StackSymbols.mli[48,2411+2]..src/StackSymbols.mli[48,2411+39])
+            Tsig_value
+            value_description goto_height/554 (src/StackSymbols.mli[48,2411+2]..src/StackSymbols.mli[48,2411+39])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/StackSymbols.mli[47,2349+2]..[47,2349+61])
+                    Pstr_eval
+                    expression (src/StackSymbols.mli[47,2349+2]..[47,2349+61])
+                      Pexp_constant PConst_string("[goto_height nt] is [Array.length (goto_symbols nt)]. ",(src/StackSymbols.mli[47,2349+2]..[47,2349+61]),None)
+                ]
+              core_type (src/StackSymbols.mli[48,2411+19]..src/StackSymbols.mli[48,2411+39])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/StackSymbols.mli[48,2411+19]..src/StackSymbols.mli[48,2411+32])
+                  Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                  []
+                core_type (src/StackSymbols.mli[48,2411+36]..src/StackSymbols.mli[48,2411+39])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+        ]
+  signature_item (src/StackSymbols.mli[56,2732+0]..src/StackSymbols.mli[56,2732+29])
+    Tsig_module "Run/556"
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackSymbols.mli[52,2457+0]..[55,2662+69])
+            Pstr_eval
+            expression (src/StackSymbols.mli[52,2457+0]..[55,2662+69])
+              Pexp_constant PConst_string("This module computes the known suffix of the stack, a sequence of\n   symbols, in each of the automaton's states. The length of this\n   sequence can be predicted based on the LR(0) items present in this\n   state: it is the maximum position of the bullet over all items. ",(src/StackSymbols.mli[52,2457+0]..[55,2662+69]),None)
+        ]
+    module_type (src/StackSymbols.mli[56,2732+11]..src/StackSymbols.mli[56,2732+29])
+      Tmty_functor ()
+      module_type (src/StackSymbols.mli[56,2732+16]..src/StackSymbols.mli[56,2732+29])
+        Tmty_ident "STACK_SYMBOLS/555"
+  signature_item (src/StackSymbols.mli[63,3086+0]..src/StackSymbols.mli[63,3086+30])
+    Tsig_module "Long/557"
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackSymbols.mli[58,2763+0]..[62,3035+50])
+            Pstr_eval
+            expression (src/StackSymbols.mli[58,2763+0]..[62,3035+50])
+              Pexp_constant PConst_string("This module computes the known suffix of the stack, a sequence of\n   symbols, in each of the automaton's states. The length of this\n   sequence is determined by an analysis of the paths in the LR(0)\n   automaton. At each state, the sequence computed by [Run] is always\n   a suffix of the sequence computed by [Long]. ",(src/StackSymbols.mli[58,2763+0]..[62,3035+50]),None)
+        ]
+    module_type (src/StackSymbols.mli[63,3086+12]..src/StackSymbols.mli[63,3086+30])
+      Tmty_functor ()
+      module_type (src/StackSymbols.mli[63,3086+17]..src/StackSymbols.mli[63,3086+30])
+        Tmty_ident "STACK_SYMBOLS/555"
+  signature_item (src/StackSymbols.mli[73,3577+0]..src/StackSymbols.mli[73,3577+43])
+    Tsig_value
+    value_description print_symbols/558 (src/StackSymbols.mli[73,3577+0]..src/StackSymbols.mli[73,3577+43])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/StackSymbols.mli[71,3477+0]..[72,3548+28])
+            Pstr_eval
+            expression (src/StackSymbols.mli[71,3477+0]..[72,3548+28])
+              Pexp_constant PConst_string("This utility function prints a sequence of symbols. Every symbol is\n   preceded with a space. ",(src/StackSymbols.mli[71,3477+0]..[72,3548+28]),None)
+        ]
+      core_type (src/StackSymbols.mli[73,3577+19]..src/StackSymbols.mli[73,3577+43])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/StackSymbols.mli[73,3577+19]..src/StackSymbols.mli[73,3577+33])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/StackSymbols.mli[73,3577+19]..src/StackSymbols.mli[73,3577+27])
+              Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+              []
+          ]
+        core_type (src/StackSymbols.mli[73,3577+37]..src/StackSymbols.mli[73,3577+43])
+          Ttyp_constr "string/15!"
+          []
+      []
+]
+

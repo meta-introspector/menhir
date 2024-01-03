@@ -1,0 +1,3833 @@
+[
+  structure_item (src/positions.ml[14,999+0]..[14,999+11])
+    Pstr_open Fresh
+    module_expr (src/positions.ml[14,999+5]..[14,999+11])
+      Pmod_ident "Lexing" (src/positions.ml[14,999+5]..[14,999+11])
+  structure_item (src/positions.ml[16,1012+0]..[18,1054+21])
+    Pstr_type Rec
+    [
+      type_declaration "t" (src/positions.ml[16,1012+5]..[16,1012+6]) (src/positions.ml[16,1012+0]..[18,1054+21])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/positions.ml[18,1054+2]..[18,1054+21])
+              Ptyp_tuple
+              [
+                core_type (src/positions.ml[18,1054+2]..[18,1054+10])
+                  Ptyp_constr "position" (src/positions.ml[18,1054+2]..[18,1054+10])
+                  []
+                core_type (src/positions.ml[18,1054+13]..[18,1054+21])
+                  Ptyp_constr "position" (src/positions.ml[18,1054+13]..[18,1054+21])
+                  []
+              ]
+    ]
+  structure_item (src/positions.ml[20,1077+0]..[24,1142+5])
+    Pstr_type Rec
+    [
+      type_declaration "located" (src/positions.ml[20,1077+8]..[20,1077+15]) (src/positions.ml[20,1077+0]..[24,1142+5])
+        ptype_params =
+          [
+            core_type (src/positions.ml[20,1077+5]..[20,1077+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/positions.ml[22,1101+6]..[22,1101+20])
+                Immutable
+                "value" (src/positions.ml[22,1101+6]..[22,1101+11])                core_type (src/positions.ml[22,1101+17]..[22,1101+19])
+                  Ptyp_var a
+              (src/positions.ml[23,1122+6]..[23,1122+19])
+                Immutable
+                "position" (src/positions.ml[23,1122+6]..[23,1122+14])                core_type (src/positions.ml[23,1122+17]..[23,1122+18])
+                  Ptyp_constr "t" (src/positions.ml[23,1122+17]..[23,1122+18])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/positions.ml[26,1149+0]..[27,1175+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[26,1149+4]..[26,1149+9])
+          Ppat_var "value" (src/positions.ml[26,1149+4]..[26,1149+9])
+        expression (src/positions.ml[26,1149+10]..[27,1175+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[26,1149+10]..[26,1149+23])
+            Ppat_record Closed
+            [
+              "value" (src/positions.ml[26,1149+12]..[26,1149+17])
+                pattern (src/positions.ml[26,1149+20]..[26,1149+21])
+                  Ppat_var "v" (src/positions.ml[26,1149+20]..[26,1149+21])
+            ]
+          expression (src/positions.ml[27,1175+2]..[27,1175+3])
+            Pexp_ident "v" (src/positions.ml[27,1175+2]..[27,1175+3])
+    ]
+  structure_item (src/positions.ml[29,1180+0]..[30,1212+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[29,1180+4]..[29,1180+12])
+          Ppat_var "position" (src/positions.ml[29,1180+4]..[29,1180+12])
+        expression (src/positions.ml[29,1180+13]..[30,1212+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[29,1180+13]..[29,1180+29])
+            Ppat_record Closed
+            [
+              "position" (src/positions.ml[29,1180+15]..[29,1180+23])
+                pattern (src/positions.ml[29,1180+26]..[29,1180+27])
+                  Ppat_var "p" (src/positions.ml[29,1180+26]..[29,1180+27])
+            ]
+          expression (src/positions.ml[30,1212+2]..[30,1212+3])
+            Pexp_ident "p" (src/positions.ml[30,1212+2]..[30,1212+3])
+    ]
+  structure_item (src/positions.ml[32,1217+0]..[33,1253+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[32,1217+4]..[32,1217+13])
+          Ppat_var "decompose" (src/positions.ml[32,1217+4]..[32,1217+13])
+        expression (src/positions.ml[32,1217+14]..[33,1253+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[32,1217+14]..[32,1217+33])
+            Ppat_record Closed
+            [
+              "value" (src/positions.ml[32,1217+16]..[32,1217+21]) ghost
+                pattern (src/positions.ml[32,1217+16]..[32,1217+21])
+                  Ppat_var "value" (src/positions.ml[32,1217+16]..[32,1217+21])
+              "position" (src/positions.ml[32,1217+23]..[32,1217+31]) ghost
+                pattern (src/positions.ml[32,1217+23]..[32,1217+31])
+                  Ppat_var "position" (src/positions.ml[32,1217+23]..[32,1217+31])
+            ]
+          expression (src/positions.ml[33,1253+2]..[33,1253+19])
+            Pexp_tuple
+            [
+              expression (src/positions.ml[33,1253+3]..[33,1253+8])
+                Pexp_ident "value" (src/positions.ml[33,1253+3]..[33,1253+8])
+              expression (src/positions.ml[33,1253+10]..[33,1253+18])
+                Pexp_ident "position" (src/positions.ml[33,1253+10]..[33,1253+18])
+            ]
+    ]
+  structure_item (src/positions.ml[35,1274+0]..[39,1335+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[35,1274+4]..[35,1274+12])
+          Ppat_var "with_pos" (src/positions.ml[35,1274+4]..[35,1274+12])
+        expression (src/positions.ml[35,1274+13]..[39,1335+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[35,1274+13]..[35,1274+14])
+            Ppat_var "p" (src/positions.ml[35,1274+13]..[35,1274+14])
+          expression (src/positions.ml[35,1274+15]..[39,1335+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[35,1274+15]..[35,1274+16])
+              Ppat_var "v" (src/positions.ml[35,1274+15]..[35,1274+16])
+            expression (src/positions.ml[36,1293+2]..[39,1335+3])
+              Pexp_record
+              [
+                "value" (src/positions.ml[37,1297+4]..[37,1297+9])
+                  expression (src/positions.ml[37,1297+16]..[37,1297+17])
+                    Pexp_ident "v" (src/positions.ml[37,1297+16]..[37,1297+17])
+                "position" (src/positions.ml[38,1316+4]..[38,1316+12])
+                  expression (src/positions.ml[38,1316+16]..[38,1316+17])
+                    Pexp_ident "p" (src/positions.ml[38,1316+16]..[38,1316+17])
+              ]
+              None
+    ]
+  structure_item (src/positions.ml[41,1340+0]..[44,1447+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[41,1340+4]..[41,1340+12])
+          Ppat_var "with_loc" (src/positions.ml[41,1340+4]..[41,1340+12])
+        expression (src/positions.ml[44,1447+2]..[44,1447+10])
+          Pexp_ident "with_pos" (src/positions.ml[44,1447+2]..[44,1447+10])
+    ]
+  structure_item (src/positions.ml[46,1459+0]..[50,1532+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[46,1459+4]..[46,1459+7])
+          Ppat_var "map" (src/positions.ml[46,1459+4]..[46,1459+7])
+        expression (src/positions.ml[46,1459+8]..[50,1532+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[46,1459+8]..[46,1459+9])
+            Ppat_var "f" (src/positions.ml[46,1459+8]..[46,1459+9])
+          expression (src/positions.ml[46,1459+10]..[50,1532+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[46,1459+10]..[46,1459+11])
+              Ppat_var "v" (src/positions.ml[46,1459+10]..[46,1459+11])
+            expression (src/positions.ml[47,1473+2]..[50,1532+3])
+              Pexp_record
+              [
+                "value" (src/positions.ml[48,1477+4]..[48,1477+9])
+                  expression (src/positions.ml[48,1477+16]..[48,1477+25])
+                    Pexp_apply
+                    expression (src/positions.ml[48,1477+16]..[48,1477+17])
+                      Pexp_ident "f" (src/positions.ml[48,1477+16]..[48,1477+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[48,1477+18]..[48,1477+25])
+                          Pexp_field
+                          expression (src/positions.ml[48,1477+18]..[48,1477+19])
+                            Pexp_ident "v" (src/positions.ml[48,1477+18]..[48,1477+19])
+                          "value" (src/positions.ml[48,1477+20]..[48,1477+25])
+                    ]
+                "position" (src/positions.ml[49,1504+4]..[49,1504+12])
+                  expression (src/positions.ml[49,1504+16]..[49,1504+26])
+                    Pexp_field
+                    expression (src/positions.ml[49,1504+16]..[49,1504+17])
+                      Pexp_ident "v" (src/positions.ml[49,1504+16]..[49,1504+17])
+                    "position" (src/positions.ml[49,1504+18]..[49,1504+26])
+              ]
+              None
+    ]
+  structure_item (src/positions.ml[52,1537+0]..[56,1621+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[52,1537+4]..[52,1537+8])
+          Ppat_var "pmap" (src/positions.ml[52,1537+4]..[52,1537+8])
+        expression (src/positions.ml[52,1537+9]..[56,1621+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[52,1537+9]..[52,1537+10])
+            Ppat_var "f" (src/positions.ml[52,1537+9]..[52,1537+10])
+          expression (src/positions.ml[52,1537+11]..[56,1621+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[52,1537+11]..[52,1537+12])
+              Ppat_var "v" (src/positions.ml[52,1537+11]..[52,1537+12])
+            expression (src/positions.ml[53,1552+2]..[56,1621+3])
+              Pexp_record
+              [
+                "value" (src/positions.ml[54,1556+4]..[54,1556+9])
+                  expression (src/positions.ml[54,1556+16]..[54,1556+36])
+                    Pexp_apply
+                    expression (src/positions.ml[54,1556+16]..[54,1556+17])
+                      Pexp_ident "f" (src/positions.ml[54,1556+16]..[54,1556+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[54,1556+18]..[54,1556+28])
+                          Pexp_field
+                          expression (src/positions.ml[54,1556+18]..[54,1556+19])
+                            Pexp_ident "v" (src/positions.ml[54,1556+18]..[54,1556+19])
+                          "position" (src/positions.ml[54,1556+20]..[54,1556+28])
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[54,1556+29]..[54,1556+36])
+                          Pexp_field
+                          expression (src/positions.ml[54,1556+29]..[54,1556+30])
+                            Pexp_ident "v" (src/positions.ml[54,1556+29]..[54,1556+30])
+                          "value" (src/positions.ml[54,1556+31]..[54,1556+36])
+                    ]
+                "position" (src/positions.ml[55,1594+4]..[55,1594+12])
+                  expression (src/positions.ml[55,1594+16]..[55,1594+26])
+                    Pexp_field
+                    expression (src/positions.ml[55,1594+16]..[55,1594+17])
+                      Pexp_ident "v" (src/positions.ml[55,1594+16]..[55,1594+17])
+                    "position" (src/positions.ml[55,1594+18]..[55,1594+26])
+              ]
+              None
+    ]
+  structure_item (src/positions.ml[58,1626+0]..[59,1653+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[58,1626+4]..[58,1626+8])
+          Ppat_var "iter" (src/positions.ml[58,1626+4]..[58,1626+8])
+        expression (src/positions.ml[58,1626+9]..[59,1653+5]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[58,1626+9]..[58,1626+10])
+            Ppat_var "f" (src/positions.ml[58,1626+9]..[58,1626+10])
+          expression (src/positions.ml[58,1626+11]..[59,1653+5]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[58,1626+11]..[58,1626+24])
+              Ppat_record Closed
+              [
+                "value" (src/positions.ml[58,1626+13]..[58,1626+18])
+                  pattern (src/positions.ml[58,1626+21]..[58,1626+22])
+                    Ppat_var "v" (src/positions.ml[58,1626+21]..[58,1626+22])
+              ]
+            expression (src/positions.ml[59,1653+2]..[59,1653+5])
+              Pexp_apply
+              expression (src/positions.ml[59,1653+2]..[59,1653+3])
+                Pexp_ident "f" (src/positions.ml[59,1653+2]..[59,1653+3])
+              [
+                <arg>
+                Nolabel
+                  expression (src/positions.ml[59,1653+4]..[59,1653+5])
+                    Pexp_ident "v" (src/positions.ml[59,1653+4]..[59,1653+5])
+              ]
+    ]
+  structure_item (src/positions.ml[61,1660+0]..[65,1763+32])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[61,1660+4]..[61,1660+8])
+          Ppat_var "mapd" (src/positions.ml[61,1660+4]..[61,1660+8])
+        expression (src/positions.ml[61,1660+9]..[65,1763+32]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[61,1660+9]..[61,1660+10])
+            Ppat_var "f" (src/positions.ml[61,1660+9]..[61,1660+10])
+          expression (src/positions.ml[61,1660+11]..[65,1763+32]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[61,1660+11]..[61,1660+12])
+              Ppat_var "v" (src/positions.ml[61,1660+11]..[61,1660+12])
+            expression (src/positions.ml[62,1675+2]..[65,1763+32])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/positions.ml[62,1675+6]..[62,1675+12])
+                    Ppat_tuple
+                    [
+                      pattern (src/positions.ml[62,1675+6]..[62,1675+8])
+                        Ppat_var "w1" (src/positions.ml[62,1675+6]..[62,1675+8])
+                      pattern (src/positions.ml[62,1675+10]..[62,1675+12])
+                        Ppat_var "w2" (src/positions.ml[62,1675+10]..[62,1675+12])
+                    ]
+                  expression (src/positions.ml[62,1675+15]..[62,1675+24])
+                    Pexp_apply
+                    expression (src/positions.ml[62,1675+15]..[62,1675+16])
+                      Pexp_ident "f" (src/positions.ml[62,1675+15]..[62,1675+16])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[62,1675+17]..[62,1675+24])
+                          Pexp_field
+                          expression (src/positions.ml[62,1675+17]..[62,1675+18])
+                            Pexp_ident "v" (src/positions.ml[62,1675+17]..[62,1675+18])
+                          "value" (src/positions.ml[62,1675+19]..[62,1675+24])
+                    ]
+              ]
+              expression (src/positions.ml[63,1703+2]..[65,1763+32])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/positions.ml[63,1703+6]..[63,1703+9])
+                      Ppat_var "pos" (src/positions.ml[63,1703+6]..[63,1703+9])
+                    expression (src/positions.ml[63,1703+12]..[63,1703+22])
+                      Pexp_field
+                      expression (src/positions.ml[63,1703+12]..[63,1703+13])
+                        Pexp_ident "v" (src/positions.ml[63,1703+12]..[63,1703+13])
+                      "position" (src/positions.ml[63,1703+14]..[63,1703+22])
+                ]
+                expression (src/positions.ml[64,1729+2]..[65,1763+32])
+                  Pexp_tuple
+                  [
+                    expression (src/positions.ml[64,1729+2]..[64,1729+32])
+                      Pexp_record
+                      [
+                        "value" (src/positions.ml[64,1729+4]..[64,1729+9])
+                          expression (src/positions.ml[64,1729+12]..[64,1729+14])
+                            Pexp_ident "w1" (src/positions.ml[64,1729+12]..[64,1729+14])
+                        "position" (src/positions.ml[64,1729+16]..[64,1729+24])
+                          expression (src/positions.ml[64,1729+27]..[64,1729+30])
+                            Pexp_ident "pos" (src/positions.ml[64,1729+27]..[64,1729+30])
+                      ]
+                      None
+                    expression (src/positions.ml[65,1763+2]..[65,1763+32])
+                      Pexp_record
+                      [
+                        "value" (src/positions.ml[65,1763+4]..[65,1763+9])
+                          expression (src/positions.ml[65,1763+12]..[65,1763+14])
+                            Pexp_ident "w2" (src/positions.ml[65,1763+12]..[65,1763+14])
+                        "position" (src/positions.ml[65,1763+16]..[65,1763+24])
+                          expression (src/positions.ml[65,1763+27]..[65,1763+30])
+                            Pexp_ident "pos" (src/positions.ml[65,1763+27]..[65,1763+30])
+                      ]
+                      None
+                  ]
+    ]
+  structure_item (src/positions.ml[67,1797+0]..[68,1809+24])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[67,1797+4]..[67,1797+9])
+          Ppat_var "dummy" (src/positions.ml[67,1797+4]..[67,1797+9])
+        expression (src/positions.ml[68,1809+2]..[68,1809+24])
+          Pexp_tuple
+          [
+            expression (src/positions.ml[68,1809+3]..[68,1809+12])
+              Pexp_ident "dummy_pos" (src/positions.ml[68,1809+3]..[68,1809+12])
+            expression (src/positions.ml[68,1809+14]..[68,1809+23])
+              Pexp_ident "dummy_pos" (src/positions.ml[68,1809+14]..[68,1809+23])
+          ]
+    ]
+  structure_item (src/positions.ml[70,1835+0]..[74,1900+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[70,1835+4]..[70,1835+15])
+          Ppat_var "unknown_pos" (src/positions.ml[70,1835+4]..[70,1835+15])
+        expression (src/positions.ml[70,1835+16]..[74,1900+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[70,1835+16]..[70,1835+17])
+            Ppat_var "v" (src/positions.ml[70,1835+16]..[70,1835+17])
+          expression (src/positions.ml[71,1855+2]..[74,1900+3])
+            Pexp_record
+            [
+              "value" (src/positions.ml[72,1859+4]..[72,1859+9])
+                expression (src/positions.ml[72,1859+16]..[72,1859+17])
+                  Pexp_ident "v" (src/positions.ml[72,1859+16]..[72,1859+17])
+              "position" (src/positions.ml[73,1878+4]..[73,1878+12])
+                expression (src/positions.ml[73,1878+16]..[73,1878+21])
+                  Pexp_ident "dummy" (src/positions.ml[73,1878+16]..[73,1878+21])
+            ]
+            None
+    ]
+  structure_item (src/positions.ml[76,1905+0]..[76,1905+32])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[76,1905+4]..[76,1905+21])
+          Ppat_var "start_of_position" (src/positions.ml[76,1905+4]..[76,1905+21])
+        expression (src/positions.ml[76,1905+22]..[76,1905+32]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[76,1905+22]..[76,1905+28])
+            Ppat_tuple
+            [
+              pattern (src/positions.ml[76,1905+23]..[76,1905+24])
+                Ppat_var "p" (src/positions.ml[76,1905+23]..[76,1905+24])
+              pattern (src/positions.ml[76,1905+26]..[76,1905+27])
+                Ppat_any
+            ]
+          expression (src/positions.ml[76,1905+31]..[76,1905+32])
+            Pexp_ident "p" (src/positions.ml[76,1905+31]..[76,1905+32])
+    ]
+  structure_item (src/positions.ml[78,1939+0]..[78,1939+30])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[78,1939+4]..[78,1939+19])
+          Ppat_var "end_of_position" (src/positions.ml[78,1939+4]..[78,1939+19])
+        expression (src/positions.ml[78,1939+20]..[78,1939+30]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[78,1939+20]..[78,1939+26])
+            Ppat_tuple
+            [
+              pattern (src/positions.ml[78,1939+21]..[78,1939+22])
+                Ppat_any
+              pattern (src/positions.ml[78,1939+24]..[78,1939+25])
+                Ppat_var "p" (src/positions.ml[78,1939+24]..[78,1939+25])
+            ]
+          expression (src/positions.ml[78,1939+29]..[78,1939+30])
+            Pexp_ident "p" (src/positions.ml[78,1939+29]..[78,1939+30])
+    ]
+  structure_item (src/positions.ml[80,1971+0]..[81,2000+33])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[80,1971+4]..[80,1971+24])
+          Ppat_var "filename_of_position" (src/positions.ml[80,1971+4]..[80,1971+24])
+        expression (src/positions.ml[80,1971+25]..[81,2000+33]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[80,1971+25]..[80,1971+26])
+            Ppat_var "p" (src/positions.ml[80,1971+25]..[80,1971+26])
+          expression (src/positions.ml[81,2000+2]..[81,2000+33])
+            Pexp_field
+            expression (src/positions.ml[81,2000+2]..[81,2000+23])
+              Pexp_apply
+              expression (src/positions.ml[81,2000+3]..[81,2000+20])
+                Pexp_ident "start_of_position" (src/positions.ml[81,2000+3]..[81,2000+20])
+              [
+                <arg>
+                Nolabel
+                  expression (src/positions.ml[81,2000+21]..[81,2000+22])
+                    Pexp_ident "p" (src/positions.ml[81,2000+21]..[81,2000+22])
+              ]
+            "pos_fname" (src/positions.ml[81,2000+24]..[81,2000+33])
+    ]
+  structure_item (src/positions.ml[83,2035+0]..[84,2048+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[83,2035+4]..[83,2035+8])
+          Ppat_var "line" (src/positions.ml[83,2035+4]..[83,2035+8])
+        expression (src/positions.ml[83,2035+9]..[84,2048+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[83,2035+9]..[83,2035+10])
+            Ppat_var "p" (src/positions.ml[83,2035+9]..[83,2035+10])
+          expression (src/positions.ml[84,2048+2]..[84,2048+12])
+            Pexp_field
+            expression (src/positions.ml[84,2048+2]..[84,2048+3])
+              Pexp_ident "p" (src/positions.ml[84,2048+2]..[84,2048+3])
+            "pos_lnum" (src/positions.ml[84,2048+4]..[84,2048+12])
+    ]
+  structure_item (src/positions.ml[86,2062+0]..[87,2077+24])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[86,2062+4]..[86,2062+10])
+          Ppat_var "column" (src/positions.ml[86,2062+4]..[86,2062+10])
+        expression (src/positions.ml[86,2062+11]..[87,2077+24]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[86,2062+11]..[86,2062+12])
+            Ppat_var "p" (src/positions.ml[86,2062+11]..[86,2062+12])
+          expression (src/positions.ml[87,2077+2]..[87,2077+24])
+            Pexp_apply
+            expression (src/positions.ml[87,2077+13]..[87,2077+14])
+              Pexp_ident "-" (src/positions.ml[87,2077+13]..[87,2077+14])
+            [
+              <arg>
+              Nolabel
+                expression (src/positions.ml[87,2077+2]..[87,2077+12])
+                  Pexp_field
+                  expression (src/positions.ml[87,2077+2]..[87,2077+3])
+                    Pexp_ident "p" (src/positions.ml[87,2077+2]..[87,2077+3])
+                  "pos_cnum" (src/positions.ml[87,2077+4]..[87,2077+12])
+              <arg>
+              Nolabel
+                expression (src/positions.ml[87,2077+15]..[87,2077+24])
+                  Pexp_field
+                  expression (src/positions.ml[87,2077+15]..[87,2077+16])
+                    Pexp_ident "p" (src/positions.ml[87,2077+15]..[87,2077+16])
+                  "pos_bol" (src/positions.ml[87,2077+17]..[87,2077+24])
+            ]
+    ]
+  structure_item (src/positions.ml[89,2103+0]..[90,2126+39])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[89,2103+4]..[89,2103+14])
+          Ppat_var "characters" (src/positions.ml[89,2103+4]..[89,2103+14])
+        expression (src/positions.ml[89,2103+15]..[90,2126+39]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[89,2103+15]..[89,2103+17])
+            Ppat_var "p1" (src/positions.ml[89,2103+15]..[89,2103+17])
+          expression (src/positions.ml[89,2103+18]..[90,2126+39]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[89,2103+18]..[89,2103+20])
+              Ppat_var "p2" (src/positions.ml[89,2103+18]..[89,2103+20])
+            expression (src/positions.ml[90,2126+2]..[90,2126+39])
+              Pexp_tuple
+              [
+                expression (src/positions.ml[90,2126+3]..[90,2126+12])
+                  Pexp_apply
+                  expression (src/positions.ml[90,2126+3]..[90,2126+9])
+                    Pexp_ident "column" (src/positions.ml[90,2126+3]..[90,2126+9])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[90,2126+10]..[90,2126+12])
+                        Pexp_ident "p1" (src/positions.ml[90,2126+10]..[90,2126+12])
+                  ]
+                expression (src/positions.ml[90,2126+14]..[90,2126+38])
+                  Pexp_apply
+                  expression (src/positions.ml[90,2126+26]..[90,2126+27])
+                    Pexp_ident "-" (src/positions.ml[90,2126+26]..[90,2126+27])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[90,2126+14]..[90,2126+25])
+                        Pexp_field
+                        expression (src/positions.ml[90,2126+14]..[90,2126+16])
+                          Pexp_ident "p2" (src/positions.ml[90,2126+14]..[90,2126+16])
+                        "pos_cnum" (src/positions.ml[90,2126+17]..[90,2126+25])
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[90,2126+28]..[90,2126+38])
+                        Pexp_field
+                        expression (src/positions.ml[90,2126+28]..[90,2126+30])
+                          Pexp_ident "p1" (src/positions.ml[90,2126+28]..[90,2126+30])
+                        "pos_bol" (src/positions.ml[90,2126+31]..[90,2126+38])
+                  ]
+              ]
+    ]
+  structure_item (src/positions.ml[92,2200+0]..[96,2324+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[92,2200+4]..[92,2200+8])
+          Ppat_var "join" (src/positions.ml[92,2200+4]..[92,2200+8])
+        expression (src/positions.ml[92,2200+9]..[96,2324+1]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[92,2200+9]..[92,2200+11])
+            Ppat_var "x1" (src/positions.ml[92,2200+9]..[92,2200+11])
+          expression (src/positions.ml[92,2200+12]..[96,2324+1]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[92,2200+12]..[92,2200+14])
+              Ppat_var "x2" (src/positions.ml[92,2200+12]..[92,2200+14])
+            expression (src/positions.ml[93,2217+0]..[96,2324+1])
+              Pexp_tuple
+              [
+                expression (src/positions.ml[94,2219+2]..[94,2219+51])
+                  Pexp_apply
+                  expression (src/positions.ml[94,2219+2]..[94,2219+19])
+                    Pexp_ident "start_of_position" (src/positions.ml[94,2219+2]..[94,2219+19])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[94,2219+20]..[94,2219+51])
+                        Pexp_ifthenelse
+                        expression (src/positions.ml[94,2219+24]..[94,2219+34])
+                          Pexp_apply
+                          expression (src/positions.ml[94,2219+27]..[94,2219+28])
+                            Pexp_ident "=" (src/positions.ml[94,2219+27]..[94,2219+28])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[94,2219+24]..[94,2219+26])
+                                Pexp_ident "x1" (src/positions.ml[94,2219+24]..[94,2219+26])
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[94,2219+29]..[94,2219+34])
+                                Pexp_ident "dummy" (src/positions.ml[94,2219+29]..[94,2219+34])
+                          ]
+                        expression (src/positions.ml[94,2219+40]..[94,2219+42])
+                          Pexp_ident "x2" (src/positions.ml[94,2219+40]..[94,2219+42])
+                        Some
+                          expression (src/positions.ml[94,2219+48]..[94,2219+50])
+                            Pexp_ident "x1" (src/positions.ml[94,2219+48]..[94,2219+50])
+                  ]
+                expression (src/positions.ml[95,2272+2]..[95,2272+51])
+                  Pexp_apply
+                  expression (src/positions.ml[95,2272+2]..[95,2272+17])
+                    Pexp_ident "end_of_position" (src/positions.ml[95,2272+2]..[95,2272+17])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[95,2272+20]..[95,2272+51])
+                        Pexp_ifthenelse
+                        expression (src/positions.ml[95,2272+24]..[95,2272+34])
+                          Pexp_apply
+                          expression (src/positions.ml[95,2272+27]..[95,2272+28])
+                            Pexp_ident "=" (src/positions.ml[95,2272+27]..[95,2272+28])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[95,2272+24]..[95,2272+26])
+                                Pexp_ident "x2" (src/positions.ml[95,2272+24]..[95,2272+26])
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[95,2272+29]..[95,2272+34])
+                                Pexp_ident "dummy" (src/positions.ml[95,2272+29]..[95,2272+34])
+                          ]
+                        expression (src/positions.ml[95,2272+40]..[95,2272+42])
+                          Pexp_ident "x1" (src/positions.ml[95,2272+40]..[95,2272+42])
+                        Some
+                          expression (src/positions.ml[95,2272+48]..[95,2272+50])
+                            Pexp_ident "x2" (src/positions.ml[95,2272+48]..[95,2272+50])
+                  ]
+              ]
+    ]
+  structure_item (src/positions.ml[98,2327+0]..[99,2342+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[98,2327+4]..[98,2327+10])
+          Ppat_var "import" (src/positions.ml[98,2327+4]..[98,2327+10])
+        expression (src/positions.ml[98,2327+11]..[99,2342+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[98,2327+11]..[98,2327+12])
+            Ppat_var "x" (src/positions.ml[98,2327+11]..[98,2327+12])
+          expression (src/positions.ml[99,2342+2]..[99,2342+3])
+            Pexp_ident "x" (src/positions.ml[99,2342+2]..[99,2342+3])
+    ]
+  structure_item (src/positions.ml[101,2347+0]..[105,2459+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[101,2347+4]..[101,2347+16])
+          Ppat_var "join_located" (src/positions.ml[101,2347+4]..[101,2347+16])
+        expression (src/positions.ml[101,2347+17]..[105,2459+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[101,2347+17]..[101,2347+19])
+            Ppat_var "l1" (src/positions.ml[101,2347+17]..[101,2347+19])
+          expression (src/positions.ml[101,2347+20]..[105,2459+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[101,2347+20]..[101,2347+22])
+              Ppat_var "l2" (src/positions.ml[101,2347+20]..[101,2347+22])
+            expression (src/positions.ml[101,2347+23]..[105,2459+3]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/positions.ml[101,2347+23]..[101,2347+24])
+                Ppat_var "f" (src/positions.ml[101,2347+23]..[101,2347+24])
+              expression (src/positions.ml[102,2374+2]..[105,2459+3])
+                Pexp_record
+                [
+                  "value" (src/positions.ml[103,2378+4]..[103,2378+9])
+                    expression (src/positions.ml[103,2378+15]..[103,2378+34])
+                      Pexp_apply
+                      expression (src/positions.ml[103,2378+15]..[103,2378+16])
+                        Pexp_ident "f" (src/positions.ml[103,2378+15]..[103,2378+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[103,2378+17]..[103,2378+25])
+                            Pexp_field
+                            expression (src/positions.ml[103,2378+17]..[103,2378+19])
+                              Pexp_ident "l1" (src/positions.ml[103,2378+17]..[103,2378+19])
+                            "value" (src/positions.ml[103,2378+20]..[103,2378+25])
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[103,2378+26]..[103,2378+34])
+                            Pexp_field
+                            expression (src/positions.ml[103,2378+26]..[103,2378+28])
+                              Pexp_ident "l2" (src/positions.ml[103,2378+26]..[103,2378+28])
+                            "value" (src/positions.ml[103,2378+29]..[103,2378+34])
+                      ]
+                  "position" (src/positions.ml[104,2414+4]..[104,2414+12])
+                    expression (src/positions.ml[104,2414+15]..[104,2414+43])
+                      Pexp_apply
+                      expression (src/positions.ml[104,2414+15]..[104,2414+19])
+                        Pexp_ident "join" (src/positions.ml[104,2414+15]..[104,2414+19])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[104,2414+20]..[104,2414+31])
+                            Pexp_field
+                            expression (src/positions.ml[104,2414+20]..[104,2414+22])
+                              Pexp_ident "l1" (src/positions.ml[104,2414+20]..[104,2414+22])
+                            "position" (src/positions.ml[104,2414+23]..[104,2414+31])
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[104,2414+32]..[104,2414+43])
+                            Pexp_field
+                            expression (src/positions.ml[104,2414+32]..[104,2414+34])
+                              Pexp_ident "l2" (src/positions.ml[104,2414+32]..[104,2414+34])
+                            "position" (src/positions.ml[104,2414+35]..[104,2414+43])
+                      ]
+                ]
+                None
+    ]
+  structure_item (src/positions.ml[107,2464+0]..[109,2526+50])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[107,2464+4]..[107,2464+21])
+          Ppat_var "string_of_lex_pos" (src/positions.ml[107,2464+4]..[107,2464+21])
+        expression (src/positions.ml[107,2464+22]..[109,2526+50]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[107,2464+22]..[107,2464+23])
+            Ppat_var "p" (src/positions.ml[107,2464+22]..[107,2464+23])
+          expression (src/positions.ml[108,2490+2]..[109,2526+50])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/positions.ml[108,2490+6]..[108,2490+7])
+                  Ppat_var "c" (src/positions.ml[108,2490+6]..[108,2490+7])
+                expression (src/positions.ml[108,2490+10]..[108,2490+32])
+                  Pexp_apply
+                  expression (src/positions.ml[108,2490+21]..[108,2490+22])
+                    Pexp_ident "-" (src/positions.ml[108,2490+21]..[108,2490+22])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[108,2490+10]..[108,2490+20])
+                        Pexp_field
+                        expression (src/positions.ml[108,2490+10]..[108,2490+11])
+                          Pexp_ident "p" (src/positions.ml[108,2490+10]..[108,2490+11])
+                        "pos_cnum" (src/positions.ml[108,2490+12]..[108,2490+20])
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[108,2490+23]..[108,2490+32])
+                        Pexp_field
+                        expression (src/positions.ml[108,2490+23]..[108,2490+24])
+                          Pexp_ident "p" (src/positions.ml[108,2490+23]..[108,2490+24])
+                        "pos_bol" (src/positions.ml[108,2490+25]..[108,2490+32])
+                  ]
+            ]
+            expression (src/positions.ml[109,2526+2]..[109,2526+50])
+              Pexp_apply
+              expression (src/positions.ml[109,2526+28]..[109,2526+29])
+                Pexp_ident "^" (src/positions.ml[109,2526+28]..[109,2526+29])
+              [
+                <arg>
+                Nolabel
+                  expression (src/positions.ml[109,2526+2]..[109,2526+28])
+                    Pexp_apply
+                    expression (src/positions.ml[109,2526+3]..[109,2526+16])
+                      Pexp_ident "string_of_int" (src/positions.ml[109,2526+3]..[109,2526+16])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[109,2526+17]..[109,2526+27])
+                          Pexp_field
+                          expression (src/positions.ml[109,2526+17]..[109,2526+18])
+                            Pexp_ident "p" (src/positions.ml[109,2526+17]..[109,2526+18])
+                          "pos_lnum" (src/positions.ml[109,2526+19]..[109,2526+27])
+                    ]
+                <arg>
+                Nolabel
+                  expression (src/positions.ml[109,2526+29]..[109,2526+50])
+                    Pexp_apply
+                    expression (src/positions.ml[109,2526+32]..[109,2526+33])
+                      Pexp_ident "^" (src/positions.ml[109,2526+32]..[109,2526+33])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[109,2526+29]..[109,2526+32])
+                          Pexp_constant PConst_string(":",(src/positions.ml[109,2526+30]..[109,2526+31]),None)
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[109,2526+33]..[109,2526+50])
+                          Pexp_apply
+                          expression (src/positions.ml[109,2526+34]..[109,2526+47])
+                            Pexp_ident "string_of_int" (src/positions.ml[109,2526+34]..[109,2526+47])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[109,2526+48]..[109,2526+49])
+                                Pexp_ident "c" (src/positions.ml[109,2526+48]..[109,2526+49])
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (src/positions.ml[111,2578+0]..[116,2794+74])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[111,2578+4]..[111,2578+17])
+          Ppat_var "string_of_pos" (src/positions.ml[111,2578+4]..[111,2578+17])
+        expression (src/positions.ml[111,2578+18]..[116,2794+74]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[111,2578+18]..[111,2578+19])
+            Ppat_var "p" (src/positions.ml[111,2578+18]..[111,2578+19])
+          expression (src/positions.ml[112,2600+2]..[116,2794+74])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/positions.ml[112,2600+6]..[112,2600+14])
+                  Ppat_var "filename" (src/positions.ml[112,2600+6]..[112,2600+14])
+                expression (src/positions.ml[112,2600+17]..[112,2600+39])
+                  Pexp_apply
+                  expression (src/positions.ml[112,2600+17]..[112,2600+37])
+                    Pexp_ident "filename_of_position" (src/positions.ml[112,2600+17]..[112,2600+37])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[112,2600+38]..[112,2600+39])
+                        Pexp_ident "p" (src/positions.ml[112,2600+38]..[112,2600+39])
+                  ]
+            ]
+            expression (src/positions.ml[114,2683+2]..[116,2794+74])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/positions.ml[114,2683+6]..[114,2683+7])
+                    Ppat_var "l" (src/positions.ml[114,2683+6]..[114,2683+7])
+                  expression (src/positions.ml[114,2683+10]..[114,2683+36])
+                    Pexp_apply
+                    expression (src/positions.ml[114,2683+10]..[114,2683+14])
+                      Pexp_ident "line" (src/positions.ml[114,2683+10]..[114,2683+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[114,2683+15]..[114,2683+36])
+                          Pexp_apply
+                          expression (src/positions.ml[114,2683+16]..[114,2683+33])
+                            Pexp_ident "start_of_position" (src/positions.ml[114,2683+16]..[114,2683+33])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[114,2683+34]..[114,2683+35])
+                                Pexp_ident "p" (src/positions.ml[114,2683+34]..[114,2683+35])
+                          ]
+                    ]
+              ]
+              expression (src/positions.ml[115,2723+2]..[116,2794+74])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/positions.ml[115,2723+6]..[115,2723+12])
+                      Ppat_tuple
+                      [
+                        pattern (src/positions.ml[115,2723+6]..[115,2723+8])
+                          Ppat_var "c1" (src/positions.ml[115,2723+6]..[115,2723+8])
+                        pattern (src/positions.ml[115,2723+10]..[115,2723+12])
+                          Ppat_var "c2" (src/positions.ml[115,2723+10]..[115,2723+12])
+                      ]
+                    expression (src/positions.ml[115,2723+15]..[115,2723+67])
+                      Pexp_apply
+                      expression (src/positions.ml[115,2723+15]..[115,2723+25])
+                        Pexp_ident "characters" (src/positions.ml[115,2723+15]..[115,2723+25])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[115,2723+26]..[115,2723+47])
+                            Pexp_apply
+                            expression (src/positions.ml[115,2723+27]..[115,2723+44])
+                              Pexp_ident "start_of_position" (src/positions.ml[115,2723+27]..[115,2723+44])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/positions.ml[115,2723+45]..[115,2723+46])
+                                  Pexp_ident "p" (src/positions.ml[115,2723+45]..[115,2723+46])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[115,2723+48]..[115,2723+67])
+                            Pexp_apply
+                            expression (src/positions.ml[115,2723+49]..[115,2723+64])
+                              Pexp_ident "end_of_position" (src/positions.ml[115,2723+49]..[115,2723+64])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/positions.ml[115,2723+65]..[115,2723+66])
+                                  Pexp_ident "p" (src/positions.ml[115,2723+65]..[115,2723+66])
+                            ]
+                      ]
+                ]
+                expression (src/positions.ml[116,2794+2]..[116,2794+74])
+                  Pexp_apply
+                  expression (src/positions.ml[116,2794+2]..[116,2794+16])
+                    Pexp_ident "Printf.sprintf" (src/positions.ml[116,2794+2]..[116,2794+16])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[116,2794+17]..[116,2794+57])
+                        Pexp_constant PConst_string("File \"%s\", line %d, characters %d-%d",(src/positions.ml[116,2794+18]..[116,2794+56]),None)
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[116,2794+58]..[116,2794+66])
+                        Pexp_ident "filename" (src/positions.ml[116,2794+58]..[116,2794+66])
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[116,2794+67]..[116,2794+68])
+                        Pexp_ident "l" (src/positions.ml[116,2794+67]..[116,2794+68])
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[116,2794+69]..[116,2794+71])
+                        Pexp_ident "c1" (src/positions.ml[116,2794+69]..[116,2794+71])
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[116,2794+72]..[116,2794+74])
+                        Pexp_ident "c2" (src/positions.ml[116,2794+72]..[116,2794+74])
+                  ]
+    ]
+  structure_item (src/positions.ml[118,2870+0]..[120,2916+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[118,2870+4]..[118,2870+16])
+          Ppat_var "pos_or_undef" (src/positions.ml[118,2870+4]..[118,2870+16])
+        expression (src/positions.ml[118,2870+19]..[120,2916+15])
+          Pexp_function
+          [
+            <case>
+              pattern (src/positions.ml[119,2898+4]..[119,2898+8])
+                Ppat_construct "None" (src/positions.ml[119,2898+4]..[119,2898+8])
+                None
+              expression (src/positions.ml[119,2898+12]..[119,2898+17])
+                Pexp_ident "dummy" (src/positions.ml[119,2898+12]..[119,2898+17])
+            <case>
+              pattern (src/positions.ml[120,2916+4]..[120,2916+10])
+                Ppat_construct "Some" (src/positions.ml[120,2916+4]..[120,2916+8])
+                Some
+                  []
+                  pattern (src/positions.ml[120,2916+9]..[120,2916+10])
+                    Ppat_var "x" (src/positions.ml[120,2916+9]..[120,2916+10])
+              expression (src/positions.ml[120,2916+14]..[120,2916+15])
+                Pexp_ident "x" (src/positions.ml[120,2916+14]..[120,2916+15])
+          ]
+    ]
+  structure_item (src/positions.ml[122,2933+0]..[123,2951+46])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[122,2933+4]..[122,2933+8])
+          Ppat_var "cpos" (src/positions.ml[122,2933+4]..[122,2933+8])
+        expression (src/positions.ml[122,2933+9]..[123,2951+46]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[122,2933+9]..[122,2933+15])
+            Ppat_var "lexbuf" (src/positions.ml[122,2933+9]..[122,2933+15])
+          expression (src/positions.ml[123,2951+2]..[123,2951+46])
+            Pexp_tuple
+            [
+              expression (src/positions.ml[123,2951+3]..[123,2951+24])
+                Pexp_apply
+                expression (src/positions.ml[123,2951+3]..[123,2951+17])
+                  Pexp_ident "lexeme_start_p" (src/positions.ml[123,2951+3]..[123,2951+17])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/positions.ml[123,2951+18]..[123,2951+24])
+                      Pexp_ident "lexbuf" (src/positions.ml[123,2951+18]..[123,2951+24])
+                ]
+              expression (src/positions.ml[123,2951+26]..[123,2951+45])
+                Pexp_apply
+                expression (src/positions.ml[123,2951+26]..[123,2951+38])
+                  Pexp_ident "lexeme_end_p" (src/positions.ml[123,2951+26]..[123,2951+38])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/positions.ml[123,2951+39]..[123,2951+45])
+                      Pexp_ident "lexbuf" (src/positions.ml[123,2951+39]..[123,2951+45])
+                ]
+            ]
+    ]
+  structure_item (src/positions.ml[125,2999+0]..[126,3024+26])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[125,2999+4]..[125,2999+13])
+          Ppat_var "with_cpos" (src/positions.ml[125,2999+4]..[125,2999+13])
+        expression (src/positions.ml[125,2999+14]..[126,3024+26]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[125,2999+14]..[125,2999+20])
+            Ppat_var "lexbuf" (src/positions.ml[125,2999+14]..[125,2999+20])
+          expression (src/positions.ml[125,2999+21]..[126,3024+26]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[125,2999+21]..[125,2999+22])
+              Ppat_var "v" (src/positions.ml[125,2999+21]..[125,2999+22])
+            expression (src/positions.ml[126,3024+2]..[126,3024+26])
+              Pexp_apply
+              expression (src/positions.ml[126,3024+2]..[126,3024+10])
+                Pexp_ident "with_pos" (src/positions.ml[126,3024+2]..[126,3024+10])
+              [
+                <arg>
+                Nolabel
+                  expression (src/positions.ml[126,3024+11]..[126,3024+24])
+                    Pexp_apply
+                    expression (src/positions.ml[126,3024+12]..[126,3024+16])
+                      Pexp_ident "cpos" (src/positions.ml[126,3024+12]..[126,3024+16])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[126,3024+17]..[126,3024+23])
+                          Pexp_ident "lexbuf" (src/positions.ml[126,3024+17]..[126,3024+23])
+                    ]
+                <arg>
+                Nolabel
+                  expression (src/positions.ml[126,3024+25]..[126,3024+26])
+                    Pexp_ident "v" (src/positions.ml[126,3024+25]..[126,3024+26])
+              ]
+    ]
+  structure_item (src/positions.ml[128,3052+0]..[129,3080+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[128,3052+4]..[128,3052+18])
+          Ppat_var "string_of_cpos" (src/positions.ml[128,3052+4]..[128,3052+18])
+        expression (src/positions.ml[128,3052+19]..[129,3080+29]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[128,3052+19]..[128,3052+25])
+            Ppat_var "lexbuf" (src/positions.ml[128,3052+19]..[128,3052+25])
+          expression (src/positions.ml[129,3080+2]..[129,3080+29])
+            Pexp_apply
+            expression (src/positions.ml[129,3080+2]..[129,3080+15])
+              Pexp_ident "string_of_pos" (src/positions.ml[129,3080+2]..[129,3080+15])
+            [
+              <arg>
+              Nolabel
+                expression (src/positions.ml[129,3080+16]..[129,3080+29])
+                  Pexp_apply
+                  expression (src/positions.ml[129,3080+17]..[129,3080+21])
+                    Pexp_ident "cpos" (src/positions.ml[129,3080+17]..[129,3080+21])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/positions.ml[129,3080+22]..[129,3080+28])
+                        Pexp_ident "lexbuf" (src/positions.ml[129,3080+22]..[129,3080+28])
+                  ]
+            ]
+    ]
+  structure_item (src/positions.ml[131,3111+0]..[132,3131+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[131,3111+4]..[131,3111+9])
+          Ppat_var "joinf" (src/positions.ml[131,3111+4]..[131,3111+9])
+        expression (src/positions.ml[131,3111+10]..[132,3131+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[131,3111+10]..[131,3111+11])
+            Ppat_var "f" (src/positions.ml[131,3111+10]..[131,3111+11])
+          expression (src/positions.ml[131,3111+12]..[132,3131+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[131,3111+12]..[131,3111+14])
+              Ppat_var "t1" (src/positions.ml[131,3111+12]..[131,3111+14])
+            expression (src/positions.ml[131,3111+15]..[132,3131+20]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/positions.ml[131,3111+15]..[131,3111+17])
+                Ppat_var "t2" (src/positions.ml[131,3111+15]..[131,3111+17])
+              expression (src/positions.ml[132,3131+2]..[132,3131+20])
+                Pexp_apply
+                expression (src/positions.ml[132,3131+2]..[132,3131+6])
+                  Pexp_ident "join" (src/positions.ml[132,3131+2]..[132,3131+6])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/positions.ml[132,3131+7]..[132,3131+13])
+                      Pexp_apply
+                      expression (src/positions.ml[132,3131+8]..[132,3131+9])
+                        Pexp_ident "f" (src/positions.ml[132,3131+8]..[132,3131+9])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[132,3131+10]..[132,3131+12])
+                            Pexp_ident "t1" (src/positions.ml[132,3131+10]..[132,3131+12])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/positions.ml[132,3131+14]..[132,3131+20])
+                      Pexp_apply
+                      expression (src/positions.ml[132,3131+15]..[132,3131+16])
+                        Pexp_ident "f" (src/positions.ml[132,3131+15]..[132,3131+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[132,3131+17]..[132,3131+19])
+                            Pexp_ident "t2" (src/positions.ml[132,3131+17]..[132,3131+19])
+                      ]
+                ]
+    ]
+  structure_item (src/positions.ml[134,3153+0]..[135,3168+48])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[134,3153+4]..[134,3153+10])
+          Ppat_var "ljoinf" (src/positions.ml[134,3153+4]..[134,3153+10])
+        expression (src/positions.ml[134,3153+11]..[135,3168+48]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[134,3153+11]..[134,3153+12])
+            Ppat_var "f" (src/positions.ml[134,3153+11]..[134,3153+12])
+          expression (src/positions.ml[135,3168+2]..[135,3168+48])
+            Pexp_apply
+            expression (src/positions.ml[135,3168+2]..[135,3168+16])
+              Pexp_ident "List.fold_left" (src/positions.ml[135,3168+2]..[135,3168+16])
+            [
+              <arg>
+              Nolabel
+                expression (src/positions.ml[135,3168+17]..[135,3168+42])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/positions.ml[135,3168+22]..[135,3168+23])
+                    Ppat_var "p" (src/positions.ml[135,3168+22]..[135,3168+23])
+                  expression (src/positions.ml[135,3168+24]..[135,3168+41]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/positions.ml[135,3168+24]..[135,3168+25])
+                      Ppat_var "t" (src/positions.ml[135,3168+24]..[135,3168+25])
+                    expression (src/positions.ml[135,3168+29]..[135,3168+41])
+                      Pexp_apply
+                      expression (src/positions.ml[135,3168+29]..[135,3168+33])
+                        Pexp_ident "join" (src/positions.ml[135,3168+29]..[135,3168+33])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[135,3168+34]..[135,3168+35])
+                            Pexp_ident "p" (src/positions.ml[135,3168+34]..[135,3168+35])
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[135,3168+36]..[135,3168+41])
+                            Pexp_apply
+                            expression (src/positions.ml[135,3168+37]..[135,3168+38])
+                              Pexp_ident "f" (src/positions.ml[135,3168+37]..[135,3168+38])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/positions.ml[135,3168+39]..[135,3168+40])
+                                  Pexp_ident "t" (src/positions.ml[135,3168+39]..[135,3168+40])
+                            ]
+                      ]
+              <arg>
+              Nolabel
+                expression (src/positions.ml[135,3168+43]..[135,3168+48])
+                  Pexp_ident "dummy" (src/positions.ml[135,3168+43]..[135,3168+48])
+            ]
+    ]
+  structure_item (src/positions.ml[137,3218+0]..[141,3351+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[137,3218+4]..[137,3218+21])
+          Ppat_var "join_located_list" (src/positions.ml[137,3218+4]..[137,3218+21])
+        expression (src/positions.ml[137,3218+22]..[141,3351+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[137,3218+22]..[137,3218+24])
+            Ppat_var "ls" (src/positions.ml[137,3218+22]..[137,3218+24])
+          expression (src/positions.ml[137,3218+25]..[141,3351+3]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/positions.ml[137,3218+25]..[137,3218+26])
+              Ppat_var "f" (src/positions.ml[137,3218+25]..[137,3218+26])
+            expression (src/positions.ml[138,3247+2]..[141,3351+3])
+              Pexp_record
+              [
+                "value" (src/positions.ml[139,3251+4]..[139,3251+9])
+                  expression (src/positions.ml[139,3251+16]..[139,3251+50])
+                    Pexp_apply
+                    expression (src/positions.ml[139,3251+16]..[139,3251+17])
+                      Pexp_ident "f" (src/positions.ml[139,3251+16]..[139,3251+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[139,3251+18]..[139,3251+50])
+                          Pexp_apply
+                          expression (src/positions.ml[139,3251+19]..[139,3251+27])
+                            Pexp_ident "List.map" (src/positions.ml[139,3251+19]..[139,3251+27])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[139,3251+28]..[139,3251+46])
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/positions.ml[139,3251+33]..[139,3251+34])
+                                  Ppat_var "l" (src/positions.ml[139,3251+33]..[139,3251+34])
+                                expression (src/positions.ml[139,3251+38]..[139,3251+45])
+                                  Pexp_field
+                                  expression (src/positions.ml[139,3251+38]..[139,3251+39])
+                                    Pexp_ident "l" (src/positions.ml[139,3251+38]..[139,3251+39])
+                                  "value" (src/positions.ml[139,3251+40]..[139,3251+45])
+                            <arg>
+                            Nolabel
+                              expression (src/positions.ml[139,3251+47]..[139,3251+49])
+                                Pexp_ident "ls" (src/positions.ml[139,3251+47]..[139,3251+49])
+                          ]
+                    ]
+                "position" (src/positions.ml[140,3303+4]..[140,3303+12])
+                  expression (src/positions.ml[140,3303+16]..[140,3303+47])
+                    Pexp_apply
+                    expression (src/positions.ml[140,3303+16]..[140,3303+22])
+                      Pexp_ident "ljoinf" (src/positions.ml[140,3303+16]..[140,3303+22])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[140,3303+23]..[140,3303+44])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/positions.ml[140,3303+28]..[140,3303+29])
+                            Ppat_var "x" (src/positions.ml[140,3303+28]..[140,3303+29])
+                          expression (src/positions.ml[140,3303+33]..[140,3303+43])
+                            Pexp_field
+                            expression (src/positions.ml[140,3303+33]..[140,3303+34])
+                              Pexp_ident "x" (src/positions.ml[140,3303+33]..[140,3303+34])
+                            "position" (src/positions.ml[140,3303+35]..[140,3303+43])
+                      <arg>
+                      Nolabel
+                        expression (src/positions.ml[140,3303+45]..[140,3303+47])
+                          Pexp_ident "ls" (src/positions.ml[140,3303+45]..[140,3303+47])
+                    ]
+              ]
+              None
+    ]
+  structure_item (src/positions.ml[146,3505+0]..[147,3522+10])
+    Pstr_type Rec
+    [
+      type_declaration "positions" (src/positions.ml[146,3505+5]..[146,3505+14]) (src/positions.ml[146,3505+0]..[147,3522+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/positions.ml[147,3522+4]..[147,3522+10])
+              Ptyp_constr "list" (src/positions.ml[147,3522+6]..[147,3522+10])
+              [
+                core_type (src/positions.ml[147,3522+4]..[147,3522+5])
+                  Ptyp_constr "t" (src/positions.ml[147,3522+4]..[147,3522+5])
+                  []
+              ]
+    ]
+  structure_item (src/positions.ml[149,3534+0]..[150,3573+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[149,3534+4]..[149,3534+7])
+          Ppat_var "one" (src/positions.ml[149,3534+4]..[149,3534+7])
+        expression (src/positions.ml[149,3534+8]..[150,3573+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[149,3534+8]..[149,3534+24])
+            Ppat_constraint
+            pattern (src/positions.ml[149,3534+9]..[149,3534+12])
+              Ppat_var "pos" (src/positions.ml[149,3534+9]..[149,3534+12])
+            core_type (src/positions.ml[149,3534+15]..[149,3534+23])
+              Ptyp_constr "position" (src/positions.ml[149,3534+15]..[149,3534+23])
+              []
+          expression (src/positions.ml[149,3534+25]..[150,3573+23])
+            Pexp_constraint
+            expression (src/positions.ml[150,3573+2]..[150,3573+23])
+              Pexp_construct "::" (src/positions.ml[150,3573+4]..[150,3573+23]) ghost
+              Some
+                expression (src/positions.ml[150,3573+4]..[150,3573+23]) ghost
+                  Pexp_tuple
+                  [
+                    expression (src/positions.ml[150,3573+4]..[150,3573+21])
+                      Pexp_apply
+                      expression (src/positions.ml[150,3573+4]..[150,3573+10])
+                        Pexp_ident "import" (src/positions.ml[150,3573+4]..[150,3573+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[150,3573+11]..[150,3573+21])
+                            Pexp_tuple
+                            [
+                              expression (src/positions.ml[150,3573+12]..[150,3573+15])
+                                Pexp_ident "pos" (src/positions.ml[150,3573+12]..[150,3573+15])
+                              expression (src/positions.ml[150,3573+17]..[150,3573+20])
+                                Pexp_ident "pos" (src/positions.ml[150,3573+17]..[150,3573+20])
+                            ]
+                      ]
+                    expression (src/positions.ml[150,3573+22]..[150,3573+23]) ghost
+                      Pexp_construct "[]" (src/positions.ml[150,3573+22]..[150,3573+23]) ghost
+                      None
+                  ]
+            core_type (src/positions.ml[149,3534+27]..[149,3534+36])
+              Ptyp_constr "positions" (src/positions.ml[149,3534+27]..[149,3534+36])
+              []
+    ]
+  structure_item (src/positions.ml[152,3598+0]..[153,3641+52])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[152,3598+4]..[152,3598+10])
+          Ppat_var "lexbuf" (src/positions.ml[152,3598+4]..[152,3598+10])
+        expression (src/positions.ml[152,3598+11]..[153,3641+52]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[152,3598+11]..[152,3598+28])
+            Ppat_constraint
+            pattern (src/positions.ml[152,3598+12]..[152,3598+18])
+              Ppat_var "lexbuf" (src/positions.ml[152,3598+12]..[152,3598+18])
+            core_type (src/positions.ml[152,3598+21]..[152,3598+27])
+              Ptyp_constr "lexbuf" (src/positions.ml[152,3598+21]..[152,3598+27])
+              []
+          expression (src/positions.ml[152,3598+29]..[153,3641+52])
+            Pexp_constraint
+            expression (src/positions.ml[153,3641+2]..[153,3641+52])
+              Pexp_construct "::" (src/positions.ml[153,3641+4]..[153,3641+52]) ghost
+              Some
+                expression (src/positions.ml[153,3641+4]..[153,3641+52]) ghost
+                  Pexp_tuple
+                  [
+                    expression (src/positions.ml[153,3641+4]..[153,3641+50])
+                      Pexp_apply
+                      expression (src/positions.ml[153,3641+4]..[153,3641+10])
+                        Pexp_ident "import" (src/positions.ml[153,3641+4]..[153,3641+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/positions.ml[153,3641+11]..[153,3641+50])
+                            Pexp_tuple
+                            [
+                              expression (src/positions.ml[153,3641+12]..[153,3641+30])
+                                Pexp_field
+                                expression (src/positions.ml[153,3641+12]..[153,3641+18])
+                                  Pexp_ident "lexbuf" (src/positions.ml[153,3641+12]..[153,3641+18])
+                                "lex_start_p" (src/positions.ml[153,3641+19]..[153,3641+30])
+                              expression (src/positions.ml[153,3641+32]..[153,3641+49])
+                                Pexp_field
+                                expression (src/positions.ml[153,3641+32]..[153,3641+38])
+                                  Pexp_ident "lexbuf" (src/positions.ml[153,3641+32]..[153,3641+38])
+                                "lex_curr_p" (src/positions.ml[153,3641+39]..[153,3641+49])
+                            ]
+                      ]
+                    expression (src/positions.ml[153,3641+51]..[153,3641+52]) ghost
+                      Pexp_construct "[]" (src/positions.ml[153,3641+51]..[153,3641+52]) ghost
+                      None
+                  ]
+            core_type (src/positions.ml[152,3598+31]..[152,3598+40])
+              Ptyp_constr "positions" (src/positions.ml[152,3598+31]..[152,3598+40])
+              []
+    ]
+  structure_item (src/positions.ml[155,3695+0]..[161,3872+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[155,3695+4]..[155,3695+9])
+          Ppat_var "print" (src/positions.ml[155,3695+4]..[155,3695+9])
+        expression (src/positions.ml[155,3695+10]..[161,3872+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/positions.ml[155,3695+10]..[155,3695+26])
+            Ppat_constraint
+            pattern (src/positions.ml[155,3695+11]..[155,3695+14])
+              Ppat_var "pos" (src/positions.ml[155,3695+11]..[155,3695+14])
+            core_type (src/positions.ml[155,3695+17]..[155,3695+25])
+              Ptyp_constr "position" (src/positions.ml[155,3695+17]..[155,3695+25])
+              []
+          expression (src/positions.ml[156,3724+2]..[161,3872+18])
+            Pexp_apply
+            expression (src/positions.ml[156,3724+2]..[156,3724+15])
+              Pexp_ident "Printf.printf" (src/positions.ml[156,3724+2]..[156,3724+15])
+            [
+              <arg>
+              Nolabel
+                expression (src/positions.ml[157,3740+4]..[157,3740+74])
+                  Pexp_constant PConst_string("{ pos_fname = \"%s\"; pos_lnum = %d; pos_bol = %d; pos_cnum = %d }\n",(src/positions.ml[157,3740+5]..[157,3740+73]),None)
+              <arg>
+              Nolabel
+                expression (src/positions.ml[158,3815+6]..[158,3815+19])
+                  Pexp_field
+                  expression (src/positions.ml[158,3815+6]..[158,3815+9])
+                    Pexp_ident "pos" (src/positions.ml[158,3815+6]..[158,3815+9])
+                  "pos_fname" (src/positions.ml[158,3815+10]..[158,3815+19])
+              <arg>
+              Nolabel
+                expression (src/positions.ml[159,3835+6]..[159,3835+18])
+                  Pexp_field
+                  expression (src/positions.ml[159,3835+6]..[159,3835+9])
+                    Pexp_ident "pos" (src/positions.ml[159,3835+6]..[159,3835+9])
+                  "pos_lnum" (src/positions.ml[159,3835+10]..[159,3835+18])
+              <arg>
+              Nolabel
+                expression (src/positions.ml[160,3854+6]..[160,3854+17])
+                  Pexp_field
+                  expression (src/positions.ml[160,3854+6]..[160,3854+9])
+                    Pexp_ident "pos" (src/positions.ml[160,3854+6]..[160,3854+9])
+                  "pos_bol" (src/positions.ml[160,3854+10]..[160,3854+17])
+              <arg>
+              Nolabel
+                expression (src/positions.ml[161,3872+6]..[161,3872+18])
+                  Pexp_field
+                  expression (src/positions.ml[161,3872+6]..[161,3872+9])
+                    Pexp_ident "pos" (src/positions.ml[161,3872+6]..[161,3872+9])
+                  "pos_cnum" (src/positions.ml[161,3872+10]..[161,3872+18])
+            ]
+    ]
+]
+
+open Lexing
+type t = (position * position)
+type 'a located = {
+  value: 'a ;
+  position: t }
+let value { value = v } = v
+let position { position = p } = p
+let decompose { value; position } = (value, position)
+let with_pos p v = { value = v; position = p }
+let with_loc = with_pos
+let map f v = { value = (f v.value); position = (v.position) }
+let pmap f v = { value = (f v.position v.value); position = (v.position) }
+let iter f { value = v } = f v
+let mapd f v =
+  let (w1, w2) = f v.value in
+  let pos = v.position in
+  ({ value = w1; position = pos }, { value = w2; position = pos })
+let dummy = (dummy_pos, dummy_pos)
+let unknown_pos v = { value = v; position = dummy }
+let start_of_position (p, _) = p
+let end_of_position (_, p) = p
+let filename_of_position p = (start_of_position p).pos_fname
+let line p = p.pos_lnum
+let column p = p.pos_cnum - p.pos_bol
+let characters p1 p2 = ((column p1), (p2.pos_cnum - p1.pos_bol))
+let join x1 x2 =
+  ((start_of_position (if x1 = dummy then x2 else x1)),
+    (end_of_position (if x2 = dummy then x1 else x2)))
+let import x = x
+let join_located l1 l2 f =
+  { value = (f l1.value l2.value); position = (join l1.position l2.position)
+  }
+let string_of_lex_pos p =
+  let c = p.pos_cnum - p.pos_bol in
+  (string_of_int p.pos_lnum) ^ (":" ^ (string_of_int c))
+let string_of_pos p =
+  let filename = filename_of_position p in
+  let l = line (start_of_position p) in
+  let (c1, c2) = characters (start_of_position p) (end_of_position p) in
+  Printf.sprintf "File \"%s\", line %d, characters %d-%d" filename l c1 c2
+let pos_or_undef = function | None -> dummy | Some x -> x
+let cpos lexbuf = ((lexeme_start_p lexbuf), (lexeme_end_p lexbuf))
+let with_cpos lexbuf v = with_pos (cpos lexbuf) v
+let string_of_cpos lexbuf = string_of_pos (cpos lexbuf)
+let joinf f t1 t2 = join (f t1) (f t2)
+let ljoinf f = List.fold_left (fun p -> fun t -> join p (f t)) dummy
+let join_located_list ls f =
+  {
+    value = (f (List.map (fun l -> l.value) ls));
+    position = (ljoinf (fun x -> x.position) ls)
+  }
+type positions = t list
+let one (pos : position) = ([import (pos, pos)] : positions)
+let lexbuf (lexbuf : lexbuf) =
+  ([import ((lexbuf.lex_start_p), (lexbuf.lex_curr_p))] : positions)
+let print (pos : position) =
+  Printf.printf
+    "{ pos_fname = \"%s\"; pos_lnum = %d; pos_bol = %d; pos_cnum = %d }\n"
+    pos.pos_fname pos.pos_lnum pos.pos_bol pos.pos_cnum
+[
+  structure_item (src/positions.ml[14,999+0]..src/positions.ml[14,999+11])
+    Tstr_open Fresh
+    module_expr (src/positions.ml[14,999+5]..src/positions.ml[14,999+11])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (src/positions.ml[16,1012+0]..src/positions.ml[18,1054+21])
+    Tstr_type Rec
+    [
+      type_declaration t/420 (src/positions.ml[16,1012+0]..src/positions.ml[18,1054+21])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/positions.ml[18,1054+2]..src/positions.ml[18,1054+21])
+              Ttyp_tuple
+              [
+                core_type (src/positions.ml[18,1054+2]..src/positions.ml[18,1054+10])
+                  Ttyp_constr "Stdlib!.Lexing.position"
+                  []
+                core_type (src/positions.ml[18,1054+13]..src/positions.ml[18,1054+21])
+                  Ttyp_constr "Stdlib!.Lexing.position"
+                  []
+              ]
+    ]
+  structure_item (src/positions.ml[20,1077+0]..src/positions.ml[24,1142+5])
+    Tstr_type Rec
+    [
+      type_declaration located/445 (src/positions.ml[20,1077+0]..src/positions.ml[24,1142+5])
+        ptype_params =
+          [
+            core_type (src/positions.ml[20,1077+5]..src/positions.ml[20,1077+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/positions.ml[22,1101+6]..src/positions.ml[22,1101+20])
+                Immutable
+                value/446                core_type (src/positions.ml[22,1101+17]..src/positions.ml[22,1101+19])
+                  Ttyp_poly
+                  core_type (src/positions.ml[22,1101+17]..src/positions.ml[22,1101+19])
+                    Ttyp_var a
+              (src/positions.ml[23,1122+6]..src/positions.ml[23,1122+19])
+                Immutable
+                position/447                core_type (src/positions.ml[23,1122+17]..src/positions.ml[23,1122+18])
+                  Ttyp_poly
+                  core_type (src/positions.ml[23,1122+17]..src/positions.ml[23,1122+18])
+                    Ttyp_constr "t/420"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/positions.ml[26,1149+0]..src/positions.ml[27,1175+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[26,1149+4]..src/positions.ml[26,1149+9])
+          Tpat_var "value/448"
+        expression (src/positions.ml[26,1149+10]..src/positions.ml[27,1175+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[26,1149+10]..src/positions.ml[26,1149+23])
+                Tpat_record
+                [
+                  "value"
+                    pattern (src/positions.ml[26,1149+20]..src/positions.ml[26,1149+21])
+                      Tpat_var "v/450"
+                ]
+              expression (src/positions.ml[27,1175+2]..src/positions.ml[27,1175+3])
+                Texp_ident "v/450"
+          ]
+    ]
+  structure_item (src/positions.ml[29,1180+0]..src/positions.ml[30,1212+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[29,1180+4]..src/positions.ml[29,1180+12])
+          Tpat_var "position/452"
+        expression (src/positions.ml[29,1180+13]..src/positions.ml[30,1212+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[29,1180+13]..src/positions.ml[29,1180+29])
+                Tpat_record
+                [
+                  "position"
+                    pattern (src/positions.ml[29,1180+26]..src/positions.ml[29,1180+27])
+                      Tpat_var "p/454"
+                ]
+              expression (src/positions.ml[30,1212+2]..src/positions.ml[30,1212+3])
+                Texp_ident "p/454"
+          ]
+    ]
+  structure_item (src/positions.ml[32,1217+0]..src/positions.ml[33,1253+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[32,1217+4]..src/positions.ml[32,1217+13])
+          Tpat_var "decompose/456"
+        expression (src/positions.ml[32,1217+14]..src/positions.ml[33,1253+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[32,1217+14]..src/positions.ml[32,1217+33])
+                Tpat_record
+                [
+                  "value"
+                    pattern (src/positions.ml[32,1217+16]..src/positions.ml[32,1217+21])
+                      Tpat_var "value/458"
+                  "position"
+                    pattern (src/positions.ml[32,1217+23]..src/positions.ml[32,1217+31])
+                      Tpat_var "position/459"
+                ]
+              expression (src/positions.ml[33,1253+2]..src/positions.ml[33,1253+19])
+                Texp_tuple
+                [
+                  expression (src/positions.ml[33,1253+3]..src/positions.ml[33,1253+8])
+                    Texp_ident "value/458"
+                  expression (src/positions.ml[33,1253+10]..src/positions.ml[33,1253+18])
+                    Texp_ident "position/459"
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[35,1274+0]..src/positions.ml[39,1335+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[35,1274+4]..src/positions.ml[35,1274+12])
+          Tpat_var "with_pos/461"
+        expression (src/positions.ml[35,1274+13]..src/positions.ml[39,1335+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[35,1274+13]..src/positions.ml[35,1274+14])
+                Tpat_var "p/463"
+              expression (src/positions.ml[35,1274+15]..src/positions.ml[39,1335+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[35,1274+15]..src/positions.ml[35,1274+16])
+                      Tpat_var "v/464"
+                    expression (src/positions.ml[36,1293+2]..src/positions.ml[39,1335+3])
+                      Texp_record
+                        fields =
+                          [
+                            "value"
+                              expression (src/positions.ml[37,1297+16]..src/positions.ml[37,1297+17])
+                                Texp_ident "v/464"
+                            "position"
+                              expression (src/positions.ml[38,1316+16]..src/positions.ml[38,1316+17])
+                                Texp_ident "p/463"
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[41,1340+0]..src/positions.ml[44,1447+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[41,1340+4]..src/positions.ml[41,1340+12])
+          Tpat_var "with_loc/465"
+        expression (src/positions.ml[44,1447+2]..src/positions.ml[44,1447+10])
+          Texp_ident "with_pos/461"
+    ]
+  structure_item (src/positions.ml[46,1459+0]..src/positions.ml[50,1532+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[46,1459+4]..src/positions.ml[46,1459+7])
+          Tpat_var "map/466"
+        expression (src/positions.ml[46,1459+8]..src/positions.ml[50,1532+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[46,1459+8]..src/positions.ml[46,1459+9])
+                Tpat_var "f/468"
+              expression (src/positions.ml[46,1459+10]..src/positions.ml[50,1532+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[46,1459+10]..src/positions.ml[46,1459+11])
+                      Tpat_var "v/469"
+                    expression (src/positions.ml[47,1473+2]..src/positions.ml[50,1532+3])
+                      Texp_record
+                        fields =
+                          [
+                            "value"
+                              expression (src/positions.ml[48,1477+16]..src/positions.ml[48,1477+25])
+                                Texp_apply
+                                expression (src/positions.ml[48,1477+16]..src/positions.ml[48,1477+17])
+                                  Texp_ident "f/468"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[48,1477+18]..src/positions.ml[48,1477+25])
+                                      Texp_field
+                                      expression (src/positions.ml[48,1477+18]..src/positions.ml[48,1477+19])
+                                        Texp_ident "v/469"
+                                      "value"
+                                ]
+                            "position"
+                              expression (src/positions.ml[49,1504+16]..src/positions.ml[49,1504+26])
+                                Texp_field
+                                expression (src/positions.ml[49,1504+16]..src/positions.ml[49,1504+17])
+                                  Texp_ident "v/469"
+                                "position"
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[52,1537+0]..src/positions.ml[56,1621+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[52,1537+4]..src/positions.ml[52,1537+8])
+          Tpat_var "pmap/470"
+        expression (src/positions.ml[52,1537+9]..src/positions.ml[56,1621+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[52,1537+9]..src/positions.ml[52,1537+10])
+                Tpat_var "f/472"
+              expression (src/positions.ml[52,1537+11]..src/positions.ml[56,1621+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[52,1537+11]..src/positions.ml[52,1537+12])
+                      Tpat_var "v/473"
+                    expression (src/positions.ml[53,1552+2]..src/positions.ml[56,1621+3])
+                      Texp_record
+                        fields =
+                          [
+                            "value"
+                              expression (src/positions.ml[54,1556+16]..src/positions.ml[54,1556+36])
+                                Texp_apply
+                                expression (src/positions.ml[54,1556+16]..src/positions.ml[54,1556+17])
+                                  Texp_ident "f/472"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[54,1556+18]..src/positions.ml[54,1556+28])
+                                      Texp_field
+                                      expression (src/positions.ml[54,1556+18]..src/positions.ml[54,1556+19])
+                                        Texp_ident "v/473"
+                                      "position"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[54,1556+29]..src/positions.ml[54,1556+36])
+                                      Texp_field
+                                      expression (src/positions.ml[54,1556+29]..src/positions.ml[54,1556+30])
+                                        Texp_ident "v/473"
+                                      "value"
+                                ]
+                            "position"
+                              expression (src/positions.ml[55,1594+16]..src/positions.ml[55,1594+26])
+                                Texp_field
+                                expression (src/positions.ml[55,1594+16]..src/positions.ml[55,1594+17])
+                                  Texp_ident "v/473"
+                                "position"
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[58,1626+0]..src/positions.ml[59,1653+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[58,1626+4]..src/positions.ml[58,1626+8])
+          Tpat_var "iter/474"
+        expression (src/positions.ml[58,1626+9]..src/positions.ml[59,1653+5]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[58,1626+9]..src/positions.ml[58,1626+10])
+                Tpat_var "f/476"
+              expression (src/positions.ml[58,1626+11]..src/positions.ml[59,1653+5]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[58,1626+11]..src/positions.ml[58,1626+24])
+                      Tpat_record
+                      [
+                        "value"
+                          pattern (src/positions.ml[58,1626+21]..src/positions.ml[58,1626+22])
+                            Tpat_var "v/477"
+                      ]
+                    expression (src/positions.ml[59,1653+2]..src/positions.ml[59,1653+5])
+                      Texp_apply
+                      expression (src/positions.ml[59,1653+2]..src/positions.ml[59,1653+3])
+                        Texp_ident "f/476"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[59,1653+4]..src/positions.ml[59,1653+5])
+                            Texp_ident "v/477"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[61,1660+0]..src/positions.ml[65,1763+32])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[61,1660+4]..src/positions.ml[61,1660+8])
+          Tpat_var "mapd/479"
+        expression (src/positions.ml[61,1660+9]..src/positions.ml[65,1763+32]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[61,1660+9]..src/positions.ml[61,1660+10])
+                Tpat_var "f/481"
+              expression (src/positions.ml[61,1660+11]..src/positions.ml[65,1763+32]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[61,1660+11]..src/positions.ml[61,1660+12])
+                      Tpat_var "v/482"
+                    expression (src/positions.ml[62,1675+2]..src/positions.ml[65,1763+32])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/positions.ml[62,1675+6]..src/positions.ml[62,1675+12])
+                            Tpat_tuple
+                            [
+                              pattern (src/positions.ml[62,1675+6]..src/positions.ml[62,1675+8])
+                                Tpat_var "w1/483"
+                              pattern (src/positions.ml[62,1675+10]..src/positions.ml[62,1675+12])
+                                Tpat_var "w2/484"
+                            ]
+                          expression (src/positions.ml[62,1675+15]..src/positions.ml[62,1675+24])
+                            Texp_apply
+                            expression (src/positions.ml[62,1675+15]..src/positions.ml[62,1675+16])
+                              Texp_ident "f/481"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/positions.ml[62,1675+17]..src/positions.ml[62,1675+24])
+                                  Texp_field
+                                  expression (src/positions.ml[62,1675+17]..src/positions.ml[62,1675+18])
+                                    Texp_ident "v/482"
+                                  "value"
+                            ]
+                      ]
+                      expression (src/positions.ml[63,1703+2]..src/positions.ml[65,1763+32])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/positions.ml[63,1703+6]..src/positions.ml[63,1703+9])
+                              Tpat_var "pos/485"
+                            expression (src/positions.ml[63,1703+12]..src/positions.ml[63,1703+22])
+                              Texp_field
+                              expression (src/positions.ml[63,1703+12]..src/positions.ml[63,1703+13])
+                                Texp_ident "v/482"
+                              "position"
+                        ]
+                        expression (src/positions.ml[64,1729+2]..src/positions.ml[65,1763+32])
+                          Texp_tuple
+                          [
+                            expression (src/positions.ml[64,1729+2]..src/positions.ml[64,1729+32])
+                              Texp_record
+                                fields =
+                                  [
+                                    "value"
+                                      expression (src/positions.ml[64,1729+12]..src/positions.ml[64,1729+14])
+                                        Texp_ident "w1/483"
+                                    "position"
+                                      expression (src/positions.ml[64,1729+27]..src/positions.ml[64,1729+30])
+                                        Texp_ident "pos/485"
+                                  ]
+                                representation =
+                                  Record_regular
+                                extended_expression =
+                                  None
+                            expression (src/positions.ml[65,1763+2]..src/positions.ml[65,1763+32])
+                              Texp_record
+                                fields =
+                                  [
+                                    "value"
+                                      expression (src/positions.ml[65,1763+12]..src/positions.ml[65,1763+14])
+                                        Texp_ident "w2/484"
+                                    "position"
+                                      expression (src/positions.ml[65,1763+27]..src/positions.ml[65,1763+30])
+                                        Texp_ident "pos/485"
+                                  ]
+                                representation =
+                                  Record_regular
+                                extended_expression =
+                                  None
+                          ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[67,1797+0]..src/positions.ml[68,1809+24])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[67,1797+4]..src/positions.ml[67,1797+9])
+          Tpat_var "dummy/486"
+        expression (src/positions.ml[68,1809+2]..src/positions.ml[68,1809+24])
+          Texp_tuple
+          [
+            expression (src/positions.ml[68,1809+3]..src/positions.ml[68,1809+12])
+              Texp_ident "Stdlib!.Lexing.dummy_pos"
+            expression (src/positions.ml[68,1809+14]..src/positions.ml[68,1809+23])
+              Texp_ident "Stdlib!.Lexing.dummy_pos"
+          ]
+    ]
+  structure_item (src/positions.ml[70,1835+0]..src/positions.ml[74,1900+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[70,1835+4]..src/positions.ml[70,1835+15])
+          Tpat_var "unknown_pos/487"
+        expression (src/positions.ml[70,1835+16]..src/positions.ml[74,1900+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[70,1835+16]..src/positions.ml[70,1835+17])
+                Tpat_var "v/489"
+              expression (src/positions.ml[71,1855+2]..src/positions.ml[74,1900+3])
+                Texp_record
+                  fields =
+                    [
+                      "value"
+                        expression (src/positions.ml[72,1859+16]..src/positions.ml[72,1859+17])
+                          Texp_ident "v/489"
+                      "position"
+                        expression (src/positions.ml[73,1878+16]..src/positions.ml[73,1878+21])
+                          Texp_ident "dummy/486"
+                    ]
+                  representation =
+                    Record_regular
+                  extended_expression =
+                    None
+          ]
+    ]
+  structure_item (src/positions.ml[76,1905+0]..src/positions.ml[76,1905+32])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[76,1905+4]..src/positions.ml[76,1905+21])
+          Tpat_var "start_of_position/490"
+        expression (src/positions.ml[76,1905+22]..src/positions.ml[76,1905+32]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[76,1905+22]..src/positions.ml[76,1905+28])
+                Tpat_tuple
+                [
+                  pattern (src/positions.ml[76,1905+23]..src/positions.ml[76,1905+24])
+                    Tpat_var "p/492"
+                  pattern (src/positions.ml[76,1905+26]..src/positions.ml[76,1905+27])
+                    Tpat_any
+                ]
+              expression (src/positions.ml[76,1905+31]..src/positions.ml[76,1905+32])
+                Texp_ident "p/492"
+          ]
+    ]
+  structure_item (src/positions.ml[78,1939+0]..src/positions.ml[78,1939+30])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[78,1939+4]..src/positions.ml[78,1939+19])
+          Tpat_var "end_of_position/494"
+        expression (src/positions.ml[78,1939+20]..src/positions.ml[78,1939+30]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[78,1939+20]..src/positions.ml[78,1939+26])
+                Tpat_tuple
+                [
+                  pattern (src/positions.ml[78,1939+21]..src/positions.ml[78,1939+22])
+                    Tpat_any
+                  pattern (src/positions.ml[78,1939+24]..src/positions.ml[78,1939+25])
+                    Tpat_var "p/496"
+                ]
+              expression (src/positions.ml[78,1939+29]..src/positions.ml[78,1939+30])
+                Texp_ident "p/496"
+          ]
+    ]
+  structure_item (src/positions.ml[80,1971+0]..src/positions.ml[81,2000+33])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[80,1971+4]..src/positions.ml[80,1971+24])
+          Tpat_var "filename_of_position/498"
+        expression (src/positions.ml[80,1971+25]..src/positions.ml[81,2000+33]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[80,1971+25]..src/positions.ml[80,1971+26])
+                Tpat_var "p/500"
+              expression (src/positions.ml[81,2000+2]..src/positions.ml[81,2000+33])
+                Texp_field
+                expression (src/positions.ml[81,2000+2]..src/positions.ml[81,2000+23])
+                  Texp_apply
+                  expression (src/positions.ml[81,2000+3]..src/positions.ml[81,2000+20])
+                    Texp_ident "start_of_position/490"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/positions.ml[81,2000+21]..src/positions.ml[81,2000+22])
+                        Texp_ident "p/500"
+                  ]
+                "pos_fname"
+          ]
+    ]
+  structure_item (src/positions.ml[83,2035+0]..src/positions.ml[84,2048+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[83,2035+4]..src/positions.ml[83,2035+8])
+          Tpat_var "line/501"
+        expression (src/positions.ml[83,2035+9]..src/positions.ml[84,2048+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[83,2035+9]..src/positions.ml[83,2035+10])
+                Tpat_var "p/503"
+              expression (src/positions.ml[84,2048+2]..src/positions.ml[84,2048+12])
+                Texp_field
+                expression (src/positions.ml[84,2048+2]..src/positions.ml[84,2048+3])
+                  Texp_ident "p/503"
+                "pos_lnum"
+          ]
+    ]
+  structure_item (src/positions.ml[86,2062+0]..src/positions.ml[87,2077+24])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[86,2062+4]..src/positions.ml[86,2062+10])
+          Tpat_var "column/504"
+        expression (src/positions.ml[86,2062+11]..src/positions.ml[87,2077+24]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[86,2062+11]..src/positions.ml[86,2062+12])
+                Tpat_var "p/506"
+              expression (src/positions.ml[87,2077+2]..src/positions.ml[87,2077+24])
+                Texp_apply
+                expression (src/positions.ml[87,2077+13]..src/positions.ml[87,2077+14])
+                  Texp_ident "Stdlib!.-"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[87,2077+2]..src/positions.ml[87,2077+12])
+                      Texp_field
+                      expression (src/positions.ml[87,2077+2]..src/positions.ml[87,2077+3])
+                        Texp_ident "p/506"
+                      "pos_cnum"
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[87,2077+15]..src/positions.ml[87,2077+24])
+                      Texp_field
+                      expression (src/positions.ml[87,2077+15]..src/positions.ml[87,2077+16])
+                        Texp_ident "p/506"
+                      "pos_bol"
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[89,2103+0]..src/positions.ml[90,2126+39])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[89,2103+4]..src/positions.ml[89,2103+14])
+          Tpat_var "characters/507"
+        expression (src/positions.ml[89,2103+15]..src/positions.ml[90,2126+39]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[89,2103+15]..src/positions.ml[89,2103+17])
+                Tpat_var "p1/509"
+              expression (src/positions.ml[89,2103+18]..src/positions.ml[90,2126+39]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[89,2103+18]..src/positions.ml[89,2103+20])
+                      Tpat_var "p2/510"
+                    expression (src/positions.ml[90,2126+2]..src/positions.ml[90,2126+39])
+                      Texp_tuple
+                      [
+                        expression (src/positions.ml[90,2126+3]..src/positions.ml[90,2126+12])
+                          Texp_apply
+                          expression (src/positions.ml[90,2126+3]..src/positions.ml[90,2126+9])
+                            Texp_ident "column/504"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[90,2126+10]..src/positions.ml[90,2126+12])
+                                Texp_ident "p1/509"
+                          ]
+                        expression (src/positions.ml[90,2126+14]..src/positions.ml[90,2126+38])
+                          Texp_apply
+                          expression (src/positions.ml[90,2126+26]..src/positions.ml[90,2126+27])
+                            Texp_ident "Stdlib!.-"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[90,2126+14]..src/positions.ml[90,2126+25])
+                                Texp_field
+                                expression (src/positions.ml[90,2126+14]..src/positions.ml[90,2126+16])
+                                  Texp_ident "p2/510"
+                                "pos_cnum"
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[90,2126+28]..src/positions.ml[90,2126+38])
+                                Texp_field
+                                expression (src/positions.ml[90,2126+28]..src/positions.ml[90,2126+30])
+                                  Texp_ident "p1/509"
+                                "pos_bol"
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[92,2200+0]..src/positions.ml[96,2324+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[92,2200+4]..src/positions.ml[92,2200+8])
+          Tpat_var "join/511"
+        expression (src/positions.ml[92,2200+9]..src/positions.ml[96,2324+1]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[92,2200+9]..src/positions.ml[92,2200+11])
+                Tpat_var "x1/513"
+              expression (src/positions.ml[92,2200+12]..src/positions.ml[96,2324+1]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[92,2200+12]..src/positions.ml[92,2200+14])
+                      Tpat_var "x2/514"
+                    expression (src/positions.ml[93,2217+0]..src/positions.ml[96,2324+1])
+                      Texp_tuple
+                      [
+                        expression (src/positions.ml[94,2219+2]..src/positions.ml[94,2219+51])
+                          Texp_apply
+                          expression (src/positions.ml[94,2219+2]..src/positions.ml[94,2219+19])
+                            Texp_ident "start_of_position/490"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[94,2219+20]..src/positions.ml[94,2219+51])
+                                Texp_ifthenelse
+                                expression (src/positions.ml[94,2219+24]..src/positions.ml[94,2219+34])
+                                  Texp_apply
+                                  expression (src/positions.ml[94,2219+27]..src/positions.ml[94,2219+28])
+                                    Texp_ident "Stdlib!.="
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[94,2219+24]..src/positions.ml[94,2219+26])
+                                        Texp_ident "x1/513"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[94,2219+29]..src/positions.ml[94,2219+34])
+                                        Texp_ident "dummy/486"
+                                  ]
+                                expression (src/positions.ml[94,2219+40]..src/positions.ml[94,2219+42])
+                                  Texp_ident "x2/514"
+                                Some
+                                  expression (src/positions.ml[94,2219+48]..src/positions.ml[94,2219+50])
+                                    Texp_ident "x1/513"
+                          ]
+                        expression (src/positions.ml[95,2272+2]..src/positions.ml[95,2272+51])
+                          Texp_apply
+                          expression (src/positions.ml[95,2272+2]..src/positions.ml[95,2272+17])
+                            Texp_ident "end_of_position/494"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[95,2272+20]..src/positions.ml[95,2272+51])
+                                Texp_ifthenelse
+                                expression (src/positions.ml[95,2272+24]..src/positions.ml[95,2272+34])
+                                  Texp_apply
+                                  expression (src/positions.ml[95,2272+27]..src/positions.ml[95,2272+28])
+                                    Texp_ident "Stdlib!.="
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[95,2272+24]..src/positions.ml[95,2272+26])
+                                        Texp_ident "x2/514"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[95,2272+29]..src/positions.ml[95,2272+34])
+                                        Texp_ident "dummy/486"
+                                  ]
+                                expression (src/positions.ml[95,2272+40]..src/positions.ml[95,2272+42])
+                                  Texp_ident "x1/513"
+                                Some
+                                  expression (src/positions.ml[95,2272+48]..src/positions.ml[95,2272+50])
+                                    Texp_ident "x2/514"
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[98,2327+0]..src/positions.ml[99,2342+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[98,2327+4]..src/positions.ml[98,2327+10])
+          Tpat_var "import/515"
+        expression (src/positions.ml[98,2327+11]..src/positions.ml[99,2342+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[98,2327+11]..src/positions.ml[98,2327+12])
+                Tpat_var "x/517"
+              expression (src/positions.ml[99,2342+2]..src/positions.ml[99,2342+3])
+                Texp_ident "x/517"
+          ]
+    ]
+  structure_item (src/positions.ml[101,2347+0]..src/positions.ml[105,2459+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[101,2347+4]..src/positions.ml[101,2347+16])
+          Tpat_var "join_located/518"
+        expression (src/positions.ml[101,2347+17]..src/positions.ml[105,2459+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[101,2347+17]..src/positions.ml[101,2347+19])
+                Tpat_var "l1/520"
+              expression (src/positions.ml[101,2347+20]..src/positions.ml[105,2459+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[101,2347+20]..src/positions.ml[101,2347+22])
+                      Tpat_var "l2/521"
+                    expression (src/positions.ml[101,2347+23]..src/positions.ml[105,2459+3]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/positions.ml[101,2347+23]..src/positions.ml[101,2347+24])
+                            Tpat_var "f/522"
+                          expression (src/positions.ml[102,2374+2]..src/positions.ml[105,2459+3])
+                            Texp_record
+                              fields =
+                                [
+                                  "value"
+                                    expression (src/positions.ml[103,2378+15]..src/positions.ml[103,2378+34])
+                                      Texp_apply
+                                      expression (src/positions.ml[103,2378+15]..src/positions.ml[103,2378+16])
+                                        Texp_ident "f/522"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/positions.ml[103,2378+17]..src/positions.ml[103,2378+25])
+                                            Texp_field
+                                            expression (src/positions.ml[103,2378+17]..src/positions.ml[103,2378+19])
+                                              Texp_ident "l1/520"
+                                            "value"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/positions.ml[103,2378+26]..src/positions.ml[103,2378+34])
+                                            Texp_field
+                                            expression (src/positions.ml[103,2378+26]..src/positions.ml[103,2378+28])
+                                              Texp_ident "l2/521"
+                                            "value"
+                                      ]
+                                  "position"
+                                    expression (src/positions.ml[104,2414+15]..src/positions.ml[104,2414+43])
+                                      Texp_apply
+                                      expression (src/positions.ml[104,2414+15]..src/positions.ml[104,2414+19])
+                                        Texp_ident "join/511"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/positions.ml[104,2414+20]..src/positions.ml[104,2414+31])
+                                            Texp_field
+                                            expression (src/positions.ml[104,2414+20]..src/positions.ml[104,2414+22])
+                                              Texp_ident "l1/520"
+                                            "position"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/positions.ml[104,2414+32]..src/positions.ml[104,2414+43])
+                                            Texp_field
+                                            expression (src/positions.ml[104,2414+32]..src/positions.ml[104,2414+34])
+                                              Texp_ident "l2/521"
+                                            "position"
+                                      ]
+                                ]
+                              representation =
+                                Record_regular
+                              extended_expression =
+                                None
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[107,2464+0]..src/positions.ml[109,2526+50])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[107,2464+4]..src/positions.ml[107,2464+21])
+          Tpat_var "string_of_lex_pos/523"
+        expression (src/positions.ml[107,2464+22]..src/positions.ml[109,2526+50]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[107,2464+22]..src/positions.ml[107,2464+23])
+                Tpat_var "p/525"
+              expression (src/positions.ml[108,2490+2]..src/positions.ml[109,2526+50])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/positions.ml[108,2490+6]..src/positions.ml[108,2490+7])
+                      Tpat_var "c/526"
+                    expression (src/positions.ml[108,2490+10]..src/positions.ml[108,2490+32])
+                      Texp_apply
+                      expression (src/positions.ml[108,2490+21]..src/positions.ml[108,2490+22])
+                        Texp_ident "Stdlib!.-"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[108,2490+10]..src/positions.ml[108,2490+20])
+                            Texp_field
+                            expression (src/positions.ml[108,2490+10]..src/positions.ml[108,2490+11])
+                              Texp_ident "p/525"
+                            "pos_cnum"
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[108,2490+23]..src/positions.ml[108,2490+32])
+                            Texp_field
+                            expression (src/positions.ml[108,2490+23]..src/positions.ml[108,2490+24])
+                              Texp_ident "p/525"
+                            "pos_bol"
+                      ]
+                ]
+                expression (src/positions.ml[109,2526+2]..src/positions.ml[109,2526+50])
+                  Texp_apply
+                  expression (src/positions.ml[109,2526+28]..src/positions.ml[109,2526+29])
+                    Texp_ident "Stdlib!.^"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/positions.ml[109,2526+2]..src/positions.ml[109,2526+28])
+                        Texp_apply
+                        expression (src/positions.ml[109,2526+3]..src/positions.ml[109,2526+16])
+                          Texp_ident "Stdlib!.string_of_int"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/positions.ml[109,2526+17]..src/positions.ml[109,2526+27])
+                              Texp_field
+                              expression (src/positions.ml[109,2526+17]..src/positions.ml[109,2526+18])
+                                Texp_ident "p/525"
+                              "pos_lnum"
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (src/positions.ml[109,2526+29]..src/positions.ml[109,2526+50])
+                        Texp_apply
+                        expression (src/positions.ml[109,2526+32]..src/positions.ml[109,2526+33])
+                          Texp_ident "Stdlib!.^"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/positions.ml[109,2526+29]..src/positions.ml[109,2526+32])
+                              Texp_constant Const_string(":",(src/positions.ml[109,2526+30]..src/positions.ml[109,2526+31]),None)
+                          <arg>
+                            Nolabel
+                            expression (src/positions.ml[109,2526+33]..src/positions.ml[109,2526+50])
+                              Texp_apply
+                              expression (src/positions.ml[109,2526+34]..src/positions.ml[109,2526+47])
+                                Texp_ident "Stdlib!.string_of_int"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/positions.ml[109,2526+48]..src/positions.ml[109,2526+49])
+                                    Texp_ident "c/526"
+                              ]
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (src/positions.ml[111,2578+0]..src/positions.ml[116,2794+74])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[111,2578+4]..src/positions.ml[111,2578+17])
+          Tpat_var "string_of_pos/527"
+        expression (src/positions.ml[111,2578+18]..src/positions.ml[116,2794+74]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[111,2578+18]..src/positions.ml[111,2578+19])
+                Tpat_var "p/529"
+              expression (src/positions.ml[112,2600+2]..src/positions.ml[116,2794+74])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/positions.ml[112,2600+6]..src/positions.ml[112,2600+14])
+                      Tpat_var "filename/530"
+                    expression (src/positions.ml[112,2600+17]..src/positions.ml[112,2600+39])
+                      Texp_apply
+                      expression (src/positions.ml[112,2600+17]..src/positions.ml[112,2600+37])
+                        Texp_ident "filename_of_position/498"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[112,2600+38]..src/positions.ml[112,2600+39])
+                            Texp_ident "p/529"
+                      ]
+                ]
+                expression (src/positions.ml[114,2683+2]..src/positions.ml[116,2794+74])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/positions.ml[114,2683+6]..src/positions.ml[114,2683+7])
+                        Tpat_var "l/531"
+                      expression (src/positions.ml[114,2683+10]..src/positions.ml[114,2683+36])
+                        Texp_apply
+                        expression (src/positions.ml[114,2683+10]..src/positions.ml[114,2683+14])
+                          Texp_ident "line/501"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/positions.ml[114,2683+15]..src/positions.ml[114,2683+36])
+                              Texp_apply
+                              expression (src/positions.ml[114,2683+16]..src/positions.ml[114,2683+33])
+                                Texp_ident "start_of_position/490"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/positions.ml[114,2683+34]..src/positions.ml[114,2683+35])
+                                    Texp_ident "p/529"
+                              ]
+                        ]
+                  ]
+                  expression (src/positions.ml[115,2723+2]..src/positions.ml[116,2794+74])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/positions.ml[115,2723+6]..src/positions.ml[115,2723+12])
+                          Tpat_tuple
+                          [
+                            pattern (src/positions.ml[115,2723+6]..src/positions.ml[115,2723+8])
+                              Tpat_var "c1/532"
+                            pattern (src/positions.ml[115,2723+10]..src/positions.ml[115,2723+12])
+                              Tpat_var "c2/533"
+                          ]
+                        expression (src/positions.ml[115,2723+15]..src/positions.ml[115,2723+67])
+                          Texp_apply
+                          expression (src/positions.ml[115,2723+15]..src/positions.ml[115,2723+25])
+                            Texp_ident "characters/507"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[115,2723+26]..src/positions.ml[115,2723+47])
+                                Texp_apply
+                                expression (src/positions.ml[115,2723+27]..src/positions.ml[115,2723+44])
+                                  Texp_ident "start_of_position/490"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[115,2723+45]..src/positions.ml[115,2723+46])
+                                      Texp_ident "p/529"
+                                ]
+                            <arg>
+                              Nolabel
+                              expression (src/positions.ml[115,2723+48]..src/positions.ml[115,2723+67])
+                                Texp_apply
+                                expression (src/positions.ml[115,2723+49]..src/positions.ml[115,2723+64])
+                                  Texp_ident "end_of_position/494"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[115,2723+65]..src/positions.ml[115,2723+66])
+                                      Texp_ident "p/529"
+                                ]
+                          ]
+                    ]
+                    expression (src/positions.ml[116,2794+2]..src/positions.ml[116,2794+74])
+                      Texp_apply
+                      expression (src/positions.ml[116,2794+2]..src/positions.ml[116,2794+16])
+                        Texp_ident "Stdlib!.Printf.sprintf"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                [
+                                  expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                    Texp_constant Const_string("File \"",(src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost,None)
+                                  expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.String"
+                                    [
+                                      expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                        []
+                                      expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                        [
+                                          expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                            Texp_constant Const_string("\", line ",(src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost,None)
+                                          expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Int"
+                                            [
+                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                []
+                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                []
+                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                []
+                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                [
+                                                  expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                    Texp_constant Const_string(", characters ",(src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost,None)
+                                                  expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.Int"
+                                                    [
+                                                      expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                        []
+                                                      expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                        []
+                                                      expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                        []
+                                                      expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                        [
+                                                          expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                            Texp_constant Const_char 2d
+                                                          expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.Int"
+                                                            [
+                                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                                []
+                                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                []
+                                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                                []
+                                                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                []
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                              expression (src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost
+                                Texp_constant Const_string("File \"%s\", line %d, characters %d-%d",(src/positions.ml[116,2794+17]..src/positions.ml[116,2794+57]) ghost,None)
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[116,2794+58]..src/positions.ml[116,2794+66])
+                            Texp_ident "filename/530"
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[116,2794+67]..src/positions.ml[116,2794+68])
+                            Texp_ident "l/531"
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[116,2794+69]..src/positions.ml[116,2794+71])
+                            Texp_ident "c1/532"
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[116,2794+72]..src/positions.ml[116,2794+74])
+                            Texp_ident "c2/533"
+                      ]
+          ]
+    ]
+  structure_item (src/positions.ml[118,2870+0]..src/positions.ml[120,2916+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[118,2870+4]..src/positions.ml[118,2870+16])
+          Tpat_var "pos_or_undef/570"
+        expression (src/positions.ml[118,2870+19]..src/positions.ml[120,2916+15])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[119,2898+4]..src/positions.ml[119,2898+8])
+                Tpat_construct "None"
+                []
+                None
+              expression (src/positions.ml[119,2898+12]..src/positions.ml[119,2898+17])
+                Texp_ident "dummy/486"
+            <case>
+              pattern (src/positions.ml[120,2916+4]..src/positions.ml[120,2916+10])
+                Tpat_construct "Some"
+                [
+                  pattern (src/positions.ml[120,2916+9]..src/positions.ml[120,2916+10])
+                    Tpat_var "x/572"
+                ]
+                None
+              expression (src/positions.ml[120,2916+14]..src/positions.ml[120,2916+15])
+                Texp_ident "x/572"
+          ]
+    ]
+  structure_item (src/positions.ml[122,2933+0]..src/positions.ml[123,2951+46])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[122,2933+4]..src/positions.ml[122,2933+8])
+          Tpat_var "cpos/574"
+        expression (src/positions.ml[122,2933+9]..src/positions.ml[123,2951+46]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[122,2933+9]..src/positions.ml[122,2933+15])
+                Tpat_var "lexbuf/576"
+              expression (src/positions.ml[123,2951+2]..src/positions.ml[123,2951+46])
+                Texp_tuple
+                [
+                  expression (src/positions.ml[123,2951+3]..src/positions.ml[123,2951+24])
+                    Texp_apply
+                    expression (src/positions.ml[123,2951+3]..src/positions.ml[123,2951+17])
+                      Texp_ident "Stdlib!.Lexing.lexeme_start_p"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/positions.ml[123,2951+18]..src/positions.ml[123,2951+24])
+                          Texp_ident "lexbuf/576"
+                    ]
+                  expression (src/positions.ml[123,2951+26]..src/positions.ml[123,2951+45])
+                    Texp_apply
+                    expression (src/positions.ml[123,2951+26]..src/positions.ml[123,2951+38])
+                      Texp_ident "Stdlib!.Lexing.lexeme_end_p"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/positions.ml[123,2951+39]..src/positions.ml[123,2951+45])
+                          Texp_ident "lexbuf/576"
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[125,2999+0]..src/positions.ml[126,3024+26])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[125,2999+4]..src/positions.ml[125,2999+13])
+          Tpat_var "with_cpos/577"
+        expression (src/positions.ml[125,2999+14]..src/positions.ml[126,3024+26]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[125,2999+14]..src/positions.ml[125,2999+20])
+                Tpat_var "lexbuf/579"
+              expression (src/positions.ml[125,2999+21]..src/positions.ml[126,3024+26]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[125,2999+21]..src/positions.ml[125,2999+22])
+                      Tpat_var "v/580"
+                    expression (src/positions.ml[126,3024+2]..src/positions.ml[126,3024+26])
+                      Texp_apply
+                      expression (src/positions.ml[126,3024+2]..src/positions.ml[126,3024+10])
+                        Texp_ident "with_pos/461"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[126,3024+11]..src/positions.ml[126,3024+24])
+                            Texp_apply
+                            expression (src/positions.ml[126,3024+12]..src/positions.ml[126,3024+16])
+                              Texp_ident "cpos/574"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/positions.ml[126,3024+17]..src/positions.ml[126,3024+23])
+                                  Texp_ident "lexbuf/579"
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[126,3024+25]..src/positions.ml[126,3024+26])
+                            Texp_ident "v/580"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[128,3052+0]..src/positions.ml[129,3080+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[128,3052+4]..src/positions.ml[128,3052+18])
+          Tpat_var "string_of_cpos/581"
+        expression (src/positions.ml[128,3052+19]..src/positions.ml[129,3080+29]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[128,3052+19]..src/positions.ml[128,3052+25])
+                Tpat_var "lexbuf/583"
+              expression (src/positions.ml[129,3080+2]..src/positions.ml[129,3080+29])
+                Texp_apply
+                expression (src/positions.ml[129,3080+2]..src/positions.ml[129,3080+15])
+                  Texp_ident "string_of_pos/527"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[129,3080+16]..src/positions.ml[129,3080+29])
+                      Texp_apply
+                      expression (src/positions.ml[129,3080+17]..src/positions.ml[129,3080+21])
+                        Texp_ident "cpos/574"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/positions.ml[129,3080+22]..src/positions.ml[129,3080+28])
+                            Texp_ident "lexbuf/583"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[131,3111+0]..src/positions.ml[132,3131+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[131,3111+4]..src/positions.ml[131,3111+9])
+          Tpat_var "joinf/584"
+        expression (src/positions.ml[131,3111+10]..src/positions.ml[132,3131+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[131,3111+10]..src/positions.ml[131,3111+11])
+                Tpat_var "f/586"
+              expression (src/positions.ml[131,3111+12]..src/positions.ml[132,3131+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[131,3111+12]..src/positions.ml[131,3111+14])
+                      Tpat_var "t1/587"
+                    expression (src/positions.ml[131,3111+15]..src/positions.ml[132,3131+20]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/positions.ml[131,3111+15]..src/positions.ml[131,3111+17])
+                            Tpat_var "t2/588"
+                          expression (src/positions.ml[132,3131+2]..src/positions.ml[132,3131+20])
+                            Texp_apply
+                            expression (src/positions.ml[132,3131+2]..src/positions.ml[132,3131+6])
+                              Texp_ident "join/511"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/positions.ml[132,3131+7]..src/positions.ml[132,3131+13])
+                                  Texp_apply
+                                  expression (src/positions.ml[132,3131+8]..src/positions.ml[132,3131+9])
+                                    Texp_ident "f/586"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[132,3131+10]..src/positions.ml[132,3131+12])
+                                        Texp_ident "t1/587"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/positions.ml[132,3131+14]..src/positions.ml[132,3131+20])
+                                  Texp_apply
+                                  expression (src/positions.ml[132,3131+15]..src/positions.ml[132,3131+16])
+                                    Texp_ident "f/586"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[132,3131+17]..src/positions.ml[132,3131+19])
+                                        Texp_ident "t2/588"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[134,3153+0]..src/positions.ml[135,3168+48])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[134,3153+4]..src/positions.ml[134,3153+10])
+          Tpat_var "ljoinf/589"
+        expression (src/positions.ml[134,3153+11]..src/positions.ml[135,3168+48]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[134,3153+11]..src/positions.ml[134,3153+12])
+                Tpat_var "f/591"
+              expression (src/positions.ml[135,3168+2]..src/positions.ml[135,3168+48])
+                Texp_apply
+                expression (src/positions.ml[135,3168+2]..src/positions.ml[135,3168+16])
+                  Texp_ident "Stdlib!.List.fold_left"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[135,3168+17]..src/positions.ml[135,3168+42])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/positions.ml[135,3168+22]..src/positions.ml[135,3168+23])
+                            Tpat_var "p/658"
+                          expression (src/positions.ml[135,3168+24]..src/positions.ml[135,3168+41]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/positions.ml[135,3168+24]..src/positions.ml[135,3168+25])
+                                  Tpat_var "t/659"
+                                expression (src/positions.ml[135,3168+29]..src/positions.ml[135,3168+41])
+                                  Texp_apply
+                                  expression (src/positions.ml[135,3168+29]..src/positions.ml[135,3168+33])
+                                    Texp_ident "join/511"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[135,3168+34]..src/positions.ml[135,3168+35])
+                                        Texp_ident "p/658"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/positions.ml[135,3168+36]..src/positions.ml[135,3168+41])
+                                        Texp_apply
+                                        expression (src/positions.ml[135,3168+37]..src/positions.ml[135,3168+38])
+                                          Texp_ident "f/591"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/positions.ml[135,3168+39]..src/positions.ml[135,3168+40])
+                                              Texp_ident "t/659"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[135,3168+43]..src/positions.ml[135,3168+48])
+                      Texp_ident "dummy/486"
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[137,3218+0]..src/positions.ml[141,3351+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[137,3218+4]..src/positions.ml[137,3218+21])
+          Tpat_var "join_located_list/660"
+        expression (src/positions.ml[137,3218+22]..src/positions.ml[141,3351+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[137,3218+22]..src/positions.ml[137,3218+24])
+                Tpat_var "ls/662"
+              expression (src/positions.ml[137,3218+25]..src/positions.ml[141,3351+3]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/positions.ml[137,3218+25]..src/positions.ml[137,3218+26])
+                      Tpat_var "f/663"
+                    expression (src/positions.ml[138,3247+2]..src/positions.ml[141,3351+3])
+                      Texp_record
+                        fields =
+                          [
+                            "value"
+                              expression (src/positions.ml[139,3251+16]..src/positions.ml[139,3251+50])
+                                Texp_apply
+                                expression (src/positions.ml[139,3251+16]..src/positions.ml[139,3251+17])
+                                  Texp_ident "f/663"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[139,3251+18]..src/positions.ml[139,3251+50])
+                                      Texp_apply
+                                      expression (src/positions.ml[139,3251+19]..src/positions.ml[139,3251+27])
+                                        Texp_ident "Stdlib!.List.map"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/positions.ml[139,3251+28]..src/positions.ml[139,3251+46])
+                                            Texp_function
+                                            Nolabel
+                                            [
+                                              <case>
+                                                pattern (src/positions.ml[139,3251+33]..src/positions.ml[139,3251+34])
+                                                  Tpat_var "l/664"
+                                                expression (src/positions.ml[139,3251+38]..src/positions.ml[139,3251+45])
+                                                  Texp_field
+                                                  expression (src/positions.ml[139,3251+38]..src/positions.ml[139,3251+39])
+                                                    Texp_ident "l/664"
+                                                  "value"
+                                            ]
+                                        <arg>
+                                          Nolabel
+                                          expression (src/positions.ml[139,3251+47]..src/positions.ml[139,3251+49])
+                                            Texp_ident "ls/662"
+                                      ]
+                                ]
+                            "position"
+                              expression (src/positions.ml[140,3303+16]..src/positions.ml[140,3303+47])
+                                Texp_apply
+                                expression (src/positions.ml[140,3303+16]..src/positions.ml[140,3303+22])
+                                  Texp_ident "ljoinf/589"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[140,3303+23]..src/positions.ml[140,3303+44])
+                                      Texp_function
+                                      Nolabel
+                                      [
+                                        <case>
+                                          pattern (src/positions.ml[140,3303+28]..src/positions.ml[140,3303+29])
+                                            Tpat_var "x/665"
+                                          expression (src/positions.ml[140,3303+33]..src/positions.ml[140,3303+43])
+                                            Texp_field
+                                            expression (src/positions.ml[140,3303+33]..src/positions.ml[140,3303+34])
+                                              Texp_ident "x/665"
+                                            "position"
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (src/positions.ml[140,3303+45]..src/positions.ml[140,3303+47])
+                                      Texp_ident "ls/662"
+                                ]
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[146,3505+0]..src/positions.ml[147,3522+10])
+    Tstr_type Rec
+    [
+      type_declaration positions/666 (src/positions.ml[146,3505+0]..src/positions.ml[147,3522+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/positions.ml[147,3522+4]..src/positions.ml[147,3522+10])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/positions.ml[147,3522+4]..src/positions.ml[147,3522+5])
+                  Ttyp_constr "t/420"
+                  []
+              ]
+    ]
+  structure_item (src/positions.ml[149,3534+0]..src/positions.ml[150,3573+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[149,3534+4]..src/positions.ml[149,3534+7])
+          Tpat_var "one/667"
+        expression (src/positions.ml[149,3534+8]..src/positions.ml[150,3573+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[149,3534+9]..src/positions.ml[149,3534+12])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/positions.ml[149,3534+15]..src/positions.ml[149,3534+23])
+                    Ttyp_constr "Stdlib!.Lexing.position"
+                    []
+                Tpat_alias "pos/669"
+                pattern (src/positions.ml[149,3534+9]..src/positions.ml[149,3534+12])
+                  Tpat_any
+              expression (src/positions.ml[150,3573+2]..src/positions.ml[150,3573+23])
+                extra
+                  Texp_constraint
+                  core_type (src/positions.ml[149,3534+27]..src/positions.ml[149,3534+36])
+                    Ttyp_constr "positions/666"
+                    []
+                Texp_construct "::"
+                [
+                  expression (src/positions.ml[150,3573+4]..src/positions.ml[150,3573+21])
+                    Texp_apply
+                    expression (src/positions.ml[150,3573+4]..src/positions.ml[150,3573+10])
+                      Texp_ident "import/515"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/positions.ml[150,3573+11]..src/positions.ml[150,3573+21])
+                          Texp_tuple
+                          [
+                            expression (src/positions.ml[150,3573+12]..src/positions.ml[150,3573+15])
+                              Texp_ident "pos/669"
+                            expression (src/positions.ml[150,3573+17]..src/positions.ml[150,3573+20])
+                              Texp_ident "pos/669"
+                          ]
+                    ]
+                  expression (src/positions.ml[150,3573+22]..src/positions.ml[150,3573+23]) ghost
+                    Texp_construct "[]"
+                    []
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[152,3598+0]..src/positions.ml[153,3641+52])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[152,3598+4]..src/positions.ml[152,3598+10])
+          Tpat_var "lexbuf/670"
+        expression (src/positions.ml[152,3598+11]..src/positions.ml[153,3641+52]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[152,3598+12]..src/positions.ml[152,3598+18])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/positions.ml[152,3598+21]..src/positions.ml[152,3598+27])
+                    Ttyp_constr "Stdlib!.Lexing.lexbuf"
+                    []
+                Tpat_alias "lexbuf/672"
+                pattern (src/positions.ml[152,3598+12]..src/positions.ml[152,3598+18])
+                  Tpat_any
+              expression (src/positions.ml[153,3641+2]..src/positions.ml[153,3641+52])
+                extra
+                  Texp_constraint
+                  core_type (src/positions.ml[152,3598+31]..src/positions.ml[152,3598+40])
+                    Ttyp_constr "positions/666"
+                    []
+                Texp_construct "::"
+                [
+                  expression (src/positions.ml[153,3641+4]..src/positions.ml[153,3641+50])
+                    Texp_apply
+                    expression (src/positions.ml[153,3641+4]..src/positions.ml[153,3641+10])
+                      Texp_ident "import/515"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/positions.ml[153,3641+11]..src/positions.ml[153,3641+50])
+                          Texp_tuple
+                          [
+                            expression (src/positions.ml[153,3641+12]..src/positions.ml[153,3641+30])
+                              Texp_field
+                              expression (src/positions.ml[153,3641+12]..src/positions.ml[153,3641+18])
+                                Texp_ident "lexbuf/672"
+                              "lex_start_p"
+                            expression (src/positions.ml[153,3641+32]..src/positions.ml[153,3641+49])
+                              Texp_field
+                              expression (src/positions.ml[153,3641+32]..src/positions.ml[153,3641+38])
+                                Texp_ident "lexbuf/672"
+                              "lex_curr_p"
+                          ]
+                    ]
+                  expression (src/positions.ml[153,3641+51]..src/positions.ml[153,3641+52]) ghost
+                    Texp_construct "[]"
+                    []
+                ]
+          ]
+    ]
+  structure_item (src/positions.ml[155,3695+0]..src/positions.ml[161,3872+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/positions.ml[155,3695+4]..src/positions.ml[155,3695+9])
+          Tpat_var "print/673"
+        expression (src/positions.ml[155,3695+10]..src/positions.ml[161,3872+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/positions.ml[155,3695+11]..src/positions.ml[155,3695+14])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/positions.ml[155,3695+17]..src/positions.ml[155,3695+25])
+                    Ttyp_constr "Stdlib!.Lexing.position"
+                    []
+                Tpat_alias "pos/675"
+                pattern (src/positions.ml[155,3695+11]..src/positions.ml[155,3695+14])
+                  Tpat_any
+              expression (src/positions.ml[156,3724+2]..src/positions.ml[161,3872+18])
+                Texp_apply
+                expression (src/positions.ml[156,3724+2]..src/positions.ml[156,3724+15])
+                  Texp_ident "Stdlib!.Printf.printf"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74])
+                      Texp_construct "CamlinternalFormatBasics.Format"
+                      [
+                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                          [
+                            expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                              Texp_constant Const_string("{ pos_fname = \"",(src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost,None)
+                            expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                              Texp_construct "CamlinternalFormatBasics.String"
+                              [
+                                expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                  []
+                                expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                  [
+                                    expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                      Texp_constant Const_string("\"; pos_lnum = ",(src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost,None)
+                                    expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                      [
+                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                          []
+                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                          []
+                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                          []
+                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                              Texp_constant Const_string("; pos_bol = ",(src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost,None)
+                                            expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Int"
+                                              [
+                                                expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                  []
+                                                expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                  []
+                                                expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                  []
+                                                expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                  [
+                                                    expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                      Texp_constant Const_string("; pos_cnum = ",(src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost,None)
+                                                    expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                                      [
+                                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                          []
+                                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                          []
+                                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                          []
+                                                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                          [
+                                                            expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                              Texp_constant Const_string(" }\n",(src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost,None)
+                                                            expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                              []
+                                                          ]
+                                                      ]
+                                                  ]
+                                              ]
+                                          ]
+                                      ]
+                                  ]
+                              ]
+                          ]
+                        expression (src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost
+                          Texp_constant Const_string("{ pos_fname = \"%s\"; pos_lnum = %d; pos_bol = %d; pos_cnum = %d }\n",(src/positions.ml[157,3740+4]..src/positions.ml[157,3740+74]) ghost,None)
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[158,3815+6]..src/positions.ml[158,3815+19])
+                      Texp_field
+                      expression (src/positions.ml[158,3815+6]..src/positions.ml[158,3815+9])
+                        Texp_ident "pos/675"
+                      "pos_fname"
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[159,3835+6]..src/positions.ml[159,3835+18])
+                      Texp_field
+                      expression (src/positions.ml[159,3835+6]..src/positions.ml[159,3835+9])
+                        Texp_ident "pos/675"
+                      "pos_lnum"
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[160,3854+6]..src/positions.ml[160,3854+17])
+                      Texp_field
+                      expression (src/positions.ml[160,3854+6]..src/positions.ml[160,3854+9])
+                        Texp_ident "pos/675"
+                      "pos_bol"
+                  <arg>
+                    Nolabel
+                    expression (src/positions.ml[161,3872+6]..src/positions.ml[161,3872+18])
+                      Texp_field
+                      expression (src/positions.ml[161,3872+6]..src/positions.ml[161,3872+9])
+                        Texp_ident "pos/675"
+                      "pos_cnum"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Positions>
+ "characters"[value] -> <Dune__exe__Positions.43>;
+ "column"[value] -> <Dune__exe__Positions.41>;
+ "cpos"[value] -> <Dune__exe__Positions.66>;
+ "decompose"[value] -> <Dune__exe__Positions.8>;
+ "dummy"[value] -> <Dune__exe__Positions.30>;
+ "end_of_position"[value] -> <Dune__exe__Positions.35>;
+ "filename_of_position"[value] -> <Dune__exe__Positions.37>;
+ "import"[value] -> <Dune__exe__Positions.49>;
+ "iter"[value] -> <Dune__exe__Positions.21>;
+ "join"[value] -> <Dune__exe__Positions.46>;
+ "join_located"[value] -> <Dune__exe__Positions.51>;
+ "join_located_list"[value] -> <Dune__exe__Positions.81>;
+ "joinf"[value] -> <Dune__exe__Positions.73>;
+ "lexbuf"[value] -> <Dune__exe__Positions.89>;
+ "line"[value] -> <Dune__exe__Positions.39>;
+ "ljoinf"[value] -> <Dune__exe__Positions.77>;
+ "located"[type] -> <Dune__exe__Positions.1>;
+ "map"[value] -> <Dune__exe__Positions.15>;
+ "mapd"[value] -> <Dune__exe__Positions.24>;
+ "one"[value] -> <Dune__exe__Positions.87>;
+ "pmap"[value] -> <Dune__exe__Positions.18>;
+ "pos_or_undef"[value] -> <Dune__exe__Positions.64>;
+ "position"[value] -> <Dune__exe__Positions.6>;
+ "positions"[type] -> <Dune__exe__Positions.86>;
+ "print"[value] -> <Dune__exe__Positions.91>;
+ "start_of_position"[value] -> <Dune__exe__Positions.33>;
+ "string_of_cpos"[value] -> <Dune__exe__Positions.71>;
+ "string_of_lex_pos"[value] -> <Dune__exe__Positions.55>;
+ "string_of_pos"[value] -> <Dune__exe__Positions.58>;
+ "t"[type] -> <Dune__exe__Positions.0>;
+ "unknown_pos"[value] -> <Dune__exe__Positions.31>;
+ "value"[value] -> <Dune__exe__Positions.4>;
+ "with_cpos"[value] -> <Dune__exe__Positions.68>;
+ "with_loc"[value] -> <Dune__exe__Positions.14>;
+ "with_pos"[value] -> <Dune__exe__Positions.11>;
+ }
+
+(seq
+  (let
+    (value/448 =
+       (function param/451
+         (let
+           (*match*/1111 =a (field_imm 1 param/451)
+            v/450 =a (field_imm 0 param/451))
+           v/450)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Positions!) value/448))
+  (let
+    (position/452 =
+       (function param/455
+         (let
+           (p/454 =a (field_imm 1 param/455)
+            *match*/1112 =a (field_imm 0 param/455))
+           p/454)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Positions!) position/452))
+  (let
+    (decompose/456 =
+       (function param/460
+         (let
+           (position/459 =a (field_imm 1 param/460)
+            value/458 =a (field_imm 0 param/460))
+           (makeblock 0 value/458 position/459))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Positions!) decompose/456))
+  (let (with_pos/461 = (function p/463 v/464 (makeblock 0 v/464 p/463)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Positions!) with_pos/461))
+  (let (with_loc/465 = (field_imm 3 (global Dune__exe__Positions!)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Positions!) with_loc/465))
+  (let
+    (map/466 =
+       (function f/468 v/469
+         (makeblock 0 (apply f/468 (field_imm 0 v/469)) (field_imm 1 v/469))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Positions!) map/466))
+  (let
+    (pmap/470 =
+       (function f/472 v/473
+         (makeblock 0 (apply f/472 (field_imm 1 v/473) (field_imm 0 v/473))
+           (field_imm 1 v/473))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Positions!) pmap/470))
+  (let
+    (iter/474 =
+       (function f/476 param/478
+         (let
+           (*match*/1116 =a (field_imm 1 param/478)
+            v/477 =a (field_imm 0 param/478))
+           (apply f/476 v/477))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Positions!) iter/474))
+  (let
+    (mapd/479 =
+       (function f/481 v/482
+         (let
+           (*match*/1122 = (apply f/481 (field_imm 0 v/482))
+            w2/484 =a (field_imm 1 *match*/1122)
+            w1/483 =a (field_imm 0 *match*/1122)
+            pos/485 = (field_imm 1 v/482))
+           (makeblock 0 (makeblock 0 w1/483 pos/485)
+             (makeblock 0 w2/484 pos/485)))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Positions!) mapd/479))
+  (let
+    (dummy/486 =
+       (makeblock 0 (field_imm 0 (global Stdlib__Lexing!))
+         (field_imm 0 (global Stdlib__Lexing!))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Positions!) dummy/486))
+  (let
+    (unknown_pos/487 =
+       (function v/489
+         (makeblock 0 v/489 (field_imm 11 (global Dune__exe__Positions!)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Positions!)
+      unknown_pos/487))
+  (let
+    (start_of_position/490 =
+       (function (param/1124, param/1125) (let (p/492 =a param/1124) p/492)))
+    (setfield_ptr(root-init) 15 (global Dune__exe__Positions!)
+      start_of_position/490))
+  (let
+    (end_of_position/494 =
+       (function (param/1126, param/1127) (let (p/496 =a param/1127) p/496)))
+    (setfield_ptr(root-init) 16 (global Dune__exe__Positions!)
+      end_of_position/494))
+  (let
+    (filename_of_position/498 =
+       (function p/500
+         (field_imm 0
+           (apply (field_imm 15 (global Dune__exe__Positions!)) p/500))))
+    (setfield_ptr(root-init) 17 (global Dune__exe__Positions!)
+      filename_of_position/498))
+  (let (line/501 = (function p/503 : int (field_int 1 p/503)))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Positions!) line/501))
+  (let
+    (column/504 =
+       (function p/506 : int (- (field_int 3 p/506) (field_int 2 p/506))))
+    (setfield_ptr(root-init) 12 (global Dune__exe__Positions!) column/504))
+  (let
+    (characters/507 =
+       (function p1/509 p2/510
+         (makeblock 0 (int,int)
+           (apply (field_imm 12 (global Dune__exe__Positions!)) p1/509)
+           (- (field_int 3 p2/510) (field_int 2 p1/509)))))
+    (setfield_ptr(root-init) 14 (global Dune__exe__Positions!)
+      characters/507))
+  (let
+    (join/511 =
+       (function x1/513 x2/514
+         (makeblock 0
+           (apply (field_imm 15 (global Dune__exe__Positions!))
+             (if
+               (caml_equal x1/513
+                 (field_imm 11 (global Dune__exe__Positions!)))
+               x2/514 x1/513))
+           (apply (field_imm 16 (global Dune__exe__Positions!))
+             (if
+               (caml_equal x2/514
+                 (field_imm 11 (global Dune__exe__Positions!)))
+               x1/513 x2/514)))))
+    (setfield_ptr(root-init) 18 (global Dune__exe__Positions!) join/511))
+  (let (import/515 = (function x/517 x/517))
+    (setfield_ptr(root-init) 19 (global Dune__exe__Positions!) import/515))
+  (let
+    (join_located/518 =
+       (function l1/520 l2/521 f/522
+         (makeblock 0 (apply f/522 (field_imm 0 l1/520) (field_imm 0 l2/521))
+           (apply (field_imm 18 (global Dune__exe__Positions!))
+             (field_imm 1 l1/520) (field_imm 1 l2/521)))))
+    (setfield_ptr(root-init) 22 (global Dune__exe__Positions!)
+      join_located/518))
+  (let
+    (string_of_lex_pos/523 =
+       (function p/525
+         (let (c/526 =[int] (- (field_int 3 p/525) (field_int 2 p/525)))
+           (apply (field_imm 27 (global Stdlib!))
+             (apply (field_imm 32 (global Stdlib!)) (field_int 1 p/525))
+             (apply (field_imm 27 (global Stdlib!)) ":"
+               (apply (field_imm 32 (global Stdlib!)) c/526))))))
+    (setfield_ptr(root-init) 24 (global Dune__exe__Positions!)
+      string_of_lex_pos/523))
+  (let
+    (string_of_pos/527 =
+       (function p/529
+         (let
+           (filename/530 =
+              (apply (field_imm 17 (global Dune__exe__Positions!)) p/529)
+            l/531 =[int]
+              (apply (field_imm 13 (global Dune__exe__Positions!))
+                (apply (field_imm 15 (global Dune__exe__Positions!)) p/529))
+            *match*/1132 =
+              (apply (field_imm 14 (global Dune__exe__Positions!))
+                (apply (field_imm 15 (global Dune__exe__Positions!)) p/529)
+                (apply (field_imm 16 (global Dune__exe__Positions!)) p/529))
+            c2/533 =a (field_imm 1 *match*/1132)
+            c1/532 =a (field_imm 0 *match*/1132))
+           (apply (field_imm 3 (global Stdlib__Printf!))
+             [0:
+              [11:
+               "File \""
+               [2:
+                0
+                [11:
+                 "\", line "
+                 [4:
+                  0 0 0
+                  [11: ", characters " [4: 0 0 0 [12: '-' [4: 0 0 0 0]]]]]]]]
+              "File \"%s\", line %d, characters %d-%d"]
+             filename/530 l/531 c1/532 c2/533))))
+    (setfield_ptr(root-init) 25 (global Dune__exe__Positions!)
+      string_of_pos/527))
+  (let
+    (pos_or_undef/570 =
+       (function param/573
+         (if (isint param/573) (field_imm 11 (global Dune__exe__Positions!))
+           (let (x/572 =a (field_imm 0 param/573)) x/572))))
+    (setfield_ptr(root-init) 26 (global Dune__exe__Positions!)
+      pos_or_undef/570))
+  (let
+    (cpos/574 =
+       (function lexbuf/576
+         (makeblock 0
+           (apply (field_imm 11 (global Stdlib__Lexing!)) lexbuf/576)
+           (apply (field_imm 12 (global Stdlib__Lexing!)) lexbuf/576))))
+    (setfield_ptr(root-init) 27 (global Dune__exe__Positions!) cpos/574))
+  (let
+    (with_cpos/577 =
+       (function lexbuf/579 v/580
+         (apply (field_imm 3 (global Dune__exe__Positions!))
+           (apply (field_imm 27 (global Dune__exe__Positions!)) lexbuf/579)
+           v/580)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Positions!) with_cpos/577))
+  (let
+    (string_of_cpos/581 =
+       (function lexbuf/583
+         (apply (field_imm 25 (global Dune__exe__Positions!))
+           (apply (field_imm 27 (global Dune__exe__Positions!)) lexbuf/583))))
+    (setfield_ptr(root-init) 28 (global Dune__exe__Positions!)
+      string_of_cpos/581))
+  (let
+    (joinf/584 =
+       (function f/586 t1/587 t2/588
+         (apply (field_imm 18 (global Dune__exe__Positions!))
+           (apply f/586 t1/587) (apply f/586 t2/588))))
+    (setfield_ptr(root-init) 21 (global Dune__exe__Positions!) joinf/584))
+  (let
+    (ljoinf/589 =
+       (function f/591
+         (apply (field_imm 25 (global Stdlib__List!))
+           (function p/658 t/659
+             (apply (field_imm 18 (global Dune__exe__Positions!)) p/658
+               (apply f/591 t/659)))
+           (field_imm 11 (global Dune__exe__Positions!)))))
+    (setfield_ptr(root-init) 20 (global Dune__exe__Positions!) ljoinf/589))
+  (let
+    (join_located_list/660 =
+       (function ls/662 f/663
+         (makeblock 0
+           (apply f/663
+             (apply (field_imm 19 (global Stdlib__List!))
+               (function l/664 (field_imm 0 l/664)) ls/662))
+           (apply (field_imm 20 (global Dune__exe__Positions!))
+             (function x/665 (field_imm 1 x/665)) ls/662))))
+    (setfield_ptr(root-init) 23 (global Dune__exe__Positions!)
+      join_located_list/660))
+  (let
+    (one/667 =
+       (function pos/669
+         (makeblock 0
+           (apply (field_imm 19 (global Dune__exe__Positions!))
+             (makeblock 0 pos/669 pos/669))
+           0)))
+    (setfield_ptr(root-init) 29 (global Dune__exe__Positions!) one/667))
+  (let
+    (lexbuf/670 =
+       (function lexbuf/672
+         (makeblock 0
+           (apply (field_imm 19 (global Dune__exe__Positions!))
+             (makeblock 0 (field_mut 10 lexbuf/672)
+               (field_mut 11 lexbuf/672)))
+           0)))
+    (setfield_ptr(root-init) 30 (global Dune__exe__Positions!) lexbuf/670))
+  (let
+    (print/673 =
+       (function pos/675 : int
+         (apply (field_imm 1 (global Stdlib__Printf!))
+           [0:
+            [11:
+             "{ pos_fname = \""
+             [2:
+              0
+              [11:
+               "\"; pos_lnum = "
+               [4:
+                0 0 0
+                [11:
+                 "; pos_bol = "
+                 [4: 0 0 0 [11: "; pos_cnum = " [4: 0 0 0 [11: " }\n" 0]]]]]]]]]
+            "{ pos_fname = \"%s\"; pos_lnum = %d; pos_bol = %d; pos_cnum = %d }\n"]
+           (field_imm 0 pos/675) (field_int 1 pos/675) (field_int 2 pos/675)
+           (field_int 3 pos/675))))
+    (setfield_ptr(root-init) 31 (global Dune__exe__Positions!) print/673))
+  0)
+(seq
+  (let (value/448 = (function param/451 (field_imm 0 param/451)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Positions!) value/448))
+  (let (position/452 = (function param/455 (field_imm 1 param/455)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Positions!) position/452))
+  (let
+    (decompose/456 =
+       (function param/460
+         (makeblock 0 (field_imm 0 param/460) (field_imm 1 param/460))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Positions!) decompose/456))
+  (let (with_pos/461 = (function p/463 v/464 (makeblock 0 v/464 p/463)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Positions!) with_pos/461))
+  (let (with_loc/465 = (field_imm 3 (global Dune__exe__Positions!)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Positions!) with_loc/465))
+  (let
+    (map/466 =
+       (function f/468 v/469
+         (makeblock 0 (apply f/468 (field_imm 0 v/469)) (field_imm 1 v/469))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Positions!) map/466))
+  (let
+    (pmap/470 =
+       (function f/472 v/473
+         (makeblock 0 (apply f/472 (field_imm 1 v/473) (field_imm 0 v/473))
+           (field_imm 1 v/473))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Positions!) pmap/470))
+  (let
+    (iter/474 =
+       (function f/476 param/478 (apply f/476 (field_imm 0 param/478))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Positions!) iter/474))
+  (let
+    (mapd/479 =
+       (function f/481 v/482
+         (let
+           (*match*/1122 = (apply f/481 (field_imm 0 v/482))
+            pos/485 = (field_imm 1 v/482))
+           (makeblock 0 (makeblock 0 (field_imm 0 *match*/1122) pos/485)
+             (makeblock 0 (field_imm 1 *match*/1122) pos/485)))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Positions!) mapd/479))
+  (let
+    (dummy/486 =
+       (makeblock 0 (field_imm 0 (global Stdlib__Lexing!))
+         (field_imm 0 (global Stdlib__Lexing!))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Positions!) dummy/486))
+  (let
+    (unknown_pos/487 =
+       (function v/489
+         (makeblock 0 v/489 (field_imm 11 (global Dune__exe__Positions!)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Positions!)
+      unknown_pos/487))
+  (let
+    (start_of_position/490 = (function (param/1124, param/1125) param/1124))
+    (setfield_ptr(root-init) 15 (global Dune__exe__Positions!)
+      start_of_position/490))
+  (let (end_of_position/494 = (function (param/1126, param/1127) param/1127))
+    (setfield_ptr(root-init) 16 (global Dune__exe__Positions!)
+      end_of_position/494))
+  (let
+    (filename_of_position/498 =
+       (function p/500
+         (field_imm 0
+           (apply (field_imm 15 (global Dune__exe__Positions!)) p/500))))
+    (setfield_ptr(root-init) 17 (global Dune__exe__Positions!)
+      filename_of_position/498))
+  (let (line/501 = (function p/503 : int (field_int 1 p/503)))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Positions!) line/501))
+  (let
+    (column/504 =
+       (function p/506 : int (- (field_int 3 p/506) (field_int 2 p/506))))
+    (setfield_ptr(root-init) 12 (global Dune__exe__Positions!) column/504))
+  (let
+    (characters/507 =
+       (function p1/509 p2/510
+         (makeblock 0 (int,int)
+           (apply (field_imm 12 (global Dune__exe__Positions!)) p1/509)
+           (- (field_int 3 p2/510) (field_int 2 p1/509)))))
+    (setfield_ptr(root-init) 14 (global Dune__exe__Positions!)
+      characters/507))
+  (let
+    (join/511 =
+       (function x1/513 x2/514
+         (makeblock 0
+           (apply (field_imm 15 (global Dune__exe__Positions!))
+             (if
+               (caml_equal x1/513
+                 (field_imm 11 (global Dune__exe__Positions!)))
+               x2/514 x1/513))
+           (apply (field_imm 16 (global Dune__exe__Positions!))
+             (if
+               (caml_equal x2/514
+                 (field_imm 11 (global Dune__exe__Positions!)))
+               x1/513 x2/514)))))
+    (setfield_ptr(root-init) 18 (global Dune__exe__Positions!) join/511))
+  (let (import/515 = (function x/517 x/517))
+    (setfield_ptr(root-init) 19 (global Dune__exe__Positions!) import/515))
+  (let
+    (join_located/518 =
+       (function l1/520 l2/521 f/522
+         (makeblock 0 (apply f/522 (field_imm 0 l1/520) (field_imm 0 l2/521))
+           (apply (field_imm 18 (global Dune__exe__Positions!))
+             (field_imm 1 l1/520) (field_imm 1 l2/521)))))
+    (setfield_ptr(root-init) 22 (global Dune__exe__Positions!)
+      join_located/518))
+  (let
+    (string_of_lex_pos/523 =
+       (function p/525
+         (let (c/526 =[int] (- (field_int 3 p/525) (field_int 2 p/525)))
+           (apply (field_imm 27 (global Stdlib!))
+             (apply (field_imm 32 (global Stdlib!)) (field_int 1 p/525))
+             (apply (field_imm 27 (global Stdlib!)) ":"
+               (apply (field_imm 32 (global Stdlib!)) c/526))))))
+    (setfield_ptr(root-init) 24 (global Dune__exe__Positions!)
+      string_of_lex_pos/523))
+  (let
+    (string_of_pos/527 =
+       (function p/529
+         (let
+           (filename/530 =
+              (apply (field_imm 17 (global Dune__exe__Positions!)) p/529)
+            l/531 =[int]
+              (apply (field_imm 13 (global Dune__exe__Positions!))
+                (apply (field_imm 15 (global Dune__exe__Positions!)) p/529))
+            *match*/1132 =
+              (apply (field_imm 14 (global Dune__exe__Positions!))
+                (apply (field_imm 15 (global Dune__exe__Positions!)) p/529)
+                (apply (field_imm 16 (global Dune__exe__Positions!)) p/529)))
+           (apply (field_imm 3 (global Stdlib__Printf!))
+             [0:
+              [11:
+               "File \""
+               [2:
+                0
+                [11:
+                 "\", line "
+                 [4:
+                  0 0 0
+                  [11: ", characters " [4: 0 0 0 [12: '-' [4: 0 0 0 0]]]]]]]]
+              "File \"%s\", line %d, characters %d-%d"]
+             filename/530 l/531 (field_imm 0 *match*/1132)
+             (field_imm 1 *match*/1132)))))
+    (setfield_ptr(root-init) 25 (global Dune__exe__Positions!)
+      string_of_pos/527))
+  (let
+    (pos_or_undef/570 =
+       (function param/573
+         (if (isint param/573) (field_imm 11 (global Dune__exe__Positions!))
+           (field_imm 0 param/573))))
+    (setfield_ptr(root-init) 26 (global Dune__exe__Positions!)
+      pos_or_undef/570))
+  (let
+    (cpos/574 =
+       (function lexbuf/576
+         (makeblock 0
+           (apply (field_imm 11 (global Stdlib__Lexing!)) lexbuf/576)
+           (apply (field_imm 12 (global Stdlib__Lexing!)) lexbuf/576))))
+    (setfield_ptr(root-init) 27 (global Dune__exe__Positions!) cpos/574))
+  (let
+    (with_cpos/577 =
+       (function lexbuf/579 v/580
+         (apply (field_imm 3 (global Dune__exe__Positions!))
+           (apply (field_imm 27 (global Dune__exe__Positions!)) lexbuf/579)
+           v/580)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Positions!) with_cpos/577))
+  (let
+    (string_of_cpos/581 =
+       (function lexbuf/583
+         (apply (field_imm 25 (global Dune__exe__Positions!))
+           (apply (field_imm 27 (global Dune__exe__Positions!)) lexbuf/583))))
+    (setfield_ptr(root-init) 28 (global Dune__exe__Positions!)
+      string_of_cpos/581))
+  (let
+    (joinf/584 =
+       (function f/586 t1/587 t2/588
+         (apply (field_imm 18 (global Dune__exe__Positions!))
+           (apply f/586 t1/587) (apply f/586 t2/588))))
+    (setfield_ptr(root-init) 21 (global Dune__exe__Positions!) joinf/584))
+  (let
+    (ljoinf/589 =
+       (function f/591
+         (apply (field_imm 25 (global Stdlib__List!))
+           (function p/658 t/659
+             (apply (field_imm 18 (global Dune__exe__Positions!)) p/658
+               (apply f/591 t/659)))
+           (field_imm 11 (global Dune__exe__Positions!)))))
+    (setfield_ptr(root-init) 20 (global Dune__exe__Positions!) ljoinf/589))
+  (let
+    (join_located_list/660 =
+       (function ls/662 f/663
+         (makeblock 0
+           (apply f/663
+             (apply (field_imm 19 (global Stdlib__List!))
+               (function l/664 (field_imm 0 l/664)) ls/662))
+           (apply (field_imm 20 (global Dune__exe__Positions!))
+             (function x/665 (field_imm 1 x/665)) ls/662))))
+    (setfield_ptr(root-init) 23 (global Dune__exe__Positions!)
+      join_located_list/660))
+  (let
+    (one/667 =
+       (function pos/669
+         (makeblock 0
+           (apply (field_imm 19 (global Dune__exe__Positions!))
+             (makeblock 0 pos/669 pos/669))
+           0)))
+    (setfield_ptr(root-init) 29 (global Dune__exe__Positions!) one/667))
+  (let
+    (lexbuf/670 =
+       (function lexbuf/672
+         (makeblock 0
+           (apply (field_imm 19 (global Dune__exe__Positions!))
+             (makeblock 0 (field_mut 10 lexbuf/672)
+               (field_mut 11 lexbuf/672)))
+           0)))
+    (setfield_ptr(root-init) 30 (global Dune__exe__Positions!) lexbuf/670))
+  (let
+    (print/673 =
+       (function pos/675 : int
+         (apply (field_imm 1 (global Stdlib__Printf!))
+           [0:
+            [11:
+             "{ pos_fname = \""
+             [2:
+              0
+              [11:
+               "\"; pos_lnum = "
+               [4:
+                0 0 0
+                [11:
+                 "; pos_bol = "
+                 [4: 0 0 0 [11: "; pos_cnum = " [4: 0 0 0 [11: " }\n" 0]]]]]]]]]
+            "{ pos_fname = \"%s\"; pos_lnum = %d; pos_bol = %d; pos_cnum = %d }\n"]
+           (field_imm 0 pos/675) (field_int 1 pos/675) (field_int 2 pos/675)
+           (field_int 3 pos/675))))
+    (setfield_ptr(root-init) 31 (global Dune__exe__Positions!) print/673))
+  0)

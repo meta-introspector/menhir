@@ -1,0 +1,186 @@
+[
+  signature_item (src/interface.mli[18,1104+0]..[18,1104+19])
+    Psig_value
+    value_description "excname" (src/interface.mli[18,1104+4]..[18,1104+11]) (src/interface.mli[18,1104+0]..[18,1104+19])
+      core_type (src/interface.mli[18,1104+13]..[18,1104+19])
+        Ptyp_constr "string" (src/interface.mli[18,1104+13]..[18,1104+19])
+        []
+      []
+  signature_item (src/interface.mli[19,1124+0]..[19,1124+21])
+    Psig_value
+    value_description "excdef" (src/interface.mli[19,1124+4]..[19,1124+10]) (src/interface.mli[19,1124+0]..[19,1124+21])
+      core_type (src/interface.mli[19,1124+12]..[19,1124+21])
+        Ptyp_constr "IL.excdef" (src/interface.mli[19,1124+12]..[19,1124+21])
+        []
+      []
+  signature_item (src/interface.mli[23,1209+0]..[23,1209+67])
+    Psig_value
+    value_description "entrytypescheme" (src/interface.mli[23,1209+4]..[23,1209+19]) (src/interface.mli[23,1209+0]..[23,1209+67])
+      core_type (src/interface.mli[23,1209+21]..[23,1209+67])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/interface.mli[23,1209+21]..[23,1209+40])
+          Ptyp_constr "BasicSyntax.grammar" (src/interface.mli[23,1209+21]..[23,1209+40])
+          []
+        core_type (src/interface.mli[23,1209+44]..[23,1209+67])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/interface.mli[23,1209+44]..[23,1209+50])
+            Ptyp_constr "string" (src/interface.mli[23,1209+44]..[23,1209+50])
+            []
+          core_type (src/interface.mli[23,1209+54]..[23,1209+67])
+            Ptyp_constr "IL.typescheme" (src/interface.mli[23,1209+54]..[23,1209+67])
+            []
+      []
+  signature_item (src/interface.mli[28,1361+0]..[28,1361+23])
+    Psig_value
+    value_description "interpreter" (src/interface.mli[28,1361+4]..[28,1361+15]) (src/interface.mli[28,1361+0]..[28,1361+23])
+      core_type (src/interface.mli[28,1361+17]..[28,1361+23])
+        Ptyp_constr "string" (src/interface.mli[28,1361+17]..[28,1361+23])
+        []
+      []
+  signature_item (src/interface.mli[32,1458+0]..[32,1458+32])
+    Psig_value
+    value_description "checkpoint" (src/interface.mli[32,1458+4]..[32,1458+14]) (src/interface.mli[32,1458+0]..[32,1458+32])
+      core_type (src/interface.mli[32,1458+16]..[32,1458+32])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/interface.mli[32,1458+16]..[32,1458+22])
+          Ptyp_constr "IL.typ" (src/interface.mli[32,1458+16]..[32,1458+22])
+          []
+        core_type (src/interface.mli[32,1458+26]..[32,1458+32])
+          Ptyp_constr "IL.typ" (src/interface.mli[32,1458+26]..[32,1458+32])
+          []
+      []
+  signature_item (src/interface.mli[36,1570+0]..[36,1570+23])
+    Psig_value
+    value_description "incremental" (src/interface.mli[36,1570+4]..[36,1570+15]) (src/interface.mli[36,1570+0]..[36,1570+23])
+      core_type (src/interface.mli[36,1570+17]..[36,1570+23])
+        Ptyp_constr "string" (src/interface.mli[36,1570+17]..[36,1570+23])
+        []
+      []
+  signature_item (src/interface.mli[40,1663+0]..[40,1663+22])
+    Psig_value
+    value_description "inspection" (src/interface.mli[40,1663+4]..[40,1663+14]) (src/interface.mli[40,1663+0]..[40,1663+22])
+      core_type (src/interface.mli[40,1663+16]..[40,1663+22])
+        Ptyp_constr "string" (src/interface.mli[40,1663+16]..[40,1663+22])
+        []
+      []
+  signature_item (src/interface.mli[44,1764+0]..[44,1764+46])
+    Psig_value
+    value_description "write" (src/interface.mli[44,1764+4]..[44,1764+9]) (src/interface.mli[44,1764+0]..[44,1764+46])
+      core_type (src/interface.mli[44,1764+11]..[44,1764+46])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/interface.mli[44,1764+11]..[44,1764+30])
+          Ptyp_constr "BasicSyntax.grammar" (src/interface.mli[44,1764+11]..[44,1764+30])
+          []
+        core_type (src/interface.mli[44,1764+34]..[44,1764+46])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/interface.mli[44,1764+34]..[44,1764+38])
+            Ptyp_constr "unit" (src/interface.mli[44,1764+34]..[44,1764+38])
+            []
+          core_type (src/interface.mli[44,1764+42]..[44,1764+46])
+            Ptyp_constr "unit" (src/interface.mli[44,1764+42]..[44,1764+46])
+            []
+      []
+]
+
+val excname : string
+val excdef : IL.excdef
+val entrytypescheme : BasicSyntax.grammar -> string -> IL.typescheme
+val interpreter : string
+val checkpoint : IL.typ -> IL.typ
+val incremental : string
+val inspection : string
+val write : BasicSyntax.grammar -> unit -> unit
+[
+  signature_item (src/interface.mli[18,1104+0]..src/interface.mli[18,1104+19])
+    Tsig_value
+    value_description excname/396 (src/interface.mli[18,1104+0]..src/interface.mli[18,1104+19])
+      core_type (src/interface.mli[18,1104+13]..src/interface.mli[18,1104+19])
+        Ttyp_constr "string/15!"
+        []
+      []
+  signature_item (src/interface.mli[19,1124+0]..src/interface.mli[19,1124+21])
+    Tsig_value
+    value_description excdef/424 (src/interface.mli[19,1124+0]..src/interface.mli[19,1124+21])
+      core_type (src/interface.mli[19,1124+12]..src/interface.mli[19,1124+21])
+        Ttyp_constr "Dune__exe!.IL.excdef"
+        []
+      []
+  signature_item (src/interface.mli[23,1209+0]..src/interface.mli[23,1209+67])
+    Tsig_value
+    value_description entrytypescheme/445 (src/interface.mli[23,1209+0]..src/interface.mli[23,1209+67])
+      core_type (src/interface.mli[23,1209+21]..src/interface.mli[23,1209+67])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/interface.mli[23,1209+21]..src/interface.mli[23,1209+40])
+          Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+          []
+        core_type (src/interface.mli[23,1209+44]..src/interface.mli[23,1209+67])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/interface.mli[23,1209+44]..src/interface.mli[23,1209+50])
+            Ttyp_constr "string/15!"
+            []
+          core_type (src/interface.mli[23,1209+54]..src/interface.mli[23,1209+67])
+            Ttyp_constr "Dune__exe!.IL.typescheme"
+            []
+      []
+  signature_item (src/interface.mli[28,1361+0]..src/interface.mli[28,1361+23])
+    Tsig_value
+    value_description interpreter/446 (src/interface.mli[28,1361+0]..src/interface.mli[28,1361+23])
+      core_type (src/interface.mli[28,1361+17]..src/interface.mli[28,1361+23])
+        Ttyp_constr "string/15!"
+        []
+      []
+  signature_item (src/interface.mli[32,1458+0]..src/interface.mli[32,1458+32])
+    Tsig_value
+    value_description checkpoint/447 (src/interface.mli[32,1458+0]..src/interface.mli[32,1458+32])
+      core_type (src/interface.mli[32,1458+16]..src/interface.mli[32,1458+32])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/interface.mli[32,1458+16]..src/interface.mli[32,1458+22])
+          Ttyp_constr "Dune__exe!.IL.typ"
+          []
+        core_type (src/interface.mli[32,1458+26]..src/interface.mli[32,1458+32])
+          Ttyp_constr "Dune__exe!.IL.typ"
+          []
+      []
+  signature_item (src/interface.mli[36,1570+0]..src/interface.mli[36,1570+23])
+    Tsig_value
+    value_description incremental/448 (src/interface.mli[36,1570+0]..src/interface.mli[36,1570+23])
+      core_type (src/interface.mli[36,1570+17]..src/interface.mli[36,1570+23])
+        Ttyp_constr "string/15!"
+        []
+      []
+  signature_item (src/interface.mli[40,1663+0]..src/interface.mli[40,1663+22])
+    Tsig_value
+    value_description inspection/449 (src/interface.mli[40,1663+0]..src/interface.mli[40,1663+22])
+      core_type (src/interface.mli[40,1663+16]..src/interface.mli[40,1663+22])
+        Ttyp_constr "string/15!"
+        []
+      []
+  signature_item (src/interface.mli[44,1764+0]..src/interface.mli[44,1764+46])
+    Tsig_value
+    value_description write/450 (src/interface.mli[44,1764+0]..src/interface.mli[44,1764+46])
+      core_type (src/interface.mli[44,1764+11]..src/interface.mli[44,1764+46])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/interface.mli[44,1764+11]..src/interface.mli[44,1764+30])
+          Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+          []
+        core_type (src/interface.mli[44,1764+34]..src/interface.mli[44,1764+46])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/interface.mli[44,1764+34]..src/interface.mli[44,1764+38])
+            Ttyp_constr "unit/6!"
+            []
+          core_type (src/interface.mli[44,1764+42]..src/interface.mli[44,1764+46])
+            Ttyp_constr "unit/6!"
+            []
+      []
+]
+

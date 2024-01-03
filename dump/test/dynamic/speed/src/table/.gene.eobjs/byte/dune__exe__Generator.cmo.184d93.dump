@@ -1,0 +1,1676 @@
+[
+  structure_item (test/dynamic/speed/src/Generator.ml[4,148+0]..[4,148+8])
+    Pstr_open Fresh
+    module_expr (test/dynamic/speed/src/Generator.ml[4,148+5]..[4,148+8])
+      Pmod_ident "Sek" (test/dynamic/speed/src/Generator.ml[4,148+5]..[4,148+8])
+  structure_item (test/dynamic/speed/src/Generator.ml[5,157+0]..[5,157+11])
+    Pstr_open Fresh
+    module_expr (test/dynamic/speed/src/Generator.ml[5,157+5]..[5,157+11])
+      Pmod_ident "Parser" (test/dynamic/speed/src/Generator.ml[5,157+5]..[5,157+11])
+  structure_item (test/dynamic/speed/src/Generator.ml[10,285+0]..[13,353+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/speed/src/Generator.ml[10,285+4]..[10,285+9])
+          Ppat_var "split" (test/dynamic/speed/src/Generator.ml[10,285+4]..[10,285+9])
+        expression (test/dynamic/speed/src/Generator.ml[10,285+10]..[13,353+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/speed/src/Generator.ml[10,285+10]..[10,285+11])
+            Ppat_var "n" (test/dynamic/speed/src/Generator.ml[10,285+10]..[10,285+11])
+          expression (test/dynamic/speed/src/Generator.ml[11,299+2]..[13,353+8])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (test/dynamic/speed/src/Generator.ml[11,299+6]..[11,299+8])
+                  Ppat_var "n1" (test/dynamic/speed/src/Generator.ml[11,299+6]..[11,299+8])
+                expression (test/dynamic/speed/src/Generator.ml[11,299+11]..[11,299+29])
+                  Pexp_apply
+                  expression (test/dynamic/speed/src/Generator.ml[11,299+11]..[11,299+21])
+                    Pexp_ident "Random.int" (test/dynamic/speed/src/Generator.ml[11,299+11]..[11,299+21])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/speed/src/Generator.ml[11,299+22]..[11,299+29])
+                        Pexp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[11,299+25]..[11,299+26])
+                          Pexp_ident "+" (test/dynamic/speed/src/Generator.ml[11,299+25]..[11,299+26])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[11,299+23]..[11,299+24])
+                              Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[11,299+23]..[11,299+24])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[11,299+27]..[11,299+28])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+                  ]
+            ]
+            expression (test/dynamic/speed/src/Generator.ml[12,332+2]..[13,353+8])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (test/dynamic/speed/src/Generator.ml[12,332+6]..[12,332+8])
+                    Ppat_var "n2" (test/dynamic/speed/src/Generator.ml[12,332+6]..[12,332+8])
+                  expression (test/dynamic/speed/src/Generator.ml[12,332+11]..[12,332+17])
+                    Pexp_apply
+                    expression (test/dynamic/speed/src/Generator.ml[12,332+13]..[12,332+14])
+                      Pexp_ident "-" (test/dynamic/speed/src/Generator.ml[12,332+13]..[12,332+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/speed/src/Generator.ml[12,332+11]..[12,332+12])
+                          Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[12,332+11]..[12,332+12])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/speed/src/Generator.ml[12,332+15]..[12,332+17])
+                          Pexp_ident "n1" (test/dynamic/speed/src/Generator.ml[12,332+15]..[12,332+17])
+                    ]
+              ]
+              expression (test/dynamic/speed/src/Generator.ml[13,353+2]..[13,353+8])
+                Pexp_tuple
+                [
+                  expression (test/dynamic/speed/src/Generator.ml[13,353+2]..[13,353+4])
+                    Pexp_ident "n1" (test/dynamic/speed/src/Generator.ml[13,353+2]..[13,353+4])
+                  expression (test/dynamic/speed/src/Generator.ml[13,353+6]..[13,353+8])
+                    Pexp_ident "n2" (test/dynamic/speed/src/Generator.ml[13,353+6]..[13,353+8])
+                ]
+    ]
+  structure_item (test/dynamic/speed/src/Generator.ml[26,963+0]..[62,1773+20])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (test/dynamic/speed/src/Generator.ml[26,963+8]..[26,963+15])
+          Ppat_var "produce" (test/dynamic/speed/src/Generator.ml[26,963+8]..[26,963+15])
+        expression (test/dynamic/speed/src/Generator.ml[26,963+16]..[62,1773+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/speed/src/Generator.ml[26,963+16]..[26,963+36])
+            Ppat_constraint
+            pattern (test/dynamic/speed/src/Generator.ml[26,963+17]..[26,963+23])
+              Ppat_var "buffer" (test/dynamic/speed/src/Generator.ml[26,963+17]..[26,963+23])
+            core_type (test/dynamic/speed/src/Generator.ml[26,963+26]..[26,963+35])
+              Ptyp_constr "E.t" (test/dynamic/speed/src/Generator.ml[26,963+32]..[26,963+35])
+              [
+                core_type (test/dynamic/speed/src/Generator.ml[26,963+26]..[26,963+31])
+                  Ptyp_constr "token" (test/dynamic/speed/src/Generator.ml[26,963+26]..[26,963+31])
+                  []
+              ]
+          expression (test/dynamic/speed/src/Generator.ml[26,963+37]..[62,1773+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (test/dynamic/speed/src/Generator.ml[26,963+37]..[26,963+38])
+              Ppat_var "n" (test/dynamic/speed/src/Generator.ml[26,963+37]..[26,963+38])
+            expression (test/dynamic/speed/src/Generator.ml[26,963+39]..[62,1773+20])
+              Pexp_constraint
+              expression (test/dynamic/speed/src/Generator.ml[27,1011+2]..[62,1773+20])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/speed/src/Generator.ml[27,1011+6]..[27,1011+10])
+                      Ppat_var "push" (test/dynamic/speed/src/Generator.ml[27,1011+6]..[27,1011+10])
+                    expression (test/dynamic/speed/src/Generator.ml[27,1011+11]..[27,1011+44]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (test/dynamic/speed/src/Generator.ml[27,1011+11]..[27,1011+16])
+                        Ppat_var "token" (test/dynamic/speed/src/Generator.ml[27,1011+11]..[27,1011+16])
+                      expression (test/dynamic/speed/src/Generator.ml[27,1011+19]..[27,1011+44])
+                        Pexp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[27,1011+19]..[27,1011+25])
+                          Pexp_ident "E.push" (test/dynamic/speed/src/Generator.ml[27,1011+19]..[27,1011+25])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[27,1011+26]..[27,1011+31])
+                              Pexp_ident "front" (test/dynamic/speed/src/Generator.ml[27,1011+26]..[27,1011+31])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[27,1011+32]..[27,1011+38])
+                              Pexp_ident "buffer" (test/dynamic/speed/src/Generator.ml[27,1011+32]..[27,1011+38])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[27,1011+39]..[27,1011+44])
+                              Pexp_ident "token" (test/dynamic/speed/src/Generator.ml[27,1011+39]..[27,1011+44])
+                        ]
+                  <def>
+                    pattern (test/dynamic/speed/src/Generator.ml[28,1056+6]..[28,1056+13])
+                      Ppat_var "produce" (test/dynamic/speed/src/Generator.ml[28,1056+6]..[28,1056+13])
+                    expression (test/dynamic/speed/src/Generator.ml[28,1056+14]..[28,1056+34]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (test/dynamic/speed/src/Generator.ml[28,1056+14]..[28,1056+15])
+                        Ppat_var "n" (test/dynamic/speed/src/Generator.ml[28,1056+14]..[28,1056+15])
+                      expression (test/dynamic/speed/src/Generator.ml[28,1056+18]..[28,1056+34])
+                        Pexp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[28,1056+18]..[28,1056+25])
+                          Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[28,1056+18]..[28,1056+25])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[28,1056+26]..[28,1056+32])
+                              Pexp_ident "buffer" (test/dynamic/speed/src/Generator.ml[28,1056+26]..[28,1056+32])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[28,1056+33]..[28,1056+34])
+                              Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[28,1056+33]..[28,1056+34])
+                        ]
+                ]
+                expression (test/dynamic/speed/src/Generator.ml[29,1094+2]..[62,1773+20])
+                  Pexp_ifthenelse
+                  expression (test/dynamic/speed/src/Generator.ml[29,1094+5]..[29,1094+10])
+                    Pexp_apply
+                    expression (test/dynamic/speed/src/Generator.ml[29,1094+7]..[29,1094+8])
+                      Pexp_ident "=" (test/dynamic/speed/src/Generator.ml[29,1094+7]..[29,1094+8])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/speed/src/Generator.ml[29,1094+5]..[29,1094+6])
+                          Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[29,1094+5]..[29,1094+6])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/speed/src/Generator.ml[29,1094+9]..[29,1094+10])
+                          Pexp_constant PConst_int (0,None)
+                    ]
+                  expression (test/dynamic/speed/src/Generator.ml[30,1110+4]..[31,1139+16])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (test/dynamic/speed/src/Generator.ml[30,1110+8]..[30,1110+9])
+                          Ppat_var "i" (test/dynamic/speed/src/Generator.ml[30,1110+8]..[30,1110+9])
+                        expression (test/dynamic/speed/src/Generator.ml[30,1110+12]..[30,1110+25])
+                          Pexp_apply
+                          expression (test/dynamic/speed/src/Generator.ml[30,1110+12]..[30,1110+22])
+                            Pexp_ident "Random.int" (test/dynamic/speed/src/Generator.ml[30,1110+12]..[30,1110+22])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (test/dynamic/speed/src/Generator.ml[30,1110+23]..[30,1110+25])
+                                Pexp_constant PConst_int (10,None)
+                          ]
+                    ]
+                    expression (test/dynamic/speed/src/Generator.ml[31,1139+4]..[31,1139+16])
+                      Pexp_apply
+                      expression (test/dynamic/speed/src/Generator.ml[31,1139+4]..[31,1139+8])
+                        Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[31,1139+4]..[31,1139+8])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[31,1139+9]..[31,1139+16])
+                            Pexp_construct "INT" (test/dynamic/speed/src/Generator.ml[31,1139+10]..[31,1139+13])
+                            Some
+                              expression (test/dynamic/speed/src/Generator.ml[31,1139+14]..[31,1139+15])
+                                Pexp_ident "i" (test/dynamic/speed/src/Generator.ml[31,1139+14]..[31,1139+15])
+                      ]
+                  Some
+                    expression (test/dynamic/speed/src/Generator.ml[33,1163+4]..[62,1773+20])
+                      Pexp_match
+                      expression (test/dynamic/speed/src/Generator.ml[33,1163+10]..[33,1163+22])
+                        Pexp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[33,1163+10]..[33,1163+20])
+                          Pexp_ident "Random.int" (test/dynamic/speed/src/Generator.ml[33,1163+10]..[33,1163+20])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[33,1163+21]..[33,1163+22])
+                              Pexp_constant PConst_int (5,None)
+                        ]
+                      [
+                        <case>
+                          pattern (test/dynamic/speed/src/Generator.ml[34,1191+6]..[34,1191+7])
+                            Ppat_constant PConst_int (0,None)
+                          expression (test/dynamic/speed/src/Generator.ml[36,1229+8]..[38,1275+19])
+                            Pexp_sequence
+                            expression (test/dynamic/speed/src/Generator.ml[36,1229+8]..[36,1229+19])
+                              Pexp_apply
+                              expression (test/dynamic/speed/src/Generator.ml[36,1229+8]..[36,1229+12])
+                                Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[36,1229+8]..[36,1229+12])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (test/dynamic/speed/src/Generator.ml[36,1229+13]..[36,1229+19])
+                                    Pexp_construct "RPAREN" (test/dynamic/speed/src/Generator.ml[36,1229+13]..[36,1229+19])
+                                    None
+                              ]
+                            expression (test/dynamic/speed/src/Generator.ml[37,1250+8]..[38,1275+19])
+                              Pexp_sequence
+                              expression (test/dynamic/speed/src/Generator.ml[37,1250+8]..[37,1250+23])
+                                Pexp_apply
+                                expression (test/dynamic/speed/src/Generator.ml[37,1250+8]..[37,1250+15])
+                                  Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[37,1250+8]..[37,1250+15])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (test/dynamic/speed/src/Generator.ml[37,1250+16]..[37,1250+23])
+                                      Pexp_apply
+                                      expression (test/dynamic/speed/src/Generator.ml[37,1250+19]..[37,1250+20])
+                                        Pexp_ident "-" (test/dynamic/speed/src/Generator.ml[37,1250+19]..[37,1250+20])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[37,1250+17]..[37,1250+18])
+                                            Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[37,1250+17]..[37,1250+18])
+                                        <arg>
+                                        Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[37,1250+21]..[37,1250+22])
+                                            Pexp_constant PConst_int (1,None)
+                                      ]
+                                ]
+                              expression (test/dynamic/speed/src/Generator.ml[38,1275+8]..[38,1275+19])
+                                Pexp_apply
+                                expression (test/dynamic/speed/src/Generator.ml[38,1275+8]..[38,1275+12])
+                                  Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[38,1275+8]..[38,1275+12])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (test/dynamic/speed/src/Generator.ml[38,1275+13]..[38,1275+19])
+                                      Pexp_construct "LPAREN" (test/dynamic/speed/src/Generator.ml[38,1275+13]..[38,1275+19])
+                                      None
+                                ]
+                        <case>
+                          pattern (test/dynamic/speed/src/Generator.ml[39,1295+6]..[39,1295+7])
+                            Ppat_constant PConst_int (1,None)
+                          expression (test/dynamic/speed/src/Generator.ml[41,1326+8]..[44,1403+18])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (test/dynamic/speed/src/Generator.ml[41,1326+12]..[41,1326+18])
+                                  Ppat_tuple
+                                  [
+                                    pattern (test/dynamic/speed/src/Generator.ml[41,1326+12]..[41,1326+14])
+                                      Ppat_var "n1" (test/dynamic/speed/src/Generator.ml[41,1326+12]..[41,1326+14])
+                                    pattern (test/dynamic/speed/src/Generator.ml[41,1326+16]..[41,1326+18])
+                                      Ppat_var "n2" (test/dynamic/speed/src/Generator.ml[41,1326+16]..[41,1326+18])
+                                  ]
+                                expression (test/dynamic/speed/src/Generator.ml[41,1326+21]..[41,1326+34])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[41,1326+21]..[41,1326+26])
+                                    Pexp_ident "split" (test/dynamic/speed/src/Generator.ml[41,1326+21]..[41,1326+26])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[41,1326+27]..[41,1326+34])
+                                        Pexp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[41,1326+30]..[41,1326+31])
+                                          Pexp_ident "-" (test/dynamic/speed/src/Generator.ml[41,1326+30]..[41,1326+31])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[41,1326+28]..[41,1326+29])
+                                              Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[41,1326+28]..[41,1326+29])
+                                          <arg>
+                                          Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[41,1326+32]..[41,1326+33])
+                                              Pexp_constant PConst_int (1,None)
+                                        ]
+                                  ]
+                            ]
+                            expression (test/dynamic/speed/src/Generator.ml[42,1364+8]..[44,1403+18])
+                              Pexp_sequence
+                              expression (test/dynamic/speed/src/Generator.ml[42,1364+8]..[42,1364+18])
+                                Pexp_apply
+                                expression (test/dynamic/speed/src/Generator.ml[42,1364+8]..[42,1364+15])
+                                  Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[42,1364+8]..[42,1364+15])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (test/dynamic/speed/src/Generator.ml[42,1364+16]..[42,1364+18])
+                                      Pexp_ident "n2" (test/dynamic/speed/src/Generator.ml[42,1364+16]..[42,1364+18])
+                                ]
+                              expression (test/dynamic/speed/src/Generator.ml[43,1384+8]..[44,1403+18])
+                                Pexp_sequence
+                                expression (test/dynamic/speed/src/Generator.ml[43,1384+8]..[43,1384+17])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[43,1384+8]..[43,1384+12])
+                                    Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[43,1384+8]..[43,1384+12])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[43,1384+13]..[43,1384+17])
+                                        Pexp_construct "PLUS" (test/dynamic/speed/src/Generator.ml[43,1384+13]..[43,1384+17])
+                                        None
+                                  ]
+                                expression (test/dynamic/speed/src/Generator.ml[44,1403+8]..[44,1403+18])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[44,1403+8]..[44,1403+15])
+                                    Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[44,1403+8]..[44,1403+15])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[44,1403+16]..[44,1403+18])
+                                        Pexp_ident "n1" (test/dynamic/speed/src/Generator.ml[44,1403+16]..[44,1403+18])
+                                  ]
+                        <case>
+                          pattern (test/dynamic/speed/src/Generator.ml[45,1422+6]..[45,1422+7])
+                            Ppat_constant PConst_int (2,None)
+                          expression (test/dynamic/speed/src/Generator.ml[47,1454+8]..[50,1532+18])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (test/dynamic/speed/src/Generator.ml[47,1454+12]..[47,1454+18])
+                                  Ppat_tuple
+                                  [
+                                    pattern (test/dynamic/speed/src/Generator.ml[47,1454+12]..[47,1454+14])
+                                      Ppat_var "n1" (test/dynamic/speed/src/Generator.ml[47,1454+12]..[47,1454+14])
+                                    pattern (test/dynamic/speed/src/Generator.ml[47,1454+16]..[47,1454+18])
+                                      Ppat_var "n2" (test/dynamic/speed/src/Generator.ml[47,1454+16]..[47,1454+18])
+                                  ]
+                                expression (test/dynamic/speed/src/Generator.ml[47,1454+21]..[47,1454+34])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[47,1454+21]..[47,1454+26])
+                                    Pexp_ident "split" (test/dynamic/speed/src/Generator.ml[47,1454+21]..[47,1454+26])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[47,1454+27]..[47,1454+34])
+                                        Pexp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[47,1454+30]..[47,1454+31])
+                                          Pexp_ident "-" (test/dynamic/speed/src/Generator.ml[47,1454+30]..[47,1454+31])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[47,1454+28]..[47,1454+29])
+                                              Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[47,1454+28]..[47,1454+29])
+                                          <arg>
+                                          Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[47,1454+32]..[47,1454+33])
+                                              Pexp_constant PConst_int (1,None)
+                                        ]
+                                  ]
+                            ]
+                            expression (test/dynamic/speed/src/Generator.ml[48,1492+8]..[50,1532+18])
+                              Pexp_sequence
+                              expression (test/dynamic/speed/src/Generator.ml[48,1492+8]..[48,1492+18])
+                                Pexp_apply
+                                expression (test/dynamic/speed/src/Generator.ml[48,1492+8]..[48,1492+15])
+                                  Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[48,1492+8]..[48,1492+15])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (test/dynamic/speed/src/Generator.ml[48,1492+16]..[48,1492+18])
+                                      Pexp_ident "n2" (test/dynamic/speed/src/Generator.ml[48,1492+16]..[48,1492+18])
+                                ]
+                              expression (test/dynamic/speed/src/Generator.ml[49,1512+8]..[50,1532+18])
+                                Pexp_sequence
+                                expression (test/dynamic/speed/src/Generator.ml[49,1512+8]..[49,1512+18])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[49,1512+8]..[49,1512+12])
+                                    Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[49,1512+8]..[49,1512+12])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[49,1512+13]..[49,1512+18])
+                                        Pexp_construct "MINUS" (test/dynamic/speed/src/Generator.ml[49,1512+13]..[49,1512+18])
+                                        None
+                                  ]
+                                expression (test/dynamic/speed/src/Generator.ml[50,1532+8]..[50,1532+18])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[50,1532+8]..[50,1532+15])
+                                    Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[50,1532+8]..[50,1532+15])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[50,1532+16]..[50,1532+18])
+                                        Pexp_ident "n1" (test/dynamic/speed/src/Generator.ml[50,1532+16]..[50,1532+18])
+                                  ]
+                        <case>
+                          pattern (test/dynamic/speed/src/Generator.ml[51,1551+6]..[51,1551+7])
+                            Ppat_constant PConst_int (3,None)
+                          expression (test/dynamic/speed/src/Generator.ml[53,1583+8]..[56,1661+18])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (test/dynamic/speed/src/Generator.ml[53,1583+12]..[53,1583+18])
+                                  Ppat_tuple
+                                  [
+                                    pattern (test/dynamic/speed/src/Generator.ml[53,1583+12]..[53,1583+14])
+                                      Ppat_var "n1" (test/dynamic/speed/src/Generator.ml[53,1583+12]..[53,1583+14])
+                                    pattern (test/dynamic/speed/src/Generator.ml[53,1583+16]..[53,1583+18])
+                                      Ppat_var "n2" (test/dynamic/speed/src/Generator.ml[53,1583+16]..[53,1583+18])
+                                  ]
+                                expression (test/dynamic/speed/src/Generator.ml[53,1583+21]..[53,1583+34])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[53,1583+21]..[53,1583+26])
+                                    Pexp_ident "split" (test/dynamic/speed/src/Generator.ml[53,1583+21]..[53,1583+26])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[53,1583+27]..[53,1583+34])
+                                        Pexp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[53,1583+30]..[53,1583+31])
+                                          Pexp_ident "-" (test/dynamic/speed/src/Generator.ml[53,1583+30]..[53,1583+31])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[53,1583+28]..[53,1583+29])
+                                              Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[53,1583+28]..[53,1583+29])
+                                          <arg>
+                                          Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[53,1583+32]..[53,1583+33])
+                                              Pexp_constant PConst_int (1,None)
+                                        ]
+                                  ]
+                            ]
+                            expression (test/dynamic/speed/src/Generator.ml[54,1621+8]..[56,1661+18])
+                              Pexp_sequence
+                              expression (test/dynamic/speed/src/Generator.ml[54,1621+8]..[54,1621+18])
+                                Pexp_apply
+                                expression (test/dynamic/speed/src/Generator.ml[54,1621+8]..[54,1621+15])
+                                  Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[54,1621+8]..[54,1621+15])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (test/dynamic/speed/src/Generator.ml[54,1621+16]..[54,1621+18])
+                                      Pexp_ident "n2" (test/dynamic/speed/src/Generator.ml[54,1621+16]..[54,1621+18])
+                                ]
+                              expression (test/dynamic/speed/src/Generator.ml[55,1641+8]..[56,1661+18])
+                                Pexp_sequence
+                                expression (test/dynamic/speed/src/Generator.ml[55,1641+8]..[55,1641+18])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[55,1641+8]..[55,1641+12])
+                                    Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[55,1641+8]..[55,1641+12])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[55,1641+13]..[55,1641+18])
+                                        Pexp_construct "TIMES" (test/dynamic/speed/src/Generator.ml[55,1641+13]..[55,1641+18])
+                                        None
+                                  ]
+                                expression (test/dynamic/speed/src/Generator.ml[56,1661+8]..[56,1661+18])
+                                  Pexp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[56,1661+8]..[56,1661+15])
+                                    Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[56,1661+8]..[56,1661+15])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[56,1661+16]..[56,1661+18])
+                                        Pexp_ident "n1" (test/dynamic/speed/src/Generator.ml[56,1661+16]..[56,1661+18])
+                                  ]
+                        <case>
+                          pattern (test/dynamic/speed/src/Generator.ml[57,1680+6]..[57,1680+7])
+                            Ppat_constant PConst_int (4,None)
+                          expression (test/dynamic/speed/src/Generator.ml[59,1718+8]..[60,1743+18])
+                            Pexp_sequence
+                            expression (test/dynamic/speed/src/Generator.ml[59,1718+8]..[59,1718+23])
+                              Pexp_apply
+                              expression (test/dynamic/speed/src/Generator.ml[59,1718+8]..[59,1718+15])
+                                Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[59,1718+8]..[59,1718+15])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (test/dynamic/speed/src/Generator.ml[59,1718+16]..[59,1718+23])
+                                    Pexp_apply
+                                    expression (test/dynamic/speed/src/Generator.ml[59,1718+19]..[59,1718+20])
+                                      Pexp_ident "-" (test/dynamic/speed/src/Generator.ml[59,1718+19]..[59,1718+20])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (test/dynamic/speed/src/Generator.ml[59,1718+17]..[59,1718+18])
+                                          Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[59,1718+17]..[59,1718+18])
+                                      <arg>
+                                      Nolabel
+                                        expression (test/dynamic/speed/src/Generator.ml[59,1718+21]..[59,1718+22])
+                                          Pexp_constant PConst_int (1,None)
+                                    ]
+                              ]
+                            expression (test/dynamic/speed/src/Generator.ml[60,1743+8]..[60,1743+18])
+                              Pexp_apply
+                              expression (test/dynamic/speed/src/Generator.ml[60,1743+8]..[60,1743+12])
+                                Pexp_ident "push" (test/dynamic/speed/src/Generator.ml[60,1743+8]..[60,1743+12])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (test/dynamic/speed/src/Generator.ml[60,1743+13]..[60,1743+18])
+                                    Pexp_construct "MINUS" (test/dynamic/speed/src/Generator.ml[60,1743+13]..[60,1743+18])
+                                    None
+                              ]
+                        <case>
+                          pattern (test/dynamic/speed/src/Generator.ml[61,1762+6]..[61,1762+7])
+                            Ppat_any
+                          expression (test/dynamic/speed/src/Generator.ml[62,1773+8]..[62,1773+20])
+                            Pexp_assert
+                            expression (test/dynamic/speed/src/Generator.ml[62,1773+15]..[62,1773+20])
+                              Pexp_construct "false" (test/dynamic/speed/src/Generator.ml[62,1773+15]..[62,1773+20])
+                              None
+                      ]
+              core_type (test/dynamic/speed/src/Generator.ml[26,963+41]..[26,963+45])
+                Ptyp_constr "unit" (test/dynamic/speed/src/Generator.ml[26,963+41]..[26,963+45])
+                []
+    ]
+  structure_item (test/dynamic/speed/src/Generator.ml[66,1825+0]..[71,1955+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/speed/src/Generator.ml[66,1825+4]..[66,1825+11])
+          Ppat_var "produce" (test/dynamic/speed/src/Generator.ml[66,1825+4]..[66,1825+11])
+        expression (test/dynamic/speed/src/Generator.ml[66,1825+12]..[71,1955+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/speed/src/Generator.ml[66,1825+12]..[66,1825+13])
+            Ppat_var "n" (test/dynamic/speed/src/Generator.ml[66,1825+12]..[66,1825+13])
+          expression (test/dynamic/speed/src/Generator.ml[66,1825+14]..[71,1955+19])
+            Pexp_constraint
+            expression (test/dynamic/speed/src/Generator.ml[67,1855+2]..[71,1955+19])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (test/dynamic/speed/src/Generator.ml[67,1855+6]..[67,1855+11])
+                    Ppat_var "dummy" (test/dynamic/speed/src/Generator.ml[67,1855+6]..[67,1855+11])
+                  expression (test/dynamic/speed/src/Generator.ml[67,1855+14]..[67,1855+17])
+                    Pexp_construct "EOL" (test/dynamic/speed/src/Generator.ml[67,1855+14]..[67,1855+17])
+                    None
+              ]
+              expression (test/dynamic/speed/src/Generator.ml[68,1876+2]..[71,1955+19])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/speed/src/Generator.ml[68,1876+6]..[68,1876+12])
+                      Ppat_var "buffer" (test/dynamic/speed/src/Generator.ml[68,1876+6]..[68,1876+12])
+                    expression (test/dynamic/speed/src/Generator.ml[68,1876+15]..[68,1876+29])
+                      Pexp_apply
+                      expression (test/dynamic/speed/src/Generator.ml[68,1876+15]..[68,1876+23])
+                        Pexp_ident "E.create" (test/dynamic/speed/src/Generator.ml[68,1876+15]..[68,1876+23])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[68,1876+24]..[68,1876+29])
+                            Pexp_ident "dummy" (test/dynamic/speed/src/Generator.ml[68,1876+24]..[68,1876+29])
+                      ]
+                ]
+                expression (test/dynamic/speed/src/Generator.ml[69,1909+2]..[71,1955+19])
+                  Pexp_sequence
+                  expression (test/dynamic/speed/src/Generator.ml[69,1909+2]..[69,1909+18])
+                    Pexp_apply
+                    expression (test/dynamic/speed/src/Generator.ml[69,1909+2]..[69,1909+9])
+                      Pexp_ident "produce" (test/dynamic/speed/src/Generator.ml[69,1909+2]..[69,1909+9])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/speed/src/Generator.ml[69,1909+10]..[69,1909+16])
+                          Pexp_ident "buffer" (test/dynamic/speed/src/Generator.ml[69,1909+10]..[69,1909+16])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/speed/src/Generator.ml[69,1909+17]..[69,1909+18])
+                          Pexp_ident "n" (test/dynamic/speed/src/Generator.ml[69,1909+17]..[69,1909+18])
+                    ]
+                  expression (test/dynamic/speed/src/Generator.ml[70,1929+2]..[71,1955+19])
+                    Pexp_sequence
+                    expression (test/dynamic/speed/src/Generator.ml[70,1929+2]..[70,1929+24])
+                      Pexp_apply
+                      expression (test/dynamic/speed/src/Generator.ml[70,1929+2]..[70,1929+8])
+                        Pexp_ident "E.push" (test/dynamic/speed/src/Generator.ml[70,1929+2]..[70,1929+8])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[70,1929+9]..[70,1929+13])
+                            Pexp_ident "back" (test/dynamic/speed/src/Generator.ml[70,1929+9]..[70,1929+13])
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[70,1929+14]..[70,1929+20])
+                            Pexp_ident "buffer" (test/dynamic/speed/src/Generator.ml[70,1929+14]..[70,1929+20])
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[70,1929+21]..[70,1929+24])
+                            Pexp_construct "EOL" (test/dynamic/speed/src/Generator.ml[70,1929+21]..[70,1929+24])
+                            None
+                      ]
+                    expression (test/dynamic/speed/src/Generator.ml[71,1955+2]..[71,1955+19])
+                      Pexp_apply
+                      expression (test/dynamic/speed/src/Generator.ml[71,1955+2]..[71,1955+12])
+                        Pexp_ident "E.to_array" (test/dynamic/speed/src/Generator.ml[71,1955+2]..[71,1955+12])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[71,1955+13]..[71,1955+19])
+                            Pexp_ident "buffer" (test/dynamic/speed/src/Generator.ml[71,1955+13]..[71,1955+19])
+                      ]
+            core_type (test/dynamic/speed/src/Generator.ml[66,1825+16]..[66,1825+27])
+              Ptyp_constr "array" (test/dynamic/speed/src/Generator.ml[66,1825+22]..[66,1825+27])
+              [
+                core_type (test/dynamic/speed/src/Generator.ml[66,1825+16]..[66,1825+21])
+                  Ptyp_constr "token" (test/dynamic/speed/src/Generator.ml[66,1825+16]..[66,1825+21])
+                  []
+              ]
+    ]
+]
+
+open Sek
+open Parser
+let split n = let n1 = Random.int (n + 1) in let n2 = n - n1 in (n1, n2)
+let rec produce (buffer : token E.t) n =
+  (let push token = E.push front buffer token
+   and produce n = produce buffer n in
+   if n = 0
+   then let i = Random.int 10 in push (INT i)
+   else
+     (match Random.int 5 with
+      | 0 -> (push RPAREN; produce (n - 1); push LPAREN)
+      | 1 ->
+          let (n1, n2) = split (n - 1) in (produce n2; push PLUS; produce n1)
+      | 2 ->
+          let (n1, n2) = split (n - 1) in
+          (produce n2; push MINUS; produce n1)
+      | 3 ->
+          let (n1, n2) = split (n - 1) in
+          (produce n2; push TIMES; produce n1)
+      | 4 -> (produce (n - 1); push MINUS)
+      | _ -> assert false) : unit)
+let produce n =
+  (let dummy = EOL in
+   let buffer = E.create dummy in
+   produce buffer n; E.push back buffer EOL; E.to_array buffer : token array)
+[
+  structure_item (test/dynamic/speed/src/Generator.ml[4,148+0]..test/dynamic/speed/src/Generator.ml[4,148+8])
+    Tstr_open Fresh
+    module_expr (test/dynamic/speed/src/Generator.ml[4,148+5]..test/dynamic/speed/src/Generator.ml[4,148+8])
+      Tmod_ident "Sek!"
+  structure_item (test/dynamic/speed/src/Generator.ml[5,157+0]..test/dynamic/speed/src/Generator.ml[5,157+11])
+    Tstr_open Fresh
+    module_expr (test/dynamic/speed/src/Generator.ml[5,157+5]..test/dynamic/speed/src/Generator.ml[5,157+11])
+      Tmod_ident "Dune__exe!.Parser"
+  structure_item (test/dynamic/speed/src/Generator.ml[10,285+0]..test/dynamic/speed/src/Generator.ml[13,353+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/speed/src/Generator.ml[10,285+4]..test/dynamic/speed/src/Generator.ml[10,285+9])
+          Tpat_var "split/322"
+        expression (test/dynamic/speed/src/Generator.ml[10,285+10]..test/dynamic/speed/src/Generator.ml[13,353+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/speed/src/Generator.ml[10,285+10]..test/dynamic/speed/src/Generator.ml[10,285+11])
+                Tpat_var "n/324"
+              expression (test/dynamic/speed/src/Generator.ml[11,299+2]..test/dynamic/speed/src/Generator.ml[13,353+8])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/speed/src/Generator.ml[11,299+6]..test/dynamic/speed/src/Generator.ml[11,299+8])
+                      Tpat_var "n1/325"
+                    expression (test/dynamic/speed/src/Generator.ml[11,299+11]..test/dynamic/speed/src/Generator.ml[11,299+29])
+                      Texp_apply
+                      expression (test/dynamic/speed/src/Generator.ml[11,299+11]..test/dynamic/speed/src/Generator.ml[11,299+21])
+                        Texp_ident "Stdlib!.Random.int"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[11,299+22]..test/dynamic/speed/src/Generator.ml[11,299+29])
+                            Texp_apply
+                            expression (test/dynamic/speed/src/Generator.ml[11,299+25]..test/dynamic/speed/src/Generator.ml[11,299+26])
+                              Texp_ident "Stdlib!.+"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/speed/src/Generator.ml[11,299+23]..test/dynamic/speed/src/Generator.ml[11,299+24])
+                                  Texp_ident "n/324"
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/speed/src/Generator.ml[11,299+27]..test/dynamic/speed/src/Generator.ml[11,299+28])
+                                  Texp_constant Const_int 1
+                            ]
+                      ]
+                ]
+                expression (test/dynamic/speed/src/Generator.ml[12,332+2]..test/dynamic/speed/src/Generator.ml[13,353+8])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (test/dynamic/speed/src/Generator.ml[12,332+6]..test/dynamic/speed/src/Generator.ml[12,332+8])
+                        Tpat_var "n2/344"
+                      expression (test/dynamic/speed/src/Generator.ml[12,332+11]..test/dynamic/speed/src/Generator.ml[12,332+17])
+                        Texp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[12,332+13]..test/dynamic/speed/src/Generator.ml[12,332+14])
+                          Texp_ident "Stdlib!.-"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[12,332+11]..test/dynamic/speed/src/Generator.ml[12,332+12])
+                              Texp_ident "n/324"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[12,332+15]..test/dynamic/speed/src/Generator.ml[12,332+17])
+                              Texp_ident "n1/325"
+                        ]
+                  ]
+                  expression (test/dynamic/speed/src/Generator.ml[13,353+2]..test/dynamic/speed/src/Generator.ml[13,353+8])
+                    Texp_tuple
+                    [
+                      expression (test/dynamic/speed/src/Generator.ml[13,353+2]..test/dynamic/speed/src/Generator.ml[13,353+4])
+                        Texp_ident "n1/325"
+                      expression (test/dynamic/speed/src/Generator.ml[13,353+6]..test/dynamic/speed/src/Generator.ml[13,353+8])
+                        Texp_ident "n2/344"
+                    ]
+          ]
+    ]
+  structure_item (test/dynamic/speed/src/Generator.ml[26,963+0]..test/dynamic/speed/src/Generator.ml[62,1773+20])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (test/dynamic/speed/src/Generator.ml[26,963+8]..test/dynamic/speed/src/Generator.ml[26,963+15])
+          Tpat_var "produce/345"
+        expression (test/dynamic/speed/src/Generator.ml[26,963+16]..test/dynamic/speed/src/Generator.ml[62,1773+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/speed/src/Generator.ml[26,963+17]..test/dynamic/speed/src/Generator.ml[26,963+23])
+                extra
+                  Tpat_extra_constraint
+                  core_type (test/dynamic/speed/src/Generator.ml[26,963+26]..test/dynamic/speed/src/Generator.ml[26,963+35])
+                    Ttyp_constr "Sek!.E.t"
+                    [
+                      core_type (test/dynamic/speed/src/Generator.ml[26,963+26]..test/dynamic/speed/src/Generator.ml[26,963+31])
+                        Ttyp_constr "Dune__exe!.Parser.token"
+                        []
+                    ]
+                Tpat_alias "buffer/418"
+                pattern (test/dynamic/speed/src/Generator.ml[26,963+17]..test/dynamic/speed/src/Generator.ml[26,963+23])
+                  Tpat_any
+              expression (test/dynamic/speed/src/Generator.ml[26,963+37]..test/dynamic/speed/src/Generator.ml[62,1773+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (test/dynamic/speed/src/Generator.ml[26,963+37]..test/dynamic/speed/src/Generator.ml[26,963+38])
+                      Tpat_var "n/419"
+                    expression (test/dynamic/speed/src/Generator.ml[27,1011+2]..test/dynamic/speed/src/Generator.ml[62,1773+20])
+                      extra
+                        Texp_constraint
+                        core_type (test/dynamic/speed/src/Generator.ml[26,963+41]..test/dynamic/speed/src/Generator.ml[26,963+45])
+                          Ttyp_constr "unit/6!"
+                          []
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (test/dynamic/speed/src/Generator.ml[27,1011+6]..test/dynamic/speed/src/Generator.ml[27,1011+10])
+                            Tpat_var "push/420"
+                          expression (test/dynamic/speed/src/Generator.ml[27,1011+11]..test/dynamic/speed/src/Generator.ml[27,1011+44]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[27,1011+11]..test/dynamic/speed/src/Generator.ml[27,1011+16])
+                                  Tpat_var "token/423"
+                                expression (test/dynamic/speed/src/Generator.ml[27,1011+19]..test/dynamic/speed/src/Generator.ml[27,1011+44])
+                                  Texp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[27,1011+19]..test/dynamic/speed/src/Generator.ml[27,1011+25])
+                                    Texp_ident "Sek!.E.push"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[27,1011+26]..test/dynamic/speed/src/Generator.ml[27,1011+31])
+                                        Texp_ident "Sek!.front"
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[27,1011+32]..test/dynamic/speed/src/Generator.ml[27,1011+38])
+                                        Texp_ident "buffer/418"
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[27,1011+39]..test/dynamic/speed/src/Generator.ml[27,1011+44])
+                                        Texp_ident "token/423"
+                                  ]
+                            ]
+                        <def>
+                          pattern (test/dynamic/speed/src/Generator.ml[28,1056+6]..test/dynamic/speed/src/Generator.ml[28,1056+13])
+                            Tpat_var "produce/421"
+                          expression (test/dynamic/speed/src/Generator.ml[28,1056+14]..test/dynamic/speed/src/Generator.ml[28,1056+34]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[28,1056+14]..test/dynamic/speed/src/Generator.ml[28,1056+15])
+                                  Tpat_var "n/429"
+                                expression (test/dynamic/speed/src/Generator.ml[28,1056+18]..test/dynamic/speed/src/Generator.ml[28,1056+34])
+                                  Texp_apply
+                                  expression (test/dynamic/speed/src/Generator.ml[28,1056+18]..test/dynamic/speed/src/Generator.ml[28,1056+25])
+                                    Texp_ident "produce/345"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[28,1056+26]..test/dynamic/speed/src/Generator.ml[28,1056+32])
+                                        Texp_ident "buffer/418"
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/speed/src/Generator.ml[28,1056+33]..test/dynamic/speed/src/Generator.ml[28,1056+34])
+                                        Texp_ident "n/429"
+                                  ]
+                            ]
+                      ]
+                      expression (test/dynamic/speed/src/Generator.ml[29,1094+2]..test/dynamic/speed/src/Generator.ml[62,1773+20])
+                        Texp_ifthenelse
+                        expression (test/dynamic/speed/src/Generator.ml[29,1094+5]..test/dynamic/speed/src/Generator.ml[29,1094+10])
+                          Texp_apply
+                          expression (test/dynamic/speed/src/Generator.ml[29,1094+7]..test/dynamic/speed/src/Generator.ml[29,1094+8])
+                            Texp_ident "Stdlib!.="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/speed/src/Generator.ml[29,1094+5]..test/dynamic/speed/src/Generator.ml[29,1094+6])
+                                Texp_ident "n/419"
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/speed/src/Generator.ml[29,1094+9]..test/dynamic/speed/src/Generator.ml[29,1094+10])
+                                Texp_constant Const_int 0
+                          ]
+                        expression (test/dynamic/speed/src/Generator.ml[30,1110+4]..test/dynamic/speed/src/Generator.ml[31,1139+16])
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (test/dynamic/speed/src/Generator.ml[30,1110+8]..test/dynamic/speed/src/Generator.ml[30,1110+9])
+                                Tpat_var "i/430"
+                              expression (test/dynamic/speed/src/Generator.ml[30,1110+12]..test/dynamic/speed/src/Generator.ml[30,1110+25])
+                                Texp_apply
+                                expression (test/dynamic/speed/src/Generator.ml[30,1110+12]..test/dynamic/speed/src/Generator.ml[30,1110+22])
+                                  Texp_ident "Stdlib!.Random.int"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (test/dynamic/speed/src/Generator.ml[30,1110+23]..test/dynamic/speed/src/Generator.ml[30,1110+25])
+                                      Texp_constant Const_int 10
+                                ]
+                          ]
+                          expression (test/dynamic/speed/src/Generator.ml[31,1139+4]..test/dynamic/speed/src/Generator.ml[31,1139+16])
+                            Texp_apply
+                            expression (test/dynamic/speed/src/Generator.ml[31,1139+4]..test/dynamic/speed/src/Generator.ml[31,1139+8])
+                              Texp_ident "push/420"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/speed/src/Generator.ml[31,1139+9]..test/dynamic/speed/src/Generator.ml[31,1139+16])
+                                  Texp_construct "INT"
+                                  [
+                                    expression (test/dynamic/speed/src/Generator.ml[31,1139+14]..test/dynamic/speed/src/Generator.ml[31,1139+15])
+                                      Texp_ident "i/430"
+                                  ]
+                            ]
+                        Some
+                          expression (test/dynamic/speed/src/Generator.ml[33,1163+4]..test/dynamic/speed/src/Generator.ml[62,1773+20])
+                            Texp_match
+                            expression (test/dynamic/speed/src/Generator.ml[33,1163+10]..test/dynamic/speed/src/Generator.ml[33,1163+22])
+                              Texp_apply
+                              expression (test/dynamic/speed/src/Generator.ml[33,1163+10]..test/dynamic/speed/src/Generator.ml[33,1163+20])
+                                Texp_ident "Stdlib!.Random.int"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (test/dynamic/speed/src/Generator.ml[33,1163+21]..test/dynamic/speed/src/Generator.ml[33,1163+22])
+                                    Texp_constant Const_int 5
+                              ]
+                            [
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[34,1191+6]..test/dynamic/speed/src/Generator.ml[34,1191+7])
+                                  Tpat_value
+                                  pattern (test/dynamic/speed/src/Generator.ml[34,1191+6]..test/dynamic/speed/src/Generator.ml[34,1191+7])
+                                    Tpat_constant Const_int 0
+                                expression (test/dynamic/speed/src/Generator.ml[36,1229+8]..test/dynamic/speed/src/Generator.ml[38,1275+19])
+                                  Texp_sequence
+                                  expression (test/dynamic/speed/src/Generator.ml[36,1229+8]..test/dynamic/speed/src/Generator.ml[36,1229+19])
+                                    Texp_apply
+                                    expression (test/dynamic/speed/src/Generator.ml[36,1229+8]..test/dynamic/speed/src/Generator.ml[36,1229+12])
+                                      Texp_ident "push/420"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (test/dynamic/speed/src/Generator.ml[36,1229+13]..test/dynamic/speed/src/Generator.ml[36,1229+19])
+                                          Texp_construct "RPAREN"
+                                          []
+                                    ]
+                                  expression (test/dynamic/speed/src/Generator.ml[37,1250+8]..test/dynamic/speed/src/Generator.ml[38,1275+19])
+                                    Texp_sequence
+                                    expression (test/dynamic/speed/src/Generator.ml[37,1250+8]..test/dynamic/speed/src/Generator.ml[37,1250+23])
+                                      Texp_apply
+                                      expression (test/dynamic/speed/src/Generator.ml[37,1250+8]..test/dynamic/speed/src/Generator.ml[37,1250+15])
+                                        Texp_ident "produce/421"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[37,1250+16]..test/dynamic/speed/src/Generator.ml[37,1250+23])
+                                            Texp_apply
+                                            expression (test/dynamic/speed/src/Generator.ml[37,1250+19]..test/dynamic/speed/src/Generator.ml[37,1250+20])
+                                              Texp_ident "Stdlib!.-"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (test/dynamic/speed/src/Generator.ml[37,1250+17]..test/dynamic/speed/src/Generator.ml[37,1250+18])
+                                                  Texp_ident "n/419"
+                                              <arg>
+                                                Nolabel
+                                                expression (test/dynamic/speed/src/Generator.ml[37,1250+21]..test/dynamic/speed/src/Generator.ml[37,1250+22])
+                                                  Texp_constant Const_int 1
+                                            ]
+                                      ]
+                                    expression (test/dynamic/speed/src/Generator.ml[38,1275+8]..test/dynamic/speed/src/Generator.ml[38,1275+19])
+                                      Texp_apply
+                                      expression (test/dynamic/speed/src/Generator.ml[38,1275+8]..test/dynamic/speed/src/Generator.ml[38,1275+12])
+                                        Texp_ident "push/420"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[38,1275+13]..test/dynamic/speed/src/Generator.ml[38,1275+19])
+                                            Texp_construct "LPAREN"
+                                            []
+                                      ]
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[39,1295+6]..test/dynamic/speed/src/Generator.ml[39,1295+7])
+                                  Tpat_value
+                                  pattern (test/dynamic/speed/src/Generator.ml[39,1295+6]..test/dynamic/speed/src/Generator.ml[39,1295+7])
+                                    Tpat_constant Const_int 1
+                                expression (test/dynamic/speed/src/Generator.ml[41,1326+8]..test/dynamic/speed/src/Generator.ml[44,1403+18])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (test/dynamic/speed/src/Generator.ml[41,1326+12]..test/dynamic/speed/src/Generator.ml[41,1326+18])
+                                        Tpat_tuple
+                                        [
+                                          pattern (test/dynamic/speed/src/Generator.ml[41,1326+12]..test/dynamic/speed/src/Generator.ml[41,1326+14])
+                                            Tpat_var "n1/431"
+                                          pattern (test/dynamic/speed/src/Generator.ml[41,1326+16]..test/dynamic/speed/src/Generator.ml[41,1326+18])
+                                            Tpat_var "n2/432"
+                                        ]
+                                      expression (test/dynamic/speed/src/Generator.ml[41,1326+21]..test/dynamic/speed/src/Generator.ml[41,1326+34])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[41,1326+21]..test/dynamic/speed/src/Generator.ml[41,1326+26])
+                                          Texp_ident "split/322"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[41,1326+27]..test/dynamic/speed/src/Generator.ml[41,1326+34])
+                                              Texp_apply
+                                              expression (test/dynamic/speed/src/Generator.ml[41,1326+30]..test/dynamic/speed/src/Generator.ml[41,1326+31])
+                                                Texp_ident "Stdlib!.-"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (test/dynamic/speed/src/Generator.ml[41,1326+28]..test/dynamic/speed/src/Generator.ml[41,1326+29])
+                                                    Texp_ident "n/419"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (test/dynamic/speed/src/Generator.ml[41,1326+32]..test/dynamic/speed/src/Generator.ml[41,1326+33])
+                                                    Texp_constant Const_int 1
+                                              ]
+                                        ]
+                                  ]
+                                  expression (test/dynamic/speed/src/Generator.ml[42,1364+8]..test/dynamic/speed/src/Generator.ml[44,1403+18])
+                                    Texp_sequence
+                                    expression (test/dynamic/speed/src/Generator.ml[42,1364+8]..test/dynamic/speed/src/Generator.ml[42,1364+18])
+                                      Texp_apply
+                                      expression (test/dynamic/speed/src/Generator.ml[42,1364+8]..test/dynamic/speed/src/Generator.ml[42,1364+15])
+                                        Texp_ident "produce/421"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[42,1364+16]..test/dynamic/speed/src/Generator.ml[42,1364+18])
+                                            Texp_ident "n2/432"
+                                      ]
+                                    expression (test/dynamic/speed/src/Generator.ml[43,1384+8]..test/dynamic/speed/src/Generator.ml[44,1403+18])
+                                      Texp_sequence
+                                      expression (test/dynamic/speed/src/Generator.ml[43,1384+8]..test/dynamic/speed/src/Generator.ml[43,1384+17])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[43,1384+8]..test/dynamic/speed/src/Generator.ml[43,1384+12])
+                                          Texp_ident "push/420"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[43,1384+13]..test/dynamic/speed/src/Generator.ml[43,1384+17])
+                                              Texp_construct "PLUS"
+                                              []
+                                        ]
+                                      expression (test/dynamic/speed/src/Generator.ml[44,1403+8]..test/dynamic/speed/src/Generator.ml[44,1403+18])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[44,1403+8]..test/dynamic/speed/src/Generator.ml[44,1403+15])
+                                          Texp_ident "produce/421"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[44,1403+16]..test/dynamic/speed/src/Generator.ml[44,1403+18])
+                                              Texp_ident "n1/431"
+                                        ]
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[45,1422+6]..test/dynamic/speed/src/Generator.ml[45,1422+7])
+                                  Tpat_value
+                                  pattern (test/dynamic/speed/src/Generator.ml[45,1422+6]..test/dynamic/speed/src/Generator.ml[45,1422+7])
+                                    Tpat_constant Const_int 2
+                                expression (test/dynamic/speed/src/Generator.ml[47,1454+8]..test/dynamic/speed/src/Generator.ml[50,1532+18])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (test/dynamic/speed/src/Generator.ml[47,1454+12]..test/dynamic/speed/src/Generator.ml[47,1454+18])
+                                        Tpat_tuple
+                                        [
+                                          pattern (test/dynamic/speed/src/Generator.ml[47,1454+12]..test/dynamic/speed/src/Generator.ml[47,1454+14])
+                                            Tpat_var "n1/433"
+                                          pattern (test/dynamic/speed/src/Generator.ml[47,1454+16]..test/dynamic/speed/src/Generator.ml[47,1454+18])
+                                            Tpat_var "n2/434"
+                                        ]
+                                      expression (test/dynamic/speed/src/Generator.ml[47,1454+21]..test/dynamic/speed/src/Generator.ml[47,1454+34])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[47,1454+21]..test/dynamic/speed/src/Generator.ml[47,1454+26])
+                                          Texp_ident "split/322"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[47,1454+27]..test/dynamic/speed/src/Generator.ml[47,1454+34])
+                                              Texp_apply
+                                              expression (test/dynamic/speed/src/Generator.ml[47,1454+30]..test/dynamic/speed/src/Generator.ml[47,1454+31])
+                                                Texp_ident "Stdlib!.-"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (test/dynamic/speed/src/Generator.ml[47,1454+28]..test/dynamic/speed/src/Generator.ml[47,1454+29])
+                                                    Texp_ident "n/419"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (test/dynamic/speed/src/Generator.ml[47,1454+32]..test/dynamic/speed/src/Generator.ml[47,1454+33])
+                                                    Texp_constant Const_int 1
+                                              ]
+                                        ]
+                                  ]
+                                  expression (test/dynamic/speed/src/Generator.ml[48,1492+8]..test/dynamic/speed/src/Generator.ml[50,1532+18])
+                                    Texp_sequence
+                                    expression (test/dynamic/speed/src/Generator.ml[48,1492+8]..test/dynamic/speed/src/Generator.ml[48,1492+18])
+                                      Texp_apply
+                                      expression (test/dynamic/speed/src/Generator.ml[48,1492+8]..test/dynamic/speed/src/Generator.ml[48,1492+15])
+                                        Texp_ident "produce/421"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[48,1492+16]..test/dynamic/speed/src/Generator.ml[48,1492+18])
+                                            Texp_ident "n2/434"
+                                      ]
+                                    expression (test/dynamic/speed/src/Generator.ml[49,1512+8]..test/dynamic/speed/src/Generator.ml[50,1532+18])
+                                      Texp_sequence
+                                      expression (test/dynamic/speed/src/Generator.ml[49,1512+8]..test/dynamic/speed/src/Generator.ml[49,1512+18])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[49,1512+8]..test/dynamic/speed/src/Generator.ml[49,1512+12])
+                                          Texp_ident "push/420"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[49,1512+13]..test/dynamic/speed/src/Generator.ml[49,1512+18])
+                                              Texp_construct "MINUS"
+                                              []
+                                        ]
+                                      expression (test/dynamic/speed/src/Generator.ml[50,1532+8]..test/dynamic/speed/src/Generator.ml[50,1532+18])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[50,1532+8]..test/dynamic/speed/src/Generator.ml[50,1532+15])
+                                          Texp_ident "produce/421"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[50,1532+16]..test/dynamic/speed/src/Generator.ml[50,1532+18])
+                                              Texp_ident "n1/433"
+                                        ]
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[51,1551+6]..test/dynamic/speed/src/Generator.ml[51,1551+7])
+                                  Tpat_value
+                                  pattern (test/dynamic/speed/src/Generator.ml[51,1551+6]..test/dynamic/speed/src/Generator.ml[51,1551+7])
+                                    Tpat_constant Const_int 3
+                                expression (test/dynamic/speed/src/Generator.ml[53,1583+8]..test/dynamic/speed/src/Generator.ml[56,1661+18])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (test/dynamic/speed/src/Generator.ml[53,1583+12]..test/dynamic/speed/src/Generator.ml[53,1583+18])
+                                        Tpat_tuple
+                                        [
+                                          pattern (test/dynamic/speed/src/Generator.ml[53,1583+12]..test/dynamic/speed/src/Generator.ml[53,1583+14])
+                                            Tpat_var "n1/435"
+                                          pattern (test/dynamic/speed/src/Generator.ml[53,1583+16]..test/dynamic/speed/src/Generator.ml[53,1583+18])
+                                            Tpat_var "n2/436"
+                                        ]
+                                      expression (test/dynamic/speed/src/Generator.ml[53,1583+21]..test/dynamic/speed/src/Generator.ml[53,1583+34])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[53,1583+21]..test/dynamic/speed/src/Generator.ml[53,1583+26])
+                                          Texp_ident "split/322"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[53,1583+27]..test/dynamic/speed/src/Generator.ml[53,1583+34])
+                                              Texp_apply
+                                              expression (test/dynamic/speed/src/Generator.ml[53,1583+30]..test/dynamic/speed/src/Generator.ml[53,1583+31])
+                                                Texp_ident "Stdlib!.-"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (test/dynamic/speed/src/Generator.ml[53,1583+28]..test/dynamic/speed/src/Generator.ml[53,1583+29])
+                                                    Texp_ident "n/419"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (test/dynamic/speed/src/Generator.ml[53,1583+32]..test/dynamic/speed/src/Generator.ml[53,1583+33])
+                                                    Texp_constant Const_int 1
+                                              ]
+                                        ]
+                                  ]
+                                  expression (test/dynamic/speed/src/Generator.ml[54,1621+8]..test/dynamic/speed/src/Generator.ml[56,1661+18])
+                                    Texp_sequence
+                                    expression (test/dynamic/speed/src/Generator.ml[54,1621+8]..test/dynamic/speed/src/Generator.ml[54,1621+18])
+                                      Texp_apply
+                                      expression (test/dynamic/speed/src/Generator.ml[54,1621+8]..test/dynamic/speed/src/Generator.ml[54,1621+15])
+                                        Texp_ident "produce/421"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (test/dynamic/speed/src/Generator.ml[54,1621+16]..test/dynamic/speed/src/Generator.ml[54,1621+18])
+                                            Texp_ident "n2/436"
+                                      ]
+                                    expression (test/dynamic/speed/src/Generator.ml[55,1641+8]..test/dynamic/speed/src/Generator.ml[56,1661+18])
+                                      Texp_sequence
+                                      expression (test/dynamic/speed/src/Generator.ml[55,1641+8]..test/dynamic/speed/src/Generator.ml[55,1641+18])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[55,1641+8]..test/dynamic/speed/src/Generator.ml[55,1641+12])
+                                          Texp_ident "push/420"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[55,1641+13]..test/dynamic/speed/src/Generator.ml[55,1641+18])
+                                              Texp_construct "TIMES"
+                                              []
+                                        ]
+                                      expression (test/dynamic/speed/src/Generator.ml[56,1661+8]..test/dynamic/speed/src/Generator.ml[56,1661+18])
+                                        Texp_apply
+                                        expression (test/dynamic/speed/src/Generator.ml[56,1661+8]..test/dynamic/speed/src/Generator.ml[56,1661+15])
+                                          Texp_ident "produce/421"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/speed/src/Generator.ml[56,1661+16]..test/dynamic/speed/src/Generator.ml[56,1661+18])
+                                              Texp_ident "n1/435"
+                                        ]
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[57,1680+6]..test/dynamic/speed/src/Generator.ml[57,1680+7])
+                                  Tpat_value
+                                  pattern (test/dynamic/speed/src/Generator.ml[57,1680+6]..test/dynamic/speed/src/Generator.ml[57,1680+7])
+                                    Tpat_constant Const_int 4
+                                expression (test/dynamic/speed/src/Generator.ml[59,1718+8]..test/dynamic/speed/src/Generator.ml[60,1743+18])
+                                  Texp_sequence
+                                  expression (test/dynamic/speed/src/Generator.ml[59,1718+8]..test/dynamic/speed/src/Generator.ml[59,1718+23])
+                                    Texp_apply
+                                    expression (test/dynamic/speed/src/Generator.ml[59,1718+8]..test/dynamic/speed/src/Generator.ml[59,1718+15])
+                                      Texp_ident "produce/421"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (test/dynamic/speed/src/Generator.ml[59,1718+16]..test/dynamic/speed/src/Generator.ml[59,1718+23])
+                                          Texp_apply
+                                          expression (test/dynamic/speed/src/Generator.ml[59,1718+19]..test/dynamic/speed/src/Generator.ml[59,1718+20])
+                                            Texp_ident "Stdlib!.-"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (test/dynamic/speed/src/Generator.ml[59,1718+17]..test/dynamic/speed/src/Generator.ml[59,1718+18])
+                                                Texp_ident "n/419"
+                                            <arg>
+                                              Nolabel
+                                              expression (test/dynamic/speed/src/Generator.ml[59,1718+21]..test/dynamic/speed/src/Generator.ml[59,1718+22])
+                                                Texp_constant Const_int 1
+                                          ]
+                                    ]
+                                  expression (test/dynamic/speed/src/Generator.ml[60,1743+8]..test/dynamic/speed/src/Generator.ml[60,1743+18])
+                                    Texp_apply
+                                    expression (test/dynamic/speed/src/Generator.ml[60,1743+8]..test/dynamic/speed/src/Generator.ml[60,1743+12])
+                                      Texp_ident "push/420"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (test/dynamic/speed/src/Generator.ml[60,1743+13]..test/dynamic/speed/src/Generator.ml[60,1743+18])
+                                          Texp_construct "MINUS"
+                                          []
+                                    ]
+                              <case>
+                                pattern (test/dynamic/speed/src/Generator.ml[61,1762+6]..test/dynamic/speed/src/Generator.ml[61,1762+7])
+                                  Tpat_value
+                                  pattern (test/dynamic/speed/src/Generator.ml[61,1762+6]..test/dynamic/speed/src/Generator.ml[61,1762+7])
+                                    Tpat_any
+                                expression (test/dynamic/speed/src/Generator.ml[62,1773+8]..test/dynamic/speed/src/Generator.ml[62,1773+20])
+                                  Texp_assert                                  expression (test/dynamic/speed/src/Generator.ml[62,1773+15]..test/dynamic/speed/src/Generator.ml[62,1773+20])
+                                    Texp_construct "false"
+                                    []
+                            ]
+                ]
+          ]
+    ]
+  structure_item (test/dynamic/speed/src/Generator.ml[66,1825+0]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/speed/src/Generator.ml[66,1825+4]..test/dynamic/speed/src/Generator.ml[66,1825+11])
+          Tpat_var "produce/437"
+        expression (test/dynamic/speed/src/Generator.ml[66,1825+12]..test/dynamic/speed/src/Generator.ml[71,1955+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/speed/src/Generator.ml[66,1825+12]..test/dynamic/speed/src/Generator.ml[66,1825+13])
+                Tpat_var "n/438"
+              expression (test/dynamic/speed/src/Generator.ml[67,1855+2]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+                extra
+                  Texp_constraint
+                  core_type (test/dynamic/speed/src/Generator.ml[66,1825+16]..test/dynamic/speed/src/Generator.ml[66,1825+27])
+                    Ttyp_constr "array/8!"
+                    [
+                      core_type (test/dynamic/speed/src/Generator.ml[66,1825+16]..test/dynamic/speed/src/Generator.ml[66,1825+21])
+                        Ttyp_constr "Dune__exe!.Parser.token"
+                        []
+                    ]
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/speed/src/Generator.ml[67,1855+6]..test/dynamic/speed/src/Generator.ml[67,1855+11])
+                      Tpat_var "dummy/439"
+                    expression (test/dynamic/speed/src/Generator.ml[67,1855+14]..test/dynamic/speed/src/Generator.ml[67,1855+17])
+                      Texp_construct "EOL"
+                      []
+                ]
+                expression (test/dynamic/speed/src/Generator.ml[68,1876+2]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (test/dynamic/speed/src/Generator.ml[68,1876+6]..test/dynamic/speed/src/Generator.ml[68,1876+12])
+                        Tpat_var "buffer/440"
+                      expression (test/dynamic/speed/src/Generator.ml[68,1876+15]..test/dynamic/speed/src/Generator.ml[68,1876+29])
+                        Texp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[68,1876+15]..test/dynamic/speed/src/Generator.ml[68,1876+23])
+                          Texp_ident "Sek!.E.create"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[68,1876+24]..test/dynamic/speed/src/Generator.ml[68,1876+29])
+                              Texp_ident "dummy/439"
+                        ]
+                  ]
+                  expression (test/dynamic/speed/src/Generator.ml[69,1909+2]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+                    Texp_sequence
+                    expression (test/dynamic/speed/src/Generator.ml[69,1909+2]..test/dynamic/speed/src/Generator.ml[69,1909+18])
+                      Texp_apply
+                      expression (test/dynamic/speed/src/Generator.ml[69,1909+2]..test/dynamic/speed/src/Generator.ml[69,1909+9])
+                        Texp_ident "produce/345"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[69,1909+10]..test/dynamic/speed/src/Generator.ml[69,1909+16])
+                            Texp_ident "buffer/440"
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/speed/src/Generator.ml[69,1909+17]..test/dynamic/speed/src/Generator.ml[69,1909+18])
+                            Texp_ident "n/438"
+                      ]
+                    expression (test/dynamic/speed/src/Generator.ml[70,1929+2]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+                      Texp_sequence
+                      expression (test/dynamic/speed/src/Generator.ml[70,1929+2]..test/dynamic/speed/src/Generator.ml[70,1929+24])
+                        Texp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[70,1929+2]..test/dynamic/speed/src/Generator.ml[70,1929+8])
+                          Texp_ident "Sek!.E.push"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[70,1929+9]..test/dynamic/speed/src/Generator.ml[70,1929+13])
+                              Texp_ident "Sek!.back"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[70,1929+14]..test/dynamic/speed/src/Generator.ml[70,1929+20])
+                              Texp_ident "buffer/440"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[70,1929+21]..test/dynamic/speed/src/Generator.ml[70,1929+24])
+                              Texp_construct "EOL"
+                              []
+                        ]
+                      expression (test/dynamic/speed/src/Generator.ml[71,1955+2]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+                        Texp_apply
+                        expression (test/dynamic/speed/src/Generator.ml[71,1955+2]..test/dynamic/speed/src/Generator.ml[71,1955+12])
+                          Texp_ident "Sek!.E.to_array"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/speed/src/Generator.ml[71,1955+13]..test/dynamic/speed/src/Generator.ml[71,1955+19])
+                              Texp_ident "buffer/440"
+                        ]
+          ]
+    ]
+]
+
+{<Dune__exe__Generator>
+ "produce"[value] -> <Dune__exe__Generator.18>;
+ "split"[value] -> <Dune__exe__Generator.0>;
+ }
+
+(setglobal Dune__exe__Generator!
+  (let
+    (split/322 =
+       (function n/324[int]
+         (funct-body Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(10)<ghost>:295-361
+           (before Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(11):301-361
+             (let
+               (n1/325 =[int]
+                  (after Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(11):310-328
+                    (apply (field_imm 4 (global Stdlib__Random!))
+                      (+ n/324 1))))
+               (before Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(12):334-361
+                 (let (n2/344 =[int] (- n/324 n1/325))
+                   (before Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(13):355-361
+                     (makeblock 0 (int,int) n1/325 n2/344)))))))))
+    (letrec
+      (produce/345
+         (function buffer/418 n/419[int] : int
+           (funct-body Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(26)<ghost>:979-1793
+             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(27):1013-1793
+               (let
+                 (push/420 =
+                    (function token/423 : int
+                      (funct-body Dune__exe__Generator.produce.push test/dynamic/speed/src/Generator.ml(27)<ghost>:1022-1055
+                        (before Dune__exe__Generator.produce.push test/dynamic/speed/src/Generator.ml(27):1030-1055
+                          (after Dune__exe__Generator.produce.push test/dynamic/speed/src/Generator.ml(27):1030-1055
+                            (apply (field_imm 9 (field_imm 9 (global Sek!)))
+                              (field_imm 0 (global Sek!)) buffer/418
+                              token/423)))))
+                  produce/421 =
+                    (function n/429[int] : int
+                      (funct-body Dune__exe__Generator.produce.produce test/dynamic/speed/src/Generator.ml(28)<ghost>:1070-1090
+                        (before Dune__exe__Generator.produce.produce test/dynamic/speed/src/Generator.ml(28):1074-1090
+                          (after Dune__exe__Generator.produce.produce test/dynamic/speed/src/Generator.ml(28):1074-1090
+                            (apply produce/345 buffer/418 n/429))))))
+                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(29):1096-1793
+                   (if (== n/419 0)
+                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(30):1114-1155
+                       (let
+                         (i/430 =[int]
+                            (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(30):1122-1135
+                              (apply (field_imm 4 (global Stdlib__Random!))
+                                10)))
+                         (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(31):1143-1155
+                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(31):1143-1155
+                             (apply push/420 (makeblock 0 (int) i/430))))))
+                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(33):1167-1793
+                       (let
+                         (*match*/1712 =
+                            (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(33):1173-1185
+                              (apply (field_imm 4 (global Stdlib__Random!))
+                                5)))
+                         (catch
+                           (if (isout 4 *match*/1712) (exit 10)
+                             (switch* *match*/1712
+                              case int 0:
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(36):1237-1294
+                                 (seq
+                                   (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(36):1237-1248
+                                     (apply push/420 1))
+                                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(37):1258-1294
+                                     (seq
+                                       (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(37):1258-1273
+                                         (apply produce/421 (- n/419 1)))
+                                       (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(38):1283-1294
+                                         (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(38):1283-1294
+                                           (apply push/420 4)))))))
+                              case int 1:
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(41):1334-1421
+                                 (let
+                                   (*match*/1703 =
+                                      (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(41):1347-1360
+                                        (apply split/322 (- n/419 1)))
+                                    n2/432 =a (field_imm 1 *match*/1703)
+                                    n1/431 =a (field_imm 0 *match*/1703))
+                                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(42):1372-1421
+                                     (seq
+                                       (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(42):1372-1382
+                                         (apply produce/421 n2/432))
+                                       (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(43):1392-1421
+                                         (seq
+                                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(43):1392-1401
+                                             (apply push/420 2))
+                                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(44):1411-1421
+                                             (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(44):1411-1421
+                                               (apply produce/421 n1/431)))))))))
+                              case int 2:
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(47):1462-1550
+                                 (let
+                                   (*match*/1707 =
+                                      (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(47):1475-1488
+                                        (apply split/322 (- n/419 1)))
+                                    n2/434 =a (field_imm 1 *match*/1707)
+                                    n1/433 =a (field_imm 0 *match*/1707))
+                                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(48):1500-1550
+                                     (seq
+                                       (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(48):1500-1510
+                                         (apply produce/421 n2/434))
+                                       (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(49):1520-1550
+                                         (seq
+                                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(49):1520-1530
+                                             (apply push/420 3))
+                                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(50):1540-1550
+                                             (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(50):1540-1550
+                                               (apply produce/421 n1/433)))))))))
+                              case int 3:
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(53):1591-1679
+                                 (let
+                                   (*match*/1711 =
+                                      (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(53):1604-1617
+                                        (apply split/322 (- n/419 1)))
+                                    n2/436 =a (field_imm 1 *match*/1711)
+                                    n1/435 =a (field_imm 0 *match*/1711))
+                                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(54):1629-1679
+                                     (seq
+                                       (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(54):1629-1639
+                                         (apply produce/421 n2/436))
+                                       (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(55):1649-1679
+                                         (seq
+                                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(55):1649-1659
+                                             (apply push/420 0))
+                                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(56):1669-1679
+                                             (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(56):1669-1679
+                                               (apply produce/421 n1/435)))))))))
+                              case int 4:
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(59):1726-1761
+                                 (seq
+                                   (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(59):1726-1741
+                                     (apply produce/421 (- n/419 1)))
+                                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(60):1751-1761
+                                     (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(60):1751-1761
+                                       (apply push/420 3)))))))
+                          with (10)
+                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(62):1781-1793
+                             (raise
+                               (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(62):1781-1793
+                                 (makeblock 0 (global Assert_failure/28!)
+                                   [0:
+                                    "test/dynamic/speed/src/Generator.ml" 62
+                                    8]))))))))))))))
+      (let
+        (produce/437 =
+           (function n/438[int]
+             (funct-body Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(66)<ghost>:1837-1974
+               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(67):1857-1974
+                 (let (dummy/439 = 5)
+                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(68):1878-1974
+                     (let
+                       (buffer/440 =
+                          (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(68):1891-1905
+                            (apply (field_imm 0 (field_imm 9 (global Sek!)))
+                              dummy/439)))
+                       (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(69):1911-1974
+                         (seq
+                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(69):1911-1927
+                             (apply produce/345 buffer/440 n/438))
+                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(70):1931-1974
+                             (seq
+                               (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(70):1931-1953
+                                 (apply
+                                   (field_imm 9 (field_imm 9 (global Sek!)))
+                                   (field_imm 1 (global Sek!)) buffer/440 5))
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(71):1957-1974
+                                 (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(71):1957-1974
+                                   (apply
+                                     (field_imm 30
+                                       (field_imm 9 (global Sek!)))
+                                     buffer/440))))))))))))))
+        (pseudo <unknown location> (makeblock 0 split/322 produce/437))))))
+(setglobal Dune__exe__Generator!
+  (let
+    (split/322 =
+       (function n/324[int]
+         (funct-body Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(10)<ghost>:295-361
+           (before Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(11):301-361
+             (let
+               (n1/325 =[int]
+                  (after Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(11):310-328
+                    (apply (field_imm 4 (global Stdlib__Random!))
+                      (+ n/324 1))))
+               (before Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(12):334-361
+                 (let (n2/344 =[int] (- n/324 n1/325))
+                   (before Dune__exe__Generator.split test/dynamic/speed/src/Generator.ml(13):355-361
+                     (makeblock 0 (int,int) n1/325 n2/344)))))))))
+    (letrec
+      (produce/345
+         (function buffer/418 n/419[int] : int
+           (funct-body Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(26)<ghost>:979-1793
+             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(27):1013-1793
+               (let
+                 (push/420 =
+                    (function token/423 : int
+                      (funct-body Dune__exe__Generator.produce.push test/dynamic/speed/src/Generator.ml(27)<ghost>:1022-1055
+                        (before Dune__exe__Generator.produce.push test/dynamic/speed/src/Generator.ml(27):1030-1055
+                          (after Dune__exe__Generator.produce.push test/dynamic/speed/src/Generator.ml(27):1030-1055
+                            (apply (field_imm 9 (field_imm 9 (global Sek!)))
+                              (field_imm 0 (global Sek!)) buffer/418
+                              token/423)))))
+                  produce/421 =
+                    (function n/429[int] : int
+                      (funct-body Dune__exe__Generator.produce.produce test/dynamic/speed/src/Generator.ml(28)<ghost>:1070-1090
+                        (before Dune__exe__Generator.produce.produce test/dynamic/speed/src/Generator.ml(28):1074-1090
+                          (after Dune__exe__Generator.produce.produce test/dynamic/speed/src/Generator.ml(28):1074-1090
+                            (apply produce/345 buffer/418 n/429))))))
+                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(29):1096-1793
+                   (if (== n/419 0)
+                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(30):1114-1155
+                       (let
+                         (i/430 =[int]
+                            (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(30):1122-1135
+                              (apply (field_imm 4 (global Stdlib__Random!))
+                                10)))
+                         (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(31):1143-1155
+                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(31):1143-1155
+                             (apply push/420 (makeblock 0 (int) i/430))))))
+                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(33):1167-1793
+                       (let
+                         (*match*/1712 =
+                            (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(33):1173-1185
+                              (apply (field_imm 4 (global Stdlib__Random!))
+                                5)))
+                         (if (isout 4 *match*/1712)
+                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(62):1781-1793
+                             (raise
+                               (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(62):1781-1793
+                                 (makeblock 0 (global Assert_failure/28!)
+                                   [0:
+                                    "test/dynamic/speed/src/Generator.ml" 62
+                                    8]))))
+                           (switch* *match*/1712
+                            case int 0:
+                             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(36):1237-1294
+                               (seq
+                                 (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(36):1237-1248
+                                   (apply push/420 1))
+                                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(37):1258-1294
+                                   (seq
+                                     (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(37):1258-1273
+                                       (apply produce/421 (- n/419 1)))
+                                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(38):1283-1294
+                                       (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(38):1283-1294
+                                         (apply push/420 4)))))))
+                            case int 1:
+                             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(41):1334-1421
+                               (let
+                                 (*match*/1703 =
+                                    (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(41):1347-1360
+                                      (apply split/322 (- n/419 1)))
+                                  n2/432 =a (field_imm 1 *match*/1703)
+                                  n1/431 =a (field_imm 0 *match*/1703))
+                                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(42):1372-1421
+                                   (seq
+                                     (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(42):1372-1382
+                                       (apply produce/421 n2/432))
+                                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(43):1392-1421
+                                       (seq
+                                         (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(43):1392-1401
+                                           (apply push/420 2))
+                                         (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(44):1411-1421
+                                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(44):1411-1421
+                                             (apply produce/421 n1/431)))))))))
+                            case int 2:
+                             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(47):1462-1550
+                               (let
+                                 (*match*/1707 =
+                                    (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(47):1475-1488
+                                      (apply split/322 (- n/419 1)))
+                                  n2/434 =a (field_imm 1 *match*/1707)
+                                  n1/433 =a (field_imm 0 *match*/1707))
+                                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(48):1500-1550
+                                   (seq
+                                     (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(48):1500-1510
+                                       (apply produce/421 n2/434))
+                                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(49):1520-1550
+                                       (seq
+                                         (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(49):1520-1530
+                                           (apply push/420 3))
+                                         (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(50):1540-1550
+                                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(50):1540-1550
+                                             (apply produce/421 n1/433)))))))))
+                            case int 3:
+                             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(53):1591-1679
+                               (let
+                                 (*match*/1711 =
+                                    (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(53):1604-1617
+                                      (apply split/322 (- n/419 1)))
+                                  n2/436 =a (field_imm 1 *match*/1711)
+                                  n1/435 =a (field_imm 0 *match*/1711))
+                                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(54):1629-1679
+                                   (seq
+                                     (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(54):1629-1639
+                                       (apply produce/421 n2/436))
+                                     (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(55):1649-1679
+                                       (seq
+                                         (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(55):1649-1659
+                                           (apply push/420 0))
+                                         (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(56):1669-1679
+                                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(56):1669-1679
+                                             (apply produce/421 n1/435)))))))))
+                            case int 4:
+                             (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(59):1726-1761
+                               (seq
+                                 (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(59):1726-1741
+                                   (apply produce/421 (- n/419 1)))
+                                 (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(60):1751-1761
+                                   (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(60):1751-1761
+                                     (apply push/420 3))))))))))))))))
+      (let
+        (produce/437 =
+           (function n/438[int]
+             (funct-body Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(66)<ghost>:1837-1974
+               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(67):1857-1974
+                 (let (dummy/439 = 5)
+                   (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(68):1878-1974
+                     (let
+                       (buffer/440 =
+                          (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(68):1891-1905
+                            (apply (field_imm 0 (field_imm 9 (global Sek!)))
+                              dummy/439)))
+                       (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(69):1911-1974
+                         (seq
+                           (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(69):1911-1927
+                             (apply produce/345 buffer/440 n/438))
+                           (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(70):1931-1974
+                             (seq
+                               (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(70):1931-1953
+                                 (apply
+                                   (field_imm 9 (field_imm 9 (global Sek!)))
+                                   (field_imm 1 (global Sek!)) buffer/440 5))
+                               (before Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(71):1957-1974
+                                 (after Dune__exe__Generator.produce test/dynamic/speed/src/Generator.ml(71):1957-1974
+                                   (apply
+                                     (field_imm 30
+                                       (field_imm 9 (global Sek!)))
+                                     buffer/440))))))))))))))
+        (pseudo <unknown location> (makeblock 0 split/322 produce/437))))))

@@ -1,0 +1,115 @@
+[
+  signature_item (src/dump.mli[20,1308+0]..[20,1308+12])
+    Psig_open Fresh "Grammar" (src/dump.mli[20,1308+5]..[20,1308+12])
+  signature_item (src/dump.mli[22,1322+0]..[31,1478+3])
+    Psig_module "Make" (src/dump.mli[22,1322+7]..[22,1322+11])
+    module_type (src/dump.mli[22,1322+12]..[31,1478+3])
+      Pmty_functor "Default" (src/dump.mli[22,1322+13]..[22,1322+20])
+      module_type (src/dump.mli[22,1322+23]..[27,1438+3])
+        Pmty_signature
+        [
+          signature_item (src/dump.mli[24,1350+2]..[25,1379+57])
+            Psig_value
+            value_description "has_default_reduction" (src/dump.mli[24,1350+6]..[24,1350+27]) (src/dump.mli[24,1350+2]..[25,1379+57])
+              core_type (src/dump.mli[25,1379+4]..[25,1379+57])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/dump.mli[25,1379+4]..[25,1379+12])
+                  Ptyp_constr "Lr1.node" (src/dump.mli[25,1379+4]..[25,1379+12])
+                  []
+                core_type (src/dump.mli[25,1379+16]..[25,1379+57])
+                  Ptyp_constr "option" (src/dump.mli[25,1379+51]..[25,1379+57])
+                  [
+                    core_type (src/dump.mli[25,1379+17]..[25,1379+49])
+                      Ptyp_tuple
+                      [
+                        core_type (src/dump.mli[25,1379+17]..[25,1379+33])
+                          Ptyp_constr "Production.index" (src/dump.mli[25,1379+17]..[25,1379+33])
+                          []
+                        core_type (src/dump.mli[25,1379+36]..[25,1379+49])
+                          Ptyp_constr "TerminalSet.t" (src/dump.mli[25,1379+36]..[25,1379+49])
+                          []
+                      ]
+                  ]
+              []
+        ]
+      module_type (src/dump.mli[27,1438+7]..[31,1478+3])
+        Pmty_signature
+        [
+          signature_item (src/dump.mli[29,1450+2]..[29,1450+26])
+            Psig_value
+            value_description "dump" (src/dump.mli[29,1450+6]..[29,1450+10]) (src/dump.mli[29,1450+2]..[29,1450+26])
+              core_type (src/dump.mli[29,1450+12]..[29,1450+26])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/dump.mli[29,1450+12]..[29,1450+18])
+                  Ptyp_constr "string" (src/dump.mli[29,1450+12]..[29,1450+18])
+                  []
+                core_type (src/dump.mli[29,1450+22]..[29,1450+26])
+                  Ptyp_constr "unit" (src/dump.mli[29,1450+22]..[29,1450+26])
+                  []
+              []
+        ]
+]
+
+open Grammar
+module Make :
+functor (Default :
+  sig
+    val has_default_reduction :
+      Lr1.node -> (Production.index * TerminalSet.t) option
+  end) -> sig val dump : string -> unit end
+[
+  signature_item (src/dump.mli[20,1308+0]..src/dump.mli[20,1308+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/dump.mli[22,1322+0]..src/dump.mli[31,1478+3])
+    Tsig_module "Make/530"
+    module_type (src/dump.mli[22,1322+12]..src/dump.mli[31,1478+3])
+      Tmty_functor "Default/528"
+      module_type (src/dump.mli[22,1322+23]..src/dump.mli[27,1438+3])
+        Tmty_signature
+        [
+          signature_item (src/dump.mli[24,1350+2]..src/dump.mli[25,1379+57])
+            Tsig_value
+            value_description has_default_reduction/527 (src/dump.mli[24,1350+2]..src/dump.mli[25,1379+57])
+              core_type (src/dump.mli[25,1379+4]..src/dump.mli[25,1379+57])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/dump.mli[25,1379+4]..src/dump.mli[25,1379+12])
+                  Ttyp_constr "Dune__exe!.Lr1.node"
+                  []
+                core_type (src/dump.mli[25,1379+16]..src/dump.mli[25,1379+57])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (src/dump.mli[25,1379+17]..src/dump.mli[25,1379+49])
+                      Ttyp_tuple
+                      [
+                        core_type (src/dump.mli[25,1379+17]..src/dump.mli[25,1379+33])
+                          Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                          []
+                        core_type (src/dump.mli[25,1379+36]..src/dump.mli[25,1379+49])
+                          Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                          []
+                      ]
+                  ]
+              []
+        ]
+      module_type (src/dump.mli[27,1438+7]..src/dump.mli[31,1478+3])
+        Tmty_signature
+        [
+          signature_item (src/dump.mli[29,1450+2]..src/dump.mli[29,1450+26])
+            Tsig_value
+            value_description dump/529 (src/dump.mli[29,1450+2]..src/dump.mli[29,1450+26])
+              core_type (src/dump.mli[29,1450+12]..src/dump.mli[29,1450+26])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/dump.mli[29,1450+12]..src/dump.mli[29,1450+18])
+                  Ttyp_constr "string/15!"
+                  []
+                core_type (src/dump.mli[29,1450+22]..src/dump.mli[29,1450+26])
+                  Ttyp_constr "unit/6!"
+                  []
+              []
+        ]
+]
+

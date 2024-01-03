@@ -1,0 +1,378 @@
+[
+  structure_item (src/grammar.ml[17,1086+0]..[20,1172+6])
+    Pstr_include    module_expr (src/grammar.ml[17,1086+8]..[20,1172+6])
+      Pmod_apply_unit
+      module_expr (src/grammar.ml[17,1086+8]..[20,1172+4])
+        Pmod_apply
+        module_expr (src/grammar.ml[17,1086+8]..[17,1086+27])
+          Pmod_ident "GrammarFunctor.Make" (src/grammar.ml[17,1086+8]..[17,1086+27])
+        module_expr (src/grammar.ml[17,1086+28]..[20,1172+3])
+          Pmod_structure
+          [
+            structure_item (src/grammar.ml[18,1121+2]..[18,1121+29])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/grammar.ml[18,1121+6]..[18,1121+13])
+                    Ppat_var "grammar" (src/grammar.ml[18,1121+6]..[18,1121+13])
+                  expression (src/grammar.ml[18,1121+16]..[18,1121+29])
+                    Pexp_ident "Front.grammar" (src/grammar.ml[18,1121+16]..[18,1121+29])
+              ]
+            structure_item (src/grammar.ml[19,1151+2]..[19,1151+20])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/grammar.ml[19,1151+6]..[19,1151+13])
+                    Ppat_var "verbose" (src/grammar.ml[19,1151+6]..[19,1151+13])
+                  expression (src/grammar.ml[19,1151+16]..[19,1151+20])
+                    Pexp_construct "true" (src/grammar.ml[19,1151+16]..[19,1151+20])
+                    None
+              ]
+          ]
+]
+
+include
+  ((GrammarFunctor.Make)(struct
+                           let grammar = Front.grammar
+                           let verbose = true
+                         end))()
+[
+  structure_item (src/grammar.ml[17,1086+0]..src/grammar.ml[20,1172+6])
+    Tstr_include    module_expr (src/grammar.ml[17,1086+8]..src/grammar.ml[20,1172+4])
+      Tmod_apply_unit
+      module_expr (src/grammar.ml[17,1086+8]..src/grammar.ml[20,1172+4])
+        Tmod_apply
+        module_expr (src/grammar.ml[17,1086+8]..src/grammar.ml[17,1086+27])
+          module_expr (src/grammar.ml[17,1086+8]..src/grammar.ml[17,1086+27])
+            Tmod_ident "Dune__exe!.GrammarFunctor.Make"
+        module_expr (src/grammar.ml[17,1086+28]..src/grammar.ml[20,1172+3])
+          Tmod_structure
+          [
+            structure_item (src/grammar.ml[18,1121+2]..src/grammar.ml[18,1121+29])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/grammar.ml[18,1121+6]..src/grammar.ml[18,1121+13])
+                    Tpat_var "grammar/396"
+                  expression (src/grammar.ml[18,1121+16]..src/grammar.ml[18,1121+29])
+                    Texp_ident "Dune__exe!.Front.grammar"
+              ]
+            structure_item (src/grammar.ml[19,1151+2]..src/grammar.ml[19,1151+20])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/grammar.ml[19,1151+6]..src/grammar.ml[19,1151+13])
+                    Tpat_var "verbose/399"
+                  expression (src/grammar.ml[19,1151+16]..src/grammar.ml[19,1151+20])
+                    Texp_construct "true"
+                    []
+              ]
+          ]
+]
+
+{<Dune__exe__Grammar>
+ "Analysis"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Analysis"[module];
+ "Nonterminal"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Nonterminal"[module];
+ "NonterminalMap"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "NonterminalMap"[module];
+ "NonterminalSet"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "NonterminalSet"[module];
+ "OnErrorReduce"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "OnErrorReduce"[module];
+ "Precedence"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Precedence"[module];
+ "Production"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Production"[module];
+ "ProductionMap"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "ProductionMap"[module];
+ "Sentence"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Sentence"[module];
+ "Symbol"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Symbol"[module];
+ "SymbolMap"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "SymbolMap"[module];
+ "SymbolSet"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "SymbolSet"[module];
+ "Terminal"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "Terminal"[module];
+ "TerminalMap"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "TerminalMap"[module];
+ "TerminalSet"[module] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "TerminalSet"[module];
+ "diagnostics"[value] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "diagnostics"[value];
+ "grammar_uses_error_token"[value] ->
+   CU Dune__exe . "GrammarFunctor"[module] . "Make"[module](
+   {
+    "grammar"[value] -> <Dune__exe__Grammar.0>;
+    "verbose"[value] -> <Dune__exe__Grammar.1>;
+    })(
+   {
+    })
+   . "grammar_uses_error_token"[value];
+ }
+
+(let
+  (include/3275 =
+     (apply
+       (apply
+         (let (let/3276 = (field_imm 0 (global Dune__exe__GrammarFunctor!)))
+           (field_imm 0 (global Dune__exe__GrammarFunctor!)))
+         (let
+           (grammar/396 = (field_imm 0 (global Dune__exe__Front!))
+            verbose/399 =[int] 1)
+           (makeblock 0 grammar/396 verbose/399)))
+       0)
+   Nonterminal/1906 =a (field_mut 0 include/3275))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__Grammar!) Nonterminal/1906)
+    (let (NonterminalMap/1907 =a (field_mut 1 include/3275))
+      (seq
+        (setfield_ptr(root-init) 1 (global Dune__exe__Grammar!)
+          NonterminalMap/1907)
+        (let (Terminal/1909 =a (field_mut 2 include/3275))
+          (seq
+            (setfield_ptr(root-init) 2 (global Dune__exe__Grammar!)
+              Terminal/1909)
+            (let (TerminalSet/1910 =a (field_mut 3 include/3275))
+              (seq
+                (setfield_ptr(root-init) 3 (global Dune__exe__Grammar!)
+                  TerminalSet/1910)
+                (let (TerminalMap/1911 =a (field_mut 4 include/3275))
+                  (seq
+                    (setfield_ptr(root-init) 4 (global Dune__exe__Grammar!)
+                      TerminalMap/1911)
+                    (let (Symbol/1912 =a (field_mut 5 include/3275))
+                      (seq
+                        (setfield_ptr(root-init) 5
+                          (global Dune__exe__Grammar!) Symbol/1912)
+                        (let (SymbolSet/1913 =a (field_mut 6 include/3275))
+                          (seq
+                            (setfield_ptr(root-init) 6
+                              (global Dune__exe__Grammar!) SymbolSet/1913)
+                            (let
+                              (SymbolMap/1914 =a (field_mut 7 include/3275))
+                              (seq
+                                (setfield_ptr(root-init) 7
+                                  (global Dune__exe__Grammar!)
+                                  SymbolMap/1914)
+                                (let
+                                  (Production/1915 =a
+                                     (field_mut 8 include/3275))
+                                  (seq
+                                    (setfield_ptr(root-init) 8
+                                      (global Dune__exe__Grammar!)
+                                      Production/1915)
+                                    (let
+                                      (ProductionMap/1916 =a
+                                         (field_mut 9 include/3275))
+                                      (seq
+                                        (setfield_ptr(root-init) 9
+                                          (global Dune__exe__Grammar!)
+                                          ProductionMap/1916)
+                                        (let
+                                          (grammar_uses_error_token/1917 =a
+                                             (field_mut 10 include/3275))
+                                          (seq
+                                            (setfield_ptr(root-init) 10
+                                              (global Dune__exe__Grammar!)
+                                              grammar_uses_error_token/1917)
+                                            (let
+                                              (Analysis/1918 =a
+                                                 (field_mut 11 include/3275))
+                                              (seq
+                                                (setfield_ptr(root-init) 11
+                                                  (global Dune__exe__Grammar!)
+                                                  Analysis/1918)
+                                                (let
+                                                  (Precedence/1919 =a
+                                                     (field_mut 12
+                                                       include/3275))
+                                                  (seq
+                                                    (setfield_ptr(root-init) 12
+                                                      (global Dune__exe__Grammar!)
+                                                      Precedence/1919)
+                                                    (let
+                                                      (OnErrorReduce/1920 =a
+                                                         (field_mut 13
+                                                           include/3275))
+                                                      (seq
+                                                        (setfield_ptr(root-init) 13
+                                                          (global Dune__exe__Grammar!)
+                                                          OnErrorReduce/1920)
+                                                        (let
+                                                          (Sentence/1921 =a
+                                                             (field_mut 14
+                                                               include/3275))
+                                                          (seq
+                                                            (setfield_ptr(root-init) 14
+                                                              (global Dune__exe__Grammar!)
+                                                              Sentence/1921)
+                                                            (let
+                                                              (diagnostics/1922 =a
+                                                                 (field_mut 15
+                                                                   include/3275))
+                                                              (seq
+                                                                (setfield_ptr(root-init) 15
+                                                                  (global Dune__exe__Grammar!)
+                                                                  diagnostics/1922)
+                                                                0))))))))))))))))))))))))))))))))
+(let
+  (include/3275 =
+     (apply
+       (apply
+         (let (let/3276 = (field_imm 0 (global Dune__exe__GrammarFunctor!)))
+           (field_imm 0 (global Dune__exe__GrammarFunctor!)))
+         (let
+           (grammar/396 = (field_imm 0 (global Dune__exe__Front!))
+            verbose/399 =[int] 1)
+           (makeblock 0 grammar/396 verbose/399)))
+       0))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__Grammar!)
+      (field_mut 0 include/3275))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Grammar!)
+      (field_mut 1 include/3275))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Grammar!)
+      (field_mut 2 include/3275))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Grammar!)
+      (field_mut 3 include/3275))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Grammar!)
+      (field_mut 4 include/3275))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Grammar!)
+      (field_mut 5 include/3275))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Grammar!)
+      (field_mut 6 include/3275))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Grammar!)
+      (field_mut 7 include/3275))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Grammar!)
+      (field_mut 8 include/3275))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Grammar!)
+      (field_mut 9 include/3275))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Grammar!)
+      (field_mut 10 include/3275))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Grammar!)
+      (field_mut 11 include/3275))
+    (setfield_ptr(root-init) 12 (global Dune__exe__Grammar!)
+      (field_mut 12 include/3275))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Grammar!)
+      (field_mut 13 include/3275))
+    (setfield_ptr(root-init) 14 (global Dune__exe__Grammar!)
+      (field_mut 14 include/3275))
+    (setfield_ptr(root-init) 15 (global Dune__exe__Grammar!)
+      (field_mut 15 include/3275))
+    0))

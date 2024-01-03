@@ -1,0 +1,564 @@
+[
+  structure_item (src/installation.ml[17,1115+0]..[33,1755+40])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/installation.ml[17,1115+8]..[17,1115+17])
+          Ppat_var "normalize" (src/installation.ml[17,1115+8]..[17,1115+17])
+        expression (src/installation.ml[17,1115+18]..[33,1755+40]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/installation.ml[17,1115+18]..[17,1115+20])
+            Ppat_var "fn" (src/installation.ml[17,1115+18]..[17,1115+20])
+          expression (src/installation.ml[18,1138+2]..[33,1755+40])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/installation.ml[18,1138+6]..[18,1138+9])
+                  Ppat_var "dir" (src/installation.ml[18,1138+6]..[18,1138+9])
+                expression (src/installation.ml[18,1138+12]..[18,1138+31])
+                  Pexp_apply
+                  expression (src/installation.ml[18,1138+12]..[18,1138+28])
+                    Pexp_ident "Filename.dirname" (src/installation.ml[18,1138+12]..[18,1138+28])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/installation.ml[18,1138+29]..[18,1138+31])
+                        Pexp_ident "fn" (src/installation.ml[18,1138+29]..[18,1138+31])
+                  ]
+            ]
+            expression (src/installation.ml[19,1173+2]..[33,1755+40])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/installation.ml[19,1173+6]..[19,1173+10])
+                    Ppat_var "base" (src/installation.ml[19,1173+6]..[19,1173+10])
+                  expression (src/installation.ml[19,1173+13]..[19,1173+33])
+                    Pexp_apply
+                    expression (src/installation.ml[19,1173+13]..[19,1173+30])
+                      Pexp_ident "Filename.basename" (src/installation.ml[19,1173+13]..[19,1173+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/installation.ml[19,1173+31]..[19,1173+33])
+                          Pexp_ident "fn" (src/installation.ml[19,1173+31]..[19,1173+33])
+                    ]
+              ]
+              expression (src/installation.ml[20,1210+2]..[33,1755+40])
+                Pexp_ifthenelse
+                expression (src/installation.ml[20,1210+5]..[20,1210+13])
+                  Pexp_apply
+                  expression (src/installation.ml[20,1210+9]..[20,1210+10])
+                    Pexp_ident "=" (src/installation.ml[20,1210+9]..[20,1210+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/installation.ml[20,1210+5]..[20,1210+8])
+                        Pexp_ident "dir" (src/installation.ml[20,1210+5]..[20,1210+8])
+                    <arg>
+                    Nolabel
+                      expression (src/installation.ml[20,1210+11]..[20,1210+13])
+                        Pexp_ident "fn" (src/installation.ml[20,1210+11]..[20,1210+13])
+                  ]
+                expression (src/installation.ml[22,1283+4]..[22,1283+7])
+                  Pexp_ident "dir" (src/installation.ml[22,1283+4]..[22,1283+7])
+                Some
+                  expression (src/installation.ml[23,1291+7]..[33,1755+40])
+                    Pexp_ifthenelse
+                    expression (src/installation.ml[23,1291+10]..[23,1291+42])
+                      Pexp_apply
+                      expression (src/installation.ml[23,1291+15]..[23,1291+16])
+                        Pexp_ident "=" (src/installation.ml[23,1291+15]..[23,1291+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/installation.ml[23,1291+10]..[23,1291+14])
+                            Pexp_ident "base" (src/installation.ml[23,1291+10]..[23,1291+14])
+                        <arg>
+                        Nolabel
+                          expression (src/installation.ml[23,1291+17]..[23,1291+42])
+                            Pexp_ident "Filename.current_dir_name" (src/installation.ml[23,1291+17]..[23,1291+42])
+                      ]
+                    expression (src/installation.ml[26,1430+4]..[26,1430+17])
+                      Pexp_apply
+                      expression (src/installation.ml[26,1430+4]..[26,1430+13])
+                        Pexp_ident "normalize" (src/installation.ml[26,1430+4]..[26,1430+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/installation.ml[26,1430+14]..[26,1430+17])
+                            Pexp_ident "dir" (src/installation.ml[26,1430+14]..[26,1430+17])
+                      ]
+                    Some
+                      expression (src/installation.ml[27,1448+7]..[33,1755+40])
+                        Pexp_ifthenelse
+                        expression (src/installation.ml[27,1448+10]..[27,1448+41])
+                          Pexp_apply
+                          expression (src/installation.ml[27,1448+15]..[27,1448+16])
+                            Pexp_ident "=" (src/installation.ml[27,1448+15]..[27,1448+16])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/installation.ml[27,1448+10]..[27,1448+14])
+                                Pexp_ident "base" (src/installation.ml[27,1448+10]..[27,1448+14])
+                            <arg>
+                            Nolabel
+                              expression (src/installation.ml[27,1448+17]..[27,1448+41])
+                                Pexp_ident "Filename.parent_dir_name" (src/installation.ml[27,1448+17]..[27,1448+41])
+                          ]
+                        expression (src/installation.ml[30,1654+4]..[30,1654+36])
+                          Pexp_apply
+                          expression (src/installation.ml[30,1654+4]..[30,1654+20])
+                            Pexp_ident "Filename.dirname" (src/installation.ml[30,1654+4]..[30,1654+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/installation.ml[30,1654+21]..[30,1654+36])
+                                Pexp_apply
+                                expression (src/installation.ml[30,1654+22]..[30,1654+31])
+                                  Pexp_ident "normalize" (src/installation.ml[30,1654+22]..[30,1654+31])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/installation.ml[30,1654+32]..[30,1654+35])
+                                      Pexp_ident "dir" (src/installation.ml[30,1654+32]..[30,1654+35])
+                                ]
+                          ]
+                        Some
+                          expression (src/installation.ml[33,1755+4]..[33,1755+40])
+                            Pexp_apply
+                            expression (src/installation.ml[33,1755+4]..[33,1755+19])
+                              Pexp_ident "Filename.concat" (src/installation.ml[33,1755+4]..[33,1755+19])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/installation.ml[33,1755+20]..[33,1755+35])
+                                  Pexp_apply
+                                  expression (src/installation.ml[33,1755+21]..[33,1755+30])
+                                    Pexp_ident "normalize" (src/installation.ml[33,1755+21]..[33,1755+30])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/installation.ml[33,1755+31]..[33,1755+34])
+                                        Pexp_ident "dir" (src/installation.ml[33,1755+31]..[33,1755+34])
+                                  ]
+                              <arg>
+                              Nolabel
+                                expression (src/installation.ml[33,1755+36]..[33,1755+40])
+                                  Pexp_ident "base" (src/installation.ml[33,1755+36]..[33,1755+40])
+                            ]
+    ]
+  structure_item (src/installation.ml[42,2162+0]..[51,2353+39])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/installation.ml[42,2162+4]..[42,2162+10])
+          Ppat_var "libdir" (src/installation.ml[42,2162+4]..[42,2162+10])
+        expression (src/installation.ml[42,2162+11]..[51,2353+39]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/installation.ml[42,2162+11]..[42,2162+13])
+            Ppat_construct "()" (src/installation.ml[42,2162+11]..[42,2162+13])
+            None
+          expression (src/installation.ml[43,2178+2]..[51,2353+39])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/installation.ml[43,2178+6]..[43,2178+10])
+                  Ppat_var "root" (src/installation.ml[43,2178+6]..[43,2178+10])
+                expression (src/installation.ml[44,2191+4]..[47,2278+23])
+                  Pexp_apply
+                  expression (src/installation.ml[47,2278+4]..[47,2278+6])
+                    Pexp_ident "|>" (src/installation.ml[47,2278+4]..[47,2278+6])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/installation.ml[44,2191+4]..[46,2232+23])
+                        Pexp_apply
+                        expression (src/installation.ml[46,2232+4]..[46,2232+6])
+                          Pexp_ident "|>" (src/installation.ml[46,2232+4]..[46,2232+6])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/installation.ml[44,2191+4]..[45,2215+16])
+                              Pexp_apply
+                              expression (src/installation.ml[45,2215+4]..[45,2215+6])
+                                Pexp_ident "|>" (src/installation.ml[45,2215+4]..[45,2215+6])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/installation.ml[44,2191+4]..[44,2191+23])
+                                    Pexp_ident "Sys.executable_name" (src/installation.ml[44,2191+4]..[44,2191+23])
+                                <arg>
+                                Nolabel
+                                  expression (src/installation.ml[45,2215+7]..[45,2215+16])
+                                    Pexp_ident "normalize" (src/installation.ml[45,2215+7]..[45,2215+16])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (src/installation.ml[46,2232+7]..[46,2232+23])
+                              Pexp_ident "Filename.dirname" (src/installation.ml[46,2232+7]..[46,2232+23])
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (src/installation.ml[47,2278+7]..[47,2278+23])
+                        Pexp_ident "Filename.dirname" (src/installation.ml[47,2278+7]..[47,2278+23])
+                  ]
+            ]
+            expression (src/installation.ml[49,2326+2]..[51,2353+39])
+              Pexp_apply
+              expression (src/installation.ml[49,2326+2]..[49,2326+17])
+                Pexp_ident "Filename.concat" (src/installation.ml[49,2326+2]..[49,2326+17])
+              [
+                <arg>
+                Nolabel
+                  expression (src/installation.ml[50,2344+4]..[50,2344+8])
+                    Pexp_ident "root" (src/installation.ml[50,2344+4]..[50,2344+8])
+                <arg>
+                Nolabel
+                  expression (src/installation.ml[51,2353+4]..[51,2353+39])
+                    Pexp_apply
+                    expression (src/installation.ml[51,2353+5]..[51,2353+20])
+                      Pexp_ident "Filename.concat" (src/installation.ml[51,2353+5]..[51,2353+20])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/installation.ml[51,2353+21]..[51,2353+26])
+                          Pexp_constant PConst_string("lib",(src/installation.ml[51,2353+22]..[51,2353+25]),None)
+                      <arg>
+                      Nolabel
+                        expression (src/installation.ml[51,2353+27]..[51,2353+38])
+                          Pexp_constant PConst_string("menhirLib",(src/installation.ml[51,2353+28]..[51,2353+37]),None)
+                    ]
+              ]
+    ]
+]
+
+let rec normalize fn =
+  let dir = Filename.dirname fn in
+  let base = Filename.basename fn in
+  if dir = fn
+  then dir
+  else
+    if base = Filename.current_dir_name
+    then normalize dir
+    else
+      if base = Filename.parent_dir_name
+      then Filename.dirname (normalize dir)
+      else Filename.concat (normalize dir) base
+let libdir () =
+  let root =
+    ((Sys.executable_name |> normalize) |> Filename.dirname) |>
+      Filename.dirname in
+  Filename.concat root (Filename.concat "lib" "menhirLib")
+[
+  structure_item (src/installation.ml[17,1115+0]..src/installation.ml[33,1755+40])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/installation.ml[17,1115+8]..src/installation.ml[17,1115+17])
+          Tpat_var "normalize/397"
+        expression (src/installation.ml[17,1115+18]..src/installation.ml[33,1755+40]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/installation.ml[17,1115+18]..src/installation.ml[17,1115+20])
+                Tpat_var "fn/398"
+              expression (src/installation.ml[18,1138+2]..src/installation.ml[33,1755+40])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/installation.ml[18,1138+6]..src/installation.ml[18,1138+9])
+                      Tpat_var "dir/399"
+                    expression (src/installation.ml[18,1138+12]..src/installation.ml[18,1138+31])
+                      Texp_apply
+                      expression (src/installation.ml[18,1138+12]..src/installation.ml[18,1138+28])
+                        Texp_ident "Stdlib!.Filename.dirname"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/installation.ml[18,1138+29]..src/installation.ml[18,1138+31])
+                            Texp_ident "fn/398"
+                      ]
+                ]
+                expression (src/installation.ml[19,1173+2]..src/installation.ml[33,1755+40])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/installation.ml[19,1173+6]..src/installation.ml[19,1173+10])
+                        Tpat_var "base/422"
+                      expression (src/installation.ml[19,1173+13]..src/installation.ml[19,1173+33])
+                        Texp_apply
+                        expression (src/installation.ml[19,1173+13]..src/installation.ml[19,1173+30])
+                          Texp_ident "Stdlib!.Filename.basename"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/installation.ml[19,1173+31]..src/installation.ml[19,1173+33])
+                              Texp_ident "fn/398"
+                        ]
+                  ]
+                  expression (src/installation.ml[20,1210+2]..src/installation.ml[33,1755+40])
+                    Texp_ifthenelse
+                    expression (src/installation.ml[20,1210+5]..src/installation.ml[20,1210+13])
+                      Texp_apply
+                      expression (src/installation.ml[20,1210+9]..src/installation.ml[20,1210+10])
+                        Texp_ident "Stdlib!.="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/installation.ml[20,1210+5]..src/installation.ml[20,1210+8])
+                            Texp_ident "dir/399"
+                        <arg>
+                          Nolabel
+                          expression (src/installation.ml[20,1210+11]..src/installation.ml[20,1210+13])
+                            Texp_ident "fn/398"
+                      ]
+                    expression (src/installation.ml[22,1283+4]..src/installation.ml[22,1283+7])
+                      Texp_ident "dir/399"
+                    Some
+                      expression (src/installation.ml[23,1291+7]..src/installation.ml[33,1755+40])
+                        Texp_ifthenelse
+                        expression (src/installation.ml[23,1291+10]..src/installation.ml[23,1291+42])
+                          Texp_apply
+                          expression (src/installation.ml[23,1291+15]..src/installation.ml[23,1291+16])
+                            Texp_ident "Stdlib!.="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/installation.ml[23,1291+10]..src/installation.ml[23,1291+14])
+                                Texp_ident "base/422"
+                            <arg>
+                              Nolabel
+                              expression (src/installation.ml[23,1291+17]..src/installation.ml[23,1291+42])
+                                Texp_ident "Stdlib!.Filename.current_dir_name"
+                          ]
+                        expression (src/installation.ml[26,1430+4]..src/installation.ml[26,1430+17])
+                          Texp_apply
+                          expression (src/installation.ml[26,1430+4]..src/installation.ml[26,1430+13])
+                            Texp_ident "normalize/397"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/installation.ml[26,1430+14]..src/installation.ml[26,1430+17])
+                                Texp_ident "dir/399"
+                          ]
+                        Some
+                          expression (src/installation.ml[27,1448+7]..src/installation.ml[33,1755+40])
+                            Texp_ifthenelse
+                            expression (src/installation.ml[27,1448+10]..src/installation.ml[27,1448+41])
+                              Texp_apply
+                              expression (src/installation.ml[27,1448+15]..src/installation.ml[27,1448+16])
+                                Texp_ident "Stdlib!.="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/installation.ml[27,1448+10]..src/installation.ml[27,1448+14])
+                                    Texp_ident "base/422"
+                                <arg>
+                                  Nolabel
+                                  expression (src/installation.ml[27,1448+17]..src/installation.ml[27,1448+41])
+                                    Texp_ident "Stdlib!.Filename.parent_dir_name"
+                              ]
+                            expression (src/installation.ml[30,1654+4]..src/installation.ml[30,1654+36])
+                              Texp_apply
+                              expression (src/installation.ml[30,1654+4]..src/installation.ml[30,1654+20])
+                                Texp_ident "Stdlib!.Filename.dirname"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/installation.ml[30,1654+21]..src/installation.ml[30,1654+36])
+                                    Texp_apply
+                                    expression (src/installation.ml[30,1654+22]..src/installation.ml[30,1654+31])
+                                      Texp_ident "normalize/397"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/installation.ml[30,1654+32]..src/installation.ml[30,1654+35])
+                                          Texp_ident "dir/399"
+                                    ]
+                              ]
+                            Some
+                              expression (src/installation.ml[33,1755+4]..src/installation.ml[33,1755+40])
+                                Texp_apply
+                                expression (src/installation.ml[33,1755+4]..src/installation.ml[33,1755+19])
+                                  Texp_ident "Stdlib!.Filename.concat"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/installation.ml[33,1755+20]..src/installation.ml[33,1755+35])
+                                      Texp_apply
+                                      expression (src/installation.ml[33,1755+21]..src/installation.ml[33,1755+30])
+                                        Texp_ident "normalize/397"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/installation.ml[33,1755+31]..src/installation.ml[33,1755+34])
+                                            Texp_ident "dir/399"
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (src/installation.ml[33,1755+36]..src/installation.ml[33,1755+40])
+                                      Texp_ident "base/422"
+                                ]
+          ]
+    ]
+  structure_item (src/installation.ml[42,2162+0]..src/installation.ml[51,2353+39])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/installation.ml[42,2162+4]..src/installation.ml[42,2162+10])
+          Tpat_var "libdir/423"
+        expression (src/installation.ml[42,2162+11]..src/installation.ml[51,2353+39]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/installation.ml[42,2162+11]..src/installation.ml[42,2162+13])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/installation.ml[43,2178+2]..src/installation.ml[51,2353+39])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/installation.ml[43,2178+6]..src/installation.ml[43,2178+10])
+                      Tpat_var "root/425"
+                    expression (src/installation.ml[44,2191+4]..src/installation.ml[47,2278+23])
+                      Texp_apply
+                      expression (src/installation.ml[47,2278+7]..src/installation.ml[47,2278+23])
+                        Texp_ident "Stdlib!.Filename.dirname"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/installation.ml[44,2191+4]..src/installation.ml[46,2232+23])
+                            Texp_apply
+                            expression (src/installation.ml[46,2232+7]..src/installation.ml[46,2232+23])
+                              Texp_ident "Stdlib!.Filename.dirname"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/installation.ml[44,2191+4]..src/installation.ml[45,2215+16])
+                                  Texp_apply
+                                  expression (src/installation.ml[45,2215+7]..src/installation.ml[45,2215+16])
+                                    Texp_ident "normalize/397"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/installation.ml[44,2191+4]..src/installation.ml[44,2191+23])
+                                        Texp_ident "Stdlib!.Sys.executable_name"
+                                  ]
+                            ]
+                      ]
+                ]
+                expression (src/installation.ml[49,2326+2]..src/installation.ml[51,2353+39])
+                  Texp_apply
+                  expression (src/installation.ml[49,2326+2]..src/installation.ml[49,2326+17])
+                    Texp_ident "Stdlib!.Filename.concat"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/installation.ml[50,2344+4]..src/installation.ml[50,2344+8])
+                        Texp_ident "root/425"
+                    <arg>
+                      Nolabel
+                      expression (src/installation.ml[51,2353+4]..src/installation.ml[51,2353+39])
+                        Texp_apply
+                        expression (src/installation.ml[51,2353+5]..src/installation.ml[51,2353+20])
+                          Texp_ident "Stdlib!.Filename.concat"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/installation.ml[51,2353+21]..src/installation.ml[51,2353+26])
+                              Texp_constant Const_string("lib",(src/installation.ml[51,2353+22]..src/installation.ml[51,2353+25]),None)
+                          <arg>
+                            Nolabel
+                            expression (src/installation.ml[51,2353+27]..src/installation.ml[51,2353+38])
+                              Texp_constant Const_string("menhirLib",(src/installation.ml[51,2353+28]..src/installation.ml[51,2353+37]),None)
+                        ]
+                  ]
+          ]
+    ]
+]
+
+{<Dune__exe__Installation>
+ "libdir"[value] -> <Dune__exe__Installation.4>;
+ }
+
+(seq
+  (letrec
+    (normalize/397
+       (function fn/398
+         (let
+           (dir/399 =
+              (apply (field_imm 13 (global Stdlib__Filename!)) fn/398)
+            base/422 =
+              (apply (field_imm 12 (global Stdlib__Filename!)) fn/398))
+           (if (caml_string_equal dir/399 fn/398) dir/399
+             (if
+               (caml_string_equal base/422
+                 (field_imm 0 (global Stdlib__Filename!)))
+               (apply normalize/397 dir/399)
+               (if
+                 (caml_string_equal base/422
+                   (field_imm 1 (global Stdlib__Filename!)))
+                 (apply (field_imm 13 (global Stdlib__Filename!))
+                   (apply normalize/397 dir/399))
+                 (apply (field_imm 3 (global Stdlib__Filename!))
+                   (apply normalize/397 dir/399) base/422)))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Installation!)
+      normalize/397))
+  (let
+    (libdir/423 =
+       (function param/500[int]
+         (let
+           (root/425 =
+              (apply (field_imm 13 (global Stdlib__Filename!))
+                (apply (field_imm 13 (global Stdlib__Filename!))
+                  (apply (field_imm 1 (global Dune__exe__Installation!))
+                    (field_imm 0 (global Stdlib__Sys!))))))
+           (apply (field_imm 3 (global Stdlib__Filename!)) root/425
+             (apply (field_imm 3 (global Stdlib__Filename!)) "lib"
+               "menhirLib")))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Installation!) libdir/423))
+  0)
+(seq
+  (letrec
+    (normalize/397
+       (function fn/398
+         (let
+           (dir/399 =
+              (apply (field_imm 13 (global Stdlib__Filename!)) fn/398)
+            base/422 =
+              (apply (field_imm 12 (global Stdlib__Filename!)) fn/398))
+           (if (caml_string_equal dir/399 fn/398) dir/399
+             (if
+               (caml_string_equal base/422
+                 (field_imm 0 (global Stdlib__Filename!)))
+               (apply normalize/397 dir/399)
+               (if
+                 (caml_string_equal base/422
+                   (field_imm 1 (global Stdlib__Filename!)))
+                 (apply (field_imm 13 (global Stdlib__Filename!))
+                   (apply normalize/397 dir/399))
+                 (apply (field_imm 3 (global Stdlib__Filename!))
+                   (apply normalize/397 dir/399) base/422)))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Installation!)
+      normalize/397))
+  (let
+    (libdir/423 =
+       (function param/500[int]
+         (let
+           (root/425 =
+              (apply (field_imm 13 (global Stdlib__Filename!))
+                (apply (field_imm 13 (global Stdlib__Filename!))
+                  (apply (field_imm 1 (global Dune__exe__Installation!))
+                    (field_imm 0 (global Stdlib__Sys!))))))
+           (apply (field_imm 3 (global Stdlib__Filename!)) root/425
+             (apply (field_imm 3 (global Stdlib__Filename!)) "lib"
+               "menhirLib")))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Installation!) libdir/423))
+  0)

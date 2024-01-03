@@ -1,0 +1,1437 @@
+[
+  structure_item (src/IO.ml[19,1159+0]..[28,1293+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[19,1159+4]..[19,1159+15])
+          Ppat_var "try_finally" (src/IO.ml[19,1159+4]..[19,1159+15])
+        expression (src/IO.ml[19,1159+16]..[28,1293+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/IO.ml[19,1159+16]..[19,1159+22])
+            Ppat_var "action" (src/IO.ml[19,1159+16]..[19,1159+22])
+          expression (src/IO.ml[19,1159+23]..[28,1293+8]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/IO.ml[19,1159+23]..[19,1159+30])
+              Ppat_var "handler" (src/IO.ml[19,1159+23]..[19,1159+30])
+            expression (src/IO.ml[20,1192+2]..[28,1293+8])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/IO.ml[20,1192+6]..[20,1192+12])
+                    Ppat_var "result" (src/IO.ml[20,1192+6]..[20,1192+12])
+                  expression (src/IO.ml[21,1207+4]..[25,1261+13])
+                    Pexp_try
+                    expression (src/IO.ml[22,1215+6]..[22,1215+14])
+                      Pexp_apply
+                      expression (src/IO.ml[22,1215+6]..[22,1215+12])
+                        Pexp_ident "action" (src/IO.ml[22,1215+6]..[22,1215+12])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/IO.ml[22,1215+12]..[22,1215+14])
+                            Pexp_construct "()" (src/IO.ml[22,1215+12]..[22,1215+14])
+                            None
+                      ]
+                    [
+                      <case>
+                        pattern (src/IO.ml[23,1230+9]..[23,1230+10])
+                          Ppat_var "e" (src/IO.ml[23,1230+9]..[23,1230+10])
+                        expression (src/IO.ml[24,1244+6]..[25,1261+13])
+                          Pexp_sequence
+                          expression (src/IO.ml[24,1244+6]..[24,1244+15])
+                            Pexp_apply
+                            expression (src/IO.ml[24,1244+6]..[24,1244+13])
+                              Pexp_ident "handler" (src/IO.ml[24,1244+6]..[24,1244+13])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[24,1244+13]..[24,1244+15])
+                                  Pexp_construct "()" (src/IO.ml[24,1244+13]..[24,1244+15])
+                                  None
+                            ]
+                          expression (src/IO.ml[25,1261+6]..[25,1261+13])
+                            Pexp_apply
+                            expression (src/IO.ml[25,1261+6]..[25,1261+11])
+                              Pexp_ident "raise" (src/IO.ml[25,1261+6]..[25,1261+11])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[25,1261+12]..[25,1261+13])
+                                  Pexp_ident "e" (src/IO.ml[25,1261+12]..[25,1261+13])
+                            ]
+                    ]
+              ]
+              expression (src/IO.ml[27,1280+2]..[28,1293+8])
+                Pexp_sequence
+                expression (src/IO.ml[27,1280+2]..[27,1280+11])
+                  Pexp_apply
+                  expression (src/IO.ml[27,1280+2]..[27,1280+9])
+                    Pexp_ident "handler" (src/IO.ml[27,1280+2]..[27,1280+9])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[27,1280+9]..[27,1280+11])
+                        Pexp_construct "()" (src/IO.ml[27,1280+9]..[27,1280+11])
+                        None
+                  ]
+                expression (src/IO.ml[28,1293+2]..[28,1293+8])
+                  Pexp_ident "result" (src/IO.ml[28,1293+2]..[28,1293+8])
+    ]
+  structure_item (src/IO.ml[35,1552+0]..[43,1786+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[35,1552+4]..[35,1552+15])
+          Ppat_var "moving_away" (src/IO.ml[35,1552+4]..[35,1552+15])
+        expression (src/IO.ml[35,1552+16]..[43,1786+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/IO.ml[35,1552+16]..[35,1552+24])
+            Ppat_var "filename" (src/IO.ml[35,1552+16]..[35,1552+24])
+          expression (src/IO.ml[35,1552+25]..[43,1786+12]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/IO.ml[35,1552+25]..[35,1552+31])
+              Ppat_var "action" (src/IO.ml[35,1552+25]..[35,1552+31])
+            expression (src/IO.ml[36,1586+2]..[43,1786+12])
+              Pexp_ifthenelse
+              expression (src/IO.ml[36,1586+5]..[36,1586+29])
+                Pexp_apply
+                expression (src/IO.ml[36,1586+5]..[36,1586+20])
+                  Pexp_ident "Sys.file_exists" (src/IO.ml[36,1586+5]..[36,1586+20])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/IO.ml[36,1586+21]..[36,1586+29])
+                      Pexp_ident "filename" (src/IO.ml[36,1586+21]..[36,1586+29])
+                ]
+              expression (src/IO.ml[37,1621+4]..[41,1773+5])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/IO.ml[37,1621+8]..[37,1621+15])
+                      Ppat_var "newname" (src/IO.ml[37,1621+8]..[37,1621+15])
+                    expression (src/IO.ml[37,1621+18]..[37,1621+47])
+                      Pexp_apply
+                      expression (src/IO.ml[37,1621+27]..[37,1621+28])
+                        Pexp_ident "^" (src/IO.ml[37,1621+27]..[37,1621+28])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/IO.ml[37,1621+18]..[37,1621+26])
+                            Pexp_ident "filename" (src/IO.ml[37,1621+18]..[37,1621+26])
+                        <arg>
+                        Nolabel
+                          expression (src/IO.ml[37,1621+29]..[37,1621+47])
+                            Pexp_constant PConst_string(".moved_by_menhir",(src/IO.ml[37,1621+30]..[37,1621+46]),None)
+                      ]
+                ]
+                expression (src/IO.ml[38,1672+4]..[41,1773+5])
+                  Pexp_sequence
+                  expression (src/IO.ml[38,1672+4]..[38,1672+31])
+                    Pexp_apply
+                    expression (src/IO.ml[38,1672+4]..[38,1672+14])
+                      Pexp_ident "Sys.rename" (src/IO.ml[38,1672+4]..[38,1672+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[38,1672+15]..[38,1672+23])
+                          Pexp_ident "filename" (src/IO.ml[38,1672+15]..[38,1672+23])
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[38,1672+24]..[38,1672+31])
+                          Pexp_ident "newname" (src/IO.ml[38,1672+24]..[38,1672+31])
+                    ]
+                  expression (src/IO.ml[39,1705+4]..[41,1773+5])
+                    Pexp_apply
+                    expression (src/IO.ml[39,1705+4]..[39,1705+15])
+                      Pexp_ident "try_finally" (src/IO.ml[39,1705+4]..[39,1705+15])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[39,1705+16]..[39,1705+22])
+                          Pexp_ident "action" (src/IO.ml[39,1705+16]..[39,1705+22])
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[39,1705+23]..[41,1773+5])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/IO.ml[39,1705+28]..[39,1705+30])
+                            Ppat_construct "()" (src/IO.ml[39,1705+28]..[39,1705+30])
+                            None
+                          expression (src/IO.ml[40,1739+6]..[40,1739+33])
+                            Pexp_apply
+                            expression (src/IO.ml[40,1739+6]..[40,1739+16])
+                              Pexp_ident "Sys.rename" (src/IO.ml[40,1739+6]..[40,1739+16])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[40,1739+17]..[40,1739+24])
+                                  Pexp_ident "newname" (src/IO.ml[40,1739+17]..[40,1739+24])
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[40,1739+25]..[40,1739+33])
+                                  Pexp_ident "filename" (src/IO.ml[40,1739+25]..[40,1739+33])
+                            ]
+                    ]
+              Some
+                expression (src/IO.ml[43,1786+4]..[43,1786+12])
+                  Pexp_apply
+                  expression (src/IO.ml[43,1786+4]..[43,1786+10])
+                    Pexp_ident "action" (src/IO.ml[43,1786+4]..[43,1786+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[43,1786+10]..[43,1786+12])
+                        Pexp_construct "()" (src/IO.ml[43,1786+10]..[43,1786+12])
+                        None
+                  ]
+    ]
+  structure_item (src/IO.ml[50,2050+0]..[52,2105+52])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[50,2050+4]..[50,2050+13])
+          Ppat_var "with_file" (src/IO.ml[50,2050+4]..[50,2050+13])
+        expression (src/IO.ml[50,2050+14]..[52,2105+52]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/IO.ml[50,2050+14]..[50,2050+22])
+            Ppat_var "filename" (src/IO.ml[50,2050+14]..[50,2050+22])
+          expression (src/IO.ml[50,2050+23]..[52,2105+52]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/IO.ml[50,2050+23]..[50,2050+31])
+              Ppat_var "creation" (src/IO.ml[50,2050+23]..[50,2050+31])
+            expression (src/IO.ml[50,2050+32]..[52,2105+52]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/IO.ml[50,2050+32]..[50,2050+38])
+                Ppat_var "action" (src/IO.ml[50,2050+32]..[50,2050+38])
+              expression (src/IO.ml[51,2091+2]..[52,2105+52])
+                Pexp_sequence
+                expression (src/IO.ml[51,2091+2]..[51,2091+12])
+                  Pexp_apply
+                  expression (src/IO.ml[51,2091+2]..[51,2091+10])
+                    Pexp_ident "creation" (src/IO.ml[51,2091+2]..[51,2091+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[51,2091+10]..[51,2091+12])
+                        Pexp_construct "()" (src/IO.ml[51,2091+10]..[51,2091+12])
+                        None
+                  ]
+                expression (src/IO.ml[52,2105+2]..[52,2105+52])
+                  Pexp_apply
+                  expression (src/IO.ml[52,2105+2]..[52,2105+13])
+                    Pexp_ident "try_finally" (src/IO.ml[52,2105+2]..[52,2105+13])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[52,2105+14]..[52,2105+20])
+                        Pexp_ident "action" (src/IO.ml[52,2105+14]..[52,2105+20])
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[52,2105+21]..[52,2105+52])
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/IO.ml[52,2105+26]..[52,2105+28])
+                          Ppat_construct "()" (src/IO.ml[52,2105+26]..[52,2105+28])
+                          None
+                        expression (src/IO.ml[52,2105+32]..[52,2105+51])
+                          Pexp_apply
+                          expression (src/IO.ml[52,2105+32]..[52,2105+42])
+                            Pexp_ident "Sys.remove" (src/IO.ml[52,2105+32]..[52,2105+42])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/IO.ml[52,2105+43]..[52,2105+51])
+                                Pexp_ident "filename" (src/IO.ml[52,2105+43]..[52,2105+51])
+                          ]
+                  ]
+    ]
+  structure_item (src/IO.ml[59,2425+0]..[60,2442+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[59,2425+4]..[59,2425+14])
+          Ppat_var "chunk_size" (src/IO.ml[59,2425+4]..[59,2425+14])
+        expression (src/IO.ml[60,2442+2]..[60,2442+7])
+          Pexp_constant PConst_int (16384,None)
+    ]
+  structure_item (src/IO.ml[62,2451+0]..[74,2772+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[62,2451+4]..[62,2451+11])
+          Ppat_var "exhaust" (src/IO.ml[62,2451+4]..[62,2451+11])
+        expression (src/IO.ml[62,2451+12]..[74,2772+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/IO.ml[62,2451+12]..[62,2451+19])
+            Ppat_var "channel" (src/IO.ml[62,2451+12]..[62,2451+19])
+          expression (src/IO.ml[63,2473+2]..[74,2772+8])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/IO.ml[63,2473+6]..[63,2473+12])
+                  Ppat_var "buffer" (src/IO.ml[63,2473+6]..[63,2473+12])
+                expression (src/IO.ml[63,2473+15]..[63,2473+39])
+                  Pexp_apply
+                  expression (src/IO.ml[63,2473+15]..[63,2473+28])
+                    Pexp_ident "Buffer.create" (src/IO.ml[63,2473+15]..[63,2473+28])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[63,2473+29]..[63,2473+39])
+                        Pexp_ident "chunk_size" (src/IO.ml[63,2473+29]..[63,2473+39])
+                  ]
+            ]
+            expression (src/IO.ml[64,2516+2]..[74,2772+8])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/IO.ml[64,2516+6]..[64,2516+11])
+                    Ppat_var "chunk" (src/IO.ml[64,2516+6]..[64,2516+11])
+                  expression (src/IO.ml[64,2516+14]..[64,2516+37])
+                    Pexp_apply
+                    expression (src/IO.ml[64,2516+14]..[64,2516+26])
+                      Pexp_ident "Bytes.create" (src/IO.ml[64,2516+14]..[64,2516+26])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[64,2516+27]..[64,2516+37])
+                          Pexp_ident "chunk_size" (src/IO.ml[64,2516+27]..[64,2516+37])
+                    ]
+              ]
+              expression (src/IO.ml[65,2557+2]..[74,2772+8])
+                Pexp_let Rec
+                [
+                  <def>
+                    pattern (src/IO.ml[65,2557+10]..[65,2557+14])
+                      Ppat_var "loop" (src/IO.ml[65,2557+10]..[65,2557+14])
+                    expression (src/IO.ml[65,2557+15]..[72,2759+7]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/IO.ml[65,2557+15]..[65,2557+17])
+                        Ppat_construct "()" (src/IO.ml[65,2557+15]..[65,2557+17])
+                        None
+                      expression (src/IO.ml[66,2577+4]..[72,2759+7])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/IO.ml[66,2577+8]..[66,2577+14])
+                              Ppat_var "length" (src/IO.ml[66,2577+8]..[66,2577+14])
+                            expression (src/IO.ml[66,2577+17]..[66,2577+49])
+                              Pexp_apply
+                              expression (src/IO.ml[66,2577+17]..[66,2577+22])
+                                Pexp_ident "input" (src/IO.ml[66,2577+17]..[66,2577+22])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/IO.ml[66,2577+23]..[66,2577+30])
+                                    Pexp_ident "channel" (src/IO.ml[66,2577+23]..[66,2577+30])
+                                <arg>
+                                Nolabel
+                                  expression (src/IO.ml[66,2577+31]..[66,2577+36])
+                                    Pexp_ident "chunk" (src/IO.ml[66,2577+31]..[66,2577+36])
+                                <arg>
+                                Nolabel
+                                  expression (src/IO.ml[66,2577+37]..[66,2577+38])
+                                    Pexp_constant PConst_int (0,None)
+                                <arg>
+                                Nolabel
+                                  expression (src/IO.ml[66,2577+39]..[66,2577+49])
+                                    Pexp_ident "chunk_size" (src/IO.ml[66,2577+39]..[66,2577+49])
+                              ]
+                        ]
+                        expression (src/IO.ml[67,2630+4]..[72,2759+7])
+                          Pexp_ifthenelse
+                          expression (src/IO.ml[67,2630+7]..[67,2630+17])
+                            Pexp_apply
+                            expression (src/IO.ml[67,2630+14]..[67,2630+15])
+                              Pexp_ident "=" (src/IO.ml[67,2630+14]..[67,2630+15])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[67,2630+7]..[67,2630+13])
+                                  Pexp_ident "length" (src/IO.ml[67,2630+7]..[67,2630+13])
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[67,2630+16]..[67,2630+17])
+                                  Pexp_constant PConst_int (0,None)
+                            ]
+                          expression (src/IO.ml[68,2653+6]..[68,2653+28])
+                            Pexp_apply
+                            expression (src/IO.ml[68,2653+6]..[68,2653+21])
+                              Pexp_ident "Buffer.contents" (src/IO.ml[68,2653+6]..[68,2653+21])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/IO.ml[68,2653+22]..[68,2653+28])
+                                  Pexp_ident "buffer" (src/IO.ml[68,2653+22]..[68,2653+28])
+                            ]
+                          Some
+                            expression (src/IO.ml[69,2682+9]..[72,2759+7])
+                              Pexp_sequence
+                              expression (src/IO.ml[70,2697+6]..[70,2697+47])
+                                Pexp_apply
+                                expression (src/IO.ml[70,2697+6]..[70,2697+25])
+                                  Pexp_ident "Buffer.add_subbytes" (src/IO.ml[70,2697+6]..[70,2697+25])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/IO.ml[70,2697+26]..[70,2697+32])
+                                      Pexp_ident "buffer" (src/IO.ml[70,2697+26]..[70,2697+32])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/IO.ml[70,2697+33]..[70,2697+38])
+                                      Pexp_ident "chunk" (src/IO.ml[70,2697+33]..[70,2697+38])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/IO.ml[70,2697+39]..[70,2697+40])
+                                      Pexp_constant PConst_int (0,None)
+                                  <arg>
+                                  Nolabel
+                                    expression (src/IO.ml[70,2697+41]..[70,2697+47])
+                                      Pexp_ident "length" (src/IO.ml[70,2697+41]..[70,2697+47])
+                                ]
+                              expression (src/IO.ml[71,2746+6]..[71,2746+12])
+                                Pexp_apply
+                                expression (src/IO.ml[71,2746+6]..[71,2746+10])
+                                  Pexp_ident "loop" (src/IO.ml[71,2746+6]..[71,2746+10])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/IO.ml[71,2746+10]..[71,2746+12])
+                                      Pexp_construct "()" (src/IO.ml[71,2746+10]..[71,2746+12])
+                                      None
+                                ]
+                ]
+                expression (src/IO.ml[74,2772+2]..[74,2772+8])
+                  Pexp_apply
+                  expression (src/IO.ml[74,2772+2]..[74,2772+6])
+                    Pexp_ident "loop" (src/IO.ml[74,2772+2]..[74,2772+6])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[74,2772+6]..[74,2772+8])
+                        Pexp_construct "()" (src/IO.ml[74,2772+6]..[74,2772+8])
+                        None
+                  ]
+    ]
+  structure_item (src/IO.ml[81,3034+0]..[91,3390+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[81,3034+4]..[81,3034+10])
+          Ppat_var "invoke" (src/IO.ml[81,3034+4]..[81,3034+10])
+        expression (src/IO.ml[81,3034+11]..[91,3390+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/IO.ml[81,3034+11]..[81,3034+18])
+            Ppat_var "command" (src/IO.ml[81,3034+11]..[81,3034+18])
+          expression (src/IO.ml[82,3055+2]..[91,3390+10])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/IO.ml[82,3055+6]..[82,3055+8])
+                  Ppat_var "ic" (src/IO.ml[82,3055+6]..[82,3055+8])
+                expression (src/IO.ml[82,3055+11]..[82,3055+39])
+                  Pexp_apply
+                  expression (src/IO.ml[82,3055+11]..[82,3055+31])
+                    Pexp_ident "Unix.open_process_in" (src/IO.ml[82,3055+11]..[82,3055+31])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[82,3055+32]..[82,3055+39])
+                        Pexp_ident "command" (src/IO.ml[82,3055+32]..[82,3055+39])
+                  ]
+            ]
+            expression (src/IO.ml[85,3243+2]..[91,3390+10])
+              Pexp_sequence
+              expression (src/IO.ml[85,3243+2]..[85,3243+29])
+                Pexp_apply
+                expression (src/IO.ml[85,3243+2]..[85,3243+20])
+                  Pexp_ident "set_binary_mode_in" (src/IO.ml[85,3243+2]..[85,3243+20])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/IO.ml[85,3243+21]..[85,3243+23])
+                      Pexp_ident "ic" (src/IO.ml[85,3243+21]..[85,3243+23])
+                  <arg>
+                  Nolabel
+                    expression (src/IO.ml[85,3243+24]..[85,3243+29])
+                      Pexp_construct "false" (src/IO.ml[85,3243+24]..[85,3243+29])
+                      None
+                ]
+              expression (src/IO.ml[86,3274+2]..[91,3390+10])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/IO.ml[86,3274+6]..[86,3274+12])
+                      Ppat_var "result" (src/IO.ml[86,3274+6]..[86,3274+12])
+                    expression (src/IO.ml[86,3274+15]..[86,3274+25])
+                      Pexp_apply
+                      expression (src/IO.ml[86,3274+15]..[86,3274+22])
+                        Pexp_ident "exhaust" (src/IO.ml[86,3274+15]..[86,3274+22])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/IO.ml[86,3274+23]..[86,3274+25])
+                            Pexp_ident "ic" (src/IO.ml[86,3274+23]..[86,3274+25])
+                      ]
+                ]
+                expression (src/IO.ml[87,3303+2]..[91,3390+10])
+                  Pexp_match
+                  expression (src/IO.ml[87,3303+8]..[87,3303+32])
+                    Pexp_apply
+                    expression (src/IO.ml[87,3303+8]..[87,3303+29])
+                      Pexp_ident "Unix.close_process_in" (src/IO.ml[87,3303+8]..[87,3303+29])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[87,3303+30]..[87,3303+32])
+                          Pexp_ident "ic" (src/IO.ml[87,3303+30]..[87,3303+32])
+                    ]
+                  [
+                    <case>
+                      pattern (src/IO.ml[88,3341+4]..[88,3341+18])
+                        Ppat_construct "Unix.WEXITED" (src/IO.ml[88,3341+4]..[88,3341+16])
+                        Some
+                          []
+                          pattern (src/IO.ml[88,3341+17]..[88,3341+18])
+                            Ppat_constant PConst_int (0,None)
+                      expression (src/IO.ml[89,3363+6]..[89,3363+17])
+                        Pexp_construct "Some" (src/IO.ml[89,3363+6]..[89,3363+10])
+                        Some
+                          expression (src/IO.ml[89,3363+11]..[89,3363+17])
+                            Pexp_ident "result" (src/IO.ml[89,3363+11]..[89,3363+17])
+                    <case>
+                      pattern (src/IO.ml[90,3381+4]..[90,3381+5])
+                        Ppat_any
+                      expression (src/IO.ml[91,3390+6]..[91,3390+10])
+                        Pexp_construct "None" (src/IO.ml[91,3390+6]..[91,3390+10])
+                        None
+                  ]
+    ]
+  structure_item (src/IO.ml[97,3596+0]..[117,4536+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[97,3596+4]..[97,3596+19])
+          Ppat_var "read_whole_file" (src/IO.ml[97,3596+4]..[97,3596+19])
+        expression (src/IO.ml[97,3596+20]..[117,4536+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/IO.ml[97,3596+20]..[97,3596+28])
+            Ppat_var "filename" (src/IO.ml[97,3596+20]..[97,3596+28])
+          expression (src/IO.ml[103,3835+2]..[117,4536+3])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/IO.ml[103,3835+6]..[103,3835+13])
+                  Ppat_var "channel" (src/IO.ml[103,3835+6]..[103,3835+13])
+                expression (src/IO.ml[103,3835+16]..[103,3835+32])
+                  Pexp_apply
+                  expression (src/IO.ml[103,3835+16]..[103,3835+23])
+                    Pexp_ident "open_in" (src/IO.ml[103,3835+16]..[103,3835+23])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[103,3835+24]..[103,3835+32])
+                        Pexp_ident "filename" (src/IO.ml[103,3835+24]..[103,3835+32])
+                  ]
+            ]
+            expression (src/IO.ml[115,4487+2]..[117,4536+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/IO.ml[115,4487+6]..[115,4487+7])
+                    Ppat_var "s" (src/IO.ml[115,4487+6]..[115,4487+7])
+                  expression (src/IO.ml[115,4487+10]..[115,4487+25])
+                    Pexp_apply
+                    expression (src/IO.ml[115,4487+10]..[115,4487+17])
+                      Pexp_ident "exhaust" (src/IO.ml[115,4487+10]..[115,4487+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/IO.ml[115,4487+18]..[115,4487+25])
+                          Pexp_ident "channel" (src/IO.ml[115,4487+18]..[115,4487+25])
+                    ]
+              ]
+              expression (src/IO.ml[116,4516+2]..[117,4536+3])
+                Pexp_sequence
+                expression (src/IO.ml[116,4516+2]..[116,4516+18])
+                  Pexp_apply
+                  expression (src/IO.ml[116,4516+2]..[116,4516+10])
+                    Pexp_ident "close_in" (src/IO.ml[116,4516+2]..[116,4516+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/IO.ml[116,4516+11]..[116,4516+18])
+                        Pexp_ident "channel" (src/IO.ml[116,4516+11]..[116,4516+18])
+                  ]
+                expression (src/IO.ml[117,4536+2]..[117,4536+3])
+                  Pexp_ident "s" (src/IO.ml[117,4536+2]..[117,4536+3])
+    ]
+]
+
+let try_finally action handler =
+  let result = try action () with | e -> (handler (); raise e) in
+  handler (); result
+let moving_away filename action =
+  if Sys.file_exists filename
+  then
+    let newname = filename ^ ".moved_by_menhir" in
+    (Sys.rename filename newname;
+     try_finally action (fun () -> Sys.rename newname filename))
+  else action ()
+let with_file filename creation action =
+  creation (); try_finally action (fun () -> Sys.remove filename)
+let chunk_size = 16384
+let exhaust channel =
+  let buffer = Buffer.create chunk_size in
+  let chunk = Bytes.create chunk_size in
+  let rec loop () =
+    let length = input channel chunk 0 chunk_size in
+    if length = 0
+    then Buffer.contents buffer
+    else (Buffer.add_subbytes buffer chunk 0 length; loop ()) in
+  loop ()
+let invoke command =
+  let ic = Unix.open_process_in command in
+  set_binary_mode_in ic false;
+  (let result = exhaust ic in
+   match Unix.close_process_in ic with
+   | Unix.WEXITED 0 -> Some result
+   | _ -> None)
+let read_whole_file filename =
+  let channel = open_in filename in
+  let s = exhaust channel in close_in channel; s
+[
+  structure_item (src/IO.ml[19,1159+0]..src/IO.ml[28,1293+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[19,1159+4]..src/IO.ml[19,1159+15])
+          Tpat_var "try_finally/397"
+        expression (src/IO.ml[19,1159+16]..src/IO.ml[28,1293+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/IO.ml[19,1159+16]..src/IO.ml[19,1159+22])
+                Tpat_var "action/399"
+              expression (src/IO.ml[19,1159+23]..src/IO.ml[28,1293+8]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/IO.ml[19,1159+23]..src/IO.ml[19,1159+30])
+                      Tpat_var "handler/400"
+                    expression (src/IO.ml[20,1192+2]..src/IO.ml[28,1293+8])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/IO.ml[20,1192+6]..src/IO.ml[20,1192+12])
+                            Tpat_var "result/401"
+                          expression (src/IO.ml[21,1207+4]..src/IO.ml[25,1261+13])
+                            Texp_try
+                            expression (src/IO.ml[22,1215+6]..src/IO.ml[22,1215+14])
+                              Texp_apply
+                              expression (src/IO.ml[22,1215+6]..src/IO.ml[22,1215+12])
+                                Texp_ident "action/399"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/IO.ml[22,1215+12]..src/IO.ml[22,1215+14])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                            [
+                              <case>
+                                pattern (src/IO.ml[23,1230+9]..src/IO.ml[23,1230+10])
+                                  Tpat_var "e/402"
+                                expression (src/IO.ml[24,1244+6]..src/IO.ml[25,1261+13])
+                                  Texp_sequence
+                                  expression (src/IO.ml[24,1244+6]..src/IO.ml[24,1244+15])
+                                    Texp_apply
+                                    expression (src/IO.ml[24,1244+6]..src/IO.ml[24,1244+13])
+                                      Texp_ident "handler/400"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/IO.ml[24,1244+13]..src/IO.ml[24,1244+15])
+                                          Texp_construct "()"
+                                          []
+                                    ]
+                                  expression (src/IO.ml[25,1261+6]..src/IO.ml[25,1261+13])
+                                    Texp_apply
+                                    expression (src/IO.ml[25,1261+6]..src/IO.ml[25,1261+11])
+                                      Texp_ident "Stdlib!.raise"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/IO.ml[25,1261+12]..src/IO.ml[25,1261+13])
+                                          Texp_ident "e/402"
+                                    ]
+                            ]
+                      ]
+                      expression (src/IO.ml[27,1280+2]..src/IO.ml[28,1293+8])
+                        Texp_sequence
+                        expression (src/IO.ml[27,1280+2]..src/IO.ml[27,1280+11])
+                          Texp_apply
+                          expression (src/IO.ml[27,1280+2]..src/IO.ml[27,1280+9])
+                            Texp_ident "handler/400"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/IO.ml[27,1280+9]..src/IO.ml[27,1280+11])
+                                Texp_construct "()"
+                                []
+                          ]
+                        expression (src/IO.ml[28,1293+2]..src/IO.ml[28,1293+8])
+                          Texp_ident "result/401"
+                ]
+          ]
+    ]
+  structure_item (src/IO.ml[35,1552+0]..src/IO.ml[43,1786+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[35,1552+4]..src/IO.ml[35,1552+15])
+          Tpat_var "moving_away/403"
+        expression (src/IO.ml[35,1552+16]..src/IO.ml[43,1786+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/IO.ml[35,1552+16]..src/IO.ml[35,1552+24])
+                Tpat_var "filename/405"
+              expression (src/IO.ml[35,1552+25]..src/IO.ml[43,1786+12]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/IO.ml[35,1552+25]..src/IO.ml[35,1552+31])
+                      Tpat_var "action/406"
+                    expression (src/IO.ml[36,1586+2]..src/IO.ml[43,1786+12])
+                      Texp_ifthenelse
+                      expression (src/IO.ml[36,1586+5]..src/IO.ml[36,1586+29])
+                        Texp_apply
+                        expression (src/IO.ml[36,1586+5]..src/IO.ml[36,1586+20])
+                          Texp_ident "Stdlib!.Sys.file_exists"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/IO.ml[36,1586+21]..src/IO.ml[36,1586+29])
+                              Texp_ident "filename/405"
+                        ]
+                      expression (src/IO.ml[37,1621+4]..src/IO.ml[41,1773+5])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/IO.ml[37,1621+8]..src/IO.ml[37,1621+15])
+                              Tpat_var "newname/481"
+                            expression (src/IO.ml[37,1621+18]..src/IO.ml[37,1621+47])
+                              Texp_apply
+                              expression (src/IO.ml[37,1621+27]..src/IO.ml[37,1621+28])
+                                Texp_ident "Stdlib!.^"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/IO.ml[37,1621+18]..src/IO.ml[37,1621+26])
+                                    Texp_ident "filename/405"
+                                <arg>
+                                  Nolabel
+                                  expression (src/IO.ml[37,1621+29]..src/IO.ml[37,1621+47])
+                                    Texp_constant Const_string(".moved_by_menhir",(src/IO.ml[37,1621+30]..src/IO.ml[37,1621+46]),None)
+                              ]
+                        ]
+                        expression (src/IO.ml[38,1672+4]..src/IO.ml[41,1773+5])
+                          Texp_sequence
+                          expression (src/IO.ml[38,1672+4]..src/IO.ml[38,1672+31])
+                            Texp_apply
+                            expression (src/IO.ml[38,1672+4]..src/IO.ml[38,1672+14])
+                              Texp_ident "Stdlib!.Sys.rename"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/IO.ml[38,1672+15]..src/IO.ml[38,1672+23])
+                                  Texp_ident "filename/405"
+                              <arg>
+                                Nolabel
+                                expression (src/IO.ml[38,1672+24]..src/IO.ml[38,1672+31])
+                                  Texp_ident "newname/481"
+                            ]
+                          expression (src/IO.ml[39,1705+4]..src/IO.ml[41,1773+5])
+                            Texp_apply
+                            expression (src/IO.ml[39,1705+4]..src/IO.ml[39,1705+15])
+                              Texp_ident "try_finally/397"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/IO.ml[39,1705+16]..src/IO.ml[39,1705+22])
+                                  Texp_ident "action/406"
+                              <arg>
+                                Nolabel
+                                expression (src/IO.ml[39,1705+23]..src/IO.ml[41,1773+5])
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/IO.ml[39,1705+28]..src/IO.ml[39,1705+30])
+                                        Tpat_construct "()"
+                                        []
+                                        None
+                                      expression (src/IO.ml[40,1739+6]..src/IO.ml[40,1739+33])
+                                        Texp_apply
+                                        expression (src/IO.ml[40,1739+6]..src/IO.ml[40,1739+16])
+                                          Texp_ident "Stdlib!.Sys.rename"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[40,1739+17]..src/IO.ml[40,1739+24])
+                                              Texp_ident "newname/481"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[40,1739+25]..src/IO.ml[40,1739+33])
+                                              Texp_ident "filename/405"
+                                        ]
+                                  ]
+                            ]
+                      Some
+                        expression (src/IO.ml[43,1786+4]..src/IO.ml[43,1786+12])
+                          Texp_apply
+                          expression (src/IO.ml[43,1786+4]..src/IO.ml[43,1786+10])
+                            Texp_ident "action/406"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/IO.ml[43,1786+10]..src/IO.ml[43,1786+12])
+                                Texp_construct "()"
+                                []
+                          ]
+                ]
+          ]
+    ]
+  structure_item (src/IO.ml[50,2050+0]..src/IO.ml[52,2105+52])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[50,2050+4]..src/IO.ml[50,2050+13])
+          Tpat_var "with_file/483"
+        expression (src/IO.ml[50,2050+14]..src/IO.ml[52,2105+52]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/IO.ml[50,2050+14]..src/IO.ml[50,2050+22])
+                Tpat_var "filename/485"
+              expression (src/IO.ml[50,2050+23]..src/IO.ml[52,2105+52]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/IO.ml[50,2050+23]..src/IO.ml[50,2050+31])
+                      Tpat_var "creation/486"
+                    expression (src/IO.ml[50,2050+32]..src/IO.ml[52,2105+52]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/IO.ml[50,2050+32]..src/IO.ml[50,2050+38])
+                            Tpat_var "action/487"
+                          expression (src/IO.ml[51,2091+2]..src/IO.ml[52,2105+52])
+                            Texp_sequence
+                            expression (src/IO.ml[51,2091+2]..src/IO.ml[51,2091+12])
+                              Texp_apply
+                              expression (src/IO.ml[51,2091+2]..src/IO.ml[51,2091+10])
+                                Texp_ident "creation/486"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/IO.ml[51,2091+10]..src/IO.ml[51,2091+12])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                            expression (src/IO.ml[52,2105+2]..src/IO.ml[52,2105+52])
+                              Texp_apply
+                              expression (src/IO.ml[52,2105+2]..src/IO.ml[52,2105+13])
+                                Texp_ident "try_finally/397"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/IO.ml[52,2105+14]..src/IO.ml[52,2105+20])
+                                    Texp_ident "action/487"
+                                <arg>
+                                  Nolabel
+                                  expression (src/IO.ml[52,2105+21]..src/IO.ml[52,2105+52])
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/IO.ml[52,2105+26]..src/IO.ml[52,2105+28])
+                                          Tpat_construct "()"
+                                          []
+                                          None
+                                        expression (src/IO.ml[52,2105+32]..src/IO.ml[52,2105+51])
+                                          Texp_apply
+                                          expression (src/IO.ml[52,2105+32]..src/IO.ml[52,2105+42])
+                                            Texp_ident "Stdlib!.Sys.remove"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/IO.ml[52,2105+43]..src/IO.ml[52,2105+51])
+                                                Texp_ident "filename/485"
+                                          ]
+                                    ]
+                              ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/IO.ml[59,2425+0]..src/IO.ml[60,2442+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[59,2425+4]..src/IO.ml[59,2425+14])
+          Tpat_var "chunk_size/489"
+        expression (src/IO.ml[60,2442+2]..src/IO.ml[60,2442+7])
+          Texp_constant Const_int 16384
+    ]
+  structure_item (src/IO.ml[62,2451+0]..src/IO.ml[74,2772+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[62,2451+4]..src/IO.ml[62,2451+11])
+          Tpat_var "exhaust/490"
+        expression (src/IO.ml[62,2451+12]..src/IO.ml[74,2772+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/IO.ml[62,2451+12]..src/IO.ml[62,2451+19])
+                Tpat_var "channel/492"
+              expression (src/IO.ml[63,2473+2]..src/IO.ml[74,2772+8])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/IO.ml[63,2473+6]..src/IO.ml[63,2473+12])
+                      Tpat_var "buffer/493"
+                    expression (src/IO.ml[63,2473+15]..src/IO.ml[63,2473+39])
+                      Texp_apply
+                      expression (src/IO.ml[63,2473+15]..src/IO.ml[63,2473+28])
+                        Texp_ident "Stdlib!.Buffer.create"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/IO.ml[63,2473+29]..src/IO.ml[63,2473+39])
+                            Texp_ident "chunk_size/489"
+                      ]
+                ]
+                expression (src/IO.ml[64,2516+2]..src/IO.ml[74,2772+8])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/IO.ml[64,2516+6]..src/IO.ml[64,2516+11])
+                        Tpat_var "chunk/576"
+                      expression (src/IO.ml[64,2516+14]..src/IO.ml[64,2516+37])
+                        Texp_apply
+                        expression (src/IO.ml[64,2516+14]..src/IO.ml[64,2516+26])
+                          Texp_ident "Stdlib!.Bytes.create"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/IO.ml[64,2516+27]..src/IO.ml[64,2516+37])
+                              Texp_ident "chunk_size/489"
+                        ]
+                  ]
+                  expression (src/IO.ml[65,2557+2]..src/IO.ml[74,2772+8])
+                    Texp_let Rec
+                    [
+                      <def>
+                        pattern (src/IO.ml[65,2557+10]..src/IO.ml[65,2557+14])
+                          Tpat_var "loop/674"
+                        expression (src/IO.ml[65,2557+15]..src/IO.ml[72,2759+7]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (src/IO.ml[65,2557+15]..src/IO.ml[65,2557+17])
+                                Tpat_construct "()"
+                                []
+                                None
+                              expression (src/IO.ml[66,2577+4]..src/IO.ml[72,2759+7])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/IO.ml[66,2577+8]..src/IO.ml[66,2577+14])
+                                      Tpat_var "length/675"
+                                    expression (src/IO.ml[66,2577+17]..src/IO.ml[66,2577+49])
+                                      Texp_apply
+                                      expression (src/IO.ml[66,2577+17]..src/IO.ml[66,2577+22])
+                                        Texp_ident "Stdlib!.input"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/IO.ml[66,2577+23]..src/IO.ml[66,2577+30])
+                                            Texp_ident "channel/492"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/IO.ml[66,2577+31]..src/IO.ml[66,2577+36])
+                                            Texp_ident "chunk/576"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/IO.ml[66,2577+37]..src/IO.ml[66,2577+38])
+                                            Texp_constant Const_int 0
+                                        <arg>
+                                          Nolabel
+                                          expression (src/IO.ml[66,2577+39]..src/IO.ml[66,2577+49])
+                                            Texp_ident "chunk_size/489"
+                                      ]
+                                ]
+                                expression (src/IO.ml[67,2630+4]..src/IO.ml[72,2759+7])
+                                  Texp_ifthenelse
+                                  expression (src/IO.ml[67,2630+7]..src/IO.ml[67,2630+17])
+                                    Texp_apply
+                                    expression (src/IO.ml[67,2630+14]..src/IO.ml[67,2630+15])
+                                      Texp_ident "Stdlib!.="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/IO.ml[67,2630+7]..src/IO.ml[67,2630+13])
+                                          Texp_ident "length/675"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/IO.ml[67,2630+16]..src/IO.ml[67,2630+17])
+                                          Texp_constant Const_int 0
+                                    ]
+                                  expression (src/IO.ml[68,2653+6]..src/IO.ml[68,2653+28])
+                                    Texp_apply
+                                    expression (src/IO.ml[68,2653+6]..src/IO.ml[68,2653+21])
+                                      Texp_ident "Stdlib!.Buffer.contents"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/IO.ml[68,2653+22]..src/IO.ml[68,2653+28])
+                                          Texp_ident "buffer/493"
+                                    ]
+                                  Some
+                                    expression (src/IO.ml[69,2682+9]..src/IO.ml[72,2759+7])
+                                      Texp_sequence
+                                      expression (src/IO.ml[70,2697+6]..src/IO.ml[70,2697+47])
+                                        Texp_apply
+                                        expression (src/IO.ml[70,2697+6]..src/IO.ml[70,2697+25])
+                                          Texp_ident "Stdlib!.Buffer.add_subbytes"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[70,2697+26]..src/IO.ml[70,2697+32])
+                                              Texp_ident "buffer/493"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[70,2697+33]..src/IO.ml[70,2697+38])
+                                              Texp_ident "chunk/576"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[70,2697+39]..src/IO.ml[70,2697+40])
+                                              Texp_constant Const_int 0
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[70,2697+41]..src/IO.ml[70,2697+47])
+                                              Texp_ident "length/675"
+                                        ]
+                                      expression (src/IO.ml[71,2746+6]..src/IO.ml[71,2746+12])
+                                        Texp_apply
+                                        expression (src/IO.ml[71,2746+6]..src/IO.ml[71,2746+10])
+                                          Texp_ident "loop/674"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/IO.ml[71,2746+10]..src/IO.ml[71,2746+12])
+                                              Texp_construct "()"
+                                              []
+                                        ]
+                          ]
+                    ]
+                    expression (src/IO.ml[74,2772+2]..src/IO.ml[74,2772+8])
+                      Texp_apply
+                      expression (src/IO.ml[74,2772+2]..src/IO.ml[74,2772+6])
+                        Texp_ident "loop/674"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/IO.ml[74,2772+6]..src/IO.ml[74,2772+8])
+                            Texp_construct "()"
+                            []
+                      ]
+          ]
+    ]
+  structure_item (src/IO.ml[81,3034+0]..src/IO.ml[91,3390+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[81,3034+4]..src/IO.ml[81,3034+10])
+          Tpat_var "invoke/677"
+        expression (src/IO.ml[81,3034+11]..src/IO.ml[91,3390+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/IO.ml[81,3034+11]..src/IO.ml[81,3034+18])
+                Tpat_var "command/679"
+              expression (src/IO.ml[82,3055+2]..src/IO.ml[91,3390+10])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/IO.ml[82,3055+6]..src/IO.ml[82,3055+8])
+                      Tpat_var "ic/680"
+                    expression (src/IO.ml[82,3055+11]..src/IO.ml[82,3055+39])
+                      Texp_apply
+                      expression (src/IO.ml[82,3055+11]..src/IO.ml[82,3055+31])
+                        Texp_ident "Unix!.open_process_in"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/IO.ml[82,3055+32]..src/IO.ml[82,3055+39])
+                            Texp_ident "command/679"
+                      ]
+                ]
+                expression (src/IO.ml[85,3243+2]..src/IO.ml[91,3390+10])
+                  Texp_sequence
+                  expression (src/IO.ml[85,3243+2]..src/IO.ml[85,3243+29])
+                    Texp_apply
+                    expression (src/IO.ml[85,3243+2]..src/IO.ml[85,3243+20])
+                      Texp_ident "Stdlib!.set_binary_mode_in"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/IO.ml[85,3243+21]..src/IO.ml[85,3243+23])
+                          Texp_ident "ic/680"
+                      <arg>
+                        Nolabel
+                        expression (src/IO.ml[85,3243+24]..src/IO.ml[85,3243+29])
+                          Texp_construct "false"
+                          []
+                    ]
+                  expression (src/IO.ml[86,3274+2]..src/IO.ml[91,3390+10])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/IO.ml[86,3274+6]..src/IO.ml[86,3274+12])
+                          Tpat_var "result/897"
+                        expression (src/IO.ml[86,3274+15]..src/IO.ml[86,3274+25])
+                          Texp_apply
+                          expression (src/IO.ml[86,3274+15]..src/IO.ml[86,3274+22])
+                            Texp_ident "exhaust/490"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/IO.ml[86,3274+23]..src/IO.ml[86,3274+25])
+                                Texp_ident "ic/680"
+                          ]
+                    ]
+                    expression (src/IO.ml[87,3303+2]..src/IO.ml[91,3390+10])
+                      Texp_match
+                      expression (src/IO.ml[87,3303+8]..src/IO.ml[87,3303+32])
+                        Texp_apply
+                        expression (src/IO.ml[87,3303+8]..src/IO.ml[87,3303+29])
+                          Texp_ident "Unix!.close_process_in"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/IO.ml[87,3303+30]..src/IO.ml[87,3303+32])
+                              Texp_ident "ic/680"
+                        ]
+                      [
+                        <case>
+                          pattern (src/IO.ml[88,3341+4]..src/IO.ml[88,3341+18])
+                            Tpat_value
+                            pattern (src/IO.ml[88,3341+4]..src/IO.ml[88,3341+18])
+                              Tpat_construct "Unix.WEXITED"
+                              [
+                                pattern (src/IO.ml[88,3341+17]..src/IO.ml[88,3341+18])
+                                  Tpat_constant Const_int 0
+                              ]
+                              None
+                          expression (src/IO.ml[89,3363+6]..src/IO.ml[89,3363+17])
+                            Texp_construct "Some"
+                            [
+                              expression (src/IO.ml[89,3363+11]..src/IO.ml[89,3363+17])
+                                Texp_ident "result/897"
+                            ]
+                        <case>
+                          pattern (src/IO.ml[90,3381+4]..src/IO.ml[90,3381+5])
+                            Tpat_value
+                            pattern (src/IO.ml[90,3381+4]..src/IO.ml[90,3381+5])
+                              Tpat_any
+                          expression (src/IO.ml[91,3390+6]..src/IO.ml[91,3390+10])
+                            Texp_construct "None"
+                            []
+                      ]
+          ]
+    ]
+  structure_item (src/IO.ml[97,3596+0]..src/IO.ml[117,4536+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/IO.ml[97,3596+4]..src/IO.ml[97,3596+19])
+          Tpat_var "read_whole_file/898"
+        expression (src/IO.ml[97,3596+20]..src/IO.ml[117,4536+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/IO.ml[97,3596+20]..src/IO.ml[97,3596+28])
+                Tpat_var "filename/900"
+              expression (src/IO.ml[103,3835+2]..src/IO.ml[117,4536+3])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/IO.ml[103,3835+6]..src/IO.ml[103,3835+13])
+                      Tpat_var "channel/901"
+                    expression (src/IO.ml[103,3835+16]..src/IO.ml[103,3835+32])
+                      Texp_apply
+                      expression (src/IO.ml[103,3835+16]..src/IO.ml[103,3835+23])
+                        Texp_ident "Stdlib!.open_in"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/IO.ml[103,3835+24]..src/IO.ml[103,3835+32])
+                            Texp_ident "filename/900"
+                      ]
+                ]
+                expression (src/IO.ml[115,4487+2]..src/IO.ml[117,4536+3])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/IO.ml[115,4487+6]..src/IO.ml[115,4487+7])
+                        Tpat_var "s/902"
+                      expression (src/IO.ml[115,4487+10]..src/IO.ml[115,4487+25])
+                        Texp_apply
+                        expression (src/IO.ml[115,4487+10]..src/IO.ml[115,4487+17])
+                          Texp_ident "exhaust/490"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/IO.ml[115,4487+18]..src/IO.ml[115,4487+25])
+                              Texp_ident "channel/901"
+                        ]
+                  ]
+                  expression (src/IO.ml[116,4516+2]..src/IO.ml[117,4536+3])
+                    Texp_sequence
+                    expression (src/IO.ml[116,4516+2]..src/IO.ml[116,4516+18])
+                      Texp_apply
+                      expression (src/IO.ml[116,4516+2]..src/IO.ml[116,4516+10])
+                        Texp_ident "Stdlib!.close_in"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/IO.ml[116,4516+11]..src/IO.ml[116,4516+18])
+                            Texp_ident "channel/901"
+                      ]
+                    expression (src/IO.ml[117,4536+2]..src/IO.ml[117,4536+3])
+                      Texp_ident "s/902"
+          ]
+    ]
+]
+
+{<Dune__exe__IO>
+ "exhaust"[value] -> <Dune__exe__IO.14>;
+ "invoke"[value] -> <Dune__exe__IO.20>;
+ "moving_away"[value] -> <Dune__exe__IO.5>;
+ "read_whole_file"[value] -> <Dune__exe__IO.24>;
+ "try_finally"[value] -> <Dune__exe__IO.0>;
+ "with_file"[value] -> <Dune__exe__IO.9>;
+ }
+
+(seq
+  (let
+    (try_finally/397 =
+       (function action/399 handler/400
+         (let
+           (result/401 =
+              (try (apply action/399 0) with e/402
+                (seq (apply handler/400 0) (reraise e/402))))
+           (seq (apply handler/400 0) result/401))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__IO!) try_finally/397))
+  (let
+    (moving_away/403 =
+       (function filename/405 action/406
+         (if (caml_sys_file_exists filename/405)
+           (let
+             (newname/481 =
+                (apply (field_imm 27 (global Stdlib!)) filename/405
+                  ".moved_by_menhir"))
+             (seq (caml_sys_rename filename/405 newname/481)
+               (apply (field_imm 0 (global Dune__exe__IO!)) action/406
+                 (function param/482[int] : int
+                   (caml_sys_rename newname/481 filename/405)))))
+           (apply action/406 0))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__IO!) moving_away/403))
+  (let
+    (with_file/483 =
+       (function filename/485 creation/486 action/487
+         (seq (apply creation/486 0)
+           (apply (field_imm 0 (global Dune__exe__IO!)) action/487
+             (function param/488[int] : int (caml_sys_remove filename/485))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__IO!) with_file/483))
+  (let (chunk_size/489 =[int] 16384)
+    (setfield_ptr(root-init) 6 (global Dune__exe__IO!) chunk_size/489))
+  (let
+    (exhaust/490 =
+       (function channel/492
+         (let
+           (buffer/493 =
+              (apply (field_imm 0 (global Stdlib__Buffer!))
+                (field_imm 6 (global Dune__exe__IO!)))
+            chunk/576 =
+              (caml_create_bytes (field_imm 6 (global Dune__exe__IO!))))
+           (letrec
+             (loop/674
+                (function param/676[int]
+                  (let
+                    (length/675 =[int]
+                       (apply (field_imm 83 (global Stdlib!)) channel/492
+                         chunk/576 0 (field_imm 6 (global Dune__exe__IO!))))
+                    (if (== length/675 0)
+                      (apply (field_imm 1 (global Stdlib__Buffer!))
+                        buffer/493)
+                      (seq
+                        (apply (field_imm 18 (global Stdlib__Buffer!))
+                          buffer/493 chunk/576 0 length/675)
+                        (apply loop/674 0))))))
+             (apply loop/674 0)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__IO!) exhaust/490))
+  (let
+    (invoke/677 =
+       (function command/679
+         (let (ic/680 = (apply (field_imm 73 (global Unix!)) command/679))
+           (seq (apply (field_imm 94 (global Stdlib!)) ic/680 0)
+             (let
+               (result/897 =
+                  (apply (field_imm 3 (global Dune__exe__IO!)) ic/680)
+                *match*/1427 = (apply (field_imm 85 (global Unix!)) ic/680))
+               (catch
+                 (switch* *match*/1427
+                  case tag 0:
+                   (let (*match*/1428 =a (field_imm 0 *match*/1427))
+                     (if (!= *match*/1428 0) (exit 2)
+                       (makeblock 0 result/897)))
+                  case tag 1: (exit 2)
+                  case tag 2: (exit 2))
+                with (2) 0))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__IO!) invoke/677))
+  (let
+    (read_whole_file/898 =
+       (function filename/900
+         (let
+           (channel/901 =
+              (apply (field_imm 78 (global Stdlib!)) filename/900)
+            s/902 = (apply (field_imm 3 (global Dune__exe__IO!)) channel/901))
+           (seq (apply (field_imm 92 (global Stdlib!)) channel/901) s/902))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__IO!) read_whole_file/898))
+  0)
+(seq
+  (let
+    (try_finally/397 =
+       (function action/399 handler/400
+         (let
+           (result/401 =
+              (try (apply action/399 0) with e/402
+                (seq (apply handler/400 0) (reraise e/402))))
+           (seq (apply handler/400 0) result/401))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__IO!) try_finally/397))
+  (let
+    (moving_away/403 =
+       (function filename/405 action/406
+         (if (caml_sys_file_exists filename/405)
+           (let
+             (newname/481 =
+                (apply (field_imm 27 (global Stdlib!)) filename/405
+                  ".moved_by_menhir"))
+             (seq (caml_sys_rename filename/405 newname/481)
+               (apply (field_imm 0 (global Dune__exe__IO!)) action/406
+                 (function param/482[int] : int
+                   (caml_sys_rename newname/481 filename/405)))))
+           (apply action/406 0))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__IO!) moving_away/403))
+  (let
+    (with_file/483 =
+       (function filename/485 creation/486 action/487
+         (seq (apply creation/486 0)
+           (apply (field_imm 0 (global Dune__exe__IO!)) action/487
+             (function param/488[int] : int (caml_sys_remove filename/485))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__IO!) with_file/483))
+  (let (chunk_size/489 =[int] 16384)
+    (setfield_ptr(root-init) 6 (global Dune__exe__IO!) chunk_size/489))
+  (let
+    (exhaust/490 =
+       (function channel/492
+         (let
+           (buffer/493 =
+              (apply (field_imm 0 (global Stdlib__Buffer!))
+                (field_imm 6 (global Dune__exe__IO!)))
+            chunk/576 =
+              (caml_create_bytes (field_imm 6 (global Dune__exe__IO!))))
+           (letrec
+             (loop/674
+                (function param/676[int]
+                  (let
+                    (length/675 =[int]
+                       (apply (field_imm 83 (global Stdlib!)) channel/492
+                         chunk/576 0 (field_imm 6 (global Dune__exe__IO!))))
+                    (if (== length/675 0)
+                      (apply (field_imm 1 (global Stdlib__Buffer!))
+                        buffer/493)
+                      (seq
+                        (apply (field_imm 18 (global Stdlib__Buffer!))
+                          buffer/493 chunk/576 0 length/675)
+                        (apply loop/674 0))))))
+             (apply loop/674 0)))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__IO!) exhaust/490))
+  (let
+    (invoke/677 =
+       (function command/679
+         (let (ic/680 = (apply (field_imm 73 (global Unix!)) command/679))
+           (seq (apply (field_imm 94 (global Stdlib!)) ic/680 0)
+             (let
+               (result/897 =
+                  (apply (field_imm 3 (global Dune__exe__IO!)) ic/680)
+                *match*/1427 = (apply (field_imm 85 (global Unix!)) ic/680))
+               (catch
+                 (switch* *match*/1427
+                  case tag 0:
+                   (if (!= (field_imm 0 *match*/1427) 0) (exit 2)
+                     (makeblock 0 result/897))
+                  case tag 1: (exit 2)
+                  case tag 2: (exit 2))
+                with (2) 0))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__IO!) invoke/677))
+  (let
+    (read_whole_file/898 =
+       (function filename/900
+         (let
+           (channel/901 =
+              (apply (field_imm 78 (global Stdlib!)) filename/900)
+            s/902 = (apply (field_imm 3 (global Dune__exe__IO!)) channel/901))
+           (seq (apply (field_imm 92 (global Stdlib!)) channel/901) s/902))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__IO!) read_whole_file/898))
+  0)

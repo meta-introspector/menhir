@@ -1,0 +1,970 @@
+[
+  structure_item (src/stage2/Driver.ml[21,1270+0]..[21,1270+29])
+    Pstr_open Fresh
+    module_expr (src/stage2/Driver.ml[21,1270+5]..[21,1270+29])
+      Pmod_ident "Parser.MenhirInterpreter" (src/stage2/Driver.ml[21,1270+5]..[21,1270+29])
+  structure_item (src/stage2/Driver.ml[26,1428+0]..[44,2284+76])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage2/Driver.ml[26,1428+4]..[26,1428+8])
+          Ppat_var "fail" (src/stage2/Driver.ml[26,1428+4]..[26,1428+8])
+        expression (src/stage2/Driver.ml[26,1428+9]..[44,2284+76]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stage2/Driver.ml[26,1428+9]..[26,1428+15])
+            Ppat_var "buffer" (src/stage2/Driver.ml[26,1428+9]..[26,1428+15])
+          expression (src/stage2/Driver.ml[26,1428+16]..[44,2284+76]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stage2/Driver.ml[26,1428+16]..[26,1428+22])
+              Ppat_var "lexbuf" (src/stage2/Driver.ml[26,1428+16]..[26,1428+22])
+            expression (src/stage2/Driver.ml[26,1428+23]..[44,2284+76]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/stage2/Driver.ml[26,1428+23]..[26,1428+32])
+                Ppat_constraint
+                pattern (src/stage2/Driver.ml[26,1428+24]..[26,1428+25])
+                  Ppat_var "s" (src/stage2/Driver.ml[26,1428+24]..[26,1428+25])
+                core_type (src/stage2/Driver.ml[26,1428+28]..[26,1428+31])
+                  Ptyp_constr "int" (src/stage2/Driver.ml[26,1428+28]..[26,1428+31])
+                  []
+              expression (src/stage2/Driver.ml[33,1830+2]..[44,2284+76])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/stage2/Driver.ml[33,1830+6]..[33,1830+13])
+                      Ppat_var "message" (src/stage2/Driver.ml[33,1830+6]..[33,1830+13])
+                    expression (src/stage2/Driver.ml[34,1846+4]..[37,1907+62])
+                      Pexp_try
+                      expression (src/stage2/Driver.ml[35,1854+6]..[35,1854+30])
+                        Pexp_apply
+                        expression (src/stage2/Driver.ml[35,1854+6]..[35,1854+28])
+                          Pexp_ident "ParserMessages.message" (src/stage2/Driver.ml[35,1854+6]..[35,1854+28])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stage2/Driver.ml[35,1854+29]..[35,1854+30])
+                              Pexp_ident "s" (src/stage2/Driver.ml[35,1854+29]..[35,1854+30])
+                        ]
+                      [
+                        <case>
+                          pattern (src/stage2/Driver.ml[36,1885+9]..[36,1885+18])
+                            Ppat_construct "Not_found" (src/stage2/Driver.ml[36,1885+9]..[36,1885+18])
+                            None
+                          expression (src/stage2/Driver.ml[37,1907+6]..[37,1907+62])
+                            Pexp_apply
+                            expression (src/stage2/Driver.ml[37,1907+6]..[37,1907+20])
+                              Pexp_ident "Printf.sprintf" (src/stage2/Driver.ml[37,1907+6]..[37,1907+20])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/stage2/Driver.ml[37,1907+21]..[37,1907+60])
+                                  Pexp_constant PConst_string("Unknown syntax error (in state %d).\n",(src/stage2/Driver.ml[37,1907+22]..[37,1907+59]),None)
+                              <arg>
+                              Nolabel
+                                expression (src/stage2/Driver.ml[37,1907+61]..[37,1907+62])
+                                  Pexp_ident "s" (src/stage2/Driver.ml[37,1907+61]..[37,1907+62])
+                            ]
+                      ]
+                ]
+                expression (src/stage2/Driver.ml[40,2039+2]..[44,2284+76])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/stage2/Driver.ml[40,2039+6]..[40,2039+11])
+                        Ppat_var "where" (src/stage2/Driver.ml[40,2039+6]..[40,2039+11])
+                      expression (src/stage2/Driver.ml[40,2039+14]..[40,2039+64])
+                        Pexp_apply
+                        expression (src/stage2/Driver.ml[40,2039+14]..[40,2039+41])
+                          Pexp_ident "MenhirLib.ErrorReports.show" (src/stage2/Driver.ml[40,2039+14]..[40,2039+41])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stage2/Driver.ml[40,2039+42]..[40,2039+57])
+                              Pexp_ident "InputFile.chunk" (src/stage2/Driver.ml[40,2039+42]..[40,2039+57])
+                          <arg>
+                          Nolabel
+                            expression (src/stage2/Driver.ml[40,2039+58]..[40,2039+64])
+                              Pexp_ident "buffer" (src/stage2/Driver.ml[40,2039+58]..[40,2039+64])
+                        ]
+                  ]
+                  expression (src/stage2/Driver.ml[42,2179+2]..[44,2284+76])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/stage2/Driver.ml[42,2179+6]..[42,2179+13])
+                          Ppat_var "message" (src/stage2/Driver.ml[42,2179+6]..[42,2179+13])
+                        expression (src/stage2/Driver.ml[42,2179+16]..[42,2179+64])
+                          Pexp_apply
+                          expression (src/stage2/Driver.ml[42,2179+16]..[42,2179+26])
+                            Pexp_ident "String.sub" (src/stage2/Driver.ml[42,2179+16]..[42,2179+26])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/stage2/Driver.ml[42,2179+27]..[42,2179+34])
+                                Pexp_ident "message" (src/stage2/Driver.ml[42,2179+27]..[42,2179+34])
+                            <arg>
+                            Nolabel
+                              expression (src/stage2/Driver.ml[42,2179+35]..[42,2179+36])
+                                Pexp_constant PConst_int (0,None)
+                            <arg>
+                            Nolabel
+                              expression (src/stage2/Driver.ml[42,2179+37]..[42,2179+64])
+                                Pexp_apply
+                                expression (src/stage2/Driver.ml[42,2179+60]..[42,2179+61])
+                                  Pexp_ident "-" (src/stage2/Driver.ml[42,2179+60]..[42,2179+61])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/stage2/Driver.ml[42,2179+38]..[42,2179+59])
+                                      Pexp_apply
+                                      expression (src/stage2/Driver.ml[42,2179+38]..[42,2179+51])
+                                        Pexp_ident "String.length" (src/stage2/Driver.ml[42,2179+38]..[42,2179+51])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/stage2/Driver.ml[42,2179+52]..[42,2179+59])
+                                            Pexp_ident "message" (src/stage2/Driver.ml[42,2179+52]..[42,2179+59])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (src/stage2/Driver.ml[42,2179+62]..[42,2179+63])
+                                      Pexp_constant PConst_int (1,None)
+                                ]
+                          ]
+                    ]
+                    expression (src/stage2/Driver.ml[44,2284+2]..[44,2284+76])
+                      Pexp_apply
+                      expression (src/stage2/Driver.ml[44,2284+2]..[44,2284+13])
+                        Pexp_ident "Error.error" (src/stage2/Driver.ml[44,2284+2]..[44,2284+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[44,2284+14]..[44,2284+39])
+                            Pexp_apply
+                            expression (src/stage2/Driver.ml[44,2284+15]..[44,2284+31])
+                              Pexp_ident "Positions.lexbuf" (src/stage2/Driver.ml[44,2284+15]..[44,2284+31])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/stage2/Driver.ml[44,2284+32]..[44,2284+38])
+                                  Pexp_ident "lexbuf" (src/stage2/Driver.ml[44,2284+32]..[44,2284+38])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[44,2284+40]..[44,2284+62])
+                            Pexp_constant PConst_string("syntax error %s.\n%s",(src/stage2/Driver.ml[44,2284+41]..[44,2284+61]),None)
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[44,2284+63]..[44,2284+68])
+                            Pexp_ident "where" (src/stage2/Driver.ml[44,2284+63]..[44,2284+68])
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[44,2284+69]..[44,2284+76])
+                            Pexp_ident "message" (src/stage2/Driver.ml[44,2284+69]..[44,2284+76])
+                      ]
+    ]
+  structure_item (src/stage2/Driver.ml[48,2438+0]..[54,2601+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage2/Driver.ml[48,2438+4]..[48,2438+8])
+          Ppat_var "fail" (src/stage2/Driver.ml[48,2438+4]..[48,2438+8])
+        expression (src/stage2/Driver.ml[48,2438+9]..[54,2601+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stage2/Driver.ml[48,2438+9]..[48,2438+15])
+            Ppat_var "buffer" (src/stage2/Driver.ml[48,2438+9]..[48,2438+15])
+          expression (src/stage2/Driver.ml[48,2438+16]..[54,2601+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stage2/Driver.ml[48,2438+16]..[48,2438+22])
+              Ppat_var "lexbuf" (src/stage2/Driver.ml[48,2438+16]..[48,2438+22])
+            expression (src/stage2/Driver.ml[48,2438+23]..[54,2601+18]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/stage2/Driver.ml[48,2438+23]..[48,2438+33])
+                Ppat_var "checkpoint" (src/stage2/Driver.ml[48,2438+23]..[48,2438+33])
+              expression (src/stage2/Driver.ml[49,2474+2]..[54,2601+18])
+                Pexp_match
+                expression (src/stage2/Driver.ml[49,2474+8]..[49,2474+18])
+                  Pexp_ident "checkpoint" (src/stage2/Driver.ml[49,2474+8]..[49,2474+18])
+                [
+                  <case>
+                    pattern (src/stage2/Driver.ml[50,2498+4]..[50,2498+21])
+                      Ppat_construct "HandlingError" (src/stage2/Driver.ml[50,2498+4]..[50,2498+17])
+                      Some
+                        []
+                        pattern (src/stage2/Driver.ml[50,2498+18]..[50,2498+21])
+                          Ppat_var "env" (src/stage2/Driver.ml[50,2498+18]..[50,2498+21])
+                    expression (src/stage2/Driver.ml[51,2523+6]..[52,2565+26])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/stage2/Driver.ml[51,2523+10]..[51,2523+11])
+                            Ppat_var "s" (src/stage2/Driver.ml[51,2523+10]..[51,2523+11])
+                          expression (src/stage2/Driver.ml[51,2523+14]..[51,2523+38])
+                            Pexp_apply
+                            expression (src/stage2/Driver.ml[51,2523+14]..[51,2523+34])
+                              Pexp_ident "current_state_number" (src/stage2/Driver.ml[51,2523+14]..[51,2523+34])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/stage2/Driver.ml[51,2523+35]..[51,2523+38])
+                                  Pexp_ident "env" (src/stage2/Driver.ml[51,2523+35]..[51,2523+38])
+                            ]
+                      ]
+                      expression (src/stage2/Driver.ml[52,2565+6]..[52,2565+26])
+                        Pexp_apply
+                        expression (src/stage2/Driver.ml[52,2565+6]..[52,2565+10])
+                          Pexp_ident "fail" (src/stage2/Driver.ml[52,2565+6]..[52,2565+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stage2/Driver.ml[52,2565+11]..[52,2565+17])
+                              Pexp_ident "buffer" (src/stage2/Driver.ml[52,2565+11]..[52,2565+17])
+                          <arg>
+                          Nolabel
+                            expression (src/stage2/Driver.ml[52,2565+18]..[52,2565+24])
+                              Pexp_ident "lexbuf" (src/stage2/Driver.ml[52,2565+18]..[52,2565+24])
+                          <arg>
+                          Nolabel
+                            expression (src/stage2/Driver.ml[52,2565+25]..[52,2565+26])
+                              Pexp_ident "s" (src/stage2/Driver.ml[52,2565+25]..[52,2565+26])
+                        ]
+                  <case>
+                    pattern (src/stage2/Driver.ml[53,2592+4]..[53,2592+5])
+                      Ppat_any
+                    expression (src/stage2/Driver.ml[54,2601+6]..[54,2601+18])
+                      Pexp_assert
+                      expression (src/stage2/Driver.ml[54,2601+13]..[54,2601+18])
+                        Pexp_construct "false" (src/stage2/Driver.ml[54,2601+13]..[54,2601+18])
+                        None
+                ]
+    ]
+  structure_item (src/stage2/Driver.ml[58,2670+0]..[67,2913+57])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage2/Driver.ml[58,2670+4]..[58,2670+11])
+          Ppat_var "grammar" (src/stage2/Driver.ml[58,2670+4]..[58,2670+11])
+        expression (src/stage2/Driver.ml[58,2670+12]..[67,2913+57]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stage2/Driver.ml[58,2670+12]..[58,2670+17])
+            Ppat_var "lexer" (src/stage2/Driver.ml[58,2670+12]..[58,2670+17])
+          expression (src/stage2/Driver.ml[58,2670+18]..[67,2913+57]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stage2/Driver.ml[58,2670+18]..[58,2670+24])
+              Ppat_var "lexbuf" (src/stage2/Driver.ml[58,2670+18]..[58,2670+24])
+            expression (src/stage2/Driver.ml[61,2753+2]..[67,2913+57])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/stage2/Driver.ml[61,2753+6]..[61,2753+19])
+                    Ppat_tuple
+                    [
+                      pattern (src/stage2/Driver.ml[61,2753+6]..[61,2753+12])
+                        Ppat_var "buffer" (src/stage2/Driver.ml[61,2753+6]..[61,2753+12])
+                      pattern (src/stage2/Driver.ml[61,2753+14]..[61,2753+19])
+                        Ppat_var "lexer" (src/stage2/Driver.ml[61,2753+14]..[61,2753+19])
+                    ]
+                  expression (src/stage2/Driver.ml[61,2753+22]..[61,2753+55])
+                    Pexp_apply
+                    expression (src/stage2/Driver.ml[61,2753+22]..[61,2753+49])
+                      Pexp_ident "MenhirLib.ErrorReports.wrap" (src/stage2/Driver.ml[61,2753+22]..[61,2753+49])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/stage2/Driver.ml[61,2753+50]..[61,2753+55])
+                          Pexp_ident "lexer" (src/stage2/Driver.ml[61,2753+50]..[61,2753+55])
+                    ]
+              ]
+              expression (src/stage2/Driver.ml[63,2813+2]..[67,2913+57])
+                Pexp_apply
+                expression (src/stage2/Driver.ml[63,2813+2]..[63,2813+13])
+                  Pexp_ident "loop_handle" (src/stage2/Driver.ml[63,2813+2]..[63,2813+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/stage2/Driver.ml[64,2827+4]..[64,2827+16])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/stage2/Driver.ml[64,2827+9]..[64,2827+10])
+                        Ppat_var "v" (src/stage2/Driver.ml[64,2827+9]..[64,2827+10])
+                      expression (src/stage2/Driver.ml[64,2827+14]..[64,2827+15])
+                        Pexp_ident "v" (src/stage2/Driver.ml[64,2827+14]..[64,2827+15])
+                  <arg>
+                  Nolabel
+                    expression (src/stage2/Driver.ml[65,2844+4]..[65,2844+24])
+                      Pexp_apply
+                      expression (src/stage2/Driver.ml[65,2844+5]..[65,2844+9])
+                        Pexp_ident "fail" (src/stage2/Driver.ml[65,2844+5]..[65,2844+9])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[65,2844+10]..[65,2844+16])
+                            Pexp_ident "buffer" (src/stage2/Driver.ml[65,2844+10]..[65,2844+16])
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[65,2844+17]..[65,2844+23])
+                            Pexp_ident "lexbuf" (src/stage2/Driver.ml[65,2844+17]..[65,2844+23])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/stage2/Driver.ml[66,2869+4]..[66,2869+43])
+                      Pexp_apply
+                      expression (src/stage2/Driver.ml[66,2869+5]..[66,2869+29])
+                        Pexp_ident "lexer_lexbuf_to_supplier" (src/stage2/Driver.ml[66,2869+5]..[66,2869+29])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[66,2869+30]..[66,2869+35])
+                            Pexp_ident "lexer" (src/stage2/Driver.ml[66,2869+30]..[66,2869+35])
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[66,2869+36]..[66,2869+42])
+                            Pexp_ident "lexbuf" (src/stage2/Driver.ml[66,2869+36]..[66,2869+42])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/stage2/Driver.ml[67,2913+4]..[67,2913+57])
+                      Pexp_apply
+                      expression (src/stage2/Driver.ml[67,2913+5]..[67,2913+31])
+                        Pexp_ident "Parser.Incremental.grammar" (src/stage2/Driver.ml[67,2913+5]..[67,2913+31])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/stage2/Driver.ml[67,2913+32]..[67,2913+56])
+                            Pexp_field
+                            expression (src/stage2/Driver.ml[67,2913+32]..[67,2913+38])
+                              Pexp_ident "lexbuf" (src/stage2/Driver.ml[67,2913+32]..[67,2913+38])
+                            "Lexing.lex_curr_p" (src/stage2/Driver.ml[67,2913+39]..[67,2913+56])
+                      ]
+                ]
+    ]
+]
+
+open Parser.MenhirInterpreter
+let fail buffer lexbuf (s : int) =
+  let message =
+    try ParserMessages.message s
+    with
+    | Not_found -> Printf.sprintf "Unknown syntax error (in state %d).\n" s in
+  let where = MenhirLib.ErrorReports.show InputFile.chunk buffer in
+  let message = String.sub message 0 ((String.length message) - 1) in
+  Error.error (Positions.lexbuf lexbuf) "syntax error %s.\n%s" where message
+let fail buffer lexbuf checkpoint =
+  match checkpoint with
+  | HandlingError env ->
+      let s = current_state_number env in fail buffer lexbuf s
+  | _ -> assert false
+let grammar lexer lexbuf =
+  let (buffer, lexer) = MenhirLib.ErrorReports.wrap lexer in
+  loop_handle (fun v -> v) (fail buffer lexbuf)
+    (lexer_lexbuf_to_supplier lexer lexbuf)
+    (Parser.Incremental.grammar lexbuf.Lexing.lex_curr_p)
+[
+  structure_item (src/stage2/Driver.ml[21,1270+0]..src/stage2/Driver.ml[21,1270+29])
+    Tstr_open Fresh
+    module_expr (src/stage2/Driver.ml[21,1270+5]..src/stage2/Driver.ml[21,1270+29])
+      Tmod_ident "Dune__exe!.Parser.MenhirInterpreter"
+  structure_item (src/stage2/Driver.ml[26,1428+0]..src/stage2/Driver.ml[44,2284+76])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage2/Driver.ml[26,1428+4]..src/stage2/Driver.ml[26,1428+8])
+          Tpat_var "fail/439"
+        expression (src/stage2/Driver.ml[26,1428+9]..src/stage2/Driver.ml[44,2284+76]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stage2/Driver.ml[26,1428+9]..src/stage2/Driver.ml[26,1428+15])
+                Tpat_var "buffer/441"
+              expression (src/stage2/Driver.ml[26,1428+16]..src/stage2/Driver.ml[44,2284+76]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stage2/Driver.ml[26,1428+16]..src/stage2/Driver.ml[26,1428+22])
+                      Tpat_var "lexbuf/442"
+                    expression (src/stage2/Driver.ml[26,1428+23]..src/stage2/Driver.ml[44,2284+76]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stage2/Driver.ml[26,1428+24]..src/stage2/Driver.ml[26,1428+25])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (src/stage2/Driver.ml[26,1428+28]..src/stage2/Driver.ml[26,1428+31])
+                                Ttyp_constr "int/1!"
+                                []
+                            Tpat_alias "s/443"
+                            pattern (src/stage2/Driver.ml[26,1428+24]..src/stage2/Driver.ml[26,1428+25])
+                              Tpat_any
+                          expression (src/stage2/Driver.ml[33,1830+2]..src/stage2/Driver.ml[44,2284+76])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/stage2/Driver.ml[33,1830+6]..src/stage2/Driver.ml[33,1830+13])
+                                  Tpat_var "message/444"
+                                expression (src/stage2/Driver.ml[34,1846+4]..src/stage2/Driver.ml[37,1907+62])
+                                  Texp_try
+                                  expression (src/stage2/Driver.ml[35,1854+6]..src/stage2/Driver.ml[35,1854+30])
+                                    Texp_apply
+                                    expression (src/stage2/Driver.ml[35,1854+6]..src/stage2/Driver.ml[35,1854+28])
+                                      Texp_ident "Dune__exe!.ParserMessages.message"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stage2/Driver.ml[35,1854+29]..src/stage2/Driver.ml[35,1854+30])
+                                          Texp_ident "s/443"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (src/stage2/Driver.ml[36,1885+9]..src/stage2/Driver.ml[36,1885+18])
+                                        Tpat_construct "Not_found"
+                                        []
+                                        None
+                                      expression (src/stage2/Driver.ml[37,1907+6]..src/stage2/Driver.ml[37,1907+62])
+                                        Texp_apply
+                                        expression (src/stage2/Driver.ml[37,1907+6]..src/stage2/Driver.ml[37,1907+20])
+                                          Texp_ident "Stdlib!.Printf.sprintf"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60])
+                                              Texp_construct "CamlinternalFormatBasics.Format"
+                                              [
+                                                expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                  [
+                                                    expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                      Texp_constant Const_string("Unknown syntax error (in state ",(src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost,None)
+                                                    expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Int"
+                                                      [
+                                                        expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                          []
+                                                        expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                          []
+                                                        expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                          []
+                                                        expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                          [
+                                                            expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                              Texp_constant Const_string(").\n",(src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost,None)
+                                                            expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                              []
+                                                          ]
+                                                      ]
+                                                  ]
+                                                expression (src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost
+                                                  Texp_constant Const_string("Unknown syntax error (in state %d).\n",(src/stage2/Driver.ml[37,1907+21]..src/stage2/Driver.ml[37,1907+60]) ghost,None)
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stage2/Driver.ml[37,1907+61]..src/stage2/Driver.ml[37,1907+62])
+                                              Texp_ident "s/443"
+                                        ]
+                                  ]
+                            ]
+                            expression (src/stage2/Driver.ml[40,2039+2]..src/stage2/Driver.ml[44,2284+76])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/stage2/Driver.ml[40,2039+6]..src/stage2/Driver.ml[40,2039+11])
+                                    Tpat_var "where/482"
+                                  expression (src/stage2/Driver.ml[40,2039+14]..src/stage2/Driver.ml[40,2039+64])
+                                    Texp_apply
+                                    expression (src/stage2/Driver.ml[40,2039+14]..src/stage2/Driver.ml[40,2039+41])
+                                      Texp_ident "MenhirLib!.ErrorReports.show"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stage2/Driver.ml[40,2039+42]..src/stage2/Driver.ml[40,2039+57])
+                                          Texp_ident "Dune__exe!.InputFile.chunk"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stage2/Driver.ml[40,2039+58]..src/stage2/Driver.ml[40,2039+64])
+                                          Texp_ident "buffer/441"
+                                    ]
+                              ]
+                              expression (src/stage2/Driver.ml[42,2179+2]..src/stage2/Driver.ml[44,2284+76])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/stage2/Driver.ml[42,2179+6]..src/stage2/Driver.ml[42,2179+13])
+                                      Tpat_var "message/519"
+                                    expression (src/stage2/Driver.ml[42,2179+16]..src/stage2/Driver.ml[42,2179+64])
+                                      Texp_apply
+                                      expression (src/stage2/Driver.ml[42,2179+16]..src/stage2/Driver.ml[42,2179+26])
+                                        Texp_ident "Stdlib!.String.sub"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/stage2/Driver.ml[42,2179+27]..src/stage2/Driver.ml[42,2179+34])
+                                            Texp_ident "message/444"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/stage2/Driver.ml[42,2179+35]..src/stage2/Driver.ml[42,2179+36])
+                                            Texp_constant Const_int 0
+                                        <arg>
+                                          Nolabel
+                                          expression (src/stage2/Driver.ml[42,2179+37]..src/stage2/Driver.ml[42,2179+64])
+                                            Texp_apply
+                                            expression (src/stage2/Driver.ml[42,2179+60]..src/stage2/Driver.ml[42,2179+61])
+                                              Texp_ident "Stdlib!.-"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/stage2/Driver.ml[42,2179+38]..src/stage2/Driver.ml[42,2179+59])
+                                                  Texp_apply
+                                                  expression (src/stage2/Driver.ml[42,2179+38]..src/stage2/Driver.ml[42,2179+51])
+                                                    Texp_ident "Stdlib!.String.length"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/stage2/Driver.ml[42,2179+52]..src/stage2/Driver.ml[42,2179+59])
+                                                        Texp_ident "message/444"
+                                                  ]
+                                              <arg>
+                                                Nolabel
+                                                expression (src/stage2/Driver.ml[42,2179+62]..src/stage2/Driver.ml[42,2179+63])
+                                                  Texp_constant Const_int 1
+                                            ]
+                                      ]
+                                ]
+                                expression (src/stage2/Driver.ml[44,2284+2]..src/stage2/Driver.ml[44,2284+76])
+                                  Texp_apply
+                                  expression (src/stage2/Driver.ml[44,2284+2]..src/stage2/Driver.ml[44,2284+13])
+                                    Texp_ident "Dune__exe!.Error.error"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stage2/Driver.ml[44,2284+14]..src/stage2/Driver.ml[44,2284+39])
+                                        Texp_apply
+                                        expression (src/stage2/Driver.ml[44,2284+15]..src/stage2/Driver.ml[44,2284+31])
+                                          Texp_ident "Dune__exe!.Positions.lexbuf"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stage2/Driver.ml[44,2284+32]..src/stage2/Driver.ml[44,2284+38])
+                                              Texp_ident "lexbuf/442"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                Texp_constant Const_string("syntax error ",(src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost,None)
+                                              expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                [
+                                                  expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                    [
+                                                      expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                        Texp_constant Const_string(".\n",(src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost,None)
+                                                      expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.String"
+                                                        [
+                                                          expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                            []
+                                                          expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                            []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost
+                                            Texp_constant Const_string("syntax error %s.\n%s",(src/stage2/Driver.ml[44,2284+40]..src/stage2/Driver.ml[44,2284+62]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stage2/Driver.ml[44,2284+63]..src/stage2/Driver.ml[44,2284+68])
+                                        Texp_ident "where/482"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stage2/Driver.ml[44,2284+69]..src/stage2/Driver.ml[44,2284+76])
+                                        Texp_ident "message/519"
+                                  ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/stage2/Driver.ml[48,2438+0]..src/stage2/Driver.ml[54,2601+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage2/Driver.ml[48,2438+4]..src/stage2/Driver.ml[48,2438+8])
+          Tpat_var "fail/687"
+        expression (src/stage2/Driver.ml[48,2438+9]..src/stage2/Driver.ml[54,2601+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stage2/Driver.ml[48,2438+9]..src/stage2/Driver.ml[48,2438+15])
+                Tpat_var "buffer/688"
+              expression (src/stage2/Driver.ml[48,2438+16]..src/stage2/Driver.ml[54,2601+18]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stage2/Driver.ml[48,2438+16]..src/stage2/Driver.ml[48,2438+22])
+                      Tpat_var "lexbuf/689"
+                    expression (src/stage2/Driver.ml[48,2438+23]..src/stage2/Driver.ml[54,2601+18]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stage2/Driver.ml[48,2438+23]..src/stage2/Driver.ml[48,2438+33])
+                            Tpat_var "checkpoint/690"
+                          expression (src/stage2/Driver.ml[49,2474+2]..src/stage2/Driver.ml[54,2601+18])
+                            Texp_match
+                            expression (src/stage2/Driver.ml[49,2474+8]..src/stage2/Driver.ml[49,2474+18])
+                              Texp_ident "checkpoint/690"
+                            [
+                              <case>
+                                pattern (src/stage2/Driver.ml[50,2498+4]..src/stage2/Driver.ml[50,2498+21])
+                                  Tpat_value
+                                  pattern (src/stage2/Driver.ml[50,2498+4]..src/stage2/Driver.ml[50,2498+21])
+                                    Tpat_construct "HandlingError"
+                                    [
+                                      pattern (src/stage2/Driver.ml[50,2498+18]..src/stage2/Driver.ml[50,2498+21])
+                                        Tpat_var "env/691"
+                                    ]
+                                    None
+                                expression (src/stage2/Driver.ml[51,2523+6]..src/stage2/Driver.ml[52,2565+26])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/stage2/Driver.ml[51,2523+10]..src/stage2/Driver.ml[51,2523+11])
+                                        Tpat_var "s/692"
+                                      expression (src/stage2/Driver.ml[51,2523+14]..src/stage2/Driver.ml[51,2523+38])
+                                        Texp_apply
+                                        expression (src/stage2/Driver.ml[51,2523+14]..src/stage2/Driver.ml[51,2523+34])
+                                          Texp_ident "Dune__exe!.Parser.MenhirInterpreter.current_state_number"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stage2/Driver.ml[51,2523+35]..src/stage2/Driver.ml[51,2523+38])
+                                              Texp_ident "env/691"
+                                        ]
+                                  ]
+                                  expression (src/stage2/Driver.ml[52,2565+6]..src/stage2/Driver.ml[52,2565+26])
+                                    Texp_apply
+                                    expression (src/stage2/Driver.ml[52,2565+6]..src/stage2/Driver.ml[52,2565+10])
+                                      Texp_ident "fail/439"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stage2/Driver.ml[52,2565+11]..src/stage2/Driver.ml[52,2565+17])
+                                          Texp_ident "buffer/688"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stage2/Driver.ml[52,2565+18]..src/stage2/Driver.ml[52,2565+24])
+                                          Texp_ident "lexbuf/689"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stage2/Driver.ml[52,2565+25]..src/stage2/Driver.ml[52,2565+26])
+                                          Texp_ident "s/692"
+                                    ]
+                              <case>
+                                pattern (src/stage2/Driver.ml[53,2592+4]..src/stage2/Driver.ml[53,2592+5])
+                                  Tpat_value
+                                  pattern (src/stage2/Driver.ml[53,2592+4]..src/stage2/Driver.ml[53,2592+5])
+                                    Tpat_any
+                                expression (src/stage2/Driver.ml[54,2601+6]..src/stage2/Driver.ml[54,2601+18])
+                                  Texp_assert                                  expression (src/stage2/Driver.ml[54,2601+13]..src/stage2/Driver.ml[54,2601+18])
+                                    Texp_construct "false"
+                                    []
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/stage2/Driver.ml[58,2670+0]..src/stage2/Driver.ml[67,2913+57])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage2/Driver.ml[58,2670+4]..src/stage2/Driver.ml[58,2670+11])
+          Tpat_var "grammar/725"
+        expression (src/stage2/Driver.ml[58,2670+12]..src/stage2/Driver.ml[67,2913+57]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stage2/Driver.ml[58,2670+12]..src/stage2/Driver.ml[58,2670+17])
+                Tpat_var "lexer/727"
+              expression (src/stage2/Driver.ml[58,2670+18]..src/stage2/Driver.ml[67,2913+57]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stage2/Driver.ml[58,2670+18]..src/stage2/Driver.ml[58,2670+24])
+                      Tpat_var "lexbuf/728"
+                    expression (src/stage2/Driver.ml[61,2753+2]..src/stage2/Driver.ml[67,2913+57])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/stage2/Driver.ml[61,2753+6]..src/stage2/Driver.ml[61,2753+19])
+                            Tpat_tuple
+                            [
+                              pattern (src/stage2/Driver.ml[61,2753+6]..src/stage2/Driver.ml[61,2753+12])
+                                Tpat_var "buffer/729"
+                              pattern (src/stage2/Driver.ml[61,2753+14]..src/stage2/Driver.ml[61,2753+19])
+                                Tpat_var "lexer/730"
+                            ]
+                          expression (src/stage2/Driver.ml[61,2753+22]..src/stage2/Driver.ml[61,2753+55])
+                            Texp_apply
+                            expression (src/stage2/Driver.ml[61,2753+22]..src/stage2/Driver.ml[61,2753+49])
+                              Texp_ident "MenhirLib!.ErrorReports.wrap"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/stage2/Driver.ml[61,2753+50]..src/stage2/Driver.ml[61,2753+55])
+                                  Texp_ident "lexer/727"
+                            ]
+                      ]
+                      expression (src/stage2/Driver.ml[63,2813+2]..src/stage2/Driver.ml[67,2913+57])
+                        Texp_apply
+                        expression (src/stage2/Driver.ml[63,2813+2]..src/stage2/Driver.ml[63,2813+13])
+                          Texp_ident "Dune__exe!.Parser.MenhirInterpreter.loop_handle"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/stage2/Driver.ml[64,2827+4]..src/stage2/Driver.ml[64,2827+16])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/stage2/Driver.ml[64,2827+9]..src/stage2/Driver.ml[64,2827+10])
+                                    Tpat_var "v/731"
+                                  expression (src/stage2/Driver.ml[64,2827+14]..src/stage2/Driver.ml[64,2827+15])
+                                    Texp_ident "v/731"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/stage2/Driver.ml[65,2844+4]..src/stage2/Driver.ml[65,2844+24])
+                              Texp_apply
+                              expression (src/stage2/Driver.ml[65,2844+5]..src/stage2/Driver.ml[65,2844+9])
+                                Texp_ident "fail/687"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage2/Driver.ml[65,2844+10]..src/stage2/Driver.ml[65,2844+16])
+                                    Texp_ident "buffer/729"
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage2/Driver.ml[65,2844+17]..src/stage2/Driver.ml[65,2844+23])
+                                    Texp_ident "lexbuf/728"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/stage2/Driver.ml[66,2869+4]..src/stage2/Driver.ml[66,2869+43])
+                              Texp_apply
+                              expression (src/stage2/Driver.ml[66,2869+5]..src/stage2/Driver.ml[66,2869+29])
+                                Texp_ident "Dune__exe!.Parser.MenhirInterpreter.lexer_lexbuf_to_supplier"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage2/Driver.ml[66,2869+30]..src/stage2/Driver.ml[66,2869+35])
+                                    Texp_ident "lexer/730"
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage2/Driver.ml[66,2869+36]..src/stage2/Driver.ml[66,2869+42])
+                                    Texp_ident "lexbuf/728"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/stage2/Driver.ml[67,2913+4]..src/stage2/Driver.ml[67,2913+57])
+                              Texp_apply
+                              expression (src/stage2/Driver.ml[67,2913+5]..src/stage2/Driver.ml[67,2913+31])
+                                Texp_ident "Dune__exe!.Parser.Incremental.grammar"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage2/Driver.ml[67,2913+32]..src/stage2/Driver.ml[67,2913+56])
+                                    Texp_field
+                                    expression (src/stage2/Driver.ml[67,2913+32]..src/stage2/Driver.ml[67,2913+38])
+                                      Texp_ident "lexbuf/728"
+                                    "Lexing.lex_curr_p"
+                              ]
+                        ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Driver>
+ "grammar"[value] -> <Dune__exe__Driver.13>;
+ }
+
+(seq
+  (let
+    (fail/439 =
+       (function buffer/441 lexbuf/442 s/443[int]
+         (let
+           (message/444 =
+              (try
+                (apply (field_imm 0 (global Dune__exe__ParserMessages!))
+                  s/443)
+               with exn/1530
+                (catch
+                  (if (== exn/1530 (field_imm 7 (global Stdlib!)))
+                    (apply (field_imm 3 (global Stdlib__Printf!))
+                      [0:
+                       [11:
+                        "Unknown syntax error (in state "
+                        [4: 0 0 0 [11: ").\n" 0]]]
+                       "Unknown syntax error (in state %d).\n"]
+                      s/443)
+                    (exit 1))
+                 with (1) (reraise exn/1530)))
+            where/482 =
+              (apply (field_imm 2 (field_imm 5 (global MenhirLib!)))
+                (field_imm 7 (global Dune__exe__InputFile!)) buffer/441)
+            message/519 =
+              (apply (field_imm 15 (global Stdlib__String!)) message/444 0
+                (- (string.length message/444) 1)))
+           (apply (field_imm 5 (global Dune__exe__Error!))
+             (apply (field_imm 30 (global Dune__exe__Positions!)) lexbuf/442)
+             [0:
+              [11: "syntax error " [2: 0 [11: ".\n" [2: 0 0]]]]
+              "syntax error %s.\n%s"]
+             where/482 message/519))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Driver!) fail/439))
+  (let
+    (fail/687 =
+       (function buffer/688 lexbuf/689 checkpoint/690
+         (catch
+           (switch checkpoint/690
+            case tag 3:
+             (let
+               (env/691 =a (field_imm 0 checkpoint/690)
+                s/692 =[int]
+                  (apply
+                    (field_imm 15 (field_imm 2 (global Dune__exe__Parser!)))
+                    env/691))
+               (apply (field_imm 1 (global Dune__exe__Driver!)) buffer/688
+                 lexbuf/689 s/692))
+            default: (exit 2))
+          with (2)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/stage2/Driver.ml" 54 6])))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Driver!) fail/687))
+  (let
+    (grammar/725 =
+       (function lexer/727 lexbuf/728
+         (let
+           (*match*/1534 =
+              (apply (field_imm 0 (field_imm 5 (global MenhirLib!)))
+                lexer/727)
+            lexer/730 =a (field_imm 1 *match*/1534)
+            buffer/729 =a (field_imm 0 *match*/1534))
+           (apply (field_imm 4 (field_imm 2 (global Dune__exe__Parser!)))
+             (function v/731 v/731)
+             (apply (field_imm 2 (global Dune__exe__Driver!)) buffer/729
+               lexbuf/728)
+             (apply (field_imm 2 (field_imm 2 (global Dune__exe__Parser!)))
+               lexer/730 lexbuf/728)
+             (apply (field_imm 0 (field_imm 3 (global Dune__exe__Parser!)))
+               (field_mut 11 lexbuf/728))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Driver!) grammar/725))
+  0)
+(seq
+  (let
+    (fail/439 =
+       (function buffer/441 lexbuf/442 s/443[int]
+         (let
+           (message/444 =
+              (try
+                (apply (field_imm 0 (global Dune__exe__ParserMessages!))
+                  s/443)
+               with exn/1530
+                (if (== exn/1530 (field_imm 7 (global Stdlib!)))
+                  (apply (field_imm 3 (global Stdlib__Printf!))
+                    [0:
+                     [11:
+                      "Unknown syntax error (in state "
+                      [4: 0 0 0 [11: ").\n" 0]]]
+                     "Unknown syntax error (in state %d).\n"]
+                    s/443)
+                  (reraise exn/1530)))
+            where/482 =
+              (apply (field_imm 2 (field_imm 5 (global MenhirLib!)))
+                (field_imm 7 (global Dune__exe__InputFile!)) buffer/441)
+            message/519 =
+              (apply (field_imm 15 (global Stdlib__String!)) message/444 0
+                (- (string.length message/444) 1)))
+           (apply (field_imm 5 (global Dune__exe__Error!))
+             (apply (field_imm 30 (global Dune__exe__Positions!)) lexbuf/442)
+             [0:
+              [11: "syntax error " [2: 0 [11: ".\n" [2: 0 0]]]]
+              "syntax error %s.\n%s"]
+             where/482 message/519))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Driver!) fail/439))
+  (let
+    (fail/687 =
+       (function buffer/688 lexbuf/689 checkpoint/690
+         (catch
+           (switch checkpoint/690
+            case tag 3:
+             (let
+               (s/692 =[int]
+                  (apply
+                    (field_imm 15 (field_imm 2 (global Dune__exe__Parser!)))
+                    (field_imm 0 checkpoint/690)))
+               (apply (field_imm 1 (global Dune__exe__Driver!)) buffer/688
+                 lexbuf/689 s/692))
+            default: (exit 2))
+          with (2)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "src/stage2/Driver.ml" 54 6])))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Driver!) fail/687))
+  (let
+    (grammar/725 =
+       (function lexer/727 lexbuf/728
+         (let
+           (*match*/1534 =
+              (apply (field_imm 0 (field_imm 5 (global MenhirLib!)))
+                lexer/727))
+           (apply (field_imm 4 (field_imm 2 (global Dune__exe__Parser!)))
+             (function v/731 v/731)
+             (apply (field_imm 2 (global Dune__exe__Driver!))
+               (field_imm 0 *match*/1534) lexbuf/728)
+             (apply (field_imm 2 (field_imm 2 (global Dune__exe__Parser!)))
+               (field_imm 1 *match*/1534) lexbuf/728)
+             (apply (field_imm 0 (field_imm 3 (global Dune__exe__Parser!)))
+               (field_mut 11 lexbuf/728))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Driver!) grammar/725))
+  0)

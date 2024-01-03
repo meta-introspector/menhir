@@ -1,0 +1,509 @@
+[
+  signature_item (src/SortUnification.mli[25,1314+0]..[26,1334+20])
+    Psig_type Rec
+    [
+      type_declaration "structure" (src/SortUnification.mli[25,1314+8]..[25,1314+17]) (src/SortUnification.mli[25,1314+0]..[26,1334+20])
+        ptype_params =
+          [
+            core_type (src/SortUnification.mli[25,1314+5]..[25,1314+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/SortUnification.mli[26,1334+2]..[26,1334+20])
+                "Arrow" (src/SortUnification.mli[26,1334+4]..[26,1334+9])
+                [
+                  core_type (src/SortUnification.mli[26,1334+13]..[26,1334+20])
+                    Ptyp_constr "list" (src/SortUnification.mli[26,1334+16]..[26,1334+20])
+                    [
+                      core_type (src/SortUnification.mli[26,1334+13]..[26,1334+15])
+                        Ptyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SortUnification.mli[28,1356+0]..[30,1384+27])
+    Psig_type Rec
+    [
+      type_declaration "sort" (src/SortUnification.mli[28,1356+5]..[28,1356+9]) (src/SortUnification.mli[28,1356+0]..[30,1384+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/SortUnification.mli[29,1368+2]..[29,1368+15])
+                "TVar" (src/SortUnification.mli[29,1368+4]..[29,1368+8])
+                [
+                  core_type (src/SortUnification.mli[29,1368+12]..[29,1368+15])
+                    Ptyp_constr "int" (src/SortUnification.mli[29,1368+12]..[29,1368+15])
+                    []
+                ]
+                None
+              (src/SortUnification.mli[30,1384+2]..[30,1384+27])
+                "TNode" (src/SortUnification.mli[30,1384+4]..[30,1384+9])
+                [
+                  core_type (src/SortUnification.mli[30,1384+13]..[30,1384+27])
+                    Ptyp_constr "structure" (src/SortUnification.mli[30,1384+18]..[30,1384+27])
+                    [
+                      core_type (src/SortUnification.mli[30,1384+13]..[30,1384+17])
+                        Ptyp_constr "sort" (src/SortUnification.mli[30,1384+13]..[30,1384+17])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SortUnification.mli[36,1520+0]..[36,1520+13])
+    Psig_type Rec
+    [
+      type_declaration "variable" (src/SortUnification.mli[36,1520+5]..[36,1520+13]) (src/SortUnification.mli[36,1520+0]..[36,1520+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SortUnification.mli[38,1535+0]..[38,1535+18])
+    Psig_value
+    value_description "star" (src/SortUnification.mli[38,1535+4]..[38,1535+8]) (src/SortUnification.mli[38,1535+0]..[38,1535+18])
+      core_type (src/SortUnification.mli[38,1535+10]..[38,1535+18])
+        Ptyp_constr "variable" (src/SortUnification.mli[38,1535+10]..[38,1535+18])
+        []
+      []
+  signature_item (src/SortUnification.mli[39,1554+0]..[39,1554+36])
+    Psig_value
+    value_description "arrow" (src/SortUnification.mli[39,1554+4]..[39,1554+9]) (src/SortUnification.mli[39,1554+0]..[39,1554+36])
+      core_type (src/SortUnification.mli[39,1554+11]..[39,1554+36])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[39,1554+11]..[39,1554+24])
+          Ptyp_constr "list" (src/SortUnification.mli[39,1554+20]..[39,1554+24])
+          [
+            core_type (src/SortUnification.mli[39,1554+11]..[39,1554+19])
+              Ptyp_constr "variable" (src/SortUnification.mli[39,1554+11]..[39,1554+19])
+              []
+          ]
+        core_type (src/SortUnification.mli[39,1554+28]..[39,1554+36])
+          Ptyp_constr "variable" (src/SortUnification.mli[39,1554+28]..[39,1554+36])
+          []
+      []
+  signature_item (src/SortUnification.mli[40,1591+0]..[40,1591+27])
+    Psig_value
+    value_description "fresh" (src/SortUnification.mli[40,1591+4]..[40,1591+9]) (src/SortUnification.mli[40,1591+0]..[40,1591+27])
+      core_type (src/SortUnification.mli[40,1591+11]..[40,1591+27])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[40,1591+11]..[40,1591+15])
+          Ptyp_constr "unit" (src/SortUnification.mli[40,1591+11]..[40,1591+15])
+          []
+        core_type (src/SortUnification.mli[40,1591+19]..[40,1591+27])
+          Ptyp_constr "variable" (src/SortUnification.mli[40,1591+19]..[40,1591+27])
+          []
+      []
+  signature_item (src/SortUnification.mli[45,1792+0]..[45,1792+44])
+    Psig_value
+    value_description "domain" (src/SortUnification.mli[45,1792+4]..[45,1792+10]) (src/SortUnification.mli[45,1792+0]..[45,1792+44])
+      core_type (src/SortUnification.mli[45,1792+12]..[45,1792+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[45,1792+12]..[45,1792+20])
+          Ptyp_constr "variable" (src/SortUnification.mli[45,1792+12]..[45,1792+20])
+          []
+        core_type (src/SortUnification.mli[45,1792+24]..[45,1792+44])
+          Ptyp_constr "option" (src/SortUnification.mli[45,1792+38]..[45,1792+44])
+          [
+            core_type (src/SortUnification.mli[45,1792+24]..[45,1792+37])
+              Ptyp_constr "list" (src/SortUnification.mli[45,1792+33]..[45,1792+37])
+              [
+                core_type (src/SortUnification.mli[45,1792+24]..[45,1792+32])
+                  Ptyp_constr "variable" (src/SortUnification.mli[45,1792+24]..[45,1792+32])
+                  []
+              ]
+          ]
+      []
+  signature_item (src/SortUnification.mli[47,1838+0]..[47,1838+38])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/SortUnification.mli[47,1838+0]..[47,1838+38])
+          pext_name = "Unify"
+          pext_kind =
+            Pext_decl
+              [
+                core_type (src/SortUnification.mli[47,1838+19]..[47,1838+27])
+                  Ptyp_constr "variable" (src/SortUnification.mli[47,1838+19]..[47,1838+27])
+                  []
+                core_type (src/SortUnification.mli[47,1838+30]..[47,1838+38])
+                  Ptyp_constr "variable" (src/SortUnification.mli[47,1838+30]..[47,1838+38])
+                  []
+              ]
+              None
+  signature_item (src/SortUnification.mli[48,1877+0]..[48,1877+39])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/SortUnification.mli[48,1877+0]..[48,1877+39])
+          pext_name = "Occurs"
+          pext_kind =
+            Pext_decl
+              [
+                core_type (src/SortUnification.mli[48,1877+20]..[48,1877+28])
+                  Ptyp_constr "variable" (src/SortUnification.mli[48,1877+20]..[48,1877+28])
+                  []
+                core_type (src/SortUnification.mli[48,1877+31]..[48,1877+39])
+                  Ptyp_constr "variable" (src/SortUnification.mli[48,1877+31]..[48,1877+39])
+                  []
+              ]
+              None
+  signature_item (src/SortUnification.mli[49,1917+0]..[49,1917+39])
+    Psig_value
+    value_description "unify" (src/SortUnification.mli[49,1917+4]..[49,1917+9]) (src/SortUnification.mli[49,1917+0]..[49,1917+39])
+      core_type (src/SortUnification.mli[49,1917+11]..[49,1917+39])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[49,1917+11]..[49,1917+19])
+          Ptyp_constr "variable" (src/SortUnification.mli[49,1917+11]..[49,1917+19])
+          []
+        core_type (src/SortUnification.mli[49,1917+23]..[49,1917+39])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/SortUnification.mli[49,1917+23]..[49,1917+31])
+            Ptyp_constr "variable" (src/SortUnification.mli[49,1917+23]..[49,1917+31])
+            []
+          core_type (src/SortUnification.mli[49,1917+35]..[49,1917+39])
+            Ptyp_constr "unit" (src/SortUnification.mli[49,1917+35]..[49,1917+39])
+            []
+      []
+  signature_item (src/SortUnification.mli[53,2040+0]..[53,2040+28])
+    Psig_value
+    value_description "decode" (src/SortUnification.mli[53,2040+4]..[53,2040+10]) (src/SortUnification.mli[53,2040+0]..[53,2040+28])
+      core_type (src/SortUnification.mli[53,2040+12]..[53,2040+28])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[53,2040+12]..[53,2040+20])
+          Ptyp_constr "variable" (src/SortUnification.mli[53,2040+12]..[53,2040+20])
+          []
+        core_type (src/SortUnification.mli[53,2040+24]..[53,2040+28])
+          Ptyp_constr "sort" (src/SortUnification.mli[53,2040+24]..[53,2040+28])
+          []
+      []
+  signature_item (src/SortUnification.mli[57,2141+0]..[57,2141+35])
+    Psig_value
+    value_description "ground" (src/SortUnification.mli[57,2141+4]..[57,2141+10]) (src/SortUnification.mli[57,2141+0]..[57,2141+35])
+      core_type (src/SortUnification.mli[57,2141+12]..[57,2141+35])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[57,2141+12]..[57,2141+16])
+          Ptyp_constr "sort" (src/SortUnification.mli[57,2141+12]..[57,2141+16])
+          []
+        core_type (src/SortUnification.mli[57,2141+20]..[57,2141+35])
+          Ptyp_constr "GroundSort.sort" (src/SortUnification.mli[57,2141+20]..[57,2141+35])
+          []
+      []
+  signature_item (src/SortUnification.mli[58,2177+0]..[58,2177+37])
+    Psig_value
+    value_description "unground" (src/SortUnification.mli[58,2177+4]..[58,2177+12]) (src/SortUnification.mli[58,2177+0]..[58,2177+37])
+      core_type (src/SortUnification.mli[58,2177+14]..[58,2177+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[58,2177+14]..[58,2177+29])
+          Ptyp_constr "GroundSort.sort" (src/SortUnification.mli[58,2177+14]..[58,2177+29])
+          []
+        core_type (src/SortUnification.mli[58,2177+33]..[58,2177+37])
+          Ptyp_constr "sort" (src/SortUnification.mli[58,2177+33]..[58,2177+37])
+          []
+      []
+  signature_item (src/SortUnification.mli[64,2328+0]..[64,2328+25])
+    Psig_value
+    value_description "print" (src/SortUnification.mli[64,2328+4]..[64,2328+9]) (src/SortUnification.mli[64,2328+0]..[64,2328+25])
+      core_type (src/SortUnification.mli[64,2328+11]..[64,2328+25])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[64,2328+11]..[64,2328+15])
+          Ptyp_constr "sort" (src/SortUnification.mli[64,2328+11]..[64,2328+15])
+          []
+        core_type (src/SortUnification.mli[64,2328+19]..[64,2328+25])
+          Ptyp_constr "string" (src/SortUnification.mli[64,2328+19]..[64,2328+25])
+          []
+      []
+]
+
+type 'a structure =
+  | Arrow of 'a list 
+type sort =
+  | TVar of int 
+  | TNode of sort structure 
+type variable
+val star : variable
+val arrow : variable list -> variable
+val fresh : unit -> variable
+val domain : variable -> variable list option
+exception Unify of variable * variable 
+exception Occurs of variable * variable 
+val unify : variable -> variable -> unit
+val decode : variable -> sort
+val ground : sort -> GroundSort.sort
+val unground : GroundSort.sort -> sort
+val print : sort -> string
+[
+  signature_item (src/SortUnification.mli[25,1314+0]..src/SortUnification.mli[26,1334+20])
+    Tsig_type Rec
+    [
+      type_declaration structure/397 (src/SortUnification.mli[25,1314+0]..src/SortUnification.mli[26,1334+20])
+        ptype_params =
+          [
+            core_type (src/SortUnification.mli[25,1314+5]..src/SortUnification.mli[25,1314+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/SortUnification.mli[26,1334+2]..src/SortUnification.mli[26,1334+20])
+                Arrow/398
+                [
+                  core_type (src/SortUnification.mli[26,1334+13]..src/SortUnification.mli[26,1334+20])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/SortUnification.mli[26,1334+13]..src/SortUnification.mli[26,1334+15])
+                        Ttyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SortUnification.mli[28,1356+0]..src/SortUnification.mli[30,1384+27])
+    Tsig_type Rec
+    [
+      type_declaration sort/399 (src/SortUnification.mli[28,1356+0]..src/SortUnification.mli[30,1384+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/SortUnification.mli[29,1368+2]..src/SortUnification.mli[29,1368+15])
+                TVar/400
+                [
+                  core_type (src/SortUnification.mli[29,1368+12]..src/SortUnification.mli[29,1368+15])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (src/SortUnification.mli[30,1384+2]..src/SortUnification.mli[30,1384+27])
+                TNode/401
+                [
+                  core_type (src/SortUnification.mli[30,1384+13]..src/SortUnification.mli[30,1384+27])
+                    Ttyp_constr "structure/397"
+                    [
+                      core_type (src/SortUnification.mli[30,1384+13]..src/SortUnification.mli[30,1384+17])
+                        Ttyp_constr "sort/399"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SortUnification.mli[36,1520+0]..src/SortUnification.mli[36,1520+13])
+    Tsig_type Rec
+    [
+      type_declaration variable/402 (src/SortUnification.mli[36,1520+0]..src/SortUnification.mli[36,1520+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SortUnification.mli[38,1535+0]..src/SortUnification.mli[38,1535+18])
+    Tsig_value
+    value_description star/403 (src/SortUnification.mli[38,1535+0]..src/SortUnification.mli[38,1535+18])
+      core_type (src/SortUnification.mli[38,1535+10]..src/SortUnification.mli[38,1535+18])
+        Ttyp_constr "variable/402"
+        []
+      []
+  signature_item (src/SortUnification.mli[39,1554+0]..src/SortUnification.mli[39,1554+36])
+    Tsig_value
+    value_description arrow/404 (src/SortUnification.mli[39,1554+0]..src/SortUnification.mli[39,1554+36])
+      core_type (src/SortUnification.mli[39,1554+11]..src/SortUnification.mli[39,1554+36])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[39,1554+11]..src/SortUnification.mli[39,1554+24])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/SortUnification.mli[39,1554+11]..src/SortUnification.mli[39,1554+19])
+              Ttyp_constr "variable/402"
+              []
+          ]
+        core_type (src/SortUnification.mli[39,1554+28]..src/SortUnification.mli[39,1554+36])
+          Ttyp_constr "variable/402"
+          []
+      []
+  signature_item (src/SortUnification.mli[40,1591+0]..src/SortUnification.mli[40,1591+27])
+    Tsig_value
+    value_description fresh/405 (src/SortUnification.mli[40,1591+0]..src/SortUnification.mli[40,1591+27])
+      core_type (src/SortUnification.mli[40,1591+11]..src/SortUnification.mli[40,1591+27])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[40,1591+11]..src/SortUnification.mli[40,1591+15])
+          Ttyp_constr "unit/6!"
+          []
+        core_type (src/SortUnification.mli[40,1591+19]..src/SortUnification.mli[40,1591+27])
+          Ttyp_constr "variable/402"
+          []
+      []
+  signature_item (src/SortUnification.mli[45,1792+0]..src/SortUnification.mli[45,1792+44])
+    Tsig_value
+    value_description domain/406 (src/SortUnification.mli[45,1792+0]..src/SortUnification.mli[45,1792+44])
+      core_type (src/SortUnification.mli[45,1792+12]..src/SortUnification.mli[45,1792+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[45,1792+12]..src/SortUnification.mli[45,1792+20])
+          Ttyp_constr "variable/402"
+          []
+        core_type (src/SortUnification.mli[45,1792+24]..src/SortUnification.mli[45,1792+44])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/SortUnification.mli[45,1792+24]..src/SortUnification.mli[45,1792+37])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/SortUnification.mli[45,1792+24]..src/SortUnification.mli[45,1792+32])
+                  Ttyp_constr "variable/402"
+                  []
+              ]
+          ]
+      []
+  signature_item (src/SortUnification.mli[47,1838+0]..src/SortUnification.mli[47,1838+38])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/SortUnification.mli[47,1838+0]..src/SortUnification.mli[47,1838+38])
+          pext_name = "Unify/407"
+          pext_kind =
+            Text_decl
+              [
+                core_type (src/SortUnification.mli[47,1838+19]..src/SortUnification.mli[47,1838+27])
+                  Ttyp_constr "variable/402"
+                  []
+                core_type (src/SortUnification.mli[47,1838+30]..src/SortUnification.mli[47,1838+38])
+                  Ttyp_constr "variable/402"
+                  []
+              ]
+              None
+  signature_item (src/SortUnification.mli[48,1877+0]..src/SortUnification.mli[48,1877+39])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/SortUnification.mli[48,1877+0]..src/SortUnification.mli[48,1877+39])
+          pext_name = "Occurs/408"
+          pext_kind =
+            Text_decl
+              [
+                core_type (src/SortUnification.mli[48,1877+20]..src/SortUnification.mli[48,1877+28])
+                  Ttyp_constr "variable/402"
+                  []
+                core_type (src/SortUnification.mli[48,1877+31]..src/SortUnification.mli[48,1877+39])
+                  Ttyp_constr "variable/402"
+                  []
+              ]
+              None
+  signature_item (src/SortUnification.mli[49,1917+0]..src/SortUnification.mli[49,1917+39])
+    Tsig_value
+    value_description unify/409 (src/SortUnification.mli[49,1917+0]..src/SortUnification.mli[49,1917+39])
+      core_type (src/SortUnification.mli[49,1917+11]..src/SortUnification.mli[49,1917+39])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[49,1917+11]..src/SortUnification.mli[49,1917+19])
+          Ttyp_constr "variable/402"
+          []
+        core_type (src/SortUnification.mli[49,1917+23]..src/SortUnification.mli[49,1917+39])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/SortUnification.mli[49,1917+23]..src/SortUnification.mli[49,1917+31])
+            Ttyp_constr "variable/402"
+            []
+          core_type (src/SortUnification.mli[49,1917+35]..src/SortUnification.mli[49,1917+39])
+            Ttyp_constr "unit/6!"
+            []
+      []
+  signature_item (src/SortUnification.mli[53,2040+0]..src/SortUnification.mli[53,2040+28])
+    Tsig_value
+    value_description decode/410 (src/SortUnification.mli[53,2040+0]..src/SortUnification.mli[53,2040+28])
+      core_type (src/SortUnification.mli[53,2040+12]..src/SortUnification.mli[53,2040+28])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[53,2040+12]..src/SortUnification.mli[53,2040+20])
+          Ttyp_constr "variable/402"
+          []
+        core_type (src/SortUnification.mli[53,2040+24]..src/SortUnification.mli[53,2040+28])
+          Ttyp_constr "sort/399"
+          []
+      []
+  signature_item (src/SortUnification.mli[57,2141+0]..src/SortUnification.mli[57,2141+35])
+    Tsig_value
+    value_description ground/414 (src/SortUnification.mli[57,2141+0]..src/SortUnification.mli[57,2141+35])
+      core_type (src/SortUnification.mli[57,2141+12]..src/SortUnification.mli[57,2141+35])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[57,2141+12]..src/SortUnification.mli[57,2141+16])
+          Ttyp_constr "sort/399"
+          []
+        core_type (src/SortUnification.mli[57,2141+20]..src/SortUnification.mli[57,2141+35])
+          Ttyp_constr "Dune__exe!.GroundSort.sort"
+          []
+      []
+  signature_item (src/SortUnification.mli[58,2177+0]..src/SortUnification.mli[58,2177+37])
+    Tsig_value
+    value_description unground/415 (src/SortUnification.mli[58,2177+0]..src/SortUnification.mli[58,2177+37])
+      core_type (src/SortUnification.mli[58,2177+14]..src/SortUnification.mli[58,2177+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[58,2177+14]..src/SortUnification.mli[58,2177+29])
+          Ttyp_constr "Dune__exe!.GroundSort.sort"
+          []
+        core_type (src/SortUnification.mli[58,2177+33]..src/SortUnification.mli[58,2177+37])
+          Ttyp_constr "sort/399"
+          []
+      []
+  signature_item (src/SortUnification.mli[64,2328+0]..src/SortUnification.mli[64,2328+25])
+    Tsig_value
+    value_description print/416 (src/SortUnification.mli[64,2328+0]..src/SortUnification.mli[64,2328+25])
+      core_type (src/SortUnification.mli[64,2328+11]..src/SortUnification.mli[64,2328+25])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortUnification.mli[64,2328+11]..src/SortUnification.mli[64,2328+15])
+          Ttyp_constr "sort/399"
+          []
+        core_type (src/SortUnification.mli[64,2328+19]..src/SortUnification.mli[64,2328+25])
+          Ttyp_constr "string/15!"
+          []
+      []
+]
+

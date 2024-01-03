@@ -1,0 +1,476 @@
+[
+  structure_item (src/BoundedBitSet.ml[30,1909+0]..[52,2397+3])
+    Pstr_module
+    "Make" (src/BoundedBitSet.ml[30,1909+7]..[30,1909+11])
+      module_expr (src/BoundedBitSet.ml[30,1909+12]..[52,2397+3])
+        Pmod_functor "N" (src/BoundedBitSet.ml[30,1909+13]..[30,1909+14])
+        module_type (src/BoundedBitSet.ml[30,1909+17]..[32,1943+3])
+          Pmty_signature
+          [
+            signature_item (src/BoundedBitSet.ml[31,1930+2]..[31,1930+12])
+              Psig_value
+              value_description "n" (src/BoundedBitSet.ml[31,1930+6]..[31,1930+7]) (src/BoundedBitSet.ml[31,1930+2]..[31,1930+12])
+                core_type (src/BoundedBitSet.ml[31,1930+9]..[31,1930+12])
+                  Ptyp_constr "int" (src/BoundedBitSet.ml[31,1930+9]..[31,1930+12])
+                  []
+                []
+          ]
+        module_expr (src/BoundedBitSet.ml[32,1943+5]..[52,2397+3])
+          Pmod_functor ()
+          module_expr (src/BoundedBitSet.ml[33,1951+2]..[52,2397+3])
+            Pmod_structure
+            [
+              structure_item (src/BoundedBitSet.ml[38,2061+2]..[39,2079+34])
+                Pstr_modtype "S" (src/BoundedBitSet.ml[38,2061+14]..[38,2061+15])
+                  module_type (src/BoundedBitSet.ml[39,2079+4]..[39,2079+34])
+                    Pmty_with
+                    module_type (src/BoundedBitSet.ml[39,2079+4]..[39,2079+10])
+                      Pmty_ident "GSet.S" (src/BoundedBitSet.ml[39,2079+4]..[39,2079+10])
+                    [
+                      Pwith_type "element" (src/BoundedBitSet.ml[39,2079+21]..[39,2079+28])
+                        type_declaration "element" (src/BoundedBitSet.ml[39,2079+21]..[39,2079+28]) (src/BoundedBitSet.ml[39,2079+16]..[39,2079+34])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ptype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (src/BoundedBitSet.ml[39,2079+31]..[39,2079+34])
+                                Ptyp_constr "int" (src/BoundedBitSet.ml[39,2079+31]..[39,2079+34])
+                                []
+                    ]
+              structure_item (src/BoundedBitSet.ml[41,2115+2]..[50,2387+8])
+                Pstr_include                module_expr (src/BoundedBitSet.ml[41,2115+10]..[50,2387+8])
+                  Pmod_unpack
+                  expression (src/BoundedBitSet.ml[42,2130+4]..[50,2387+7]) ghost
+                    Pexp_constraint
+                    expression (src/BoundedBitSet.ml[42,2130+4]..[49,2355+31])
+                      Pexp_ifthenelse
+                      expression (src/BoundedBitSet.ml[42,2130+7]..[42,2130+32])
+                        Pexp_apply
+                        expression (src/BoundedBitSet.ml[42,2130+11]..[42,2130+13])
+                          Pexp_ident "<=" (src/BoundedBitSet.ml[42,2130+11]..[42,2130+13])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/BoundedBitSet.ml[42,2130+7]..[42,2130+10])
+                              Pexp_ident "N.n" (src/BoundedBitSet.ml[42,2130+7]..[42,2130+10])
+                          <arg>
+                          Nolabel
+                            expression (src/BoundedBitSet.ml[42,2130+14]..[42,2130+32])
+                              Pexp_ident "AtomicBitSet.bound" (src/BoundedBitSet.ml[42,2130+14]..[42,2130+32])
+                        ]
+                      expression (src/BoundedBitSet.ml[43,2168+6]..[43,2168+31])
+                        Pexp_constraint
+                        expression (src/BoundedBitSet.ml[43,2168+6]..[43,2168+31]) ghost
+                          Pexp_pack
+                          module_expr (src/BoundedBitSet.ml[43,2168+14]..[43,2168+26])
+                            Pmod_ident "AtomicBitSet" (src/BoundedBitSet.ml[43,2168+14]..[43,2168+26])
+                        core_type (src/BoundedBitSet.ml[43,2168+29]..[43,2168+30])
+                          Ptyp_package "S" (src/BoundedBitSet.ml[43,2168+29]..[43,2168+30])
+                          []
+                      Some
+                        expression (src/BoundedBitSet.ml[44,2200+9]..[49,2355+31])
+                          Pexp_ifthenelse
+                          expression (src/BoundedBitSet.ml[44,2200+12]..[44,2200+36])
+                            Pexp_apply
+                            expression (src/BoundedBitSet.ml[44,2200+16]..[44,2200+18])
+                              Pexp_ident "<=" (src/BoundedBitSet.ml[44,2200+16]..[44,2200+18])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/BoundedBitSet.ml[44,2200+12]..[44,2200+15])
+                                  Pexp_ident "N.n" (src/BoundedBitSet.ml[44,2200+12]..[44,2200+15])
+                              <arg>
+                              Nolabel
+                                expression (src/BoundedBitSet.ml[44,2200+19]..[44,2200+36])
+                                  Pexp_ident "DWordBitSet.bound" (src/BoundedBitSet.ml[44,2200+19]..[44,2200+36])
+                            ]
+                          expression (src/BoundedBitSet.ml[45,2242+6]..[45,2242+30])
+                            Pexp_constraint
+                            expression (src/BoundedBitSet.ml[45,2242+6]..[45,2242+30]) ghost
+                              Pexp_pack
+                              module_expr (src/BoundedBitSet.ml[45,2242+14]..[45,2242+25])
+                                Pmod_ident "DWordBitSet" (src/BoundedBitSet.ml[45,2242+14]..[45,2242+25])
+                            core_type (src/BoundedBitSet.ml[45,2242+28]..[45,2242+29])
+                              Ptyp_package "S" (src/BoundedBitSet.ml[45,2242+28]..[45,2242+29])
+                              []
+                          Some
+                            expression (src/BoundedBitSet.ml[46,2273+9]..[49,2355+31])
+                              Pexp_ifthenelse
+                              expression (src/BoundedBitSet.ml[46,2273+12]..[46,2273+36])
+                                Pexp_apply
+                                expression (src/BoundedBitSet.ml[46,2273+16]..[46,2273+18])
+                                  Pexp_ident "<=" (src/BoundedBitSet.ml[46,2273+16]..[46,2273+18])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/BoundedBitSet.ml[46,2273+12]..[46,2273+15])
+                                      Pexp_ident "N.n" (src/BoundedBitSet.ml[46,2273+12]..[46,2273+15])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/BoundedBitSet.ml[46,2273+19]..[46,2273+36])
+                                      Pexp_ident "QWordBitSet.bound" (src/BoundedBitSet.ml[46,2273+19]..[46,2273+36])
+                                ]
+                              expression (src/BoundedBitSet.ml[47,2315+6]..[47,2315+30])
+                                Pexp_constraint
+                                expression (src/BoundedBitSet.ml[47,2315+6]..[47,2315+30]) ghost
+                                  Pexp_pack
+                                  module_expr (src/BoundedBitSet.ml[47,2315+14]..[47,2315+25])
+                                    Pmod_ident "QWordBitSet" (src/BoundedBitSet.ml[47,2315+14]..[47,2315+25])
+                                core_type (src/BoundedBitSet.ml[47,2315+28]..[47,2315+29])
+                                  Ptyp_package "S" (src/BoundedBitSet.ml[47,2315+28]..[47,2315+29])
+                                  []
+                              Some
+                                expression (src/BoundedBitSet.ml[49,2355+6]..[49,2355+31])
+                                  Pexp_constraint
+                                  expression (src/BoundedBitSet.ml[49,2355+6]..[49,2355+31]) ghost
+                                    Pexp_pack
+                                    module_expr (src/BoundedBitSet.ml[49,2355+14]..[49,2355+26])
+                                      Pmod_ident "SparseBitSet" (src/BoundedBitSet.ml[49,2355+14]..[49,2355+26])
+                                  core_type (src/BoundedBitSet.ml[49,2355+29]..[49,2355+30])
+                                    Ptyp_package "S" (src/BoundedBitSet.ml[49,2355+29]..[49,2355+30])
+                                    []
+                    core_type (src/BoundedBitSet.ml[50,2387+6]..[50,2387+7])
+                      Ptyp_package "S" (src/BoundedBitSet.ml[50,2387+6]..[50,2387+7])
+                      []
+            ]
+]
+
+module Make(N:sig val n : int end)() =
+  struct
+    module type S  = GSet.S with type  element =  int
+    include (val
+      (if N.n <= AtomicBitSet.bound
+       then ((module AtomicBitSet) : (module S))
+       else
+         if N.n <= DWordBitSet.bound
+         then ((module DWordBitSet) : (module S))
+         else
+           if N.n <= QWordBitSet.bound
+           then ((module QWordBitSet) : (module S))
+           else ((module SparseBitSet) : (module S)) : (module S)))
+  end
+[
+  structure_item (src/BoundedBitSet.ml[30,1909+0]..src/BoundedBitSet.ml[52,2397+3])
+    Tstr_module
+    Make/664
+      module_expr (src/BoundedBitSet.ml[30,1909+12]..src/BoundedBitSet.ml[52,2397+3])
+        Tmod_functor "N/397"
+        module_type (src/BoundedBitSet.ml[30,1909+17]..src/BoundedBitSet.ml[32,1943+3])
+          Tmty_signature
+          [
+            signature_item (src/BoundedBitSet.ml[31,1930+2]..src/BoundedBitSet.ml[31,1930+12])
+              Tsig_value
+              value_description n/396 (src/BoundedBitSet.ml[31,1930+2]..src/BoundedBitSet.ml[31,1930+12])
+                core_type (src/BoundedBitSet.ml[31,1930+9]..src/BoundedBitSet.ml[31,1930+12])
+                  Ttyp_constr "int/1!"
+                  []
+                []
+          ]
+        module_expr (src/BoundedBitSet.ml[32,1943+5]..src/BoundedBitSet.ml[52,2397+3])
+          Tmod_functor ()
+          module_expr (src/BoundedBitSet.ml[33,1951+2]..src/BoundedBitSet.ml[52,2397+3])
+            Tmod_structure
+            [
+              structure_item (src/BoundedBitSet.ml[38,2061+2]..src/BoundedBitSet.ml[39,2079+34])
+                Tstr_modtype "S/441"
+                  module_type (src/BoundedBitSet.ml[39,2079+4]..src/BoundedBitSet.ml[39,2079+34])
+                    Tmty_with
+                    module_type (src/BoundedBitSet.ml[39,2079+4]..src/BoundedBitSet.ml[39,2079+10])
+                      Tmty_ident "Dune__exe!.GSet.S"
+                    [
+                      "element/400"
+                        Twith_type
+                          type_declaration element/400 (src/BoundedBitSet.ml[39,2079+16]..src/BoundedBitSet.ml[39,2079+34])
+                            ptype_params =
+                              []
+                            ptype_cstrs =
+                              []
+                            ptype_kind =
+                              Ttype_abstract
+                            ptype_private = Public
+                            ptype_manifest =
+                              Some
+                                core_type (src/BoundedBitSet.ml[39,2079+31]..src/BoundedBitSet.ml[39,2079+34])
+                                  Ttyp_constr "int/1!"
+                                  []
+                    ]
+              structure_item (src/BoundedBitSet.ml[41,2115+2]..src/BoundedBitSet.ml[50,2387+8])
+                Tstr_include                module_expr (src/BoundedBitSet.ml[41,2115+10]..src/BoundedBitSet.ml[50,2387+8])
+                  Tmod_unpack
+                  expression (src/BoundedBitSet.ml[42,2130+4]..src/BoundedBitSet.ml[49,2355+31])
+                    extra
+                      Texp_constraint
+                      core_type (src/BoundedBitSet.ml[50,2387+6]..src/BoundedBitSet.ml[50,2387+7])
+                        Ttyp_package "S/441"
+                        []
+                    Texp_ifthenelse
+                    expression (src/BoundedBitSet.ml[42,2130+7]..src/BoundedBitSet.ml[42,2130+32])
+                      Texp_apply
+                      expression (src/BoundedBitSet.ml[42,2130+11]..src/BoundedBitSet.ml[42,2130+13])
+                        Texp_ident "Stdlib!.<="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/BoundedBitSet.ml[42,2130+7]..src/BoundedBitSet.ml[42,2130+10])
+                            Texp_ident "N/397.n"
+                        <arg>
+                          Nolabel
+                          expression (src/BoundedBitSet.ml[42,2130+14]..src/BoundedBitSet.ml[42,2130+32])
+                            Texp_ident "Dune__exe!.AtomicBitSet.bound"
+                      ]
+                    expression (src/BoundedBitSet.ml[43,2168+6]..src/BoundedBitSet.ml[43,2168+31]) ghost
+                      extra
+                        Texp_constraint
+                        core_type (src/BoundedBitSet.ml[43,2168+29]..src/BoundedBitSet.ml[43,2168+30])
+                          Ttyp_package "S/441"
+                          []
+                      Texp_pack                      module_expr (src/BoundedBitSet.ml[43,2168+14]..src/BoundedBitSet.ml[43,2168+26])
+                        module_expr (src/BoundedBitSet.ml[43,2168+14]..src/BoundedBitSet.ml[43,2168+26])
+                          module_expr (src/BoundedBitSet.ml[43,2168+14]..src/BoundedBitSet.ml[43,2168+26])
+                            Tmod_ident "Dune__exe!.AtomicBitSet"
+                    Some
+                      expression (src/BoundedBitSet.ml[44,2200+9]..src/BoundedBitSet.ml[49,2355+31])
+                        Texp_ifthenelse
+                        expression (src/BoundedBitSet.ml[44,2200+12]..src/BoundedBitSet.ml[44,2200+36])
+                          Texp_apply
+                          expression (src/BoundedBitSet.ml[44,2200+16]..src/BoundedBitSet.ml[44,2200+18])
+                            Texp_ident "Stdlib!.<="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/BoundedBitSet.ml[44,2200+12]..src/BoundedBitSet.ml[44,2200+15])
+                                Texp_ident "N/397.n"
+                            <arg>
+                              Nolabel
+                              expression (src/BoundedBitSet.ml[44,2200+19]..src/BoundedBitSet.ml[44,2200+36])
+                                Texp_ident "Dune__exe!.DWordBitSet.bound"
+                          ]
+                        expression (src/BoundedBitSet.ml[45,2242+6]..src/BoundedBitSet.ml[45,2242+30]) ghost
+                          extra
+                            Texp_constraint
+                            core_type (src/BoundedBitSet.ml[45,2242+28]..src/BoundedBitSet.ml[45,2242+29])
+                              Ttyp_package "S/441"
+                              []
+                          Texp_pack                          module_expr (src/BoundedBitSet.ml[45,2242+14]..src/BoundedBitSet.ml[45,2242+25])
+                            module_expr (src/BoundedBitSet.ml[45,2242+14]..src/BoundedBitSet.ml[45,2242+25])
+                              module_expr (src/BoundedBitSet.ml[45,2242+14]..src/BoundedBitSet.ml[45,2242+25])
+                                Tmod_ident "Dune__exe!.DWordBitSet"
+                        Some
+                          expression (src/BoundedBitSet.ml[46,2273+9]..src/BoundedBitSet.ml[49,2355+31])
+                            Texp_ifthenelse
+                            expression (src/BoundedBitSet.ml[46,2273+12]..src/BoundedBitSet.ml[46,2273+36])
+                              Texp_apply
+                              expression (src/BoundedBitSet.ml[46,2273+16]..src/BoundedBitSet.ml[46,2273+18])
+                                Texp_ident "Stdlib!.<="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/BoundedBitSet.ml[46,2273+12]..src/BoundedBitSet.ml[46,2273+15])
+                                    Texp_ident "N/397.n"
+                                <arg>
+                                  Nolabel
+                                  expression (src/BoundedBitSet.ml[46,2273+19]..src/BoundedBitSet.ml[46,2273+36])
+                                    Texp_ident "Dune__exe!.QWordBitSet.bound"
+                              ]
+                            expression (src/BoundedBitSet.ml[47,2315+6]..src/BoundedBitSet.ml[47,2315+30]) ghost
+                              extra
+                                Texp_constraint
+                                core_type (src/BoundedBitSet.ml[47,2315+28]..src/BoundedBitSet.ml[47,2315+29])
+                                  Ttyp_package "S/441"
+                                  []
+                              Texp_pack                              module_expr (src/BoundedBitSet.ml[47,2315+14]..src/BoundedBitSet.ml[47,2315+25])
+                                module_expr (src/BoundedBitSet.ml[47,2315+14]..src/BoundedBitSet.ml[47,2315+25])
+                                  module_expr (src/BoundedBitSet.ml[47,2315+14]..src/BoundedBitSet.ml[47,2315+25])
+                                    Tmod_ident "Dune__exe!.QWordBitSet"
+                            Some
+                              expression (src/BoundedBitSet.ml[49,2355+6]..src/BoundedBitSet.ml[49,2355+31]) ghost
+                                extra
+                                  Texp_constraint
+                                  core_type (src/BoundedBitSet.ml[49,2355+29]..src/BoundedBitSet.ml[49,2355+30])
+                                    Ttyp_package "S/441"
+                                    []
+                                Texp_pack                                module_expr (src/BoundedBitSet.ml[49,2355+14]..src/BoundedBitSet.ml[49,2355+26])
+                                  module_expr (src/BoundedBitSet.ml[49,2355+14]..src/BoundedBitSet.ml[49,2355+26])
+                                    module_expr (src/BoundedBitSet.ml[49,2355+14]..src/BoundedBitSet.ml[49,2355+26])
+                                      Tmod_ident "Dune__exe!.SparseBitSet"
+            ]
+]
+
+{<Dune__exe__BoundedBitSet>
+ "Make"[module] ->
+   Abs<Dune__exe__BoundedBitSet.4>
+      (N/397, ()/1,
+       {
+        "add"[value] -> <>;
+        "cardinal"[value] -> <>;
+        "choose"[value] -> <>;
+        "compare"[value] -> <>;
+        "disjoint"[value] -> <>;
+        "element"[type] -> <>;
+        "elements"[value] -> <>;
+        "empty"[value] -> <>;
+        "equal"[value] -> <>;
+        "fold"[value] -> <>;
+        "inter"[value] -> <>;
+        "is_empty"[value] -> <>;
+        "is_singleton"[value] -> <>;
+        "iter"[value] -> <>;
+        "mem"[value] -> <>;
+        "remove"[value] -> <>;
+        "singleton"[value] -> <>;
+        "subset"[value] -> <>;
+        "t"[type] -> <>;
+        "union"[value] -> <>;
+        });
+ }
+
+(let
+  (Make/664 =
+     (function N/1116 */1115 is_a_functor
+       (let
+         (N/397 =a N/1116
+          */1106 =a */1115
+          include/1107 =
+            (if
+              (<= (field_imm 0 N/397)
+                (field_imm 0 (global Dune__exe__AtomicBitSet!)))
+              (let
+                (let/1113 = (global Dune__exe__AtomicBitSet!)
+                 let/1114 =a (global Dune__exe__AtomicBitSet!))
+                (makeblock 0 (field_mut 1 let/1114) (field_mut 2 let/1114)
+                  (field_mut 3 let/1114) (field_mut 4 let/1114)
+                  (field_mut 5 let/1114) (field_mut 6 let/1114)
+                  (field_mut 7 let/1114) (field_mut 8 let/1114)
+                  (field_mut 9 let/1114) (field_mut 10 let/1114)
+                  (field_mut 11 let/1114) (field_mut 12 let/1114)
+                  (field_mut 13 let/1114) (field_mut 14 let/1114)
+                  (field_mut 15 let/1114) (field_mut 16 let/1114)
+                  (field_mut 17 let/1114) (field_mut 18 let/1114)))
+              (if
+                (<= (field_imm 0 N/397)
+                  (field_imm 0 (global Dune__exe__DWordBitSet!)))
+                (let
+                  (let/1111 = (global Dune__exe__DWordBitSet!)
+                   let/1112 =a (global Dune__exe__DWordBitSet!))
+                  (makeblock 0 (field_mut 1 let/1112) (field_mut 2 let/1112)
+                    (field_mut 3 let/1112) (field_mut 4 let/1112)
+                    (field_mut 5 let/1112) (field_mut 6 let/1112)
+                    (field_mut 7 let/1112) (field_mut 8 let/1112)
+                    (field_mut 9 let/1112) (field_mut 10 let/1112)
+                    (field_mut 11 let/1112) (field_mut 12 let/1112)
+                    (field_mut 13 let/1112) (field_mut 14 let/1112)
+                    (field_mut 15 let/1112) (field_mut 16 let/1112)
+                    (field_mut 17 let/1112) (field_mut 18 let/1112)))
+                (if
+                  (<= (field_imm 0 N/397)
+                    (field_imm 0 (global Dune__exe__QWordBitSet!)))
+                  (let
+                    (let/1109 = (global Dune__exe__QWordBitSet!)
+                     let/1110 =a (global Dune__exe__QWordBitSet!))
+                    (makeblock 0 (field_mut 1 let/1110)
+                      (field_mut 2 let/1110) (field_mut 3 let/1110)
+                      (field_mut 4 let/1110) (field_mut 5 let/1110)
+                      (field_mut 6 let/1110) (field_mut 7 let/1110)
+                      (field_mut 8 let/1110) (field_mut 9 let/1110)
+                      (field_mut 10 let/1110) (field_mut 11 let/1110)
+                      (field_mut 12 let/1110) (field_mut 13 let/1110)
+                      (field_mut 14 let/1110) (field_mut 15 let/1110)
+                      (field_mut 16 let/1110) (field_mut 17 let/1110)
+                      (field_mut 18 let/1110)))
+                  (let (let/1108 = (global Dune__exe__SparseBitSet!))
+                    (global Dune__exe__SparseBitSet!)))))
+          empty/646 =a (field_mut 0 include/1107)
+          is_empty/647 =a (field_mut 1 include/1107)
+          singleton/648 =a (field_mut 2 include/1107)
+          is_singleton/649 =a (field_mut 3 include/1107)
+          cardinal/650 =a (field_mut 4 include/1107)
+          choose/651 =a (field_mut 5 include/1107)
+          mem/652 =a (field_mut 6 include/1107)
+          add/653 =a (field_mut 7 include/1107)
+          remove/654 =a (field_mut 8 include/1107)
+          union/655 =a (field_mut 9 include/1107)
+          inter/656 =a (field_mut 10 include/1107)
+          disjoint/657 =a (field_mut 11 include/1107)
+          iter/658 =a (field_mut 12 include/1107)
+          fold/659 =a (field_mut 13 include/1107)
+          elements/660 =a (field_mut 14 include/1107)
+          compare/661 =a (field_mut 15 include/1107)
+          equal/662 =a (field_mut 16 include/1107)
+          subset/663 =a (field_mut 17 include/1107))
+         (makeblock 0 empty/646 is_empty/647 singleton/648 is_singleton/649
+           cardinal/650 choose/651 mem/652 add/653 remove/654 union/655
+           inter/656 disjoint/657 iter/658 fold/659 elements/660 compare/661
+           equal/662 subset/663))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__BoundedBitSet!) Make/664)
+    0))
+(let
+  (Make/664 =
+     (function N/1116 */1115 is_a_functor
+       (let
+         (include/1107 =
+            (if
+              (<= (field_imm 0 N/1116)
+                (field_imm 0 (global Dune__exe__AtomicBitSet!)))
+              (let
+                (let/1113 = (global Dune__exe__AtomicBitSet!)
+                 let/1114 =a (global Dune__exe__AtomicBitSet!))
+                (makeblock 0 (field_mut 1 let/1114) (field_mut 2 let/1114)
+                  (field_mut 3 let/1114) (field_mut 4 let/1114)
+                  (field_mut 5 let/1114) (field_mut 6 let/1114)
+                  (field_mut 7 let/1114) (field_mut 8 let/1114)
+                  (field_mut 9 let/1114) (field_mut 10 let/1114)
+                  (field_mut 11 let/1114) (field_mut 12 let/1114)
+                  (field_mut 13 let/1114) (field_mut 14 let/1114)
+                  (field_mut 15 let/1114) (field_mut 16 let/1114)
+                  (field_mut 17 let/1114) (field_mut 18 let/1114)))
+              (if
+                (<= (field_imm 0 N/1116)
+                  (field_imm 0 (global Dune__exe__DWordBitSet!)))
+                (let
+                  (let/1111 = (global Dune__exe__DWordBitSet!)
+                   let/1112 =a (global Dune__exe__DWordBitSet!))
+                  (makeblock 0 (field_mut 1 let/1112) (field_mut 2 let/1112)
+                    (field_mut 3 let/1112) (field_mut 4 let/1112)
+                    (field_mut 5 let/1112) (field_mut 6 let/1112)
+                    (field_mut 7 let/1112) (field_mut 8 let/1112)
+                    (field_mut 9 let/1112) (field_mut 10 let/1112)
+                    (field_mut 11 let/1112) (field_mut 12 let/1112)
+                    (field_mut 13 let/1112) (field_mut 14 let/1112)
+                    (field_mut 15 let/1112) (field_mut 16 let/1112)
+                    (field_mut 17 let/1112) (field_mut 18 let/1112)))
+                (if
+                  (<= (field_imm 0 N/1116)
+                    (field_imm 0 (global Dune__exe__QWordBitSet!)))
+                  (let
+                    (let/1109 = (global Dune__exe__QWordBitSet!)
+                     let/1110 =a (global Dune__exe__QWordBitSet!))
+                    (makeblock 0 (field_mut 1 let/1110)
+                      (field_mut 2 let/1110) (field_mut 3 let/1110)
+                      (field_mut 4 let/1110) (field_mut 5 let/1110)
+                      (field_mut 6 let/1110) (field_mut 7 let/1110)
+                      (field_mut 8 let/1110) (field_mut 9 let/1110)
+                      (field_mut 10 let/1110) (field_mut 11 let/1110)
+                      (field_mut 12 let/1110) (field_mut 13 let/1110)
+                      (field_mut 14 let/1110) (field_mut 15 let/1110)
+                      (field_mut 16 let/1110) (field_mut 17 let/1110)
+                      (field_mut 18 let/1110)))
+                  (let (let/1108 = (global Dune__exe__SparseBitSet!))
+                    (global Dune__exe__SparseBitSet!))))))
+         (makeblock 0 (field_mut 0 include/1107) (field_mut 1 include/1107)
+           (field_mut 2 include/1107) (field_mut 3 include/1107)
+           (field_mut 4 include/1107) (field_mut 5 include/1107)
+           (field_mut 6 include/1107) (field_mut 7 include/1107)
+           (field_mut 8 include/1107) (field_mut 9 include/1107)
+           (field_mut 10 include/1107) (field_mut 11 include/1107)
+           (field_mut 12 include/1107) (field_mut 13 include/1107)
+           (field_mut 14 include/1107) (field_mut 15 include/1107)
+           (field_mut 16 include/1107) (field_mut 17 include/1107)))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__BoundedBitSet!) Make/664)
+    0))

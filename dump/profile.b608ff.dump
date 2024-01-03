@@ -1,0 +1,19 @@
+0.090s 83.4MB 7.03MB 8.76MB src/stage2/conflict.ml
+  0.003s 2.05MB 0.65MB 2.38MB parsing
+    0.003s 2.05MB 0.65MB 2.38MB parser
+  0.046s 31.5MB 4.31MB 6.69MB typing
+  0.002s 2.02MB ------ ------ transl
+  0.020s 22.0MB 1.90MB 8.60MB generate
+    ------ 0.12MB ------ ------ cmm
+    0.009s 13.1MB 1.34MB 8.04MB compile_phrases
+      0.001s ------ ------ ------ selection
+      ------ 2.00MB 0.21MB 6.91MB polling
+      0.001s 2.00MB 0.15MB 7.07MB liveness
+      0.001s 2.00MB 0.28MB 7.35MB deadcode
+      0.001s 4.20MB 0.43MB 7.79MB spill
+      0.003s 2.54MB 0.25MB 8.04MB regalloc
+      0.001s 0.45MB ------ ------ emit
+    0.004s ------ ------ ------ assemble
+    0.006s 8.69MB 0.56MB 8.60MB other
+  0.019s 25.7MB 0.15MB 8.76MB other
+0.014s 3.08MB 1.73MB ------ other

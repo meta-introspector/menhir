@@ -1,0 +1,283 @@
+[
+  structure_item (test/dynamic/misc/variants/test.ml[1,0+0]..[7,148+30])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/misc/variants/test.ml[1,0+4]..[1,0+6])
+          Ppat_construct "()" (test/dynamic/misc/variants/test.ml[1,0+4]..[1,0+6])
+          None
+        expression (test/dynamic/misc/variants/test.ml[2,9+2]..[7,148+30])
+          Pexp_let Nonrec
+          [
+            <def>
+              pattern (test/dynamic/misc/variants/test.ml[2,9+6]..[2,9+12])
+                Ppat_var "lexbuf" (test/dynamic/misc/variants/test.ml[2,9+6]..[2,9+12])
+              expression (test/dynamic/misc/variants/test.ml[2,9+15]..[2,9+37])
+                Pexp_apply
+                expression (test/dynamic/misc/variants/test.ml[2,9+15]..[2,9+33])
+                  Pexp_ident "Lexing.from_string" (test/dynamic/misc/variants/test.ml[2,9+15]..[2,9+33])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/misc/variants/test.ml[2,9+34]..[2,9+37])
+                      Pexp_constant PConst_string("T",(test/dynamic/misc/variants/test.ml[2,9+35]..[2,9+36]),None)
+                ]
+          ]
+          expression (test/dynamic/misc/variants/test.ml[3,50+2]..[7,148+30])
+            Pexp_match
+            expression (test/dynamic/misc/variants/test.ml[3,50+8]..[3,50+37])
+              Pexp_apply
+              expression (test/dynamic/misc/variants/test.ml[3,50+8]..[3,50+19])
+                Pexp_ident "Parser.main" (test/dynamic/misc/variants/test.ml[3,50+8]..[3,50+19])
+              [
+                <arg>
+                Nolabel
+                  expression (test/dynamic/misc/variants/test.ml[3,50+20]..[3,50+30])
+                    Pexp_ident "Lexer.read" (test/dynamic/misc/variants/test.ml[3,50+20]..[3,50+30])
+                <arg>
+                Nolabel
+                  expression (test/dynamic/misc/variants/test.ml[3,50+31]..[3,50+37])
+                    Pexp_ident "lexbuf" (test/dynamic/misc/variants/test.ml[3,50+31]..[3,50+37])
+              ]
+            [
+              <case>
+                pattern (test/dynamic/misc/variants/test.ml[4,93+4]..[4,93+8])
+                  Ppat_variant "A"
+                  Some
+                    pattern (test/dynamic/misc/variants/test.ml[4,93+7]..[4,93+8])
+                      Ppat_var "s" (test/dynamic/misc/variants/test.ml[4,93+7]..[4,93+8])
+                expression (test/dynamic/misc/variants/test.ml[5,105+6]..[5,105+30])
+                  Pexp_apply
+                  expression (test/dynamic/misc/variants/test.ml[5,105+6]..[5,105+19])
+                    Pexp_ident "Printf.printf" (test/dynamic/misc/variants/test.ml[5,105+6]..[5,105+19])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[5,105+20]..[5,105+28])
+                        Pexp_constant PConst_string("A %s\n",(test/dynamic/misc/variants/test.ml[5,105+21]..[5,105+27]),None)
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[5,105+29]..[5,105+30])
+                        Pexp_ident "s" (test/dynamic/misc/variants/test.ml[5,105+29]..[5,105+30])
+                  ]
+              <case>
+                pattern (test/dynamic/misc/variants/test.ml[6,136+4]..[6,136+8])
+                  Ppat_variant "T"
+                  Some
+                    pattern (test/dynamic/misc/variants/test.ml[6,136+7]..[6,136+8])
+                      Ppat_var "i" (test/dynamic/misc/variants/test.ml[6,136+7]..[6,136+8])
+                expression (test/dynamic/misc/variants/test.ml[7,148+6]..[7,148+30])
+                  Pexp_apply
+                  expression (test/dynamic/misc/variants/test.ml[7,148+6]..[7,148+19])
+                    Pexp_ident "Printf.printf" (test/dynamic/misc/variants/test.ml[7,148+6]..[7,148+19])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[7,148+20]..[7,148+28])
+                        Pexp_constant PConst_string("T %d\n",(test/dynamic/misc/variants/test.ml[7,148+21]..[7,148+27]),None)
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[7,148+29]..[7,148+30])
+                        Pexp_ident "i" (test/dynamic/misc/variants/test.ml[7,148+29]..[7,148+30])
+                  ]
+            ]
+    ]
+]
+
+let () =
+  let lexbuf = Lexing.from_string "T" in
+  match Parser.main Lexer.read lexbuf with
+  | `A s -> Printf.printf "A %s\n" s
+  | `T i -> Printf.printf "T %d\n" i
+[
+  structure_item (test/dynamic/misc/variants/test.ml[1,0+0]..test/dynamic/misc/variants/test.ml[7,148+30])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/misc/variants/test.ml[1,0+4]..test/dynamic/misc/variants/test.ml[1,0+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (test/dynamic/misc/variants/test.ml[2,9+2]..test/dynamic/misc/variants/test.ml[7,148+30])
+          Texp_let Nonrec
+          [
+            <def>
+              pattern (test/dynamic/misc/variants/test.ml[2,9+6]..test/dynamic/misc/variants/test.ml[2,9+12])
+                Tpat_var "lexbuf/272"
+              expression (test/dynamic/misc/variants/test.ml[2,9+15]..test/dynamic/misc/variants/test.ml[2,9+37])
+                Texp_apply
+                expression (test/dynamic/misc/variants/test.ml[2,9+15]..test/dynamic/misc/variants/test.ml[2,9+33])
+                  Texp_ident "Stdlib!.Lexing.from_string"
+                [
+                  <arg>
+                    Optional "with_positions"
+                    expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                      Texp_construct "None"
+                      []
+                  <arg>
+                    Nolabel
+                    expression (test/dynamic/misc/variants/test.ml[2,9+34]..test/dynamic/misc/variants/test.ml[2,9+37])
+                      Texp_constant Const_string("T",(test/dynamic/misc/variants/test.ml[2,9+35]..test/dynamic/misc/variants/test.ml[2,9+36]),None)
+                ]
+          ]
+          expression (test/dynamic/misc/variants/test.ml[3,50+2]..test/dynamic/misc/variants/test.ml[7,148+30])
+            Texp_match
+            expression (test/dynamic/misc/variants/test.ml[3,50+8]..test/dynamic/misc/variants/test.ml[3,50+37])
+              Texp_apply
+              expression (test/dynamic/misc/variants/test.ml[3,50+8]..test/dynamic/misc/variants/test.ml[3,50+19])
+                Texp_ident "Dune__exe!.Parser.main"
+              [
+                <arg>
+                  Nolabel
+                  expression (test/dynamic/misc/variants/test.ml[3,50+20]..test/dynamic/misc/variants/test.ml[3,50+30])
+                    Texp_ident "Dune__exe!.Lexer.read"
+                <arg>
+                  Nolabel
+                  expression (test/dynamic/misc/variants/test.ml[3,50+31]..test/dynamic/misc/variants/test.ml[3,50+37])
+                    Texp_ident "lexbuf/272"
+              ]
+            [
+              <case>
+                pattern (test/dynamic/misc/variants/test.ml[4,93+4]..test/dynamic/misc/variants/test.ml[4,93+8])
+                  Tpat_value
+                  pattern (test/dynamic/misc/variants/test.ml[4,93+4]..test/dynamic/misc/variants/test.ml[4,93+8])
+                    Tpat_variant "A"
+                    Some
+                      pattern (test/dynamic/misc/variants/test.ml[4,93+7]..test/dynamic/misc/variants/test.ml[4,93+8])
+                        Tpat_var "s/330"
+                expression (test/dynamic/misc/variants/test.ml[5,105+6]..test/dynamic/misc/variants/test.ml[5,105+30])
+                  Texp_apply
+                  expression (test/dynamic/misc/variants/test.ml[5,105+6]..test/dynamic/misc/variants/test.ml[5,105+19])
+                    Texp_ident "Stdlib!.Printf.printf"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28])
+                        Texp_construct "CamlinternalFormatBasics.Format"
+                        [
+                          expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                            [
+                              expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                                Texp_constant Const_string("A ",(test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost,None)
+                              expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String"
+                                [
+                                  expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                    []
+                                  expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                    [
+                                      expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                                        Texp_constant Const_char 0a
+                                      expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                        []
+                                    ]
+                                ]
+                            ]
+                          expression (test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost
+                            Texp_constant Const_string("A %s\n",(test/dynamic/misc/variants/test.ml[5,105+20]..test/dynamic/misc/variants/test.ml[5,105+28]) ghost,None)
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[5,105+29]..test/dynamic/misc/variants/test.ml[5,105+30])
+                        Texp_ident "s/330"
+                  ]
+              <case>
+                pattern (test/dynamic/misc/variants/test.ml[6,136+4]..test/dynamic/misc/variants/test.ml[6,136+8])
+                  Tpat_value
+                  pattern (test/dynamic/misc/variants/test.ml[6,136+4]..test/dynamic/misc/variants/test.ml[6,136+8])
+                    Tpat_variant "T"
+                    Some
+                      pattern (test/dynamic/misc/variants/test.ml[6,136+7]..test/dynamic/misc/variants/test.ml[6,136+8])
+                        Tpat_var "i/331"
+                expression (test/dynamic/misc/variants/test.ml[7,148+6]..test/dynamic/misc/variants/test.ml[7,148+30])
+                  Texp_apply
+                  expression (test/dynamic/misc/variants/test.ml[7,148+6]..test/dynamic/misc/variants/test.ml[7,148+19])
+                    Texp_ident "Stdlib!.Printf.printf"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28])
+                        Texp_construct "CamlinternalFormatBasics.Format"
+                        [
+                          expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                            [
+                              expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                Texp_constant Const_string("T ",(test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost,None)
+                              expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                Texp_construct "CamlinternalFormatBasics.Int"
+                                [
+                                  expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.Int_d"
+                                    []
+                                  expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                    []
+                                  expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.No_precision"
+                                    []
+                                  expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                    [
+                                      expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                        Texp_constant Const_char 0a
+                                      expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                        []
+                                    ]
+                                ]
+                            ]
+                          expression (test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost
+                            Texp_constant Const_string("T %d\n",(test/dynamic/misc/variants/test.ml[7,148+20]..test/dynamic/misc/variants/test.ml[7,148+28]) ghost,None)
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/misc/variants/test.ml[7,148+29]..test/dynamic/misc/variants/test.ml[7,148+30])
+                        Texp_ident "i/331"
+                  ]
+            ]
+    ]
+]
+
+{<Dune__exe__Test>
+ }
+
+(seq
+  (let
+    (*match*/451 =
+       (let
+         (lexbuf/272 = (apply (field_imm 2 (global Stdlib__Lexing!)) 0 "T")
+          *match*/447 =
+            (apply (field_imm 1 (global Dune__exe__Parser!))
+              (field_imm 1 (global Dune__exe__Lexer!)) lexbuf/272)
+          variant/448 =a (field_imm 0 *match*/447))
+         (if (>= variant/448 84)
+           (let (i/331 =a (field_imm 1 *match*/447))
+             (apply (field_imm 1 (global Stdlib__Printf!))
+               [0: [11: "T " [4: 0 0 0 [12: '\n' 0]]] "T %d\n"] i/331))
+           (let (s/330 =a (field_imm 1 *match*/447))
+             (apply (field_imm 1 (global Stdlib__Printf!))
+               [0: [11: "A " [2: 0 [12: '\n' 0]]] "A %s\n"] s/330)))))
+    0)
+  0)
+(seq
+  (let
+    (*match*/451 =
+       (let
+         (lexbuf/272 = (apply (field_imm 2 (global Stdlib__Lexing!)) 0 "T")
+          *match*/447 =
+            (apply (field_imm 1 (global Dune__exe__Parser!))
+              (field_imm 1 (global Dune__exe__Lexer!)) lexbuf/272))
+         (if (>= (field_imm 0 *match*/447) 84)
+           (apply (field_imm 1 (global Stdlib__Printf!))
+             [0: [11: "T " [4: 0 0 0 [12: '\n' 0]]] "T %d\n"]
+             (field_imm 1 *match*/447))
+           (apply (field_imm 1 (global Stdlib__Printf!))
+             [0: [11: "A " [2: 0 [12: '\n' 0]]] "A %s\n"]
+             (field_imm 1 *match*/447)))))
+    0)
+  0)

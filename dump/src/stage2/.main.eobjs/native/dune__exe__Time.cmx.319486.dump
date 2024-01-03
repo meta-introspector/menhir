@@ -1,0 +1,1231 @@
+[
+  structure_item (src/time.ml[14,994+0]..[14,994+9])
+    Pstr_open Fresh
+    module_expr (src/time.ml[14,994+5]..[14,994+9])
+      Pmod_ident "Unix" (src/time.ml[14,994+5]..[14,994+9])
+  structure_item (src/time.ml[15,1004+0]..[15,1004+11])
+    Pstr_open Fresh
+    module_expr (src/time.ml[15,1004+5]..[15,1004+11])
+      Pmod_ident "Printf" (src/time.ml[15,1004+5]..[15,1004+11])
+  structure_item (src/time.ml[17,1017+0]..[18,1029+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[17,1017+4]..[17,1017+9])
+          Ppat_var "clock" (src/time.ml[17,1017+4]..[17,1017+9])
+        expression (src/time.ml[18,1029+2]..[18,1029+15])
+          Pexp_apply
+          expression (src/time.ml[18,1029+2]..[18,1029+5])
+            Pexp_ident "ref" (src/time.ml[18,1029+2]..[18,1029+5])
+          [
+            <arg>
+            Nolabel
+              expression (src/time.ml[18,1029+6]..[18,1029+15])
+                Pexp_apply
+                expression (src/time.ml[18,1029+7]..[18,1029+12])
+                  Pexp_ident "times" (src/time.ml[18,1029+7]..[18,1029+12])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/time.ml[18,1029+12]..[18,1029+14])
+                      Pexp_construct "()" (src/time.ml[18,1029+12]..[18,1029+14])
+                      None
+                ]
+          ]
+    ]
+  structure_item (src/time.ml[20,1046+0]..[30,1290+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[20,1046+4]..[20,1046+8])
+          Ppat_var "tick" (src/time.ml[20,1046+4]..[20,1046+8])
+        expression (src/time.ml[20,1046+9]..[30,1290+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/time.ml[20,1046+9]..[20,1046+12])
+            Ppat_var "msg" (src/time.ml[20,1046+9]..[20,1046+12])
+          expression (src/time.ml[21,1061+2]..[30,1290+22])
+            Pexp_match
+            expression (src/time.ml[21,1061+8]..[21,1061+24])
+              Pexp_ident "Settings.timings" (src/time.ml[21,1061+8]..[21,1061+24])
+            [
+              <case>
+                pattern (src/time.ml[22,1091+4]..[22,1091+8])
+                  Ppat_construct "None" (src/time.ml[22,1091+4]..[22,1091+8])
+                  None
+                expression (src/time.ml[23,1103+6]..[23,1103+8])
+                  Pexp_construct "()" (src/time.ml[23,1103+6]..[23,1103+8])
+                  None
+              <case>
+                pattern (src/time.ml[24,1112+4]..[24,1112+16])
+                  Ppat_construct "Some" (src/time.ml[24,1112+4]..[24,1112+8])
+                  Some
+                    []
+                    pattern (src/time.ml[24,1112+9]..[24,1112+16])
+                      Ppat_var "channel" (src/time.ml[24,1112+9]..[24,1112+16])
+                expression (src/time.ml[25,1132+6]..[30,1290+22])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/time.ml[25,1132+10]..[25,1132+16])
+                        Ppat_var "times1" (src/time.ml[25,1132+10]..[25,1132+16])
+                      expression (src/time.ml[25,1132+19]..[25,1132+25])
+                        Pexp_apply
+                        expression (src/time.ml[25,1132+19]..[25,1132+20])
+                          Pexp_ident "!" (src/time.ml[25,1132+19]..[25,1132+20])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[25,1132+20]..[25,1132+25])
+                              Pexp_ident "clock" (src/time.ml[25,1132+20]..[25,1132+25])
+                        ]
+                  ]
+                  expression (src/time.ml[26,1161+6]..[30,1290+22])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/time.ml[26,1161+10]..[26,1161+16])
+                          Ppat_var "times2" (src/time.ml[26,1161+10]..[26,1161+16])
+                        expression (src/time.ml[26,1161+19]..[26,1161+26])
+                          Pexp_apply
+                          expression (src/time.ml[26,1161+19]..[26,1161+24])
+                            Pexp_ident "times" (src/time.ml[26,1161+19]..[26,1161+24])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/time.ml[26,1161+24]..[26,1161+26])
+                                Pexp_construct "()" (src/time.ml[26,1161+24]..[26,1161+26])
+                                None
+                          ]
+                    ]
+                    expression (src/time.ml[27,1191+6]..[30,1290+22])
+                      Pexp_sequence
+                      expression (src/time.ml[27,1191+6]..[29,1242+46])
+                        Pexp_apply
+                        expression (src/time.ml[27,1191+6]..[27,1191+13])
+                          Pexp_ident "fprintf" (src/time.ml[27,1191+6]..[27,1191+13])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[27,1191+14]..[27,1191+21])
+                              Pexp_ident "channel" (src/time.ml[27,1191+14]..[27,1191+21])
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[27,1191+22]..[27,1191+38])
+                              Pexp_constant PConst_string("%s: %.02fs\n%!",(src/time.ml[27,1191+23]..[27,1191+37]),None)
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[28,1230+8]..[28,1230+11])
+                              Pexp_ident "msg" (src/time.ml[28,1230+8]..[28,1230+11])
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[29,1242+8]..[29,1242+46])
+                              Pexp_apply
+                              expression (src/time.ml[29,1242+26]..[29,1242+28])
+                                Pexp_ident "-." (src/time.ml[29,1242+26]..[29,1242+28])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/time.ml[29,1242+9]..[29,1242+25])
+                                    Pexp_field
+                                    expression (src/time.ml[29,1242+9]..[29,1242+15])
+                                      Pexp_ident "times2" (src/time.ml[29,1242+9]..[29,1242+15])
+                                    "tms_utime" (src/time.ml[29,1242+16]..[29,1242+25])
+                                <arg>
+                                Nolabel
+                                  expression (src/time.ml[29,1242+29]..[29,1242+45])
+                                    Pexp_field
+                                    expression (src/time.ml[29,1242+29]..[29,1242+35])
+                                      Pexp_ident "times1" (src/time.ml[29,1242+29]..[29,1242+35])
+                                    "tms_utime" (src/time.ml[29,1242+36]..[29,1242+45])
+                              ]
+                        ]
+                      expression (src/time.ml[30,1290+6]..[30,1290+22])
+                        Pexp_apply
+                        expression (src/time.ml[30,1290+12]..[30,1290+14])
+                          Pexp_ident ":=" (src/time.ml[30,1290+12]..[30,1290+14])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[30,1290+6]..[30,1290+11])
+                              Pexp_ident "clock" (src/time.ml[30,1290+6]..[30,1290+11])
+                          <arg>
+                          Nolabel
+                            expression (src/time.ml[30,1290+15]..[30,1290+22])
+                              Pexp_apply
+                              expression (src/time.ml[30,1290+15]..[30,1290+20])
+                                Pexp_ident "times" (src/time.ml[30,1290+15]..[30,1290+20])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/time.ml[30,1290+20]..[30,1290+22])
+                                    Pexp_construct "()" (src/time.ml[30,1290+20]..[30,1290+22])
+                                    None
+                              ]
+                        ]
+            ]
+    ]
+  structure_item (src/time.ml[32,1314+0]..[33,1328+13])
+    Pstr_type Rec
+    [
+      type_declaration "chrono" (src/time.ml[32,1314+5]..[32,1314+11]) (src/time.ml[32,1314+0]..[33,1328+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/time.ml[33,1328+4]..[33,1328+13])
+              Ptyp_constr "ref" (src/time.ml[33,1328+10]..[33,1328+13])
+              [
+                core_type (src/time.ml[33,1328+4]..[33,1328+9])
+                  Ptyp_constr "float" (src/time.ml[33,1328+4]..[33,1328+9])
+                  []
+              ]
+    ]
+  structure_item (src/time.ml[35,1343+0]..[36,1358+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[35,1343+4]..[35,1343+9])
+          Ppat_var "fresh" (src/time.ml[35,1343+4]..[35,1343+9])
+        expression (src/time.ml[35,1343+10]..[36,1358+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/time.ml[35,1343+10]..[35,1343+12])
+            Ppat_construct "()" (src/time.ml[35,1343+10]..[35,1343+12])
+            None
+          expression (src/time.ml[36,1358+2]..[36,1358+8])
+            Pexp_apply
+            expression (src/time.ml[36,1358+2]..[36,1358+5])
+              Pexp_ident "ref" (src/time.ml[36,1358+2]..[36,1358+5])
+            [
+              <arg>
+              Nolabel
+                expression (src/time.ml[36,1358+6]..[36,1358+8])
+                  Pexp_constant PConst_float (0.,None)
+            ]
+    ]
+  structure_item (src/time.ml[38,1368+0]..[47,1657+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[38,1368+4]..[38,1368+10])
+          Ppat_var "chrono" (src/time.ml[38,1368+4]..[38,1368+10])
+        expression (src/time.ml[38,1368+11]..[47,1657+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/time.ml[38,1368+11]..[38,1368+31])
+            Ppat_constraint
+            pattern (src/time.ml[38,1368+12]..[38,1368+18])
+              Ppat_var "chrono" (src/time.ml[38,1368+12]..[38,1368+18])
+            core_type (src/time.ml[38,1368+21]..[38,1368+30])
+              Ptyp_constr "ref" (src/time.ml[38,1368+27]..[38,1368+30])
+              [
+                core_type (src/time.ml[38,1368+21]..[38,1368+26])
+                  Ptyp_constr "float" (src/time.ml[38,1368+21]..[38,1368+26])
+                  []
+              ]
+          expression (src/time.ml[38,1368+32]..[47,1657+12]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/time.ml[38,1368+32]..[38,1368+51])
+              Ppat_constraint
+              pattern (src/time.ml[38,1368+33]..[38,1368+37])
+                Ppat_var "task" (src/time.ml[38,1368+33]..[38,1368+37])
+              core_type (src/time.ml[38,1368+40]..[38,1368+50])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/time.ml[38,1368+40]..[38,1368+44])
+                  Ptyp_constr "unit" (src/time.ml[38,1368+40]..[38,1368+44])
+                  []
+                core_type (src/time.ml[38,1368+48]..[38,1368+50])
+                  Ptyp_var a
+            expression (src/time.ml[38,1368+52]..[47,1657+12])
+              Pexp_constraint
+              expression (src/time.ml[39,1427+2]..[47,1657+12])
+                Pexp_match
+                expression (src/time.ml[39,1427+8]..[39,1427+24])
+                  Pexp_ident "Settings.timings" (src/time.ml[39,1427+8]..[39,1427+24])
+                [
+                  <case>
+                    pattern (src/time.ml[40,1457+4]..[40,1457+8])
+                      Ppat_construct "None" (src/time.ml[40,1457+4]..[40,1457+8])
+                      None
+                    expression (src/time.ml[41,1469+6]..[41,1469+12])
+                      Pexp_apply
+                      expression (src/time.ml[41,1469+6]..[41,1469+10])
+                        Pexp_ident "task" (src/time.ml[41,1469+6]..[41,1469+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/time.ml[41,1469+10]..[41,1469+12])
+                            Pexp_construct "()" (src/time.ml[41,1469+10]..[41,1469+12])
+                            None
+                      ]
+                  <case>
+                    pattern (src/time.ml[42,1482+4]..[42,1482+17])
+                      Ppat_construct "Some" (src/time.ml[42,1482+4]..[42,1482+8])
+                      Some
+                        []
+                        pattern (src/time.ml[42,1482+9]..[42,1482+17])
+                          Ppat_var "_channel" (src/time.ml[42,1482+9]..[42,1482+17])
+                    expression (src/time.ml[43,1503+6]..[47,1657+12])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/time.ml[43,1503+10]..[43,1503+16])
+                            Ppat_var "times1" (src/time.ml[43,1503+10]..[43,1503+16])
+                          expression (src/time.ml[43,1503+19]..[43,1503+26])
+                            Pexp_apply
+                            expression (src/time.ml[43,1503+19]..[43,1503+24])
+                              Pexp_ident "times" (src/time.ml[43,1503+19]..[43,1503+24])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/time.ml[43,1503+24]..[43,1503+26])
+                                  Pexp_construct "()" (src/time.ml[43,1503+24]..[43,1503+26])
+                                  None
+                            ]
+                      ]
+                      expression (src/time.ml[44,1533+6]..[47,1657+12])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/time.ml[44,1533+10]..[44,1533+16])
+                              Ppat_var "result" (src/time.ml[44,1533+10]..[44,1533+16])
+                            expression (src/time.ml[44,1533+19]..[44,1533+25])
+                              Pexp_apply
+                              expression (src/time.ml[44,1533+19]..[44,1533+23])
+                                Pexp_ident "task" (src/time.ml[44,1533+19]..[44,1533+23])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/time.ml[44,1533+23]..[44,1533+25])
+                                    Pexp_construct "()" (src/time.ml[44,1533+23]..[44,1533+25])
+                                    None
+                              ]
+                        ]
+                        expression (src/time.ml[45,1562+6]..[47,1657+12])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/time.ml[45,1562+10]..[45,1562+16])
+                                Ppat_var "times2" (src/time.ml[45,1562+10]..[45,1562+16])
+                              expression (src/time.ml[45,1562+19]..[45,1562+26])
+                                Pexp_apply
+                                expression (src/time.ml[45,1562+19]..[45,1562+24])
+                                  Pexp_ident "times" (src/time.ml[45,1562+19]..[45,1562+24])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/time.ml[45,1562+24]..[45,1562+26])
+                                      Pexp_construct "()" (src/time.ml[45,1562+24]..[45,1562+26])
+                                      None
+                                ]
+                          ]
+                          expression (src/time.ml[46,1592+6]..[47,1657+12])
+                            Pexp_sequence
+                            expression (src/time.ml[46,1592+6]..[46,1592+63])
+                              Pexp_apply
+                              expression (src/time.ml[46,1592+13]..[46,1592+15])
+                                Pexp_ident ":=" (src/time.ml[46,1592+13]..[46,1592+15])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/time.ml[46,1592+6]..[46,1592+12])
+                                    Pexp_ident "chrono" (src/time.ml[46,1592+6]..[46,1592+12])
+                                <arg>
+                                Nolabel
+                                  expression (src/time.ml[46,1592+16]..[46,1592+63])
+                                    Pexp_apply
+                                    expression (src/time.ml[46,1592+44]..[46,1592+46])
+                                      Pexp_ident "-." (src/time.ml[46,1592+44]..[46,1592+46])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/time.ml[46,1592+16]..[46,1592+43])
+                                          Pexp_apply
+                                          expression (src/time.ml[46,1592+24]..[46,1592+26])
+                                            Pexp_ident "+." (src/time.ml[46,1592+24]..[46,1592+26])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/time.ml[46,1592+16]..[46,1592+23])
+                                                Pexp_apply
+                                                expression (src/time.ml[46,1592+16]..[46,1592+17])
+                                                  Pexp_ident "!" (src/time.ml[46,1592+16]..[46,1592+17])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/time.ml[46,1592+17]..[46,1592+23])
+                                                      Pexp_ident "chrono" (src/time.ml[46,1592+17]..[46,1592+23])
+                                                ]
+                                            <arg>
+                                            Nolabel
+                                              expression (src/time.ml[46,1592+27]..[46,1592+43])
+                                                Pexp_field
+                                                expression (src/time.ml[46,1592+27]..[46,1592+33])
+                                                  Pexp_ident "times2" (src/time.ml[46,1592+27]..[46,1592+33])
+                                                "tms_utime" (src/time.ml[46,1592+34]..[46,1592+43])
+                                          ]
+                                      <arg>
+                                      Nolabel
+                                        expression (src/time.ml[46,1592+47]..[46,1592+63])
+                                          Pexp_field
+                                          expression (src/time.ml[46,1592+47]..[46,1592+53])
+                                            Pexp_ident "times1" (src/time.ml[46,1592+47]..[46,1592+53])
+                                          "tms_utime" (src/time.ml[46,1592+54]..[46,1592+63])
+                                    ]
+                              ]
+                            expression (src/time.ml[47,1657+6]..[47,1657+12])
+                              Pexp_ident "result" (src/time.ml[47,1657+6]..[47,1657+12])
+                ]
+              core_type (src/time.ml[38,1368+54]..[38,1368+56])
+                Ptyp_var a
+    ]
+  structure_item (src/time.ml[49,1671+0]..[56,1830+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[49,1671+4]..[49,1671+11])
+          Ppat_var "display" (src/time.ml[49,1671+4]..[49,1671+11])
+        expression (src/time.ml[49,1671+12]..[56,1830+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/time.ml[49,1671+12]..[49,1671+32])
+            Ppat_constraint
+            pattern (src/time.ml[49,1671+13]..[49,1671+19])
+              Ppat_var "chrono" (src/time.ml[49,1671+13]..[49,1671+19])
+            core_type (src/time.ml[49,1671+22]..[49,1671+31])
+              Ptyp_constr "ref" (src/time.ml[49,1671+28]..[49,1671+31])
+              [
+                core_type (src/time.ml[49,1671+22]..[49,1671+27])
+                  Ptyp_constr "float" (src/time.ml[49,1671+22]..[49,1671+27])
+                  []
+              ]
+          expression (src/time.ml[49,1671+33]..[56,1830+15]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/time.ml[49,1671+33]..[49,1671+36])
+              Ppat_var "msg" (src/time.ml[49,1671+33]..[49,1671+36])
+            expression (src/time.ml[50,1710+2]..[56,1830+15])
+              Pexp_match
+              expression (src/time.ml[50,1710+8]..[50,1710+24])
+                Pexp_ident "Settings.timings" (src/time.ml[50,1710+8]..[50,1710+24])
+              [
+                <case>
+                  pattern (src/time.ml[51,1740+4]..[51,1740+8])
+                    Ppat_construct "None" (src/time.ml[51,1740+4]..[51,1740+8])
+                    None
+                  expression (src/time.ml[52,1752+6]..[52,1752+8])
+                    Pexp_construct "()" (src/time.ml[52,1752+6]..[52,1752+8])
+                    None
+                <case>
+                  pattern (src/time.ml[53,1761+4]..[53,1761+16])
+                    Ppat_construct "Some" (src/time.ml[53,1761+4]..[53,1761+8])
+                    Some
+                      []
+                      pattern (src/time.ml[53,1761+9]..[53,1761+16])
+                        Ppat_var "channel" (src/time.ml[53,1761+9]..[53,1761+16])
+                  expression (src/time.ml[54,1781+6]..[56,1830+15])
+                    Pexp_apply
+                    expression (src/time.ml[54,1781+6]..[54,1781+13])
+                      Pexp_ident "fprintf" (src/time.ml[54,1781+6]..[54,1781+13])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/time.ml[54,1781+14]..[54,1781+21])
+                          Pexp_ident "channel" (src/time.ml[54,1781+14]..[54,1781+21])
+                      <arg>
+                      Nolabel
+                        expression (src/time.ml[54,1781+22]..[54,1781+36])
+                          Pexp_constant PConst_string("%s: %.02fs\n",(src/time.ml[54,1781+23]..[54,1781+35]),None)
+                      <arg>
+                      Nolabel
+                        expression (src/time.ml[55,1818+8]..[55,1818+11])
+                          Pexp_ident "msg" (src/time.ml[55,1818+8]..[55,1818+11])
+                      <arg>
+                      Nolabel
+                        expression (src/time.ml[56,1830+8]..[56,1830+15])
+                          Pexp_apply
+                          expression (src/time.ml[56,1830+8]..[56,1830+9])
+                            Pexp_ident "!" (src/time.ml[56,1830+8]..[56,1830+9])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/time.ml[56,1830+9]..[56,1830+15])
+                                Pexp_ident "chrono" (src/time.ml[56,1830+9]..[56,1830+15])
+                          ]
+                    ]
+              ]
+    ]
+]
+
+open Unix
+open Printf
+let clock = ref (times ())
+let tick msg =
+  match Settings.timings with
+  | None -> ()
+  | Some channel ->
+      let times1 = !clock in
+      let times2 = times () in
+      (fprintf channel "%s: %.02fs\n%!" msg
+         (times2.tms_utime -. times1.tms_utime);
+       clock := (times ()))
+type chrono = float ref
+let fresh () = ref 0.
+let chrono (chrono : float ref) (task : unit -> 'a) =
+  (match Settings.timings with
+   | None -> task ()
+   | Some _channel ->
+       let times1 = times () in
+       let result = task () in
+       let times2 = times () in
+       (chrono := (((!chrono) +. times2.tms_utime) -. times1.tms_utime);
+        result) : 'a)
+let display (chrono : float ref) msg =
+  match Settings.timings with
+  | None -> ()
+  | Some channel -> fprintf channel "%s: %.02fs\n" msg (!chrono)
+[
+  structure_item (src/time.ml[14,994+0]..src/time.ml[14,994+9])
+    Tstr_open Fresh
+    module_expr (src/time.ml[14,994+5]..src/time.ml[14,994+9])
+      Tmod_ident "Unix!"
+  structure_item (src/time.ml[15,1004+0]..src/time.ml[15,1004+11])
+    Tstr_open Fresh
+    module_expr (src/time.ml[15,1004+5]..src/time.ml[15,1004+11])
+      Tmod_ident "Stdlib!.Printf"
+  structure_item (src/time.ml[17,1017+0]..src/time.ml[18,1029+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[17,1017+4]..src/time.ml[17,1017+9])
+          Tpat_var "clock/626"
+        expression (src/time.ml[18,1029+2]..src/time.ml[18,1029+15])
+          Texp_apply
+          expression (src/time.ml[18,1029+2]..src/time.ml[18,1029+5])
+            Texp_ident "Stdlib!.ref"
+          [
+            <arg>
+              Nolabel
+              expression (src/time.ml[18,1029+6]..src/time.ml[18,1029+15])
+                Texp_apply
+                expression (src/time.ml[18,1029+7]..src/time.ml[18,1029+12])
+                  Texp_ident "Unix!.times"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/time.ml[18,1029+12]..src/time.ml[18,1029+14])
+                      Texp_construct "()"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/time.ml[20,1046+0]..src/time.ml[30,1290+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[20,1046+4]..src/time.ml[20,1046+8])
+          Tpat_var "tick/627"
+        expression (src/time.ml[20,1046+9]..src/time.ml[30,1290+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/time.ml[20,1046+9]..src/time.ml[20,1046+12])
+                Tpat_var "msg/629"
+              expression (src/time.ml[21,1061+2]..src/time.ml[30,1290+22])
+                Texp_match
+                expression (src/time.ml[21,1061+8]..src/time.ml[21,1061+24])
+                  Texp_ident "Dune__exe!.Settings.timings"
+                [
+                  <case>
+                    pattern (src/time.ml[22,1091+4]..src/time.ml[22,1091+8])
+                      Tpat_value
+                      pattern (src/time.ml[22,1091+4]..src/time.ml[22,1091+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (src/time.ml[23,1103+6]..src/time.ml[23,1103+8])
+                      Texp_construct "()"
+                      []
+                  <case>
+                    pattern (src/time.ml[24,1112+4]..src/time.ml[24,1112+16])
+                      Tpat_value
+                      pattern (src/time.ml[24,1112+4]..src/time.ml[24,1112+16])
+                        Tpat_construct "Some"
+                        [
+                          pattern (src/time.ml[24,1112+9]..src/time.ml[24,1112+16])
+                            Tpat_var "channel/690"
+                        ]
+                        None
+                    expression (src/time.ml[25,1132+6]..src/time.ml[30,1290+22])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/time.ml[25,1132+10]..src/time.ml[25,1132+16])
+                            Tpat_var "times1/691"
+                          expression (src/time.ml[25,1132+19]..src/time.ml[25,1132+25])
+                            Texp_apply
+                            expression (src/time.ml[25,1132+19]..src/time.ml[25,1132+20])
+                              Texp_ident "Stdlib!.!"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[25,1132+20]..src/time.ml[25,1132+25])
+                                  Texp_ident "clock/626"
+                            ]
+                      ]
+                      expression (src/time.ml[26,1161+6]..src/time.ml[30,1290+22])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/time.ml[26,1161+10]..src/time.ml[26,1161+16])
+                              Tpat_var "times2/692"
+                            expression (src/time.ml[26,1161+19]..src/time.ml[26,1161+26])
+                              Texp_apply
+                              expression (src/time.ml[26,1161+19]..src/time.ml[26,1161+24])
+                                Texp_ident "Unix!.times"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/time.ml[26,1161+24]..src/time.ml[26,1161+26])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                        ]
+                        expression (src/time.ml[27,1191+6]..src/time.ml[30,1290+22])
+                          Texp_sequence
+                          expression (src/time.ml[27,1191+6]..src/time.ml[29,1242+46])
+                            Texp_apply
+                            expression (src/time.ml[27,1191+6]..src/time.ml[27,1191+13])
+                              Texp_ident "Stdlib!.Printf.fprintf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[27,1191+14]..src/time.ml[27,1191+21])
+                                  Texp_ident "channel/690"
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String"
+                                      [
+                                        expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                          []
+                                        expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                              Texp_constant Const_string(": ",(src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost,None)
+                                            expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Float"
+                                              [
+                                                expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                  Texp_tuple
+                                                  [
+                                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Float_flag_"
+                                                      []
+                                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Float_f"
+                                                      []
+                                                  ]
+                                                expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                  []
+                                                expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.Lit_precision"
+                                                  [
+                                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                      Texp_constant Const_int 2
+                                                  ]
+                                                expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                  [
+                                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                      Texp_constant Const_string("s\n",(src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost,None)
+                                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Flush"
+                                                      [
+                                                        expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                          []
+                                                      ]
+                                                  ]
+                                              ]
+                                          ]
+                                      ]
+                                    expression (src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost
+                                      Texp_constant Const_string("%s: %.02fs\n%!",(src/time.ml[27,1191+22]..src/time.ml[27,1191+38]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[28,1230+8]..src/time.ml[28,1230+11])
+                                  Texp_ident "msg/629"
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[29,1242+8]..src/time.ml[29,1242+46])
+                                  Texp_apply
+                                  expression (src/time.ml[29,1242+26]..src/time.ml[29,1242+28])
+                                    Texp_ident "Stdlib!.-."
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/time.ml[29,1242+9]..src/time.ml[29,1242+25])
+                                        Texp_field
+                                        expression (src/time.ml[29,1242+9]..src/time.ml[29,1242+15])
+                                          Texp_ident "times2/692"
+                                        "tms_utime"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/time.ml[29,1242+29]..src/time.ml[29,1242+45])
+                                        Texp_field
+                                        expression (src/time.ml[29,1242+29]..src/time.ml[29,1242+35])
+                                          Texp_ident "times1/691"
+                                        "tms_utime"
+                                  ]
+                            ]
+                          expression (src/time.ml[30,1290+6]..src/time.ml[30,1290+22])
+                            Texp_apply
+                            expression (src/time.ml[30,1290+12]..src/time.ml[30,1290+14])
+                              Texp_ident "Stdlib!.:="
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[30,1290+6]..src/time.ml[30,1290+11])
+                                  Texp_ident "clock/626"
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[30,1290+15]..src/time.ml[30,1290+22])
+                                  Texp_apply
+                                  expression (src/time.ml[30,1290+15]..src/time.ml[30,1290+20])
+                                    Texp_ident "Unix!.times"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/time.ml[30,1290+20]..src/time.ml[30,1290+22])
+                                        Texp_construct "()"
+                                        []
+                                  ]
+                            ]
+                ]
+          ]
+    ]
+  structure_item (src/time.ml[32,1314+0]..src/time.ml[33,1328+13])
+    Tstr_type Rec
+    [
+      type_declaration chrono/716 (src/time.ml[32,1314+0]..src/time.ml[33,1328+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/time.ml[33,1328+4]..src/time.ml[33,1328+13])
+              Ttyp_constr "Stdlib!.ref"
+              [
+                core_type (src/time.ml[33,1328+4]..src/time.ml[33,1328+9])
+                  Ttyp_constr "float/4!"
+                  []
+              ]
+    ]
+  structure_item (src/time.ml[35,1343+0]..src/time.ml[36,1358+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[35,1343+4]..src/time.ml[35,1343+9])
+          Tpat_var "fresh/717"
+        expression (src/time.ml[35,1343+10]..src/time.ml[36,1358+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/time.ml[35,1343+10]..src/time.ml[35,1343+12])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/time.ml[36,1358+2]..src/time.ml[36,1358+8])
+                Texp_apply
+                expression (src/time.ml[36,1358+2]..src/time.ml[36,1358+5])
+                  Texp_ident "Stdlib!.ref"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/time.ml[36,1358+6]..src/time.ml[36,1358+8])
+                      Texp_constant Const_float 0.
+                ]
+          ]
+    ]
+  structure_item (src/time.ml[38,1368+0]..src/time.ml[47,1657+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[38,1368+4]..src/time.ml[38,1368+10])
+          Tpat_var "chrono/720"
+        expression (src/time.ml[38,1368+11]..src/time.ml[47,1657+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/time.ml[38,1368+12]..src/time.ml[38,1368+18])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/time.ml[38,1368+21]..src/time.ml[38,1368+30])
+                    Ttyp_constr "Stdlib!.ref"
+                    [
+                      core_type (src/time.ml[38,1368+21]..src/time.ml[38,1368+26])
+                        Ttyp_constr "float/4!"
+                        []
+                    ]
+                Tpat_alias "chrono/722"
+                pattern (src/time.ml[38,1368+12]..src/time.ml[38,1368+18])
+                  Tpat_any
+              expression (src/time.ml[38,1368+32]..src/time.ml[47,1657+12]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/time.ml[38,1368+33]..src/time.ml[38,1368+37])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/time.ml[38,1368+40]..src/time.ml[38,1368+50])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/time.ml[38,1368+40]..src/time.ml[38,1368+44])
+                            Ttyp_constr "unit/6!"
+                            []
+                          core_type (src/time.ml[38,1368+48]..src/time.ml[38,1368+50])
+                            Ttyp_var a
+                      Tpat_alias "task/723"
+                      pattern (src/time.ml[38,1368+33]..src/time.ml[38,1368+37])
+                        Tpat_any
+                    expression (src/time.ml[39,1427+2]..src/time.ml[47,1657+12])
+                      extra
+                        Texp_constraint
+                        core_type (src/time.ml[38,1368+54]..src/time.ml[38,1368+56])
+                          Ttyp_var a
+                      Texp_match
+                      expression (src/time.ml[39,1427+8]..src/time.ml[39,1427+24])
+                        Texp_ident "Dune__exe!.Settings.timings"
+                      [
+                        <case>
+                          pattern (src/time.ml[40,1457+4]..src/time.ml[40,1457+8])
+                            Tpat_value
+                            pattern (src/time.ml[40,1457+4]..src/time.ml[40,1457+8])
+                              Tpat_construct "None"
+                              []
+                              None
+                          expression (src/time.ml[41,1469+6]..src/time.ml[41,1469+12])
+                            Texp_apply
+                            expression (src/time.ml[41,1469+6]..src/time.ml[41,1469+10])
+                              Texp_ident "task/723"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[41,1469+10]..src/time.ml[41,1469+12])
+                                  Texp_construct "()"
+                                  []
+                            ]
+                        <case>
+                          pattern (src/time.ml[42,1482+4]..src/time.ml[42,1482+17])
+                            Tpat_value
+                            pattern (src/time.ml[42,1482+4]..src/time.ml[42,1482+17])
+                              Tpat_construct "Some"
+                              [
+                                pattern (src/time.ml[42,1482+9]..src/time.ml[42,1482+17])
+                                  Tpat_var "_channel/724"
+                              ]
+                              None
+                          expression (src/time.ml[43,1503+6]..src/time.ml[47,1657+12])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/time.ml[43,1503+10]..src/time.ml[43,1503+16])
+                                  Tpat_var "times1/725"
+                                expression (src/time.ml[43,1503+19]..src/time.ml[43,1503+26])
+                                  Texp_apply
+                                  expression (src/time.ml[43,1503+19]..src/time.ml[43,1503+24])
+                                    Texp_ident "Unix!.times"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/time.ml[43,1503+24]..src/time.ml[43,1503+26])
+                                        Texp_construct "()"
+                                        []
+                                  ]
+                            ]
+                            expression (src/time.ml[44,1533+6]..src/time.ml[47,1657+12])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/time.ml[44,1533+10]..src/time.ml[44,1533+16])
+                                    Tpat_var "result/726"
+                                  expression (src/time.ml[44,1533+19]..src/time.ml[44,1533+25])
+                                    Texp_apply
+                                    expression (src/time.ml[44,1533+19]..src/time.ml[44,1533+23])
+                                      Texp_ident "task/723"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/time.ml[44,1533+23]..src/time.ml[44,1533+25])
+                                          Texp_construct "()"
+                                          []
+                                    ]
+                              ]
+                              expression (src/time.ml[45,1562+6]..src/time.ml[47,1657+12])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/time.ml[45,1562+10]..src/time.ml[45,1562+16])
+                                      Tpat_var "times2/727"
+                                    expression (src/time.ml[45,1562+19]..src/time.ml[45,1562+26])
+                                      Texp_apply
+                                      expression (src/time.ml[45,1562+19]..src/time.ml[45,1562+24])
+                                        Texp_ident "Unix!.times"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/time.ml[45,1562+24]..src/time.ml[45,1562+26])
+                                            Texp_construct "()"
+                                            []
+                                      ]
+                                ]
+                                expression (src/time.ml[46,1592+6]..src/time.ml[47,1657+12])
+                                  Texp_sequence
+                                  expression (src/time.ml[46,1592+6]..src/time.ml[46,1592+63])
+                                    Texp_apply
+                                    expression (src/time.ml[46,1592+13]..src/time.ml[46,1592+15])
+                                      Texp_ident "Stdlib!.:="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/time.ml[46,1592+6]..src/time.ml[46,1592+12])
+                                          Texp_ident "chrono/722"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/time.ml[46,1592+16]..src/time.ml[46,1592+63])
+                                          Texp_apply
+                                          expression (src/time.ml[46,1592+44]..src/time.ml[46,1592+46])
+                                            Texp_ident "Stdlib!.-."
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/time.ml[46,1592+16]..src/time.ml[46,1592+43])
+                                                Texp_apply
+                                                expression (src/time.ml[46,1592+24]..src/time.ml[46,1592+26])
+                                                  Texp_ident "Stdlib!.+."
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/time.ml[46,1592+16]..src/time.ml[46,1592+23])
+                                                      Texp_apply
+                                                      expression (src/time.ml[46,1592+16]..src/time.ml[46,1592+17])
+                                                        Texp_ident "Stdlib!.!"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/time.ml[46,1592+17]..src/time.ml[46,1592+23])
+                                                            Texp_ident "chrono/722"
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/time.ml[46,1592+27]..src/time.ml[46,1592+43])
+                                                      Texp_field
+                                                      expression (src/time.ml[46,1592+27]..src/time.ml[46,1592+33])
+                                                        Texp_ident "times2/727"
+                                                      "tms_utime"
+                                                ]
+                                            <arg>
+                                              Nolabel
+                                              expression (src/time.ml[46,1592+47]..src/time.ml[46,1592+63])
+                                                Texp_field
+                                                expression (src/time.ml[46,1592+47]..src/time.ml[46,1592+53])
+                                                  Texp_ident "times1/725"
+                                                "tms_utime"
+                                          ]
+                                    ]
+                                  expression (src/time.ml[47,1657+6]..src/time.ml[47,1657+12])
+                                    Texp_ident "result/726"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/time.ml[49,1671+0]..src/time.ml[56,1830+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/time.ml[49,1671+4]..src/time.ml[49,1671+11])
+          Tpat_var "display/728"
+        expression (src/time.ml[49,1671+12]..src/time.ml[56,1830+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/time.ml[49,1671+13]..src/time.ml[49,1671+19])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/time.ml[49,1671+22]..src/time.ml[49,1671+31])
+                    Ttyp_constr "Stdlib!.ref"
+                    [
+                      core_type (src/time.ml[49,1671+22]..src/time.ml[49,1671+27])
+                        Ttyp_constr "float/4!"
+                        []
+                    ]
+                Tpat_alias "chrono/730"
+                pattern (src/time.ml[49,1671+13]..src/time.ml[49,1671+19])
+                  Tpat_any
+              expression (src/time.ml[49,1671+33]..src/time.ml[56,1830+15]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/time.ml[49,1671+33]..src/time.ml[49,1671+36])
+                      Tpat_var "msg/731"
+                    expression (src/time.ml[50,1710+2]..src/time.ml[56,1830+15])
+                      Texp_match
+                      expression (src/time.ml[50,1710+8]..src/time.ml[50,1710+24])
+                        Texp_ident "Dune__exe!.Settings.timings"
+                      [
+                        <case>
+                          pattern (src/time.ml[51,1740+4]..src/time.ml[51,1740+8])
+                            Tpat_value
+                            pattern (src/time.ml[51,1740+4]..src/time.ml[51,1740+8])
+                              Tpat_construct "None"
+                              []
+                              None
+                          expression (src/time.ml[52,1752+6]..src/time.ml[52,1752+8])
+                            Texp_construct "()"
+                            []
+                        <case>
+                          pattern (src/time.ml[53,1761+4]..src/time.ml[53,1761+16])
+                            Tpat_value
+                            pattern (src/time.ml[53,1761+4]..src/time.ml[53,1761+16])
+                              Tpat_construct "Some"
+                              [
+                                pattern (src/time.ml[53,1761+9]..src/time.ml[53,1761+16])
+                                  Tpat_var "channel/732"
+                              ]
+                              None
+                          expression (src/time.ml[54,1781+6]..src/time.ml[56,1830+15])
+                            Texp_apply
+                            expression (src/time.ml[54,1781+6]..src/time.ml[54,1781+13])
+                              Texp_ident "Stdlib!.Printf.fprintf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[54,1781+14]..src/time.ml[54,1781+21])
+                                  Texp_ident "channel/732"
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String"
+                                      [
+                                        expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                          []
+                                        expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                              Texp_constant Const_string(": ",(src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost,None)
+                                            expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Float"
+                                              [
+                                                expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                  Texp_tuple
+                                                  [
+                                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Float_flag_"
+                                                      []
+                                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.Float_f"
+                                                      []
+                                                  ]
+                                                expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                  []
+                                                expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.Lit_precision"
+                                                  [
+                                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                      Texp_constant Const_int 2
+                                                  ]
+                                                expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                  [
+                                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                      Texp_constant Const_string("s\n",(src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost,None)
+                                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                      []
+                                                  ]
+                                              ]
+                                          ]
+                                      ]
+                                    expression (src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost
+                                      Texp_constant Const_string("%s: %.02fs\n",(src/time.ml[54,1781+22]..src/time.ml[54,1781+36]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[55,1818+8]..src/time.ml[55,1818+11])
+                                  Texp_ident "msg/731"
+                              <arg>
+                                Nolabel
+                                expression (src/time.ml[56,1830+8]..src/time.ml[56,1830+15])
+                                  Texp_apply
+                                  expression (src/time.ml[56,1830+8]..src/time.ml[56,1830+9])
+                                    Texp_ident "Stdlib!.!"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/time.ml[56,1830+9]..src/time.ml[56,1830+15])
+                                        Texp_ident "chrono/730"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Time>
+ "chrono"[value] -> <Dune__exe__Time.8>;
+ "chrono"[type] -> <Dune__exe__Time.6>;
+ "display"[value] -> <Dune__exe__Time.15>;
+ "fresh"[value] -> <Dune__exe__Time.7>;
+ "tick"[value] -> <Dune__exe__Time.1>;
+ }
+
+(seq
+  (let (clock/626 = (makemutable 0 (apply (field_imm 107 (global Unix!)) 0)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Time!) clock/626))
+  (let
+    (tick/627 =
+       (function msg/629 : int
+         (let (*match*/1216 = (field_imm 23 (global Dune__exe__Settings!)))
+           (if (isint *match*/1216) 0
+             (let
+               (channel/690 =a (field_imm 0 *match*/1216)
+                times1/691 =
+                  (field_mut 0 (field_imm 4 (global Dune__exe__Time!)))
+                times2/692 = (apply (field_imm 107 (global Unix!)) 0))
+               (seq
+                 (apply (field_imm 0 (global Stdlib__Printf!)) channel/690
+                   [0:
+                    [2:
+                     0 [11: ": " [8: [0: 0 0] 0 [0: 2] [11: "s\n" [10: 0]]]]]
+                    "%s: %.02fs\n%!"]
+                   msg/629
+                   (-. (floatfield 0 times2/692) (floatfield 0 times1/691)))
+                 (setfield_ptr 0 (field_imm 4 (global Dune__exe__Time!))
+                   (apply (field_imm 107 (global Unix!)) 0))))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Time!) tick/627))
+  (let (fresh/717 = (function param/719[int] (makemutable 0 (float) 0.)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Time!) fresh/717))
+  (let
+    (chrono/720 =
+       (function chrono/722 task/723
+         (let (*match*/1217 = (field_imm 23 (global Dune__exe__Settings!)))
+           (if (isint *match*/1217) (apply task/723 0)
+             (let
+               (_channel/724 =a (field_imm 0 *match*/1217)
+                times1/725 = (apply (field_imm 107 (global Unix!)) 0)
+                result/726 = (apply task/723 0)
+                times2/727 = (apply (field_imm 107 (global Unix!)) 0))
+               (seq
+                 (setfield_ptr 0 chrono/722
+                   (-.
+                     (+. (field_mut 0 chrono/722) (floatfield 0 times2/727))
+                     (floatfield 0 times1/725)))
+                 result/726))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Time!) chrono/720))
+  (let
+    (display/728 =
+       (function chrono/730 msg/731 : int
+         (let (*match*/1218 = (field_imm 23 (global Dune__exe__Settings!)))
+           (if (isint *match*/1218) 0
+             (let (channel/732 =a (field_imm 0 *match*/1218))
+               (apply (field_imm 0 (global Stdlib__Printf!)) channel/732
+                 [0:
+                  [2: 0 [11: ": " [8: [0: 0 0] 0 [0: 2] [11: "s\n" 0]]]]
+                  "%s: %.02fs\n"]
+                 msg/731 (field_mut 0 chrono/730)))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Time!) display/728))
+  0)
+(seq
+  (let (clock/626 = (makemutable 0 (apply (field_imm 107 (global Unix!)) 0)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Time!) clock/626))
+  (let
+    (tick/627 =
+       (function msg/629 : int
+         (let (*match*/1216 = (field_imm 23 (global Dune__exe__Settings!)))
+           (if (isint *match*/1216) 0
+             (let
+               (times1/691 =
+                  (field_mut 0 (field_imm 4 (global Dune__exe__Time!)))
+                times2/692 = (apply (field_imm 107 (global Unix!)) 0))
+               (seq
+                 (apply (field_imm 0 (global Stdlib__Printf!))
+                   (field_imm 0 *match*/1216)
+                   [0:
+                    [2:
+                     0 [11: ": " [8: [0: 0 0] 0 [0: 2] [11: "s\n" [10: 0]]]]]
+                    "%s: %.02fs\n%!"]
+                   msg/629
+                   (-. (floatfield 0 times2/692) (floatfield 0 times1/691)))
+                 (setfield_ptr 0 (field_imm 4 (global Dune__exe__Time!))
+                   (apply (field_imm 107 (global Unix!)) 0))))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Time!) tick/627))
+  (let (fresh/717 = (function param/719[int] (makemutable 0 (float) 0.)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Time!) fresh/717))
+  (let
+    (chrono/720 =
+       (function chrono/722 task/723
+         (let (*match*/1217 = (field_imm 23 (global Dune__exe__Settings!)))
+           (if (isint *match*/1217) (apply task/723 0)
+             (let
+               (times1/725 = (apply (field_imm 107 (global Unix!)) 0)
+                result/726 = (apply task/723 0)
+                times2/727 = (apply (field_imm 107 (global Unix!)) 0))
+               (seq
+                 (setfield_ptr 0 chrono/722
+                   (-.
+                     (+. (field_mut 0 chrono/722) (floatfield 0 times2/727))
+                     (floatfield 0 times1/725)))
+                 result/726))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Time!) chrono/720))
+  (let
+    (display/728 =
+       (function chrono/730 msg/731 : int
+         (let (*match*/1218 = (field_imm 23 (global Dune__exe__Settings!)))
+           (if (isint *match*/1218) 0
+             (apply (field_imm 0 (global Stdlib__Printf!))
+               (field_imm 0 *match*/1218)
+               [0:
+                [2: 0 [11: ": " [8: [0: 0 0] 0 [0: 2] [11: "s\n" 0]]]]
+                "%s: %.02fs\n"]
+               msg/731 (field_mut 0 chrono/730))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Time!) display/728))
+  0)

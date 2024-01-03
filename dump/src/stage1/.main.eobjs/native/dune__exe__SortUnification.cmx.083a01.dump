@@ -1,0 +1,3191 @@
+[
+  structure_item (src/SortUnification.ml[25,1295+0]..[46,1653+3])
+    Pstr_module
+    "S" (src/SortUnification.ml[25,1295+7]..[25,1295+8])
+      module_expr (src/SortUnification.ml[25,1295+11]..[46,1653+3])
+        Pmod_structure
+        [
+          structure_item (src/SortUnification.ml[27,1314+2]..[28,1336+22])
+            Pstr_type Rec
+            [
+              type_declaration "structure" (src/SortUnification.ml[27,1314+10]..[27,1314+19]) (src/SortUnification.ml[27,1314+2]..[28,1336+22])
+                ptype_params =
+                  [
+                    core_type (src/SortUnification.ml[27,1314+7]..[27,1314+9])
+                      Ptyp_var a
+                  ]
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_variant
+                    [
+                      (src/SortUnification.ml[28,1336+4]..[28,1336+22])
+                        "Arrow" (src/SortUnification.ml[28,1336+6]..[28,1336+11])
+                        [
+                          core_type (src/SortUnification.ml[28,1336+15]..[28,1336+22])
+                            Ptyp_constr "list" (src/SortUnification.ml[28,1336+18]..[28,1336+22])
+                            [
+                              core_type (src/SortUnification.ml[28,1336+15]..[28,1336+17])
+                                Ptyp_var a
+                            ]
+                        ]
+                        None
+                    ]
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          structure_item (src/SortUnification.ml[30,1360+2]..[31,1385+25])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (src/SortUnification.ml[30,1360+6]..[30,1360+9])
+                  Ppat_var "map" (src/SortUnification.ml[30,1360+6]..[30,1360+9])
+                expression (src/SortUnification.ml[30,1360+10]..[31,1385+25]) ghost
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/SortUnification.ml[30,1360+10]..[30,1360+11])
+                    Ppat_var "f" (src/SortUnification.ml[30,1360+10]..[30,1360+11])
+                  expression (src/SortUnification.ml[30,1360+12]..[31,1385+25]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/SortUnification.ml[30,1360+12]..[30,1360+22])
+                      Ppat_construct "Arrow" (src/SortUnification.ml[30,1360+13]..[30,1360+18])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[30,1360+19]..[30,1360+21])
+                          Ppat_var "xs" (src/SortUnification.ml[30,1360+19]..[30,1360+21])
+                    expression (src/SortUnification.ml[31,1385+4]..[31,1385+25])
+                      Pexp_construct "Arrow" (src/SortUnification.ml[31,1385+4]..[31,1385+9])
+                      Some
+                        expression (src/SortUnification.ml[31,1385+10]..[31,1385+25])
+                          Pexp_apply
+                          expression (src/SortUnification.ml[31,1385+11]..[31,1385+19])
+                            Pexp_ident "List.map" (src/SortUnification.ml[31,1385+11]..[31,1385+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/SortUnification.ml[31,1385+20]..[31,1385+21])
+                                Pexp_ident "f" (src/SortUnification.ml[31,1385+20]..[31,1385+21])
+                            <arg>
+                            Nolabel
+                              expression (src/SortUnification.ml[31,1385+22]..[31,1385+24])
+                                Pexp_ident "xs" (src/SortUnification.ml[31,1385+22]..[31,1385+24])
+                          ]
+            ]
+          structure_item (src/SortUnification.ml[33,1412+2]..[34,1438+18])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (src/SortUnification.ml[33,1412+6]..[33,1412+10])
+                  Ppat_var "iter" (src/SortUnification.ml[33,1412+6]..[33,1412+10])
+                expression (src/SortUnification.ml[33,1412+11]..[34,1438+18]) ghost
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/SortUnification.ml[33,1412+11]..[33,1412+12])
+                    Ppat_var "f" (src/SortUnification.ml[33,1412+11]..[33,1412+12])
+                  expression (src/SortUnification.ml[33,1412+13]..[34,1438+18]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/SortUnification.ml[33,1412+13]..[33,1412+23])
+                      Ppat_construct "Arrow" (src/SortUnification.ml[33,1412+14]..[33,1412+19])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[33,1412+20]..[33,1412+22])
+                          Ppat_var "xs" (src/SortUnification.ml[33,1412+20]..[33,1412+22])
+                    expression (src/SortUnification.ml[34,1438+4]..[34,1438+18])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[34,1438+4]..[34,1438+13])
+                        Pexp_ident "List.iter" (src/SortUnification.ml[34,1438+4]..[34,1438+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[34,1438+14]..[34,1438+15])
+                            Pexp_ident "f" (src/SortUnification.ml[34,1438+14]..[34,1438+15])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[34,1438+16]..[34,1438+18])
+                            Pexp_ident "xs" (src/SortUnification.ml[34,1438+16]..[34,1438+18])
+                      ]
+            ]
+          structure_item (src/SortUnification.ml[36,1458+2]..[36,1458+17])
+            Pstr_exception
+            type_exception
+              ptyext_constructor =
+                extension_constructor (src/SortUnification.ml[36,1458+2]..[36,1458+17])
+                  pext_name = "Iter2"
+                  pext_kind =
+                    Pext_decl
+                      []
+                      None
+          structure_item (src/SortUnification.ml[38,1477+2]..[44,1634+17])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (src/SortUnification.ml[38,1477+6]..[38,1477+11])
+                  Ppat_var "iter2" (src/SortUnification.ml[38,1477+6]..[38,1477+11])
+                expression (src/SortUnification.ml[38,1477+12]..[44,1634+17]) ghost
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/SortUnification.ml[38,1477+12]..[38,1477+13])
+                    Ppat_var "f" (src/SortUnification.ml[38,1477+12]..[38,1477+13])
+                  expression (src/SortUnification.ml[38,1477+14]..[44,1634+17]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/SortUnification.ml[38,1477+14]..[38,1477+25])
+                      Ppat_construct "Arrow" (src/SortUnification.ml[38,1477+15]..[38,1477+20])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[38,1477+21]..[38,1477+24])
+                          Ppat_var "xs1" (src/SortUnification.ml[38,1477+21]..[38,1477+24])
+                    expression (src/SortUnification.ml[38,1477+26]..[44,1634+17]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/SortUnification.ml[38,1477+26]..[38,1477+37])
+                        Ppat_construct "Arrow" (src/SortUnification.ml[38,1477+27]..[38,1477+32])
+                        Some
+                          []
+                          pattern (src/SortUnification.ml[38,1477+33]..[38,1477+36])
+                            Ppat_var "xs2" (src/SortUnification.ml[38,1477+33]..[38,1477+36])
+                      expression (src/SortUnification.ml[39,1517+4]..[44,1634+17])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/SortUnification.ml[39,1517+8]..[39,1517+10])
+                              Ppat_var "n1" (src/SortUnification.ml[39,1517+8]..[39,1517+10])
+                            expression (src/SortUnification.ml[39,1517+13]..[39,1517+28])
+                              Pexp_apply
+                              expression (src/SortUnification.ml[39,1517+13]..[39,1517+24])
+                                Pexp_ident "List.length" (src/SortUnification.ml[39,1517+13]..[39,1517+24])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/SortUnification.ml[39,1517+25]..[39,1517+28])
+                                    Pexp_ident "xs1" (src/SortUnification.ml[39,1517+25]..[39,1517+28])
+                              ]
+                          <def>
+                            pattern (src/SortUnification.ml[40,1546+8]..[40,1546+10])
+                              Ppat_var "n2" (src/SortUnification.ml[40,1546+8]..[40,1546+10])
+                            expression (src/SortUnification.ml[40,1546+13]..[40,1546+28])
+                              Pexp_apply
+                              expression (src/SortUnification.ml[40,1546+13]..[40,1546+24])
+                                Pexp_ident "List.length" (src/SortUnification.ml[40,1546+13]..[40,1546+24])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/SortUnification.ml[40,1546+25]..[40,1546+28])
+                                    Pexp_ident "xs2" (src/SortUnification.ml[40,1546+25]..[40,1546+28])
+                              ]
+                        ]
+                        expression (src/SortUnification.ml[41,1578+4]..[44,1634+17])
+                          Pexp_ifthenelse
+                          expression (src/SortUnification.ml[41,1578+7]..[41,1578+14])
+                            Pexp_apply
+                            expression (src/SortUnification.ml[41,1578+10]..[41,1578+11])
+                              Pexp_ident "=" (src/SortUnification.ml[41,1578+10]..[41,1578+11])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[41,1578+7]..[41,1578+9])
+                                  Pexp_ident "n1" (src/SortUnification.ml[41,1578+7]..[41,1578+9])
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[41,1578+12]..[41,1578+14])
+                                  Pexp_ident "n2" (src/SortUnification.ml[41,1578+12]..[41,1578+14])
+                            ]
+                          expression (src/SortUnification.ml[42,1598+6]..[42,1598+26])
+                            Pexp_apply
+                            expression (src/SortUnification.ml[42,1598+6]..[42,1598+16])
+                              Pexp_ident "List.iter2" (src/SortUnification.ml[42,1598+6]..[42,1598+16])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[42,1598+17]..[42,1598+18])
+                                  Pexp_ident "f" (src/SortUnification.ml[42,1598+17]..[42,1598+18])
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[42,1598+19]..[42,1598+22])
+                                  Pexp_ident "xs1" (src/SortUnification.ml[42,1598+19]..[42,1598+22])
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[42,1598+23]..[42,1598+26])
+                                  Pexp_ident "xs2" (src/SortUnification.ml[42,1598+23]..[42,1598+26])
+                            ]
+                          Some
+                            expression (src/SortUnification.ml[44,1634+6]..[44,1634+17])
+                              Pexp_apply
+                              expression (src/SortUnification.ml[44,1634+6]..[44,1634+11])
+                                Pexp_ident "raise" (src/SortUnification.ml[44,1634+6]..[44,1634+11])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/SortUnification.ml[44,1634+12]..[44,1634+17])
+                                    Pexp_construct "Iter2" (src/SortUnification.ml[44,1634+12]..[44,1634+17])
+                                    None
+                              ]
+            ]
+        ]
+  structure_item (src/SortUnification.ml[48,1658+0]..[48,1658+9])
+    Pstr_include    module_expr (src/SortUnification.ml[48,1658+8]..[48,1658+9])
+      Pmod_ident "S" (src/SortUnification.ml[48,1658+8]..[48,1658+9])
+  structure_item (src/SortUnification.ml[54,1822+0]..[54,1822+23])
+    Pstr_include    module_expr (src/SortUnification.ml[54,1822+8]..[54,1822+23])
+      Pmod_apply
+      module_expr (src/SortUnification.ml[54,1822+8]..[54,1822+20])
+        Pmod_ident "Unifier.Make" (src/SortUnification.ml[54,1822+8]..[54,1822+20])
+      module_expr (src/SortUnification.ml[54,1822+21]..[54,1822+22])
+        Pmod_ident "S" (src/SortUnification.ml[54,1822+21]..[54,1822+22])
+  structure_item (src/SortUnification.ml[56,1847+0]..[58,1882+27])
+    Pstr_type Rec
+    [
+      type_declaration "sort" (src/SortUnification.ml[56,1847+5]..[56,1847+9]) (src/SortUnification.ml[56,1847+0]..[58,1882+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/SortUnification.ml[57,1866+2]..[57,1866+15])
+                "TVar" (src/SortUnification.ml[57,1866+4]..[57,1866+8])
+                [
+                  core_type (src/SortUnification.ml[57,1866+12]..[57,1866+15])
+                    Ptyp_constr "int" (src/SortUnification.ml[57,1866+12]..[57,1866+15])
+                    []
+                ]
+                None
+              (src/SortUnification.ml[58,1882+2]..[58,1882+27])
+                "TNode" (src/SortUnification.ml[58,1882+4]..[58,1882+9])
+                [
+                  core_type (src/SortUnification.ml[58,1882+13]..[58,1882+27])
+                    Ptyp_constr "structure" (src/SortUnification.ml[58,1882+18]..[58,1882+27])
+                    [
+                      core_type (src/SortUnification.ml[58,1882+13]..[58,1882+17])
+                        Ptyp_constr "sort" (src/SortUnification.ml[58,1882+13]..[58,1882+17])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/SortUnification.ml[56,1847+12]..[56,1847+16])
+              Ptyp_constr "term" (src/SortUnification.ml[56,1847+12]..[56,1847+16])
+              []
+    ]
+  structure_item (src/SortUnification.ml[64,2019+0]..[65,2065+27])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[64,2019+4]..[64,2019+9])
+          Ppat_var "arrow" (src/SortUnification.ml[64,2019+4]..[64,2019+9])
+        expression (src/SortUnification.ml[64,2019+10]..[65,2065+27]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[64,2019+10]..[64,2019+32])
+            Ppat_constraint
+            pattern (src/SortUnification.ml[64,2019+11]..[64,2019+15])
+              Ppat_var "args" (src/SortUnification.ml[64,2019+11]..[64,2019+15])
+            core_type (src/SortUnification.ml[64,2019+18]..[64,2019+31])
+              Ptyp_constr "list" (src/SortUnification.ml[64,2019+27]..[64,2019+31])
+              [
+                core_type (src/SortUnification.ml[64,2019+18]..[64,2019+26])
+                  Ptyp_constr "variable" (src/SortUnification.ml[64,2019+18]..[64,2019+26])
+                  []
+              ]
+          expression (src/SortUnification.ml[64,2019+33]..[65,2065+27])
+            Pexp_constraint
+            expression (src/SortUnification.ml[65,2065+2]..[65,2065+27])
+              Pexp_apply
+              expression (src/SortUnification.ml[65,2065+2]..[65,2065+7])
+                Pexp_ident "fresh" (src/SortUnification.ml[65,2065+2]..[65,2065+7])
+              [
+                <arg>
+                Nolabel
+                  expression (src/SortUnification.ml[65,2065+8]..[65,2065+27])
+                    Pexp_construct "Some" (src/SortUnification.ml[65,2065+9]..[65,2065+13])
+                    Some
+                      expression (src/SortUnification.ml[65,2065+14]..[65,2065+26])
+                        Pexp_construct "Arrow" (src/SortUnification.ml[65,2065+15]..[65,2065+20])
+                        Some
+                          expression (src/SortUnification.ml[65,2065+21]..[65,2065+25])
+                            Pexp_ident "args" (src/SortUnification.ml[65,2065+21]..[65,2065+25])
+              ]
+            core_type (src/SortUnification.ml[64,2019+35]..[64,2019+43])
+              Ptyp_constr "variable" (src/SortUnification.ml[64,2019+35]..[64,2019+43])
+              []
+    ]
+  structure_item (src/SortUnification.ml[67,2094+0]..[68,2116+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[67,2094+4]..[67,2094+8])
+          Ppat_var "star" (src/SortUnification.ml[67,2094+4]..[67,2094+8])
+        core_type (src/SortUnification.ml[67,2094+11]..[67,2094+19])
+          Ptyp_constr "variable" (src/SortUnification.ml[67,2094+11]..[67,2094+19])
+          []
+        expression (src/SortUnification.ml[68,2116+2]..[68,2116+10])
+          Pexp_apply
+          expression (src/SortUnification.ml[68,2116+2]..[68,2116+7])
+            Pexp_ident "arrow" (src/SortUnification.ml[68,2116+2]..[68,2116+7])
+          [
+            <arg>
+            Nolabel
+              expression (src/SortUnification.ml[68,2116+8]..[68,2116+10])
+                Pexp_construct "[]" (src/SortUnification.ml[68,2116+8]..[68,2116+10])
+                None
+          ]
+    ]
+  structure_item (src/SortUnification.ml[70,2128+0]..[71,2143+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[70,2128+4]..[70,2128+9])
+          Ppat_var "fresh" (src/SortUnification.ml[70,2128+4]..[70,2128+9])
+        expression (src/SortUnification.ml[70,2128+10]..[71,2143+12]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[70,2128+10]..[70,2128+12])
+            Ppat_construct "()" (src/SortUnification.ml[70,2128+10]..[70,2128+12])
+            None
+          expression (src/SortUnification.ml[71,2143+2]..[71,2143+12])
+            Pexp_apply
+            expression (src/SortUnification.ml[71,2143+2]..[71,2143+7])
+              Pexp_ident "fresh" (src/SortUnification.ml[71,2143+2]..[71,2143+7])
+            [
+              <arg>
+              Nolabel
+                expression (src/SortUnification.ml[71,2143+8]..[71,2143+12])
+                  Pexp_construct "None" (src/SortUnification.ml[71,2143+8]..[71,2143+12])
+                  None
+            ]
+    ]
+  structure_item (src/SortUnification.ml[75,2180+0]..[80,2305+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[75,2180+4]..[75,2180+10])
+          Ppat_var "domain" (src/SortUnification.ml[75,2180+4]..[75,2180+10])
+        expression (src/SortUnification.ml[75,2180+11]..[80,2305+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[75,2180+11]..[75,2180+25])
+            Ppat_constraint
+            pattern (src/SortUnification.ml[75,2180+12]..[75,2180+13])
+              Ppat_var "x" (src/SortUnification.ml[75,2180+12]..[75,2180+13])
+            core_type (src/SortUnification.ml[75,2180+16]..[75,2180+24])
+              Ptyp_constr "variable" (src/SortUnification.ml[75,2180+16]..[75,2180+24])
+              []
+          expression (src/SortUnification.ml[75,2180+26]..[80,2305+10])
+            Pexp_constraint
+            expression (src/SortUnification.ml[76,2231+2]..[80,2305+10])
+              Pexp_match
+              expression (src/SortUnification.ml[76,2231+8]..[76,2231+19])
+                Pexp_apply
+                expression (src/SortUnification.ml[76,2231+8]..[76,2231+17])
+                  Pexp_ident "structure" (src/SortUnification.ml[76,2231+8]..[76,2231+17])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[76,2231+18]..[76,2231+19])
+                      Pexp_ident "x" (src/SortUnification.ml[76,2231+18]..[76,2231+19])
+                ]
+              [
+                <case>
+                  pattern (src/SortUnification.ml[77,2256+4]..[77,2256+19])
+                    Ppat_construct "Some" (src/SortUnification.ml[77,2256+4]..[77,2256+8])
+                    Some
+                      []
+                      pattern (src/SortUnification.ml[77,2256+9]..[77,2256+19])
+                        Ppat_construct "Arrow" (src/SortUnification.ml[77,2256+10]..[77,2256+15])
+                        Some
+                          []
+                          pattern (src/SortUnification.ml[77,2256+16]..[77,2256+18])
+                            Ppat_var "xs" (src/SortUnification.ml[77,2256+16]..[77,2256+18])
+                  expression (src/SortUnification.ml[78,2279+6]..[78,2279+13])
+                    Pexp_construct "Some" (src/SortUnification.ml[78,2279+6]..[78,2279+10])
+                    Some
+                      expression (src/SortUnification.ml[78,2279+11]..[78,2279+13])
+                        Pexp_ident "xs" (src/SortUnification.ml[78,2279+11]..[78,2279+13])
+                <case>
+                  pattern (src/SortUnification.ml[79,2293+4]..[79,2293+8])
+                    Ppat_construct "None" (src/SortUnification.ml[79,2293+4]..[79,2293+8])
+                    None
+                  expression (src/SortUnification.ml[80,2305+6]..[80,2305+10])
+                    Pexp_construct "None" (src/SortUnification.ml[80,2305+6]..[80,2305+10])
+                    None
+              ]
+            core_type (src/SortUnification.ml[75,2180+28]..[75,2180+48])
+              Ptyp_constr "option" (src/SortUnification.ml[75,2180+42]..[75,2180+48])
+              [
+                core_type (src/SortUnification.ml[75,2180+28]..[75,2180+41])
+                  Ptyp_constr "list" (src/SortUnification.ml[75,2180+37]..[75,2180+41])
+                  [
+                    core_type (src/SortUnification.ml[75,2180+28]..[75,2180+36])
+                      Ptyp_constr "variable" (src/SortUnification.ml[75,2180+28]..[75,2180+36])
+                      []
+                  ]
+              ]
+    ]
+  structure_item (src/SortUnification.ml[86,2449+0]..[92,2597+44])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/SortUnification.ml[86,2449+8]..[86,2449+14])
+          Ppat_var "ground" (src/SortUnification.ml[86,2449+8]..[86,2449+14])
+        expression (src/SortUnification.ml[86,2449+15]..[92,2597+44]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[86,2449+15]..[86,2449+16])
+            Ppat_var "s" (src/SortUnification.ml[86,2449+15]..[86,2449+16])
+          expression (src/SortUnification.ml[87,2468+2]..[92,2597+44])
+            Pexp_match
+            expression (src/SortUnification.ml[87,2468+8]..[87,2468+9])
+              Pexp_ident "s" (src/SortUnification.ml[87,2468+8]..[87,2468+9])
+            [
+              <case>
+                pattern (src/SortUnification.ml[88,2483+4]..[88,2483+10])
+                  Ppat_construct "TVar" (src/SortUnification.ml[88,2483+4]..[88,2483+8])
+                  Some
+                    []
+                    pattern (src/SortUnification.ml[88,2483+9]..[88,2483+10])
+                      Ppat_any
+                expression (src/SortUnification.ml[90,2546+6]..[90,2546+26])
+                  Pexp_construct "GroundSort.GArrow" (src/SortUnification.ml[90,2546+6]..[90,2546+23])
+                  Some
+                    expression (src/SortUnification.ml[90,2546+24]..[90,2546+26])
+                      Pexp_construct "[]" (src/SortUnification.ml[90,2546+24]..[90,2546+26])
+                      None
+              <case>
+                pattern (src/SortUnification.ml[91,2573+4]..[91,2573+20])
+                  Ppat_construct "TNode" (src/SortUnification.ml[91,2573+4]..[91,2573+9])
+                  Some
+                    []
+                    pattern (src/SortUnification.ml[91,2573+10]..[91,2573+20])
+                      Ppat_construct "Arrow" (src/SortUnification.ml[91,2573+11]..[91,2573+16])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[91,2573+17]..[91,2573+19])
+                          Ppat_var "ss" (src/SortUnification.ml[91,2573+17]..[91,2573+19])
+                expression (src/SortUnification.ml[92,2597+6]..[92,2597+44])
+                  Pexp_construct "GroundSort.GArrow" (src/SortUnification.ml[92,2597+6]..[92,2597+23])
+                  Some
+                    expression (src/SortUnification.ml[92,2597+24]..[92,2597+44])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[92,2597+25]..[92,2597+33])
+                        Pexp_ident "List.map" (src/SortUnification.ml[92,2597+25]..[92,2597+33])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[92,2597+34]..[92,2597+40])
+                            Pexp_ident "ground" (src/SortUnification.ml[92,2597+34]..[92,2597+40])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[92,2597+41]..[92,2597+43])
+                            Pexp_ident "ss" (src/SortUnification.ml[92,2597+41]..[92,2597+43])
+                      ]
+            ]
+    ]
+  structure_item (src/SortUnification.ml[94,2643+0]..[95,2685+38])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/SortUnification.ml[94,2643+8]..[94,2643+16])
+          Ppat_var "unground" (src/SortUnification.ml[94,2643+8]..[94,2643+16])
+        expression (src/SortUnification.ml[94,2643+17]..[95,2685+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[94,2643+17]..[94,2643+39])
+            Ppat_construct "GroundSort.GArrow" (src/SortUnification.ml[94,2643+18]..[94,2643+35])
+            Some
+              []
+              pattern (src/SortUnification.ml[94,2643+36]..[94,2643+38])
+                Ppat_var "ss" (src/SortUnification.ml[94,2643+36]..[94,2643+38])
+          expression (src/SortUnification.ml[95,2685+2]..[95,2685+38])
+            Pexp_construct "TNode" (src/SortUnification.ml[95,2685+2]..[95,2685+7])
+            Some
+              expression (src/SortUnification.ml[95,2685+8]..[95,2685+38])
+                Pexp_construct "Arrow" (src/SortUnification.ml[95,2685+9]..[95,2685+14])
+                Some
+                  expression (src/SortUnification.ml[95,2685+15]..[95,2685+37])
+                    Pexp_apply
+                    expression (src/SortUnification.ml[95,2685+16]..[95,2685+24])
+                      Pexp_ident "List.map" (src/SortUnification.ml[95,2685+16]..[95,2685+24])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/SortUnification.ml[95,2685+25]..[95,2685+33])
+                          Pexp_ident "unground" (src/SortUnification.ml[95,2685+25]..[95,2685+33])
+                      <arg>
+                      Nolabel
+                        expression (src/SortUnification.ml[95,2685+34]..[95,2685+36])
+                          Pexp_ident "ss" (src/SortUnification.ml[95,2685+34]..[95,2685+36])
+                    ]
+    ]
+  structure_item (src/SortUnification.ml[101,2858+0]..[109,3111+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[101,2858+4]..[101,2858+15])
+          Ppat_var "make_gensym" (src/SortUnification.ml[101,2858+4]..[101,2858+15])
+        expression (src/SortUnification.ml[101,2858+16]..[109,3111+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[101,2858+16]..[101,2858+18])
+            Ppat_construct "()" (src/SortUnification.ml[101,2858+16]..[101,2858+18])
+            None
+          expression (src/SortUnification.ml[101,2858+19]..[109,3111+8])
+            Pexp_constraint
+            expression (src/SortUnification.ml[102,2896+2]..[109,3111+8])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/SortUnification.ml[102,2896+6]..[102,2896+7])
+                    Ppat_var "c" (src/SortUnification.ml[102,2896+6]..[102,2896+7])
+                  expression (src/SortUnification.ml[102,2896+10]..[102,2896+15])
+                    Pexp_apply
+                    expression (src/SortUnification.ml[102,2896+10]..[102,2896+13])
+                      Pexp_ident "ref" (src/SortUnification.ml[102,2896+10]..[102,2896+13])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/SortUnification.ml[102,2896+14]..[102,2896+15])
+                          Pexp_constant PConst_int (0,None)
+                    ]
+              ]
+              expression (src/SortUnification.ml[103,2915+2]..[109,3111+8])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/SortUnification.ml[103,2915+6]..[103,2915+12])
+                      Ppat_var "gensym" (src/SortUnification.ml[103,2915+6]..[103,2915+12])
+                    expression (src/SortUnification.ml[103,2915+13]..[107,3042+63]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/SortUnification.ml[103,2915+13]..[103,2915+15])
+                        Ppat_construct "()" (src/SortUnification.ml[103,2915+13]..[103,2915+15])
+                        None
+                      expression (src/SortUnification.ml[104,2933+4]..[107,3042+63])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/SortUnification.ml[104,2933+8]..[104,2933+9])
+                              Ppat_var "n" (src/SortUnification.ml[104,2933+8]..[104,2933+9])
+                            expression (src/SortUnification.ml[104,2933+12]..[104,2933+32])
+                              Pexp_apply
+                              expression (src/SortUnification.ml[104,2933+12]..[104,2933+30])
+                                Pexp_ident "Misc.postincrement" (src/SortUnification.ml[104,2933+12]..[104,2933+30])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/SortUnification.ml[104,2933+31]..[104,2933+32])
+                                    Pexp_ident "c" (src/SortUnification.ml[104,2933+31]..[104,2933+32])
+                              ]
+                        ]
+                        expression (src/SortUnification.ml[105,2969+4]..[107,3042+63])
+                          Pexp_apply
+                          expression (src/SortUnification.ml[105,2969+4]..[105,2969+18])
+                            Pexp_ident "Printf.sprintf" (src/SortUnification.ml[105,2969+4]..[105,2969+18])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/SortUnification.ml[105,2969+19]..[105,2969+25])
+                                Pexp_constant PConst_string("%c%s",(src/SortUnification.ml[105,2969+20]..[105,2969+24]),None)
+                            <arg>
+                            Nolabel
+                              expression (src/SortUnification.ml[106,2995+6]..[106,2995+46])
+                                Pexp_apply
+                                expression (src/SortUnification.ml[106,2995+7]..[106,2995+18])
+                                  Pexp_ident "char_of_int" (src/SortUnification.ml[106,2995+7]..[106,2995+18])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/SortUnification.ml[106,2995+19]..[106,2995+45])
+                                      Pexp_apply
+                                      expression (src/SortUnification.ml[106,2995+34]..[106,2995+35])
+                                        Pexp_ident "+" (src/SortUnification.ml[106,2995+34]..[106,2995+35])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/SortUnification.ml[106,2995+20]..[106,2995+33])
+                                            Pexp_apply
+                                            expression (src/SortUnification.ml[106,2995+20]..[106,2995+29])
+                                              Pexp_ident "Char.code" (src/SortUnification.ml[106,2995+20]..[106,2995+29])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/SortUnification.ml[106,2995+30]..[106,2995+33])
+                                                  Pexp_constant PConst_char 61
+                                            ]
+                                        <arg>
+                                        Nolabel
+                                          expression (src/SortUnification.ml[106,2995+36]..[106,2995+44])
+                                            Pexp_apply
+                                            expression (src/SortUnification.ml[106,2995+38]..[106,2995+41])
+                                              Pexp_ident "mod" (src/SortUnification.ml[106,2995+38]..[106,2995+41])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/SortUnification.ml[106,2995+36]..[106,2995+37])
+                                                  Pexp_ident "n" (src/SortUnification.ml[106,2995+36]..[106,2995+37])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/SortUnification.ml[106,2995+42]..[106,2995+44])
+                                                  Pexp_constant PConst_int (26,None)
+                                            ]
+                                      ]
+                                ]
+                            <arg>
+                            Nolabel
+                              expression (src/SortUnification.ml[107,3042+6]..[107,3042+63])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/SortUnification.ml[107,3042+11]..[107,3042+12])
+                                      Ppat_var "d" (src/SortUnification.ml[107,3042+11]..[107,3042+12])
+                                    expression (src/SortUnification.ml[107,3042+15]..[107,3042+21])
+                                      Pexp_apply
+                                      expression (src/SortUnification.ml[107,3042+17]..[107,3042+18])
+                                        Pexp_ident "/" (src/SortUnification.ml[107,3042+17]..[107,3042+18])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/SortUnification.ml[107,3042+15]..[107,3042+16])
+                                            Pexp_ident "n" (src/SortUnification.ml[107,3042+15]..[107,3042+16])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/SortUnification.ml[107,3042+19]..[107,3042+21])
+                                            Pexp_constant PConst_int (26,None)
+                                      ]
+                                ]
+                                expression (src/SortUnification.ml[107,3042+25]..[107,3042+62])
+                                  Pexp_ifthenelse
+                                  expression (src/SortUnification.ml[107,3042+28]..[107,3042+33])
+                                    Pexp_apply
+                                    expression (src/SortUnification.ml[107,3042+30]..[107,3042+31])
+                                      Pexp_ident "=" (src/SortUnification.ml[107,3042+30]..[107,3042+31])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/SortUnification.ml[107,3042+28]..[107,3042+29])
+                                          Pexp_ident "d" (src/SortUnification.ml[107,3042+28]..[107,3042+29])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/SortUnification.ml[107,3042+32]..[107,3042+33])
+                                          Pexp_constant PConst_int (0,None)
+                                    ]
+                                  expression (src/SortUnification.ml[107,3042+39]..[107,3042+41])
+                                    Pexp_constant PConst_string("",(src/SortUnification.ml[107,3042+40]..[107,3042+40]),None)
+                                  Some
+                                    expression (src/SortUnification.ml[107,3042+47]..[107,3042+62])
+                                      Pexp_apply
+                                      expression (src/SortUnification.ml[107,3042+47]..[107,3042+60])
+                                        Pexp_ident "string_of_int" (src/SortUnification.ml[107,3042+47]..[107,3042+60])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/SortUnification.ml[107,3042+61]..[107,3042+62])
+                                            Pexp_ident "d" (src/SortUnification.ml[107,3042+61]..[107,3042+62])
+                                      ]
+                          ]
+                ]
+                expression (src/SortUnification.ml[109,3111+2]..[109,3111+8])
+                  Pexp_ident "gensym" (src/SortUnification.ml[109,3111+2]..[109,3111+8])
+            core_type (src/SortUnification.ml[101,2858+21]..[101,2858+35])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/SortUnification.ml[101,2858+21]..[101,2858+25])
+                Ptyp_constr "unit" (src/SortUnification.ml[101,2858+21]..[101,2858+25])
+                []
+              core_type (src/SortUnification.ml[101,2858+29]..[101,2858+35])
+                Ptyp_constr "string" (src/SortUnification.ml[101,2858+29]..[101,2858+35])
+                []
+    ]
+  structure_item (src/SortUnification.ml[113,3155+0]..[115,3222+46])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[113,3155+4]..[113,3155+13])
+          Ppat_var "make_name" (src/SortUnification.ml[113,3155+4]..[113,3155+13])
+        expression (src/SortUnification.ml[113,3155+14]..[115,3222+46]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[113,3155+14]..[113,3155+16])
+            Ppat_construct "()" (src/SortUnification.ml[113,3155+14]..[113,3155+16])
+            None
+          expression (src/SortUnification.ml[113,3155+17]..[115,3222+46])
+            Pexp_constraint
+            expression (src/SortUnification.ml[114,3190+2]..[115,3222+46])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/SortUnification.ml[114,3190+6]..[114,3190+12])
+                    Ppat_var "gensym" (src/SortUnification.ml[114,3190+6]..[114,3190+12])
+                  expression (src/SortUnification.ml[114,3190+15]..[114,3190+28])
+                    Pexp_apply
+                    expression (src/SortUnification.ml[114,3190+15]..[114,3190+26])
+                      Pexp_ident "make_gensym" (src/SortUnification.ml[114,3190+15]..[114,3190+26])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/SortUnification.ml[114,3190+26]..[114,3190+28])
+                          Pexp_construct "()" (src/SortUnification.ml[114,3190+26]..[114,3190+28])
+                          None
+                    ]
+              ]
+              expression (src/SortUnification.ml[115,3222+2]..[115,3222+46])
+                Pexp_apply
+                expression (src/SortUnification.ml[115,3222+2]..[115,3222+25])
+                  Pexp_ident "Fix.Memoize.Int.memoize" (src/SortUnification.ml[115,3222+2]..[115,3222+25])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[115,3222+26]..[115,3222+46])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/SortUnification.ml[115,3222+31]..[115,3222+33])
+                        Ppat_var "_x" (src/SortUnification.ml[115,3222+31]..[115,3222+33])
+                      expression (src/SortUnification.ml[115,3222+37]..[115,3222+45])
+                        Pexp_apply
+                        expression (src/SortUnification.ml[115,3222+37]..[115,3222+43])
+                          Pexp_ident "gensym" (src/SortUnification.ml[115,3222+37]..[115,3222+43])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/SortUnification.ml[115,3222+43]..[115,3222+45])
+                              Pexp_construct "()" (src/SortUnification.ml[115,3222+43]..[115,3222+45])
+                              None
+                        ]
+                ]
+            core_type (src/SortUnification.ml[113,3155+19]..[113,3155+32])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/SortUnification.ml[113,3155+19]..[113,3155+22])
+                Ptyp_constr "int" (src/SortUnification.ml[113,3155+19]..[113,3155+22])
+                []
+              core_type (src/SortUnification.ml[113,3155+26]..[113,3155+32])
+                Ptyp_constr "string" (src/SortUnification.ml[113,3155+26]..[113,3155+32])
+                []
+    ]
+  structure_item (src/SortUnification.ml[121,3370+0]..[137,3871+43])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/SortUnification.ml[121,3370+8]..[121,3370+13])
+          Ppat_var "print" (src/SortUnification.ml[121,3370+8]..[121,3370+13])
+        expression (src/SortUnification.ml[121,3370+14]..[131,3714+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[121,3370+14]..[121,3370+18])
+            Ppat_var "name" (src/SortUnification.ml[121,3370+14]..[121,3370+18])
+          expression (src/SortUnification.ml[121,3370+19]..[131,3714+38]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/SortUnification.ml[121,3370+19]..[121,3370+33])
+              Ppat_constraint
+              pattern (src/SortUnification.ml[121,3370+20]..[121,3370+21])
+                Ppat_var "b" (src/SortUnification.ml[121,3370+20]..[121,3370+21])
+              core_type (src/SortUnification.ml[121,3370+24]..[121,3370+32])
+                Ptyp_constr "Buffer.t" (src/SortUnification.ml[121,3370+24]..[121,3370+32])
+                []
+            expression (src/SortUnification.ml[121,3370+34]..[131,3714+38]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/SortUnification.ml[121,3370+34]..[121,3370+47])
+                Ppat_constraint
+                pattern (src/SortUnification.ml[121,3370+35]..[121,3370+39])
+                  Ppat_var "sort" (src/SortUnification.ml[121,3370+35]..[121,3370+39])
+                core_type (src/SortUnification.ml[121,3370+42]..[121,3370+46])
+                  Ptyp_constr "sort" (src/SortUnification.ml[121,3370+42]..[121,3370+46])
+                  []
+              expression (src/SortUnification.ml[122,3420+2]..[131,3714+38])
+                Pexp_match
+                expression (src/SortUnification.ml[122,3420+8]..[122,3420+12])
+                  Pexp_ident "sort" (src/SortUnification.ml[122,3420+8]..[122,3420+12])
+                [
+                  <case>
+                    pattern (src/SortUnification.ml[123,3438+4]..[123,3438+10])
+                      Ppat_construct "TVar" (src/SortUnification.ml[123,3438+4]..[123,3438+8])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[123,3438+9]..[123,3438+10])
+                          Ppat_var "x" (src/SortUnification.ml[123,3438+9]..[123,3438+10])
+                    expression (src/SortUnification.ml[124,3452+6]..[124,3452+36])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[124,3452+6]..[124,3452+20])
+                        Pexp_ident "Printf.bprintf" (src/SortUnification.ml[124,3452+6]..[124,3452+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[124,3452+21]..[124,3452+22])
+                            Pexp_ident "b" (src/SortUnification.ml[124,3452+21]..[124,3452+22])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[124,3452+23]..[124,3452+27])
+                            Pexp_constant PConst_string("%s",(src/SortUnification.ml[124,3452+24]..[124,3452+26]),None)
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[124,3452+28]..[124,3452+36])
+                            Pexp_apply
+                            expression (src/SortUnification.ml[124,3452+29]..[124,3452+33])
+                              Pexp_ident "name" (src/SortUnification.ml[124,3452+29]..[124,3452+33])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[124,3452+34]..[124,3452+35])
+                                  Pexp_ident "x" (src/SortUnification.ml[124,3452+34]..[124,3452+35])
+                            ]
+                      ]
+                  <case>
+                    pattern (src/SortUnification.ml[125,3489+4]..[125,3489+22])
+                      Ppat_construct "TNode" (src/SortUnification.ml[125,3489+4]..[125,3489+9])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[125,3489+10]..[125,3489+22])
+                          Ppat_construct "S.Arrow" (src/SortUnification.ml[125,3489+11]..[125,3489+18])
+                          Some
+                            []
+                            pattern (src/SortUnification.ml[125,3489+19]..[125,3489+21])
+                              Ppat_construct "[]" (src/SortUnification.ml[125,3489+19]..[125,3489+21])
+                              None
+                    expression (src/SortUnification.ml[126,3515+6]..[126,3515+26])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[126,3515+6]..[126,3515+20])
+                        Pexp_ident "Printf.bprintf" (src/SortUnification.ml[126,3515+6]..[126,3515+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[126,3515+21]..[126,3515+22])
+                            Pexp_ident "b" (src/SortUnification.ml[126,3515+21]..[126,3515+22])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[126,3515+23]..[126,3515+26])
+                            Pexp_constant PConst_string("*",(src/SortUnification.ml[126,3515+24]..[126,3515+25]),None)
+                      ]
+                  <case>
+                    pattern (src/SortUnification.ml[127,3542+4]..[127,3542+35])
+                      Ppat_construct "TNode" (src/SortUnification.ml[127,3542+4]..[127,3542+9])
+                      Some
+                        []
+                        pattern (src/SortUnification.ml[127,3542+10]..[127,3542+35])
+                          Ppat_construct "S.Arrow" (src/SortUnification.ml[127,3542+11]..[127,3542+18])
+                          Some
+                            []
+                            pattern (src/SortUnification.ml[127,3542+19]..[127,3542+34])
+                              Ppat_construct "::" (src/SortUnification.ml[127,3542+25]..[127,3542+27])
+                              Some
+                                []
+                                pattern (src/SortUnification.ml[127,3542+20]..[127,3542+33]) ghost
+                                  Ppat_tuple
+                                  [
+                                    pattern (src/SortUnification.ml[127,3542+20]..[127,3542+24])
+                                      Ppat_var "sort" (src/SortUnification.ml[127,3542+20]..[127,3542+24])
+                                    pattern (src/SortUnification.ml[127,3542+28]..[127,3542+33])
+                                      Ppat_var "sorts" (src/SortUnification.ml[127,3542+28]..[127,3542+33])
+                                  ]
+                    expression (src/SortUnification.ml[129,3651+6]..[131,3714+38])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[129,3651+6]..[129,3651+20])
+                        Pexp_ident "Printf.bprintf" (src/SortUnification.ml[129,3651+6]..[129,3651+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[129,3651+21]..[129,3651+22])
+                            Pexp_ident "b" (src/SortUnification.ml[129,3651+21]..[129,3651+22])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[129,3651+23]..[129,3651+36])
+                            Pexp_constant PConst_string("(%a%a) -> *",(src/SortUnification.ml[129,3651+24]..[129,3651+35]),None)
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[130,3688+8]..[130,3688+20])
+                            Pexp_apply
+                            expression (src/SortUnification.ml[130,3688+9]..[130,3688+14])
+                              Pexp_ident "print" (src/SortUnification.ml[130,3688+9]..[130,3688+14])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[130,3688+15]..[130,3688+19])
+                                  Pexp_ident "name" (src/SortUnification.ml[130,3688+15]..[130,3688+19])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[130,3688+21]..[130,3688+25])
+                            Pexp_ident "sort" (src/SortUnification.ml[130,3688+21]..[130,3688+25])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[131,3714+8]..[131,3714+32])
+                            Pexp_apply
+                            expression (src/SortUnification.ml[131,3714+9]..[131,3714+26])
+                              Pexp_ident "print_comma_sorts" (src/SortUnification.ml[131,3714+9]..[131,3714+26])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/SortUnification.ml[131,3714+27]..[131,3714+31])
+                                  Pexp_ident "name" (src/SortUnification.ml[131,3714+27]..[131,3714+31])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[131,3714+33]..[131,3714+38])
+                            Pexp_ident "sorts" (src/SortUnification.ml[131,3714+33]..[131,3714+38])
+                      ]
+                ]
+      <def>
+        pattern (src/SortUnification.ml[133,3754+4]..[133,3754+21])
+          Ppat_var "print_comma_sorts" (src/SortUnification.ml[133,3754+4]..[133,3754+21])
+        expression (src/SortUnification.ml[133,3754+22]..[134,3791+43]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[133,3754+22]..[133,3754+26])
+            Ppat_var "name" (src/SortUnification.ml[133,3754+22]..[133,3754+26])
+          expression (src/SortUnification.ml[133,3754+27]..[134,3791+43]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/SortUnification.ml[133,3754+27]..[133,3754+28])
+              Ppat_var "b" (src/SortUnification.ml[133,3754+27]..[133,3754+28])
+            expression (src/SortUnification.ml[133,3754+29]..[134,3791+43]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/SortUnification.ml[133,3754+29]..[133,3754+34])
+                Ppat_var "sorts" (src/SortUnification.ml[133,3754+29]..[133,3754+34])
+              expression (src/SortUnification.ml[134,3791+2]..[134,3791+43])
+                Pexp_apply
+                expression (src/SortUnification.ml[134,3791+2]..[134,3791+11])
+                  Pexp_ident "List.iter" (src/SortUnification.ml[134,3791+2]..[134,3791+11])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[134,3791+12]..[134,3791+37])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[134,3791+13]..[134,3791+29])
+                        Pexp_ident "print_comma_sort" (src/SortUnification.ml[134,3791+13]..[134,3791+29])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[134,3791+30]..[134,3791+34])
+                            Pexp_ident "name" (src/SortUnification.ml[134,3791+30]..[134,3791+34])
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[134,3791+35]..[134,3791+36])
+                            Pexp_ident "b" (src/SortUnification.ml[134,3791+35]..[134,3791+36])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[134,3791+38]..[134,3791+43])
+                      Pexp_ident "sorts" (src/SortUnification.ml[134,3791+38]..[134,3791+43])
+                ]
+      <def>
+        pattern (src/SortUnification.ml[136,3836+4]..[136,3836+20])
+          Ppat_var "print_comma_sort" (src/SortUnification.ml[136,3836+4]..[136,3836+20])
+        expression (src/SortUnification.ml[136,3836+21]..[137,3871+43]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[136,3836+21]..[136,3836+25])
+            Ppat_var "name" (src/SortUnification.ml[136,3836+21]..[136,3836+25])
+          expression (src/SortUnification.ml[136,3836+26]..[137,3871+43]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/SortUnification.ml[136,3836+26]..[136,3836+27])
+              Ppat_var "b" (src/SortUnification.ml[136,3836+26]..[136,3836+27])
+            expression (src/SortUnification.ml[136,3836+28]..[137,3871+43]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/SortUnification.ml[136,3836+28]..[136,3836+32])
+                Ppat_var "sort" (src/SortUnification.ml[136,3836+28]..[136,3836+32])
+              expression (src/SortUnification.ml[137,3871+2]..[137,3871+43])
+                Pexp_apply
+                expression (src/SortUnification.ml[137,3871+2]..[137,3871+16])
+                  Pexp_ident "Printf.bprintf" (src/SortUnification.ml[137,3871+2]..[137,3871+16])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[137,3871+17]..[137,3871+18])
+                      Pexp_ident "b" (src/SortUnification.ml[137,3871+17]..[137,3871+18])
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[137,3871+19]..[137,3871+25])
+                      Pexp_constant PConst_string(", %a",(src/SortUnification.ml[137,3871+20]..[137,3871+24]),None)
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[137,3871+26]..[137,3871+38])
+                      Pexp_apply
+                      expression (src/SortUnification.ml[137,3871+27]..[137,3871+32])
+                        Pexp_ident "print" (src/SortUnification.ml[137,3871+27]..[137,3871+32])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/SortUnification.ml[137,3871+33]..[137,3871+37])
+                            Pexp_ident "name" (src/SortUnification.ml[137,3871+33]..[137,3871+37])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/SortUnification.ml[137,3871+39]..[137,3871+43])
+                      Pexp_ident "sort" (src/SortUnification.ml[137,3871+39]..[137,3871+43])
+                ]
+    ]
+  structure_item (src/SortUnification.ml[139,3916+0]..[142,4002+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[139,3916+4]..[139,3916+9])
+          Ppat_var "print" (src/SortUnification.ml[139,3916+4]..[139,3916+9])
+        expression (src/SortUnification.ml[139,3916+10]..[142,4002+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/SortUnification.ml[139,3916+10]..[139,3916+14])
+            Ppat_var "sort" (src/SortUnification.ml[139,3916+10]..[139,3916+14])
+          expression (src/SortUnification.ml[139,3916+15]..[142,4002+19])
+            Pexp_constraint
+            expression (src/SortUnification.ml[140,3942+2]..[142,4002+19])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/SortUnification.ml[140,3942+6]..[140,3942+7])
+                    Ppat_var "b" (src/SortUnification.ml[140,3942+6]..[140,3942+7])
+                  expression (src/SortUnification.ml[140,3942+10]..[140,3942+26])
+                    Pexp_apply
+                    expression (src/SortUnification.ml[140,3942+10]..[140,3942+23])
+                      Pexp_ident "Buffer.create" (src/SortUnification.ml[140,3942+10]..[140,3942+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/SortUnification.ml[140,3942+24]..[140,3942+26])
+                          Pexp_constant PConst_int (32,None)
+                    ]
+              ]
+              expression (src/SortUnification.ml[141,3972+2]..[142,4002+19])
+                Pexp_sequence
+                expression (src/SortUnification.ml[141,3972+2]..[141,3972+28])
+                  Pexp_apply
+                  expression (src/SortUnification.ml[141,3972+2]..[141,3972+7])
+                    Pexp_ident "print" (src/SortUnification.ml[141,3972+2]..[141,3972+7])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/SortUnification.ml[141,3972+8]..[141,3972+21])
+                        Pexp_apply
+                        expression (src/SortUnification.ml[141,3972+9]..[141,3972+18])
+                          Pexp_ident "make_name" (src/SortUnification.ml[141,3972+9]..[141,3972+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/SortUnification.ml[141,3972+18]..[141,3972+20])
+                              Pexp_construct "()" (src/SortUnification.ml[141,3972+18]..[141,3972+20])
+                              None
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (src/SortUnification.ml[141,3972+22]..[141,3972+23])
+                        Pexp_ident "b" (src/SortUnification.ml[141,3972+22]..[141,3972+23])
+                    <arg>
+                    Nolabel
+                      expression (src/SortUnification.ml[141,3972+24]..[141,3972+28])
+                        Pexp_ident "sort" (src/SortUnification.ml[141,3972+24]..[141,3972+28])
+                  ]
+                expression (src/SortUnification.ml[142,4002+2]..[142,4002+19])
+                  Pexp_apply
+                  expression (src/SortUnification.ml[142,4002+2]..[142,4002+17])
+                    Pexp_ident "Buffer.contents" (src/SortUnification.ml[142,4002+2]..[142,4002+17])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/SortUnification.ml[142,4002+18]..[142,4002+19])
+                        Pexp_ident "b" (src/SortUnification.ml[142,4002+18]..[142,4002+19])
+                  ]
+            core_type (src/SortUnification.ml[139,3916+17]..[139,3916+23])
+              Ptyp_constr "string" (src/SortUnification.ml[139,3916+17]..[139,3916+23])
+              []
+    ]
+]
+
+module S =
+  struct
+    type 'a structure =
+      | Arrow of 'a list 
+    let map f (Arrow xs) = Arrow (List.map f xs)
+    let iter f (Arrow xs) = List.iter f xs
+    exception Iter2 
+    let iter2 f (Arrow xs1) (Arrow xs2) =
+      let n1 = List.length xs1
+      and n2 = List.length xs2 in
+      if n1 = n2 then List.iter2 f xs1 xs2 else raise Iter2
+  end
+include S
+include (Unifier.Make)(S)
+type sort = term =
+  | TVar of int 
+  | TNode of sort structure 
+let arrow (args : variable list) = (fresh (Some (Arrow args)) : variable)
+let star : variable = arrow []
+let fresh () = fresh None
+let domain (x : variable) =
+  (match structure x with | Some (Arrow xs) -> Some xs | None -> None : 
+  variable list option)
+let rec ground s =
+  match s with
+  | TVar _ -> GroundSort.GArrow []
+  | TNode (Arrow ss) -> GroundSort.GArrow (List.map ground ss)
+let rec unground (GroundSort.GArrow ss) =
+  TNode (Arrow (List.map unground ss))
+let make_gensym () =
+  (let c = ref 0 in
+   let gensym () =
+     let n = Misc.postincrement c in
+     Printf.sprintf "%c%s" (char_of_int ((Char.code 'a') + (n mod 26)))
+       (let d = n / 26 in if d = 0 then "" else string_of_int d) in
+   gensym : unit -> string)
+let make_name () =
+  (let gensym = make_gensym () in
+   Fix.Memoize.Int.memoize (fun _x -> gensym ()) : int -> string)
+let rec print name (b : Buffer.t) (sort : sort) =
+  match sort with
+  | TVar x -> Printf.bprintf b "%s" (name x)
+  | TNode (S.Arrow []) -> Printf.bprintf b "*"
+  | TNode (S.Arrow (sort::sorts)) ->
+      Printf.bprintf b "(%a%a) -> *" (print name) sort
+        (print_comma_sorts name) sorts
+and print_comma_sorts name b sorts =
+  List.iter (print_comma_sort name b) sorts
+and print_comma_sort name b sort = Printf.bprintf b ", %a" (print name) sort
+let print sort =
+  (let b = Buffer.create 32 in print (make_name ()) b sort; Buffer.contents b : 
+  string)
+[
+  structure_item (src/SortUnification.ml[25,1295+0]..src/SortUnification.ml[46,1653+3])
+    Tstr_module
+    S/484
+      module_expr (src/SortUnification.ml[25,1295+11]..src/SortUnification.ml[46,1653+3])
+        Tmod_structure
+        [
+          structure_item (src/SortUnification.ml[27,1314+2]..src/SortUnification.ml[28,1336+22])
+            Tstr_type Rec
+            [
+              type_declaration structure/396 (src/SortUnification.ml[27,1314+2]..src/SortUnification.ml[28,1336+22])
+                ptype_params =
+                  [
+                    core_type (src/SortUnification.ml[27,1314+7]..src/SortUnification.ml[27,1314+9])
+                      Ttyp_var a
+                  ]
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_variant
+                    [
+                      (src/SortUnification.ml[28,1336+4]..src/SortUnification.ml[28,1336+22])
+                        Arrow/397
+                        [
+                          core_type (src/SortUnification.ml[28,1336+15]..src/SortUnification.ml[28,1336+22])
+                            Ttyp_constr "list/9!"
+                            [
+                              core_type (src/SortUnification.ml[28,1336+15]..src/SortUnification.ml[28,1336+17])
+                                Ttyp_var a
+                            ]
+                        ]
+                        None
+                    ]
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          structure_item (src/SortUnification.ml[30,1360+2]..src/SortUnification.ml[31,1385+25])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (src/SortUnification.ml[30,1360+6]..src/SortUnification.ml[30,1360+9])
+                  Tpat_var "map/398"
+                expression (src/SortUnification.ml[30,1360+10]..src/SortUnification.ml[31,1385+25]) ghost
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (src/SortUnification.ml[30,1360+10]..src/SortUnification.ml[30,1360+11])
+                        Tpat_var "f/400"
+                      expression (src/SortUnification.ml[30,1360+12]..src/SortUnification.ml[31,1385+25]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/SortUnification.ml[30,1360+12]..src/SortUnification.ml[30,1360+22])
+                              Tpat_construct "Arrow"
+                              [
+                                pattern (src/SortUnification.ml[30,1360+19]..src/SortUnification.ml[30,1360+21])
+                                  Tpat_var "xs/401"
+                              ]
+                              None
+                            expression (src/SortUnification.ml[31,1385+4]..src/SortUnification.ml[31,1385+25])
+                              Texp_construct "Arrow"
+                              [
+                                expression (src/SortUnification.ml[31,1385+10]..src/SortUnification.ml[31,1385+25])
+                                  Texp_apply
+                                  expression (src/SortUnification.ml[31,1385+11]..src/SortUnification.ml[31,1385+19])
+                                    Texp_ident "Stdlib!.List.map"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[31,1385+20]..src/SortUnification.ml[31,1385+21])
+                                        Texp_ident "f/400"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[31,1385+22]..src/SortUnification.ml[31,1385+24])
+                                        Texp_ident "xs/401"
+                                  ]
+                              ]
+                        ]
+                  ]
+            ]
+          structure_item (src/SortUnification.ml[33,1412+2]..src/SortUnification.ml[34,1438+18])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (src/SortUnification.ml[33,1412+6]..src/SortUnification.ml[33,1412+10])
+                  Tpat_var "iter/469"
+                expression (src/SortUnification.ml[33,1412+11]..src/SortUnification.ml[34,1438+18]) ghost
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (src/SortUnification.ml[33,1412+11]..src/SortUnification.ml[33,1412+12])
+                        Tpat_var "f/471"
+                      expression (src/SortUnification.ml[33,1412+13]..src/SortUnification.ml[34,1438+18]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/SortUnification.ml[33,1412+13]..src/SortUnification.ml[33,1412+23])
+                              Tpat_construct "Arrow"
+                              [
+                                pattern (src/SortUnification.ml[33,1412+20]..src/SortUnification.ml[33,1412+22])
+                                  Tpat_var "xs/472"
+                              ]
+                              None
+                            expression (src/SortUnification.ml[34,1438+4]..src/SortUnification.ml[34,1438+18])
+                              Texp_apply
+                              expression (src/SortUnification.ml[34,1438+4]..src/SortUnification.ml[34,1438+13])
+                                Texp_ident "Stdlib!.List.iter"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/SortUnification.ml[34,1438+14]..src/SortUnification.ml[34,1438+15])
+                                    Texp_ident "f/471"
+                                <arg>
+                                  Nolabel
+                                  expression (src/SortUnification.ml[34,1438+16]..src/SortUnification.ml[34,1438+18])
+                                    Texp_ident "xs/472"
+                              ]
+                        ]
+                  ]
+            ]
+          structure_item (src/SortUnification.ml[36,1458+2]..src/SortUnification.ml[36,1458+17])
+            Tstr_exception
+            type_exception
+              ptyext_constructor =
+                extension_constructor (src/SortUnification.ml[36,1458+2]..src/SortUnification.ml[36,1458+17])
+                  pext_name = "Iter2/474"
+                  pext_kind =
+                    Text_decl
+                      []
+                      None
+          structure_item (src/SortUnification.ml[38,1477+2]..src/SortUnification.ml[44,1634+17])
+            Tstr_value Nonrec
+            [
+              <def>
+                pattern (src/SortUnification.ml[38,1477+6]..src/SortUnification.ml[38,1477+11])
+                  Tpat_var "iter2/475"
+                expression (src/SortUnification.ml[38,1477+12]..src/SortUnification.ml[44,1634+17]) ghost
+                  Texp_function
+                  Nolabel
+                  [
+                    <case>
+                      pattern (src/SortUnification.ml[38,1477+12]..src/SortUnification.ml[38,1477+13])
+                        Tpat_var "f/477"
+                      expression (src/SortUnification.ml[38,1477+14]..src/SortUnification.ml[44,1634+17]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/SortUnification.ml[38,1477+14]..src/SortUnification.ml[38,1477+25])
+                              Tpat_construct "Arrow"
+                              [
+                                pattern (src/SortUnification.ml[38,1477+21]..src/SortUnification.ml[38,1477+24])
+                                  Tpat_var "xs1/478"
+                              ]
+                              None
+                            expression (src/SortUnification.ml[38,1477+26]..src/SortUnification.ml[44,1634+17]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/SortUnification.ml[38,1477+26]..src/SortUnification.ml[38,1477+37])
+                                    Tpat_construct "Arrow"
+                                    [
+                                      pattern (src/SortUnification.ml[38,1477+33]..src/SortUnification.ml[38,1477+36])
+                                        Tpat_var "xs2/479"
+                                    ]
+                                    None
+                                  expression (src/SortUnification.ml[39,1517+4]..src/SortUnification.ml[44,1634+17])
+                                    Texp_let Nonrec
+                                    [
+                                      <def>
+                                        pattern (src/SortUnification.ml[39,1517+8]..src/SortUnification.ml[39,1517+10])
+                                          Tpat_var "n1/480"
+                                        expression (src/SortUnification.ml[39,1517+13]..src/SortUnification.ml[39,1517+28])
+                                          Texp_apply
+                                          expression (src/SortUnification.ml[39,1517+13]..src/SortUnification.ml[39,1517+24])
+                                            Texp_ident "Stdlib!.List.length"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/SortUnification.ml[39,1517+25]..src/SortUnification.ml[39,1517+28])
+                                                Texp_ident "xs1/478"
+                                          ]
+                                      <def>
+                                        pattern (src/SortUnification.ml[40,1546+8]..src/SortUnification.ml[40,1546+10])
+                                          Tpat_var "n2/481"
+                                        expression (src/SortUnification.ml[40,1546+13]..src/SortUnification.ml[40,1546+28])
+                                          Texp_apply
+                                          expression (src/SortUnification.ml[40,1546+13]..src/SortUnification.ml[40,1546+24])
+                                            Texp_ident "Stdlib!.List.length"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/SortUnification.ml[40,1546+25]..src/SortUnification.ml[40,1546+28])
+                                                Texp_ident "xs2/479"
+                                          ]
+                                    ]
+                                    expression (src/SortUnification.ml[41,1578+4]..src/SortUnification.ml[44,1634+17])
+                                      Texp_ifthenelse
+                                      expression (src/SortUnification.ml[41,1578+7]..src/SortUnification.ml[41,1578+14])
+                                        Texp_apply
+                                        expression (src/SortUnification.ml[41,1578+10]..src/SortUnification.ml[41,1578+11])
+                                          Texp_ident "Stdlib!.="
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[41,1578+7]..src/SortUnification.ml[41,1578+9])
+                                              Texp_ident "n1/480"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[41,1578+12]..src/SortUnification.ml[41,1578+14])
+                                              Texp_ident "n2/481"
+                                        ]
+                                      expression (src/SortUnification.ml[42,1598+6]..src/SortUnification.ml[42,1598+26])
+                                        Texp_apply
+                                        expression (src/SortUnification.ml[42,1598+6]..src/SortUnification.ml[42,1598+16])
+                                          Texp_ident "Stdlib!.List.iter2"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[42,1598+17]..src/SortUnification.ml[42,1598+18])
+                                              Texp_ident "f/477"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[42,1598+19]..src/SortUnification.ml[42,1598+22])
+                                              Texp_ident "xs1/478"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[42,1598+23]..src/SortUnification.ml[42,1598+26])
+                                              Texp_ident "xs2/479"
+                                        ]
+                                      Some
+                                        expression (src/SortUnification.ml[44,1634+6]..src/SortUnification.ml[44,1634+17])
+                                          Texp_apply
+                                          expression (src/SortUnification.ml[44,1634+6]..src/SortUnification.ml[44,1634+11])
+                                            Texp_ident "Stdlib!.raise"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/SortUnification.ml[44,1634+12]..src/SortUnification.ml[44,1634+17])
+                                                Texp_construct "Iter2"
+                                                []
+                                          ]
+                              ]
+                        ]
+                  ]
+            ]
+        ]
+  structure_item (src/SortUnification.ml[48,1658+0]..src/SortUnification.ml[48,1658+9])
+    Tstr_include    module_expr (src/SortUnification.ml[48,1658+8]..src/SortUnification.ml[48,1658+9])
+      Tmod_ident "S/484"
+  structure_item (src/SortUnification.ml[54,1822+0]..src/SortUnification.ml[54,1822+23])
+    Tstr_include    module_expr (src/SortUnification.ml[54,1822+8]..src/SortUnification.ml[54,1822+23])
+      Tmod_apply
+      module_expr (src/SortUnification.ml[54,1822+8]..src/SortUnification.ml[54,1822+20])
+        module_expr (src/SortUnification.ml[54,1822+8]..src/SortUnification.ml[54,1822+20])
+          Tmod_ident "Dune__exe!.Unifier.Make"
+      module_expr (src/SortUnification.ml[54,1822+21]..src/SortUnification.ml[54,1822+22])
+        Tmod_ident "S/484"
+  structure_item (src/SortUnification.ml[56,1847+0]..src/SortUnification.ml[58,1882+27])
+    Tstr_type Rec
+    [
+      type_declaration sort/526 (src/SortUnification.ml[56,1847+0]..src/SortUnification.ml[58,1882+27])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/SortUnification.ml[57,1866+2]..src/SortUnification.ml[57,1866+15])
+                TVar/527
+                [
+                  core_type (src/SortUnification.ml[57,1866+12]..src/SortUnification.ml[57,1866+15])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (src/SortUnification.ml[58,1882+2]..src/SortUnification.ml[58,1882+27])
+                TNode/528
+                [
+                  core_type (src/SortUnification.ml[58,1882+13]..src/SortUnification.ml[58,1882+27])
+                    Ttyp_constr "structure/485"
+                    [
+                      core_type (src/SortUnification.ml[58,1882+13]..src/SortUnification.ml[58,1882+17])
+                        Ttyp_constr "sort/526"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/SortUnification.ml[56,1847+12]..src/SortUnification.ml[56,1847+16])
+              Ttyp_constr "term/524"
+              []
+    ]
+  structure_item (src/SortUnification.ml[64,2019+0]..src/SortUnification.ml[65,2065+27])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[64,2019+4]..src/SortUnification.ml[64,2019+9])
+          Tpat_var "arrow/545"
+        expression (src/SortUnification.ml[64,2019+10]..src/SortUnification.ml[65,2065+27]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[64,2019+11]..src/SortUnification.ml[64,2019+15])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/SortUnification.ml[64,2019+18]..src/SortUnification.ml[64,2019+31])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/SortUnification.ml[64,2019+18]..src/SortUnification.ml[64,2019+26])
+                        Ttyp_constr "variable/518"
+                        []
+                    ]
+                Tpat_alias "args/547"
+                pattern (src/SortUnification.ml[64,2019+11]..src/SortUnification.ml[64,2019+15])
+                  Tpat_any
+              expression (src/SortUnification.ml[65,2065+2]..src/SortUnification.ml[65,2065+27])
+                extra
+                  Texp_constraint
+                  core_type (src/SortUnification.ml[64,2019+35]..src/SortUnification.ml[64,2019+43])
+                    Ttyp_constr "variable/518"
+                    []
+                Texp_apply
+                expression (src/SortUnification.ml[65,2065+2]..src/SortUnification.ml[65,2065+7])
+                  Texp_ident "fresh/519"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/SortUnification.ml[65,2065+8]..src/SortUnification.ml[65,2065+27])
+                      Texp_construct "Some"
+                      [
+                        expression (src/SortUnification.ml[65,2065+14]..src/SortUnification.ml[65,2065+26])
+                          Texp_construct "Arrow"
+                          [
+                            expression (src/SortUnification.ml[65,2065+21]..src/SortUnification.ml[65,2065+25])
+                              Texp_ident "args/547"
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[67,2094+0]..src/SortUnification.ml[68,2116+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[67,2094+4]..src/SortUnification.ml[67,2094+8])
+          extra
+            Tpat_extra_constraint
+            core_type (src/SortUnification.ml[67,2094+11]..src/SortUnification.ml[67,2094+19])
+              Ttyp_constr "variable/518"
+              []
+          Tpat_alias "star/548"
+          pattern (src/SortUnification.ml[67,2094+4]..src/SortUnification.ml[67,2094+8])
+            Tpat_any
+        expression (src/SortUnification.ml[68,2116+2]..src/SortUnification.ml[68,2116+10])
+          extra
+            Texp_constraint
+            core_type (src/SortUnification.ml[67,2094+11]..src/SortUnification.ml[67,2094+19])
+              Ttyp_constr "variable/518"
+              []
+          Texp_apply
+          expression (src/SortUnification.ml[68,2116+2]..src/SortUnification.ml[68,2116+7])
+            Texp_ident "arrow/545"
+          [
+            <arg>
+              Nolabel
+              expression (src/SortUnification.ml[68,2116+8]..src/SortUnification.ml[68,2116+10])
+                Texp_construct "[]"
+                []
+          ]
+    ]
+  structure_item (src/SortUnification.ml[70,2128+0]..src/SortUnification.ml[71,2143+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[70,2128+4]..src/SortUnification.ml[70,2128+9])
+          Tpat_var "fresh/549"
+        expression (src/SortUnification.ml[70,2128+10]..src/SortUnification.ml[71,2143+12]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[70,2128+10]..src/SortUnification.ml[70,2128+12])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/SortUnification.ml[71,2143+2]..src/SortUnification.ml[71,2143+12])
+                Texp_apply
+                expression (src/SortUnification.ml[71,2143+2]..src/SortUnification.ml[71,2143+7])
+                  Texp_ident "fresh/519"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/SortUnification.ml[71,2143+8]..src/SortUnification.ml[71,2143+12])
+                      Texp_construct "None"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[75,2180+0]..src/SortUnification.ml[80,2305+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[75,2180+4]..src/SortUnification.ml[75,2180+10])
+          Tpat_var "domain/551"
+        expression (src/SortUnification.ml[75,2180+11]..src/SortUnification.ml[80,2305+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[75,2180+12]..src/SortUnification.ml[75,2180+13])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/SortUnification.ml[75,2180+16]..src/SortUnification.ml[75,2180+24])
+                    Ttyp_constr "variable/518"
+                    []
+                Tpat_alias "x/553"
+                pattern (src/SortUnification.ml[75,2180+12]..src/SortUnification.ml[75,2180+13])
+                  Tpat_any
+              expression (src/SortUnification.ml[76,2231+2]..src/SortUnification.ml[80,2305+10])
+                extra
+                  Texp_constraint
+                  core_type (src/SortUnification.ml[75,2180+28]..src/SortUnification.ml[75,2180+48])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (src/SortUnification.ml[75,2180+28]..src/SortUnification.ml[75,2180+41])
+                        Ttyp_constr "list/9!"
+                        [
+                          core_type (src/SortUnification.ml[75,2180+28]..src/SortUnification.ml[75,2180+36])
+                            Ttyp_constr "variable/518"
+                            []
+                        ]
+                    ]
+                Texp_match
+                expression (src/SortUnification.ml[76,2231+8]..src/SortUnification.ml[76,2231+19])
+                  Texp_apply
+                  expression (src/SortUnification.ml[76,2231+8]..src/SortUnification.ml[76,2231+17])
+                    Texp_ident "structure/520"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/SortUnification.ml[76,2231+18]..src/SortUnification.ml[76,2231+19])
+                        Texp_ident "x/553"
+                  ]
+                [
+                  <case>
+                    pattern (src/SortUnification.ml[77,2256+4]..src/SortUnification.ml[77,2256+19])
+                      Tpat_value
+                      pattern (src/SortUnification.ml[77,2256+4]..src/SortUnification.ml[77,2256+19])
+                        Tpat_construct "Some"
+                        [
+                          pattern (src/SortUnification.ml[77,2256+9]..src/SortUnification.ml[77,2256+19])
+                            Tpat_construct "Arrow"
+                            [
+                              pattern (src/SortUnification.ml[77,2256+16]..src/SortUnification.ml[77,2256+18])
+                                Tpat_var "xs/554"
+                            ]
+                            None
+                        ]
+                        None
+                    expression (src/SortUnification.ml[78,2279+6]..src/SortUnification.ml[78,2279+13])
+                      Texp_construct "Some"
+                      [
+                        expression (src/SortUnification.ml[78,2279+11]..src/SortUnification.ml[78,2279+13])
+                          Texp_ident "xs/554"
+                      ]
+                  <case>
+                    pattern (src/SortUnification.ml[79,2293+4]..src/SortUnification.ml[79,2293+8])
+                      Tpat_value
+                      pattern (src/SortUnification.ml[79,2293+4]..src/SortUnification.ml[79,2293+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (src/SortUnification.ml[80,2305+6]..src/SortUnification.ml[80,2305+10])
+                      Texp_construct "None"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[86,2449+0]..src/SortUnification.ml[92,2597+44])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/SortUnification.ml[86,2449+8]..src/SortUnification.ml[86,2449+14])
+          Tpat_var "ground/555"
+        expression (src/SortUnification.ml[86,2449+15]..src/SortUnification.ml[92,2597+44]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[86,2449+15]..src/SortUnification.ml[86,2449+16])
+                Tpat_var "s/556"
+              expression (src/SortUnification.ml[87,2468+2]..src/SortUnification.ml[92,2597+44])
+                Texp_match
+                expression (src/SortUnification.ml[87,2468+8]..src/SortUnification.ml[87,2468+9])
+                  Texp_ident "s/556"
+                [
+                  <case>
+                    pattern (src/SortUnification.ml[88,2483+4]..src/SortUnification.ml[88,2483+10])
+                      Tpat_value
+                      pattern (src/SortUnification.ml[88,2483+4]..src/SortUnification.ml[88,2483+10])
+                        Tpat_construct "TVar"
+                        [
+                          pattern (src/SortUnification.ml[88,2483+9]..src/SortUnification.ml[88,2483+10])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/SortUnification.ml[90,2546+6]..src/SortUnification.ml[90,2546+26])
+                      Texp_construct "GroundSort.GArrow"
+                      [
+                        expression (src/SortUnification.ml[90,2546+24]..src/SortUnification.ml[90,2546+26])
+                          Texp_construct "[]"
+                          []
+                      ]
+                  <case>
+                    pattern (src/SortUnification.ml[91,2573+4]..src/SortUnification.ml[91,2573+20])
+                      Tpat_value
+                      pattern (src/SortUnification.ml[91,2573+4]..src/SortUnification.ml[91,2573+20])
+                        Tpat_construct "TNode"
+                        [
+                          pattern (src/SortUnification.ml[91,2573+10]..src/SortUnification.ml[91,2573+20])
+                            Tpat_construct "Arrow"
+                            [
+                              pattern (src/SortUnification.ml[91,2573+17]..src/SortUnification.ml[91,2573+19])
+                                Tpat_var "ss/557"
+                            ]
+                            None
+                        ]
+                        None
+                    expression (src/SortUnification.ml[92,2597+6]..src/SortUnification.ml[92,2597+44])
+                      Texp_construct "GroundSort.GArrow"
+                      [
+                        expression (src/SortUnification.ml[92,2597+24]..src/SortUnification.ml[92,2597+44])
+                          Texp_apply
+                          expression (src/SortUnification.ml[92,2597+25]..src/SortUnification.ml[92,2597+33])
+                            Texp_ident "Stdlib!.List.map"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/SortUnification.ml[92,2597+34]..src/SortUnification.ml[92,2597+40])
+                                Texp_ident "ground/555"
+                            <arg>
+                              Nolabel
+                              expression (src/SortUnification.ml[92,2597+41]..src/SortUnification.ml[92,2597+43])
+                                Texp_ident "ss/557"
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[94,2643+0]..src/SortUnification.ml[95,2685+38])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/SortUnification.ml[94,2643+8]..src/SortUnification.ml[94,2643+16])
+          Tpat_var "unground/564"
+        expression (src/SortUnification.ml[94,2643+17]..src/SortUnification.ml[95,2685+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[94,2643+17]..src/SortUnification.ml[94,2643+39])
+                Tpat_construct "GroundSort.GArrow"
+                [
+                  pattern (src/SortUnification.ml[94,2643+36]..src/SortUnification.ml[94,2643+38])
+                    Tpat_var "ss/565"
+                ]
+                None
+              expression (src/SortUnification.ml[95,2685+2]..src/SortUnification.ml[95,2685+38])
+                Texp_construct "TNode"
+                [
+                  expression (src/SortUnification.ml[95,2685+8]..src/SortUnification.ml[95,2685+38])
+                    Texp_construct "Arrow"
+                    [
+                      expression (src/SortUnification.ml[95,2685+15]..src/SortUnification.ml[95,2685+37])
+                        Texp_apply
+                        expression (src/SortUnification.ml[95,2685+16]..src/SortUnification.ml[95,2685+24])
+                          Texp_ident "Stdlib!.List.map"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/SortUnification.ml[95,2685+25]..src/SortUnification.ml[95,2685+33])
+                              Texp_ident "unground/564"
+                          <arg>
+                            Nolabel
+                            expression (src/SortUnification.ml[95,2685+34]..src/SortUnification.ml[95,2685+36])
+                              Texp_ident "ss/565"
+                        ]
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[101,2858+0]..src/SortUnification.ml[109,3111+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[101,2858+4]..src/SortUnification.ml[101,2858+15])
+          Tpat_var "make_gensym/567"
+        expression (src/SortUnification.ml[101,2858+16]..src/SortUnification.ml[109,3111+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[101,2858+16]..src/SortUnification.ml[101,2858+18])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/SortUnification.ml[102,2896+2]..src/SortUnification.ml[109,3111+8])
+                extra
+                  Texp_constraint
+                  core_type (src/SortUnification.ml[101,2858+21]..src/SortUnification.ml[101,2858+35])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/SortUnification.ml[101,2858+21]..src/SortUnification.ml[101,2858+25])
+                      Ttyp_constr "unit/6!"
+                      []
+                    core_type (src/SortUnification.ml[101,2858+29]..src/SortUnification.ml[101,2858+35])
+                      Ttyp_constr "string/15!"
+                      []
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/SortUnification.ml[102,2896+6]..src/SortUnification.ml[102,2896+7])
+                      Tpat_var "c/569"
+                    expression (src/SortUnification.ml[102,2896+10]..src/SortUnification.ml[102,2896+15])
+                      Texp_apply
+                      expression (src/SortUnification.ml[102,2896+10]..src/SortUnification.ml[102,2896+13])
+                        Texp_ident "Stdlib!.ref"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/SortUnification.ml[102,2896+14]..src/SortUnification.ml[102,2896+15])
+                            Texp_constant Const_int 0
+                      ]
+                ]
+                expression (src/SortUnification.ml[103,2915+2]..src/SortUnification.ml[109,3111+8])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/SortUnification.ml[103,2915+6]..src/SortUnification.ml[103,2915+12])
+                        Tpat_var "gensym/570"
+                      expression (src/SortUnification.ml[103,2915+13]..src/SortUnification.ml[107,3042+63]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/SortUnification.ml[103,2915+13]..src/SortUnification.ml[103,2915+15])
+                              Tpat_construct "()"
+                              []
+                              None
+                            expression (src/SortUnification.ml[104,2933+4]..src/SortUnification.ml[107,3042+63])
+                              Texp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/SortUnification.ml[104,2933+8]..src/SortUnification.ml[104,2933+9])
+                                    Tpat_var "n/572"
+                                  expression (src/SortUnification.ml[104,2933+12]..src/SortUnification.ml[104,2933+32])
+                                    Texp_apply
+                                    expression (src/SortUnification.ml[104,2933+12]..src/SortUnification.ml[104,2933+30])
+                                      Texp_ident "Dune__exe!.Misc.postincrement"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/SortUnification.ml[104,2933+31]..src/SortUnification.ml[104,2933+32])
+                                          Texp_ident "c/569"
+                                    ]
+                              ]
+                              expression (src/SortUnification.ml[105,2969+4]..src/SortUnification.ml[107,3042+63])
+                                Texp_apply
+                                expression (src/SortUnification.ml[105,2969+4]..src/SortUnification.ml[105,2969+18])
+                                  Texp_ident "Stdlib!.Printf.sprintf"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25])
+                                      Texp_construct "CamlinternalFormatBasics.Format"
+                                      [
+                                        expression (src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Char"
+                                          [
+                                            expression (src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.String"
+                                              [
+                                                expression (src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                  []
+                                                expression (src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                  []
+                                              ]
+                                          ]
+                                        expression (src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25]) ghost
+                                          Texp_constant Const_string("%c%s",(src/SortUnification.ml[105,2969+19]..src/SortUnification.ml[105,2969+25]) ghost,None)
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (src/SortUnification.ml[106,2995+6]..src/SortUnification.ml[106,2995+46])
+                                      Texp_apply
+                                      expression (src/SortUnification.ml[106,2995+7]..src/SortUnification.ml[106,2995+18])
+                                        Texp_ident "Stdlib!.char_of_int"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/SortUnification.ml[106,2995+19]..src/SortUnification.ml[106,2995+45])
+                                            Texp_apply
+                                            expression (src/SortUnification.ml[106,2995+34]..src/SortUnification.ml[106,2995+35])
+                                              Texp_ident "Stdlib!.+"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/SortUnification.ml[106,2995+20]..src/SortUnification.ml[106,2995+33])
+                                                  Texp_apply
+                                                  expression (src/SortUnification.ml[106,2995+20]..src/SortUnification.ml[106,2995+29])
+                                                    Texp_ident "Stdlib!.Char.code"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/SortUnification.ml[106,2995+30]..src/SortUnification.ml[106,2995+33])
+                                                        Texp_constant Const_char 61
+                                                  ]
+                                              <arg>
+                                                Nolabel
+                                                expression (src/SortUnification.ml[106,2995+36]..src/SortUnification.ml[106,2995+44])
+                                                  Texp_apply
+                                                  expression (src/SortUnification.ml[106,2995+38]..src/SortUnification.ml[106,2995+41])
+                                                    Texp_ident "Stdlib!.mod"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/SortUnification.ml[106,2995+36]..src/SortUnification.ml[106,2995+37])
+                                                        Texp_ident "n/572"
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/SortUnification.ml[106,2995+42]..src/SortUnification.ml[106,2995+44])
+                                                        Texp_constant Const_int 26
+                                                  ]
+                                            ]
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (src/SortUnification.ml[107,3042+6]..src/SortUnification.ml[107,3042+63])
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (src/SortUnification.ml[107,3042+11]..src/SortUnification.ml[107,3042+12])
+                                            Tpat_var "d/656"
+                                          expression (src/SortUnification.ml[107,3042+15]..src/SortUnification.ml[107,3042+21])
+                                            Texp_apply
+                                            expression (src/SortUnification.ml[107,3042+17]..src/SortUnification.ml[107,3042+18])
+                                              Texp_ident "Stdlib!./"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/SortUnification.ml[107,3042+15]..src/SortUnification.ml[107,3042+16])
+                                                  Texp_ident "n/572"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/SortUnification.ml[107,3042+19]..src/SortUnification.ml[107,3042+21])
+                                                  Texp_constant Const_int 26
+                                            ]
+                                      ]
+                                      expression (src/SortUnification.ml[107,3042+25]..src/SortUnification.ml[107,3042+62])
+                                        Texp_ifthenelse
+                                        expression (src/SortUnification.ml[107,3042+28]..src/SortUnification.ml[107,3042+33])
+                                          Texp_apply
+                                          expression (src/SortUnification.ml[107,3042+30]..src/SortUnification.ml[107,3042+31])
+                                            Texp_ident "Stdlib!.="
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/SortUnification.ml[107,3042+28]..src/SortUnification.ml[107,3042+29])
+                                                Texp_ident "d/656"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/SortUnification.ml[107,3042+32]..src/SortUnification.ml[107,3042+33])
+                                                Texp_constant Const_int 0
+                                          ]
+                                        expression (src/SortUnification.ml[107,3042+39]..src/SortUnification.ml[107,3042+41])
+                                          Texp_constant Const_string("",(src/SortUnification.ml[107,3042+40]..src/SortUnification.ml[107,3042+40]),None)
+                                        Some
+                                          expression (src/SortUnification.ml[107,3042+47]..src/SortUnification.ml[107,3042+62])
+                                            Texp_apply
+                                            expression (src/SortUnification.ml[107,3042+47]..src/SortUnification.ml[107,3042+60])
+                                              Texp_ident "Stdlib!.string_of_int"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/SortUnification.ml[107,3042+61]..src/SortUnification.ml[107,3042+62])
+                                                  Texp_ident "d/656"
+                                            ]
+                                ]
+                        ]
+                  ]
+                  expression (src/SortUnification.ml[109,3111+2]..src/SortUnification.ml[109,3111+8])
+                    Texp_ident "gensym/570"
+          ]
+    ]
+  structure_item (src/SortUnification.ml[113,3155+0]..src/SortUnification.ml[115,3222+46])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[113,3155+4]..src/SortUnification.ml[113,3155+13])
+          Tpat_var "make_name/659"
+        expression (src/SortUnification.ml[113,3155+14]..src/SortUnification.ml[115,3222+46]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[113,3155+14]..src/SortUnification.ml[113,3155+16])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/SortUnification.ml[114,3190+2]..src/SortUnification.ml[115,3222+46])
+                extra
+                  Texp_constraint
+                  core_type (src/SortUnification.ml[113,3155+19]..src/SortUnification.ml[113,3155+32])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/SortUnification.ml[113,3155+19]..src/SortUnification.ml[113,3155+22])
+                      Ttyp_constr "int/1!"
+                      []
+                    core_type (src/SortUnification.ml[113,3155+26]..src/SortUnification.ml[113,3155+32])
+                      Ttyp_constr "string/15!"
+                      []
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/SortUnification.ml[114,3190+6]..src/SortUnification.ml[114,3190+12])
+                      Tpat_var "gensym/661"
+                    expression (src/SortUnification.ml[114,3190+15]..src/SortUnification.ml[114,3190+28])
+                      Texp_apply
+                      expression (src/SortUnification.ml[114,3190+15]..src/SortUnification.ml[114,3190+26])
+                        Texp_ident "make_gensym/567"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/SortUnification.ml[114,3190+26]..src/SortUnification.ml[114,3190+28])
+                            Texp_construct "()"
+                            []
+                      ]
+                ]
+                expression (src/SortUnification.ml[115,3222+2]..src/SortUnification.ml[115,3222+46])
+                  Texp_apply
+                  expression (src/SortUnification.ml[115,3222+2]..src/SortUnification.ml[115,3222+25])
+                    Texp_ident "Dune__exe!.Fix.Memoize.Int.memoize"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/SortUnification.ml[115,3222+26]..src/SortUnification.ml[115,3222+46])
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/SortUnification.ml[115,3222+31]..src/SortUnification.ml[115,3222+33])
+                              Tpat_var "_x/742"
+                            expression (src/SortUnification.ml[115,3222+37]..src/SortUnification.ml[115,3222+45])
+                              Texp_apply
+                              expression (src/SortUnification.ml[115,3222+37]..src/SortUnification.ml[115,3222+43])
+                                Texp_ident "gensym/661"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/SortUnification.ml[115,3222+43]..src/SortUnification.ml[115,3222+45])
+                                    Texp_construct "()"
+                                    []
+                              ]
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[121,3370+0]..src/SortUnification.ml[137,3871+43])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/SortUnification.ml[121,3370+8]..src/SortUnification.ml[121,3370+13])
+          Tpat_var "print/744"
+        expression (src/SortUnification.ml[121,3370+14]..src/SortUnification.ml[131,3714+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[121,3370+14]..src/SortUnification.ml[121,3370+18])
+                Tpat_var "name/747"
+              expression (src/SortUnification.ml[121,3370+19]..src/SortUnification.ml[131,3714+38]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/SortUnification.ml[121,3370+20]..src/SortUnification.ml[121,3370+21])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/SortUnification.ml[121,3370+24]..src/SortUnification.ml[121,3370+32])
+                          Ttyp_constr "Stdlib!.Buffer.t"
+                          []
+                      Tpat_alias "b/789"
+                      pattern (src/SortUnification.ml[121,3370+20]..src/SortUnification.ml[121,3370+21])
+                        Tpat_any
+                    expression (src/SortUnification.ml[121,3370+34]..src/SortUnification.ml[131,3714+38]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/SortUnification.ml[121,3370+35]..src/SortUnification.ml[121,3370+39])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (src/SortUnification.ml[121,3370+42]..src/SortUnification.ml[121,3370+46])
+                                Ttyp_constr "sort/526"
+                                []
+                            Tpat_alias "sort/790"
+                            pattern (src/SortUnification.ml[121,3370+35]..src/SortUnification.ml[121,3370+39])
+                              Tpat_any
+                          expression (src/SortUnification.ml[122,3420+2]..src/SortUnification.ml[131,3714+38])
+                            Texp_match
+                            expression (src/SortUnification.ml[122,3420+8]..src/SortUnification.ml[122,3420+12])
+                              Texp_ident "sort/790"
+                            [
+                              <case>
+                                pattern (src/SortUnification.ml[123,3438+4]..src/SortUnification.ml[123,3438+10])
+                                  Tpat_value
+                                  pattern (src/SortUnification.ml[123,3438+4]..src/SortUnification.ml[123,3438+10])
+                                    Tpat_construct "TVar"
+                                    [
+                                      pattern (src/SortUnification.ml[123,3438+9]..src/SortUnification.ml[123,3438+10])
+                                        Tpat_var "x/791"
+                                    ]
+                                    None
+                                expression (src/SortUnification.ml[124,3452+6]..src/SortUnification.ml[124,3452+36])
+                                  Texp_apply
+                                  expression (src/SortUnification.ml[124,3452+6]..src/SortUnification.ml[124,3452+20])
+                                    Texp_ident "Stdlib!.Printf.bprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[124,3452+21]..src/SortUnification.ml[124,3452+22])
+                                        Texp_ident "b/789"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[124,3452+23]..src/SortUnification.ml[124,3452+27])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/SortUnification.ml[124,3452+23]..src/SortUnification.ml[124,3452+27]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String"
+                                            [
+                                              expression (src/SortUnification.ml[124,3452+23]..src/SortUnification.ml[124,3452+27]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                []
+                                              expression (src/SortUnification.ml[124,3452+23]..src/SortUnification.ml[124,3452+27]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                []
+                                            ]
+                                          expression (src/SortUnification.ml[124,3452+23]..src/SortUnification.ml[124,3452+27]) ghost
+                                            Texp_constant Const_string("%s",(src/SortUnification.ml[124,3452+23]..src/SortUnification.ml[124,3452+27]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[124,3452+28]..src/SortUnification.ml[124,3452+36])
+                                        Texp_apply
+                                        expression (src/SortUnification.ml[124,3452+29]..src/SortUnification.ml[124,3452+33])
+                                          Texp_ident "name/747"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[124,3452+34]..src/SortUnification.ml[124,3452+35])
+                                              Texp_ident "x/791"
+                                        ]
+                                  ]
+                              <case>
+                                pattern (src/SortUnification.ml[125,3489+4]..src/SortUnification.ml[125,3489+22])
+                                  Tpat_value
+                                  pattern (src/SortUnification.ml[125,3489+4]..src/SortUnification.ml[125,3489+22])
+                                    Tpat_construct "TNode"
+                                    [
+                                      pattern (src/SortUnification.ml[125,3489+10]..src/SortUnification.ml[125,3489+22])
+                                        Tpat_construct "S.Arrow"
+                                        [
+                                          pattern (src/SortUnification.ml[125,3489+19]..src/SortUnification.ml[125,3489+21])
+                                            Tpat_construct "[]"
+                                            []
+                                            None
+                                        ]
+                                        None
+                                    ]
+                                    None
+                                expression (src/SortUnification.ml[126,3515+6]..src/SortUnification.ml[126,3515+26])
+                                  Texp_apply
+                                  expression (src/SortUnification.ml[126,3515+6]..src/SortUnification.ml[126,3515+20])
+                                    Texp_ident "Stdlib!.Printf.bprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[126,3515+21]..src/SortUnification.ml[126,3515+22])
+                                        Texp_ident "b/789"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[126,3515+23]..src/SortUnification.ml[126,3515+26])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/SortUnification.ml[126,3515+23]..src/SortUnification.ml[126,3515+26]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                            [
+                                              expression (src/SortUnification.ml[126,3515+23]..src/SortUnification.ml[126,3515+26]) ghost
+                                                Texp_constant Const_char 2a
+                                              expression (src/SortUnification.ml[126,3515+23]..src/SortUnification.ml[126,3515+26]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                []
+                                            ]
+                                          expression (src/SortUnification.ml[126,3515+23]..src/SortUnification.ml[126,3515+26]) ghost
+                                            Texp_constant Const_string("*",(src/SortUnification.ml[126,3515+23]..src/SortUnification.ml[126,3515+26]) ghost,None)
+                                        ]
+                                  ]
+                              <case>
+                                pattern (src/SortUnification.ml[127,3542+4]..src/SortUnification.ml[127,3542+35])
+                                  Tpat_value
+                                  pattern (src/SortUnification.ml[127,3542+4]..src/SortUnification.ml[127,3542+35])
+                                    Tpat_construct "TNode"
+                                    [
+                                      pattern (src/SortUnification.ml[127,3542+10]..src/SortUnification.ml[127,3542+35])
+                                        Tpat_construct "S.Arrow"
+                                        [
+                                          pattern (src/SortUnification.ml[127,3542+19]..src/SortUnification.ml[127,3542+34])
+                                            Tpat_construct "::"
+                                            [
+                                              pattern (src/SortUnification.ml[127,3542+20]..src/SortUnification.ml[127,3542+24])
+                                                Tpat_var "sort/792"
+                                              pattern (src/SortUnification.ml[127,3542+28]..src/SortUnification.ml[127,3542+33])
+                                                Tpat_var "sorts/793"
+                                            ]
+                                            None
+                                        ]
+                                        None
+                                    ]
+                                    None
+                                expression (src/SortUnification.ml[129,3651+6]..src/SortUnification.ml[131,3714+38])
+                                  Texp_apply
+                                  expression (src/SortUnification.ml[129,3651+6]..src/SortUnification.ml[129,3651+20])
+                                    Texp_ident "Stdlib!.Printf.bprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[129,3651+21]..src/SortUnification.ml[129,3651+22])
+                                        Texp_ident "b/789"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                            [
+                                              expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                                Texp_constant Const_char 28
+                                              expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Alpha"
+                                                [
+                                                  expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.Alpha"
+                                                    [
+                                                      expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                        [
+                                                          expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                                            Texp_constant Const_string(") -> *",(src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost,None)
+                                                          expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                            []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost
+                                            Texp_constant Const_string("(%a%a) -> *",(src/SortUnification.ml[129,3651+23]..src/SortUnification.ml[129,3651+36]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[130,3688+8]..src/SortUnification.ml[130,3688+20])
+                                        Texp_apply
+                                        expression (src/SortUnification.ml[130,3688+9]..src/SortUnification.ml[130,3688+14])
+                                          Texp_ident "print/744"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[130,3688+15]..src/SortUnification.ml[130,3688+19])
+                                              Texp_ident "name/747"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[130,3688+21]..src/SortUnification.ml[130,3688+25])
+                                        Texp_ident "sort/792"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[131,3714+8]..src/SortUnification.ml[131,3714+32])
+                                        Texp_apply
+                                        expression (src/SortUnification.ml[131,3714+9]..src/SortUnification.ml[131,3714+26])
+                                          Texp_ident "print_comma_sorts/745"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/SortUnification.ml[131,3714+27]..src/SortUnification.ml[131,3714+31])
+                                              Texp_ident "name/747"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[131,3714+33]..src/SortUnification.ml[131,3714+38])
+                                        Texp_ident "sorts/793"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+      <def>
+        pattern (src/SortUnification.ml[133,3754+4]..src/SortUnification.ml[133,3754+21])
+          Tpat_var "print_comma_sorts/745"
+        expression (src/SortUnification.ml[133,3754+22]..src/SortUnification.ml[134,3791+43]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[133,3754+22]..src/SortUnification.ml[133,3754+26])
+                Tpat_var "name/835"
+              expression (src/SortUnification.ml[133,3754+27]..src/SortUnification.ml[134,3791+43]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/SortUnification.ml[133,3754+27]..src/SortUnification.ml[133,3754+28])
+                      Tpat_var "b/836"
+                    expression (src/SortUnification.ml[133,3754+29]..src/SortUnification.ml[134,3791+43]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/SortUnification.ml[133,3754+29]..src/SortUnification.ml[133,3754+34])
+                            Tpat_var "sorts/837"
+                          expression (src/SortUnification.ml[134,3791+2]..src/SortUnification.ml[134,3791+43])
+                            Texp_apply
+                            expression (src/SortUnification.ml[134,3791+2]..src/SortUnification.ml[134,3791+11])
+                              Texp_ident "Stdlib!.List.iter"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/SortUnification.ml[134,3791+12]..src/SortUnification.ml[134,3791+37])
+                                  Texp_apply
+                                  expression (src/SortUnification.ml[134,3791+13]..src/SortUnification.ml[134,3791+29])
+                                    Texp_ident "print_comma_sort/746"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[134,3791+30]..src/SortUnification.ml[134,3791+34])
+                                        Texp_ident "name/835"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[134,3791+35]..src/SortUnification.ml[134,3791+36])
+                                        Texp_ident "b/836"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/SortUnification.ml[134,3791+38]..src/SortUnification.ml[134,3791+43])
+                                  Texp_ident "sorts/837"
+                            ]
+                      ]
+                ]
+          ]
+      <def>
+        pattern (src/SortUnification.ml[136,3836+4]..src/SortUnification.ml[136,3836+20])
+          Tpat_var "print_comma_sort/746"
+        expression (src/SortUnification.ml[136,3836+21]..src/SortUnification.ml[137,3871+43]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[136,3836+21]..src/SortUnification.ml[136,3836+25])
+                Tpat_var "name/838"
+              expression (src/SortUnification.ml[136,3836+26]..src/SortUnification.ml[137,3871+43]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/SortUnification.ml[136,3836+26]..src/SortUnification.ml[136,3836+27])
+                      Tpat_var "b/839"
+                    expression (src/SortUnification.ml[136,3836+28]..src/SortUnification.ml[137,3871+43]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/SortUnification.ml[136,3836+28]..src/SortUnification.ml[136,3836+32])
+                            Tpat_var "sort/840"
+                          expression (src/SortUnification.ml[137,3871+2]..src/SortUnification.ml[137,3871+43])
+                            Texp_apply
+                            expression (src/SortUnification.ml[137,3871+2]..src/SortUnification.ml[137,3871+16])
+                              Texp_ident "Stdlib!.Printf.bprintf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/SortUnification.ml[137,3871+17]..src/SortUnification.ml[137,3871+18])
+                                  Texp_ident "b/839"
+                              <arg>
+                                Nolabel
+                                expression (src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost
+                                          Texp_constant Const_string(", ",(src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost,None)
+                                        expression (src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Alpha"
+                                          [
+                                            expression (src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                              []
+                                          ]
+                                      ]
+                                    expression (src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost
+                                      Texp_constant Const_string(", %a",(src/SortUnification.ml[137,3871+19]..src/SortUnification.ml[137,3871+25]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/SortUnification.ml[137,3871+26]..src/SortUnification.ml[137,3871+38])
+                                  Texp_apply
+                                  expression (src/SortUnification.ml[137,3871+27]..src/SortUnification.ml[137,3871+32])
+                                    Texp_ident "print/744"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/SortUnification.ml[137,3871+33]..src/SortUnification.ml[137,3871+37])
+                                        Texp_ident "name/838"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/SortUnification.ml[137,3871+39]..src/SortUnification.ml[137,3871+43])
+                                  Texp_ident "sort/840"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/SortUnification.ml[139,3916+0]..src/SortUnification.ml[142,4002+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/SortUnification.ml[139,3916+4]..src/SortUnification.ml[139,3916+9])
+          Tpat_var "print/841"
+        expression (src/SortUnification.ml[139,3916+10]..src/SortUnification.ml[142,4002+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/SortUnification.ml[139,3916+10]..src/SortUnification.ml[139,3916+14])
+                Tpat_var "sort/842"
+              expression (src/SortUnification.ml[140,3942+2]..src/SortUnification.ml[142,4002+19])
+                extra
+                  Texp_constraint
+                  core_type (src/SortUnification.ml[139,3916+17]..src/SortUnification.ml[139,3916+23])
+                    Ttyp_constr "string/15!"
+                    []
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/SortUnification.ml[140,3942+6]..src/SortUnification.ml[140,3942+7])
+                      Tpat_var "b/843"
+                    expression (src/SortUnification.ml[140,3942+10]..src/SortUnification.ml[140,3942+26])
+                      Texp_apply
+                      expression (src/SortUnification.ml[140,3942+10]..src/SortUnification.ml[140,3942+23])
+                        Texp_ident "Stdlib!.Buffer.create"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/SortUnification.ml[140,3942+24]..src/SortUnification.ml[140,3942+26])
+                            Texp_constant Const_int 32
+                      ]
+                ]
+                expression (src/SortUnification.ml[141,3972+2]..src/SortUnification.ml[142,4002+19])
+                  Texp_sequence
+                  expression (src/SortUnification.ml[141,3972+2]..src/SortUnification.ml[141,3972+28])
+                    Texp_apply
+                    expression (src/SortUnification.ml[141,3972+2]..src/SortUnification.ml[141,3972+7])
+                      Texp_ident "print/744"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/SortUnification.ml[141,3972+8]..src/SortUnification.ml[141,3972+21])
+                          Texp_apply
+                          expression (src/SortUnification.ml[141,3972+9]..src/SortUnification.ml[141,3972+18])
+                            Texp_ident "make_name/659"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/SortUnification.ml[141,3972+18]..src/SortUnification.ml[141,3972+20])
+                                Texp_construct "()"
+                                []
+                          ]
+                      <arg>
+                        Nolabel
+                        expression (src/SortUnification.ml[141,3972+22]..src/SortUnification.ml[141,3972+23])
+                          Texp_ident "b/843"
+                      <arg>
+                        Nolabel
+                        expression (src/SortUnification.ml[141,3972+24]..src/SortUnification.ml[141,3972+28])
+                          Texp_ident "sort/842"
+                    ]
+                  expression (src/SortUnification.ml[142,4002+2]..src/SortUnification.ml[142,4002+19])
+                    Texp_apply
+                    expression (src/SortUnification.ml[142,4002+2]..src/SortUnification.ml[142,4002+17])
+                      Texp_ident "Stdlib!.Buffer.contents"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/SortUnification.ml[142,4002+18]..src/SortUnification.ml[142,4002+19])
+                          Texp_ident "b/843"
+                    ]
+          ]
+    ]
+]
+
+{<Dune__exe__SortUnification>
+ "Occurs"[extension constructor] ->
+   CU Dune__exe . "Unifier"[module] . "Make"[module](
+   {<Dune__exe__SortUnification.15>
+    "Iter2"[extension constructor] -> <Dune__exe__SortUnification.8>;
+    "iter"[value] -> <Dune__exe__SortUnification.5>;
+    "iter2"[value] -> <Dune__exe__SortUnification.9>;
+    "map"[value] -> <Dune__exe__SortUnification.2>;
+    "structure"[type] -> <Dune__exe__SortUnification.0>;
+    })
+   . "Occurs"[extension constructor];
+ "Unify"[extension constructor] ->
+   CU Dune__exe . "Unifier"[module] . "Make"[module](
+   {<Dune__exe__SortUnification.15>
+    "Iter2"[extension constructor] -> <Dune__exe__SortUnification.8>;
+    "iter"[value] -> <Dune__exe__SortUnification.5>;
+    "iter2"[value] -> <Dune__exe__SortUnification.9>;
+    "map"[value] -> <Dune__exe__SortUnification.2>;
+    "structure"[type] -> <Dune__exe__SortUnification.0>;
+    })
+   . "Unify"[extension constructor];
+ "arrow"[value] -> <Dune__exe__SortUnification.19>;
+ "decode"[value] ->
+   CU Dune__exe . "Unifier"[module] . "Make"[module](
+   {<Dune__exe__SortUnification.15>
+    "Iter2"[extension constructor] -> <Dune__exe__SortUnification.8>;
+    "iter"[value] -> <Dune__exe__SortUnification.5>;
+    "iter2"[value] -> <Dune__exe__SortUnification.9>;
+    "map"[value] -> <Dune__exe__SortUnification.2>;
+    "structure"[type] -> <Dune__exe__SortUnification.0>;
+    })
+   . "decode"[value];
+ "domain"[value] -> <Dune__exe__SortUnification.23>;
+ "fresh"[value] -> <Dune__exe__SortUnification.22>;
+ "ground"[value] -> <Dune__exe__SortUnification.26>;
+ "print"[value] -> <Dune__exe__SortUnification.54>;
+ "sort"[type] -> <Dune__exe__SortUnification.16>;
+ "star"[value] -> <Dune__exe__SortUnification.21>;
+ "structure"[type] -> <Dune__exe__SortUnification.0>;
+ "unground"[value] -> <Dune__exe__SortUnification.29>;
+ "unify"[value] ->
+   CU Dune__exe . "Unifier"[module] . "Make"[module](
+   {<Dune__exe__SortUnification.15>
+    "Iter2"[extension constructor] -> <Dune__exe__SortUnification.8>;
+    "iter"[value] -> <Dune__exe__SortUnification.5>;
+    "iter2"[value] -> <Dune__exe__SortUnification.9>;
+    "map"[value] -> <Dune__exe__SortUnification.2>;
+    "structure"[type] -> <Dune__exe__SortUnification.0>;
+    })
+   . "unify"[value];
+ "variable"[type] ->
+   CU Dune__exe . "Unifier"[module] . "Make"[module](
+   {<Dune__exe__SortUnification.15>
+    "Iter2"[extension constructor] -> <Dune__exe__SortUnification.8>;
+    "iter"[value] -> <Dune__exe__SortUnification.5>;
+    "iter2"[value] -> <Dune__exe__SortUnification.9>;
+    "map"[value] -> <Dune__exe__SortUnification.2>;
+    "structure"[type] -> <Dune__exe__SortUnification.0>;
+    })
+   . "variable"[type];
+ }
+
+(seq
+  (seq
+    (let
+      (map/398 =
+         (function f/400 param/468
+           (let (xs/401 =a (field_imm 0 param/468))
+             (makeblock 0
+               (apply (field_imm 19 (global Stdlib__List!)) f/400 xs/401)))))
+      (setfield_ptr(root-init) 23 (global Dune__exe__SortUnification!)
+        map/398))
+    (let
+      (iter/469 =
+         (function f/471 param/473 : int
+           (let (xs/472 =a (field_imm 0 param/473))
+             (apply (field_imm 17 (global Stdlib__List!)) f/471 xs/472))))
+      (setfield_ptr(root-init) 24 (global Dune__exe__SortUnification!)
+        iter/469))
+    (let
+      (Iter2/474 =
+         (makeblock 248 "Dune__exe__SortUnification.S.Iter2"
+           (caml_fresh_oo_id 0)))
+      (setfield_ptr(root-init) 25 (global Dune__exe__SortUnification!)
+        Iter2/474))
+    (let
+      (iter2/475 =
+         (function f/477 param/483 param/482 : int
+           (let
+             (xs2/479 =a (field_imm 0 param/482)
+              xs1/478 =a (field_imm 0 param/483)
+              n1/480 =[int]
+                (apply (field_imm 0 (global Stdlib__List!)) xs1/478)
+              n2/481 =[int]
+                (apply (field_imm 0 (global Stdlib__List!)) xs2/479))
+             (if (== n1/480 n2/481)
+               (apply (field_imm 27 (global Stdlib__List!)) f/477 xs1/478
+                 xs2/479)
+               (raise (field_imm 25 (global Dune__exe__SortUnification!)))))))
+      (setfield_ptr(root-init) 26 (global Dune__exe__SortUnification!)
+        iter2/475))
+    0)
+  (let
+    (S/484 =
+       (makeblock 0 (field_imm 23 (global Dune__exe__SortUnification!))
+         (field_imm 24 (global Dune__exe__SortUnification!))
+         (field_imm 25 (global Dune__exe__SortUnification!))
+         (field_imm 26 (global Dune__exe__SortUnification!))))
+    (seq
+      (setfield_ptr(root-init) 11 (global Dune__exe__SortUnification!) S/484)
+      (let
+        (include/1258 = (field_imm 11 (global Dune__exe__SortUnification!))
+         map/486 =a (field_mut 0 include/1258))
+        (seq
+          (setfield_ptr(root-init) 12 (global Dune__exe__SortUnification!)
+            map/486)
+          (let (iter/487 =a (field_mut 1 include/1258))
+            (seq
+              (setfield_ptr(root-init) 13
+                (global Dune__exe__SortUnification!) iter/487)
+              (let (Iter2/488 =a (field_mut 2 include/1258))
+                (seq
+                  (setfield_ptr(root-init) 14
+                    (global Dune__exe__SortUnification!) Iter2/488)
+                  (let (iter2/489 =a (field_mut 3 include/1258))
+                    (seq
+                      (setfield_ptr(root-init) 15
+                        (global Dune__exe__SortUnification!) iter2/489)
+                      (let
+                        (include/1259 =
+                           (apply
+                             (let
+                               (let/1267 =
+                                  (field_imm 0 (global Dune__exe__Unifier!)))
+                               (field_imm 0 (global Dune__exe__Unifier!)))
+                             (field_imm 11
+                               (global Dune__exe__SortUnification!)))
+                         fresh/519 =a (field_mut 0 include/1259))
+                        (seq
+                          (setfield_ptr(root-init) 16
+                            (global Dune__exe__SortUnification!) fresh/519)
+                          (let (structure/520 =a (field_mut 1 include/1259))
+                            (seq
+                              (setfield_ptr(root-init) 17
+                                (global Dune__exe__SortUnification!)
+                                structure/520)
+                              (let (Unify/521 =a (field_mut 2 include/1259))
+                                (seq
+                                  (setfield_ptr(root-init) 4
+                                    (global Dune__exe__SortUnification!)
+                                    Unify/521)
+                                  (let
+                                    (Occurs/522 =a (field_mut 3 include/1259))
+                                    (seq
+                                      (setfield_ptr(root-init) 5
+                                        (global Dune__exe__SortUnification!)
+                                        Occurs/522)
+                                      (let
+                                        (unify/523 =a
+                                           (field_mut 4 include/1259))
+                                        (seq
+                                          (setfield_ptr(root-init) 6
+                                            (global Dune__exe__SortUnification!)
+                                            unify/523)
+                                          (let
+                                            (decode/525 =a
+                                               (field_mut 5 include/1259))
+                                            (seq
+                                              (setfield_ptr(root-init) 7
+                                                (global Dune__exe__SortUnification!)
+                                                decode/525)
+                                              (let
+                                                (arrow/545 =
+                                                   (function args/547
+                                                     (apply
+                                                       (field_imm 16
+                                                         (global Dune__exe__SortUnification!))
+                                                       (makeblock 0
+                                                         (makeblock 0
+                                                           args/547)))))
+                                                (setfield_ptr(root-init) 1
+                                                  (global Dune__exe__SortUnification!)
+                                                  arrow/545))
+                                              (let
+                                                (star/548 =
+                                                   (apply
+                                                     (field_imm 1
+                                                       (global Dune__exe__SortUnification!))
+                                                     0))
+                                                (setfield_ptr(root-init) 0
+                                                  (global Dune__exe__SortUnification!)
+                                                  star/548))
+                                              (let
+                                                (fresh/549 =
+                                                   (function param/550[int]
+                                                     (apply
+                                                       (field_imm 16
+                                                         (global Dune__exe__SortUnification!))
+                                                       0)))
+                                                (setfield_ptr(root-init) 2
+                                                  (global Dune__exe__SortUnification!)
+                                                  fresh/549))
+                                              (let
+                                                (domain/551 =
+                                                   (function x/553
+                                                     (let
+                                                       (*match*/1261 =
+                                                          (apply
+                                                            (field_imm 17
+                                                              (global Dune__exe__SortUnification!))
+                                                            x/553))
+                                                       (if
+                                                         (isint *match*/1261)
+                                                         0
+                                                         (let
+                                                           (*match*/1262 =a
+                                                              (field_imm 0
+                                                                *match*/1261)
+                                                            xs/554 =a
+                                                              (field_imm 0
+                                                                *match*/1262))
+                                                           (makeblock 0
+                                                             xs/554))))))
+                                                (setfield_ptr(root-init) 3
+                                                  (global Dune__exe__SortUnification!)
+                                                  domain/551))
+                                              (letrec
+                                                (ground/555
+                                                   (function s/556
+                                                     (switch* s/556
+                                                      case tag 0:
+                                                       (let
+                                                         (*match*/1263 =a
+                                                            (field_imm 0
+                                                              s/556))
+                                                         [0: 0])
+                                                      case tag 1:
+                                                       (let
+                                                         (*match*/1264 =a
+                                                            (field_imm 0
+                                                              s/556)
+                                                          ss/557 =a
+                                                            (field_imm 0
+                                                              *match*/1264))
+                                                         (makeblock 0
+                                                           (apply
+                                                             (field_imm 19
+                                                               (global Stdlib__List!))
+                                                             ground/555
+                                                             ss/557))))))
+                                                (setfield_ptr(root-init) 8
+                                                  (global Dune__exe__SortUnification!)
+                                                  ground/555))
+                                              (letrec
+                                                (unground/564
+                                                   (function param/566
+                                                     (let
+                                                       (ss/565 =a
+                                                          (field_imm 0
+                                                            param/566))
+                                                       (makeblock 1
+                                                         (makeblock 0
+                                                           (apply
+                                                             (field_imm 19
+                                                               (global Stdlib__List!))
+                                                             unground/564
+                                                             ss/565))))))
+                                                (setfield_ptr(root-init) 9
+                                                  (global Dune__exe__SortUnification!)
+                                                  unground/564))
+                                              (let
+                                                (make_gensym/567 =
+                                                   (function param/658[int]
+                                                     (let
+                                                       (c/569 =
+                                                          (makemutable 0 (int)
+                                                            0)
+                                                        gensym/570 =
+                                                          (function
+                                                            param/657[int]
+                                                            (let
+                                                              (n/572 =[int]
+                                                                 (apply
+                                                                   (field_imm 22
+                                                                    (global Dune__exe__Misc!))
+                                                                   c/569))
+                                                              (apply
+                                                                (field_imm 3
+                                                                  (global Stdlib__Printf!))
+                                                                [0:
+                                                                 [0:
+                                                                  [2: 0 0]]
+                                                                 "%c%s"]
+                                                                (apply
+                                                                  (field_imm 28
+                                                                    (global Stdlib!))
+                                                                  (+ 'a'
+                                                                    (mod
+                                                                    n/572 26)))
+                                                                (let
+                                                                  (d/656 =[int]
+                                                                    (/ n/572
+                                                                    26))
+                                                                  (if
+                                                                    (== d/656
+                                                                    0) ""
+                                                                    (apply
+                                                                    (field_imm 32
+                                                                    (global Stdlib!))
+                                                                    d/656)))))))
+                                                       gensym/570)))
+                                                (setfield_ptr(root-init) 18
+                                                  (global Dune__exe__SortUnification!)
+                                                  make_gensym/567))
+                                              (let
+                                                (make_name/659 =
+                                                   (function param/743[int]
+                                                     (let
+                                                       (gensym/661 =
+                                                          (apply
+                                                            (field_imm 18
+                                                              (global Dune__exe__SortUnification!))
+                                                            0))
+                                                       (apply
+                                                         (field_imm 0
+                                                           (field_imm 5
+                                                             (global Vendored_fix__Memoize!)))
+                                                         (function
+                                                           _x/742[int]
+                                                           (apply gensym/661
+                                                             0))))))
+                                                (setfield_ptr(root-init) 19
+                                                  (global Dune__exe__SortUnification!)
+                                                  make_name/659))
+                                              (letrec
+                                                (print/744
+                                                   (function name/747 b/789
+                                                     sort/790 : int
+                                                     (switch* sort/790
+                                                      case tag 0:
+                                                       (let
+                                                         (x/791 =a
+                                                            (field_imm 0
+                                                              sort/790))
+                                                         (apply
+                                                           (field_imm 4
+                                                             (global Stdlib__Printf!))
+                                                           b/789
+                                                           [0: [2: 0 0] "%s"]
+                                                           (apply name/747
+                                                             x/791)))
+                                                      case tag 1:
+                                                       (let
+                                                         (*match*/1265 =a
+                                                            (field_imm 0
+                                                              sort/790)
+                                                          *match*/1266 =a
+                                                            (field_imm 0
+                                                              *match*/1265))
+                                                         (if
+                                                           (isint
+                                                             *match*/1266)
+                                                           (apply
+                                                             (field_imm 4
+                                                               (global Stdlib__Printf!))
+                                                             b/789
+                                                             [0:
+                                                              [12: '*' 0] "*"])
+                                                           (let
+                                                             (sorts/793 =a
+                                                                (field_imm 1
+                                                                  *match*/1266)
+                                                              sort/792 =a
+                                                                (field_imm 0
+                                                                  *match*/1266))
+                                                             (apply
+                                                               (field_imm 4
+                                                                 (global Stdlib__Printf!))
+                                                               b/789
+                                                               [0:
+                                                                [12:
+                                                                 '('
+                                                                 [15:
+                                                                  [15:
+                                                                   [11:
+                                                                    ") -> *"
+                                                                    0]]]]
+                                                                "(%a%a) -> *"]
+                                                               (apply
+                                                                 print/744
+                                                                 name/747)
+                                                               sort/792
+                                                               (apply
+                                                                 print_comma_sorts/745
+                                                                 name/747)
+                                                               sorts/793))))))
+                                                  print_comma_sorts/745
+                                                    (function name/835 b/836
+                                                      sorts/837 : int
+                                                      (apply
+                                                        (field_imm 17
+                                                          (global Stdlib__List!))
+                                                        (apply
+                                                          print_comma_sort/746
+                                                          name/835 b/836)
+                                                        sorts/837))
+                                                  print_comma_sort/746
+                                                    (function name/838 b/839
+                                                      sort/840 : int
+                                                      (apply
+                                                        (field_imm 4
+                                                          (global Stdlib__Printf!))
+                                                        b/839
+                                                        [0:
+                                                         [11: ", " [15: 0]]
+                                                         ", %a"]
+                                                        (apply print/744
+                                                          name/838)
+                                                        sort/840)))
+                                                (seq
+                                                  (setfield_ptr(root-init) 20
+                                                    (global Dune__exe__SortUnification!)
+                                                    print/744)
+                                                  (setfield_ptr(root-init) 21
+                                                    (global Dune__exe__SortUnification!)
+                                                    print_comma_sorts/745)
+                                                  (setfield_ptr(root-init) 22
+                                                    (global Dune__exe__SortUnification!)
+                                                    print_comma_sort/746)))
+                                              (let
+                                                (print/841 =
+                                                   (function sort/842
+                                                     (let
+                                                       (b/843 =
+                                                          (apply
+                                                            (field_imm 0
+                                                              (global Stdlib__Buffer!))
+                                                            32))
+                                                       (seq
+                                                         (apply
+                                                           (field_imm 20
+                                                             (global Dune__exe__SortUnification!))
+                                                           (apply
+                                                             (field_imm 19
+                                                               (global Dune__exe__SortUnification!))
+                                                             0)
+                                                           b/843 sort/842)
+                                                         (apply
+                                                           (field_imm 1
+                                                             (global Stdlib__Buffer!))
+                                                           b/843)))))
+                                                (setfield_ptr(root-init) 10
+                                                  (global Dune__exe__SortUnification!)
+                                                  print/841))
+                                              0)))))))))))))))))))))))
+(seq
+  (seq
+    (let
+      (map/398 =
+         (function f/400 param/468
+           (makeblock 0
+             (apply (field_imm 19 (global Stdlib__List!)) f/400
+               (field_imm 0 param/468)))))
+      (setfield_ptr(root-init) 23 (global Dune__exe__SortUnification!)
+        map/398))
+    (let
+      (iter/469 =
+         (function f/471 param/473 : int
+           (apply (field_imm 17 (global Stdlib__List!)) f/471
+             (field_imm 0 param/473))))
+      (setfield_ptr(root-init) 24 (global Dune__exe__SortUnification!)
+        iter/469))
+    (let
+      (Iter2/474 =
+         (makeblock 248 "Dune__exe__SortUnification.S.Iter2"
+           (caml_fresh_oo_id 0)))
+      (setfield_ptr(root-init) 25 (global Dune__exe__SortUnification!)
+        Iter2/474))
+    (let
+      (iter2/475 =
+         (function f/477 param/483 param/482 : int
+           (let
+             (xs2/479 =a (field_imm 0 param/482)
+              xs1/478 =a (field_imm 0 param/483)
+              n1/480 =[int]
+                (apply (field_imm 0 (global Stdlib__List!)) xs1/478)
+              n2/481 =[int]
+                (apply (field_imm 0 (global Stdlib__List!)) xs2/479))
+             (if (== n1/480 n2/481)
+               (apply (field_imm 27 (global Stdlib__List!)) f/477 xs1/478
+                 xs2/479)
+               (raise (field_imm 25 (global Dune__exe__SortUnification!)))))))
+      (setfield_ptr(root-init) 26 (global Dune__exe__SortUnification!)
+        iter2/475))
+    0)
+  (let
+    (S/484 =
+       (makeblock 0 (field_imm 23 (global Dune__exe__SortUnification!))
+         (field_imm 24 (global Dune__exe__SortUnification!))
+         (field_imm 25 (global Dune__exe__SortUnification!))
+         (field_imm 26 (global Dune__exe__SortUnification!))))
+    (seq
+      (setfield_ptr(root-init) 11 (global Dune__exe__SortUnification!) S/484)
+      (let
+        (include/1258 = (field_imm 11 (global Dune__exe__SortUnification!)))
+        (seq
+          (setfield_ptr(root-init) 12 (global Dune__exe__SortUnification!)
+            (field_mut 0 include/1258))
+          (setfield_ptr(root-init) 13 (global Dune__exe__SortUnification!)
+            (field_mut 1 include/1258))
+          (setfield_ptr(root-init) 14 (global Dune__exe__SortUnification!)
+            (field_mut 2 include/1258))
+          (setfield_ptr(root-init) 15 (global Dune__exe__SortUnification!)
+            (field_mut 3 include/1258))
+          (let
+            (include/1259 =
+               (apply
+                 (let (let/1267 = (field_imm 0 (global Dune__exe__Unifier!)))
+                   (field_imm 0 (global Dune__exe__Unifier!)))
+                 (field_imm 11 (global Dune__exe__SortUnification!))))
+            (seq
+              (setfield_ptr(root-init) 16
+                (global Dune__exe__SortUnification!)
+                (field_mut 0 include/1259))
+              (setfield_ptr(root-init) 17
+                (global Dune__exe__SortUnification!)
+                (field_mut 1 include/1259))
+              (setfield_ptr(root-init) 4 (global Dune__exe__SortUnification!)
+                (field_mut 2 include/1259))
+              (setfield_ptr(root-init) 5 (global Dune__exe__SortUnification!)
+                (field_mut 3 include/1259))
+              (setfield_ptr(root-init) 6 (global Dune__exe__SortUnification!)
+                (field_mut 4 include/1259))
+              (setfield_ptr(root-init) 7 (global Dune__exe__SortUnification!)
+                (field_mut 5 include/1259))
+              (let
+                (arrow/545 =
+                   (function args/547
+                     (apply
+                       (field_imm 16 (global Dune__exe__SortUnification!))
+                       (makeblock 0 (makeblock 0 args/547)))))
+                (setfield_ptr(root-init) 1
+                  (global Dune__exe__SortUnification!) arrow/545))
+              (let
+                (star/548 =
+                   (apply (field_imm 1 (global Dune__exe__SortUnification!))
+                     0))
+                (setfield_ptr(root-init) 0
+                  (global Dune__exe__SortUnification!) star/548))
+              (let
+                (fresh/549 =
+                   (function param/550[int]
+                     (apply
+                       (field_imm 16 (global Dune__exe__SortUnification!)) 0)))
+                (setfield_ptr(root-init) 2
+                  (global Dune__exe__SortUnification!) fresh/549))
+              (let
+                (domain/551 =
+                   (function x/553
+                     (let
+                       (*match*/1261 =
+                          (apply
+                            (field_imm 17
+                              (global Dune__exe__SortUnification!))
+                            x/553))
+                       (if (isint *match*/1261) 0
+                         (makeblock 0
+                           (field_imm 0 (field_imm 0 *match*/1261)))))))
+                (setfield_ptr(root-init) 3
+                  (global Dune__exe__SortUnification!) domain/551))
+              (letrec
+                (ground/555
+                   (function s/556
+                     (switch* s/556
+                      case tag 0: [0: 0]
+                      case tag 1:
+                       (makeblock 0
+                         (apply (field_imm 19 (global Stdlib__List!))
+                           ground/555 (field_imm 0 (field_imm 0 s/556)))))))
+                (setfield_ptr(root-init) 8
+                  (global Dune__exe__SortUnification!) ground/555))
+              (letrec
+                (unground/564
+                   (function param/566
+                     (makeblock 1
+                       (makeblock 0
+                         (apply (field_imm 19 (global Stdlib__List!))
+                           unground/564 (field_imm 0 param/566))))))
+                (setfield_ptr(root-init) 9
+                  (global Dune__exe__SortUnification!) unground/564))
+              (let
+                (make_gensym/567 =
+                   (function param/658[int]
+                     (let (c/569 = (makemutable 0 (int) 0))
+                       (function param/657[int]
+                         (let
+                           (n/572 =[int]
+                              (apply (field_imm 22 (global Dune__exe__Misc!))
+                                c/569))
+                           (apply (field_imm 3 (global Stdlib__Printf!))
+                             [0: [0: [2: 0 0]] "%c%s"]
+                             (apply (field_imm 28 (global Stdlib!))
+                               (+ 'a' (mod n/572 26)))
+                             (let (d/656 =[int] (/ n/572 26))
+                               (if (== d/656 0) ""
+                                 (apply (field_imm 32 (global Stdlib!))
+                                   d/656)))))))))
+                (setfield_ptr(root-init) 18
+                  (global Dune__exe__SortUnification!) make_gensym/567))
+              (let
+                (make_name/659 =
+                   (function param/743[int]
+                     (let
+                       (gensym/661 =
+                          (apply
+                            (field_imm 18
+                              (global Dune__exe__SortUnification!))
+                            0))
+                       (apply
+                         (field_imm 0
+                           (field_imm 5 (global Vendored_fix__Memoize!)))
+                         (function _x/742[int] (apply gensym/661 0))))))
+                (setfield_ptr(root-init) 19
+                  (global Dune__exe__SortUnification!) make_name/659))
+              (letrec
+                (print/744
+                   (function name/747 b/789 sort/790 : int
+                     (switch* sort/790
+                      case tag 0:
+                       (apply (field_imm 4 (global Stdlib__Printf!)) b/789
+                         [0: [2: 0 0] "%s"]
+                         (apply name/747 (field_imm 0 sort/790)))
+                      case tag 1:
+                       (let
+                         (*match*/1266 =a
+                            (field_imm 0 (field_imm 0 sort/790)))
+                         (if (isint *match*/1266)
+                           (apply (field_imm 4 (global Stdlib__Printf!))
+                             b/789 [0: [12: '*' 0] "*"])
+                           (apply (field_imm 4 (global Stdlib__Printf!))
+                             b/789
+                             [0:
+                              [12: '(' [15: [15: [11: ") -> *" 0]]]]
+                              "(%a%a) -> *"]
+                             (apply print/744 name/747)
+                             (field_imm 0 *match*/1266)
+                             (apply print_comma_sorts/745 name/747)
+                             (field_imm 1 *match*/1266))))))
+                  print_comma_sorts/745
+                    (function name/835 b/836 sorts/837 : int
+                      (apply (field_imm 17 (global Stdlib__List!))
+                        (apply print_comma_sort/746 name/835 b/836)
+                        sorts/837))
+                  print_comma_sort/746
+                    (function name/838 b/839 sort/840 : int
+                      (apply (field_imm 4 (global Stdlib__Printf!)) b/839
+                        [0: [11: ", " [15: 0]] ", %a"]
+                        (apply print/744 name/838) sort/840)))
+                (seq
+                  (setfield_ptr(root-init) 20
+                    (global Dune__exe__SortUnification!) print/744)
+                  (setfield_ptr(root-init) 21
+                    (global Dune__exe__SortUnification!)
+                    print_comma_sorts/745)
+                  (setfield_ptr(root-init) 22
+                    (global Dune__exe__SortUnification!)
+                    print_comma_sort/746)))
+              (let
+                (print/841 =
+                   (function sort/842
+                     (let
+                       (b/843 =
+                          (apply (field_imm 0 (global Stdlib__Buffer!)) 32))
+                       (seq
+                         (apply
+                           (field_imm 20
+                             (global Dune__exe__SortUnification!))
+                           (apply
+                             (field_imm 19
+                               (global Dune__exe__SortUnification!))
+                             0)
+                           b/843 sort/842)
+                         (apply (field_imm 1 (global Stdlib__Buffer!)) b/843)))))
+                (setfield_ptr(root-init) 10
+                  (global Dune__exe__SortUnification!) print/841))
+              0)))))))

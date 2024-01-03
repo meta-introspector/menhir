@@ -1,0 +1,70 @@
+[
+  signature_item (sdk/cmly_read.mli[19,1224+0]..[19,1224+25])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (sdk/cmly_read.mli[19,1224+0]..[19,1224+25])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              [
+                core_type (sdk/cmly_read.mli[19,1224+19]..[19,1224+25])
+                  Ptyp_constr "string" (sdk/cmly_read.mli[19,1224+19]..[19,1224+25])
+                  []
+              ]
+              None
+  signature_item (sdk/cmly_read.mli[21,1251+0]..[21,1251+66])
+    Psig_module "Read" (sdk/cmly_read.mli[21,1251+7]..[21,1251+11])
+    module_type (sdk/cmly_read.mli[21,1251+12]..[21,1251+66])
+      Pmty_functor "X" (sdk/cmly_read.mli[21,1251+13]..[21,1251+14])
+      module_type (sdk/cmly_read.mli[21,1251+17]..[21,1251+46])
+        Pmty_signature
+        [
+          signature_item (sdk/cmly_read.mli[21,1251+21]..[21,1251+42])
+            Psig_value
+            value_description "filename" (sdk/cmly_read.mli[21,1251+25]..[21,1251+33]) (sdk/cmly_read.mli[21,1251+21]..[21,1251+42])
+              core_type (sdk/cmly_read.mli[21,1251+36]..[21,1251+42])
+                Ptyp_constr "string" (sdk/cmly_read.mli[21,1251+36]..[21,1251+42])
+                []
+              []
+        ]
+      module_type (sdk/cmly_read.mli[21,1251+50]..[21,1251+66])
+        Pmty_ident "Cmly_api.GRAMMAR" (sdk/cmly_read.mli[21,1251+50]..[21,1251+66])
+]
+
+exception Error of string 
+module Read : functor (X : sig val filename : string end) -> Cmly_api.GRAMMAR
+[
+  signature_item (sdk/cmly_read.mli[19,1224+0]..sdk/cmly_read.mli[19,1224+25])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (sdk/cmly_read.mli[19,1224+0]..sdk/cmly_read.mli[19,1224+25])
+          pext_name = "Error/274"
+          pext_kind =
+            Text_decl
+              [
+                core_type (sdk/cmly_read.mli[19,1224+19]..sdk/cmly_read.mli[19,1224+25])
+                  Ttyp_constr "string/15!"
+                  []
+              ]
+              None
+  signature_item (sdk/cmly_read.mli[21,1251+0]..sdk/cmly_read.mli[21,1251+66])
+    Tsig_module "Read/279"
+    module_type (sdk/cmly_read.mli[21,1251+12]..sdk/cmly_read.mli[21,1251+66])
+      Tmty_functor "X/276"
+      module_type (sdk/cmly_read.mli[21,1251+17]..sdk/cmly_read.mli[21,1251+46])
+        Tmty_signature
+        [
+          signature_item (sdk/cmly_read.mli[21,1251+21]..sdk/cmly_read.mli[21,1251+42])
+            Tsig_value
+            value_description filename/275 (sdk/cmly_read.mli[21,1251+21]..sdk/cmly_read.mli[21,1251+42])
+              core_type (sdk/cmly_read.mli[21,1251+36]..sdk/cmly_read.mli[21,1251+42])
+                Ttyp_constr "string/15!"
+                []
+              []
+        ]
+      module_type (sdk/cmly_read.mli[21,1251+50]..sdk/cmly_read.mli[21,1251+66])
+        Tmty_ident "MenhirSdk!.Cmly_api.GRAMMAR"
+]
+

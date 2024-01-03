@@ -1,0 +1,1192 @@
+[
+  structure_item (src/nonterminalType.ml[14,1005+0]..[14,1005+16])
+    Pstr_open Fresh
+    module_expr (src/nonterminalType.ml[14,1005+5]..[14,1005+16])
+      Pmod_ident "BasicSyntax" (src/nonterminalType.ml[14,1005+5]..[14,1005+16])
+  structure_item (src/nonterminalType.ml[15,1022+0]..[15,1022+7])
+    Pstr_open Fresh
+    module_expr (src/nonterminalType.ml[15,1022+5]..[15,1022+7])
+      Pmod_ident "IL" (src/nonterminalType.ml[15,1022+5]..[15,1022+7])
+  structure_item (src/nonterminalType.ml[20,1137+0]..[21,1161+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[20,1137+4]..[20,1137+21])
+          Ppat_var "tcnonterminalgadt" (src/nonterminalType.ml[20,1137+4]..[20,1137+21])
+        expression (src/nonterminalType.ml[21,1161+2]..[21,1161+15])
+          Pexp_constant PConst_string("nonterminal",(src/nonterminalType.ml[21,1161+3]..[21,1161+14]),None)
+    ]
+  structure_item (src/nonterminalType.ml[23,1178+0]..[24,1203+35])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[23,1178+4]..[23,1178+20])
+          Ppat_var "tnonterminalgadt" (src/nonterminalType.ml[23,1178+4]..[23,1178+20])
+        expression (src/nonterminalType.ml[23,1178+21]..[24,1203+35]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/nonterminalType.ml[23,1178+21]..[23,1178+22])
+            Ppat_var "a" (src/nonterminalType.ml[23,1178+21]..[23,1178+22])
+          expression (src/nonterminalType.ml[24,1203+2]..[24,1203+35])
+            Pexp_construct "TypApp" (src/nonterminalType.ml[24,1203+2]..[24,1203+8])
+            Some
+              expression (src/nonterminalType.ml[24,1203+9]..[24,1203+35])
+                Pexp_tuple
+                [
+                  expression (src/nonterminalType.ml[24,1203+10]..[24,1203+27])
+                    Pexp_ident "tcnonterminalgadt" (src/nonterminalType.ml[24,1203+10]..[24,1203+27])
+                  expression (src/nonterminalType.ml[24,1203+29]..[24,1203+34])
+                    Pexp_construct "::" (src/nonterminalType.ml[24,1203+31]..[24,1203+34]) ghost
+                    Some
+                      expression (src/nonterminalType.ml[24,1203+31]..[24,1203+34]) ghost
+                        Pexp_tuple
+                        [
+                          expression (src/nonterminalType.ml[24,1203+31]..[24,1203+32])
+                            Pexp_ident "a" (src/nonterminalType.ml[24,1203+31]..[24,1203+32])
+                          expression (src/nonterminalType.ml[24,1203+33]..[24,1203+34]) ghost
+                            Pexp_construct "[]" (src/nonterminalType.ml[24,1203+33]..[24,1203+34]) ghost
+                            None
+                        ]
+                ]
+    ]
+  structure_item (src/nonterminalType.ml[29,1330+0]..[30,1360+26])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[29,1330+4]..[29,1330+24])
+          Ppat_var "tnonterminalgadtdata" (src/nonterminalType.ml[29,1330+4]..[29,1330+24])
+        expression (src/nonterminalType.ml[29,1330+25]..[30,1360+26]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/nonterminalType.ml[29,1330+25]..[29,1330+27])
+            Ppat_var "nt" (src/nonterminalType.ml[29,1330+25]..[29,1330+27])
+          expression (src/nonterminalType.ml[30,1360+2]..[30,1360+26])
+            Pexp_apply
+            expression (src/nonterminalType.ml[30,1360+7]..[30,1360+8])
+              Pexp_ident "^" (src/nonterminalType.ml[30,1360+7]..[30,1360+8])
+            [
+              <arg>
+              Nolabel
+                expression (src/nonterminalType.ml[30,1360+2]..[30,1360+6])
+                  Pexp_constant PConst_string("N_",(src/nonterminalType.ml[30,1360+3]..[30,1360+5]),None)
+              <arg>
+              Nolabel
+                expression (src/nonterminalType.ml[30,1360+9]..[30,1360+26])
+                  Pexp_apply
+                  expression (src/nonterminalType.ml[30,1360+9]..[30,1360+23])
+                    Pexp_ident "Misc.normalize" (src/nonterminalType.ml[30,1360+9]..[30,1360+23])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/nonterminalType.ml[30,1360+24]..[30,1360+26])
+                        Pexp_ident "nt" (src/nonterminalType.ml[30,1360+24]..[30,1360+26])
+                  ]
+            ]
+    ]
+  structure_item (src/nonterminalType.ml[35,1521+0]..[35,1521+36])
+    Pstr_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/nonterminalType.ml[35,1521+0]..[35,1521+36])
+          pext_name = "MissingOCamlType"
+          pext_kind =
+            Pext_decl
+              [
+                core_type (src/nonterminalType.ml[35,1521+30]..[35,1521+36])
+                  Ptyp_constr "string" (src/nonterminalType.ml[35,1521+30]..[35,1521+36])
+                  []
+              ]
+              None
+  structure_item (src/nonterminalType.ml[37,1559+0]..[105,4149+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[37,1559+4]..[37,1559+22])
+          Ppat_var "nonterminalgadtdef" (src/nonterminalType.ml[37,1559+4]..[37,1559+22])
+        expression (src/nonterminalType.ml[37,1559+23]..[105,4149+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/nonterminalType.ml[37,1559+23]..[37,1559+30])
+            Ppat_var "grammar" (src/nonterminalType.ml[37,1559+23]..[37,1559+30])
+          expression (src/nonterminalType.ml[38,1592+2]..[105,4149+3])
+            Pexp_sequence
+            expression (src/nonterminalType.ml[38,1592+2]..[38,1592+28])
+              Pexp_assert
+              expression (src/nonterminalType.ml[38,1592+9]..[38,1592+28])
+                Pexp_ident "Settings.inspection" (src/nonterminalType.ml[38,1592+9]..[38,1592+28])
+            expression (src/nonterminalType.ml[39,1622+2]..[105,4149+3])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/nonterminalType.ml[39,1622+6]..[39,1622+23])
+                    Ppat_tuple
+                    [
+                      pattern (src/nonterminalType.ml[39,1622+6]..[39,1622+13])
+                        Ppat_var "comment" (src/nonterminalType.ml[39,1622+6]..[39,1622+13])
+                      pattern (src/nonterminalType.ml[39,1622+15]..[39,1622+23])
+                        Ppat_var "datadefs" (src/nonterminalType.ml[39,1622+15]..[39,1622+23])
+                    ]
+                  expression (src/nonterminalType.ml[40,1648+4]..[94,3940+23])
+                    Pexp_try
+                    expression (src/nonterminalType.ml[49,2051+6]..[63,2459+30])
+                      Pexp_tuple
+                      [
+                        expression (src/nonterminalType.ml[49,2051+6]..[49,2051+48])
+                          Pexp_constant PConst_string("The indexed type of nonterminal symbols.",(src/nonterminalType.ml[49,2051+7]..[49,2051+47]),None)
+                        expression (src/nonterminalType.ml[50,2101+6]..[63,2459+30])
+                          Pexp_apply
+                          expression (src/nonterminalType.ml[50,2101+6]..[50,2101+14])
+                            Pexp_ident "List.map" (src/nonterminalType.ml[50,2101+6]..[50,2101+14])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/nonterminalType.ml[50,2101+15]..[63,2459+7])
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/nonterminalType.ml[50,2101+20]..[50,2101+22])
+                                  Ppat_var "nt" (src/nonterminalType.ml[50,2101+20]..[50,2101+22])
+                                expression (src/nonterminalType.ml[51,2127+8]..[62,2449+9])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/nonterminalType.ml[51,2127+12]..[51,2127+17])
+                                        Ppat_var "index" (src/nonterminalType.ml[51,2127+12]..[51,2127+17])
+                                      expression (src/nonterminalType.ml[52,2147+10]..[56,2268+41])
+                                        Pexp_match
+                                        expression (src/nonterminalType.ml[52,2147+16]..[52,2147+46])
+                                          Pexp_apply
+                                          expression (src/nonterminalType.ml[52,2147+16]..[52,2147+35])
+                                            Pexp_ident "ocamltype_of_symbol" (src/nonterminalType.ml[52,2147+16]..[52,2147+35])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/nonterminalType.ml[52,2147+36]..[52,2147+43])
+                                                Pexp_ident "grammar" (src/nonterminalType.ml[52,2147+36]..[52,2147+43])
+                                            <arg>
+                                            Nolabel
+                                              expression (src/nonterminalType.ml[52,2147+44]..[52,2147+46])
+                                                Pexp_ident "nt" (src/nonterminalType.ml[52,2147+44]..[52,2147+46])
+                                          ]
+                                        [
+                                          <case>
+                                            pattern (src/nonterminalType.ml[53,2199+12]..[53,2199+18])
+                                              Ppat_construct "Some" (src/nonterminalType.ml[53,2199+12]..[53,2199+16])
+                                              Some
+                                                []
+                                                pattern (src/nonterminalType.ml[53,2199+17]..[53,2199+18])
+                                                  Ppat_var "t" (src/nonterminalType.ml[53,2199+17]..[53,2199+18])
+                                            expression (src/nonterminalType.ml[54,2221+14]..[54,2221+26])
+                                              Pexp_construct "TypTextual" (src/nonterminalType.ml[54,2221+14]..[54,2221+24])
+                                              Some
+                                                expression (src/nonterminalType.ml[54,2221+25]..[54,2221+26])
+                                                  Pexp_ident "t" (src/nonterminalType.ml[54,2221+25]..[54,2221+26])
+                                          <case>
+                                            pattern (src/nonterminalType.ml[55,2248+12]..[55,2248+16])
+                                              Ppat_construct "None" (src/nonterminalType.ml[55,2248+12]..[55,2248+16])
+                                              None
+                                            expression (src/nonterminalType.ml[56,2268+14]..[56,2268+41])
+                                              Pexp_apply
+                                              expression (src/nonterminalType.ml[56,2268+14]..[56,2268+19])
+                                                Pexp_ident "raise" (src/nonterminalType.ml[56,2268+14]..[56,2268+19])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/nonterminalType.ml[56,2268+20]..[56,2268+41])
+                                                    Pexp_construct "MissingOCamlType" (src/nonterminalType.ml[56,2268+21]..[56,2268+37])
+                                                    Some
+                                                      expression (src/nonterminalType.ml[56,2268+38]..[56,2268+40])
+                                                        Pexp_ident "nt" (src/nonterminalType.ml[56,2268+38]..[56,2268+40])
+                                              ]
+                                        ]
+                                  ]
+                                  expression (src/nonterminalType.ml[58,2321+8]..[62,2449+9])
+                                    Pexp_record
+                                    [
+                                      "dataname" (src/nonterminalType.ml[59,2331+10]..[59,2331+18])
+                                        expression (src/nonterminalType.ml[59,2331+21]..[59,2331+44])
+                                          Pexp_apply
+                                          expression (src/nonterminalType.ml[59,2331+21]..[59,2331+41])
+                                            Pexp_ident "tnonterminalgadtdata" (src/nonterminalType.ml[59,2331+21]..[59,2331+41])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/nonterminalType.ml[59,2331+42]..[59,2331+44])
+                                                Pexp_ident "nt" (src/nonterminalType.ml[59,2331+42]..[59,2331+44])
+                                          ]
+                                      "datavalparams" (src/nonterminalType.ml[60,2377+10]..[60,2377+23])
+                                        expression (src/nonterminalType.ml[60,2377+26]..[60,2377+28])
+                                          Pexp_construct "[]" (src/nonterminalType.ml[60,2377+26]..[60,2377+28])
+                                          None
+                                      "datatypeparams" (src/nonterminalType.ml[61,2407+10]..[61,2407+24])
+                                        expression (src/nonterminalType.ml[61,2407+27]..[61,2407+41])
+                                          Pexp_construct "Some" (src/nonterminalType.ml[61,2407+27]..[61,2407+31])
+                                          Some
+                                            expression (src/nonterminalType.ml[61,2407+32]..[61,2407+41])
+                                              Pexp_construct "::" (src/nonterminalType.ml[61,2407+34]..[61,2407+41]) ghost
+                                              Some
+                                                expression (src/nonterminalType.ml[61,2407+34]..[61,2407+41]) ghost
+                                                  Pexp_tuple
+                                                  [
+                                                    expression (src/nonterminalType.ml[61,2407+34]..[61,2407+39])
+                                                      Pexp_ident "index" (src/nonterminalType.ml[61,2407+34]..[61,2407+39])
+                                                    expression (src/nonterminalType.ml[61,2407+40]..[61,2407+41]) ghost
+                                                      Pexp_construct "[]" (src/nonterminalType.ml[61,2407+40]..[61,2407+41]) ghost
+                                                      None
+                                                  ]
+                                    ]
+                                    None
+                            <arg>
+                            Nolabel
+                              expression (src/nonterminalType.ml[63,2459+8]..[63,2459+30])
+                                Pexp_apply
+                                expression (src/nonterminalType.ml[63,2459+9]..[63,2459+21])
+                                  Pexp_ident "nonterminals" (src/nonterminalType.ml[63,2459+9]..[63,2459+21])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/nonterminalType.ml[63,2459+22]..[63,2459+29])
+                                      Pexp_ident "grammar" (src/nonterminalType.ml[63,2459+22]..[63,2459+29])
+                                ]
+                          ]
+                      ]
+                    [
+                      <case>
+                        pattern (src/nonterminalType.ml[65,2491+9]..[65,2491+28])
+                          Ppat_construct "MissingOCamlType" (src/nonterminalType.ml[65,2491+9]..[65,2491+25])
+                          Some
+                            []
+                            pattern (src/nonterminalType.ml[65,2491+26]..[65,2491+28])
+                              Ppat_var "nt" (src/nonterminalType.ml[65,2491+26]..[65,2491+28])
+                        expression (src/nonterminalType.ml[73,2973+6]..[94,3940+23])
+                          Pexp_open Fresh
+                          module_expr (src/nonterminalType.ml[73,2973+6]..[73,2973+14])
+                            Pmod_ident "Settings" (src/nonterminalType.ml[73,2973+6]..[73,2973+14])
+                          expression (src/nonterminalType.ml[73,2973+16]..[94,3940+22])
+                            Pexp_match
+                            expression (src/nonterminalType.ml[73,2973+22]..[73,2973+27])
+                              Pexp_ident "infer" (src/nonterminalType.ml[73,2973+22]..[73,2973+27])
+                            [
+                              <case>
+                                pattern (src/nonterminalType.ml[74,3006+8]..[75,3026+27])
+                                  Ppat_or
+                                  pattern (src/nonterminalType.ml[74,3006+8]..[74,3006+19])
+                                    Ppat_construct "IMDependRaw" (src/nonterminalType.ml[74,3006+8]..[74,3006+19])
+                                    None
+                                  pattern (src/nonterminalType.ml[75,3026+8]..[75,3026+27])
+                                    Ppat_construct "IMDependPostprocess" (src/nonterminalType.ml[75,3026+8]..[75,3026+27])
+                                    None
+                                expression (src/nonterminalType.ml[76,3057+10]..[77,3119+12])
+                                  Pexp_tuple
+                                  [
+                                    expression (src/nonterminalType.ml[76,3057+10]..[76,3057+60])
+                                      Pexp_constant PConst_string("The indexed type of nonterminal symbols (mock!).",(src/nonterminalType.ml[76,3057+11]..[76,3057+59]),None)
+                                    expression (src/nonterminalType.ml[77,3119+10]..[77,3119+12])
+                                      Pexp_construct "[]" (src/nonterminalType.ml[77,3119+10]..[77,3119+12])
+                                      None
+                                  ]
+                              <case>
+                                pattern (src/nonterminalType.ml[78,3132+8]..[78,3132+14])
+                                  Ppat_construct "IMNone" (src/nonterminalType.ml[78,3132+8]..[78,3132+14])
+                                  None
+                                expression (src/nonterminalType.ml[79,3150+10]..[84,3491+14])
+                                  Pexp_apply
+                                  expression (src/nonterminalType.ml[79,3150+10]..[79,3150+21])
+                                    Pexp_ident "Error.error" (src/nonterminalType.ml[79,3150+10]..[79,3150+21])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/nonterminalType.ml[79,3150+22]..[79,3150+24])
+                                        Pexp_construct "[]" (src/nonterminalType.ml[79,3150+22]..[79,3150+24])
+                                        None
+                                    <arg>
+                                    Nolabel
+                                      expression (src/nonterminalType.ml[79,3150+25]..[83,3417+73])
+                                        Pexp_constant PConst_string("the type of the nonterminal symbol %s is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via %%type declarations.",(src/nonterminalType.ml[79,3150+26]..[83,3417+72]),None)
+                                    <arg>
+                                    Nolabel
+                                      expression (src/nonterminalType.ml[84,3491+12]..[84,3491+14])
+                                        Pexp_ident "nt" (src/nonterminalType.ml[84,3491+12]..[84,3491+14])
+                                  ]
+                              <case>
+                                pattern (src/nonterminalType.ml[85,3506+8]..[86,3522+21])
+                                  Ppat_or
+                                  pattern (src/nonterminalType.ml[85,3506+8]..[85,3506+15])
+                                    Ppat_construct "IMInfer" (src/nonterminalType.ml[85,3506+8]..[85,3506+15])
+                                    None
+                                  pattern (src/nonterminalType.ml[86,3522+8]..[86,3522+21])
+                                    Ppat_construct "IMReadReply" (src/nonterminalType.ml[86,3522+8]..[86,3522+19])
+                                    Some
+                                      []
+                                      pattern (src/nonterminalType.ml[86,3522+20]..[86,3522+21])
+                                        Ppat_any
+                                expression (src/nonterminalType.ml[89,3701+10]..[89,3701+22])
+                                  Pexp_assert
+                                  expression (src/nonterminalType.ml[89,3701+17]..[89,3701+22])
+                                    Pexp_construct "false" (src/nonterminalType.ml[89,3701+17]..[89,3701+22])
+                                    None
+                              <case>
+                                pattern (src/nonterminalType.ml[90,3724+8]..[90,3724+22])
+                                  Ppat_construct "IMWriteQuery" (src/nonterminalType.ml[90,3724+8]..[90,3724+20])
+                                  Some
+                                    []
+                                    pattern (src/nonterminalType.ml[90,3724+21]..[90,3724+22])
+                                      Ppat_any
+                                expression (src/nonterminalType.ml[94,3940+10]..[94,3940+22])
+                                  Pexp_assert
+                                  expression (src/nonterminalType.ml[94,3940+17]..[94,3940+22])
+                                    Pexp_construct "false" (src/nonterminalType.ml[94,3940+17]..[94,3940+22])
+                                    None
+                            ]
+                    ]
+              ]
+              expression (src/nonterminalType.ml[97,3970+2]..[105,4149+3])
+                Pexp_construct "::" (src/nonterminalType.ml[98,3974+4]..[105,4149+3]) ghost
+                Some
+                  expression (src/nonterminalType.ml[98,3974+4]..[105,4149+3]) ghost
+                    Pexp_tuple
+                    [
+                      expression (src/nonterminalType.ml[98,3974+4]..[98,3974+21])
+                        Pexp_construct "IIComment" (src/nonterminalType.ml[98,3974+4]..[98,3974+13])
+                        Some
+                          expression (src/nonterminalType.ml[98,3974+14]..[98,3974+21])
+                            Pexp_ident "comment" (src/nonterminalType.ml[98,3974+14]..[98,3974+21])
+                      expression (src/nonterminalType.ml[99,3997+4]..[105,4149+3]) ghost
+                        Pexp_construct "::" (src/nonterminalType.ml[99,3997+4]..[105,4149+3]) ghost
+                        Some
+                          expression (src/nonterminalType.ml[99,3997+4]..[105,4149+3]) ghost
+                            Pexp_tuple
+                            [
+                              expression (src/nonterminalType.ml[99,3997+4]..[104,4142+6])
+                                Pexp_construct "IITypeDecls" (src/nonterminalType.ml[99,3997+4]..[99,3997+15])
+                                Some
+                                  expression (src/nonterminalType.ml[99,3997+16]..[104,4142+6])
+                                    Pexp_construct "::" (src/nonterminalType.ml[99,3997+17]..[104,4142+6]) ghost
+                                    Some
+                                      expression (src/nonterminalType.ml[99,3997+17]..[104,4142+6]) ghost
+                                        Pexp_tuple
+                                        [
+                                          expression (src/nonterminalType.ml[99,3997+17]..[104,4142+5])
+                                            Pexp_record
+                                            [
+                                              "typename" (src/nonterminalType.ml[100,4016+6]..[100,4016+14])
+                                                expression (src/nonterminalType.ml[100,4016+17]..[100,4016+34])
+                                                  Pexp_ident "tcnonterminalgadt" (src/nonterminalType.ml[100,4016+17]..[100,4016+34])
+                                              "typeparams" (src/nonterminalType.ml[101,4052+6]..[101,4052+16])
+                                                expression (src/nonterminalType.ml[101,4052+19]..[101,4052+26])
+                                                  Pexp_construct "::" (src/nonterminalType.ml[101,4052+21]..[101,4052+26]) ghost
+                                                  Some
+                                                    expression (src/nonterminalType.ml[101,4052+21]..[101,4052+26]) ghost
+                                                      Pexp_tuple
+                                                      [
+                                                        expression (src/nonterminalType.ml[101,4052+21]..[101,4052+24])
+                                                          Pexp_constant PConst_string("_",(src/nonterminalType.ml[101,4052+22]..[101,4052+23]),None)
+                                                        expression (src/nonterminalType.ml[101,4052+25]..[101,4052+26]) ghost
+                                                          Pexp_construct "[]" (src/nonterminalType.ml[101,4052+25]..[101,4052+26]) ghost
+                                                          None
+                                                      ]
+                                              "typerhs" (src/nonterminalType.ml[102,4080+6]..[102,4080+13])
+                                                expression (src/nonterminalType.ml[102,4080+16]..[102,4080+32])
+                                                  Pexp_construct "TDefSum" (src/nonterminalType.ml[102,4080+16]..[102,4080+23])
+                                                  Some
+                                                    expression (src/nonterminalType.ml[102,4080+24]..[102,4080+32])
+                                                      Pexp_ident "datadefs" (src/nonterminalType.ml[102,4080+24]..[102,4080+32])
+                                              "typeconstraint" (src/nonterminalType.ml[103,4114+6]..[103,4114+20])
+                                                expression (src/nonterminalType.ml[103,4114+23]..[103,4114+27])
+                                                  Pexp_construct "None" (src/nonterminalType.ml[103,4114+23]..[103,4114+27])
+                                                  None
+                                            ]
+                                            None
+                                          expression (src/nonterminalType.ml[104,4142+5]..[104,4142+6]) ghost
+                                            Pexp_construct "[]" (src/nonterminalType.ml[104,4142+5]..[104,4142+6]) ghost
+                                            None
+                                        ]
+                              expression (src/nonterminalType.ml[105,4149+2]..[105,4149+3]) ghost
+                                Pexp_construct "[]" (src/nonterminalType.ml[105,4149+2]..[105,4149+3]) ghost
+                                None
+                            ]
+                    ]
+    ]
+]
+
+open BasicSyntax
+open IL
+let tcnonterminalgadt = "nonterminal"
+let tnonterminalgadt a = TypApp (tcnonterminalgadt, [a])
+let tnonterminalgadtdata nt = "N_" ^ (Misc.normalize nt)
+exception MissingOCamlType of string 
+let nonterminalgadtdef grammar =
+  assert Settings.inspection;
+  (let (comment, datadefs) =
+     try
+       ("The indexed type of nonterminal symbols.",
+         (List.map
+            (fun nt ->
+               let index =
+                 match ocamltype_of_symbol grammar nt with
+                 | Some t -> TypTextual t
+                 | None -> raise (MissingOCamlType nt) in
+               {
+                 dataname = (tnonterminalgadtdata nt);
+                 datavalparams = [];
+                 datatypeparams = (Some [index])
+               }) (nonterminals grammar)))
+     with
+     | MissingOCamlType nt ->
+         let open Settings in
+           (match infer with
+            | IMDependRaw | IMDependPostprocess ->
+                ("The indexed type of nonterminal symbols (mock!).", [])
+            | IMNone ->
+                Error.error []
+                  "the type of the nonterminal symbol %s is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via %%type declarations."
+                  nt
+            | IMInfer | IMReadReply _ -> assert false
+            | IMWriteQuery _ -> assert false) in
+   [IIComment comment;
+   IITypeDecls
+     [{
+        typename = tcnonterminalgadt;
+        typeparams = ["_"];
+        typerhs = (TDefSum datadefs);
+        typeconstraint = None
+      }]])
+[
+  structure_item (src/nonterminalType.ml[14,1005+0]..src/nonterminalType.ml[14,1005+16])
+    Tstr_open Fresh
+    module_expr (src/nonterminalType.ml[14,1005+5]..src/nonterminalType.ml[14,1005+16])
+      Tmod_ident "Dune__exe!.BasicSyntax"
+  structure_item (src/nonterminalType.ml[15,1022+0]..src/nonterminalType.ml[15,1022+7])
+    Tstr_open Fresh
+    module_expr (src/nonterminalType.ml[15,1022+5]..src/nonterminalType.ml[15,1022+7])
+      Tmod_ident "Dune__exe!.IL"
+  structure_item (src/nonterminalType.ml[20,1137+0]..src/nonterminalType.ml[21,1161+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[20,1137+4]..src/nonterminalType.ml[20,1137+21])
+          Tpat_var "tcnonterminalgadt/443"
+        expression (src/nonterminalType.ml[21,1161+2]..src/nonterminalType.ml[21,1161+15])
+          Texp_constant Const_string("nonterminal",(src/nonterminalType.ml[21,1161+3]..src/nonterminalType.ml[21,1161+14]),None)
+    ]
+  structure_item (src/nonterminalType.ml[23,1178+0]..src/nonterminalType.ml[24,1203+35])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[23,1178+4]..src/nonterminalType.ml[23,1178+20])
+          Tpat_var "tnonterminalgadt/444"
+        expression (src/nonterminalType.ml[23,1178+21]..src/nonterminalType.ml[24,1203+35]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/nonterminalType.ml[23,1178+21]..src/nonterminalType.ml[23,1178+22])
+                Tpat_var "a/446"
+              expression (src/nonterminalType.ml[24,1203+2]..src/nonterminalType.ml[24,1203+35])
+                Texp_construct "TypApp"
+                [
+                  expression (src/nonterminalType.ml[24,1203+10]..src/nonterminalType.ml[24,1203+27])
+                    Texp_ident "tcnonterminalgadt/443"
+                  expression (src/nonterminalType.ml[24,1203+29]..src/nonterminalType.ml[24,1203+34])
+                    Texp_construct "::"
+                    [
+                      expression (src/nonterminalType.ml[24,1203+31]..src/nonterminalType.ml[24,1203+32])
+                        Texp_ident "a/446"
+                      expression (src/nonterminalType.ml[24,1203+33]..src/nonterminalType.ml[24,1203+34]) ghost
+                        Texp_construct "[]"
+                        []
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/nonterminalType.ml[29,1330+0]..src/nonterminalType.ml[30,1360+26])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[29,1330+4]..src/nonterminalType.ml[29,1330+24])
+          Tpat_var "tnonterminalgadtdata/474"
+        expression (src/nonterminalType.ml[29,1330+25]..src/nonterminalType.ml[30,1360+26]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/nonterminalType.ml[29,1330+25]..src/nonterminalType.ml[29,1330+27])
+                Tpat_var "nt/476"
+              expression (src/nonterminalType.ml[30,1360+2]..src/nonterminalType.ml[30,1360+26])
+                Texp_apply
+                expression (src/nonterminalType.ml[30,1360+7]..src/nonterminalType.ml[30,1360+8])
+                  Texp_ident "Stdlib!.^"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/nonterminalType.ml[30,1360+2]..src/nonterminalType.ml[30,1360+6])
+                      Texp_constant Const_string("N_",(src/nonterminalType.ml[30,1360+3]..src/nonterminalType.ml[30,1360+5]),None)
+                  <arg>
+                    Nolabel
+                    expression (src/nonterminalType.ml[30,1360+9]..src/nonterminalType.ml[30,1360+26])
+                      Texp_apply
+                      expression (src/nonterminalType.ml[30,1360+9]..src/nonterminalType.ml[30,1360+23])
+                        Texp_ident "Dune__exe!.Misc.normalize"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/nonterminalType.ml[30,1360+24]..src/nonterminalType.ml[30,1360+26])
+                            Texp_ident "nt/476"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/nonterminalType.ml[35,1521+0]..src/nonterminalType.ml[35,1521+36])
+    Tstr_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (src/nonterminalType.ml[35,1521+0]..src/nonterminalType.ml[35,1521+36])
+          pext_name = "MissingOCamlType/513"
+          pext_kind =
+            Text_decl
+              [
+                core_type (src/nonterminalType.ml[35,1521+30]..src/nonterminalType.ml[35,1521+36])
+                  Ttyp_constr "string/15!"
+                  []
+              ]
+              None
+  structure_item (src/nonterminalType.ml[37,1559+0]..src/nonterminalType.ml[105,4149+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/nonterminalType.ml[37,1559+4]..src/nonterminalType.ml[37,1559+22])
+          Tpat_var "nonterminalgadtdef/514"
+        expression (src/nonterminalType.ml[37,1559+23]..src/nonterminalType.ml[105,4149+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/nonterminalType.ml[37,1559+23]..src/nonterminalType.ml[37,1559+30])
+                Tpat_var "grammar/516"
+              expression (src/nonterminalType.ml[38,1592+2]..src/nonterminalType.ml[105,4149+3])
+                Texp_sequence
+                expression (src/nonterminalType.ml[38,1592+2]..src/nonterminalType.ml[38,1592+28])
+                  Texp_assert                  expression (src/nonterminalType.ml[38,1592+9]..src/nonterminalType.ml[38,1592+28])
+                    Texp_ident "Dune__exe!.Settings.inspection"
+                expression (src/nonterminalType.ml[39,1622+2]..src/nonterminalType.ml[105,4149+3])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/nonterminalType.ml[39,1622+6]..src/nonterminalType.ml[39,1622+23])
+                        Tpat_tuple
+                        [
+                          pattern (src/nonterminalType.ml[39,1622+6]..src/nonterminalType.ml[39,1622+13])
+                            Tpat_var "comment/577"
+                          pattern (src/nonterminalType.ml[39,1622+15]..src/nonterminalType.ml[39,1622+23])
+                            Tpat_var "datadefs/578"
+                        ]
+                      expression (src/nonterminalType.ml[40,1648+4]..src/nonterminalType.ml[94,3940+23])
+                        Texp_try
+                        expression (src/nonterminalType.ml[49,2051+6]..src/nonterminalType.ml[63,2459+30])
+                          Texp_tuple
+                          [
+                            expression (src/nonterminalType.ml[49,2051+6]..src/nonterminalType.ml[49,2051+48])
+                              Texp_constant Const_string("The indexed type of nonterminal symbols.",(src/nonterminalType.ml[49,2051+7]..src/nonterminalType.ml[49,2051+47]),None)
+                            expression (src/nonterminalType.ml[50,2101+6]..src/nonterminalType.ml[63,2459+30])
+                              Texp_apply
+                              expression (src/nonterminalType.ml[50,2101+6]..src/nonterminalType.ml[50,2101+14])
+                                Texp_ident "Stdlib!.List.map"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/nonterminalType.ml[50,2101+15]..src/nonterminalType.ml[63,2459+7])
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/nonterminalType.ml[50,2101+20]..src/nonterminalType.ml[50,2101+22])
+                                          Tpat_var "nt/645"
+                                        expression (src/nonterminalType.ml[51,2127+8]..src/nonterminalType.ml[62,2449+9])
+                                          Texp_let Nonrec
+                                          [
+                                            <def>
+                                              pattern (src/nonterminalType.ml[51,2127+12]..src/nonterminalType.ml[51,2127+17])
+                                                Tpat_var "index/646"
+                                              expression (src/nonterminalType.ml[52,2147+10]..src/nonterminalType.ml[56,2268+41])
+                                                Texp_match
+                                                expression (src/nonterminalType.ml[52,2147+16]..src/nonterminalType.ml[52,2147+46])
+                                                  Texp_apply
+                                                  expression (src/nonterminalType.ml[52,2147+16]..src/nonterminalType.ml[52,2147+35])
+                                                    Texp_ident "Dune__exe!.BasicSyntax.ocamltype_of_symbol"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/nonterminalType.ml[52,2147+36]..src/nonterminalType.ml[52,2147+43])
+                                                        Texp_ident "grammar/516"
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/nonterminalType.ml[52,2147+44]..src/nonterminalType.ml[52,2147+46])
+                                                        Texp_ident "nt/645"
+                                                  ]
+                                                [
+                                                  <case>
+                                                    pattern (src/nonterminalType.ml[53,2199+12]..src/nonterminalType.ml[53,2199+18])
+                                                      Tpat_value
+                                                      pattern (src/nonterminalType.ml[53,2199+12]..src/nonterminalType.ml[53,2199+18])
+                                                        Tpat_construct "Some"
+                                                        [
+                                                          pattern (src/nonterminalType.ml[53,2199+17]..src/nonterminalType.ml[53,2199+18])
+                                                            Tpat_var "t/715"
+                                                        ]
+                                                        None
+                                                    expression (src/nonterminalType.ml[54,2221+14]..src/nonterminalType.ml[54,2221+26])
+                                                      Texp_construct "TypTextual"
+                                                      [
+                                                        expression (src/nonterminalType.ml[54,2221+25]..src/nonterminalType.ml[54,2221+26])
+                                                          Texp_ident "t/715"
+                                                      ]
+                                                  <case>
+                                                    pattern (src/nonterminalType.ml[55,2248+12]..src/nonterminalType.ml[55,2248+16])
+                                                      Tpat_value
+                                                      pattern (src/nonterminalType.ml[55,2248+12]..src/nonterminalType.ml[55,2248+16])
+                                                        Tpat_construct "None"
+                                                        []
+                                                        None
+                                                    expression (src/nonterminalType.ml[56,2268+14]..src/nonterminalType.ml[56,2268+41])
+                                                      Texp_apply
+                                                      expression (src/nonterminalType.ml[56,2268+14]..src/nonterminalType.ml[56,2268+19])
+                                                        Texp_ident "Stdlib!.raise"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/nonterminalType.ml[56,2268+20]..src/nonterminalType.ml[56,2268+41])
+                                                            Texp_construct "MissingOCamlType"
+                                                            [
+                                                              expression (src/nonterminalType.ml[56,2268+38]..src/nonterminalType.ml[56,2268+40])
+                                                                Texp_ident "nt/645"
+                                                            ]
+                                                      ]
+                                                ]
+                                          ]
+                                          expression (src/nonterminalType.ml[58,2321+8]..src/nonterminalType.ml[62,2449+9])
+                                            Texp_record
+                                              fields =
+                                                [
+                                                  "dataname"
+                                                    expression (src/nonterminalType.ml[59,2331+21]..src/nonterminalType.ml[59,2331+44])
+                                                      Texp_apply
+                                                      expression (src/nonterminalType.ml[59,2331+21]..src/nonterminalType.ml[59,2331+41])
+                                                        Texp_ident "tnonterminalgadtdata/474"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/nonterminalType.ml[59,2331+42]..src/nonterminalType.ml[59,2331+44])
+                                                            Texp_ident "nt/645"
+                                                      ]
+                                                  "datavalparams"
+                                                    expression (src/nonterminalType.ml[60,2377+26]..src/nonterminalType.ml[60,2377+28])
+                                                      Texp_construct "[]"
+                                                      []
+                                                  "datatypeparams"
+                                                    expression (src/nonterminalType.ml[61,2407+27]..src/nonterminalType.ml[61,2407+41])
+                                                      Texp_construct "Some"
+                                                      [
+                                                        expression (src/nonterminalType.ml[61,2407+32]..src/nonterminalType.ml[61,2407+41])
+                                                          Texp_construct "::"
+                                                          [
+                                                            expression (src/nonterminalType.ml[61,2407+34]..src/nonterminalType.ml[61,2407+39])
+                                                              Texp_ident "index/646"
+                                                            expression (src/nonterminalType.ml[61,2407+40]..src/nonterminalType.ml[61,2407+41]) ghost
+                                                              Texp_construct "[]"
+                                                              []
+                                                          ]
+                                                      ]
+                                                ]
+                                              representation =
+                                                Record_regular
+                                              extended_expression =
+                                                None
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/nonterminalType.ml[63,2459+8]..src/nonterminalType.ml[63,2459+30])
+                                    Texp_apply
+                                    expression (src/nonterminalType.ml[63,2459+9]..src/nonterminalType.ml[63,2459+21])
+                                      Texp_ident "Dune__exe!.BasicSyntax.nonterminals"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/nonterminalType.ml[63,2459+22]..src/nonterminalType.ml[63,2459+29])
+                                          Texp_ident "grammar/516"
+                                    ]
+                              ]
+                          ]
+                        [
+                          <case>
+                            pattern (src/nonterminalType.ml[65,2491+9]..src/nonterminalType.ml[65,2491+28])
+                              Tpat_construct "MissingOCamlType"
+                              [
+                                pattern (src/nonterminalType.ml[65,2491+26]..src/nonterminalType.ml[65,2491+28])
+                                  Tpat_var "nt/755"
+                              ]
+                              None
+                            expression (src/nonterminalType.ml[73,2973+6]..src/nonterminalType.ml[94,3940+23])
+                              Texp_open Fresh
+                              module_expr (src/nonterminalType.ml[73,2973+6]..src/nonterminalType.ml[73,2973+14])
+                                Tmod_ident "Dune__exe!.Settings"
+                              expression (src/nonterminalType.ml[73,2973+16]..src/nonterminalType.ml[94,3940+22])
+                                Texp_match
+                                expression (src/nonterminalType.ml[73,2973+22]..src/nonterminalType.ml[73,2973+27])
+                                  Texp_ident "Dune__exe!.Settings.infer"
+                                [
+                                  <case>
+                                    pattern (src/nonterminalType.ml[74,3006+8]..src/nonterminalType.ml[75,3026+27])
+                                      Tpat_or
+                                      pattern (src/nonterminalType.ml[74,3006+8]..src/nonterminalType.ml[74,3006+19])
+                                        Tpat_value
+                                        pattern (src/nonterminalType.ml[74,3006+8]..src/nonterminalType.ml[74,3006+19])
+                                          Tpat_construct "IMDependRaw"
+                                          []
+                                          None
+                                      pattern (src/nonterminalType.ml[75,3026+8]..src/nonterminalType.ml[75,3026+27])
+                                        Tpat_value
+                                        pattern (src/nonterminalType.ml[75,3026+8]..src/nonterminalType.ml[75,3026+27])
+                                          Tpat_construct "IMDependPostprocess"
+                                          []
+                                          None
+                                    expression (src/nonterminalType.ml[76,3057+10]..src/nonterminalType.ml[77,3119+12])
+                                      Texp_tuple
+                                      [
+                                        expression (src/nonterminalType.ml[76,3057+10]..src/nonterminalType.ml[76,3057+60])
+                                          Texp_constant Const_string("The indexed type of nonterminal symbols (mock!).",(src/nonterminalType.ml[76,3057+11]..src/nonterminalType.ml[76,3057+59]),None)
+                                        expression (src/nonterminalType.ml[77,3119+10]..src/nonterminalType.ml[77,3119+12])
+                                          Texp_construct "[]"
+                                          []
+                                      ]
+                                  <case>
+                                    pattern (src/nonterminalType.ml[78,3132+8]..src/nonterminalType.ml[78,3132+14])
+                                      Tpat_value
+                                      pattern (src/nonterminalType.ml[78,3132+8]..src/nonterminalType.ml[78,3132+14])
+                                        Tpat_construct "IMNone"
+                                        []
+                                        None
+                                    expression (src/nonterminalType.ml[79,3150+10]..src/nonterminalType.ml[84,3491+14])
+                                      Texp_apply
+                                      expression (src/nonterminalType.ml[79,3150+10]..src/nonterminalType.ml[79,3150+21])
+                                        Texp_ident "Dune__exe!.Error.error"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/nonterminalType.ml[79,3150+22]..src/nonterminalType.ml[79,3150+24])
+                                            Texp_construct "[]"
+                                            []
+                                        <arg>
+                                          Nolabel
+                                          expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73])
+                                            Texp_construct "CamlinternalFormatBasics.Format"
+                                            [
+                                              expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                [
+                                                  expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                    Texp_constant Const_string("the type of the nonterminal symbol ",(src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost,None)
+                                                  expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String"
+                                                    [
+                                                      expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                        []
+                                                      expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                        [
+                                                          expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                            Texp_constant Const_string(" is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via ",(src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost,None)
+                                                          expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                            [
+                                                              expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                                Texp_constant Const_char 25
+                                                              expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                                [
+                                                                  expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                                    Texp_constant Const_string("type declarations.",(src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost,None)
+                                                                  expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                    []
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                              expression (src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost
+                                                Texp_constant Const_string("the type of the nonterminal symbol %s is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via %%type declarations.",(src/nonterminalType.ml[79,3150+25]..src/nonterminalType.ml[83,3417+73]) ghost,None)
+                                            ]
+                                        <arg>
+                                          Nolabel
+                                          expression (src/nonterminalType.ml[84,3491+12]..src/nonterminalType.ml[84,3491+14])
+                                            Texp_ident "nt/755"
+                                      ]
+                                  <case>
+                                    pattern (src/nonterminalType.ml[85,3506+8]..src/nonterminalType.ml[86,3522+21])
+                                      Tpat_or
+                                      pattern (src/nonterminalType.ml[85,3506+8]..src/nonterminalType.ml[85,3506+15])
+                                        Tpat_value
+                                        pattern (src/nonterminalType.ml[85,3506+8]..src/nonterminalType.ml[85,3506+15])
+                                          Tpat_construct "IMInfer"
+                                          []
+                                          None
+                                      pattern (src/nonterminalType.ml[86,3522+8]..src/nonterminalType.ml[86,3522+21])
+                                        Tpat_value
+                                        pattern (src/nonterminalType.ml[86,3522+8]..src/nonterminalType.ml[86,3522+21])
+                                          Tpat_construct "IMReadReply"
+                                          [
+                                            pattern (src/nonterminalType.ml[86,3522+20]..src/nonterminalType.ml[86,3522+21])
+                                              Tpat_any
+                                          ]
+                                          None
+                                    expression (src/nonterminalType.ml[89,3701+10]..src/nonterminalType.ml[89,3701+22])
+                                      Texp_assert                                      expression (src/nonterminalType.ml[89,3701+17]..src/nonterminalType.ml[89,3701+22])
+                                        Texp_construct "false"
+                                        []
+                                  <case>
+                                    pattern (src/nonterminalType.ml[90,3724+8]..src/nonterminalType.ml[90,3724+22])
+                                      Tpat_value
+                                      pattern (src/nonterminalType.ml[90,3724+8]..src/nonterminalType.ml[90,3724+22])
+                                        Tpat_construct "IMWriteQuery"
+                                        [
+                                          pattern (src/nonterminalType.ml[90,3724+21]..src/nonterminalType.ml[90,3724+22])
+                                            Tpat_any
+                                        ]
+                                        None
+                                    expression (src/nonterminalType.ml[94,3940+10]..src/nonterminalType.ml[94,3940+22])
+                                      Texp_assert                                      expression (src/nonterminalType.ml[94,3940+17]..src/nonterminalType.ml[94,3940+22])
+                                        Texp_construct "false"
+                                        []
+                                ]
+                        ]
+                  ]
+                  expression (src/nonterminalType.ml[97,3970+2]..src/nonterminalType.ml[105,4149+3])
+                    Texp_construct "::"
+                    [
+                      expression (src/nonterminalType.ml[98,3974+4]..src/nonterminalType.ml[98,3974+21])
+                        Texp_construct "IIComment"
+                        [
+                          expression (src/nonterminalType.ml[98,3974+14]..src/nonterminalType.ml[98,3974+21])
+                            Texp_ident "comment/577"
+                        ]
+                      expression (src/nonterminalType.ml[99,3997+4]..src/nonterminalType.ml[105,4149+3]) ghost
+                        Texp_construct "::"
+                        [
+                          expression (src/nonterminalType.ml[99,3997+4]..src/nonterminalType.ml[104,4142+6])
+                            Texp_construct "IITypeDecls"
+                            [
+                              expression (src/nonterminalType.ml[99,3997+16]..src/nonterminalType.ml[104,4142+6])
+                                Texp_construct "::"
+                                [
+                                  expression (src/nonterminalType.ml[99,3997+17]..src/nonterminalType.ml[104,4142+5])
+                                    Texp_record
+                                      fields =
+                                        [
+                                          "typename"
+                                            expression (src/nonterminalType.ml[100,4016+17]..src/nonterminalType.ml[100,4016+34])
+                                              Texp_ident "tcnonterminalgadt/443"
+                                          "typeparams"
+                                            expression (src/nonterminalType.ml[101,4052+19]..src/nonterminalType.ml[101,4052+26])
+                                              Texp_construct "::"
+                                              [
+                                                expression (src/nonterminalType.ml[101,4052+21]..src/nonterminalType.ml[101,4052+24])
+                                                  Texp_constant Const_string("_",(src/nonterminalType.ml[101,4052+22]..src/nonterminalType.ml[101,4052+23]),None)
+                                                expression (src/nonterminalType.ml[101,4052+25]..src/nonterminalType.ml[101,4052+26]) ghost
+                                                  Texp_construct "[]"
+                                                  []
+                                              ]
+                                          "typerhs"
+                                            expression (src/nonterminalType.ml[102,4080+16]..src/nonterminalType.ml[102,4080+32])
+                                              Texp_construct "TDefSum"
+                                              [
+                                                expression (src/nonterminalType.ml[102,4080+24]..src/nonterminalType.ml[102,4080+32])
+                                                  Texp_ident "datadefs/578"
+                                              ]
+                                          "typeconstraint"
+                                            expression (src/nonterminalType.ml[103,4114+23]..src/nonterminalType.ml[103,4114+27])
+                                              Texp_construct "None"
+                                              []
+                                        ]
+                                      representation =
+                                        Record_regular
+                                      extended_expression =
+                                        None
+                                  expression (src/nonterminalType.ml[104,4142+5]..src/nonterminalType.ml[104,4142+6]) ghost
+                                    Texp_construct "[]"
+                                    []
+                                ]
+                            ]
+                          expression (src/nonterminalType.ml[105,4149+2]..src/nonterminalType.ml[105,4149+3]) ghost
+                            Texp_construct "[]"
+                            []
+                        ]
+                    ]
+          ]
+    ]
+]
+
+{<Dune__exe__NonterminalType>
+ "nonterminalgadtdef"[value] -> <Dune__exe__NonterminalType.6>;
+ "tcnonterminalgadt"[value] -> <Dune__exe__NonterminalType.0>;
+ "tnonterminalgadt"[value] -> <Dune__exe__NonterminalType.1>;
+ "tnonterminalgadtdata"[value] -> <Dune__exe__NonterminalType.3>;
+ }
+
+(seq
+  (let (tcnonterminalgadt/443 = "nonterminal")
+    (setfield_ptr(root-init) 0 (global Dune__exe__NonterminalType!)
+      tcnonterminalgadt/443))
+  (let
+    (tnonterminalgadt/444 =
+       (function a/446
+         (makeblock 2 (field_imm 0 (global Dune__exe__NonterminalType!))
+           (makeblock 0 a/446 0))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__NonterminalType!)
+      tnonterminalgadt/444))
+  (let
+    (tnonterminalgadtdata/474 =
+       (function nt/476
+         (apply (field_imm 27 (global Stdlib!)) "N_"
+           (apply (field_imm 21 (global Dune__exe__Misc!)) nt/476))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__NonterminalType!)
+      tnonterminalgadtdata/474))
+  (let
+    (MissingOCamlType/513 =
+       (makeblock 248 "Dune__exe__NonterminalType.MissingOCamlType"
+         (caml_fresh_oo_id 0)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__NonterminalType!)
+      MissingOCamlType/513))
+  (let
+    (nonterminalgadtdef/514 =
+       (function grammar/516
+         (seq
+           (if (field_imm 30 (global Dune__exe__Settings!)) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/nonterminalType.ml" 38 2])))
+           (catch
+             (try
+               (let
+                 (datadefs/1984 =
+                    (apply (field_imm 19 (global Stdlib__List!))
+                      (function nt/645
+                        (let
+                          (index/646 =
+                             (let
+                               (*match*/1977 =
+                                  (apply
+                                    (field_imm 9
+                                      (global Dune__exe__BasicSyntax!))
+                                    grammar/516 nt/645))
+                               (if (isint *match*/1977)
+                                 (raise
+                                   (makeblock 0
+                                     (field_imm 4
+                                       (global Dune__exe__NonterminalType!))
+                                     nt/645))
+                                 (let (t/715 =a (field_imm 0 *match*/1977))
+                                   (makeblock 0 t/715)))))
+                          (makeblock 0
+                            (apply
+                              (field_imm 2
+                                (global Dune__exe__NonterminalType!))
+                              nt/645)
+                            0 (makeblock 0 (makeblock 0 index/646 0)))))
+                      (apply (field_imm 8 (global Dune__exe__BasicSyntax!))
+                        grammar/516))
+                  comment/1983 = "The indexed type of nonterminal symbols.")
+                 (exit 4 comment/1983 datadefs/1984))
+              with exn/1971
+               (catch
+                 (let (tag/1975 =a (field_imm 0 exn/1971))
+                   (if
+                     (== tag/1975
+                       (field_imm 4 (global Dune__exe__NonterminalType!)))
+                     (let
+                       (nt/755 =a (field_imm 1 exn/1971)
+                        *match*/1972 =
+                          (field_imm 10 (global Dune__exe__Settings!)))
+                       (catch
+                         (catch
+                           (switch* *match*/1972
+                            case int 0:
+                             (let
+                               (*match*/1982 =
+                                  (apply
+                                    (field_imm 5 (global Dune__exe__Error!))
+                                    0
+                                    [0:
+                                     [11:
+                                      "the type of the nonterminal symbol "
+                                      [2:
+                                       0
+                                       [11:
+                                        " is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via "
+                                        [12:
+                                         '%' [11: "type declarations." 0]]]]]
+                                     "the type of the nonterminal symbol %s is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via %%type declarations."]
+                                    nt/755)
+                                datadefs/1981 =a (field_imm 1 *match*/1982)
+                                comment/1980 =a (field_imm 0 *match*/1982))
+                               (exit 4 comment/1980 datadefs/1981))
+                            case int 1: (exit 2)
+                            case int 2: (exit 1)
+                            case int 3: (exit 1)
+                            case tag 0:
+                             (let
+                               (*match*/1973 =a (field_imm 0 *match*/1972))
+                               (raise
+                                 (makeblock 0 (global Assert_failure/28!)
+                                   [0: "src/nonterminalType.ml" 94 10])))
+                            case tag 1: (exit 2))
+                          with (1)
+                           (let
+                             (datadefs/1979 = 0
+                              comment/1978 =
+                                "The indexed type of nonterminal symbols (mock!).")
+                             (exit 4 comment/1978 datadefs/1979)))
+                        with (2)
+                         (raise
+                           (makeblock 0 (global Assert_failure/28!)
+                             [0: "src/nonterminalType.ml" 89 10]))))
+                     (exit 3)))
+                with (3) (reraise exn/1971)))
+            with (4 comment/577 datadefs/578)
+             (makeblock 0 (makeblock 6 comment/577)
+               (makeblock 0
+                 (makeblock 2
+                   (makeblock 0
+                     (makeblock 0
+                       (field_imm 0 (global Dune__exe__NonterminalType!))
+                       [0: "_" 0] (makeblock 1 datadefs/578) 0)
+                     0))
+                 0))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__NonterminalType!)
+      nonterminalgadtdef/514))
+  0)
+(seq
+  (let (tcnonterminalgadt/443 = "nonterminal")
+    (setfield_ptr(root-init) 0 (global Dune__exe__NonterminalType!)
+      tcnonterminalgadt/443))
+  (let
+    (tnonterminalgadt/444 =
+       (function a/446
+         (makeblock 2 (field_imm 0 (global Dune__exe__NonterminalType!))
+           (makeblock 0 a/446 0))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__NonterminalType!)
+      tnonterminalgadt/444))
+  (let
+    (tnonterminalgadtdata/474 =
+       (function nt/476
+         (apply (field_imm 27 (global Stdlib!)) "N_"
+           (apply (field_imm 21 (global Dune__exe__Misc!)) nt/476))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__NonterminalType!)
+      tnonterminalgadtdata/474))
+  (let
+    (MissingOCamlType/513 =
+       (makeblock 248 "Dune__exe__NonterminalType.MissingOCamlType"
+         (caml_fresh_oo_id 0)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__NonterminalType!)
+      MissingOCamlType/513))
+  (let
+    (nonterminalgadtdef/514 =
+       (function grammar/516
+         (seq
+           (if (field_imm 30 (global Dune__exe__Settings!)) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/nonterminalType.ml" 38 2])))
+           (catch
+             (try
+               (let
+                 (datadefs/1984 =
+                    (apply (field_imm 19 (global Stdlib__List!))
+                      (function nt/645
+                        (let
+                          (index/646 =
+                             (let
+                               (*match*/1977 =
+                                  (apply
+                                    (field_imm 9
+                                      (global Dune__exe__BasicSyntax!))
+                                    grammar/516 nt/645))
+                               (if (isint *match*/1977)
+                                 (raise
+                                   (makeblock 0
+                                     (field_imm 4
+                                       (global Dune__exe__NonterminalType!))
+                                     nt/645))
+                                 (makeblock 0 (field_imm 0 *match*/1977)))))
+                          (makeblock 0
+                            (apply
+                              (field_imm 2
+                                (global Dune__exe__NonterminalType!))
+                              nt/645)
+                            0 (makeblock 0 (makeblock 0 index/646 0)))))
+                      (apply (field_imm 8 (global Dune__exe__BasicSyntax!))
+                        grammar/516))
+                  comment/1983 = "The indexed type of nonterminal symbols.")
+                 (exit 4 comment/1983 datadefs/1984))
+              with exn/1971
+               (if
+                 (== (field_imm 0 exn/1971)
+                   (field_imm 4 (global Dune__exe__NonterminalType!)))
+                 (let
+                   (*match*/1972 =
+                      (field_imm 10 (global Dune__exe__Settings!)))
+                   (catch
+                     (catch
+                       (switch* *match*/1972
+                        case int 0:
+                         (let
+                           (*match*/1982 =
+                              (apply (field_imm 5 (global Dune__exe__Error!))
+                                0
+                                [0:
+                                 [11:
+                                  "the type of the nonterminal symbol "
+                                  [2:
+                                   0
+                                   [11:
+                                    " is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via "
+                                    [12: '%' [11: "type declarations." 0]]]]]
+                                 "the type of the nonterminal symbol %s is unknown.\nWhen --inspection is set, the type of every nonterminal symbol must be known.\nPlease enable type inference (see --infer and --infer-read-reply)\nor specify the type of every symbol via %%type declarations."]
+                                (field_imm 1 exn/1971)))
+                           (exit 4 (field_imm 0 *match*/1982)
+                             (field_imm 1 *match*/1982)))
+                        case int 1: (exit 2)
+                        case int 2: (exit 1)
+                        case int 3: (exit 1)
+                        case tag 0:
+                         (raise
+                           (makeblock 0 (global Assert_failure/28!)
+                             [0: "src/nonterminalType.ml" 94 10]))
+                        case tag 1: (exit 2))
+                      with (1)
+                       (let
+                         (datadefs/1979 = 0
+                          comment/1978 =
+                            "The indexed type of nonterminal symbols (mock!).")
+                         (exit 4 comment/1978 datadefs/1979)))
+                    with (2)
+                     (raise
+                       (makeblock 0 (global Assert_failure/28!)
+                         [0: "src/nonterminalType.ml" 89 10]))))
+                 (reraise exn/1971)))
+            with (4 comment/577 datadefs/578)
+             (makeblock 0 (makeblock 6 comment/577)
+               (makeblock 0
+                 (makeblock 2
+                   (makeblock 0
+                     (makeblock 0
+                       (field_imm 0 (global Dune__exe__NonterminalType!))
+                       [0: "_" 0] (makeblock 1 datadefs/578) 0)
+                     0))
+                 0))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__NonterminalType!)
+      nonterminalgadtdef/514))
+  0)

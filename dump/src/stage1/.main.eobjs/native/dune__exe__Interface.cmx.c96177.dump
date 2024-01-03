@@ -1,0 +1,3120 @@
+[
+  structure_item (src/interface.ml[14,999+0]..[14,999+16])
+    Pstr_open Fresh
+    module_expr (src/interface.ml[14,999+5]..[14,999+16])
+      Pmod_ident "BasicSyntax" (src/interface.ml[14,999+5]..[14,999+16])
+  structure_item (src/interface.ml[15,1016+0]..[15,1016+7])
+    Pstr_open Fresh
+    module_expr (src/interface.ml[15,1016+5]..[15,1016+7])
+      Pmod_ident "IL" (src/interface.ml[15,1016+5]..[15,1016+7])
+  structure_item (src/interface.ml[16,1024+0]..[16,1024+13])
+    Pstr_open Fresh
+    module_expr (src/interface.ml[16,1024+5]..[16,1024+13])
+      Pmod_ident "CodeBits" (src/interface.ml[16,1024+5]..[16,1024+13])
+  structure_item (src/interface.ml[22,1151+0]..[23,1165+9])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[22,1151+4]..[22,1151+11])
+          Ppat_var "excname" (src/interface.ml[22,1151+4]..[22,1151+11])
+        expression (src/interface.ml[23,1165+2]..[23,1165+9])
+          Pexp_constant PConst_string("Error",(src/interface.ml[23,1165+3]..[23,1165+8]),None)
+    ]
+  structure_item (src/interface.ml[25,1176+0]..[28,1288+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[25,1176+4]..[25,1176+10])
+          Ppat_var "excdef" (src/interface.ml[25,1176+4]..[25,1176+10])
+        expression (src/interface.ml[25,1176+13]..[28,1288+1])
+          Pexp_record
+          [
+            "excname" (src/interface.ml[26,1191+2]..[26,1191+9])
+              expression (src/interface.ml[26,1191+12]..[26,1191+19])
+                Pexp_ident "excname" (src/interface.ml[26,1191+12]..[26,1191+19])
+            "exceq" (src/interface.ml[27,1212+2]..[27,1212+7])
+              expression (src/interface.ml[27,1212+10]..[27,1212+74])
+                Pexp_ifthenelse
+                expression (src/interface.ml[27,1212+14]..[27,1212+31])
+                  Pexp_ident "Settings.fixedexc" (src/interface.ml[27,1212+14]..[27,1212+31])
+                expression (src/interface.ml[27,1212+37]..[27,1212+63])
+                  Pexp_construct "Some" (src/interface.ml[27,1212+37]..[27,1212+41])
+                  Some
+                    expression (src/interface.ml[27,1212+42]..[27,1212+63])
+                      Pexp_constant PConst_string("Parsing.Parse_error",(src/interface.ml[27,1212+43]..[27,1212+62]),None)
+                Some
+                  expression (src/interface.ml[27,1212+69]..[27,1212+73])
+                    Pexp_construct "None" (src/interface.ml[27,1212+69]..[27,1212+73])
+                    None
+          ]
+          None
+    ]
+  structure_item (src/interface.ml[34,1450+0]..[36,1556+70])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[34,1450+4]..[34,1450+19])
+          Ppat_var "entrytypescheme" (src/interface.ml[34,1450+4]..[34,1450+19])
+        expression (src/interface.ml[34,1450+20]..[36,1556+70]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[34,1450+20]..[34,1450+27])
+            Ppat_var "grammar" (src/interface.ml[34,1450+20]..[34,1450+27])
+          expression (src/interface.ml[34,1450+28]..[36,1556+70]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/interface.ml[34,1450+28]..[34,1450+34])
+              Ppat_var "symbol" (src/interface.ml[34,1450+28]..[34,1450+34])
+            expression (src/interface.ml[35,1487+2]..[36,1556+70])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/interface.ml[35,1487+6]..[35,1487+9])
+                    Ppat_var "typ" (src/interface.ml[35,1487+6]..[35,1487+9])
+                  expression (src/interface.ml[35,1487+12]..[35,1487+65])
+                    Pexp_construct "TypTextual" (src/interface.ml[35,1487+12]..[35,1487+22])
+                    Some
+                      expression (src/interface.ml[35,1487+23]..[35,1487+65])
+                        Pexp_apply
+                        expression (src/interface.ml[35,1487+24]..[35,1487+49])
+                          Pexp_ident "ocamltype_of_start_symbol" (src/interface.ml[35,1487+24]..[35,1487+49])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/interface.ml[35,1487+50]..[35,1487+57])
+                              Pexp_ident "grammar" (src/interface.ml[35,1487+50]..[35,1487+57])
+                          <arg>
+                          Nolabel
+                            expression (src/interface.ml[35,1487+58]..[35,1487+64])
+                              Pexp_ident "symbol" (src/interface.ml[35,1487+58]..[35,1487+64])
+                        ]
+              ]
+              expression (src/interface.ml[36,1556+2]..[36,1556+70])
+                Pexp_apply
+                expression (src/interface.ml[36,1556+2]..[36,1556+13])
+                  Pexp_ident "type2scheme" (src/interface.ml[36,1556+2]..[36,1556+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/interface.ml[36,1556+14]..[36,1556+70])
+                      Pexp_apply
+                      expression (src/interface.ml[36,1556+15]..[36,1556+21])
+                        Pexp_ident "marrow" (src/interface.ml[36,1556+15]..[36,1556+21])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[36,1556+22]..[36,1556+65])
+                            Pexp_construct "::" (src/interface.ml[36,1556+24]..[36,1556+65]) ghost
+                            Some
+                              expression (src/interface.ml[36,1556+24]..[36,1556+65]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (src/interface.ml[36,1556+24]..[36,1556+54])
+                                    Pexp_apply
+                                    expression (src/interface.ml[36,1556+24]..[36,1556+29])
+                                      Pexp_ident "arrow" (src/interface.ml[36,1556+24]..[36,1556+29])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/interface.ml[36,1556+30]..[36,1556+37])
+                                          Pexp_ident "tlexbuf" (src/interface.ml[36,1556+30]..[36,1556+37])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/interface.ml[36,1556+38]..[36,1556+54])
+                                          Pexp_ident "TokenType.ttoken" (src/interface.ml[36,1556+38]..[36,1556+54])
+                                    ]
+                                  expression (src/interface.ml[36,1556+56]..[36,1556+65]) ghost
+                                    Pexp_construct "::" (src/interface.ml[36,1556+56]..[36,1556+65]) ghost
+                                    Some
+                                      expression (src/interface.ml[36,1556+56]..[36,1556+65]) ghost
+                                        Pexp_tuple
+                                        [
+                                          expression (src/interface.ml[36,1556+56]..[36,1556+63])
+                                            Pexp_ident "tlexbuf" (src/interface.ml[36,1556+56]..[36,1556+63])
+                                          expression (src/interface.ml[36,1556+64]..[36,1556+65]) ghost
+                                            Pexp_construct "[]" (src/interface.ml[36,1556+64]..[36,1556+65]) ghost
+                                            None
+                                        ]
+                                ]
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[36,1556+66]..[36,1556+69])
+                            Pexp_ident "typ" (src/interface.ml[36,1556+66]..[36,1556+69])
+                      ]
+                ]
+    ]
+  structure_item (src/interface.ml[44,1876+0]..[45,1894+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[44,1876+4]..[44,1876+15])
+          Ppat_var "interpreter" (src/interface.ml[44,1876+4]..[44,1876+15])
+        expression (src/interface.ml[45,1894+2]..[45,1894+21])
+          Pexp_constant PConst_string("MenhirInterpreter",(src/interface.ml[45,1894+3]..[45,1894+20]),None)
+    ]
+  structure_item (src/interface.ml[47,1917+0]..[48,1936+45])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[47,1917+4]..[47,1917+14])
+          Ppat_var "checkpoint" (src/interface.ml[47,1917+4]..[47,1917+14])
+        expression (src/interface.ml[47,1917+15]..[48,1936+45]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[47,1917+15]..[47,1917+16])
+            Ppat_var "t" (src/interface.ml[47,1917+15]..[47,1917+16])
+          expression (src/interface.ml[48,1936+2]..[48,1936+45])
+            Pexp_construct "TypApp" (src/interface.ml[48,1936+2]..[48,1936+8])
+            Some
+              expression (src/interface.ml[48,1936+9]..[48,1936+45])
+                Pexp_tuple
+                [
+                  expression (src/interface.ml[48,1936+10]..[48,1936+37])
+                    Pexp_apply
+                    expression (src/interface.ml[48,1936+22]..[48,1936+23])
+                      Pexp_ident "^" (src/interface.ml[48,1936+22]..[48,1936+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/interface.ml[48,1936+10]..[48,1936+21])
+                          Pexp_ident "interpreter" (src/interface.ml[48,1936+10]..[48,1936+21])
+                      <arg>
+                      Nolabel
+                        expression (src/interface.ml[48,1936+24]..[48,1936+37])
+                          Pexp_constant PConst_string(".checkpoint",(src/interface.ml[48,1936+25]..[48,1936+36]),None)
+                    ]
+                  expression (src/interface.ml[48,1936+39]..[48,1936+44])
+                    Pexp_construct "::" (src/interface.ml[48,1936+41]..[48,1936+44]) ghost
+                    Some
+                      expression (src/interface.ml[48,1936+41]..[48,1936+44]) ghost
+                        Pexp_tuple
+                        [
+                          expression (src/interface.ml[48,1936+41]..[48,1936+42])
+                            Pexp_ident "t" (src/interface.ml[48,1936+41]..[48,1936+42])
+                          expression (src/interface.ml[48,1936+43]..[48,1936+44]) ghost
+                            Pexp_construct "[]" (src/interface.ml[48,1936+43]..[48,1936+44]) ghost
+                            None
+                        ]
+                ]
+    ]
+  structure_item (src/interface.ml[50,1983+0]..[51,1998+12])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[50,1983+4]..[50,1983+12])
+          Ppat_var "lr1state" (src/interface.ml[50,1983+4]..[50,1983+12])
+        expression (src/interface.ml[51,1998+2]..[51,1998+12])
+          Pexp_constant PConst_string("lr1state",(src/interface.ml[51,1998+3]..[51,1998+11]),None)
+    ]
+  structure_item (src/interface.ml[53,2012+0]..[54,2036+24])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[53,2012+4]..[53,2012+13])
+          Ppat_var "tlr1state" (src/interface.ml[53,2012+4]..[53,2012+13])
+        expression (src/interface.ml[53,2012+14]..[54,2036+24]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[53,2012+14]..[53,2012+15])
+            Ppat_var "a" (src/interface.ml[53,2012+14]..[53,2012+15])
+          expression (src/interface.ml[53,2012+16]..[54,2036+24])
+            Pexp_constraint
+            expression (src/interface.ml[54,2036+2]..[54,2036+24])
+              Pexp_construct "TypApp" (src/interface.ml[54,2036+2]..[54,2036+8])
+              Some
+                expression (src/interface.ml[54,2036+9]..[54,2036+24])
+                  Pexp_tuple
+                  [
+                    expression (src/interface.ml[54,2036+10]..[54,2036+18])
+                      Pexp_ident "lr1state" (src/interface.ml[54,2036+10]..[54,2036+18])
+                    expression (src/interface.ml[54,2036+20]..[54,2036+23])
+                      Pexp_construct "::" (src/interface.ml[54,2036+21]..[54,2036+23]) ghost
+                      Some
+                        expression (src/interface.ml[54,2036+21]..[54,2036+23]) ghost
+                          Pexp_tuple
+                          [
+                            expression (src/interface.ml[54,2036+21]..[54,2036+22])
+                              Pexp_ident "a" (src/interface.ml[54,2036+21]..[54,2036+22])
+                            expression (src/interface.ml[54,2036+22]..[54,2036+23]) ghost
+                              Pexp_construct "[]" (src/interface.ml[54,2036+22]..[54,2036+23]) ghost
+                              None
+                          ]
+                  ]
+            core_type (src/interface.ml[53,2012+18]..[53,2012+21])
+              Ptyp_constr "typ" (src/interface.ml[53,2012+18]..[53,2012+21])
+              []
+    ]
+  structure_item (src/interface.ml[60,2222+0]..[61,2240+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[60,2222+4]..[60,2222+15])
+          Ppat_var "incremental" (src/interface.ml[60,2222+4]..[60,2222+15])
+        expression (src/interface.ml[61,2240+2]..[61,2240+15])
+          Pexp_constant PConst_string("Incremental",(src/interface.ml[61,2240+3]..[61,2240+14]),None)
+    ]
+  structure_item (src/interface.ml[65,2335+0]..[67,2451+51])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[65,2335+4]..[65,2335+31])
+          Ppat_var "entrytypescheme_incremental" (src/interface.ml[65,2335+4]..[65,2335+31])
+        expression (src/interface.ml[65,2335+32]..[67,2451+51]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[65,2335+32]..[65,2335+39])
+            Ppat_var "grammar" (src/interface.ml[65,2335+32]..[65,2335+39])
+          expression (src/interface.ml[65,2335+40]..[67,2451+51]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/interface.ml[65,2335+40]..[65,2335+46])
+              Ppat_var "symbol" (src/interface.ml[65,2335+40]..[65,2335+46])
+            expression (src/interface.ml[66,2384+2]..[67,2451+51])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/interface.ml[66,2384+6]..[66,2384+7])
+                    Ppat_var "t" (src/interface.ml[66,2384+6]..[66,2384+7])
+                  expression (src/interface.ml[66,2384+10]..[66,2384+63])
+                    Pexp_construct "TypTextual" (src/interface.ml[66,2384+10]..[66,2384+20])
+                    Some
+                      expression (src/interface.ml[66,2384+21]..[66,2384+63])
+                        Pexp_apply
+                        expression (src/interface.ml[66,2384+22]..[66,2384+47])
+                          Pexp_ident "ocamltype_of_start_symbol" (src/interface.ml[66,2384+22]..[66,2384+47])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/interface.ml[66,2384+48]..[66,2384+55])
+                              Pexp_ident "grammar" (src/interface.ml[66,2384+48]..[66,2384+55])
+                          <arg>
+                          Nolabel
+                            expression (src/interface.ml[66,2384+56]..[66,2384+62])
+                              Pexp_ident "symbol" (src/interface.ml[66,2384+56]..[66,2384+62])
+                        ]
+              ]
+              expression (src/interface.ml[67,2451+2]..[67,2451+51])
+                Pexp_apply
+                expression (src/interface.ml[67,2451+2]..[67,2451+13])
+                  Pexp_ident "type2scheme" (src/interface.ml[67,2451+2]..[67,2451+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/interface.ml[67,2451+14]..[67,2451+51])
+                      Pexp_apply
+                      expression (src/interface.ml[67,2451+15]..[67,2451+21])
+                        Pexp_ident "marrow" (src/interface.ml[67,2451+15]..[67,2451+21])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[67,2451+22]..[67,2451+35])
+                            Pexp_construct "::" (src/interface.ml[67,2451+24]..[67,2451+35]) ghost
+                            Some
+                              expression (src/interface.ml[67,2451+24]..[67,2451+35]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (src/interface.ml[67,2451+24]..[67,2451+33])
+                                    Pexp_ident "tposition" (src/interface.ml[67,2451+24]..[67,2451+33])
+                                  expression (src/interface.ml[67,2451+34]..[67,2451+35]) ghost
+                                    Pexp_construct "[]" (src/interface.ml[67,2451+34]..[67,2451+35]) ghost
+                                    None
+                                ]
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[67,2451+36]..[67,2451+50])
+                            Pexp_apply
+                            expression (src/interface.ml[67,2451+37]..[67,2451+47])
+                              Pexp_ident "checkpoint" (src/interface.ml[67,2451+37]..[67,2451+47])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[67,2451+48]..[67,2451+49])
+                                  Pexp_ident "t" (src/interface.ml[67,2451+48]..[67,2451+49])
+                            ]
+                      ]
+                ]
+    ]
+  structure_item (src/interface.ml[73,2654+0]..[74,2671+14])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[73,2654+4]..[73,2654+14])
+          Ppat_var "inspection" (src/interface.ml[73,2654+4]..[73,2654+14])
+        expression (src/interface.ml[74,2671+2]..[74,2671+14])
+          Pexp_constant PConst_string("Inspection",(src/interface.ml[74,2671+3]..[74,2671+13]),None)
+    ]
+  structure_item (src/interface.ml[81,2885+0]..[95,3256+4])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[81,2885+4]..[81,2885+18])
+          Ppat_var "monolithic_api" (src/interface.ml[81,2885+4]..[81,2885+18])
+        expression (src/interface.ml[81,2885+19]..[95,3256+4]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[81,2885+19]..[81,2885+26])
+            Ppat_var "grammar" (src/interface.ml[81,2885+19]..[81,2885+26])
+          expression (src/interface.ml[83,2915+2]..[95,3256+4])
+            Pexp_apply
+            expression (src/interface.ml[83,2915+33]..[83,2915+34])
+              Pexp_ident "@" (src/interface.ml[83,2915+33]..[83,2915+34])
+            [
+              <arg>
+              Nolabel
+                expression (src/interface.ml[83,2915+2]..[83,2915+32])
+                  Pexp_apply
+                  expression (src/interface.ml[83,2915+2]..[83,2915+24])
+                    Pexp_ident "TokenType.tokentypedef" (src/interface.ml[83,2915+2]..[83,2915+24])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/interface.ml[83,2915+25]..[83,2915+32])
+                        Pexp_ident "grammar" (src/interface.ml[83,2915+25]..[83,2915+32])
+                  ]
+              <arg>
+              Nolabel
+                expression (src/interface.ml[85,2951+2]..[95,3256+4])
+                  Pexp_construct "::" (src/interface.ml[85,2951+72]..[85,2951+74])
+                  Some
+                    expression (src/interface.ml[85,2951+2]..[95,3256+4]) ghost
+                      Pexp_tuple
+                      [
+                        expression (src/interface.ml[85,2951+2]..[85,2951+71])
+                          Pexp_construct "IIComment" (src/interface.ml[85,2951+2]..[85,2951+11])
+                          Some
+                            expression (src/interface.ml[85,2951+12]..[85,2951+71])
+                              Pexp_constant PConst_string("This exception is raised by the monolithic API functions.",(src/interface.ml[85,2951+13]..[85,2951+70]),None)
+                        expression (src/interface.ml[86,3026+2]..[95,3256+4])
+                          Pexp_construct "::" (src/interface.ml[86,3026+24]..[86,3026+26])
+                          Some
+                            expression (src/interface.ml[86,3026+2]..[95,3256+4]) ghost
+                              Pexp_tuple
+                              [
+                                expression (src/interface.ml[86,3026+2]..[86,3026+23])
+                                  Pexp_construct "IIExcDecls" (src/interface.ml[86,3026+2]..[86,3026+12])
+                                  Some
+                                    expression (src/interface.ml[86,3026+13]..[86,3026+23])
+                                      Pexp_construct "::" (src/interface.ml[86,3026+15]..[86,3026+23]) ghost
+                                      Some
+                                        expression (src/interface.ml[86,3026+15]..[86,3026+23]) ghost
+                                          Pexp_tuple
+                                          [
+                                            expression (src/interface.ml[86,3026+15]..[86,3026+21])
+                                              Pexp_ident "excdef" (src/interface.ml[86,3026+15]..[86,3026+21])
+                                            expression (src/interface.ml[86,3026+22]..[86,3026+23]) ghost
+                                              Pexp_construct "[]" (src/interface.ml[86,3026+22]..[86,3026+23]) ghost
+                                              None
+                                          ]
+                                expression (src/interface.ml[88,3054+2]..[95,3256+4])
+                                  Pexp_construct "::" (src/interface.ml[88,3054+34]..[88,3054+36])
+                                  Some
+                                    expression (src/interface.ml[88,3054+2]..[95,3256+4]) ghost
+                                      Pexp_tuple
+                                      [
+                                        expression (src/interface.ml[88,3054+2]..[88,3054+33])
+                                          Pexp_construct "IIComment" (src/interface.ml[88,3054+2]..[88,3054+11])
+                                          Some
+                                            expression (src/interface.ml[88,3054+12]..[88,3054+33])
+                                              Pexp_constant PConst_string("The monolithic API.",(src/interface.ml[88,3054+13]..[88,3054+32]),None)
+                                        expression (src/interface.ml[89,3091+2]..[95,3256+4])
+                                          Pexp_construct "::" (src/interface.ml[93,3248+4]..[93,3248+6])
+                                          Some
+                                            expression (src/interface.ml[89,3091+2]..[95,3256+4]) ghost
+                                              Pexp_tuple
+                                              [
+                                                expression (src/interface.ml[89,3091+2]..[93,3248+3])
+                                                  Pexp_construct "IIValDecls" (src/interface.ml[89,3091+2]..[89,3091+12])
+                                                  Some
+                                                    expression (src/interface.ml[89,3091+13]..[93,3248+3])
+                                                      Pexp_apply
+                                                      expression (src/interface.ml[90,3106+4]..[90,3106+18])
+                                                        Pexp_ident "StringSet.fold" (src/interface.ml[90,3106+4]..[90,3106+18])
+                                                      [
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/interface.ml[90,3106+19]..[92,3217+5])
+                                                            Pexp_fun
+                                                            Nolabel
+                                                            None
+                                                            pattern (src/interface.ml[90,3106+24]..[90,3106+30])
+                                                              Ppat_var "symbol" (src/interface.ml[90,3106+24]..[90,3106+30])
+                                                            expression (src/interface.ml[90,3106+31]..[91,3146+70]) ghost
+                                                              Pexp_fun
+                                                              Nolabel
+                                                              None
+                                                              pattern (src/interface.ml[90,3106+31]..[90,3106+36])
+                                                                Ppat_var "decls" (src/interface.ml[90,3106+31]..[90,3106+36])
+                                                              expression (src/interface.ml[91,3146+6]..[91,3146+70])
+                                                                Pexp_construct "::" (src/interface.ml[91,3146+62]..[91,3146+64])
+                                                                Some
+                                                                  expression (src/interface.ml[91,3146+6]..[91,3146+70]) ghost
+                                                                    Pexp_tuple
+                                                                    [
+                                                                      expression (src/interface.ml[91,3146+6]..[91,3146+61])
+Pexp_tuple
+[
+  expression (src/interface.ml[91,3146+7]..[91,3146+28])
+    Pexp_apply
+    expression (src/interface.ml[91,3146+7]..[91,3146+21])
+      Pexp_ident "Misc.normalize" (src/interface.ml[91,3146+7]..[91,3146+21])
+    [
+      <arg>
+      Nolabel
+        expression (src/interface.ml[91,3146+22]..[91,3146+28])
+          Pexp_ident "symbol" (src/interface.ml[91,3146+22]..[91,3146+28])
+    ]
+  expression (src/interface.ml[91,3146+30]..[91,3146+60])
+    Pexp_apply
+    expression (src/interface.ml[91,3146+30]..[91,3146+45])
+      Pexp_ident "entrytypescheme" (src/interface.ml[91,3146+30]..[91,3146+45])
+    [
+      <arg>
+      Nolabel
+        expression (src/interface.ml[91,3146+46]..[91,3146+53])
+          Pexp_ident "grammar" (src/interface.ml[91,3146+46]..[91,3146+53])
+      <arg>
+      Nolabel
+        expression (src/interface.ml[91,3146+54]..[91,3146+60])
+          Pexp_ident "symbol" (src/interface.ml[91,3146+54]..[91,3146+60])
+    ]
+]
+                                                                      expression (src/interface.ml[91,3146+65]..[91,3146+70])
+Pexp_ident "decls" (src/interface.ml[91,3146+65]..[91,3146+70])
+                                                                    ]
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/interface.ml[92,3217+6]..[92,3217+27])
+                                                            Pexp_field
+                                                            expression (src/interface.ml[92,3217+6]..[92,3217+13])
+                                                              Pexp_ident "grammar" (src/interface.ml[92,3217+6]..[92,3217+13])
+                                                            "start_symbols" (src/interface.ml[92,3217+14]..[92,3217+27])
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/interface.ml[92,3217+28]..[92,3217+30])
+                                                            Pexp_construct "[]" (src/interface.ml[92,3217+28]..[92,3217+30])
+                                                            None
+                                                      ]
+                                                expression (src/interface.ml[95,3256+2]..[95,3256+4])
+                                                  Pexp_construct "[]" (src/interface.ml[95,3256+2]..[95,3256+4])
+                                                  None
+                                              ]
+                                      ]
+                              ]
+                      ]
+            ]
+    ]
+  structure_item (src/interface.ml[101,3371+0]..[125,4137+4])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[101,3371+4]..[101,3371+18])
+          Ppat_var "inspection_api" (src/interface.ml[101,3371+4]..[101,3371+18])
+        expression (src/interface.ml[101,3371+19]..[125,4137+4]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[101,3371+19]..[101,3371+26])
+            Ppat_var "grammar" (src/interface.ml[101,3371+19]..[101,3371+26])
+          expression (src/interface.ml[101,3371+27]..[125,4137+4]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/interface.ml[101,3371+27]..[101,3371+29])
+              Ppat_construct "()" (src/interface.ml[101,3371+27]..[101,3371+29])
+              None
+            expression (src/interface.ml[103,3404+2]..[125,4137+4])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/interface.ml[103,3404+6]..[103,3404+7])
+                    Ppat_var "a" (src/interface.ml[103,3404+6]..[103,3404+7])
+                  expression (src/interface.ml[103,3404+10]..[103,3404+13])
+                    Pexp_constant PConst_string("a",(src/interface.ml[103,3404+11]..[103,3404+12]),None)
+              ]
+              expression (src/interface.ml[107,3478+2]..[125,4137+4])
+                Pexp_apply
+                expression (src/interface.ml[107,3478+33]..[107,3478+34])
+                  Pexp_ident "@" (src/interface.ml[107,3478+33]..[107,3478+34])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/interface.ml[107,3478+2]..[107,3478+32])
+                      Pexp_apply
+                      expression (src/interface.ml[107,3478+2]..[107,3478+24])
+                        Pexp_ident "TokenType.tokengadtdef" (src/interface.ml[107,3478+2]..[107,3478+24])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[107,3478+25]..[107,3478+32])
+                            Pexp_ident "grammar" (src/interface.ml[107,3478+25]..[107,3478+32])
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/interface.ml[108,3513+2]..[125,4137+4])
+                      Pexp_apply
+                      expression (src/interface.ml[108,3513+45]..[108,3513+46])
+                        Pexp_ident "@" (src/interface.ml[108,3513+45]..[108,3513+46])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[108,3513+2]..[108,3513+44])
+                            Pexp_apply
+                            expression (src/interface.ml[108,3513+2]..[108,3513+36])
+                              Pexp_ident "NonterminalType.nonterminalgadtdef" (src/interface.ml[108,3513+2]..[108,3513+36])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[108,3513+37]..[108,3513+44])
+                                  Pexp_ident "grammar" (src/interface.ml[108,3513+37]..[108,3513+44])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[113,3672+2]..[125,4137+4])
+                            Pexp_construct "::" (src/interface.ml[113,3672+34]..[113,3672+36])
+                            Some
+                              expression (src/interface.ml[113,3672+2]..[125,4137+4]) ghost
+                                Pexp_tuple
+                                [
+                                  expression (src/interface.ml[113,3672+2]..[113,3672+33])
+                                    Pexp_construct "IIComment" (src/interface.ml[113,3672+2]..[113,3672+11])
+                                    Some
+                                      expression (src/interface.ml[113,3672+12]..[113,3672+33])
+                                        Pexp_constant PConst_string("The inspection API.",(src/interface.ml[113,3672+13]..[113,3672+32]),None)
+                                  expression (src/interface.ml[114,3709+2]..[125,4137+4])
+                                    Pexp_construct "::" (src/interface.ml[123,4129+4]..[123,4129+6])
+                                    Some
+                                      expression (src/interface.ml[114,3709+2]..[125,4137+4]) ghost
+                                        Pexp_tuple
+                                        [
+                                          expression (src/interface.ml[114,3709+2]..[123,4129+3])
+                                            Pexp_construct "IIInclude" (src/interface.ml[114,3709+2]..[114,3709+11])
+                                            Some
+                                              expression (src/interface.ml[114,3709+12]..[123,4129+3])
+                                                Pexp_apply
+                                                expression (src/interface.ml[115,3723+4]..[115,3723+14])
+                                                  Pexp_ident "with_types" (src/interface.ml[115,3723+4]..[115,3723+14])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/interface.ml[115,3723+15]..[115,3723+28])
+                                                      Pexp_construct "WKDestructive" (src/interface.ml[115,3723+15]..[115,3723+28])
+                                                      None
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/interface.ml[116,3752+6]..[116,3752+46])
+                                                      Pexp_constant PConst_string("MenhirLib.IncrementalEngine.INSPECTION",(src/interface.ml[116,3752+7]..[116,3752+45]),None)
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/interface.ml[116,3752+47]..[122,4121+7])
+                                                      Pexp_construct "::" (src/interface.ml[117,3801+8]..[122,4121+7]) ghost
+                                                      Some
+                                                        expression (src/interface.ml[117,3801+8]..[122,4121+7]) ghost
+                                                          Pexp_tuple
+                                                          [
+                                                            expression (src/interface.ml[117,3801+8]..[117,3801+47])
+                                                              Pexp_tuple
+                                                              [
+                                                                expression (src/interface.ml[117,3801+8]..[117,3801+13])
+                                                                  Pexp_construct "::" (src/interface.ml[117,3801+10]..[117,3801+13]) ghost
+                                                                  Some
+                                                                    expression (src/interface.ml[117,3801+10]..[117,3801+13]) ghost
+                                                                      Pexp_tuple
+                                                                      [
+expression (src/interface.ml[117,3801+10]..[117,3801+11])
+  Pexp_ident "a" (src/interface.ml[117,3801+10]..[117,3801+11])
+expression (src/interface.ml[117,3801+12]..[117,3801+13]) ghost
+  Pexp_construct "[]" (src/interface.ml[117,3801+12]..[117,3801+13]) ghost
+  None
+                                                                      ]
+                                                                expression (src/interface.ml[117,3801+15]..[117,3801+25])
+                                                                  Pexp_constant PConst_string("lr1state",(src/interface.ml[117,3801+16]..[117,3801+24]),None)
+                                                                expression (src/interface.ml[117,3801+27]..[117,3801+47])
+                                                                  Pexp_apply
+                                                                  expression (src/interface.ml[117,3801+27]..[117,3801+36])
+                                                                    Pexp_ident "tlr1state" (src/interface.ml[117,3801+27]..[117,3801+36])
+                                                                  [
+                                                                    <arg>
+                                                                    Nolabel
+                                                                      expression (src/interface.ml[117,3801+37]..[117,3801+47])
+Pexp_construct "TypVar" (src/interface.ml[117,3801+38]..[117,3801+44])
+Some
+  expression (src/interface.ml[117,3801+45]..[117,3801+46])
+    Pexp_ident "a" (src/interface.ml[117,3801+45]..[117,3801+46])
+                                                                  ]
+                                                              ]
+                                                            expression (src/interface.ml[118,3850+8]..[122,4121+7]) ghost
+                                                              Pexp_construct "::" (src/interface.ml[118,3850+8]..[122,4121+7]) ghost
+                                                              Some
+                                                                expression (src/interface.ml[118,3850+8]..[122,4121+7]) ghost
+                                                                  Pexp_tuple
+                                                                  [
+                                                                    expression (src/interface.ml[118,3850+8]..[118,3850+51])
+                                                                      Pexp_tuple
+                                                                      [
+expression (src/interface.ml[118,3850+8]..[118,3850+10])
+  Pexp_construct "[]" (src/interface.ml[118,3850+8]..[118,3850+10])
+  None
+expression (src/interface.ml[118,3850+12]..[118,3850+24])
+  Pexp_constant PConst_string("production",(src/interface.ml[118,3850+13]..[118,3850+23]),None)
+expression (src/interface.ml[118,3850+26]..[118,3850+51])
+  Pexp_construct "TypApp" (src/interface.ml[118,3850+26]..[118,3850+32])
+  Some
+    expression (src/interface.ml[118,3850+33]..[118,3850+51])
+      Pexp_tuple
+      [
+        expression (src/interface.ml[118,3850+34]..[118,3850+46])
+          Pexp_constant PConst_string("production",(src/interface.ml[118,3850+35]..[118,3850+45]),None)
+        expression (src/interface.ml[118,3850+48]..[118,3850+50])
+          Pexp_construct "[]" (src/interface.ml[118,3850+48]..[118,3850+50])
+          None
+      ]
+                                                                      ]
+                                                                    expression (src/interface.ml[119,3903+8]..[122,4121+7]) ghost
+                                                                      Pexp_construct "::" (src/interface.ml[119,3903+8]..[122,4121+7]) ghost
+                                                                      Some
+expression (src/interface.ml[119,3903+8]..[122,4121+7]) ghost
+  Pexp_tuple
+  [
+    expression (src/interface.ml[119,3903+8]..[119,3903+69])
+      Pexp_tuple
+      [
+        expression (src/interface.ml[119,3903+8]..[119,3903+13])
+          Pexp_construct "::" (src/interface.ml[119,3903+10]..[119,3903+13]) ghost
+          Some
+            expression (src/interface.ml[119,3903+10]..[119,3903+13]) ghost
+              Pexp_tuple
+              [
+                expression (src/interface.ml[119,3903+10]..[119,3903+11])
+                  Pexp_ident "a" (src/interface.ml[119,3903+10]..[119,3903+11])
+                expression (src/interface.ml[119,3903+12]..[119,3903+13]) ghost
+                  Pexp_construct "[]" (src/interface.ml[119,3903+12]..[119,3903+13]) ghost
+                  None
+              ]
+        expression (src/interface.ml[119,3903+15]..[119,3903+36])
+          Pexp_ident "TokenType.tctokengadt" (src/interface.ml[119,3903+15]..[119,3903+36])
+        expression (src/interface.ml[119,3903+38]..[119,3903+69])
+          Pexp_apply
+          expression (src/interface.ml[119,3903+38]..[119,3903+58])
+            Pexp_ident "TokenType.ttokengadt" (src/interface.ml[119,3903+38]..[119,3903+58])
+          [
+            <arg>
+            Nolabel
+              expression (src/interface.ml[119,3903+59]..[119,3903+69])
+                Pexp_construct "TypVar" (src/interface.ml[119,3903+60]..[119,3903+66])
+                Some
+                  expression (src/interface.ml[119,3903+67]..[119,3903+68])
+                    Pexp_ident "a" (src/interface.ml[119,3903+67]..[119,3903+68])
+          ]
+      ]
+    expression (src/interface.ml[120,3974+8]..[122,4121+7]) ghost
+      Pexp_construct "::" (src/interface.ml[120,3974+8]..[122,4121+7]) ghost
+      Some
+        expression (src/interface.ml[120,3974+8]..[122,4121+7]) ghost
+          Pexp_tuple
+          [
+            expression (src/interface.ml[120,3974+8]..[120,3974+93])
+              Pexp_tuple
+              [
+                expression (src/interface.ml[120,3974+8]..[120,3974+13])
+                  Pexp_construct "::" (src/interface.ml[120,3974+10]..[120,3974+13]) ghost
+                  Some
+                    expression (src/interface.ml[120,3974+10]..[120,3974+13]) ghost
+                      Pexp_tuple
+                      [
+                        expression (src/interface.ml[120,3974+10]..[120,3974+11])
+                          Pexp_ident "a" (src/interface.ml[120,3974+10]..[120,3974+11])
+                        expression (src/interface.ml[120,3974+12]..[120,3974+13]) ghost
+                          Pexp_construct "[]" (src/interface.ml[120,3974+12]..[120,3974+13]) ghost
+                          None
+                      ]
+                expression (src/interface.ml[120,3974+15]..[120,3974+48])
+                  Pexp_ident "NonterminalType.tcnonterminalgadt" (src/interface.ml[120,3974+15]..[120,3974+48])
+                expression (src/interface.ml[120,3974+50]..[120,3974+93])
+                  Pexp_apply
+                  expression (src/interface.ml[120,3974+50]..[120,3974+82])
+                    Pexp_ident "NonterminalType.tnonterminalgadt" (src/interface.ml[120,3974+50]..[120,3974+82])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/interface.ml[120,3974+83]..[120,3974+93])
+                        Pexp_construct "TypVar" (src/interface.ml[120,3974+84]..[120,3974+90])
+                        Some
+                          expression (src/interface.ml[120,3974+91]..[120,3974+92])
+                            Pexp_ident "a" (src/interface.ml[120,3974+91]..[120,3974+92])
+                  ]
+              ]
+            expression (src/interface.ml[121,4069+8]..[122,4121+7]) ghost
+              Pexp_construct "::" (src/interface.ml[121,4069+8]..[122,4121+7]) ghost
+              Some
+                expression (src/interface.ml[121,4069+8]..[122,4121+7]) ghost
+                  Pexp_tuple
+                  [
+                    expression (src/interface.ml[121,4069+8]..[121,4069+50])
+                      Pexp_tuple
+                      [
+                        expression (src/interface.ml[121,4069+8]..[121,4069+13])
+                          Pexp_construct "::" (src/interface.ml[121,4069+10]..[121,4069+13]) ghost
+                          Some
+                            expression (src/interface.ml[121,4069+10]..[121,4069+13]) ghost
+                              Pexp_tuple
+                              [
+                                expression (src/interface.ml[121,4069+10]..[121,4069+11])
+                                  Pexp_ident "a" (src/interface.ml[121,4069+10]..[121,4069+11])
+                                expression (src/interface.ml[121,4069+12]..[121,4069+13]) ghost
+                                  Pexp_construct "[]" (src/interface.ml[121,4069+12]..[121,4069+13]) ghost
+                                  None
+                              ]
+                        expression (src/interface.ml[121,4069+15]..[121,4069+20])
+                          Pexp_constant PConst_string("env",(src/interface.ml[121,4069+16]..[121,4069+19]),None)
+                        expression (src/interface.ml[121,4069+22]..[121,4069+50])
+                          Pexp_construct "TypApp" (src/interface.ml[121,4069+22]..[121,4069+28])
+                          Some
+                            expression (src/interface.ml[121,4069+29]..[121,4069+50])
+                              Pexp_tuple
+                              [
+                                expression (src/interface.ml[121,4069+30]..[121,4069+35])
+                                  Pexp_constant PConst_string("env",(src/interface.ml[121,4069+31]..[121,4069+34]),None)
+                                expression (src/interface.ml[121,4069+37]..[121,4069+49])
+                                  Pexp_construct "::" (src/interface.ml[121,4069+39]..[121,4069+49]) ghost
+                                  Some
+                                    expression (src/interface.ml[121,4069+39]..[121,4069+49]) ghost
+                                      Pexp_tuple
+                                      [
+                                        expression (src/interface.ml[121,4069+39]..[121,4069+47])
+                                          Pexp_construct "TypVar" (src/interface.ml[121,4069+39]..[121,4069+45])
+                                          Some
+                                            expression (src/interface.ml[121,4069+46]..[121,4069+47])
+                                              Pexp_ident "a" (src/interface.ml[121,4069+46]..[121,4069+47])
+                                        expression (src/interface.ml[121,4069+48]..[121,4069+49]) ghost
+                                          Pexp_construct "[]" (src/interface.ml[121,4069+48]..[121,4069+49]) ghost
+                                          None
+                                      ]
+                              ]
+                      ]
+                    expression (src/interface.ml[122,4121+6]..[122,4121+7]) ghost
+                      Pexp_construct "[]" (src/interface.ml[122,4121+6]..[122,4121+7]) ghost
+                      None
+                  ]
+          ]
+  ]
+                                                                  ]
+                                                          ]
+                                                ]
+                                          expression (src/interface.ml[125,4137+2]..[125,4137+4])
+                                            Pexp_construct "[]" (src/interface.ml[125,4137+2]..[125,4137+4])
+                                            None
+                                        ]
+                                ]
+                      ]
+                ]
+    ]
+  structure_item (src/interface.ml[131,4253+0]..[138,4503+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[131,4253+4]..[131,4253+22])
+          Ppat_var "incremental_engine" (src/interface.ml[131,4253+4]..[131,4253+22])
+        expression (src/interface.ml[131,4253+23]..[138,4503+5]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[131,4253+23]..[131,4253+25])
+            Ppat_construct "()" (src/interface.ml[131,4253+23]..[131,4253+25])
+            None
+          expression (src/interface.ml[131,4253+26]..[138,4503+5])
+            Pexp_constraint
+            expression (src/interface.ml[132,4295+2]..[138,4503+5])
+              Pexp_apply
+              expression (src/interface.ml[132,4295+2]..[132,4295+12])
+                Pexp_ident "with_types" (src/interface.ml[132,4295+2]..[132,4295+12])
+              [
+                <arg>
+                Nolabel
+                  expression (src/interface.ml[132,4295+13]..[132,4295+29])
+                    Pexp_construct "WKNonDestructive" (src/interface.ml[132,4295+13]..[132,4295+29])
+                    None
+                <arg>
+                Nolabel
+                  expression (src/interface.ml[133,4325+4]..[133,4325+52])
+                    Pexp_constant PConst_string("MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE",(src/interface.ml[133,4325+5]..[133,4325+51]),None)
+                <arg>
+                Nolabel
+                  expression (src/interface.ml[134,4378+4]..[138,4503+5])
+                    Pexp_construct "::" (src/interface.ml[135,4384+6]..[138,4503+5]) ghost
+                    Some
+                      expression (src/interface.ml[135,4384+6]..[138,4503+5]) ghost
+                        Pexp_tuple
+                        [
+                          expression (src/interface.ml[135,4384+6]..[137,4480+22])
+                            Pexp_tuple
+                            [
+                              expression (src/interface.ml[135,4384+6]..[135,4384+8])
+                                Pexp_construct "[]" (src/interface.ml[135,4384+6]..[135,4384+8])
+                                None
+                              expression (src/interface.ml[136,4394+6]..[136,4394+13])
+                                Pexp_constant PConst_string("token",(src/interface.ml[136,4394+7]..[136,4394+12]),None)
+                              expression (src/interface.ml[137,4480+6]..[137,4480+22])
+                                Pexp_ident "TokenType.ttoken" (src/interface.ml[137,4480+6]..[137,4480+22])
+                            ]
+                          expression (src/interface.ml[138,4503+4]..[138,4503+5]) ghost
+                            Pexp_construct "[]" (src/interface.ml[138,4503+4]..[138,4503+5]) ghost
+                            None
+                        ]
+              ]
+            core_type (src/interface.ml[131,4253+28]..[131,4253+39])
+              Ptyp_constr "module_type" (src/interface.ml[131,4253+28]..[131,4253+39])
+              []
+    ]
+  structure_item (src/interface.ml[140,4510+0]..[151,4835+4])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[140,4510+4]..[140,4510+28])
+          Ppat_var "incremental_entry_points" (src/interface.ml[140,4510+4]..[140,4510+28])
+        expression (src/interface.ml[140,4510+29]..[151,4835+4]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[140,4510+29]..[140,4510+36])
+            Ppat_var "grammar" (src/interface.ml[140,4510+29]..[140,4510+36])
+          expression (src/interface.ml[140,4510+37]..[151,4835+4])
+            Pexp_constraint
+            expression (src/interface.ml[142,4562+2]..[151,4835+4])
+              Pexp_construct "::" (src/interface.ml[142,4562+57]..[142,4562+59])
+              Some
+                expression (src/interface.ml[142,4562+2]..[151,4835+4]) ghost
+                  Pexp_tuple
+                  [
+                    expression (src/interface.ml[142,4562+2]..[142,4562+56])
+                      Pexp_construct "IIComment" (src/interface.ml[142,4562+2]..[142,4562+11])
+                      Some
+                        expression (src/interface.ml[142,4562+12]..[142,4562+56])
+                          Pexp_constant PConst_string("The entry point(s) to the incremental API.",(src/interface.ml[142,4562+13]..[142,4562+55]),None)
+                    expression (src/interface.ml[143,4622+2]..[151,4835+4])
+                      Pexp_construct "::" (src/interface.ml[149,4826+5]..[149,4826+7])
+                      Some
+                        expression (src/interface.ml[143,4622+2]..[151,4835+4]) ghost
+                          Pexp_tuple
+                          [
+                            expression (src/interface.ml[143,4622+2]..[149,4826+4])
+                              Pexp_construct "IIModule" (src/interface.ml[143,4622+2]..[143,4622+10])
+                              Some
+                                expression (src/interface.ml[143,4622+11]..[149,4826+4])
+                                  Pexp_tuple
+                                  [
+                                    expression (src/interface.ml[143,4622+12]..[143,4622+23])
+                                      Pexp_ident "incremental" (src/interface.ml[143,4622+12]..[143,4622+23])
+                                    expression (src/interface.ml[143,4622+25]..[149,4826+3])
+                                      Pexp_construct "MTSigEnd" (src/interface.ml[143,4622+25]..[143,4622+33])
+                                      Some
+                                        expression (src/interface.ml[143,4622+34]..[149,4826+3])
+                                          Pexp_construct "::" (src/interface.ml[144,4658+4]..[149,4826+3]) ghost
+                                          Some
+                                            expression (src/interface.ml[144,4658+4]..[149,4826+3]) ghost
+                                              Pexp_tuple
+                                              [
+                                                expression (src/interface.ml[144,4658+4]..[148,4820+5])
+                                                  Pexp_construct "IIValDecls" (src/interface.ml[144,4658+4]..[144,4658+14])
+                                                  Some
+                                                    expression (src/interface.ml[144,4658+15]..[148,4820+5])
+                                                      Pexp_apply
+                                                      expression (src/interface.ml[145,4675+6]..[145,4675+20])
+                                                        Pexp_ident "StringSet.fold" (src/interface.ml[145,4675+6]..[145,4675+20])
+                                                      [
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/interface.ml[145,4675+21]..[147,4787+7])
+                                                            Pexp_fun
+                                                            Nolabel
+                                                            None
+                                                            pattern (src/interface.ml[145,4675+26]..[145,4675+32])
+                                                              Ppat_var "symbol" (src/interface.ml[145,4675+26]..[145,4675+32])
+                                                            expression (src/interface.ml[145,4675+33]..[146,4717+69]) ghost
+                                                              Pexp_fun
+                                                              Nolabel
+                                                              None
+                                                              pattern (src/interface.ml[145,4675+33]..[145,4675+38])
+                                                                Ppat_var "decls" (src/interface.ml[145,4675+33]..[145,4675+38])
+                                                              expression (src/interface.ml[146,4717+8]..[146,4717+69])
+                                                                Pexp_construct "::" (src/interface.ml[146,4717+61]..[146,4717+63])
+                                                                Some
+                                                                  expression (src/interface.ml[146,4717+8]..[146,4717+69]) ghost
+                                                                    Pexp_tuple
+                                                                    [
+                                                                      expression (src/interface.ml[146,4717+8]..[146,4717+60])
+Pexp_tuple
+[
+  expression (src/interface.ml[146,4717+9]..[146,4717+15])
+    Pexp_ident "symbol" (src/interface.ml[146,4717+9]..[146,4717+15])
+  expression (src/interface.ml[146,4717+17]..[146,4717+59])
+    Pexp_apply
+    expression (src/interface.ml[146,4717+17]..[146,4717+44])
+      Pexp_ident "entrytypescheme_incremental" (src/interface.ml[146,4717+17]..[146,4717+44])
+    [
+      <arg>
+      Nolabel
+        expression (src/interface.ml[146,4717+45]..[146,4717+52])
+          Pexp_ident "grammar" (src/interface.ml[146,4717+45]..[146,4717+52])
+      <arg>
+      Nolabel
+        expression (src/interface.ml[146,4717+53]..[146,4717+59])
+          Pexp_ident "symbol" (src/interface.ml[146,4717+53]..[146,4717+59])
+    ]
+]
+                                                                      expression (src/interface.ml[146,4717+64]..[146,4717+69])
+Pexp_ident "decls" (src/interface.ml[146,4717+64]..[146,4717+69])
+                                                                    ]
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/interface.ml[147,4787+8]..[147,4787+29])
+                                                            Pexp_field
+                                                            expression (src/interface.ml[147,4787+8]..[147,4787+15])
+                                                              Pexp_ident "grammar" (src/interface.ml[147,4787+8]..[147,4787+15])
+                                                            "start_symbols" (src/interface.ml[147,4787+16]..[147,4787+29])
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/interface.ml[147,4787+30]..[147,4787+32])
+                                                            Pexp_construct "[]" (src/interface.ml[147,4787+30]..[147,4787+32])
+                                                            None
+                                                      ]
+                                                expression (src/interface.ml[149,4826+2]..[149,4826+3]) ghost
+                                                  Pexp_construct "[]" (src/interface.ml[149,4826+2]..[149,4826+3]) ghost
+                                                  None
+                                              ]
+                                  ]
+                            expression (src/interface.ml[151,4835+2]..[151,4835+4])
+                              Pexp_construct "[]" (src/interface.ml[151,4835+2]..[151,4835+4])
+                              None
+                          ]
+                  ]
+            core_type (src/interface.ml[140,4510+39]..[140,4510+48])
+              Ptyp_constr "interface" (src/interface.ml[140,4510+39]..[140,4510+48])
+              []
+    ]
+  structure_item (src/interface.ml[153,4841+0]..[166,5214+34])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[153,4841+4]..[153,4841+19])
+          Ppat_var "incremental_api" (src/interface.ml[153,4841+4]..[153,4841+19])
+        expression (src/interface.ml[153,4841+20]..[166,5214+34]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[153,4841+20]..[153,4841+27])
+            Ppat_var "grammar" (src/interface.ml[153,4841+20]..[153,4841+27])
+          expression (src/interface.ml[153,4841+28]..[166,5214+34]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/interface.ml[153,4841+28]..[153,4841+30])
+              Ppat_construct "()" (src/interface.ml[153,4841+28]..[153,4841+30])
+              None
+            expression (src/interface.ml[153,4841+31]..[166,5214+34])
+              Pexp_constraint
+              expression (src/interface.ml[155,4887+2]..[166,5214+34])
+                Pexp_construct "::" (src/interface.ml[162,5087+4]..[162,5087+6])
+                Some
+                  expression (src/interface.ml[155,4887+2]..[166,5214+34]) ghost
+                    Pexp_tuple
+                    [
+                      expression (src/interface.ml[155,4887+2]..[162,5087+3])
+                        Pexp_construct "IIModule" (src/interface.ml[155,4887+2]..[155,4887+10])
+                        Some
+                          expression (src/interface.ml[155,4887+11]..[162,5087+3])
+                            Pexp_tuple
+                            [
+                              expression (src/interface.ml[156,4900+4]..[156,4900+15])
+                                Pexp_ident "interpreter" (src/interface.ml[156,4900+4]..[156,4900+15])
+                              expression (src/interface.ml[157,4917+4]..[161,5081+5])
+                                Pexp_construct "MTSigEnd" (src/interface.ml[157,4917+4]..[157,4917+12])
+                                Some
+                                  expression (src/interface.ml[157,4917+13]..[161,5081+5])
+                                    Pexp_construct "::" (src/interface.ml[158,4932+39]..[158,4932+41])
+                                    Some
+                                      expression (src/interface.ml[158,4932+6]..[160,5016+64]) ghost
+                                        Pexp_tuple
+                                        [
+                                          expression (src/interface.ml[158,4932+6]..[158,4932+38])
+                                            Pexp_construct "IIComment" (src/interface.ml[158,4932+6]..[158,4932+15])
+                                            Some
+                                              expression (src/interface.ml[158,4932+16]..[158,4932+38])
+                                                Pexp_constant PConst_string("The incremental API.",(src/interface.ml[158,4932+17]..[158,4932+37]),None)
+                                          expression (src/interface.ml[159,4974+6]..[160,5016+64])
+                                            Pexp_construct "::" (src/interface.ml[159,4974+39]..[159,4974+41])
+                                            Some
+                                              expression (src/interface.ml[159,4974+6]..[160,5016+64]) ghost
+                                                Pexp_tuple
+                                                [
+                                                  expression (src/interface.ml[159,4974+6]..[159,4974+38])
+                                                    Pexp_construct "IIInclude" (src/interface.ml[159,4974+6]..[159,4974+15])
+                                                    Some
+                                                      expression (src/interface.ml[159,4974+16]..[159,4974+38])
+                                                        Pexp_apply
+                                                        expression (src/interface.ml[159,4974+17]..[159,4974+35])
+                                                          Pexp_ident "incremental_engine" (src/interface.ml[159,4974+17]..[159,4974+35])
+                                                        [
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/interface.ml[159,4974+35]..[159,4974+37])
+                                                              Pexp_construct "()" (src/interface.ml[159,4974+35]..[159,4974+37])
+                                                              None
+                                                        ]
+                                                  expression (src/interface.ml[160,5016+6]..[160,5016+64])
+                                                    Pexp_apply
+                                                    expression (src/interface.ml[160,5016+6]..[160,5016+19])
+                                                      Pexp_ident "MList.ifnlazy" (src/interface.ml[160,5016+6]..[160,5016+19])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/interface.ml[160,5016+20]..[160,5016+39])
+                                                          Pexp_ident "Settings.inspection" (src/interface.ml[160,5016+20]..[160,5016+39])
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/interface.ml[160,5016+40]..[160,5016+64])
+                                                          Pexp_apply
+                                                          expression (src/interface.ml[160,5016+41]..[160,5016+55])
+                                                            Pexp_ident "inspection_api" (src/interface.ml[160,5016+41]..[160,5016+55])
+                                                          [
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/interface.ml[160,5016+56]..[160,5016+63])
+                                                                Pexp_ident "grammar" (src/interface.ml[160,5016+56]..[160,5016+63])
+                                                          ]
+                                                    ]
+                                                ]
+                                        ]
+                            ]
+                      expression (src/interface.ml[166,5214+2]..[166,5214+34])
+                        Pexp_apply
+                        expression (src/interface.ml[166,5214+2]..[166,5214+26])
+                          Pexp_ident "incremental_entry_points" (src/interface.ml[166,5214+2]..[166,5214+26])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/interface.ml[166,5214+27]..[166,5214+34])
+                              Pexp_ident "grammar" (src/interface.ml[166,5214+27]..[166,5214+34])
+                        ]
+                    ]
+              core_type (src/interface.ml[153,4841+33]..[153,4841+42])
+                Ptyp_constr "interface" (src/interface.ml[153,4841+33]..[153,4841+42])
+                []
+    ]
+  structure_item (src/interface.ml[172,5387+0]..[177,5538+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[172,5387+4]..[172,5387+13])
+          Ppat_var "interface" (src/interface.ml[172,5387+4]..[172,5387+13])
+        expression (src/interface.ml[172,5387+14]..[177,5538+1]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[172,5387+14]..[172,5387+21])
+            Ppat_var "grammar" (src/interface.ml[172,5387+14]..[172,5387+21])
+          expression (src/interface.ml[172,5387+24]..[177,5538+1])
+            Pexp_construct "::" (src/interface.ml[173,5413+2]..[177,5538+1]) ghost
+            Some
+              expression (src/interface.ml[173,5413+2]..[177,5538+1]) ghost
+                Pexp_tuple
+                [
+                  expression (src/interface.ml[173,5413+2]..[176,5534+3])
+                    Pexp_construct "IIFunctor" (src/interface.ml[173,5413+2]..[173,5413+11])
+                    Some
+                      expression (src/interface.ml[173,5413+12]..[176,5534+3])
+                        Pexp_tuple
+                        [
+                          expression (src/interface.ml[173,5413+13]..[173,5413+31])
+                            Pexp_field
+                            expression (src/interface.ml[173,5413+13]..[173,5413+20])
+                              Pexp_ident "grammar" (src/interface.ml[173,5413+13]..[173,5413+20])
+                            "parameters" (src/interface.ml[173,5413+21]..[173,5413+31])
+                          expression (src/interface.ml[174,5446+4]..[175,5475+58])
+                            Pexp_apply
+                            expression (src/interface.ml[174,5446+27]..[174,5446+28])
+                              Pexp_ident "@" (src/interface.ml[174,5446+27]..[174,5446+28])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[174,5446+4]..[174,5446+26])
+                                  Pexp_apply
+                                  expression (src/interface.ml[174,5446+4]..[174,5446+18])
+                                    Pexp_ident "monolithic_api" (src/interface.ml[174,5446+4]..[174,5446+18])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/interface.ml[174,5446+19]..[174,5446+26])
+                                        Pexp_ident "grammar" (src/interface.ml[174,5446+19]..[174,5446+26])
+                                  ]
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[175,5475+4]..[175,5475+58])
+                                  Pexp_apply
+                                  expression (src/interface.ml[175,5475+4]..[175,5475+17])
+                                    Pexp_ident "MList.ifnlazy" (src/interface.ml[175,5475+4]..[175,5475+17])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/interface.ml[175,5475+18]..[175,5475+32])
+                                        Pexp_ident "Settings.table" (src/interface.ml[175,5475+18]..[175,5475+32])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/interface.ml[175,5475+33]..[175,5475+58])
+                                        Pexp_apply
+                                        expression (src/interface.ml[175,5475+34]..[175,5475+49])
+                                          Pexp_ident "incremental_api" (src/interface.ml[175,5475+34]..[175,5475+49])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/interface.ml[175,5475+50]..[175,5475+57])
+                                              Pexp_ident "grammar" (src/interface.ml[175,5475+50]..[175,5475+57])
+                                        ]
+                                  ]
+                            ]
+                        ]
+                  expression (src/interface.ml[177,5538+0]..[177,5538+1]) ghost
+                    Pexp_construct "[]" (src/interface.ml[177,5538+0]..[177,5538+1]) ghost
+                    None
+                ]
+    ]
+  structure_item (src/interface.ml[183,5663+0]..[193,6052+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[183,5663+4]..[183,5663+9])
+          Ppat_var "write" (src/interface.ml[183,5663+4]..[183,5663+9])
+        expression (src/interface.ml[183,5663+10]..[193,6052+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/interface.ml[183,5663+10]..[183,5663+17])
+            Ppat_var "grammar" (src/interface.ml[183,5663+10]..[183,5663+17])
+          expression (src/interface.ml[183,5663+18]..[193,6052+15]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/interface.ml[183,5663+18]..[183,5663+20])
+              Ppat_construct "()" (src/interface.ml[183,5663+18]..[183,5663+20])
+              None
+            expression (src/interface.ml[186,5809+2]..[193,6052+15])
+              Pexp_sequence
+              expression (src/interface.ml[186,5809+2]..[186,5809+61])
+                Pexp_assert
+                expression (src/interface.ml[186,5809+9]..[186,5809+61])
+                  Pexp_apply
+                  expression (src/interface.ml[186,5809+35]..[186,5809+37])
+                    Pexp_ident "<>" (src/interface.ml[186,5809+35]..[186,5809+37])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/interface.ml[186,5809+10]..[186,5809+34])
+                        Pexp_ident "Settings.token_type_mode" (src/interface.ml[186,5809+10]..[186,5809+34])
+                    <arg>
+                    Nolabel
+                      expression (src/interface.ml[186,5809+38]..[186,5809+60])
+                        Pexp_construct "Settings.TokenTypeOnly" (src/interface.ml[186,5809+38]..[186,5809+60])
+                        None
+                  ]
+              expression (src/interface.ml[187,5872+2]..[193,6052+15])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/interface.ml[187,5872+6]..[187,5872+9])
+                      Ppat_var "mli" (src/interface.ml[187,5872+6]..[187,5872+9])
+                    expression (src/interface.ml[187,5872+12]..[187,5872+45])
+                      Pexp_apply
+                      expression (src/interface.ml[187,5872+12]..[187,5872+20])
+                        Pexp_ident "open_out" (src/interface.ml[187,5872+12]..[187,5872+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[187,5872+21]..[187,5872+45])
+                            Pexp_apply
+                            expression (src/interface.ml[187,5872+36]..[187,5872+37])
+                              Pexp_ident "^" (src/interface.ml[187,5872+36]..[187,5872+37])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[187,5872+22]..[187,5872+35])
+                                  Pexp_ident "Settings.base" (src/interface.ml[187,5872+22]..[187,5872+35])
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[187,5872+38]..[187,5872+44])
+                                  Pexp_constant PConst_string(".mli",(src/interface.ml[187,5872+39]..[187,5872+43]),None)
+                            ]
+                      ]
+                ]
+                expression (src/interface.ml[188,5921+2]..[193,6052+15])
+                  Pexp_letmodule "P" (src/interface.ml[188,5921+13]..[188,5921+14])
+                  module_expr (src/interface.ml[188,5921+17]..[191,6007+6])
+                    Pmod_apply
+                    module_expr (src/interface.ml[188,5921+17]..[188,5921+29])
+                      Pmod_ident "Printer.Make" (src/interface.ml[188,5921+17]..[188,5921+29])
+                    module_expr (src/interface.ml[188,5921+31]..[191,6007+5])
+                      Pmod_structure
+                      [
+                        structure_item (src/interface.ml[189,5959+4]..[189,5959+15])
+                          Pstr_value Nonrec
+                          [
+                            <def>
+                              pattern (src/interface.ml[189,5959+8]..[189,5959+9])
+                                Ppat_var "f" (src/interface.ml[189,5959+8]..[189,5959+9])
+                              expression (src/interface.ml[189,5959+12]..[189,5959+15])
+                                Pexp_ident "mli" (src/interface.ml[189,5959+12]..[189,5959+15])
+                          ]
+                        structure_item (src/interface.ml[190,5975+4]..[190,5975+31])
+                          Pstr_value Nonrec
+                          [
+                            <def>
+                              pattern (src/interface.ml[190,5975+8]..[190,5975+24])
+                                Ppat_var "locate_stretches" (src/interface.ml[190,5975+8]..[190,5975+24])
+                              expression (src/interface.ml[190,5975+27]..[190,5975+31])
+                                Pexp_construct "None" (src/interface.ml[190,5975+27]..[190,5975+31])
+                                None
+                          ]
+                      ]
+                  expression (src/interface.ml[192,6017+2]..[193,6052+15])
+                    Pexp_sequence
+                    expression (src/interface.ml[192,6017+2]..[192,6017+33])
+                      Pexp_apply
+                      expression (src/interface.ml[192,6017+2]..[192,6017+13])
+                        Pexp_ident "P.interface" (src/interface.ml[192,6017+2]..[192,6017+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[192,6017+14]..[192,6017+33])
+                            Pexp_apply
+                            expression (src/interface.ml[192,6017+15]..[192,6017+24])
+                              Pexp_ident "interface" (src/interface.ml[192,6017+15]..[192,6017+24])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/interface.ml[192,6017+25]..[192,6017+32])
+                                  Pexp_ident "grammar" (src/interface.ml[192,6017+25]..[192,6017+32])
+                            ]
+                      ]
+                    expression (src/interface.ml[193,6052+2]..[193,6052+15])
+                      Pexp_apply
+                      expression (src/interface.ml[193,6052+2]..[193,6052+11])
+                        Pexp_ident "close_out" (src/interface.ml[193,6052+2]..[193,6052+11])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/interface.ml[193,6052+12]..[193,6052+15])
+                            Pexp_ident "mli" (src/interface.ml[193,6052+12]..[193,6052+15])
+                      ]
+    ]
+]
+
+open BasicSyntax
+open IL
+open CodeBits
+let excname = "Error"
+let excdef =
+  {
+    excname;
+    exceq = (if Settings.fixedexc then Some "Parsing.Parse_error" else None)
+  }
+let entrytypescheme grammar symbol =
+  let typ = TypTextual (ocamltype_of_start_symbol grammar symbol) in
+  type2scheme (marrow [arrow tlexbuf TokenType.ttoken; tlexbuf] typ)
+let interpreter = "MenhirInterpreter"
+let checkpoint t = TypApp ((interpreter ^ ".checkpoint"), [t])
+let lr1state = "lr1state"
+let tlr1state a = (TypApp (lr1state, [a]) : typ)
+let incremental = "Incremental"
+let entrytypescheme_incremental grammar symbol =
+  let t = TypTextual (ocamltype_of_start_symbol grammar symbol) in
+  type2scheme (marrow [tposition] (checkpoint t))
+let inspection = "Inspection"
+let monolithic_api grammar =
+  (TokenType.tokentypedef grammar) @
+    [IIComment "This exception is raised by the monolithic API functions.";
+    IIExcDecls [excdef];
+    IIComment "The monolithic API.";
+    IIValDecls
+      (StringSet.fold
+         (fun symbol ->
+            fun decls ->
+              ((Misc.normalize symbol), (entrytypescheme grammar symbol)) ::
+              decls) grammar.start_symbols [])]
+let inspection_api grammar () =
+  let a = "a" in
+  (TokenType.tokengadtdef grammar) @
+    ((NonterminalType.nonterminalgadtdef grammar) @
+       [IIComment "The inspection API.";
+       IIInclude
+         (with_types WKDestructive "MenhirLib.IncrementalEngine.INSPECTION"
+            [([a], "lr1state", (tlr1state (TypVar a)));
+            ([], "production", (TypApp ("production", [])));
+            ([a], TokenType.tctokengadt, (TokenType.ttokengadt (TypVar a)));
+            ([a], NonterminalType.tcnonterminalgadt,
+              (NonterminalType.tnonterminalgadt (TypVar a)));
+            ([a], "env", (TypApp ("env", [TypVar a])))])])
+let incremental_engine () =
+  (with_types WKNonDestructive
+     "MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE"
+     [([], "token", TokenType.ttoken)] : module_type)
+let incremental_entry_points grammar =
+  ([IIComment "The entry point(s) to the incremental API.";
+   IIModule
+     (incremental,
+       (MTSigEnd
+          [IIValDecls
+             (StringSet.fold
+                (fun symbol ->
+                   fun decls ->
+                     (symbol, (entrytypescheme_incremental grammar symbol))
+                     :: decls) grammar.start_symbols [])]))] : interface)
+let incremental_api grammar () =
+  ((IIModule
+      (interpreter,
+        (MTSigEnd ((IIComment "The incremental API.") ::
+           (IIInclude (incremental_engine ())) ::
+           (MList.ifnlazy Settings.inspection (inspection_api grammar))))))
+  :: (incremental_entry_points grammar) : interface)
+let interface grammar =
+  [IIFunctor
+     ((grammar.parameters),
+       ((monolithic_api grammar) @
+          (MList.ifnlazy Settings.table (incremental_api grammar))))]
+let write grammar () =
+  assert (Settings.token_type_mode <> Settings.TokenTypeOnly);
+  (let mli = open_out (Settings.base ^ ".mli") in
+   let module P =
+     (Printer.Make)(struct let f = mli
+                           let locate_stretches = None end) in
+     P.interface (interface grammar); close_out mli)
+[
+  structure_item (src/interface.ml[14,999+0]..src/interface.ml[14,999+16])
+    Tstr_open Fresh
+    module_expr (src/interface.ml[14,999+5]..src/interface.ml[14,999+16])
+      Tmod_ident "Dune__exe!.BasicSyntax"
+  structure_item (src/interface.ml[15,1016+0]..src/interface.ml[15,1016+7])
+    Tstr_open Fresh
+    module_expr (src/interface.ml[15,1016+5]..src/interface.ml[15,1016+7])
+      Tmod_ident "Dune__exe!.IL"
+  structure_item (src/interface.ml[16,1024+0]..src/interface.ml[16,1024+13])
+    Tstr_open Fresh
+    module_expr (src/interface.ml[16,1024+5]..src/interface.ml[16,1024+13])
+      Tmod_ident "Dune__exe!.CodeBits"
+  structure_item (src/interface.ml[22,1151+0]..src/interface.ml[23,1165+9])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[22,1151+4]..src/interface.ml[22,1151+11])
+          Tpat_var "excname/490"
+        expression (src/interface.ml[23,1165+2]..src/interface.ml[23,1165+9])
+          Texp_constant Const_string("Error",(src/interface.ml[23,1165+3]..src/interface.ml[23,1165+8]),None)
+    ]
+  structure_item (src/interface.ml[25,1176+0]..src/interface.ml[28,1288+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[25,1176+4]..src/interface.ml[25,1176+10])
+          Tpat_var "excdef/491"
+        expression (src/interface.ml[25,1176+13]..src/interface.ml[28,1288+1])
+          Texp_record
+            fields =
+              [
+                "excname"
+                  expression (src/interface.ml[26,1191+12]..src/interface.ml[26,1191+19])
+                    Texp_ident "excname/490"
+                "exceq"
+                  expression (src/interface.ml[27,1212+10]..src/interface.ml[27,1212+74])
+                    Texp_ifthenelse
+                    expression (src/interface.ml[27,1212+14]..src/interface.ml[27,1212+31])
+                      Texp_ident "Dune__exe!.Settings.fixedexc"
+                    expression (src/interface.ml[27,1212+37]..src/interface.ml[27,1212+63])
+                      Texp_construct "Some"
+                      [
+                        expression (src/interface.ml[27,1212+42]..src/interface.ml[27,1212+63])
+                          Texp_constant Const_string("Parsing.Parse_error",(src/interface.ml[27,1212+43]..src/interface.ml[27,1212+62]),None)
+                      ]
+                    Some
+                      expression (src/interface.ml[27,1212+69]..src/interface.ml[27,1212+73])
+                        Texp_construct "None"
+                        []
+              ]
+            representation =
+              Record_regular
+            extended_expression =
+              None
+    ]
+  structure_item (src/interface.ml[34,1450+0]..src/interface.ml[36,1556+70])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[34,1450+4]..src/interface.ml[34,1450+19])
+          Tpat_var "entrytypescheme/552"
+        expression (src/interface.ml[34,1450+20]..src/interface.ml[36,1556+70]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[34,1450+20]..src/interface.ml[34,1450+27])
+                Tpat_var "grammar/554"
+              expression (src/interface.ml[34,1450+28]..src/interface.ml[36,1556+70]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/interface.ml[34,1450+28]..src/interface.ml[34,1450+34])
+                      Tpat_var "symbol/555"
+                    expression (src/interface.ml[35,1487+2]..src/interface.ml[36,1556+70])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/interface.ml[35,1487+6]..src/interface.ml[35,1487+9])
+                            Tpat_var "typ/556"
+                          expression (src/interface.ml[35,1487+12]..src/interface.ml[35,1487+65])
+                            Texp_construct "TypTextual"
+                            [
+                              expression (src/interface.ml[35,1487+23]..src/interface.ml[35,1487+65])
+                                Texp_apply
+                                expression (src/interface.ml[35,1487+24]..src/interface.ml[35,1487+49])
+                                  Texp_ident "Dune__exe!.BasicSyntax.ocamltype_of_start_symbol"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/interface.ml[35,1487+50]..src/interface.ml[35,1487+57])
+                                      Texp_ident "grammar/554"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/interface.ml[35,1487+58]..src/interface.ml[35,1487+64])
+                                      Texp_ident "symbol/555"
+                                ]
+                            ]
+                      ]
+                      expression (src/interface.ml[36,1556+2]..src/interface.ml[36,1556+70])
+                        Texp_apply
+                        expression (src/interface.ml[36,1556+2]..src/interface.ml[36,1556+13])
+                          Texp_ident "Dune__exe!.CodeBits.type2scheme"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/interface.ml[36,1556+14]..src/interface.ml[36,1556+70])
+                              Texp_apply
+                              expression (src/interface.ml[36,1556+15]..src/interface.ml[36,1556+21])
+                                Texp_ident "Dune__exe!.CodeBits.marrow"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[36,1556+22]..src/interface.ml[36,1556+65])
+                                    Texp_construct "::"
+                                    [
+                                      expression (src/interface.ml[36,1556+24]..src/interface.ml[36,1556+54])
+                                        Texp_apply
+                                        expression (src/interface.ml[36,1556+24]..src/interface.ml[36,1556+29])
+                                          Texp_ident "Dune__exe!.CodeBits.arrow"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/interface.ml[36,1556+30]..src/interface.ml[36,1556+37])
+                                              Texp_ident "Dune__exe!.CodeBits.tlexbuf"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/interface.ml[36,1556+38]..src/interface.ml[36,1556+54])
+                                              Texp_ident "Dune__exe!.TokenType.ttoken"
+                                        ]
+                                      expression (src/interface.ml[36,1556+56]..src/interface.ml[36,1556+65]) ghost
+                                        Texp_construct "::"
+                                        [
+                                          expression (src/interface.ml[36,1556+56]..src/interface.ml[36,1556+63])
+                                            Texp_ident "Dune__exe!.CodeBits.tlexbuf"
+                                          expression (src/interface.ml[36,1556+64]..src/interface.ml[36,1556+65]) ghost
+                                            Texp_construct "[]"
+                                            []
+                                        ]
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[36,1556+66]..src/interface.ml[36,1556+69])
+                                    Texp_ident "typ/556"
+                              ]
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[44,1876+0]..src/interface.ml[45,1894+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[44,1876+4]..src/interface.ml[44,1876+15])
+          Tpat_var "interpreter/664"
+        expression (src/interface.ml[45,1894+2]..src/interface.ml[45,1894+21])
+          Texp_constant Const_string("MenhirInterpreter",(src/interface.ml[45,1894+3]..src/interface.ml[45,1894+20]),None)
+    ]
+  structure_item (src/interface.ml[47,1917+0]..src/interface.ml[48,1936+45])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[47,1917+4]..src/interface.ml[47,1917+14])
+          Tpat_var "checkpoint/665"
+        expression (src/interface.ml[47,1917+15]..src/interface.ml[48,1936+45]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[47,1917+15]..src/interface.ml[47,1917+16])
+                Tpat_var "t/667"
+              expression (src/interface.ml[48,1936+2]..src/interface.ml[48,1936+45])
+                Texp_construct "TypApp"
+                [
+                  expression (src/interface.ml[48,1936+10]..src/interface.ml[48,1936+37])
+                    Texp_apply
+                    expression (src/interface.ml[48,1936+22]..src/interface.ml[48,1936+23])
+                      Texp_ident "Stdlib!.^"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/interface.ml[48,1936+10]..src/interface.ml[48,1936+21])
+                          Texp_ident "interpreter/664"
+                      <arg>
+                        Nolabel
+                        expression (src/interface.ml[48,1936+24]..src/interface.ml[48,1936+37])
+                          Texp_constant Const_string(".checkpoint",(src/interface.ml[48,1936+25]..src/interface.ml[48,1936+36]),None)
+                    ]
+                  expression (src/interface.ml[48,1936+39]..src/interface.ml[48,1936+44])
+                    Texp_construct "::"
+                    [
+                      expression (src/interface.ml[48,1936+41]..src/interface.ml[48,1936+42])
+                        Texp_ident "t/667"
+                      expression (src/interface.ml[48,1936+43]..src/interface.ml[48,1936+44]) ghost
+                        Texp_construct "[]"
+                        []
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[50,1983+0]..src/interface.ml[51,1998+12])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[50,1983+4]..src/interface.ml[50,1983+12])
+          Tpat_var "lr1state/668"
+        expression (src/interface.ml[51,1998+2]..src/interface.ml[51,1998+12])
+          Texp_constant Const_string("lr1state",(src/interface.ml[51,1998+3]..src/interface.ml[51,1998+11]),None)
+    ]
+  structure_item (src/interface.ml[53,2012+0]..src/interface.ml[54,2036+24])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[53,2012+4]..src/interface.ml[53,2012+13])
+          Tpat_var "tlr1state/669"
+        expression (src/interface.ml[53,2012+14]..src/interface.ml[54,2036+24]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[53,2012+14]..src/interface.ml[53,2012+15])
+                Tpat_var "a/671"
+              expression (src/interface.ml[54,2036+2]..src/interface.ml[54,2036+24])
+                extra
+                  Texp_constraint
+                  core_type (src/interface.ml[53,2012+18]..src/interface.ml[53,2012+21])
+                    Ttyp_constr "Dune__exe!.IL.typ"
+                    []
+                Texp_construct "TypApp"
+                [
+                  expression (src/interface.ml[54,2036+10]..src/interface.ml[54,2036+18])
+                    Texp_ident "lr1state/668"
+                  expression (src/interface.ml[54,2036+20]..src/interface.ml[54,2036+23])
+                    Texp_construct "::"
+                    [
+                      expression (src/interface.ml[54,2036+21]..src/interface.ml[54,2036+22])
+                        Texp_ident "a/671"
+                      expression (src/interface.ml[54,2036+22]..src/interface.ml[54,2036+23]) ghost
+                        Texp_construct "[]"
+                        []
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[60,2222+0]..src/interface.ml[61,2240+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[60,2222+4]..src/interface.ml[60,2222+15])
+          Tpat_var "incremental/672"
+        expression (src/interface.ml[61,2240+2]..src/interface.ml[61,2240+15])
+          Texp_constant Const_string("Incremental",(src/interface.ml[61,2240+3]..src/interface.ml[61,2240+14]),None)
+    ]
+  structure_item (src/interface.ml[65,2335+0]..src/interface.ml[67,2451+51])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[65,2335+4]..src/interface.ml[65,2335+31])
+          Tpat_var "entrytypescheme_incremental/673"
+        expression (src/interface.ml[65,2335+32]..src/interface.ml[67,2451+51]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[65,2335+32]..src/interface.ml[65,2335+39])
+                Tpat_var "grammar/675"
+              expression (src/interface.ml[65,2335+40]..src/interface.ml[67,2451+51]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/interface.ml[65,2335+40]..src/interface.ml[65,2335+46])
+                      Tpat_var "symbol/676"
+                    expression (src/interface.ml[66,2384+2]..src/interface.ml[67,2451+51])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/interface.ml[66,2384+6]..src/interface.ml[66,2384+7])
+                            Tpat_var "t/677"
+                          expression (src/interface.ml[66,2384+10]..src/interface.ml[66,2384+63])
+                            Texp_construct "TypTextual"
+                            [
+                              expression (src/interface.ml[66,2384+21]..src/interface.ml[66,2384+63])
+                                Texp_apply
+                                expression (src/interface.ml[66,2384+22]..src/interface.ml[66,2384+47])
+                                  Texp_ident "Dune__exe!.BasicSyntax.ocamltype_of_start_symbol"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/interface.ml[66,2384+48]..src/interface.ml[66,2384+55])
+                                      Texp_ident "grammar/675"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/interface.ml[66,2384+56]..src/interface.ml[66,2384+62])
+                                      Texp_ident "symbol/676"
+                                ]
+                            ]
+                      ]
+                      expression (src/interface.ml[67,2451+2]..src/interface.ml[67,2451+51])
+                        Texp_apply
+                        expression (src/interface.ml[67,2451+2]..src/interface.ml[67,2451+13])
+                          Texp_ident "Dune__exe!.CodeBits.type2scheme"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/interface.ml[67,2451+14]..src/interface.ml[67,2451+51])
+                              Texp_apply
+                              expression (src/interface.ml[67,2451+15]..src/interface.ml[67,2451+21])
+                                Texp_ident "Dune__exe!.CodeBits.marrow"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[67,2451+22]..src/interface.ml[67,2451+35])
+                                    Texp_construct "::"
+                                    [
+                                      expression (src/interface.ml[67,2451+24]..src/interface.ml[67,2451+33])
+                                        Texp_ident "Dune__exe!.CodeBits.tposition"
+                                      expression (src/interface.ml[67,2451+34]..src/interface.ml[67,2451+35]) ghost
+                                        Texp_construct "[]"
+                                        []
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[67,2451+36]..src/interface.ml[67,2451+50])
+                                    Texp_apply
+                                    expression (src/interface.ml[67,2451+37]..src/interface.ml[67,2451+47])
+                                      Texp_ident "checkpoint/665"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/interface.ml[67,2451+48]..src/interface.ml[67,2451+49])
+                                          Texp_ident "t/677"
+                                    ]
+                              ]
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[73,2654+0]..src/interface.ml[74,2671+14])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[73,2654+4]..src/interface.ml[73,2654+14])
+          Tpat_var "inspection/678"
+        expression (src/interface.ml[74,2671+2]..src/interface.ml[74,2671+14])
+          Texp_constant Const_string("Inspection",(src/interface.ml[74,2671+3]..src/interface.ml[74,2671+13]),None)
+    ]
+  structure_item (src/interface.ml[81,2885+0]..src/interface.ml[95,3256+4])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[81,2885+4]..src/interface.ml[81,2885+18])
+          Tpat_var "monolithic_api/679"
+        expression (src/interface.ml[81,2885+19]..src/interface.ml[95,3256+4]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[81,2885+19]..src/interface.ml[81,2885+26])
+                Tpat_var "grammar/681"
+              expression (src/interface.ml[83,2915+2]..src/interface.ml[95,3256+4])
+                Texp_apply
+                expression (src/interface.ml[83,2915+33]..src/interface.ml[83,2915+34])
+                  Texp_ident "Stdlib!.@"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/interface.ml[83,2915+2]..src/interface.ml[83,2915+32])
+                      Texp_apply
+                      expression (src/interface.ml[83,2915+2]..src/interface.ml[83,2915+24])
+                        Texp_ident "Dune__exe!.TokenType.tokentypedef"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/interface.ml[83,2915+25]..src/interface.ml[83,2915+32])
+                            Texp_ident "grammar/681"
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/interface.ml[85,2951+2]..src/interface.ml[95,3256+4])
+                      Texp_construct "::"
+                      [
+                        expression (src/interface.ml[85,2951+2]..src/interface.ml[85,2951+71])
+                          Texp_construct "IIComment"
+                          [
+                            expression (src/interface.ml[85,2951+12]..src/interface.ml[85,2951+71])
+                              Texp_constant Const_string("This exception is raised by the monolithic API functions.",(src/interface.ml[85,2951+13]..src/interface.ml[85,2951+70]),None)
+                          ]
+                        expression (src/interface.ml[86,3026+2]..src/interface.ml[95,3256+4])
+                          Texp_construct "::"
+                          [
+                            expression (src/interface.ml[86,3026+2]..src/interface.ml[86,3026+23])
+                              Texp_construct "IIExcDecls"
+                              [
+                                expression (src/interface.ml[86,3026+13]..src/interface.ml[86,3026+23])
+                                  Texp_construct "::"
+                                  [
+                                    expression (src/interface.ml[86,3026+15]..src/interface.ml[86,3026+21])
+                                      Texp_ident "excdef/491"
+                                    expression (src/interface.ml[86,3026+22]..src/interface.ml[86,3026+23]) ghost
+                                      Texp_construct "[]"
+                                      []
+                                  ]
+                              ]
+                            expression (src/interface.ml[88,3054+2]..src/interface.ml[95,3256+4])
+                              Texp_construct "::"
+                              [
+                                expression (src/interface.ml[88,3054+2]..src/interface.ml[88,3054+33])
+                                  Texp_construct "IIComment"
+                                  [
+                                    expression (src/interface.ml[88,3054+12]..src/interface.ml[88,3054+33])
+                                      Texp_constant Const_string("The monolithic API.",(src/interface.ml[88,3054+13]..src/interface.ml[88,3054+32]),None)
+                                  ]
+                                expression (src/interface.ml[89,3091+2]..src/interface.ml[95,3256+4])
+                                  Texp_construct "::"
+                                  [
+                                    expression (src/interface.ml[89,3091+2]..src/interface.ml[93,3248+3])
+                                      Texp_construct "IIValDecls"
+                                      [
+                                        expression (src/interface.ml[89,3091+13]..src/interface.ml[93,3248+3])
+                                          Texp_apply
+                                          expression (src/interface.ml[90,3106+4]..src/interface.ml[90,3106+18])
+                                            Texp_ident "Dune__exe!.StringSet.fold"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/interface.ml[90,3106+19]..src/interface.ml[92,3217+5])
+                                                Texp_function
+                                                Nolabel
+                                                [
+                                                  <case>
+                                                    pattern (src/interface.ml[90,3106+24]..src/interface.ml[90,3106+30])
+                                                      Tpat_var "symbol/728"
+                                                    expression (src/interface.ml[90,3106+31]..src/interface.ml[91,3146+70]) ghost
+                                                      Texp_function
+                                                      Nolabel
+                                                      [
+                                                        <case>
+                                                          pattern (src/interface.ml[90,3106+31]..src/interface.ml[90,3106+36])
+                                                            Tpat_var "decls/729"
+                                                          expression (src/interface.ml[91,3146+6]..src/interface.ml[91,3146+70])
+                                                            Texp_construct "::"
+                                                            [
+                                                              expression (src/interface.ml[91,3146+6]..src/interface.ml[91,3146+61])
+                                                                Texp_tuple
+                                                                [
+                                                                  expression (src/interface.ml[91,3146+7]..src/interface.ml[91,3146+28])
+                                                                    Texp_apply
+                                                                    expression (src/interface.ml[91,3146+7]..src/interface.ml[91,3146+21])
+                                                                      Texp_ident "Dune__exe!.Misc.normalize"
+                                                                    [
+                                                                      <arg>
+                                                                        Nolabel
+                                                                        expression (src/interface.ml[91,3146+22]..src/interface.ml[91,3146+28])
+                                                                          Texp_ident "symbol/728"
+                                                                    ]
+                                                                  expression (src/interface.ml[91,3146+30]..src/interface.ml[91,3146+60])
+                                                                    Texp_apply
+                                                                    expression (src/interface.ml[91,3146+30]..src/interface.ml[91,3146+45])
+                                                                      Texp_ident "entrytypescheme/552"
+                                                                    [
+                                                                      <arg>
+                                                                        Nolabel
+                                                                        expression (src/interface.ml[91,3146+46]..src/interface.ml[91,3146+53])
+                                                                          Texp_ident "grammar/681"
+                                                                      <arg>
+                                                                        Nolabel
+                                                                        expression (src/interface.ml[91,3146+54]..src/interface.ml[91,3146+60])
+                                                                          Texp_ident "symbol/728"
+                                                                    ]
+                                                                ]
+                                                              expression (src/interface.ml[91,3146+65]..src/interface.ml[91,3146+70])
+                                                                Texp_ident "decls/729"
+                                                            ]
+                                                      ]
+                                                ]
+                                            <arg>
+                                              Nolabel
+                                              expression (src/interface.ml[92,3217+6]..src/interface.ml[92,3217+27])
+                                                Texp_field
+                                                expression (src/interface.ml[92,3217+6]..src/interface.ml[92,3217+13])
+                                                  Texp_ident "grammar/681"
+                                                "start_symbols"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/interface.ml[92,3217+28]..src/interface.ml[92,3217+30])
+                                                Texp_construct "[]"
+                                                []
+                                          ]
+                                      ]
+                                    expression (src/interface.ml[95,3256+2]..src/interface.ml[95,3256+4])
+                                      Texp_construct "[]"
+                                      []
+                                  ]
+                              ]
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[101,3371+0]..src/interface.ml[125,4137+4])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[101,3371+4]..src/interface.ml[101,3371+18])
+          Tpat_var "inspection_api/812"
+        expression (src/interface.ml[101,3371+19]..src/interface.ml[125,4137+4]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[101,3371+19]..src/interface.ml[101,3371+26])
+                Tpat_var "grammar/814"
+              expression (src/interface.ml[101,3371+27]..src/interface.ml[125,4137+4]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/interface.ml[101,3371+27]..src/interface.ml[101,3371+29])
+                      Tpat_construct "()"
+                      []
+                      None
+                    expression (src/interface.ml[103,3404+2]..src/interface.ml[125,4137+4])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/interface.ml[103,3404+6]..src/interface.ml[103,3404+7])
+                            Tpat_var "a/815"
+                          expression (src/interface.ml[103,3404+10]..src/interface.ml[103,3404+13])
+                            Texp_constant Const_string("a",(src/interface.ml[103,3404+11]..src/interface.ml[103,3404+12]),None)
+                      ]
+                      expression (src/interface.ml[107,3478+2]..src/interface.ml[125,4137+4])
+                        Texp_apply
+                        expression (src/interface.ml[107,3478+33]..src/interface.ml[107,3478+34])
+                          Texp_ident "Stdlib!.@"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/interface.ml[107,3478+2]..src/interface.ml[107,3478+32])
+                              Texp_apply
+                              expression (src/interface.ml[107,3478+2]..src/interface.ml[107,3478+24])
+                                Texp_ident "Dune__exe!.TokenType.tokengadtdef"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[107,3478+25]..src/interface.ml[107,3478+32])
+                                    Texp_ident "grammar/814"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/interface.ml[108,3513+2]..src/interface.ml[125,4137+4])
+                              Texp_apply
+                              expression (src/interface.ml[108,3513+45]..src/interface.ml[108,3513+46])
+                                Texp_ident "Stdlib!.@"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[108,3513+2]..src/interface.ml[108,3513+44])
+                                    Texp_apply
+                                    expression (src/interface.ml[108,3513+2]..src/interface.ml[108,3513+36])
+                                      Texp_ident "Dune__exe!.NonterminalType.nonterminalgadtdef"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/interface.ml[108,3513+37]..src/interface.ml[108,3513+44])
+                                          Texp_ident "grammar/814"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[113,3672+2]..src/interface.ml[125,4137+4])
+                                    Texp_construct "::"
+                                    [
+                                      expression (src/interface.ml[113,3672+2]..src/interface.ml[113,3672+33])
+                                        Texp_construct "IIComment"
+                                        [
+                                          expression (src/interface.ml[113,3672+12]..src/interface.ml[113,3672+33])
+                                            Texp_constant Const_string("The inspection API.",(src/interface.ml[113,3672+13]..src/interface.ml[113,3672+32]),None)
+                                        ]
+                                      expression (src/interface.ml[114,3709+2]..src/interface.ml[125,4137+4])
+                                        Texp_construct "::"
+                                        [
+                                          expression (src/interface.ml[114,3709+2]..src/interface.ml[123,4129+3])
+                                            Texp_construct "IIInclude"
+                                            [
+                                              expression (src/interface.ml[114,3709+12]..src/interface.ml[123,4129+3])
+                                                Texp_apply
+                                                expression (src/interface.ml[115,3723+4]..src/interface.ml[115,3723+14])
+                                                  Texp_ident "Dune__exe!.CodeBits.with_types"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/interface.ml[115,3723+15]..src/interface.ml[115,3723+28])
+                                                      Texp_construct "WKDestructive"
+                                                      []
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/interface.ml[116,3752+6]..src/interface.ml[116,3752+46])
+                                                      Texp_constant Const_string("MenhirLib.IncrementalEngine.INSPECTION",(src/interface.ml[116,3752+7]..src/interface.ml[116,3752+45]),None)
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/interface.ml[116,3752+47]..src/interface.ml[122,4121+7])
+                                                      Texp_construct "::"
+                                                      [
+                                                        expression (src/interface.ml[117,3801+8]..src/interface.ml[117,3801+47])
+                                                          Texp_tuple
+                                                          [
+                                                            expression (src/interface.ml[117,3801+8]..src/interface.ml[117,3801+13])
+                                                              Texp_construct "::"
+                                                              [
+                                                                expression (src/interface.ml[117,3801+10]..src/interface.ml[117,3801+11])
+                                                                  Texp_ident "a/815"
+                                                                expression (src/interface.ml[117,3801+12]..src/interface.ml[117,3801+13]) ghost
+                                                                  Texp_construct "[]"
+                                                                  []
+                                                              ]
+                                                            expression (src/interface.ml[117,3801+15]..src/interface.ml[117,3801+25])
+                                                              Texp_constant Const_string("lr1state",(src/interface.ml[117,3801+16]..src/interface.ml[117,3801+24]),None)
+                                                            expression (src/interface.ml[117,3801+27]..src/interface.ml[117,3801+47])
+                                                              Texp_apply
+                                                              expression (src/interface.ml[117,3801+27]..src/interface.ml[117,3801+36])
+                                                                Texp_ident "tlr1state/669"
+                                                              [
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/interface.ml[117,3801+37]..src/interface.ml[117,3801+47])
+                                                                    Texp_construct "TypVar"
+                                                                    [
+                                                                      expression (src/interface.ml[117,3801+45]..src/interface.ml[117,3801+46])
+                                                                        Texp_ident "a/815"
+                                                                    ]
+                                                              ]
+                                                          ]
+                                                        expression (src/interface.ml[118,3850+8]..src/interface.ml[122,4121+7]) ghost
+                                                          Texp_construct "::"
+                                                          [
+                                                            expression (src/interface.ml[118,3850+8]..src/interface.ml[118,3850+51])
+                                                              Texp_tuple
+                                                              [
+                                                                expression (src/interface.ml[118,3850+8]..src/interface.ml[118,3850+10])
+                                                                  Texp_construct "[]"
+                                                                  []
+                                                                expression (src/interface.ml[118,3850+12]..src/interface.ml[118,3850+24])
+                                                                  Texp_constant Const_string("production",(src/interface.ml[118,3850+13]..src/interface.ml[118,3850+23]),None)
+                                                                expression (src/interface.ml[118,3850+26]..src/interface.ml[118,3850+51])
+                                                                  Texp_construct "TypApp"
+                                                                  [
+                                                                    expression (src/interface.ml[118,3850+34]..src/interface.ml[118,3850+46])
+                                                                      Texp_constant Const_string("production",(src/interface.ml[118,3850+35]..src/interface.ml[118,3850+45]),None)
+                                                                    expression (src/interface.ml[118,3850+48]..src/interface.ml[118,3850+50])
+                                                                      Texp_construct "[]"
+                                                                      []
+                                                                  ]
+                                                              ]
+                                                            expression (src/interface.ml[119,3903+8]..src/interface.ml[122,4121+7]) ghost
+                                                              Texp_construct "::"
+                                                              [
+                                                                expression (src/interface.ml[119,3903+8]..src/interface.ml[119,3903+69])
+                                                                  Texp_tuple
+                                                                  [
+                                                                    expression (src/interface.ml[119,3903+8]..src/interface.ml[119,3903+13])
+                                                                      Texp_construct "::"
+                                                                      [
+                                                                        expression (src/interface.ml[119,3903+10]..src/interface.ml[119,3903+11])
+                                                                          Texp_ident "a/815"
+                                                                        expression (src/interface.ml[119,3903+12]..src/interface.ml[119,3903+13]) ghost
+                                                                          Texp_construct "[]"
+                                                                          []
+                                                                      ]
+                                                                    expression (src/interface.ml[119,3903+15]..src/interface.ml[119,3903+36])
+                                                                      Texp_ident "Dune__exe!.TokenType.tctokengadt"
+                                                                    expression (src/interface.ml[119,3903+38]..src/interface.ml[119,3903+69])
+                                                                      Texp_apply
+                                                                      expression (src/interface.ml[119,3903+38]..src/interface.ml[119,3903+58])
+                                                                        Texp_ident "Dune__exe!.TokenType.ttokengadt"
+                                                                      [
+                                                                        <arg>
+                                                                          Nolabel
+                                                                          expression (src/interface.ml[119,3903+59]..src/interface.ml[119,3903+69])
+                                                                            Texp_construct "TypVar"
+                                                                            [
+                                                                              expression (src/interface.ml[119,3903+67]..src/interface.ml[119,3903+68])
+                                                                                Texp_ident "a/815"
+                                                                            ]
+                                                                      ]
+                                                                  ]
+                                                                expression (src/interface.ml[120,3974+8]..src/interface.ml[122,4121+7]) ghost
+                                                                  Texp_construct "::"
+                                                                  [
+                                                                    expression (src/interface.ml[120,3974+8]..src/interface.ml[120,3974+93])
+                                                                      Texp_tuple
+                                                                      [
+                                                                        expression (src/interface.ml[120,3974+8]..src/interface.ml[120,3974+13])
+                                                                          Texp_construct "::"
+                                                                          [
+                                                                            expression (src/interface.ml[120,3974+10]..src/interface.ml[120,3974+11])
+                                                                              Texp_ident "a/815"
+                                                                            expression (src/interface.ml[120,3974+12]..src/interface.ml[120,3974+13]) ghost
+                                                                              Texp_construct "[]"
+                                                                              []
+                                                                          ]
+                                                                        expression (src/interface.ml[120,3974+15]..src/interface.ml[120,3974+48])
+                                                                          Texp_ident "Dune__exe!.NonterminalType.tcnonterminalgadt"
+                                                                        expression (src/interface.ml[120,3974+50]..src/interface.ml[120,3974+93])
+                                                                          Texp_apply
+                                                                          expression (src/interface.ml[120,3974+50]..src/interface.ml[120,3974+82])
+                                                                            Texp_ident "Dune__exe!.NonterminalType.tnonterminalgadt"
+                                                                          [
+                                                                            <arg>
+                                                                              Nolabel
+                                                                              expression (src/interface.ml[120,3974+83]..src/interface.ml[120,3974+93])
+                                                                                Texp_construct "TypVar"
+                                                                                [
+                                                                                  expression (src/interface.ml[120,3974+91]..src/interface.ml[120,3974+92])
+                                                                                    Texp_ident "a/815"
+                                                                                ]
+                                                                          ]
+                                                                      ]
+                                                                    expression (src/interface.ml[121,4069+8]..src/interface.ml[122,4121+7]) ghost
+                                                                      Texp_construct "::"
+                                                                      [
+                                                                        expression (src/interface.ml[121,4069+8]..src/interface.ml[121,4069+50])
+                                                                          Texp_tuple
+                                                                          [
+                                                                            expression (src/interface.ml[121,4069+8]..src/interface.ml[121,4069+13])
+                                                                              Texp_construct "::"
+                                                                              [
+                                                                                expression (src/interface.ml[121,4069+10]..src/interface.ml[121,4069+11])
+                                                                                  Texp_ident "a/815"
+                                                                                expression (src/interface.ml[121,4069+12]..src/interface.ml[121,4069+13]) ghost
+                                                                                  Texp_construct "[]"
+                                                                                  []
+                                                                              ]
+                                                                            expression (src/interface.ml[121,4069+15]..src/interface.ml[121,4069+20])
+                                                                              Texp_constant Const_string("env",(src/interface.ml[121,4069+16]..src/interface.ml[121,4069+19]),None)
+                                                                            expression (src/interface.ml[121,4069+22]..src/interface.ml[121,4069+50])
+                                                                              Texp_construct "TypApp"
+                                                                              [
+                                                                                expression (src/interface.ml[121,4069+30]..src/interface.ml[121,4069+35])
+                                                                                  Texp_constant Const_string("env",(src/interface.ml[121,4069+31]..src/interface.ml[121,4069+34]),None)
+                                                                                expression (src/interface.ml[121,4069+37]..src/interface.ml[121,4069+49])
+                                                                                  Texp_construct "::"
+                                                                                  [
+                                                                                    expression (src/interface.ml[121,4069+39]..src/interface.ml[121,4069+47])
+                                                                                      Texp_construct "TypVar"
+                                                                                      [
+                                                                                        expression (src/interface.ml[121,4069+46]..src/interface.ml[121,4069+47])
+                                                                                          Texp_ident "a/815"
+                                                                                      ]
+                                                                                    expression (src/interface.ml[121,4069+48]..src/interface.ml[121,4069+49]) ghost
+                                                                                      Texp_construct "[]"
+                                                                                      []
+                                                                                  ]
+                                                                              ]
+                                                                          ]
+                                                                        expression (src/interface.ml[122,4121+6]..src/interface.ml[122,4121+7]) ghost
+                                                                          Texp_construct "[]"
+                                                                          []
+                                                                      ]
+                                                                  ]
+                                                              ]
+                                                          ]
+                                                      ]
+                                                ]
+                                            ]
+                                          expression (src/interface.ml[125,4137+2]..src/interface.ml[125,4137+4])
+                                            Texp_construct "[]"
+                                            []
+                                        ]
+                                    ]
+                              ]
+                        ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[131,4253+0]..src/interface.ml[138,4503+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[131,4253+4]..src/interface.ml[131,4253+22])
+          Tpat_var "incremental_engine/821"
+        expression (src/interface.ml[131,4253+23]..src/interface.ml[138,4503+5]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[131,4253+23]..src/interface.ml[131,4253+25])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/interface.ml[132,4295+2]..src/interface.ml[138,4503+5])
+                extra
+                  Texp_constraint
+                  core_type (src/interface.ml[131,4253+28]..src/interface.ml[131,4253+39])
+                    Ttyp_constr "Dune__exe!.IL.module_type"
+                    []
+                Texp_apply
+                expression (src/interface.ml[132,4295+2]..src/interface.ml[132,4295+12])
+                  Texp_ident "Dune__exe!.CodeBits.with_types"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/interface.ml[132,4295+13]..src/interface.ml[132,4295+29])
+                      Texp_construct "WKNonDestructive"
+                      []
+                  <arg>
+                    Nolabel
+                    expression (src/interface.ml[133,4325+4]..src/interface.ml[133,4325+52])
+                      Texp_constant Const_string("MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE",(src/interface.ml[133,4325+5]..src/interface.ml[133,4325+51]),None)
+                  <arg>
+                    Nolabel
+                    expression (src/interface.ml[134,4378+4]..src/interface.ml[138,4503+5])
+                      Texp_construct "::"
+                      [
+                        expression (src/interface.ml[135,4384+6]..src/interface.ml[137,4480+22])
+                          Texp_tuple
+                          [
+                            expression (src/interface.ml[135,4384+6]..src/interface.ml[135,4384+8])
+                              Texp_construct "[]"
+                              []
+                            expression (src/interface.ml[136,4394+6]..src/interface.ml[136,4394+13])
+                              Texp_constant Const_string("token",(src/interface.ml[136,4394+7]..src/interface.ml[136,4394+12]),None)
+                            expression (src/interface.ml[137,4480+6]..src/interface.ml[137,4480+22])
+                              Texp_ident "Dune__exe!.TokenType.ttoken"
+                          ]
+                        expression (src/interface.ml[138,4503+4]..src/interface.ml[138,4503+5]) ghost
+                          Texp_construct "[]"
+                          []
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[140,4510+0]..src/interface.ml[151,4835+4])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[140,4510+4]..src/interface.ml[140,4510+28])
+          Tpat_var "incremental_entry_points/824"
+        expression (src/interface.ml[140,4510+29]..src/interface.ml[151,4835+4]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[140,4510+29]..src/interface.ml[140,4510+36])
+                Tpat_var "grammar/826"
+              expression (src/interface.ml[142,4562+2]..src/interface.ml[151,4835+4])
+                extra
+                  Texp_constraint
+                  core_type (src/interface.ml[140,4510+39]..src/interface.ml[140,4510+48])
+                    Ttyp_constr "Dune__exe!.IL.interface"
+                    []
+                Texp_construct "::"
+                [
+                  expression (src/interface.ml[142,4562+2]..src/interface.ml[142,4562+56])
+                    Texp_construct "IIComment"
+                    [
+                      expression (src/interface.ml[142,4562+12]..src/interface.ml[142,4562+56])
+                        Texp_constant Const_string("The entry point(s) to the incremental API.",(src/interface.ml[142,4562+13]..src/interface.ml[142,4562+55]),None)
+                    ]
+                  expression (src/interface.ml[143,4622+2]..src/interface.ml[151,4835+4])
+                    Texp_construct "::"
+                    [
+                      expression (src/interface.ml[143,4622+2]..src/interface.ml[149,4826+4])
+                        Texp_construct "IIModule"
+                        [
+                          expression (src/interface.ml[143,4622+12]..src/interface.ml[143,4622+23])
+                            Texp_ident "incremental/672"
+                          expression (src/interface.ml[143,4622+25]..src/interface.ml[149,4826+3])
+                            Texp_construct "MTSigEnd"
+                            [
+                              expression (src/interface.ml[143,4622+34]..src/interface.ml[149,4826+3])
+                                Texp_construct "::"
+                                [
+                                  expression (src/interface.ml[144,4658+4]..src/interface.ml[148,4820+5])
+                                    Texp_construct "IIValDecls"
+                                    [
+                                      expression (src/interface.ml[144,4658+15]..src/interface.ml[148,4820+5])
+                                        Texp_apply
+                                        expression (src/interface.ml[145,4675+6]..src/interface.ml[145,4675+20])
+                                          Texp_ident "Dune__exe!.StringSet.fold"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/interface.ml[145,4675+21]..src/interface.ml[147,4787+7])
+                                              Texp_function
+                                              Nolabel
+                                              [
+                                                <case>
+                                                  pattern (src/interface.ml[145,4675+26]..src/interface.ml[145,4675+32])
+                                                    Tpat_var "symbol/827"
+                                                  expression (src/interface.ml[145,4675+33]..src/interface.ml[146,4717+69]) ghost
+                                                    Texp_function
+                                                    Nolabel
+                                                    [
+                                                      <case>
+                                                        pattern (src/interface.ml[145,4675+33]..src/interface.ml[145,4675+38])
+                                                          Tpat_var "decls/828"
+                                                        expression (src/interface.ml[146,4717+8]..src/interface.ml[146,4717+69])
+                                                          Texp_construct "::"
+                                                          [
+                                                            expression (src/interface.ml[146,4717+8]..src/interface.ml[146,4717+60])
+                                                              Texp_tuple
+                                                              [
+                                                                expression (src/interface.ml[146,4717+9]..src/interface.ml[146,4717+15])
+                                                                  Texp_ident "symbol/827"
+                                                                expression (src/interface.ml[146,4717+17]..src/interface.ml[146,4717+59])
+                                                                  Texp_apply
+                                                                  expression (src/interface.ml[146,4717+17]..src/interface.ml[146,4717+44])
+                                                                    Texp_ident "entrytypescheme_incremental/673"
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/interface.ml[146,4717+45]..src/interface.ml[146,4717+52])
+                                                                        Texp_ident "grammar/826"
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/interface.ml[146,4717+53]..src/interface.ml[146,4717+59])
+                                                                        Texp_ident "symbol/827"
+                                                                  ]
+                                                              ]
+                                                            expression (src/interface.ml[146,4717+64]..src/interface.ml[146,4717+69])
+                                                              Texp_ident "decls/828"
+                                                          ]
+                                                    ]
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/interface.ml[147,4787+8]..src/interface.ml[147,4787+29])
+                                              Texp_field
+                                              expression (src/interface.ml[147,4787+8]..src/interface.ml[147,4787+15])
+                                                Texp_ident "grammar/826"
+                                              "start_symbols"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/interface.ml[147,4787+30]..src/interface.ml[147,4787+32])
+                                              Texp_construct "[]"
+                                              []
+                                        ]
+                                    ]
+                                  expression (src/interface.ml[149,4826+2]..src/interface.ml[149,4826+3]) ghost
+                                    Texp_construct "[]"
+                                    []
+                                ]
+                            ]
+                        ]
+                      expression (src/interface.ml[151,4835+2]..src/interface.ml[151,4835+4])
+                        Texp_construct "[]"
+                        []
+                    ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[153,4841+0]..src/interface.ml[166,5214+34])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[153,4841+4]..src/interface.ml[153,4841+19])
+          Tpat_var "incremental_api/829"
+        expression (src/interface.ml[153,4841+20]..src/interface.ml[166,5214+34]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[153,4841+20]..src/interface.ml[153,4841+27])
+                Tpat_var "grammar/831"
+              expression (src/interface.ml[153,4841+28]..src/interface.ml[166,5214+34]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/interface.ml[153,4841+28]..src/interface.ml[153,4841+30])
+                      Tpat_construct "()"
+                      []
+                      None
+                    expression (src/interface.ml[155,4887+2]..src/interface.ml[166,5214+34])
+                      extra
+                        Texp_constraint
+                        core_type (src/interface.ml[153,4841+33]..src/interface.ml[153,4841+42])
+                          Ttyp_constr "Dune__exe!.IL.interface"
+                          []
+                      Texp_construct "::"
+                      [
+                        expression (src/interface.ml[155,4887+2]..src/interface.ml[162,5087+3])
+                          Texp_construct "IIModule"
+                          [
+                            expression (src/interface.ml[156,4900+4]..src/interface.ml[156,4900+15])
+                              Texp_ident "interpreter/664"
+                            expression (src/interface.ml[157,4917+4]..src/interface.ml[161,5081+5])
+                              Texp_construct "MTSigEnd"
+                              [
+                                expression (src/interface.ml[157,4917+13]..src/interface.ml[161,5081+5])
+                                  Texp_construct "::"
+                                  [
+                                    expression (src/interface.ml[158,4932+6]..src/interface.ml[158,4932+38])
+                                      Texp_construct "IIComment"
+                                      [
+                                        expression (src/interface.ml[158,4932+16]..src/interface.ml[158,4932+38])
+                                          Texp_constant Const_string("The incremental API.",(src/interface.ml[158,4932+17]..src/interface.ml[158,4932+37]),None)
+                                      ]
+                                    expression (src/interface.ml[159,4974+6]..src/interface.ml[160,5016+64])
+                                      Texp_construct "::"
+                                      [
+                                        expression (src/interface.ml[159,4974+6]..src/interface.ml[159,4974+38])
+                                          Texp_construct "IIInclude"
+                                          [
+                                            expression (src/interface.ml[159,4974+16]..src/interface.ml[159,4974+38])
+                                              Texp_apply
+                                              expression (src/interface.ml[159,4974+17]..src/interface.ml[159,4974+35])
+                                                Texp_ident "incremental_engine/821"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/interface.ml[159,4974+35]..src/interface.ml[159,4974+37])
+                                                    Texp_construct "()"
+                                                    []
+                                              ]
+                                          ]
+                                        expression (src/interface.ml[160,5016+6]..src/interface.ml[160,5016+64])
+                                          Texp_apply
+                                          expression (src/interface.ml[160,5016+6]..src/interface.ml[160,5016+19])
+                                            Texp_ident "Dune__exe!.MList.ifnlazy"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/interface.ml[160,5016+20]..src/interface.ml[160,5016+39])
+                                                Texp_ident "Dune__exe!.Settings.inspection"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/interface.ml[160,5016+40]..src/interface.ml[160,5016+64])
+                                                Texp_apply
+                                                expression (src/interface.ml[160,5016+41]..src/interface.ml[160,5016+55])
+                                                  Texp_ident "inspection_api/812"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/interface.ml[160,5016+56]..src/interface.ml[160,5016+63])
+                                                      Texp_ident "grammar/831"
+                                                ]
+                                          ]
+                                      ]
+                                  ]
+                              ]
+                          ]
+                        expression (src/interface.ml[166,5214+2]..src/interface.ml[166,5214+34])
+                          Texp_apply
+                          expression (src/interface.ml[166,5214+2]..src/interface.ml[166,5214+26])
+                            Texp_ident "incremental_entry_points/824"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/interface.ml[166,5214+27]..src/interface.ml[166,5214+34])
+                                Texp_ident "grammar/831"
+                          ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[172,5387+0]..src/interface.ml[177,5538+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[172,5387+4]..src/interface.ml[172,5387+13])
+          Tpat_var "interface/903"
+        expression (src/interface.ml[172,5387+14]..src/interface.ml[177,5538+1]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[172,5387+14]..src/interface.ml[172,5387+21])
+                Tpat_var "grammar/905"
+              expression (src/interface.ml[172,5387+24]..src/interface.ml[177,5538+1])
+                Texp_construct "::"
+                [
+                  expression (src/interface.ml[173,5413+2]..src/interface.ml[176,5534+3])
+                    Texp_construct "IIFunctor"
+                    [
+                      expression (src/interface.ml[173,5413+13]..src/interface.ml[173,5413+31])
+                        Texp_field
+                        expression (src/interface.ml[173,5413+13]..src/interface.ml[173,5413+20])
+                          Texp_ident "grammar/905"
+                        "parameters"
+                      expression (src/interface.ml[174,5446+4]..src/interface.ml[175,5475+58])
+                        Texp_apply
+                        expression (src/interface.ml[174,5446+27]..src/interface.ml[174,5446+28])
+                          Texp_ident "Stdlib!.@"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/interface.ml[174,5446+4]..src/interface.ml[174,5446+26])
+                              Texp_apply
+                              expression (src/interface.ml[174,5446+4]..src/interface.ml[174,5446+18])
+                                Texp_ident "monolithic_api/679"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[174,5446+19]..src/interface.ml[174,5446+26])
+                                    Texp_ident "grammar/905"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/interface.ml[175,5475+4]..src/interface.ml[175,5475+58])
+                              Texp_apply
+                              expression (src/interface.ml[175,5475+4]..src/interface.ml[175,5475+17])
+                                Texp_ident "Dune__exe!.MList.ifnlazy"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[175,5475+18]..src/interface.ml[175,5475+32])
+                                    Texp_ident "Dune__exe!.Settings.table"
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[175,5475+33]..src/interface.ml[175,5475+58])
+                                    Texp_apply
+                                    expression (src/interface.ml[175,5475+34]..src/interface.ml[175,5475+49])
+                                      Texp_ident "incremental_api/829"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/interface.ml[175,5475+50]..src/interface.ml[175,5475+57])
+                                          Texp_ident "grammar/905"
+                                    ]
+                              ]
+                        ]
+                    ]
+                  expression (src/interface.ml[177,5538+0]..src/interface.ml[177,5538+1]) ghost
+                    Texp_construct "[]"
+                    []
+                ]
+          ]
+    ]
+  structure_item (src/interface.ml[183,5663+0]..src/interface.ml[193,6052+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/interface.ml[183,5663+4]..src/interface.ml[183,5663+9])
+          Tpat_var "write/906"
+        expression (src/interface.ml[183,5663+10]..src/interface.ml[193,6052+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/interface.ml[183,5663+10]..src/interface.ml[183,5663+17])
+                Tpat_var "grammar/908"
+              expression (src/interface.ml[183,5663+18]..src/interface.ml[193,6052+15]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/interface.ml[183,5663+18]..src/interface.ml[183,5663+20])
+                      Tpat_construct "()"
+                      []
+                      None
+                    expression (src/interface.ml[186,5809+2]..src/interface.ml[193,6052+15])
+                      Texp_sequence
+                      expression (src/interface.ml[186,5809+2]..src/interface.ml[186,5809+61])
+                        Texp_assert                        expression (src/interface.ml[186,5809+9]..src/interface.ml[186,5809+61])
+                          Texp_apply
+                          expression (src/interface.ml[186,5809+35]..src/interface.ml[186,5809+37])
+                            Texp_ident "Stdlib!.<>"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/interface.ml[186,5809+10]..src/interface.ml[186,5809+34])
+                                Texp_ident "Dune__exe!.Settings.token_type_mode"
+                            <arg>
+                              Nolabel
+                              expression (src/interface.ml[186,5809+38]..src/interface.ml[186,5809+60])
+                                Texp_construct "Settings.TokenTypeOnly"
+                                []
+                          ]
+                      expression (src/interface.ml[187,5872+2]..src/interface.ml[193,6052+15])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/interface.ml[187,5872+6]..src/interface.ml[187,5872+9])
+                              Tpat_var "mli/969"
+                            expression (src/interface.ml[187,5872+12]..src/interface.ml[187,5872+45])
+                              Texp_apply
+                              expression (src/interface.ml[187,5872+12]..src/interface.ml[187,5872+20])
+                                Texp_ident "Stdlib!.open_out"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[187,5872+21]..src/interface.ml[187,5872+45])
+                                    Texp_apply
+                                    expression (src/interface.ml[187,5872+36]..src/interface.ml[187,5872+37])
+                                      Texp_ident "Stdlib!.^"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/interface.ml[187,5872+22]..src/interface.ml[187,5872+35])
+                                          Texp_ident "Dune__exe!.Settings.base"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/interface.ml[187,5872+38]..src/interface.ml[187,5872+44])
+                                          Texp_constant Const_string(".mli",(src/interface.ml[187,5872+39]..src/interface.ml[187,5872+43]),None)
+                                    ]
+                              ]
+                        ]
+                        expression (src/interface.ml[188,5921+2]..src/interface.ml[193,6052+15])
+                          Texp_letmodule "P/989"
+                          module_expr (src/interface.ml[188,5921+17]..src/interface.ml[191,6007+6])
+                            Tmod_apply
+                            module_expr (src/interface.ml[188,5921+17]..src/interface.ml[188,5921+29])
+                              module_expr (src/interface.ml[188,5921+17]..src/interface.ml[188,5921+29])
+                                Tmod_ident "Dune__exe!.Printer.Make"
+                            module_expr (src/interface.ml[188,5921+31]..src/interface.ml[191,6007+5])
+                              Tmod_structure
+                              [
+                                structure_item (src/interface.ml[189,5959+4]..src/interface.ml[189,5959+15])
+                                  Tstr_value Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/interface.ml[189,5959+8]..src/interface.ml[189,5959+9])
+                                        Tpat_var "f/970"
+                                      expression (src/interface.ml[189,5959+12]..src/interface.ml[189,5959+15])
+                                        Texp_ident "mli/969"
+                                  ]
+                                structure_item (src/interface.ml[190,5975+4]..src/interface.ml[190,5975+31])
+                                  Tstr_value Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/interface.ml[190,5975+8]..src/interface.ml[190,5975+24])
+                                        Tpat_var "locate_stretches/971"
+                                      expression (src/interface.ml[190,5975+27]..src/interface.ml[190,5975+31])
+                                        Texp_construct "None"
+                                        []
+                                  ]
+                              ]
+                          expression (src/interface.ml[192,6017+2]..src/interface.ml[193,6052+15])
+                            Texp_sequence
+                            expression (src/interface.ml[192,6017+2]..src/interface.ml[192,6017+33])
+                              Texp_apply
+                              expression (src/interface.ml[192,6017+2]..src/interface.ml[192,6017+13])
+                                Texp_ident "P/989.interface"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[192,6017+14]..src/interface.ml[192,6017+33])
+                                    Texp_apply
+                                    expression (src/interface.ml[192,6017+15]..src/interface.ml[192,6017+24])
+                                      Texp_ident "interface/903"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/interface.ml[192,6017+25]..src/interface.ml[192,6017+32])
+                                          Texp_ident "grammar/908"
+                                    ]
+                              ]
+                            expression (src/interface.ml[193,6052+2]..src/interface.ml[193,6052+15])
+                              Texp_apply
+                              expression (src/interface.ml[193,6052+2]..src/interface.ml[193,6052+11])
+                                Texp_ident "Stdlib!.close_out"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/interface.ml[193,6052+12]..src/interface.ml[193,6052+15])
+                                    Texp_ident "mli/969"
+                              ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Interface>
+ "checkpoint"[value] -> <Dune__exe__Interface.7>;
+ "entrytypescheme"[value] -> <Dune__exe__Interface.2>;
+ "excdef"[value] -> <Dune__exe__Interface.1>;
+ "excname"[value] -> <Dune__exe__Interface.0>;
+ "incremental"[value] -> <Dune__exe__Interface.12>;
+ "inspection"[value] -> <Dune__exe__Interface.17>;
+ "interpreter"[value] -> <Dune__exe__Interface.6>;
+ "write"[value] -> <Dune__exe__Interface.34>;
+ }
+
+(seq
+  (let (excname/490 = "Error")
+    (setfield_ptr(root-init) 0 (global Dune__exe__Interface!) excname/490))
+  (let
+    (excdef/491 =
+       (makeblock 0 (field_imm 0 (global Dune__exe__Interface!))
+         (if (field_imm 37 (global Dune__exe__Settings!))
+           [0: "Parsing.Parse_error"] 0)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Interface!) excdef/491))
+  (let
+    (entrytypescheme/552 =
+       (function grammar/554 symbol/555
+         (let
+           (typ/556 =
+              (makeblock 0
+                (apply (field_imm 10 (global Dune__exe__BasicSyntax!))
+                  grammar/554 symbol/555)))
+           (apply (field_imm 17 (global Dune__exe__CodeBits!))
+             (apply (field_imm 35 (global Dune__exe__CodeBits!))
+               (makeblock 0
+                 (apply (field_imm 33 (global Dune__exe__CodeBits!))
+                   (field_imm 13 (global Dune__exe__CodeBits!))
+                   (field_imm 0 (global Dune__exe__TokenType!)))
+                 (makeblock 0 (field_imm 13 (global Dune__exe__CodeBits!)) 0))
+               typ/556)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Interface!)
+      entrytypescheme/552))
+  (let (interpreter/664 = "MenhirInterpreter")
+    (setfield_ptr(root-init) 3 (global Dune__exe__Interface!)
+      interpreter/664))
+  (let
+    (checkpoint/665 =
+       (function t/667
+         (makeblock 2
+           (apply (field_imm 27 (global Stdlib!))
+             (field_imm 3 (global Dune__exe__Interface!)) ".checkpoint")
+           (makeblock 0 t/667 0))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Interface!) checkpoint/665))
+  (let (lr1state/668 = "lr1state")
+    (setfield_ptr(root-init) 8 (global Dune__exe__Interface!) lr1state/668))
+  (let
+    (tlr1state/669 =
+       (function a/671
+         (makeblock 2 (field_imm 8 (global Dune__exe__Interface!))
+           (makeblock 0 a/671 0))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Interface!) tlr1state/669))
+  (let (incremental/672 = "Incremental")
+    (setfield_ptr(root-init) 5 (global Dune__exe__Interface!)
+      incremental/672))
+  (let
+    (entrytypescheme_incremental/673 =
+       (function grammar/675 symbol/676
+         (let
+           (t/677 =
+              (makeblock 0
+                (apply (field_imm 10 (global Dune__exe__BasicSyntax!))
+                  grammar/675 symbol/676)))
+           (apply (field_imm 17 (global Dune__exe__CodeBits!))
+             (apply (field_imm 35 (global Dune__exe__CodeBits!))
+               (makeblock 0 (field_imm 11 (global Dune__exe__CodeBits!)) 0)
+               (apply (field_imm 4 (global Dune__exe__Interface!)) t/677))))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Interface!)
+      entrytypescheme_incremental/673))
+  (let (inspection/678 = "Inspection")
+    (setfield_ptr(root-init) 6 (global Dune__exe__Interface!) inspection/678))
+  (let
+    (monolithic_api/679 =
+       (function grammar/681
+         (apply (field_imm 36 (global Stdlib!))
+           (apply (field_imm 5 (global Dune__exe__TokenType!)) grammar/681)
+           (makeblock 0
+             [6: "This exception is raised by the monolithic API functions."]
+             (makeblock 0
+               (makeblock 1
+                 (makeblock 0 (field_imm 1 (global Dune__exe__Interface!)) 0))
+               (makeblock 0 [6: "The monolithic API."]
+                 (makeblock 0
+                   (makeblock 3
+                     (apply (field_imm 23 (global Dune__exe__StringSet!))
+                       (function symbol/728 decls/729
+                         (makeblock 0
+                           (makeblock 0
+                             (apply (field_imm 21 (global Dune__exe__Misc!))
+                               symbol/728)
+                             (apply
+                               (field_imm 2 (global Dune__exe__Interface!))
+                               grammar/681 symbol/728))
+                           decls/729))
+                       (field_imm 3 grammar/681) 0))
+                   0)))))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Interface!)
+      monolithic_api/679))
+  (let
+    (inspection_api/812 =
+       (function grammar/814 param/820[int]
+         (let (a/815 = "a")
+           (apply (field_imm 36 (global Stdlib!))
+             (apply (field_imm 6 (global Dune__exe__TokenType!)) grammar/814)
+             (apply (field_imm 36 (global Stdlib!))
+               (apply (field_imm 3 (global Dune__exe__NonterminalType!))
+                 grammar/814)
+               (makeblock 0 [6: "The inspection API."]
+                 (makeblock 0
+                   (makeblock 4
+                     (apply (field_imm 43 (global Dune__exe__CodeBits!)) 1
+                       "MenhirLib.IncrementalEngine.INSPECTION"
+                       (makeblock 0
+                         (makeblock 0 (makeblock 0 a/815 0) "lr1state"
+                           (apply
+                             (field_imm 9 (global Dune__exe__Interface!))
+                             (makeblock 1 a/815)))
+                         (makeblock 0 [0: 0 "production" [2: "production" 0]]
+                           (makeblock 0
+                             (makeblock 0 (makeblock 0 a/815 0)
+                               (field_imm 2 (global Dune__exe__TokenType!))
+                               (apply
+                                 (field_imm 3 (global Dune__exe__TokenType!))
+                                 (makeblock 1 a/815)))
+                             (makeblock 0
+                               (makeblock 0 (makeblock 0 a/815 0)
+                                 (field_imm 0
+                                   (global Dune__exe__NonterminalType!))
+                                 (apply
+                                   (field_imm 1
+                                     (global Dune__exe__NonterminalType!))
+                                   (makeblock 1 a/815)))
+                               (makeblock 0
+                                 (makeblock 0 (makeblock 0 a/815 0) "env"
+                                   (makeblock 2 "env"
+                                     (makeblock 0 (makeblock 1 a/815) 0)))
+                                 0)))))))
+                   0)))))))
+    (setfield_ptr(root-init) 12 (global Dune__exe__Interface!)
+      inspection_api/812))
+  (let
+    (incremental_engine/821 =
+       (function param/823[int]
+         (apply (field_imm 43 (global Dune__exe__CodeBits!)) 0
+           "MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE"
+           (makeblock 0
+             (makeblock 0 0 "token"
+               (field_imm 0 (global Dune__exe__TokenType!)))
+             0))))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Interface!)
+      incremental_engine/821))
+  (let
+    (incremental_entry_points/824 =
+       (function grammar/826
+         (makeblock 0 [6: "The entry point(s) to the incremental API."]
+           (makeblock 0
+             (makeblock 5 (field_imm 5 (global Dune__exe__Interface!))
+               (makeblock 2
+                 (makeblock 0
+                   (makeblock 3
+                     (apply (field_imm 23 (global Dune__exe__StringSet!))
+                       (function symbol/827 decls/828
+                         (makeblock 0
+                           (makeblock 0 symbol/827
+                             (apply
+                               (field_imm 10 (global Dune__exe__Interface!))
+                               grammar/826 symbol/827))
+                           decls/828))
+                       (field_imm 3 grammar/826) 0))
+                   0)))
+             0))))
+    (setfield_ptr(root-init) 14 (global Dune__exe__Interface!)
+      incremental_entry_points/824))
+  (let
+    (incremental_api/829 =
+       (function grammar/831 param/902[int]
+         (makeblock 0
+           (makeblock 5 (field_imm 3 (global Dune__exe__Interface!))
+             (makeblock 2
+               (makeblock 0 [6: "The incremental API."]
+                 (makeblock 0
+                   (makeblock 4
+                     (apply (field_imm 13 (global Dune__exe__Interface!)) 0))
+                   (apply (field_imm 67 (global Dune__exe__MList!))
+                     (field_imm 30 (global Dune__exe__Settings!))
+                     (apply (field_imm 12 (global Dune__exe__Interface!))
+                       grammar/831))))))
+           (apply (field_imm 14 (global Dune__exe__Interface!)) grammar/831))))
+    (setfield_ptr(root-init) 15 (global Dune__exe__Interface!)
+      incremental_api/829))
+  (let
+    (interface/903 =
+       (function grammar/905
+         (makeblock 0
+           (makeblock 0 (field_imm 2 grammar/905)
+             (apply (field_imm 36 (global Stdlib!))
+               (apply (field_imm 11 (global Dune__exe__Interface!))
+                 grammar/905)
+               (apply (field_imm 67 (global Dune__exe__MList!))
+                 (field_imm 29 (global Dune__exe__Settings!))
+                 (apply (field_imm 15 (global Dune__exe__Interface!))
+                   grammar/905))))
+           0)))
+    (setfield_ptr(root-init) 16 (global Dune__exe__Interface!) interface/903))
+  (let
+    (write/906 =
+       (function grammar/908 param/990[int] : int
+         (seq
+           (if (!= (field_imm 1 (global Dune__exe__Settings!)) 1) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/interface.ml" 186 2])))
+           (let
+             (mli/969 =
+                (apply (field_imm 59 (global Stdlib!))
+                  (apply (field_imm 27 (global Stdlib!))
+                    (field_imm 24 (global Dune__exe__Settings!)) ".mli"))
+              P/989 =
+                (apply
+                  (let
+                    (let/1973 = (field_imm 0 (global Dune__exe__Printer!)))
+                    (field_imm 0 (global Dune__exe__Printer!)))
+                  (let (f/970 = mli/969 locate_stretches/971 = 0)
+                    (makeblock 0 f/970 locate_stretches/971))))
+             (seq
+               (apply (field_imm 2 P/989)
+                 (apply (field_imm 16 (global Dune__exe__Interface!))
+                   grammar/908))
+               (apply (field_imm 75 (global Stdlib!)) mli/969))))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Interface!) write/906))
+  0)
+(seq
+  (let (excname/490 = "Error")
+    (setfield_ptr(root-init) 0 (global Dune__exe__Interface!) excname/490))
+  (let
+    (excdef/491 =
+       (makeblock 0 (field_imm 0 (global Dune__exe__Interface!))
+         (if (field_imm 37 (global Dune__exe__Settings!))
+           [0: "Parsing.Parse_error"] 0)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Interface!) excdef/491))
+  (let
+    (entrytypescheme/552 =
+       (function grammar/554 symbol/555
+         (let
+           (typ/556 =
+              (makeblock 0
+                (apply (field_imm 10 (global Dune__exe__BasicSyntax!))
+                  grammar/554 symbol/555)))
+           (apply (field_imm 17 (global Dune__exe__CodeBits!))
+             (apply (field_imm 35 (global Dune__exe__CodeBits!))
+               (makeblock 0
+                 (apply (field_imm 33 (global Dune__exe__CodeBits!))
+                   (field_imm 13 (global Dune__exe__CodeBits!))
+                   (field_imm 0 (global Dune__exe__TokenType!)))
+                 (makeblock 0 (field_imm 13 (global Dune__exe__CodeBits!)) 0))
+               typ/556)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Interface!)
+      entrytypescheme/552))
+  (let (interpreter/664 = "MenhirInterpreter")
+    (setfield_ptr(root-init) 3 (global Dune__exe__Interface!)
+      interpreter/664))
+  (let
+    (checkpoint/665 =
+       (function t/667
+         (makeblock 2
+           (apply (field_imm 27 (global Stdlib!))
+             (field_imm 3 (global Dune__exe__Interface!)) ".checkpoint")
+           (makeblock 0 t/667 0))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Interface!) checkpoint/665))
+  (let (lr1state/668 = "lr1state")
+    (setfield_ptr(root-init) 8 (global Dune__exe__Interface!) lr1state/668))
+  (let
+    (tlr1state/669 =
+       (function a/671
+         (makeblock 2 (field_imm 8 (global Dune__exe__Interface!))
+           (makeblock 0 a/671 0))))
+    (setfield_ptr(root-init) 9 (global Dune__exe__Interface!) tlr1state/669))
+  (let (incremental/672 = "Incremental")
+    (setfield_ptr(root-init) 5 (global Dune__exe__Interface!)
+      incremental/672))
+  (let
+    (entrytypescheme_incremental/673 =
+       (function grammar/675 symbol/676
+         (let
+           (t/677 =
+              (makeblock 0
+                (apply (field_imm 10 (global Dune__exe__BasicSyntax!))
+                  grammar/675 symbol/676)))
+           (apply (field_imm 17 (global Dune__exe__CodeBits!))
+             (apply (field_imm 35 (global Dune__exe__CodeBits!))
+               (makeblock 0 (field_imm 11 (global Dune__exe__CodeBits!)) 0)
+               (apply (field_imm 4 (global Dune__exe__Interface!)) t/677))))))
+    (setfield_ptr(root-init) 10 (global Dune__exe__Interface!)
+      entrytypescheme_incremental/673))
+  (let (inspection/678 = "Inspection")
+    (setfield_ptr(root-init) 6 (global Dune__exe__Interface!) inspection/678))
+  (let
+    (monolithic_api/679 =
+       (function grammar/681
+         (apply (field_imm 36 (global Stdlib!))
+           (apply (field_imm 5 (global Dune__exe__TokenType!)) grammar/681)
+           (makeblock 0
+             [6: "This exception is raised by the monolithic API functions."]
+             (makeblock 0
+               (makeblock 1
+                 (makeblock 0 (field_imm 1 (global Dune__exe__Interface!)) 0))
+               (makeblock 0 [6: "The monolithic API."]
+                 (makeblock 0
+                   (makeblock 3
+                     (apply (field_imm 23 (global Dune__exe__StringSet!))
+                       (function symbol/728 decls/729
+                         (makeblock 0
+                           (makeblock 0
+                             (apply (field_imm 21 (global Dune__exe__Misc!))
+                               symbol/728)
+                             (apply
+                               (field_imm 2 (global Dune__exe__Interface!))
+                               grammar/681 symbol/728))
+                           decls/729))
+                       (field_imm 3 grammar/681) 0))
+                   0)))))))
+    (setfield_ptr(root-init) 11 (global Dune__exe__Interface!)
+      monolithic_api/679))
+  (let
+    (inspection_api/812 =
+       (function grammar/814 param/820[int]
+         (let (a/815 = "a")
+           (apply (field_imm 36 (global Stdlib!))
+             (apply (field_imm 6 (global Dune__exe__TokenType!)) grammar/814)
+             (apply (field_imm 36 (global Stdlib!))
+               (apply (field_imm 3 (global Dune__exe__NonterminalType!))
+                 grammar/814)
+               (makeblock 0 [6: "The inspection API."]
+                 (makeblock 0
+                   (makeblock 4
+                     (apply (field_imm 43 (global Dune__exe__CodeBits!)) 1
+                       "MenhirLib.IncrementalEngine.INSPECTION"
+                       (makeblock 0
+                         (makeblock 0 (makeblock 0 a/815 0) "lr1state"
+                           (apply
+                             (field_imm 9 (global Dune__exe__Interface!))
+                             (makeblock 1 a/815)))
+                         (makeblock 0 [0: 0 "production" [2: "production" 0]]
+                           (makeblock 0
+                             (makeblock 0 (makeblock 0 a/815 0)
+                               (field_imm 2 (global Dune__exe__TokenType!))
+                               (apply
+                                 (field_imm 3 (global Dune__exe__TokenType!))
+                                 (makeblock 1 a/815)))
+                             (makeblock 0
+                               (makeblock 0 (makeblock 0 a/815 0)
+                                 (field_imm 0
+                                   (global Dune__exe__NonterminalType!))
+                                 (apply
+                                   (field_imm 1
+                                     (global Dune__exe__NonterminalType!))
+                                   (makeblock 1 a/815)))
+                               (makeblock 0
+                                 (makeblock 0 (makeblock 0 a/815 0) "env"
+                                   (makeblock 2 "env"
+                                     (makeblock 0 (makeblock 1 a/815) 0)))
+                                 0)))))))
+                   0)))))))
+    (setfield_ptr(root-init) 12 (global Dune__exe__Interface!)
+      inspection_api/812))
+  (let
+    (incremental_engine/821 =
+       (function param/823[int]
+         (apply (field_imm 43 (global Dune__exe__CodeBits!)) 0
+           "MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE"
+           (makeblock 0
+             (makeblock 0 0 "token"
+               (field_imm 0 (global Dune__exe__TokenType!)))
+             0))))
+    (setfield_ptr(root-init) 13 (global Dune__exe__Interface!)
+      incremental_engine/821))
+  (let
+    (incremental_entry_points/824 =
+       (function grammar/826
+         (makeblock 0 [6: "The entry point(s) to the incremental API."]
+           (makeblock 0
+             (makeblock 5 (field_imm 5 (global Dune__exe__Interface!))
+               (makeblock 2
+                 (makeblock 0
+                   (makeblock 3
+                     (apply (field_imm 23 (global Dune__exe__StringSet!))
+                       (function symbol/827 decls/828
+                         (makeblock 0
+                           (makeblock 0 symbol/827
+                             (apply
+                               (field_imm 10 (global Dune__exe__Interface!))
+                               grammar/826 symbol/827))
+                           decls/828))
+                       (field_imm 3 grammar/826) 0))
+                   0)))
+             0))))
+    (setfield_ptr(root-init) 14 (global Dune__exe__Interface!)
+      incremental_entry_points/824))
+  (let
+    (incremental_api/829 =
+       (function grammar/831 param/902[int]
+         (makeblock 0
+           (makeblock 5 (field_imm 3 (global Dune__exe__Interface!))
+             (makeblock 2
+               (makeblock 0 [6: "The incremental API."]
+                 (makeblock 0
+                   (makeblock 4
+                     (apply (field_imm 13 (global Dune__exe__Interface!)) 0))
+                   (apply (field_imm 67 (global Dune__exe__MList!))
+                     (field_imm 30 (global Dune__exe__Settings!))
+                     (apply (field_imm 12 (global Dune__exe__Interface!))
+                       grammar/831))))))
+           (apply (field_imm 14 (global Dune__exe__Interface!)) grammar/831))))
+    (setfield_ptr(root-init) 15 (global Dune__exe__Interface!)
+      incremental_api/829))
+  (let
+    (interface/903 =
+       (function grammar/905
+         (makeblock 0
+           (makeblock 0 (field_imm 2 grammar/905)
+             (apply (field_imm 36 (global Stdlib!))
+               (apply (field_imm 11 (global Dune__exe__Interface!))
+                 grammar/905)
+               (apply (field_imm 67 (global Dune__exe__MList!))
+                 (field_imm 29 (global Dune__exe__Settings!))
+                 (apply (field_imm 15 (global Dune__exe__Interface!))
+                   grammar/905))))
+           0)))
+    (setfield_ptr(root-init) 16 (global Dune__exe__Interface!) interface/903))
+  (let
+    (write/906 =
+       (function grammar/908 param/990[int] : int
+         (seq
+           (if (!= (field_imm 1 (global Dune__exe__Settings!)) 1) 0
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "src/interface.ml" 186 2])))
+           (let
+             (mli/969 =
+                (apply (field_imm 59 (global Stdlib!))
+                  (apply (field_imm 27 (global Stdlib!))
+                    (field_imm 24 (global Dune__exe__Settings!)) ".mli"))
+              P/989 =
+                (apply
+                  (let
+                    (let/1973 = (field_imm 0 (global Dune__exe__Printer!)))
+                    (field_imm 0 (global Dune__exe__Printer!)))
+                  (let (locate_stretches/971 = 0)
+                    (makeblock 0 mli/969 locate_stretches/971))))
+             (seq
+               (apply (field_imm 2 P/989)
+                 (apply (field_imm 16 (global Dune__exe__Interface!))
+                   grammar/908))
+               (apply (field_imm 75 (global Stdlib!)) mli/969))))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Interface!) write/906))
+  0)

@@ -1,0 +1,1285 @@
+[
+  signature_item (src/MArray.mli[14,997+0]..[14,997+50])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/MArray.mli[14,997+0]..[14,997+50])
+        Pstr_eval
+        expression (src/MArray.mli[14,997+0]..[14,997+50])
+          Pexp_constant PConst_string(" This module is an extension of Stdlib.Array ",(src/MArray.mli[14,997+0]..[14,997+50]),None)
+    ]
+  signature_item (src/MArray.mli[16,1049+0]..[16,1049+28])
+    Psig_include
+    module_type (src/MArray.mli[16,1049+8]..[16,1049+28])
+      Pmty_typeof
+      module_expr (src/MArray.mli[16,1049+23]..[16,1049+28])
+        Pmod_ident "Array" (src/MArray.mli[16,1049+23]..[16,1049+28])
+  signature_item (src/MArray.mli[19,1113+0]..[19,1113+20])
+    Psig_value
+    value_description "empty" (src/MArray.mli[19,1113+4]..[19,1113+9]) (src/MArray.mli[19,1113+0]..[19,1113+20])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[18,1079+0]..[18,1079+33])
+            Pstr_eval
+            expression (src/MArray.mli[18,1079+0]..[18,1079+33])
+              Pexp_constant PConst_string("[empty] is the empty array. ",(src/MArray.mli[18,1079+0]..[18,1079+33]),None)
+        ]
+      core_type (src/MArray.mli[19,1113+12]..[19,1113+20])
+        Ptyp_constr "array" (src/MArray.mli[19,1113+15]..[19,1113+20])
+        [
+          core_type (src/MArray.mli[19,1113+12]..[19,1113+14])
+            Ptyp_var a
+        ]
+      []
+  signature_item (src/MArray.mli[22,1212+0]..[22,1212+25])
+    Psig_value
+    value_description "last" (src/MArray.mli[22,1212+4]..[22,1212+8]) (src/MArray.mli[22,1212+0]..[22,1212+25])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[21,1135+0]..[21,1135+76])
+            Pstr_eval
+            expression (src/MArray.mli[21,1135+0]..[21,1135+76])
+              Pexp_constant PConst_string("[last a] is the last element of the array [a], which must be nonempty. ",(src/MArray.mli[21,1135+0]..[21,1135+76]),None)
+        ]
+      core_type (src/MArray.mli[22,1212+11]..[22,1212+25])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[22,1212+11]..[22,1212+19])
+          Ptyp_constr "array" (src/MArray.mli[22,1212+14]..[22,1212+19])
+          [
+            core_type (src/MArray.mli[22,1212+11]..[22,1212+13])
+              Ptyp_var a
+          ]
+        core_type (src/MArray.mli[22,1212+23]..[22,1212+25])
+          Ptyp_var a
+      []
+  signature_item (src/MArray.mli[26,1331+0]..[26,1331+30])
+    Psig_value
+    value_description "pop" (src/MArray.mli[26,1331+4]..[26,1331+7]) (src/MArray.mli[26,1331+0]..[26,1331+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[24,1239+0]..[25,1289+41])
+            Pstr_eval
+            expression (src/MArray.mli[24,1239+0]..[25,1289+41])
+              Pexp_constant PConst_string(" [pop a] is [a] with its last element removed.\n    [pop [|1; 2; 3; 4|] = [|1; 2; 3|]] ",(src/MArray.mli[24,1239+0]..[25,1289+41]),None)
+        ]
+      core_type (src/MArray.mli[26,1331+10]..[26,1331+30])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[26,1331+10]..[26,1331+18])
+          Ptyp_constr "array" (src/MArray.mli[26,1331+13]..[26,1331+18])
+          [
+            core_type (src/MArray.mli[26,1331+10]..[26,1331+12])
+              Ptyp_var a
+          ]
+        core_type (src/MArray.mli[26,1331+22]..[26,1331+30])
+          Ptyp_constr "array" (src/MArray.mli[26,1331+25]..[26,1331+30])
+          [
+            core_type (src/MArray.mli[26,1331+22]..[26,1331+24])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[30,1457+0]..[30,1457+37])
+    Psig_value
+    value_description "push" (src/MArray.mli[30,1457+4]..[30,1457+8]) (src/MArray.mli[30,1457+0]..[30,1457+37])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[28,1363+0]..[29,1412+44])
+            Pstr_eval
+            expression (src/MArray.mli[28,1363+0]..[29,1412+44])
+              Pexp_constant PConst_string(" [push a x] is [a] with [x] added at its end.\n    [push [|1; 2; 3|] 4 = [|1; 2; 3; 4|]] ",(src/MArray.mli[28,1363+0]..[29,1412+44]),None)
+        ]
+      core_type (src/MArray.mli[30,1457+11]..[30,1457+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[30,1457+11]..[30,1457+19])
+          Ptyp_constr "array" (src/MArray.mli[30,1457+14]..[30,1457+19])
+          [
+            core_type (src/MArray.mli[30,1457+11]..[30,1457+13])
+              Ptyp_var a
+          ]
+        core_type (src/MArray.mli[30,1457+23]..[30,1457+37])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[30,1457+23]..[30,1457+25])
+            Ptyp_var a
+          core_type (src/MArray.mli[30,1457+29]..[30,1457+37])
+            Ptyp_constr "array" (src/MArray.mli[30,1457+32]..[30,1457+37])
+            [
+              core_type (src/MArray.mli[30,1457+29]..[30,1457+31])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/MArray.mli[34,1647+0]..[34,1647+42])
+    Psig_value
+    value_description "truncate" (src/MArray.mli[34,1647+4]..[34,1647+12]) (src/MArray.mli[34,1647+0]..[34,1647+42])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[32,1496+0]..[33,1575+71])
+            Pstr_eval
+            expression (src/MArray.mli[32,1496+0]..[33,1575+71])
+              Pexp_constant PConst_string("If the array [a] has length at least [k], then [truncate k a] is the suffix\n   of length [k] of the array [a]. Otherwise, [truncate k a] is [a]. ",(src/MArray.mli[32,1496+0]..[33,1575+71]),None)
+        ]
+      core_type (src/MArray.mli[34,1647+15]..[34,1647+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[34,1647+15]..[34,1647+18])
+          Ptyp_constr "int" (src/MArray.mli[34,1647+15]..[34,1647+18])
+          []
+        core_type (src/MArray.mli[34,1647+22]..[34,1647+42])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[34,1647+22]..[34,1647+30])
+            Ptyp_constr "array" (src/MArray.mli[34,1647+25]..[34,1647+30])
+            [
+              core_type (src/MArray.mli[34,1647+22]..[34,1647+24])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[34,1647+34]..[34,1647+42])
+            Ptyp_constr "array" (src/MArray.mli[34,1647+37]..[34,1647+42])
+            [
+              core_type (src/MArray.mli[34,1647+34]..[34,1647+36])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/MArray.mli[38,1818+0]..[38,1818+66])
+    Psig_value
+    value_description "is_suffix" (src/MArray.mli[38,1818+4]..[38,1818+13]) (src/MArray.mli[38,1818+0]..[38,1818+66])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[36,1691+0]..[37,1762+55])
+            Pstr_eval
+            expression (src/MArray.mli[36,1691+0]..[37,1762+55])
+              Pexp_constant PConst_string("[is_suffix equal a1 a2] tests whether [a1] is a suffix of [a2]. The\n   elements are compared using the function [equal]. ",(src/MArray.mli[36,1691+0]..[37,1762+55]),None)
+        ]
+      core_type (src/MArray.mli[38,1818+16]..[38,1818+66])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[38,1818+17]..[38,1818+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[38,1818+17]..[38,1818+19])
+            Ptyp_var a
+          core_type (src/MArray.mli[38,1818+23]..[38,1818+33])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[38,1818+23]..[38,1818+25])
+              Ptyp_var a
+            core_type (src/MArray.mli[38,1818+29]..[38,1818+33])
+              Ptyp_constr "bool" (src/MArray.mli[38,1818+29]..[38,1818+33])
+              []
+        core_type (src/MArray.mli[38,1818+38]..[38,1818+66])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[38,1818+38]..[38,1818+46])
+            Ptyp_constr "array" (src/MArray.mli[38,1818+41]..[38,1818+46])
+            [
+              core_type (src/MArray.mli[38,1818+38]..[38,1818+40])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[38,1818+50]..[38,1818+66])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[38,1818+50]..[38,1818+58])
+              Ptyp_constr "array" (src/MArray.mli[38,1818+53]..[38,1818+58])
+              [
+                core_type (src/MArray.mli[38,1818+50]..[38,1818+52])
+                  Ptyp_var a
+              ]
+            core_type (src/MArray.mli[38,1818+62]..[38,1818+66])
+              Ptyp_constr "bool" (src/MArray.mli[38,1818+62]..[38,1818+66])
+              []
+      []
+  signature_item (src/MArray.mli[42,2006+0]..[42,2006+65])
+    Psig_value
+    value_description "greatest_suffix_forall" (src/MArray.mli[42,2006+4]..[42,2006+26]) (src/MArray.mli[42,2006+0]..[42,2006+65])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[40,1886+0]..[41,1958+47])
+            Pstr_eval
+            expression (src/MArray.mli[40,1886+0]..[41,1958+47])
+              Pexp_constant PConst_string("[greatest_suffix_forall p a] is the greatest suffix of the array [a]\n   whose elements satisfy the predicate [p]. ",(src/MArray.mli[40,1886+0]..[41,1958+47]),None)
+        ]
+      core_type (src/MArray.mli[42,2006+29]..[42,2006+65])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[42,2006+30]..[42,2006+40])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[42,2006+30]..[42,2006+32])
+            Ptyp_var a
+          core_type (src/MArray.mli[42,2006+36]..[42,2006+40])
+            Ptyp_constr "bool" (src/MArray.mli[42,2006+36]..[42,2006+40])
+            []
+        core_type (src/MArray.mli[42,2006+45]..[42,2006+65])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[42,2006+45]..[42,2006+53])
+            Ptyp_constr "array" (src/MArray.mli[42,2006+48]..[42,2006+53])
+            [
+              core_type (src/MArray.mli[42,2006+45]..[42,2006+47])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[42,2006+57]..[42,2006+65])
+            Ptyp_constr "array" (src/MArray.mli[42,2006+60]..[42,2006+65])
+            [
+              core_type (src/MArray.mli[42,2006+57]..[42,2006+59])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/MArray.mli[47,2213+0]..[47,2213+30])
+    Psig_value
+    value_description "rev" (src/MArray.mli[47,2213+4]..[47,2213+7]) (src/MArray.mli[47,2213+0]..[47,2213+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[44,2073+0]..[46,2170+42])
+            Pstr_eval
+            expression (src/MArray.mli[44,2073+0]..[46,2170+42])
+              Pexp_constant PConst_string("[rev a] is a new array whose elements are the elements of the array [a],\n   in reverse order.\n   [rev [|1; 2; 3; 4|] = [|4; 3; 2; 1|]]",(src/MArray.mli[44,2073+0]..[46,2170+42]),None)
+        ]
+      core_type (src/MArray.mli[47,2213+10]..[47,2213+30])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[47,2213+10]..[47,2213+18])
+          Ptyp_constr "array" (src/MArray.mli[47,2213+13]..[47,2213+18])
+          [
+            core_type (src/MArray.mli[47,2213+10]..[47,2213+12])
+              Ptyp_var a
+          ]
+        core_type (src/MArray.mli[47,2213+22]..[47,2213+30])
+          Ptyp_constr "array" (src/MArray.mli[47,2213+25]..[47,2213+30])
+          [
+            core_type (src/MArray.mli[47,2213+22]..[47,2213+24])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[52,2396+0]..[52,2396+37])
+    Psig_value
+    value_description "rev_of_list" (src/MArray.mli[52,2396+4]..[52,2396+15]) (src/MArray.mli[52,2396+0]..[52,2396+37])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[49,2245+0]..[51,2340+55])
+            Pstr_eval
+            expression (src/MArray.mli[49,2245+0]..[51,2340+55])
+              Pexp_constant PConst_string("[rev_of_list] converts a list to an array.\n   The list's head becomes the end of the array.\n   [rev_of_list [1; 2; 3; 4; 5] = [|5; 4; 3; 2; 1|]] ",(src/MArray.mli[49,2245+0]..[51,2340+55]),None)
+        ]
+      core_type (src/MArray.mli[52,2396+18]..[52,2396+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[52,2396+18]..[52,2396+25])
+          Ptyp_constr "list" (src/MArray.mli[52,2396+21]..[52,2396+25])
+          [
+            core_type (src/MArray.mli[52,2396+18]..[52,2396+20])
+              Ptyp_var a
+          ]
+        core_type (src/MArray.mli[52,2396+29]..[52,2396+37])
+          Ptyp_constr "array" (src/MArray.mli[52,2396+32]..[52,2396+37])
+          [
+            core_type (src/MArray.mli[52,2396+29]..[52,2396+31])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[57,2586+0]..[57,2586+37])
+    Psig_value
+    value_description "rev_to_list" (src/MArray.mli[57,2586+4]..[57,2586+15]) (src/MArray.mli[57,2586+0]..[57,2586+37])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[54,2435+0]..[56,2530+55])
+            Pstr_eval
+            expression (src/MArray.mli[54,2435+0]..[56,2530+55])
+              Pexp_constant PConst_string("[rev_to_list] converts an array to a list.\n   The end of the array becomes the list's head.\n   [rev_to_list [|1; 2; 3; 4; 5|] = [5; 4; 3; 2; 1]] ",(src/MArray.mli[54,2435+0]..[56,2530+55]),None)
+        ]
+      core_type (src/MArray.mli[57,2586+18]..[57,2586+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[57,2586+18]..[57,2586+26])
+          Ptyp_constr "array" (src/MArray.mli[57,2586+21]..[57,2586+26])
+          [
+            core_type (src/MArray.mli[57,2586+18]..[57,2586+20])
+              Ptyp_var a
+          ]
+        core_type (src/MArray.mli[57,2586+30]..[57,2586+37])
+          Ptyp_constr "list" (src/MArray.mli[57,2586+33]..[57,2586+37])
+          [
+            core_type (src/MArray.mli[57,2586+30]..[57,2586+32])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[60,2681+0]..[60,2681+47])
+    Psig_value
+    value_description "iter_rev" (src/MArray.mli[60,2681+4]..[60,2681+12]) (src/MArray.mli[60,2681+0]..[60,2681+47])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[59,2625+0]..[59,2625+55])
+            Pstr_eval
+            expression (src/MArray.mli[59,2625+0]..[59,2625+55])
+              Pexp_constant PConst_string("[iter_rev f a] is equivalent to [iter f (rev a)]. ",(src/MArray.mli[59,2625+0]..[59,2625+55]),None)
+        ]
+      core_type (src/MArray.mli[60,2681+15]..[60,2681+47])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[60,2681+16]..[60,2681+26])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[60,2681+16]..[60,2681+18])
+            Ptyp_var a
+          core_type (src/MArray.mli[60,2681+22]..[60,2681+26])
+            Ptyp_constr "unit" (src/MArray.mli[60,2681+22]..[60,2681+26])
+            []
+        core_type (src/MArray.mli[60,2681+31]..[60,2681+47])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[60,2681+31]..[60,2681+39])
+            Ptyp_constr "array" (src/MArray.mli[60,2681+34]..[60,2681+39])
+            [
+              core_type (src/MArray.mli[60,2681+31]..[60,2681+33])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[60,2681+43]..[60,2681+47])
+            Ptyp_constr "unit" (src/MArray.mli[60,2681+43]..[60,2681+47])
+            []
+      []
+  signature_item (src/MArray.mli[64,2822+0]..[64,2822+53])
+    Psig_value
+    value_description "existsi" (src/MArray.mli[64,2822+4]..[64,2822+11]) (src/MArray.mli[64,2822+0]..[64,2822+53])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[62,2730+0]..[63,2797+24])
+            Pstr_eval
+            expression (src/MArray.mli[62,2730+0]..[63,2797+24])
+              Pexp_constant PConst_string("[existsi p a] tests whether there exists an index [i] such that\n   [p i a.(i)] holds. ",(src/MArray.mli[62,2730+0]..[63,2797+24]),None)
+        ]
+      core_type (src/MArray.mli[64,2822+14]..[64,2822+53])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[64,2822+15]..[64,2822+32])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[64,2822+15]..[64,2822+18])
+            Ptyp_constr "int" (src/MArray.mli[64,2822+15]..[64,2822+18])
+            []
+          core_type (src/MArray.mli[64,2822+22]..[64,2822+32])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[64,2822+22]..[64,2822+24])
+              Ptyp_var a
+            core_type (src/MArray.mli[64,2822+28]..[64,2822+32])
+              Ptyp_constr "bool" (src/MArray.mli[64,2822+28]..[64,2822+32])
+              []
+        core_type (src/MArray.mli[64,2822+37]..[64,2822+53])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[64,2822+37]..[64,2822+45])
+            Ptyp_constr "array" (src/MArray.mli[64,2822+40]..[64,2822+45])
+            [
+              core_type (src/MArray.mli[64,2822+37]..[64,2822+39])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[64,2822+49]..[64,2822+53])
+            Ptyp_constr "bool" (src/MArray.mli[64,2822+49]..[64,2822+53])
+            []
+      []
+  signature_item (src/MArray.mli[68,2967+0]..[68,2967+42])
+    Psig_value
+    value_description "count" (src/MArray.mli[68,2967+4]..[68,2967+9]) (src/MArray.mli[68,2967+0]..[68,2967+42])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[66,2877+0]..[67,2946+20])
+            Pstr_eval
+            expression (src/MArray.mli[66,2877+0]..[67,2946+20])
+              Pexp_constant PConst_string("[count p a] counts how many elements of the array [a] satisfy the\n   predicate [p]. ",(src/MArray.mli[66,2877+0]..[67,2946+20]),None)
+        ]
+      core_type (src/MArray.mli[68,2967+11]..[68,2967+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[68,2967+12]..[68,2967+22])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[68,2967+12]..[68,2967+14])
+            Ptyp_var a
+          core_type (src/MArray.mli[68,2967+18]..[68,2967+22])
+            Ptyp_constr "bool" (src/MArray.mli[68,2967+18]..[68,2967+22])
+            []
+        core_type (src/MArray.mli[68,2967+27]..[68,2967+42])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[68,2967+27]..[68,2967+35])
+            Ptyp_constr "array" (src/MArray.mli[68,2967+30]..[68,2967+35])
+            [
+              core_type (src/MArray.mli[68,2967+27]..[68,2967+29])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[68,2967+39]..[68,2967+42])
+            Ptyp_constr "int" (src/MArray.mli[68,2967+39]..[68,2967+42])
+            []
+      []
+  signature_item (src/MArray.mli[72,3107+0]..[72,3107+46])
+    Psig_value
+    value_description "for_all" (src/MArray.mli[72,3107+4]..[72,3107+11]) (src/MArray.mli[72,3107+0]..[72,3107+46])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[70,3011+0]..[71,3083+23])
+            Pstr_eval
+            expression (src/MArray.mli[70,3011+0]..[71,3083+23])
+              Pexp_constant PConst_string("[for_all] is identical to the function by the same name in the OCaml\n   standard library. ",(src/MArray.mli[70,3011+0]..[71,3083+23]),None)
+        ]
+      core_type (src/MArray.mli[72,3107+14]..[72,3107+46])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[72,3107+15]..[72,3107+25])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[72,3107+15]..[72,3107+17])
+            Ptyp_var a
+          core_type (src/MArray.mli[72,3107+21]..[72,3107+25])
+            Ptyp_constr "bool" (src/MArray.mli[72,3107+21]..[72,3107+25])
+            []
+        core_type (src/MArray.mli[72,3107+30]..[72,3107+46])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[72,3107+30]..[72,3107+38])
+            Ptyp_constr "array" (src/MArray.mli[72,3107+33]..[72,3107+38])
+            [
+              core_type (src/MArray.mli[72,3107+30]..[72,3107+32])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[72,3107+42]..[72,3107+46])
+            Ptyp_constr "bool" (src/MArray.mli[72,3107+42]..[72,3107+46])
+            []
+      []
+  signature_item (src/MArray.mli[76,3252+0]..[76,3252+65])
+    Psig_value
+    value_description "for_all2" (src/MArray.mli[76,3252+4]..[76,3252+12]) (src/MArray.mli[76,3252+0]..[76,3252+65])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[74,3155+0]..[75,3228+23])
+            Pstr_eval
+            expression (src/MArray.mli[74,3155+0]..[75,3228+23])
+              Pexp_constant PConst_string("[for_all2] is identical to the function by the same name in the OCaml\n   standard library. ",(src/MArray.mli[74,3155+0]..[75,3228+23]),None)
+        ]
+      core_type (src/MArray.mli[76,3252+15]..[76,3252+65])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[76,3252+16]..[76,3252+32])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[76,3252+16]..[76,3252+18])
+            Ptyp_var a
+          core_type (src/MArray.mli[76,3252+22]..[76,3252+32])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[76,3252+22]..[76,3252+24])
+              Ptyp_var b
+            core_type (src/MArray.mli[76,3252+28]..[76,3252+32])
+              Ptyp_constr "bool" (src/MArray.mli[76,3252+28]..[76,3252+32])
+              []
+        core_type (src/MArray.mli[76,3252+37]..[76,3252+65])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[76,3252+37]..[76,3252+45])
+            Ptyp_constr "array" (src/MArray.mli[76,3252+40]..[76,3252+45])
+            [
+              core_type (src/MArray.mli[76,3252+37]..[76,3252+39])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[76,3252+49]..[76,3252+65])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[76,3252+49]..[76,3252+57])
+              Ptyp_constr "array" (src/MArray.mli[76,3252+52]..[76,3252+57])
+              [
+                core_type (src/MArray.mli[76,3252+49]..[76,3252+51])
+                  Ptyp_var b
+              ]
+            core_type (src/MArray.mli[76,3252+61]..[76,3252+65])
+              Ptyp_constr "bool" (src/MArray.mli[76,3252+61]..[76,3252+65])
+              []
+      []
+  signature_item (src/MArray.mli[80,3455+0]..[80,3455+79])
+    Psig_value
+    value_description "fold_left2" (src/MArray.mli[80,3455+4]..[80,3455+14]) (src/MArray.mli[80,3455+0]..[80,3455+79])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[78,3319+0]..[79,3391+63])
+            Pstr_eval
+            expression (src/MArray.mli[78,3319+0]..[79,3391+63])
+              Pexp_constant PConst_string("[fold_left2] performs left-to-right iteration over two arrays, which\n   must have the same length, while carrying an accumulator. ",(src/MArray.mli[78,3319+0]..[79,3391+63]),None)
+        ]
+      core_type (src/MArray.mli[80,3455+17]..[80,3455+79])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[80,3455+18]..[80,3455+40])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[80,3455+18]..[80,3455+20])
+            Ptyp_var a
+          core_type (src/MArray.mli[80,3455+24]..[80,3455+40])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[80,3455+24]..[80,3455+27])
+              Ptyp_var b1
+            core_type (src/MArray.mli[80,3455+31]..[80,3455+40])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/MArray.mli[80,3455+31]..[80,3455+34])
+                Ptyp_var b2
+              core_type (src/MArray.mli[80,3455+38]..[80,3455+40])
+                Ptyp_var a
+        core_type (src/MArray.mli[80,3455+45]..[80,3455+79])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[80,3455+45]..[80,3455+47])
+            Ptyp_var a
+          core_type (src/MArray.mli[80,3455+51]..[80,3455+79])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[80,3455+51]..[80,3455+60])
+              Ptyp_constr "array" (src/MArray.mli[80,3455+55]..[80,3455+60])
+              [
+                core_type (src/MArray.mli[80,3455+51]..[80,3455+54])
+                  Ptyp_var b1
+              ]
+            core_type (src/MArray.mli[80,3455+64]..[80,3455+79])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/MArray.mli[80,3455+64]..[80,3455+73])
+                Ptyp_constr "array" (src/MArray.mli[80,3455+68]..[80,3455+73])
+                [
+                  core_type (src/MArray.mli[80,3455+64]..[80,3455+67])
+                    Ptyp_var b2
+                ]
+              core_type (src/MArray.mli[80,3455+77]..[80,3455+79])
+                Ptyp_var a
+      []
+  signature_item (src/MArray.mli[86,3779+0]..[86,3779+67])
+    Psig_value
+    value_description "leq_join" (src/MArray.mli[86,3779+4]..[86,3779+12]) (src/MArray.mli[86,3779+0]..[86,3779+67])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[82,3536+0]..[85,3745+33])
+            Pstr_eval
+            expression (src/MArray.mli[82,3536+0]..[85,3745+33])
+              Pexp_constant PConst_string("Given a [leq_join] function on elements, [leq_join] constructs a [leq_join]\n   function on arrays. The two arrays must have the same length. The\n   specification of a [leq_join] is defined by the signature\n   [Fix.MINIMAL_SEMI_LATTICE]. ",(src/MArray.mli[82,3536+0]..[85,3745+33]),None)
+        ]
+      core_type (src/MArray.mli[86,3779+15]..[86,3779+67])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[86,3779+16]..[86,3779+30])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[86,3779+16]..[86,3779+18])
+            Ptyp_var a
+          core_type (src/MArray.mli[86,3779+22]..[86,3779+30])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[86,3779+22]..[86,3779+24])
+              Ptyp_var b
+            core_type (src/MArray.mli[86,3779+28]..[86,3779+30])
+              Ptyp_var b
+        core_type (src/MArray.mli[86,3779+35]..[86,3779+67])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[86,3779+35]..[86,3779+43])
+            Ptyp_constr "array" (src/MArray.mli[86,3779+38]..[86,3779+43])
+            [
+              core_type (src/MArray.mli[86,3779+35]..[86,3779+37])
+                Ptyp_var a
+            ]
+          core_type (src/MArray.mli[86,3779+47]..[86,3779+67])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[86,3779+47]..[86,3779+55])
+              Ptyp_constr "array" (src/MArray.mli[86,3779+50]..[86,3779+55])
+              [
+                core_type (src/MArray.mli[86,3779+47]..[86,3779+49])
+                  Ptyp_var b
+              ]
+            core_type (src/MArray.mli[86,3779+59]..[86,3779+67])
+              Ptyp_constr "array" (src/MArray.mli[86,3779+62]..[86,3779+67])
+              [
+                core_type (src/MArray.mli[86,3779+59]..[86,3779+61])
+                  Ptyp_var b
+              ]
+      []
+  signature_item (src/MArray.mli[89,3867+0]..[89,3867+23])
+    Psig_value
+    value_description "test" (src/MArray.mli[89,3867+4]..[89,3867+8]) (src/MArray.mli[89,3867+0]..[89,3867+23])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[88,3848+0]..[88,3848+18])
+            Pstr_eval
+            expression (src/MArray.mli[88,3848+0]..[88,3848+18])
+              Pexp_constant PConst_string(" Unit tests. ",(src/MArray.mli[88,3848+0]..[88,3848+18]),None)
+        ]
+      core_type (src/MArray.mli[89,3867+11]..[89,3867+23])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[89,3867+11]..[89,3867+15])
+          Ptyp_constr "unit" (src/MArray.mli[89,3867+11]..[89,3867+15])
+          []
+        core_type (src/MArray.mli[89,3867+19]..[89,3867+23])
+          Ptyp_constr "unit" (src/MArray.mli[89,3867+19]..[89,3867+23])
+          []
+      []
+]
+
+[@@@ocaml.text " This module is an extension of Stdlib.Array "]
+include module type of Array
+val empty : 'a array[@@ocaml.doc "[empty] is the empty array. "]
+val last : 'a array -> 'a[@@ocaml.doc
+                           "[last a] is the last element of the array [a], which must be nonempty. "]
+val pop : 'a array -> 'a array[@@ocaml.doc
+                                " [pop a] is [a] with its last element removed.\n    [pop [|1; 2; 3; 4|] = [|1; 2; 3|]] "]
+val push : 'a array -> 'a -> 'a array[@@ocaml.doc
+                                       " [push a x] is [a] with [x] added at its end.\n    [push [|1; 2; 3|] 4 = [|1; 2; 3; 4|]] "]
+val truncate : int -> 'a array -> 'a array[@@ocaml.doc
+                                            "If the array [a] has length at least [k], then [truncate k a] is the suffix\n   of length [k] of the array [a]. Otherwise, [truncate k a] is [a]. "]
+val is_suffix : ('a -> 'a -> bool) -> 'a array -> 'a array -> bool[@@ocaml.doc
+                                                                    "[is_suffix equal a1 a2] tests whether [a1] is a suffix of [a2]. The\n   elements are compared using the function [equal]. "]
+val greatest_suffix_forall : ('a -> bool) -> 'a array -> 'a array[@@ocaml.doc
+                                                                   "[greatest_suffix_forall p a] is the greatest suffix of the array [a]\n   whose elements satisfy the predicate [p]. "]
+val rev : 'a array -> 'a array[@@ocaml.doc
+                                "[rev a] is a new array whose elements are the elements of the array [a],\n   in reverse order.\n   [rev [|1; 2; 3; 4|] = [|4; 3; 2; 1|]]"]
+val rev_of_list : 'a list -> 'a array[@@ocaml.doc
+                                       "[rev_of_list] converts a list to an array.\n   The list's head becomes the end of the array.\n   [rev_of_list [1; 2; 3; 4; 5] = [|5; 4; 3; 2; 1|]] "]
+val rev_to_list : 'a array -> 'a list[@@ocaml.doc
+                                       "[rev_to_list] converts an array to a list.\n   The end of the array becomes the list's head.\n   [rev_to_list [|1; 2; 3; 4; 5|] = [5; 4; 3; 2; 1]] "]
+val iter_rev : ('a -> unit) -> 'a array -> unit[@@ocaml.doc
+                                                 "[iter_rev f a] is equivalent to [iter f (rev a)]. "]
+val existsi : (int -> 'a -> bool) -> 'a array -> bool[@@ocaml.doc
+                                                       "[existsi p a] tests whether there exists an index [i] such that\n   [p i a.(i)] holds. "]
+val count : ('a -> bool) -> 'a array -> int[@@ocaml.doc
+                                             "[count p a] counts how many elements of the array [a] satisfy the\n   predicate [p]. "]
+val for_all : ('a -> bool) -> 'a array -> bool[@@ocaml.doc
+                                                "[for_all] is identical to the function by the same name in the OCaml\n   standard library. "]
+val for_all2 : ('a -> 'b -> bool) -> 'a array -> 'b array -> bool[@@ocaml.doc
+                                                                   "[for_all2] is identical to the function by the same name in the OCaml\n   standard library. "]
+val fold_left2 :
+  ('a -> 'b1 -> 'b2 -> 'a) -> 'a -> 'b1 array -> 'b2 array -> 'a[@@ocaml.doc
+                                                                  "[fold_left2] performs left-to-right iteration over two arrays, which\n   must have the same length, while carrying an accumulator. "]
+val leq_join : ('a -> 'b -> 'b) -> 'a array -> 'b array -> 'b array[@@ocaml.doc
+                                                                    "Given a [leq_join] function on elements, [leq_join] constructs a [leq_join]\n   function on arrays. The two arrays must have the same length. The\n   specification of a [leq_join] is defined by the signature\n   [Fix.MINIMAL_SEMI_LATTICE]. "]
+val test : unit -> unit[@@ocaml.doc " Unit tests. "]
+[
+  signature_item (src/MArray.mli[14,997+0]..src/MArray.mli[14,997+50])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/MArray.mli[14,997+0]..[14,997+50])
+        Pstr_eval
+        expression (src/MArray.mli[14,997+0]..[14,997+50])
+          Pexp_constant PConst_string(" This module is an extension of Stdlib.Array ",(src/MArray.mli[14,997+0]..[14,997+50]),None)
+    ]
+  signature_item (src/MArray.mli[16,1049+0]..src/MArray.mli[16,1049+28])
+    Tsig_include
+    module_type (src/MArray.mli[16,1049+8]..src/MArray.mli[16,1049+28])
+      Tmty_typeof
+      module_expr (src/MArray.mli[16,1049+23]..src/MArray.mli[16,1049+28])
+        Tmod_ident "Stdlib!.Array"
+  signature_item (src/MArray.mli[19,1113+0]..src/MArray.mli[19,1113+20])
+    Tsig_value
+    value_description empty/505 (src/MArray.mli[19,1113+0]..src/MArray.mli[19,1113+20])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[18,1079+0]..[18,1079+33])
+            Pstr_eval
+            expression (src/MArray.mli[18,1079+0]..[18,1079+33])
+              Pexp_constant PConst_string("[empty] is the empty array. ",(src/MArray.mli[18,1079+0]..[18,1079+33]),None)
+        ]
+      core_type (src/MArray.mli[19,1113+12]..src/MArray.mli[19,1113+20])
+        Ttyp_constr "array/8!"
+        [
+          core_type (src/MArray.mli[19,1113+12]..src/MArray.mli[19,1113+14])
+            Ttyp_var a
+        ]
+      []
+  signature_item (src/MArray.mli[22,1212+0]..src/MArray.mli[22,1212+25])
+    Tsig_value
+    value_description last/506 (src/MArray.mli[22,1212+0]..src/MArray.mli[22,1212+25])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[21,1135+0]..[21,1135+76])
+            Pstr_eval
+            expression (src/MArray.mli[21,1135+0]..[21,1135+76])
+              Pexp_constant PConst_string("[last a] is the last element of the array [a], which must be nonempty. ",(src/MArray.mli[21,1135+0]..[21,1135+76]),None)
+        ]
+      core_type (src/MArray.mli[22,1212+11]..src/MArray.mli[22,1212+25])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[22,1212+11]..src/MArray.mli[22,1212+19])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[22,1212+11]..src/MArray.mli[22,1212+13])
+              Ttyp_var a
+          ]
+        core_type (src/MArray.mli[22,1212+23]..src/MArray.mli[22,1212+25])
+          Ttyp_var a
+      []
+  signature_item (src/MArray.mli[26,1331+0]..src/MArray.mli[26,1331+30])
+    Tsig_value
+    value_description pop/507 (src/MArray.mli[26,1331+0]..src/MArray.mli[26,1331+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[24,1239+0]..[25,1289+41])
+            Pstr_eval
+            expression (src/MArray.mli[24,1239+0]..[25,1289+41])
+              Pexp_constant PConst_string(" [pop a] is [a] with its last element removed.\n    [pop [|1; 2; 3; 4|] = [|1; 2; 3|]] ",(src/MArray.mli[24,1239+0]..[25,1289+41]),None)
+        ]
+      core_type (src/MArray.mli[26,1331+10]..src/MArray.mli[26,1331+30])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[26,1331+10]..src/MArray.mli[26,1331+18])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[26,1331+10]..src/MArray.mli[26,1331+12])
+              Ttyp_var a
+          ]
+        core_type (src/MArray.mli[26,1331+22]..src/MArray.mli[26,1331+30])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[26,1331+22]..src/MArray.mli[26,1331+24])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[30,1457+0]..src/MArray.mli[30,1457+37])
+    Tsig_value
+    value_description push/508 (src/MArray.mli[30,1457+0]..src/MArray.mli[30,1457+37])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[28,1363+0]..[29,1412+44])
+            Pstr_eval
+            expression (src/MArray.mli[28,1363+0]..[29,1412+44])
+              Pexp_constant PConst_string(" [push a x] is [a] with [x] added at its end.\n    [push [|1; 2; 3|] 4 = [|1; 2; 3; 4|]] ",(src/MArray.mli[28,1363+0]..[29,1412+44]),None)
+        ]
+      core_type (src/MArray.mli[30,1457+11]..src/MArray.mli[30,1457+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[30,1457+11]..src/MArray.mli[30,1457+19])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[30,1457+11]..src/MArray.mli[30,1457+13])
+              Ttyp_var a
+          ]
+        core_type (src/MArray.mli[30,1457+23]..src/MArray.mli[30,1457+37])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[30,1457+23]..src/MArray.mli[30,1457+25])
+            Ttyp_var a
+          core_type (src/MArray.mli[30,1457+29]..src/MArray.mli[30,1457+37])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[30,1457+29]..src/MArray.mli[30,1457+31])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/MArray.mli[34,1647+0]..src/MArray.mli[34,1647+42])
+    Tsig_value
+    value_description truncate/509 (src/MArray.mli[34,1647+0]..src/MArray.mli[34,1647+42])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[32,1496+0]..[33,1575+71])
+            Pstr_eval
+            expression (src/MArray.mli[32,1496+0]..[33,1575+71])
+              Pexp_constant PConst_string("If the array [a] has length at least [k], then [truncate k a] is the suffix\n   of length [k] of the array [a]. Otherwise, [truncate k a] is [a]. ",(src/MArray.mli[32,1496+0]..[33,1575+71]),None)
+        ]
+      core_type (src/MArray.mli[34,1647+15]..src/MArray.mli[34,1647+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[34,1647+15]..src/MArray.mli[34,1647+18])
+          Ttyp_constr "int/1!"
+          []
+        core_type (src/MArray.mli[34,1647+22]..src/MArray.mli[34,1647+42])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[34,1647+22]..src/MArray.mli[34,1647+30])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[34,1647+22]..src/MArray.mli[34,1647+24])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[34,1647+34]..src/MArray.mli[34,1647+42])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[34,1647+34]..src/MArray.mli[34,1647+36])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/MArray.mli[38,1818+0]..src/MArray.mli[38,1818+66])
+    Tsig_value
+    value_description is_suffix/510 (src/MArray.mli[38,1818+0]..src/MArray.mli[38,1818+66])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[36,1691+0]..[37,1762+55])
+            Pstr_eval
+            expression (src/MArray.mli[36,1691+0]..[37,1762+55])
+              Pexp_constant PConst_string("[is_suffix equal a1 a2] tests whether [a1] is a suffix of [a2]. The\n   elements are compared using the function [equal]. ",(src/MArray.mli[36,1691+0]..[37,1762+55]),None)
+        ]
+      core_type (src/MArray.mli[38,1818+16]..src/MArray.mli[38,1818+66])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[38,1818+17]..src/MArray.mli[38,1818+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[38,1818+17]..src/MArray.mli[38,1818+19])
+            Ttyp_var a
+          core_type (src/MArray.mli[38,1818+23]..src/MArray.mli[38,1818+33])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[38,1818+23]..src/MArray.mli[38,1818+25])
+              Ttyp_var a
+            core_type (src/MArray.mli[38,1818+29]..src/MArray.mli[38,1818+33])
+              Ttyp_constr "bool/5!"
+              []
+        core_type (src/MArray.mli[38,1818+38]..src/MArray.mli[38,1818+66])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[38,1818+38]..src/MArray.mli[38,1818+46])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[38,1818+38]..src/MArray.mli[38,1818+40])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[38,1818+50]..src/MArray.mli[38,1818+66])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[38,1818+50]..src/MArray.mli[38,1818+58])
+              Ttyp_constr "array/8!"
+              [
+                core_type (src/MArray.mli[38,1818+50]..src/MArray.mli[38,1818+52])
+                  Ttyp_var a
+              ]
+            core_type (src/MArray.mli[38,1818+62]..src/MArray.mli[38,1818+66])
+              Ttyp_constr "bool/5!"
+              []
+      []
+  signature_item (src/MArray.mli[42,2006+0]..src/MArray.mli[42,2006+65])
+    Tsig_value
+    value_description greatest_suffix_forall/511 (src/MArray.mli[42,2006+0]..src/MArray.mli[42,2006+65])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[40,1886+0]..[41,1958+47])
+            Pstr_eval
+            expression (src/MArray.mli[40,1886+0]..[41,1958+47])
+              Pexp_constant PConst_string("[greatest_suffix_forall p a] is the greatest suffix of the array [a]\n   whose elements satisfy the predicate [p]. ",(src/MArray.mli[40,1886+0]..[41,1958+47]),None)
+        ]
+      core_type (src/MArray.mli[42,2006+29]..src/MArray.mli[42,2006+65])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[42,2006+30]..src/MArray.mli[42,2006+40])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[42,2006+30]..src/MArray.mli[42,2006+32])
+            Ttyp_var a
+          core_type (src/MArray.mli[42,2006+36]..src/MArray.mli[42,2006+40])
+            Ttyp_constr "bool/5!"
+            []
+        core_type (src/MArray.mli[42,2006+45]..src/MArray.mli[42,2006+65])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[42,2006+45]..src/MArray.mli[42,2006+53])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[42,2006+45]..src/MArray.mli[42,2006+47])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[42,2006+57]..src/MArray.mli[42,2006+65])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[42,2006+57]..src/MArray.mli[42,2006+59])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/MArray.mli[47,2213+0]..src/MArray.mli[47,2213+30])
+    Tsig_value
+    value_description rev/512 (src/MArray.mli[47,2213+0]..src/MArray.mli[47,2213+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[44,2073+0]..[46,2170+42])
+            Pstr_eval
+            expression (src/MArray.mli[44,2073+0]..[46,2170+42])
+              Pexp_constant PConst_string("[rev a] is a new array whose elements are the elements of the array [a],\n   in reverse order.\n   [rev [|1; 2; 3; 4|] = [|4; 3; 2; 1|]]",(src/MArray.mli[44,2073+0]..[46,2170+42]),None)
+        ]
+      core_type (src/MArray.mli[47,2213+10]..src/MArray.mli[47,2213+30])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[47,2213+10]..src/MArray.mli[47,2213+18])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[47,2213+10]..src/MArray.mli[47,2213+12])
+              Ttyp_var a
+          ]
+        core_type (src/MArray.mli[47,2213+22]..src/MArray.mli[47,2213+30])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[47,2213+22]..src/MArray.mli[47,2213+24])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[52,2396+0]..src/MArray.mli[52,2396+37])
+    Tsig_value
+    value_description rev_of_list/513 (src/MArray.mli[52,2396+0]..src/MArray.mli[52,2396+37])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[49,2245+0]..[51,2340+55])
+            Pstr_eval
+            expression (src/MArray.mli[49,2245+0]..[51,2340+55])
+              Pexp_constant PConst_string("[rev_of_list] converts a list to an array.\n   The list's head becomes the end of the array.\n   [rev_of_list [1; 2; 3; 4; 5] = [|5; 4; 3; 2; 1|]] ",(src/MArray.mli[49,2245+0]..[51,2340+55]),None)
+        ]
+      core_type (src/MArray.mli[52,2396+18]..src/MArray.mli[52,2396+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[52,2396+18]..src/MArray.mli[52,2396+25])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/MArray.mli[52,2396+18]..src/MArray.mli[52,2396+20])
+              Ttyp_var a
+          ]
+        core_type (src/MArray.mli[52,2396+29]..src/MArray.mli[52,2396+37])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[52,2396+29]..src/MArray.mli[52,2396+31])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[57,2586+0]..src/MArray.mli[57,2586+37])
+    Tsig_value
+    value_description rev_to_list/514 (src/MArray.mli[57,2586+0]..src/MArray.mli[57,2586+37])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[54,2435+0]..[56,2530+55])
+            Pstr_eval
+            expression (src/MArray.mli[54,2435+0]..[56,2530+55])
+              Pexp_constant PConst_string("[rev_to_list] converts an array to a list.\n   The end of the array becomes the list's head.\n   [rev_to_list [|1; 2; 3; 4; 5|] = [5; 4; 3; 2; 1]] ",(src/MArray.mli[54,2435+0]..[56,2530+55]),None)
+        ]
+      core_type (src/MArray.mli[57,2586+18]..src/MArray.mli[57,2586+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[57,2586+18]..src/MArray.mli[57,2586+26])
+          Ttyp_constr "array/8!"
+          [
+            core_type (src/MArray.mli[57,2586+18]..src/MArray.mli[57,2586+20])
+              Ttyp_var a
+          ]
+        core_type (src/MArray.mli[57,2586+30]..src/MArray.mli[57,2586+37])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/MArray.mli[57,2586+30]..src/MArray.mli[57,2586+32])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/MArray.mli[60,2681+0]..src/MArray.mli[60,2681+47])
+    Tsig_value
+    value_description iter_rev/515 (src/MArray.mli[60,2681+0]..src/MArray.mli[60,2681+47])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[59,2625+0]..[59,2625+55])
+            Pstr_eval
+            expression (src/MArray.mli[59,2625+0]..[59,2625+55])
+              Pexp_constant PConst_string("[iter_rev f a] is equivalent to [iter f (rev a)]. ",(src/MArray.mli[59,2625+0]..[59,2625+55]),None)
+        ]
+      core_type (src/MArray.mli[60,2681+15]..src/MArray.mli[60,2681+47])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[60,2681+16]..src/MArray.mli[60,2681+26])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[60,2681+16]..src/MArray.mli[60,2681+18])
+            Ttyp_var a
+          core_type (src/MArray.mli[60,2681+22]..src/MArray.mli[60,2681+26])
+            Ttyp_constr "unit/6!"
+            []
+        core_type (src/MArray.mli[60,2681+31]..src/MArray.mli[60,2681+47])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[60,2681+31]..src/MArray.mli[60,2681+39])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[60,2681+31]..src/MArray.mli[60,2681+33])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[60,2681+43]..src/MArray.mli[60,2681+47])
+            Ttyp_constr "unit/6!"
+            []
+      []
+  signature_item (src/MArray.mli[64,2822+0]..src/MArray.mli[64,2822+53])
+    Tsig_value
+    value_description existsi/516 (src/MArray.mli[64,2822+0]..src/MArray.mli[64,2822+53])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[62,2730+0]..[63,2797+24])
+            Pstr_eval
+            expression (src/MArray.mli[62,2730+0]..[63,2797+24])
+              Pexp_constant PConst_string("[existsi p a] tests whether there exists an index [i] such that\n   [p i a.(i)] holds. ",(src/MArray.mli[62,2730+0]..[63,2797+24]),None)
+        ]
+      core_type (src/MArray.mli[64,2822+14]..src/MArray.mli[64,2822+53])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[64,2822+15]..src/MArray.mli[64,2822+32])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[64,2822+15]..src/MArray.mli[64,2822+18])
+            Ttyp_constr "int/1!"
+            []
+          core_type (src/MArray.mli[64,2822+22]..src/MArray.mli[64,2822+32])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[64,2822+22]..src/MArray.mli[64,2822+24])
+              Ttyp_var a
+            core_type (src/MArray.mli[64,2822+28]..src/MArray.mli[64,2822+32])
+              Ttyp_constr "bool/5!"
+              []
+        core_type (src/MArray.mli[64,2822+37]..src/MArray.mli[64,2822+53])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[64,2822+37]..src/MArray.mli[64,2822+45])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[64,2822+37]..src/MArray.mli[64,2822+39])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[64,2822+49]..src/MArray.mli[64,2822+53])
+            Ttyp_constr "bool/5!"
+            []
+      []
+  signature_item (src/MArray.mli[68,2967+0]..src/MArray.mli[68,2967+42])
+    Tsig_value
+    value_description count/517 (src/MArray.mli[68,2967+0]..src/MArray.mli[68,2967+42])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[66,2877+0]..[67,2946+20])
+            Pstr_eval
+            expression (src/MArray.mli[66,2877+0]..[67,2946+20])
+              Pexp_constant PConst_string("[count p a] counts how many elements of the array [a] satisfy the\n   predicate [p]. ",(src/MArray.mli[66,2877+0]..[67,2946+20]),None)
+        ]
+      core_type (src/MArray.mli[68,2967+11]..src/MArray.mli[68,2967+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[68,2967+12]..src/MArray.mli[68,2967+22])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[68,2967+12]..src/MArray.mli[68,2967+14])
+            Ttyp_var a
+          core_type (src/MArray.mli[68,2967+18]..src/MArray.mli[68,2967+22])
+            Ttyp_constr "bool/5!"
+            []
+        core_type (src/MArray.mli[68,2967+27]..src/MArray.mli[68,2967+42])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[68,2967+27]..src/MArray.mli[68,2967+35])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[68,2967+27]..src/MArray.mli[68,2967+29])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[68,2967+39]..src/MArray.mli[68,2967+42])
+            Ttyp_constr "int/1!"
+            []
+      []
+  signature_item (src/MArray.mli[72,3107+0]..src/MArray.mli[72,3107+46])
+    Tsig_value
+    value_description for_all/518 (src/MArray.mli[72,3107+0]..src/MArray.mli[72,3107+46])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[70,3011+0]..[71,3083+23])
+            Pstr_eval
+            expression (src/MArray.mli[70,3011+0]..[71,3083+23])
+              Pexp_constant PConst_string("[for_all] is identical to the function by the same name in the OCaml\n   standard library. ",(src/MArray.mli[70,3011+0]..[71,3083+23]),None)
+        ]
+      core_type (src/MArray.mli[72,3107+14]..src/MArray.mli[72,3107+46])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[72,3107+15]..src/MArray.mli[72,3107+25])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[72,3107+15]..src/MArray.mli[72,3107+17])
+            Ttyp_var a
+          core_type (src/MArray.mli[72,3107+21]..src/MArray.mli[72,3107+25])
+            Ttyp_constr "bool/5!"
+            []
+        core_type (src/MArray.mli[72,3107+30]..src/MArray.mli[72,3107+46])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[72,3107+30]..src/MArray.mli[72,3107+38])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[72,3107+30]..src/MArray.mli[72,3107+32])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[72,3107+42]..src/MArray.mli[72,3107+46])
+            Ttyp_constr "bool/5!"
+            []
+      []
+  signature_item (src/MArray.mli[76,3252+0]..src/MArray.mli[76,3252+65])
+    Tsig_value
+    value_description for_all2/519 (src/MArray.mli[76,3252+0]..src/MArray.mli[76,3252+65])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[74,3155+0]..[75,3228+23])
+            Pstr_eval
+            expression (src/MArray.mli[74,3155+0]..[75,3228+23])
+              Pexp_constant PConst_string("[for_all2] is identical to the function by the same name in the OCaml\n   standard library. ",(src/MArray.mli[74,3155+0]..[75,3228+23]),None)
+        ]
+      core_type (src/MArray.mli[76,3252+15]..src/MArray.mli[76,3252+65])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[76,3252+16]..src/MArray.mli[76,3252+32])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[76,3252+16]..src/MArray.mli[76,3252+18])
+            Ttyp_var a
+          core_type (src/MArray.mli[76,3252+22]..src/MArray.mli[76,3252+32])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[76,3252+22]..src/MArray.mli[76,3252+24])
+              Ttyp_var b
+            core_type (src/MArray.mli[76,3252+28]..src/MArray.mli[76,3252+32])
+              Ttyp_constr "bool/5!"
+              []
+        core_type (src/MArray.mli[76,3252+37]..src/MArray.mli[76,3252+65])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[76,3252+37]..src/MArray.mli[76,3252+45])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[76,3252+37]..src/MArray.mli[76,3252+39])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[76,3252+49]..src/MArray.mli[76,3252+65])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[76,3252+49]..src/MArray.mli[76,3252+57])
+              Ttyp_constr "array/8!"
+              [
+                core_type (src/MArray.mli[76,3252+49]..src/MArray.mli[76,3252+51])
+                  Ttyp_var b
+              ]
+            core_type (src/MArray.mli[76,3252+61]..src/MArray.mli[76,3252+65])
+              Ttyp_constr "bool/5!"
+              []
+      []
+  signature_item (src/MArray.mli[80,3455+0]..src/MArray.mli[80,3455+79])
+    Tsig_value
+    value_description fold_left2/520 (src/MArray.mli[80,3455+0]..src/MArray.mli[80,3455+79])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[78,3319+0]..[79,3391+63])
+            Pstr_eval
+            expression (src/MArray.mli[78,3319+0]..[79,3391+63])
+              Pexp_constant PConst_string("[fold_left2] performs left-to-right iteration over two arrays, which\n   must have the same length, while carrying an accumulator. ",(src/MArray.mli[78,3319+0]..[79,3391+63]),None)
+        ]
+      core_type (src/MArray.mli[80,3455+17]..src/MArray.mli[80,3455+79])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[80,3455+18]..src/MArray.mli[80,3455+40])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[80,3455+18]..src/MArray.mli[80,3455+20])
+            Ttyp_var a
+          core_type (src/MArray.mli[80,3455+24]..src/MArray.mli[80,3455+40])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[80,3455+24]..src/MArray.mli[80,3455+27])
+              Ttyp_var b1
+            core_type (src/MArray.mli[80,3455+31]..src/MArray.mli[80,3455+40])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/MArray.mli[80,3455+31]..src/MArray.mli[80,3455+34])
+                Ttyp_var b2
+              core_type (src/MArray.mli[80,3455+38]..src/MArray.mli[80,3455+40])
+                Ttyp_var a
+        core_type (src/MArray.mli[80,3455+45]..src/MArray.mli[80,3455+79])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[80,3455+45]..src/MArray.mli[80,3455+47])
+            Ttyp_var a
+          core_type (src/MArray.mli[80,3455+51]..src/MArray.mli[80,3455+79])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[80,3455+51]..src/MArray.mli[80,3455+60])
+              Ttyp_constr "array/8!"
+              [
+                core_type (src/MArray.mli[80,3455+51]..src/MArray.mli[80,3455+54])
+                  Ttyp_var b1
+              ]
+            core_type (src/MArray.mli[80,3455+64]..src/MArray.mli[80,3455+79])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/MArray.mli[80,3455+64]..src/MArray.mli[80,3455+73])
+                Ttyp_constr "array/8!"
+                [
+                  core_type (src/MArray.mli[80,3455+64]..src/MArray.mli[80,3455+67])
+                    Ttyp_var b2
+                ]
+              core_type (src/MArray.mli[80,3455+77]..src/MArray.mli[80,3455+79])
+                Ttyp_var a
+      []
+  signature_item (src/MArray.mli[86,3779+0]..src/MArray.mli[86,3779+67])
+    Tsig_value
+    value_description leq_join/521 (src/MArray.mli[86,3779+0]..src/MArray.mli[86,3779+67])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[82,3536+0]..[85,3745+33])
+            Pstr_eval
+            expression (src/MArray.mli[82,3536+0]..[85,3745+33])
+              Pexp_constant PConst_string("Given a [leq_join] function on elements, [leq_join] constructs a [leq_join]\n   function on arrays. The two arrays must have the same length. The\n   specification of a [leq_join] is defined by the signature\n   [Fix.MINIMAL_SEMI_LATTICE]. ",(src/MArray.mli[82,3536+0]..[85,3745+33]),None)
+        ]
+      core_type (src/MArray.mli[86,3779+15]..src/MArray.mli[86,3779+67])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[86,3779+16]..src/MArray.mli[86,3779+30])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[86,3779+16]..src/MArray.mli[86,3779+18])
+            Ttyp_var a
+          core_type (src/MArray.mli[86,3779+22]..src/MArray.mli[86,3779+30])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[86,3779+22]..src/MArray.mli[86,3779+24])
+              Ttyp_var b
+            core_type (src/MArray.mli[86,3779+28]..src/MArray.mli[86,3779+30])
+              Ttyp_var b
+        core_type (src/MArray.mli[86,3779+35]..src/MArray.mli[86,3779+67])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/MArray.mli[86,3779+35]..src/MArray.mli[86,3779+43])
+            Ttyp_constr "array/8!"
+            [
+              core_type (src/MArray.mli[86,3779+35]..src/MArray.mli[86,3779+37])
+                Ttyp_var a
+            ]
+          core_type (src/MArray.mli[86,3779+47]..src/MArray.mli[86,3779+67])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/MArray.mli[86,3779+47]..src/MArray.mli[86,3779+55])
+              Ttyp_constr "array/8!"
+              [
+                core_type (src/MArray.mli[86,3779+47]..src/MArray.mli[86,3779+49])
+                  Ttyp_var b
+              ]
+            core_type (src/MArray.mli[86,3779+59]..src/MArray.mli[86,3779+67])
+              Ttyp_constr "array/8!"
+              [
+                core_type (src/MArray.mli[86,3779+59]..src/MArray.mli[86,3779+61])
+                  Ttyp_var b
+              ]
+      []
+  signature_item (src/MArray.mli[89,3867+0]..src/MArray.mli[89,3867+23])
+    Tsig_value
+    value_description test/522 (src/MArray.mli[89,3867+0]..src/MArray.mli[89,3867+23])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/MArray.mli[88,3848+0]..[88,3848+18])
+            Pstr_eval
+            expression (src/MArray.mli[88,3848+0]..[88,3848+18])
+              Pexp_constant PConst_string(" Unit tests. ",(src/MArray.mli[88,3848+0]..[88,3848+18]),None)
+        ]
+      core_type (src/MArray.mli[89,3867+11]..src/MArray.mli[89,3867+23])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/MArray.mli[89,3867+11]..src/MArray.mli[89,3867+15])
+          Ttyp_constr "unit/6!"
+          []
+        core_type (src/MArray.mli[89,3867+19]..src/MArray.mli[89,3867+23])
+          Ttyp_constr "unit/6!"
+          []
+      []
+]
+

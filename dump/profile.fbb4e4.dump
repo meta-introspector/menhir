@@ -1,0 +1,22 @@
+0.327s  240MB 11.4MB 13.1MB src/stage3/printer.ml
+  0.010s 3.73MB 0.71MB 2.48MB parsing
+    0.010s 3.73MB 0.71MB 2.48MB parser
+  0.112s 72.9MB 5.09MB 7.57MB typing
+  0.016s 6.30MB 0.34MB 7.91MB transl
+  0.099s 86.2MB 4.56MB 12.4MB generate
+    0.007s 4.77MB ------ ------ cmm
+    0.057s 58.1MB 3.25MB 11.1MB compile_phrases
+      0.005s 4.38MB 0.15MB 8.07MB selection
+      ------ 0.17MB ------ ------ comballoc
+      0.004s 6.56MB 0.25MB 8.32MB cse
+      0.005s 8.41MB 0.34MB 8.66MB liveness
+      0.001s ------ ------ ------ deadcode
+      0.005s 1.87MB 0.06MB 8.73MB spill
+      0.001s 2.00MB 0.15MB 8.88MB split
+      0.031s 30.4MB 2.09MB 10.9MB regalloc
+      0.002s 4.27MB 0.18MB 11.1MB emit
+      0.002s ------ ------ ------ other
+    0.011s ------ ------ ------ assemble
+    0.024s 23.3MB 1.31MB 12.4MB other
+  0.090s 71.7MB 0.68MB 13.1MB other
+0.013s 3.08MB 1.76MB ------ other

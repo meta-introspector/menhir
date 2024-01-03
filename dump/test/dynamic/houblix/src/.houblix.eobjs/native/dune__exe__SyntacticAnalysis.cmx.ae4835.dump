@@ -1,0 +1,558 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+          ]
+          None
+    ]
+  structure_item (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+0]..[1,0+35])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+4]..[1,0+16])
+          Ppat_var "parsing_step" (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+4]..[1,0+16])
+        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+19]..[1,0+35])
+          Pexp_constant PConst_string("during parsing",(test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+20]..[1,0+34]),None)
+    ]
+  structure_item (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+0]..[4,93+41])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+4]..[3,37+11])
+          Ppat_var "process" (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+4]..[3,37+11])
+        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+12]..[4,93+41]) ghost
+          Pexp_fun
+          Labelled "lexer_init"
+          None
+          pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+13]..[3,37+23])
+            Ppat_var "lexer_init" (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+13]..[3,37+23])
+          expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+24]..[4,93+41]) ghost
+            Pexp_fun
+            Labelled "lexer_fun"
+            None
+            pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+25]..[3,37+34])
+              Ppat_var "lexer_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+25]..[3,37+34])
+            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+35]..[4,93+41]) ghost
+              Pexp_fun
+              Labelled "parser_fun"
+              None
+              pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+36]..[3,37+46])
+                Ppat_var "parser_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+36]..[3,37+46])
+              expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+47]..[4,93+41]) ghost
+                Pexp_fun
+                Labelled "input"
+                None
+                pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+48]..[3,37+53])
+                  Ppat_var "input" (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+48]..[3,37+53])
+                expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+2]..[4,93+41])
+                  Pexp_apply
+                  expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+2]..[4,93+12])
+                    Pexp_ident "parser_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+2]..[4,93+12])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+13]..[4,93+22])
+                        Pexp_ident "lexer_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+13]..[4,93+22])
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+23]..[4,93+41])
+                        Pexp_apply
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+24]..[4,93+34])
+                          Pexp_ident "lexer_init" (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+24]..[4,93+34])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+35]..[4,93+40])
+                              Pexp_ident "input" (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+35]..[4,93+40])
+                        ]
+                  ]
+    ]
+  structure_item (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+0]..[9,310+56])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+4]..[6,136+11])
+          Ppat_var "process" (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+4]..[6,136+11])
+        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+12]..[9,310+56]) ghost
+          Pexp_fun
+          Labelled "lexer_init"
+          None
+          pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+13]..[6,136+23])
+            Ppat_var "lexer_init" (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+13]..[6,136+23])
+          expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+24]..[9,310+56]) ghost
+            Pexp_fun
+            Labelled "lexer_fun"
+            None
+            pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+25]..[6,136+34])
+              Ppat_var "lexer_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+25]..[6,136+34])
+            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+35]..[9,310+56]) ghost
+              Pexp_fun
+              Labelled "parser_fun"
+              None
+              pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+36]..[6,136+46])
+                Ppat_var "parser_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+36]..[6,136+46])
+              expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+47]..[9,310+56]) ghost
+                Pexp_fun
+                Labelled "input"
+                None
+                pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+48]..[6,136+53])
+                  Ppat_var "input" (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+48]..[6,136+53])
+                expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+2]..[9,310+56])
+                  Pexp_try
+                  expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+6]..[7,192+55])
+                    Pexp_apply
+                    expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+6]..[7,192+13])
+                      Pexp_ident "process" (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+6]..[7,192+13])
+                    [
+                      <arg>
+                      Labelled "lexer_init"
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+15]..[7,192+25])
+                          Pexp_ident "lexer_init" (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+15]..[7,192+25])
+                      <arg>
+                      Labelled "lexer_fun"
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+27]..[7,192+36])
+                          Pexp_ident "lexer_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+27]..[7,192+36])
+                      <arg>
+                      Labelled "parser_fun"
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+38]..[7,192+48])
+                          Pexp_ident "parser_fun" (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+38]..[7,192+48])
+                      <arg>
+                      Labelled "input"
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+50]..[7,192+55])
+                          Pexp_ident "input" (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+50]..[7,192+55])
+                    ]
+                  [
+                    <case>
+                      pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+4]..[8,253+17])
+                        Ppat_construct "Sys_error" (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+4]..[8,253+13])
+                        Some
+                          []
+                          pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+14]..[8,253+17])
+                            Ppat_var "msg" (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+14]..[8,253+17])
+                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+21]..[8,253+56])
+                        Pexp_apply
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+21]..[8,253+39])
+                          Pexp_ident "Error.global_error" (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+21]..[8,253+39])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+40]..[8,253+52])
+                              Pexp_ident "parsing_step" (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+40]..[8,253+52])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+53]..[8,253+56])
+                              Pexp_ident "msg" (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+53]..[8,253+56])
+                        ]
+                    <case>
+                      pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+4]..[9,310+5])
+                        Ppat_any
+                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+9]..[9,310+56])
+                        Pexp_apply
+                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+9]..[9,310+27])
+                          Pexp_ident "Error.global_error" (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+9]..[9,310+27])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+28]..[9,310+40])
+                              Pexp_ident "parsing_step" (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+28]..[9,310+40])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+41]..[9,310+56])
+                              Pexp_constant PConst_string("Syntax error.",(test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+42]..[9,310+55]),None)
+                        ]
+                  ]
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = []
+  }]
+let parsing_step = "during parsing"
+let process ~lexer_init  ~lexer_fun  ~parser_fun  ~input  =
+  parser_fun lexer_fun (lexer_init input)
+let process ~lexer_init  ~lexer_fun  ~parser_fun  ~input  =
+  try process ~lexer_init ~lexer_fun ~parser_fun ~input
+  with | Sys_error msg -> Error.global_error parsing_step msg
+  | _ -> Error.global_error parsing_step "Syntax error."
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+          ]
+          None
+    ]
+  structure_item (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+0]..test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+35])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+4]..test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+16])
+          Tpat_var "parsing_step/285"
+        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+19]..test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+35])
+          Texp_constant Const_string("during parsing",(test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+20]..test/dynamic/houblix/src/syntacticAnalysis.ml[1,0+34]),None)
+    ]
+  structure_item (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+0]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+4]..test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+11])
+          Tpat_var "process/286"
+        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+12]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41]) ghost
+          Texp_function
+          Labelled "lexer_init"
+          [
+            <case>
+              pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+13]..test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+23])
+                Tpat_var "lexer_init/288"
+              expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+24]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41]) ghost
+                Texp_function
+                Labelled "lexer_fun"
+                [
+                  <case>
+                    pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+25]..test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+34])
+                      Tpat_var "lexer_fun/289"
+                    expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+35]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41]) ghost
+                      Texp_function
+                      Labelled "parser_fun"
+                      [
+                        <case>
+                          pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+36]..test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+46])
+                            Tpat_var "parser_fun/290"
+                          expression (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+47]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41]) ghost
+                            Texp_function
+                            Labelled "input"
+                            [
+                              <case>
+                                pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+48]..test/dynamic/houblix/src/syntacticAnalysis.ml[3,37+53])
+                                  Tpat_var "input/291"
+                                expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+2]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41])
+                                  Texp_apply
+                                  expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+2]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+12])
+                                    Texp_ident "parser_fun/290"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+13]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+22])
+                                        Texp_ident "lexer_fun/289"
+                                    <arg>
+                                      Nolabel
+                                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+23]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+41])
+                                        Texp_apply
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+24]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+34])
+                                          Texp_ident "lexer_init/288"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+35]..test/dynamic/houblix/src/syntacticAnalysis.ml[4,93+40])
+                                              Texp_ident "input/291"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+0]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+4]..test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+11])
+          Tpat_var "process/292"
+        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+12]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56]) ghost
+          Texp_function
+          Labelled "lexer_init"
+          [
+            <case>
+              pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+13]..test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+23])
+                Tpat_var "lexer_init/293"
+              expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+24]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56]) ghost
+                Texp_function
+                Labelled "lexer_fun"
+                [
+                  <case>
+                    pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+25]..test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+34])
+                      Tpat_var "lexer_fun/294"
+                    expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+35]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56]) ghost
+                      Texp_function
+                      Labelled "parser_fun"
+                      [
+                        <case>
+                          pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+36]..test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+46])
+                            Tpat_var "parser_fun/295"
+                          expression (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+47]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56]) ghost
+                            Texp_function
+                            Labelled "input"
+                            [
+                              <case>
+                                pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+48]..test/dynamic/houblix/src/syntacticAnalysis.ml[6,136+53])
+                                  Tpat_var "input/296"
+                                expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+2]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56])
+                                  Texp_try
+                                  expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+6]..test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+55])
+                                    Texp_apply
+                                    expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+6]..test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+13])
+                                      Texp_ident "process/286"
+                                    [
+                                      <arg>
+                                        Labelled "lexer_init"
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+15]..test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+25])
+                                          Texp_ident "lexer_init/293"
+                                      <arg>
+                                        Labelled "lexer_fun"
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+27]..test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+36])
+                                          Texp_ident "lexer_fun/294"
+                                      <arg>
+                                        Labelled "parser_fun"
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+38]..test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+48])
+                                          Texp_ident "parser_fun/295"
+                                      <arg>
+                                        Labelled "input"
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+50]..test/dynamic/houblix/src/syntacticAnalysis.ml[7,192+55])
+                                          Texp_ident "input/296"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+4]..test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+17])
+                                        Tpat_construct "Sys_error"
+                                        [
+                                          pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+14]..test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+17])
+                                            Tpat_var "msg/297"
+                                        ]
+                                        None
+                                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+21]..test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+56])
+                                        Texp_apply
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+21]..test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+39])
+                                          Texp_ident "Dune__exe!.Error.global_error"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+40]..test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+52])
+                                              Texp_ident "parsing_step/285"
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+53]..test/dynamic/houblix/src/syntacticAnalysis.ml[8,253+56])
+                                              Texp_ident "msg/297"
+                                        ]
+                                    <case>
+                                      pattern (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+4]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+5])
+                                        Tpat_any
+                                      expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+9]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56])
+                                        Texp_apply
+                                        expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+9]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+27])
+                                          Texp_ident "Dune__exe!.Error.global_error"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+28]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+40])
+                                              Texp_ident "parsing_step/285"
+                                          <arg>
+                                            Nolabel
+                                            expression (test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+41]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+56])
+                                              Texp_constant Const_string("Syntax error.",(test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+42]..test/dynamic/houblix/src/syntacticAnalysis.ml[9,310+55]),None)
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__SyntacticAnalysis>
+ "process"[value] -> <Dune__exe__SyntacticAnalysis.6>;
+ }
+
+(seq
+  (let (parsing_step/285 = "during parsing")
+    (setfield_ptr(root-init) 1 (global Dune__exe__SyntacticAnalysis!)
+      parsing_step/285))
+  (let
+    (process/286 =
+       (function lexer_init/288 lexer_fun/289 parser_fun/290 input/291
+         (apply parser_fun/290 lexer_fun/289
+           (apply lexer_init/288 input/291))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__SyntacticAnalysis!)
+      process/286))
+  (let
+    (process/292 =
+       (function lexer_init/293 lexer_fun/294 parser_fun/295 input/296
+         (try
+           (apply (field_imm 2 (global Dune__exe__SyntacticAnalysis!))
+             lexer_init/293 lexer_fun/294 parser_fun/295 input/296)
+          with exn/502
+           (catch
+             (let (tag/503 =a (field_imm 0 exn/502))
+               (if (== tag/503 (field_imm 10 (global Stdlib!)))
+                 (let (msg/297 =a (field_imm 1 exn/502))
+                   (apply (field_imm 7 (global Dune__exe__Error!))
+                     (field_imm 1 (global Dune__exe__SyntacticAnalysis!))
+                     msg/297))
+                 (exit 2)))
+            with (2)
+             (apply (field_imm 7 (global Dune__exe__Error!))
+               (field_imm 1 (global Dune__exe__SyntacticAnalysis!))
+               "Syntax error.")))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__SyntacticAnalysis!)
+      process/292))
+  0)
+(seq
+  (let (parsing_step/285 = "during parsing")
+    (setfield_ptr(root-init) 1 (global Dune__exe__SyntacticAnalysis!)
+      parsing_step/285))
+  (let
+    (process/286 =
+       (function lexer_init/288 lexer_fun/289 parser_fun/290 input/291
+         (apply parser_fun/290 lexer_fun/289
+           (apply lexer_init/288 input/291))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__SyntacticAnalysis!)
+      process/286))
+  (let
+    (process/292 =
+       (function lexer_init/293 lexer_fun/294 parser_fun/295 input/296
+         (try
+           (apply (field_imm 2 (global Dune__exe__SyntacticAnalysis!))
+             lexer_init/293 lexer_fun/294 parser_fun/295 input/296)
+          with exn/502
+           (if (== (field_imm 0 exn/502) (field_imm 10 (global Stdlib!)))
+             (apply (field_imm 7 (global Dune__exe__Error!))
+               (field_imm 1 (global Dune__exe__SyntacticAnalysis!))
+               (field_imm 1 exn/502))
+             (apply (field_imm 7 (global Dune__exe__Error!))
+               (field_imm 1 (global Dune__exe__SyntacticAnalysis!))
+               "Syntax error.")))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__SyntacticAnalysis!)
+      process/292))
+  0)

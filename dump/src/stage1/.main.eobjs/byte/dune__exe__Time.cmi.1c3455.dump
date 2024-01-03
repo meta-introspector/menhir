@@ -1,0 +1,175 @@
+[
+  signature_item (src/time.mli[19,1237+0]..[19,1237+24])
+    Psig_value
+    value_description "tick" (src/time.mli[19,1237+4]..[19,1237+8]) (src/time.mli[19,1237+0]..[19,1237+24])
+      core_type (src/time.mli[19,1237+10]..[19,1237+24])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/time.mli[19,1237+10]..[19,1237+16])
+          Ptyp_constr "string" (src/time.mli[19,1237+10]..[19,1237+16])
+          []
+        core_type (src/time.mli[19,1237+20]..[19,1237+24])
+          Ptyp_constr "unit" (src/time.mli[19,1237+20]..[19,1237+24])
+          []
+      []
+  signature_item (src/time.mli[24,1359+0]..[24,1359+11])
+    Psig_type Rec
+    [
+      type_declaration "chrono" (src/time.mli[24,1359+5]..[24,1359+11]) (src/time.mli[24,1359+0]..[24,1359+11])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/time.mli[26,1372+0]..[26,1372+25])
+    Psig_value
+    value_description "fresh" (src/time.mli[26,1372+4]..[26,1372+9]) (src/time.mli[26,1372+0]..[26,1372+25])
+      core_type (src/time.mli[26,1372+11]..[26,1372+25])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/time.mli[26,1372+11]..[26,1372+15])
+          Ptyp_constr "unit" (src/time.mli[26,1372+11]..[26,1372+15])
+          []
+        core_type (src/time.mli[26,1372+19]..[26,1372+25])
+          Ptyp_constr "chrono" (src/time.mli[26,1372+19]..[26,1372+25])
+          []
+      []
+  signature_item (src/time.mli[28,1399+0]..[28,1399+40])
+    Psig_value
+    value_description "chrono" (src/time.mli[28,1399+4]..[28,1399+10]) (src/time.mli[28,1399+0]..[28,1399+40])
+      core_type (src/time.mli[28,1399+12]..[28,1399+40])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/time.mli[28,1399+12]..[28,1399+18])
+          Ptyp_constr "chrono" (src/time.mli[28,1399+12]..[28,1399+18])
+          []
+        core_type (src/time.mli[28,1399+22]..[28,1399+40])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/time.mli[28,1399+23]..[28,1399+33])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/time.mli[28,1399+23]..[28,1399+27])
+              Ptyp_constr "unit" (src/time.mli[28,1399+23]..[28,1399+27])
+              []
+            core_type (src/time.mli[28,1399+31]..[28,1399+33])
+              Ptyp_var a
+          core_type (src/time.mli[28,1399+38]..[28,1399+40])
+            Ptyp_var a
+      []
+  signature_item (src/time.mli[30,1441+0]..[30,1441+37])
+    Psig_value
+    value_description "display" (src/time.mli[30,1441+4]..[30,1441+11]) (src/time.mli[30,1441+0]..[30,1441+37])
+      core_type (src/time.mli[30,1441+13]..[30,1441+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/time.mli[30,1441+13]..[30,1441+19])
+          Ptyp_constr "chrono" (src/time.mli[30,1441+13]..[30,1441+19])
+          []
+        core_type (src/time.mli[30,1441+23]..[30,1441+37])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/time.mli[30,1441+23]..[30,1441+29])
+            Ptyp_constr "string" (src/time.mli[30,1441+23]..[30,1441+29])
+            []
+          core_type (src/time.mli[30,1441+33]..[30,1441+37])
+            Ptyp_constr "unit" (src/time.mli[30,1441+33]..[30,1441+37])
+            []
+      []
+]
+
+val tick : string -> unit
+type chrono
+val fresh : unit -> chrono
+val chrono : chrono -> (unit -> 'a) -> 'a
+val display : chrono -> string -> unit
+[
+  signature_item (src/time.mli[19,1237+0]..src/time.mli[19,1237+24])
+    Tsig_value
+    value_description tick/396 (src/time.mli[19,1237+0]..src/time.mli[19,1237+24])
+      core_type (src/time.mli[19,1237+10]..src/time.mli[19,1237+24])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/time.mli[19,1237+10]..src/time.mli[19,1237+16])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/time.mli[19,1237+20]..src/time.mli[19,1237+24])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/time.mli[24,1359+0]..src/time.mli[24,1359+11])
+    Tsig_type Rec
+    [
+      type_declaration chrono/397 (src/time.mli[24,1359+0]..src/time.mli[24,1359+11])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/time.mli[26,1372+0]..src/time.mli[26,1372+25])
+    Tsig_value
+    value_description fresh/398 (src/time.mli[26,1372+0]..src/time.mli[26,1372+25])
+      core_type (src/time.mli[26,1372+11]..src/time.mli[26,1372+25])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/time.mli[26,1372+11]..src/time.mli[26,1372+15])
+          Ttyp_constr "unit/6!"
+          []
+        core_type (src/time.mli[26,1372+19]..src/time.mli[26,1372+25])
+          Ttyp_constr "chrono/397"
+          []
+      []
+  signature_item (src/time.mli[28,1399+0]..src/time.mli[28,1399+40])
+    Tsig_value
+    value_description chrono/399 (src/time.mli[28,1399+0]..src/time.mli[28,1399+40])
+      core_type (src/time.mli[28,1399+12]..src/time.mli[28,1399+40])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/time.mli[28,1399+12]..src/time.mli[28,1399+18])
+          Ttyp_constr "chrono/397"
+          []
+        core_type (src/time.mli[28,1399+22]..src/time.mli[28,1399+40])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/time.mli[28,1399+23]..src/time.mli[28,1399+33])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/time.mli[28,1399+23]..src/time.mli[28,1399+27])
+              Ttyp_constr "unit/6!"
+              []
+            core_type (src/time.mli[28,1399+31]..src/time.mli[28,1399+33])
+              Ttyp_var a
+          core_type (src/time.mli[28,1399+38]..src/time.mli[28,1399+40])
+            Ttyp_var a
+      []
+  signature_item (src/time.mli[30,1441+0]..src/time.mli[30,1441+37])
+    Tsig_value
+    value_description display/400 (src/time.mli[30,1441+0]..src/time.mli[30,1441+37])
+      core_type (src/time.mli[30,1441+13]..src/time.mli[30,1441+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/time.mli[30,1441+13]..src/time.mli[30,1441+19])
+          Ttyp_constr "chrono/397"
+          []
+        core_type (src/time.mli[30,1441+23]..src/time.mli[30,1441+37])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/time.mli[30,1441+23]..src/time.mli[30,1441+29])
+            Ttyp_constr "string/15!"
+            []
+          core_type (src/time.mli[30,1441+33]..src/time.mli[30,1441+37])
+            Ttyp_constr "unit/6!"
+            []
+      []
+]
+

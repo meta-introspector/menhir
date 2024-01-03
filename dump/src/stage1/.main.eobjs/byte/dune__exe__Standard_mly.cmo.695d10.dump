@@ -1,0 +1,309 @@
+[
+  structure_item (src/standard_mly.ml[1,26+0]..[270,7763+2])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/standard_mly.ml[1,26+4]..[1,26+12])
+          Ppat_var "contents" (src/standard_mly.ml[1,26+4]..[1,26+12])
+        expression (src/standard_mly.ml[1,26+15]..[270,7763+2])
+          Pexp_constant PConst_string ("/******************************************************************************/\n/*                                                                            */\n/*                                   Menhir                                   */\n/*                                                                            */\n/*                       Fran\195\167ois Pottier, Inria Paris                        */\n/*              Yann R\195\169gis-Gianas, PPS, Universit\195\169 Paris Diderot              */\n/*                                                                            */\n/*  Copyright Inria. All rights reserved. This file is distributed under the  */\n/*  terms of the GNU Library General Public License version 2, with a         */\n/*  special exception on linking, as described in the file LICENSE.           */\n/*                                                                            */\n/******************************************************************************/\n\n(* This is menhir's standard library. It offers a number of\n   parameterized nonterminal definitions, such as options and lists,\n   that should be useful in a number of circumstances. *)\n\n%%\n\n(* ------------------------------------------------------------------------- *)\n(* The identity. *)\n\n(* [endrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     endrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [endrule] is marked %inline, everything is expanded away. So,\n   this is equivalent to:\n\n     cat dog cow { action1; action2 }\n\n   Note that [action1] moves to the end of the rule. The anonymous subrule\n   can even have several branches, as in:\n\n     cat\n     endrule(dog { action1a } | fox { action1b })\n     cow\n     { action2 }\n\n   This is expanded to:\n\n     cat dog cow { action1a; action2 }\n   | cat fox cow { action1b; action2 }\n\n*)\n\n%public %inline endrule(X):\nx = X\n    { x }\n\n(* [anonymous(X)] is a deprecated synonym for [endrule(X)].\n   It was never documented. *)\n\n%public %inline anonymous(X):\nx = X\n    { x }\n\n(* [midrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     midrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [midrule] is not marked %inline, this is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where the fresh nonterminal symbol [xxx] is separately defined by:\n\n     xxx: dog { action1 }\n\n   In particular, if there is no [dog], what we get is a semantic action\n   embedded in the middle of a rule. For instance,\n\n     cat midrule({ action1 }) cow { action2 }\n\n   is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where [xxx] is separately defined by the rule:\n\n     xxx: { action1 }\n\n*)\n\n%public midrule(X):\nx = X\n    { x }\n\n(* [embedded(X)] is a deprecated synonym for [midrule(X)].\n   It was never documented. *)\n\n%public embedded(X):\nx = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Options. *)\n\n(* [option(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a option] if [X] produces a value of type ['a]. *)\n\n%public option(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [ioption(X)] is identical to [option(X)], except its definition is\n   inlined. This has the effect of duplicating the production that\n   refers to it, possibly eliminating an LR(1) conflict. *)\n\n%public %inline ioption(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [boption(X)] recognizes either nothing or [X]. It produces a value\n   of type [bool]. *)\n\n%public boption(X):\n  /* nothing */\n    { false }\n| X\n    { true }\n\n(* [loption(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a list] if [X] produces a value of type ['a list]. *)\n\n%public loption(X):\n  /* nothing */\n    { [] }\n| x = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Sequences. *)\n\n(* [epsilon] recognizes the empty word. It can be used instead of the\n   traditional /* empty */ comment. *)\n\n(* NOT YET ADDED because we first need to remove the limitation that\n   every symbol must be reachable from the start symbol!\n\n%public %inline epsilon:\n  /* empty */\n    { () }\n\n *)\n\n(* [pair(X, Y)] recognizes the sequence [X Y]. It produces a value of\n   type ['a * 'b] if [X] and [Y] produce values of type ['a] and ['b],\n   respectively. *)\n\n%public %inline pair(X, Y):\n  x = X; y = Y\n    { (x, y) }\n\n(* [separated_pair(X, sep, Y)] recognizes the sequence [X sep Y]. It\n   produces a value of type ['a * 'b] if [X] and [Y] produce values of\n   type ['a] and ['b], respectively. *)\n\n%public %inline separated_pair(X, sep, Y):\n  x = X; sep; y = Y\n    { (x, y) }\n\n(* [preceded(opening, X)] recognizes the sequence [opening X]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline preceded(opening, X):\n  opening; x = X\n    { x }\n\n(* [terminated(X, closing)] recognizes the sequence [X closing]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline terminated(X, closing):\n  x = X; closing\n    { x }\n\n(* [delimited(opening, X, closing)] recognizes the sequence [opening X\n   closing]. It passes on the value produced by [X], so that it\n   produces a value of type ['a] if [X] produces a value of type\n   ['a]. *)\n\n%public %inline delimited(opening, X, closing):\n  opening; x = X; closing\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Lists. *)\n\n(* [list(X)] recognizes a possibly empty list of [X]'s. It produces a\n   value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public list(X):\n  /* nothing */\n    { [] }\n| x = X; xs = list(X)\n    { x :: xs }\n\n(* [nonempty_list(X)] recognizes a nonempty list of [X]'s. It produces\n   a value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public nonempty_list(X):\n  x = X\n    { [ x ] }\n| x = X; xs = nonempty_list(X)\n    { x :: xs }\n\n(* [separated_list(separator, X)] recognizes a possibly empty list of\n   [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public %inline separated_list(separator, X):\n  xs = loption(separated_nonempty_list(separator, X))\n    { xs }\n\n(* [separated_nonempty_list(separator, X)] recognizes a nonempty list\n   of [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public separated_nonempty_list(separator, X):\n  x = X\n    { [ x ] }\n| x = X; separator; xs = separated_nonempty_list(separator, X)\n    { x :: xs }\n\n(* ------------------------------------------------------------------------- *)\n(* List manipulation and transformation. *)\n\n(* [rev(XS)] recognizes the same language as [XS], but reverses the resulting\n   OCaml list. (20181005) *)\n\n%public %inline rev(XS):\n  xs = XS\n    { List.rev xs }\n\n(* [flatten(XSS)] recognizes the same language as [XSS], and flattens the\n   resulting OCaml list of lists. (20181005) *)\n\n%public %inline flatten(XSS):\n  xss = XSS\n    { List.flatten xss }\n\n(* [append(XS, YS)] recognizes [XS YS], and appends (concatenates) the\n   resulting OCaml lists. (20181005) *)\n\n%public %inline append(XS, YS):\n  xs = XS ys = YS\n    { xs @ ys }\n\n%%\n",(src/standard_mly.ml[1,26+17]..[270,7763+0]),Some "")
+    ]
+]
+
+let contents =
+  {|/******************************************************************************/
+/*                                                                            */
+/*                                   Menhir                                   */
+/*                                                                            */
+/*                       François Pottier, Inria Paris                        */
+/*              Yann Régis-Gianas, PPS, Université Paris Diderot              */
+/*                                                                            */
+/*  Copyright Inria. All rights reserved. This file is distributed under the  */
+/*  terms of the GNU Library General Public License version 2, with a         */
+/*  special exception on linking, as described in the file LICENSE.           */
+/*                                                                            */
+/******************************************************************************/
+
+(* This is menhir's standard library. It offers a number of
+   parameterized nonterminal definitions, such as options and lists,
+   that should be useful in a number of circumstances. *)
+
+%%
+
+(* ------------------------------------------------------------------------- *)
+(* The identity. *)
+
+(* [endrule(X)] is the same as [X]. *)
+
+(* This allows placing an anonymous subrule in the middle of a rule, as in:
+
+     cat
+     endrule(dog { action1 })
+     cow
+     { action2 }
+
+   Because [endrule] is marked %inline, everything is expanded away. So,
+   this is equivalent to:
+
+     cat dog cow { action1; action2 }
+
+   Note that [action1] moves to the end of the rule. The anonymous subrule
+   can even have several branches, as in:
+
+     cat
+     endrule(dog { action1a } | fox { action1b })
+     cow
+     { action2 }
+
+   This is expanded to:
+
+     cat dog cow { action1a; action2 }
+   | cat fox cow { action1b; action2 }
+
+*)
+
+%public %inline endrule(X):
+x = X
+    { x }
+
+(* [anonymous(X)] is a deprecated synonym for [endrule(X)].
+   It was never documented. *)
+
+%public %inline anonymous(X):
+x = X
+    { x }
+
+(* [midrule(X)] is the same as [X]. *)
+
+(* This allows placing an anonymous subrule in the middle of a rule, as in:
+
+     cat
+     midrule(dog { action1 })
+     cow
+     { action2 }
+
+   Because [midrule] is not marked %inline, this is equivalent to:
+
+     cat xxx cow { action2 }
+
+   where the fresh nonterminal symbol [xxx] is separately defined by:
+
+     xxx: dog { action1 }
+
+   In particular, if there is no [dog], what we get is a semantic action
+   embedded in the middle of a rule. For instance,
+
+     cat midrule({ action1 }) cow { action2 }
+
+   is equivalent to:
+
+     cat xxx cow { action2 }
+
+   where [xxx] is separately defined by the rule:
+
+     xxx: { action1 }
+
+*)
+
+%public midrule(X):
+x = X
+    { x }
+
+(* [embedded(X)] is a deprecated synonym for [midrule(X)].
+   It was never documented. *)
+
+%public embedded(X):
+x = X
+    { x }
+
+(* ------------------------------------------------------------------------- *)
+(* Options. *)
+
+(* [option(X)] recognizes either nothing or [X]. It produces a value
+   of type ['a option] if [X] produces a value of type ['a]. *)
+
+%public option(X):
+  /* nothing */
+    { None }
+| x = X
+    { Some x }
+
+(* [ioption(X)] is identical to [option(X)], except its definition is
+   inlined. This has the effect of duplicating the production that
+   refers to it, possibly eliminating an LR(1) conflict. *)
+
+%public %inline ioption(X):
+  /* nothing */
+    { None }
+| x = X
+    { Some x }
+
+(* [boption(X)] recognizes either nothing or [X]. It produces a value
+   of type [bool]. *)
+
+%public boption(X):
+  /* nothing */
+    { false }
+| X
+    { true }
+
+(* [loption(X)] recognizes either nothing or [X]. It produces a value
+   of type ['a list] if [X] produces a value of type ['a list]. *)
+
+%public loption(X):
+  /* nothing */
+    { [] }
+| x = X
+    { x }
+
+(* ------------------------------------------------------------------------- *)
+(* Sequences. *)
+
+(* [epsilon] recognizes the empty word. It can be used instead of the
+   traditional /* empty */ comment. *)
+
+(* NOT YET ADDED because we first need to remove the limitation that
+   every symbol must be reachable from the start symbol!
+
+%public %inline epsilon:
+  /* empty */
+    { () }
+
+ *)
+
+(* [pair(X, Y)] recognizes the sequence [X Y]. It produces a value of
+   type ['a * 'b] if [X] and [Y] produce values of type ['a] and ['b],
+   respectively. *)
+
+%public %inline pair(X, Y):
+  x = X; y = Y
+    { (x, y) }
+
+(* [separated_pair(X, sep, Y)] recognizes the sequence [X sep Y]. It
+   produces a value of type ['a * 'b] if [X] and [Y] produce values of
+   type ['a] and ['b], respectively. *)
+
+%public %inline separated_pair(X, sep, Y):
+  x = X; sep; y = Y
+    { (x, y) }
+
+(* [preceded(opening, X)] recognizes the sequence [opening X]. It
+   passes on the value produced by [X], so that it produces a value of
+   type ['a] if [X] produces a value of type ['a]. *)
+
+%public %inline preceded(opening, X):
+  opening; x = X
+    { x }
+
+(* [terminated(X, closing)] recognizes the sequence [X closing]. It
+   passes on the value produced by [X], so that it produces a value of
+   type ['a] if [X] produces a value of type ['a]. *)
+
+%public %inline terminated(X, closing):
+  x = X; closing
+    { x }
+
+(* [delimited(opening, X, closing)] recognizes the sequence [opening X
+   closing]. It passes on the value produced by [X], so that it
+   produces a value of type ['a] if [X] produces a value of type
+   ['a]. *)
+
+%public %inline delimited(opening, X, closing):
+  opening; x = X; closing
+    { x }
+
+(* ------------------------------------------------------------------------- *)
+(* Lists. *)
+
+(* [list(X)] recognizes a possibly empty list of [X]'s. It produces a
+   value of type ['a list] if [X] produces a value of type ['a]. The
+   front element of the list is the first element that was parsed. *)
+
+%public list(X):
+  /* nothing */
+    { [] }
+| x = X; xs = list(X)
+    { x :: xs }
+
+(* [nonempty_list(X)] recognizes a nonempty list of [X]'s. It produces
+   a value of type ['a list] if [X] produces a value of type ['a]. The
+   front element of the list is the first element that was parsed. *)
+
+%public nonempty_list(X):
+  x = X
+    { [ x ] }
+| x = X; xs = nonempty_list(X)
+    { x :: xs }
+
+(* [separated_list(separator, X)] recognizes a possibly empty list of
+   [X]'s, separated with [separator]'s. It produces a value of type
+   ['a list] if [X] produces a value of type ['a]. The front element
+   of the list is the first element that was parsed. *)
+
+%public %inline separated_list(separator, X):
+  xs = loption(separated_nonempty_list(separator, X))
+    { xs }
+
+(* [separated_nonempty_list(separator, X)] recognizes a nonempty list
+   of [X]'s, separated with [separator]'s. It produces a value of type
+   ['a list] if [X] produces a value of type ['a]. The front element
+   of the list is the first element that was parsed. *)
+
+%public separated_nonempty_list(separator, X):
+  x = X
+    { [ x ] }
+| x = X; separator; xs = separated_nonempty_list(separator, X)
+    { x :: xs }
+
+(* ------------------------------------------------------------------------- *)
+(* List manipulation and transformation. *)
+
+(* [rev(XS)] recognizes the same language as [XS], but reverses the resulting
+   OCaml list. (20181005) *)
+
+%public %inline rev(XS):
+  xs = XS
+    { List.rev xs }
+
+(* [flatten(XSS)] recognizes the same language as [XSS], and flattens the
+   resulting OCaml list of lists. (20181005) *)
+
+%public %inline flatten(XSS):
+  xss = XSS
+    { List.flatten xss }
+
+(* [append(XS, YS)] recognizes [XS YS], and appends (concatenates) the
+   resulting OCaml lists. (20181005) *)
+
+%public %inline append(XS, YS):
+  xs = XS ys = YS
+    { xs @ ys }
+
+%%
+|}
+[
+  structure_item (src/standard_mly.ml[1,26+0]..src/standard_mly.ml[270,7763+2])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/standard_mly.ml[1,26+4]..src/standard_mly.ml[1,26+12])
+          Tpat_var "contents/396"
+        expression (src/standard_mly.ml[1,26+15]..src/standard_mly.ml[270,7763+2])
+          Texp_constant Const_string ("/******************************************************************************/\n/*                                                                            */\n/*                                   Menhir                                   */\n/*                                                                            */\n/*                       Fran\195\167ois Pottier, Inria Paris                        */\n/*              Yann R\195\169gis-Gianas, PPS, Universit\195\169 Paris Diderot              */\n/*                                                                            */\n/*  Copyright Inria. All rights reserved. This file is distributed under the  */\n/*  terms of the GNU Library General Public License version 2, with a         */\n/*  special exception on linking, as described in the file LICENSE.           */\n/*                                                                            */\n/******************************************************************************/\n\n(* This is menhir's standard library. It offers a number of\n   parameterized nonterminal definitions, such as options and lists,\n   that should be useful in a number of circumstances. *)\n\n%%\n\n(* ------------------------------------------------------------------------- *)\n(* The identity. *)\n\n(* [endrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     endrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [endrule] is marked %inline, everything is expanded away. So,\n   this is equivalent to:\n\n     cat dog cow { action1; action2 }\n\n   Note that [action1] moves to the end of the rule. The anonymous subrule\n   can even have several branches, as in:\n\n     cat\n     endrule(dog { action1a } | fox { action1b })\n     cow\n     { action2 }\n\n   This is expanded to:\n\n     cat dog cow { action1a; action2 }\n   | cat fox cow { action1b; action2 }\n\n*)\n\n%public %inline endrule(X):\nx = X\n    { x }\n\n(* [anonymous(X)] is a deprecated synonym for [endrule(X)].\n   It was never documented. *)\n\n%public %inline anonymous(X):\nx = X\n    { x }\n\n(* [midrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     midrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [midrule] is not marked %inline, this is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where the fresh nonterminal symbol [xxx] is separately defined by:\n\n     xxx: dog { action1 }\n\n   In particular, if there is no [dog], what we get is a semantic action\n   embedded in the middle of a rule. For instance,\n\n     cat midrule({ action1 }) cow { action2 }\n\n   is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where [xxx] is separately defined by the rule:\n\n     xxx: { action1 }\n\n*)\n\n%public midrule(X):\nx = X\n    { x }\n\n(* [embedded(X)] is a deprecated synonym for [midrule(X)].\n   It was never documented. *)\n\n%public embedded(X):\nx = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Options. *)\n\n(* [option(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a option] if [X] produces a value of type ['a]. *)\n\n%public option(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [ioption(X)] is identical to [option(X)], except its definition is\n   inlined. This has the effect of duplicating the production that\n   refers to it, possibly eliminating an LR(1) conflict. *)\n\n%public %inline ioption(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [boption(X)] recognizes either nothing or [X]. It produces a value\n   of type [bool]. *)\n\n%public boption(X):\n  /* nothing */\n    { false }\n| X\n    { true }\n\n(* [loption(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a list] if [X] produces a value of type ['a list]. *)\n\n%public loption(X):\n  /* nothing */\n    { [] }\n| x = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Sequences. *)\n\n(* [epsilon] recognizes the empty word. It can be used instead of the\n   traditional /* empty */ comment. *)\n\n(* NOT YET ADDED because we first need to remove the limitation that\n   every symbol must be reachable from the start symbol!\n\n%public %inline epsilon:\n  /* empty */\n    { () }\n\n *)\n\n(* [pair(X, Y)] recognizes the sequence [X Y]. It produces a value of\n   type ['a * 'b] if [X] and [Y] produce values of type ['a] and ['b],\n   respectively. *)\n\n%public %inline pair(X, Y):\n  x = X; y = Y\n    { (x, y) }\n\n(* [separated_pair(X, sep, Y)] recognizes the sequence [X sep Y]. It\n   produces a value of type ['a * 'b] if [X] and [Y] produce values of\n   type ['a] and ['b], respectively. *)\n\n%public %inline separated_pair(X, sep, Y):\n  x = X; sep; y = Y\n    { (x, y) }\n\n(* [preceded(opening, X)] recognizes the sequence [opening X]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline preceded(opening, X):\n  opening; x = X\n    { x }\n\n(* [terminated(X, closing)] recognizes the sequence [X closing]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline terminated(X, closing):\n  x = X; closing\n    { x }\n\n(* [delimited(opening, X, closing)] recognizes the sequence [opening X\n   closing]. It passes on the value produced by [X], so that it\n   produces a value of type ['a] if [X] produces a value of type\n   ['a]. *)\n\n%public %inline delimited(opening, X, closing):\n  opening; x = X; closing\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Lists. *)\n\n(* [list(X)] recognizes a possibly empty list of [X]'s. It produces a\n   value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public list(X):\n  /* nothing */\n    { [] }\n| x = X; xs = list(X)\n    { x :: xs }\n\n(* [nonempty_list(X)] recognizes a nonempty list of [X]'s. It produces\n   a value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public nonempty_list(X):\n  x = X\n    { [ x ] }\n| x = X; xs = nonempty_list(X)\n    { x :: xs }\n\n(* [separated_list(separator, X)] recognizes a possibly empty list of\n   [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public %inline separated_list(separator, X):\n  xs = loption(separated_nonempty_list(separator, X))\n    { xs }\n\n(* [separated_nonempty_list(separator, X)] recognizes a nonempty list\n   of [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public separated_nonempty_list(separator, X):\n  x = X\n    { [ x ] }\n| x = X; separator; xs = separated_nonempty_list(separator, X)\n    { x :: xs }\n\n(* ------------------------------------------------------------------------- *)\n(* List manipulation and transformation. *)\n\n(* [rev(XS)] recognizes the same language as [XS], but reverses the resulting\n   OCaml list. (20181005) *)\n\n%public %inline rev(XS):\n  xs = XS\n    { List.rev xs }\n\n(* [flatten(XSS)] recognizes the same language as [XSS], and flattens the\n   resulting OCaml list of lists. (20181005) *)\n\n%public %inline flatten(XSS):\n  xss = XSS\n    { List.flatten xss }\n\n(* [append(XS, YS)] recognizes [XS YS], and appends (concatenates) the\n   resulting OCaml lists. (20181005) *)\n\n%public %inline append(XS, YS):\n  xs = XS ys = YS\n    { xs @ ys }\n\n%%\n",(src/standard_mly.ml[1,26+17]..src/standard_mly.ml[270,7763+0]),Some "")
+    ]
+]
+
+{<Dune__exe__Standard_mly>
+ "contents"[value] -> <Dune__exe__Standard_mly.0>;
+ }
+
+(setglobal Dune__exe__Standard_mly!
+  (let
+    (contents/396 =
+       "/******************************************************************************/\n/*                                                                            */\n/*                                   Menhir                                   */\n/*                                                                            */\n/*                       Fran\195\167ois Pottier, Inria Paris                        */\n/*              Yann R\195\169gis-Gianas, PPS, Universit\195\169 Paris Diderot              */\n/*                                                                            */\n/*  Copyright Inria. All rights reserved. This file is distributed under the  */\n/*  terms of the GNU Library General Public License version 2, with a         */\n/*  special exception on linking, as described in the file LICENSE.           */\n/*                                                                            */\n/******************************************************************************/\n\n(* This is menhir's standard library. It offers a number of\n   parameterized nonterminal definitions, such as options and lists,\n   that should be useful in a number of circumstances. *)\n\n%%\n\n(* ------------------------------------------------------------------------- *)\n(* The identity. *)\n\n(* [endrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     endrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [endrule] is marked %inline, everything is expanded away. So,\n   this is equivalent to:\n\n     cat dog cow { action1; action2 }\n\n   Note that [action1] moves to the end of the rule. The anonymous subrule\n   can even have several branches, as in:\n\n     cat\n     endrule(dog { action1a } | fox { action1b })\n     cow\n     { action2 }\n\n   This is expanded to:\n\n     cat dog cow { action1a; action2 }\n   | cat fox cow { action1b; action2 }\n\n*)\n\n%public %inline endrule(X):\nx = X\n    { x }\n\n(* [anonymous(X)] is a deprecated synonym for [endrule(X)].\n   It was never documented. *)\n\n%public %inline anonymous(X):\nx = X\n    { x }\n\n(* [midrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     midrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [midrule] is not marked %inline, this is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where the fresh nonterminal symbol [xxx] is separately defined by:\n\n     xxx: dog { action1 }\n\n   In particular, if there is no [dog], what we get is a semantic action\n   embedded in the middle of a rule. For instance,\n\n     cat midrule({ action1 }) cow { action2 }\n\n   is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where [xxx] is separately defined by the rule:\n\n     xxx: { action1 }\n\n*)\n\n%public midrule(X):\nx = X\n    { x }\n\n(* [embedded(X)] is a deprecated synonym for [midrule(X)].\n   It was never documented. *)\n\n%public embedded(X):\nx = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Options. *)\n\n(* [option(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a option] if [X] produces a value of type ['a]. *)\n\n%public option(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [ioption(X)] is identical to [option(X)], except its definition is\n   inlined. This has the effect of duplicating the production that\n   refers to it, possibly eliminating an LR(1) conflict. *)\n\n%public %inline ioption(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [boption(X)] recognizes either nothing or [X]. It produces a value\n   of type [bool]. *)\n\n%public boption(X):\n  /* nothing */\n    { false }\n| X\n    { true }\n\n(* [loption(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a list] if [X] produces a value of type ['a list]. *)\n\n%public loption(X):\n  /* nothing */\n    { [] }\n| x = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Sequences. *)\n\n(* [epsilon] recognizes the empty word. It can be used instead of the\n   traditional /* empty */ comment. *)\n\n(* NOT YET ADDED because we first need to remove the limitation that\n   every symbol must be reachable from the start symbol!\n\n%public %inline epsilon:\n  /* empty */\n    { () }\n\n *)\n\n(* [pair(X, Y)] recognizes the sequence [X Y]. It produces a value of\n   type ['a * 'b] if [X] and [Y] produce values of type ['a] and ['b],\n   respectively. *)\n\n%public %inline pair(X, Y):\n  x = X; y = Y\n    { (x, y) }\n\n(* [separated_pair(X, sep, Y)] recognizes the sequence [X sep Y]. It\n   produces a value of type ['a * 'b] if [X] and [Y] produce values of\n   type ['a] and ['b], respectively. *)\n\n%public %inline separated_pair(X, sep, Y):\n  x = X; sep; y = Y\n    { (x, y) }\n\n(* [preceded(opening, X)] recognizes the sequence [opening X]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline preceded(opening, X):\n  opening; x = X\n    { x }\n\n(* [terminated(X, closing)] recognizes the sequence [X closing]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline terminated(X, closing):\n  x = X; closing\n    { x }\n\n(* [delimited(opening, X, closing)] recognizes the sequence [opening X\n   closing]. It passes on the value produced by [X], so that it\n   produces a value of type ['a] if [X] produces a value of type\n   ['a]. *)\n\n%public %inline delimited(opening, X, closing):\n  opening; x = X; closing\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Lists. *)\n\n(* [list(X)] recognizes a possibly empty list of [X]'s. It produces a\n   value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public list(X):\n  /* nothing */\n    { [] }\n| x = X; xs = list(X)\n    { x :: xs }\n\n(* [nonempty_list(X)] recognizes a nonempty list of [X]'s. It produces\n   a value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public nonempty_list(X):\n  x = X\n    { [ x ] }\n| x = X; xs = nonempty_list(X)\n    { x :: xs }\n\n(* [separated_list(separator, X)] recognizes a possibly empty list of\n   [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public %inline separated_list(separator, X):\n  xs = loption(separated_nonempty_list(separator, X))\n    { xs }\n\n(* [separated_nonempty_list(separator, X)] recognizes a nonempty list\n   of [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public separated_nonempty_list(separator, X):\n  x = X\n    { [ x ] }\n| x = X; separator; xs = separated_nonempty_list(separator, X)\n    { x :: xs }\n\n(* ------------------------------------------------------------------------- *)\n(* List manipulation and transformation. *)\n\n(* [rev(XS)] recognizes the same language as [XS], but reverses the resulting\n   OCaml list. (20181005) *)\n\n%public %inline rev(XS):\n  xs = XS\n    { List.rev xs }\n\n(* [flatten(XSS)] recognizes the same language as [XSS], and flattens the\n   resulting OCaml list of lists. (20181005) *)\n\n%public %inline flatten(XSS):\n  xss = XSS\n    { List.flatten xss }\n\n(* [append(XS, YS)] recognizes [XS YS], and appends (concatenates) the\n   resulting OCaml lists. (20181005) *)\n\n%public %inline append(XS, YS):\n  xs = XS ys = YS\n    { xs @ ys }\n\n%%\n")
+    (pseudo <unknown location> (makeblock 0 contents/396))))
+(setglobal Dune__exe__Standard_mly!
+  (let
+    (contents/396 =
+       "/******************************************************************************/\n/*                                                                            */\n/*                                   Menhir                                   */\n/*                                                                            */\n/*                       Fran\195\167ois Pottier, Inria Paris                        */\n/*              Yann R\195\169gis-Gianas, PPS, Universit\195\169 Paris Diderot              */\n/*                                                                            */\n/*  Copyright Inria. All rights reserved. This file is distributed under the  */\n/*  terms of the GNU Library General Public License version 2, with a         */\n/*  special exception on linking, as described in the file LICENSE.           */\n/*                                                                            */\n/******************************************************************************/\n\n(* This is menhir's standard library. It offers a number of\n   parameterized nonterminal definitions, such as options and lists,\n   that should be useful in a number of circumstances. *)\n\n%%\n\n(* ------------------------------------------------------------------------- *)\n(* The identity. *)\n\n(* [endrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     endrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [endrule] is marked %inline, everything is expanded away. So,\n   this is equivalent to:\n\n     cat dog cow { action1; action2 }\n\n   Note that [action1] moves to the end of the rule. The anonymous subrule\n   can even have several branches, as in:\n\n     cat\n     endrule(dog { action1a } | fox { action1b })\n     cow\n     { action2 }\n\n   This is expanded to:\n\n     cat dog cow { action1a; action2 }\n   | cat fox cow { action1b; action2 }\n\n*)\n\n%public %inline endrule(X):\nx = X\n    { x }\n\n(* [anonymous(X)] is a deprecated synonym for [endrule(X)].\n   It was never documented. *)\n\n%public %inline anonymous(X):\nx = X\n    { x }\n\n(* [midrule(X)] is the same as [X]. *)\n\n(* This allows placing an anonymous subrule in the middle of a rule, as in:\n\n     cat\n     midrule(dog { action1 })\n     cow\n     { action2 }\n\n   Because [midrule] is not marked %inline, this is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where the fresh nonterminal symbol [xxx] is separately defined by:\n\n     xxx: dog { action1 }\n\n   In particular, if there is no [dog], what we get is a semantic action\n   embedded in the middle of a rule. For instance,\n\n     cat midrule({ action1 }) cow { action2 }\n\n   is equivalent to:\n\n     cat xxx cow { action2 }\n\n   where [xxx] is separately defined by the rule:\n\n     xxx: { action1 }\n\n*)\n\n%public midrule(X):\nx = X\n    { x }\n\n(* [embedded(X)] is a deprecated synonym for [midrule(X)].\n   It was never documented. *)\n\n%public embedded(X):\nx = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Options. *)\n\n(* [option(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a option] if [X] produces a value of type ['a]. *)\n\n%public option(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [ioption(X)] is identical to [option(X)], except its definition is\n   inlined. This has the effect of duplicating the production that\n   refers to it, possibly eliminating an LR(1) conflict. *)\n\n%public %inline ioption(X):\n  /* nothing */\n    { None }\n| x = X\n    { Some x }\n\n(* [boption(X)] recognizes either nothing or [X]. It produces a value\n   of type [bool]. *)\n\n%public boption(X):\n  /* nothing */\n    { false }\n| X\n    { true }\n\n(* [loption(X)] recognizes either nothing or [X]. It produces a value\n   of type ['a list] if [X] produces a value of type ['a list]. *)\n\n%public loption(X):\n  /* nothing */\n    { [] }\n| x = X\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Sequences. *)\n\n(* [epsilon] recognizes the empty word. It can be used instead of the\n   traditional /* empty */ comment. *)\n\n(* NOT YET ADDED because we first need to remove the limitation that\n   every symbol must be reachable from the start symbol!\n\n%public %inline epsilon:\n  /* empty */\n    { () }\n\n *)\n\n(* [pair(X, Y)] recognizes the sequence [X Y]. It produces a value of\n   type ['a * 'b] if [X] and [Y] produce values of type ['a] and ['b],\n   respectively. *)\n\n%public %inline pair(X, Y):\n  x = X; y = Y\n    { (x, y) }\n\n(* [separated_pair(X, sep, Y)] recognizes the sequence [X sep Y]. It\n   produces a value of type ['a * 'b] if [X] and [Y] produce values of\n   type ['a] and ['b], respectively. *)\n\n%public %inline separated_pair(X, sep, Y):\n  x = X; sep; y = Y\n    { (x, y) }\n\n(* [preceded(opening, X)] recognizes the sequence [opening X]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline preceded(opening, X):\n  opening; x = X\n    { x }\n\n(* [terminated(X, closing)] recognizes the sequence [X closing]. It\n   passes on the value produced by [X], so that it produces a value of\n   type ['a] if [X] produces a value of type ['a]. *)\n\n%public %inline terminated(X, closing):\n  x = X; closing\n    { x }\n\n(* [delimited(opening, X, closing)] recognizes the sequence [opening X\n   closing]. It passes on the value produced by [X], so that it\n   produces a value of type ['a] if [X] produces a value of type\n   ['a]. *)\n\n%public %inline delimited(opening, X, closing):\n  opening; x = X; closing\n    { x }\n\n(* ------------------------------------------------------------------------- *)\n(* Lists. *)\n\n(* [list(X)] recognizes a possibly empty list of [X]'s. It produces a\n   value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public list(X):\n  /* nothing */\n    { [] }\n| x = X; xs = list(X)\n    { x :: xs }\n\n(* [nonempty_list(X)] recognizes a nonempty list of [X]'s. It produces\n   a value of type ['a list] if [X] produces a value of type ['a]. The\n   front element of the list is the first element that was parsed. *)\n\n%public nonempty_list(X):\n  x = X\n    { [ x ] }\n| x = X; xs = nonempty_list(X)\n    { x :: xs }\n\n(* [separated_list(separator, X)] recognizes a possibly empty list of\n   [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public %inline separated_list(separator, X):\n  xs = loption(separated_nonempty_list(separator, X))\n    { xs }\n\n(* [separated_nonempty_list(separator, X)] recognizes a nonempty list\n   of [X]'s, separated with [separator]'s. It produces a value of type\n   ['a list] if [X] produces a value of type ['a]. The front element\n   of the list is the first element that was parsed. *)\n\n%public separated_nonempty_list(separator, X):\n  x = X\n    { [ x ] }\n| x = X; separator; xs = separated_nonempty_list(separator, X)\n    { x :: xs }\n\n(* ------------------------------------------------------------------------- *)\n(* List manipulation and transformation. *)\n\n(* [rev(XS)] recognizes the same language as [XS], but reverses the resulting\n   OCaml list. (20181005) *)\n\n%public %inline rev(XS):\n  xs = XS\n    { List.rev xs }\n\n(* [flatten(XSS)] recognizes the same language as [XSS], and flattens the\n   resulting OCaml list of lists. (20181005) *)\n\n%public %inline flatten(XSS):\n  xss = XSS\n    { List.flatten xss }\n\n(* [append(XS, YS)] recognizes [XS YS], and appends (concatenates) the\n   resulting OCaml lists. (20181005) *)\n\n%public %inline append(XS, YS):\n  xs = XS ys = YS\n    { xs @ ys }\n\n%%\n")
+    (pseudo <unknown location> (makeblock 0 contents/396))))

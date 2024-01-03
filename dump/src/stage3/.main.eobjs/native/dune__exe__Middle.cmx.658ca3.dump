@@ -1,0 +1,469 @@
+[
+  structure_item (src/middle.ml[14,996+0]..[14,996+12])
+    Pstr_open Fresh
+    module_expr (src/middle.ml[14,996+5]..[14,996+12])
+      Pmod_ident "Grammar" (src/middle.ml[14,996+5]..[14,996+12])
+  structure_item (src/middle.ml[16,1010+0]..[35,1660+3])
+    Pstr_module
+    "Run" (src/middle.ml[16,1010+7]..[16,1010+10])
+      module_expr (src/middle.ml[16,1010+11]..[35,1660+3])
+        Pmod_functor ()
+        module_expr (src/middle.ml[16,1010+16]..[35,1660+3])
+          Pmod_structure
+          [
+            structure_item (src/middle.ml[22,1190+0]..[31,1571+5])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/middle.ml[22,1190+4]..[22,1190+6])
+                    Ppat_construct "()" (src/middle.ml[22,1190+4]..[22,1190+6])
+                    None
+                  expression (src/middle.ml[23,1199+2]..[31,1571+5])
+                    Pexp_apply
+                    expression (src/middle.ml[23,1199+27]..[23,1199+29])
+                      Pexp_ident "|>" (src/middle.ml[23,1199+27]..[23,1199+29])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/middle.ml[23,1199+2]..[23,1199+26])
+                          Pexp_ident "Settings.random_sentence" (src/middle.ml[23,1199+2]..[23,1199+26])
+                      <arg>
+                      Nolabel
+                        expression (src/middle.ml[23,1199+30]..[31,1571+5])
+                          Pexp_apply
+                          expression (src/middle.ml[23,1199+30]..[23,1199+41])
+                            Pexp_ident "Option.iter" (src/middle.ml[23,1199+30]..[23,1199+41])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/middle.ml[23,1199+42]..[31,1571+5])
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/middle.ml[23,1199+52]..[23,1199+69])
+                                  Ppat_tuple
+                                  [
+                                    pattern (src/middle.ml[23,1199+53]..[23,1199+55])
+                                      Ppat_var "nt" (src/middle.ml[23,1199+53]..[23,1199+55])
+                                    pattern (src/middle.ml[23,1199+57]..[23,1199+61])
+                                      Ppat_var "goal" (src/middle.ml[23,1199+57]..[23,1199+61])
+                                    pattern (src/middle.ml[23,1199+63]..[23,1199+68])
+                                      Ppat_var "style" (src/middle.ml[23,1199+63]..[23,1199+68])
+                                  ]
+                                expression (src/middle.ml[24,1272+4]..[30,1556+14])
+                                  Pexp_match
+                                  expression (src/middle.ml[24,1272+10]..[24,1272+31])
+                                    Pexp_apply
+                                    expression (src/middle.ml[24,1272+10]..[24,1272+28])
+                                      Pexp_ident "Nonterminal.lookup" (src/middle.ml[24,1272+10]..[24,1272+28])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/middle.ml[24,1272+29]..[24,1272+31])
+                                          Pexp_ident "nt" (src/middle.ml[24,1272+29]..[24,1272+31])
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (src/middle.ml[25,1309+6]..[25,1309+25])
+                                        Ppat_exception
+                                        pattern (src/middle.ml[25,1309+16]..[25,1309+25])
+                                          Ppat_construct "Not_found" (src/middle.ml[25,1309+16]..[25,1309+25])
+                                          None
+                                      expression (src/middle.ml[26,1338+8]..[26,1338+69])
+                                        Pexp_apply
+                                        expression (src/middle.ml[26,1338+8]..[26,1338+19])
+                                          Pexp_ident "Error.error" (src/middle.ml[26,1338+8]..[26,1338+19])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/middle.ml[26,1338+20]..[26,1338+22])
+                                              Pexp_construct "[]" (src/middle.ml[26,1338+20]..[26,1338+22])
+                                              None
+                                          <arg>
+                                          Nolabel
+                                            expression (src/middle.ml[26,1338+23]..[26,1338+66])
+                                              Pexp_constant PConst_string("the nonterminal symbol %s does not exist.",(src/middle.ml[26,1338+24]..[26,1338+65]),None)
+                                          <arg>
+                                          Nolabel
+                                            expression (src/middle.ml[26,1338+67]..[26,1338+69])
+                                              Pexp_ident "nt" (src/middle.ml[26,1338+67]..[26,1338+69])
+                                        ]
+                                    <case>
+                                      pattern (src/middle.ml[27,1408+6]..[27,1408+8])
+                                        Ppat_var "nt" (src/middle.ml[27,1408+6]..[27,1408+8])
+                                      expression (src/middle.ml[28,1420+8]..[30,1556+14])
+                                        Pexp_let Nonrec
+                                        [
+                                          <def>
+                                            pattern (src/middle.ml[28,1420+12]..[28,1420+20])
+                                              Ppat_var "sentence" (src/middle.ml[28,1420+12]..[28,1420+20])
+                                            expression (src/middle.ml[28,1420+23]..[28,1420+66])
+                                              Pexp_apply
+                                              expression (src/middle.ml[28,1420+23]..[28,1420+58])
+                                                Pexp_ident "RandomSentenceGenerator.nonterminal" (src/middle.ml[28,1420+23]..[28,1420+58])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/middle.ml[28,1420+59]..[28,1420+61])
+                                                    Pexp_ident "nt" (src/middle.ml[28,1420+59]..[28,1420+61])
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/middle.ml[28,1420+62]..[28,1420+66])
+                                                    Pexp_ident "goal" (src/middle.ml[28,1420+62]..[28,1420+66])
+                                              ]
+                                        ]
+                                        expression (src/middle.ml[29,1490+8]..[30,1556+14])
+                                          Pexp_sequence
+                                          expression (src/middle.ml[29,1490+8]..[29,1490+64])
+                                            Pexp_apply
+                                            expression (src/middle.ml[29,1490+8]..[29,1490+21])
+                                              Pexp_ident "print_endline" (src/middle.ml[29,1490+8]..[29,1490+21])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/middle.ml[29,1490+22]..[29,1490+64])
+                                                  Pexp_apply
+                                                  expression (src/middle.ml[29,1490+23]..[29,1490+37])
+                                                    Pexp_ident "Sentence.print" (src/middle.ml[29,1490+23]..[29,1490+37])
+                                                  [
+                                                    <arg>
+                                                    Nolabel
+                                                      expression (src/middle.ml[29,1490+38]..[29,1490+43])
+                                                        Pexp_ident "style" (src/middle.ml[29,1490+38]..[29,1490+43])
+                                                    <arg>
+                                                    Nolabel
+                                                      expression (src/middle.ml[29,1490+44]..[29,1490+63])
+                                                        Pexp_tuple
+                                                        [
+                                                          expression (src/middle.ml[29,1490+45]..[29,1490+52])
+                                                            Pexp_construct "Some" (src/middle.ml[29,1490+45]..[29,1490+49])
+                                                            Some
+                                                              expression (src/middle.ml[29,1490+50]..[29,1490+52])
+                                                                Pexp_ident "nt" (src/middle.ml[29,1490+50]..[29,1490+52])
+                                                          expression (src/middle.ml[29,1490+54]..[29,1490+62])
+                                                            Pexp_ident "sentence" (src/middle.ml[29,1490+54]..[29,1490+62])
+                                                        ]
+                                                  ]
+                                            ]
+                                          expression (src/middle.ml[30,1556+8]..[30,1556+14])
+                                            Pexp_apply
+                                            expression (src/middle.ml[30,1556+8]..[30,1556+12])
+                                              Pexp_ident "exit" (src/middle.ml[30,1556+8]..[30,1556+12])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/middle.ml[30,1556+13]..[30,1556+14])
+                                                  Pexp_constant PConst_int (0,None)
+                                            ]
+                                  ]
+                          ]
+                    ]
+              ]
+          ]
+]
+
+open Grammar
+module Run() =
+  struct
+    let () =
+      Settings.random_sentence |>
+        (Option.iter
+           (fun (nt, goal, style) ->
+              match Nonterminal.lookup nt with
+              | exception Not_found ->
+                  Error.error [] "the nonterminal symbol %s does not exist."
+                    nt
+              | nt ->
+                  let sentence = RandomSentenceGenerator.nonterminal nt goal in
+                  (print_endline (Sentence.print style ((Some nt), sentence));
+                   exit 0)))
+  end
+[
+  structure_item (src/middle.ml[14,996+0]..src/middle.ml[14,996+12])
+    Tstr_open Fresh
+    module_expr (src/middle.ml[14,996+5]..src/middle.ml[14,996+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/middle.ml[16,1010+0]..src/middle.ml[35,1660+3])
+    Tstr_module
+    Run/683
+      module_expr (src/middle.ml[16,1010+11]..src/middle.ml[35,1660+3])
+        Tmod_functor ()
+        module_expr (src/middle.ml[16,1010+16]..src/middle.ml[35,1660+3])
+          Tmod_structure
+          [
+            structure_item (src/middle.ml[22,1190+0]..src/middle.ml[31,1571+5])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/middle.ml[22,1190+4]..src/middle.ml[22,1190+6])
+                    Tpat_construct "()"
+                    []
+                    None
+                  expression (src/middle.ml[23,1199+2]..src/middle.ml[31,1571+5])
+                    Texp_apply
+                    expression (src/middle.ml[23,1199+30]..src/middle.ml[31,1571+5])
+                      Texp_apply
+                      expression (src/middle.ml[23,1199+30]..src/middle.ml[23,1199+41])
+                        Texp_ident "Dune__exe!.Option.iter"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/middle.ml[23,1199+42]..src/middle.ml[31,1571+5])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/middle.ml[23,1199+52]..src/middle.ml[23,1199+69])
+                                  Tpat_tuple
+                                  [
+                                    pattern (src/middle.ml[23,1199+53]..src/middle.ml[23,1199+55])
+                                      Tpat_var "nt/425"
+                                    pattern (src/middle.ml[23,1199+57]..src/middle.ml[23,1199+61])
+                                      Tpat_var "goal/426"
+                                    pattern (src/middle.ml[23,1199+63]..src/middle.ml[23,1199+68])
+                                      Tpat_var "style/427"
+                                  ]
+                                expression (src/middle.ml[24,1272+4]..src/middle.ml[30,1556+14])
+                                  Texp_match
+                                  expression (src/middle.ml[24,1272+10]..src/middle.ml[24,1272+31])
+                                    Texp_apply
+                                    expression (src/middle.ml[24,1272+10]..src/middle.ml[24,1272+28])
+                                      Texp_ident "Dune__exe!.Grammar.Nonterminal.lookup"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/middle.ml[24,1272+29]..src/middle.ml[24,1272+31])
+                                          Texp_ident "nt/425"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (src/middle.ml[25,1309+6]..src/middle.ml[25,1309+25])
+                                        Tpat_exception
+                                        pattern (src/middle.ml[25,1309+16]..src/middle.ml[25,1309+25])
+                                          Tpat_construct "Not_found"
+                                          []
+                                          None
+                                      expression (src/middle.ml[26,1338+8]..src/middle.ml[26,1338+69])
+                                        Texp_apply
+                                        expression (src/middle.ml[26,1338+8]..src/middle.ml[26,1338+19])
+                                          Texp_ident "Dune__exe!.Error.error"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/middle.ml[26,1338+20]..src/middle.ml[26,1338+22])
+                                              Texp_construct "[]"
+                                              []
+                                          <arg>
+                                            Nolabel
+                                            expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66])
+                                              Texp_construct "CamlinternalFormatBasics.Format"
+                                              [
+                                                expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                  Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                  [
+                                                    expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                      Texp_constant Const_string("the nonterminal symbol ",(src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost,None)
+                                                    expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                      Texp_construct "CamlinternalFormatBasics.String"
+                                                      [
+                                                        expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                          []
+                                                        expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                          [
+                                                            expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                              Texp_constant Const_string(" does not exist.",(src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost,None)
+                                                            expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                              []
+                                                          ]
+                                                      ]
+                                                  ]
+                                                expression (src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost
+                                                  Texp_constant Const_string("the nonterminal symbol %s does not exist.",(src/middle.ml[26,1338+23]..src/middle.ml[26,1338+66]) ghost,None)
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/middle.ml[26,1338+67]..src/middle.ml[26,1338+69])
+                                              Texp_ident "nt/425"
+                                        ]
+                                    <case>
+                                      pattern (src/middle.ml[27,1408+6]..src/middle.ml[27,1408+8])
+                                        Tpat_value
+                                        pattern (src/middle.ml[27,1408+6]..src/middle.ml[27,1408+8])
+                                          Tpat_var "nt/485"
+                                      expression (src/middle.ml[28,1420+8]..src/middle.ml[30,1556+14])
+                                        Texp_let Nonrec
+                                        [
+                                          <def>
+                                            pattern (src/middle.ml[28,1420+12]..src/middle.ml[28,1420+20])
+                                              Tpat_var "sentence/559"
+                                            expression (src/middle.ml[28,1420+23]..src/middle.ml[28,1420+66])
+                                              Texp_apply
+                                              expression (src/middle.ml[28,1420+23]..src/middle.ml[28,1420+58])
+                                                Texp_ident "Dune__exe!.RandomSentenceGenerator.nonterminal"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/middle.ml[28,1420+59]..src/middle.ml[28,1420+61])
+                                                    Texp_ident "nt/485"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/middle.ml[28,1420+62]..src/middle.ml[28,1420+66])
+                                                    Texp_ident "goal/426"
+                                              ]
+                                        ]
+                                        expression (src/middle.ml[29,1490+8]..src/middle.ml[30,1556+14])
+                                          Texp_sequence
+                                          expression (src/middle.ml[29,1490+8]..src/middle.ml[29,1490+64])
+                                            Texp_apply
+                                            expression (src/middle.ml[29,1490+8]..src/middle.ml[29,1490+21])
+                                              Texp_ident "Stdlib!.print_endline"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/middle.ml[29,1490+22]..src/middle.ml[29,1490+64])
+                                                  Texp_apply
+                                                  expression (src/middle.ml[29,1490+23]..src/middle.ml[29,1490+37])
+                                                    Texp_ident "Dune__exe!.Grammar.Sentence.print"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/middle.ml[29,1490+38]..src/middle.ml[29,1490+43])
+                                                        Texp_ident "style/427"
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/middle.ml[29,1490+44]..src/middle.ml[29,1490+63])
+                                                        Texp_tuple
+                                                        [
+                                                          expression (src/middle.ml[29,1490+45]..src/middle.ml[29,1490+52])
+                                                            Texp_construct "Some"
+                                                            [
+                                                              expression (src/middle.ml[29,1490+50]..src/middle.ml[29,1490+52])
+                                                                Texp_ident "nt/485"
+                                                            ]
+                                                          expression (src/middle.ml[29,1490+54]..src/middle.ml[29,1490+62])
+                                                            Texp_ident "sentence/559"
+                                                        ]
+                                                  ]
+                                            ]
+                                          expression (src/middle.ml[30,1556+8]..src/middle.ml[30,1556+14])
+                                            Texp_apply
+                                            expression (src/middle.ml[30,1556+8]..src/middle.ml[30,1556+12])
+                                              Texp_ident "Stdlib!.exit"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/middle.ml[30,1556+13]..src/middle.ml[30,1556+14])
+                                                  Texp_constant Const_int 0
+                                            ]
+                                  ]
+                            ]
+                      ]
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/middle.ml[23,1199+2]..src/middle.ml[23,1199+26])
+                          Texp_ident "Dune__exe!.Settings.random_sentence"
+                    ]
+              ]
+          ]
+]
+
+{<Dune__exe__Middle>
+ "Run"[module] -> Abs<Dune__exe__Middle.5>(()/1, {
+                                                  });
+ }
+
+(let
+  (Run/683 =
+     (function */1563 is_a_functor
+       (let
+         (*/1556 =a */1563
+          *match*/1562 =
+            (apply (field_imm 2 (global Dune__exe__Option!))
+              (function (param/1557, param/1558[int], param/1559[int]) : int
+                (let
+                  (style/427 =a param/1559
+                   goal/426 =a param/1558
+                   nt/425 =a param/1557)
+                  (catch
+                    (try
+                      (exit 1
+                        (apply
+                          (field_imm 3
+                            (field_imm 0 (global Dune__exe__Grammar!)))
+                          nt/425))
+                     with exn/1560
+                      (catch
+                        (if (== exn/1560 (field_imm 7 (global Stdlib!)))
+                          (apply (field_imm 5 (global Dune__exe__Error!)) 0
+                            [0:
+                             [11:
+                              "the nonterminal symbol "
+                              [2: 0 [11: " does not exist." 0]]]
+                             "the nonterminal symbol %s does not exist."]
+                            nt/425)
+                          (exit 2))
+                       with (2) (reraise exn/1560)))
+                   with (1 nt/485)
+                    (let
+                      (sentence/559 =
+                         (apply
+                           (field_imm 0
+                             (global Dune__exe__RandomSentenceGenerator!))
+                           nt/485 goal/426))
+                      (seq
+                        (apply (field_imm 45 (global Stdlib!))
+                          (apply
+                            (field_imm 0
+                              (field_imm 14 (global Dune__exe__Grammar!)))
+                            style/427
+                            (makeblock 0 (makeblock 0 nt/485) sentence/559)))
+                        (apply (field_imm 98 (global Stdlib!)) 0))))))
+              (field_imm 52 (global Dune__exe__Settings!))))
+         (makeblock 0))))
+  (seq (setfield_ptr(root-init) 0 (global Dune__exe__Middle!) Run/683) 0))
+(let
+  (Run/683 =
+     (function */1563 is_a_functor
+       (let
+         (*match*/1562 =
+            (apply (field_imm 2 (global Dune__exe__Option!))
+              (function (param/1557, param/1558[int], param/1559[int]) : int
+                (catch
+                  (try
+                    (exit 1
+                      (apply
+                        (field_imm 3
+                          (field_imm 0 (global Dune__exe__Grammar!)))
+                        param/1557))
+                   with exn/1560
+                    (if (== exn/1560 (field_imm 7 (global Stdlib!)))
+                      (apply (field_imm 5 (global Dune__exe__Error!)) 0
+                        [0:
+                         [11:
+                          "the nonterminal symbol "
+                          [2: 0 [11: " does not exist." 0]]]
+                         "the nonterminal symbol %s does not exist."]
+                        param/1557)
+                      (reraise exn/1560)))
+                 with (1 nt/485)
+                  (let
+                    (sentence/559 =
+                       (apply
+                         (field_imm 0
+                           (global Dune__exe__RandomSentenceGenerator!))
+                         nt/485 param/1558))
+                    (seq
+                      (apply (field_imm 45 (global Stdlib!))
+                        (apply
+                          (field_imm 0
+                            (field_imm 14 (global Dune__exe__Grammar!)))
+                          param/1559
+                          (makeblock 0 (makeblock 0 nt/485) sentence/559)))
+                      (apply (field_imm 98 (global Stdlib!)) 0)))))
+              (field_imm 52 (global Dune__exe__Settings!))))
+         (makeblock 0))))
+  (seq (setfield_ptr(root-init) 0 (global Dune__exe__Middle!) Run/683) 0))
