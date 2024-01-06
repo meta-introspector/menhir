@@ -1,3 +1,5 @@
+cat files.txt | xargs opam install -y
+dune describe pp src/stage2/parser.ml > src/stage2/parser.ml.describe
 # Menhir
 
 Menhir is an LR(1) parser generator for OCaml.

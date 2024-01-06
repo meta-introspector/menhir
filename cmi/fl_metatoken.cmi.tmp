@@ -1,0 +1,17 @@
+type token =
+    Name of string
+  | LParen
+  | RParen
+  | Equal
+  | PlusEqual
+  | Minus
+  | Comma
+  | String of string
+  | Space
+  | Newline
+  | Eof
+  | Unknown
+val name_tok : token -> string option
+val string_tok : token -> string option
+("DEBUG:rule", [Tag1 (("token", 294), (0, 0, Tag1 ([(("Name", 270), ([(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -15)]), 0, (("fl_metatoken.ml", 8, 104, 108), ("fl_metatoken.ml", 8, 104, 122), 0), 0, Tag1 ("Fl_metatoken", 1)); (("LParen", 271), (0), 0, (("fl_metatoken.ml", 9, 123, 125), ("fl_metatoken.ml", 9, 123, 133), 0), 0, Tag1 ("Fl_metatoken", 2)); (("RParen", 272), (0), 0, (("fl_metatoken.ml", 10, 135, 137), ("fl_metatoken.ml", 10, 135, 145), 0), 0, Tag1 ("Fl_metatoken", 3)); (("Equal", 273), (0), 0, (("fl_metatoken.ml", 11, 146, 148), ("fl_metatoken.ml", 11, 146, 155), 0), 0, Tag1 ("Fl_metatoken", 4)); (("PlusEqual", 274), (0), 0, (("fl_metatoken.ml", 12, 156, 158), ("fl_metatoken.ml", 12, 156, 169), 0), 0, Tag1 ("Fl_metatoken", 5)); (("Minus", 275), (0), 0, (("fl_metatoken.ml", 13, 170, 172), ("fl_metatoken.ml", 13, 170, 179), 0), 0, Tag1 ("Fl_metatoken", 6)); (("Comma", 276), (0), 0, (("fl_metatoken.ml", 14, 180, 182), ("fl_metatoken.ml", 14, 180, 189), 0), 0, Tag1 ("Fl_metatoken", 7)); (("String", 277), ([(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -16)]), 0, (("fl_metatoken.ml", 15, 190, 192), ("fl_metatoken.ml", 15, 190, 210), 0), 0, Tag1 ("Fl_metatoken", 8)); (("Space", 278), (0), 0, (("fl_metatoken.ml", 16, 211, 213), ("fl_metatoken.ml", 16, 211, 220), 0), 0, Tag1 ("Fl_metatoken", 9)); (("Newline", 279), (0), 0, (("fl_metatoken.ml", 17, 221, 223), ("fl_metatoken.ml", 17, 221, 232), 0), 0, Tag1 ("Fl_metatoken", 10)); (("Eof", 280), (0), 0, (("fl_metatoken.ml", 18, 233, 235), ("fl_metatoken.ml", 18, 233, 240), 0), 0, Tag1 ("Fl_metatoken", 11)); (("Unknown", 281), (0), 0, (("fl_metatoken.ml", 19, 241, 243), ("fl_metatoken.ml", 19, 241, 252), 0), 0, Tag1 ("Fl_metatoken", 12))], 0), 1, 0, 0, 0, 0, 0, (("fl_metatoken.ml", 7, 91, 91), ("fl_metatoken.ml", 19, 241, 252), 0), 0, 0, 0, Tag1 ("Fl_metatoken", 0)), 1, 0); (("name_tok", 295), ((Tag1 (0, (Tag3 ((("token", 294)), 0, (0)), 100000000, 0, -14), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -13)], (0)), 100000000, 0, -12), 0), 100000000, 0, -11), 0, (("fl_metatoken.ml", 23, 258, 262), ("fl_metatoken.ml", 23, 258, 270), 0), 0, Tag1 ("Fl_metatoken", 13)), 0); (("string_tok", 296), ((Tag1 (0, (Tag3 ((("token", 294)), 0, (0)), 100000000, 0, -10), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("string", 15)), 0, (0)), 100000000, 0, -9)], (0)), 100000000, 0, -8), 0), 100000000, 0, -7), 0, (("fl_metatoken.ml", 27, 318, 322), ("fl_metatoken.ml", 27, 318, 332), 0), 0, Tag1 ("Fl_metatoken", 15)), 0); (("const_tok", 297), ((Tag1 (0, (Tag3 ((("token", 294)), 0, (0)), 100000000, 0, -6), (Tag1 (0, (Tag3 ((("token", 294)), 0, (0)), 100000000, 0, -6), (Tag3 ((Tag3 ("option", 10)), [(Tag3 ((Tag3 ("unit", 6)), 0, (0)), 100000000, 0, -5)], (0)), 100000000, 0, -4), 0), 100000000, 0, -3), 0), 100000000, 0, -2), 0, (("fl_metatoken.ml", 31, 382, 386), ("fl_metatoken.ml", 31, 382, 395), 0), 0, Tag1 ("Fl_metatoken", 17)), 0)], "Fl_metatoken", [("Fl_metatoken", ("\137\245\238\238\216\234{\144N\19227*\203\t\128")); ("Stdlib", ("\011EI\"\139\201\184\193\207\161\232\136\215C+\223")); ("CamlinternalFormatBasics", ("!%\242k\131\017S\201*D\240k\253\229p\174"))], [1; (0)])
+val const_tok : token -> token -> unit option
