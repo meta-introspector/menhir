@@ -1,0 +1,2101 @@
+[
+  structure_item (sdk/keyword.ml[24,1336+0]..[27,1386+18])
+    Pstr_type Rec
+    [
+      type_declaration "flavor" (sdk/keyword.ml[24,1336+5]..[24,1336+11]) (sdk/keyword.ml[24,1336+0]..[27,1386+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (sdk/keyword.ml[25,1350+2]..[25,1350+16])
+                "FlavorOffset" (sdk/keyword.ml[25,1350+4]..[25,1350+16])
+                []
+                None
+              (sdk/keyword.ml[26,1367+2]..[26,1367+18])
+                "FlavorPosition" (sdk/keyword.ml[26,1367+4]..[26,1367+18])
+                []
+                None
+              (sdk/keyword.ml[27,1386+2]..[27,1386+18])
+                "FlavorLocation" (sdk/keyword.ml[27,1386+4]..[27,1386+18])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[33,1612+0]..[36,1657+10])
+    Pstr_type Rec
+    [
+      type_declaration "where" (sdk/keyword.ml[33,1612+5]..[33,1612+10]) (sdk/keyword.ml[33,1612+0]..[36,1657+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (sdk/keyword.ml[34,1625+0]..[34,1625+18])
+                "WhereSymbolStart" (sdk/keyword.ml[34,1625+2]..[34,1625+18])
+                []
+                None
+              (sdk/keyword.ml[35,1644+0]..[35,1644+12])
+                "WhereStart" (sdk/keyword.ml[35,1644+2]..[35,1644+12])
+                []
+                None
+              (sdk/keyword.ml[36,1657+0]..[36,1657+10])
+                "WhereEnd" (sdk/keyword.ml[36,1657+2]..[36,1657+10])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[42,1858+0]..[45,1893+24])
+    Pstr_type Rec
+    [
+      type_declaration "subject" (sdk/keyword.ml[42,1858+5]..[42,1858+12]) (sdk/keyword.ml[42,1858+0]..[45,1893+24])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (sdk/keyword.ml[43,1873+2]..[43,1873+10])
+                "Before" (sdk/keyword.ml[43,1873+4]..[43,1873+10])
+                []
+                None
+              (sdk/keyword.ml[44,1884+2]..[44,1884+8])
+                "Left" (sdk/keyword.ml[44,1884+4]..[44,1884+8])
+                []
+                None
+              (sdk/keyword.ml[45,1893+2]..[45,1893+24])
+                "RightNamed" (sdk/keyword.ml[45,1893+4]..[45,1893+14])
+                [
+                  core_type (sdk/keyword.ml[45,1893+18]..[45,1893+24])
+                    Ptyp_constr "string" (sdk/keyword.ml[45,1893+18]..[45,1893+24])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[50,2028+0]..[52,2084+15])
+    Pstr_type Rec
+    [
+      type_declaration "keyword" (sdk/keyword.ml[50,2028+5]..[50,2028+12]) (sdk/keyword.ml[50,2028+0]..[52,2084+15])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (sdk/keyword.ml[51,2043+2]..[51,2043+40])
+                "Position" (sdk/keyword.ml[51,2043+4]..[51,2043+12])
+                [
+                  core_type (sdk/keyword.ml[51,2043+16]..[51,2043+23])
+                    Ptyp_constr "subject" (sdk/keyword.ml[51,2043+16]..[51,2043+23])
+                    []
+                  core_type (sdk/keyword.ml[51,2043+26]..[51,2043+31])
+                    Ptyp_constr "where" (sdk/keyword.ml[51,2043+26]..[51,2043+31])
+                    []
+                  core_type (sdk/keyword.ml[51,2043+34]..[51,2043+40])
+                    Ptyp_constr "flavor" (sdk/keyword.ml[51,2043+34]..[51,2043+40])
+                    []
+                ]
+                None
+              (sdk/keyword.ml[52,2084+2]..[52,2084+15])
+                "SyntaxError" (sdk/keyword.ml[52,2084+4]..[52,2084+15])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[58,2310+0]..[64,2423+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[58,2310+4]..[58,2310+9])
+          Ppat_var "where" (sdk/keyword.ml[58,2310+4]..[58,2310+9])
+        expression (sdk/keyword.ml[58,2310+12]..[64,2423+11])
+          Pexp_function
+          [
+            <case>
+              pattern (sdk/keyword.ml[59,2331+4]..[59,2331+20])
+                Ppat_construct "WhereSymbolStart" (sdk/keyword.ml[59,2331+4]..[59,2331+20])
+                None
+              expression (sdk/keyword.ml[60,2355+6]..[60,2355+19])
+                Pexp_constant PConst_string("symbolstart",(sdk/keyword.ml[60,2355+7]..[60,2355+18]),None)
+            <case>
+              pattern (sdk/keyword.ml[61,2375+4]..[61,2375+14])
+                Ppat_construct "WhereStart" (sdk/keyword.ml[61,2375+4]..[61,2375+14])
+                None
+              expression (sdk/keyword.ml[62,2393+6]..[62,2393+13])
+                Pexp_constant PConst_string("start",(sdk/keyword.ml[62,2393+7]..[62,2393+12]),None)
+            <case>
+              pattern (sdk/keyword.ml[63,2407+4]..[63,2407+12])
+                Ppat_construct "WhereEnd" (sdk/keyword.ml[63,2407+4]..[63,2407+12])
+                None
+              expression (sdk/keyword.ml[64,2423+6]..[64,2423+11])
+                Pexp_constant PConst_string("end",(sdk/keyword.ml[64,2423+7]..[64,2423+10]),None)
+          ]
+    ]
+  structure_item (sdk/keyword.ml[66,2436+0]..[72,2528+30])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[66,2436+4]..[66,2436+11])
+          Ppat_var "subject" (sdk/keyword.ml[66,2436+4]..[66,2436+11])
+        expression (sdk/keyword.ml[66,2436+14]..[72,2528+30])
+          Pexp_function
+          [
+            <case>
+              pattern (sdk/keyword.ml[67,2459+4]..[67,2459+10])
+                Ppat_construct "Before" (sdk/keyword.ml[67,2459+4]..[67,2459+10])
+                None
+              expression (sdk/keyword.ml[68,2473+6]..[68,2473+12])
+                Pexp_constant PConst_string("__0_",(sdk/keyword.ml[68,2473+7]..[68,2473+11]),None)
+            <case>
+              pattern (sdk/keyword.ml[69,2486+4]..[69,2486+8])
+                Ppat_construct "Left" (sdk/keyword.ml[69,2486+4]..[69,2486+8])
+                None
+              expression (sdk/keyword.ml[70,2498+6]..[70,2498+8])
+                Pexp_constant PConst_string("",(sdk/keyword.ml[70,2498+7]..[70,2498+7]),None)
+            <case>
+              pattern (sdk/keyword.ml[71,2507+4]..[71,2507+17])
+                Ppat_construct "RightNamed" (sdk/keyword.ml[71,2507+4]..[71,2507+14])
+                Some
+                  []
+                  pattern (sdk/keyword.ml[71,2507+15]..[71,2507+17])
+                    Ppat_var "id" (sdk/keyword.ml[71,2507+15]..[71,2507+17])
+              expression (sdk/keyword.ml[72,2528+6]..[72,2528+30])
+                Pexp_apply
+                expression (sdk/keyword.ml[72,2528+6]..[72,2528+20])
+                  Pexp_ident "Printf.sprintf" (sdk/keyword.ml[72,2528+6]..[72,2528+20])
+                [
+                  <arg>
+                  Nolabel
+                    expression (sdk/keyword.ml[72,2528+21]..[72,2528+27])
+                      Pexp_constant PConst_string("_%s_",(sdk/keyword.ml[72,2528+22]..[72,2528+26]),None)
+                  <arg>
+                  Nolabel
+                    expression (sdk/keyword.ml[72,2528+28]..[72,2528+30])
+                      Pexp_ident "id" (sdk/keyword.ml[72,2528+28]..[72,2528+30])
+                ]
+          ]
+    ]
+  structure_item (sdk/keyword.ml[74,2560+0]..[80,2670+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[74,2560+4]..[74,2560+10])
+          Ppat_var "flavor" (sdk/keyword.ml[74,2560+4]..[74,2560+10])
+        expression (sdk/keyword.ml[74,2560+13]..[80,2670+11])
+          Pexp_function
+          [
+            <case>
+              pattern (sdk/keyword.ml[75,2582+4]..[75,2582+18])
+                Ppat_construct "FlavorPosition" (sdk/keyword.ml[75,2582+4]..[75,2582+18])
+                None
+              expression (sdk/keyword.ml[76,2604+6]..[76,2604+11])
+                Pexp_constant PConst_string("pos",(sdk/keyword.ml[76,2604+7]..[76,2604+10]),None)
+            <case>
+              pattern (sdk/keyword.ml[77,2616+4]..[77,2616+16])
+                Ppat_construct "FlavorOffset" (sdk/keyword.ml[77,2616+4]..[77,2616+16])
+                None
+              expression (sdk/keyword.ml[78,2636+6]..[78,2636+11])
+                Pexp_constant PConst_string("ofs",(sdk/keyword.ml[78,2636+7]..[78,2636+10]),None)
+            <case>
+              pattern (sdk/keyword.ml[79,2648+4]..[79,2648+18])
+                Ppat_construct "FlavorLocation" (sdk/keyword.ml[79,2648+4]..[79,2648+18])
+                None
+              expression (sdk/keyword.ml[80,2670+6]..[80,2670+11])
+                Pexp_constant PConst_string("loc",(sdk/keyword.ml[80,2670+7]..[80,2670+10]),None)
+          ]
+    ]
+  structure_item (sdk/keyword.ml[82,2683+0]..[91,2965+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[82,2683+4]..[82,2683+10])
+          Ppat_var "posvar" (sdk/keyword.ml[82,2683+4]..[82,2683+10])
+        expression (sdk/keyword.ml[82,2683+11]..[91,2965+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (sdk/keyword.ml[82,2683+11]..[82,2683+12])
+            Ppat_var "s" (sdk/keyword.ml[82,2683+11]..[82,2683+12])
+          expression (sdk/keyword.ml[82,2683+13]..[91,2965+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (sdk/keyword.ml[82,2683+13]..[82,2683+14])
+              Ppat_var "w" (sdk/keyword.ml[82,2683+13]..[82,2683+14])
+            expression (sdk/keyword.ml[82,2683+15]..[91,2965+18]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (sdk/keyword.ml[82,2683+15]..[82,2683+16])
+                Ppat_var "f" (sdk/keyword.ml[82,2683+15]..[82,2683+16])
+              expression (sdk/keyword.ml[83,2702+2]..[91,2965+18])
+                Pexp_match
+                expression (sdk/keyword.ml[83,2702+8]..[83,2702+12])
+                  Pexp_tuple
+                  [
+                    expression (sdk/keyword.ml[83,2702+8]..[83,2702+9])
+                      Pexp_ident "w" (sdk/keyword.ml[83,2702+8]..[83,2702+9])
+                    expression (sdk/keyword.ml[83,2702+11]..[83,2702+12])
+                      Pexp_ident "f" (sdk/keyword.ml[83,2702+11]..[83,2702+12])
+                  ]
+                [
+                  <case>
+                    pattern (sdk/keyword.ml[84,2720+4]..[84,2720+38])
+                      Ppat_tuple
+                      [
+                        pattern (sdk/keyword.ml[84,2720+4]..[84,2720+5])
+                          Ppat_any
+                        pattern (sdk/keyword.ml[84,2720+7]..[84,2720+38])
+                          Ppat_or
+                          pattern (sdk/keyword.ml[84,2720+8]..[84,2720+20])
+                            Ppat_construct "FlavorOffset" (sdk/keyword.ml[84,2720+8]..[84,2720+20])
+                            None
+                          pattern (sdk/keyword.ml[84,2720+23]..[84,2720+37])
+                            Ppat_construct "FlavorPosition" (sdk/keyword.ml[84,2720+23]..[84,2720+37])
+                            None
+                      ]
+                    expression (sdk/keyword.ml[85,2762+6]..[85,2762+63])
+                      Pexp_apply
+                      expression (sdk/keyword.ml[85,2762+6]..[85,2762+20])
+                        Pexp_ident "Printf.sprintf" (sdk/keyword.ml[85,2762+6]..[85,2762+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[85,2762+21]..[85,2762+30])
+                            Pexp_constant PConst_string("_%s%s%s",(sdk/keyword.ml[85,2762+22]..[85,2762+29]),None)
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[85,2762+31]..[85,2762+40])
+                            Pexp_apply
+                            expression (sdk/keyword.ml[85,2762+32]..[85,2762+37])
+                              Pexp_ident "where" (sdk/keyword.ml[85,2762+32]..[85,2762+37])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (sdk/keyword.ml[85,2762+38]..[85,2762+39])
+                                  Pexp_ident "w" (sdk/keyword.ml[85,2762+38]..[85,2762+39])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[85,2762+41]..[85,2762+51])
+                            Pexp_apply
+                            expression (sdk/keyword.ml[85,2762+42]..[85,2762+48])
+                              Pexp_ident "flavor" (sdk/keyword.ml[85,2762+42]..[85,2762+48])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (sdk/keyword.ml[85,2762+49]..[85,2762+50])
+                                  Pexp_ident "f" (sdk/keyword.ml[85,2762+49]..[85,2762+50])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[85,2762+52]..[85,2762+63])
+                            Pexp_apply
+                            expression (sdk/keyword.ml[85,2762+53]..[85,2762+60])
+                              Pexp_ident "subject" (sdk/keyword.ml[85,2762+53]..[85,2762+60])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (sdk/keyword.ml[85,2762+61]..[85,2762+62])
+                                  Pexp_ident "s" (sdk/keyword.ml[85,2762+61]..[85,2762+62])
+                            ]
+                      ]
+                  <case>
+                    pattern (sdk/keyword.ml[86,2826+4]..[86,2826+36])
+                      Ppat_tuple
+                      [
+                        pattern (sdk/keyword.ml[86,2826+4]..[86,2826+20])
+                          Ppat_construct "WhereSymbolStart" (sdk/keyword.ml[86,2826+4]..[86,2826+20])
+                          None
+                        pattern (sdk/keyword.ml[86,2826+22]..[86,2826+36])
+                          Ppat_construct "FlavorLocation" (sdk/keyword.ml[86,2826+22]..[86,2826+36])
+                          None
+                      ]
+                    expression (sdk/keyword.ml[87,2866+6]..[87,2866+13])
+                      Pexp_constant PConst_string("_sloc",(sdk/keyword.ml[87,2866+7]..[87,2866+12]),None)
+                  <case>
+                    pattern (sdk/keyword.ml[88,2880+4]..[88,2880+30])
+                      Ppat_tuple
+                      [
+                        pattern (sdk/keyword.ml[88,2880+4]..[88,2880+14])
+                          Ppat_construct "WhereStart" (sdk/keyword.ml[88,2880+4]..[88,2880+14])
+                          None
+                        pattern (sdk/keyword.ml[88,2880+16]..[88,2880+30])
+                          Ppat_construct "FlavorLocation" (sdk/keyword.ml[88,2880+16]..[88,2880+30])
+                          None
+                      ]
+                    expression (sdk/keyword.ml[89,2914+6]..[89,2914+41])
+                      Pexp_apply
+                      expression (sdk/keyword.ml[89,2914+6]..[89,2914+20])
+                        Pexp_ident "Printf.sprintf" (sdk/keyword.ml[89,2914+6]..[89,2914+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[89,2914+21]..[89,2914+29])
+                            Pexp_constant PConst_string("_loc%s",(sdk/keyword.ml[89,2914+22]..[89,2914+28]),None)
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[89,2914+30]..[89,2914+41])
+                            Pexp_apply
+                            expression (sdk/keyword.ml[89,2914+31]..[89,2914+38])
+                              Pexp_ident "subject" (sdk/keyword.ml[89,2914+31]..[89,2914+38])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (sdk/keyword.ml[89,2914+39]..[89,2914+40])
+                                  Pexp_ident "s" (sdk/keyword.ml[89,2914+39]..[89,2914+40])
+                            ]
+                      ]
+                  <case>
+                    pattern (sdk/keyword.ml[90,2956+4]..[90,2956+5])
+                      Ppat_any
+                    expression (sdk/keyword.ml[91,2965+6]..[91,2965+18])
+                      Pexp_assert
+                      expression (sdk/keyword.ml[91,2965+13]..[91,2965+18])
+                        Pexp_construct "false" (sdk/keyword.ml[91,2965+13]..[91,2965+18])
+                        None
+                ]
+    ]
+  structure_item (sdk/keyword.ml[96,3090+0]..[108,3302+3])
+    Pstr_module
+    "KeywordSet" (sdk/keyword.ml[96,3090+7]..[96,3090+17])
+      module_expr (sdk/keyword.ml[96,3090+20]..[108,3302+3])
+        Pmod_structure
+        [
+          structure_item (sdk/keyword.ml[98,3118+2]..[101,3192+6])
+            Pstr_include            module_expr (sdk/keyword.ml[98,3118+10]..[101,3192+6])
+              Pmod_apply
+              module_expr (sdk/keyword.ml[98,3118+10]..[98,3118+18])
+                Pmod_ident "Set.Make" (sdk/keyword.ml[98,3118+10]..[98,3118+18])
+              module_expr (sdk/keyword.ml[98,3118+20]..[101,3192+5])
+                Pmod_structure
+                [
+                  structure_item (sdk/keyword.ml[99,3145+4]..[99,3145+20])
+                    Pstr_type Rec
+                    [
+                      type_declaration "t" (sdk/keyword.ml[99,3145+9]..[99,3145+10]) (sdk/keyword.ml[99,3145+4]..[99,3145+20])
+                        ptype_params =
+                          []
+                        ptype_cstrs =
+                          []
+                        ptype_kind =
+                          Ptype_abstract
+                        ptype_private = Public
+                        ptype_manifest =
+                          Some
+                            core_type (sdk/keyword.ml[99,3145+13]..[99,3145+20])
+                              Ptyp_constr "keyword" (sdk/keyword.ml[99,3145+13]..[99,3145+20])
+                              []
+                    ]
+                  structure_item (sdk/keyword.ml[100,3166+4]..[100,3166+25])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (sdk/keyword.ml[100,3166+8]..[100,3166+15])
+                          Ppat_var "compare" (sdk/keyword.ml[100,3166+8]..[100,3166+15])
+                        expression (sdk/keyword.ml[100,3166+18]..[100,3166+25])
+                          Pexp_ident "compare" (sdk/keyword.ml[100,3166+18]..[100,3166+25])
+                    ]
+                ]
+          structure_item (sdk/keyword.ml[103,3200+2]..[106,3280+20])
+            Pstr_value Nonrec
+            [
+              <def>
+                pattern (sdk/keyword.ml[103,3200+6]..[103,3200+9])
+                  Ppat_var "map" (sdk/keyword.ml[103,3200+6]..[103,3200+9])
+                expression (sdk/keyword.ml[103,3200+10]..[106,3280+20]) ghost
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (sdk/keyword.ml[103,3200+10]..[103,3200+11])
+                    Ppat_var "f" (sdk/keyword.ml[103,3200+10]..[103,3200+11])
+                  expression (sdk/keyword.ml[103,3200+12]..[106,3280+20]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (sdk/keyword.ml[103,3200+12]..[103,3200+20])
+                      Ppat_var "keywords" (sdk/keyword.ml[103,3200+12]..[103,3200+20])
+                    expression (sdk/keyword.ml[104,3223+4]..[106,3280+20])
+                      Pexp_apply
+                      expression (sdk/keyword.ml[104,3223+4]..[104,3223+8])
+                        Pexp_ident "fold" (sdk/keyword.ml[104,3223+4]..[104,3223+8])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[104,3223+9]..[106,3280+5])
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (sdk/keyword.ml[104,3223+14]..[104,3223+21])
+                              Ppat_var "keyword" (sdk/keyword.ml[104,3223+14]..[104,3223+21])
+                            expression (sdk/keyword.ml[104,3223+22]..[105,3253+26]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (sdk/keyword.ml[104,3223+22]..[104,3223+26])
+                                Ppat_var "accu" (sdk/keyword.ml[104,3223+22]..[104,3223+26])
+                              expression (sdk/keyword.ml[105,3253+6]..[105,3253+26])
+                                Pexp_apply
+                                expression (sdk/keyword.ml[105,3253+6]..[105,3253+9])
+                                  Pexp_ident "add" (sdk/keyword.ml[105,3253+6]..[105,3253+9])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (sdk/keyword.ml[105,3253+10]..[105,3253+21])
+                                      Pexp_apply
+                                      expression (sdk/keyword.ml[105,3253+11]..[105,3253+12])
+                                        Pexp_ident "f" (sdk/keyword.ml[105,3253+11]..[105,3253+12])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (sdk/keyword.ml[105,3253+13]..[105,3253+20])
+                                            Pexp_ident "keyword" (sdk/keyword.ml[105,3253+13]..[105,3253+20])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (sdk/keyword.ml[105,3253+22]..[105,3253+26])
+                                      Pexp_ident "accu" (sdk/keyword.ml[105,3253+22]..[105,3253+26])
+                                ]
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[106,3280+6]..[106,3280+14])
+                            Pexp_ident "keywords" (sdk/keyword.ml[106,3280+6]..[106,3280+14])
+                        <arg>
+                        Nolabel
+                          expression (sdk/keyword.ml[106,3280+15]..[106,3280+20])
+                            Pexp_ident "empty" (sdk/keyword.ml[106,3280+15]..[106,3280+20])
+                      ]
+            ]
+        ]
+]
+
+type flavor =
+  | FlavorOffset 
+  | FlavorPosition 
+  | FlavorLocation 
+type where =
+  | WhereSymbolStart 
+  | WhereStart 
+  | WhereEnd 
+type subject =
+  | Before 
+  | Left 
+  | RightNamed of string 
+type keyword =
+  | Position of subject * where * flavor 
+  | SyntaxError 
+let where =
+  function
+  | WhereSymbolStart -> "symbolstart"
+  | WhereStart -> "start"
+  | WhereEnd -> "end"
+let subject =
+  function
+  | Before -> "__0_"
+  | Left -> ""
+  | RightNamed id -> Printf.sprintf "_%s_" id
+let flavor =
+  function
+  | FlavorPosition -> "pos"
+  | FlavorOffset -> "ofs"
+  | FlavorLocation -> "loc"
+let posvar s w f =
+  match (w, f) with
+  | (_, (FlavorOffset | FlavorPosition)) ->
+      Printf.sprintf "_%s%s%s" (where w) (flavor f) (subject s)
+  | (WhereSymbolStart, FlavorLocation) -> "_sloc"
+  | (WhereStart, FlavorLocation) -> Printf.sprintf "_loc%s" (subject s)
+  | _ -> assert false
+module KeywordSet =
+  struct
+    include (Set.Make)(struct type t = keyword
+                              let compare = compare end)
+    let map f keywords =
+      fold (fun keyword -> fun accu -> add (f keyword) accu) keywords empty
+  end
+[
+  structure_item (sdk/keyword.ml[24,1336+0]..sdk/keyword.ml[27,1386+18])
+    Tstr_type Rec
+    [
+      type_declaration flavor/274 (sdk/keyword.ml[24,1336+0]..sdk/keyword.ml[27,1386+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (sdk/keyword.ml[25,1350+2]..sdk/keyword.ml[25,1350+16])
+                FlavorOffset/275
+                []
+                None
+              (sdk/keyword.ml[26,1367+2]..sdk/keyword.ml[26,1367+18])
+                FlavorPosition/276
+                []
+                None
+              (sdk/keyword.ml[27,1386+2]..sdk/keyword.ml[27,1386+18])
+                FlavorLocation/277
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[33,1612+0]..sdk/keyword.ml[36,1657+10])
+    Tstr_type Rec
+    [
+      type_declaration where/278 (sdk/keyword.ml[33,1612+0]..sdk/keyword.ml[36,1657+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (sdk/keyword.ml[34,1625+0]..sdk/keyword.ml[34,1625+18])
+                WhereSymbolStart/279
+                []
+                None
+              (sdk/keyword.ml[35,1644+0]..sdk/keyword.ml[35,1644+12])
+                WhereStart/280
+                []
+                None
+              (sdk/keyword.ml[36,1657+0]..sdk/keyword.ml[36,1657+10])
+                WhereEnd/281
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[42,1858+0]..sdk/keyword.ml[45,1893+24])
+    Tstr_type Rec
+    [
+      type_declaration subject/282 (sdk/keyword.ml[42,1858+0]..sdk/keyword.ml[45,1893+24])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (sdk/keyword.ml[43,1873+2]..sdk/keyword.ml[43,1873+10])
+                Before/283
+                []
+                None
+              (sdk/keyword.ml[44,1884+2]..sdk/keyword.ml[44,1884+8])
+                Left/284
+                []
+                None
+              (sdk/keyword.ml[45,1893+2]..sdk/keyword.ml[45,1893+24])
+                RightNamed/285
+                [
+                  core_type (sdk/keyword.ml[45,1893+18]..sdk/keyword.ml[45,1893+24])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[50,2028+0]..sdk/keyword.ml[52,2084+15])
+    Tstr_type Rec
+    [
+      type_declaration keyword/286 (sdk/keyword.ml[50,2028+0]..sdk/keyword.ml[52,2084+15])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (sdk/keyword.ml[51,2043+2]..sdk/keyword.ml[51,2043+40])
+                Position/287
+                [
+                  core_type (sdk/keyword.ml[51,2043+16]..sdk/keyword.ml[51,2043+23])
+                    Ttyp_constr "subject/282"
+                    []
+                  core_type (sdk/keyword.ml[51,2043+26]..sdk/keyword.ml[51,2043+31])
+                    Ttyp_constr "where/278"
+                    []
+                  core_type (sdk/keyword.ml[51,2043+34]..sdk/keyword.ml[51,2043+40])
+                    Ttyp_constr "flavor/274"
+                    []
+                ]
+                None
+              (sdk/keyword.ml[52,2084+2]..sdk/keyword.ml[52,2084+15])
+                SyntaxError/288
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (sdk/keyword.ml[58,2310+0]..sdk/keyword.ml[64,2423+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[58,2310+4]..sdk/keyword.ml[58,2310+9])
+          Tpat_var "where/289"
+        expression (sdk/keyword.ml[58,2310+12]..sdk/keyword.ml[64,2423+11])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (sdk/keyword.ml[59,2331+4]..sdk/keyword.ml[59,2331+20])
+                Tpat_construct "WhereSymbolStart"
+                []
+                None
+              expression (sdk/keyword.ml[60,2355+6]..sdk/keyword.ml[60,2355+19])
+                Texp_constant Const_string("symbolstart",(sdk/keyword.ml[60,2355+7]..sdk/keyword.ml[60,2355+18]),None)
+            <case>
+              pattern (sdk/keyword.ml[61,2375+4]..sdk/keyword.ml[61,2375+14])
+                Tpat_construct "WhereStart"
+                []
+                None
+              expression (sdk/keyword.ml[62,2393+6]..sdk/keyword.ml[62,2393+13])
+                Texp_constant Const_string("start",(sdk/keyword.ml[62,2393+7]..sdk/keyword.ml[62,2393+12]),None)
+            <case>
+              pattern (sdk/keyword.ml[63,2407+4]..sdk/keyword.ml[63,2407+12])
+                Tpat_construct "WhereEnd"
+                []
+                None
+              expression (sdk/keyword.ml[64,2423+6]..sdk/keyword.ml[64,2423+11])
+                Texp_constant Const_string("end",(sdk/keyword.ml[64,2423+7]..sdk/keyword.ml[64,2423+10]),None)
+          ]
+    ]
+  structure_item (sdk/keyword.ml[66,2436+0]..sdk/keyword.ml[72,2528+30])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[66,2436+4]..sdk/keyword.ml[66,2436+11])
+          Tpat_var "subject/292"
+        expression (sdk/keyword.ml[66,2436+14]..sdk/keyword.ml[72,2528+30])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (sdk/keyword.ml[67,2459+4]..sdk/keyword.ml[67,2459+10])
+                Tpat_construct "Before"
+                []
+                None
+              expression (sdk/keyword.ml[68,2473+6]..sdk/keyword.ml[68,2473+12])
+                Texp_constant Const_string("__0_",(sdk/keyword.ml[68,2473+7]..sdk/keyword.ml[68,2473+11]),None)
+            <case>
+              pattern (sdk/keyword.ml[69,2486+4]..sdk/keyword.ml[69,2486+8])
+                Tpat_construct "Left"
+                []
+                None
+              expression (sdk/keyword.ml[70,2498+6]..sdk/keyword.ml[70,2498+8])
+                Texp_constant Const_string("",(sdk/keyword.ml[70,2498+7]..sdk/keyword.ml[70,2498+7]),None)
+            <case>
+              pattern (sdk/keyword.ml[71,2507+4]..sdk/keyword.ml[71,2507+17])
+                Tpat_construct "RightNamed"
+                [
+                  pattern (sdk/keyword.ml[71,2507+15]..sdk/keyword.ml[71,2507+17])
+                    Tpat_var "id/294"
+                ]
+                None
+              expression (sdk/keyword.ml[72,2528+6]..sdk/keyword.ml[72,2528+30])
+                Texp_apply
+                expression (sdk/keyword.ml[72,2528+6]..sdk/keyword.ml[72,2528+20])
+                  Texp_ident "Stdlib!.Printf.sprintf"
+                [
+                  <arg>
+                    Nolabel
+                    expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27])
+                      Texp_construct "CamlinternalFormatBasics.Format"
+                      [
+                        expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                          Texp_construct "CamlinternalFormatBasics.Char_literal"
+                          [
+                            expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                              Texp_constant Const_char 5f
+                            expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                              Texp_construct "CamlinternalFormatBasics.String"
+                              [
+                                expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.No_padding"
+                                  []
+                                expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                                  Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                  [
+                                    expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                                      Texp_constant Const_char 5f
+                                    expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                      []
+                                  ]
+                              ]
+                          ]
+                        expression (sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost
+                          Texp_constant Const_string("_%s_",(sdk/keyword.ml[72,2528+21]..sdk/keyword.ml[72,2528+27]) ghost,None)
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (sdk/keyword.ml[72,2528+28]..sdk/keyword.ml[72,2528+30])
+                      Texp_ident "id/294"
+                ]
+          ]
+    ]
+  structure_item (sdk/keyword.ml[74,2560+0]..sdk/keyword.ml[80,2670+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[74,2560+4]..sdk/keyword.ml[74,2560+10])
+          Tpat_var "flavor/332"
+        expression (sdk/keyword.ml[74,2560+13]..sdk/keyword.ml[80,2670+11])
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (sdk/keyword.ml[75,2582+4]..sdk/keyword.ml[75,2582+18])
+                Tpat_construct "FlavorPosition"
+                []
+                None
+              expression (sdk/keyword.ml[76,2604+6]..sdk/keyword.ml[76,2604+11])
+                Texp_constant Const_string("pos",(sdk/keyword.ml[76,2604+7]..sdk/keyword.ml[76,2604+10]),None)
+            <case>
+              pattern (sdk/keyword.ml[77,2616+4]..sdk/keyword.ml[77,2616+16])
+                Tpat_construct "FlavorOffset"
+                []
+                None
+              expression (sdk/keyword.ml[78,2636+6]..sdk/keyword.ml[78,2636+11])
+                Texp_constant Const_string("ofs",(sdk/keyword.ml[78,2636+7]..sdk/keyword.ml[78,2636+10]),None)
+            <case>
+              pattern (sdk/keyword.ml[79,2648+4]..sdk/keyword.ml[79,2648+18])
+                Tpat_construct "FlavorLocation"
+                []
+                None
+              expression (sdk/keyword.ml[80,2670+6]..sdk/keyword.ml[80,2670+11])
+                Texp_constant Const_string("loc",(sdk/keyword.ml[80,2670+7]..sdk/keyword.ml[80,2670+10]),None)
+          ]
+    ]
+  structure_item (sdk/keyword.ml[82,2683+0]..sdk/keyword.ml[91,2965+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (sdk/keyword.ml[82,2683+4]..sdk/keyword.ml[82,2683+10])
+          Tpat_var "posvar/335"
+        expression (sdk/keyword.ml[82,2683+11]..sdk/keyword.ml[91,2965+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (sdk/keyword.ml[82,2683+11]..sdk/keyword.ml[82,2683+12])
+                Tpat_var "s/337"
+              expression (sdk/keyword.ml[82,2683+13]..sdk/keyword.ml[91,2965+18]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (sdk/keyword.ml[82,2683+13]..sdk/keyword.ml[82,2683+14])
+                      Tpat_var "w/338"
+                    expression (sdk/keyword.ml[82,2683+15]..sdk/keyword.ml[91,2965+18]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (sdk/keyword.ml[82,2683+15]..sdk/keyword.ml[82,2683+16])
+                            Tpat_var "f/339"
+                          expression (sdk/keyword.ml[83,2702+2]..sdk/keyword.ml[91,2965+18])
+                            Texp_match
+                            expression (sdk/keyword.ml[83,2702+8]..sdk/keyword.ml[83,2702+12])
+                              Texp_tuple
+                              [
+                                expression (sdk/keyword.ml[83,2702+8]..sdk/keyword.ml[83,2702+9])
+                                  Texp_ident "w/338"
+                                expression (sdk/keyword.ml[83,2702+11]..sdk/keyword.ml[83,2702+12])
+                                  Texp_ident "f/339"
+                              ]
+                            [
+                              <case>
+                                pattern (sdk/keyword.ml[84,2720+4]..sdk/keyword.ml[84,2720+38])
+                                  Tpat_value
+                                  pattern (sdk/keyword.ml[84,2720+4]..sdk/keyword.ml[84,2720+38])
+                                    Tpat_tuple
+                                    [
+                                      pattern (sdk/keyword.ml[84,2720+4]..sdk/keyword.ml[84,2720+5])
+                                        Tpat_any
+                                      pattern (sdk/keyword.ml[84,2720+7]..sdk/keyword.ml[84,2720+38])
+                                        Tpat_or
+                                        pattern (sdk/keyword.ml[84,2720+8]..sdk/keyword.ml[84,2720+20])
+                                          Tpat_construct "FlavorOffset"
+                                          []
+                                          None
+                                        pattern (sdk/keyword.ml[84,2720+23]..sdk/keyword.ml[84,2720+37])
+                                          Tpat_construct "FlavorPosition"
+                                          []
+                                          None
+                                    ]
+                                expression (sdk/keyword.ml[85,2762+6]..sdk/keyword.ml[85,2762+63])
+                                  Texp_apply
+                                  expression (sdk/keyword.ml[85,2762+6]..sdk/keyword.ml[85,2762+20])
+                                    Texp_ident "Stdlib!.Printf.sprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                            [
+                                              expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                Texp_constant Const_char 5f
+                                              expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                [
+                                                  expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String"
+                                                    [
+                                                      expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                        []
+                                                      expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.String"
+                                                        [
+                                                          expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                            []
+                                                          expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                            []
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost
+                                            Texp_constant Const_string("_%s%s%s",(sdk/keyword.ml[85,2762+21]..sdk/keyword.ml[85,2762+30]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (sdk/keyword.ml[85,2762+31]..sdk/keyword.ml[85,2762+40])
+                                        Texp_apply
+                                        expression (sdk/keyword.ml[85,2762+32]..sdk/keyword.ml[85,2762+37])
+                                          Texp_ident "where/289"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (sdk/keyword.ml[85,2762+38]..sdk/keyword.ml[85,2762+39])
+                                              Texp_ident "w/338"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (sdk/keyword.ml[85,2762+41]..sdk/keyword.ml[85,2762+51])
+                                        Texp_apply
+                                        expression (sdk/keyword.ml[85,2762+42]..sdk/keyword.ml[85,2762+48])
+                                          Texp_ident "flavor/332"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (sdk/keyword.ml[85,2762+49]..sdk/keyword.ml[85,2762+50])
+                                              Texp_ident "f/339"
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (sdk/keyword.ml[85,2762+52]..sdk/keyword.ml[85,2762+63])
+                                        Texp_apply
+                                        expression (sdk/keyword.ml[85,2762+53]..sdk/keyword.ml[85,2762+60])
+                                          Texp_ident "subject/292"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (sdk/keyword.ml[85,2762+61]..sdk/keyword.ml[85,2762+62])
+                                              Texp_ident "s/337"
+                                        ]
+                                  ]
+                              <case>
+                                pattern (sdk/keyword.ml[86,2826+4]..sdk/keyword.ml[86,2826+36])
+                                  Tpat_value
+                                  pattern (sdk/keyword.ml[86,2826+4]..sdk/keyword.ml[86,2826+36])
+                                    Tpat_tuple
+                                    [
+                                      pattern (sdk/keyword.ml[86,2826+4]..sdk/keyword.ml[86,2826+20])
+                                        Tpat_construct "WhereSymbolStart"
+                                        []
+                                        None
+                                      pattern (sdk/keyword.ml[86,2826+22]..sdk/keyword.ml[86,2826+36])
+                                        Tpat_construct "FlavorLocation"
+                                        []
+                                        None
+                                    ]
+                                expression (sdk/keyword.ml[87,2866+6]..sdk/keyword.ml[87,2866+13])
+                                  Texp_constant Const_string("_sloc",(sdk/keyword.ml[87,2866+7]..sdk/keyword.ml[87,2866+12]),None)
+                              <case>
+                                pattern (sdk/keyword.ml[88,2880+4]..sdk/keyword.ml[88,2880+30])
+                                  Tpat_value
+                                  pattern (sdk/keyword.ml[88,2880+4]..sdk/keyword.ml[88,2880+30])
+                                    Tpat_tuple
+                                    [
+                                      pattern (sdk/keyword.ml[88,2880+4]..sdk/keyword.ml[88,2880+14])
+                                        Tpat_construct "WhereStart"
+                                        []
+                                        None
+                                      pattern (sdk/keyword.ml[88,2880+16]..sdk/keyword.ml[88,2880+30])
+                                        Tpat_construct "FlavorLocation"
+                                        []
+                                        None
+                                    ]
+                                expression (sdk/keyword.ml[89,2914+6]..sdk/keyword.ml[89,2914+41])
+                                  Texp_apply
+                                  expression (sdk/keyword.ml[89,2914+6]..sdk/keyword.ml[89,2914+20])
+                                    Texp_ident "Stdlib!.Printf.sprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost
+                                                Texp_constant Const_string("_loc",(sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost,None)
+                                              expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.String"
+                                                [
+                                                  expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                          expression (sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost
+                                            Texp_constant Const_string("_loc%s",(sdk/keyword.ml[89,2914+21]..sdk/keyword.ml[89,2914+29]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (sdk/keyword.ml[89,2914+30]..sdk/keyword.ml[89,2914+41])
+                                        Texp_apply
+                                        expression (sdk/keyword.ml[89,2914+31]..sdk/keyword.ml[89,2914+38])
+                                          Texp_ident "subject/292"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (sdk/keyword.ml[89,2914+39]..sdk/keyword.ml[89,2914+40])
+                                              Texp_ident "s/337"
+                                        ]
+                                  ]
+                              <case>
+                                pattern (sdk/keyword.ml[90,2956+4]..sdk/keyword.ml[90,2956+5])
+                                  Tpat_value
+                                  pattern (sdk/keyword.ml[90,2956+4]..sdk/keyword.ml[90,2956+5])
+                                    Tpat_any
+                                expression (sdk/keyword.ml[91,2965+6]..sdk/keyword.ml[91,2965+18])
+                                  Texp_assert                                  expression (sdk/keyword.ml[91,2965+13]..sdk/keyword.ml[91,2965+18])
+                                    Texp_construct "false"
+                                    []
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (sdk/keyword.ml[96,3090+0]..sdk/keyword.ml[108,3302+3])
+    Tstr_module
+    KeywordSet/615
+      module_expr (sdk/keyword.ml[96,3090+20]..sdk/keyword.ml[108,3302+3])
+        module_expr (sdk/keyword.ml[96,3090+20]..sdk/keyword.ml[108,3302+3])
+          Tmod_structure
+          [
+            structure_item (sdk/keyword.ml[98,3118+2]..sdk/keyword.ml[101,3192+6])
+              Tstr_include              module_expr (sdk/keyword.ml[98,3118+10]..sdk/keyword.ml[101,3192+6])
+                Tmod_apply
+                module_expr (sdk/keyword.ml[98,3118+10]..sdk/keyword.ml[98,3118+18])
+                  module_expr (sdk/keyword.ml[98,3118+10]..sdk/keyword.ml[98,3118+18])
+                    Tmod_ident "Stdlib!.Set.Make"
+                module_expr (sdk/keyword.ml[98,3118+20]..sdk/keyword.ml[101,3192+5])
+                  Tmod_structure
+                  [
+                    structure_item (sdk/keyword.ml[99,3145+4]..sdk/keyword.ml[99,3145+20])
+                      Tstr_type Rec
+                      [
+                        type_declaration t/340 (sdk/keyword.ml[99,3145+4]..sdk/keyword.ml[99,3145+20])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ttype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (sdk/keyword.ml[99,3145+13]..sdk/keyword.ml[99,3145+20])
+                                Ttyp_constr "keyword/286"
+                                []
+                      ]
+                    structure_item (sdk/keyword.ml[100,3166+4]..sdk/keyword.ml[100,3166+25])
+                      Tstr_value Nonrec
+                      [
+                        <def>
+                          pattern (sdk/keyword.ml[100,3166+8]..sdk/keyword.ml[100,3166+15])
+                            Tpat_var "compare/341"
+                          expression (sdk/keyword.ml[100,3166+18]..sdk/keyword.ml[100,3166+25])
+                            Texp_ident "Stdlib!.compare"
+                      ]
+                  ]
+            structure_item (sdk/keyword.ml[103,3200+2]..sdk/keyword.ml[106,3280+20])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (sdk/keyword.ml[103,3200+6]..sdk/keyword.ml[103,3200+9])
+                    Tpat_var "map/610"
+                  expression (sdk/keyword.ml[103,3200+10]..sdk/keyword.ml[106,3280+20]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (sdk/keyword.ml[103,3200+10]..sdk/keyword.ml[103,3200+11])
+                          Tpat_var "f/611"
+                        expression (sdk/keyword.ml[103,3200+12]..sdk/keyword.ml[106,3280+20]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (sdk/keyword.ml[103,3200+12]..sdk/keyword.ml[103,3200+20])
+                                Tpat_var "keywords/612"
+                              expression (sdk/keyword.ml[104,3223+4]..sdk/keyword.ml[106,3280+20])
+                                Texp_apply
+                                expression (sdk/keyword.ml[104,3223+4]..sdk/keyword.ml[104,3223+8])
+                                  Texp_ident "fold/590"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (sdk/keyword.ml[104,3223+9]..sdk/keyword.ml[106,3280+5])
+                                      Texp_function
+                                      Nolabel
+                                      [
+                                        <case>
+                                          pattern (sdk/keyword.ml[104,3223+14]..sdk/keyword.ml[104,3223+21])
+                                            Tpat_var "keyword/613"
+                                          expression (sdk/keyword.ml[104,3223+22]..sdk/keyword.ml[105,3253+26]) ghost
+                                            Texp_function
+                                            Nolabel
+                                            [
+                                              <case>
+                                                pattern (sdk/keyword.ml[104,3223+22]..sdk/keyword.ml[104,3223+26])
+                                                  Tpat_var "accu/614"
+                                                expression (sdk/keyword.ml[105,3253+6]..sdk/keyword.ml[105,3253+26])
+                                                  Texp_apply
+                                                  expression (sdk/keyword.ml[105,3253+6]..sdk/keyword.ml[105,3253+9])
+                                                    Texp_ident "add/568"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (sdk/keyword.ml[105,3253+10]..sdk/keyword.ml[105,3253+21])
+                                                        Texp_apply
+                                                        expression (sdk/keyword.ml[105,3253+11]..sdk/keyword.ml[105,3253+12])
+                                                          Texp_ident "f/611"
+                                                        [
+                                                          <arg>
+                                                            Nolabel
+                                                            expression (sdk/keyword.ml[105,3253+13]..sdk/keyword.ml[105,3253+20])
+                                                              Texp_ident "keyword/613"
+                                                        ]
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (sdk/keyword.ml[105,3253+22]..sdk/keyword.ml[105,3253+26])
+                                                        Texp_ident "accu/614"
+                                                  ]
+                                            ]
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (sdk/keyword.ml[106,3280+6]..sdk/keyword.ml[106,3280+14])
+                                      Texp_ident "keywords/612"
+                                  <arg>
+                                    Nolabel
+                                    expression (sdk/keyword.ml[106,3280+15]..sdk/keyword.ml[106,3280+20])
+                                      Texp_ident "empty/567"
+                                ]
+                          ]
+                    ]
+              ]
+          ]
+]
+
+{<MenhirSdk__Keyword>
+ "KeywordSet"[module] ->
+   {<MenhirSdk__Keyword.30>
+    "add"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "add"[value];
+    "add_seq"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "add_seq"[value];
+    "cardinal"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "cardinal"[value];
+    "choose"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "choose"[value];
+    "choose_opt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "choose_opt"[value];
+    "compare"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "compare"[value];
+    "diff"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "diff"[value];
+    "disjoint"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "disjoint"[value];
+    "elements"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "elements"[value];
+    "elt"[type] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "elt"[type];
+    "empty"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "empty"[value];
+    "equal"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "equal"[value];
+    "exists"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "exists"[value];
+    "filter"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "filter"[value];
+    "filter_map"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "filter_map"[value];
+    "find"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "find"[value];
+    "find_first"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "find_first"[value];
+    "find_first_opt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "find_first_opt"[value];
+    "find_last"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "find_last"[value];
+    "find_last_opt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "find_last_opt"[value];
+    "find_opt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "find_opt"[value];
+    "fold"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "fold"[value];
+    "for_all"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "for_all"[value];
+    "inter"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "inter"[value];
+    "is_empty"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "is_empty"[value];
+    "iter"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "iter"[value];
+    "map"[value] -> <MenhirSdk__Keyword.25>;
+    "max_elt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "max_elt"[value];
+    "max_elt_opt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "max_elt_opt"[value];
+    "mem"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "mem"[value];
+    "min_elt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "min_elt"[value];
+    "min_elt_opt"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "min_elt_opt"[value];
+    "of_list"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "of_list"[value];
+    "of_seq"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "of_seq"[value];
+    "partition"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "partition"[value];
+    "remove"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "remove"[value];
+    "singleton"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "singleton"[value];
+    "split"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "split"[value];
+    "subset"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "subset"[value];
+    "t"[type] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "t"[type];
+    "to_list"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "to_list"[value];
+    "to_rev_seq"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "to_rev_seq"[value];
+    "to_seq"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "to_seq"[value];
+    "to_seq_from"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "to_seq_from"[value];
+    "union"[value] ->
+      CU Stdlib . "Set"[module] . "Make"[module](
+      {
+       "compare"[value] -> <MenhirSdk__Keyword.24>;
+       "t"[type] -> <MenhirSdk__Keyword.23>;
+       })
+      . "union"[value];
+    };
+ "flavor"[type] -> <MenhirSdk__Keyword.0>;
+ "keyword"[type] -> <MenhirSdk__Keyword.12>;
+ "posvar"[value] -> <MenhirSdk__Keyword.19>;
+ "subject"[type] -> <MenhirSdk__Keyword.8>;
+ "where"[type] -> <MenhirSdk__Keyword.4>;
+ }
+
+(seq
+  (let
+    (where/289 =
+       (function param/291[int]
+         (switch* param/291
+          case int 0: "symbolstart"
+          case int 1: "start"
+          case int 2: "end")))
+    (setfield_ptr(root-init) 2 (global MenhirSdk__Keyword!) where/289))
+  (let
+    (subject/292 =
+       (function param/331
+         (if (isint param/331) (if param/331 "" "__0_")
+           (let (id/294 =a (field_imm 0 param/331))
+             (apply (field_imm 3 (global Stdlib__Printf!))
+               [0: [12: '_' [2: 0 [12: '_' 0]]] "_%s_"] id/294)))))
+    (setfield_ptr(root-init) 3 (global MenhirSdk__Keyword!) subject/292))
+  (let
+    (flavor/332 =
+       (function param/334[int]
+         (switch* param/334
+          case int 0: "ofs"
+          case int 1: "pos"
+          case int 2: "loc")))
+    (setfield_ptr(root-init) 4 (global MenhirSdk__Keyword!) flavor/332))
+  (let
+    (posvar/335 =
+       (function s/337 w/338[int] f/339[int]
+         (catch
+           (catch
+             (catch (if (>= f/339 2) (exit 2) (exit 3)) with (3)
+               (apply (field_imm 3 (global Stdlib__Printf!))
+                 [0: [12: '_' [2: 0 [2: 0 [2: 0 0]]]] "_%s%s%s"]
+                 (apply (field_imm 2 (global MenhirSdk__Keyword!)) w/338)
+                 (apply (field_imm 4 (global MenhirSdk__Keyword!)) f/339)
+                 (apply (field_imm 3 (global MenhirSdk__Keyword!)) s/337)))
+            with (2)
+             (switch* w/338
+              case int 0: "_sloc"
+              case int 1:
+               (apply (field_imm 3 (global Stdlib__Printf!))
+                 [0: [11: "_loc" [2: 0 0]] "_loc%s"]
+                 (apply (field_imm 3 (global MenhirSdk__Keyword!)) s/337))
+              case int 2: (exit 1)))
+          with (1)
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "sdk/keyword.ml" 91 6])))))
+    (setfield_ptr(root-init) 0 (global MenhirSdk__Keyword!) posvar/335))
+  (let
+    (include/892 =
+       (apply
+         (let (let/895 = (field_imm 0 (global Stdlib__Set!)))
+           (field_imm 0 (global Stdlib__Set!)))
+         (let
+           (compare/341 =
+              (function prim/894 prim/893 stub
+                (caml_compare prim/894 prim/893)))
+           (makeblock 0 compare/341)))
+     empty/567 =a (field_mut 0 include/892))
+    (seq (setfield_ptr(root-init) 5 (global MenhirSdk__Keyword!) empty/567)
+      (let (add/568 =a (field_mut 1 include/892))
+        (seq (setfield_ptr(root-init) 6 (global MenhirSdk__Keyword!) add/568)
+          (let (singleton/569 =a (field_mut 2 include/892))
+            (seq
+              (setfield_ptr(root-init) 7 (global MenhirSdk__Keyword!)
+                singleton/569)
+              (let (remove/570 =a (field_mut 3 include/892))
+                (seq
+                  (setfield_ptr(root-init) 8 (global MenhirSdk__Keyword!)
+                    remove/570)
+                  (let (union/571 =a (field_mut 4 include/892))
+                    (seq
+                      (setfield_ptr(root-init) 9 (global MenhirSdk__Keyword!)
+                        union/571)
+                      (let (inter/572 =a (field_mut 5 include/892))
+                        (seq
+                          (setfield_ptr(root-init) 10
+                            (global MenhirSdk__Keyword!) inter/572)
+                          (let (disjoint/573 =a (field_mut 6 include/892))
+                            (seq
+                              (setfield_ptr(root-init) 11
+                                (global MenhirSdk__Keyword!) disjoint/573)
+                              (let (diff/574 =a (field_mut 7 include/892))
+                                (seq
+                                  (setfield_ptr(root-init) 12
+                                    (global MenhirSdk__Keyword!) diff/574)
+                                  (let
+                                    (cardinal/575 =a
+                                       (field_mut 8 include/892))
+                                    (seq
+                                      (setfield_ptr(root-init) 13
+                                        (global MenhirSdk__Keyword!)
+                                        cardinal/575)
+                                      (let
+                                        (elements/576 =a
+                                           (field_mut 9 include/892))
+                                        (seq
+                                          (setfield_ptr(root-init) 14
+                                            (global MenhirSdk__Keyword!)
+                                            elements/576)
+                                          (let
+                                            (min_elt/577 =a
+                                               (field_mut 10 include/892))
+                                            (seq
+                                              (setfield_ptr(root-init) 15
+                                                (global MenhirSdk__Keyword!)
+                                                min_elt/577)
+                                              (let
+                                                (min_elt_opt/578 =a
+                                                   (field_mut 11 include/892))
+                                                (seq
+                                                  (setfield_ptr(root-init) 16
+                                                    (global MenhirSdk__Keyword!)
+                                                    min_elt_opt/578)
+                                                  (let
+                                                    (max_elt/579 =a
+                                                       (field_mut 12
+                                                         include/892))
+                                                    (seq
+                                                      (setfield_ptr(root-init) 17
+                                                        (global MenhirSdk__Keyword!)
+                                                        max_elt/579)
+                                                      (let
+                                                        (max_elt_opt/580 =a
+                                                           (field_mut 13
+                                                             include/892))
+                                                        (seq
+                                                          (setfield_ptr(root-init) 18
+                                                            (global MenhirSdk__Keyword!)
+                                                            max_elt_opt/580)
+                                                          (let
+                                                            (choose/581 =a
+                                                               (field_mut 14
+                                                                 include/892))
+                                                            (seq
+                                                              (setfield_ptr(root-init) 19
+                                                                (global MenhirSdk__Keyword!)
+                                                                choose/581)
+                                                              (let
+                                                                (choose_opt/582 =a
+                                                                   (field_mut 15
+                                                                    include/892))
+                                                                (seq
+                                                                  (setfield_ptr(root-init) 20
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    choose_opt/582)
+                                                                  (let
+                                                                    (find/583 =a
+                                                                    (field_mut 16
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 21
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    find/583)
+                                                                    (let
+                                                                    (find_opt/584 =a
+                                                                    (field_mut 17
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 22
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    find_opt/584)
+                                                                    (let
+                                                                    (find_first/585 =a
+                                                                    (field_mut 18
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 23
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    find_first/585)
+                                                                    (let
+                                                                    (find_first_opt/586 =a
+                                                                    (field_mut 19
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 24
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    find_first_opt/586)
+                                                                    (let
+                                                                    (find_last/587 =a
+                                                                    (field_mut 20
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 25
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    find_last/587)
+                                                                    (let
+                                                                    (find_last_opt/588 =a
+                                                                    (field_mut 21
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 26
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    find_last_opt/588)
+                                                                    (let
+                                                                    (iter/589 =a
+                                                                    (field_mut 22
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 27
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    iter/589)
+                                                                    (let
+                                                                    (fold/590 =a
+                                                                    (field_mut 23
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 28
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    fold/590)
+                                                                    (let
+                                                                    (map/591 =a
+                                                                    (field_mut 24
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 29
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    map/591)
+                                                                    (let
+                                                                    (filter/592 =a
+                                                                    (field_mut 25
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 30
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    filter/592)
+                                                                    (let
+                                                                    (filter_map/593 =a
+                                                                    (field_mut 26
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 31
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    filter_map/593)
+                                                                    (let
+                                                                    (partition/594 =a
+                                                                    (field_mut 27
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 32
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    partition/594)
+                                                                    (let
+                                                                    (split/595 =a
+                                                                    (field_mut 28
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 33
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    split/595)
+                                                                    (let
+                                                                    (is_empty/596 =a
+                                                                    (field_mut 29
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 34
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    is_empty/596)
+                                                                    (let
+                                                                    (mem/597 =a
+                                                                    (field_mut 30
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 35
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    mem/597)
+                                                                    (let
+                                                                    (equal/598 =a
+                                                                    (field_mut 31
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 36
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    equal/598)
+                                                                    (let
+                                                                    (compare/599 =a
+                                                                    (field_mut 32
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 37
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    compare/599)
+                                                                    (let
+                                                                    (subset/600 =a
+                                                                    (field_mut 33
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 38
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    subset/600)
+                                                                    (let
+                                                                    (for_all/601 =a
+                                                                    (field_mut 34
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 39
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    for_all/601)
+                                                                    (let
+                                                                    (exists/602 =a
+                                                                    (field_mut 35
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 40
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    exists/602)
+                                                                    (let
+                                                                    (to_list/603 =a
+                                                                    (field_mut 36
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 41
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    to_list/603)
+                                                                    (let
+                                                                    (of_list/604 =a
+                                                                    (field_mut 37
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 42
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    of_list/604)
+                                                                    (let
+                                                                    (to_seq_from/605 =a
+                                                                    (field_mut 38
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 43
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    to_seq_from/605)
+                                                                    (let
+                                                                    (to_seq/606 =a
+                                                                    (field_mut 39
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 44
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    to_seq/606)
+                                                                    (let
+                                                                    (to_rev_seq/607 =a
+                                                                    (field_mut 40
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 45
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    to_rev_seq/607)
+                                                                    (let
+                                                                    (add_seq/608 =a
+                                                                    (field_mut 41
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 46
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    add_seq/608)
+                                                                    (let
+                                                                    (of_seq/609 =a
+                                                                    (field_mut 42
+                                                                    include/892))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 47
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    of_seq/609)
+                                                                    (let
+                                                                    (map/610 =
+                                                                    (function
+                                                                    f/611
+                                                                    keywords/612
+                                                                    (apply
+                                                                    (field_imm 28
+                                                                    (global MenhirSdk__Keyword!))
+                                                                    (function
+                                                                    keyword/613
+                                                                    accu/614
+                                                                    (apply
+                                                                    (field_imm 6
+                                                                    (global MenhirSdk__Keyword!))
+                                                                    (apply
+                                                                    f/611
+                                                                    keyword/613)
+                                                                    accu/614))
+                                                                    keywords/612
+                                                                    (field_imm 5
+                                                                    (global MenhirSdk__Keyword!)))))
+                                                                    (setfield_ptr(root-init) 48
+                                                                    (global MenhirSdk__Keyword!)
+                                                                    map/610))
+                                                                    0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+  (let
+    (KeywordSet/615 =
+       (makeblock 0 (field_imm 5 (global MenhirSdk__Keyword!))
+         (field_imm 6 (global MenhirSdk__Keyword!))
+         (field_imm 7 (global MenhirSdk__Keyword!))
+         (field_imm 8 (global MenhirSdk__Keyword!))
+         (field_imm 9 (global MenhirSdk__Keyword!))
+         (field_imm 10 (global MenhirSdk__Keyword!))
+         (field_imm 11 (global MenhirSdk__Keyword!))
+         (field_imm 12 (global MenhirSdk__Keyword!))
+         (field_imm 13 (global MenhirSdk__Keyword!))
+         (field_imm 14 (global MenhirSdk__Keyword!))
+         (field_imm 15 (global MenhirSdk__Keyword!))
+         (field_imm 16 (global MenhirSdk__Keyword!))
+         (field_imm 17 (global MenhirSdk__Keyword!))
+         (field_imm 18 (global MenhirSdk__Keyword!))
+         (field_imm 19 (global MenhirSdk__Keyword!))
+         (field_imm 20 (global MenhirSdk__Keyword!))
+         (field_imm 21 (global MenhirSdk__Keyword!))
+         (field_imm 22 (global MenhirSdk__Keyword!))
+         (field_imm 23 (global MenhirSdk__Keyword!))
+         (field_imm 24 (global MenhirSdk__Keyword!))
+         (field_imm 25 (global MenhirSdk__Keyword!))
+         (field_imm 26 (global MenhirSdk__Keyword!))
+         (field_imm 27 (global MenhirSdk__Keyword!))
+         (field_imm 28 (global MenhirSdk__Keyword!))
+         (field_imm 30 (global MenhirSdk__Keyword!))
+         (field_imm 31 (global MenhirSdk__Keyword!))
+         (field_imm 32 (global MenhirSdk__Keyword!))
+         (field_imm 33 (global MenhirSdk__Keyword!))
+         (field_imm 34 (global MenhirSdk__Keyword!))
+         (field_imm 35 (global MenhirSdk__Keyword!))
+         (field_imm 36 (global MenhirSdk__Keyword!))
+         (field_imm 37 (global MenhirSdk__Keyword!))
+         (field_imm 38 (global MenhirSdk__Keyword!))
+         (field_imm 39 (global MenhirSdk__Keyword!))
+         (field_imm 40 (global MenhirSdk__Keyword!))
+         (field_imm 41 (global MenhirSdk__Keyword!))
+         (field_imm 42 (global MenhirSdk__Keyword!))
+         (field_imm 43 (global MenhirSdk__Keyword!))
+         (field_imm 44 (global MenhirSdk__Keyword!))
+         (field_imm 45 (global MenhirSdk__Keyword!))
+         (field_imm 46 (global MenhirSdk__Keyword!))
+         (field_imm 47 (global MenhirSdk__Keyword!))
+         (field_imm 48 (global MenhirSdk__Keyword!))))
+    (seq
+      (setfield_ptr(root-init) 1 (global MenhirSdk__Keyword!) KeywordSet/615)
+      0)))
+(seq
+  (let
+    (where/289 =
+       (function param/291[int]
+         (switch* param/291
+          case int 0: "symbolstart"
+          case int 1: "start"
+          case int 2: "end")))
+    (setfield_ptr(root-init) 2 (global MenhirSdk__Keyword!) where/289))
+  (let
+    (subject/292 =
+       (function param/331
+         (if (isint param/331) (if param/331 "" "__0_")
+           (apply (field_imm 3 (global Stdlib__Printf!))
+             [0: [12: '_' [2: 0 [12: '_' 0]]] "_%s_"]
+             (field_imm 0 param/331)))))
+    (setfield_ptr(root-init) 3 (global MenhirSdk__Keyword!) subject/292))
+  (let
+    (flavor/332 =
+       (function param/334[int]
+         (switch* param/334
+          case int 0: "ofs"
+          case int 1: "pos"
+          case int 2: "loc")))
+    (setfield_ptr(root-init) 4 (global MenhirSdk__Keyword!) flavor/332))
+  (let
+    (posvar/335 =
+       (function s/337 w/338[int] f/339[int]
+         (if (>= f/339 2)
+           (switch* w/338
+            case int 0: "_sloc"
+            case int 1:
+             (apply (field_imm 3 (global Stdlib__Printf!))
+               [0: [11: "_loc" [2: 0 0]] "_loc%s"]
+               (apply (field_imm 3 (global MenhirSdk__Keyword!)) s/337))
+            case int 2:
+             (raise
+               (makeblock 0 (global Assert_failure/28!)
+                 [0: "sdk/keyword.ml" 91 6])))
+           (apply (field_imm 3 (global Stdlib__Printf!))
+             [0: [12: '_' [2: 0 [2: 0 [2: 0 0]]]] "_%s%s%s"]
+             (apply (field_imm 2 (global MenhirSdk__Keyword!)) w/338)
+             (apply (field_imm 4 (global MenhirSdk__Keyword!)) f/339)
+             (apply (field_imm 3 (global MenhirSdk__Keyword!)) s/337)))))
+    (setfield_ptr(root-init) 0 (global MenhirSdk__Keyword!) posvar/335))
+  (let
+    (include/892 =
+       (apply
+         (let (let/895 = (field_imm 0 (global Stdlib__Set!)))
+           (field_imm 0 (global Stdlib__Set!)))
+         (let
+           (compare/341 =
+              (function prim/894 prim/893 stub
+                (caml_compare prim/894 prim/893)))
+           (makeblock 0 compare/341))))
+    (seq
+      (setfield_ptr(root-init) 5 (global MenhirSdk__Keyword!)
+        (field_mut 0 include/892))
+      (setfield_ptr(root-init) 6 (global MenhirSdk__Keyword!)
+        (field_mut 1 include/892))
+      (setfield_ptr(root-init) 7 (global MenhirSdk__Keyword!)
+        (field_mut 2 include/892))
+      (setfield_ptr(root-init) 8 (global MenhirSdk__Keyword!)
+        (field_mut 3 include/892))
+      (setfield_ptr(root-init) 9 (global MenhirSdk__Keyword!)
+        (field_mut 4 include/892))
+      (setfield_ptr(root-init) 10 (global MenhirSdk__Keyword!)
+        (field_mut 5 include/892))
+      (setfield_ptr(root-init) 11 (global MenhirSdk__Keyword!)
+        (field_mut 6 include/892))
+      (setfield_ptr(root-init) 12 (global MenhirSdk__Keyword!)
+        (field_mut 7 include/892))
+      (setfield_ptr(root-init) 13 (global MenhirSdk__Keyword!)
+        (field_mut 8 include/892))
+      (setfield_ptr(root-init) 14 (global MenhirSdk__Keyword!)
+        (field_mut 9 include/892))
+      (setfield_ptr(root-init) 15 (global MenhirSdk__Keyword!)
+        (field_mut 10 include/892))
+      (setfield_ptr(root-init) 16 (global MenhirSdk__Keyword!)
+        (field_mut 11 include/892))
+      (setfield_ptr(root-init) 17 (global MenhirSdk__Keyword!)
+        (field_mut 12 include/892))
+      (setfield_ptr(root-init) 18 (global MenhirSdk__Keyword!)
+        (field_mut 13 include/892))
+      (setfield_ptr(root-init) 19 (global MenhirSdk__Keyword!)
+        (field_mut 14 include/892))
+      (setfield_ptr(root-init) 20 (global MenhirSdk__Keyword!)
+        (field_mut 15 include/892))
+      (setfield_ptr(root-init) 21 (global MenhirSdk__Keyword!)
+        (field_mut 16 include/892))
+      (setfield_ptr(root-init) 22 (global MenhirSdk__Keyword!)
+        (field_mut 17 include/892))
+      (setfield_ptr(root-init) 23 (global MenhirSdk__Keyword!)
+        (field_mut 18 include/892))
+      (setfield_ptr(root-init) 24 (global MenhirSdk__Keyword!)
+        (field_mut 19 include/892))
+      (setfield_ptr(root-init) 25 (global MenhirSdk__Keyword!)
+        (field_mut 20 include/892))
+      (setfield_ptr(root-init) 26 (global MenhirSdk__Keyword!)
+        (field_mut 21 include/892))
+      (setfield_ptr(root-init) 27 (global MenhirSdk__Keyword!)
+        (field_mut 22 include/892))
+      (setfield_ptr(root-init) 28 (global MenhirSdk__Keyword!)
+        (field_mut 23 include/892))
+      (setfield_ptr(root-init) 29 (global MenhirSdk__Keyword!)
+        (field_mut 24 include/892))
+      (setfield_ptr(root-init) 30 (global MenhirSdk__Keyword!)
+        (field_mut 25 include/892))
+      (setfield_ptr(root-init) 31 (global MenhirSdk__Keyword!)
+        (field_mut 26 include/892))
+      (setfield_ptr(root-init) 32 (global MenhirSdk__Keyword!)
+        (field_mut 27 include/892))
+      (setfield_ptr(root-init) 33 (global MenhirSdk__Keyword!)
+        (field_mut 28 include/892))
+      (setfield_ptr(root-init) 34 (global MenhirSdk__Keyword!)
+        (field_mut 29 include/892))
+      (setfield_ptr(root-init) 35 (global MenhirSdk__Keyword!)
+        (field_mut 30 include/892))
+      (setfield_ptr(root-init) 36 (global MenhirSdk__Keyword!)
+        (field_mut 31 include/892))
+      (setfield_ptr(root-init) 37 (global MenhirSdk__Keyword!)
+        (field_mut 32 include/892))
+      (setfield_ptr(root-init) 38 (global MenhirSdk__Keyword!)
+        (field_mut 33 include/892))
+      (setfield_ptr(root-init) 39 (global MenhirSdk__Keyword!)
+        (field_mut 34 include/892))
+      (setfield_ptr(root-init) 40 (global MenhirSdk__Keyword!)
+        (field_mut 35 include/892))
+      (setfield_ptr(root-init) 41 (global MenhirSdk__Keyword!)
+        (field_mut 36 include/892))
+      (setfield_ptr(root-init) 42 (global MenhirSdk__Keyword!)
+        (field_mut 37 include/892))
+      (setfield_ptr(root-init) 43 (global MenhirSdk__Keyword!)
+        (field_mut 38 include/892))
+      (setfield_ptr(root-init) 44 (global MenhirSdk__Keyword!)
+        (field_mut 39 include/892))
+      (setfield_ptr(root-init) 45 (global MenhirSdk__Keyword!)
+        (field_mut 40 include/892))
+      (setfield_ptr(root-init) 46 (global MenhirSdk__Keyword!)
+        (field_mut 41 include/892))
+      (setfield_ptr(root-init) 47 (global MenhirSdk__Keyword!)
+        (field_mut 42 include/892))
+      (let
+        (map/610 =
+           (function f/611 keywords/612
+             (apply (field_imm 28 (global MenhirSdk__Keyword!))
+               (function keyword/613 accu/614
+                 (apply (field_imm 6 (global MenhirSdk__Keyword!))
+                   (apply f/611 keyword/613) accu/614))
+               keywords/612 (field_imm 5 (global MenhirSdk__Keyword!)))))
+        (setfield_ptr(root-init) 48 (global MenhirSdk__Keyword!) map/610))
+      0))
+  (let
+    (KeywordSet/615 =
+       (makeblock 0 (field_imm 5 (global MenhirSdk__Keyword!))
+         (field_imm 6 (global MenhirSdk__Keyword!))
+         (field_imm 7 (global MenhirSdk__Keyword!))
+         (field_imm 8 (global MenhirSdk__Keyword!))
+         (field_imm 9 (global MenhirSdk__Keyword!))
+         (field_imm 10 (global MenhirSdk__Keyword!))
+         (field_imm 11 (global MenhirSdk__Keyword!))
+         (field_imm 12 (global MenhirSdk__Keyword!))
+         (field_imm 13 (global MenhirSdk__Keyword!))
+         (field_imm 14 (global MenhirSdk__Keyword!))
+         (field_imm 15 (global MenhirSdk__Keyword!))
+         (field_imm 16 (global MenhirSdk__Keyword!))
+         (field_imm 17 (global MenhirSdk__Keyword!))
+         (field_imm 18 (global MenhirSdk__Keyword!))
+         (field_imm 19 (global MenhirSdk__Keyword!))
+         (field_imm 20 (global MenhirSdk__Keyword!))
+         (field_imm 21 (global MenhirSdk__Keyword!))
+         (field_imm 22 (global MenhirSdk__Keyword!))
+         (field_imm 23 (global MenhirSdk__Keyword!))
+         (field_imm 24 (global MenhirSdk__Keyword!))
+         (field_imm 25 (global MenhirSdk__Keyword!))
+         (field_imm 26 (global MenhirSdk__Keyword!))
+         (field_imm 27 (global MenhirSdk__Keyword!))
+         (field_imm 28 (global MenhirSdk__Keyword!))
+         (field_imm 30 (global MenhirSdk__Keyword!))
+         (field_imm 31 (global MenhirSdk__Keyword!))
+         (field_imm 32 (global MenhirSdk__Keyword!))
+         (field_imm 33 (global MenhirSdk__Keyword!))
+         (field_imm 34 (global MenhirSdk__Keyword!))
+         (field_imm 35 (global MenhirSdk__Keyword!))
+         (field_imm 36 (global MenhirSdk__Keyword!))
+         (field_imm 37 (global MenhirSdk__Keyword!))
+         (field_imm 38 (global MenhirSdk__Keyword!))
+         (field_imm 39 (global MenhirSdk__Keyword!))
+         (field_imm 40 (global MenhirSdk__Keyword!))
+         (field_imm 41 (global MenhirSdk__Keyword!))
+         (field_imm 42 (global MenhirSdk__Keyword!))
+         (field_imm 43 (global MenhirSdk__Keyword!))
+         (field_imm 44 (global MenhirSdk__Keyword!))
+         (field_imm 45 (global MenhirSdk__Keyword!))
+         (field_imm 46 (global MenhirSdk__Keyword!))
+         (field_imm 47 (global MenhirSdk__Keyword!))
+         (field_imm 48 (global MenhirSdk__Keyword!))))
+    (seq
+      (setfield_ptr(root-init) 1 (global MenhirSdk__Keyword!) KeywordSet/615)
+      0)))

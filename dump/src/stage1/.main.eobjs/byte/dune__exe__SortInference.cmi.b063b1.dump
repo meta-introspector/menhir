@@ -1,0 +1,86 @@
+[
+  signature_item (src/SortInference.mli[14,1004+0]..[14,1004+11])
+    Psig_open Fresh "Syntax" (src/SortInference.mli[14,1004+5]..[14,1004+11])
+  signature_item (src/SortInference.mli[15,1016+0]..[15,1016+15])
+    Psig_open Fresh "GroundSort" (src/SortInference.mli[15,1016+5]..[15,1016+15])
+  signature_item (src/SortInference.mli[21,1224+0]..[21,1224+29])
+    Psig_type Rec
+    [
+      type_declaration "sorts" (src/SortInference.mli[21,1224+5]..[21,1224+10]) (src/SortInference.mli[21,1224+0]..[21,1224+29])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/SortInference.mli[21,1224+13]..[21,1224+29])
+              Ptyp_constr "StringMap.t" (src/SortInference.mli[21,1224+18]..[21,1224+29])
+              [
+                core_type (src/SortInference.mli[21,1224+13]..[21,1224+17])
+                  Ptyp_constr "sort" (src/SortInference.mli[21,1224+13]..[21,1224+17])
+                  []
+              ]
+    ]
+  signature_item (src/SortInference.mli[23,1255+0]..[23,1255+27])
+    Psig_value
+    value_description "infer" (src/SortInference.mli[23,1255+4]..[23,1255+9]) (src/SortInference.mli[23,1255+0]..[23,1255+27])
+      core_type (src/SortInference.mli[23,1255+11]..[23,1255+27])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SortInference.mli[23,1255+11]..[23,1255+18])
+          Ptyp_constr "grammar" (src/SortInference.mli[23,1255+11]..[23,1255+18])
+          []
+        core_type (src/SortInference.mli[23,1255+22]..[23,1255+27])
+          Ptyp_constr "sorts" (src/SortInference.mli[23,1255+22]..[23,1255+27])
+          []
+      []
+]
+
+open Syntax
+open GroundSort
+type sorts = sort StringMap.t
+val infer : grammar -> sorts
+[
+  signature_item (src/SortInference.mli[14,1004+0]..src/SortInference.mli[14,1004+11])
+    Tsig_open Fresh "Dune__exe!.Syntax"
+  signature_item (src/SortInference.mli[15,1016+0]..src/SortInference.mli[15,1016+15])
+    Tsig_open Fresh "Dune__exe!.GroundSort"
+  signature_item (src/SortInference.mli[21,1224+0]..src/SortInference.mli[21,1224+29])
+    Tsig_type Rec
+    [
+      type_declaration sorts/434 (src/SortInference.mli[21,1224+0]..src/SortInference.mli[21,1224+29])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/SortInference.mli[21,1224+13]..src/SortInference.mli[21,1224+29])
+              Ttyp_constr "Dune__exe!.StringMap.t"
+              [
+                core_type (src/SortInference.mli[21,1224+13]..src/SortInference.mli[21,1224+17])
+                  Ttyp_constr "Dune__exe!.GroundSort.sort"
+                  []
+              ]
+    ]
+  signature_item (src/SortInference.mli[23,1255+0]..src/SortInference.mli[23,1255+27])
+    Tsig_value
+    value_description infer/534 (src/SortInference.mli[23,1255+0]..src/SortInference.mli[23,1255+27])
+      core_type (src/SortInference.mli[23,1255+11]..src/SortInference.mli[23,1255+27])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SortInference.mli[23,1255+11]..src/SortInference.mli[23,1255+18])
+          Ttyp_constr "Dune__exe!.Syntax.grammar"
+          []
+        core_type (src/SortInference.mli[23,1255+22]..src/SortInference.mli[23,1255+27])
+          Ttyp_constr "sorts/434"
+          []
+      []
+]
+

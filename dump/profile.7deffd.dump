@@ -1,0 +1,23 @@
+0.097s  240MB 11.5MB 13.2MB src/stage1/printer.ml
+  0.002s 3.73MB 0.75MB 2.48MB parsing
+    0.002s 3.73MB 0.75MB 2.48MB parser
+  0.035s 72.9MB 5.06MB 7.54MB typing
+  0.003s 6.30MB 0.28MB 7.82MB transl
+  0.040s 86.2MB 4.59MB 12.4MB generate
+    0.002s 4.77MB ------ ------ cmm
+    0.024s 58.1MB 3.28MB 11.1MB compile_phrases
+      0.001s 4.17MB 0.12MB 7.94MB selection
+      ------ 0.17MB ------ ------ polling
+      0.002s 8.57MB 0.37MB 8.32MB cse
+      0.002s 6.16MB 0.40MB 8.73MB liveness
+      0.001s 1.20MB 0.06MB 8.79MB deadcode
+      0.002s 2.67MB ------ ------ spill
+      0.001s 0.25MB ------ ------ split
+      0.012s 28.4MB 2.12MB 10.9MB regalloc
+      ------ 2.00MB 0.12MB 11.0MB linearize
+      0.001s 0.28MB ------ ------ emit
+      0.002s 4.20MB 0.06MB 11.1MB other
+    0.008s ------ ------ ------ assemble
+    0.006s 23.3MB 1.31MB 12.4MB other
+  0.017s 71.7MB 0.81MB 13.2MB other
+0.006s 3.08MB 1.73MB ------ other

@@ -1,0 +1,16 @@
+0.042s 42.2MB 3.25MB 5.01MB src/stage1/action.ml
+  0.001s 0.05MB ------ ------ parsing
+    0.001s 0.05MB ------ ------ parser
+  0.016s 14.8MB 1.87MB 3.63MB typing
+  0.001s ------ ------ ------ transl
+  0.015s 11.7MB 0.87MB 4.51MB generate
+    0.006s 5.70MB 0.50MB 4.13MB compile_phrases
+      ------ 0.11MB ------ ------ polling
+      0.001s ------ ------ ------ liveness
+      0.001s 1.24MB 0.09MB 3.73MB spill
+      0.002s 4.22MB 0.40MB 4.13MB regalloc
+      0.001s 0.11MB ------ ------ other
+    0.005s ------ ------ ------ assemble
+    0.003s 6.04MB 0.37MB 4.51MB other
+  0.009s 15.5MB 0.50MB 5.01MB other
+0.013s 3.08MB 1.76MB ------ other

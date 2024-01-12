@@ -1,0 +1,1370 @@
+[
+  structure_item (src/ReferenceGraph.ml[14,1004+0]..[14,1004+12])
+    Pstr_open Fresh
+    module_expr (src/ReferenceGraph.ml[14,1004+5]..[14,1004+12])
+      Pmod_ident "Grammar" (src/ReferenceGraph.ml[14,1004+5]..[14,1004+12])
+  structure_item (src/ReferenceGraph.ml[16,1018+0]..[64,2215+13])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/ReferenceGraph.ml[16,1018+4]..[16,1018+25])
+          Ppat_var "print_reference_graph" (src/ReferenceGraph.ml[16,1018+4]..[16,1018+25])
+        expression (src/ReferenceGraph.ml[16,1018+25]..[64,2215+13]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/ReferenceGraph.ml[16,1018+25]..[16,1018+27])
+            Ppat_construct "()" (src/ReferenceGraph.ml[16,1018+25]..[16,1018+27])
+            None
+          expression (src/ReferenceGraph.ml[20,1068+2]..[64,2215+13])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/ReferenceGraph.ml[20,1068+6]..[20,1068+13])
+                  Ppat_var "forward" (src/ReferenceGraph.ml[20,1068+6]..[20,1068+13])
+                core_type (src/ReferenceGraph.ml[20,1068+16]..[20,1068+53])
+                  Ptyp_constr "ref" (src/ReferenceGraph.ml[20,1068+50]..[20,1068+53])
+                  [
+                    core_type (src/ReferenceGraph.ml[20,1068+16]..[20,1068+49])
+                      Ptyp_constr "NonterminalMap.t" (src/ReferenceGraph.ml[20,1068+33]..[20,1068+49])
+                      [
+                        core_type (src/ReferenceGraph.ml[20,1068+16]..[20,1068+32])
+                          Ptyp_constr "NonterminalSet.t" (src/ReferenceGraph.ml[20,1068+16]..[20,1068+32])
+                          []
+                      ]
+                  ]
+                expression (src/ReferenceGraph.ml[21,1124+4]..[21,1124+28])
+                  Pexp_apply
+                  expression (src/ReferenceGraph.ml[21,1124+4]..[21,1124+7])
+                    Pexp_ident "ref" (src/ReferenceGraph.ml[21,1124+4]..[21,1124+7])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/ReferenceGraph.ml[21,1124+8]..[21,1124+28])
+                        Pexp_ident "NonterminalMap.empty" (src/ReferenceGraph.ml[21,1124+8]..[21,1124+28])
+                  ]
+            ]
+            expression (src/ReferenceGraph.ml[24,1159+2]..[64,2215+13])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/ReferenceGraph.ml[24,1159+6]..[24,1159+16])
+                    Ppat_var "successors" (src/ReferenceGraph.ml[24,1159+6]..[24,1159+16])
+                  expression (src/ReferenceGraph.ml[24,1159+17]..[28,1249+26]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/ReferenceGraph.ml[24,1159+17]..[24,1159+19])
+                      Ppat_var "nt" (src/ReferenceGraph.ml[24,1159+17]..[24,1159+19])
+                    expression (src/ReferenceGraph.ml[25,1181+4]..[28,1249+26])
+                      Pexp_try
+                      expression (src/ReferenceGraph.ml[26,1189+6]..[26,1189+37])
+                        Pexp_apply
+                        expression (src/ReferenceGraph.ml[26,1189+6]..[26,1189+25])
+                          Pexp_ident "NonterminalMap.find" (src/ReferenceGraph.ml[26,1189+6]..[26,1189+25])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/ReferenceGraph.ml[26,1189+26]..[26,1189+28])
+                              Pexp_ident "nt" (src/ReferenceGraph.ml[26,1189+26]..[26,1189+28])
+                          <arg>
+                          Nolabel
+                            expression (src/ReferenceGraph.ml[26,1189+29]..[26,1189+37])
+                              Pexp_apply
+                              expression (src/ReferenceGraph.ml[26,1189+29]..[26,1189+30])
+                                Pexp_ident "!" (src/ReferenceGraph.ml[26,1189+29]..[26,1189+30])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/ReferenceGraph.ml[26,1189+30]..[26,1189+37])
+                                    Pexp_ident "forward" (src/ReferenceGraph.ml[26,1189+30]..[26,1189+37])
+                              ]
+                        ]
+                      [
+                        <case>
+                          pattern (src/ReferenceGraph.ml[27,1227+9]..[27,1227+18])
+                            Ppat_construct "Not_found" (src/ReferenceGraph.ml[27,1227+9]..[27,1227+18])
+                            None
+                          expression (src/ReferenceGraph.ml[28,1249+6]..[28,1249+26])
+                            Pexp_ident "NonterminalSet.empty" (src/ReferenceGraph.ml[28,1249+6]..[28,1249+26])
+                      ]
+              ]
+              expression (src/ReferenceGraph.ml[33,1301+2]..[64,2215+13])
+                Pexp_sequence
+                expression (src/ReferenceGraph.ml[33,1301+2]..[45,1627+3])
+                  Pexp_apply
+                  expression (src/ReferenceGraph.ml[33,1301+2]..[33,1301+17])
+                    Pexp_ident "Production.iter" (src/ReferenceGraph.ml[33,1301+2]..[33,1301+17])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/ReferenceGraph.ml[33,1301+18]..[45,1627+3])
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/ReferenceGraph.ml[33,1301+23]..[33,1301+27])
+                          Ppat_var "prod" (src/ReferenceGraph.ml[33,1301+23]..[33,1301+27])
+                        expression (src/ReferenceGraph.ml[34,1332+4]..[44,1617+9])
+                          Pexp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/ReferenceGraph.ml[34,1332+8]..[34,1332+11])
+                                Ppat_var "nt1" (src/ReferenceGraph.ml[34,1332+8]..[34,1332+11])
+                              expression (src/ReferenceGraph.ml[34,1332+14]..[34,1332+32])
+                                Pexp_apply
+                                expression (src/ReferenceGraph.ml[34,1332+14]..[34,1332+27])
+                                  Pexp_ident "Production.nt" (src/ReferenceGraph.ml[34,1332+14]..[34,1332+27])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/ReferenceGraph.ml[34,1332+28]..[34,1332+32])
+                                      Pexp_ident "prod" (src/ReferenceGraph.ml[34,1332+28]..[34,1332+32])
+                                ]
+                            <def>
+                              pattern (src/ReferenceGraph.ml[35,1365+8]..[35,1365+11])
+                                Ppat_var "rhs" (src/ReferenceGraph.ml[35,1365+8]..[35,1365+11])
+                              expression (src/ReferenceGraph.ml[35,1365+14]..[35,1365+33])
+                                Pexp_apply
+                                expression (src/ReferenceGraph.ml[35,1365+14]..[35,1365+28])
+                                  Pexp_ident "Production.rhs" (src/ReferenceGraph.ml[35,1365+14]..[35,1365+28])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/ReferenceGraph.ml[35,1365+29]..[35,1365+33])
+                                      Pexp_ident "prod" (src/ReferenceGraph.ml[35,1365+29]..[35,1365+33])
+                                ]
+                          ]
+                          expression (src/ReferenceGraph.ml[36,1402+4]..[44,1617+9])
+                            Pexp_apply
+                            expression (src/ReferenceGraph.ml[36,1402+4]..[36,1402+14])
+                              Pexp_ident "Array.iter" (src/ReferenceGraph.ml[36,1402+4]..[36,1402+14])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/ReferenceGraph.ml[36,1402+15]..[44,1617+5])
+                                  Pexp_function
+                                  [
+                                    <case>
+                                      pattern (src/ReferenceGraph.ml[37,1427+8]..[37,1427+18])
+                                        Ppat_construct "Symbol.T" (src/ReferenceGraph.ml[37,1427+8]..[37,1427+16])
+                                        Some
+                                          []
+                                          pattern (src/ReferenceGraph.ml[37,1427+17]..[37,1427+18])
+                                            Ppat_any
+                                      expression (src/ReferenceGraph.ml[38,1449+10]..[38,1449+12])
+                                        Pexp_construct "()" (src/ReferenceGraph.ml[38,1449+10]..[38,1449+12])
+                                        None
+                                    <case>
+                                      pattern (src/ReferenceGraph.ml[39,1462+8]..[39,1462+20])
+                                        Ppat_construct "Symbol.N" (src/ReferenceGraph.ml[39,1462+8]..[39,1462+16])
+                                        Some
+                                          []
+                                          pattern (src/ReferenceGraph.ml[39,1462+17]..[39,1462+20])
+                                            Ppat_var "nt2" (src/ReferenceGraph.ml[39,1462+17]..[39,1462+20])
+                                      expression (src/ReferenceGraph.ml[40,1486+10]..[43,1596+20])
+                                        Pexp_apply
+                                        expression (src/ReferenceGraph.ml[40,1486+18]..[40,1486+20])
+                                          Pexp_ident ":=" (src/ReferenceGraph.ml[40,1486+18]..[40,1486+20])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/ReferenceGraph.ml[40,1486+10]..[40,1486+17])
+                                              Pexp_ident "forward" (src/ReferenceGraph.ml[40,1486+10]..[40,1486+17])
+                                          <arg>
+                                          Nolabel
+                                            expression (src/ReferenceGraph.ml[40,1486+21]..[43,1596+20])
+                                              Pexp_apply
+                                              expression (src/ReferenceGraph.ml[40,1486+21]..[40,1486+39])
+                                                Pexp_ident "NonterminalMap.add" (src/ReferenceGraph.ml[40,1486+21]..[40,1486+39])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/ReferenceGraph.ml[41,1526+12]..[41,1526+15])
+                                                    Pexp_ident "nt1" (src/ReferenceGraph.ml[41,1526+12]..[41,1526+15])
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/ReferenceGraph.ml[42,1542+12]..[42,1542+53])
+                                                    Pexp_apply
+                                                    expression (src/ReferenceGraph.ml[42,1542+13]..[42,1542+31])
+                                                      Pexp_ident "NonterminalSet.add" (src/ReferenceGraph.ml[42,1542+13]..[42,1542+31])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/ReferenceGraph.ml[42,1542+32]..[42,1542+35])
+                                                          Pexp_ident "nt2" (src/ReferenceGraph.ml[42,1542+32]..[42,1542+35])
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/ReferenceGraph.ml[42,1542+36]..[42,1542+52])
+                                                          Pexp_apply
+                                                          expression (src/ReferenceGraph.ml[42,1542+37]..[42,1542+47])
+                                                            Pexp_ident "successors" (src/ReferenceGraph.ml[42,1542+37]..[42,1542+47])
+                                                          [
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/ReferenceGraph.ml[42,1542+48]..[42,1542+51])
+                                                                Pexp_ident "nt1" (src/ReferenceGraph.ml[42,1542+48]..[42,1542+51])
+                                                          ]
+                                                    ]
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/ReferenceGraph.ml[43,1596+12]..[43,1596+20])
+                                                    Pexp_apply
+                                                    expression (src/ReferenceGraph.ml[43,1596+12]..[43,1596+13])
+                                                      Pexp_ident "!" (src/ReferenceGraph.ml[43,1596+12]..[43,1596+13])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/ReferenceGraph.ml[43,1596+13]..[43,1596+20])
+                                                          Pexp_ident "forward" (src/ReferenceGraph.ml[43,1596+13]..[43,1596+20])
+                                                    ]
+                                              ]
+                                        ]
+                                  ]
+                              <arg>
+                              Nolabel
+                                expression (src/ReferenceGraph.ml[44,1617+6]..[44,1617+9])
+                                  Pexp_ident "rhs" (src/ReferenceGraph.ml[44,1617+6]..[44,1617+9])
+                            ]
+                  ]
+                expression (src/ReferenceGraph.ml[49,1649+2]..[64,2215+13])
+                  Pexp_letmodule "P" (src/ReferenceGraph.ml[49,1649+13]..[49,1649+14])
+                  module_expr (src/ReferenceGraph.ml[49,1649+17]..[61,2145+6])
+                    Pmod_apply
+                    module_expr (src/ReferenceGraph.ml[49,1649+17]..[49,1649+26])
+                      Pmod_ident "Dot.Print" (src/ReferenceGraph.ml[49,1649+17]..[49,1649+26])
+                    module_expr (src/ReferenceGraph.ml[49,1649+28]..[61,2145+5])
+                      Pmod_structure
+                      [
+                        structure_item (src/ReferenceGraph.ml[50,1684+4]..[50,1684+31])
+                          Pstr_type Rec
+                          [
+                            type_declaration "vertex" (src/ReferenceGraph.ml[50,1684+9]..[50,1684+15]) (src/ReferenceGraph.ml[50,1684+4]..[50,1684+31])
+                              ptype_params =
+                                []
+                              ptype_cstrs =
+                                []
+                              ptype_kind =
+                                Ptype_abstract
+                              ptype_private = Public
+                              ptype_manifest =
+                                Some
+                                  core_type (src/ReferenceGraph.ml[50,1684+18]..[50,1684+31])
+                                    Ptyp_constr "Nonterminal.t" (src/ReferenceGraph.ml[50,1684+18]..[50,1684+31])
+                                    []
+                          ]
+                        structure_item (src/ReferenceGraph.ml[51,1716+4]..[52,1734+48])
+                          Pstr_value Nonrec
+                          [
+                            <def>
+                              pattern (src/ReferenceGraph.ml[51,1716+8]..[51,1716+12])
+                                Ppat_var "name" (src/ReferenceGraph.ml[51,1716+8]..[51,1716+12])
+                              expression (src/ReferenceGraph.ml[51,1716+13]..[52,1734+48]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/ReferenceGraph.ml[51,1716+13]..[51,1716+15])
+                                  Ppat_var "nt" (src/ReferenceGraph.ml[51,1716+13]..[51,1716+15])
+                                expression (src/ReferenceGraph.ml[52,1734+6]..[52,1734+48])
+                                  Pexp_apply
+                                  expression (src/ReferenceGraph.ml[52,1734+6]..[52,1734+20])
+                                    Pexp_ident "Printf.sprintf" (src/ReferenceGraph.ml[52,1734+6]..[52,1734+20])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/ReferenceGraph.ml[52,1734+21]..[52,1734+27])
+                                        Pexp_constant PConst_string("nt%d",(src/ReferenceGraph.ml[52,1734+22]..[52,1734+26]),None)
+                                    <arg>
+                                    Nolabel
+                                      expression (src/ReferenceGraph.ml[52,1734+28]..[52,1734+48])
+                                        Pexp_apply
+                                        expression (src/ReferenceGraph.ml[52,1734+29]..[52,1734+44])
+                                          Pexp_ident "Nonterminal.n2i" (src/ReferenceGraph.ml[52,1734+29]..[52,1734+44])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/ReferenceGraph.ml[52,1734+45]..[52,1734+47])
+                                              Pexp_ident "nt" (src/ReferenceGraph.ml[52,1734+45]..[52,1734+47])
+                                        ]
+                                  ]
+                          ]
+                        structure_item (src/ReferenceGraph.ml[53,1783+4]..[56,1938+23])
+                          Pstr_value Nonrec
+                          [
+                            <def>
+                              pattern (src/ReferenceGraph.ml[53,1783+8]..[53,1783+18])
+                                Ppat_var "successors" (src/ReferenceGraph.ml[53,1783+8]..[53,1783+18])
+                              expression (src/ReferenceGraph.ml[53,1783+19]..[56,1938+23]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/ReferenceGraph.ml[53,1783+19]..[53,1783+75])
+                                  Ppat_constraint
+                                  pattern (src/ReferenceGraph.ml[53,1783+20]..[53,1783+21])
+                                    Ppat_var "f" (src/ReferenceGraph.ml[53,1783+20]..[53,1783+21])
+                                  core_type (src/ReferenceGraph.ml[53,1783+24]..[53,1783+74])
+                                    Ptyp_arrow
+                                    Optional "style"
+                                    core_type (src/ReferenceGraph.ml[53,1783+31]..[53,1783+40])
+                                      Ptyp_constr "Dot.style" (src/ReferenceGraph.ml[53,1783+31]..[53,1783+40])
+                                      []
+                                    core_type (src/ReferenceGraph.ml[53,1783+44]..[53,1783+74])
+                                      Ptyp_arrow
+                                      Labelled "label"
+                                      core_type (src/ReferenceGraph.ml[53,1783+50]..[53,1783+56])
+                                        Ptyp_constr "string" (src/ReferenceGraph.ml[53,1783+50]..[53,1783+56])
+                                        []
+                                      core_type (src/ReferenceGraph.ml[53,1783+60]..[53,1783+74])
+                                        Ptyp_arrow
+                                        Nolabel
+                                        core_type (src/ReferenceGraph.ml[53,1783+60]..[53,1783+66])
+                                          Ptyp_constr "vertex" (src/ReferenceGraph.ml[53,1783+60]..[53,1783+66])
+                                          []
+                                        core_type (src/ReferenceGraph.ml[53,1783+70]..[53,1783+74])
+                                          Ptyp_constr "unit" (src/ReferenceGraph.ml[53,1783+70]..[53,1783+74])
+                                          []
+                                expression (src/ReferenceGraph.ml[53,1783+76]..[56,1938+23]) ghost
+                                  Pexp_fun
+                                  Nolabel
+                                  None
+                                  pattern (src/ReferenceGraph.ml[53,1783+76]..[53,1783+78])
+                                    Ppat_var "nt" (src/ReferenceGraph.ml[53,1783+76]..[53,1783+78])
+                                  expression (src/ReferenceGraph.ml[54,1864+6]..[56,1938+23])
+                                    Pexp_apply
+                                    expression (src/ReferenceGraph.ml[54,1864+6]..[54,1864+25])
+                                      Pexp_ident "NonterminalSet.iter" (src/ReferenceGraph.ml[54,1864+6]..[54,1864+25])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/ReferenceGraph.ml[54,1864+26]..[56,1938+7])
+                                          Pexp_fun
+                                          Nolabel
+                                          None
+                                          pattern (src/ReferenceGraph.ml[54,1864+31]..[54,1864+40])
+                                            Ppat_var "successor" (src/ReferenceGraph.ml[54,1864+31]..[54,1864+40])
+                                          expression (src/ReferenceGraph.ml[55,1908+8]..[55,1908+29])
+                                            Pexp_apply
+                                            expression (src/ReferenceGraph.ml[55,1908+8]..[55,1908+9])
+                                              Pexp_ident "f" (src/ReferenceGraph.ml[55,1908+8]..[55,1908+9])
+                                            [
+                                              <arg>
+                                              Labelled "label"
+                                                expression (src/ReferenceGraph.ml[55,1908+17]..[55,1908+19])
+                                                  Pexp_constant PConst_string("",(src/ReferenceGraph.ml[55,1908+18]..[55,1908+18]),None)
+                                              <arg>
+                                              Nolabel
+                                                expression (src/ReferenceGraph.ml[55,1908+20]..[55,1908+29])
+                                                  Pexp_ident "successor" (src/ReferenceGraph.ml[55,1908+20]..[55,1908+29])
+                                            ]
+                                      <arg>
+                                      Nolabel
+                                        expression (src/ReferenceGraph.ml[56,1938+8]..[56,1938+23])
+                                          Pexp_apply
+                                          expression (src/ReferenceGraph.ml[56,1938+9]..[56,1938+19])
+                                            Pexp_ident "successors" (src/ReferenceGraph.ml[56,1938+9]..[56,1938+19])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/ReferenceGraph.ml[56,1938+20]..[56,1938+22])
+                                                Pexp_ident "nt" (src/ReferenceGraph.ml[56,1938+20]..[56,1938+22])
+                                          ]
+                                    ]
+                          ]
+                        structure_item (src/ReferenceGraph.ml[57,1962+4]..[60,2137+7])
+                          Pstr_value Nonrec
+                          [
+                            <def>
+                              pattern (src/ReferenceGraph.ml[57,1962+8]..[57,1962+12])
+                                Ppat_var "iter" (src/ReferenceGraph.ml[57,1962+8]..[57,1962+12])
+                              expression (src/ReferenceGraph.ml[57,1962+13]..[60,2137+7]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/ReferenceGraph.ml[57,1962+13]..[57,1962+89])
+                                  Ppat_constraint
+                                  pattern (src/ReferenceGraph.ml[57,1962+14]..[57,1962+15])
+                                    Ppat_var "f" (src/ReferenceGraph.ml[57,1962+14]..[57,1962+15])
+                                  core_type (src/ReferenceGraph.ml[57,1962+18]..[57,1962+88])
+                                    Ptyp_arrow
+                                    Optional "shape"
+                                    core_type (src/ReferenceGraph.ml[57,1962+25]..[57,1962+34])
+                                      Ptyp_constr "Dot.shape" (src/ReferenceGraph.ml[57,1962+25]..[57,1962+34])
+                                      []
+                                    core_type (src/ReferenceGraph.ml[57,1962+38]..[57,1962+88])
+                                      Ptyp_arrow
+                                      Optional "style"
+                                      core_type (src/ReferenceGraph.ml[57,1962+45]..[57,1962+54])
+                                        Ptyp_constr "Dot.style" (src/ReferenceGraph.ml[57,1962+45]..[57,1962+54])
+                                        []
+                                      core_type (src/ReferenceGraph.ml[57,1962+58]..[57,1962+88])
+                                        Ptyp_arrow
+                                        Labelled "label"
+                                        core_type (src/ReferenceGraph.ml[57,1962+64]..[57,1962+70])
+                                          Ptyp_constr "string" (src/ReferenceGraph.ml[57,1962+64]..[57,1962+70])
+                                          []
+                                        core_type (src/ReferenceGraph.ml[57,1962+74]..[57,1962+88])
+                                          Ptyp_arrow
+                                          Nolabel
+                                          core_type (src/ReferenceGraph.ml[57,1962+74]..[57,1962+80])
+                                            Ptyp_constr "vertex" (src/ReferenceGraph.ml[57,1962+74]..[57,1962+80])
+                                            []
+                                          core_type (src/ReferenceGraph.ml[57,1962+84]..[57,1962+88])
+                                            Ptyp_constr "unit" (src/ReferenceGraph.ml[57,1962+84]..[57,1962+88])
+                                            []
+                                expression (src/ReferenceGraph.ml[58,2054+6]..[60,2137+7])
+                                  Pexp_apply
+                                  expression (src/ReferenceGraph.ml[58,2054+6]..[58,2054+22])
+                                    Pexp_ident "Nonterminal.iter" (src/ReferenceGraph.ml[58,2054+6]..[58,2054+22])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/ReferenceGraph.ml[58,2054+23]..[60,2137+7])
+                                        Pexp_fun
+                                        Nolabel
+                                        None
+                                        pattern (src/ReferenceGraph.ml[58,2054+28]..[58,2054+30])
+                                          Ppat_var "nt" (src/ReferenceGraph.ml[58,2054+28]..[58,2054+30])
+                                        expression (src/ReferenceGraph.ml[59,2088+8]..[59,2088+48])
+                                          Pexp_apply
+                                          expression (src/ReferenceGraph.ml[59,2088+8]..[59,2088+9])
+                                            Pexp_ident "f" (src/ReferenceGraph.ml[59,2088+8]..[59,2088+9])
+                                          [
+                                            <arg>
+                                            Labelled "label"
+                                              expression (src/ReferenceGraph.ml[59,2088+17]..[59,2088+45])
+                                                Pexp_apply
+                                                expression (src/ReferenceGraph.ml[59,2088+18]..[59,2088+35])
+                                                  Pexp_ident "Nonterminal.print" (src/ReferenceGraph.ml[59,2088+18]..[59,2088+35])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/ReferenceGraph.ml[59,2088+36]..[59,2088+41])
+                                                      Pexp_construct "false" (src/ReferenceGraph.ml[59,2088+36]..[59,2088+41])
+                                                      None
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/ReferenceGraph.ml[59,2088+42]..[59,2088+44])
+                                                      Pexp_ident "nt" (src/ReferenceGraph.ml[59,2088+42]..[59,2088+44])
+                                                ]
+                                            <arg>
+                                            Nolabel
+                                              expression (src/ReferenceGraph.ml[59,2088+46]..[59,2088+48])
+                                                Pexp_ident "nt" (src/ReferenceGraph.ml[59,2088+46]..[59,2088+48])
+                                          ]
+                                  ]
+                          ]
+                      ]
+                  expression (src/ReferenceGraph.ml[62,2155+2]..[64,2215+13])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/ReferenceGraph.ml[62,2155+6]..[62,2155+7])
+                          Ppat_var "f" (src/ReferenceGraph.ml[62,2155+6]..[62,2155+7])
+                        expression (src/ReferenceGraph.ml[62,2155+10]..[62,2155+43])
+                          Pexp_apply
+                          expression (src/ReferenceGraph.ml[62,2155+10]..[62,2155+18])
+                            Pexp_ident "open_out" (src/ReferenceGraph.ml[62,2155+10]..[62,2155+18])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/ReferenceGraph.ml[62,2155+19]..[62,2155+43])
+                                Pexp_apply
+                                expression (src/ReferenceGraph.ml[62,2155+34]..[62,2155+35])
+                                  Pexp_ident "^" (src/ReferenceGraph.ml[62,2155+34]..[62,2155+35])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/ReferenceGraph.ml[62,2155+20]..[62,2155+33])
+                                      Pexp_ident "Settings.base" (src/ReferenceGraph.ml[62,2155+20]..[62,2155+33])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/ReferenceGraph.ml[62,2155+36]..[62,2155+42])
+                                      Pexp_constant PConst_string(".dot",(src/ReferenceGraph.ml[62,2155+37]..[62,2155+41]),None)
+                                ]
+                          ]
+                    ]
+                    expression (src/ReferenceGraph.ml[63,2202+2]..[64,2215+13])
+                      Pexp_sequence
+                      expression (src/ReferenceGraph.ml[63,2202+2]..[63,2202+11])
+                        Pexp_apply
+                        expression (src/ReferenceGraph.ml[63,2202+2]..[63,2202+9])
+                          Pexp_ident "P.print" (src/ReferenceGraph.ml[63,2202+2]..[63,2202+9])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/ReferenceGraph.ml[63,2202+10]..[63,2202+11])
+                              Pexp_ident "f" (src/ReferenceGraph.ml[63,2202+10]..[63,2202+11])
+                        ]
+                      expression (src/ReferenceGraph.ml[64,2215+2]..[64,2215+13])
+                        Pexp_apply
+                        expression (src/ReferenceGraph.ml[64,2215+2]..[64,2215+11])
+                          Pexp_ident "close_out" (src/ReferenceGraph.ml[64,2215+2]..[64,2215+11])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/ReferenceGraph.ml[64,2215+12]..[64,2215+13])
+                              Pexp_ident "f" (src/ReferenceGraph.ml[64,2215+12]..[64,2215+13])
+                        ]
+    ]
+]
+
+open Grammar
+let print_reference_graph () =
+  let forward : NonterminalSet.t NonterminalMap.t ref =
+    ref NonterminalMap.empty in
+  let successors nt =
+    try NonterminalMap.find nt (!forward)
+    with | Not_found -> NonterminalSet.empty in
+  Production.iter
+    (fun prod ->
+       let nt1 = Production.nt prod
+       and rhs = Production.rhs prod in
+       Array.iter
+         (function
+          | Symbol.T _ -> ()
+          | Symbol.N nt2 ->
+              forward :=
+                (NonterminalMap.add nt1
+                   (NonterminalSet.add nt2 (successors nt1)) (!forward))) rhs);
+  (let module P =
+     (Dot.Print)(struct
+                   type vertex = Nonterminal.t
+                   let name nt = Printf.sprintf "nt%d" (Nonterminal.n2i nt)
+                   let successors
+                     (f : ?style:Dot.style -> label:string -> vertex -> unit)
+                     nt =
+                     NonterminalSet.iter
+                       (fun successor -> f ~label:"" successor)
+                       (successors nt)
+                   let iter
+                     (f :
+                       ?shape:Dot.shape ->
+                         ?style:Dot.style -> label:string -> vertex -> unit)
+                     =
+                     Nonterminal.iter
+                       (fun nt -> f ~label:(Nonterminal.print false nt) nt)
+                 end) in
+     let f = open_out (Settings.base ^ ".dot") in P.print f; close_out f)
+[
+  structure_item (src/ReferenceGraph.ml[14,1004+0]..src/ReferenceGraph.ml[14,1004+12])
+    Tstr_open Fresh
+    module_expr (src/ReferenceGraph.ml[14,1004+5]..src/ReferenceGraph.ml[14,1004+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/ReferenceGraph.ml[16,1018+0]..src/ReferenceGraph.ml[64,2215+13])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/ReferenceGraph.ml[16,1018+4]..src/ReferenceGraph.ml[16,1018+25])
+          Tpat_var "print_reference_graph/414"
+        expression (src/ReferenceGraph.ml[16,1018+25]..src/ReferenceGraph.ml[64,2215+13]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/ReferenceGraph.ml[16,1018+25]..src/ReferenceGraph.ml[16,1018+27])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/ReferenceGraph.ml[20,1068+2]..src/ReferenceGraph.ml[64,2215+13])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/ReferenceGraph.ml[20,1068+6]..src/ReferenceGraph.ml[20,1068+13])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/ReferenceGraph.ml[20,1068+16]..src/ReferenceGraph.ml[20,1068+53])
+                          Ttyp_constr "Stdlib!.ref"
+                          [
+                            core_type (src/ReferenceGraph.ml[20,1068+16]..src/ReferenceGraph.ml[20,1068+49])
+                              Ttyp_constr "Dune__exe!.Grammar.NonterminalMap.t"
+                              [
+                                core_type (src/ReferenceGraph.ml[20,1068+16]..src/ReferenceGraph.ml[20,1068+32])
+                                  Ttyp_constr "Dune__exe!.Grammar.NonterminalSet.t"
+                                  []
+                              ]
+                          ]
+                      Tpat_alias "forward/519"
+                      pattern (src/ReferenceGraph.ml[20,1068+6]..src/ReferenceGraph.ml[20,1068+13])
+                        Tpat_any
+                    expression (src/ReferenceGraph.ml[21,1124+4]..src/ReferenceGraph.ml[21,1124+28])
+                      extra
+                        Texp_constraint
+                        core_type (src/ReferenceGraph.ml[20,1068+16]..src/ReferenceGraph.ml[20,1068+53])
+                          Ttyp_constr "Stdlib!.ref"
+                          [
+                            core_type (src/ReferenceGraph.ml[20,1068+16]..src/ReferenceGraph.ml[20,1068+49])
+                              Ttyp_constr "Dune__exe!.Grammar.NonterminalMap.t"
+                              [
+                                core_type (src/ReferenceGraph.ml[20,1068+16]..src/ReferenceGraph.ml[20,1068+32])
+                                  Ttyp_constr "Dune__exe!.Grammar.NonterminalSet.t"
+                                  []
+                              ]
+                          ]
+                      Texp_apply
+                      expression (src/ReferenceGraph.ml[21,1124+4]..src/ReferenceGraph.ml[21,1124+7])
+                        Texp_ident "Stdlib!.ref"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/ReferenceGraph.ml[21,1124+8]..src/ReferenceGraph.ml[21,1124+28])
+                            Texp_ident "Dune__exe!.Grammar.NonterminalMap.empty"
+                      ]
+                ]
+                expression (src/ReferenceGraph.ml[24,1159+2]..src/ReferenceGraph.ml[64,2215+13])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/ReferenceGraph.ml[24,1159+6]..src/ReferenceGraph.ml[24,1159+16])
+                        Tpat_var "successors/520"
+                      expression (src/ReferenceGraph.ml[24,1159+17]..src/ReferenceGraph.ml[28,1249+26]) ghost
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/ReferenceGraph.ml[24,1159+17]..src/ReferenceGraph.ml[24,1159+19])
+                              Tpat_var "nt/522"
+                            expression (src/ReferenceGraph.ml[25,1181+4]..src/ReferenceGraph.ml[28,1249+26])
+                              Texp_try
+                              expression (src/ReferenceGraph.ml[26,1189+6]..src/ReferenceGraph.ml[26,1189+37])
+                                Texp_apply
+                                expression (src/ReferenceGraph.ml[26,1189+6]..src/ReferenceGraph.ml[26,1189+25])
+                                  Texp_ident "Dune__exe!.Grammar.NonterminalMap.find"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/ReferenceGraph.ml[26,1189+26]..src/ReferenceGraph.ml[26,1189+28])
+                                      Texp_ident "nt/522"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/ReferenceGraph.ml[26,1189+29]..src/ReferenceGraph.ml[26,1189+37])
+                                      Texp_apply
+                                      expression (src/ReferenceGraph.ml[26,1189+29]..src/ReferenceGraph.ml[26,1189+30])
+                                        Texp_ident "Stdlib!.!"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/ReferenceGraph.ml[26,1189+30]..src/ReferenceGraph.ml[26,1189+37])
+                                            Texp_ident "forward/519"
+                                      ]
+                                ]
+                              [
+                                <case>
+                                  pattern (src/ReferenceGraph.ml[27,1227+9]..src/ReferenceGraph.ml[27,1227+18])
+                                    Tpat_construct "Not_found"
+                                    []
+                                    None
+                                  expression (src/ReferenceGraph.ml[28,1249+6]..src/ReferenceGraph.ml[28,1249+26])
+                                    Texp_ident "Dune__exe!.Grammar.NonterminalSet.empty"
+                              ]
+                        ]
+                  ]
+                  expression (src/ReferenceGraph.ml[33,1301+2]..src/ReferenceGraph.ml[64,2215+13])
+                    Texp_sequence
+                    expression (src/ReferenceGraph.ml[33,1301+2]..src/ReferenceGraph.ml[45,1627+3])
+                      Texp_apply
+                      expression (src/ReferenceGraph.ml[33,1301+2]..src/ReferenceGraph.ml[33,1301+17])
+                        Texp_ident "Dune__exe!.Grammar.Production.iter"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/ReferenceGraph.ml[33,1301+18]..src/ReferenceGraph.ml[45,1627+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/ReferenceGraph.ml[33,1301+23]..src/ReferenceGraph.ml[33,1301+27])
+                                  Tpat_var "prod/577"
+                                expression (src/ReferenceGraph.ml[34,1332+4]..src/ReferenceGraph.ml[44,1617+9])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/ReferenceGraph.ml[34,1332+8]..src/ReferenceGraph.ml[34,1332+11])
+                                        Tpat_var "nt1/578"
+                                      expression (src/ReferenceGraph.ml[34,1332+14]..src/ReferenceGraph.ml[34,1332+32])
+                                        Texp_apply
+                                        expression (src/ReferenceGraph.ml[34,1332+14]..src/ReferenceGraph.ml[34,1332+27])
+                                          Texp_ident "Dune__exe!.Grammar.Production.nt"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/ReferenceGraph.ml[34,1332+28]..src/ReferenceGraph.ml[34,1332+32])
+                                              Texp_ident "prod/577"
+                                        ]
+                                    <def>
+                                      pattern (src/ReferenceGraph.ml[35,1365+8]..src/ReferenceGraph.ml[35,1365+11])
+                                        Tpat_var "rhs/579"
+                                      expression (src/ReferenceGraph.ml[35,1365+14]..src/ReferenceGraph.ml[35,1365+33])
+                                        Texp_apply
+                                        expression (src/ReferenceGraph.ml[35,1365+14]..src/ReferenceGraph.ml[35,1365+28])
+                                          Texp_ident "Dune__exe!.Grammar.Production.rhs"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/ReferenceGraph.ml[35,1365+29]..src/ReferenceGraph.ml[35,1365+33])
+                                              Texp_ident "prod/577"
+                                        ]
+                                  ]
+                                  expression (src/ReferenceGraph.ml[36,1402+4]..src/ReferenceGraph.ml[44,1617+9])
+                                    Texp_apply
+                                    expression (src/ReferenceGraph.ml[36,1402+4]..src/ReferenceGraph.ml[36,1402+14])
+                                      Texp_ident "Stdlib!.Array.iter"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/ReferenceGraph.ml[36,1402+15]..src/ReferenceGraph.ml[44,1617+5])
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/ReferenceGraph.ml[37,1427+8]..src/ReferenceGraph.ml[37,1427+18])
+                                                Tpat_construct "Symbol.T"
+                                                [
+                                                  pattern (src/ReferenceGraph.ml[37,1427+17]..src/ReferenceGraph.ml[37,1427+18])
+                                                    Tpat_any
+                                                ]
+                                                None
+                                              expression (src/ReferenceGraph.ml[38,1449+10]..src/ReferenceGraph.ml[38,1449+12])
+                                                Texp_construct "()"
+                                                []
+                                            <case>
+                                              pattern (src/ReferenceGraph.ml[39,1462+8]..src/ReferenceGraph.ml[39,1462+20])
+                                                Tpat_construct "Symbol.N"
+                                                [
+                                                  pattern (src/ReferenceGraph.ml[39,1462+17]..src/ReferenceGraph.ml[39,1462+20])
+                                                    Tpat_var "nt2/684"
+                                                ]
+                                                None
+                                              expression (src/ReferenceGraph.ml[40,1486+10]..src/ReferenceGraph.ml[43,1596+20])
+                                                Texp_apply
+                                                expression (src/ReferenceGraph.ml[40,1486+18]..src/ReferenceGraph.ml[40,1486+20])
+                                                  Texp_ident "Stdlib!.:="
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/ReferenceGraph.ml[40,1486+10]..src/ReferenceGraph.ml[40,1486+17])
+                                                      Texp_ident "forward/519"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/ReferenceGraph.ml[40,1486+21]..src/ReferenceGraph.ml[43,1596+20])
+                                                      Texp_apply
+                                                      expression (src/ReferenceGraph.ml[40,1486+21]..src/ReferenceGraph.ml[40,1486+39])
+                                                        Texp_ident "Dune__exe!.Grammar.NonterminalMap.add"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/ReferenceGraph.ml[41,1526+12]..src/ReferenceGraph.ml[41,1526+15])
+                                                            Texp_ident "nt1/578"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/ReferenceGraph.ml[42,1542+12]..src/ReferenceGraph.ml[42,1542+53])
+                                                            Texp_apply
+                                                            expression (src/ReferenceGraph.ml[42,1542+13]..src/ReferenceGraph.ml[42,1542+31])
+                                                              Texp_ident "Dune__exe!.Grammar.NonterminalSet.add"
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/ReferenceGraph.ml[42,1542+32]..src/ReferenceGraph.ml[42,1542+35])
+                                                                  Texp_ident "nt2/684"
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/ReferenceGraph.ml[42,1542+36]..src/ReferenceGraph.ml[42,1542+52])
+                                                                  Texp_apply
+                                                                  expression (src/ReferenceGraph.ml[42,1542+37]..src/ReferenceGraph.ml[42,1542+47])
+                                                                    Texp_ident "successors/520"
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/ReferenceGraph.ml[42,1542+48]..src/ReferenceGraph.ml[42,1542+51])
+                                                                        Texp_ident "nt1/578"
+                                                                  ]
+                                                            ]
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/ReferenceGraph.ml[43,1596+12]..src/ReferenceGraph.ml[43,1596+20])
+                                                            Texp_apply
+                                                            expression (src/ReferenceGraph.ml[43,1596+12]..src/ReferenceGraph.ml[43,1596+13])
+                                                              Texp_ident "Stdlib!.!"
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/ReferenceGraph.ml[43,1596+13]..src/ReferenceGraph.ml[43,1596+20])
+                                                                  Texp_ident "forward/519"
+                                                            ]
+                                                      ]
+                                                ]
+                                          ]
+                                      <arg>
+                                        Nolabel
+                                        expression (src/ReferenceGraph.ml[44,1617+6]..src/ReferenceGraph.ml[44,1617+9])
+                                          Texp_ident "rhs/579"
+                                    ]
+                            ]
+                      ]
+                    expression (src/ReferenceGraph.ml[49,1649+2]..src/ReferenceGraph.ml[64,2215+13])
+                      Texp_letmodule "P/797"
+                      module_expr (src/ReferenceGraph.ml[49,1649+17]..src/ReferenceGraph.ml[61,2145+6])
+                        Tmod_apply
+                        module_expr (src/ReferenceGraph.ml[49,1649+17]..src/ReferenceGraph.ml[49,1649+26])
+                          module_expr (src/ReferenceGraph.ml[49,1649+17]..src/ReferenceGraph.ml[49,1649+26])
+                            Tmod_ident "Dune__exe!.Dot.Print"
+                        module_expr (src/ReferenceGraph.ml[49,1649+28]..src/ReferenceGraph.ml[61,2145+5])
+                          Tmod_structure
+                          [
+                            structure_item (src/ReferenceGraph.ml[50,1684+4]..src/ReferenceGraph.ml[50,1684+31])
+                              Tstr_type Rec
+                              [
+                                type_declaration vertex/706 (src/ReferenceGraph.ml[50,1684+4]..src/ReferenceGraph.ml[50,1684+31])
+                                  ptype_params =
+                                    []
+                                  ptype_cstrs =
+                                    []
+                                  ptype_kind =
+                                    Ttype_abstract
+                                  ptype_private = Public
+                                  ptype_manifest =
+                                    Some
+                                      core_type (src/ReferenceGraph.ml[50,1684+18]..src/ReferenceGraph.ml[50,1684+31])
+                                        Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                                        []
+                              ]
+                            structure_item (src/ReferenceGraph.ml[51,1716+4]..src/ReferenceGraph.ml[52,1734+48])
+                              Tstr_value Nonrec
+                              [
+                                <def>
+                                  pattern (src/ReferenceGraph.ml[51,1716+8]..src/ReferenceGraph.ml[51,1716+12])
+                                    Tpat_var "name/727"
+                                  expression (src/ReferenceGraph.ml[51,1716+13]..src/ReferenceGraph.ml[52,1734+48]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/ReferenceGraph.ml[51,1716+13]..src/ReferenceGraph.ml[51,1716+15])
+                                          Tpat_var "nt/729"
+                                        expression (src/ReferenceGraph.ml[52,1734+6]..src/ReferenceGraph.ml[52,1734+48])
+                                          Texp_apply
+                                          expression (src/ReferenceGraph.ml[52,1734+6]..src/ReferenceGraph.ml[52,1734+20])
+                                            Texp_ident "Stdlib!.Printf.sprintf"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27])
+                                                Texp_construct "CamlinternalFormatBasics.Format"
+                                                [
+                                                  expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                    [
+                                                      expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                        Texp_constant Const_string("nt",(src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost,None)
+                                                      expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.Int"
+                                                        [
+                                                          expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                            []
+                                                          expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                            []
+                                                          expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                            []
+                                                          expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                            []
+                                                        ]
+                                                    ]
+                                                  expression (src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost
+                                                    Texp_constant Const_string("nt%d",(src/ReferenceGraph.ml[52,1734+21]..src/ReferenceGraph.ml[52,1734+27]) ghost,None)
+                                                ]
+                                            <arg>
+                                              Nolabel
+                                              expression (src/ReferenceGraph.ml[52,1734+28]..src/ReferenceGraph.ml[52,1734+48])
+                                                Texp_apply
+                                                expression (src/ReferenceGraph.ml[52,1734+29]..src/ReferenceGraph.ml[52,1734+44])
+                                                  Texp_ident "Dune__exe!.Grammar.Nonterminal.n2i"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/ReferenceGraph.ml[52,1734+45]..src/ReferenceGraph.ml[52,1734+47])
+                                                      Texp_ident "nt/729"
+                                                ]
+                                          ]
+                                    ]
+                              ]
+                            structure_item (src/ReferenceGraph.ml[53,1783+4]..src/ReferenceGraph.ml[56,1938+23])
+                              Tstr_value Nonrec
+                              [
+                                <def>
+                                  pattern (src/ReferenceGraph.ml[53,1783+8]..src/ReferenceGraph.ml[53,1783+18])
+                                    Tpat_var "successors/766"
+                                  expression (src/ReferenceGraph.ml[53,1783+19]..src/ReferenceGraph.ml[56,1938+23]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/ReferenceGraph.ml[53,1783+20]..src/ReferenceGraph.ml[53,1783+21])
+                                          extra
+                                            Tpat_extra_constraint
+                                            core_type (src/ReferenceGraph.ml[53,1783+24]..src/ReferenceGraph.ml[53,1783+74])
+                                              Ttyp_arrow
+                                              Optional "style"
+                                              core_type (src/ReferenceGraph.ml[53,1783+31]..src/ReferenceGraph.ml[53,1783+40])
+                                                Ttyp_constr "Dune__exe!.Dot.style"
+                                                []
+                                              core_type (src/ReferenceGraph.ml[53,1783+44]..src/ReferenceGraph.ml[53,1783+74])
+                                                Ttyp_arrow
+                                                Labelled "label"
+                                                core_type (src/ReferenceGraph.ml[53,1783+50]..src/ReferenceGraph.ml[53,1783+56])
+                                                  Ttyp_constr "string/15!"
+                                                  []
+                                                core_type (src/ReferenceGraph.ml[53,1783+60]..src/ReferenceGraph.ml[53,1783+74])
+                                                  Ttyp_arrow
+                                                  Nolabel
+                                                  core_type (src/ReferenceGraph.ml[53,1783+60]..src/ReferenceGraph.ml[53,1783+66])
+                                                    Ttyp_constr "vertex/706"
+                                                    []
+                                                  core_type (src/ReferenceGraph.ml[53,1783+70]..src/ReferenceGraph.ml[53,1783+74])
+                                                    Ttyp_constr "unit/6!"
+                                                    []
+                                          Tpat_alias "f/775"
+                                          pattern (src/ReferenceGraph.ml[53,1783+20]..src/ReferenceGraph.ml[53,1783+21])
+                                            Tpat_any
+                                        expression (src/ReferenceGraph.ml[53,1783+76]..src/ReferenceGraph.ml[56,1938+23]) ghost
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/ReferenceGraph.ml[53,1783+76]..src/ReferenceGraph.ml[53,1783+78])
+                                                Tpat_var "nt/776"
+                                              expression (src/ReferenceGraph.ml[54,1864+6]..src/ReferenceGraph.ml[56,1938+23])
+                                                Texp_apply
+                                                expression (src/ReferenceGraph.ml[54,1864+6]..src/ReferenceGraph.ml[54,1864+25])
+                                                  Texp_ident "Dune__exe!.Grammar.NonterminalSet.iter"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/ReferenceGraph.ml[54,1864+26]..src/ReferenceGraph.ml[56,1938+7])
+                                                      Texp_function
+                                                      Nolabel
+                                                      [
+                                                        <case>
+                                                          pattern (src/ReferenceGraph.ml[54,1864+31]..src/ReferenceGraph.ml[54,1864+40])
+                                                            Tpat_var "successor/777"
+                                                          expression (src/ReferenceGraph.ml[55,1908+8]..src/ReferenceGraph.ml[55,1908+29])
+                                                            Texp_apply
+                                                            expression (src/ReferenceGraph.ml[55,1908+8]..src/ReferenceGraph.ml[55,1908+9])
+                                                              Texp_ident "f/775"
+                                                            [
+                                                              <arg>
+                                                                Optional "style"
+                                                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                                                  Texp_construct "None"
+                                                                  []
+                                                              <arg>
+                                                                Labelled "label"
+                                                                expression (src/ReferenceGraph.ml[55,1908+17]..src/ReferenceGraph.ml[55,1908+19])
+                                                                  Texp_constant Const_string("",(src/ReferenceGraph.ml[55,1908+18]..src/ReferenceGraph.ml[55,1908+18]),None)
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/ReferenceGraph.ml[55,1908+20]..src/ReferenceGraph.ml[55,1908+29])
+                                                                  Texp_ident "successor/777"
+                                                            ]
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/ReferenceGraph.ml[56,1938+8]..src/ReferenceGraph.ml[56,1938+23])
+                                                      Texp_apply
+                                                      expression (src/ReferenceGraph.ml[56,1938+9]..src/ReferenceGraph.ml[56,1938+19])
+                                                        Texp_ident "successors/520"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/ReferenceGraph.ml[56,1938+20]..src/ReferenceGraph.ml[56,1938+22])
+                                                            Texp_ident "nt/776"
+                                                      ]
+                                                ]
+                                          ]
+                                    ]
+                              ]
+                            structure_item (src/ReferenceGraph.ml[57,1962+4]..src/ReferenceGraph.ml[60,2137+7])
+                              Tstr_value Nonrec
+                              [
+                                <def>
+                                  pattern (src/ReferenceGraph.ml[57,1962+8]..src/ReferenceGraph.ml[57,1962+12])
+                                    Tpat_var "iter/778"
+                                  expression (src/ReferenceGraph.ml[57,1962+13]..src/ReferenceGraph.ml[60,2137+7]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/ReferenceGraph.ml[57,1962+14]..src/ReferenceGraph.ml[57,1962+15])
+                                          extra
+                                            Tpat_extra_constraint
+                                            core_type (src/ReferenceGraph.ml[57,1962+18]..src/ReferenceGraph.ml[57,1962+88])
+                                              Ttyp_arrow
+                                              Optional "shape"
+                                              core_type (src/ReferenceGraph.ml[57,1962+25]..src/ReferenceGraph.ml[57,1962+34])
+                                                Ttyp_constr "Dune__exe!.Dot.shape"
+                                                []
+                                              core_type (src/ReferenceGraph.ml[57,1962+38]..src/ReferenceGraph.ml[57,1962+88])
+                                                Ttyp_arrow
+                                                Optional "style"
+                                                core_type (src/ReferenceGraph.ml[57,1962+45]..src/ReferenceGraph.ml[57,1962+54])
+                                                  Ttyp_constr "Dune__exe!.Dot.style"
+                                                  []
+                                                core_type (src/ReferenceGraph.ml[57,1962+58]..src/ReferenceGraph.ml[57,1962+88])
+                                                  Ttyp_arrow
+                                                  Labelled "label"
+                                                  core_type (src/ReferenceGraph.ml[57,1962+64]..src/ReferenceGraph.ml[57,1962+70])
+                                                    Ttyp_constr "string/15!"
+                                                    []
+                                                  core_type (src/ReferenceGraph.ml[57,1962+74]..src/ReferenceGraph.ml[57,1962+88])
+                                                    Ttyp_arrow
+                                                    Nolabel
+                                                    core_type (src/ReferenceGraph.ml[57,1962+74]..src/ReferenceGraph.ml[57,1962+80])
+                                                      Ttyp_constr "vertex/706"
+                                                      []
+                                                    core_type (src/ReferenceGraph.ml[57,1962+84]..src/ReferenceGraph.ml[57,1962+88])
+                                                      Ttyp_constr "unit/6!"
+                                                      []
+                                          Tpat_alias "f/780"
+                                          pattern (src/ReferenceGraph.ml[57,1962+14]..src/ReferenceGraph.ml[57,1962+15])
+                                            Tpat_any
+                                        expression (src/ReferenceGraph.ml[58,2054+6]..src/ReferenceGraph.ml[60,2137+7])
+                                          Texp_apply
+                                          expression (src/ReferenceGraph.ml[58,2054+6]..src/ReferenceGraph.ml[58,2054+22])
+                                            Texp_ident "Dune__exe!.Grammar.Nonterminal.iter"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/ReferenceGraph.ml[58,2054+23]..src/ReferenceGraph.ml[60,2137+7])
+                                                Texp_function
+                                                Nolabel
+                                                [
+                                                  <case>
+                                                    pattern (src/ReferenceGraph.ml[58,2054+28]..src/ReferenceGraph.ml[58,2054+30])
+                                                      Tpat_var "nt/781"
+                                                    expression (src/ReferenceGraph.ml[59,2088+8]..src/ReferenceGraph.ml[59,2088+48])
+                                                      Texp_apply
+                                                      expression (src/ReferenceGraph.ml[59,2088+8]..src/ReferenceGraph.ml[59,2088+9])
+                                                        Texp_ident "f/780"
+                                                      [
+                                                        <arg>
+                                                          Optional "shape"
+                                                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                                            Texp_construct "None"
+                                                            []
+                                                        <arg>
+                                                          Optional "style"
+                                                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                                            Texp_construct "None"
+                                                            []
+                                                        <arg>
+                                                          Labelled "label"
+                                                          expression (src/ReferenceGraph.ml[59,2088+17]..src/ReferenceGraph.ml[59,2088+45])
+                                                            Texp_apply
+                                                            expression (src/ReferenceGraph.ml[59,2088+18]..src/ReferenceGraph.ml[59,2088+35])
+                                                              Texp_ident "Dune__exe!.Grammar.Nonterminal.print"
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/ReferenceGraph.ml[59,2088+36]..src/ReferenceGraph.ml[59,2088+41])
+                                                                  Texp_construct "false"
+                                                                  []
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/ReferenceGraph.ml[59,2088+42]..src/ReferenceGraph.ml[59,2088+44])
+                                                                  Texp_ident "nt/781"
+                                                            ]
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/ReferenceGraph.ml[59,2088+46]..src/ReferenceGraph.ml[59,2088+48])
+                                                            Texp_ident "nt/781"
+                                                      ]
+                                                ]
+                                          ]
+                                    ]
+                              ]
+                          ]
+                      expression (src/ReferenceGraph.ml[62,2155+2]..src/ReferenceGraph.ml[64,2215+13])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/ReferenceGraph.ml[62,2155+6]..src/ReferenceGraph.ml[62,2155+7])
+                              Tpat_var "f/798"
+                            expression (src/ReferenceGraph.ml[62,2155+10]..src/ReferenceGraph.ml[62,2155+43])
+                              Texp_apply
+                              expression (src/ReferenceGraph.ml[62,2155+10]..src/ReferenceGraph.ml[62,2155+18])
+                                Texp_ident "Stdlib!.open_out"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/ReferenceGraph.ml[62,2155+19]..src/ReferenceGraph.ml[62,2155+43])
+                                    Texp_apply
+                                    expression (src/ReferenceGraph.ml[62,2155+34]..src/ReferenceGraph.ml[62,2155+35])
+                                      Texp_ident "Stdlib!.^"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/ReferenceGraph.ml[62,2155+20]..src/ReferenceGraph.ml[62,2155+33])
+                                          Texp_ident "Dune__exe!.Settings.base"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/ReferenceGraph.ml[62,2155+36]..src/ReferenceGraph.ml[62,2155+42])
+                                          Texp_constant Const_string(".dot",(src/ReferenceGraph.ml[62,2155+37]..src/ReferenceGraph.ml[62,2155+41]),None)
+                                    ]
+                              ]
+                        ]
+                        expression (src/ReferenceGraph.ml[63,2202+2]..src/ReferenceGraph.ml[64,2215+13])
+                          Texp_sequence
+                          expression (src/ReferenceGraph.ml[63,2202+2]..src/ReferenceGraph.ml[63,2202+11])
+                            Texp_apply
+                            expression (src/ReferenceGraph.ml[63,2202+2]..src/ReferenceGraph.ml[63,2202+9])
+                              Texp_ident "P/797.print"
+                            [
+                              <arg>
+                                Optional "directed"
+                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                  Texp_construct "None"
+                                  []
+                              <arg>
+                                Optional "size"
+                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                  Texp_construct "None"
+                                  []
+                              <arg>
+                                Optional "orientation"
+                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                  Texp_construct "None"
+                                  []
+                              <arg>
+                                Optional "rankdir"
+                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                  Texp_construct "None"
+                                  []
+                              <arg>
+                                Optional "ratio"
+                                expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                                  Texp_construct "None"
+                                  []
+                              <arg>
+                                Nolabel
+                                expression (src/ReferenceGraph.ml[63,2202+10]..src/ReferenceGraph.ml[63,2202+11])
+                                  Texp_ident "f/798"
+                            ]
+                          expression (src/ReferenceGraph.ml[64,2215+2]..src/ReferenceGraph.ml[64,2215+13])
+                            Texp_apply
+                            expression (src/ReferenceGraph.ml[64,2215+2]..src/ReferenceGraph.ml[64,2215+11])
+                              Texp_ident "Stdlib!.close_out"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/ReferenceGraph.ml[64,2215+12]..src/ReferenceGraph.ml[64,2215+13])
+                                  Texp_ident "f/798"
+                            ]
+          ]
+    ]
+]
+
+{<Dune__exe__ReferenceGraph>
+ "print_reference_graph"[value] -> <Dune__exe__ReferenceGraph.0>;
+ }
+
+(seq
+  (let
+    (print_reference_graph/414 =
+       (function param/859[int] : int
+         (let
+           (forward/519 =
+              (makemutable 0
+                (field_imm 0 (field_imm 1 (global Dune__exe__Grammar!))))
+            successors/520 =
+              (function nt/522
+                (try
+                  (apply
+                    (field_imm 2 (field_imm 1 (global Dune__exe__Grammar!)))
+                    nt/522 (field_mut 0 forward/519))
+                 with exn/2228
+                  (catch
+                    (if (== exn/2228 (field_imm 7 (global Stdlib!)))
+                      (field_imm 0
+                        (field_imm 26
+                          (field_imm 1 (global Dune__exe__Grammar!))))
+                      (exit 1))
+                   with (1) (reraise exn/2228)))))
+           (seq
+             (apply (field_imm 14 (field_imm 8 (global Dune__exe__Grammar!)))
+               (function prod/577 : int
+                 (let
+                   (nt1/578 =
+                      (apply
+                        (field_imm 5
+                          (field_imm 8 (global Dune__exe__Grammar!)))
+                        prod/577)
+                    rhs/579 =
+                      (apply
+                        (field_imm 6
+                          (field_imm 8 (global Dune__exe__Grammar!)))
+                        prod/577))
+                   (apply (field_imm 10 (global Stdlib__Array!))
+                     (function param/705 : int
+                       (switch* param/705
+                        case tag 0:
+                         (let (nt2/684 =a (field_imm 0 param/705))
+                           (setfield_ptr 0 forward/519
+                             (apply
+                               (field_imm 3
+                                 (field_imm 1 (global Dune__exe__Grammar!)))
+                               nt1/578
+                               (apply
+                                 (field_imm 7
+                                   (field_imm 26
+                                     (field_imm 1
+                                       (global Dune__exe__Grammar!))))
+                                 nt2/684 (apply successors/520 nt1/578))
+                               (field_mut 0 forward/519))))
+                        case tag 1:
+                         (let (*match*/2227 =a (field_imm 0 param/705)) 0)))
+                     rhs/579))))
+             (let
+               (P/797 =
+                  (apply
+                    (let (let/2226 = (field_imm 0 (global Dune__exe__Dot!)))
+                      (field_imm 0 (global Dune__exe__Dot!)))
+                    (let
+                      (name/727 =
+                         (function nt/729
+                           (apply (field_imm 3 (global Stdlib__Printf!))
+                             [0: [11: "nt" [4: 0 0 0 0]] "nt%d"]
+                             (apply
+                               (field_imm 4
+                                 (field_imm 0 (global Dune__exe__Grammar!)))
+                               nt/729)))
+                       successors/766 =
+                         (function f/775 nt/776 : int
+                           (apply
+                             (field_imm 12
+                               (field_imm 26
+                                 (field_imm 1 (global Dune__exe__Grammar!))))
+                             (function successor/777 : int
+                               (apply f/775 0 "" successor/777))
+                             (apply successors/520 nt/776)))
+                       iter/778 =
+                         (function f/780 : int
+                           (apply
+                             (field_imm 9
+                               (field_imm 0 (global Dune__exe__Grammar!)))
+                             (function nt/781 : int
+                               (apply f/780 0 0
+                                 (apply
+                                   (field_imm 5
+                                     (field_imm 0
+                                       (global Dune__exe__Grammar!)))
+                                   0 nt/781)
+                                 nt/781)))))
+                      (makeblock 0 name/727 successors/766 iter/778)))
+                f/798 =
+                  (apply (field_imm 59 (global Stdlib!))
+                    (apply (field_imm 27 (global Stdlib!))
+                      (field_imm 24 (global Dune__exe__Settings!)) ".dot")))
+               (seq (apply (field_imm 0 P/797) 0 0 0 0 0 f/798)
+                 (apply (field_imm 75 (global Stdlib!)) f/798)))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__ReferenceGraph!)
+      print_reference_graph/414))
+  0)
+(seq
+  (let
+    (print_reference_graph/414 =
+       (function param/859[int] : int
+         (let
+           (forward/519 =
+              (makemutable 0
+                (field_imm 0 (field_imm 1 (global Dune__exe__Grammar!))))
+            successors/520 =
+              (function nt/522
+                (try
+                  (apply
+                    (field_imm 2 (field_imm 1 (global Dune__exe__Grammar!)))
+                    nt/522 (field_mut 0 forward/519))
+                 with exn/2228
+                  (if (== exn/2228 (field_imm 7 (global Stdlib!)))
+                    (field_imm 0
+                      (field_imm 26
+                        (field_imm 1 (global Dune__exe__Grammar!))))
+                    (reraise exn/2228)))))
+           (seq
+             (apply (field_imm 14 (field_imm 8 (global Dune__exe__Grammar!)))
+               (function prod/577 : int
+                 (let
+                   (nt1/578 =
+                      (apply
+                        (field_imm 5
+                          (field_imm 8 (global Dune__exe__Grammar!)))
+                        prod/577)
+                    rhs/579 =
+                      (apply
+                        (field_imm 6
+                          (field_imm 8 (global Dune__exe__Grammar!)))
+                        prod/577))
+                   (apply (field_imm 10 (global Stdlib__Array!))
+                     (function param/705 : int
+                       (switch* param/705
+                        case tag 0:
+                         (setfield_ptr 0 forward/519
+                           (apply
+                             (field_imm 3
+                               (field_imm 1 (global Dune__exe__Grammar!)))
+                             nt1/578
+                             (apply
+                               (field_imm 7
+                                 (field_imm 26
+                                   (field_imm 1 (global Dune__exe__Grammar!))))
+                               (field_imm 0 param/705)
+                               (apply successors/520 nt1/578))
+                             (field_mut 0 forward/519)))
+                        case tag 1: 0))
+                     rhs/579))))
+             (let
+               (P/797 =
+                  (apply
+                    (let (let/2226 = (field_imm 0 (global Dune__exe__Dot!)))
+                      (field_imm 0 (global Dune__exe__Dot!)))
+                    (let
+                      (name/727 =
+                         (function nt/729
+                           (apply (field_imm 3 (global Stdlib__Printf!))
+                             [0: [11: "nt" [4: 0 0 0 0]] "nt%d"]
+                             (apply
+                               (field_imm 4
+                                 (field_imm 0 (global Dune__exe__Grammar!)))
+                               nt/729)))
+                       successors/766 =
+                         (function f/775 nt/776 : int
+                           (apply
+                             (field_imm 12
+                               (field_imm 26
+                                 (field_imm 1 (global Dune__exe__Grammar!))))
+                             (function successor/777 : int
+                               (apply f/775 0 "" successor/777))
+                             (apply successors/520 nt/776)))
+                       iter/778 =
+                         (function f/780 : int
+                           (apply
+                             (field_imm 9
+                               (field_imm 0 (global Dune__exe__Grammar!)))
+                             (function nt/781 : int
+                               (apply f/780 0 0
+                                 (apply
+                                   (field_imm 5
+                                     (field_imm 0
+                                       (global Dune__exe__Grammar!)))
+                                   0 nt/781)
+                                 nt/781)))))
+                      (makeblock 0 name/727 successors/766 iter/778)))
+                f/798 =
+                  (apply (field_imm 59 (global Stdlib!))
+                    (apply (field_imm 27 (global Stdlib!))
+                      (field_imm 24 (global Dune__exe__Settings!)) ".dot")))
+               (seq (apply (field_imm 0 P/797) 0 0 0 0 0 f/798)
+                 (apply (field_imm 75 (global Stdlib!)) f/798)))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__ReferenceGraph!)
+      print_reference_graph/414))
+  0)

@@ -1,0 +1,21 @@
+0.160s  214MB 14.2MB 15.9MB src/stage2/coqBackend.ml
+  0.006s 3.72MB 0.68MB 2.44MB parsing
+    0.006s 3.72MB 0.68MB 2.44MB parser
+  0.086s 78.4MB 7.75MB 10.1MB typing
+  0.003s 4.16MB 0.12MB 10.3MB transl
+  0.036s 63.3MB 5.31MB 15.6MB generate
+    ------ 2.00MB 0.25MB 10.5MB cmm
+    0.018s 33.0MB 3.06MB 13.6MB compile_phrases
+      0.001s 2.20MB 0.06MB 10.6MB selection
+      0.001s 2.29MB 0.15MB 10.7MB cse
+      0.001s 2.00MB 0.21MB 11.0MB liveness
+      ------ 2.00MB 0.09MB 11.1MB deadcode
+      0.002s 2.69MB 0.18MB 11.2MB spill
+      0.001s 2.19MB 0.53MB 11.8MB split
+      0.008s 17.2MB 1.53MB 13.3MB regalloc
+      0.001s 2.23MB 0.28MB 13.6MB emit
+      0.002s 0.20MB ------ ------ other
+    0.009s ------ ------ ------ assemble
+    0.010s 28.2MB 2.00MB 15.6MB other
+  0.029s 64.7MB 0.34MB 15.9MB other
+0.014s 3.08MB 1.76MB ------ other

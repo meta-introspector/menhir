@@ -1,0 +1,20 @@
+0.119s  157MB 6.96MB 8.73MB src/stage3/patricia.ml
+  0.010s 5.68MB 1.00MB 2.76MB parsing
+    0.010s 5.68MB 1.00MB 2.76MB parser
+  0.030s 34.8MB 2.53MB 5.29MB typing
+  0.002s 4.13MB 0.09MB 5.38MB transl
+  0.045s 52.5MB 3.03MB 8.41MB generate
+    0.023s 31.5MB 2.53MB 7.91MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.001s 6.00MB 0.31MB 5.69MB cse
+      0.002s 0.28MB ------ ------ liveness
+      0.001s 1.21MB 0.06MB 5.76MB deadcode
+      0.003s 5.48MB 0.56MB 6.32MB spill
+      0.001s 2.00MB 0.21MB 6.54MB split
+      0.009s 11.6MB 1.06MB 7.60MB regalloc
+      0.002s 2.69MB 0.09MB 7.69MB emit
+      0.002s 2.20MB 0.21MB 7.91MB other
+    0.013s ------ ------ ------ assemble
+    0.009s 21.0MB 0.50MB 8.41MB other
+  0.031s 60.6MB 0.31MB 8.73MB other
+0.016s 3.08MB 1.76MB ------ other

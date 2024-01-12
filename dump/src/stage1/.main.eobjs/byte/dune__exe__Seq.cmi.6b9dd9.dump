@@ -1,0 +1,267 @@
+[
+  signature_item (src/Seq.mli[17,1095+0]..[17,1095+11])
+    Psig_type Rec
+    [
+      type_declaration "seq" (src/Seq.mli[17,1095+8]..[17,1095+11]) (src/Seq.mli[17,1095+0]..[17,1095+11])
+        ptype_params =
+          [
+            core_type (src/Seq.mli[17,1095+5]..[17,1095+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/Seq.mli[19,1108+0]..[19,1108+17])
+    Psig_value
+    value_description "empty" (src/Seq.mli[19,1108+4]..[19,1108+9]) (src/Seq.mli[19,1108+0]..[19,1108+17])
+      core_type (src/Seq.mli[19,1108+11]..[19,1108+17])
+        Ptyp_constr "seq" (src/Seq.mli[19,1108+14]..[19,1108+17])
+        [
+          core_type (src/Seq.mli[19,1108+11]..[19,1108+13])
+            Ptyp_var a
+        ]
+      []
+  signature_item (src/Seq.mli[20,1126+0]..[20,1126+27])
+    Psig_value
+    value_description "singleton" (src/Seq.mli[20,1126+4]..[20,1126+13]) (src/Seq.mli[20,1126+0]..[20,1126+27])
+      core_type (src/Seq.mli[20,1126+15]..[20,1126+27])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[20,1126+15]..[20,1126+17])
+          Ptyp_var a
+        core_type (src/Seq.mli[20,1126+21]..[20,1126+27])
+          Ptyp_constr "seq" (src/Seq.mli[20,1126+24]..[20,1126+27])
+          [
+            core_type (src/Seq.mli[20,1126+21]..[20,1126+23])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/Seq.mli[21,1154+0]..[21,1154+38])
+    Psig_value
+    value_description "append" (src/Seq.mli[21,1154+4]..[21,1154+10]) (src/Seq.mli[21,1154+0]..[21,1154+38])
+      core_type (src/Seq.mli[21,1154+12]..[21,1154+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[21,1154+12]..[21,1154+18])
+          Ptyp_constr "seq" (src/Seq.mli[21,1154+15]..[21,1154+18])
+          [
+            core_type (src/Seq.mli[21,1154+12]..[21,1154+14])
+              Ptyp_var a
+          ]
+        core_type (src/Seq.mli[21,1154+22]..[21,1154+38])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/Seq.mli[21,1154+22]..[21,1154+28])
+            Ptyp_constr "seq" (src/Seq.mli[21,1154+25]..[21,1154+28])
+            [
+              core_type (src/Seq.mli[21,1154+22]..[21,1154+24])
+                Ptyp_var a
+            ]
+          core_type (src/Seq.mli[21,1154+32]..[21,1154+38])
+            Ptyp_constr "seq" (src/Seq.mli[21,1154+35]..[21,1154+38])
+            [
+              core_type (src/Seq.mli[21,1154+32]..[21,1154+34])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/Seq.mli[22,1193+0]..[22,1193+31])
+    Psig_value
+    value_description "elements" (src/Seq.mli[22,1193+4]..[22,1193+12]) (src/Seq.mli[22,1193+0]..[22,1193+31])
+      core_type (src/Seq.mli[22,1193+14]..[22,1193+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[22,1193+14]..[22,1193+20])
+          Ptyp_constr "seq" (src/Seq.mli[22,1193+17]..[22,1193+20])
+          [
+            core_type (src/Seq.mli[22,1193+14]..[22,1193+16])
+              Ptyp_var a
+          ]
+        core_type (src/Seq.mli[22,1193+24]..[22,1193+31])
+          Ptyp_constr "list" (src/Seq.mli[22,1193+27]..[22,1193+31])
+          [
+            core_type (src/Seq.mli[22,1193+24]..[22,1193+26])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/Seq.mli[23,1225+0]..[23,1225+33])
+    Psig_value
+    value_description "concat" (src/Seq.mli[23,1225+4]..[23,1225+10]) (src/Seq.mli[23,1225+0]..[23,1225+33])
+      core_type (src/Seq.mli[23,1225+12]..[23,1225+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[23,1225+12]..[23,1225+23])
+          Ptyp_constr "list" (src/Seq.mli[23,1225+19]..[23,1225+23])
+          [
+            core_type (src/Seq.mli[23,1225+12]..[23,1225+18])
+              Ptyp_constr "seq" (src/Seq.mli[23,1225+15]..[23,1225+18])
+              [
+                core_type (src/Seq.mli[23,1225+12]..[23,1225+14])
+                  Ptyp_var a
+              ]
+          ]
+        core_type (src/Seq.mli[23,1225+27]..[23,1225+33])
+          Ptyp_constr "seq" (src/Seq.mli[23,1225+30]..[23,1225+33])
+          [
+            core_type (src/Seq.mli[23,1225+27]..[23,1225+29])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/Seq.mli[24,1259+0]..[24,1259+23])
+    Psig_value
+    value_description "first" (src/Seq.mli[24,1259+4]..[24,1259+9]) (src/Seq.mli[24,1259+0]..[24,1259+23])
+      core_type (src/Seq.mli[24,1259+11]..[24,1259+23])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[24,1259+11]..[24,1259+17])
+          Ptyp_constr "seq" (src/Seq.mli[24,1259+14]..[24,1259+17])
+          [
+            core_type (src/Seq.mli[24,1259+11]..[24,1259+13])
+              Ptyp_var a
+          ]
+        core_type (src/Seq.mli[24,1259+21]..[24,1259+23])
+          Ptyp_var a
+      []
+]
+
+type 'a seq
+val empty : 'a seq
+val singleton : 'a -> 'a seq
+val append : 'a seq -> 'a seq -> 'a seq
+val elements : 'a seq -> 'a list
+val concat : 'a seq list -> 'a seq
+val first : 'a seq -> 'a
+[
+  signature_item (src/Seq.mli[17,1095+0]..src/Seq.mli[17,1095+11])
+    Tsig_type Rec
+    [
+      type_declaration seq/396 (src/Seq.mli[17,1095+0]..src/Seq.mli[17,1095+11])
+        ptype_params =
+          [
+            core_type (src/Seq.mli[17,1095+5]..src/Seq.mli[17,1095+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/Seq.mli[19,1108+0]..src/Seq.mli[19,1108+17])
+    Tsig_value
+    value_description empty/397 (src/Seq.mli[19,1108+0]..src/Seq.mli[19,1108+17])
+      core_type (src/Seq.mli[19,1108+11]..src/Seq.mli[19,1108+17])
+        Ttyp_constr "seq/396"
+        [
+          core_type (src/Seq.mli[19,1108+11]..src/Seq.mli[19,1108+13])
+            Ttyp_var a
+        ]
+      []
+  signature_item (src/Seq.mli[20,1126+0]..src/Seq.mli[20,1126+27])
+    Tsig_value
+    value_description singleton/398 (src/Seq.mli[20,1126+0]..src/Seq.mli[20,1126+27])
+      core_type (src/Seq.mli[20,1126+15]..src/Seq.mli[20,1126+27])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[20,1126+15]..src/Seq.mli[20,1126+17])
+          Ttyp_var a
+        core_type (src/Seq.mli[20,1126+21]..src/Seq.mli[20,1126+27])
+          Ttyp_constr "seq/396"
+          [
+            core_type (src/Seq.mli[20,1126+21]..src/Seq.mli[20,1126+23])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/Seq.mli[21,1154+0]..src/Seq.mli[21,1154+38])
+    Tsig_value
+    value_description append/399 (src/Seq.mli[21,1154+0]..src/Seq.mli[21,1154+38])
+      core_type (src/Seq.mli[21,1154+12]..src/Seq.mli[21,1154+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[21,1154+12]..src/Seq.mli[21,1154+18])
+          Ttyp_constr "seq/396"
+          [
+            core_type (src/Seq.mli[21,1154+12]..src/Seq.mli[21,1154+14])
+              Ttyp_var a
+          ]
+        core_type (src/Seq.mli[21,1154+22]..src/Seq.mli[21,1154+38])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/Seq.mli[21,1154+22]..src/Seq.mli[21,1154+28])
+            Ttyp_constr "seq/396"
+            [
+              core_type (src/Seq.mli[21,1154+22]..src/Seq.mli[21,1154+24])
+                Ttyp_var a
+            ]
+          core_type (src/Seq.mli[21,1154+32]..src/Seq.mli[21,1154+38])
+            Ttyp_constr "seq/396"
+            [
+              core_type (src/Seq.mli[21,1154+32]..src/Seq.mli[21,1154+34])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/Seq.mli[22,1193+0]..src/Seq.mli[22,1193+31])
+    Tsig_value
+    value_description elements/400 (src/Seq.mli[22,1193+0]..src/Seq.mli[22,1193+31])
+      core_type (src/Seq.mli[22,1193+14]..src/Seq.mli[22,1193+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[22,1193+14]..src/Seq.mli[22,1193+20])
+          Ttyp_constr "seq/396"
+          [
+            core_type (src/Seq.mli[22,1193+14]..src/Seq.mli[22,1193+16])
+              Ttyp_var a
+          ]
+        core_type (src/Seq.mli[22,1193+24]..src/Seq.mli[22,1193+31])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/Seq.mli[22,1193+24]..src/Seq.mli[22,1193+26])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/Seq.mli[23,1225+0]..src/Seq.mli[23,1225+33])
+    Tsig_value
+    value_description concat/401 (src/Seq.mli[23,1225+0]..src/Seq.mli[23,1225+33])
+      core_type (src/Seq.mli[23,1225+12]..src/Seq.mli[23,1225+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[23,1225+12]..src/Seq.mli[23,1225+23])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/Seq.mli[23,1225+12]..src/Seq.mli[23,1225+18])
+              Ttyp_constr "seq/396"
+              [
+                core_type (src/Seq.mli[23,1225+12]..src/Seq.mli[23,1225+14])
+                  Ttyp_var a
+              ]
+          ]
+        core_type (src/Seq.mli[23,1225+27]..src/Seq.mli[23,1225+33])
+          Ttyp_constr "seq/396"
+          [
+            core_type (src/Seq.mli[23,1225+27]..src/Seq.mli[23,1225+29])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/Seq.mli[24,1259+0]..src/Seq.mli[24,1259+23])
+    Tsig_value
+    value_description first/402 (src/Seq.mli[24,1259+0]..src/Seq.mli[24,1259+23])
+      core_type (src/Seq.mli[24,1259+11]..src/Seq.mli[24,1259+23])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/Seq.mli[24,1259+11]..src/Seq.mli[24,1259+17])
+          Ttyp_constr "seq/396"
+          [
+            core_type (src/Seq.mli[24,1259+11]..src/Seq.mli[24,1259+13])
+              Ttyp_var a
+          ]
+        core_type (src/Seq.mli[24,1259+21]..src/Seq.mli[24,1259+23])
+          Ttyp_var a
+      []
+]
+

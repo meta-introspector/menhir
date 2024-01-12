@@ -1,0 +1,1681 @@
+[
+  structure_item (src/stringMap.ml[14,999+0]..[14,999+25])
+    Pstr_include    module_expr (src/stringMap.ml[14,999+8]..[14,999+25])
+      Pmod_apply
+      module_expr (src/stringMap.ml[14,999+8]..[14,999+16])
+        Pmod_ident "Map.Make" (src/stringMap.ml[14,999+8]..[14,999+16])
+      module_expr (src/stringMap.ml[14,999+18]..[14,999+24])
+        Pmod_ident "String" (src/stringMap.ml[14,999+18]..[14,999+24])
+  structure_item (src/stringMap.ml[16,1026+0]..[17,1043+31])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[16,1026+4]..[16,1026+12])
+          Ppat_var "cardinal" (src/stringMap.ml[16,1026+4]..[16,1026+12])
+        expression (src/stringMap.ml[16,1026+13]..[17,1043+31]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringMap.ml[16,1026+13]..[16,1026+14])
+            Ppat_var "s" (src/stringMap.ml[16,1026+13]..[16,1026+14])
+          expression (src/stringMap.ml[17,1043+2]..[17,1043+31])
+            Pexp_apply
+            expression (src/stringMap.ml[17,1043+2]..[17,1043+6])
+              Pexp_ident "fold" (src/stringMap.ml[17,1043+2]..[17,1043+6])
+            [
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[17,1043+7]..[17,1043+27])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/stringMap.ml[17,1043+12]..[17,1043+13])
+                    Ppat_any
+                  expression (src/stringMap.ml[17,1043+14]..[17,1043+26]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/stringMap.ml[17,1043+14]..[17,1043+15])
+                      Ppat_any
+                    expression (src/stringMap.ml[17,1043+16]..[17,1043+26]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/stringMap.ml[17,1043+16]..[17,1043+17])
+                        Ppat_var "x" (src/stringMap.ml[17,1043+16]..[17,1043+17])
+                      expression (src/stringMap.ml[17,1043+21]..[17,1043+26])
+                        Pexp_apply
+                        expression (src/stringMap.ml[17,1043+23]..[17,1043+24])
+                          Pexp_ident "+" (src/stringMap.ml[17,1043+23]..[17,1043+24])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[17,1043+21]..[17,1043+22])
+                              Pexp_ident "x" (src/stringMap.ml[17,1043+21]..[17,1043+22])
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[17,1043+25]..[17,1043+26])
+                              Pexp_constant PConst_int (1,None)
+                        ]
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[17,1043+28]..[17,1043+29])
+                  Pexp_ident "s" (src/stringMap.ml[17,1043+28]..[17,1043+29])
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[17,1043+30]..[17,1043+31])
+                  Pexp_constant PConst_int (0,None)
+            ]
+    ]
+  structure_item (src/stringMap.ml[19,1076+0]..[24,1205+26])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[19,1076+4]..[19,1076+10])
+          Ppat_var "filter" (src/stringMap.ml[19,1076+4]..[19,1076+10])
+        expression (src/stringMap.ml[19,1076+11]..[24,1205+26]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringMap.ml[19,1076+11]..[19,1076+15])
+            Ppat_var "pred" (src/stringMap.ml[19,1076+11]..[19,1076+15])
+          expression (src/stringMap.ml[19,1076+16]..[24,1205+26]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stringMap.ml[19,1076+16]..[19,1076+19])
+              Ppat_var "map" (src/stringMap.ml[19,1076+16]..[19,1076+19])
+            expression (src/stringMap.ml[20,1098+2]..[24,1205+26])
+              Pexp_apply
+              expression (src/stringMap.ml[20,1098+2]..[20,1098+6])
+                Pexp_ident "fold" (src/stringMap.ml[20,1098+2]..[20,1098+6])
+              [
+                <arg>
+                Nolabel
+                  expression (src/stringMap.ml[20,1098+7]..[24,1205+16])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/stringMap.ml[20,1098+12]..[20,1098+15])
+                      Ppat_var "key" (src/stringMap.ml[20,1098+12]..[20,1098+15])
+                    expression (src/stringMap.ml[20,1098+16]..[24,1205+15]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/stringMap.ml[20,1098+16]..[20,1098+21])
+                        Ppat_var "value" (src/stringMap.ml[20,1098+16]..[20,1098+21])
+                      expression (src/stringMap.ml[20,1098+22]..[24,1205+15]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/stringMap.ml[20,1098+22]..[20,1098+25])
+                          Ppat_var "map" (src/stringMap.ml[20,1098+22]..[20,1098+25])
+                        expression (src/stringMap.ml[21,1127+10]..[24,1205+15])
+                          Pexp_ifthenelse
+                          expression (src/stringMap.ml[21,1127+13]..[21,1127+27])
+                            Pexp_apply
+                            expression (src/stringMap.ml[21,1127+13]..[21,1127+17])
+                              Pexp_ident "pred" (src/stringMap.ml[21,1127+13]..[21,1127+17])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/stringMap.ml[21,1127+18]..[21,1127+21])
+                                  Pexp_ident "key" (src/stringMap.ml[21,1127+18]..[21,1127+21])
+                              <arg>
+                              Nolabel
+                                expression (src/stringMap.ml[21,1127+22]..[21,1127+27])
+                                  Pexp_ident "value" (src/stringMap.ml[21,1127+22]..[21,1127+27])
+                            ]
+                          expression (src/stringMap.ml[22,1160+12]..[22,1160+29])
+                            Pexp_apply
+                            expression (src/stringMap.ml[22,1160+12]..[22,1160+15])
+                              Pexp_ident "add" (src/stringMap.ml[22,1160+12]..[22,1160+15])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/stringMap.ml[22,1160+16]..[22,1160+19])
+                                  Pexp_ident "key" (src/stringMap.ml[22,1160+16]..[22,1160+19])
+                              <arg>
+                              Nolabel
+                                expression (src/stringMap.ml[22,1160+20]..[22,1160+25])
+                                  Pexp_ident "value" (src/stringMap.ml[22,1160+20]..[22,1160+25])
+                              <arg>
+                              Nolabel
+                                expression (src/stringMap.ml[22,1160+26]..[22,1160+29])
+                                  Pexp_ident "map" (src/stringMap.ml[22,1160+26]..[22,1160+29])
+                            ]
+                          Some
+                            expression (src/stringMap.ml[24,1205+12]..[24,1205+15])
+                              Pexp_ident "map" (src/stringMap.ml[24,1205+12]..[24,1205+15])
+                <arg>
+                Nolabel
+                  expression (src/stringMap.ml[24,1205+17]..[24,1205+20])
+                    Pexp_ident "map" (src/stringMap.ml[24,1205+17]..[24,1205+20])
+                <arg>
+                Nolabel
+                  expression (src/stringMap.ml[24,1205+21]..[24,1205+26])
+                    Pexp_ident "empty" (src/stringMap.ml[24,1205+21]..[24,1205+26])
+              ]
+    ]
+  structure_item (src/stringMap.ml[26,1233+0]..[27,1259+48])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[26,1233+4]..[26,1233+12])
+          Ppat_var "restrict" (src/stringMap.ml[26,1233+4]..[26,1233+12])
+        expression (src/stringMap.ml[26,1233+13]..[27,1259+48]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringMap.ml[26,1233+13]..[26,1233+19])
+            Ppat_var "domain" (src/stringMap.ml[26,1233+13]..[26,1233+19])
+          expression (src/stringMap.ml[26,1233+20]..[27,1259+48]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stringMap.ml[26,1233+20]..[26,1233+23])
+              Ppat_var "map" (src/stringMap.ml[26,1233+20]..[26,1233+23])
+            expression (src/stringMap.ml[27,1259+2]..[27,1259+48])
+              Pexp_apply
+              expression (src/stringMap.ml[27,1259+2]..[27,1259+8])
+                Pexp_ident "filter" (src/stringMap.ml[27,1259+2]..[27,1259+8])
+              [
+                <arg>
+                Nolabel
+                  expression (src/stringMap.ml[27,1259+9]..[27,1259+44])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/stringMap.ml[27,1259+14]..[27,1259+15])
+                      Ppat_var "k" (src/stringMap.ml[27,1259+14]..[27,1259+15])
+                    expression (src/stringMap.ml[27,1259+16]..[27,1259+43]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/stringMap.ml[27,1259+16]..[27,1259+17])
+                        Ppat_any
+                      expression (src/stringMap.ml[27,1259+21]..[27,1259+43])
+                        Pexp_apply
+                        expression (src/stringMap.ml[27,1259+21]..[27,1259+34])
+                          Pexp_ident "StringSet.mem" (src/stringMap.ml[27,1259+21]..[27,1259+34])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[27,1259+35]..[27,1259+36])
+                              Pexp_ident "k" (src/stringMap.ml[27,1259+35]..[27,1259+36])
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[27,1259+37]..[27,1259+43])
+                              Pexp_ident "domain" (src/stringMap.ml[27,1259+37]..[27,1259+43])
+                        ]
+                <arg>
+                Nolabel
+                  expression (src/stringMap.ml[27,1259+45]..[27,1259+48])
+                    Pexp_ident "map" (src/stringMap.ml[27,1259+45]..[27,1259+48])
+              ]
+    ]
+  structure_item (src/stringMap.ml[29,1309+0]..[30,1326+67])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[29,1309+4]..[29,1309+10])
+          Ppat_var "domain" (src/stringMap.ml[29,1309+4]..[29,1309+10])
+        expression (src/stringMap.ml[29,1309+11]..[30,1326+67]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringMap.ml[29,1309+11]..[29,1309+14])
+            Ppat_var "map" (src/stringMap.ml[29,1309+11]..[29,1309+14])
+          expression (src/stringMap.ml[30,1326+2]..[30,1326+67])
+            Pexp_apply
+            expression (src/stringMap.ml[30,1326+2]..[30,1326+6])
+              Pexp_ident "fold" (src/stringMap.ml[30,1326+2]..[30,1326+6])
+            [
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[30,1326+7]..[30,1326+47])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/stringMap.ml[30,1326+12]..[30,1326+15])
+                    Ppat_var "key" (src/stringMap.ml[30,1326+12]..[30,1326+15])
+                  expression (src/stringMap.ml[30,1326+16]..[30,1326+46]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/stringMap.ml[30,1326+16]..[30,1326+17])
+                      Ppat_any
+                    expression (src/stringMap.ml[30,1326+18]..[30,1326+46]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/stringMap.ml[30,1326+18]..[30,1326+21])
+                        Ppat_var "acu" (src/stringMap.ml[30,1326+18]..[30,1326+21])
+                      expression (src/stringMap.ml[30,1326+25]..[30,1326+46])
+                        Pexp_apply
+                        expression (src/stringMap.ml[30,1326+25]..[30,1326+38])
+                          Pexp_ident "StringSet.add" (src/stringMap.ml[30,1326+25]..[30,1326+38])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[30,1326+39]..[30,1326+42])
+                              Pexp_ident "key" (src/stringMap.ml[30,1326+39]..[30,1326+42])
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[30,1326+43]..[30,1326+46])
+                              Pexp_ident "acu" (src/stringMap.ml[30,1326+43]..[30,1326+46])
+                        ]
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[30,1326+48]..[30,1326+51])
+                  Pexp_ident "map" (src/stringMap.ml[30,1326+48]..[30,1326+51])
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[30,1326+52]..[30,1326+67])
+                  Pexp_ident "StringSet.empty" (src/stringMap.ml[30,1326+52]..[30,1326+67])
+            ]
+    ]
+  structure_item (src/stringMap.ml[32,1395+0]..[39,1490+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[32,1395+4]..[32,1395+16])
+          Ppat_var "multiple_add" (src/stringMap.ml[32,1395+4]..[32,1395+16])
+        expression (src/stringMap.ml[32,1395+17]..[39,1490+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringMap.ml[32,1395+17]..[32,1395+18])
+            Ppat_var "k" (src/stringMap.ml[32,1395+17]..[32,1395+18])
+          expression (src/stringMap.ml[32,1395+19]..[39,1490+19]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/stringMap.ml[32,1395+19]..[32,1395+20])
+              Ppat_var "v" (src/stringMap.ml[32,1395+19]..[32,1395+20])
+            expression (src/stringMap.ml[32,1395+21]..[39,1490+19]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/stringMap.ml[32,1395+21]..[32,1395+22])
+                Ppat_var "m" (src/stringMap.ml[32,1395+21]..[32,1395+22])
+              expression (src/stringMap.ml[33,1420+2]..[39,1490+19])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/stringMap.ml[33,1420+6]..[33,1420+8])
+                      Ppat_var "vs" (src/stringMap.ml[33,1420+6]..[33,1420+8])
+                    expression (src/stringMap.ml[34,1431+4]..[37,1476+8])
+                      Pexp_try
+                      expression (src/stringMap.ml[35,1439+6]..[35,1439+14])
+                        Pexp_apply
+                        expression (src/stringMap.ml[35,1439+6]..[35,1439+10])
+                          Pexp_ident "find" (src/stringMap.ml[35,1439+6]..[35,1439+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[35,1439+11]..[35,1439+12])
+                              Pexp_ident "k" (src/stringMap.ml[35,1439+11]..[35,1439+12])
+                          <arg>
+                          Nolabel
+                            expression (src/stringMap.ml[35,1439+13]..[35,1439+14])
+                              Pexp_ident "m" (src/stringMap.ml[35,1439+13]..[35,1439+14])
+                        ]
+                      [
+                        <case>
+                          pattern (src/stringMap.ml[36,1454+9]..[36,1454+18])
+                            Ppat_construct "Not_found" (src/stringMap.ml[36,1454+9]..[36,1454+18])
+                            None
+                          expression (src/stringMap.ml[37,1476+6]..[37,1476+8])
+                            Pexp_construct "[]" (src/stringMap.ml[37,1476+6]..[37,1476+8])
+                            None
+                      ]
+                ]
+                expression (src/stringMap.ml[39,1490+2]..[39,1490+19])
+                  Pexp_apply
+                  expression (src/stringMap.ml[39,1490+2]..[39,1490+5])
+                    Pexp_ident "add" (src/stringMap.ml[39,1490+2]..[39,1490+5])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/stringMap.ml[39,1490+6]..[39,1490+7])
+                        Pexp_ident "k" (src/stringMap.ml[39,1490+6]..[39,1490+7])
+                    <arg>
+                    Nolabel
+                      expression (src/stringMap.ml[39,1490+8]..[39,1490+17])
+                        Pexp_construct "::" (src/stringMap.ml[39,1490+11]..[39,1490+13])
+                        Some
+                          expression (src/stringMap.ml[39,1490+9]..[39,1490+16]) ghost
+                            Pexp_tuple
+                            [
+                              expression (src/stringMap.ml[39,1490+9]..[39,1490+10])
+                                Pexp_ident "v" (src/stringMap.ml[39,1490+9]..[39,1490+10])
+                              expression (src/stringMap.ml[39,1490+14]..[39,1490+16])
+                                Pexp_ident "vs" (src/stringMap.ml[39,1490+14]..[39,1490+16])
+                            ]
+                    <arg>
+                    Nolabel
+                      expression (src/stringMap.ml[39,1490+18]..[39,1490+19])
+                        Pexp_ident "m" (src/stringMap.ml[39,1490+18]..[39,1490+19])
+                  ]
+    ]
+  structure_item (src/stringMap.ml[41,1511+0]..[42,1528+53])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[41,1511+4]..[41,1511+11])
+          Ppat_var "of_list" (src/stringMap.ml[41,1511+4]..[41,1511+11])
+        expression (src/stringMap.ml[41,1511+12]..[42,1528+53]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stringMap.ml[41,1511+12]..[41,1511+14])
+            Ppat_var "xs" (src/stringMap.ml[41,1511+12]..[41,1511+14])
+          expression (src/stringMap.ml[42,1528+2]..[42,1528+53])
+            Pexp_apply
+            expression (src/stringMap.ml[42,1528+2]..[42,1528+16])
+              Pexp_ident "List.fold_left" (src/stringMap.ml[42,1528+2]..[42,1528+16])
+            [
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[42,1528+17]..[42,1528+44])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/stringMap.ml[42,1528+22]..[42,1528+23])
+                    Ppat_var "m" (src/stringMap.ml[42,1528+22]..[42,1528+23])
+                  expression (src/stringMap.ml[42,1528+24]..[42,1528+43]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/stringMap.ml[42,1528+24]..[42,1528+30])
+                      Ppat_tuple
+                      [
+                        pattern (src/stringMap.ml[42,1528+25]..[42,1528+26])
+                          Ppat_var "x" (src/stringMap.ml[42,1528+25]..[42,1528+26])
+                        pattern (src/stringMap.ml[42,1528+28]..[42,1528+29])
+                          Ppat_var "v" (src/stringMap.ml[42,1528+28]..[42,1528+29])
+                      ]
+                    expression (src/stringMap.ml[42,1528+34]..[42,1528+43])
+                      Pexp_apply
+                      expression (src/stringMap.ml[42,1528+34]..[42,1528+37])
+                        Pexp_ident "add" (src/stringMap.ml[42,1528+34]..[42,1528+37])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/stringMap.ml[42,1528+38]..[42,1528+39])
+                            Pexp_ident "x" (src/stringMap.ml[42,1528+38]..[42,1528+39])
+                        <arg>
+                        Nolabel
+                          expression (src/stringMap.ml[42,1528+40]..[42,1528+41])
+                            Pexp_ident "v" (src/stringMap.ml[42,1528+40]..[42,1528+41])
+                        <arg>
+                        Nolabel
+                          expression (src/stringMap.ml[42,1528+42]..[42,1528+43])
+                            Pexp_ident "m" (src/stringMap.ml[42,1528+42]..[42,1528+43])
+                      ]
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[42,1528+45]..[42,1528+50])
+                  Pexp_ident "empty" (src/stringMap.ml[42,1528+45]..[42,1528+50])
+              <arg>
+              Nolabel
+                expression (src/stringMap.ml[42,1528+51]..[42,1528+53])
+                  Pexp_ident "xs" (src/stringMap.ml[42,1528+51]..[42,1528+53])
+            ]
+    ]
+]
+
+include (Map.Make)(String)
+let cardinal s = fold (fun _ -> fun _ -> fun x -> x + 1) s 0
+let filter pred map =
+  fold
+    (fun key ->
+       fun value ->
+         fun map -> if pred key value then add key value map else map) map
+    empty
+let restrict domain map =
+  filter (fun k -> fun _ -> StringSet.mem k domain) map
+let domain map =
+  fold (fun key -> fun _ -> fun acu -> StringSet.add key acu) map
+    StringSet.empty
+let multiple_add k v m =
+  let vs = try find k m with | Not_found -> [] in add k (v :: vs) m
+let of_list xs = List.fold_left (fun m -> fun (x, v) -> add x v m) empty xs
+[
+  structure_item (src/stringMap.ml[14,999+0]..src/stringMap.ml[14,999+25])
+    Tstr_include    module_expr (src/stringMap.ml[14,999+8]..src/stringMap.ml[14,999+25])
+      Tmod_apply
+      module_expr (src/stringMap.ml[14,999+8]..src/stringMap.ml[14,999+16])
+        module_expr (src/stringMap.ml[14,999+8]..src/stringMap.ml[14,999+16])
+          Tmod_ident "Stdlib!.Map.Make"
+      module_expr (src/stringMap.ml[14,999+18]..src/stringMap.ml[14,999+24])
+        module_expr (src/stringMap.ml[14,999+18]..src/stringMap.ml[14,999+24])
+          Tmod_ident "Stdlib!.String"
+  structure_item (src/stringMap.ml[16,1026+0]..src/stringMap.ml[17,1043+31])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[16,1026+4]..src/stringMap.ml[16,1026+12])
+          Tpat_var "cardinal/612"
+        expression (src/stringMap.ml[16,1026+13]..src/stringMap.ml[17,1043+31]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringMap.ml[16,1026+13]..src/stringMap.ml[16,1026+14])
+                Tpat_var "s/613"
+              expression (src/stringMap.ml[17,1043+2]..src/stringMap.ml[17,1043+31])
+                Texp_apply
+                expression (src/stringMap.ml[17,1043+2]..src/stringMap.ml[17,1043+6])
+                  Texp_ident "fold/592"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[17,1043+7]..src/stringMap.ml[17,1043+27])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stringMap.ml[17,1043+12]..src/stringMap.ml[17,1043+13])
+                            Tpat_any
+                          expression (src/stringMap.ml[17,1043+14]..src/stringMap.ml[17,1043+26]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/stringMap.ml[17,1043+14]..src/stringMap.ml[17,1043+15])
+                                  Tpat_any
+                                expression (src/stringMap.ml[17,1043+16]..src/stringMap.ml[17,1043+26]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/stringMap.ml[17,1043+16]..src/stringMap.ml[17,1043+17])
+                                        Tpat_var "x/614"
+                                      expression (src/stringMap.ml[17,1043+21]..src/stringMap.ml[17,1043+26])
+                                        Texp_apply
+                                        expression (src/stringMap.ml[17,1043+23]..src/stringMap.ml[17,1043+24])
+                                          Texp_ident "Stdlib!.+"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringMap.ml[17,1043+21]..src/stringMap.ml[17,1043+22])
+                                              Texp_ident "x/614"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringMap.ml[17,1043+25]..src/stringMap.ml[17,1043+26])
+                                              Texp_constant Const_int 1
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[17,1043+28]..src/stringMap.ml[17,1043+29])
+                      Texp_ident "s/613"
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[17,1043+30]..src/stringMap.ml[17,1043+31])
+                      Texp_constant Const_int 0
+                ]
+          ]
+    ]
+  structure_item (src/stringMap.ml[19,1076+0]..src/stringMap.ml[24,1205+26])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[19,1076+4]..src/stringMap.ml[19,1076+10])
+          Tpat_var "filter/752"
+        expression (src/stringMap.ml[19,1076+11]..src/stringMap.ml[24,1205+26]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringMap.ml[19,1076+11]..src/stringMap.ml[19,1076+15])
+                Tpat_var "pred/753"
+              expression (src/stringMap.ml[19,1076+16]..src/stringMap.ml[24,1205+26]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stringMap.ml[19,1076+16]..src/stringMap.ml[19,1076+19])
+                      Tpat_var "map/754"
+                    expression (src/stringMap.ml[20,1098+2]..src/stringMap.ml[24,1205+26])
+                      Texp_apply
+                      expression (src/stringMap.ml[20,1098+2]..src/stringMap.ml[20,1098+6])
+                        Texp_ident "fold/592"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/stringMap.ml[20,1098+7]..src/stringMap.ml[24,1205+16])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/stringMap.ml[20,1098+12]..src/stringMap.ml[20,1098+15])
+                                  Tpat_var "key/755"
+                                expression (src/stringMap.ml[20,1098+16]..src/stringMap.ml[24,1205+15]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/stringMap.ml[20,1098+16]..src/stringMap.ml[20,1098+21])
+                                        Tpat_var "value/756"
+                                      expression (src/stringMap.ml[20,1098+22]..src/stringMap.ml[24,1205+15]) ghost
+                                        Texp_function
+                                        Nolabel
+                                        [
+                                          <case>
+                                            pattern (src/stringMap.ml[20,1098+22]..src/stringMap.ml[20,1098+25])
+                                              Tpat_var "map/757"
+                                            expression (src/stringMap.ml[21,1127+10]..src/stringMap.ml[24,1205+15])
+                                              Texp_ifthenelse
+                                              expression (src/stringMap.ml[21,1127+13]..src/stringMap.ml[21,1127+27])
+                                                Texp_apply
+                                                expression (src/stringMap.ml[21,1127+13]..src/stringMap.ml[21,1127+17])
+                                                  Texp_ident "pred/753"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/stringMap.ml[21,1127+18]..src/stringMap.ml[21,1127+21])
+                                                      Texp_ident "key/755"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/stringMap.ml[21,1127+22]..src/stringMap.ml[21,1127+27])
+                                                      Texp_ident "value/756"
+                                                ]
+                                              expression (src/stringMap.ml[22,1160+12]..src/stringMap.ml[22,1160+29])
+                                                Texp_apply
+                                                expression (src/stringMap.ml[22,1160+12]..src/stringMap.ml[22,1160+15])
+                                                  Texp_ident "add/570"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/stringMap.ml[22,1160+16]..src/stringMap.ml[22,1160+19])
+                                                      Texp_ident "key/755"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/stringMap.ml[22,1160+20]..src/stringMap.ml[22,1160+25])
+                                                      Texp_ident "value/756"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/stringMap.ml[22,1160+26]..src/stringMap.ml[22,1160+29])
+                                                      Texp_ident "map/757"
+                                                ]
+                                              Some
+                                                expression (src/stringMap.ml[24,1205+12]..src/stringMap.ml[24,1205+15])
+                                                  Texp_ident "map/757"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/stringMap.ml[24,1205+17]..src/stringMap.ml[24,1205+20])
+                            Texp_ident "map/754"
+                        <arg>
+                          Nolabel
+                          expression (src/stringMap.ml[24,1205+21]..src/stringMap.ml[24,1205+26])
+                            Texp_ident "empty/569"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/stringMap.ml[26,1233+0]..src/stringMap.ml[27,1259+48])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[26,1233+4]..src/stringMap.ml[26,1233+12])
+          Tpat_var "restrict/758"
+        expression (src/stringMap.ml[26,1233+13]..src/stringMap.ml[27,1259+48]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringMap.ml[26,1233+13]..src/stringMap.ml[26,1233+19])
+                Tpat_var "domain/760"
+              expression (src/stringMap.ml[26,1233+20]..src/stringMap.ml[27,1259+48]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stringMap.ml[26,1233+20]..src/stringMap.ml[26,1233+23])
+                      Tpat_var "map/761"
+                    expression (src/stringMap.ml[27,1259+2]..src/stringMap.ml[27,1259+48])
+                      Texp_apply
+                      expression (src/stringMap.ml[27,1259+2]..src/stringMap.ml[27,1259+8])
+                        Texp_ident "filter/752"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/stringMap.ml[27,1259+9]..src/stringMap.ml[27,1259+44])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/stringMap.ml[27,1259+14]..src/stringMap.ml[27,1259+15])
+                                  Tpat_var "k/762"
+                                expression (src/stringMap.ml[27,1259+16]..src/stringMap.ml[27,1259+43]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/stringMap.ml[27,1259+16]..src/stringMap.ml[27,1259+17])
+                                        Tpat_any
+                                      expression (src/stringMap.ml[27,1259+21]..src/stringMap.ml[27,1259+43])
+                                        Texp_apply
+                                        expression (src/stringMap.ml[27,1259+21]..src/stringMap.ml[27,1259+34])
+                                          Texp_ident "Dune__exe!.StringSet.mem"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringMap.ml[27,1259+35]..src/stringMap.ml[27,1259+36])
+                                              Texp_ident "k/762"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringMap.ml[27,1259+37]..src/stringMap.ml[27,1259+43])
+                                              Texp_ident "domain/760"
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/stringMap.ml[27,1259+45]..src/stringMap.ml[27,1259+48])
+                            Texp_ident "map/761"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/stringMap.ml[29,1309+0]..src/stringMap.ml[30,1326+67])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[29,1309+4]..src/stringMap.ml[29,1309+10])
+          Tpat_var "domain/856"
+        expression (src/stringMap.ml[29,1309+11]..src/stringMap.ml[30,1326+67]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringMap.ml[29,1309+11]..src/stringMap.ml[29,1309+14])
+                Tpat_var "map/858"
+              expression (src/stringMap.ml[30,1326+2]..src/stringMap.ml[30,1326+67])
+                Texp_apply
+                expression (src/stringMap.ml[30,1326+2]..src/stringMap.ml[30,1326+6])
+                  Texp_ident "fold/592"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[30,1326+7]..src/stringMap.ml[30,1326+47])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stringMap.ml[30,1326+12]..src/stringMap.ml[30,1326+15])
+                            Tpat_var "key/859"
+                          expression (src/stringMap.ml[30,1326+16]..src/stringMap.ml[30,1326+46]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/stringMap.ml[30,1326+16]..src/stringMap.ml[30,1326+17])
+                                  Tpat_any
+                                expression (src/stringMap.ml[30,1326+18]..src/stringMap.ml[30,1326+46]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/stringMap.ml[30,1326+18]..src/stringMap.ml[30,1326+21])
+                                        Tpat_var "acu/860"
+                                      expression (src/stringMap.ml[30,1326+25]..src/stringMap.ml[30,1326+46])
+                                        Texp_apply
+                                        expression (src/stringMap.ml[30,1326+25]..src/stringMap.ml[30,1326+38])
+                                          Texp_ident "Dune__exe!.StringSet.add"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringMap.ml[30,1326+39]..src/stringMap.ml[30,1326+42])
+                                              Texp_ident "key/859"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/stringMap.ml[30,1326+43]..src/stringMap.ml[30,1326+46])
+                                              Texp_ident "acu/860"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[30,1326+48]..src/stringMap.ml[30,1326+51])
+                      Texp_ident "map/858"
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[30,1326+52]..src/stringMap.ml[30,1326+67])
+                      Texp_ident "Dune__exe!.StringSet.empty"
+                ]
+          ]
+    ]
+  structure_item (src/stringMap.ml[32,1395+0]..src/stringMap.ml[39,1490+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[32,1395+4]..src/stringMap.ml[32,1395+16])
+          Tpat_var "multiple_add/862"
+        expression (src/stringMap.ml[32,1395+17]..src/stringMap.ml[39,1490+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringMap.ml[32,1395+17]..src/stringMap.ml[32,1395+18])
+                Tpat_var "k/864"
+              expression (src/stringMap.ml[32,1395+19]..src/stringMap.ml[39,1490+19]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/stringMap.ml[32,1395+19]..src/stringMap.ml[32,1395+20])
+                      Tpat_var "v/865"
+                    expression (src/stringMap.ml[32,1395+21]..src/stringMap.ml[39,1490+19]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stringMap.ml[32,1395+21]..src/stringMap.ml[32,1395+22])
+                            Tpat_var "m/866"
+                          expression (src/stringMap.ml[33,1420+2]..src/stringMap.ml[39,1490+19])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/stringMap.ml[33,1420+6]..src/stringMap.ml[33,1420+8])
+                                  Tpat_var "vs/867"
+                                expression (src/stringMap.ml[34,1431+4]..src/stringMap.ml[37,1476+8])
+                                  Texp_try
+                                  expression (src/stringMap.ml[35,1439+6]..src/stringMap.ml[35,1439+14])
+                                    Texp_apply
+                                    expression (src/stringMap.ml[35,1439+6]..src/stringMap.ml[35,1439+10])
+                                      Texp_ident "find/585"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stringMap.ml[35,1439+11]..src/stringMap.ml[35,1439+12])
+                                          Texp_ident "k/864"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/stringMap.ml[35,1439+13]..src/stringMap.ml[35,1439+14])
+                                          Texp_ident "m/866"
+                                    ]
+                                  [
+                                    <case>
+                                      pattern (src/stringMap.ml[36,1454+9]..src/stringMap.ml[36,1454+18])
+                                        Tpat_construct "Not_found"
+                                        []
+                                        None
+                                      expression (src/stringMap.ml[37,1476+6]..src/stringMap.ml[37,1476+8])
+                                        Texp_construct "[]"
+                                        []
+                                  ]
+                            ]
+                            expression (src/stringMap.ml[39,1490+2]..src/stringMap.ml[39,1490+19])
+                              Texp_apply
+                              expression (src/stringMap.ml[39,1490+2]..src/stringMap.ml[39,1490+5])
+                                Texp_ident "add/570"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/stringMap.ml[39,1490+6]..src/stringMap.ml[39,1490+7])
+                                    Texp_ident "k/864"
+                                <arg>
+                                  Nolabel
+                                  expression (src/stringMap.ml[39,1490+8]..src/stringMap.ml[39,1490+17])
+                                    Texp_construct "::"
+                                    [
+                                      expression (src/stringMap.ml[39,1490+9]..src/stringMap.ml[39,1490+10])
+                                        Texp_ident "v/865"
+                                      expression (src/stringMap.ml[39,1490+14]..src/stringMap.ml[39,1490+16])
+                                        Texp_ident "vs/867"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/stringMap.ml[39,1490+18]..src/stringMap.ml[39,1490+19])
+                                    Texp_ident "m/866"
+                              ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/stringMap.ml[41,1511+0]..src/stringMap.ml[42,1528+53])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stringMap.ml[41,1511+4]..src/stringMap.ml[41,1511+11])
+          Tpat_var "of_list/868"
+        expression (src/stringMap.ml[41,1511+12]..src/stringMap.ml[42,1528+53]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stringMap.ml[41,1511+12]..src/stringMap.ml[41,1511+14])
+                Tpat_var "xs/869"
+              expression (src/stringMap.ml[42,1528+2]..src/stringMap.ml[42,1528+53])
+                Texp_apply
+                expression (src/stringMap.ml[42,1528+2]..src/stringMap.ml[42,1528+16])
+                  Texp_ident "Stdlib!.List.fold_left"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[42,1528+17]..src/stringMap.ml[42,1528+44])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/stringMap.ml[42,1528+22]..src/stringMap.ml[42,1528+23])
+                            Tpat_var "m/936"
+                          expression (src/stringMap.ml[42,1528+24]..src/stringMap.ml[42,1528+43]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/stringMap.ml[42,1528+24]..src/stringMap.ml[42,1528+30])
+                                  Tpat_tuple
+                                  [
+                                    pattern (src/stringMap.ml[42,1528+25]..src/stringMap.ml[42,1528+26])
+                                      Tpat_var "x/937"
+                                    pattern (src/stringMap.ml[42,1528+28]..src/stringMap.ml[42,1528+29])
+                                      Tpat_var "v/938"
+                                  ]
+                                expression (src/stringMap.ml[42,1528+34]..src/stringMap.ml[42,1528+43])
+                                  Texp_apply
+                                  expression (src/stringMap.ml[42,1528+34]..src/stringMap.ml[42,1528+37])
+                                    Texp_ident "add/570"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stringMap.ml[42,1528+38]..src/stringMap.ml[42,1528+39])
+                                        Texp_ident "x/937"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stringMap.ml[42,1528+40]..src/stringMap.ml[42,1528+41])
+                                        Texp_ident "v/938"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/stringMap.ml[42,1528+42]..src/stringMap.ml[42,1528+43])
+                                        Texp_ident "m/936"
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[42,1528+45]..src/stringMap.ml[42,1528+50])
+                      Texp_ident "empty/569"
+                  <arg>
+                    Nolabel
+                    expression (src/stringMap.ml[42,1528+51]..src/stringMap.ml[42,1528+53])
+                      Texp_ident "xs/869"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__StringMap>
+ "add"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add"[value];
+ "add_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add_seq"[value];
+ "add_to_list"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "add_to_list"[value];
+ "bindings"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "bindings"[value];
+ "cardinal"[value] -> <Dune__exe__StringMap.0>;
+ "choose"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose"[value];
+ "choose_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "choose_opt"[value];
+ "compare"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "compare"[value];
+ "domain"[value] -> <Dune__exe__StringMap.13>;
+ "empty"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "empty"[value];
+ "equal"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "equal"[value];
+ "exists"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "exists"[value];
+ "filter"[value] -> <Dune__exe__StringMap.3>;
+ "filter_map"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "filter_map"[value];
+ "find"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find"[value];
+ "find_first"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first"[value];
+ "find_first_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_first_opt"[value];
+ "find_last"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last"[value];
+ "find_last_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_last_opt"[value];
+ "find_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "find_opt"[value];
+ "fold"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "fold"[value];
+ "for_all"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "for_all"[value];
+ "is_empty"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "is_empty"[value];
+ "iter"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "iter"[value];
+ "key"[type] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "key"[type];
+ "map"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "map"[value];
+ "mapi"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "mapi"[value];
+ "max_binding"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_binding"[value];
+ "max_binding_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "max_binding_opt"[value];
+ "mem"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "mem"[value];
+ "merge"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "merge"[value];
+ "min_binding"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_binding"[value];
+ "min_binding_opt"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "min_binding_opt"[value];
+ "multiple_add"[value] -> <Dune__exe__StringMap.17>;
+ "of_list"[value] -> <Dune__exe__StringMap.22>;
+ "of_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "of_seq"[value];
+ "partition"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "partition"[value];
+ "remove"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "remove"[value];
+ "restrict"[value] -> <Dune__exe__StringMap.9>;
+ "singleton"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "singleton"[value];
+ "split"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "split"[value];
+ "t"[type] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "t"[type];
+ "to_list"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_list"[value];
+ "to_rev_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_rev_seq"[value];
+ "to_seq"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq"[value];
+ "to_seq_from"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "to_seq_from"[value];
+ "union"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "union"[value];
+ "update"[value] ->
+   CU Stdlib . "Map"[module] . "Make"[module](CU Stdlib . "String"[module]) .
+   "update"[value];
+ }
+
+(let
+  (include/1535 =
+     (apply
+       (let (let/1539 = (field_imm 0 (global Stdlib__Map!)))
+         (field_imm 0 (global Stdlib__Map!)))
+       (let
+         (let/1537 = (global Stdlib__String!)
+          let/1538 =a (global Stdlib__String!))
+         (makeblock 0 (field_mut 9 let/1538))))
+   empty/569 =a (field_mut 0 include/1535))
+  (seq (setfield_ptr(root-init) 0 (global Dune__exe__StringMap!) empty/569)
+    (let (add/570 =a (field_mut 1 include/1535))
+      (seq (setfield_ptr(root-init) 1 (global Dune__exe__StringMap!) add/570)
+        (let (add_to_list/571 =a (field_mut 2 include/1535))
+          (seq
+            (setfield_ptr(root-init) 2 (global Dune__exe__StringMap!)
+              add_to_list/571)
+            (let (update/572 =a (field_mut 3 include/1535))
+              (seq
+                (setfield_ptr(root-init) 3 (global Dune__exe__StringMap!)
+                  update/572)
+                (let (singleton/573 =a (field_mut 4 include/1535))
+                  (seq
+                    (setfield_ptr(root-init) 4 (global Dune__exe__StringMap!)
+                      singleton/573)
+                    (let (remove/574 =a (field_mut 5 include/1535))
+                      (seq
+                        (setfield_ptr(root-init) 5
+                          (global Dune__exe__StringMap!) remove/574)
+                        (let (merge/575 =a (field_mut 6 include/1535))
+                          (seq
+                            (setfield_ptr(root-init) 6
+                              (global Dune__exe__StringMap!) merge/575)
+                            (let (union/576 =a (field_mut 7 include/1535))
+                              (seq
+                                (setfield_ptr(root-init) 7
+                                  (global Dune__exe__StringMap!) union/576)
+                                (let
+                                  (cardinal/577 =a (field_mut 8 include/1535))
+                                  (seq
+                                    (setfield_ptr(root-init) 46
+                                      (global Dune__exe__StringMap!)
+                                      cardinal/577)
+                                    (let
+                                      (bindings/578 =a
+                                         (field_mut 9 include/1535))
+                                      (seq
+                                        (setfield_ptr(root-init) 8
+                                          (global Dune__exe__StringMap!)
+                                          bindings/578)
+                                        (let
+                                          (min_binding/579 =a
+                                             (field_mut 10 include/1535))
+                                          (seq
+                                            (setfield_ptr(root-init) 9
+                                              (global Dune__exe__StringMap!)
+                                              min_binding/579)
+                                            (let
+                                              (min_binding_opt/580 =a
+                                                 (field_mut 11 include/1535))
+                                              (seq
+                                                (setfield_ptr(root-init) 10
+                                                  (global Dune__exe__StringMap!)
+                                                  min_binding_opt/580)
+                                                (let
+                                                  (max_binding/581 =a
+                                                     (field_mut 12
+                                                       include/1535))
+                                                  (seq
+                                                    (setfield_ptr(root-init) 11
+                                                      (global Dune__exe__StringMap!)
+                                                      max_binding/581)
+                                                    (let
+                                                      (max_binding_opt/582 =a
+                                                         (field_mut 13
+                                                           include/1535))
+                                                      (seq
+                                                        (setfield_ptr(root-init) 12
+                                                          (global Dune__exe__StringMap!)
+                                                          max_binding_opt/582)
+                                                        (let
+                                                          (choose/583 =a
+                                                             (field_mut 14
+                                                               include/1535))
+                                                          (seq
+                                                            (setfield_ptr(root-init) 13
+                                                              (global Dune__exe__StringMap!)
+                                                              choose/583)
+                                                            (let
+                                                              (choose_opt/584 =a
+                                                                 (field_mut 15
+                                                                   include/1535))
+                                                              (seq
+                                                                (setfield_ptr(root-init) 14
+                                                                  (global Dune__exe__StringMap!)
+                                                                  choose_opt/584)
+                                                                (let
+                                                                  (find/585 =a
+                                                                    (field_mut 16
+                                                                    include/1535))
+                                                                  (seq
+                                                                    (setfield_ptr(root-init) 15
+                                                                    (global Dune__exe__StringMap!)
+                                                                    find/585)
+                                                                    (let
+                                                                    (find_opt/586 =a
+                                                                    (field_mut 17
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 16
+                                                                    (global Dune__exe__StringMap!)
+                                                                    find_opt/586)
+                                                                    (let
+                                                                    (find_first/587 =a
+                                                                    (field_mut 18
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 17
+                                                                    (global Dune__exe__StringMap!)
+                                                                    find_first/587)
+                                                                    (let
+                                                                    (find_first_opt/588 =a
+                                                                    (field_mut 19
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 18
+                                                                    (global Dune__exe__StringMap!)
+                                                                    find_first_opt/588)
+                                                                    (let
+                                                                    (find_last/589 =a
+                                                                    (field_mut 20
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 19
+                                                                    (global Dune__exe__StringMap!)
+                                                                    find_last/589)
+                                                                    (let
+                                                                    (find_last_opt/590 =a
+                                                                    (field_mut 21
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 20
+                                                                    (global Dune__exe__StringMap!)
+                                                                    find_last_opt/590)
+                                                                    (let
+                                                                    (iter/591 =a
+                                                                    (field_mut 22
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 21
+                                                                    (global Dune__exe__StringMap!)
+                                                                    iter/591)
+                                                                    (let
+                                                                    (fold/592 =a
+                                                                    (field_mut 23
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 22
+                                                                    (global Dune__exe__StringMap!)
+                                                                    fold/592)
+                                                                    (let
+                                                                    (map/593 =a
+                                                                    (field_mut 24
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 23
+                                                                    (global Dune__exe__StringMap!)
+                                                                    map/593)
+                                                                    (let
+                                                                    (mapi/594 =a
+                                                                    (field_mut 25
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 24
+                                                                    (global Dune__exe__StringMap!)
+                                                                    mapi/594)
+                                                                    (let
+                                                                    (filter/595 =a
+                                                                    (field_mut 26
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 47
+                                                                    (global Dune__exe__StringMap!)
+                                                                    filter/595)
+                                                                    (let
+                                                                    (filter_map/596 =a
+                                                                    (field_mut 27
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 25
+                                                                    (global Dune__exe__StringMap!)
+                                                                    filter_map/596)
+                                                                    (let
+                                                                    (partition/597 =a
+                                                                    (field_mut 28
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 26
+                                                                    (global Dune__exe__StringMap!)
+                                                                    partition/597)
+                                                                    (let
+                                                                    (split/598 =a
+                                                                    (field_mut 29
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 27
+                                                                    (global Dune__exe__StringMap!)
+                                                                    split/598)
+                                                                    (let
+                                                                    (is_empty/599 =a
+                                                                    (field_mut 30
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 28
+                                                                    (global Dune__exe__StringMap!)
+                                                                    is_empty/599)
+                                                                    (let
+                                                                    (mem/600 =a
+                                                                    (field_mut 31
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 29
+                                                                    (global Dune__exe__StringMap!)
+                                                                    mem/600)
+                                                                    (let
+                                                                    (equal/601 =a
+                                                                    (field_mut 32
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 30
+                                                                    (global Dune__exe__StringMap!)
+                                                                    equal/601)
+                                                                    (let
+                                                                    (compare/602 =a
+                                                                    (field_mut 33
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 31
+                                                                    (global Dune__exe__StringMap!)
+                                                                    compare/602)
+                                                                    (let
+                                                                    (for_all/603 =a
+                                                                    (field_mut 34
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 32
+                                                                    (global Dune__exe__StringMap!)
+                                                                    for_all/603)
+                                                                    (let
+                                                                    (exists/604 =a
+                                                                    (field_mut 35
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 33
+                                                                    (global Dune__exe__StringMap!)
+                                                                    exists/604)
+                                                                    (let
+                                                                    (to_list/605 =a
+                                                                    (field_mut 36
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 34
+                                                                    (global Dune__exe__StringMap!)
+                                                                    to_list/605)
+                                                                    (let
+                                                                    (of_list/606 =a
+                                                                    (field_mut 37
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 48
+                                                                    (global Dune__exe__StringMap!)
+                                                                    of_list/606)
+                                                                    (let
+                                                                    (to_seq/607 =a
+                                                                    (field_mut 38
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 35
+                                                                    (global Dune__exe__StringMap!)
+                                                                    to_seq/607)
+                                                                    (let
+                                                                    (to_rev_seq/608 =a
+                                                                    (field_mut 39
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 36
+                                                                    (global Dune__exe__StringMap!)
+                                                                    to_rev_seq/608)
+                                                                    (let
+                                                                    (to_seq_from/609 =a
+                                                                    (field_mut 40
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 37
+                                                                    (global Dune__exe__StringMap!)
+                                                                    to_seq_from/609)
+                                                                    (let
+                                                                    (add_seq/610 =a
+                                                                    (field_mut 41
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 38
+                                                                    (global Dune__exe__StringMap!)
+                                                                    add_seq/610)
+                                                                    (let
+                                                                    (of_seq/611 =a
+                                                                    (field_mut 42
+                                                                    include/1535))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 39
+                                                                    (global Dune__exe__StringMap!)
+                                                                    of_seq/611)
+                                                                    (let
+                                                                    (cardinal/612 =
+                                                                    (function
+                                                                    s/613
+                                                                    : int
+                                                                    (apply
+                                                                    (field_imm 22
+                                                                    (global Dune__exe__StringMap!))
+                                                                    (function
+                                                                    param/616
+                                                                    param/615
+                                                                    x/614[int]
+                                                                    : int
+                                                                    (+ x/614
+                                                                    1)) s/613
+                                                                    0)))
+                                                                    (setfield_ptr(root-init) 40
+                                                                    (global Dune__exe__StringMap!)
+                                                                    cardinal/612))
+                                                                    (let
+                                                                    (filter/752 =
+                                                                    (function
+                                                                    pred/753
+                                                                    map/754
+                                                                    (apply
+                                                                    (field_imm 22
+                                                                    (global Dune__exe__StringMap!))
+                                                                    (function
+                                                                    key/755
+                                                                    value/756
+                                                                    map/757
+                                                                    (if
+                                                                    (apply
+                                                                    pred/753
+                                                                    key/755
+                                                                    value/756)
+                                                                    (apply
+                                                                    (field_imm 1
+                                                                    (global Dune__exe__StringMap!))
+                                                                    key/755
+                                                                    value/756
+                                                                    map/757)
+                                                                    map/757))
+                                                                    map/754
+                                                                    (field_imm 0
+                                                                    (global Dune__exe__StringMap!)))))
+                                                                    (setfield_ptr(root-init) 42
+                                                                    (global Dune__exe__StringMap!)
+                                                                    filter/752))
+                                                                    (let
+                                                                    (restrict/758 =
+                                                                    (function
+                                                                    domain/760
+                                                                    map/761
+                                                                    (apply
+                                                                    (field_imm 42
+                                                                    (global Dune__exe__StringMap!))
+                                                                    (function
+                                                                    k/762
+                                                                    param/855
+                                                                    : int
+                                                                    (apply
+                                                                    (field_imm 29
+                                                                    (global Dune__exe__StringSet!))
+                                                                    k/762
+                                                                    domain/760))
+                                                                    map/761)))
+                                                                    (setfield_ptr(root-init) 41
+                                                                    (global Dune__exe__StringMap!)
+                                                                    restrict/758))
+                                                                    (let
+                                                                    (domain/856 =
+                                                                    (function
+                                                                    map/858
+                                                                    (apply
+                                                                    (field_imm 22
+                                                                    (global Dune__exe__StringMap!))
+                                                                    (function
+                                                                    key/859
+                                                                    param/861
+                                                                    acu/860
+                                                                    (apply
+                                                                    (field_imm 1
+                                                                    (global Dune__exe__StringSet!))
+                                                                    key/859
+                                                                    acu/860))
+                                                                    map/858
+                                                                    (field_imm 0
+                                                                    (global Dune__exe__StringSet!)))))
+                                                                    (setfield_ptr(root-init) 43
+                                                                    (global Dune__exe__StringMap!)
+                                                                    domain/856))
+                                                                    (let
+                                                                    (multiple_add/862 =
+                                                                    (function
+                                                                    k/864
+                                                                    v/865
+                                                                    m/866
+                                                                    (let
+                                                                    (vs/867 =
+                                                                    (try
+                                                                    (apply
+                                                                    (field_imm 15
+                                                                    (global Dune__exe__StringMap!))
+                                                                    k/864
+                                                                    m/866)
+                                                                    with exn/1536
+                                                                    (catch
+                                                                    (if
+                                                                    (==
+                                                                    exn/1536
+                                                                    (field_imm 7
+                                                                    (global Stdlib!)))
+                                                                    0
+                                                                    (exit 1))
+                                                                    with (1)
+                                                                    (reraise
+                                                                    exn/1536))))
+                                                                    (apply
+                                                                    (field_imm 1
+                                                                    (global Dune__exe__StringMap!))
+                                                                    k/864
+                                                                    (makeblock 0
+                                                                    v/865
+                                                                    vs/867)
+                                                                    m/866))))
+                                                                    (setfield_ptr(root-init) 44
+                                                                    (global Dune__exe__StringMap!)
+                                                                    multiple_add/862))
+                                                                    (let
+                                                                    (of_list/868 =
+                                                                    (function
+                                                                    xs/869
+                                                                    (apply
+                                                                    (field_imm 25
+                                                                    (global Stdlib__List!))
+                                                                    (function
+                                                                    m/936
+                                                                    param/939
+                                                                    (let
+                                                                    (v/938 =a
+                                                                    (field_imm 1
+                                                                    param/939)
+                                                                    x/937 =a
+                                                                    (field_imm 0
+                                                                    param/939))
+                                                                    (apply
+                                                                    (field_imm 1
+                                                                    (global Dune__exe__StringMap!))
+                                                                    x/937
+                                                                    v/938
+                                                                    m/936)))
+                                                                    (field_imm 0
+                                                                    (global Dune__exe__StringMap!))
+                                                                    xs/869)))
+                                                                    (setfield_ptr(root-init) 45
+                                                                    (global Dune__exe__StringMap!)
+                                                                    of_list/868))
+                                                                    0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+(let
+  (include/1535 =
+     (apply
+       (let (let/1539 = (field_imm 0 (global Stdlib__Map!)))
+         (field_imm 0 (global Stdlib__Map!)))
+       (let (let/1537 = (global Stdlib__String!))
+         (makeblock 0 (field_mut 9 (global Stdlib__String!))))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__StringMap!)
+      (field_mut 0 include/1535))
+    (setfield_ptr(root-init) 1 (global Dune__exe__StringMap!)
+      (field_mut 1 include/1535))
+    (setfield_ptr(root-init) 2 (global Dune__exe__StringMap!)
+      (field_mut 2 include/1535))
+    (setfield_ptr(root-init) 3 (global Dune__exe__StringMap!)
+      (field_mut 3 include/1535))
+    (setfield_ptr(root-init) 4 (global Dune__exe__StringMap!)
+      (field_mut 4 include/1535))
+    (setfield_ptr(root-init) 5 (global Dune__exe__StringMap!)
+      (field_mut 5 include/1535))
+    (setfield_ptr(root-init) 6 (global Dune__exe__StringMap!)
+      (field_mut 6 include/1535))
+    (setfield_ptr(root-init) 7 (global Dune__exe__StringMap!)
+      (field_mut 7 include/1535))
+    (setfield_ptr(root-init) 46 (global Dune__exe__StringMap!)
+      (field_mut 8 include/1535))
+    (setfield_ptr(root-init) 8 (global Dune__exe__StringMap!)
+      (field_mut 9 include/1535))
+    (setfield_ptr(root-init) 9 (global Dune__exe__StringMap!)
+      (field_mut 10 include/1535))
+    (setfield_ptr(root-init) 10 (global Dune__exe__StringMap!)
+      (field_mut 11 include/1535))
+    (setfield_ptr(root-init) 11 (global Dune__exe__StringMap!)
+      (field_mut 12 include/1535))
+    (setfield_ptr(root-init) 12 (global Dune__exe__StringMap!)
+      (field_mut 13 include/1535))
+    (setfield_ptr(root-init) 13 (global Dune__exe__StringMap!)
+      (field_mut 14 include/1535))
+    (setfield_ptr(root-init) 14 (global Dune__exe__StringMap!)
+      (field_mut 15 include/1535))
+    (setfield_ptr(root-init) 15 (global Dune__exe__StringMap!)
+      (field_mut 16 include/1535))
+    (setfield_ptr(root-init) 16 (global Dune__exe__StringMap!)
+      (field_mut 17 include/1535))
+    (setfield_ptr(root-init) 17 (global Dune__exe__StringMap!)
+      (field_mut 18 include/1535))
+    (setfield_ptr(root-init) 18 (global Dune__exe__StringMap!)
+      (field_mut 19 include/1535))
+    (setfield_ptr(root-init) 19 (global Dune__exe__StringMap!)
+      (field_mut 20 include/1535))
+    (setfield_ptr(root-init) 20 (global Dune__exe__StringMap!)
+      (field_mut 21 include/1535))
+    (setfield_ptr(root-init) 21 (global Dune__exe__StringMap!)
+      (field_mut 22 include/1535))
+    (setfield_ptr(root-init) 22 (global Dune__exe__StringMap!)
+      (field_mut 23 include/1535))
+    (setfield_ptr(root-init) 23 (global Dune__exe__StringMap!)
+      (field_mut 24 include/1535))
+    (setfield_ptr(root-init) 24 (global Dune__exe__StringMap!)
+      (field_mut 25 include/1535))
+    (setfield_ptr(root-init) 47 (global Dune__exe__StringMap!)
+      (field_mut 26 include/1535))
+    (setfield_ptr(root-init) 25 (global Dune__exe__StringMap!)
+      (field_mut 27 include/1535))
+    (setfield_ptr(root-init) 26 (global Dune__exe__StringMap!)
+      (field_mut 28 include/1535))
+    (setfield_ptr(root-init) 27 (global Dune__exe__StringMap!)
+      (field_mut 29 include/1535))
+    (setfield_ptr(root-init) 28 (global Dune__exe__StringMap!)
+      (field_mut 30 include/1535))
+    (setfield_ptr(root-init) 29 (global Dune__exe__StringMap!)
+      (field_mut 31 include/1535))
+    (setfield_ptr(root-init) 30 (global Dune__exe__StringMap!)
+      (field_mut 32 include/1535))
+    (setfield_ptr(root-init) 31 (global Dune__exe__StringMap!)
+      (field_mut 33 include/1535))
+    (setfield_ptr(root-init) 32 (global Dune__exe__StringMap!)
+      (field_mut 34 include/1535))
+    (setfield_ptr(root-init) 33 (global Dune__exe__StringMap!)
+      (field_mut 35 include/1535))
+    (setfield_ptr(root-init) 34 (global Dune__exe__StringMap!)
+      (field_mut 36 include/1535))
+    (setfield_ptr(root-init) 48 (global Dune__exe__StringMap!)
+      (field_mut 37 include/1535))
+    (setfield_ptr(root-init) 35 (global Dune__exe__StringMap!)
+      (field_mut 38 include/1535))
+    (setfield_ptr(root-init) 36 (global Dune__exe__StringMap!)
+      (field_mut 39 include/1535))
+    (setfield_ptr(root-init) 37 (global Dune__exe__StringMap!)
+      (field_mut 40 include/1535))
+    (setfield_ptr(root-init) 38 (global Dune__exe__StringMap!)
+      (field_mut 41 include/1535))
+    (setfield_ptr(root-init) 39 (global Dune__exe__StringMap!)
+      (field_mut 42 include/1535))
+    (let
+      (cardinal/612 =
+         (function s/613 : int
+           (apply (field_imm 22 (global Dune__exe__StringMap!))
+             (function param/616 param/615 x/614[int] : int (+ x/614 1))
+             s/613 0)))
+      (setfield_ptr(root-init) 40 (global Dune__exe__StringMap!)
+        cardinal/612))
+    (let
+      (filter/752 =
+         (function pred/753 map/754
+           (apply (field_imm 22 (global Dune__exe__StringMap!))
+             (function key/755 value/756 map/757
+               (if (apply pred/753 key/755 value/756)
+                 (apply (field_imm 1 (global Dune__exe__StringMap!)) key/755
+                   value/756 map/757)
+                 map/757))
+             map/754 (field_imm 0 (global Dune__exe__StringMap!)))))
+      (setfield_ptr(root-init) 42 (global Dune__exe__StringMap!) filter/752))
+    (let
+      (restrict/758 =
+         (function domain/760 map/761
+           (apply (field_imm 42 (global Dune__exe__StringMap!))
+             (function k/762 param/855 : int
+               (apply (field_imm 29 (global Dune__exe__StringSet!)) k/762
+                 domain/760))
+             map/761)))
+      (setfield_ptr(root-init) 41 (global Dune__exe__StringMap!)
+        restrict/758))
+    (let
+      (domain/856 =
+         (function map/858
+           (apply (field_imm 22 (global Dune__exe__StringMap!))
+             (function key/859 param/861 acu/860
+               (apply (field_imm 1 (global Dune__exe__StringSet!)) key/859
+                 acu/860))
+             map/858 (field_imm 0 (global Dune__exe__StringSet!)))))
+      (setfield_ptr(root-init) 43 (global Dune__exe__StringMap!) domain/856))
+    (let
+      (multiple_add/862 =
+         (function k/864 v/865 m/866
+           (let
+             (vs/867 =
+                (try
+                  (apply (field_imm 15 (global Dune__exe__StringMap!)) k/864
+                    m/866)
+                 with exn/1536
+                  (if (== exn/1536 (field_imm 7 (global Stdlib!))) 0
+                    (reraise exn/1536))))
+             (apply (field_imm 1 (global Dune__exe__StringMap!)) k/864
+               (makeblock 0 v/865 vs/867) m/866))))
+      (setfield_ptr(root-init) 44 (global Dune__exe__StringMap!)
+        multiple_add/862))
+    (let
+      (of_list/868 =
+         (function xs/869
+           (apply (field_imm 25 (global Stdlib__List!))
+             (function m/936 param/939
+               (apply (field_imm 1 (global Dune__exe__StringMap!))
+                 (field_imm 0 param/939) (field_imm 1 param/939) m/936))
+             (field_imm 0 (global Dune__exe__StringMap!)) xs/869)))
+      (setfield_ptr(root-init) 45 (global Dune__exe__StringMap!) of_list/868))
+    0))

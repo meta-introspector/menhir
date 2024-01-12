@@ -1,0 +1,806 @@
+[
+  structure_item (test/dynamic/positions/src/calc.ml[1,41+0]..[1,41+11])
+    Pstr_open Fresh
+    module_expr (test/dynamic/positions/src/calc.ml[1,41+5]..[1,41+11])
+      Pmod_ident "Lexing" (test/dynamic/positions/src/calc.ml[1,41+5]..[1,41+11])
+  structure_item (test/dynamic/positions/src/calc.ml[3,54+0]..[16,651+84])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[3,54+4]..[3,54+11])
+          Ppat_var "process" (test/dynamic/positions/src/calc.ml[3,54+4]..[3,54+11])
+        expression (test/dynamic/positions/src/calc.ml[3,54+12]..[16,651+84]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/positions/src/calc.ml[3,54+12]..[3,54+27])
+            Ppat_constraint
+            pattern (test/dynamic/positions/src/calc.ml[3,54+13]..[3,54+17])
+              Ppat_var "line" (test/dynamic/positions/src/calc.ml[3,54+13]..[3,54+17])
+            core_type (test/dynamic/positions/src/calc.ml[3,54+20]..[3,54+26])
+              Ptyp_constr "string" (test/dynamic/positions/src/calc.ml[3,54+20]..[3,54+26])
+              []
+          expression (test/dynamic/positions/src/calc.ml[4,84+2]..[16,651+84])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (test/dynamic/positions/src/calc.ml[4,84+6]..[4,84+13])
+                  Ppat_var "linebuf" (test/dynamic/positions/src/calc.ml[4,84+6]..[4,84+13])
+                expression (test/dynamic/positions/src/calc.ml[4,84+16]..[4,84+32])
+                  Pexp_apply
+                  expression (test/dynamic/positions/src/calc.ml[4,84+16]..[4,84+27])
+                    Pexp_ident "from_string" (test/dynamic/positions/src/calc.ml[4,84+16]..[4,84+27])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/positions/src/calc.ml[4,84+28]..[4,84+32])
+                        Pexp_ident "line" (test/dynamic/positions/src/calc.ml[4,84+28]..[4,84+32])
+                  ]
+            ]
+            expression (test/dynamic/positions/src/calc.ml[5,120+2]..[16,651+84])
+              Pexp_sequence
+              expression (test/dynamic/positions/src/calc.ml[5,120+2]..[5,120+84])
+                Pexp_setfield
+                expression (test/dynamic/positions/src/calc.ml[5,120+2]..[5,120+9])
+                  Pexp_ident "linebuf" (test/dynamic/positions/src/calc.ml[5,120+2]..[5,120+9])
+                "lex_curr_p" (test/dynamic/positions/src/calc.ml[5,120+10]..[5,120+20])
+                expression (test/dynamic/positions/src/calc.ml[5,120+24]..[5,120+84])
+                  Pexp_record
+                  [
+                    "pos_fname" (test/dynamic/positions/src/calc.ml[5,120+26]..[5,120+35])
+                      expression (test/dynamic/positions/src/calc.ml[5,120+38]..[5,120+41])
+                        Pexp_constant PConst_string("-",(test/dynamic/positions/src/calc.ml[5,120+39]..[5,120+40]),None)
+                    "pos_lnum" (test/dynamic/positions/src/calc.ml[5,120+43]..[5,120+51])
+                      expression (test/dynamic/positions/src/calc.ml[5,120+54]..[5,120+55])
+                        Pexp_constant PConst_int (1,None)
+                    "pos_bol" (test/dynamic/positions/src/calc.ml[5,120+57]..[5,120+64])
+                      expression (test/dynamic/positions/src/calc.ml[5,120+67]..[5,120+68])
+                        Pexp_constant PConst_int (0,None)
+                    "pos_cnum" (test/dynamic/positions/src/calc.ml[5,120+70]..[5,120+78])
+                      expression (test/dynamic/positions/src/calc.ml[5,120+81]..[5,120+82])
+                        Pexp_constant PConst_int (0,None)
+                  ]
+                  None
+              expression (test/dynamic/positions/src/calc.ml[6,206+2]..[16,651+84])
+                Pexp_try
+                expression (test/dynamic/positions/src/calc.ml[11,496+4]..[11,496+58])
+                  Pexp_apply
+                  expression (test/dynamic/positions/src/calc.ml[11,496+4]..[11,496+24])
+                    Pexp_ident "Auxiliary.Print.main" (test/dynamic/positions/src/calc.ml[11,496+4]..[11,496+24])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/positions/src/calc.ml[11,496+25]..[11,496+58])
+                        Pexp_apply
+                        expression (test/dynamic/positions/src/calc.ml[11,496+26]..[11,496+37])
+                          Pexp_ident "Parser.main" (test/dynamic/positions/src/calc.ml[11,496+26]..[11,496+37])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/positions/src/calc.ml[11,496+38]..[11,496+49])
+                              Pexp_ident "Lexer.token" (test/dynamic/positions/src/calc.ml[11,496+38]..[11,496+49])
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/positions/src/calc.ml[11,496+50]..[11,496+57])
+                              Pexp_ident "linebuf" (test/dynamic/positions/src/calc.ml[11,496+50]..[11,496+57])
+                        ]
+                  ]
+                [
+                  <case>
+                    pattern (test/dynamic/positions/src/calc.ml[13,562+4]..[13,562+19])
+                      Ppat_construct "Lexer.Error" (test/dynamic/positions/src/calc.ml[13,562+4]..[13,562+15])
+                      Some
+                        []
+                        pattern (test/dynamic/positions/src/calc.ml[13,562+16]..[13,562+19])
+                          Ppat_var "msg" (test/dynamic/positions/src/calc.ml[13,562+16]..[13,562+19])
+                    expression (test/dynamic/positions/src/calc.ml[14,585+6]..[14,585+38])
+                      Pexp_apply
+                      expression (test/dynamic/positions/src/calc.ml[14,585+6]..[14,585+20])
+                        Pexp_ident "Printf.fprintf" (test/dynamic/positions/src/calc.ml[14,585+6]..[14,585+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[14,585+21]..[14,585+27])
+                            Pexp_ident "stderr" (test/dynamic/positions/src/calc.ml[14,585+21]..[14,585+27])
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[14,585+28]..[14,585+34])
+                            Pexp_constant PConst_string("%s%!",(test/dynamic/positions/src/calc.ml[14,585+29]..[14,585+33]),None)
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[14,585+35]..[14,585+38])
+                            Pexp_ident "msg" (test/dynamic/positions/src/calc.ml[14,585+35]..[14,585+38])
+                      ]
+                  <case>
+                    pattern (test/dynamic/positions/src/calc.ml[15,624+4]..[15,624+23])
+                      Ppat_construct "Parsing.Parse_error" (test/dynamic/positions/src/calc.ml[15,624+4]..[15,624+23])
+                      None
+                    expression (test/dynamic/positions/src/calc.ml[16,651+6]..[16,651+84])
+                      Pexp_apply
+                      expression (test/dynamic/positions/src/calc.ml[16,651+6]..[16,651+20])
+                        Pexp_ident "Printf.fprintf" (test/dynamic/positions/src/calc.ml[16,651+6]..[16,651+20])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[16,651+21]..[16,651+27])
+                            Pexp_ident "stderr" (test/dynamic/positions/src/calc.ml[16,651+21]..[16,651+27])
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[16,651+28]..[16,651+61])
+                            Pexp_constant PConst_string("At offset %d: syntax error.\n%!",(test/dynamic/positions/src/calc.ml[16,651+29]..[16,651+60]),None)
+                        <arg>
+                        Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[16,651+62]..[16,651+84])
+                            Pexp_apply
+                            expression (test/dynamic/positions/src/calc.ml[16,651+63]..[16,651+75])
+                              Pexp_ident "lexeme_start" (test/dynamic/positions/src/calc.ml[16,651+63]..[16,651+75])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (test/dynamic/positions/src/calc.ml[16,651+76]..[16,651+83])
+                                  Pexp_ident "linebuf" (test/dynamic/positions/src/calc.ml[16,651+76]..[16,651+83])
+                            ]
+                      ]
+                ]
+    ]
+  structure_item (test/dynamic/positions/src/calc.ml[18,737+0]..[23,848+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[18,737+4]..[18,737+11])
+          Ppat_var "process" (test/dynamic/positions/src/calc.ml[18,737+4]..[18,737+11])
+        expression (test/dynamic/positions/src/calc.ml[18,737+12]..[23,848+18]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/positions/src/calc.ml[18,737+12]..[18,737+43])
+            Ppat_constraint
+            pattern (test/dynamic/positions/src/calc.ml[18,737+13]..[18,737+26])
+              Ppat_var "optional_line" (test/dynamic/positions/src/calc.ml[18,737+13]..[18,737+26])
+            core_type (test/dynamic/positions/src/calc.ml[18,737+29]..[18,737+42])
+              Ptyp_constr "option" (test/dynamic/positions/src/calc.ml[18,737+36]..[18,737+42])
+              [
+                core_type (test/dynamic/positions/src/calc.ml[18,737+29]..[18,737+35])
+                  Ptyp_constr "string" (test/dynamic/positions/src/calc.ml[18,737+29]..[18,737+35])
+                  []
+              ]
+          expression (test/dynamic/positions/src/calc.ml[19,783+2]..[23,848+18])
+            Pexp_match
+            expression (test/dynamic/positions/src/calc.ml[19,783+8]..[19,783+21])
+              Pexp_ident "optional_line" (test/dynamic/positions/src/calc.ml[19,783+8]..[19,783+21])
+            [
+              <case>
+                pattern (test/dynamic/positions/src/calc.ml[20,810+4]..[20,810+8])
+                  Ppat_construct "None" (test/dynamic/positions/src/calc.ml[20,810+4]..[20,810+8])
+                  None
+                expression (test/dynamic/positions/src/calc.ml[21,822+6]..[21,822+8])
+                  Pexp_construct "()" (test/dynamic/positions/src/calc.ml[21,822+6]..[21,822+8])
+                  None
+              <case>
+                pattern (test/dynamic/positions/src/calc.ml[22,831+4]..[22,831+13])
+                  Ppat_construct "Some" (test/dynamic/positions/src/calc.ml[22,831+4]..[22,831+8])
+                  Some
+                    []
+                    pattern (test/dynamic/positions/src/calc.ml[22,831+9]..[22,831+13])
+                      Ppat_var "line" (test/dynamic/positions/src/calc.ml[22,831+9]..[22,831+13])
+                expression (test/dynamic/positions/src/calc.ml[23,848+6]..[23,848+18])
+                  Pexp_apply
+                  expression (test/dynamic/positions/src/calc.ml[23,848+6]..[23,848+13])
+                    Pexp_ident "process" (test/dynamic/positions/src/calc.ml[23,848+6]..[23,848+13])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/positions/src/calc.ml[23,848+14]..[23,848+18])
+                        Pexp_ident "line" (test/dynamic/positions/src/calc.ml[23,848+14]..[23,848+18])
+                  ]
+            ]
+    ]
+  structure_item (test/dynamic/positions/src/calc.ml[25,868+0]..[30,1023+17])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[25,868+8]..[25,868+14])
+          Ppat_var "repeat" (test/dynamic/positions/src/calc.ml[25,868+8]..[25,868+14])
+        expression (test/dynamic/positions/src/calc.ml[25,868+15]..[30,1023+17]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/positions/src/calc.ml[25,868+15]..[25,868+21])
+            Ppat_var "lexbuf" (test/dynamic/positions/src/calc.ml[25,868+15]..[25,868+21])
+          expression (test/dynamic/positions/src/calc.ml[27,926+2]..[30,1023+17])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (test/dynamic/positions/src/calc.ml[27,926+6]..[27,926+29])
+                  Ppat_tuple
+                  [
+                    pattern (test/dynamic/positions/src/calc.ml[27,926+6]..[27,926+19])
+                      Ppat_var "optional_line" (test/dynamic/positions/src/calc.ml[27,926+6]..[27,926+19])
+                    pattern (test/dynamic/positions/src/calc.ml[27,926+21]..[27,926+29])
+                      Ppat_var "continue" (test/dynamic/positions/src/calc.ml[27,926+21]..[27,926+29])
+                  ]
+                expression (test/dynamic/positions/src/calc.ml[27,926+32]..[27,926+49])
+                  Pexp_apply
+                  expression (test/dynamic/positions/src/calc.ml[27,926+32]..[27,926+42])
+                    Pexp_ident "Lexer.line" (test/dynamic/positions/src/calc.ml[27,926+32]..[27,926+42])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/positions/src/calc.ml[27,926+43]..[27,926+49])
+                        Pexp_ident "lexbuf" (test/dynamic/positions/src/calc.ml[27,926+43]..[27,926+49])
+                  ]
+            ]
+            expression (test/dynamic/positions/src/calc.ml[28,979+2]..[30,1023+17])
+              Pexp_sequence
+              expression (test/dynamic/positions/src/calc.ml[28,979+2]..[28,979+23])
+                Pexp_apply
+                expression (test/dynamic/positions/src/calc.ml[28,979+2]..[28,979+9])
+                  Pexp_ident "process" (test/dynamic/positions/src/calc.ml[28,979+2]..[28,979+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/positions/src/calc.ml[28,979+10]..[28,979+23])
+                      Pexp_ident "optional_line" (test/dynamic/positions/src/calc.ml[28,979+10]..[28,979+23])
+                ]
+              expression (test/dynamic/positions/src/calc.ml[29,1004+2]..[30,1023+17])
+                Pexp_ifthenelse
+                expression (test/dynamic/positions/src/calc.ml[29,1004+5]..[29,1004+13])
+                  Pexp_ident "continue" (test/dynamic/positions/src/calc.ml[29,1004+5]..[29,1004+13])
+                expression (test/dynamic/positions/src/calc.ml[30,1023+4]..[30,1023+17])
+                  Pexp_apply
+                  expression (test/dynamic/positions/src/calc.ml[30,1023+4]..[30,1023+10])
+                    Pexp_ident "repeat" (test/dynamic/positions/src/calc.ml[30,1023+4]..[30,1023+10])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/positions/src/calc.ml[30,1023+11]..[30,1023+17])
+                        Pexp_ident "lexbuf" (test/dynamic/positions/src/calc.ml[30,1023+11]..[30,1023+17])
+                  ]
+                None
+    ]
+  structure_item (test/dynamic/positions/src/calc.ml[32,1042+0]..[33,1052+29])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[32,1042+4]..[32,1042+6])
+          Ppat_construct "()" (test/dynamic/positions/src/calc.ml[32,1042+4]..[32,1042+6])
+          None
+        expression (test/dynamic/positions/src/calc.ml[33,1052+2]..[33,1052+29])
+          Pexp_apply
+          expression (test/dynamic/positions/src/calc.ml[33,1052+2]..[33,1052+8])
+            Pexp_ident "repeat" (test/dynamic/positions/src/calc.ml[33,1052+2]..[33,1052+8])
+          [
+            <arg>
+            Nolabel
+              expression (test/dynamic/positions/src/calc.ml[33,1052+9]..[33,1052+29])
+                Pexp_apply
+                expression (test/dynamic/positions/src/calc.ml[33,1052+10]..[33,1052+22])
+                  Pexp_ident "from_channel" (test/dynamic/positions/src/calc.ml[33,1052+10]..[33,1052+22])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/positions/src/calc.ml[33,1052+23]..[33,1052+28])
+                      Pexp_ident "stdin" (test/dynamic/positions/src/calc.ml[33,1052+23]..[33,1052+28])
+                ]
+          ]
+    ]
+]
+
+open Lexing
+let process (line : string) =
+  let linebuf = from_string line in
+  linebuf.lex_curr_p <-
+    { pos_fname = "-"; pos_lnum = 1; pos_bol = 0; pos_cnum = 0 };
+  (try Auxiliary.Print.main (Parser.main Lexer.token linebuf)
+   with | Lexer.Error msg -> Printf.fprintf stderr "%s%!" msg
+   | Parsing.Parse_error ->
+       Printf.fprintf stderr "At offset %d: syntax error.\n%!"
+         (lexeme_start linebuf))
+let process (optional_line : string option) =
+  match optional_line with | None -> () | Some line -> process line
+let rec repeat lexbuf =
+  let (optional_line, continue) = Lexer.line lexbuf in
+  process optional_line; if continue then repeat lexbuf
+let () = repeat (from_channel stdin)
+[
+  structure_item (test/dynamic/positions/src/calc.ml[1,41+0]..test/dynamic/positions/src/calc.ml[1,41+11])
+    Tstr_open Fresh
+    module_expr (test/dynamic/positions/src/calc.ml[1,41+5]..test/dynamic/positions/src/calc.ml[1,41+11])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (test/dynamic/positions/src/calc.ml[3,54+0]..test/dynamic/positions/src/calc.ml[16,651+84])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[3,54+4]..test/dynamic/positions/src/calc.ml[3,54+11])
+          Tpat_var "process/297"
+        expression (test/dynamic/positions/src/calc.ml[3,54+12]..test/dynamic/positions/src/calc.ml[16,651+84]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/positions/src/calc.ml[3,54+13]..test/dynamic/positions/src/calc.ml[3,54+17])
+                extra
+                  Tpat_extra_constraint
+                  core_type (test/dynamic/positions/src/calc.ml[3,54+20]..test/dynamic/positions/src/calc.ml[3,54+26])
+                    Ttyp_constr "string/15!"
+                    []
+                Tpat_alias "line/299"
+                pattern (test/dynamic/positions/src/calc.ml[3,54+13]..test/dynamic/positions/src/calc.ml[3,54+17])
+                  Tpat_any
+              expression (test/dynamic/positions/src/calc.ml[4,84+2]..test/dynamic/positions/src/calc.ml[16,651+84])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/positions/src/calc.ml[4,84+6]..test/dynamic/positions/src/calc.ml[4,84+13])
+                      Tpat_var "linebuf/300"
+                    expression (test/dynamic/positions/src/calc.ml[4,84+16]..test/dynamic/positions/src/calc.ml[4,84+32])
+                      Texp_apply
+                      expression (test/dynamic/positions/src/calc.ml[4,84+16]..test/dynamic/positions/src/calc.ml[4,84+27])
+                        Texp_ident "Stdlib!.Lexing.from_string"
+                      [
+                        <arg>
+                          Optional "with_positions"
+                          expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                            Texp_construct "None"
+                            []
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[4,84+28]..test/dynamic/positions/src/calc.ml[4,84+32])
+                            Texp_ident "line/299"
+                      ]
+                ]
+                expression (test/dynamic/positions/src/calc.ml[5,120+2]..test/dynamic/positions/src/calc.ml[16,651+84])
+                  Texp_sequence
+                  expression (test/dynamic/positions/src/calc.ml[5,120+2]..test/dynamic/positions/src/calc.ml[5,120+84])
+                    Texp_setfield
+                    expression (test/dynamic/positions/src/calc.ml[5,120+2]..test/dynamic/positions/src/calc.ml[5,120+9])
+                      Texp_ident "linebuf/300"
+                    "lex_curr_p"
+                    expression (test/dynamic/positions/src/calc.ml[5,120+24]..test/dynamic/positions/src/calc.ml[5,120+84])
+                      Texp_record
+                        fields =
+                          [
+                            "pos_fname"
+                              expression (test/dynamic/positions/src/calc.ml[5,120+38]..test/dynamic/positions/src/calc.ml[5,120+41])
+                                Texp_constant Const_string("-",(test/dynamic/positions/src/calc.ml[5,120+39]..test/dynamic/positions/src/calc.ml[5,120+40]),None)
+                            "pos_lnum"
+                              expression (test/dynamic/positions/src/calc.ml[5,120+54]..test/dynamic/positions/src/calc.ml[5,120+55])
+                                Texp_constant Const_int 1
+                            "pos_bol"
+                              expression (test/dynamic/positions/src/calc.ml[5,120+67]..test/dynamic/positions/src/calc.ml[5,120+68])
+                                Texp_constant Const_int 0
+                            "pos_cnum"
+                              expression (test/dynamic/positions/src/calc.ml[5,120+81]..test/dynamic/positions/src/calc.ml[5,120+82])
+                                Texp_constant Const_int 0
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          None
+                  expression (test/dynamic/positions/src/calc.ml[6,206+2]..test/dynamic/positions/src/calc.ml[16,651+84])
+                    Texp_try
+                    expression (test/dynamic/positions/src/calc.ml[11,496+4]..test/dynamic/positions/src/calc.ml[11,496+58])
+                      Texp_apply
+                      expression (test/dynamic/positions/src/calc.ml[11,496+4]..test/dynamic/positions/src/calc.ml[11,496+24])
+                        Texp_ident "Dune__exe!.Auxiliary.Print.main"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[11,496+25]..test/dynamic/positions/src/calc.ml[11,496+58])
+                            Texp_apply
+                            expression (test/dynamic/positions/src/calc.ml[11,496+26]..test/dynamic/positions/src/calc.ml[11,496+37])
+                              Texp_ident "Dune__exe!.Parser.main"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/positions/src/calc.ml[11,496+38]..test/dynamic/positions/src/calc.ml[11,496+49])
+                                  Texp_ident "Dune__exe!.Lexer.token"
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/positions/src/calc.ml[11,496+50]..test/dynamic/positions/src/calc.ml[11,496+57])
+                                  Texp_ident "linebuf/300"
+                            ]
+                      ]
+                    [
+                      <case>
+                        pattern (test/dynamic/positions/src/calc.ml[13,562+4]..test/dynamic/positions/src/calc.ml[13,562+19])
+                          Tpat_construct "Lexer.Error"
+                          [
+                            pattern (test/dynamic/positions/src/calc.ml[13,562+16]..test/dynamic/positions/src/calc.ml[13,562+19])
+                              Tpat_var "msg/365"
+                          ]
+                          None
+                        expression (test/dynamic/positions/src/calc.ml[14,585+6]..test/dynamic/positions/src/calc.ml[14,585+38])
+                          Texp_apply
+                          expression (test/dynamic/positions/src/calc.ml[14,585+6]..test/dynamic/positions/src/calc.ml[14,585+20])
+                            Texp_ident "Stdlib!.Printf.fprintf"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/positions/src/calc.ml[14,585+21]..test/dynamic/positions/src/calc.ml[14,585+27])
+                                Texp_ident "Stdlib!.stderr"
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34])
+                                Texp_construct "CamlinternalFormatBasics.Format"
+                                [
+                                  expression (test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.String"
+                                    [
+                                      expression (test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                        []
+                                      expression (test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.Flush"
+                                        [
+                                          expression (test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                            []
+                                        ]
+                                    ]
+                                  expression (test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34]) ghost
+                                    Texp_constant Const_string("%s%!",(test/dynamic/positions/src/calc.ml[14,585+28]..test/dynamic/positions/src/calc.ml[14,585+34]) ghost,None)
+                                ]
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/positions/src/calc.ml[14,585+35]..test/dynamic/positions/src/calc.ml[14,585+38])
+                                Texp_ident "msg/365"
+                          ]
+                      <case>
+                        pattern (test/dynamic/positions/src/calc.ml[15,624+4]..test/dynamic/positions/src/calc.ml[15,624+23])
+                          Tpat_construct "Parsing.Parse_error"
+                          []
+                          None
+                        expression (test/dynamic/positions/src/calc.ml[16,651+6]..test/dynamic/positions/src/calc.ml[16,651+84])
+                          Texp_apply
+                          expression (test/dynamic/positions/src/calc.ml[16,651+6]..test/dynamic/positions/src/calc.ml[16,651+20])
+                            Texp_ident "Stdlib!.Printf.fprintf"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/positions/src/calc.ml[16,651+21]..test/dynamic/positions/src/calc.ml[16,651+27])
+                                Texp_ident "Stdlib!.stderr"
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61])
+                                Texp_construct "CamlinternalFormatBasics.Format"
+                                [
+                                  expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                    [
+                                      expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                        Texp_constant Const_string("At offset ",(test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost,None)
+                                      expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.Int"
+                                        [
+                                          expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Int_d"
+                                            []
+                                          expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.No_padding"
+                                            []
+                                          expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.No_precision"
+                                            []
+                                          expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                                Texp_constant Const_string(": syntax error.\n",(test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost,None)
+                                              expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Flush"
+                                                [
+                                                  expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                  expression (test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost
+                                    Texp_constant Const_string("At offset %d: syntax error.\n%!",(test/dynamic/positions/src/calc.ml[16,651+28]..test/dynamic/positions/src/calc.ml[16,651+61]) ghost,None)
+                                ]
+                            <arg>
+                              Nolabel
+                              expression (test/dynamic/positions/src/calc.ml[16,651+62]..test/dynamic/positions/src/calc.ml[16,651+84])
+                                Texp_apply
+                                expression (test/dynamic/positions/src/calc.ml[16,651+63]..test/dynamic/positions/src/calc.ml[16,651+75])
+                                  Texp_ident "Stdlib!.Lexing.lexeme_start"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (test/dynamic/positions/src/calc.ml[16,651+76]..test/dynamic/positions/src/calc.ml[16,651+83])
+                                      Texp_ident "linebuf/300"
+                                ]
+                          ]
+                    ]
+          ]
+    ]
+  structure_item (test/dynamic/positions/src/calc.ml[18,737+0]..test/dynamic/positions/src/calc.ml[23,848+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[18,737+4]..test/dynamic/positions/src/calc.ml[18,737+11])
+          Tpat_var "process/420"
+        expression (test/dynamic/positions/src/calc.ml[18,737+12]..test/dynamic/positions/src/calc.ml[23,848+18]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/positions/src/calc.ml[18,737+13]..test/dynamic/positions/src/calc.ml[18,737+26])
+                extra
+                  Tpat_extra_constraint
+                  core_type (test/dynamic/positions/src/calc.ml[18,737+29]..test/dynamic/positions/src/calc.ml[18,737+42])
+                    Ttyp_constr "option/10!"
+                    [
+                      core_type (test/dynamic/positions/src/calc.ml[18,737+29]..test/dynamic/positions/src/calc.ml[18,737+35])
+                        Ttyp_constr "string/15!"
+                        []
+                    ]
+                Tpat_alias "optional_line/421"
+                pattern (test/dynamic/positions/src/calc.ml[18,737+13]..test/dynamic/positions/src/calc.ml[18,737+26])
+                  Tpat_any
+              expression (test/dynamic/positions/src/calc.ml[19,783+2]..test/dynamic/positions/src/calc.ml[23,848+18])
+                Texp_match
+                expression (test/dynamic/positions/src/calc.ml[19,783+8]..test/dynamic/positions/src/calc.ml[19,783+21])
+                  Texp_ident "optional_line/421"
+                [
+                  <case>
+                    pattern (test/dynamic/positions/src/calc.ml[20,810+4]..test/dynamic/positions/src/calc.ml[20,810+8])
+                      Tpat_value
+                      pattern (test/dynamic/positions/src/calc.ml[20,810+4]..test/dynamic/positions/src/calc.ml[20,810+8])
+                        Tpat_construct "None"
+                        []
+                        None
+                    expression (test/dynamic/positions/src/calc.ml[21,822+6]..test/dynamic/positions/src/calc.ml[21,822+8])
+                      Texp_construct "()"
+                      []
+                  <case>
+                    pattern (test/dynamic/positions/src/calc.ml[22,831+4]..test/dynamic/positions/src/calc.ml[22,831+13])
+                      Tpat_value
+                      pattern (test/dynamic/positions/src/calc.ml[22,831+4]..test/dynamic/positions/src/calc.ml[22,831+13])
+                        Tpat_construct "Some"
+                        [
+                          pattern (test/dynamic/positions/src/calc.ml[22,831+9]..test/dynamic/positions/src/calc.ml[22,831+13])
+                            Tpat_var "line/422"
+                        ]
+                        None
+                    expression (test/dynamic/positions/src/calc.ml[23,848+6]..test/dynamic/positions/src/calc.ml[23,848+18])
+                      Texp_apply
+                      expression (test/dynamic/positions/src/calc.ml[23,848+6]..test/dynamic/positions/src/calc.ml[23,848+13])
+                        Texp_ident "process/297"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[23,848+14]..test/dynamic/positions/src/calc.ml[23,848+18])
+                            Texp_ident "line/422"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/dynamic/positions/src/calc.ml[25,868+0]..test/dynamic/positions/src/calc.ml[30,1023+17])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[25,868+8]..test/dynamic/positions/src/calc.ml[25,868+14])
+          Tpat_var "repeat/423"
+        expression (test/dynamic/positions/src/calc.ml[25,868+15]..test/dynamic/positions/src/calc.ml[30,1023+17]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/positions/src/calc.ml[25,868+15]..test/dynamic/positions/src/calc.ml[25,868+21])
+                Tpat_var "lexbuf/424"
+              expression (test/dynamic/positions/src/calc.ml[27,926+2]..test/dynamic/positions/src/calc.ml[30,1023+17])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (test/dynamic/positions/src/calc.ml[27,926+6]..test/dynamic/positions/src/calc.ml[27,926+29])
+                      Tpat_tuple
+                      [
+                        pattern (test/dynamic/positions/src/calc.ml[27,926+6]..test/dynamic/positions/src/calc.ml[27,926+19])
+                          Tpat_var "optional_line/425"
+                        pattern (test/dynamic/positions/src/calc.ml[27,926+21]..test/dynamic/positions/src/calc.ml[27,926+29])
+                          Tpat_var "continue/426"
+                      ]
+                    expression (test/dynamic/positions/src/calc.ml[27,926+32]..test/dynamic/positions/src/calc.ml[27,926+49])
+                      Texp_apply
+                      expression (test/dynamic/positions/src/calc.ml[27,926+32]..test/dynamic/positions/src/calc.ml[27,926+42])
+                        Texp_ident "Dune__exe!.Lexer.line"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[27,926+43]..test/dynamic/positions/src/calc.ml[27,926+49])
+                            Texp_ident "lexbuf/424"
+                      ]
+                ]
+                expression (test/dynamic/positions/src/calc.ml[28,979+2]..test/dynamic/positions/src/calc.ml[30,1023+17])
+                  Texp_sequence
+                  expression (test/dynamic/positions/src/calc.ml[28,979+2]..test/dynamic/positions/src/calc.ml[28,979+23])
+                    Texp_apply
+                    expression (test/dynamic/positions/src/calc.ml[28,979+2]..test/dynamic/positions/src/calc.ml[28,979+9])
+                      Texp_ident "process/420"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (test/dynamic/positions/src/calc.ml[28,979+10]..test/dynamic/positions/src/calc.ml[28,979+23])
+                          Texp_ident "optional_line/425"
+                    ]
+                  expression (test/dynamic/positions/src/calc.ml[29,1004+2]..test/dynamic/positions/src/calc.ml[30,1023+17])
+                    Texp_ifthenelse
+                    expression (test/dynamic/positions/src/calc.ml[29,1004+5]..test/dynamic/positions/src/calc.ml[29,1004+13])
+                      Texp_ident "continue/426"
+                    expression (test/dynamic/positions/src/calc.ml[30,1023+4]..test/dynamic/positions/src/calc.ml[30,1023+17])
+                      Texp_apply
+                      expression (test/dynamic/positions/src/calc.ml[30,1023+4]..test/dynamic/positions/src/calc.ml[30,1023+10])
+                        Texp_ident "repeat/423"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/positions/src/calc.ml[30,1023+11]..test/dynamic/positions/src/calc.ml[30,1023+17])
+                            Texp_ident "lexbuf/424"
+                      ]
+                    None
+          ]
+    ]
+  structure_item (test/dynamic/positions/src/calc.ml[32,1042+0]..test/dynamic/positions/src/calc.ml[33,1052+29])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/positions/src/calc.ml[32,1042+4]..test/dynamic/positions/src/calc.ml[32,1042+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (test/dynamic/positions/src/calc.ml[33,1052+2]..test/dynamic/positions/src/calc.ml[33,1052+29])
+          Texp_apply
+          expression (test/dynamic/positions/src/calc.ml[33,1052+2]..test/dynamic/positions/src/calc.ml[33,1052+8])
+            Texp_ident "repeat/423"
+          [
+            <arg>
+              Nolabel
+              expression (test/dynamic/positions/src/calc.ml[33,1052+9]..test/dynamic/positions/src/calc.ml[33,1052+29])
+                Texp_apply
+                expression (test/dynamic/positions/src/calc.ml[33,1052+10]..test/dynamic/positions/src/calc.ml[33,1052+22])
+                  Texp_ident "Stdlib!.Lexing.from_channel"
+                [
+                  <arg>
+                    Optional "with_positions"
+                    expression (_none_[0,0+-1].._none_[0,0+-1]) ghost
+                      Texp_construct "None"
+                      []
+                  <arg>
+                    Nolabel
+                    expression (test/dynamic/positions/src/calc.ml[33,1052+23]..test/dynamic/positions/src/calc.ml[33,1052+28])
+                      Texp_ident "Stdlib!.stdin"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Calc>
+ "process"[value] -> <Dune__exe__Calc.4>;
+ "repeat"[value] -> <Dune__exe__Calc.7>;
+ }
+
+(seq
+  (let
+    (process/297 =
+       (function line/299 : int
+         (let
+           (linebuf/300 =
+              (apply (field_imm 2 (global Stdlib__Lexing!)) 0 line/299))
+           (seq (setfield_ptr 11 linebuf/300 [0: "-" 1 0 0])
+             (try
+               (apply
+                 (field_imm 9 (field_imm 1 (global Dune__exe__Auxiliary!)))
+                 (apply (field_imm 0 (global Dune__exe__Parser!))
+                   (field_imm 4 (global Dune__exe__Lexer!)) linebuf/300))
+              with exn/530
+               (catch
+                 (catch
+                   (let (tag/531 =a (field_imm 0 exn/530))
+                     (if
+                       (== tag/531 (field_imm 0 (global Dune__exe__Lexer!)))
+                       (let (msg/365 =a (field_imm 1 exn/530))
+                         (apply (field_imm 0 (global Stdlib__Printf!))
+                           (field_imm 39 (global Stdlib!))
+                           [0: [2: 0 [10: 0]] "%s%!"] msg/365))
+                       (exit 2)))
+                  with (2)
+                   (if (== exn/530 (field_imm 9 (global Stdlib__Parsing!)))
+                     (apply (field_imm 0 (global Stdlib__Printf!))
+                       (field_imm 39 (global Stdlib!))
+                       [0:
+                        [11:
+                         "At offset "
+                         [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                        "At offset %d: syntax error.\n%!"]
+                       (apply (field_imm 9 (global Stdlib__Lexing!))
+                         linebuf/300))
+                     (exit 1)))
+                with (1) (reraise exn/530)))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) process/297))
+  (let
+    (process/420 =
+       (function optional_line/421 : int
+         (if (isint optional_line/421) 0
+           (let (line/422 =a (field_imm 0 optional_line/421))
+             (apply (field_imm 2 (global Dune__exe__Calc!)) line/422)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Calc!) process/420))
+  (letrec
+    (repeat/423
+       (function lexbuf/424 : int
+         (let
+           (*match*/536 =
+              (apply (field_imm 2 (global Dune__exe__Lexer!)) lexbuf/424)
+            continue/426 =a (field_imm 1 *match*/536)
+            optional_line/425 =a (field_imm 0 *match*/536))
+           (seq
+             (apply (field_imm 0 (global Dune__exe__Calc!))
+               optional_line/425)
+             (if continue/426 (apply repeat/423 lexbuf/424) 0)))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Calc!) repeat/423))
+  (let
+    (*match*/538 =
+       (apply (field_imm 1 (global Dune__exe__Calc!))
+         (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+           (field_imm 37 (global Stdlib!)))))
+    0)
+  0)
+(seq
+  (let
+    (process/297 =
+       (function line/299 : int
+         (let
+           (linebuf/300 =
+              (apply (field_imm 2 (global Stdlib__Lexing!)) 0 line/299))
+           (seq (setfield_ptr 11 linebuf/300 [0: "-" 1 0 0])
+             (try
+               (apply
+                 (field_imm 9 (field_imm 1 (global Dune__exe__Auxiliary!)))
+                 (apply (field_imm 0 (global Dune__exe__Parser!))
+                   (field_imm 4 (global Dune__exe__Lexer!)) linebuf/300))
+              with exn/530
+               (if
+                 (== (field_imm 0 exn/530)
+                   (field_imm 0 (global Dune__exe__Lexer!)))
+                 (apply (field_imm 0 (global Stdlib__Printf!))
+                   (field_imm 39 (global Stdlib!)) [0: [2: 0 [10: 0]] "%s%!"]
+                   (field_imm 1 exn/530))
+                 (if (== exn/530 (field_imm 9 (global Stdlib__Parsing!)))
+                   (apply (field_imm 0 (global Stdlib__Printf!))
+                     (field_imm 39 (global Stdlib!))
+                     [0:
+                      [11:
+                       "At offset "
+                       [4: 0 0 0 [11: ": syntax error.\n" [10: 0]]]]
+                      "At offset %d: syntax error.\n%!"]
+                     (apply (field_imm 9 (global Stdlib__Lexing!))
+                       linebuf/300))
+                   (reraise exn/530))))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Calc!) process/297))
+  (let
+    (process/420 =
+       (function optional_line/421 : int
+         (if (isint optional_line/421) 0
+           (apply (field_imm 2 (global Dune__exe__Calc!))
+             (field_imm 0 optional_line/421)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Calc!) process/420))
+  (letrec
+    (repeat/423
+       (function lexbuf/424 : int
+         (let
+           (*match*/536 =
+              (apply (field_imm 2 (global Dune__exe__Lexer!)) lexbuf/424))
+           (seq
+             (apply (field_imm 0 (global Dune__exe__Calc!))
+               (field_imm 0 *match*/536))
+             (if (field_imm 1 *match*/536) (apply repeat/423 lexbuf/424) 0)))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Calc!) repeat/423))
+  (let
+    (*match*/538 =
+       (apply (field_imm 1 (global Dune__exe__Calc!))
+         (apply (field_imm 1 (global Stdlib__Lexing!)) 0
+           (field_imm 37 (global Stdlib!)))))
+    0)
+  0)

@@ -1,0 +1,158 @@
+[
+  signature_item (test/dynamic/misc/variants/parser.mli[4,28+0]..[6,48+7])
+    Psig_type Rec
+    [
+      type_declaration "token" (test/dynamic/misc/variants/parser.mli[4,28+5]..[4,28+10]) (test/dynamic/misc/variants/parser.mli[4,28+0]..[6,48+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (test/dynamic/misc/variants/parser.mli[5,42+2]..[5,42+5])
+                "T" (test/dynamic/misc/variants/parser.mli[5,42+4]..[5,42+5])
+                []
+                None
+              (test/dynamic/misc/variants/parser.mli[6,48+2]..[6,48+7])
+                "EOF" (test/dynamic/misc/variants/parser.mli[6,48+4]..[6,48+7])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (test/dynamic/misc/variants/parser.mli[10,122+0]..[10,122+15])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (test/dynamic/misc/variants/parser.mli[10,122+0]..[10,122+15])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (test/dynamic/misc/variants/parser.mli[14,166+0]..[14,166+86])
+    Psig_value
+    value_description "main" (test/dynamic/misc/variants/parser.mli[14,166+4]..[14,166+8]) (test/dynamic/misc/variants/parser.mli[14,166+0]..[14,166+86])
+      core_type (test/dynamic/misc/variants/parser.mli[14,166+10]..[14,166+86])
+        Ptyp_arrow
+        Nolabel
+        core_type (test/dynamic/misc/variants/parser.mli[14,166+11]..[14,166+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+11]..[14,166+24])
+            Ptyp_constr "Lexing.lexbuf" (test/dynamic/misc/variants/parser.mli[14,166+11]..[14,166+24])
+            []
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+28]..[14,166+33])
+            Ptyp_constr "token" (test/dynamic/misc/variants/parser.mli[14,166+28]..[14,166+33])
+            []
+        core_type (test/dynamic/misc/variants/parser.mli[14,166+38]..[14,166+86])
+          Ptyp_arrow
+          Nolabel
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+38]..[14,166+51])
+            Ptyp_constr "Lexing.lexbuf" (test/dynamic/misc/variants/parser.mli[14,166+38]..[14,166+51])
+            []
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+56]..[14,166+85])
+            Ptyp_variant closed=Open
+            [
+              Rtag "A" false
+                [
+                  core_type (test/dynamic/misc/variants/parser.mli[14,166+65]..[14,166+71])
+                    Ptyp_constr "string" (test/dynamic/misc/variants/parser.mli[14,166+65]..[14,166+71])
+                    []
+                ]
+              Rtag "T" false
+                [
+                  core_type (test/dynamic/misc/variants/parser.mli[14,166+80]..[14,166+83])
+                    Ptyp_constr "int" (test/dynamic/misc/variants/parser.mli[14,166+80]..[14,166+83])
+                    []
+                ]
+            ]
+            None
+      []
+]
+
+type token =
+  | T 
+  | EOF 
+exception Error 
+val main :
+  (Lexing.lexbuf -> token) -> Lexing.lexbuf -> [> `A of string  | `T of int ]
+[
+  signature_item (test/dynamic/misc/variants/parser.mli[4,28+0]..test/dynamic/misc/variants/parser.mli[6,48+7])
+    Tsig_type Rec
+    [
+      type_declaration token/272 (test/dynamic/misc/variants/parser.mli[4,28+0]..test/dynamic/misc/variants/parser.mli[6,48+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (test/dynamic/misc/variants/parser.mli[5,42+2]..test/dynamic/misc/variants/parser.mli[5,42+5])
+                T/273
+                []
+                None
+              (test/dynamic/misc/variants/parser.mli[6,48+2]..test/dynamic/misc/variants/parser.mli[6,48+7])
+                EOF/274
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (test/dynamic/misc/variants/parser.mli[10,122+0]..test/dynamic/misc/variants/parser.mli[10,122+15])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (test/dynamic/misc/variants/parser.mli[10,122+0]..test/dynamic/misc/variants/parser.mli[10,122+15])
+          pext_name = "Error/275"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (test/dynamic/misc/variants/parser.mli[14,166+0]..test/dynamic/misc/variants/parser.mli[14,166+86])
+    Tsig_value
+    value_description main/300 (test/dynamic/misc/variants/parser.mli[14,166+0]..test/dynamic/misc/variants/parser.mli[14,166+86])
+      core_type (test/dynamic/misc/variants/parser.mli[14,166+10]..test/dynamic/misc/variants/parser.mli[14,166+86])
+        Ttyp_arrow
+        Nolabel
+        core_type (test/dynamic/misc/variants/parser.mli[14,166+11]..test/dynamic/misc/variants/parser.mli[14,166+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+11]..test/dynamic/misc/variants/parser.mli[14,166+24])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+28]..test/dynamic/misc/variants/parser.mli[14,166+33])
+            Ttyp_constr "token/272"
+            []
+        core_type (test/dynamic/misc/variants/parser.mli[14,166+38]..test/dynamic/misc/variants/parser.mli[14,166+86])
+          Ttyp_arrow
+          Nolabel
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+38]..test/dynamic/misc/variants/parser.mli[14,166+51])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (test/dynamic/misc/variants/parser.mli[14,166+56]..test/dynamic/misc/variants/parser.mli[14,166+85])
+            Ttyp_variant closed=Open
+            [
+              Ttag "A" false
+                [
+                  core_type (test/dynamic/misc/variants/parser.mli[14,166+65]..test/dynamic/misc/variants/parser.mli[14,166+71])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+              Ttag "T" false
+                [
+                  core_type (test/dynamic/misc/variants/parser.mli[14,166+80]..test/dynamic/misc/variants/parser.mli[14,166+83])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+            ]
+            None
+      []
+]
+

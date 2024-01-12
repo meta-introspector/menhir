@@ -1,0 +1,263 @@
+[
+  signature_item (src/listMonad.mli[15,1054+0]..[15,1054+19])
+    Psig_type Rec
+    [
+      type_declaration "m" (src/listMonad.mli[15,1054+8]..[15,1054+9]) (src/listMonad.mli[15,1054+0]..[15,1054+19])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/listMonad.mli[14,1000+0]..[14,1000+53])
+              Pstr_eval
+              expression (src/listMonad.mli[14,1000+0]..[14,1000+53])
+                Pexp_constant PConst_string(" Monad type which represents a list of results. ",(src/listMonad.mli[14,1000+0]..[14,1000+53]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/listMonad.mli[15,1054+5]..[15,1054+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/listMonad.mli[15,1054+12]..[15,1054+19])
+              Ptyp_constr "list" (src/listMonad.mli[15,1054+15]..[15,1054+19])
+              [
+                core_type (src/listMonad.mli[15,1054+12]..[15,1054+14])
+                  Ptyp_var a
+              ]
+    ]
+  signature_item (src/listMonad.mli[19,1160+0]..[19,1160+38])
+    Psig_value
+    value_description "bind" (src/listMonad.mli[19,1160+4]..[19,1160+8]) (src/listMonad.mli[19,1160+0]..[19,1160+38])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/listMonad.mli[17,1075+0]..[18,1134+25])
+            Pstr_eval
+            expression (src/listMonad.mli[17,1075+0]..[18,1134+25])
+              Pexp_constant PConst_string(" [bind x f] applies [f] to a list of results, returning\n    a list of results. ",(src/listMonad.mli[17,1075+0]..[18,1134+25]),None)
+        ]
+      core_type (src/listMonad.mli[19,1160+10]..[19,1160+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/listMonad.mli[19,1160+10]..[19,1160+14])
+          Ptyp_constr "m" (src/listMonad.mli[19,1160+13]..[19,1160+14])
+          [
+            core_type (src/listMonad.mli[19,1160+10]..[19,1160+12])
+              Ptyp_var a
+          ]
+        core_type (src/listMonad.mli[19,1160+18]..[19,1160+38])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/listMonad.mli[19,1160+19]..[19,1160+29])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/listMonad.mli[19,1160+19]..[19,1160+21])
+              Ptyp_var a
+            core_type (src/listMonad.mli[19,1160+25]..[19,1160+29])
+              Ptyp_constr "m" (src/listMonad.mli[19,1160+28]..[19,1160+29])
+              [
+                core_type (src/listMonad.mli[19,1160+25]..[19,1160+27])
+                  Ptyp_var b
+              ]
+          core_type (src/listMonad.mli[19,1160+34]..[19,1160+38])
+            Ptyp_constr "m" (src/listMonad.mli[19,1160+37]..[19,1160+38])
+            [
+              core_type (src/listMonad.mli[19,1160+34]..[19,1160+36])
+                Ptyp_var b
+            ]
+      []
+  signature_item (src/listMonad.mli[20,1199+0]..[20,1199+42])
+    Psig_value
+    value_description ">>=" (src/listMonad.mli[20,1199+4]..[20,1199+11]) (src/listMonad.mli[20,1199+0]..[20,1199+42])
+      core_type (src/listMonad.mli[20,1199+14]..[20,1199+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/listMonad.mli[20,1199+14]..[20,1199+18])
+          Ptyp_constr "m" (src/listMonad.mli[20,1199+17]..[20,1199+18])
+          [
+            core_type (src/listMonad.mli[20,1199+14]..[20,1199+16])
+              Ptyp_var a
+          ]
+        core_type (src/listMonad.mli[20,1199+22]..[20,1199+42])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/listMonad.mli[20,1199+23]..[20,1199+33])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/listMonad.mli[20,1199+23]..[20,1199+25])
+              Ptyp_var a
+            core_type (src/listMonad.mli[20,1199+29]..[20,1199+33])
+              Ptyp_constr "m" (src/listMonad.mli[20,1199+32]..[20,1199+33])
+              [
+                core_type (src/listMonad.mli[20,1199+29]..[20,1199+31])
+                  Ptyp_var b
+              ]
+          core_type (src/listMonad.mli[20,1199+38]..[20,1199+42])
+            Ptyp_constr "m" (src/listMonad.mli[20,1199+41]..[20,1199+42])
+            [
+              core_type (src/listMonad.mli[20,1199+38]..[20,1199+40])
+                Ptyp_var b
+            ]
+      []
+  signature_item (src/listMonad.mli[23,1299+0]..[23,1299+22])
+    Psig_value
+    value_description "return" (src/listMonad.mli[23,1299+4]..[23,1299+10]) (src/listMonad.mli[23,1299+0]..[23,1299+22])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/listMonad.mli[22,1243+0]..[22,1243+55])
+            Pstr_eval
+            expression (src/listMonad.mli[22,1243+0]..[22,1243+55])
+              Pexp_constant PConst_string(" [return x] is the left and right unit of [bind]. ",(src/listMonad.mli[22,1243+0]..[22,1243+55]),None)
+        ]
+      core_type (src/listMonad.mli[23,1299+12]..[23,1299+22])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/listMonad.mli[23,1299+12]..[23,1299+14])
+          Ptyp_var a
+        core_type (src/listMonad.mli[23,1299+18]..[23,1299+22])
+          Ptyp_constr "m" (src/listMonad.mli[23,1299+21]..[23,1299+22])
+          [
+            core_type (src/listMonad.mli[23,1299+18]..[23,1299+20])
+              Ptyp_var a
+          ]
+      []
+]
+
+type 'a m = 'a list[@@ocaml.doc
+                     " Monad type which represents a list of results. "]
+val bind : 'a m -> ('a -> 'b m) -> 'b m[@@ocaml.doc
+                                         " [bind x f] applies [f] to a list of results, returning\n    a list of results. "]
+val (>>=) : 'a m -> ('a -> 'b m) -> 'b m
+val return : 'a -> 'a m[@@ocaml.doc
+                         " [return x] is the left and right unit of [bind]. "]
+[
+  signature_item (src/listMonad.mli[15,1054+0]..src/listMonad.mli[15,1054+19])
+    Tsig_type Rec
+    [
+      type_declaration m/396 (src/listMonad.mli[15,1054+0]..src/listMonad.mli[15,1054+19])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/listMonad.mli[14,1000+0]..[14,1000+53])
+              Pstr_eval
+              expression (src/listMonad.mli[14,1000+0]..[14,1000+53])
+                Pexp_constant PConst_string(" Monad type which represents a list of results. ",(src/listMonad.mli[14,1000+0]..[14,1000+53]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/listMonad.mli[15,1054+5]..src/listMonad.mli[15,1054+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/listMonad.mli[15,1054+12]..src/listMonad.mli[15,1054+19])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/listMonad.mli[15,1054+12]..src/listMonad.mli[15,1054+14])
+                  Ttyp_var a
+              ]
+    ]
+  signature_item (src/listMonad.mli[19,1160+0]..src/listMonad.mli[19,1160+38])
+    Tsig_value
+    value_description bind/397 (src/listMonad.mli[19,1160+0]..src/listMonad.mli[19,1160+38])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/listMonad.mli[17,1075+0]..[18,1134+25])
+            Pstr_eval
+            expression (src/listMonad.mli[17,1075+0]..[18,1134+25])
+              Pexp_constant PConst_string(" [bind x f] applies [f] to a list of results, returning\n    a list of results. ",(src/listMonad.mli[17,1075+0]..[18,1134+25]),None)
+        ]
+      core_type (src/listMonad.mli[19,1160+10]..src/listMonad.mli[19,1160+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/listMonad.mli[19,1160+10]..src/listMonad.mli[19,1160+14])
+          Ttyp_constr "m/396"
+          [
+            core_type (src/listMonad.mli[19,1160+10]..src/listMonad.mli[19,1160+12])
+              Ttyp_var a
+          ]
+        core_type (src/listMonad.mli[19,1160+18]..src/listMonad.mli[19,1160+38])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/listMonad.mli[19,1160+19]..src/listMonad.mli[19,1160+29])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/listMonad.mli[19,1160+19]..src/listMonad.mli[19,1160+21])
+              Ttyp_var a
+            core_type (src/listMonad.mli[19,1160+25]..src/listMonad.mli[19,1160+29])
+              Ttyp_constr "m/396"
+              [
+                core_type (src/listMonad.mli[19,1160+25]..src/listMonad.mli[19,1160+27])
+                  Ttyp_var b
+              ]
+          core_type (src/listMonad.mli[19,1160+34]..src/listMonad.mli[19,1160+38])
+            Ttyp_constr "m/396"
+            [
+              core_type (src/listMonad.mli[19,1160+34]..src/listMonad.mli[19,1160+36])
+                Ttyp_var b
+            ]
+      []
+  signature_item (src/listMonad.mli[20,1199+0]..src/listMonad.mli[20,1199+42])
+    Tsig_value
+    value_description >>=/398 (src/listMonad.mli[20,1199+0]..src/listMonad.mli[20,1199+42])
+      core_type (src/listMonad.mli[20,1199+14]..src/listMonad.mli[20,1199+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/listMonad.mli[20,1199+14]..src/listMonad.mli[20,1199+18])
+          Ttyp_constr "m/396"
+          [
+            core_type (src/listMonad.mli[20,1199+14]..src/listMonad.mli[20,1199+16])
+              Ttyp_var a
+          ]
+        core_type (src/listMonad.mli[20,1199+22]..src/listMonad.mli[20,1199+42])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/listMonad.mli[20,1199+23]..src/listMonad.mli[20,1199+33])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/listMonad.mli[20,1199+23]..src/listMonad.mli[20,1199+25])
+              Ttyp_var a
+            core_type (src/listMonad.mli[20,1199+29]..src/listMonad.mli[20,1199+33])
+              Ttyp_constr "m/396"
+              [
+                core_type (src/listMonad.mli[20,1199+29]..src/listMonad.mli[20,1199+31])
+                  Ttyp_var b
+              ]
+          core_type (src/listMonad.mli[20,1199+38]..src/listMonad.mli[20,1199+42])
+            Ttyp_constr "m/396"
+            [
+              core_type (src/listMonad.mli[20,1199+38]..src/listMonad.mli[20,1199+40])
+                Ttyp_var b
+            ]
+      []
+  signature_item (src/listMonad.mli[23,1299+0]..src/listMonad.mli[23,1299+22])
+    Tsig_value
+    value_description return/399 (src/listMonad.mli[23,1299+0]..src/listMonad.mli[23,1299+22])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/listMonad.mli[22,1243+0]..[22,1243+55])
+            Pstr_eval
+            expression (src/listMonad.mli[22,1243+0]..[22,1243+55])
+              Pexp_constant PConst_string(" [return x] is the left and right unit of [bind]. ",(src/listMonad.mli[22,1243+0]..[22,1243+55]),None)
+        ]
+      core_type (src/listMonad.mli[23,1299+12]..src/listMonad.mli[23,1299+22])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/listMonad.mli[23,1299+12]..src/listMonad.mli[23,1299+14])
+          Ttyp_var a
+        core_type (src/listMonad.mli[23,1299+18]..src/listMonad.mli[23,1299+22])
+          Ttyp_constr "m/396"
+          [
+            core_type (src/listMonad.mli[23,1299+18]..src/listMonad.mli[23,1299+20])
+              Ttyp_var a
+          ]
+      []
+]
+

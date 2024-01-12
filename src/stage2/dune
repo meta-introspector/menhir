@@ -70,7 +70,8 @@
     menhirLib menhirSdk
   )
   (flags :standard -open MenhirSdk)
-  (link_deps parserMessages.check)
+ (link_deps parserMessages.check)
+ (preprocess  (pps ppx-introspector) )
 )
 
 ;; -----------------------------------------------------------------------------

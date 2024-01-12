@@ -1,0 +1,20 @@
+0.120s  144MB 8.09MB 9.85MB src/stage1/partialGrammar.ml
+  0.010s 3.53MB 0.68MB 2.44MB parsing
+    0.010s 3.53MB 0.68MB 2.44MB parser
+  0.044s 43.3MB 3.90MB 6.35MB typing
+  0.006s 6.15MB 0.25MB 6.60MB transl
+  0.037s 40.9MB 3.06MB 9.66MB generate
+    0.021s 23.7MB 2.15MB 8.76MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.001s ------ ------ ------ cse
+      0.002s 4.19MB 0.21MB 6.82MB liveness
+      0.003s 6.19MB 0.84MB 7.66MB spill
+      0.001s ------ ------ ------ split
+      0.008s 10.5MB 0.93MB 8.60MB regalloc
+      ------ 0.17MB ------ ------ scheduling
+      0.002s 2.36MB 0.15MB 8.76MB emit
+      0.002s 0.26MB ------ ------ other
+    0.007s ------ ------ ------ assemble
+    0.009s 17.2MB 0.90MB 9.66MB other
+  0.023s 50.5MB 0.18MB 9.85MB other
+0.018s 3.08MB 1.76MB ------ other

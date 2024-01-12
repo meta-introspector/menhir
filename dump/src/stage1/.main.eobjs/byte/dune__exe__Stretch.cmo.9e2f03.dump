@@ -1,0 +1,200 @@
+[
+  structure_item (src/stretch.ml[24,1621+0]..[31,1843+3])
+    Pstr_type Rec
+    [
+      type_declaration "t" (src/stretch.ml[24,1621+5]..[24,1621+6]) (src/stretch.ml[24,1621+0]..[31,1843+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/stretch.ml[25,1632+4]..[25,1632+33])
+                Immutable
+                "stretch_filename" (src/stretch.ml[25,1632+4]..[25,1632+20])                core_type (src/stretch.ml[25,1632+26]..[25,1632+32])
+                  Ptyp_constr "string" (src/stretch.ml[25,1632+26]..[25,1632+32])
+                  []
+              (src/stretch.ml[26,1666+4]..[26,1666+30])
+                Immutable
+                "stretch_linenum" (src/stretch.ml[26,1666+4]..[26,1666+19])                core_type (src/stretch.ml[26,1666+26]..[26,1666+29])
+                  Ptyp_constr "int" (src/stretch.ml[26,1666+26]..[26,1666+29])
+                  []
+              (src/stretch.ml[27,1697+4]..[27,1697+30])
+                Immutable
+                "stretch_linecount" (src/stretch.ml[27,1697+4]..[27,1697+21])                core_type (src/stretch.ml[27,1697+26]..[27,1697+29])
+                  Ptyp_constr "int" (src/stretch.ml[27,1697+26]..[27,1697+29])
+                  []
+              (src/stretch.ml[28,1728+4]..[28,1728+33])
+                Immutable
+                "stretch_raw_content" (src/stretch.ml[28,1728+4]..[28,1728+23])                core_type (src/stretch.ml[28,1728+26]..[28,1728+32])
+                  Ptyp_constr "string" (src/stretch.ml[28,1728+26]..[28,1728+32])
+                  []
+              (src/stretch.ml[29,1762+4]..[29,1762+33])
+                Immutable
+                "stretch_content" (src/stretch.ml[29,1762+4]..[29,1762+19])                core_type (src/stretch.ml[29,1762+26]..[29,1762+32])
+                  Ptyp_constr "string" (src/stretch.ml[29,1762+26]..[29,1762+32])
+                  []
+              (src/stretch.ml[30,1796+4]..[30,1796+46])
+                Immutable
+                "stretch_keywords" (src/stretch.ml[30,1796+4]..[30,1796+20])                core_type (src/stretch.ml[30,1796+26]..[30,1796+46])
+                  Ptyp_constr "list" (src/stretch.ml[30,1796+42]..[30,1796+46])
+                  [
+                    core_type (src/stretch.ml[30,1796+26]..[30,1796+41])
+                      Ptyp_constr "Keyword.keyword" (src/stretch.ml[30,1796+26]..[30,1796+41])
+                      []
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/stretch.ml[36,1976+0]..[38,2011+22])
+    Pstr_type Rec
+    [
+      type_declaration "ocamltype" (src/stretch.ml[36,1976+5]..[36,1976+14]) (src/stretch.ml[36,1976+0]..[38,2011+22])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/stretch.ml[37,1993+2]..[37,1993+17])
+                "Declared" (src/stretch.ml[37,1993+4]..[37,1993+12])
+                [
+                  core_type (src/stretch.ml[37,1993+16]..[37,1993+17])
+                    Ptyp_constr "t" (src/stretch.ml[37,1993+16]..[37,1993+17])
+                    []
+                ]
+                None
+              (src/stretch.ml[38,2011+2]..[38,2011+22])
+                "Inferred" (src/stretch.ml[38,2011+4]..[38,2011+12])
+                [
+                  core_type (src/stretch.ml[38,2011+16]..[38,2011+22])
+                    Ptyp_constr "string" (src/stretch.ml[38,2011+16]..[38,2011+22])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+]
+
+type t =
+  {
+  stretch_filename: string ;
+  stretch_linenum: int ;
+  stretch_linecount: int ;
+  stretch_raw_content: string ;
+  stretch_content: string ;
+  stretch_keywords: Keyword.keyword list }
+type ocamltype =
+  | Declared of t 
+  | Inferred of string 
+[
+  structure_item (src/stretch.ml[24,1621+0]..src/stretch.ml[31,1843+3])
+    Tstr_type Rec
+    [
+      type_declaration t/396 (src/stretch.ml[24,1621+0]..src/stretch.ml[31,1843+3])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/stretch.ml[25,1632+4]..src/stretch.ml[25,1632+33])
+                Immutable
+                stretch_filename/397                core_type (src/stretch.ml[25,1632+26]..src/stretch.ml[25,1632+32])
+                  Ttyp_poly
+                  core_type (src/stretch.ml[25,1632+26]..src/stretch.ml[25,1632+32])
+                    Ttyp_constr "string/15!"
+                    []
+              (src/stretch.ml[26,1666+4]..src/stretch.ml[26,1666+30])
+                Immutable
+                stretch_linenum/398                core_type (src/stretch.ml[26,1666+26]..src/stretch.ml[26,1666+29])
+                  Ttyp_poly
+                  core_type (src/stretch.ml[26,1666+26]..src/stretch.ml[26,1666+29])
+                    Ttyp_constr "int/1!"
+                    []
+              (src/stretch.ml[27,1697+4]..src/stretch.ml[27,1697+30])
+                Immutable
+                stretch_linecount/399                core_type (src/stretch.ml[27,1697+26]..src/stretch.ml[27,1697+29])
+                  Ttyp_poly
+                  core_type (src/stretch.ml[27,1697+26]..src/stretch.ml[27,1697+29])
+                    Ttyp_constr "int/1!"
+                    []
+              (src/stretch.ml[28,1728+4]..src/stretch.ml[28,1728+33])
+                Immutable
+                stretch_raw_content/400                core_type (src/stretch.ml[28,1728+26]..src/stretch.ml[28,1728+32])
+                  Ttyp_poly
+                  core_type (src/stretch.ml[28,1728+26]..src/stretch.ml[28,1728+32])
+                    Ttyp_constr "string/15!"
+                    []
+              (src/stretch.ml[29,1762+4]..src/stretch.ml[29,1762+33])
+                Immutable
+                stretch_content/401                core_type (src/stretch.ml[29,1762+26]..src/stretch.ml[29,1762+32])
+                  Ttyp_poly
+                  core_type (src/stretch.ml[29,1762+26]..src/stretch.ml[29,1762+32])
+                    Ttyp_constr "string/15!"
+                    []
+              (src/stretch.ml[30,1796+4]..src/stretch.ml[30,1796+46])
+                Immutable
+                stretch_keywords/408                core_type (src/stretch.ml[30,1796+26]..src/stretch.ml[30,1796+46])
+                  Ttyp_poly
+                  core_type (src/stretch.ml[30,1796+26]..src/stretch.ml[30,1796+46])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/stretch.ml[30,1796+26]..src/stretch.ml[30,1796+41])
+                        Ttyp_constr "MenhirSdk!.Keyword.keyword"
+                        []
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/stretch.ml[36,1976+0]..src/stretch.ml[38,2011+22])
+    Tstr_type Rec
+    [
+      type_declaration ocamltype/415 (src/stretch.ml[36,1976+0]..src/stretch.ml[38,2011+22])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/stretch.ml[37,1993+2]..src/stretch.ml[37,1993+17])
+                Declared/416
+                [
+                  core_type (src/stretch.ml[37,1993+16]..src/stretch.ml[37,1993+17])
+                    Ttyp_constr "t/396"
+                    []
+                ]
+                None
+              (src/stretch.ml[38,2011+2]..src/stretch.ml[38,2011+22])
+                Inferred/417
+                [
+                  core_type (src/stretch.ml[38,2011+16]..src/stretch.ml[38,2011+22])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+]
+
+{<Dune__exe__Stretch>
+ "ocamltype"[type] -> <Dune__exe__Stretch.7>;
+ "t"[type] -> <Dune__exe__Stretch.0>;
+ }
+
+(setglobal Dune__exe__Stretch! (pseudo <unknown location> (makeblock 0)))
+(setglobal Dune__exe__Stretch! (pseudo <unknown location> (makeblock 0)))

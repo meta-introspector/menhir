@@ -1,0 +1,100 @@
+[
+  signature_item (demos/calc-inspection/CalcPrinters.mli[1,0+0]..[1,0+29])
+    Psig_open Fresh "Parser.MenhirInterpreter" (demos/calc-inspection/CalcPrinters.mli[1,0+5]..[1,0+29])
+  signature_item (demos/calc-inspection/CalcPrinters.mli[6,129+0]..[6,129+25])
+    Psig_value
+    value_description "print" (demos/calc-inspection/CalcPrinters.mli[6,129+4]..[6,129+9]) (demos/calc-inspection/CalcPrinters.mli[6,129+0]..[6,129+25])
+      core_type (demos/calc-inspection/CalcPrinters.mli[6,129+11]..[6,129+25])
+        Ptyp_arrow
+        Nolabel
+        core_type (demos/calc-inspection/CalcPrinters.mli[6,129+11]..[6,129+17])
+          Ptyp_constr "string" (demos/calc-inspection/CalcPrinters.mli[6,129+11]..[6,129+17])
+          []
+        core_type (demos/calc-inspection/CalcPrinters.mli[6,129+21]..[6,129+25])
+          Ptyp_constr "unit" (demos/calc-inspection/CalcPrinters.mli[6,129+21]..[6,129+25])
+          []
+      []
+  signature_item (demos/calc-inspection/CalcPrinters.mli[7,155+0]..[7,155+33])
+    Psig_value
+    value_description "print_symbol" (demos/calc-inspection/CalcPrinters.mli[7,155+4]..[7,155+16]) (demos/calc-inspection/CalcPrinters.mli[7,155+0]..[7,155+33])
+      core_type (demos/calc-inspection/CalcPrinters.mli[7,155+18]..[7,155+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (demos/calc-inspection/CalcPrinters.mli[7,155+18]..[7,155+25])
+          Ptyp_constr "xsymbol" (demos/calc-inspection/CalcPrinters.mli[7,155+18]..[7,155+25])
+          []
+        core_type (demos/calc-inspection/CalcPrinters.mli[7,155+29]..[7,155+33])
+          Ptyp_constr "unit" (demos/calc-inspection/CalcPrinters.mli[7,155+29]..[7,155+33])
+          []
+      []
+  signature_item (demos/calc-inspection/CalcPrinters.mli[8,189+0]..[8,189+43])
+    Psig_value
+    value_description "print_element" (demos/calc-inspection/CalcPrinters.mli[8,189+4]..[8,189+17]) (demos/calc-inspection/CalcPrinters.mli[8,189+0]..[8,189+43])
+      core_type (demos/calc-inspection/CalcPrinters.mli[8,189+19]..[8,189+43])
+        Ptyp_constr "option" (demos/calc-inspection/CalcPrinters.mli[8,189+37]..[8,189+43])
+        [
+          core_type (demos/calc-inspection/CalcPrinters.mli[8,189+20]..[8,189+35])
+            Ptyp_arrow
+            Nolabel
+            core_type (demos/calc-inspection/CalcPrinters.mli[8,189+20]..[8,189+27])
+              Ptyp_constr "element" (demos/calc-inspection/CalcPrinters.mli[8,189+20]..[8,189+27])
+              []
+            core_type (demos/calc-inspection/CalcPrinters.mli[8,189+31]..[8,189+35])
+              Ptyp_constr "unit" (demos/calc-inspection/CalcPrinters.mli[8,189+31]..[8,189+35])
+              []
+        ]
+      []
+]
+
+open Parser.MenhirInterpreter
+val print : string -> unit
+val print_symbol : xsymbol -> unit
+val print_element : (element -> unit) option
+[
+  signature_item (demos/calc-inspection/CalcPrinters.mli[1,0+0]..demos/calc-inspection/CalcPrinters.mli[1,0+29])
+    Tsig_open Fresh "Dune__exe!.Parser.MenhirInterpreter"
+  signature_item (demos/calc-inspection/CalcPrinters.mli[6,129+0]..demos/calc-inspection/CalcPrinters.mli[6,129+25])
+    Tsig_value
+    value_description print/337 (demos/calc-inspection/CalcPrinters.mli[6,129+0]..demos/calc-inspection/CalcPrinters.mli[6,129+25])
+      core_type (demos/calc-inspection/CalcPrinters.mli[6,129+11]..demos/calc-inspection/CalcPrinters.mli[6,129+25])
+        Ttyp_arrow
+        Nolabel
+        core_type (demos/calc-inspection/CalcPrinters.mli[6,129+11]..demos/calc-inspection/CalcPrinters.mli[6,129+17])
+          Ttyp_constr "string/15!"
+          []
+        core_type (demos/calc-inspection/CalcPrinters.mli[6,129+21]..demos/calc-inspection/CalcPrinters.mli[6,129+25])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (demos/calc-inspection/CalcPrinters.mli[7,155+0]..demos/calc-inspection/CalcPrinters.mli[7,155+33])
+    Tsig_value
+    value_description print_symbol/338 (demos/calc-inspection/CalcPrinters.mli[7,155+0]..demos/calc-inspection/CalcPrinters.mli[7,155+33])
+      core_type (demos/calc-inspection/CalcPrinters.mli[7,155+18]..demos/calc-inspection/CalcPrinters.mli[7,155+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (demos/calc-inspection/CalcPrinters.mli[7,155+18]..demos/calc-inspection/CalcPrinters.mli[7,155+25])
+          Ttyp_constr "Dune__exe!.Parser.MenhirInterpreter.xsymbol"
+          []
+        core_type (demos/calc-inspection/CalcPrinters.mli[7,155+29]..demos/calc-inspection/CalcPrinters.mli[7,155+33])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (demos/calc-inspection/CalcPrinters.mli[8,189+0]..demos/calc-inspection/CalcPrinters.mli[8,189+43])
+    Tsig_value
+    value_description print_element/339 (demos/calc-inspection/CalcPrinters.mli[8,189+0]..demos/calc-inspection/CalcPrinters.mli[8,189+43])
+      core_type (demos/calc-inspection/CalcPrinters.mli[8,189+19]..demos/calc-inspection/CalcPrinters.mli[8,189+43])
+        Ttyp_constr "option/10!"
+        [
+          core_type (demos/calc-inspection/CalcPrinters.mli[8,189+20]..demos/calc-inspection/CalcPrinters.mli[8,189+35])
+            Ttyp_arrow
+            Nolabel
+            core_type (demos/calc-inspection/CalcPrinters.mli[8,189+20]..demos/calc-inspection/CalcPrinters.mli[8,189+27])
+              Ttyp_constr "Dune__exe!.Parser.MenhirInterpreter.element"
+              []
+            core_type (demos/calc-inspection/CalcPrinters.mli[8,189+31]..demos/calc-inspection/CalcPrinters.mli[8,189+35])
+              Ttyp_constr "unit/6!"
+              []
+        ]
+      []
+]
+

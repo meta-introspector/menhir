@@ -1,0 +1,1130 @@
+[
+  structure_item (src/sentenceLexer.mll[19,59+2]..[19,59+13])
+    Pstr_open Fresh
+    module_expr (src/sentenceLexer.mll[19,59+7]..[19,59+13])
+      Pmod_ident "Lexing" (src/sentenceLexer.mll[19,59+7]..[19,59+13])
+  structure_item (src/sentenceLexer.mll[20,73+2]..[20,73+21])
+    Pstr_open Fresh
+    module_expr (src/sentenceLexer.mll[20,73+7]..[20,73+21])
+      Pmod_ident "SentenceParser" (src/sentenceLexer.mll[20,73+7]..[20,73+21])
+  structure_item (src/sentenceLexer.mll[24,119+2]..[25,141+41])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceLexer.mll[24,119+6]..[24,119+12])
+          Ppat_var "error2" (src/sentenceLexer.mll[24,119+6]..[24,119+12])
+        expression (src/sentenceLexer.mll[24,119+13]..[25,141+41]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceLexer.mll[24,119+13]..[24,119+19])
+            Ppat_var "lexbuf" (src/sentenceLexer.mll[24,119+13]..[24,119+19])
+          expression (src/sentenceLexer.mll[25,141+4]..[25,141+41])
+            Pexp_apply
+            expression (src/sentenceLexer.mll[25,141+4]..[25,141+15])
+              Pexp_ident "Error.error" (src/sentenceLexer.mll[25,141+4]..[25,141+15])
+            [
+              <arg>
+              Nolabel
+                expression (src/sentenceLexer.mll[25,141+16]..[25,141+41])
+                  Pexp_apply
+                  expression (src/sentenceLexer.mll[25,141+17]..[25,141+33])
+                    Pexp_ident "Positions.lexbuf" (src/sentenceLexer.mll[25,141+17]..[25,141+33])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/sentenceLexer.mll[25,141+34]..[25,141+40])
+                        Pexp_ident "lexbuf" (src/sentenceLexer.mll[25,141+34]..[25,141+40])
+                  ]
+            ]
+    ]
+  structure_item (src/sentenceLexer.ml[14,213+0]..[211,12806+1])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceLexer.ml[14,213+4]..[14,213+22])
+          Ppat_var "__ocaml_lex_tables" (src/sentenceLexer.ml[14,213+4]..[14,213+22])
+        expression (src/sentenceLexer.ml[14,213+25]..[211,12806+1])
+          Pexp_record
+          [
+            "Lexing.lex_base" (src/sentenceLexer.ml[15,240+2]..[15,240+17])
+              expression (src/sentenceLexer.ml[16,260+3]..[18,400+5])
+                Pexp_constant PConst_string("\000\000\247\255\248\255\249\255\001\000\002\000\252\255\253\255\210\000\162\001\005\000\250\255\012\000\r\000\006\000\251\255",(src/sentenceLexer.ml[16,260+4]..[18,400+4]),None)
+            "Lexing.lex_backtrk" (src/sentenceLexer.ml[19,407+2]..[19,407+20])
+              expression (src/sentenceLexer.ml[20,430+3]..[22,570+5])
+                Pexp_constant PConst_string("\255\255\255\255\255\255\255\255\b\000\003\000\255\255\255\255\001\000\000\000\005\000\255\255\255\255\255\255\004\000\255\255",(src/sentenceLexer.ml[20,430+4]..[22,570+4]),None)
+            "Lexing.lex_default" (src/sentenceLexer.ml[23,577+2]..[23,577+20])
+              expression (src/sentenceLexer.ml[24,600+3]..[26,740+5])
+                Pexp_constant PConst_string("\001\000\000\000\000\000\000\000\012\000\255\255\000\000\000\000\255\255\255\255\255\255\000\000\012\000\r\000\255\255\000\000",(src/sentenceLexer.ml[24,600+4]..[26,740+4]),None)
+            "Lexing.lex_trans" (src/sentenceLexer.ml[27,747+2]..[27,747+18])
+              expression (src/sentenceLexer.ml[28,768+3]..[112,6648+29])
+                Pexp_constant PConst_string("\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\007\000\006\000\011\000\006\000\005\000\n\000\011\000\015\000\000\000\000\000\000\000\000\000\000\000\011\000\015\000\000\000\n\000\014\000\000\000\000\000\000\000\000\000\000\000\007\000\000\000\000\000\004\000\r\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\007\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\003\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000",(src/sentenceLexer.ml[28,768+4]..[112,6648+28]),None)
+            "Lexing.lex_check" (src/sentenceLexer.ml[113,6679+2]..[113,6679+18])
+              expression (src/sentenceLexer.ml[114,6700+3]..[198,12580+29])
+                Pexp_constant PConst_string("\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\004\000\005\000\000\000\004\000\n\000\014\000\255\255\255\255\255\255\255\255\255\255\012\000\r\000\255\255\012\000\r\000\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\000\000\004\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\012\000\r\000\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255",(src/sentenceLexer.ml[114,6700+4]..[198,12580+28]),None)
+            "Lexing.lex_base_code" (src/sentenceLexer.ml[199,12611+2]..[199,12611+22])
+              expression (src/sentenceLexer.ml[200,12636+3]..[200,12636+5])
+                Pexp_constant PConst_string("",(src/sentenceLexer.ml[200,12636+4]..[200,12636+4]),None)
+            "Lexing.lex_backtrk_code" (src/sentenceLexer.ml[201,12643+2]..[201,12643+25])
+              expression (src/sentenceLexer.ml[202,12671+3]..[202,12671+5])
+                Pexp_constant PConst_string("",(src/sentenceLexer.ml[202,12671+4]..[202,12671+4]),None)
+            "Lexing.lex_default_code" (src/sentenceLexer.ml[203,12678+2]..[203,12678+25])
+              expression (src/sentenceLexer.ml[204,12706+3]..[204,12706+5])
+                Pexp_constant PConst_string("",(src/sentenceLexer.ml[204,12706+4]..[204,12706+4]),None)
+            "Lexing.lex_trans_code" (src/sentenceLexer.ml[205,12713+2]..[205,12713+23])
+              expression (src/sentenceLexer.ml[206,12739+3]..[206,12739+5])
+                Pexp_constant PConst_string("",(src/sentenceLexer.ml[206,12739+4]..[206,12739+4]),None)
+            "Lexing.lex_check_code" (src/sentenceLexer.ml[207,12746+2]..[207,12746+23])
+              expression (src/sentenceLexer.ml[208,12772+3]..[208,12772+5])
+                Pexp_constant PConst_string("",(src/sentenceLexer.ml[208,12772+4]..[208,12772+4]),None)
+            "Lexing.lex_code" (src/sentenceLexer.ml[209,12779+2]..[209,12779+17])
+              expression (src/sentenceLexer.ml[210,12799+3]..[210,12799+5])
+                Pexp_constant PConst_string("",(src/sentenceLexer.ml[210,12799+4]..[210,12799+4]),None)
+          ]
+          None
+    ]
+  structure_item (src/sentenceLexer.ml[213,12809+0]..[279,14602+50])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/sentenceLexer.ml[213,12809+8]..[213,12809+11])
+          Ppat_var "lex" (src/sentenceLexer.ml[213,12809+8]..[213,12809+11])
+        expression (src/sentenceLexer.ml[213,12809+12]..[214,12830+31]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceLexer.ml[213,12809+12]..[213,12809+18])
+            Ppat_var "lexbuf" (src/sentenceLexer.ml[213,12809+12]..[213,12809+18])
+          expression (src/sentenceLexer.ml[214,12830+3]..[214,12830+31])
+            Pexp_apply
+            expression (src/sentenceLexer.ml[214,12830+3]..[214,12830+22])
+              Pexp_ident "__ocaml_lex_lex_rec" (src/sentenceLexer.ml[214,12830+3]..[214,12830+22])
+            [
+              <arg>
+              Nolabel
+                expression (src/sentenceLexer.ml[214,12830+23]..[214,12830+29])
+                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[214,12830+23]..[214,12830+29])
+              <arg>
+              Nolabel
+                expression (src/sentenceLexer.ml[214,12830+30]..[214,12830+31])
+                  Pexp_constant PConst_int (0,None)
+            ]
+      <def>
+        pattern (src/sentenceLexer.ml[215,12862+4]..[215,12862+23])
+          Ppat_var "__ocaml_lex_lex_rec" (src/sentenceLexer.ml[215,12862+4]..[215,12862+23])
+        expression (src/sentenceLexer.ml[215,12862+24]..[279,14602+50]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceLexer.ml[215,12862+24]..[215,12862+30])
+            Ppat_var "lexbuf" (src/sentenceLexer.ml[215,12862+24]..[215,12862+30])
+          expression (src/sentenceLexer.ml[215,12862+31]..[279,14602+50]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/sentenceLexer.ml[215,12862+31]..[215,12862+48])
+              Ppat_var "__ocaml_lex_state" (src/sentenceLexer.ml[215,12862+31]..[215,12862+48])
+            expression (src/sentenceLexer.ml[216,12913+2]..[279,14602+50])
+              Pexp_match
+              expression (src/sentenceLexer.ml[216,12913+8]..[216,12913+65])
+                Pexp_apply
+                expression (src/sentenceLexer.ml[216,12913+8]..[216,12913+21])
+                  Pexp_ident "Lexing.engine" (src/sentenceLexer.ml[216,12913+8]..[216,12913+21])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/sentenceLexer.ml[216,12913+22]..[216,12913+40])
+                      Pexp_ident "__ocaml_lex_tables" (src/sentenceLexer.ml[216,12913+22]..[216,12913+40])
+                  <arg>
+                  Nolabel
+                    expression (src/sentenceLexer.ml[216,12913+41]..[216,12913+58])
+                      Pexp_ident "__ocaml_lex_state" (src/sentenceLexer.ml[216,12913+41]..[216,12913+58])
+                  <arg>
+                  Nolabel
+                    expression (src/sentenceLexer.ml[216,12913+59]..[216,12913+65])
+                      Pexp_ident "lexbuf" (src/sentenceLexer.ml[216,12913+59]..[216,12913+65])
+                ]
+              [
+                <case>
+                  pattern (src/sentenceLexer.ml[217,12984+8]..[217,12984+9])
+                    Ppat_constant PConst_int (0,None)
+                  expression (src/sentenceLexer.ml[218,12997+0]..src/sentenceLexer.mll[49,13208+66])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/sentenceLexer.mll[48,13030+31]..[48,13030+34])
+                          Ppat_var "lid" (src/sentenceLexer.mll[48,13030+31]..[48,13030+34])
+                        expression (src/sentenceLexer.ml[222,13094+2]..[222,13094+81])
+                          Pexp_apply
+                          expression (src/sentenceLexer.ml[222,13094+2]..[222,13094+19])
+                            Pexp_ident "Lexing.sub_lexeme" (src/sentenceLexer.ml[222,13094+2]..[222,13094+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[222,13094+20]..[222,13094+26])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.ml[222,13094+20]..[222,13094+26])
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[222,13094+27]..[222,13094+54])
+                                Pexp_field
+                                expression (src/sentenceLexer.ml[222,13094+27]..[222,13094+33])
+                                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[222,13094+27]..[222,13094+33])
+                                "Lexing.lex_start_pos" (src/sentenceLexer.ml[222,13094+34]..[222,13094+54])
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[222,13094+55]..[222,13094+81])
+                                Pexp_field
+                                expression (src/sentenceLexer.ml[222,13094+55]..[222,13094+61])
+                                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[222,13094+55]..[222,13094+61])
+                                "Lexing.lex_curr_pos" (src/sentenceLexer.ml[222,13094+62]..[222,13094+81])
+                          ]
+                    ]
+                    expression (src/sentenceLexer.mll[49,13208+6]..[49,13208+66])
+                      Pexp_construct "NONTERMINAL" (src/sentenceLexer.mll[49,13208+8]..[49,13208+19])
+                      Some
+                        expression (src/sentenceLexer.mll[49,13208+20]..[49,13208+64])
+                          Pexp_tuple
+                          [
+                            expression (src/sentenceLexer.mll[49,13208+21]..[49,13208+24])
+                              Pexp_ident "lid" (src/sentenceLexer.mll[49,13208+21]..[49,13208+24])
+                            expression (src/sentenceLexer.mll[49,13208+26]..[49,13208+44])
+                              Pexp_field
+                              expression (src/sentenceLexer.mll[49,13208+26]..[49,13208+32])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.mll[49,13208+26]..[49,13208+32])
+                              "lex_start_p" (src/sentenceLexer.mll[49,13208+33]..[49,13208+44])
+                            expression (src/sentenceLexer.mll[49,13208+46]..[49,13208+63])
+                              Pexp_field
+                              expression (src/sentenceLexer.mll[49,13208+46]..[49,13208+52])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.mll[49,13208+46]..[49,13208+52])
+                              "lex_curr_p" (src/sentenceLexer.mll[49,13208+53]..[49,13208+63])
+                          ]
+                <case>
+                  pattern (src/sentenceLexer.ml[227,13305+4]..[227,13305+5])
+                    Ppat_constant PConst_int (1,None)
+                  expression (src/sentenceLexer.ml[228,13314+0]..src/sentenceLexer.mll[53,13525+63])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/sentenceLexer.mll[52,13347+31]..[52,13347+34])
+                          Ppat_var "uid" (src/sentenceLexer.mll[52,13347+31]..[52,13347+34])
+                        expression (src/sentenceLexer.ml[232,13411+2]..[232,13411+81])
+                          Pexp_apply
+                          expression (src/sentenceLexer.ml[232,13411+2]..[232,13411+19])
+                            Pexp_ident "Lexing.sub_lexeme" (src/sentenceLexer.ml[232,13411+2]..[232,13411+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[232,13411+20]..[232,13411+26])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.ml[232,13411+20]..[232,13411+26])
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[232,13411+27]..[232,13411+54])
+                                Pexp_field
+                                expression (src/sentenceLexer.ml[232,13411+27]..[232,13411+33])
+                                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[232,13411+27]..[232,13411+33])
+                                "Lexing.lex_start_pos" (src/sentenceLexer.ml[232,13411+34]..[232,13411+54])
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[232,13411+55]..[232,13411+81])
+                                Pexp_field
+                                expression (src/sentenceLexer.ml[232,13411+55]..[232,13411+61])
+                                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[232,13411+55]..[232,13411+61])
+                                "Lexing.lex_curr_pos" (src/sentenceLexer.ml[232,13411+62]..[232,13411+81])
+                          ]
+                    ]
+                    expression (src/sentenceLexer.mll[53,13525+6]..[53,13525+63])
+                      Pexp_construct "TERMINAL" (src/sentenceLexer.mll[53,13525+8]..[53,13525+16])
+                      Some
+                        expression (src/sentenceLexer.mll[53,13525+17]..[53,13525+61])
+                          Pexp_tuple
+                          [
+                            expression (src/sentenceLexer.mll[53,13525+18]..[53,13525+21])
+                              Pexp_ident "uid" (src/sentenceLexer.mll[53,13525+18]..[53,13525+21])
+                            expression (src/sentenceLexer.mll[53,13525+23]..[53,13525+41])
+                              Pexp_field
+                              expression (src/sentenceLexer.mll[53,13525+23]..[53,13525+29])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.mll[53,13525+23]..[53,13525+29])
+                              "lex_start_p" (src/sentenceLexer.mll[53,13525+30]..[53,13525+41])
+                            expression (src/sentenceLexer.mll[53,13525+43]..[53,13525+60])
+                              Pexp_field
+                              expression (src/sentenceLexer.mll[53,13525+43]..[53,13525+49])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.mll[53,13525+43]..[53,13525+49])
+                              "lex_curr_p" (src/sentenceLexer.mll[53,13525+50]..[53,13525+60])
+                          ]
+                <case>
+                  pattern (src/sentenceLexer.ml[237,13619+4]..[237,13619+5])
+                    Ppat_constant PConst_int (2,None)
+                  expression (src/sentenceLexer.mll[56,13657+6]..[56,13657+20])
+                    Pexp_apply
+                    expression (src/sentenceLexer.mll[56,13657+8]..[56,13657+11])
+                      Pexp_ident "lex" (src/sentenceLexer.mll[56,13657+8]..[56,13657+11])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/sentenceLexer.mll[56,13657+12]..[56,13657+18])
+                          Pexp_ident "lexbuf" (src/sentenceLexer.mll[56,13657+12]..[56,13657+18])
+                    ]
+                <case>
+                  pattern (src/sentenceLexer.ml[242,13708+4]..[242,13708+5])
+                    Ppat_constant PConst_int (3,None)
+                  expression (src/sentenceLexer.mll[59,13746+6]..[59,13746+30])
+                    Pexp_sequence
+                    expression (src/sentenceLexer.mll[59,13746+8]..[59,13746+23])
+                      Pexp_apply
+                      expression (src/sentenceLexer.mll[59,13746+8]..[59,13746+16])
+                        Pexp_ident "new_line" (src/sentenceLexer.mll[59,13746+8]..[59,13746+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceLexer.mll[59,13746+17]..[59,13746+23])
+                            Pexp_ident "lexbuf" (src/sentenceLexer.mll[59,13746+17]..[59,13746+23])
+                      ]
+                    expression (src/sentenceLexer.mll[59,13746+25]..[59,13746+28])
+                      Pexp_construct "EOL" (src/sentenceLexer.mll[59,13746+25]..[59,13746+28])
+                      None
+                <case>
+                  pattern (src/sentenceLexer.ml[247,13807+4]..[247,13807+5])
+                    Ppat_constant PConst_int (4,None)
+                  expression (src/sentenceLexer.mll[62,13845+6]..[62,13845+37])
+                    Pexp_sequence
+                    expression (src/sentenceLexer.mll[62,13845+8]..[62,13845+23])
+                      Pexp_apply
+                      expression (src/sentenceLexer.mll[62,13845+8]..[62,13845+16])
+                        Pexp_ident "new_line" (src/sentenceLexer.mll[62,13845+8]..[62,13845+16])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceLexer.mll[62,13845+17]..[62,13845+23])
+                            Pexp_ident "lexbuf" (src/sentenceLexer.mll[62,13845+17]..[62,13845+23])
+                      ]
+                    expression (src/sentenceLexer.mll[62,13845+25]..[62,13845+35])
+                      Pexp_apply
+                      expression (src/sentenceLexer.mll[62,13845+25]..[62,13845+28])
+                        Pexp_ident "lex" (src/sentenceLexer.mll[62,13845+25]..[62,13845+28])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceLexer.mll[62,13845+29]..[62,13845+35])
+                            Pexp_ident "lexbuf" (src/sentenceLexer.mll[62,13845+29]..[62,13845+35])
+                      ]
+                <case>
+                  pattern (src/sentenceLexer.ml[252,13913+4]..[252,13913+5])
+                    Ppat_constant PConst_int (5,None)
+                  expression (src/sentenceLexer.ml[253,13922+0]..src/sentenceLexer.mll[65,14115+36])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/sentenceLexer.mll[64,13955+15]..[64,13955+16])
+                          Ppat_var "c" (src/sentenceLexer.mll[64,13955+15]..[64,13955+16])
+                        expression (src/sentenceLexer.ml[257,14001+2]..[257,14001+81])
+                          Pexp_apply
+                          expression (src/sentenceLexer.ml[257,14001+2]..[257,14001+19])
+                            Pexp_ident "Lexing.sub_lexeme" (src/sentenceLexer.ml[257,14001+2]..[257,14001+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[257,14001+20]..[257,14001+26])
+                                Pexp_ident "lexbuf" (src/sentenceLexer.ml[257,14001+20]..[257,14001+26])
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[257,14001+27]..[257,14001+54])
+                                Pexp_field
+                                expression (src/sentenceLexer.ml[257,14001+27]..[257,14001+33])
+                                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[257,14001+27]..[257,14001+33])
+                                "Lexing.lex_start_pos" (src/sentenceLexer.ml[257,14001+34]..[257,14001+54])
+                            <arg>
+                            Nolabel
+                              expression (src/sentenceLexer.ml[257,14001+55]..[257,14001+81])
+                                Pexp_field
+                                expression (src/sentenceLexer.ml[257,14001+55]..[257,14001+61])
+                                  Pexp_ident "lexbuf" (src/sentenceLexer.ml[257,14001+55]..[257,14001+61])
+                                "Lexing.lex_curr_pos" (src/sentenceLexer.ml[257,14001+62]..[257,14001+81])
+                          ]
+                    ]
+                    expression (src/sentenceLexer.mll[65,14115+6]..[65,14115+36])
+                      Pexp_sequence
+                      expression (src/sentenceLexer.mll[65,14115+8]..[65,14115+23])
+                        Pexp_apply
+                        expression (src/sentenceLexer.mll[65,14115+8]..[65,14115+16])
+                          Pexp_ident "new_line" (src/sentenceLexer.mll[65,14115+8]..[65,14115+16])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/sentenceLexer.mll[65,14115+17]..[65,14115+23])
+                              Pexp_ident "lexbuf" (src/sentenceLexer.mll[65,14115+17]..[65,14115+23])
+                        ]
+                      expression (src/sentenceLexer.mll[65,14115+25]..[65,14115+34])
+                        Pexp_construct "COMMENT" (src/sentenceLexer.mll[65,14115+25]..[65,14115+32])
+                        Some
+                          expression (src/sentenceLexer.mll[65,14115+33]..[65,14115+34])
+                            Pexp_ident "c" (src/sentenceLexer.mll[65,14115+33]..[65,14115+34])
+                <case>
+                  pattern (src/sentenceLexer.ml[262,14182+4]..[262,14182+5])
+                    Ppat_constant PConst_int (6,None)
+                  expression (src/sentenceLexer.mll[68,14220+6]..[68,14220+13])
+                    Pexp_construct "EOF" (src/sentenceLexer.mll[68,14220+8]..[68,14220+11])
+                    None
+                <case>
+                  pattern (src/sentenceLexer.ml[267,14264+4]..[267,14264+5])
+                    Ppat_constant PConst_int (7,None)
+                  expression (src/sentenceLexer.mll[71,14302+6]..[71,14302+15])
+                    Pexp_construct "COLON" (src/sentenceLexer.mll[71,14302+8]..[71,14302+13])
+                    None
+                <case>
+                  pattern (src/sentenceLexer.ml[272,14348+4]..[272,14348+5])
+                    Ppat_constant PConst_int (8,None)
+                  expression (src/sentenceLexer.mll[73,14386+6]..[74,14434+78])
+                    Pexp_apply
+                    expression (src/sentenceLexer.mll[73,14386+8]..[73,14386+14])
+                      Pexp_ident "error2" (src/sentenceLexer.mll[73,14386+8]..[73,14386+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/sentenceLexer.mll[73,14386+15]..[73,14386+21])
+                          Pexp_ident "lexbuf" (src/sentenceLexer.mll[73,14386+15]..[73,14386+21])
+                      <arg>
+                      Nolabel
+                        expression (src/sentenceLexer.mll[73,14386+22]..[74,14434+76])
+                          Pexp_constant PConst_string("unexpected character.\n(I believe I am reading a sentence, but may be off.)",(src/sentenceLexer.mll[73,14386+23]..[74,14434+75]),None)
+                    ]
+                <case>
+                  pattern (src/sentenceLexer.ml[278,14543+4]..[278,14543+21])
+                    Ppat_var "__ocaml_lex_state" (src/sentenceLexer.ml[278,14543+4]..[278,14543+21])
+                  expression (src/sentenceLexer.ml[278,14543+25]..[279,14602+50])
+                    Pexp_sequence
+                    expression (src/sentenceLexer.ml[278,14543+25]..[278,14543+57])
+                      Pexp_apply
+                      expression (src/sentenceLexer.ml[278,14543+25]..[278,14543+50])
+                        Pexp_field
+                        expression (src/sentenceLexer.ml[278,14543+25]..[278,14543+31])
+                          Pexp_ident "lexbuf" (src/sentenceLexer.ml[278,14543+25]..[278,14543+31])
+                        "Lexing.refill_buff" (src/sentenceLexer.ml[278,14543+32]..[278,14543+50])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceLexer.ml[278,14543+51]..[278,14543+57])
+                            Pexp_ident "lexbuf" (src/sentenceLexer.ml[278,14543+51]..[278,14543+57])
+                      ]
+                    expression (src/sentenceLexer.ml[279,14602+6]..[279,14602+50])
+                      Pexp_apply
+                      expression (src/sentenceLexer.ml[279,14602+6]..[279,14602+25])
+                        Pexp_ident "__ocaml_lex_lex_rec" (src/sentenceLexer.ml[279,14602+6]..[279,14602+25])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceLexer.ml[279,14602+26]..[279,14602+32])
+                            Pexp_ident "lexbuf" (src/sentenceLexer.ml[279,14602+26]..[279,14602+32])
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceLexer.ml[279,14602+33]..[279,14602+50])
+                            Pexp_ident "__ocaml_lex_state" (src/sentenceLexer.ml[279,14602+33]..[279,14602+50])
+                      ]
+              ]
+    ]
+]
+
+open Lexing
+open SentenceParser
+let error2 lexbuf = Error.error (Positions.lexbuf lexbuf)
+let __ocaml_lex_tables =
+  {
+    Lexing.lex_base =
+      "\000\000\247\255\248\255\249\255\001\000\002\000\252\255\253\255\210\000\162\001\005\000\250\255\012\000\r\000\006\000\251\255";
+    Lexing.lex_backtrk =
+      "\255\255\255\255\255\255\255\255\b\000\003\000\255\255\255\255\001\000\000\000\005\000\255\255\255\255\255\255\004\000\255\255";
+    Lexing.lex_default =
+      "\001\000\000\000\000\000\000\000\012\000\255\255\000\000\000\000\255\255\255\255\255\255\000\000\012\000\r\000\255\255\000\000";
+    Lexing.lex_trans =
+      "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\007\000\006\000\011\000\006\000\005\000\n\000\011\000\015\000\000\000\000\000\000\000\000\000\000\000\011\000\015\000\000\000\n\000\014\000\000\000\000\000\000\000\000\000\000\000\007\000\000\000\000\000\004\000\r\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\007\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\003\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000";
+    Lexing.lex_check =
+      "\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\004\000\005\000\000\000\004\000\n\000\014\000\255\255\255\255\255\255\255\255\255\255\012\000\r\000\255\255\012\000\r\000\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\000\000\004\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\012\000\r\000\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255";
+    Lexing.lex_base_code = "";
+    Lexing.lex_backtrk_code = "";
+    Lexing.lex_default_code = "";
+    Lexing.lex_trans_code = "";
+    Lexing.lex_check_code = "";
+    Lexing.lex_code = ""
+  }
+let rec lex lexbuf = __ocaml_lex_lex_rec lexbuf 0
+and __ocaml_lex_lex_rec lexbuf __ocaml_lex_state =
+  match Lexing.engine __ocaml_lex_tables __ocaml_lex_state lexbuf with
+  | 0 ->
+      let lid =
+        Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos
+          lexbuf.Lexing.lex_curr_pos in
+      NONTERMINAL (lid, (lexbuf.lex_start_p), (lexbuf.lex_curr_p))
+  | 1 ->
+      let uid =
+        Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos
+          lexbuf.Lexing.lex_curr_pos in
+      TERMINAL (uid, (lexbuf.lex_start_p), (lexbuf.lex_curr_p))
+  | 2 -> lex lexbuf
+  | 3 -> (new_line lexbuf; EOL)
+  | 4 -> (new_line lexbuf; lex lexbuf)
+  | 5 ->
+      let c =
+        Lexing.sub_lexeme lexbuf lexbuf.Lexing.lex_start_pos
+          lexbuf.Lexing.lex_curr_pos in
+      (new_line lexbuf; COMMENT c)
+  | 6 -> EOF
+  | 7 -> COLON
+  | 8 ->
+      error2 lexbuf
+        "unexpected character.\n(I believe I am reading a sentence, but may be off.)"
+  | __ocaml_lex_state ->
+      (lexbuf.Lexing.refill_buff lexbuf;
+       __ocaml_lex_lex_rec lexbuf __ocaml_lex_state)
+[
+  structure_item (src/sentenceLexer.mll[19,59+2]..src/sentenceLexer.mll[19,59+13])
+    Tstr_open Fresh
+    module_expr (src/sentenceLexer.mll[19,59+7]..src/sentenceLexer.mll[19,59+13])
+      Tmod_ident "Stdlib!.Lexing"
+  structure_item (src/sentenceLexer.mll[20,73+2]..src/sentenceLexer.mll[20,73+21])
+    Tstr_open Fresh
+    module_expr (src/sentenceLexer.mll[20,73+7]..src/sentenceLexer.mll[20,73+21])
+      Tmod_ident "Dune__exe!.SentenceParser"
+  structure_item (src/sentenceLexer.mll[24,119+2]..src/sentenceLexer.mll[25,141+41])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceLexer.mll[24,119+6]..src/sentenceLexer.mll[24,119+12])
+          Tpat_var "error2/424"
+        expression (src/sentenceLexer.mll[24,119+13]..src/sentenceLexer.mll[25,141+41]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceLexer.mll[24,119+13]..src/sentenceLexer.mll[24,119+19])
+                Tpat_var "lexbuf/426"
+              expression (src/sentenceLexer.mll[25,141+4]..src/sentenceLexer.mll[25,141+41])
+                Texp_apply
+                expression (src/sentenceLexer.mll[25,141+4]..src/sentenceLexer.mll[25,141+15])
+                  Texp_ident "Dune__exe!.Error.error"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/sentenceLexer.mll[25,141+16]..src/sentenceLexer.mll[25,141+41])
+                      Texp_apply
+                      expression (src/sentenceLexer.mll[25,141+17]..src/sentenceLexer.mll[25,141+33])
+                        Texp_ident "Dune__exe!.Positions.lexbuf"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/sentenceLexer.mll[25,141+34]..src/sentenceLexer.mll[25,141+40])
+                            Texp_ident "lexbuf/426"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/sentenceLexer.ml[14,213+0]..src/sentenceLexer.ml[211,12806+1])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceLexer.ml[14,213+4]..src/sentenceLexer.ml[14,213+22])
+          Tpat_var "__ocaml_lex_tables/501"
+        expression (src/sentenceLexer.ml[14,213+25]..src/sentenceLexer.ml[211,12806+1])
+          Texp_record
+            fields =
+              [
+                "Lexing.lex_base"
+                  expression (src/sentenceLexer.ml[16,260+3]..src/sentenceLexer.ml[18,400+5])
+                    Texp_constant Const_string("\000\000\247\255\248\255\249\255\001\000\002\000\252\255\253\255\210\000\162\001\005\000\250\255\012\000\r\000\006\000\251\255",(src/sentenceLexer.ml[16,260+4]..src/sentenceLexer.ml[18,400+4]),None)
+                "Lexing.lex_backtrk"
+                  expression (src/sentenceLexer.ml[20,430+3]..src/sentenceLexer.ml[22,570+5])
+                    Texp_constant Const_string("\255\255\255\255\255\255\255\255\b\000\003\000\255\255\255\255\001\000\000\000\005\000\255\255\255\255\255\255\004\000\255\255",(src/sentenceLexer.ml[20,430+4]..src/sentenceLexer.ml[22,570+4]),None)
+                "Lexing.lex_default"
+                  expression (src/sentenceLexer.ml[24,600+3]..src/sentenceLexer.ml[26,740+5])
+                    Texp_constant Const_string("\001\000\000\000\000\000\000\000\012\000\255\255\000\000\000\000\255\255\255\255\255\255\000\000\012\000\r\000\255\255\000\000",(src/sentenceLexer.ml[24,600+4]..src/sentenceLexer.ml[26,740+4]),None)
+                "Lexing.lex_trans"
+                  expression (src/sentenceLexer.ml[28,768+3]..src/sentenceLexer.ml[112,6648+29])
+                    Texp_constant Const_string("\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\007\000\006\000\011\000\006\000\005\000\n\000\011\000\015\000\000\000\000\000\000\000\000\000\000\000\011\000\015\000\000\000\n\000\014\000\000\000\000\000\000\000\000\000\000\000\007\000\000\000\000\000\004\000\r\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\007\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\003\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000",(src/sentenceLexer.ml[28,768+4]..src/sentenceLexer.ml[112,6648+28]),None)
+                "Lexing.lex_check"
+                  expression (src/sentenceLexer.ml[114,6700+3]..src/sentenceLexer.ml[198,12580+29])
+                    Texp_constant Const_string("\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\004\000\005\000\000\000\004\000\n\000\014\000\255\255\255\255\255\255\255\255\255\255\012\000\r\000\255\255\012\000\r\000\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\000\000\004\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\012\000\r\000\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255",(src/sentenceLexer.ml[114,6700+4]..src/sentenceLexer.ml[198,12580+28]),None)
+                "Lexing.lex_base_code"
+                  expression (src/sentenceLexer.ml[200,12636+3]..src/sentenceLexer.ml[200,12636+5])
+                    Texp_constant Const_string("",(src/sentenceLexer.ml[200,12636+4]..src/sentenceLexer.ml[200,12636+4]),None)
+                "Lexing.lex_backtrk_code"
+                  expression (src/sentenceLexer.ml[202,12671+3]..src/sentenceLexer.ml[202,12671+5])
+                    Texp_constant Const_string("",(src/sentenceLexer.ml[202,12671+4]..src/sentenceLexer.ml[202,12671+4]),None)
+                "Lexing.lex_default_code"
+                  expression (src/sentenceLexer.ml[204,12706+3]..src/sentenceLexer.ml[204,12706+5])
+                    Texp_constant Const_string("",(src/sentenceLexer.ml[204,12706+4]..src/sentenceLexer.ml[204,12706+4]),None)
+                "Lexing.lex_trans_code"
+                  expression (src/sentenceLexer.ml[206,12739+3]..src/sentenceLexer.ml[206,12739+5])
+                    Texp_constant Const_string("",(src/sentenceLexer.ml[206,12739+4]..src/sentenceLexer.ml[206,12739+4]),None)
+                "Lexing.lex_check_code"
+                  expression (src/sentenceLexer.ml[208,12772+3]..src/sentenceLexer.ml[208,12772+5])
+                    Texp_constant Const_string("",(src/sentenceLexer.ml[208,12772+4]..src/sentenceLexer.ml[208,12772+4]),None)
+                "Lexing.lex_code"
+                  expression (src/sentenceLexer.ml[210,12799+3]..src/sentenceLexer.ml[210,12799+5])
+                    Texp_constant Const_string("",(src/sentenceLexer.ml[210,12799+4]..src/sentenceLexer.ml[210,12799+4]),None)
+              ]
+            representation =
+              Record_regular
+            extended_expression =
+              None
+    ]
+  structure_item (src/sentenceLexer.ml[213,12809+0]..src/sentenceLexer.ml[279,14602+50])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/sentenceLexer.ml[213,12809+8]..src/sentenceLexer.ml[213,12809+11])
+          Tpat_var "lex/502"
+        expression (src/sentenceLexer.ml[213,12809+12]..src/sentenceLexer.ml[214,12830+31]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceLexer.ml[213,12809+12]..src/sentenceLexer.ml[213,12809+18])
+                Tpat_var "lexbuf/504"
+              expression (src/sentenceLexer.ml[214,12830+3]..src/sentenceLexer.ml[214,12830+31])
+                Texp_apply
+                expression (src/sentenceLexer.ml[214,12830+3]..src/sentenceLexer.ml[214,12830+22])
+                  Texp_ident "__ocaml_lex_lex_rec/503"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/sentenceLexer.ml[214,12830+23]..src/sentenceLexer.ml[214,12830+29])
+                      Texp_ident "lexbuf/504"
+                  <arg>
+                    Nolabel
+                    expression (src/sentenceLexer.ml[214,12830+30]..src/sentenceLexer.ml[214,12830+31])
+                      Texp_constant Const_int 0
+                ]
+          ]
+      <def>
+        pattern (src/sentenceLexer.ml[215,12862+4]..src/sentenceLexer.ml[215,12862+23])
+          Tpat_var "__ocaml_lex_lex_rec/503"
+        expression (src/sentenceLexer.ml[215,12862+24]..src/sentenceLexer.ml[279,14602+50]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceLexer.ml[215,12862+24]..src/sentenceLexer.ml[215,12862+30])
+                Tpat_var "lexbuf/505"
+              expression (src/sentenceLexer.ml[215,12862+31]..src/sentenceLexer.ml[279,14602+50]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/sentenceLexer.ml[215,12862+31]..src/sentenceLexer.ml[215,12862+48])
+                      Tpat_var "__ocaml_lex_state/506"
+                    expression (src/sentenceLexer.ml[216,12913+2]..src/sentenceLexer.ml[279,14602+50])
+                      Texp_match
+                      expression (src/sentenceLexer.ml[216,12913+8]..src/sentenceLexer.ml[216,12913+65])
+                        Texp_apply
+                        expression (src/sentenceLexer.ml[216,12913+8]..src/sentenceLexer.ml[216,12913+21])
+                          Texp_ident "Stdlib!.Lexing.engine"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/sentenceLexer.ml[216,12913+22]..src/sentenceLexer.ml[216,12913+40])
+                              Texp_ident "__ocaml_lex_tables/501"
+                          <arg>
+                            Nolabel
+                            expression (src/sentenceLexer.ml[216,12913+41]..src/sentenceLexer.ml[216,12913+58])
+                              Texp_ident "__ocaml_lex_state/506"
+                          <arg>
+                            Nolabel
+                            expression (src/sentenceLexer.ml[216,12913+59]..src/sentenceLexer.ml[216,12913+65])
+                              Texp_ident "lexbuf/505"
+                        ]
+                      [
+                        <case>
+                          pattern (src/sentenceLexer.ml[217,12984+8]..src/sentenceLexer.ml[217,12984+9])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[217,12984+8]..src/sentenceLexer.ml[217,12984+9])
+                              Tpat_constant Const_int 0
+                          expression (src/sentenceLexer.ml[218,12997+0]..src/sentenceLexer.mll[49,13208+66])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/sentenceLexer.mll[48,13030+31]..src/sentenceLexer.mll[48,13030+34])
+                                  Tpat_var "lid/508"
+                                expression (src/sentenceLexer.ml[222,13094+2]..src/sentenceLexer.ml[222,13094+81])
+                                  Texp_apply
+                                  expression (src/sentenceLexer.ml[222,13094+2]..src/sentenceLexer.ml[222,13094+19])
+                                    Texp_ident "Stdlib!.Lexing.sub_lexeme"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[222,13094+20]..src/sentenceLexer.ml[222,13094+26])
+                                        Texp_ident "lexbuf/505"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[222,13094+27]..src/sentenceLexer.ml[222,13094+54])
+                                        Texp_field
+                                        expression (src/sentenceLexer.ml[222,13094+27]..src/sentenceLexer.ml[222,13094+33])
+                                          Texp_ident "lexbuf/505"
+                                        "Lexing.lex_start_pos"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[222,13094+55]..src/sentenceLexer.ml[222,13094+81])
+                                        Texp_field
+                                        expression (src/sentenceLexer.ml[222,13094+55]..src/sentenceLexer.ml[222,13094+61])
+                                          Texp_ident "lexbuf/505"
+                                        "Lexing.lex_curr_pos"
+                                  ]
+                            ]
+                            expression (src/sentenceLexer.mll[49,13208+6]..src/sentenceLexer.mll[49,13208+66])
+                              Texp_construct "NONTERMINAL"
+                              [
+                                expression (src/sentenceLexer.mll[49,13208+20]..src/sentenceLexer.mll[49,13208+64])
+                                  Texp_tuple
+                                  [
+                                    expression (src/sentenceLexer.mll[49,13208+21]..src/sentenceLexer.mll[49,13208+24])
+                                      Texp_ident "lid/508"
+                                    expression (src/sentenceLexer.mll[49,13208+26]..src/sentenceLexer.mll[49,13208+44])
+                                      Texp_field
+                                      expression (src/sentenceLexer.mll[49,13208+26]..src/sentenceLexer.mll[49,13208+32])
+                                        Texp_ident "lexbuf/505"
+                                      "lex_start_p"
+                                    expression (src/sentenceLexer.mll[49,13208+46]..src/sentenceLexer.mll[49,13208+63])
+                                      Texp_field
+                                      expression (src/sentenceLexer.mll[49,13208+46]..src/sentenceLexer.mll[49,13208+52])
+                                        Texp_ident "lexbuf/505"
+                                      "lex_curr_p"
+                                  ]
+                              ]
+                        <case>
+                          pattern (src/sentenceLexer.ml[227,13305+4]..src/sentenceLexer.ml[227,13305+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[227,13305+4]..src/sentenceLexer.ml[227,13305+5])
+                              Tpat_constant Const_int 1
+                          expression (src/sentenceLexer.ml[228,13314+0]..src/sentenceLexer.mll[53,13525+63])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/sentenceLexer.mll[52,13347+31]..src/sentenceLexer.mll[52,13347+34])
+                                  Tpat_var "uid/524"
+                                expression (src/sentenceLexer.ml[232,13411+2]..src/sentenceLexer.ml[232,13411+81])
+                                  Texp_apply
+                                  expression (src/sentenceLexer.ml[232,13411+2]..src/sentenceLexer.ml[232,13411+19])
+                                    Texp_ident "Stdlib!.Lexing.sub_lexeme"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[232,13411+20]..src/sentenceLexer.ml[232,13411+26])
+                                        Texp_ident "lexbuf/505"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[232,13411+27]..src/sentenceLexer.ml[232,13411+54])
+                                        Texp_field
+                                        expression (src/sentenceLexer.ml[232,13411+27]..src/sentenceLexer.ml[232,13411+33])
+                                          Texp_ident "lexbuf/505"
+                                        "Lexing.lex_start_pos"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[232,13411+55]..src/sentenceLexer.ml[232,13411+81])
+                                        Texp_field
+                                        expression (src/sentenceLexer.ml[232,13411+55]..src/sentenceLexer.ml[232,13411+61])
+                                          Texp_ident "lexbuf/505"
+                                        "Lexing.lex_curr_pos"
+                                  ]
+                            ]
+                            expression (src/sentenceLexer.mll[53,13525+6]..src/sentenceLexer.mll[53,13525+63])
+                              Texp_construct "TERMINAL"
+                              [
+                                expression (src/sentenceLexer.mll[53,13525+17]..src/sentenceLexer.mll[53,13525+61])
+                                  Texp_tuple
+                                  [
+                                    expression (src/sentenceLexer.mll[53,13525+18]..src/sentenceLexer.mll[53,13525+21])
+                                      Texp_ident "uid/524"
+                                    expression (src/sentenceLexer.mll[53,13525+23]..src/sentenceLexer.mll[53,13525+41])
+                                      Texp_field
+                                      expression (src/sentenceLexer.mll[53,13525+23]..src/sentenceLexer.mll[53,13525+29])
+                                        Texp_ident "lexbuf/505"
+                                      "lex_start_p"
+                                    expression (src/sentenceLexer.mll[53,13525+43]..src/sentenceLexer.mll[53,13525+60])
+                                      Texp_field
+                                      expression (src/sentenceLexer.mll[53,13525+43]..src/sentenceLexer.mll[53,13525+49])
+                                        Texp_ident "lexbuf/505"
+                                      "lex_curr_p"
+                                  ]
+                              ]
+                        <case>
+                          pattern (src/sentenceLexer.ml[237,13619+4]..src/sentenceLexer.ml[237,13619+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[237,13619+4]..src/sentenceLexer.ml[237,13619+5])
+                              Tpat_constant Const_int 2
+                          expression (src/sentenceLexer.mll[56,13657+6]..src/sentenceLexer.mll[56,13657+20])
+                            Texp_apply
+                            expression (src/sentenceLexer.mll[56,13657+8]..src/sentenceLexer.mll[56,13657+11])
+                              Texp_ident "lex/502"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/sentenceLexer.mll[56,13657+12]..src/sentenceLexer.mll[56,13657+18])
+                                  Texp_ident "lexbuf/505"
+                            ]
+                        <case>
+                          pattern (src/sentenceLexer.ml[242,13708+4]..src/sentenceLexer.ml[242,13708+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[242,13708+4]..src/sentenceLexer.ml[242,13708+5])
+                              Tpat_constant Const_int 3
+                          expression (src/sentenceLexer.mll[59,13746+6]..src/sentenceLexer.mll[59,13746+30])
+                            Texp_sequence
+                            expression (src/sentenceLexer.mll[59,13746+8]..src/sentenceLexer.mll[59,13746+23])
+                              Texp_apply
+                              expression (src/sentenceLexer.mll[59,13746+8]..src/sentenceLexer.mll[59,13746+16])
+                                Texp_ident "Stdlib!.Lexing.new_line"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/sentenceLexer.mll[59,13746+17]..src/sentenceLexer.mll[59,13746+23])
+                                    Texp_ident "lexbuf/505"
+                              ]
+                            expression (src/sentenceLexer.mll[59,13746+25]..src/sentenceLexer.mll[59,13746+28])
+                              Texp_construct "EOL"
+                              []
+                        <case>
+                          pattern (src/sentenceLexer.ml[247,13807+4]..src/sentenceLexer.ml[247,13807+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[247,13807+4]..src/sentenceLexer.ml[247,13807+5])
+                              Tpat_constant Const_int 4
+                          expression (src/sentenceLexer.mll[62,13845+6]..src/sentenceLexer.mll[62,13845+37])
+                            Texp_sequence
+                            expression (src/sentenceLexer.mll[62,13845+8]..src/sentenceLexer.mll[62,13845+23])
+                              Texp_apply
+                              expression (src/sentenceLexer.mll[62,13845+8]..src/sentenceLexer.mll[62,13845+16])
+                                Texp_ident "Stdlib!.Lexing.new_line"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/sentenceLexer.mll[62,13845+17]..src/sentenceLexer.mll[62,13845+23])
+                                    Texp_ident "lexbuf/505"
+                              ]
+                            expression (src/sentenceLexer.mll[62,13845+25]..src/sentenceLexer.mll[62,13845+35])
+                              Texp_apply
+                              expression (src/sentenceLexer.mll[62,13845+25]..src/sentenceLexer.mll[62,13845+28])
+                                Texp_ident "lex/502"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/sentenceLexer.mll[62,13845+29]..src/sentenceLexer.mll[62,13845+35])
+                                    Texp_ident "lexbuf/505"
+                              ]
+                        <case>
+                          pattern (src/sentenceLexer.ml[252,13913+4]..src/sentenceLexer.ml[252,13913+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[252,13913+4]..src/sentenceLexer.ml[252,13913+5])
+                              Tpat_constant Const_int 5
+                          expression (src/sentenceLexer.ml[253,13922+0]..src/sentenceLexer.mll[65,14115+36])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/sentenceLexer.mll[64,13955+15]..src/sentenceLexer.mll[64,13955+16])
+                                  Tpat_var "c/528"
+                                expression (src/sentenceLexer.ml[257,14001+2]..src/sentenceLexer.ml[257,14001+81])
+                                  Texp_apply
+                                  expression (src/sentenceLexer.ml[257,14001+2]..src/sentenceLexer.ml[257,14001+19])
+                                    Texp_ident "Stdlib!.Lexing.sub_lexeme"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[257,14001+20]..src/sentenceLexer.ml[257,14001+26])
+                                        Texp_ident "lexbuf/505"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[257,14001+27]..src/sentenceLexer.ml[257,14001+54])
+                                        Texp_field
+                                        expression (src/sentenceLexer.ml[257,14001+27]..src/sentenceLexer.ml[257,14001+33])
+                                          Texp_ident "lexbuf/505"
+                                        "Lexing.lex_start_pos"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/sentenceLexer.ml[257,14001+55]..src/sentenceLexer.ml[257,14001+81])
+                                        Texp_field
+                                        expression (src/sentenceLexer.ml[257,14001+55]..src/sentenceLexer.ml[257,14001+61])
+                                          Texp_ident "lexbuf/505"
+                                        "Lexing.lex_curr_pos"
+                                  ]
+                            ]
+                            expression (src/sentenceLexer.mll[65,14115+6]..src/sentenceLexer.mll[65,14115+36])
+                              Texp_sequence
+                              expression (src/sentenceLexer.mll[65,14115+8]..src/sentenceLexer.mll[65,14115+23])
+                                Texp_apply
+                                expression (src/sentenceLexer.mll[65,14115+8]..src/sentenceLexer.mll[65,14115+16])
+                                  Texp_ident "Stdlib!.Lexing.new_line"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/sentenceLexer.mll[65,14115+17]..src/sentenceLexer.mll[65,14115+23])
+                                      Texp_ident "lexbuf/505"
+                                ]
+                              expression (src/sentenceLexer.mll[65,14115+25]..src/sentenceLexer.mll[65,14115+34])
+                                Texp_construct "COMMENT"
+                                [
+                                  expression (src/sentenceLexer.mll[65,14115+33]..src/sentenceLexer.mll[65,14115+34])
+                                    Texp_ident "c/528"
+                                ]
+                        <case>
+                          pattern (src/sentenceLexer.ml[262,14182+4]..src/sentenceLexer.ml[262,14182+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[262,14182+4]..src/sentenceLexer.ml[262,14182+5])
+                              Tpat_constant Const_int 6
+                          expression (src/sentenceLexer.mll[68,14220+6]..src/sentenceLexer.mll[68,14220+13])
+                            Texp_construct "EOF"
+                            []
+                        <case>
+                          pattern (src/sentenceLexer.ml[267,14264+4]..src/sentenceLexer.ml[267,14264+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[267,14264+4]..src/sentenceLexer.ml[267,14264+5])
+                              Tpat_constant Const_int 7
+                          expression (src/sentenceLexer.mll[71,14302+6]..src/sentenceLexer.mll[71,14302+15])
+                            Texp_construct "COLON"
+                            []
+                        <case>
+                          pattern (src/sentenceLexer.ml[272,14348+4]..src/sentenceLexer.ml[272,14348+5])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[272,14348+4]..src/sentenceLexer.ml[272,14348+5])
+                              Tpat_constant Const_int 8
+                          expression (src/sentenceLexer.mll[73,14386+6]..src/sentenceLexer.mll[74,14434+78])
+                            Texp_apply
+                            expression (src/sentenceLexer.mll[73,14386+8]..src/sentenceLexer.mll[73,14386+14])
+                              Texp_ident "error2/424"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/sentenceLexer.mll[73,14386+15]..src/sentenceLexer.mll[73,14386+21])
+                                  Texp_ident "lexbuf/505"
+                              <arg>
+                                Nolabel
+                                expression (src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76]) ghost
+                                          Texp_constant Const_string("unexpected character.\n(I believe I am reading a sentence, but may be off.)",(src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76]) ghost,None)
+                                        expression (src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                          []
+                                      ]
+                                    expression (src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76]) ghost
+                                      Texp_constant Const_string("unexpected character.\n(I believe I am reading a sentence, but may be off.)",(src/sentenceLexer.mll[73,14386+22]..src/sentenceLexer.mll[74,14434+76]) ghost,None)
+                                  ]
+                            ]
+                        <case>
+                          pattern (src/sentenceLexer.ml[278,14543+4]..src/sentenceLexer.ml[278,14543+21])
+                            Tpat_value
+                            pattern (src/sentenceLexer.ml[278,14543+4]..src/sentenceLexer.ml[278,14543+21])
+                              Tpat_var "__ocaml_lex_state/507"
+                          expression (src/sentenceLexer.ml[278,14543+25]..src/sentenceLexer.ml[279,14602+50])
+                            Texp_sequence
+                            expression (src/sentenceLexer.ml[278,14543+25]..src/sentenceLexer.ml[278,14543+57])
+                              Texp_apply
+                              expression (src/sentenceLexer.ml[278,14543+25]..src/sentenceLexer.ml[278,14543+50])
+                                Texp_field
+                                expression (src/sentenceLexer.ml[278,14543+25]..src/sentenceLexer.ml[278,14543+31])
+                                  Texp_ident "lexbuf/505"
+                                "Lexing.refill_buff"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/sentenceLexer.ml[278,14543+51]..src/sentenceLexer.ml[278,14543+57])
+                                    Texp_ident "lexbuf/505"
+                              ]
+                            expression (src/sentenceLexer.ml[279,14602+6]..src/sentenceLexer.ml[279,14602+50])
+                              Texp_apply
+                              expression (src/sentenceLexer.ml[279,14602+6]..src/sentenceLexer.ml[279,14602+25])
+                                Texp_ident "__ocaml_lex_lex_rec/503"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/sentenceLexer.ml[279,14602+26]..src/sentenceLexer.ml[279,14602+32])
+                                    Texp_ident "lexbuf/505"
+                                <arg>
+                                  Nolabel
+                                  expression (src/sentenceLexer.ml[279,14602+33]..src/sentenceLexer.ml[279,14602+50])
+                                    Texp_ident "__ocaml_lex_state/507"
+                              ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__SentenceLexer>
+ "__ocaml_lex_lex_rec"[value] -> <Dune__exe__SentenceLexer.4>;
+ "__ocaml_lex_tables"[value] -> <Dune__exe__SentenceLexer.2>;
+ "error2"[value] -> <Dune__exe__SentenceLexer.0>;
+ "lex"[value] -> <Dune__exe__SentenceLexer.3>;
+ }
+
+(seq
+  (let
+    (error2/424 =
+       (function lexbuf/426
+         (apply (field_imm 5 (global Dune__exe__Error!))
+           (apply (field_imm 30 (global Dune__exe__Positions!)) lexbuf/426))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__SentenceLexer!) error2/424))
+  (let
+    (__ocaml_lex_tables/501 =
+       [0:
+        "\000\000\247\255\248\255\249\255\001\000\002\000\252\255\253\255\210\000\162\001\005\000\250\255\012\000\r\000\006\000\251\255"
+        "\255\255\255\255\255\255\255\255\b\000\003\000\255\255\255\255\001\000\000\000\005\000\255\255\255\255\255\255\004\000\255\255"
+        "\001\000\000\000\000\000\000\000\012\000\255\255\000\000\000\000\255\255\255\255\255\255\000\000\012\000\r\000\255\255\000\000"
+        "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\007\000\006\000\011\000\006\000\005\000\n\000\011\000\015\000\000\000\000\000\000\000\000\000\000\000\011\000\015\000\000\000\n\000\014\000\000\000\000\000\000\000\000\000\000\000\007\000\000\000\000\000\004\000\r\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\007\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\003\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000"
+        "\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\004\000\005\000\000\000\004\000\n\000\014\000\255\255\255\255\255\255\255\255\255\255\012\000\r\000\255\255\012\000\r\000\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\000\000\004\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\012\000\r\000\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255"
+        "" "" "" "" "" ""])
+    (setfield_ptr(root-init) 1 (global Dune__exe__SentenceLexer!)
+      __ocaml_lex_tables/501))
+  (letrec
+    (lex/502
+       (function lexbuf/504 (apply __ocaml_lex_lex_rec/503 lexbuf/504 0))
+      __ocaml_lex_lex_rec/503
+        (function lexbuf/505 __ocaml_lex_state/506[int]
+          (let
+            (__ocaml_lex_state/507 =
+               (apply (field_imm 19 (global Stdlib__Lexing!))
+                 (field_imm 1 (global Dune__exe__SentenceLexer!))
+                 __ocaml_lex_state/506 lexbuf/505))
+            (catch
+              (if (isout 8 __ocaml_lex_state/507) (exit 1)
+                (switch* __ocaml_lex_state/507
+                 case int 0:
+                  (let
+                    (lid/508 =
+                       (apply (field_imm 15 (global Stdlib__Lexing!))
+                         lexbuf/505 (field_int 4 lexbuf/505)
+                         (field_int 5 lexbuf/505)))
+                    (makeblock 1
+                      (makeblock 0 lid/508 (field_mut 10 lexbuf/505)
+                        (field_mut 11 lexbuf/505))))
+                 case int 1:
+                  (let
+                    (uid/524 =
+                       (apply (field_imm 15 (global Stdlib__Lexing!))
+                         lexbuf/505 (field_int 4 lexbuf/505)
+                         (field_int 5 lexbuf/505)))
+                    (makeblock 0
+                      (makeblock 0 uid/524 (field_mut 10 lexbuf/505)
+                        (field_mut 11 lexbuf/505))))
+                 case int 2: (apply lex/502 lexbuf/505)
+                 case int 3:
+                  (seq
+                    (apply (field_imm 13 (global Stdlib__Lexing!))
+                      lexbuf/505)
+                    2)
+                 case int 4:
+                  (seq
+                    (apply (field_imm 13 (global Stdlib__Lexing!))
+                      lexbuf/505)
+                    (apply lex/502 lexbuf/505))
+                 case int 5:
+                  (let
+                    (c/528 =
+                       (apply (field_imm 15 (global Stdlib__Lexing!))
+                         lexbuf/505 (field_int 4 lexbuf/505)
+                         (field_int 5 lexbuf/505)))
+                    (seq
+                      (apply (field_imm 13 (global Stdlib__Lexing!))
+                        lexbuf/505)
+                      (makeblock 2 c/528)))
+                 case int 6: 1
+                 case int 7: 0
+                 case int 8:
+                  (apply (field_imm 0 (global Dune__exe__SentenceLexer!))
+                    lexbuf/505
+                    [0:
+                     [11:
+                      "unexpected character.\n(I believe I am reading a sentence, but may be off.)"
+                      0]
+                     "unexpected character.\n(I believe I am reading a sentence, but may be off.)"])))
+             with (1)
+              (seq (apply (field_imm 0 lexbuf/505) lexbuf/505)
+                (apply __ocaml_lex_lex_rec/503 lexbuf/505
+                  __ocaml_lex_state/507))))))
+    (seq
+      (setfield_ptr(root-init) 2 (global Dune__exe__SentenceLexer!) lex/502)
+      (setfield_ptr(root-init) 3 (global Dune__exe__SentenceLexer!)
+        __ocaml_lex_lex_rec/503)))
+  0)
+(seq
+  (let
+    (error2/424 =
+       (function lexbuf/426
+         (apply (field_imm 5 (global Dune__exe__Error!))
+           (apply (field_imm 30 (global Dune__exe__Positions!)) lexbuf/426))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__SentenceLexer!) error2/424))
+  (let
+    (__ocaml_lex_tables/501 =
+       [0:
+        "\000\000\247\255\248\255\249\255\001\000\002\000\252\255\253\255\210\000\162\001\005\000\250\255\012\000\r\000\006\000\251\255"
+        "\255\255\255\255\255\255\255\255\b\000\003\000\255\255\255\255\001\000\000\000\005\000\255\255\255\255\255\255\004\000\255\255"
+        "\001\000\000\000\000\000\000\000\012\000\255\255\000\000\000\000\255\255\255\255\255\255\000\000\012\000\r\000\255\255\000\000"
+        "\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\007\000\006\000\011\000\006\000\005\000\n\000\011\000\015\000\000\000\000\000\000\000\000\000\000\000\011\000\015\000\000\000\n\000\014\000\000\000\000\000\000\000\000\000\000\000\007\000\000\000\000\000\004\000\r\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\002\000\007\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\003\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\000\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\000\000"
+        "\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\004\000\005\000\000\000\004\000\n\000\014\000\255\255\255\255\255\255\255\255\255\255\012\000\r\000\255\255\012\000\r\000\255\255\255\255\255\255\255\255\255\255\000\000\255\255\255\255\000\000\004\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\255\255\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\012\000\r\000\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\255\255\b\000\b\000\b\000\b\000\b\000\b\000\b\000\b\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255\t\000\t\000\t\000\t\000\t\000\t\000\t\000\t\000\255\255"
+        "" "" "" "" "" ""])
+    (setfield_ptr(root-init) 1 (global Dune__exe__SentenceLexer!)
+      __ocaml_lex_tables/501))
+  (letrec
+    (lex/502
+       (function lexbuf/504 (apply __ocaml_lex_lex_rec/503 lexbuf/504 0))
+      __ocaml_lex_lex_rec/503
+        (function lexbuf/505 __ocaml_lex_state/506[int]
+          (let
+            (__ocaml_lex_state/507 =
+               (apply (field_imm 19 (global Stdlib__Lexing!))
+                 (field_imm 1 (global Dune__exe__SentenceLexer!))
+                 __ocaml_lex_state/506 lexbuf/505))
+            (if (isout 8 __ocaml_lex_state/507)
+              (seq (apply (field_imm 0 lexbuf/505) lexbuf/505)
+                (apply __ocaml_lex_lex_rec/503 lexbuf/505
+                  __ocaml_lex_state/507))
+              (switch* __ocaml_lex_state/507
+               case int 0:
+                (let
+                  (lid/508 =
+                     (apply (field_imm 15 (global Stdlib__Lexing!))
+                       lexbuf/505 (field_int 4 lexbuf/505)
+                       (field_int 5 lexbuf/505)))
+                  (makeblock 1
+                    (makeblock 0 lid/508 (field_mut 10 lexbuf/505)
+                      (field_mut 11 lexbuf/505))))
+               case int 1:
+                (let
+                  (uid/524 =
+                     (apply (field_imm 15 (global Stdlib__Lexing!))
+                       lexbuf/505 (field_int 4 lexbuf/505)
+                       (field_int 5 lexbuf/505)))
+                  (makeblock 0
+                    (makeblock 0 uid/524 (field_mut 10 lexbuf/505)
+                      (field_mut 11 lexbuf/505))))
+               case int 2: (apply lex/502 lexbuf/505)
+               case int 3:
+                (seq
+                  (apply (field_imm 13 (global Stdlib__Lexing!)) lexbuf/505)
+                  2)
+               case int 4:
+                (seq
+                  (apply (field_imm 13 (global Stdlib__Lexing!)) lexbuf/505)
+                  (apply lex/502 lexbuf/505))
+               case int 5:
+                (let
+                  (c/528 =
+                     (apply (field_imm 15 (global Stdlib__Lexing!))
+                       lexbuf/505 (field_int 4 lexbuf/505)
+                       (field_int 5 lexbuf/505)))
+                  (seq
+                    (apply (field_imm 13 (global Stdlib__Lexing!))
+                      lexbuf/505)
+                    (makeblock 2 c/528)))
+               case int 6: 1
+               case int 7: 0
+               case int 8:
+                (apply (field_imm 0 (global Dune__exe__SentenceLexer!))
+                  lexbuf/505
+                  [0:
+                   [11:
+                    "unexpected character.\n(I believe I am reading a sentence, but may be off.)"
+                    0]
+                   "unexpected character.\n(I believe I am reading a sentence, but may be off.)"]))))))
+    (seq
+      (setfield_ptr(root-init) 2 (global Dune__exe__SentenceLexer!) lex/502)
+      (setfield_ptr(root-init) 3 (global Dune__exe__SentenceLexer!)
+        __ocaml_lex_lex_rec/503)))
+  0)

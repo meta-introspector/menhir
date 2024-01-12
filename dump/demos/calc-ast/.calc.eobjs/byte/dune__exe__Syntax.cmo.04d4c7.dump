@@ -1,0 +1,341 @@
+[
+  structure_item (demos/calc-ast/syntax.ml[1,0+0]..[2,12+9])
+    Pstr_type Rec
+    [
+      type_declaration "unop" (demos/calc-ast/syntax.ml[1,0+5]..[1,0+9]) (demos/calc-ast/syntax.ml[1,0+0]..[2,12+9])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (demos/calc-ast/syntax.ml[2,12+2]..[2,12+9])
+                "OpNeg" (demos/calc-ast/syntax.ml[2,12+4]..[2,12+9])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (demos/calc-ast/syntax.ml[4,23+0]..[5,36+38])
+    Pstr_type Rec
+    [
+      type_declaration "binop" (demos/calc-ast/syntax.ml[4,23+5]..[4,23+10]) (demos/calc-ast/syntax.ml[4,23+0]..[5,36+38])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (demos/calc-ast/syntax.ml[5,36+2]..[5,36+10])
+                "OpPlus" (demos/calc-ast/syntax.ml[5,36+4]..[5,36+10])
+                []
+                None
+              (demos/calc-ast/syntax.ml[5,36+11]..[5,36+20])
+                "OpMinus" (demos/calc-ast/syntax.ml[5,36+13]..[5,36+20])
+                []
+                None
+              (demos/calc-ast/syntax.ml[5,36+21]..[5,36+30])
+                "OpTimes" (demos/calc-ast/syntax.ml[5,36+23]..[5,36+30])
+                []
+                None
+              (demos/calc-ast/syntax.ml[5,36+31]..[5,36+38])
+                "OpDiv" (demos/calc-ast/syntax.ml[5,36+33]..[5,36+38])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (demos/calc-ast/syntax.ml[7,76+0]..[8,94+55])
+    Pstr_type Rec
+    [
+      type_declaration "located" (demos/calc-ast/syntax.ml[7,76+8]..[7,76+15]) (demos/calc-ast/syntax.ml[7,76+0]..[8,94+55])
+        ptype_params =
+          [
+            core_type (demos/calc-ast/syntax.ml[7,76+5]..[7,76+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (demos/calc-ast/syntax.ml[8,94+4]..[8,94+43])
+                Immutable
+                "loc" (demos/calc-ast/syntax.ml[8,94+4]..[8,94+7])                core_type (demos/calc-ast/syntax.ml[8,94+9]..[8,94+42])
+                  Ptyp_tuple
+                  [
+                    core_type (demos/calc-ast/syntax.ml[8,94+9]..[8,94+24])
+                      Ptyp_constr "Lexing.position" (demos/calc-ast/syntax.ml[8,94+9]..[8,94+24])
+                      []
+                    core_type (demos/calc-ast/syntax.ml[8,94+27]..[8,94+42])
+                      Ptyp_constr "Lexing.position" (demos/calc-ast/syntax.ml[8,94+27]..[8,94+42])
+                      []
+                  ]
+              (demos/calc-ast/syntax.ml[8,94+44]..[8,94+53])
+                Immutable
+                "value" (demos/calc-ast/syntax.ml[8,94+44]..[8,94+49])                core_type (demos/calc-ast/syntax.ml[8,94+51]..[8,94+53])
+                  Ptyp_var a
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (demos/calc-ast/syntax.ml[10,151+0]..[16,239+31])
+    Pstr_type Rec
+    [
+      type_declaration "expr" (demos/calc-ast/syntax.ml[10,151+5]..[10,151+9]) (demos/calc-ast/syntax.ml[10,151+0]..[11,163+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (demos/calc-ast/syntax.ml[11,163+2]..[11,163+18])
+              Ptyp_constr "located" (demos/calc-ast/syntax.ml[11,163+11]..[11,163+18])
+              [
+                core_type (demos/calc-ast/syntax.ml[11,163+2]..[11,163+10])
+                  Ptyp_constr "raw_expr" (demos/calc-ast/syntax.ml[11,163+2]..[11,163+10])
+                  []
+              ]
+      type_declaration "raw_expr" (demos/calc-ast/syntax.ml[13,183+4]..[13,183+12]) (demos/calc-ast/syntax.ml[13,183+0]..[16,239+31])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (demos/calc-ast/syntax.ml[14,198+0]..[14,198+17])
+                "ELiteral" (demos/calc-ast/syntax.ml[14,198+2]..[14,198+10])
+                [
+                  core_type (demos/calc-ast/syntax.ml[14,198+14]..[14,198+17])
+                    Ptyp_constr "int" (demos/calc-ast/syntax.ml[14,198+14]..[14,198+17])
+                    []
+                ]
+                None
+              (demos/calc-ast/syntax.ml[15,216+0]..[15,216+22])
+                "EUnOp" (demos/calc-ast/syntax.ml[15,216+2]..[15,216+7])
+                [
+                  core_type (demos/calc-ast/syntax.ml[15,216+11]..[15,216+15])
+                    Ptyp_constr "unop" (demos/calc-ast/syntax.ml[15,216+11]..[15,216+15])
+                    []
+                  core_type (demos/calc-ast/syntax.ml[15,216+18]..[15,216+22])
+                    Ptyp_constr "expr" (demos/calc-ast/syntax.ml[15,216+18]..[15,216+22])
+                    []
+                ]
+                None
+              (demos/calc-ast/syntax.ml[16,239+0]..[16,239+31])
+                "EBinOp" (demos/calc-ast/syntax.ml[16,239+2]..[16,239+8])
+                [
+                  core_type (demos/calc-ast/syntax.ml[16,239+12]..[16,239+16])
+                    Ptyp_constr "expr" (demos/calc-ast/syntax.ml[16,239+12]..[16,239+16])
+                    []
+                  core_type (demos/calc-ast/syntax.ml[16,239+19]..[16,239+24])
+                    Ptyp_constr "binop" (demos/calc-ast/syntax.ml[16,239+19]..[16,239+24])
+                    []
+                  core_type (demos/calc-ast/syntax.ml[16,239+27]..[16,239+31])
+                    Ptyp_constr "expr" (demos/calc-ast/syntax.ml[16,239+27]..[16,239+31])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+]
+
+type unop =
+  | OpNeg 
+type binop =
+  | OpPlus 
+  | OpMinus 
+  | OpTimes 
+  | OpDiv 
+type 'a located = {
+  loc: (Lexing.position * Lexing.position) ;
+  value: 'a }
+type expr = raw_expr located
+and raw_expr =
+  | ELiteral of int 
+  | EUnOp of unop * expr 
+  | EBinOp of expr * binop * expr 
+[
+  structure_item (demos/calc-ast/syntax.ml[1,0+0]..demos/calc-ast/syntax.ml[2,12+9])
+    Tstr_type Rec
+    [
+      type_declaration unop/273 (demos/calc-ast/syntax.ml[1,0+0]..demos/calc-ast/syntax.ml[2,12+9])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (demos/calc-ast/syntax.ml[2,12+2]..demos/calc-ast/syntax.ml[2,12+9])
+                OpNeg/274
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (demos/calc-ast/syntax.ml[4,23+0]..demos/calc-ast/syntax.ml[5,36+38])
+    Tstr_type Rec
+    [
+      type_declaration binop/275 (demos/calc-ast/syntax.ml[4,23+0]..demos/calc-ast/syntax.ml[5,36+38])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (demos/calc-ast/syntax.ml[5,36+2]..demos/calc-ast/syntax.ml[5,36+10])
+                OpPlus/276
+                []
+                None
+              (demos/calc-ast/syntax.ml[5,36+11]..demos/calc-ast/syntax.ml[5,36+20])
+                OpMinus/277
+                []
+                None
+              (demos/calc-ast/syntax.ml[5,36+21]..demos/calc-ast/syntax.ml[5,36+30])
+                OpTimes/278
+                []
+                None
+              (demos/calc-ast/syntax.ml[5,36+31]..demos/calc-ast/syntax.ml[5,36+38])
+                OpDiv/279
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (demos/calc-ast/syntax.ml[7,76+0]..demos/calc-ast/syntax.ml[8,94+55])
+    Tstr_type Rec
+    [
+      type_declaration located/280 (demos/calc-ast/syntax.ml[7,76+0]..demos/calc-ast/syntax.ml[8,94+55])
+        ptype_params =
+          [
+            core_type (demos/calc-ast/syntax.ml[7,76+5]..demos/calc-ast/syntax.ml[7,76+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (demos/calc-ast/syntax.ml[8,94+4]..demos/calc-ast/syntax.ml[8,94+43])
+                Immutable
+                loc/305                core_type (demos/calc-ast/syntax.ml[8,94+9]..demos/calc-ast/syntax.ml[8,94+42])
+                  Ttyp_poly
+                  core_type (demos/calc-ast/syntax.ml[8,94+9]..demos/calc-ast/syntax.ml[8,94+42])
+                    Ttyp_tuple
+                    [
+                      core_type (demos/calc-ast/syntax.ml[8,94+9]..demos/calc-ast/syntax.ml[8,94+24])
+                        Ttyp_constr "Stdlib!.Lexing.position"
+                        []
+                      core_type (demos/calc-ast/syntax.ml[8,94+27]..demos/calc-ast/syntax.ml[8,94+42])
+                        Ttyp_constr "Stdlib!.Lexing.position"
+                        []
+                    ]
+              (demos/calc-ast/syntax.ml[8,94+44]..demos/calc-ast/syntax.ml[8,94+53])
+                Immutable
+                value/306                core_type (demos/calc-ast/syntax.ml[8,94+51]..demos/calc-ast/syntax.ml[8,94+53])
+                  Ttyp_poly
+                  core_type (demos/calc-ast/syntax.ml[8,94+51]..demos/calc-ast/syntax.ml[8,94+53])
+                    Ttyp_var a
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (demos/calc-ast/syntax.ml[10,151+0]..demos/calc-ast/syntax.ml[16,239+31])
+    Tstr_type Rec
+    [
+      type_declaration expr/331 (demos/calc-ast/syntax.ml[10,151+0]..demos/calc-ast/syntax.ml[11,163+18])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (demos/calc-ast/syntax.ml[11,163+2]..demos/calc-ast/syntax.ml[11,163+18])
+              Ttyp_constr "located/280"
+              [
+                core_type (demos/calc-ast/syntax.ml[11,163+2]..demos/calc-ast/syntax.ml[11,163+10])
+                  Ttyp_constr "raw_expr/332"
+                  []
+              ]
+      type_declaration raw_expr/332 (demos/calc-ast/syntax.ml[13,183+0]..demos/calc-ast/syntax.ml[16,239+31])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (demos/calc-ast/syntax.ml[14,198+0]..demos/calc-ast/syntax.ml[14,198+17])
+                ELiteral/333
+                [
+                  core_type (demos/calc-ast/syntax.ml[14,198+14]..demos/calc-ast/syntax.ml[14,198+17])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (demos/calc-ast/syntax.ml[15,216+0]..demos/calc-ast/syntax.ml[15,216+22])
+                EUnOp/334
+                [
+                  core_type (demos/calc-ast/syntax.ml[15,216+11]..demos/calc-ast/syntax.ml[15,216+15])
+                    Ttyp_constr "unop/273"
+                    []
+                  core_type (demos/calc-ast/syntax.ml[15,216+18]..demos/calc-ast/syntax.ml[15,216+22])
+                    Ttyp_constr "expr/331"
+                    []
+                ]
+                None
+              (demos/calc-ast/syntax.ml[16,239+0]..demos/calc-ast/syntax.ml[16,239+31])
+                EBinOp/335
+                [
+                  core_type (demos/calc-ast/syntax.ml[16,239+12]..demos/calc-ast/syntax.ml[16,239+16])
+                    Ttyp_constr "expr/331"
+                    []
+                  core_type (demos/calc-ast/syntax.ml[16,239+19]..demos/calc-ast/syntax.ml[16,239+24])
+                    Ttyp_constr "binop/275"
+                    []
+                  core_type (demos/calc-ast/syntax.ml[16,239+27]..demos/calc-ast/syntax.ml[16,239+31])
+                    Ttyp_constr "expr/331"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+]
+
+{<Dune__exe__Syntax>
+ "binop"[type] -> <Dune__exe__Syntax.2>;
+ "expr"[type] -> <Dune__exe__Syntax.10>;
+ "located"[type] -> <Dune__exe__Syntax.7>;
+ "raw_expr"[type] -> <Dune__exe__Syntax.11>;
+ "unop"[type] -> <Dune__exe__Syntax.0>;
+ }
+
+(setglobal Dune__exe__Syntax! (pseudo <unknown location> (makeblock 0)))
+(setglobal Dune__exe__Syntax! (pseudo <unknown location> (makeblock 0)))

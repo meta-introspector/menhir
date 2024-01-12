@@ -1,0 +1,314 @@
+[
+  structure_item (demos/calc-inspection/CalcErrorReporting.ml[1,0+0]..[1,0+11])
+    Pstr_open Fresh
+    module_expr (demos/calc-inspection/CalcErrorReporting.ml[1,0+5]..[1,0+11])
+      Pmod_ident "Parser" (demos/calc-inspection/CalcErrorReporting.ml[1,0+5]..[1,0+11])
+  structure_item (demos/calc-inspection/CalcErrorReporting.ml[2,12+0]..[2,12+29])
+    Pstr_open Fresh
+    module_expr (demos/calc-inspection/CalcErrorReporting.ml[2,12+5]..[2,12+29])
+      Pmod_ident "Parser.MenhirInterpreter" (demos/calc-inspection/CalcErrorReporting.ml[2,12+5]..[2,12+29])
+  structure_item (demos/calc-inspection/CalcErrorReporting.ml[9,317+0]..[28,620+18])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcErrorReporting.ml[9,317+4]..[9,317+18])
+          Ppat_var "terminal2token" (demos/calc-inspection/CalcErrorReporting.ml[9,317+4]..[9,317+18])
+        expression (demos/calc-inspection/CalcErrorReporting.ml[9,317+19]..[28,620+18])
+          Pexp_newtype "a"
+          expression (demos/calc-inspection/CalcErrorReporting.ml[9,317+28]..[28,620+18]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (demos/calc-inspection/CalcErrorReporting.ml[9,317+28]..[9,317+49])
+              Ppat_constraint
+              pattern (demos/calc-inspection/CalcErrorReporting.ml[9,317+29]..[9,317+35])
+                Ppat_var "symbol" (demos/calc-inspection/CalcErrorReporting.ml[9,317+29]..[9,317+35])
+              core_type (demos/calc-inspection/CalcErrorReporting.ml[9,317+38]..[9,317+48])
+                Ptyp_constr "terminal" (demos/calc-inspection/CalcErrorReporting.ml[9,317+40]..[9,317+48])
+                [
+                  core_type (demos/calc-inspection/CalcErrorReporting.ml[9,317+38]..[9,317+39])
+                    Ptyp_constr "a" (demos/calc-inspection/CalcErrorReporting.ml[9,317+38]..[9,317+39])
+                    []
+                ]
+            expression (demos/calc-inspection/CalcErrorReporting.ml[9,317+50]..[28,620+18])
+              Pexp_constraint
+              expression (demos/calc-inspection/CalcErrorReporting.ml[10,377+2]..[28,620+18])
+                Pexp_match
+                expression (demos/calc-inspection/CalcErrorReporting.ml[10,377+8]..[10,377+14])
+                  Pexp_ident "symbol" (demos/calc-inspection/CalcErrorReporting.ml[10,377+8]..[10,377+14])
+                [
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[11,397+4]..[11,397+11])
+                      Ppat_construct "T_TIMES" (demos/calc-inspection/CalcErrorReporting.ml[11,397+4]..[11,397+11])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[12,412+6]..[12,412+11])
+                      Pexp_construct "TIMES" (demos/calc-inspection/CalcErrorReporting.ml[12,412+6]..[12,412+11])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[13,424+4]..[13,424+12])
+                      Ppat_construct "T_RPAREN" (demos/calc-inspection/CalcErrorReporting.ml[13,424+4]..[13,424+12])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[14,440+6]..[14,440+12])
+                      Pexp_construct "RPAREN" (demos/calc-inspection/CalcErrorReporting.ml[14,440+6]..[14,440+12])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[15,453+4]..[15,453+10])
+                      Ppat_construct "T_PLUS" (demos/calc-inspection/CalcErrorReporting.ml[15,453+4]..[15,453+10])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[16,467+6]..[16,467+10])
+                      Pexp_construct "PLUS" (demos/calc-inspection/CalcErrorReporting.ml[16,467+6]..[16,467+10])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[17,478+4]..[17,478+11])
+                      Ppat_construct "T_MINUS" (demos/calc-inspection/CalcErrorReporting.ml[17,478+4]..[17,478+11])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[18,493+6]..[18,493+11])
+                      Pexp_construct "MINUS" (demos/calc-inspection/CalcErrorReporting.ml[18,493+6]..[18,493+11])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[19,505+4]..[19,505+12])
+                      Ppat_construct "T_LPAREN" (demos/calc-inspection/CalcErrorReporting.ml[19,505+4]..[19,505+12])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[20,521+6]..[20,521+12])
+                      Pexp_construct "LPAREN" (demos/calc-inspection/CalcErrorReporting.ml[20,521+6]..[20,521+12])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[21,534+4]..[21,534+9])
+                      Ppat_construct "T_INT" (demos/calc-inspection/CalcErrorReporting.ml[21,534+4]..[21,534+9])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[22,547+6]..[22,547+11])
+                      Pexp_construct "INT" (demos/calc-inspection/CalcErrorReporting.ml[22,547+6]..[22,547+9])
+                      Some
+                        expression (demos/calc-inspection/CalcErrorReporting.ml[22,547+10]..[22,547+11])
+                          Pexp_constant PConst_int (0,None)
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[23,559+4]..[23,559+9])
+                      Ppat_construct "T_EOL" (demos/calc-inspection/CalcErrorReporting.ml[23,559+4]..[23,559+9])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[24,572+6]..[24,572+9])
+                      Pexp_construct "EOL" (demos/calc-inspection/CalcErrorReporting.ml[24,572+6]..[24,572+9])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[25,582+4]..[25,582+9])
+                      Ppat_construct "T_DIV" (demos/calc-inspection/CalcErrorReporting.ml[25,582+4]..[25,582+9])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[26,595+6]..[26,595+9])
+                      Pexp_construct "DIV" (demos/calc-inspection/CalcErrorReporting.ml[26,595+6]..[26,595+9])
+                      None
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[27,605+4]..[27,605+11])
+                      Ppat_construct "T_error" (demos/calc-inspection/CalcErrorReporting.ml[27,605+4]..[27,605+11])
+                      None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[28,620+6]..[28,620+18])
+                      Pexp_assert
+                      expression (demos/calc-inspection/CalcErrorReporting.ml[28,620+13]..[28,620+18])
+                        Pexp_construct "false" (demos/calc-inspection/CalcErrorReporting.ml[28,620+13]..[28,620+18])
+                        None
+                ]
+              core_type (demos/calc-inspection/CalcErrorReporting.ml[9,317+52]..[9,317+57])
+                Ptyp_constr "token" (demos/calc-inspection/CalcErrorReporting.ml[9,317+52]..[9,317+57])
+                []
+    ]
+]
+
+open Parser
+open Parser.MenhirInterpreter
+let terminal2token (type a) (symbol : a terminal) =
+  (match symbol with
+   | T_TIMES -> TIMES
+   | T_RPAREN -> RPAREN
+   | T_PLUS -> PLUS
+   | T_MINUS -> MINUS
+   | T_LPAREN -> LPAREN
+   | T_INT -> INT 0
+   | T_EOL -> EOL
+   | T_DIV -> DIV
+   | T_error -> assert false : token)
+[
+  structure_item (demos/calc-inspection/CalcErrorReporting.ml[1,0+0]..demos/calc-inspection/CalcErrorReporting.ml[1,0+11])
+    Tstr_open Fresh
+    module_expr (demos/calc-inspection/CalcErrorReporting.ml[1,0+5]..demos/calc-inspection/CalcErrorReporting.ml[1,0+11])
+      Tmod_ident "Dune__exe!.Parser"
+  structure_item (demos/calc-inspection/CalcErrorReporting.ml[2,12+0]..demos/calc-inspection/CalcErrorReporting.ml[2,12+29])
+    Tstr_open Fresh
+    module_expr (demos/calc-inspection/CalcErrorReporting.ml[2,12+5]..demos/calc-inspection/CalcErrorReporting.ml[2,12+29])
+      Tmod_ident "Dune__exe!.Parser.MenhirInterpreter"
+  structure_item (demos/calc-inspection/CalcErrorReporting.ml[9,317+0]..demos/calc-inspection/CalcErrorReporting.ml[28,620+18])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (demos/calc-inspection/CalcErrorReporting.ml[9,317+4]..demos/calc-inspection/CalcErrorReporting.ml[9,317+18])
+          Tpat_var "terminal2token/337"
+        expression (demos/calc-inspection/CalcErrorReporting.ml[9,317+19]..demos/calc-inspection/CalcErrorReporting.ml[28,620+18])
+          extra
+            Texp_newtype "a"
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (demos/calc-inspection/CalcErrorReporting.ml[9,317+29]..demos/calc-inspection/CalcErrorReporting.ml[9,317+35])
+                extra
+                  Tpat_extra_constraint
+                  core_type (demos/calc-inspection/CalcErrorReporting.ml[9,317+38]..demos/calc-inspection/CalcErrorReporting.ml[9,317+48])
+                    Ttyp_constr "Dune__exe!.Parser.MenhirInterpreter.terminal"
+                    [
+                      core_type (demos/calc-inspection/CalcErrorReporting.ml[9,317+38]..demos/calc-inspection/CalcErrorReporting.ml[9,317+39])
+                        Ttyp_constr "a/338"
+                        []
+                    ]
+                Tpat_alias "symbol/339"
+                pattern (demos/calc-inspection/CalcErrorReporting.ml[9,317+29]..demos/calc-inspection/CalcErrorReporting.ml[9,317+35])
+                  Tpat_any
+              expression (demos/calc-inspection/CalcErrorReporting.ml[10,377+2]..demos/calc-inspection/CalcErrorReporting.ml[28,620+18])
+                extra
+                  Texp_constraint
+                  core_type (demos/calc-inspection/CalcErrorReporting.ml[9,317+52]..demos/calc-inspection/CalcErrorReporting.ml[9,317+57])
+                    Ttyp_constr "Dune__exe!.Parser.MenhirInterpreter.token"
+                    []
+                Texp_match
+                expression (demos/calc-inspection/CalcErrorReporting.ml[10,377+8]..demos/calc-inspection/CalcErrorReporting.ml[10,377+14])
+                  Texp_ident "symbol/339"
+                [
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[11,397+4]..demos/calc-inspection/CalcErrorReporting.ml[11,397+11])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[11,397+4]..demos/calc-inspection/CalcErrorReporting.ml[11,397+11])
+                        Tpat_construct "T_TIMES"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[12,412+6]..demos/calc-inspection/CalcErrorReporting.ml[12,412+11])
+                      Texp_construct "TIMES"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[13,424+4]..demos/calc-inspection/CalcErrorReporting.ml[13,424+12])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[13,424+4]..demos/calc-inspection/CalcErrorReporting.ml[13,424+12])
+                        Tpat_construct "T_RPAREN"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[14,440+6]..demos/calc-inspection/CalcErrorReporting.ml[14,440+12])
+                      Texp_construct "RPAREN"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[15,453+4]..demos/calc-inspection/CalcErrorReporting.ml[15,453+10])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[15,453+4]..demos/calc-inspection/CalcErrorReporting.ml[15,453+10])
+                        Tpat_construct "T_PLUS"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[16,467+6]..demos/calc-inspection/CalcErrorReporting.ml[16,467+10])
+                      Texp_construct "PLUS"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[17,478+4]..demos/calc-inspection/CalcErrorReporting.ml[17,478+11])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[17,478+4]..demos/calc-inspection/CalcErrorReporting.ml[17,478+11])
+                        Tpat_construct "T_MINUS"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[18,493+6]..demos/calc-inspection/CalcErrorReporting.ml[18,493+11])
+                      Texp_construct "MINUS"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[19,505+4]..demos/calc-inspection/CalcErrorReporting.ml[19,505+12])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[19,505+4]..demos/calc-inspection/CalcErrorReporting.ml[19,505+12])
+                        Tpat_construct "T_LPAREN"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[20,521+6]..demos/calc-inspection/CalcErrorReporting.ml[20,521+12])
+                      Texp_construct "LPAREN"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[21,534+4]..demos/calc-inspection/CalcErrorReporting.ml[21,534+9])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[21,534+4]..demos/calc-inspection/CalcErrorReporting.ml[21,534+9])
+                        Tpat_construct "T_INT"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[22,547+6]..demos/calc-inspection/CalcErrorReporting.ml[22,547+11])
+                      Texp_construct "INT"
+                      [
+                        expression (demos/calc-inspection/CalcErrorReporting.ml[22,547+10]..demos/calc-inspection/CalcErrorReporting.ml[22,547+11])
+                          Texp_constant Const_int 0
+                      ]
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[23,559+4]..demos/calc-inspection/CalcErrorReporting.ml[23,559+9])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[23,559+4]..demos/calc-inspection/CalcErrorReporting.ml[23,559+9])
+                        Tpat_construct "T_EOL"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[24,572+6]..demos/calc-inspection/CalcErrorReporting.ml[24,572+9])
+                      Texp_construct "EOL"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[25,582+4]..demos/calc-inspection/CalcErrorReporting.ml[25,582+9])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[25,582+4]..demos/calc-inspection/CalcErrorReporting.ml[25,582+9])
+                        Tpat_construct "T_DIV"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[26,595+6]..demos/calc-inspection/CalcErrorReporting.ml[26,595+9])
+                      Texp_construct "DIV"
+                      []
+                  <case>
+                    pattern (demos/calc-inspection/CalcErrorReporting.ml[27,605+4]..demos/calc-inspection/CalcErrorReporting.ml[27,605+11])
+                      Tpat_value
+                      pattern (demos/calc-inspection/CalcErrorReporting.ml[27,605+4]..demos/calc-inspection/CalcErrorReporting.ml[27,605+11])
+                        Tpat_construct "T_error"
+                        []
+                        None
+                    expression (demos/calc-inspection/CalcErrorReporting.ml[28,620+6]..demos/calc-inspection/CalcErrorReporting.ml[28,620+18])
+                      Texp_assert                      expression (demos/calc-inspection/CalcErrorReporting.ml[28,620+13]..demos/calc-inspection/CalcErrorReporting.ml[28,620+18])
+                        Texp_construct "false"
+                        []
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__CalcErrorReporting>
+ "terminal2token"[value] -> <Dune__exe__CalcErrorReporting.0>;
+ }
+
+(seq
+  (let
+    (terminal2token/337 =
+       (function symbol/339[int]
+         (switch* symbol/339
+          case int 0:
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "demos/calc-inspection/CalcErrorReporting.ml" 28 6]))
+          case int 1: 0
+          case int 2: 1
+          case int 3: 2
+          case int 4: 3
+          case int 5: 4
+          case int 6: [0: 0]
+          case int 7: 5
+          case int 8: 6)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__CalcErrorReporting!)
+      terminal2token/337))
+  0)
+(seq
+  (let
+    (terminal2token/337 =
+       (function symbol/339[int]
+         (switch* symbol/339
+          case int 0:
+           (raise
+             (makeblock 0 (global Assert_failure/28!)
+               [0: "demos/calc-inspection/CalcErrorReporting.ml" 28 6]))
+          case int 1: 0
+          case int 2: 1
+          case int 3: 2
+          case int 4: 3
+          case int 5: 4
+          case int 6: [0: 0]
+          case int 7: 5
+          case int 8: 6)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__CalcErrorReporting!)
+      terminal2token/337))
+  0)

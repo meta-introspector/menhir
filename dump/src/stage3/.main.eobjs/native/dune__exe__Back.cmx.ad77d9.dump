@@ -1,0 +1,1206 @@
+[
+  structure_item (src/back.ml[19,1166+0]..[22,1249+50])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[19,1166+4]..[19,1166+6])
+          Ppat_construct "()" (src/back.ml[19,1166+4]..[19,1166+6])
+          None
+        expression (src/back.ml[20,1175+2]..[22,1249+50])
+          Pexp_ifthenelse
+          expression (src/back.ml[20,1175+5]..[20,1175+27])
+            Pexp_ident "Settings.dump_resolved" (src/back.ml[20,1175+5]..[20,1175+27])
+          expression (src/back.ml[21,1208+4]..[22,1249+50])
+            Pexp_letmodule "D" (src/back.ml[21,1208+15]..[21,1208+16])
+            module_expr (src/back.ml[21,1208+19]..[21,1208+37])
+              Pmod_apply
+              module_expr (src/back.ml[21,1208+19]..[21,1208+28])
+                Pmod_ident "Dump.Make" (src/back.ml[21,1208+19]..[21,1208+28])
+              module_expr (src/back.ml[21,1208+29]..[21,1208+36])
+                Pmod_ident "Default" (src/back.ml[21,1208+29]..[21,1208+36])
+            expression (src/back.ml[22,1249+4]..[22,1249+50])
+              Pexp_apply
+              expression (src/back.ml[22,1249+4]..[22,1249+10])
+                Pexp_ident "D.dump" (src/back.ml[22,1249+4]..[22,1249+10])
+              [
+                <arg>
+                Nolabel
+                  expression (src/back.ml[22,1249+11]..[22,1249+50])
+                    Pexp_apply
+                    expression (src/back.ml[22,1249+26]..[22,1249+27])
+                      Pexp_ident "^" (src/back.ml[22,1249+26]..[22,1249+27])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/back.ml[22,1249+12]..[22,1249+25])
+                          Pexp_ident "Settings.base" (src/back.ml[22,1249+12]..[22,1249+25])
+                      <arg>
+                      Nolabel
+                        expression (src/back.ml[22,1249+28]..[22,1249+49])
+                          Pexp_constant PConst_string(".automaton.resolved",(src/back.ml[22,1249+29]..[22,1249+48]),None)
+                    ]
+              ]
+          None
+    ]
+  structure_item (src/back.ml[24,1301+0]..[26,1345+42])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[24,1301+4]..[24,1301+6])
+          Ppat_construct "()" (src/back.ml[24,1301+4]..[24,1301+6])
+          None
+        expression (src/back.ml[25,1310+2]..[26,1345+42])
+          Pexp_ifthenelse
+          expression (src/back.ml[25,1310+5]..[25,1310+29])
+            Pexp_ident "Settings.automaton_graph" (src/back.ml[25,1310+5]..[25,1310+29])
+          expression (src/back.ml[26,1345+4]..[26,1345+42])
+            Pexp_apply
+            expression (src/back.ml[26,1345+4]..[26,1345+40])
+              Pexp_ident "AutomatonGraph.print_automaton_graph" (src/back.ml[26,1345+4]..[26,1345+40])
+            [
+              <arg>
+              Nolabel
+                expression (src/back.ml[26,1345+40]..[26,1345+42])
+                  Pexp_construct "()" (src/back.ml[26,1345+40]..[26,1345+42])
+                  None
+            ]
+          None
+    ]
+  structure_item (src/back.ml[31,1523+0]..[32,1532+17])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[31,1523+4]..[31,1523+6])
+          Ppat_construct "()" (src/back.ml[31,1523+4]..[31,1523+6])
+          None
+        expression (src/back.ml[32,1532+2]..[32,1532+17])
+          Pexp_apply
+          expression (src/back.ml[32,1532+2]..[32,1532+15])
+            Pexp_ident "Interpret.run" (src/back.ml[32,1532+2]..[32,1532+15])
+          [
+            <arg>
+            Nolabel
+              expression (src/back.ml[32,1532+15]..[32,1532+17])
+                Pexp_construct "()" (src/back.ml[32,1532+15]..[32,1532+17])
+                None
+          ]
+    ]
+  structure_item (src/back.ml[36,1641+0]..[45,2011+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[36,1641+4]..[36,1641+6])
+          Ppat_construct "()" (src/back.ml[36,1641+4]..[36,1641+6])
+          None
+        expression (src/back.ml[37,1650+2]..[45,2011+5])
+          Pexp_ifthenelse
+          expression (src/back.ml[37,1650+5]..[37,1650+25])
+            Pexp_ident "Settings.list_errors" (src/back.ml[37,1650+5]..[37,1650+25])
+          expression (src/back.ml[37,1650+31]..[45,2011+5])
+            Pexp_letmodule "L" (src/back.ml[38,1687+15]..[38,1687+16])
+            module_expr (src/back.ml[38,1687+19]..[43,1988+8])
+              Pmod_apply
+              module_expr (src/back.ml[38,1687+19]..[38,1687+32])
+                Pmod_ident "LRijkstra.Run" (src/back.ml[38,1687+19]..[38,1687+32])
+              module_expr (src/back.ml[38,1687+33]..[43,1988+7])
+                Pmod_structure
+                [
+                  structure_item (src/back.ml[40,1796+6]..[40,1796+38])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[40,1796+10]..[40,1796+17])
+                          Ppat_var "verbose" (src/back.ml[40,1796+10]..[40,1796+17])
+                        expression (src/back.ml[40,1796+20]..[40,1796+38])
+                          Pexp_apply
+                          expression (src/back.ml[40,1796+34]..[40,1796+36])
+                            Pexp_ident ">=" (src/back.ml[40,1796+34]..[40,1796+36])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/back.ml[40,1796+20]..[40,1796+33])
+                                Pexp_ident "Settings.logA" (src/back.ml[40,1796+20]..[40,1796+33])
+                            <arg>
+                            Nolabel
+                              expression (src/back.ml[40,1796+37]..[40,1796+38])
+                                Pexp_constant PConst_int (2,None)
+                          ]
+                    ]
+                  structure_item (src/back.ml[42,1927+6]..[42,1927+60])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[42,1927+10]..[42,1927+20])
+                          Ppat_var "statistics" (src/back.ml[42,1927+10]..[42,1927+20])
+                        expression (src/back.ml[42,1927+23]..[42,1927+60])
+                          Pexp_ifthenelse
+                          expression (src/back.ml[42,1927+26]..[42,1927+31])
+                            Pexp_construct "false" (src/back.ml[42,1927+26]..[42,1927+31])
+                            None
+                          expression (src/back.ml[42,1927+37]..[42,1927+50])
+                            Pexp_construct "Some" (src/back.ml[42,1927+37]..[42,1927+41])
+                            Some
+                              expression (src/back.ml[42,1927+42]..[42,1927+50])
+                                Pexp_constant PConst_string("lr.csv",(src/back.ml[42,1927+43]..[42,1927+49]),None)
+                          Some
+                            expression (src/back.ml[42,1927+56]..[42,1927+60])
+                              Pexp_construct "None" (src/back.ml[42,1927+56]..[42,1927+60])
+                              None
+                    ]
+                ]
+            expression (src/back.ml[44,2000+4]..[44,2000+10])
+              Pexp_apply
+              expression (src/back.ml[44,2000+4]..[44,2000+8])
+                Pexp_ident "exit" (src/back.ml[44,2000+4]..[44,2000+8])
+              [
+                <arg>
+                Nolabel
+                  expression (src/back.ml[44,2000+9]..[44,2000+10])
+                    Pexp_constant PConst_int (0,None)
+              ]
+          None
+    ]
+  structure_item (src/back.ml[49,2053+0]..[65,2830+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[49,2053+4]..[49,2053+9])
+          Ppat_var "write" (src/back.ml[49,2053+4]..[49,2053+9])
+        expression (src/back.ml[49,2053+10]..[65,2830+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/back.ml[49,2053+10]..[49,2053+17])
+            Ppat_var "program" (src/back.ml[49,2053+10]..[49,2053+17])
+          expression (src/back.ml[50,2073+2]..[65,2830+19])
+            Pexp_letmodule "P" (src/back.ml[50,2073+13]..[50,2073+14])
+            module_expr (src/back.ml[50,2073+17]..[64,2820+6])
+              Pmod_apply
+              module_expr (src/back.ml[50,2073+17]..[50,2073+29])
+                Pmod_ident "Printer.Make" (src/back.ml[50,2073+17]..[50,2073+29])
+              module_expr (src/back.ml[50,2073+31]..[64,2820+5])
+                Pmod_structure
+                [
+                  structure_item (src/back.ml[51,2111+4]..[51,2111+40])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[51,2111+8]..[51,2111+16])
+                          Ppat_var "filename" (src/back.ml[51,2111+8]..[51,2111+16])
+                        expression (src/back.ml[51,2111+19]..[51,2111+40])
+                          Pexp_apply
+                          expression (src/back.ml[51,2111+33]..[51,2111+34])
+                            Pexp_ident "^" (src/back.ml[51,2111+33]..[51,2111+34])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/back.ml[51,2111+19]..[51,2111+32])
+                                Pexp_ident "Settings.base" (src/back.ml[51,2111+19]..[51,2111+32])
+                            <arg>
+                            Nolabel
+                              expression (src/back.ml[51,2111+35]..[51,2111+40])
+                                Pexp_constant PConst_string(".ml",(src/back.ml[51,2111+36]..[51,2111+39]),None)
+                          ]
+                    ]
+                  structure_item (src/back.ml[52,2152+4]..[52,2152+29])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[52,2152+8]..[52,2152+9])
+                          Ppat_var "f" (src/back.ml[52,2152+8]..[52,2152+9])
+                        expression (src/back.ml[52,2152+12]..[52,2152+29])
+                          Pexp_apply
+                          expression (src/back.ml[52,2152+12]..[52,2152+20])
+                            Pexp_ident "open_out" (src/back.ml[52,2152+12]..[52,2152+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/back.ml[52,2152+21]..[52,2152+29])
+                                Pexp_ident "filename" (src/back.ml[52,2152+21]..[52,2152+29])
+                          ]
+                    ]
+                  structure_item (src/back.ml[53,2182+4]..[63,2800+19])
+                    Pstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[53,2182+8]..[53,2182+24])
+                          Ppat_var "locate_stretches" (src/back.ml[53,2182+8]..[53,2182+24])
+                        expression (src/back.ml[63,2800+6]..[63,2800+19])
+                          Pexp_construct "Some" (src/back.ml[63,2800+6]..[63,2800+10])
+                          Some
+                            expression (src/back.ml[63,2800+11]..[63,2800+19])
+                              Pexp_ident "filename" (src/back.ml[63,2800+11]..[63,2800+19])
+                    ]
+                ]
+            expression (src/back.ml[65,2830+2]..[65,2830+19])
+              Pexp_apply
+              expression (src/back.ml[65,2830+2]..[65,2830+11])
+                Pexp_ident "P.program" (src/back.ml[65,2830+2]..[65,2830+11])
+              [
+                <arg>
+                Nolabel
+                  expression (src/back.ml[65,2830+12]..[65,2830+19])
+                    Pexp_ident "program" (src/back.ml[65,2830+12]..[65,2830+19])
+              ]
+    ]
+  structure_item (src/back.ml[69,2895+0]..[71,2928+46])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[69,2895+4]..[69,2895+6])
+          Ppat_construct "()" (src/back.ml[69,2895+4]..[69,2895+6])
+          None
+        expression (src/back.ml[70,2904+2]..[71,2928+46])
+          Pexp_ifthenelse
+          expression (src/back.ml[70,2904+5]..[70,2904+18])
+            Pexp_ident "Settings.cmly" (src/back.ml[70,2904+5]..[70,2904+18])
+          expression (src/back.ml[71,2928+4]..[71,2928+46])
+            Pexp_apply
+            expression (src/back.ml[71,2928+4]..[71,2928+20])
+              Pexp_ident "Cmly_write.write" (src/back.ml[71,2928+4]..[71,2928+20])
+            [
+              <arg>
+              Nolabel
+                expression (src/back.ml[71,2928+21]..[71,2928+46])
+                  Pexp_apply
+                  expression (src/back.ml[71,2928+36]..[71,2928+37])
+                    Pexp_ident "^" (src/back.ml[71,2928+36]..[71,2928+37])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/back.ml[71,2928+22]..[71,2928+35])
+                        Pexp_ident "Settings.base" (src/back.ml[71,2928+22]..[71,2928+35])
+                    <arg>
+                    Nolabel
+                      expression (src/back.ml[71,2928+38]..[71,2928+45])
+                        Pexp_constant PConst_string(".cmly",(src/back.ml[71,2928+39]..[71,2928+44]),None)
+                  ]
+            ]
+          None
+    ]
+  structure_item (src/back.ml[75,3043+0]..[91,3526+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[75,3043+4]..[75,3043+6])
+          Ppat_construct "()" (src/back.ml[75,3043+4]..[75,3043+6])
+          None
+        expression (src/back.ml[76,3052+2]..[91,3526+5])
+          Pexp_ifthenelse
+          expression (src/back.ml[76,3052+5]..[76,3052+19])
+            Pexp_ident "Settings.table" (src/back.ml[76,3052+5]..[76,3052+19])
+          expression (src/back.ml[76,3052+25]..[80,3193+5])
+            Pexp_letmodule "B" (src/back.ml[77,3083+15]..[77,3083+16])
+            module_expr (src/back.ml[77,3083+19]..[77,3083+48])
+              Pmod_apply
+              module_expr (src/back.ml[77,3083+19]..[77,3083+35])
+                Pmod_ident "TableBackend.Run" (src/back.ml[77,3083+19]..[77,3083+35])
+              module_expr (src/back.ml[77,3083+37]..[77,3083+47])
+                Pmod_structure
+                []
+            expression (src/back.ml[78,3135+4]..[79,3156+36])
+              Pexp_sequence
+              expression (src/back.ml[78,3135+4]..[78,3135+19])
+                Pexp_apply
+                expression (src/back.ml[78,3135+4]..[78,3135+9])
+                  Pexp_ident "write" (src/back.ml[78,3135+4]..[78,3135+9])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/back.ml[78,3135+10]..[78,3135+19])
+                      Pexp_ident "B.program" (src/back.ml[78,3135+10]..[78,3135+19])
+                ]
+              expression (src/back.ml[79,3156+4]..[79,3156+36])
+                Pexp_apply
+                expression (src/back.ml[79,3156+4]..[79,3156+19])
+                  Pexp_ident "Interface.write" (src/back.ml[79,3156+4]..[79,3156+19])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/back.ml[79,3156+20]..[79,3156+33])
+                      Pexp_ident "Front.grammar" (src/back.ml[79,3156+20]..[79,3156+33])
+                  <arg>
+                  Nolabel
+                    expression (src/back.ml[79,3156+34]..[79,3156+36])
+                      Pexp_construct "()" (src/back.ml[79,3156+34]..[79,3156+36])
+                      None
+                ]
+          Some
+            expression (src/back.ml[81,3199+7]..[91,3526+5])
+              Pexp_ifthenelse
+              expression (src/back.ml[81,3199+10]..[81,3199+22])
+                Pexp_ident "Settings.coq" (src/back.ml[81,3199+10]..[81,3199+22])
+              expression (src/back.ml[81,3199+28]..[86,3377+5])
+                Pexp_letmodule "B" (src/back.ml[82,3233+15]..[82,3233+16])
+                module_expr (src/back.ml[82,3233+19]..[82,3233+46])
+                  Pmod_apply
+                  module_expr (src/back.ml[82,3233+19]..[82,3233+33])
+                    Pmod_ident "CoqBackend.Run" (src/back.ml[82,3233+19]..[82,3233+33])
+                  module_expr (src/back.ml[82,3233+35]..[82,3233+45])
+                    Pmod_structure
+                    []
+                expression (src/back.ml[83,3283+4]..[85,3359+17])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/back.ml[83,3283+8]..[83,3283+16])
+                        Ppat_var "filename" (src/back.ml[83,3283+8]..[83,3283+16])
+                      expression (src/back.ml[83,3283+19]..[83,3283+39])
+                        Pexp_apply
+                        expression (src/back.ml[83,3283+33]..[83,3283+34])
+                          Pexp_ident "^" (src/back.ml[83,3283+33]..[83,3283+34])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/back.ml[83,3283+19]..[83,3283+32])
+                              Pexp_ident "Settings.base" (src/back.ml[83,3283+19]..[83,3283+32])
+                          <arg>
+                          Nolabel
+                            expression (src/back.ml[83,3283+35]..[83,3283+39])
+                              Pexp_constant PConst_string(".v",(src/back.ml[83,3283+36]..[83,3283+38]),None)
+                        ]
+                  ]
+                  expression (src/back.ml[84,3326+4]..[85,3359+17])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[84,3326+8]..[84,3326+9])
+                          Ppat_var "f" (src/back.ml[84,3326+8]..[84,3326+9])
+                        expression (src/back.ml[84,3326+12]..[84,3326+29])
+                          Pexp_apply
+                          expression (src/back.ml[84,3326+12]..[84,3326+20])
+                            Pexp_ident "open_out" (src/back.ml[84,3326+12]..[84,3326+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/back.ml[84,3326+21]..[84,3326+29])
+                                Pexp_ident "filename" (src/back.ml[84,3326+21]..[84,3326+29])
+                          ]
+                    ]
+                    expression (src/back.ml[85,3359+4]..[85,3359+17])
+                      Pexp_apply
+                      expression (src/back.ml[85,3359+4]..[85,3359+15])
+                        Pexp_ident "B.write_all" (src/back.ml[85,3359+4]..[85,3359+15])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/back.ml[85,3359+16]..[85,3359+17])
+                            Pexp_ident "f" (src/back.ml[85,3359+16]..[85,3359+17])
+                      ]
+              Some
+                expression (src/back.ml[87,3383+7]..[91,3526+5])
+                  Pexp_letmodule "B" (src/back.ml[88,3396+15]..[88,3396+16])
+                  module_expr (src/back.ml[88,3396+19]..[88,3396+47])
+                    Pmod_apply
+                    module_expr (src/back.ml[88,3396+19]..[88,3396+34])
+                      Pmod_ident "CodeBackend.Run" (src/back.ml[88,3396+19]..[88,3396+34])
+                    module_expr (src/back.ml[88,3396+36]..[88,3396+46])
+                      Pmod_structure
+                      []
+                  expression (src/back.ml[89,3447+4]..[90,3489+36])
+                    Pexp_sequence
+                    expression (src/back.ml[89,3447+4]..[89,3447+40])
+                      Pexp_apply
+                      expression (src/back.ml[89,3447+4]..[89,3447+9])
+                        Pexp_ident "write" (src/back.ml[89,3447+4]..[89,3447+9])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/back.ml[89,3447+10]..[89,3447+40])
+                            Pexp_apply
+                            expression (src/back.ml[89,3447+11]..[89,3447+29])
+                              Pexp_ident "CodeInliner.inline" (src/back.ml[89,3447+11]..[89,3447+29])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/back.ml[89,3447+30]..[89,3447+39])
+                                  Pexp_ident "B.program" (src/back.ml[89,3447+30]..[89,3447+39])
+                            ]
+                      ]
+                    expression (src/back.ml[90,3489+4]..[90,3489+36])
+                      Pexp_apply
+                      expression (src/back.ml[90,3489+4]..[90,3489+19])
+                        Pexp_ident "Interface.write" (src/back.ml[90,3489+4]..[90,3489+19])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/back.ml[90,3489+20]..[90,3489+33])
+                            Pexp_ident "Front.grammar" (src/back.ml[90,3489+20]..[90,3489+33])
+                        <arg>
+                        Nolabel
+                          expression (src/back.ml[90,3489+34]..[90,3489+36])
+                            Pexp_construct "()" (src/back.ml[90,3489+34]..[90,3489+36])
+                            None
+                      ]
+    ]
+  structure_item (src/back.ml[93,3533+0]..[94,3542+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[93,3533+4]..[93,3533+6])
+          Ppat_construct "()" (src/back.ml[93,3533+4]..[93,3533+6])
+          None
+        expression (src/back.ml[94,3542+2]..[94,3542+22])
+          Pexp_apply
+          expression (src/back.ml[94,3542+2]..[94,3542+11])
+            Pexp_ident "Time.tick" (src/back.ml[94,3542+2]..[94,3542+11])
+          [
+            <arg>
+            Nolabel
+              expression (src/back.ml[94,3542+12]..[94,3542+22])
+                Pexp_constant PConst_string("Printing",(src/back.ml[94,3542+13]..[94,3542+21]),None)
+          ]
+    ]
+]
+
+let () =
+  if Settings.dump_resolved
+  then
+    let module D = (Dump.Make)(Default) in
+      D.dump (Settings.base ^ ".automaton.resolved")
+let () =
+  if Settings.automaton_graph then AutomatonGraph.print_automaton_graph ()
+let () = Interpret.run ()
+let () =
+  if Settings.list_errors
+  then
+    let module L =
+      (LRijkstra.Run)(struct
+                        let verbose = Settings.logA >= 2
+                        let statistics =
+                          if false then Some "lr.csv" else None
+                      end) in exit 0
+let write program =
+  let module P =
+    (Printer.Make)(struct
+                     let filename = Settings.base ^ ".ml"
+                     let f = open_out filename
+                     let locate_stretches = Some filename
+                   end) in P.program program
+let () = if Settings.cmly then Cmly_write.write (Settings.base ^ ".cmly")
+let () =
+  if Settings.table
+  then
+    let module B = (TableBackend.Run)(struct  end) in
+      (write B.program; Interface.write Front.grammar ())
+  else
+    if Settings.coq
+    then
+      (let module B = (CoqBackend.Run)(struct  end) in
+         let filename = Settings.base ^ ".v" in
+         let f = open_out filename in B.write_all f)
+    else
+      (let module B = (CodeBackend.Run)(struct  end) in
+         write (CodeInliner.inline B.program);
+         Interface.write Front.grammar ())
+let () = Time.tick "Printing"
+[
+  structure_item (src/back.ml[19,1166+0]..src/back.ml[22,1249+50])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[19,1166+4]..src/back.ml[19,1166+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[20,1175+2]..src/back.ml[22,1249+50])
+          Texp_ifthenelse
+          expression (src/back.ml[20,1175+5]..src/back.ml[20,1175+27])
+            Texp_ident "Dune__exe!.Settings.dump_resolved"
+          expression (src/back.ml[21,1208+4]..src/back.ml[22,1249+50])
+            Texp_letmodule "D/468"
+            module_expr (src/back.ml[21,1208+19]..src/back.ml[21,1208+37])
+              Tmod_apply
+              module_expr (src/back.ml[21,1208+19]..src/back.ml[21,1208+28])
+                module_expr (src/back.ml[21,1208+19]..src/back.ml[21,1208+28])
+                  Tmod_ident "Dune__exe!.Dump.Make"
+              module_expr (src/back.ml[21,1208+29]..src/back.ml[21,1208+36])
+                module_expr (src/back.ml[21,1208+29]..src/back.ml[21,1208+36])
+                  Tmod_ident "Dune__exe!.Default"
+            expression (src/back.ml[22,1249+4]..src/back.ml[22,1249+50])
+              Texp_apply
+              expression (src/back.ml[22,1249+4]..src/back.ml[22,1249+10])
+                Texp_ident "D/468.dump"
+              [
+                <arg>
+                  Nolabel
+                  expression (src/back.ml[22,1249+11]..src/back.ml[22,1249+50])
+                    Texp_apply
+                    expression (src/back.ml[22,1249+26]..src/back.ml[22,1249+27])
+                      Texp_ident "Stdlib!.^"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/back.ml[22,1249+12]..src/back.ml[22,1249+25])
+                          Texp_ident "Dune__exe!.Settings.base"
+                      <arg>
+                        Nolabel
+                        expression (src/back.ml[22,1249+28]..src/back.ml[22,1249+49])
+                          Texp_constant Const_string(".automaton.resolved",(src/back.ml[22,1249+29]..src/back.ml[22,1249+48]),None)
+                    ]
+              ]
+          None
+    ]
+  structure_item (src/back.ml[24,1301+0]..src/back.ml[26,1345+42])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[24,1301+4]..src/back.ml[24,1301+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[25,1310+2]..src/back.ml[26,1345+42])
+          Texp_ifthenelse
+          expression (src/back.ml[25,1310+5]..src/back.ml[25,1310+29])
+            Texp_ident "Dune__exe!.Settings.automaton_graph"
+          expression (src/back.ml[26,1345+4]..src/back.ml[26,1345+42])
+            Texp_apply
+            expression (src/back.ml[26,1345+4]..src/back.ml[26,1345+40])
+              Texp_ident "Dune__exe!.AutomatonGraph.print_automaton_graph"
+            [
+              <arg>
+                Nolabel
+                expression (src/back.ml[26,1345+40]..src/back.ml[26,1345+42])
+                  Texp_construct "()"
+                  []
+            ]
+          None
+    ]
+  structure_item (src/back.ml[31,1523+0]..src/back.ml[32,1532+17])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[31,1523+4]..src/back.ml[31,1523+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[32,1532+2]..src/back.ml[32,1532+17])
+          Texp_apply
+          expression (src/back.ml[32,1532+2]..src/back.ml[32,1532+15])
+            Texp_ident "Dune__exe!.Interpret.run"
+          [
+            <arg>
+              Nolabel
+              expression (src/back.ml[32,1532+15]..src/back.ml[32,1532+17])
+                Texp_construct "()"
+                []
+          ]
+    ]
+  structure_item (src/back.ml[36,1641+0]..src/back.ml[45,2011+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[36,1641+4]..src/back.ml[36,1641+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[37,1650+2]..src/back.ml[45,2011+5])
+          Texp_ifthenelse
+          expression (src/back.ml[37,1650+5]..src/back.ml[37,1650+25])
+            Texp_ident "Dune__exe!.Settings.list_errors"
+          expression (src/back.ml[37,1650+31]..src/back.ml[45,2011+5])
+            Texp_letmodule "L/483"
+            module_expr (src/back.ml[38,1687+19]..src/back.ml[43,1988+8])
+              Tmod_apply
+              module_expr (src/back.ml[38,1687+19]..src/back.ml[38,1687+32])
+                module_expr (src/back.ml[38,1687+19]..src/back.ml[38,1687+32])
+                  Tmod_ident "Dune__exe!.LRijkstra.Run"
+              module_expr (src/back.ml[38,1687+33]..src/back.ml[43,1988+7])
+                Tmod_structure
+                [
+                  structure_item (src/back.ml[40,1796+6]..src/back.ml[40,1796+38])
+                    Tstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[40,1796+10]..src/back.ml[40,1796+17])
+                          Tpat_var "verbose/474"
+                        expression (src/back.ml[40,1796+20]..src/back.ml[40,1796+38])
+                          Texp_apply
+                          expression (src/back.ml[40,1796+34]..src/back.ml[40,1796+36])
+                            Texp_ident "Stdlib!.>="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/back.ml[40,1796+20]..src/back.ml[40,1796+33])
+                                Texp_ident "Dune__exe!.Settings.logA"
+                            <arg>
+                              Nolabel
+                              expression (src/back.ml[40,1796+37]..src/back.ml[40,1796+38])
+                                Texp_constant Const_int 2
+                          ]
+                    ]
+                  structure_item (src/back.ml[42,1927+6]..src/back.ml[42,1927+60])
+                    Tstr_value Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[42,1927+10]..src/back.ml[42,1927+20])
+                          Tpat_var "statistics/475"
+                        expression (src/back.ml[42,1927+23]..src/back.ml[42,1927+60])
+                          Texp_ifthenelse
+                          expression (src/back.ml[42,1927+26]..src/back.ml[42,1927+31])
+                            Texp_construct "false"
+                            []
+                          expression (src/back.ml[42,1927+37]..src/back.ml[42,1927+50])
+                            Texp_construct "Some"
+                            [
+                              expression (src/back.ml[42,1927+42]..src/back.ml[42,1927+50])
+                                Texp_constant Const_string("lr.csv",(src/back.ml[42,1927+43]..src/back.ml[42,1927+49]),None)
+                            ]
+                          Some
+                            expression (src/back.ml[42,1927+56]..src/back.ml[42,1927+60])
+                              Texp_construct "None"
+                              []
+                    ]
+                ]
+            expression (src/back.ml[44,2000+4]..src/back.ml[44,2000+10])
+              Texp_apply
+              expression (src/back.ml[44,2000+4]..src/back.ml[44,2000+8])
+                Texp_ident "Stdlib!.exit"
+              [
+                <arg>
+                  Nolabel
+                  expression (src/back.ml[44,2000+9]..src/back.ml[44,2000+10])
+                    Texp_constant Const_int 0
+              ]
+          None
+    ]
+  structure_item (src/back.ml[49,2053+0]..src/back.ml[65,2830+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[49,2053+4]..src/back.ml[49,2053+9])
+          Tpat_var "write/484"
+        expression (src/back.ml[49,2053+10]..src/back.ml[65,2830+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/back.ml[49,2053+10]..src/back.ml[49,2053+17])
+                Tpat_var "program/486"
+              expression (src/back.ml[50,2073+2]..src/back.ml[65,2830+19])
+                Texp_letmodule "P/507"
+                module_expr (src/back.ml[50,2073+17]..src/back.ml[64,2820+6])
+                  Tmod_apply
+                  module_expr (src/back.ml[50,2073+17]..src/back.ml[50,2073+29])
+                    module_expr (src/back.ml[50,2073+17]..src/back.ml[50,2073+29])
+                      Tmod_ident "Dune__exe!.Printer.Make"
+                  module_expr (src/back.ml[50,2073+31]..src/back.ml[64,2820+5])
+                    Tmod_structure
+                    [
+                      structure_item (src/back.ml[51,2111+4]..src/back.ml[51,2111+40])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/back.ml[51,2111+8]..src/back.ml[51,2111+16])
+                              Tpat_var "filename/487"
+                            expression (src/back.ml[51,2111+19]..src/back.ml[51,2111+40])
+                              Texp_apply
+                              expression (src/back.ml[51,2111+33]..src/back.ml[51,2111+34])
+                                Texp_ident "Stdlib!.^"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/back.ml[51,2111+19]..src/back.ml[51,2111+32])
+                                    Texp_ident "Dune__exe!.Settings.base"
+                                <arg>
+                                  Nolabel
+                                  expression (src/back.ml[51,2111+35]..src/back.ml[51,2111+40])
+                                    Texp_constant Const_string(".ml",(src/back.ml[51,2111+36]..src/back.ml[51,2111+39]),None)
+                              ]
+                        ]
+                      structure_item (src/back.ml[52,2152+4]..src/back.ml[52,2152+29])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/back.ml[52,2152+8]..src/back.ml[52,2152+9])
+                              Tpat_var "f/488"
+                            expression (src/back.ml[52,2152+12]..src/back.ml[52,2152+29])
+                              Texp_apply
+                              expression (src/back.ml[52,2152+12]..src/back.ml[52,2152+20])
+                                Texp_ident "Stdlib!.open_out"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/back.ml[52,2152+21]..src/back.ml[52,2152+29])
+                                    Texp_ident "filename/487"
+                              ]
+                        ]
+                      structure_item (src/back.ml[53,2182+4]..src/back.ml[63,2800+19])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/back.ml[53,2182+8]..src/back.ml[53,2182+24])
+                              Tpat_var "locate_stretches/489"
+                            expression (src/back.ml[63,2800+6]..src/back.ml[63,2800+19])
+                              Texp_construct "Some"
+                              [
+                                expression (src/back.ml[63,2800+11]..src/back.ml[63,2800+19])
+                                  Texp_ident "filename/487"
+                              ]
+                        ]
+                    ]
+                expression (src/back.ml[65,2830+2]..src/back.ml[65,2830+19])
+                  Texp_apply
+                  expression (src/back.ml[65,2830+2]..src/back.ml[65,2830+11])
+                    Texp_ident "P/507.program"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/back.ml[65,2830+12]..src/back.ml[65,2830+19])
+                        Texp_ident "program/486"
+                  ]
+          ]
+    ]
+  structure_item (src/back.ml[69,2895+0]..src/back.ml[71,2928+46])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[69,2895+4]..src/back.ml[69,2895+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[70,2904+2]..src/back.ml[71,2928+46])
+          Texp_ifthenelse
+          expression (src/back.ml[70,2904+5]..src/back.ml[70,2904+18])
+            Texp_ident "Dune__exe!.Settings.cmly"
+          expression (src/back.ml[71,2928+4]..src/back.ml[71,2928+46])
+            Texp_apply
+            expression (src/back.ml[71,2928+4]..src/back.ml[71,2928+20])
+              Texp_ident "Dune__exe!.Cmly_write.write"
+            [
+              <arg>
+                Nolabel
+                expression (src/back.ml[71,2928+21]..src/back.ml[71,2928+46])
+                  Texp_apply
+                  expression (src/back.ml[71,2928+36]..src/back.ml[71,2928+37])
+                    Texp_ident "Stdlib!.^"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/back.ml[71,2928+22]..src/back.ml[71,2928+35])
+                        Texp_ident "Dune__exe!.Settings.base"
+                    <arg>
+                      Nolabel
+                      expression (src/back.ml[71,2928+38]..src/back.ml[71,2928+45])
+                        Texp_constant Const_string(".cmly",(src/back.ml[71,2928+39]..src/back.ml[71,2928+44]),None)
+                  ]
+            ]
+          None
+    ]
+  structure_item (src/back.ml[75,3043+0]..src/back.ml[91,3526+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[75,3043+4]..src/back.ml[75,3043+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[76,3052+2]..src/back.ml[91,3526+5])
+          Texp_ifthenelse
+          expression (src/back.ml[76,3052+5]..src/back.ml[76,3052+19])
+            Texp_ident "Dune__exe!.Settings.table"
+          expression (src/back.ml[76,3052+25]..src/back.ml[80,3193+5])
+            Texp_letmodule "B/543"
+            module_expr (src/back.ml[77,3083+19]..src/back.ml[77,3083+48])
+              Tmod_apply
+              module_expr (src/back.ml[77,3083+19]..src/back.ml[77,3083+35])
+                module_expr (src/back.ml[77,3083+19]..src/back.ml[77,3083+35])
+                  Tmod_ident "Dune__exe!.TableBackend.Run"
+              module_expr (src/back.ml[77,3083+37]..src/back.ml[77,3083+47])
+                Tmod_structure
+                []
+            expression (src/back.ml[78,3135+4]..src/back.ml[79,3156+36])
+              Texp_sequence
+              expression (src/back.ml[78,3135+4]..src/back.ml[78,3135+19])
+                Texp_apply
+                expression (src/back.ml[78,3135+4]..src/back.ml[78,3135+9])
+                  Texp_ident "write/484"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/back.ml[78,3135+10]..src/back.ml[78,3135+19])
+                      Texp_ident "B/543.program"
+                ]
+              expression (src/back.ml[79,3156+4]..src/back.ml[79,3156+36])
+                Texp_apply
+                expression (src/back.ml[79,3156+4]..src/back.ml[79,3156+19])
+                  Texp_ident "Dune__exe!.Interface.write"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/back.ml[79,3156+20]..src/back.ml[79,3156+33])
+                      Texp_ident "Dune__exe!.Front.grammar"
+                  <arg>
+                    Nolabel
+                    expression (src/back.ml[79,3156+34]..src/back.ml[79,3156+36])
+                      Texp_construct "()"
+                      []
+                ]
+          Some
+            expression (src/back.ml[81,3199+7]..src/back.ml[91,3526+5])
+              Texp_ifthenelse
+              expression (src/back.ml[81,3199+10]..src/back.ml[81,3199+22])
+                Texp_ident "Dune__exe!.Settings.coq"
+              expression (src/back.ml[81,3199+28]..src/back.ml[86,3377+5])
+                Texp_letmodule "B/601"
+                module_expr (src/back.ml[82,3233+19]..src/back.ml[82,3233+46])
+                  Tmod_apply
+                  module_expr (src/back.ml[82,3233+19]..src/back.ml[82,3233+33])
+                    module_expr (src/back.ml[82,3233+19]..src/back.ml[82,3233+33])
+                      Tmod_ident "Dune__exe!.CoqBackend.Run"
+                  module_expr (src/back.ml[82,3233+35]..src/back.ml[82,3233+45])
+                    Tmod_structure
+                    []
+                expression (src/back.ml[83,3283+4]..src/back.ml[85,3359+17])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/back.ml[83,3283+8]..src/back.ml[83,3283+16])
+                        Tpat_var "filename/602"
+                      expression (src/back.ml[83,3283+19]..src/back.ml[83,3283+39])
+                        Texp_apply
+                        expression (src/back.ml[83,3283+33]..src/back.ml[83,3283+34])
+                          Texp_ident "Stdlib!.^"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/back.ml[83,3283+19]..src/back.ml[83,3283+32])
+                              Texp_ident "Dune__exe!.Settings.base"
+                          <arg>
+                            Nolabel
+                            expression (src/back.ml[83,3283+35]..src/back.ml[83,3283+39])
+                              Texp_constant Const_string(".v",(src/back.ml[83,3283+36]..src/back.ml[83,3283+38]),None)
+                        ]
+                  ]
+                  expression (src/back.ml[84,3326+4]..src/back.ml[85,3359+17])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/back.ml[84,3326+8]..src/back.ml[84,3326+9])
+                          Tpat_var "f/603"
+                        expression (src/back.ml[84,3326+12]..src/back.ml[84,3326+29])
+                          Texp_apply
+                          expression (src/back.ml[84,3326+12]..src/back.ml[84,3326+20])
+                            Texp_ident "Stdlib!.open_out"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/back.ml[84,3326+21]..src/back.ml[84,3326+29])
+                                Texp_ident "filename/602"
+                          ]
+                    ]
+                    expression (src/back.ml[85,3359+4]..src/back.ml[85,3359+17])
+                      Texp_apply
+                      expression (src/back.ml[85,3359+4]..src/back.ml[85,3359+15])
+                        Texp_ident "B/601.write_all"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/back.ml[85,3359+16]..src/back.ml[85,3359+17])
+                            Texp_ident "f/603"
+                      ]
+              Some
+                expression (src/back.ml[87,3383+7]..src/back.ml[91,3526+5])
+                  Texp_letmodule "B/611"
+                  module_expr (src/back.ml[88,3396+19]..src/back.ml[88,3396+47])
+                    Tmod_apply
+                    module_expr (src/back.ml[88,3396+19]..src/back.ml[88,3396+34])
+                      module_expr (src/back.ml[88,3396+19]..src/back.ml[88,3396+34])
+                        Tmod_ident "Dune__exe!.CodeBackend.Run"
+                    module_expr (src/back.ml[88,3396+36]..src/back.ml[88,3396+46])
+                      Tmod_structure
+                      []
+                  expression (src/back.ml[89,3447+4]..src/back.ml[90,3489+36])
+                    Texp_sequence
+                    expression (src/back.ml[89,3447+4]..src/back.ml[89,3447+40])
+                      Texp_apply
+                      expression (src/back.ml[89,3447+4]..src/back.ml[89,3447+9])
+                        Texp_ident "write/484"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/back.ml[89,3447+10]..src/back.ml[89,3447+40])
+                            Texp_apply
+                            expression (src/back.ml[89,3447+11]..src/back.ml[89,3447+29])
+                              Texp_ident "Dune__exe!.CodeInliner.inline"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/back.ml[89,3447+30]..src/back.ml[89,3447+39])
+                                  Texp_ident "B/611.program"
+                            ]
+                      ]
+                    expression (src/back.ml[90,3489+4]..src/back.ml[90,3489+36])
+                      Texp_apply
+                      expression (src/back.ml[90,3489+4]..src/back.ml[90,3489+19])
+                        Texp_ident "Dune__exe!.Interface.write"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/back.ml[90,3489+20]..src/back.ml[90,3489+33])
+                            Texp_ident "Dune__exe!.Front.grammar"
+                        <arg>
+                          Nolabel
+                          expression (src/back.ml[90,3489+34]..src/back.ml[90,3489+36])
+                            Texp_construct "()"
+                            []
+                      ]
+    ]
+  structure_item (src/back.ml[93,3533+0]..src/back.ml[94,3542+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/back.ml[93,3533+4]..src/back.ml[93,3533+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/back.ml[94,3542+2]..src/back.ml[94,3542+22])
+          Texp_apply
+          expression (src/back.ml[94,3542+2]..src/back.ml[94,3542+11])
+            Texp_ident "Dune__exe!.Time.tick"
+          [
+            <arg>
+              Nolabel
+              expression (src/back.ml[94,3542+12]..src/back.ml[94,3542+22])
+                Texp_constant Const_string("Printing",(src/back.ml[94,3542+13]..src/back.ml[94,3542+21]),None)
+          ]
+    ]
+]
+
+{<Dune__exe__Back>
+ }
+
+(seq
+  (let
+    (*match*/3516 =
+       (if (field_imm 5 (global Dune__exe__Settings!))
+         (let
+           (D/468 =
+              (apply
+                (let (let/3513 = (field_imm 0 (global Dune__exe__Dump!)))
+                  (field_imm 0 (global Dune__exe__Dump!)))
+                (let
+                  (let/3511 = (global Dune__exe__Default!)
+                   let/3512 =a (global Dune__exe__Default!))
+                  (makeblock 0 (field_mut 0 let/3512)))))
+           (apply (field_imm 0 D/468)
+             (apply (field_imm 27 (global Stdlib!))
+               (field_imm 24 (global Dune__exe__Settings!))
+               ".automaton.resolved")))
+         0))
+    0)
+  (let
+    (*match*/3519 =
+       (if (field_imm 7 (global Dune__exe__Settings!))
+         (apply (field_imm 0 (global Dune__exe__AutomatonGraph!)) 0) 0))
+    0)
+  (let
+    (*match*/3521 = (apply (field_imm 0 (global Dune__exe__Interpret!)) 0))
+    0)
+  (let
+    (*match*/3525 =
+       (if (field_imm 41 (global Dune__exe__Settings!))
+         (let
+           (L/483 =
+              (apply
+                (let
+                  (let/3522 = (field_imm 0 (global Dune__exe__LRijkstra!)))
+                  (field_imm 0 (global Dune__exe__LRijkstra!)))
+                (let
+                  (verbose/474 =[int]
+                     (>= (field_imm 21 (global Dune__exe__Settings!)) 2)
+                   statistics/475 = (if 0 [0: "lr.csv"] 0))
+                  (makeblock 0 verbose/474 statistics/475))))
+           (apply (field_imm 98 (global Stdlib!)) 0))
+         0))
+    0)
+  (let
+    (write/484 =
+       (function program/486 : int
+         (let
+           (P/507 =
+              (apply
+                (let (let/3526 = (field_imm 0 (global Dune__exe__Printer!)))
+                  (field_imm 0 (global Dune__exe__Printer!)))
+                (let
+                  (filename/487 =
+                     (apply (field_imm 27 (global Stdlib!))
+                       (field_imm 24 (global Dune__exe__Settings!)) ".ml")
+                   f/488 =
+                     (apply (field_imm 59 (global Stdlib!)) filename/487)
+                   locate_stretches/489 = (makeblock 0 filename/487))
+                  (makeblock 0 f/488 locate_stretches/489))))
+           (apply (field_imm 0 P/507) program/486))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Back!) write/484))
+  (let
+    (*match*/3529 =
+       (if (field_imm 48 (global Dune__exe__Settings!))
+         (apply (field_imm 0 (global Dune__exe__Cmly_write!))
+           (apply (field_imm 27 (global Stdlib!))
+             (field_imm 24 (global Dune__exe__Settings!)) ".cmly"))
+         0))
+    0)
+  (let
+    (*match*/3536 =
+       (if (field_imm 29 (global Dune__exe__Settings!))
+         (let
+           (B/543 =
+              (apply
+                (let
+                  (let/3532 = (field_imm 0 (global Dune__exe__TableBackend!)))
+                  (field_imm 0 (global Dune__exe__TableBackend!)))
+                (makeblock 0)))
+           (seq
+             (apply (field_imm 0 (global Dune__exe__Back!))
+               (field_imm 0 B/543))
+             (apply (field_imm 7 (global Dune__exe__Interface!))
+               (field_imm 0 (global Dune__exe__Front!)) 0)))
+         (if (field_imm 32 (global Dune__exe__Settings!))
+           (let
+             (B/601 =
+                (apply
+                  (let
+                    (let/3531 = (field_imm 0 (global Dune__exe__CoqBackend!)))
+                    (field_imm 0 (global Dune__exe__CoqBackend!)))
+                  (makeblock 0))
+              filename/602 =
+                (apply (field_imm 27 (global Stdlib!))
+                  (field_imm 24 (global Dune__exe__Settings!)) ".v")
+              f/603 = (apply (field_imm 59 (global Stdlib!)) filename/602))
+             (apply (field_imm 0 B/601) f/603))
+           (let
+             (B/611 =
+                (apply
+                  (let
+                    (let/3530 =
+                       (field_imm 0 (global Dune__exe__CodeBackend!)))
+                    (field_imm 0 (global Dune__exe__CodeBackend!)))
+                  (makeblock 0)))
+             (seq
+               (apply (field_imm 0 (global Dune__exe__Back!))
+                 (apply (field_imm 0 (global Dune__exe__CodeInliner!))
+                   (field_imm 0 B/611)))
+               (apply (field_imm 7 (global Dune__exe__Interface!))
+                 (field_imm 0 (global Dune__exe__Front!)) 0))))))
+    0)
+  (let
+    (*match*/3538 =
+       (apply (field_imm 0 (global Dune__exe__Time!)) "Printing"))
+    0)
+  0)
+(seq
+  (let
+    (*match*/3516 =
+       (if (field_imm 5 (global Dune__exe__Settings!))
+         (let
+           (D/468 =
+              (apply
+                (let (let/3513 = (field_imm 0 (global Dune__exe__Dump!)))
+                  (field_imm 0 (global Dune__exe__Dump!)))
+                (let (let/3511 = (global Dune__exe__Default!))
+                  (makeblock 0 (field_mut 0 (global Dune__exe__Default!))))))
+           (apply (field_imm 0 D/468)
+             (apply (field_imm 27 (global Stdlib!))
+               (field_imm 24 (global Dune__exe__Settings!))
+               ".automaton.resolved")))
+         0))
+    0)
+  (let
+    (*match*/3519 =
+       (if (field_imm 7 (global Dune__exe__Settings!))
+         (apply (field_imm 0 (global Dune__exe__AutomatonGraph!)) 0) 0))
+    0)
+  (let
+    (*match*/3521 = (apply (field_imm 0 (global Dune__exe__Interpret!)) 0))
+    0)
+  (let
+    (*match*/3525 =
+       (if (field_imm 41 (global Dune__exe__Settings!))
+         (let
+           (L/483 =
+              (apply
+                (let
+                  (let/3522 = (field_imm 0 (global Dune__exe__LRijkstra!)))
+                  (field_imm 0 (global Dune__exe__LRijkstra!)))
+                (let
+                  (verbose/474 =[int]
+                     (>= (field_imm 21 (global Dune__exe__Settings!)) 2)
+                   statistics/475 = (if 0 [0: "lr.csv"] 0))
+                  (makeblock 0 verbose/474 statistics/475))))
+           (apply (field_imm 98 (global Stdlib!)) 0))
+         0))
+    0)
+  (let
+    (write/484 =
+       (function program/486 : int
+         (let
+           (P/507 =
+              (apply
+                (let (let/3526 = (field_imm 0 (global Dune__exe__Printer!)))
+                  (field_imm 0 (global Dune__exe__Printer!)))
+                (let
+                  (filename/487 =
+                     (apply (field_imm 27 (global Stdlib!))
+                       (field_imm 24 (global Dune__exe__Settings!)) ".ml")
+                   f/488 =
+                     (apply (field_imm 59 (global Stdlib!)) filename/487)
+                   locate_stretches/489 = (makeblock 0 filename/487))
+                  (makeblock 0 f/488 locate_stretches/489))))
+           (apply (field_imm 0 P/507) program/486))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Back!) write/484))
+  (let
+    (*match*/3529 =
+       (if (field_imm 48 (global Dune__exe__Settings!))
+         (apply (field_imm 0 (global Dune__exe__Cmly_write!))
+           (apply (field_imm 27 (global Stdlib!))
+             (field_imm 24 (global Dune__exe__Settings!)) ".cmly"))
+         0))
+    0)
+  (let
+    (*match*/3536 =
+       (if (field_imm 29 (global Dune__exe__Settings!))
+         (let
+           (B/543 =
+              (apply
+                (let
+                  (let/3532 = (field_imm 0 (global Dune__exe__TableBackend!)))
+                  (field_imm 0 (global Dune__exe__TableBackend!)))
+                (makeblock 0)))
+           (seq
+             (apply (field_imm 0 (global Dune__exe__Back!))
+               (field_imm 0 B/543))
+             (apply (field_imm 7 (global Dune__exe__Interface!))
+               (field_imm 0 (global Dune__exe__Front!)) 0)))
+         (if (field_imm 32 (global Dune__exe__Settings!))
+           (let
+             (B/601 =
+                (apply
+                  (let
+                    (let/3531 = (field_imm 0 (global Dune__exe__CoqBackend!)))
+                    (field_imm 0 (global Dune__exe__CoqBackend!)))
+                  (makeblock 0))
+              filename/602 =
+                (apply (field_imm 27 (global Stdlib!))
+                  (field_imm 24 (global Dune__exe__Settings!)) ".v")
+              f/603 = (apply (field_imm 59 (global Stdlib!)) filename/602))
+             (apply (field_imm 0 B/601) f/603))
+           (let
+             (B/611 =
+                (apply
+                  (let
+                    (let/3530 =
+                       (field_imm 0 (global Dune__exe__CodeBackend!)))
+                    (field_imm 0 (global Dune__exe__CodeBackend!)))
+                  (makeblock 0)))
+             (seq
+               (apply (field_imm 0 (global Dune__exe__Back!))
+                 (apply (field_imm 0 (global Dune__exe__CodeInliner!))
+                   (field_imm 0 B/611)))
+               (apply (field_imm 7 (global Dune__exe__Interface!))
+                 (field_imm 0 (global Dune__exe__Front!)) 0))))))
+    0)
+  (let
+    (*match*/3538 =
+       (apply (field_imm 0 (global Dune__exe__Time!)) "Printing"))
+    0)
+  0)

@@ -1,0 +1,175 @@
+[
+  structure_item (src/GroundSort.ml[14,1000+0]..[15,1012+23])
+    Pstr_type Rec
+    [
+      type_declaration "sort" (src/GroundSort.ml[14,1000+5]..[14,1000+9]) (src/GroundSort.ml[14,1000+0]..[15,1012+23])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/GroundSort.ml[15,1012+2]..[15,1012+23])
+                "GArrow" (src/GroundSort.ml[15,1012+4]..[15,1012+10])
+                [
+                  core_type (src/GroundSort.ml[15,1012+14]..[15,1012+23])
+                    Ptyp_constr "list" (src/GroundSort.ml[15,1012+19]..[15,1012+23])
+                    [
+                      core_type (src/GroundSort.ml[15,1012+14]..[15,1012+18])
+                        Ptyp_constr "sort" (src/GroundSort.ml[15,1012+14]..[15,1012+18])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/GroundSort.ml[17,1037+0]..[18,1048+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/GroundSort.ml[17,1037+4]..[17,1037+8])
+          Ppat_var "star" (src/GroundSort.ml[17,1037+4]..[17,1037+8])
+        expression (src/GroundSort.ml[18,1048+2]..[18,1048+11])
+          Pexp_construct "GArrow" (src/GroundSort.ml[18,1048+2]..[18,1048+8])
+          Some
+            expression (src/GroundSort.ml[18,1048+9]..[18,1048+11])
+              Pexp_construct "[]" (src/GroundSort.ml[18,1048+9]..[18,1048+11])
+              None
+    ]
+  structure_item (src/GroundSort.ml[20,1061+0]..[22,1108+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/GroundSort.ml[20,1061+4]..[20,1061+10])
+          Ppat_var "domain" (src/GroundSort.ml[20,1061+4]..[20,1061+10])
+        expression (src/GroundSort.ml[20,1061+11]..[22,1108+7]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/GroundSort.ml[20,1061+11]..[20,1061+15])
+            Ppat_var "sort" (src/GroundSort.ml[20,1061+11]..[20,1061+15])
+          expression (src/GroundSort.ml[21,1079+2]..[22,1108+7])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/GroundSort.ml[21,1079+6]..[21,1079+18])
+                  Ppat_construct "GArrow" (src/GroundSort.ml[21,1079+6]..[21,1079+12])
+                  Some
+                    []
+                    pattern (src/GroundSort.ml[21,1079+13]..[21,1079+18])
+                      Ppat_var "sorts" (src/GroundSort.ml[21,1079+13]..[21,1079+18])
+                expression (src/GroundSort.ml[21,1079+21]..[21,1079+25])
+                  Pexp_ident "sort" (src/GroundSort.ml[21,1079+21]..[21,1079+25])
+            ]
+            expression (src/GroundSort.ml[22,1108+2]..[22,1108+7])
+              Pexp_ident "sorts" (src/GroundSort.ml[22,1108+2]..[22,1108+7])
+    ]
+]
+
+type sort =
+  | GArrow of sort list 
+let star = GArrow []
+let domain sort = let GArrow sorts = sort in sorts
+[
+  structure_item (src/GroundSort.ml[14,1000+0]..src/GroundSort.ml[15,1012+23])
+    Tstr_type Rec
+    [
+      type_declaration sort/397 (src/GroundSort.ml[14,1000+0]..src/GroundSort.ml[15,1012+23])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/GroundSort.ml[15,1012+2]..src/GroundSort.ml[15,1012+23])
+                GArrow/398
+                [
+                  core_type (src/GroundSort.ml[15,1012+14]..src/GroundSort.ml[15,1012+23])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/GroundSort.ml[15,1012+14]..src/GroundSort.ml[15,1012+18])
+                        Ttyp_constr "sort/397"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/GroundSort.ml[17,1037+0]..src/GroundSort.ml[18,1048+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/GroundSort.ml[17,1037+4]..src/GroundSort.ml[17,1037+8])
+          Tpat_var "star/399"
+        expression (src/GroundSort.ml[18,1048+2]..src/GroundSort.ml[18,1048+11])
+          Texp_construct "GArrow"
+          [
+            expression (src/GroundSort.ml[18,1048+9]..src/GroundSort.ml[18,1048+11])
+              Texp_construct "[]"
+              []
+          ]
+    ]
+  structure_item (src/GroundSort.ml[20,1061+0]..src/GroundSort.ml[22,1108+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/GroundSort.ml[20,1061+4]..src/GroundSort.ml[20,1061+10])
+          Tpat_var "domain/400"
+        expression (src/GroundSort.ml[20,1061+11]..src/GroundSort.ml[22,1108+7]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/GroundSort.ml[20,1061+11]..src/GroundSort.ml[20,1061+15])
+                Tpat_var "sort/402"
+              expression (src/GroundSort.ml[21,1079+2]..src/GroundSort.ml[22,1108+7])
+                Texp_match
+                expression (src/GroundSort.ml[21,1079+21]..src/GroundSort.ml[21,1079+25])
+                  Texp_ident "sort/402"
+                [
+                  <case>
+                    pattern (src/GroundSort.ml[21,1079+6]..src/GroundSort.ml[21,1079+18])
+                      Tpat_value
+                      pattern (src/GroundSort.ml[21,1079+6]..src/GroundSort.ml[21,1079+18])
+                        Tpat_construct "GArrow"
+                        [
+                          pattern (src/GroundSort.ml[21,1079+13]..src/GroundSort.ml[21,1079+18])
+                            Tpat_var "sorts/403"
+                        ]
+                        None
+                    expression (src/GroundSort.ml[22,1108+2]..src/GroundSort.ml[22,1108+7])
+                      Texp_ident "sorts/403"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__GroundSort>
+ "domain"[value] -> <Dune__exe__GroundSort.3>;
+ "sort"[type] -> <Dune__exe__GroundSort.0>;
+ "star"[value] -> <Dune__exe__GroundSort.2>;
+ }
+
+(seq
+  (let (star/399 = [0: 0])
+    (setfield_ptr(root-init) 0 (global Dune__exe__GroundSort!) star/399))
+  (let
+    (domain/400 =
+       (function sort/402
+         (let (sorts/403 =a (field_imm 0 sort/402)) sorts/403)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__GroundSort!) domain/400))
+  0)
+(seq
+  (let (star/399 = [0: 0])
+    (setfield_ptr(root-init) 0 (global Dune__exe__GroundSort!) star/399))
+  (let (domain/400 = (function sort/402 (field_imm 0 sort/402)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__GroundSort!) domain/400))
+  0)

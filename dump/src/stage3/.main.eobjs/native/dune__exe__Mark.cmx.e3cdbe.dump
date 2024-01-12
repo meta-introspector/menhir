@@ -1,0 +1,165 @@
+[
+  structure_item (src/mark.ml[14,994+0]..[17,1197+26])
+    Pstr_attribute "ocaml.text"
+    [
+      structure_item (src/mark.ml[14,994+0]..[17,1197+26])
+        Pstr_eval
+        expression (src/mark.ml[14,994+0]..[17,1197+26])
+          Pexp_constant PConst_string(" This module implements a very simple notion of ``mark''. A mark is\n    really a reference cell (without content). Creating a new mark\n    requires allocating a new cell, and comparing marks requires\n    comparing pointers. ",(src/mark.ml[14,994+0]..[17,1197+26]),None)
+    ]
+  structure_item (src/mark.ml[19,1225+0]..[20,1234+12])
+    Pstr_type Rec
+    [
+      type_declaration "t" (src/mark.ml[19,1225+5]..[19,1225+6]) (src/mark.ml[19,1225+0]..[20,1234+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/mark.ml[20,1234+4]..[20,1234+12])
+              Ptyp_constr "ref" (src/mark.ml[20,1234+9]..[20,1234+12])
+              [
+                core_type (src/mark.ml[20,1234+4]..[20,1234+8])
+                  Ptyp_constr "unit" (src/mark.ml[20,1234+4]..[20,1234+8])
+                  []
+              ]
+    ]
+  structure_item (src/mark.ml[22,1248+0]..[23,1260+5])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/mark.ml[22,1248+4]..[22,1248+9])
+          Ppat_var "fresh" (src/mark.ml[22,1248+4]..[22,1248+9])
+        expression (src/mark.ml[23,1260+2]..[23,1260+5])
+          Pexp_ident "ref" (src/mark.ml[23,1260+2]..[23,1260+5])
+    ]
+  structure_item (src/mark.ml[25,1267+0]..[26,1278+6])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/mark.ml[25,1267+4]..[25,1267+8])
+          Ppat_var "same" (src/mark.ml[25,1267+4]..[25,1267+8])
+        expression (src/mark.ml[26,1278+2]..[26,1278+6])
+          Pexp_ident "==" (src/mark.ml[26,1278+2]..[26,1278+6])
+    ]
+  structure_item (src/mark.ml[28,1286+0]..[29,1297+9])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/mark.ml[28,1286+4]..[28,1286+8])
+          Ppat_var "none" (src/mark.ml[28,1286+4]..[28,1286+8])
+        expression (src/mark.ml[29,1297+2]..[29,1297+9])
+          Pexp_apply
+          expression (src/mark.ml[29,1297+2]..[29,1297+7])
+            Pexp_ident "fresh" (src/mark.ml[29,1297+2]..[29,1297+7])
+          [
+            <arg>
+            Nolabel
+              expression (src/mark.ml[29,1297+7]..[29,1297+9])
+                Pexp_construct "()" (src/mark.ml[29,1297+7]..[29,1297+9])
+                None
+          ]
+    ]
+]
+
+[@@@ocaml.text
+  " This module implements a very simple notion of ``mark''. A mark is\n    really a reference cell (without content). Creating a new mark\n    requires allocating a new cell, and comparing marks requires\n    comparing pointers. "]
+type t = unit ref
+let fresh = ref
+let same = (==)
+let none = fresh ()
+[
+  structure_item (src/mark.ml[14,994+0]..src/mark.ml[17,1197+26])
+    Tstr_attribute "ocaml.text"
+    [
+      structure_item (src/mark.ml[14,994+0]..[17,1197+26])
+        Pstr_eval
+        expression (src/mark.ml[14,994+0]..[17,1197+26])
+          Pexp_constant PConst_string(" This module implements a very simple notion of ``mark''. A mark is\n    really a reference cell (without content). Creating a new mark\n    requires allocating a new cell, and comparing marks requires\n    comparing pointers. ",(src/mark.ml[14,994+0]..[17,1197+26]),None)
+    ]
+  structure_item (src/mark.ml[19,1225+0]..src/mark.ml[20,1234+12])
+    Tstr_type Rec
+    [
+      type_declaration t/397 (src/mark.ml[19,1225+0]..src/mark.ml[20,1234+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/mark.ml[20,1234+4]..src/mark.ml[20,1234+12])
+              Ttyp_constr "Stdlib!.ref"
+              [
+                core_type (src/mark.ml[20,1234+4]..src/mark.ml[20,1234+8])
+                  Ttyp_constr "unit/6!"
+                  []
+              ]
+    ]
+  structure_item (src/mark.ml[22,1248+0]..src/mark.ml[23,1260+5])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/mark.ml[22,1248+4]..src/mark.ml[22,1248+9])
+          Tpat_var "fresh/398"
+        expression (src/mark.ml[23,1260+2]..src/mark.ml[23,1260+5])
+          Texp_ident "Stdlib!.ref"
+    ]
+  structure_item (src/mark.ml[25,1267+0]..src/mark.ml[26,1278+6])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/mark.ml[25,1267+4]..src/mark.ml[25,1267+8])
+          Tpat_var "same/399"
+        expression (src/mark.ml[26,1278+2]..src/mark.ml[26,1278+6])
+          Texp_ident "Stdlib!.=="
+    ]
+  structure_item (src/mark.ml[28,1286+0]..src/mark.ml[29,1297+9])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/mark.ml[28,1286+4]..src/mark.ml[28,1286+8])
+          Tpat_var "none/400"
+        expression (src/mark.ml[29,1297+2]..src/mark.ml[29,1297+9])
+          Texp_apply
+          expression (src/mark.ml[29,1297+2]..src/mark.ml[29,1297+7])
+            Texp_ident "fresh/398"
+          [
+            <arg>
+              Nolabel
+              expression (src/mark.ml[29,1297+7]..src/mark.ml[29,1297+9])
+                Texp_construct "()"
+                []
+          ]
+    ]
+]
+
+{<Dune__exe__Mark>
+ "fresh"[value] -> <Dune__exe__Mark.1>;
+ "none"[value] -> <Dune__exe__Mark.3>;
+ "same"[value] -> <Dune__exe__Mark.2>;
+ "t"[type] -> <Dune__exe__Mark.0>;
+ }
+
+(seq
+  (let (fresh/398 = (function prim/824 stub (makemutable 0 prim/824)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Mark!) fresh/398))
+  (let (same/399 = (function prim/826 prim/825 stub (== prim/826 prim/825)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Mark!) same/399))
+  (let (none/400 = (apply (field_imm 0 (global Dune__exe__Mark!)) 0))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Mark!) none/400))
+  0)
+(seq
+  (let (fresh/398 = (function prim/824 stub (makemutable 0 prim/824)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Mark!) fresh/398))
+  (let (same/399 = (function prim/826 prim/825 stub (== prim/826 prim/825)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Mark!) same/399))
+  (let (none/400 = (apply (field_imm 0 (global Dune__exe__Mark!)) 0))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Mark!) none/400))
+  0)

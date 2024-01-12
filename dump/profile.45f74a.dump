@@ -1,0 +1,19 @@
+0.115s 49.9MB 5.84MB 7.60MB src/stage3/cmly_write.ml
+  0.002s 0.05MB ------ ------ parsing
+    0.001s 0.05MB ------ ------ parser
+  0.060s 21.5MB 4.40MB 6.16MB typing
+  0.002s 2.00MB 0.06MB 6.23MB transl
+  0.028s 12.8MB 0.93MB 7.16MB generate
+    0.013s 8.57MB 0.62MB 6.85MB compile_phrases
+      0.002s 0.38MB ------ ------ selection
+      0.001s ------ ------ ------ cse
+      0.001s ------ ------ ------ liveness
+      0.001s ------ ------ ------ spill
+      0.001s 2.00MB 0.15MB 6.38MB split
+      0.003s 0.19MB ------ ------ regalloc
+      0.003s 4.00MB 0.28MB 6.66MB emit
+      0.001s 2.00MB 0.18MB 6.85MB other
+    0.006s ------ ------ ------ assemble
+    0.008s 4.28MB 0.31MB 7.16MB other
+  0.023s 13.5MB 0.43MB 7.60MB other
+0.013s 3.08MB 1.76MB ------ other

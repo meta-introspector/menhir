@@ -1,0 +1,897 @@
+[
+  structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+    Pstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+          ]
+          None
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[1,0+0]..[1,0+13])
+    Pstr_include    module_expr (test/dynamic/houblix/src/mint.ml[1,0+8]..[1,0+13])
+      Pmod_ident "Int64" (test/dynamic/houblix/src/mint.ml[1,0+8]..[1,0+13])
+  structure_item (test/dynamic/houblix/src/mint.ml[3,15+0]..[3,15+20])
+    Pstr_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (test/dynamic/houblix/src/mint.ml[3,15+0]..[3,15+20])
+          pext_name = "DoesNotFit"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  structure_item (test/dynamic/houblix/src/mint.ml[5,37+0]..[8,138+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[5,37+4]..[5,37+10])
+          Ppat_var "to_int" (test/dynamic/houblix/src/mint.ml[5,37+4]..[5,37+10])
+        expression (test/dynamic/houblix/src/mint.ml[5,37+11]..[8,138+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/houblix/src/mint.ml[5,37+11]..[5,37+12])
+            Ppat_var "n" (test/dynamic/houblix/src/mint.ml[5,37+11]..[5,37+12])
+          expression (test/dynamic/houblix/src/mint.ml[6,52+2]..[8,138+15])
+            Pexp_ifthenelse
+            expression (test/dynamic/houblix/src/mint.ml[6,52+5]..[6,52+59])
+              Pexp_apply
+              expression (test/dynamic/houblix/src/mint.ml[6,52+31]..[6,52+33])
+                Pexp_ident "||" (test/dynamic/houblix/src/mint.ml[6,52+31]..[6,52+33])
+              [
+                <arg>
+                Nolabel
+                  expression (test/dynamic/houblix/src/mint.ml[6,52+5]..[6,52+30])
+                    Pexp_apply
+                    expression (test/dynamic/houblix/src/mint.ml[6,52+7]..[6,52+8])
+                      Pexp_ident "<" (test/dynamic/houblix/src/mint.ml[6,52+7]..[6,52+8])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/houblix/src/mint.ml[6,52+5]..[6,52+6])
+                          Pexp_ident "n" (test/dynamic/houblix/src/mint.ml[6,52+5]..[6,52+6])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/houblix/src/mint.ml[6,52+9]..[6,52+30])
+                          Pexp_apply
+                          expression (test/dynamic/houblix/src/mint.ml[6,52+9]..[6,52+15])
+                            Pexp_ident "of_int" (test/dynamic/houblix/src/mint.ml[6,52+9]..[6,52+15])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (test/dynamic/houblix/src/mint.ml[6,52+16]..[6,52+30])
+                                Pexp_ident "Stdlib.min_int" (test/dynamic/houblix/src/mint.ml[6,52+16]..[6,52+30])
+                          ]
+                    ]
+                <arg>
+                Nolabel
+                  expression (test/dynamic/houblix/src/mint.ml[6,52+34]..[6,52+59])
+                    Pexp_apply
+                    expression (test/dynamic/houblix/src/mint.ml[6,52+36]..[6,52+37])
+                      Pexp_ident ">" (test/dynamic/houblix/src/mint.ml[6,52+36]..[6,52+37])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/houblix/src/mint.ml[6,52+34]..[6,52+35])
+                          Pexp_ident "n" (test/dynamic/houblix/src/mint.ml[6,52+34]..[6,52+35])
+                      <arg>
+                      Nolabel
+                        expression (test/dynamic/houblix/src/mint.ml[6,52+38]..[6,52+59])
+                          Pexp_apply
+                          expression (test/dynamic/houblix/src/mint.ml[6,52+38]..[6,52+44])
+                            Pexp_ident "of_int" (test/dynamic/houblix/src/mint.ml[6,52+38]..[6,52+44])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (test/dynamic/houblix/src/mint.ml[6,52+45]..[6,52+59])
+                                Pexp_ident "Stdlib.max_int" (test/dynamic/houblix/src/mint.ml[6,52+45]..[6,52+59])
+                          ]
+                    ]
+              ]
+            expression (test/dynamic/houblix/src/mint.ml[7,117+4]..[7,117+20])
+              Pexp_apply
+              expression (test/dynamic/houblix/src/mint.ml[7,117+4]..[7,117+9])
+                Pexp_ident "raise" (test/dynamic/houblix/src/mint.ml[7,117+4]..[7,117+9])
+              [
+                <arg>
+                Nolabel
+                  expression (test/dynamic/houblix/src/mint.ml[7,117+10]..[7,117+20])
+                    Pexp_construct "DoesNotFit" (test/dynamic/houblix/src/mint.ml[7,117+10]..[7,117+20])
+                    None
+              ]
+            Some
+              expression (test/dynamic/houblix/src/mint.ml[8,138+7]..[8,138+15])
+                Pexp_apply
+                expression (test/dynamic/houblix/src/mint.ml[8,138+7]..[8,138+13])
+                  Pexp_ident "to_int" (test/dynamic/houblix/src/mint.ml[8,138+7]..[8,138+13])
+                [
+                  <arg>
+                  Nolabel
+                    expression (test/dynamic/houblix/src/mint.ml[8,138+14]..[8,138+15])
+                      Pexp_ident "n" (test/dynamic/houblix/src/mint.ml[8,138+14]..[8,138+15])
+                ]
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[10,155+0]..[10,155+78])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[10,155+4]..[10,155+13])
+          Ppat_var "t_of_sexp" (test/dynamic/houblix/src/mint.ml[10,155+4]..[10,155+13])
+        expression (test/dynamic/houblix/src/mint.ml[10,155+14]..[10,155+78]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/houblix/src/mint.ml[10,155+14]..[10,155+15])
+            Ppat_var "s" (test/dynamic/houblix/src/mint.ml[10,155+14]..[10,155+15])
+          expression (test/dynamic/houblix/src/mint.ml[10,155+18]..[10,155+78])
+            Pexp_apply
+            expression (test/dynamic/houblix/src/mint.ml[10,155+28]..[10,155+30])
+              Pexp_ident "@@" (test/dynamic/houblix/src/mint.ml[10,155+28]..[10,155+30])
+            [
+              <arg>
+              Nolabel
+                expression (test/dynamic/houblix/src/mint.ml[10,155+18]..[10,155+27])
+                  Pexp_ident "of_string" (test/dynamic/houblix/src/mint.ml[10,155+18]..[10,155+27])
+              <arg>
+              Nolabel
+                expression (test/dynamic/houblix/src/mint.ml[10,155+31]..[10,155+78])
+                  Pexp_apply
+                  expression (test/dynamic/houblix/src/mint.ml[10,155+47]..[10,155+49])
+                    Pexp_ident "@@" (test/dynamic/houblix/src/mint.ml[10,155+47]..[10,155+49])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[10,155+31]..[10,155+46])
+                        Pexp_ident "Int64.to_string" (test/dynamic/houblix/src/mint.ml[10,155+31]..[10,155+46])
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[10,155+50]..[10,155+78])
+                        Pexp_apply
+                        expression (test/dynamic/houblix/src/mint.ml[10,155+50]..[10,155+76])
+                          Pexp_ident "Sexplib.Conv.int64_of_sexp" (test/dynamic/houblix/src/mint.ml[10,155+50]..[10,155+76])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/mint.ml[10,155+77]..[10,155+78])
+                              Pexp_ident "s" (test/dynamic/houblix/src/mint.ml[10,155+77]..[10,155+78])
+                        ]
+                  ]
+            ]
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[12,235+0]..[12,235+78])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[12,235+4]..[12,235+13])
+          Ppat_var "sexp_of_t" (test/dynamic/houblix/src/mint.ml[12,235+4]..[12,235+13])
+        expression (test/dynamic/houblix/src/mint.ml[12,235+14]..[12,235+78]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (test/dynamic/houblix/src/mint.ml[12,235+14]..[12,235+15])
+            Ppat_var "n" (test/dynamic/houblix/src/mint.ml[12,235+14]..[12,235+15])
+          expression (test/dynamic/houblix/src/mint.ml[12,235+18]..[12,235+78])
+            Pexp_apply
+            expression (test/dynamic/houblix/src/mint.ml[12,235+45]..[12,235+47])
+              Pexp_ident "@@" (test/dynamic/houblix/src/mint.ml[12,235+45]..[12,235+47])
+            [
+              <arg>
+              Nolabel
+                expression (test/dynamic/houblix/src/mint.ml[12,235+18]..[12,235+44])
+                  Pexp_ident "Sexplib.Conv.sexp_of_int64" (test/dynamic/houblix/src/mint.ml[12,235+18]..[12,235+44])
+              <arg>
+              Nolabel
+                expression (test/dynamic/houblix/src/mint.ml[12,235+48]..[12,235+78])
+                  Pexp_apply
+                  expression (test/dynamic/houblix/src/mint.ml[12,235+64]..[12,235+66])
+                    Pexp_ident "@@" (test/dynamic/houblix/src/mint.ml[12,235+64]..[12,235+66])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[12,235+48]..[12,235+63])
+                        Pexp_ident "Int64.of_string" (test/dynamic/houblix/src/mint.ml[12,235+48]..[12,235+63])
+                    <arg>
+                    Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[12,235+67]..[12,235+78])
+                        Pexp_apply
+                        expression (test/dynamic/houblix/src/mint.ml[12,235+67]..[12,235+76])
+                          Pexp_ident "to_string" (test/dynamic/houblix/src/mint.ml[12,235+67]..[12,235+76])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (test/dynamic/houblix/src/mint.ml[12,235+77]..[12,235+78])
+                              Pexp_ident "n" (test/dynamic/houblix/src/mint.ml[12,235+77]..[12,235+78])
+                        ]
+                  ]
+            ]
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[14,315+0]..[14,315+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[14,315+4]..[14,315+17])
+          Ppat_var "size_in_bytes" (test/dynamic/houblix/src/mint.ml[14,315+4]..[14,315+17])
+        expression (test/dynamic/houblix/src/mint.ml[14,315+20]..[14,315+21])
+          Pexp_constant PConst_int (8,None)
+    ]
+]
+
+[@@@ocaml.ppx.context
+  {
+    tool_name = "ppx_driver";
+    include_dirs = [];
+    load_path = [];
+    open_modules = [];
+    for_package = None;
+    debug = false;
+    use_threads = false;
+    use_vmthreads = false;
+    recursive_types = false;
+    principal = false;
+    transparent_modules = false;
+    unboxed_types = false;
+    unsafe_string = false;
+    cookies = []
+  }]
+include Int64
+exception DoesNotFit 
+let to_int n =
+  if (n < (of_int Stdlib.min_int)) || (n > (of_int Stdlib.max_int))
+  then raise DoesNotFit
+  else to_int n
+let t_of_sexp s =
+  of_string @@ (Int64.to_string @@ (Sexplib.Conv.int64_of_sexp s))
+let sexp_of_t n =
+  Sexplib.Conv.sexp_of_int64 @@ (Int64.of_string @@ (to_string n))
+let size_in_bytes = 8
+[
+  structure_item (_none_[0,0+-1].._none_[0,0+-1]) ghost
+    Tstr_attribute "ocaml.ppx.context"
+    [
+      structure_item (_none_[0,0+-1]..[0,0+-1]) ghost
+        Pstr_eval
+        expression (_none_[0,0+-1]..[0,0+-1]) ghost
+          Pexp_record
+          [
+            "tool_name" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_constant PConst_string("ppx_driver",(_none_[0,0+-1]..[0,0+-1]) ghost,None)
+            "include_dirs" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "load_path" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "open_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "for_package" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "None" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "debug" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_threads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "use_vmthreads" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "recursive_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "principal" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "transparent_modules" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unboxed_types" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "unsafe_string" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "false" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+            "cookies" (_none_[0,0+-1]..[0,0+-1]) ghost
+              expression (_none_[0,0+-1]..[0,0+-1]) ghost
+                Pexp_construct "[]" (_none_[0,0+-1]..[0,0+-1]) ghost
+                None
+          ]
+          None
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[1,0+0]..test/dynamic/houblix/src/mint.ml[1,0+13])
+    Tstr_include    module_expr (test/dynamic/houblix/src/mint.ml[1,0+8]..test/dynamic/houblix/src/mint.ml[1,0+13])
+      module_expr (test/dynamic/houblix/src/mint.ml[1,0+8]..test/dynamic/houblix/src/mint.ml[1,0+13])
+        Tmod_ident "Stdlib!.Int64"
+  structure_item (test/dynamic/houblix/src/mint.ml[3,15+0]..test/dynamic/houblix/src/mint.ml[3,15+20])
+    Tstr_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (test/dynamic/houblix/src/mint.ml[3,15+0]..test/dynamic/houblix/src/mint.ml[3,15+20])
+          pext_name = "DoesNotFit/375"
+          pext_kind =
+            Text_decl
+              []
+              None
+  structure_item (test/dynamic/houblix/src/mint.ml[5,37+0]..test/dynamic/houblix/src/mint.ml[8,138+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[5,37+4]..test/dynamic/houblix/src/mint.ml[5,37+10])
+          Tpat_var "to_int/376"
+        expression (test/dynamic/houblix/src/mint.ml[5,37+11]..test/dynamic/houblix/src/mint.ml[8,138+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/houblix/src/mint.ml[5,37+11]..test/dynamic/houblix/src/mint.ml[5,37+12])
+                Tpat_var "n/377"
+              expression (test/dynamic/houblix/src/mint.ml[6,52+2]..test/dynamic/houblix/src/mint.ml[8,138+15])
+                Texp_ifthenelse
+                expression (test/dynamic/houblix/src/mint.ml[6,52+5]..test/dynamic/houblix/src/mint.ml[6,52+59])
+                  Texp_apply
+                  expression (test/dynamic/houblix/src/mint.ml[6,52+31]..test/dynamic/houblix/src/mint.ml[6,52+33])
+                    Texp_ident "Stdlib!.||"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[6,52+5]..test/dynamic/houblix/src/mint.ml[6,52+30])
+                        Texp_apply
+                        expression (test/dynamic/houblix/src/mint.ml[6,52+7]..test/dynamic/houblix/src/mint.ml[6,52+8])
+                          Texp_ident "Stdlib!.<"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/houblix/src/mint.ml[6,52+5]..test/dynamic/houblix/src/mint.ml[6,52+6])
+                              Texp_ident "n/377"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/houblix/src/mint.ml[6,52+9]..test/dynamic/houblix/src/mint.ml[6,52+30])
+                              Texp_apply
+                              expression (test/dynamic/houblix/src/mint.ml[6,52+9]..test/dynamic/houblix/src/mint.ml[6,52+15])
+                                Texp_ident "of_int/353"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (test/dynamic/houblix/src/mint.ml[6,52+16]..test/dynamic/houblix/src/mint.ml[6,52+30])
+                                    Texp_ident "Stdlib!.min_int"
+                              ]
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[6,52+34]..test/dynamic/houblix/src/mint.ml[6,52+59])
+                        Texp_apply
+                        expression (test/dynamic/houblix/src/mint.ml[6,52+36]..test/dynamic/houblix/src/mint.ml[6,52+37])
+                          Texp_ident "Stdlib!.>"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/houblix/src/mint.ml[6,52+34]..test/dynamic/houblix/src/mint.ml[6,52+35])
+                              Texp_ident "n/377"
+                          <arg>
+                            Nolabel
+                            expression (test/dynamic/houblix/src/mint.ml[6,52+38]..test/dynamic/houblix/src/mint.ml[6,52+59])
+                              Texp_apply
+                              expression (test/dynamic/houblix/src/mint.ml[6,52+38]..test/dynamic/houblix/src/mint.ml[6,52+44])
+                                Texp_ident "of_int/353"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (test/dynamic/houblix/src/mint.ml[6,52+45]..test/dynamic/houblix/src/mint.ml[6,52+59])
+                                    Texp_ident "Stdlib!.max_int"
+                              ]
+                        ]
+                  ]
+                expression (test/dynamic/houblix/src/mint.ml[7,117+4]..test/dynamic/houblix/src/mint.ml[7,117+20])
+                  Texp_apply
+                  expression (test/dynamic/houblix/src/mint.ml[7,117+4]..test/dynamic/houblix/src/mint.ml[7,117+9])
+                    Texp_ident "Stdlib!.raise"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (test/dynamic/houblix/src/mint.ml[7,117+10]..test/dynamic/houblix/src/mint.ml[7,117+20])
+                        Texp_construct "DoesNotFit"
+                        []
+                  ]
+                Some
+                  expression (test/dynamic/houblix/src/mint.ml[8,138+7]..test/dynamic/houblix/src/mint.ml[8,138+15])
+                    Texp_apply
+                    expression (test/dynamic/houblix/src/mint.ml[8,138+7]..test/dynamic/houblix/src/mint.ml[8,138+13])
+                      Texp_ident "to_int/354"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (test/dynamic/houblix/src/mint.ml[8,138+14]..test/dynamic/houblix/src/mint.ml[8,138+15])
+                          Texp_ident "n/377"
+                    ]
+          ]
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[10,155+0]..test/dynamic/houblix/src/mint.ml[10,155+78])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[10,155+4]..test/dynamic/houblix/src/mint.ml[10,155+13])
+          Tpat_var "t_of_sexp/378"
+        expression (test/dynamic/houblix/src/mint.ml[10,155+14]..test/dynamic/houblix/src/mint.ml[10,155+78]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/houblix/src/mint.ml[10,155+14]..test/dynamic/houblix/src/mint.ml[10,155+15])
+                Tpat_var "s/380"
+              expression (test/dynamic/houblix/src/mint.ml[10,155+18]..test/dynamic/houblix/src/mint.ml[10,155+78])
+                Texp_apply
+                expression (test/dynamic/houblix/src/mint.ml[10,155+18]..test/dynamic/houblix/src/mint.ml[10,155+27])
+                  Texp_ident "of_string/362"
+                [
+                  <arg>
+                    Nolabel
+                    expression (test/dynamic/houblix/src/mint.ml[10,155+31]..test/dynamic/houblix/src/mint.ml[10,155+78])
+                      Texp_apply
+                      expression (test/dynamic/houblix/src/mint.ml[10,155+31]..test/dynamic/houblix/src/mint.ml[10,155+46])
+                        Texp_ident "Stdlib!.Int64.to_string"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/houblix/src/mint.ml[10,155+50]..test/dynamic/houblix/src/mint.ml[10,155+78])
+                            Texp_apply
+                            expression (test/dynamic/houblix/src/mint.ml[10,155+50]..test/dynamic/houblix/src/mint.ml[10,155+76])
+                              Texp_ident "Sexplib!.Conv.int64_of_sexp"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/houblix/src/mint.ml[10,155+77]..test/dynamic/houblix/src/mint.ml[10,155+78])
+                                  Texp_ident "s/380"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[12,235+0]..test/dynamic/houblix/src/mint.ml[12,235+78])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[12,235+4]..test/dynamic/houblix/src/mint.ml[12,235+13])
+          Tpat_var "sexp_of_t/547"
+        expression (test/dynamic/houblix/src/mint.ml[12,235+14]..test/dynamic/houblix/src/mint.ml[12,235+78]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (test/dynamic/houblix/src/mint.ml[12,235+14]..test/dynamic/houblix/src/mint.ml[12,235+15])
+                Tpat_var "n/549"
+              expression (test/dynamic/houblix/src/mint.ml[12,235+18]..test/dynamic/houblix/src/mint.ml[12,235+78])
+                Texp_apply
+                expression (test/dynamic/houblix/src/mint.ml[12,235+18]..test/dynamic/houblix/src/mint.ml[12,235+44])
+                  Texp_ident "Sexplib!.Conv.sexp_of_int64"
+                [
+                  <arg>
+                    Nolabel
+                    expression (test/dynamic/houblix/src/mint.ml[12,235+48]..test/dynamic/houblix/src/mint.ml[12,235+78])
+                      Texp_apply
+                      expression (test/dynamic/houblix/src/mint.ml[12,235+48]..test/dynamic/houblix/src/mint.ml[12,235+63])
+                        Texp_ident "Stdlib!.Int64.of_string"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (test/dynamic/houblix/src/mint.ml[12,235+67]..test/dynamic/houblix/src/mint.ml[12,235+78])
+                            Texp_apply
+                            expression (test/dynamic/houblix/src/mint.ml[12,235+67]..test/dynamic/houblix/src/mint.ml[12,235+76])
+                              Texp_ident "to_string/364"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (test/dynamic/houblix/src/mint.ml[12,235+77]..test/dynamic/houblix/src/mint.ml[12,235+78])
+                                  Texp_ident "n/549"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (test/dynamic/houblix/src/mint.ml[14,315+0]..test/dynamic/houblix/src/mint.ml[14,315+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (test/dynamic/houblix/src/mint.ml[14,315+4]..test/dynamic/houblix/src/mint.ml[14,315+17])
+          Tpat_var "size_in_bytes/550"
+        expression (test/dynamic/houblix/src/mint.ml[14,315+20]..test/dynamic/houblix/src/mint.ml[14,315+21])
+          Texp_constant Const_int 8
+    ]
+]
+
+{<Dune__exe__Mint>
+ "DoesNotFit"[extension constructor] -> <Dune__exe__Mint.0>;
+ "add"[value] -> CU Stdlib . "Int64"[module] . "add"[value];
+ "div"[value] -> CU Stdlib . "Int64"[module] . "div"[value];
+ "mul"[value] -> CU Stdlib . "Int64"[module] . "mul"[value];
+ "of_int"[value] -> CU Stdlib . "Int64"[module] . "of_int"[value];
+ "of_string"[value] -> CU Stdlib . "Int64"[module] . "of_string"[value];
+ "one"[value] -> CU Stdlib . "Int64"[module] . "one"[value];
+ "sexp_of_t"[value] -> <Dune__exe__Mint.5>;
+ "size_in_bytes"[value] -> <Dune__exe__Mint.7>;
+ "sub"[value] -> CU Stdlib . "Int64"[module] . "sub"[value];
+ "t"[type] -> CU Stdlib . "Int64"[module] . "t"[type];
+ "t_of_sexp"[value] -> <Dune__exe__Mint.3>;
+ "to_int"[value] -> <Dune__exe__Mint.1>;
+ "to_string"[value] -> CU Stdlib . "Int64"[module] . "to_string"[value];
+ "zero"[value] -> CU Stdlib . "Int64"[module] . "zero"[value];
+ }
+
+(seq
+  (setfield_ptr(root-init) 9 (global Dune__exe__Mint!)
+    (function prim/858 stub (caml_int64_of_string prim/858)))
+  (setfield_ptr(root-init) 7 (global Dune__exe__Mint!)
+    (function prim/857 stub (Int64.of_int prim/857)))
+  (setfield_ptr(root-init) 5 (global Dune__exe__Mint!)
+    (function prim/856 prim/855 stub (Int64.div prim/856 prim/855)))
+  (setfield_ptr(root-init) 4 (global Dune__exe__Mint!)
+    (function prim/854 prim/853 stub (Int64.mul prim/854 prim/853)))
+  (setfield_ptr(root-init) 3 (global Dune__exe__Mint!)
+    (function prim/852 prim/851 stub (Int64.sub prim/852 prim/851)))
+  (setfield_ptr(root-init) 2 (global Dune__exe__Mint!)
+    (function prim/850 prim/849 stub (Int64.add prim/850 prim/849)))
+  (let
+    (include/847 =
+       (let (let/848 = (global Stdlib__Int64!)) (global Stdlib__Int64!))
+     zero/330 =a (field_mut 0 include/847))
+    (seq (setfield_ptr(root-init) 0 (global Dune__exe__Mint!) zero/330)
+      (let (one/331 =a (field_mut 1 include/847))
+        (seq (setfield_ptr(root-init) 1 (global Dune__exe__Mint!) one/331)
+          (let (minus_one/332 =a (field_mut 2 include/847))
+            (seq
+              (setfield_ptr(root-init) 14 (global Dune__exe__Mint!)
+                minus_one/332)
+              (let (unsigned_div/338 =a (field_mut 3 include/847))
+                (seq
+                  (setfield_ptr(root-init) 15 (global Dune__exe__Mint!)
+                    unsigned_div/338)
+                  (let (unsigned_rem/340 =a (field_mut 4 include/847))
+                    (seq
+                      (setfield_ptr(root-init) 16 (global Dune__exe__Mint!)
+                        unsigned_rem/340)
+                      (let (succ/341 =a (field_mut 5 include/847))
+                        (seq
+                          (setfield_ptr(root-init) 17
+                            (global Dune__exe__Mint!) succ/341)
+                          (let (pred/342 =a (field_mut 6 include/847))
+                            (seq
+                              (setfield_ptr(root-init) 18
+                                (global Dune__exe__Mint!) pred/342)
+                              (let (abs/343 =a (field_mut 7 include/847))
+                                (seq
+                                  (setfield_ptr(root-init) 19
+                                    (global Dune__exe__Mint!) abs/343)
+                                  (let
+                                    (max_int/344 =a (field_mut 8 include/847))
+                                    (seq
+                                      (setfield_ptr(root-init) 20
+                                        (global Dune__exe__Mint!)
+                                        max_int/344)
+                                      (let
+                                        (min_int/345 =a
+                                           (field_mut 9 include/847))
+                                        (seq
+                                          (setfield_ptr(root-init) 21
+                                            (global Dune__exe__Mint!)
+                                            min_int/345)
+                                          (let
+                                            (lognot/349 =a
+                                               (field_mut 10 include/847))
+                                            (seq
+                                              (setfield_ptr(root-init) 22
+                                                (global Dune__exe__Mint!)
+                                                lognot/349)
+                                              (let
+                                                (unsigned_to_int/355 =a
+                                                   (field_mut 11 include/847))
+                                                (seq
+                                                  (setfield_ptr(root-init) 23
+                                                    (global Dune__exe__Mint!)
+                                                    unsigned_to_int/355)
+                                                  (let
+                                                    (of_string_opt/363 =a
+                                                       (field_mut 12
+                                                         include/847))
+                                                    (seq
+                                                      (setfield_ptr(root-init) 24
+                                                        (global Dune__exe__Mint!)
+                                                        of_string_opt/363)
+                                                      (let
+                                                        (to_string/364 =a
+                                                           (field_mut 13
+                                                             include/847))
+                                                        (seq
+                                                          (setfield_ptr(root-init) 10
+                                                            (global Dune__exe__Mint!)
+                                                            to_string/364)
+                                                          (let
+                                                            (compare/368 =a
+                                                               (field_mut 14
+                                                                 include/847))
+                                                            (seq
+                                                              (setfield_ptr(root-init) 25
+                                                                (global Dune__exe__Mint!)
+                                                                compare/368)
+                                                              (let
+                                                                (unsigned_compare/369 =a
+                                                                   (field_mut 15
+                                                                    include/847))
+                                                                (seq
+                                                                  (setfield_ptr(root-init) 26
+                                                                    (global Dune__exe__Mint!)
+                                                                    unsigned_compare/369)
+                                                                  (let
+                                                                    (equal/370 =a
+                                                                    (field_mut 16
+                                                                    include/847))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 27
+                                                                    (global Dune__exe__Mint!)
+                                                                    equal/370)
+                                                                    (let
+                                                                    (min/371 =a
+                                                                    (field_mut 17
+                                                                    include/847))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 28
+                                                                    (global Dune__exe__Mint!)
+                                                                    min/371)
+                                                                    (let
+                                                                    (max/372 =a
+                                                                    (field_mut 18
+                                                                    include/847))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 29
+                                                                    (global Dune__exe__Mint!)
+                                                                    max/372)
+                                                                    (let
+                                                                    (seeded_hash/373 =a
+                                                                    (field_mut 19
+                                                                    include/847))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 30
+                                                                    (global Dune__exe__Mint!)
+                                                                    seeded_hash/373)
+                                                                    (let
+                                                                    (hash/374 =a
+                                                                    (field_mut 20
+                                                                    include/847))
+                                                                    (seq
+                                                                    (setfield_ptr(root-init) 31
+                                                                    (global Dune__exe__Mint!)
+                                                                    hash/374)
+                                                                    (let
+                                                                    (DoesNotFit/375 =
+                                                                    (makeblock 248
+                                                                    "Dune__exe__Mint.DoesNotFit"
+                                                                    (caml_fresh_oo_id
+                                                                    0)))
+                                                                    (setfield_ptr(root-init) 6
+                                                                    (global Dune__exe__Mint!)
+                                                                    DoesNotFit/375))
+                                                                    (let
+                                                                    (to_int/376 =
+                                                                    (function
+                                                                    n/377[int64]
+                                                                    : int
+                                                                    (if
+                                                                    (||
+                                                                    (Int64.<
+                                                                    n/377
+                                                                    (Int64.of_int
+                                                                    (field_imm 19
+                                                                    (global Stdlib!))))
+                                                                    (Int64.>
+                                                                    n/377
+                                                                    (Int64.of_int
+                                                                    (field_imm 18
+                                                                    (global Stdlib!)))))
+                                                                    (raise
+                                                                    (field_imm 6
+                                                                    (global Dune__exe__Mint!)))
+                                                                    (Int64.to_int
+                                                                    n/377))))
+                                                                    (setfield_ptr(root-init) 8
+                                                                    (global Dune__exe__Mint!)
+                                                                    to_int/376))
+                                                                    (let
+                                                                    (t_of_sexp/378 =
+                                                                    (function
+                                                                    s/380
+                                                                    : int64
+                                                                    (caml_int64_of_string
+                                                                    (apply
+                                                                    (field_imm 13
+                                                                    (global Stdlib__Int64!))
+                                                                    (apply
+                                                                    (field_imm 36
+                                                                    (global Sexplib__Conv!))
+                                                                    s/380)))))
+                                                                    (setfield_ptr(root-init) 11
+                                                                    (global Dune__exe__Mint!)
+                                                                    t_of_sexp/378))
+                                                                    (let
+                                                                    (sexp_of_t/547 =
+                                                                    (function
+                                                                    n/549[int64]
+                                                                    (apply
+                                                                    (field_imm 12
+                                                                    (global Sexplib__Conv!))
+                                                                    (caml_int64_of_string
+                                                                    (apply
+                                                                    (field_imm 10
+                                                                    (global Dune__exe__Mint!))
+                                                                    n/549)))))
+                                                                    (setfield_ptr(root-init) 12
+                                                                    (global Dune__exe__Mint!)
+                                                                    sexp_of_t/547))
+                                                                    (let
+                                                                    (size_in_bytes/550 =[int]
+                                                                    8)
+                                                                    (setfield_ptr(root-init) 13
+                                                                    (global Dune__exe__Mint!)
+                                                                    size_in_bytes/550))
+                                                                    0)))))))))))))))))))))))))))))))))))))))))))
+(seq
+  (setfield_ptr(root-init) 9 (global Dune__exe__Mint!)
+    (function prim/858 stub (caml_int64_of_string prim/858)))
+  (setfield_ptr(root-init) 7 (global Dune__exe__Mint!)
+    (function prim/857 stub (Int64.of_int prim/857)))
+  (setfield_ptr(root-init) 5 (global Dune__exe__Mint!)
+    (function prim/856 prim/855 stub (Int64.div prim/856 prim/855)))
+  (setfield_ptr(root-init) 4 (global Dune__exe__Mint!)
+    (function prim/854 prim/853 stub (Int64.mul prim/854 prim/853)))
+  (setfield_ptr(root-init) 3 (global Dune__exe__Mint!)
+    (function prim/852 prim/851 stub (Int64.sub prim/852 prim/851)))
+  (setfield_ptr(root-init) 2 (global Dune__exe__Mint!)
+    (function prim/850 prim/849 stub (Int64.add prim/850 prim/849)))
+  (let
+    (include/847 =
+       (let (let/848 = (global Stdlib__Int64!)) (global Stdlib__Int64!)))
+    (seq
+      (setfield_ptr(root-init) 0 (global Dune__exe__Mint!)
+        (field_mut 0 include/847))
+      (setfield_ptr(root-init) 1 (global Dune__exe__Mint!)
+        (field_mut 1 include/847))
+      (setfield_ptr(root-init) 14 (global Dune__exe__Mint!)
+        (field_mut 2 include/847))
+      (setfield_ptr(root-init) 15 (global Dune__exe__Mint!)
+        (field_mut 3 include/847))
+      (setfield_ptr(root-init) 16 (global Dune__exe__Mint!)
+        (field_mut 4 include/847))
+      (setfield_ptr(root-init) 17 (global Dune__exe__Mint!)
+        (field_mut 5 include/847))
+      (setfield_ptr(root-init) 18 (global Dune__exe__Mint!)
+        (field_mut 6 include/847))
+      (setfield_ptr(root-init) 19 (global Dune__exe__Mint!)
+        (field_mut 7 include/847))
+      (setfield_ptr(root-init) 20 (global Dune__exe__Mint!)
+        (field_mut 8 include/847))
+      (setfield_ptr(root-init) 21 (global Dune__exe__Mint!)
+        (field_mut 9 include/847))
+      (setfield_ptr(root-init) 22 (global Dune__exe__Mint!)
+        (field_mut 10 include/847))
+      (setfield_ptr(root-init) 23 (global Dune__exe__Mint!)
+        (field_mut 11 include/847))
+      (setfield_ptr(root-init) 24 (global Dune__exe__Mint!)
+        (field_mut 12 include/847))
+      (setfield_ptr(root-init) 10 (global Dune__exe__Mint!)
+        (field_mut 13 include/847))
+      (setfield_ptr(root-init) 25 (global Dune__exe__Mint!)
+        (field_mut 14 include/847))
+      (setfield_ptr(root-init) 26 (global Dune__exe__Mint!)
+        (field_mut 15 include/847))
+      (setfield_ptr(root-init) 27 (global Dune__exe__Mint!)
+        (field_mut 16 include/847))
+      (setfield_ptr(root-init) 28 (global Dune__exe__Mint!)
+        (field_mut 17 include/847))
+      (setfield_ptr(root-init) 29 (global Dune__exe__Mint!)
+        (field_mut 18 include/847))
+      (setfield_ptr(root-init) 30 (global Dune__exe__Mint!)
+        (field_mut 19 include/847))
+      (setfield_ptr(root-init) 31 (global Dune__exe__Mint!)
+        (field_mut 20 include/847))
+      (let
+        (DoesNotFit/375 =
+           (makeblock 248 "Dune__exe__Mint.DoesNotFit" (caml_fresh_oo_id 0)))
+        (setfield_ptr(root-init) 6 (global Dune__exe__Mint!) DoesNotFit/375))
+      (let
+        (to_int/376 =
+           (function n/377[int64] : int
+             (if
+               (||
+                 (Int64.< n/377
+                   (Int64.of_int (field_imm 19 (global Stdlib!))))
+                 (Int64.> n/377
+                   (Int64.of_int (field_imm 18 (global Stdlib!)))))
+               (raise (field_imm 6 (global Dune__exe__Mint!)))
+               (Int64.to_int n/377))))
+        (setfield_ptr(root-init) 8 (global Dune__exe__Mint!) to_int/376))
+      (let
+        (t_of_sexp/378 =
+           (function s/380 : int64
+             (caml_int64_of_string
+               (apply (field_imm 13 (global Stdlib__Int64!))
+                 (apply (field_imm 36 (global Sexplib__Conv!)) s/380)))))
+        (setfield_ptr(root-init) 11 (global Dune__exe__Mint!) t_of_sexp/378))
+      (let
+        (sexp_of_t/547 =
+           (function n/549[int64]
+             (apply (field_imm 12 (global Sexplib__Conv!))
+               (caml_int64_of_string
+                 (apply (field_imm 10 (global Dune__exe__Mint!)) n/549)))))
+        (setfield_ptr(root-init) 12 (global Dune__exe__Mint!) sexp_of_t/547))
+      (let (size_in_bytes/550 =[int] 8)
+        (setfield_ptr(root-init) 13 (global Dune__exe__Mint!)
+          size_in_bytes/550))
+      0)))

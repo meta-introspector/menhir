@@ -1,0 +1,17 @@
+0.061s 63.8MB 5.34MB 7.10MB src/stage1/codeInliner.ml
+  0.002s 0.05MB ------ ------ parsing
+    0.002s 0.05MB ------ ------ parser
+  0.025s 18.9MB 2.78MB 4.54MB typing
+  0.002s 2.15MB 0.12MB 4.66MB transl
+  0.018s 19.0MB 1.78MB 6.44MB generate
+    0.001s 2.00MB 0.21MB 4.88MB cmm
+    0.008s 10.4MB 1.21MB 6.10MB compile_phrases
+      0.001s 0.14MB ------ ------ selection
+      0.001s 2.00MB 0.21MB 5.10MB liveness
+      0.001s 2.00MB 0.28MB 5.38MB spill
+      0.004s 4.80MB 0.56MB 5.94MB regalloc
+      0.001s 1.47MB 0.15MB 6.10MB emit
+    0.004s ------ ------ ------ assemble
+    0.005s 6.63MB 0.34MB 6.44MB other
+  0.014s 23.6MB 0.65MB 7.10MB other
+0.009s 3.08MB 1.76MB ------ other

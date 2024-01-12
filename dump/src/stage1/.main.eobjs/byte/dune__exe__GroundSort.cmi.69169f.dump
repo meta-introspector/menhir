@@ -1,0 +1,114 @@
+[
+  signature_item (src/GroundSort.mli[21,1163+0]..[22,1175+23])
+    Psig_type Rec
+    [
+      type_declaration "sort" (src/GroundSort.mli[21,1163+5]..[21,1163+9]) (src/GroundSort.mli[21,1163+0]..[22,1175+23])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/GroundSort.mli[22,1175+2]..[22,1175+23])
+                "GArrow" (src/GroundSort.mli[22,1175+4]..[22,1175+10])
+                [
+                  core_type (src/GroundSort.mli[22,1175+14]..[22,1175+23])
+                    Ptyp_constr "list" (src/GroundSort.mli[22,1175+19]..[22,1175+23])
+                    [
+                      core_type (src/GroundSort.mli[22,1175+14]..[22,1175+18])
+                        Ptyp_constr "sort" (src/GroundSort.mli[22,1175+14]..[22,1175+18])
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/GroundSort.mli[24,1200+0]..[24,1200+14])
+    Psig_value
+    value_description "star" (src/GroundSort.mli[24,1200+4]..[24,1200+8]) (src/GroundSort.mli[24,1200+0]..[24,1200+14])
+      core_type (src/GroundSort.mli[24,1200+10]..[24,1200+14])
+        Ptyp_constr "sort" (src/GroundSort.mli[24,1200+10]..[24,1200+14])
+        []
+      []
+  signature_item (src/GroundSort.mli[26,1216+0]..[26,1216+29])
+    Psig_value
+    value_description "domain" (src/GroundSort.mli[26,1216+4]..[26,1216+10]) (src/GroundSort.mli[26,1216+0]..[26,1216+29])
+      core_type (src/GroundSort.mli[26,1216+12]..[26,1216+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/GroundSort.mli[26,1216+12]..[26,1216+16])
+          Ptyp_constr "sort" (src/GroundSort.mli[26,1216+12]..[26,1216+16])
+          []
+        core_type (src/GroundSort.mli[26,1216+20]..[26,1216+29])
+          Ptyp_constr "list" (src/GroundSort.mli[26,1216+25]..[26,1216+29])
+          [
+            core_type (src/GroundSort.mli[26,1216+20]..[26,1216+24])
+              Ptyp_constr "sort" (src/GroundSort.mli[26,1216+20]..[26,1216+24])
+              []
+          ]
+      []
+]
+
+type sort =
+  | GArrow of sort list 
+val star : sort
+val domain : sort -> sort list
+[
+  signature_item (src/GroundSort.mli[21,1163+0]..src/GroundSort.mli[22,1175+23])
+    Tsig_type Rec
+    [
+      type_declaration sort/396 (src/GroundSort.mli[21,1163+0]..src/GroundSort.mli[22,1175+23])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/GroundSort.mli[22,1175+2]..src/GroundSort.mli[22,1175+23])
+                GArrow/397
+                [
+                  core_type (src/GroundSort.mli[22,1175+14]..src/GroundSort.mli[22,1175+23])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/GroundSort.mli[22,1175+14]..src/GroundSort.mli[22,1175+18])
+                        Ttyp_constr "sort/396"
+                        []
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/GroundSort.mli[24,1200+0]..src/GroundSort.mli[24,1200+14])
+    Tsig_value
+    value_description star/398 (src/GroundSort.mli[24,1200+0]..src/GroundSort.mli[24,1200+14])
+      core_type (src/GroundSort.mli[24,1200+10]..src/GroundSort.mli[24,1200+14])
+        Ttyp_constr "sort/396"
+        []
+      []
+  signature_item (src/GroundSort.mli[26,1216+0]..src/GroundSort.mli[26,1216+29])
+    Tsig_value
+    value_description domain/399 (src/GroundSort.mli[26,1216+0]..src/GroundSort.mli[26,1216+29])
+      core_type (src/GroundSort.mli[26,1216+12]..src/GroundSort.mli[26,1216+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/GroundSort.mli[26,1216+12]..src/GroundSort.mli[26,1216+16])
+          Ttyp_constr "sort/396"
+          []
+        core_type (src/GroundSort.mli[26,1216+20]..src/GroundSort.mli[26,1216+29])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/GroundSort.mli[26,1216+20]..src/GroundSort.mli[26,1216+24])
+              Ttyp_constr "sort/396"
+              []
+          ]
+      []
+]
+

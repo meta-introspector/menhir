@@ -1,0 +1,1827 @@
+[
+  structure_item (src/gMap.ml[14,994+0]..[179,6759+3])
+    Pstr_modtype "S" (src/gMap.ml[14,994+12]..[14,994+13])
+      module_type (src/gMap.ml[14,994+16]..[179,6759+3])
+        Pmty_signature
+        [
+          signature_item (src/gMap.ml[18,1072+2]..[18,1072+10])
+            Psig_type Rec
+            [
+              type_declaration "key" (src/gMap.ml[18,1072+7]..[18,1072+10]) (src/gMap.ml[18,1072+2]..[18,1072+10])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (src/gMap.ml[22,1137+2]..[22,1137+11])
+            Psig_type Rec
+            [
+              type_declaration "t" (src/gMap.ml[22,1137+10]..[22,1137+11]) (src/gMap.ml[22,1137+2]..[22,1137+11])
+                ptype_params =
+                  [
+                    core_type (src/gMap.ml[22,1137+7]..[22,1137+9])
+                      Ptyp_var a
+                  ]
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (src/gMap.ml[26,1174+2]..[26,1174+17])
+            Psig_value
+            value_description "empty" (src/gMap.ml[26,1174+6]..[26,1174+11]) (src/gMap.ml[26,1174+2]..[26,1174+17])
+              core_type (src/gMap.ml[26,1174+13]..[26,1174+17])
+                Ptyp_constr "t" (src/gMap.ml[26,1174+16]..[26,1174+17])
+                [
+                  core_type (src/gMap.ml[26,1174+13]..[26,1174+15])
+                    Ptyp_var a
+                ]
+              []
+          signature_item (src/gMap.ml[31,1333+2]..[31,1333+31])
+            Psig_value
+            value_description "lookup" (src/gMap.ml[31,1333+6]..[31,1333+12]) (src/gMap.ml[31,1333+2]..[31,1333+31])
+              core_type (src/gMap.ml[31,1333+14]..[31,1333+31])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[31,1333+14]..[31,1333+17])
+                  Ptyp_constr "key" (src/gMap.ml[31,1333+14]..[31,1333+17])
+                  []
+                core_type (src/gMap.ml[31,1333+21]..[31,1333+31])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[31,1333+21]..[31,1333+25])
+                    Ptyp_constr "t" (src/gMap.ml[31,1333+24]..[31,1333+25])
+                    [
+                      core_type (src/gMap.ml[31,1333+21]..[31,1333+23])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[31,1333+29]..[31,1333+31])
+                    Ptyp_var a
+              []
+          signature_item (src/gMap.ml[32,1365+2]..[32,1365+29])
+            Psig_value
+            value_description "find" (src/gMap.ml[32,1365+6]..[32,1365+10]) (src/gMap.ml[32,1365+2]..[32,1365+29])
+              core_type (src/gMap.ml[32,1365+12]..[32,1365+29])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[32,1365+12]..[32,1365+15])
+                  Ptyp_constr "key" (src/gMap.ml[32,1365+12]..[32,1365+15])
+                  []
+                core_type (src/gMap.ml[32,1365+19]..[32,1365+29])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[32,1365+19]..[32,1365+23])
+                    Ptyp_constr "t" (src/gMap.ml[32,1365+22]..[32,1365+23])
+                    [
+                      core_type (src/gMap.ml[32,1365+19]..[32,1365+21])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[32,1365+27]..[32,1365+29])
+                    Ptyp_var a
+              []
+          signature_item (src/gMap.ml[38,1584+2]..[38,1584+36])
+            Psig_value
+            value_description "add" (src/gMap.ml[38,1584+6]..[38,1584+9]) (src/gMap.ml[38,1584+2]..[38,1584+36])
+              core_type (src/gMap.ml[38,1584+11]..[38,1584+36])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[38,1584+11]..[38,1584+14])
+                  Ptyp_constr "key" (src/gMap.ml[38,1584+11]..[38,1584+14])
+                  []
+                core_type (src/gMap.ml[38,1584+18]..[38,1584+36])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[38,1584+18]..[38,1584+20])
+                    Ptyp_var a
+                  core_type (src/gMap.ml[38,1584+24]..[38,1584+36])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[38,1584+24]..[38,1584+28])
+                      Ptyp_constr "t" (src/gMap.ml[38,1584+27]..[38,1584+28])
+                      [
+                        core_type (src/gMap.ml[38,1584+24]..[38,1584+26])
+                          Ptyp_var a
+                      ]
+                    core_type (src/gMap.ml[38,1584+32]..[38,1584+36])
+                      Ptyp_constr "t" (src/gMap.ml[38,1584+35]..[38,1584+36])
+                      [
+                        core_type (src/gMap.ml[38,1584+32]..[38,1584+34])
+                          Ptyp_var a
+                      ]
+              []
+          signature_item (src/gMap.ml[44,1826+2]..[44,1826+21])
+            Psig_exception
+            type_exception
+              ptyext_constructor =
+                extension_constructor (src/gMap.ml[44,1826+2]..[44,1826+21])
+                  pext_name = "Unchanged"
+                  pext_kind =
+                    Pext_decl
+                      []
+                      None
+          signature_item (src/gMap.ml[46,1849+2]..[46,1849+43])
+            Psig_value
+            value_description "strict_add" (src/gMap.ml[46,1849+6]..[46,1849+16]) (src/gMap.ml[46,1849+2]..[46,1849+43])
+              core_type (src/gMap.ml[46,1849+18]..[46,1849+43])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[46,1849+18]..[46,1849+21])
+                  Ptyp_constr "key" (src/gMap.ml[46,1849+18]..[46,1849+21])
+                  []
+                core_type (src/gMap.ml[46,1849+25]..[46,1849+43])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[46,1849+25]..[46,1849+27])
+                    Ptyp_var a
+                  core_type (src/gMap.ml[46,1849+31]..[46,1849+43])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[46,1849+31]..[46,1849+35])
+                      Ptyp_constr "t" (src/gMap.ml[46,1849+34]..[46,1849+35])
+                      [
+                        core_type (src/gMap.ml[46,1849+31]..[46,1849+33])
+                          Ptyp_var a
+                      ]
+                    core_type (src/gMap.ml[46,1849+39]..[46,1849+43])
+                      Ptyp_constr "t" (src/gMap.ml[46,1849+42]..[46,1849+43])
+                      [
+                        core_type (src/gMap.ml[46,1849+39]..[46,1849+41])
+                          Ptyp_var a
+                      ]
+              []
+          signature_item (src/gMap.ml[53,2159+2]..[53,2159+35])
+            Psig_type Rec
+            [
+              type_declaration "decision" (src/gMap.ml[53,2159+10]..[53,2159+18]) (src/gMap.ml[53,2159+2]..[53,2159+35])
+                ptype_params =
+                  [
+                    core_type (src/gMap.ml[53,2159+7]..[53,2159+9])
+                      Ptyp_var a
+                  ]
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ptype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (src/gMap.ml[53,2159+21]..[53,2159+35])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[53,2159+21]..[53,2159+23])
+                        Ptyp_var a
+                      core_type (src/gMap.ml[53,2159+27]..[53,2159+35])
+                        Ptyp_arrow
+                        Nolabel
+                        core_type (src/gMap.ml[53,2159+27]..[53,2159+29])
+                          Ptyp_var a
+                        core_type (src/gMap.ml[53,2159+33]..[53,2159+35])
+                          Ptyp_var a
+            ]
+          signature_item (src/gMap.ml[55,2196+2]..[55,2196+56])
+            Psig_value
+            value_description "fine_add" (src/gMap.ml[55,2196+6]..[55,2196+14]) (src/gMap.ml[55,2196+2]..[55,2196+56])
+              core_type (src/gMap.ml[55,2196+16]..[55,2196+56])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[55,2196+16]..[55,2196+27])
+                  Ptyp_constr "decision" (src/gMap.ml[55,2196+19]..[55,2196+27])
+                  [
+                    core_type (src/gMap.ml[55,2196+16]..[55,2196+18])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[55,2196+31]..[55,2196+56])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[55,2196+31]..[55,2196+34])
+                    Ptyp_constr "key" (src/gMap.ml[55,2196+31]..[55,2196+34])
+                    []
+                  core_type (src/gMap.ml[55,2196+38]..[55,2196+56])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[55,2196+38]..[55,2196+40])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[55,2196+44]..[55,2196+56])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[55,2196+44]..[55,2196+48])
+                        Ptyp_constr "t" (src/gMap.ml[55,2196+47]..[55,2196+48])
+                        [
+                          core_type (src/gMap.ml[55,2196+44]..[55,2196+46])
+                            Ptyp_var a
+                        ]
+                      core_type (src/gMap.ml[55,2196+52]..[55,2196+56])
+                        Ptyp_constr "t" (src/gMap.ml[55,2196+55]..[55,2196+56])
+                        [
+                          core_type (src/gMap.ml[55,2196+52]..[55,2196+54])
+                            Ptyp_var a
+                        ]
+              []
+          signature_item (src/gMap.ml[60,2342+2]..[60,2342+30])
+            Psig_value
+            value_description "mem" (src/gMap.ml[60,2342+6]..[60,2342+9]) (src/gMap.ml[60,2342+2]..[60,2342+30])
+              core_type (src/gMap.ml[60,2342+11]..[60,2342+30])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[60,2342+11]..[60,2342+14])
+                  Ptyp_constr "key" (src/gMap.ml[60,2342+11]..[60,2342+14])
+                  []
+                core_type (src/gMap.ml[60,2342+18]..[60,2342+30])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[60,2342+18]..[60,2342+22])
+                    Ptyp_constr "t" (src/gMap.ml[60,2342+21]..[60,2342+22])
+                    [
+                      core_type (src/gMap.ml[60,2342+18]..[60,2342+20])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[60,2342+26]..[60,2342+30])
+                    Ptyp_constr "bool" (src/gMap.ml[60,2342+26]..[60,2342+30])
+                    []
+              []
+          signature_item (src/gMap.ml[64,2452+2]..[64,2452+34])
+            Psig_value
+            value_description "singleton" (src/gMap.ml[64,2452+6]..[64,2452+15]) (src/gMap.ml[64,2452+2]..[64,2452+34])
+              core_type (src/gMap.ml[64,2452+17]..[64,2452+34])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[64,2452+17]..[64,2452+20])
+                  Ptyp_constr "key" (src/gMap.ml[64,2452+17]..[64,2452+20])
+                  []
+                core_type (src/gMap.ml[64,2452+24]..[64,2452+34])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[64,2452+24]..[64,2452+26])
+                    Ptyp_var a
+                  core_type (src/gMap.ml[64,2452+30]..[64,2452+34])
+                    Ptyp_constr "t" (src/gMap.ml[64,2452+33]..[64,2452+34])
+                    [
+                      core_type (src/gMap.ml[64,2452+30]..[64,2452+32])
+                        Ptyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[69,2585+2]..[69,2585+28])
+            Psig_value
+            value_description "is_empty" (src/gMap.ml[69,2585+6]..[69,2585+14]) (src/gMap.ml[69,2585+2]..[69,2585+28])
+              core_type (src/gMap.ml[69,2585+16]..[69,2585+28])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[69,2585+16]..[69,2585+20])
+                  Ptyp_constr "t" (src/gMap.ml[69,2585+19]..[69,2585+20])
+                  [
+                    core_type (src/gMap.ml[69,2585+16]..[69,2585+18])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[69,2585+24]..[69,2585+28])
+                  Ptyp_constr "bool" (src/gMap.ml[69,2585+24]..[69,2585+28])
+                  []
+              []
+          signature_item (src/gMap.ml[75,2756+2]..[75,2756+45])
+            Psig_value
+            value_description "is_singleton" (src/gMap.ml[75,2756+6]..[75,2756+18]) (src/gMap.ml[75,2756+2]..[75,2756+45])
+              core_type (src/gMap.ml[75,2756+20]..[75,2756+45])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[75,2756+20]..[75,2756+24])
+                  Ptyp_constr "t" (src/gMap.ml[75,2756+23]..[75,2756+24])
+                  [
+                    core_type (src/gMap.ml[75,2756+20]..[75,2756+22])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[75,2756+28]..[75,2756+45])
+                  Ptyp_constr "option" (src/gMap.ml[75,2756+39]..[75,2756+45])
+                  [
+                    core_type (src/gMap.ml[75,2756+29]..[75,2756+37])
+                      Ptyp_tuple
+                      [
+                        core_type (src/gMap.ml[75,2756+29]..[75,2756+32])
+                          Ptyp_constr "key" (src/gMap.ml[75,2756+29]..[75,2756+32])
+                          []
+                        core_type (src/gMap.ml[75,2756+35]..[75,2756+37])
+                          Ptyp_var a
+                      ]
+                  ]
+              []
+          signature_item (src/gMap.ml[80,2940+2]..[80,2940+27])
+            Psig_value
+            value_description "cardinal" (src/gMap.ml[80,2940+6]..[80,2940+14]) (src/gMap.ml[80,2940+2]..[80,2940+27])
+              core_type (src/gMap.ml[80,2940+16]..[80,2940+27])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[80,2940+16]..[80,2940+20])
+                  Ptyp_constr "t" (src/gMap.ml[80,2940+19]..[80,2940+20])
+                  [
+                    core_type (src/gMap.ml[80,2940+16]..[80,2940+18])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[80,2940+24]..[80,2940+27])
+                  Ptyp_constr "int" (src/gMap.ml[80,2940+24]..[80,2940+27])
+                  []
+              []
+          signature_item (src/gMap.ml[85,3094+2]..[85,3094+30])
+            Psig_value
+            value_description "choose" (src/gMap.ml[85,3094+6]..[85,3094+12]) (src/gMap.ml[85,3094+2]..[85,3094+30])
+              core_type (src/gMap.ml[85,3094+14]..[85,3094+30])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[85,3094+14]..[85,3094+18])
+                  Ptyp_constr "t" (src/gMap.ml[85,3094+17]..[85,3094+18])
+                  [
+                    core_type (src/gMap.ml[85,3094+14]..[85,3094+16])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[85,3094+22]..[85,3094+30])
+                  Ptyp_tuple
+                  [
+                    core_type (src/gMap.ml[85,3094+22]..[85,3094+25])
+                      Ptyp_constr "key" (src/gMap.ml[85,3094+22]..[85,3094+25])
+                      []
+                    core_type (src/gMap.ml[85,3094+28]..[85,3094+30])
+                      Ptyp_var a
+                  ]
+              []
+          signature_item (src/gMap.ml[92,3392+2]..[92,3392+49])
+            Psig_value
+            value_description "lookup_and_remove" (src/gMap.ml[92,3392+6]..[92,3392+23]) (src/gMap.ml[92,3392+2]..[92,3392+49])
+              core_type (src/gMap.ml[92,3392+25]..[92,3392+49])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[92,3392+25]..[92,3392+28])
+                  Ptyp_constr "key" (src/gMap.ml[92,3392+25]..[92,3392+28])
+                  []
+                core_type (src/gMap.ml[92,3392+32]..[92,3392+49])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[92,3392+32]..[92,3392+36])
+                    Ptyp_constr "t" (src/gMap.ml[92,3392+35]..[92,3392+36])
+                    [
+                      core_type (src/gMap.ml[92,3392+32]..[92,3392+34])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[92,3392+40]..[92,3392+49])
+                    Ptyp_tuple
+                    [
+                      core_type (src/gMap.ml[92,3392+40]..[92,3392+42])
+                        Ptyp_var a
+                      core_type (src/gMap.ml[92,3392+45]..[92,3392+49])
+                        Ptyp_constr "t" (src/gMap.ml[92,3392+48]..[92,3392+49])
+                        [
+                          core_type (src/gMap.ml[92,3392+45]..[92,3392+47])
+                            Ptyp_var a
+                        ]
+                    ]
+              []
+          signature_item (src/gMap.ml[93,3442+2]..[93,3442+47])
+            Psig_value
+            value_description "find_and_remove" (src/gMap.ml[93,3442+6]..[93,3442+21]) (src/gMap.ml[93,3442+2]..[93,3442+47])
+              core_type (src/gMap.ml[93,3442+23]..[93,3442+47])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[93,3442+23]..[93,3442+26])
+                  Ptyp_constr "key" (src/gMap.ml[93,3442+23]..[93,3442+26])
+                  []
+                core_type (src/gMap.ml[93,3442+30]..[93,3442+47])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[93,3442+30]..[93,3442+34])
+                    Ptyp_constr "t" (src/gMap.ml[93,3442+33]..[93,3442+34])
+                    [
+                      core_type (src/gMap.ml[93,3442+30]..[93,3442+32])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[93,3442+38]..[93,3442+47])
+                    Ptyp_tuple
+                    [
+                      core_type (src/gMap.ml[93,3442+38]..[93,3442+40])
+                        Ptyp_var a
+                      core_type (src/gMap.ml[93,3442+43]..[93,3442+47])
+                        Ptyp_constr "t" (src/gMap.ml[93,3442+46]..[93,3442+47])
+                        [
+                          core_type (src/gMap.ml[93,3442+43]..[93,3442+45])
+                            Ptyp_var a
+                        ]
+                    ]
+              []
+          signature_item (src/gMap.ml[97,3563+2]..[97,3563+33])
+            Psig_value
+            value_description "remove" (src/gMap.ml[97,3563+6]..[97,3563+12]) (src/gMap.ml[97,3563+2]..[97,3563+33])
+              core_type (src/gMap.ml[97,3563+14]..[97,3563+33])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[97,3563+14]..[97,3563+17])
+                  Ptyp_constr "key" (src/gMap.ml[97,3563+14]..[97,3563+17])
+                  []
+                core_type (src/gMap.ml[97,3563+21]..[97,3563+33])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[97,3563+21]..[97,3563+25])
+                    Ptyp_constr "t" (src/gMap.ml[97,3563+24]..[97,3563+25])
+                    [
+                      core_type (src/gMap.ml[97,3563+21]..[97,3563+23])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[97,3563+29]..[97,3563+33])
+                    Ptyp_constr "t" (src/gMap.ml[97,3563+32]..[97,3563+33])
+                    [
+                      core_type (src/gMap.ml[97,3563+29]..[97,3563+31])
+                        Ptyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[102,3724+2]..[102,3724+33])
+            Psig_value
+            value_description "union" (src/gMap.ml[102,3724+6]..[102,3724+11]) (src/gMap.ml[102,3724+2]..[102,3724+33])
+              core_type (src/gMap.ml[102,3724+13]..[102,3724+33])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[102,3724+13]..[102,3724+17])
+                  Ptyp_constr "t" (src/gMap.ml[102,3724+16]..[102,3724+17])
+                  [
+                    core_type (src/gMap.ml[102,3724+13]..[102,3724+15])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[102,3724+21]..[102,3724+33])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[102,3724+21]..[102,3724+25])
+                    Ptyp_constr "t" (src/gMap.ml[102,3724+24]..[102,3724+25])
+                    [
+                      core_type (src/gMap.ml[102,3724+21]..[102,3724+23])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[102,3724+29]..[102,3724+33])
+                    Ptyp_constr "t" (src/gMap.ml[102,3724+32]..[102,3724+33])
+                    [
+                      core_type (src/gMap.ml[102,3724+29]..[102,3724+31])
+                        Ptyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[110,4052+2]..[110,4052+53])
+            Psig_value
+            value_description "fine_union" (src/gMap.ml[110,4052+6]..[110,4052+16]) (src/gMap.ml[110,4052+2]..[110,4052+53])
+              core_type (src/gMap.ml[110,4052+18]..[110,4052+53])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[110,4052+18]..[110,4052+29])
+                  Ptyp_constr "decision" (src/gMap.ml[110,4052+21]..[110,4052+29])
+                  [
+                    core_type (src/gMap.ml[110,4052+18]..[110,4052+20])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[110,4052+33]..[110,4052+53])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[110,4052+33]..[110,4052+37])
+                    Ptyp_constr "t" (src/gMap.ml[110,4052+36]..[110,4052+37])
+                    [
+                      core_type (src/gMap.ml[110,4052+33]..[110,4052+35])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[110,4052+41]..[110,4052+53])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[110,4052+41]..[110,4052+45])
+                      Ptyp_constr "t" (src/gMap.ml[110,4052+44]..[110,4052+45])
+                      [
+                        core_type (src/gMap.ml[110,4052+41]..[110,4052+43])
+                          Ptyp_var a
+                      ]
+                    core_type (src/gMap.ml[110,4052+49]..[110,4052+53])
+                      Ptyp_constr "t" (src/gMap.ml[110,4052+52]..[110,4052+53])
+                      [
+                        core_type (src/gMap.ml[110,4052+49]..[110,4052+51])
+                          Ptyp_var a
+                      ]
+              []
+          signature_item (src/gMap.ml[116,4271+2]..[116,4271+47])
+            Psig_value
+            value_description "iter" (src/gMap.ml[116,4271+6]..[116,4271+10]) (src/gMap.ml[116,4271+2]..[116,4271+47])
+              core_type (src/gMap.ml[116,4271+12]..[116,4271+47])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[116,4271+13]..[116,4271+30])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[116,4271+13]..[116,4271+16])
+                    Ptyp_constr "key" (src/gMap.ml[116,4271+13]..[116,4271+16])
+                    []
+                  core_type (src/gMap.ml[116,4271+20]..[116,4271+30])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[116,4271+20]..[116,4271+22])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[116,4271+26]..[116,4271+30])
+                      Ptyp_constr "unit" (src/gMap.ml[116,4271+26]..[116,4271+30])
+                      []
+                core_type (src/gMap.ml[116,4271+35]..[116,4271+47])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[116,4271+35]..[116,4271+39])
+                    Ptyp_constr "t" (src/gMap.ml[116,4271+38]..[116,4271+39])
+                    [
+                      core_type (src/gMap.ml[116,4271+35]..[116,4271+37])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[116,4271+43]..[116,4271+47])
+                    Ptyp_constr "unit" (src/gMap.ml[116,4271+43]..[116,4271+47])
+                    []
+              []
+          signature_item (src/gMap.ml[125,4696+2]..[125,4696+55])
+            Psig_value
+            value_description "fold" (src/gMap.ml[125,4696+6]..[125,4696+10]) (src/gMap.ml[125,4696+2]..[125,4696+55])
+              core_type (src/gMap.ml[125,4696+12]..[125,4696+55])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[125,4696+13]..[125,4696+34])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[125,4696+13]..[125,4696+16])
+                    Ptyp_constr "key" (src/gMap.ml[125,4696+13]..[125,4696+16])
+                    []
+                  core_type (src/gMap.ml[125,4696+20]..[125,4696+34])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[125,4696+20]..[125,4696+22])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[125,4696+26]..[125,4696+34])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[125,4696+26]..[125,4696+28])
+                        Ptyp_var b
+                      core_type (src/gMap.ml[125,4696+32]..[125,4696+34])
+                        Ptyp_var b
+                core_type (src/gMap.ml[125,4696+39]..[125,4696+55])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[125,4696+39]..[125,4696+43])
+                    Ptyp_constr "t" (src/gMap.ml[125,4696+42]..[125,4696+43])
+                    [
+                      core_type (src/gMap.ml[125,4696+39]..[125,4696+41])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[125,4696+47]..[125,4696+55])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[125,4696+47]..[125,4696+49])
+                      Ptyp_var b
+                    core_type (src/gMap.ml[125,4696+53]..[125,4696+55])
+                      Ptyp_var b
+              []
+          signature_item (src/gMap.ml[130,4867+2]..[130,4867+59])
+            Psig_value
+            value_description "fold_rev" (src/gMap.ml[130,4867+6]..[130,4867+14]) (src/gMap.ml[130,4867+2]..[130,4867+59])
+              core_type (src/gMap.ml[130,4867+16]..[130,4867+59])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[130,4867+17]..[130,4867+38])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[130,4867+17]..[130,4867+20])
+                    Ptyp_constr "key" (src/gMap.ml[130,4867+17]..[130,4867+20])
+                    []
+                  core_type (src/gMap.ml[130,4867+24]..[130,4867+38])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[130,4867+24]..[130,4867+26])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[130,4867+30]..[130,4867+38])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[130,4867+30]..[130,4867+32])
+                        Ptyp_var b
+                      core_type (src/gMap.ml[130,4867+36]..[130,4867+38])
+                        Ptyp_var b
+                core_type (src/gMap.ml[130,4867+43]..[130,4867+59])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[130,4867+43]..[130,4867+47])
+                    Ptyp_constr "t" (src/gMap.ml[130,4867+46]..[130,4867+47])
+                    [
+                      core_type (src/gMap.ml[130,4867+43]..[130,4867+45])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[130,4867+51]..[130,4867+59])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[130,4867+51]..[130,4867+53])
+                      Ptyp_var b
+                    core_type (src/gMap.ml[130,4867+57]..[130,4867+59])
+                      Ptyp_var b
+              []
+          signature_item (src/gMap.ml[135,5046+2]..[135,5046+49])
+            Psig_value
+            value_description "filter" (src/gMap.ml[135,5046+6]..[135,5046+12]) (src/gMap.ml[135,5046+2]..[135,5046+49])
+              core_type (src/gMap.ml[135,5046+14]..[135,5046+49])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[135,5046+15]..[135,5046+32])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[135,5046+15]..[135,5046+18])
+                    Ptyp_constr "key" (src/gMap.ml[135,5046+15]..[135,5046+18])
+                    []
+                  core_type (src/gMap.ml[135,5046+22]..[135,5046+32])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[135,5046+22]..[135,5046+24])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[135,5046+28]..[135,5046+32])
+                      Ptyp_constr "bool" (src/gMap.ml[135,5046+28]..[135,5046+32])
+                      []
+                core_type (src/gMap.ml[135,5046+37]..[135,5046+49])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[135,5046+37]..[135,5046+41])
+                    Ptyp_constr "t" (src/gMap.ml[135,5046+40]..[135,5046+41])
+                    [
+                      core_type (src/gMap.ml[135,5046+37]..[135,5046+39])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[135,5046+45]..[135,5046+49])
+                    Ptyp_constr "t" (src/gMap.ml[135,5046+48]..[135,5046+49])
+                    [
+                      core_type (src/gMap.ml[135,5046+45]..[135,5046+47])
+                        Ptyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[142,5360+2]..[142,5360+62])
+            Psig_value
+            value_description "iter2" (src/gMap.ml[142,5360+6]..[142,5360+11]) (src/gMap.ml[142,5360+2]..[142,5360+62])
+              core_type (src/gMap.ml[142,5360+13]..[142,5360+62])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[142,5360+14]..[142,5360+37])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[142,5360+14]..[142,5360+17])
+                    Ptyp_constr "key" (src/gMap.ml[142,5360+14]..[142,5360+17])
+                    []
+                  core_type (src/gMap.ml[142,5360+21]..[142,5360+37])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[142,5360+21]..[142,5360+23])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[142,5360+27]..[142,5360+37])
+                      Ptyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[142,5360+27]..[142,5360+29])
+                        Ptyp_var b
+                      core_type (src/gMap.ml[142,5360+33]..[142,5360+37])
+                        Ptyp_constr "unit" (src/gMap.ml[142,5360+33]..[142,5360+37])
+                        []
+                core_type (src/gMap.ml[142,5360+42]..[142,5360+62])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[142,5360+42]..[142,5360+46])
+                    Ptyp_constr "t" (src/gMap.ml[142,5360+45]..[142,5360+46])
+                    [
+                      core_type (src/gMap.ml[142,5360+42]..[142,5360+44])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[142,5360+50]..[142,5360+62])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[142,5360+50]..[142,5360+54])
+                      Ptyp_constr "t" (src/gMap.ml[142,5360+53]..[142,5360+54])
+                      [
+                        core_type (src/gMap.ml[142,5360+50]..[142,5360+52])
+                          Ptyp_var b
+                      ]
+                    core_type (src/gMap.ml[142,5360+58]..[142,5360+62])
+                      Ptyp_constr "unit" (src/gMap.ml[142,5360+58]..[142,5360+62])
+                      []
+              []
+          signature_item (src/gMap.ml[147,5558+2]..[147,5558+37])
+            Psig_value
+            value_description "map" (src/gMap.ml[147,5558+6]..[147,5558+9]) (src/gMap.ml[147,5558+2]..[147,5558+37])
+              core_type (src/gMap.ml[147,5558+11]..[147,5558+37])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[147,5558+12]..[147,5558+20])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[147,5558+12]..[147,5558+14])
+                    Ptyp_var a
+                  core_type (src/gMap.ml[147,5558+18]..[147,5558+20])
+                    Ptyp_var b
+                core_type (src/gMap.ml[147,5558+25]..[147,5558+37])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[147,5558+25]..[147,5558+29])
+                    Ptyp_constr "t" (src/gMap.ml[147,5558+28]..[147,5558+29])
+                    [
+                      core_type (src/gMap.ml[147,5558+25]..[147,5558+27])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[147,5558+33]..[147,5558+37])
+                    Ptyp_constr "t" (src/gMap.ml[147,5558+36]..[147,5558+37])
+                    [
+                      core_type (src/gMap.ml[147,5558+33]..[147,5558+35])
+                        Ptyp_var b
+                    ]
+              []
+          signature_item (src/gMap.ml[153,5761+2]..[153,5761+42])
+            Psig_value
+            value_description "endo_map" (src/gMap.ml[153,5761+6]..[153,5761+14]) (src/gMap.ml[153,5761+2]..[153,5761+42])
+              core_type (src/gMap.ml[153,5761+16]..[153,5761+42])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[153,5761+17]..[153,5761+25])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[153,5761+17]..[153,5761+19])
+                    Ptyp_var a
+                  core_type (src/gMap.ml[153,5761+23]..[153,5761+25])
+                    Ptyp_var a
+                core_type (src/gMap.ml[153,5761+30]..[153,5761+42])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[153,5761+30]..[153,5761+34])
+                    Ptyp_constr "t" (src/gMap.ml[153,5761+33]..[153,5761+34])
+                    [
+                      core_type (src/gMap.ml[153,5761+30]..[153,5761+32])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[153,5761+38]..[153,5761+42])
+                    Ptyp_constr "t" (src/gMap.ml[153,5761+41]..[153,5761+42])
+                    [
+                      core_type (src/gMap.ml[153,5761+38]..[153,5761+40])
+                        Ptyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[158,5909+2]..[158,5909+55])
+            Psig_value
+            value_description "compare" (src/gMap.ml[158,5909+6]..[158,5909+13]) (src/gMap.ml[158,5909+2]..[158,5909+55])
+              core_type (src/gMap.ml[158,5909+15]..[158,5909+55])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[158,5909+16]..[158,5909+31])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[158,5909+16]..[158,5909+18])
+                    Ptyp_var a
+                  core_type (src/gMap.ml[158,5909+22]..[158,5909+31])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[158,5909+22]..[158,5909+24])
+                      Ptyp_var a
+                    core_type (src/gMap.ml[158,5909+28]..[158,5909+31])
+                      Ptyp_constr "int" (src/gMap.ml[158,5909+28]..[158,5909+31])
+                      []
+                core_type (src/gMap.ml[158,5909+36]..[158,5909+55])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[158,5909+36]..[158,5909+40])
+                    Ptyp_constr "t" (src/gMap.ml[158,5909+39]..[158,5909+40])
+                    [
+                      core_type (src/gMap.ml[158,5909+36]..[158,5909+38])
+                        Ptyp_var a
+                    ]
+                  core_type (src/gMap.ml[158,5909+44]..[158,5909+55])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[158,5909+44]..[158,5909+48])
+                      Ptyp_constr "t" (src/gMap.ml[158,5909+47]..[158,5909+48])
+                      [
+                        core_type (src/gMap.ml[158,5909+44]..[158,5909+46])
+                          Ptyp_var a
+                      ]
+                    core_type (src/gMap.ml[158,5909+52]..[158,5909+55])
+                      Ptyp_constr "int" (src/gMap.ml[158,5909+52]..[158,5909+55])
+                      []
+              []
+          signature_item (src/gMap.ml[167,6368+2]..[167,6368+48])
+            Psig_module "Domain" (src/gMap.ml[167,6368+9]..[167,6368+15])
+            module_type (src/gMap.ml[167,6368+18]..[167,6368+48])
+              Pmty_with
+              module_type (src/gMap.ml[167,6368+18]..[167,6368+24])
+                Pmty_ident "GSet.S" (src/gMap.ml[167,6368+18]..[167,6368+24])
+              [
+                Pwith_type "element" (src/gMap.ml[167,6368+35]..[167,6368+42])
+                  type_declaration "element" (src/gMap.ml[167,6368+35]..[167,6368+42]) (src/gMap.ml[167,6368+30]..[167,6368+48])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/gMap.ml[167,6368+45]..[167,6368+48])
+                          Ptyp_constr "key" (src/gMap.ml[167,6368+45]..[167,6368+48])
+                          []
+              ]
+          signature_item (src/gMap.ml[169,6418+2]..[169,6418+30])
+            Psig_value
+            value_description "domain" (src/gMap.ml[169,6418+6]..[169,6418+12]) (src/gMap.ml[169,6418+2]..[169,6418+30])
+              core_type (src/gMap.ml[169,6418+14]..[169,6418+30])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[169,6418+14]..[169,6418+18])
+                  Ptyp_constr "t" (src/gMap.ml[169,6418+17]..[169,6418+18])
+                  [
+                    core_type (src/gMap.ml[169,6418+14]..[169,6418+16])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[169,6418+22]..[169,6418+30])
+                  Ptyp_constr "Domain.t" (src/gMap.ml[169,6418+22]..[169,6418+30])
+                  []
+              []
+          signature_item (src/gMap.ml[170,6449+2]..[170,6449+43])
+            Psig_value
+            value_description "lift" (src/gMap.ml[170,6449+6]..[170,6449+10]) (src/gMap.ml[170,6449+2]..[170,6449+43])
+              core_type (src/gMap.ml[170,6449+12]..[170,6449+43])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[170,6449+13]..[170,6449+22])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[170,6449+13]..[170,6449+16])
+                    Ptyp_constr "key" (src/gMap.ml[170,6449+13]..[170,6449+16])
+                    []
+                  core_type (src/gMap.ml[170,6449+20]..[170,6449+22])
+                    Ptyp_var a
+                core_type (src/gMap.ml[170,6449+27]..[170,6449+43])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[170,6449+27]..[170,6449+35])
+                    Ptyp_constr "Domain.t" (src/gMap.ml[170,6449+27]..[170,6449+35])
+                    []
+                  core_type (src/gMap.ml[170,6449+39]..[170,6449+43])
+                    Ptyp_constr "t" (src/gMap.ml[170,6449+42]..[170,6449+43])
+                    [
+                      core_type (src/gMap.ml[170,6449+39]..[170,6449+41])
+                        Ptyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[177,6715+2]..[177,6715+42])
+            Psig_value
+            value_description "corestrict" (src/gMap.ml[177,6715+6]..[177,6715+16]) (src/gMap.ml[177,6715+2]..[177,6715+42])
+              core_type (src/gMap.ml[177,6715+18]..[177,6715+42])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[177,6715+18]..[177,6715+22])
+                  Ptyp_constr "t" (src/gMap.ml[177,6715+21]..[177,6715+22])
+                  [
+                    core_type (src/gMap.ml[177,6715+18]..[177,6715+20])
+                      Ptyp_var a
+                  ]
+                core_type (src/gMap.ml[177,6715+26]..[177,6715+42])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[177,6715+26]..[177,6715+34])
+                    Ptyp_constr "Domain.t" (src/gMap.ml[177,6715+26]..[177,6715+34])
+                    []
+                  core_type (src/gMap.ml[177,6715+38]..[177,6715+42])
+                    Ptyp_constr "t" (src/gMap.ml[177,6715+41]..[177,6715+42])
+                    [
+                      core_type (src/gMap.ml[177,6715+38]..[177,6715+40])
+                        Ptyp_var a
+                    ]
+              []
+        ]
+]
+
+module type S  =
+  sig
+    type key
+    type 'a t
+    val empty : 'a t
+    val lookup : key -> 'a t -> 'a
+    val find : key -> 'a t -> 'a
+    val add : key -> 'a -> 'a t -> 'a t
+    exception Unchanged 
+    val strict_add : key -> 'a -> 'a t -> 'a t
+    type 'a decision = 'a -> 'a -> 'a
+    val fine_add : 'a decision -> key -> 'a -> 'a t -> 'a t
+    val mem : key -> 'a t -> bool
+    val singleton : key -> 'a -> 'a t
+    val is_empty : 'a t -> bool
+    val is_singleton : 'a t -> (key * 'a) option
+    val cardinal : 'a t -> int
+    val choose : 'a t -> (key * 'a)
+    val lookup_and_remove : key -> 'a t -> ('a * 'a t)
+    val find_and_remove : key -> 'a t -> ('a * 'a t)
+    val remove : key -> 'a t -> 'a t
+    val union : 'a t -> 'a t -> 'a t
+    val fine_union : 'a decision -> 'a t -> 'a t -> 'a t
+    val iter : (key -> 'a -> unit) -> 'a t -> unit
+    val fold : (key -> 'a -> 'b -> 'b) -> 'a t -> 'b -> 'b
+    val fold_rev : (key -> 'a -> 'b -> 'b) -> 'a t -> 'b -> 'b
+    val filter : (key -> 'a -> bool) -> 'a t -> 'a t
+    val iter2 : (key -> 'a -> 'b -> unit) -> 'a t -> 'b t -> unit
+    val map : ('a -> 'b) -> 'a t -> 'b t
+    val endo_map : ('a -> 'a) -> 'a t -> 'a t
+    val compare : ('a -> 'a -> int) -> 'a t -> 'a t -> int
+    module Domain : GSet.S with type  element =  key
+    val domain : 'a t -> Domain.t
+    val lift : (key -> 'a) -> Domain.t -> 'a t
+    val corestrict : 'a t -> Domain.t -> 'a t
+  end
+[
+  structure_item (src/gMap.ml[14,994+0]..src/gMap.ml[179,6759+3])
+    Tstr_modtype "S/472"
+      module_type (src/gMap.ml[14,994+16]..src/gMap.ml[179,6759+3])
+        Tmty_signature
+        [
+          signature_item (src/gMap.ml[18,1072+2]..src/gMap.ml[18,1072+10])
+            Tsig_type Rec
+            [
+              type_declaration key/396 (src/gMap.ml[18,1072+2]..src/gMap.ml[18,1072+10])
+                ptype_params =
+                  []
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (src/gMap.ml[22,1137+2]..src/gMap.ml[22,1137+11])
+            Tsig_type Rec
+            [
+              type_declaration t/397 (src/gMap.ml[22,1137+2]..src/gMap.ml[22,1137+11])
+                ptype_params =
+                  [
+                    core_type (src/gMap.ml[22,1137+7]..src/gMap.ml[22,1137+9])
+                      Ttyp_var a
+                  ]
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  None
+            ]
+          signature_item (src/gMap.ml[26,1174+2]..src/gMap.ml[26,1174+17])
+            Tsig_value
+            value_description empty/398 (src/gMap.ml[26,1174+2]..src/gMap.ml[26,1174+17])
+              core_type (src/gMap.ml[26,1174+13]..src/gMap.ml[26,1174+17])
+                Ttyp_constr "t/397"
+                [
+                  core_type (src/gMap.ml[26,1174+13]..src/gMap.ml[26,1174+15])
+                    Ttyp_var a
+                ]
+              []
+          signature_item (src/gMap.ml[31,1333+2]..src/gMap.ml[31,1333+31])
+            Tsig_value
+            value_description lookup/399 (src/gMap.ml[31,1333+2]..src/gMap.ml[31,1333+31])
+              core_type (src/gMap.ml[31,1333+14]..src/gMap.ml[31,1333+31])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[31,1333+14]..src/gMap.ml[31,1333+17])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[31,1333+21]..src/gMap.ml[31,1333+31])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[31,1333+21]..src/gMap.ml[31,1333+25])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[31,1333+21]..src/gMap.ml[31,1333+23])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[31,1333+29]..src/gMap.ml[31,1333+31])
+                    Ttyp_var a
+              []
+          signature_item (src/gMap.ml[32,1365+2]..src/gMap.ml[32,1365+29])
+            Tsig_value
+            value_description find/400 (src/gMap.ml[32,1365+2]..src/gMap.ml[32,1365+29])
+              core_type (src/gMap.ml[32,1365+12]..src/gMap.ml[32,1365+29])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[32,1365+12]..src/gMap.ml[32,1365+15])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[32,1365+19]..src/gMap.ml[32,1365+29])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[32,1365+19]..src/gMap.ml[32,1365+23])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[32,1365+19]..src/gMap.ml[32,1365+21])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[32,1365+27]..src/gMap.ml[32,1365+29])
+                    Ttyp_var a
+              []
+          signature_item (src/gMap.ml[38,1584+2]..src/gMap.ml[38,1584+36])
+            Tsig_value
+            value_description add/401 (src/gMap.ml[38,1584+2]..src/gMap.ml[38,1584+36])
+              core_type (src/gMap.ml[38,1584+11]..src/gMap.ml[38,1584+36])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[38,1584+11]..src/gMap.ml[38,1584+14])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[38,1584+18]..src/gMap.ml[38,1584+36])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[38,1584+18]..src/gMap.ml[38,1584+20])
+                    Ttyp_var a
+                  core_type (src/gMap.ml[38,1584+24]..src/gMap.ml[38,1584+36])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[38,1584+24]..src/gMap.ml[38,1584+28])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[38,1584+24]..src/gMap.ml[38,1584+26])
+                          Ttyp_var a
+                      ]
+                    core_type (src/gMap.ml[38,1584+32]..src/gMap.ml[38,1584+36])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[38,1584+32]..src/gMap.ml[38,1584+34])
+                          Ttyp_var a
+                      ]
+              []
+          signature_item (src/gMap.ml[44,1826+2]..src/gMap.ml[44,1826+21])
+            Tsig_exception
+            type_exception
+              ptyext_constructor =
+                extension_constructor (src/gMap.ml[44,1826+2]..src/gMap.ml[44,1826+21])
+                  pext_name = "Unchanged/402"
+                  pext_kind =
+                    Text_decl
+                      []
+                      None
+          signature_item (src/gMap.ml[46,1849+2]..src/gMap.ml[46,1849+43])
+            Tsig_value
+            value_description strict_add/403 (src/gMap.ml[46,1849+2]..src/gMap.ml[46,1849+43])
+              core_type (src/gMap.ml[46,1849+18]..src/gMap.ml[46,1849+43])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[46,1849+18]..src/gMap.ml[46,1849+21])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[46,1849+25]..src/gMap.ml[46,1849+43])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[46,1849+25]..src/gMap.ml[46,1849+27])
+                    Ttyp_var a
+                  core_type (src/gMap.ml[46,1849+31]..src/gMap.ml[46,1849+43])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[46,1849+31]..src/gMap.ml[46,1849+35])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[46,1849+31]..src/gMap.ml[46,1849+33])
+                          Ttyp_var a
+                      ]
+                    core_type (src/gMap.ml[46,1849+39]..src/gMap.ml[46,1849+43])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[46,1849+39]..src/gMap.ml[46,1849+41])
+                          Ttyp_var a
+                      ]
+              []
+          signature_item (src/gMap.ml[53,2159+2]..src/gMap.ml[53,2159+35])
+            Tsig_type Rec
+            [
+              type_declaration decision/404 (src/gMap.ml[53,2159+2]..src/gMap.ml[53,2159+35])
+                ptype_params =
+                  [
+                    core_type (src/gMap.ml[53,2159+7]..src/gMap.ml[53,2159+9])
+                      Ttyp_var a
+                  ]
+                ptype_cstrs =
+                  []
+                ptype_kind =
+                  Ttype_abstract
+                ptype_private = Public
+                ptype_manifest =
+                  Some
+                    core_type (src/gMap.ml[53,2159+21]..src/gMap.ml[53,2159+35])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[53,2159+21]..src/gMap.ml[53,2159+23])
+                        Ttyp_var a
+                      core_type (src/gMap.ml[53,2159+27]..src/gMap.ml[53,2159+35])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/gMap.ml[53,2159+27]..src/gMap.ml[53,2159+29])
+                          Ttyp_var a
+                        core_type (src/gMap.ml[53,2159+33]..src/gMap.ml[53,2159+35])
+                          Ttyp_var a
+            ]
+          signature_item (src/gMap.ml[55,2196+2]..src/gMap.ml[55,2196+56])
+            Tsig_value
+            value_description fine_add/405 (src/gMap.ml[55,2196+2]..src/gMap.ml[55,2196+56])
+              core_type (src/gMap.ml[55,2196+16]..src/gMap.ml[55,2196+56])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[55,2196+16]..src/gMap.ml[55,2196+27])
+                  Ttyp_constr "decision/404"
+                  [
+                    core_type (src/gMap.ml[55,2196+16]..src/gMap.ml[55,2196+18])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[55,2196+31]..src/gMap.ml[55,2196+56])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[55,2196+31]..src/gMap.ml[55,2196+34])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[55,2196+38]..src/gMap.ml[55,2196+56])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[55,2196+38]..src/gMap.ml[55,2196+40])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[55,2196+44]..src/gMap.ml[55,2196+56])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[55,2196+44]..src/gMap.ml[55,2196+48])
+                        Ttyp_constr "t/397"
+                        [
+                          core_type (src/gMap.ml[55,2196+44]..src/gMap.ml[55,2196+46])
+                            Ttyp_var a
+                        ]
+                      core_type (src/gMap.ml[55,2196+52]..src/gMap.ml[55,2196+56])
+                        Ttyp_constr "t/397"
+                        [
+                          core_type (src/gMap.ml[55,2196+52]..src/gMap.ml[55,2196+54])
+                            Ttyp_var a
+                        ]
+              []
+          signature_item (src/gMap.ml[60,2342+2]..src/gMap.ml[60,2342+30])
+            Tsig_value
+            value_description mem/406 (src/gMap.ml[60,2342+2]..src/gMap.ml[60,2342+30])
+              core_type (src/gMap.ml[60,2342+11]..src/gMap.ml[60,2342+30])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[60,2342+11]..src/gMap.ml[60,2342+14])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[60,2342+18]..src/gMap.ml[60,2342+30])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[60,2342+18]..src/gMap.ml[60,2342+22])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[60,2342+18]..src/gMap.ml[60,2342+20])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[60,2342+26]..src/gMap.ml[60,2342+30])
+                    Ttyp_constr "bool/5!"
+                    []
+              []
+          signature_item (src/gMap.ml[64,2452+2]..src/gMap.ml[64,2452+34])
+            Tsig_value
+            value_description singleton/407 (src/gMap.ml[64,2452+2]..src/gMap.ml[64,2452+34])
+              core_type (src/gMap.ml[64,2452+17]..src/gMap.ml[64,2452+34])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[64,2452+17]..src/gMap.ml[64,2452+20])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[64,2452+24]..src/gMap.ml[64,2452+34])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[64,2452+24]..src/gMap.ml[64,2452+26])
+                    Ttyp_var a
+                  core_type (src/gMap.ml[64,2452+30]..src/gMap.ml[64,2452+34])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[64,2452+30]..src/gMap.ml[64,2452+32])
+                        Ttyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[69,2585+2]..src/gMap.ml[69,2585+28])
+            Tsig_value
+            value_description is_empty/408 (src/gMap.ml[69,2585+2]..src/gMap.ml[69,2585+28])
+              core_type (src/gMap.ml[69,2585+16]..src/gMap.ml[69,2585+28])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[69,2585+16]..src/gMap.ml[69,2585+20])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[69,2585+16]..src/gMap.ml[69,2585+18])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[69,2585+24]..src/gMap.ml[69,2585+28])
+                  Ttyp_constr "bool/5!"
+                  []
+              []
+          signature_item (src/gMap.ml[75,2756+2]..src/gMap.ml[75,2756+45])
+            Tsig_value
+            value_description is_singleton/409 (src/gMap.ml[75,2756+2]..src/gMap.ml[75,2756+45])
+              core_type (src/gMap.ml[75,2756+20]..src/gMap.ml[75,2756+45])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[75,2756+20]..src/gMap.ml[75,2756+24])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[75,2756+20]..src/gMap.ml[75,2756+22])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[75,2756+28]..src/gMap.ml[75,2756+45])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (src/gMap.ml[75,2756+29]..src/gMap.ml[75,2756+37])
+                      Ttyp_tuple
+                      [
+                        core_type (src/gMap.ml[75,2756+29]..src/gMap.ml[75,2756+32])
+                          Ttyp_constr "key/396"
+                          []
+                        core_type (src/gMap.ml[75,2756+35]..src/gMap.ml[75,2756+37])
+                          Ttyp_var a
+                      ]
+                  ]
+              []
+          signature_item (src/gMap.ml[80,2940+2]..src/gMap.ml[80,2940+27])
+            Tsig_value
+            value_description cardinal/410 (src/gMap.ml[80,2940+2]..src/gMap.ml[80,2940+27])
+              core_type (src/gMap.ml[80,2940+16]..src/gMap.ml[80,2940+27])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[80,2940+16]..src/gMap.ml[80,2940+20])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[80,2940+16]..src/gMap.ml[80,2940+18])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[80,2940+24]..src/gMap.ml[80,2940+27])
+                  Ttyp_constr "int/1!"
+                  []
+              []
+          signature_item (src/gMap.ml[85,3094+2]..src/gMap.ml[85,3094+30])
+            Tsig_value
+            value_description choose/411 (src/gMap.ml[85,3094+2]..src/gMap.ml[85,3094+30])
+              core_type (src/gMap.ml[85,3094+14]..src/gMap.ml[85,3094+30])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[85,3094+14]..src/gMap.ml[85,3094+18])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[85,3094+14]..src/gMap.ml[85,3094+16])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[85,3094+22]..src/gMap.ml[85,3094+30])
+                  Ttyp_tuple
+                  [
+                    core_type (src/gMap.ml[85,3094+22]..src/gMap.ml[85,3094+25])
+                      Ttyp_constr "key/396"
+                      []
+                    core_type (src/gMap.ml[85,3094+28]..src/gMap.ml[85,3094+30])
+                      Ttyp_var a
+                  ]
+              []
+          signature_item (src/gMap.ml[92,3392+2]..src/gMap.ml[92,3392+49])
+            Tsig_value
+            value_description lookup_and_remove/412 (src/gMap.ml[92,3392+2]..src/gMap.ml[92,3392+49])
+              core_type (src/gMap.ml[92,3392+25]..src/gMap.ml[92,3392+49])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[92,3392+25]..src/gMap.ml[92,3392+28])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[92,3392+32]..src/gMap.ml[92,3392+49])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[92,3392+32]..src/gMap.ml[92,3392+36])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[92,3392+32]..src/gMap.ml[92,3392+34])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[92,3392+40]..src/gMap.ml[92,3392+49])
+                    Ttyp_tuple
+                    [
+                      core_type (src/gMap.ml[92,3392+40]..src/gMap.ml[92,3392+42])
+                        Ttyp_var a
+                      core_type (src/gMap.ml[92,3392+45]..src/gMap.ml[92,3392+49])
+                        Ttyp_constr "t/397"
+                        [
+                          core_type (src/gMap.ml[92,3392+45]..src/gMap.ml[92,3392+47])
+                            Ttyp_var a
+                        ]
+                    ]
+              []
+          signature_item (src/gMap.ml[93,3442+2]..src/gMap.ml[93,3442+47])
+            Tsig_value
+            value_description find_and_remove/413 (src/gMap.ml[93,3442+2]..src/gMap.ml[93,3442+47])
+              core_type (src/gMap.ml[93,3442+23]..src/gMap.ml[93,3442+47])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[93,3442+23]..src/gMap.ml[93,3442+26])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[93,3442+30]..src/gMap.ml[93,3442+47])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[93,3442+30]..src/gMap.ml[93,3442+34])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[93,3442+30]..src/gMap.ml[93,3442+32])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[93,3442+38]..src/gMap.ml[93,3442+47])
+                    Ttyp_tuple
+                    [
+                      core_type (src/gMap.ml[93,3442+38]..src/gMap.ml[93,3442+40])
+                        Ttyp_var a
+                      core_type (src/gMap.ml[93,3442+43]..src/gMap.ml[93,3442+47])
+                        Ttyp_constr "t/397"
+                        [
+                          core_type (src/gMap.ml[93,3442+43]..src/gMap.ml[93,3442+45])
+                            Ttyp_var a
+                        ]
+                    ]
+              []
+          signature_item (src/gMap.ml[97,3563+2]..src/gMap.ml[97,3563+33])
+            Tsig_value
+            value_description remove/414 (src/gMap.ml[97,3563+2]..src/gMap.ml[97,3563+33])
+              core_type (src/gMap.ml[97,3563+14]..src/gMap.ml[97,3563+33])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[97,3563+14]..src/gMap.ml[97,3563+17])
+                  Ttyp_constr "key/396"
+                  []
+                core_type (src/gMap.ml[97,3563+21]..src/gMap.ml[97,3563+33])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[97,3563+21]..src/gMap.ml[97,3563+25])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[97,3563+21]..src/gMap.ml[97,3563+23])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[97,3563+29]..src/gMap.ml[97,3563+33])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[97,3563+29]..src/gMap.ml[97,3563+31])
+                        Ttyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[102,3724+2]..src/gMap.ml[102,3724+33])
+            Tsig_value
+            value_description union/415 (src/gMap.ml[102,3724+2]..src/gMap.ml[102,3724+33])
+              core_type (src/gMap.ml[102,3724+13]..src/gMap.ml[102,3724+33])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[102,3724+13]..src/gMap.ml[102,3724+17])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[102,3724+13]..src/gMap.ml[102,3724+15])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[102,3724+21]..src/gMap.ml[102,3724+33])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[102,3724+21]..src/gMap.ml[102,3724+25])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[102,3724+21]..src/gMap.ml[102,3724+23])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[102,3724+29]..src/gMap.ml[102,3724+33])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[102,3724+29]..src/gMap.ml[102,3724+31])
+                        Ttyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[110,4052+2]..src/gMap.ml[110,4052+53])
+            Tsig_value
+            value_description fine_union/416 (src/gMap.ml[110,4052+2]..src/gMap.ml[110,4052+53])
+              core_type (src/gMap.ml[110,4052+18]..src/gMap.ml[110,4052+53])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[110,4052+18]..src/gMap.ml[110,4052+29])
+                  Ttyp_constr "decision/404"
+                  [
+                    core_type (src/gMap.ml[110,4052+18]..src/gMap.ml[110,4052+20])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[110,4052+33]..src/gMap.ml[110,4052+53])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[110,4052+33]..src/gMap.ml[110,4052+37])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[110,4052+33]..src/gMap.ml[110,4052+35])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[110,4052+41]..src/gMap.ml[110,4052+53])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[110,4052+41]..src/gMap.ml[110,4052+45])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[110,4052+41]..src/gMap.ml[110,4052+43])
+                          Ttyp_var a
+                      ]
+                    core_type (src/gMap.ml[110,4052+49]..src/gMap.ml[110,4052+53])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[110,4052+49]..src/gMap.ml[110,4052+51])
+                          Ttyp_var a
+                      ]
+              []
+          signature_item (src/gMap.ml[116,4271+2]..src/gMap.ml[116,4271+47])
+            Tsig_value
+            value_description iter/417 (src/gMap.ml[116,4271+2]..src/gMap.ml[116,4271+47])
+              core_type (src/gMap.ml[116,4271+12]..src/gMap.ml[116,4271+47])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[116,4271+13]..src/gMap.ml[116,4271+30])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[116,4271+13]..src/gMap.ml[116,4271+16])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[116,4271+20]..src/gMap.ml[116,4271+30])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[116,4271+20]..src/gMap.ml[116,4271+22])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[116,4271+26]..src/gMap.ml[116,4271+30])
+                      Ttyp_constr "unit/6!"
+                      []
+                core_type (src/gMap.ml[116,4271+35]..src/gMap.ml[116,4271+47])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[116,4271+35]..src/gMap.ml[116,4271+39])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[116,4271+35]..src/gMap.ml[116,4271+37])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[116,4271+43]..src/gMap.ml[116,4271+47])
+                    Ttyp_constr "unit/6!"
+                    []
+              []
+          signature_item (src/gMap.ml[125,4696+2]..src/gMap.ml[125,4696+55])
+            Tsig_value
+            value_description fold/418 (src/gMap.ml[125,4696+2]..src/gMap.ml[125,4696+55])
+              core_type (src/gMap.ml[125,4696+12]..src/gMap.ml[125,4696+55])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[125,4696+13]..src/gMap.ml[125,4696+34])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[125,4696+13]..src/gMap.ml[125,4696+16])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[125,4696+20]..src/gMap.ml[125,4696+34])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[125,4696+20]..src/gMap.ml[125,4696+22])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[125,4696+26]..src/gMap.ml[125,4696+34])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[125,4696+26]..src/gMap.ml[125,4696+28])
+                        Ttyp_var b
+                      core_type (src/gMap.ml[125,4696+32]..src/gMap.ml[125,4696+34])
+                        Ttyp_var b
+                core_type (src/gMap.ml[125,4696+39]..src/gMap.ml[125,4696+55])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[125,4696+39]..src/gMap.ml[125,4696+43])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[125,4696+39]..src/gMap.ml[125,4696+41])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[125,4696+47]..src/gMap.ml[125,4696+55])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[125,4696+47]..src/gMap.ml[125,4696+49])
+                      Ttyp_var b
+                    core_type (src/gMap.ml[125,4696+53]..src/gMap.ml[125,4696+55])
+                      Ttyp_var b
+              []
+          signature_item (src/gMap.ml[130,4867+2]..src/gMap.ml[130,4867+59])
+            Tsig_value
+            value_description fold_rev/419 (src/gMap.ml[130,4867+2]..src/gMap.ml[130,4867+59])
+              core_type (src/gMap.ml[130,4867+16]..src/gMap.ml[130,4867+59])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[130,4867+17]..src/gMap.ml[130,4867+38])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[130,4867+17]..src/gMap.ml[130,4867+20])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[130,4867+24]..src/gMap.ml[130,4867+38])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[130,4867+24]..src/gMap.ml[130,4867+26])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[130,4867+30]..src/gMap.ml[130,4867+38])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[130,4867+30]..src/gMap.ml[130,4867+32])
+                        Ttyp_var b
+                      core_type (src/gMap.ml[130,4867+36]..src/gMap.ml[130,4867+38])
+                        Ttyp_var b
+                core_type (src/gMap.ml[130,4867+43]..src/gMap.ml[130,4867+59])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[130,4867+43]..src/gMap.ml[130,4867+47])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[130,4867+43]..src/gMap.ml[130,4867+45])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[130,4867+51]..src/gMap.ml[130,4867+59])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[130,4867+51]..src/gMap.ml[130,4867+53])
+                      Ttyp_var b
+                    core_type (src/gMap.ml[130,4867+57]..src/gMap.ml[130,4867+59])
+                      Ttyp_var b
+              []
+          signature_item (src/gMap.ml[135,5046+2]..src/gMap.ml[135,5046+49])
+            Tsig_value
+            value_description filter/420 (src/gMap.ml[135,5046+2]..src/gMap.ml[135,5046+49])
+              core_type (src/gMap.ml[135,5046+14]..src/gMap.ml[135,5046+49])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[135,5046+15]..src/gMap.ml[135,5046+32])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[135,5046+15]..src/gMap.ml[135,5046+18])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[135,5046+22]..src/gMap.ml[135,5046+32])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[135,5046+22]..src/gMap.ml[135,5046+24])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[135,5046+28]..src/gMap.ml[135,5046+32])
+                      Ttyp_constr "bool/5!"
+                      []
+                core_type (src/gMap.ml[135,5046+37]..src/gMap.ml[135,5046+49])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[135,5046+37]..src/gMap.ml[135,5046+41])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[135,5046+37]..src/gMap.ml[135,5046+39])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[135,5046+45]..src/gMap.ml[135,5046+49])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[135,5046+45]..src/gMap.ml[135,5046+47])
+                        Ttyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[142,5360+2]..src/gMap.ml[142,5360+62])
+            Tsig_value
+            value_description iter2/421 (src/gMap.ml[142,5360+2]..src/gMap.ml[142,5360+62])
+              core_type (src/gMap.ml[142,5360+13]..src/gMap.ml[142,5360+62])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[142,5360+14]..src/gMap.ml[142,5360+37])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[142,5360+14]..src/gMap.ml[142,5360+17])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[142,5360+21]..src/gMap.ml[142,5360+37])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[142,5360+21]..src/gMap.ml[142,5360+23])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[142,5360+27]..src/gMap.ml[142,5360+37])
+                      Ttyp_arrow
+                      Nolabel
+                      core_type (src/gMap.ml[142,5360+27]..src/gMap.ml[142,5360+29])
+                        Ttyp_var b
+                      core_type (src/gMap.ml[142,5360+33]..src/gMap.ml[142,5360+37])
+                        Ttyp_constr "unit/6!"
+                        []
+                core_type (src/gMap.ml[142,5360+42]..src/gMap.ml[142,5360+62])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[142,5360+42]..src/gMap.ml[142,5360+46])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[142,5360+42]..src/gMap.ml[142,5360+44])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[142,5360+50]..src/gMap.ml[142,5360+62])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[142,5360+50]..src/gMap.ml[142,5360+54])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[142,5360+50]..src/gMap.ml[142,5360+52])
+                          Ttyp_var b
+                      ]
+                    core_type (src/gMap.ml[142,5360+58]..src/gMap.ml[142,5360+62])
+                      Ttyp_constr "unit/6!"
+                      []
+              []
+          signature_item (src/gMap.ml[147,5558+2]..src/gMap.ml[147,5558+37])
+            Tsig_value
+            value_description map/422 (src/gMap.ml[147,5558+2]..src/gMap.ml[147,5558+37])
+              core_type (src/gMap.ml[147,5558+11]..src/gMap.ml[147,5558+37])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[147,5558+12]..src/gMap.ml[147,5558+20])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[147,5558+12]..src/gMap.ml[147,5558+14])
+                    Ttyp_var a
+                  core_type (src/gMap.ml[147,5558+18]..src/gMap.ml[147,5558+20])
+                    Ttyp_var b
+                core_type (src/gMap.ml[147,5558+25]..src/gMap.ml[147,5558+37])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[147,5558+25]..src/gMap.ml[147,5558+29])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[147,5558+25]..src/gMap.ml[147,5558+27])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[147,5558+33]..src/gMap.ml[147,5558+37])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[147,5558+33]..src/gMap.ml[147,5558+35])
+                        Ttyp_var b
+                    ]
+              []
+          signature_item (src/gMap.ml[153,5761+2]..src/gMap.ml[153,5761+42])
+            Tsig_value
+            value_description endo_map/423 (src/gMap.ml[153,5761+2]..src/gMap.ml[153,5761+42])
+              core_type (src/gMap.ml[153,5761+16]..src/gMap.ml[153,5761+42])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[153,5761+17]..src/gMap.ml[153,5761+25])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[153,5761+17]..src/gMap.ml[153,5761+19])
+                    Ttyp_var a
+                  core_type (src/gMap.ml[153,5761+23]..src/gMap.ml[153,5761+25])
+                    Ttyp_var a
+                core_type (src/gMap.ml[153,5761+30]..src/gMap.ml[153,5761+42])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[153,5761+30]..src/gMap.ml[153,5761+34])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[153,5761+30]..src/gMap.ml[153,5761+32])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[153,5761+38]..src/gMap.ml[153,5761+42])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[153,5761+38]..src/gMap.ml[153,5761+40])
+                        Ttyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[158,5909+2]..src/gMap.ml[158,5909+55])
+            Tsig_value
+            value_description compare/424 (src/gMap.ml[158,5909+2]..src/gMap.ml[158,5909+55])
+              core_type (src/gMap.ml[158,5909+15]..src/gMap.ml[158,5909+55])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[158,5909+16]..src/gMap.ml[158,5909+31])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[158,5909+16]..src/gMap.ml[158,5909+18])
+                    Ttyp_var a
+                  core_type (src/gMap.ml[158,5909+22]..src/gMap.ml[158,5909+31])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[158,5909+22]..src/gMap.ml[158,5909+24])
+                      Ttyp_var a
+                    core_type (src/gMap.ml[158,5909+28]..src/gMap.ml[158,5909+31])
+                      Ttyp_constr "int/1!"
+                      []
+                core_type (src/gMap.ml[158,5909+36]..src/gMap.ml[158,5909+55])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[158,5909+36]..src/gMap.ml[158,5909+40])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[158,5909+36]..src/gMap.ml[158,5909+38])
+                        Ttyp_var a
+                    ]
+                  core_type (src/gMap.ml[158,5909+44]..src/gMap.ml[158,5909+55])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/gMap.ml[158,5909+44]..src/gMap.ml[158,5909+48])
+                      Ttyp_constr "t/397"
+                      [
+                        core_type (src/gMap.ml[158,5909+44]..src/gMap.ml[158,5909+46])
+                          Ttyp_var a
+                      ]
+                    core_type (src/gMap.ml[158,5909+52]..src/gMap.ml[158,5909+55])
+                      Ttyp_constr "int/1!"
+                      []
+              []
+          signature_item (src/gMap.ml[167,6368+2]..src/gMap.ml[167,6368+48])
+            Tsig_module "Domain/468"
+            module_type (src/gMap.ml[167,6368+18]..src/gMap.ml[167,6368+48])
+              Tmty_with
+              module_type (src/gMap.ml[167,6368+18]..src/gMap.ml[167,6368+24])
+                Tmty_ident "Dune__exe!.GSet.S"
+              [
+                "element/427"
+                  Twith_type
+                    type_declaration element/427 (src/gMap.ml[167,6368+30]..src/gMap.ml[167,6368+48])
+                      ptype_params =
+                        []
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ttype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (src/gMap.ml[167,6368+45]..src/gMap.ml[167,6368+48])
+                            Ttyp_constr "key/396"
+                            []
+              ]
+          signature_item (src/gMap.ml[169,6418+2]..src/gMap.ml[169,6418+30])
+            Tsig_value
+            value_description domain/469 (src/gMap.ml[169,6418+2]..src/gMap.ml[169,6418+30])
+              core_type (src/gMap.ml[169,6418+14]..src/gMap.ml[169,6418+30])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[169,6418+14]..src/gMap.ml[169,6418+18])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[169,6418+14]..src/gMap.ml[169,6418+16])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[169,6418+22]..src/gMap.ml[169,6418+30])
+                  Ttyp_constr "Domain/468.t"
+                  []
+              []
+          signature_item (src/gMap.ml[170,6449+2]..src/gMap.ml[170,6449+43])
+            Tsig_value
+            value_description lift/470 (src/gMap.ml[170,6449+2]..src/gMap.ml[170,6449+43])
+              core_type (src/gMap.ml[170,6449+12]..src/gMap.ml[170,6449+43])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[170,6449+13]..src/gMap.ml[170,6449+22])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[170,6449+13]..src/gMap.ml[170,6449+16])
+                    Ttyp_constr "key/396"
+                    []
+                  core_type (src/gMap.ml[170,6449+20]..src/gMap.ml[170,6449+22])
+                    Ttyp_var a
+                core_type (src/gMap.ml[170,6449+27]..src/gMap.ml[170,6449+43])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[170,6449+27]..src/gMap.ml[170,6449+35])
+                    Ttyp_constr "Domain/468.t"
+                    []
+                  core_type (src/gMap.ml[170,6449+39]..src/gMap.ml[170,6449+43])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[170,6449+39]..src/gMap.ml[170,6449+41])
+                        Ttyp_var a
+                    ]
+              []
+          signature_item (src/gMap.ml[177,6715+2]..src/gMap.ml[177,6715+42])
+            Tsig_value
+            value_description corestrict/471 (src/gMap.ml[177,6715+2]..src/gMap.ml[177,6715+42])
+              core_type (src/gMap.ml[177,6715+18]..src/gMap.ml[177,6715+42])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/gMap.ml[177,6715+18]..src/gMap.ml[177,6715+22])
+                  Ttyp_constr "t/397"
+                  [
+                    core_type (src/gMap.ml[177,6715+18]..src/gMap.ml[177,6715+20])
+                      Ttyp_var a
+                  ]
+                core_type (src/gMap.ml[177,6715+26]..src/gMap.ml[177,6715+42])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/gMap.ml[177,6715+26]..src/gMap.ml[177,6715+34])
+                    Ttyp_constr "Domain/468.t"
+                    []
+                  core_type (src/gMap.ml[177,6715+38]..src/gMap.ml[177,6715+42])
+                    Ttyp_constr "t/397"
+                    [
+                      core_type (src/gMap.ml[177,6715+38]..src/gMap.ml[177,6715+40])
+                        Ttyp_var a
+                    ]
+              []
+        ]
+]
+
+{<Dune__exe__GMap>
+ "S"[module type] -> <Dune__exe__GMap.34>;
+ }
+
+0
+0

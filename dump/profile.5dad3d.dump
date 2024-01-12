@@ -1,0 +1,22 @@
+0.197s  182MB 10.0MB 11.7MB src/stage3/lexer.ml
+  0.007s 5.41MB 0.72MB 2.49MB parsing
+    0.007s 5.41MB 0.72MB 2.49MB parser
+  0.068s 56.7MB 4.34MB 6.83MB typing
+  0.007s 4.26MB 0.28MB 7.11MB transl
+  0.068s 47.6MB 3.84MB 10.9MB generate
+    0.001s 0.14MB ------ ------ cmm
+    0.029s 24.5MB 2.12MB 9.24MB compile_phrases
+      0.002s ------ ------ ------ selection
+      0.001s ------ ------ ------ comballoc
+      0.002s 0.18MB ------ ------ cse
+      0.003s 4.45MB 0.25MB 7.36MB liveness
+      0.002s 4.00MB 0.56MB 7.93MB deadcode
+      0.003s 2.40MB 0.21MB 8.14MB spill
+      0.001s 0.17MB ------ ------ split
+      0.010s 9.11MB 0.71MB 8.86MB regalloc
+      0.002s 2.00MB 0.18MB 9.05MB emit
+      0.002s 2.23MB 0.18MB 9.24MB other
+    0.015s ------ ------ ------ assemble
+    0.024s 22.9MB 1.71MB 10.9MB other
+  0.045s 68.1MB 0.82MB 11.7MB other
+0.012s 3.08MB 1.76MB ------ other

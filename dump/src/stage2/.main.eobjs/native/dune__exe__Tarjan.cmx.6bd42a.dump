@@ -1,0 +1,2729 @@
+[
+  structure_item (src/tarjan.ml[21,1297+0]..[239,7288+3])
+    Pstr_module
+    "Run" (src/tarjan.ml[21,1297+7]..[21,1297+10])
+      module_expr (src/tarjan.ml[21,1297+11]..[239,7288+3])
+        Pmod_functor "G" (src/tarjan.ml[21,1297+12]..[21,1297+13])
+        module_type (src/tarjan.ml[21,1297+16]..[39,1685+3])
+          Pmty_signature
+          [
+            signature_item (src/tarjan.ml[23,1318+2]..[23,1318+11])
+              Psig_type Rec
+              [
+                type_declaration "node" (src/tarjan.ml[23,1318+7]..[23,1318+11]) (src/tarjan.ml[23,1318+2]..[23,1318+11])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/tarjan.ml[28,1470+2]..[28,1470+12])
+              Psig_value
+              value_description "n" (src/tarjan.ml[28,1470+6]..[28,1470+7]) (src/tarjan.ml[28,1470+2]..[28,1470+12])
+                core_type (src/tarjan.ml[28,1470+9]..[28,1470+12])
+                  Ptyp_constr "int" (src/tarjan.ml[28,1470+9]..[28,1470+12])
+                  []
+                []
+            signature_item (src/tarjan.ml[29,1483+2]..[29,1483+24])
+              Psig_value
+              value_description "index" (src/tarjan.ml[29,1483+6]..[29,1483+11]) (src/tarjan.ml[29,1483+2]..[29,1483+24])
+                core_type (src/tarjan.ml[29,1483+13]..[29,1483+24])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/tarjan.ml[29,1483+13]..[29,1483+17])
+                    Ptyp_constr "node" (src/tarjan.ml[29,1483+13]..[29,1483+17])
+                    []
+                  core_type (src/tarjan.ml[29,1483+21]..[29,1483+24])
+                    Ptyp_constr "int" (src/tarjan.ml[29,1483+21]..[29,1483+24])
+                    []
+                []
+            signature_item (src/tarjan.ml[33,1564+2]..[33,1564+48])
+              Psig_value
+              value_description "successors" (src/tarjan.ml[33,1564+6]..[33,1564+16]) (src/tarjan.ml[33,1564+2]..[33,1564+48])
+                core_type (src/tarjan.ml[33,1564+18]..[33,1564+48])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/tarjan.ml[33,1564+19]..[33,1564+31])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/tarjan.ml[33,1564+19]..[33,1564+23])
+                      Ptyp_constr "node" (src/tarjan.ml[33,1564+19]..[33,1564+23])
+                      []
+                    core_type (src/tarjan.ml[33,1564+27]..[33,1564+31])
+                      Ptyp_constr "unit" (src/tarjan.ml[33,1564+27]..[33,1564+31])
+                      []
+                  core_type (src/tarjan.ml[33,1564+36]..[33,1564+48])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/tarjan.ml[33,1564+36]..[33,1564+40])
+                      Ptyp_constr "node" (src/tarjan.ml[33,1564+36]..[33,1564+40])
+                      []
+                    core_type (src/tarjan.ml[33,1564+44]..[33,1564+48])
+                      Ptyp_constr "unit" (src/tarjan.ml[33,1564+44]..[33,1564+48])
+                      []
+                []
+            signature_item (src/tarjan.ml[37,1649+2]..[37,1649+34])
+              Psig_value
+              value_description "iter" (src/tarjan.ml[37,1649+6]..[37,1649+10]) (src/tarjan.ml[37,1649+2]..[37,1649+34])
+                core_type (src/tarjan.ml[37,1649+12]..[37,1649+34])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/tarjan.ml[37,1649+13]..[37,1649+25])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/tarjan.ml[37,1649+13]..[37,1649+17])
+                      Ptyp_constr "node" (src/tarjan.ml[37,1649+13]..[37,1649+17])
+                      []
+                    core_type (src/tarjan.ml[37,1649+21]..[37,1649+25])
+                      Ptyp_constr "unit" (src/tarjan.ml[37,1649+21]..[37,1649+25])
+                      []
+                  core_type (src/tarjan.ml[37,1649+30]..[37,1649+34])
+                    Ptyp_constr "unit" (src/tarjan.ml[37,1649+30]..[37,1649+34])
+                    []
+                []
+          ]
+        module_expr (src/tarjan.ml[39,1685+7]..[239,7288+3])
+          Pmod_structure
+          [
+            structure_item (src/tarjan.ml[43,1771+2]..[72,2606+5])
+              Pstr_type Rec
+              [
+                type_declaration "data" (src/tarjan.ml[43,1771+7]..[43,1771+11]) (src/tarjan.ml[43,1771+2]..[72,2606+5])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_record
+                      [
+                        (src/tarjan.ml[48,1913+6]..[48,1913+28])
+                          Mutable
+                          "stacked" (src/tarjan.ml[48,1913+14]..[48,1913+21])                          core_type (src/tarjan.ml[48,1913+23]..[48,1913+27])
+                            Ptyp_constr "bool" (src/tarjan.ml[48,1913+23]..[48,1913+27])
+                            []
+                        (src/tarjan.ml[53,2053+6]..[53,2053+26])
+                          Mutable
+                          "number" (src/tarjan.ml[53,2053+14]..[53,2053+20])                          core_type (src/tarjan.ml[53,2053+22]..[53,2053+25])
+                            Ptyp_constr "int" (src/tarjan.ml[53,2053+22]..[53,2053+25])
+                            []
+                        (src/tarjan.ml[58,2199+6]..[58,2199+23])
+                          Mutable
+                          "low" (src/tarjan.ml[58,2199+14]..[58,2199+17])                          core_type (src/tarjan.ml[58,2199+19]..[58,2199+22])
+                            Ptyp_constr "int" (src/tarjan.ml[58,2199+19]..[58,2199+22])
+                            []
+                        (src/tarjan.ml[64,2381+6]..[64,2381+37])
+                          Mutable
+                          "representative" (src/tarjan.ml[64,2381+14]..[64,2381+28])                          core_type (src/tarjan.ml[64,2381+30]..[64,2381+36])
+                            Ptyp_constr "G.node" (src/tarjan.ml[64,2381+30]..[64,2381+36])
+                            []
+                        (src/tarjan.ml[70,2574+6]..[70,2574+30])
+                          Mutable
+                          "scc" (src/tarjan.ml[70,2574+14]..[70,2574+17])                          core_type (src/tarjan.ml[70,2574+19]..[70,2574+30])
+                            Ptyp_constr "list" (src/tarjan.ml[70,2574+26]..[70,2574+30])
+                            [
+                              core_type (src/tarjan.ml[70,2574+19]..[70,2574+25])
+                                Ptyp_constr "G.node" (src/tarjan.ml[70,2574+19]..[70,2574+25])
+                                []
+                            ]
+                      ]
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            structure_item (src/tarjan.ml[77,2753+2]..[105,3422+22])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[77,2753+6]..[77,2753+11])
+                    Ppat_var "table" (src/tarjan.ml[77,2753+6]..[77,2753+11])
+                  expression (src/tarjan.ml[83,2936+4]..[105,3422+22])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/tarjan.ml[83,2936+8]..[83,2936+13])
+                          Ppat_var "table" (src/tarjan.ml[83,2936+8]..[83,2936+13])
+                        expression (src/tarjan.ml[83,2936+16]..[83,2936+35])
+                          Pexp_apply
+                          expression (src/tarjan.ml[83,2936+16]..[83,2936+26])
+                            Pexp_ident "Array.make" (src/tarjan.ml[83,2936+16]..[83,2936+26])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/tarjan.ml[83,2936+27]..[83,2936+30])
+                                Pexp_ident "G.n" (src/tarjan.ml[83,2936+27]..[83,2936+30])
+                            <arg>
+                            Nolabel
+                              expression (src/tarjan.ml[83,2936+31]..[83,2936+35])
+                                Pexp_construct "None" (src/tarjan.ml[83,2936+31]..[83,2936+35])
+                                None
+                          ]
+                    ]
+                    expression (src/tarjan.ml[87,3009+4]..[105,3422+22])
+                      Pexp_sequence
+                      expression (src/tarjan.ml[87,3009+4]..[95,3179+5])
+                        Pexp_apply
+                        expression (src/tarjan.ml[87,3009+4]..[87,3009+10])
+                          Pexp_ident "G.iter" (src/tarjan.ml[87,3009+4]..[87,3009+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/tarjan.ml[87,3009+11]..[95,3179+5])
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/tarjan.ml[87,3009+16]..[87,3009+17])
+                                Ppat_var "x" (src/tarjan.ml[87,3009+16]..[87,3009+17])
+                              expression (src/tarjan.ml[88,3030+6]..[94,3171+7])
+                                Pexp_apply
+                                expression (src/tarjan.ml[88,3030+6]..[94,3171+7]) ghost
+                                  Pexp_ident "Array.set" (src/tarjan.ml[88,3030+6]..[94,3171+7]) ghost
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[88,3030+6]..[88,3030+11])
+                                      Pexp_ident "table" (src/tarjan.ml[88,3030+6]..[88,3030+11])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[88,3030+13]..[88,3030+22])
+                                      Pexp_apply
+                                      expression (src/tarjan.ml[88,3030+13]..[88,3030+20])
+                                        Pexp_ident "G.index" (src/tarjan.ml[88,3030+13]..[88,3030+20])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/tarjan.ml[88,3030+21]..[88,3030+22])
+                                            Pexp_ident "x" (src/tarjan.ml[88,3030+21]..[88,3030+22])
+                                      ]
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[88,3030+27]..[94,3171+7])
+                                      Pexp_construct "Some" (src/tarjan.ml[88,3030+27]..[88,3030+31])
+                                      Some
+                                        expression (src/tarjan.ml[88,3030+32]..[94,3171+7])
+                                          Pexp_record
+                                          [
+                                            "stacked" (src/tarjan.ml[89,3064+8]..[89,3064+15])
+                                              expression (src/tarjan.ml[89,3064+18]..[89,3064+23])
+                                                Pexp_construct "false" (src/tarjan.ml[89,3064+18]..[89,3064+23])
+                                                None
+                                            "number" (src/tarjan.ml[90,3089+8]..[90,3089+14])
+                                              expression (src/tarjan.ml[90,3089+17]..[90,3089+18])
+                                                Pexp_constant PConst_int (0,None)
+                                            "low" (src/tarjan.ml[91,3109+8]..[91,3109+11])
+                                              expression (src/tarjan.ml[91,3109+14]..[91,3109+15])
+                                                Pexp_constant PConst_int (0,None)
+                                            "representative" (src/tarjan.ml[92,3126+8]..[92,3126+22])
+                                              expression (src/tarjan.ml[92,3126+25]..[92,3126+26])
+                                                Pexp_ident "x" (src/tarjan.ml[92,3126+25]..[92,3126+26])
+                                            "scc" (src/tarjan.ml[93,3154+8]..[93,3154+11])
+                                              expression (src/tarjan.ml[93,3154+14]..[93,3154+16])
+                                                Pexp_construct "[]" (src/tarjan.ml[93,3154+14]..[93,3154+16])
+                                                None
+                                          ]
+                                          None
+                                ]
+                        ]
+                      expression (src/tarjan.ml[100,3321+4]..[105,3422+22])
+                        Pexp_function
+                        [
+                          <case>
+                            pattern (src/tarjan.ml[100,3321+13]..[100,3321+14])
+                              Ppat_var "x" (src/tarjan.ml[100,3321+13]..[100,3321+14])
+                            expression (src/tarjan.ml[101,3339+6]..[105,3422+22])
+                              Pexp_match
+                              expression (src/tarjan.ml[101,3339+12]..[101,3339+29])
+                                Pexp_apply
+                                expression (src/tarjan.ml[101,3339+12]..[101,3339+29]) ghost
+                                  Pexp_ident "Array.get" (src/tarjan.ml[101,3339+12]..[101,3339+29]) ghost
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[101,3339+12]..[101,3339+17])
+                                      Pexp_ident "table" (src/tarjan.ml[101,3339+12]..[101,3339+17])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[101,3339+19]..[101,3339+28])
+                                      Pexp_apply
+                                      expression (src/tarjan.ml[101,3339+19]..[101,3339+26])
+                                        Pexp_ident "G.index" (src/tarjan.ml[101,3339+19]..[101,3339+26])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/tarjan.ml[101,3339+27]..[101,3339+28])
+                                            Pexp_ident "x" (src/tarjan.ml[101,3339+27]..[101,3339+28])
+                                      ]
+                                ]
+                              [
+                                <case>
+                                  pattern (src/tarjan.ml[102,3374+8]..[102,3374+15])
+                                    Ppat_construct "Some" (src/tarjan.ml[102,3374+8]..[102,3374+12])
+                                    Some
+                                      []
+                                      pattern (src/tarjan.ml[102,3374+13]..[102,3374+15])
+                                        Ppat_var "dx" (src/tarjan.ml[102,3374+13]..[102,3374+15])
+                                  expression (src/tarjan.ml[103,3393+10]..[103,3393+12])
+                                    Pexp_ident "dx" (src/tarjan.ml[103,3393+10]..[103,3393+12])
+                                <case>
+                                  pattern (src/tarjan.ml[104,3406+8]..[104,3406+12])
+                                    Ppat_construct "None" (src/tarjan.ml[104,3406+8]..[104,3406+12])
+                                    None
+                                  expression (src/tarjan.ml[105,3422+10]..[105,3422+22])
+                                    Pexp_assert
+                                    expression (src/tarjan.ml[105,3422+17]..[105,3422+22])
+                                      Pexp_construct "false" (src/tarjan.ml[105,3422+17]..[105,3422+22])
+                                      None
+                              ]
+                        ]
+              ]
+            structure_item (src/tarjan.ml[110,3604+2]..[110,3604+32])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[110,3604+6]..[110,3604+15])
+                    Ppat_var "scc_stack" (src/tarjan.ml[110,3604+6]..[110,3604+15])
+                  expression (src/tarjan.ml[110,3604+18]..[110,3604+32])
+                    Pexp_apply
+                    expression (src/tarjan.ml[110,3604+18]..[110,3604+30])
+                      Pexp_ident "Stack.create" (src/tarjan.ml[110,3604+18]..[110,3604+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/tarjan.ml[110,3604+30]..[110,3604+32])
+                          Pexp_construct "()" (src/tarjan.ml[110,3604+30]..[110,3604+32])
+                          None
+                    ]
+              ]
+            structure_item (src/tarjan.ml[118,3932+2]..[123,4035+24])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[118,3932+6]..[118,3932+10])
+                    Ppat_var "mark" (src/tarjan.ml[118,3932+6]..[118,3932+10])
+                  expression (src/tarjan.ml[119,3945+4]..[123,4035+24])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/tarjan.ml[119,3945+8]..[119,3945+15])
+                          Ppat_var "counter" (src/tarjan.ml[119,3945+8]..[119,3945+15])
+                        expression (src/tarjan.ml[119,3945+18]..[119,3945+23])
+                          Pexp_apply
+                          expression (src/tarjan.ml[119,3945+18]..[119,3945+21])
+                            Pexp_ident "ref" (src/tarjan.ml[119,3945+18]..[119,3945+21])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/tarjan.ml[119,3945+22]..[119,3945+23])
+                                Pexp_constant PConst_int (0,None)
+                          ]
+                    ]
+                    expression (src/tarjan.ml[120,3972+4]..[123,4035+24])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/tarjan.ml[120,3972+8]..[120,3972+10])
+                        Ppat_var "dx" (src/tarjan.ml[120,3972+8]..[120,3972+10])
+                      expression (src/tarjan.ml[121,3986+6]..[123,4035+24])
+                        Pexp_sequence
+                        expression (src/tarjan.ml[121,3986+6]..[121,3986+18])
+                          Pexp_apply
+                          expression (src/tarjan.ml[121,3986+6]..[121,3986+10])
+                            Pexp_ident "incr" (src/tarjan.ml[121,3986+6]..[121,3986+10])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/tarjan.ml[121,3986+11]..[121,3986+18])
+                                Pexp_ident "counter" (src/tarjan.ml[121,3986+11]..[121,3986+18])
+                          ]
+                        expression (src/tarjan.ml[122,4006+6]..[123,4035+24])
+                          Pexp_sequence
+                          expression (src/tarjan.ml[122,4006+6]..[122,4006+27])
+                            Pexp_setfield
+                            expression (src/tarjan.ml[122,4006+6]..[122,4006+8])
+                              Pexp_ident "dx" (src/tarjan.ml[122,4006+6]..[122,4006+8])
+                            "number" (src/tarjan.ml[122,4006+9]..[122,4006+15])
+                            expression (src/tarjan.ml[122,4006+19]..[122,4006+27])
+                              Pexp_apply
+                              expression (src/tarjan.ml[122,4006+19]..[122,4006+20])
+                                Pexp_ident "!" (src/tarjan.ml[122,4006+19]..[122,4006+20])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[122,4006+20]..[122,4006+27])
+                                    Pexp_ident "counter" (src/tarjan.ml[122,4006+20]..[122,4006+27])
+                              ]
+                          expression (src/tarjan.ml[123,4035+6]..[123,4035+24])
+                            Pexp_setfield
+                            expression (src/tarjan.ml[123,4035+6]..[123,4035+8])
+                              Pexp_ident "dx" (src/tarjan.ml[123,4035+6]..[123,4035+8])
+                            "low" (src/tarjan.ml[123,4035+9]..[123,4035+12])
+                            expression (src/tarjan.ml[123,4035+16]..[123,4035+24])
+                              Pexp_apply
+                              expression (src/tarjan.ml[123,4035+16]..[123,4035+17])
+                                Pexp_ident "!" (src/tarjan.ml[123,4035+16]..[123,4035+17])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[123,4035+17]..[123,4035+24])
+                                    Pexp_ident "counter" (src/tarjan.ml[123,4035+17]..[123,4035+24])
+                              ]
+              ]
+            structure_item (src/tarjan.ml[129,4219+2]..[130,4243+10])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[129,4219+6]..[129,4219+21])
+                    Ppat_var "representatives" (src/tarjan.ml[129,4219+6]..[129,4219+21])
+                  expression (src/tarjan.ml[130,4243+4]..[130,4243+10])
+                    Pexp_apply
+                    expression (src/tarjan.ml[130,4243+4]..[130,4243+7])
+                      Pexp_ident "ref" (src/tarjan.ml[130,4243+4]..[130,4243+7])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/tarjan.ml[130,4243+8]..[130,4243+10])
+                          Pexp_construct "[]" (src/tarjan.ml[130,4243+8]..[130,4243+10])
+                          None
+                    ]
+              ]
+            structure_item (src/tarjan.ml[135,4377+2]..[209,6402+3])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[135,4377+6]..[135,4377+8])
+                    Ppat_construct "()" (src/tarjan.ml[135,4377+6]..[135,4377+8])
+                    None
+                  expression (src/tarjan.ml[135,4377+11]..[209,6402+3])
+                    Pexp_apply
+                    expression (src/tarjan.ml[135,4377+11]..[135,4377+17])
+                      Pexp_ident "G.iter" (src/tarjan.ml[135,4377+11]..[135,4377+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/tarjan.ml[135,4377+18]..[209,6402+3])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/tarjan.ml[135,4377+23]..[135,4377+27])
+                            Ppat_var "root" (src/tarjan.ml[135,4377+23]..[135,4377+27])
+                          expression (src/tarjan.ml[136,4408+4]..[208,6394+7])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/tarjan.ml[136,4408+8]..[136,4408+13])
+                                  Ppat_var "droot" (src/tarjan.ml[136,4408+8]..[136,4408+13])
+                                expression (src/tarjan.ml[136,4408+16]..[136,4408+26])
+                                  Pexp_apply
+                                  expression (src/tarjan.ml[136,4408+16]..[136,4408+21])
+                                    Pexp_ident "table" (src/tarjan.ml[136,4408+16]..[136,4408+21])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/tarjan.ml[136,4408+22]..[136,4408+26])
+                                        Pexp_ident "root" (src/tarjan.ml[136,4408+22]..[136,4408+26])
+                                  ]
+                            ]
+                            expression (src/tarjan.ml[138,4439+4]..[208,6394+7])
+                              Pexp_ifthenelse
+                              expression (src/tarjan.ml[138,4439+7]..[138,4439+23])
+                                Pexp_apply
+                                expression (src/tarjan.ml[138,4439+20]..[138,4439+21])
+                                  Pexp_ident "=" (src/tarjan.ml[138,4439+20]..[138,4439+21])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[138,4439+7]..[138,4439+19])
+                                      Pexp_field
+                                      expression (src/tarjan.ml[138,4439+7]..[138,4439+12])
+                                        Pexp_ident "droot" (src/tarjan.ml[138,4439+7]..[138,4439+12])
+                                      "number" (src/tarjan.ml[138,4439+13]..[138,4439+19])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[138,4439+22]..[138,4439+23])
+                                      Pexp_constant PConst_int (0,None)
+                                ]
+                              expression (src/tarjan.ml[138,4439+29]..[208,6394+7])
+                                Pexp_sequence
+                                expression (src/tarjan.ml[143,4566+6]..[143,4566+16])
+                                  Pexp_apply
+                                  expression (src/tarjan.ml[143,4566+6]..[143,4566+10])
+                                    Pexp_ident "mark" (src/tarjan.ml[143,4566+6]..[143,4566+10])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/tarjan.ml[143,4566+11]..[143,4566+16])
+                                        Pexp_ident "droot" (src/tarjan.ml[143,4566+11]..[143,4566+16])
+                                  ]
+                                expression (src/tarjan.ml[144,4584+6]..[206,6377+15])
+                                  Pexp_sequence
+                                  expression (src/tarjan.ml[144,4584+6]..[144,4584+27])
+                                    Pexp_setfield
+                                    expression (src/tarjan.ml[144,4584+6]..[144,4584+11])
+                                      Pexp_ident "droot" (src/tarjan.ml[144,4584+6]..[144,4584+11])
+                                    "stacked" (src/tarjan.ml[144,4584+12]..[144,4584+19])
+                                    expression (src/tarjan.ml[144,4584+23]..[144,4584+27])
+                                      Pexp_construct "true" (src/tarjan.ml[144,4584+23]..[144,4584+27])
+                                      None
+                                  expression (src/tarjan.ml[145,4613+6]..[206,6377+15])
+                                    Pexp_sequence
+                                    expression (src/tarjan.ml[145,4613+6]..[145,4613+32])
+                                      Pexp_apply
+                                      expression (src/tarjan.ml[145,4613+6]..[145,4613+16])
+                                        Pexp_ident "Stack.push" (src/tarjan.ml[145,4613+6]..[145,4613+16])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/tarjan.ml[145,4613+17]..[145,4613+22])
+                                            Pexp_ident "droot" (src/tarjan.ml[145,4613+17]..[145,4613+22])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/tarjan.ml[145,4613+23]..[145,4613+32])
+                                            Pexp_ident "scc_stack" (src/tarjan.ml[145,4613+23]..[145,4613+32])
+                                      ]
+                                    expression (src/tarjan.ml[147,4648+6]..[206,6377+15])
+                                      Pexp_let Rec
+                                      [
+                                        <def>
+                                          pattern (src/tarjan.ml[147,4648+14]..[147,4648+18])
+                                            Ppat_var "walk" (src/tarjan.ml[147,4648+14]..[147,4648+18])
+                                          expression (src/tarjan.ml[147,4648+19]..[204,6361+11]) ghost
+                                            Pexp_fun
+                                            Nolabel
+                                            None
+                                            pattern (src/tarjan.ml[147,4648+19]..[147,4648+20])
+                                              Ppat_var "x" (src/tarjan.ml[147,4648+19]..[147,4648+20])
+                                            expression (src/tarjan.ml[148,4671+8]..[204,6361+11])
+                                              Pexp_let Nonrec
+                                              [
+                                                <def>
+                                                  pattern (src/tarjan.ml[148,4671+12]..[148,4671+14])
+                                                    Ppat_var "dx" (src/tarjan.ml[148,4671+12]..[148,4671+14])
+                                                  expression (src/tarjan.ml[148,4671+17]..[148,4671+24])
+                                                    Pexp_apply
+                                                    expression (src/tarjan.ml[148,4671+17]..[148,4671+22])
+                                                      Pexp_ident "table" (src/tarjan.ml[148,4671+17]..[148,4671+22])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/tarjan.ml[148,4671+23]..[148,4671+24])
+                                                          Pexp_ident "x" (src/tarjan.ml[148,4671+23]..[148,4671+24])
+                                                    ]
+                                              ]
+                                              expression (src/tarjan.ml[150,4700+8]..[204,6361+11])
+                                                Pexp_sequence
+                                                expression (src/tarjan.ml[150,4700+8]..[183,5713+11])
+                                                  Pexp_apply
+                                                  expression (src/tarjan.ml[150,4700+8]..[150,4700+20])
+                                                    Pexp_ident "G.successors" (src/tarjan.ml[150,4700+8]..[150,4700+20])
+                                                  [
+                                                    <arg>
+                                                    Nolabel
+                                                      expression (src/tarjan.ml[150,4700+21]..[183,5713+9])
+                                                        Pexp_fun
+                                                        Nolabel
+                                                        None
+                                                        pattern (src/tarjan.ml[150,4700+26]..[150,4700+27])
+                                                          Ppat_var "y" (src/tarjan.ml[150,4700+26]..[150,4700+27])
+                                                        expression (src/tarjan.ml[151,4731+10]..[181,5698+13])
+                                                          Pexp_let Nonrec
+                                                          [
+                                                            <def>
+                                                              pattern (src/tarjan.ml[151,4731+14]..[151,4731+16])
+                                                                Ppat_var "dy" (src/tarjan.ml[151,4731+14]..[151,4731+16])
+                                                              expression (src/tarjan.ml[151,4731+19]..[151,4731+26])
+                                                                Pexp_apply
+                                                                expression (src/tarjan.ml[151,4731+19]..[151,4731+24])
+                                                                  Pexp_ident "table" (src/tarjan.ml[151,4731+19]..[151,4731+24])
+                                                                [
+                                                                  <arg>
+                                                                  Nolabel
+                                                                    expression (src/tarjan.ml[151,4731+25]..[151,4731+26])
+                                                                      Pexp_ident "y" (src/tarjan.ml[151,4731+25]..[151,4731+26])
+                                                                ]
+                                                          ]
+                                                          expression (src/tarjan.ml[153,4762+10]..[181,5698+13])
+                                                            Pexp_ifthenelse
+                                                            expression (src/tarjan.ml[153,4762+13]..[153,4762+26])
+                                                              Pexp_apply
+                                                              expression (src/tarjan.ml[153,4762+23]..[153,4762+24])
+                                                                Pexp_ident "=" (src/tarjan.ml[153,4762+23]..[153,4762+24])
+                                                              [
+                                                                <arg>
+                                                                Nolabel
+                                                                  expression (src/tarjan.ml[153,4762+13]..[153,4762+22])
+                                                                    Pexp_field
+                                                                    expression (src/tarjan.ml[153,4762+13]..[153,4762+15])
+                                                                      Pexp_ident "dy" (src/tarjan.ml[153,4762+13]..[153,4762+15])
+                                                                    "number" (src/tarjan.ml[153,4762+16]..[153,4762+22])
+                                                                <arg>
+                                                                Nolabel
+                                                                  expression (src/tarjan.ml[153,4762+25]..[153,4762+26])
+                                                                    Pexp_constant PConst_int (0,None)
+                                                              ]
+                                                            expression (src/tarjan.ml[153,4762+32]..[168,5150+13])
+                                                              Pexp_sequence
+                                                              expression (src/tarjan.ml[158,4921+12]..[158,4921+19])
+                                                                Pexp_apply
+                                                                expression (src/tarjan.ml[158,4921+12]..[158,4921+16])
+                                                                  Pexp_ident "mark" (src/tarjan.ml[158,4921+12]..[158,4921+16])
+                                                                [
+                                                                  <arg>
+                                                                  Nolabel
+                                                                    expression (src/tarjan.ml[158,4921+17]..[158,4921+19])
+                                                                      Pexp_ident "dy" (src/tarjan.ml[158,4921+17]..[158,4921+19])
+                                                                ]
+                                                              expression (src/tarjan.ml[159,4942+12]..[166,5118+30])
+                                                                Pexp_sequence
+                                                                expression (src/tarjan.ml[159,4942+12]..[159,4942+30])
+                                                                  Pexp_setfield
+                                                                  expression (src/tarjan.ml[159,4942+12]..[159,4942+14])
+                                                                    Pexp_ident "dy" (src/tarjan.ml[159,4942+12]..[159,4942+14])
+                                                                  "stacked" (src/tarjan.ml[159,4942+15]..[159,4942+22])
+                                                                  expression (src/tarjan.ml[159,4942+26]..[159,4942+30])
+                                                                    Pexp_construct "true" (src/tarjan.ml[159,4942+26]..[159,4942+30])
+                                                                    None
+                                                                expression (src/tarjan.ml[160,4974+12]..[166,5118+30])
+                                                                  Pexp_sequence
+                                                                  expression (src/tarjan.ml[160,4974+12]..[160,4974+35])
+                                                                    Pexp_apply
+                                                                    expression (src/tarjan.ml[160,4974+12]..[160,4974+22])
+                                                                      Pexp_ident "Stack.push" (src/tarjan.ml[160,4974+12]..[160,4974+22])
+                                                                    [
+                                                                      <arg>
+                                                                      Nolabel
+expression (src/tarjan.ml[160,4974+23]..[160,4974+25])
+  Pexp_ident "dy" (src/tarjan.ml[160,4974+23]..[160,4974+25])
+                                                                      <arg>
+                                                                      Nolabel
+expression (src/tarjan.ml[160,4974+26]..[160,4974+35])
+  Pexp_ident "scc_stack" (src/tarjan.ml[160,4974+26]..[160,4974+35])
+                                                                    ]
+                                                                  expression (src/tarjan.ml[164,5062+12]..[166,5118+30])
+                                                                    Pexp_sequence
+                                                                    expression (src/tarjan.ml[164,5062+12]..[164,5062+18])
+                                                                      Pexp_apply
+                                                                      expression (src/tarjan.ml[164,5062+12]..[164,5062+16])
+Pexp_ident "walk" (src/tarjan.ml[164,5062+12]..[164,5062+16])
+                                                                      [
+<arg>
+Nolabel
+  expression (src/tarjan.ml[164,5062+17]..[164,5062+18])
+    Pexp_ident "y" (src/tarjan.ml[164,5062+17]..[164,5062+18])
+                                                                      ]
+                                                                    expression (src/tarjan.ml[165,5082+12]..[166,5118+30])
+                                                                      Pexp_ifthenelse
+                                                                      expression (src/tarjan.ml[165,5082+15]..[165,5082+30])
+Pexp_apply
+expression (src/tarjan.ml[165,5082+22]..[165,5082+23])
+  Pexp_ident "<" (src/tarjan.ml[165,5082+22]..[165,5082+23])
+[
+  <arg>
+  Nolabel
+    expression (src/tarjan.ml[165,5082+15]..[165,5082+21])
+      Pexp_field
+      expression (src/tarjan.ml[165,5082+15]..[165,5082+17])
+        Pexp_ident "dy" (src/tarjan.ml[165,5082+15]..[165,5082+17])
+      "low" (src/tarjan.ml[165,5082+18]..[165,5082+21])
+  <arg>
+  Nolabel
+    expression (src/tarjan.ml[165,5082+24]..[165,5082+30])
+      Pexp_field
+      expression (src/tarjan.ml[165,5082+24]..[165,5082+26])
+        Pexp_ident "dx" (src/tarjan.ml[165,5082+24]..[165,5082+26])
+      "low" (src/tarjan.ml[165,5082+27]..[165,5082+30])
+]
+                                                                      expression (src/tarjan.ml[166,5118+14]..[166,5118+30])
+Pexp_setfield
+expression (src/tarjan.ml[166,5118+14]..[166,5118+16])
+  Pexp_ident "dx" (src/tarjan.ml[166,5118+14]..[166,5118+16])
+"low" (src/tarjan.ml[166,5118+17]..[166,5118+20])
+expression (src/tarjan.ml[166,5118+24]..[166,5118+30])
+  Pexp_field
+  expression (src/tarjan.ml[166,5118+24]..[166,5118+26])
+    Pexp_ident "dy" (src/tarjan.ml[166,5118+24]..[166,5118+26])
+  "low" (src/tarjan.ml[166,5118+27]..[166,5118+30])
+                                                                      None
+                                                            Some
+                                                              expression (src/tarjan.ml[169,5164+15]..[181,5698+13])
+                                                                Pexp_ifthenelse
+                                                                expression (src/tarjan.ml[169,5164+18]..[169,5164+49])
+                                                                  Pexp_apply
+                                                                  expression (src/tarjan.ml[169,5164+36]..[169,5164+38])
+                                                                    Pexp_ident "&&" (src/tarjan.ml[169,5164+36]..[169,5164+38])
+                                                                  [
+                                                                    <arg>
+                                                                    Nolabel
+                                                                      expression (src/tarjan.ml[169,5164+18]..[169,5164+35])
+Pexp_apply
+expression (src/tarjan.ml[169,5164+26]..[169,5164+27])
+  Pexp_ident "<" (src/tarjan.ml[169,5164+26]..[169,5164+27])
+[
+  <arg>
+  Nolabel
+    expression (src/tarjan.ml[169,5164+19]..[169,5164+25])
+      Pexp_field
+      expression (src/tarjan.ml[169,5164+19]..[169,5164+21])
+        Pexp_ident "dy" (src/tarjan.ml[169,5164+19]..[169,5164+21])
+      "low" (src/tarjan.ml[169,5164+22]..[169,5164+25])
+  <arg>
+  Nolabel
+    expression (src/tarjan.ml[169,5164+28]..[169,5164+34])
+      Pexp_field
+      expression (src/tarjan.ml[169,5164+28]..[169,5164+30])
+        Pexp_ident "dx" (src/tarjan.ml[169,5164+28]..[169,5164+30])
+      "low" (src/tarjan.ml[169,5164+31]..[169,5164+34])
+]
+                                                                    <arg>
+                                                                    Nolabel
+                                                                      expression (src/tarjan.ml[169,5164+39]..[169,5164+49])
+Pexp_field
+expression (src/tarjan.ml[169,5164+39]..[169,5164+41])
+  Pexp_ident "dy" (src/tarjan.ml[169,5164+39]..[169,5164+41])
+"stacked" (src/tarjan.ml[169,5164+42]..[169,5164+49])
+                                                                  ]
+                                                                expression (src/tarjan.ml[169,5164+55]..[181,5698+13])
+                                                                  Pexp_ifthenelse
+                                                                  expression (src/tarjan.ml[178,5624+15]..[178,5624+33])
+                                                                    Pexp_apply
+                                                                    expression (src/tarjan.ml[178,5624+25]..[178,5624+26])
+                                                                      Pexp_ident "<" (src/tarjan.ml[178,5624+25]..[178,5624+26])
+                                                                    [
+                                                                      <arg>
+                                                                      Nolabel
+expression (src/tarjan.ml[178,5624+15]..[178,5624+24])
+  Pexp_field
+  expression (src/tarjan.ml[178,5624+15]..[178,5624+17])
+    Pexp_ident "dy" (src/tarjan.ml[178,5624+15]..[178,5624+17])
+  "number" (src/tarjan.ml[178,5624+18]..[178,5624+24])
+                                                                      <arg>
+                                                                      Nolabel
+expression (src/tarjan.ml[178,5624+27]..[178,5624+33])
+  Pexp_field
+  expression (src/tarjan.ml[178,5624+27]..[178,5624+29])
+    Pexp_ident "dx" (src/tarjan.ml[178,5624+27]..[178,5624+29])
+  "low" (src/tarjan.ml[178,5624+30]..[178,5624+33])
+                                                                    ]
+                                                                  expression (src/tarjan.ml[179,5663+14]..[179,5663+33])
+                                                                    Pexp_setfield
+                                                                    expression (src/tarjan.ml[179,5663+14]..[179,5663+16])
+                                                                      Pexp_ident "dx" (src/tarjan.ml[179,5663+14]..[179,5663+16])
+                                                                    "low" (src/tarjan.ml[179,5663+17]..[179,5663+20])
+                                                                    expression (src/tarjan.ml[179,5663+24]..[179,5663+33])
+                                                                      Pexp_field
+                                                                      expression (src/tarjan.ml[179,5663+24]..[179,5663+26])
+Pexp_ident "dy" (src/tarjan.ml[179,5663+24]..[179,5663+26])
+                                                                      "number" (src/tarjan.ml[179,5663+27]..[179,5663+33])
+                                                                  None
+                                                                None
+                                                    <arg>
+                                                    Nolabel
+                                                      expression (src/tarjan.ml[183,5713+10]..[183,5713+11])
+                                                        Pexp_ident "x" (src/tarjan.ml[183,5713+10]..[183,5713+11])
+                                                  ]
+                                                expression (src/tarjan.ml[187,5780+8]..[204,6361+11])
+                                                  Pexp_ifthenelse
+                                                  expression (src/tarjan.ml[187,5780+11]..[187,5780+29])
+                                                    Pexp_apply
+                                                    expression (src/tarjan.ml[187,5780+18]..[187,5780+19])
+                                                      Pexp_ident "=" (src/tarjan.ml[187,5780+18]..[187,5780+19])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/tarjan.ml[187,5780+11]..[187,5780+17])
+                                                          Pexp_field
+                                                          expression (src/tarjan.ml[187,5780+11]..[187,5780+13])
+                                                            Pexp_ident "dx" (src/tarjan.ml[187,5780+11]..[187,5780+13])
+                                                          "low" (src/tarjan.ml[187,5780+14]..[187,5780+17])
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/tarjan.ml[187,5780+20]..[187,5780+29])
+                                                          Pexp_field
+                                                          expression (src/tarjan.ml[187,5780+20]..[187,5780+22])
+                                                            Pexp_ident "dx" (src/tarjan.ml[187,5780+20]..[187,5780+22])
+                                                          "number" (src/tarjan.ml[187,5780+23]..[187,5780+29])
+                                                    ]
+                                                  expression (src/tarjan.ml[187,5780+35]..[204,6361+11])
+                                                    Pexp_let Rec
+                                                    [
+                                                      <def>
+                                                        pattern (src/tarjan.ml[193,6020+18]..[193,6020+22])
+                                                          Ppat_var "loop" (src/tarjan.ml[193,6020+18]..[193,6020+22])
+                                                        expression (src/tarjan.ml[193,6020+23]..[199,6266+20]) ghost
+                                                          Pexp_fun
+                                                          Nolabel
+                                                          None
+                                                          pattern (src/tarjan.ml[193,6020+23]..[193,6020+25])
+                                                            Ppat_construct "()" (src/tarjan.ml[193,6020+23]..[193,6020+25])
+                                                            None
+                                                          expression (src/tarjan.ml[194,6048+12]..[199,6266+20])
+                                                            Pexp_let Nonrec
+                                                            [
+                                                              <def>
+                                                                pattern (src/tarjan.ml[194,6048+16]..[194,6048+23])
+                                                                  Ppat_var "element" (src/tarjan.ml[194,6048+16]..[194,6048+23])
+                                                                expression (src/tarjan.ml[194,6048+26]..[194,6048+45])
+                                                                  Pexp_apply
+                                                                  expression (src/tarjan.ml[194,6048+26]..[194,6048+35])
+                                                                    Pexp_ident "Stack.pop" (src/tarjan.ml[194,6048+26]..[194,6048+35])
+                                                                  [
+                                                                    <arg>
+                                                                    Nolabel
+                                                                      expression (src/tarjan.ml[194,6048+36]..[194,6048+45])
+Pexp_ident "scc_stack" (src/tarjan.ml[194,6048+36]..[194,6048+45])
+                                                                  ]
+                                                            ]
+                                                            expression (src/tarjan.ml[195,6097+12]..[199,6266+20])
+                                                              Pexp_sequence
+                                                              expression (src/tarjan.ml[195,6097+12]..[195,6097+36])
+                                                                Pexp_setfield
+                                                                expression (src/tarjan.ml[195,6097+12]..[195,6097+19])
+                                                                  Pexp_ident "element" (src/tarjan.ml[195,6097+12]..[195,6097+19])
+                                                                "stacked" (src/tarjan.ml[195,6097+20]..[195,6097+27])
+                                                                expression (src/tarjan.ml[195,6097+31]..[195,6097+36])
+                                                                  Pexp_construct "false" (src/tarjan.ml[195,6097+31]..[195,6097+36])
+                                                                  None
+                                                              expression (src/tarjan.ml[196,6135+12]..[199,6266+20])
+                                                                Pexp_sequence
+                                                                expression (src/tarjan.ml[196,6135+12]..[196,6135+54])
+                                                                  Pexp_setfield
+                                                                  expression (src/tarjan.ml[196,6135+12]..[196,6135+14])
+                                                                    Pexp_ident "dx" (src/tarjan.ml[196,6135+12]..[196,6135+14])
+                                                                  "scc" (src/tarjan.ml[196,6135+15]..[196,6135+18])
+                                                                  expression (src/tarjan.ml[196,6135+22]..[196,6135+54])
+                                                                    Pexp_construct "::" (src/tarjan.ml[196,6135+45]..[196,6135+47])
+                                                                    Some
+                                                                      expression (src/tarjan.ml[196,6135+22]..[196,6135+54]) ghost
+Pexp_tuple
+[
+  expression (src/tarjan.ml[196,6135+22]..[196,6135+44])
+    Pexp_field
+    expression (src/tarjan.ml[196,6135+22]..[196,6135+29])
+      Pexp_ident "element" (src/tarjan.ml[196,6135+22]..[196,6135+29])
+    "representative" (src/tarjan.ml[196,6135+30]..[196,6135+44])
+  expression (src/tarjan.ml[196,6135+48]..[196,6135+54])
+    Pexp_field
+    expression (src/tarjan.ml[196,6135+48]..[196,6135+50])
+      Pexp_ident "dx" (src/tarjan.ml[196,6135+48]..[196,6135+50])
+    "scc" (src/tarjan.ml[196,6135+51]..[196,6135+54])
+]
+                                                                expression (src/tarjan.ml[197,6191+12]..[199,6266+20])
+                                                                  Pexp_sequence
+                                                                  expression (src/tarjan.ml[197,6191+12]..[197,6191+39])
+                                                                    Pexp_setfield
+                                                                    expression (src/tarjan.ml[197,6191+12]..[197,6191+19])
+                                                                      Pexp_ident "element" (src/tarjan.ml[197,6191+12]..[197,6191+19])
+                                                                    "representative" (src/tarjan.ml[197,6191+20]..[197,6191+34])
+                                                                    expression (src/tarjan.ml[197,6191+38]..[197,6191+39])
+                                                                      Pexp_ident "x" (src/tarjan.ml[197,6191+38]..[197,6191+39])
+                                                                  expression (src/tarjan.ml[198,6232+12]..[199,6266+20])
+                                                                    Pexp_ifthenelse
+                                                                    expression (src/tarjan.ml[198,6232+15]..[198,6232+28])
+                                                                      Pexp_apply
+                                                                      expression (src/tarjan.ml[198,6232+23]..[198,6232+25])
+Pexp_ident "!=" (src/tarjan.ml[198,6232+23]..[198,6232+25])
+                                                                      [
+<arg>
+Nolabel
+  expression (src/tarjan.ml[198,6232+15]..[198,6232+22])
+    Pexp_ident "element" (src/tarjan.ml[198,6232+15]..[198,6232+22])
+<arg>
+Nolabel
+  expression (src/tarjan.ml[198,6232+26]..[198,6232+28])
+    Pexp_ident "dx" (src/tarjan.ml[198,6232+26]..[198,6232+28])
+                                                                      ]
+                                                                    expression (src/tarjan.ml[199,6266+14]..[199,6266+20])
+                                                                      Pexp_apply
+                                                                      expression (src/tarjan.ml[199,6266+14]..[199,6266+18])
+Pexp_ident "loop" (src/tarjan.ml[199,6266+14]..[199,6266+18])
+                                                                      [
+<arg>
+Nolabel
+  expression (src/tarjan.ml[199,6266+18]..[199,6266+20])
+    Pexp_construct "()" (src/tarjan.ml[199,6266+18]..[199,6266+20])
+    None
+                                                                      ]
+                                                                    None
+                                                    ]
+                                                    expression (src/tarjan.ml[201,6291+10]..[202,6309+50])
+                                                      Pexp_sequence
+                                                      expression (src/tarjan.ml[201,6291+10]..[201,6291+16])
+                                                        Pexp_apply
+                                                        expression (src/tarjan.ml[201,6291+10]..[201,6291+14])
+                                                          Pexp_ident "loop" (src/tarjan.ml[201,6291+10]..[201,6291+14])
+                                                        [
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/tarjan.ml[201,6291+14]..[201,6291+16])
+                                                              Pexp_construct "()" (src/tarjan.ml[201,6291+14]..[201,6291+16])
+                                                              None
+                                                        ]
+                                                      expression (src/tarjan.ml[202,6309+10]..[202,6309+50])
+                                                        Pexp_apply
+                                                        expression (src/tarjan.ml[202,6309+26]..[202,6309+28])
+                                                          Pexp_ident ":=" (src/tarjan.ml[202,6309+26]..[202,6309+28])
+                                                        [
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/tarjan.ml[202,6309+10]..[202,6309+25])
+                                                              Pexp_ident "representatives" (src/tarjan.ml[202,6309+10]..[202,6309+25])
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/tarjan.ml[202,6309+29]..[202,6309+50])
+                                                              Pexp_construct "::" (src/tarjan.ml[202,6309+31]..[202,6309+33])
+                                                              Some
+                                                                expression (src/tarjan.ml[202,6309+29]..[202,6309+50]) ghost
+                                                                  Pexp_tuple
+                                                                  [
+                                                                    expression (src/tarjan.ml[202,6309+29]..[202,6309+30])
+                                                                      Pexp_ident "x" (src/tarjan.ml[202,6309+29]..[202,6309+30])
+                                                                    expression (src/tarjan.ml[202,6309+34]..[202,6309+50])
+                                                                      Pexp_apply
+                                                                      expression (src/tarjan.ml[202,6309+34]..[202,6309+35])
+Pexp_ident "!" (src/tarjan.ml[202,6309+34]..[202,6309+35])
+                                                                      [
+<arg>
+Nolabel
+  expression (src/tarjan.ml[202,6309+35]..[202,6309+50])
+    Pexp_ident "representatives" (src/tarjan.ml[202,6309+35]..[202,6309+50])
+                                                                      ]
+                                                                  ]
+                                                        ]
+                                                  None
+                                      ]
+                                      expression (src/tarjan.ml[206,6377+6]..[206,6377+15])
+                                        Pexp_apply
+                                        expression (src/tarjan.ml[206,6377+6]..[206,6377+10])
+                                          Pexp_ident "walk" (src/tarjan.ml[206,6377+6]..[206,6377+10])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/tarjan.ml[206,6377+11]..[206,6377+15])
+                                              Pexp_ident "root" (src/tarjan.ml[206,6377+11]..[206,6377+15])
+                                        ]
+                              None
+                    ]
+              ]
+            structure_item (src/tarjan.ml[213,6482+2]..[214,6507+28])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[213,6482+6]..[213,6482+20])
+                    Ppat_var "representative" (src/tarjan.ml[213,6482+6]..[213,6482+20])
+                  expression (src/tarjan.ml[213,6482+21]..[214,6507+28]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/tarjan.ml[213,6482+21]..[213,6482+22])
+                      Ppat_var "x" (src/tarjan.ml[213,6482+21]..[213,6482+22])
+                    expression (src/tarjan.ml[214,6507+4]..[214,6507+28])
+                      Pexp_field
+                      expression (src/tarjan.ml[214,6507+4]..[214,6507+13])
+                        Pexp_apply
+                        expression (src/tarjan.ml[214,6507+5]..[214,6507+10])
+                          Pexp_ident "table" (src/tarjan.ml[214,6507+5]..[214,6507+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/tarjan.ml[214,6507+11]..[214,6507+12])
+                              Pexp_ident "x" (src/tarjan.ml[214,6507+11]..[214,6507+12])
+                        ]
+                      "representative" (src/tarjan.ml[214,6507+14]..[214,6507+28])
+              ]
+            structure_item (src/tarjan.ml[216,6537+2]..[217,6551+17])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[216,6537+6]..[216,6537+9])
+                    Ppat_var "scc" (src/tarjan.ml[216,6537+6]..[216,6537+9])
+                  expression (src/tarjan.ml[216,6537+10]..[217,6551+17]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/tarjan.ml[216,6537+10]..[216,6537+11])
+                      Ppat_var "x" (src/tarjan.ml[216,6537+10]..[216,6537+11])
+                    expression (src/tarjan.ml[217,6551+4]..[217,6551+17])
+                      Pexp_field
+                      expression (src/tarjan.ml[217,6551+4]..[217,6551+13])
+                        Pexp_apply
+                        expression (src/tarjan.ml[217,6551+5]..[217,6551+10])
+                          Pexp_ident "table" (src/tarjan.ml[217,6551+5]..[217,6551+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/tarjan.ml[217,6551+11]..[217,6551+12])
+                              Pexp_ident "x" (src/tarjan.ml[217,6551+11]..[217,6551+12])
+                        ]
+                      "scc" (src/tarjan.ml[217,6551+14]..[217,6551+17])
+              ]
+            structure_item (src/tarjan.ml[219,6570+2]..[220,6594+34])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[219,6570+6]..[219,6570+21])
+                    Ppat_var "representatives" (src/tarjan.ml[219,6570+6]..[219,6570+21])
+                  expression (src/tarjan.ml[220,6594+4]..[220,6594+34])
+                    Pexp_apply
+                    expression (src/tarjan.ml[220,6594+4]..[220,6594+17])
+                      Pexp_ident "Array.of_list" (src/tarjan.ml[220,6594+4]..[220,6594+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/tarjan.ml[220,6594+18]..[220,6594+34])
+                          Pexp_apply
+                          expression (src/tarjan.ml[220,6594+18]..[220,6594+19])
+                            Pexp_ident "!" (src/tarjan.ml[220,6594+18]..[220,6594+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/tarjan.ml[220,6594+19]..[220,6594+34])
+                                Pexp_ident "representatives" (src/tarjan.ml[220,6594+19]..[220,6594+34])
+                          ]
+                    ]
+              ]
+            structure_item (src/tarjan.ml[227,6933+2]..[231,7108+23])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[227,6933+6]..[227,6933+11])
+                    Ppat_var "yield" (src/tarjan.ml[227,6933+6]..[227,6933+11])
+                  expression (src/tarjan.ml[227,6933+12]..[231,7108+23]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/tarjan.ml[227,6933+12]..[227,6933+18])
+                      Ppat_var "action" (src/tarjan.ml[227,6933+12]..[227,6933+18])
+                    expression (src/tarjan.ml[227,6933+19]..[231,7108+23]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/tarjan.ml[227,6933+19]..[227,6933+20])
+                        Ppat_var "x" (src/tarjan.ml[227,6933+19]..[227,6933+20])
+                      expression (src/tarjan.ml[228,6956+6]..[231,7108+23])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/tarjan.ml[228,6956+10]..[228,6956+14])
+                              Ppat_var "data" (src/tarjan.ml[228,6956+10]..[228,6956+14])
+                            expression (src/tarjan.ml[228,6956+17]..[228,6956+24])
+                              Pexp_apply
+                              expression (src/tarjan.ml[228,6956+17]..[228,6956+22])
+                                Pexp_ident "table" (src/tarjan.ml[228,6956+17]..[228,6956+22])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[228,6956+23]..[228,6956+24])
+                                    Pexp_ident "x" (src/tarjan.ml[228,6956+23]..[228,6956+24])
+                              ]
+                        ]
+                        expression (src/tarjan.ml[229,6984+6]..[231,7108+23])
+                          Pexp_sequence
+                          expression (src/tarjan.ml[229,6984+6]..[229,6984+39])
+                            Pexp_assert
+                            expression (src/tarjan.ml[229,6984+13]..[229,6984+39])
+                              Pexp_apply
+                              expression (src/tarjan.ml[229,6984+34]..[229,6984+36])
+                                Pexp_ident "==" (src/tarjan.ml[229,6984+34]..[229,6984+36])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[229,6984+14]..[229,6984+33])
+                                    Pexp_field
+                                    expression (src/tarjan.ml[229,6984+14]..[229,6984+18])
+                                      Pexp_ident "data" (src/tarjan.ml[229,6984+14]..[229,6984+18])
+                                    "representative" (src/tarjan.ml[229,6984+19]..[229,6984+33])
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[229,6984+37]..[229,6984+38])
+                                    Pexp_ident "x" (src/tarjan.ml[229,6984+37]..[229,6984+38])
+                              ]
+                          expression (src/tarjan.ml[230,7046+6]..[231,7108+23])
+                            Pexp_sequence
+                            expression (src/tarjan.ml[230,7046+6]..[230,7046+29])
+                              Pexp_assert
+                              expression (src/tarjan.ml[230,7046+13]..[230,7046+29])
+                                Pexp_apply
+                                expression (src/tarjan.ml[230,7046+23]..[230,7046+25])
+                                  Pexp_ident "<>" (src/tarjan.ml[230,7046+23]..[230,7046+25])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[230,7046+14]..[230,7046+22])
+                                      Pexp_field
+                                      expression (src/tarjan.ml[230,7046+14]..[230,7046+18])
+                                        Pexp_ident "data" (src/tarjan.ml[230,7046+14]..[230,7046+18])
+                                      "scc" (src/tarjan.ml[230,7046+19]..[230,7046+22])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/tarjan.ml[230,7046+26]..[230,7046+28])
+                                      Pexp_construct "[]" (src/tarjan.ml[230,7046+26]..[230,7046+28])
+                                      None
+                                ]
+                            expression (src/tarjan.ml[231,7108+6]..[231,7108+23])
+                              Pexp_apply
+                              expression (src/tarjan.ml[231,7108+6]..[231,7108+12])
+                                Pexp_ident "action" (src/tarjan.ml[231,7108+6]..[231,7108+12])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[231,7108+13]..[231,7108+14])
+                                    Pexp_ident "x" (src/tarjan.ml[231,7108+13]..[231,7108+14])
+                                <arg>
+                                Nolabel
+                                  expression (src/tarjan.ml[231,7108+15]..[231,7108+23])
+                                    Pexp_field
+                                    expression (src/tarjan.ml[231,7108+15]..[231,7108+19])
+                                      Pexp_ident "data" (src/tarjan.ml[231,7108+15]..[231,7108+19])
+                                    "scc" (src/tarjan.ml[231,7108+20]..[231,7108+23])
+                              ]
+              ]
+            structure_item (src/tarjan.ml[233,7133+2]..[234,7153+45])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[233,7133+6]..[233,7133+10])
+                    Ppat_var "iter" (src/tarjan.ml[233,7133+6]..[233,7133+10])
+                  expression (src/tarjan.ml[233,7133+11]..[234,7153+45]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/tarjan.ml[233,7133+11]..[233,7133+17])
+                      Ppat_var "action" (src/tarjan.ml[233,7133+11]..[233,7133+17])
+                    expression (src/tarjan.ml[234,7153+4]..[234,7153+45])
+                      Pexp_apply
+                      expression (src/tarjan.ml[234,7153+4]..[234,7153+14])
+                        Pexp_ident "Array.iter" (src/tarjan.ml[234,7153+4]..[234,7153+14])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/tarjan.ml[234,7153+15]..[234,7153+29])
+                            Pexp_apply
+                            expression (src/tarjan.ml[234,7153+16]..[234,7153+21])
+                              Pexp_ident "yield" (src/tarjan.ml[234,7153+16]..[234,7153+21])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/tarjan.ml[234,7153+22]..[234,7153+28])
+                                  Pexp_ident "action" (src/tarjan.ml[234,7153+22]..[234,7153+28])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/tarjan.ml[234,7153+30]..[234,7153+45])
+                            Pexp_ident "representatives" (src/tarjan.ml[234,7153+30]..[234,7153+45])
+                      ]
+              ]
+            structure_item (src/tarjan.ml[236,7200+2]..[237,7236+50])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/tarjan.ml[236,7200+6]..[236,7200+26])
+                    Ppat_var "rev_topological_iter" (src/tarjan.ml[236,7200+6]..[236,7200+26])
+                  expression (src/tarjan.ml[236,7200+27]..[237,7236+50]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/tarjan.ml[236,7200+27]..[236,7200+33])
+                      Ppat_var "action" (src/tarjan.ml[236,7200+27]..[236,7200+33])
+                    expression (src/tarjan.ml[237,7236+4]..[237,7236+50])
+                      Pexp_apply
+                      expression (src/tarjan.ml[237,7236+4]..[237,7236+19])
+                        Pexp_ident "MArray.iter_rev" (src/tarjan.ml[237,7236+4]..[237,7236+19])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/tarjan.ml[237,7236+20]..[237,7236+34])
+                            Pexp_apply
+                            expression (src/tarjan.ml[237,7236+21]..[237,7236+26])
+                              Pexp_ident "yield" (src/tarjan.ml[237,7236+21]..[237,7236+26])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/tarjan.ml[237,7236+27]..[237,7236+33])
+                                  Pexp_ident "action" (src/tarjan.ml[237,7236+27]..[237,7236+33])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/tarjan.ml[237,7236+35]..[237,7236+50])
+                            Pexp_ident "representatives" (src/tarjan.ml[237,7236+35]..[237,7236+50])
+                      ]
+              ]
+          ]
+]
+
+module Run(G:sig
+               type node
+               val n : int
+               val index : node -> int
+               val successors : (node -> unit) -> node -> unit
+               val iter : (node -> unit) -> unit
+             end) =
+  struct
+    type data =
+      {
+      mutable stacked: bool ;
+      mutable number: int ;
+      mutable low: int ;
+      mutable representative: G.node ;
+      mutable scc: G.node list }
+    let table =
+      let table = Array.make G.n None in
+      G.iter
+        (fun x ->
+           table.(G.index x) <-
+             (Some
+                {
+                  stacked = false;
+                  number = 0;
+                  low = 0;
+                  representative = x;
+                  scc = []
+                }));
+      (function
+       | x ->
+           (match table.(G.index x) with
+            | Some dx -> dx
+            | None -> assert false))
+    let scc_stack = Stack.create ()
+    let mark =
+      let counter = ref 0 in
+      fun dx -> incr counter; dx.number <- (!counter); dx.low <- (!counter)
+    let representatives = ref []
+    let () =
+      G.iter
+        (fun root ->
+           let droot = table root in
+           if droot.number = 0
+           then
+             (mark droot;
+              droot.stacked <- true;
+              Stack.push droot scc_stack;
+              (let rec walk x =
+                 let dx = table x in
+                 G.successors
+                   (fun y ->
+                      let dy = table y in
+                      if dy.number = 0
+                      then
+                        (mark dy;
+                         dy.stacked <- true;
+                         Stack.push dy scc_stack;
+                         walk y;
+                         if dy.low < dx.low then dx.low <- (dy.low))
+                      else
+                        if (dy.low < dx.low) && dy.stacked
+                        then
+                          (if dy.number < dx.low then dx.low <- (dy.number)))
+                   x;
+                 if dx.low = dx.number
+                 then
+                   (let rec loop () =
+                      let element = Stack.pop scc_stack in
+                      element.stacked <- false;
+                      dx.scc <- ((element.representative) :: (dx.scc));
+                      element.representative <- x;
+                      if element != dx then loop () in
+                    loop (); representatives := (x :: (!representatives))) in
+               walk root)))
+    let representative x = (table x).representative
+    let scc x = (table x).scc
+    let representatives = Array.of_list (!representatives)
+    let yield action x =
+      let data = table x in
+      assert (data.representative == x);
+      assert (data.scc <> []);
+      action x data.scc
+    let iter action = Array.iter (yield action) representatives
+    let rev_topological_iter action =
+      MArray.iter_rev (yield action) representatives
+  end
+[
+  structure_item (src/tarjan.ml[21,1297+0]..src/tarjan.ml[239,7288+3])
+    Tstr_module
+    Run/595
+      module_expr (src/tarjan.ml[21,1297+11]..src/tarjan.ml[239,7288+3])
+        Tmod_functor "G/402"
+        module_type (src/tarjan.ml[21,1297+16]..src/tarjan.ml[39,1685+3])
+          Tmty_signature
+          [
+            signature_item (src/tarjan.ml[23,1318+2]..src/tarjan.ml[23,1318+11])
+              Tsig_type Rec
+              [
+                type_declaration node/397 (src/tarjan.ml[23,1318+2]..src/tarjan.ml[23,1318+11])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ttype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    None
+              ]
+            signature_item (src/tarjan.ml[28,1470+2]..src/tarjan.ml[28,1470+12])
+              Tsig_value
+              value_description n/398 (src/tarjan.ml[28,1470+2]..src/tarjan.ml[28,1470+12])
+                core_type (src/tarjan.ml[28,1470+9]..src/tarjan.ml[28,1470+12])
+                  Ttyp_constr "int/1!"
+                  []
+                []
+            signature_item (src/tarjan.ml[29,1483+2]..src/tarjan.ml[29,1483+24])
+              Tsig_value
+              value_description index/399 (src/tarjan.ml[29,1483+2]..src/tarjan.ml[29,1483+24])
+                core_type (src/tarjan.ml[29,1483+13]..src/tarjan.ml[29,1483+24])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/tarjan.ml[29,1483+13]..src/tarjan.ml[29,1483+17])
+                    Ttyp_constr "node/397"
+                    []
+                  core_type (src/tarjan.ml[29,1483+21]..src/tarjan.ml[29,1483+24])
+                    Ttyp_constr "int/1!"
+                    []
+                []
+            signature_item (src/tarjan.ml[33,1564+2]..src/tarjan.ml[33,1564+48])
+              Tsig_value
+              value_description successors/400 (src/tarjan.ml[33,1564+2]..src/tarjan.ml[33,1564+48])
+                core_type (src/tarjan.ml[33,1564+18]..src/tarjan.ml[33,1564+48])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/tarjan.ml[33,1564+19]..src/tarjan.ml[33,1564+31])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/tarjan.ml[33,1564+19]..src/tarjan.ml[33,1564+23])
+                      Ttyp_constr "node/397"
+                      []
+                    core_type (src/tarjan.ml[33,1564+27]..src/tarjan.ml[33,1564+31])
+                      Ttyp_constr "unit/6!"
+                      []
+                  core_type (src/tarjan.ml[33,1564+36]..src/tarjan.ml[33,1564+48])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/tarjan.ml[33,1564+36]..src/tarjan.ml[33,1564+40])
+                      Ttyp_constr "node/397"
+                      []
+                    core_type (src/tarjan.ml[33,1564+44]..src/tarjan.ml[33,1564+48])
+                      Ttyp_constr "unit/6!"
+                      []
+                []
+            signature_item (src/tarjan.ml[37,1649+2]..src/tarjan.ml[37,1649+34])
+              Tsig_value
+              value_description iter/401 (src/tarjan.ml[37,1649+2]..src/tarjan.ml[37,1649+34])
+                core_type (src/tarjan.ml[37,1649+12]..src/tarjan.ml[37,1649+34])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/tarjan.ml[37,1649+13]..src/tarjan.ml[37,1649+25])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/tarjan.ml[37,1649+13]..src/tarjan.ml[37,1649+17])
+                      Ttyp_constr "node/397"
+                      []
+                    core_type (src/tarjan.ml[37,1649+21]..src/tarjan.ml[37,1649+25])
+                      Ttyp_constr "unit/6!"
+                      []
+                  core_type (src/tarjan.ml[37,1649+30]..src/tarjan.ml[37,1649+34])
+                    Ttyp_constr "unit/6!"
+                    []
+                []
+          ]
+        module_expr (src/tarjan.ml[39,1685+7]..src/tarjan.ml[239,7288+3])
+          module_expr (src/tarjan.ml[39,1685+7]..src/tarjan.ml[239,7288+3])
+            Tmod_structure
+            [
+              structure_item (src/tarjan.ml[43,1771+2]..src/tarjan.ml[72,2606+5])
+                Tstr_type Rec
+                [
+                  type_declaration data/403 (src/tarjan.ml[43,1771+2]..src/tarjan.ml[72,2606+5])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_record
+                        [
+                          (src/tarjan.ml[48,1913+6]..src/tarjan.ml[48,1913+28])
+                            Mutable
+                            stacked/404                            core_type (src/tarjan.ml[48,1913+23]..src/tarjan.ml[48,1913+27])
+                              Ttyp_poly
+                              core_type (src/tarjan.ml[48,1913+23]..src/tarjan.ml[48,1913+27])
+                                Ttyp_constr "bool/5!"
+                                []
+                          (src/tarjan.ml[53,2053+6]..src/tarjan.ml[53,2053+26])
+                            Mutable
+                            number/405                            core_type (src/tarjan.ml[53,2053+22]..src/tarjan.ml[53,2053+25])
+                              Ttyp_poly
+                              core_type (src/tarjan.ml[53,2053+22]..src/tarjan.ml[53,2053+25])
+                                Ttyp_constr "int/1!"
+                                []
+                          (src/tarjan.ml[58,2199+6]..src/tarjan.ml[58,2199+23])
+                            Mutable
+                            low/406                            core_type (src/tarjan.ml[58,2199+19]..src/tarjan.ml[58,2199+22])
+                              Ttyp_poly
+                              core_type (src/tarjan.ml[58,2199+19]..src/tarjan.ml[58,2199+22])
+                                Ttyp_constr "int/1!"
+                                []
+                          (src/tarjan.ml[64,2381+6]..src/tarjan.ml[64,2381+37])
+                            Mutable
+                            representative/407                            core_type (src/tarjan.ml[64,2381+30]..src/tarjan.ml[64,2381+36])
+                              Ttyp_poly
+                              core_type (src/tarjan.ml[64,2381+30]..src/tarjan.ml[64,2381+36])
+                                Ttyp_constr "G/402.node"
+                                []
+                          (src/tarjan.ml[70,2574+6]..src/tarjan.ml[70,2574+30])
+                            Mutable
+                            scc/408                            core_type (src/tarjan.ml[70,2574+19]..src/tarjan.ml[70,2574+30])
+                              Ttyp_poly
+                              core_type (src/tarjan.ml[70,2574+19]..src/tarjan.ml[70,2574+30])
+                                Ttyp_constr "list/9!"
+                                [
+                                  core_type (src/tarjan.ml[70,2574+19]..src/tarjan.ml[70,2574+25])
+                                    Ttyp_constr "G/402.node"
+                                    []
+                                ]
+                        ]
+                    ptype_private = Public
+                    ptype_manifest =
+                      None
+                ]
+              structure_item (src/tarjan.ml[77,2753+2]..src/tarjan.ml[105,3422+22])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[77,2753+6]..src/tarjan.ml[77,2753+11])
+                      Tpat_var "table/409"
+                    expression (src/tarjan.ml[83,2936+4]..src/tarjan.ml[105,3422+22])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/tarjan.ml[83,2936+8]..src/tarjan.ml[83,2936+13])
+                            Tpat_var "table/410"
+                          expression (src/tarjan.ml[83,2936+16]..src/tarjan.ml[83,2936+35])
+                            Texp_apply
+                            expression (src/tarjan.ml[83,2936+16]..src/tarjan.ml[83,2936+26])
+                              Texp_ident "Stdlib!.Array.make"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[83,2936+27]..src/tarjan.ml[83,2936+30])
+                                  Texp_ident "G/402.n"
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[83,2936+31]..src/tarjan.ml[83,2936+35])
+                                  Texp_construct "None"
+                                  []
+                            ]
+                      ]
+                      expression (src/tarjan.ml[87,3009+4]..src/tarjan.ml[105,3422+22])
+                        Texp_sequence
+                        expression (src/tarjan.ml[87,3009+4]..src/tarjan.ml[95,3179+5])
+                          Texp_apply
+                          expression (src/tarjan.ml[87,3009+4]..src/tarjan.ml[87,3009+10])
+                            Texp_ident "G/402.iter"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/tarjan.ml[87,3009+11]..src/tarjan.ml[95,3179+5])
+                                Texp_function
+                                Nolabel
+                                [
+                                  <case>
+                                    pattern (src/tarjan.ml[87,3009+16]..src/tarjan.ml[87,3009+17])
+                                      Tpat_var "x/459"
+                                    expression (src/tarjan.ml[88,3030+6]..src/tarjan.ml[94,3171+7])
+                                      Texp_apply
+                                      expression (src/tarjan.ml[88,3030+6]..src/tarjan.ml[94,3171+7]) ghost
+                                        Texp_ident "Stdlib!.Array.set"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/tarjan.ml[88,3030+6]..src/tarjan.ml[88,3030+11])
+                                            Texp_ident "table/410"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/tarjan.ml[88,3030+13]..src/tarjan.ml[88,3030+22])
+                                            Texp_apply
+                                            expression (src/tarjan.ml[88,3030+13]..src/tarjan.ml[88,3030+20])
+                                              Texp_ident "G/402.index"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/tarjan.ml[88,3030+21]..src/tarjan.ml[88,3030+22])
+                                                  Texp_ident "x/459"
+                                            ]
+                                        <arg>
+                                          Nolabel
+                                          expression (src/tarjan.ml[88,3030+27]..src/tarjan.ml[94,3171+7])
+                                            Texp_construct "Some"
+                                            [
+                                              expression (src/tarjan.ml[88,3030+32]..src/tarjan.ml[94,3171+7])
+                                                Texp_record
+                                                  fields =
+                                                    [
+                                                      "stacked"
+                                                        expression (src/tarjan.ml[89,3064+18]..src/tarjan.ml[89,3064+23])
+                                                          Texp_construct "false"
+                                                          []
+                                                      "number"
+                                                        expression (src/tarjan.ml[90,3089+17]..src/tarjan.ml[90,3089+18])
+                                                          Texp_constant Const_int 0
+                                                      "low"
+                                                        expression (src/tarjan.ml[91,3109+14]..src/tarjan.ml[91,3109+15])
+                                                          Texp_constant Const_int 0
+                                                      "representative"
+                                                        expression (src/tarjan.ml[92,3126+25]..src/tarjan.ml[92,3126+26])
+                                                          Texp_ident "x/459"
+                                                      "scc"
+                                                        expression (src/tarjan.ml[93,3154+14]..src/tarjan.ml[93,3154+16])
+                                                          Texp_construct "[]"
+                                                          []
+                                                    ]
+                                                  representation =
+                                                    Record_regular
+                                                  extended_expression =
+                                                    None
+                                            ]
+                                      ]
+                                ]
+                          ]
+                        expression (src/tarjan.ml[100,3321+4]..src/tarjan.ml[105,3422+22])
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (src/tarjan.ml[100,3321+13]..src/tarjan.ml[100,3321+14])
+                                Tpat_var "x/460"
+                              expression (src/tarjan.ml[101,3339+6]..src/tarjan.ml[105,3422+22])
+                                Texp_match
+                                expression (src/tarjan.ml[101,3339+12]..src/tarjan.ml[101,3339+29])
+                                  Texp_apply
+                                  expression (src/tarjan.ml[101,3339+12]..src/tarjan.ml[101,3339+29]) ghost
+                                    Texp_ident "Stdlib!.Array.get"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/tarjan.ml[101,3339+12]..src/tarjan.ml[101,3339+17])
+                                        Texp_ident "table/410"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/tarjan.ml[101,3339+19]..src/tarjan.ml[101,3339+28])
+                                        Texp_apply
+                                        expression (src/tarjan.ml[101,3339+19]..src/tarjan.ml[101,3339+26])
+                                          Texp_ident "G/402.index"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[101,3339+27]..src/tarjan.ml[101,3339+28])
+                                              Texp_ident "x/460"
+                                        ]
+                                  ]
+                                [
+                                  <case>
+                                    pattern (src/tarjan.ml[102,3374+8]..src/tarjan.ml[102,3374+15])
+                                      Tpat_value
+                                      pattern (src/tarjan.ml[102,3374+8]..src/tarjan.ml[102,3374+15])
+                                        Tpat_construct "Some"
+                                        [
+                                          pattern (src/tarjan.ml[102,3374+13]..src/tarjan.ml[102,3374+15])
+                                            Tpat_var "dx/461"
+                                        ]
+                                        None
+                                    expression (src/tarjan.ml[103,3393+10]..src/tarjan.ml[103,3393+12])
+                                      Texp_ident "dx/461"
+                                  <case>
+                                    pattern (src/tarjan.ml[104,3406+8]..src/tarjan.ml[104,3406+12])
+                                      Tpat_value
+                                      pattern (src/tarjan.ml[104,3406+8]..src/tarjan.ml[104,3406+12])
+                                        Tpat_construct "None"
+                                        []
+                                        None
+                                    expression (src/tarjan.ml[105,3422+10]..src/tarjan.ml[105,3422+22])
+                                      Texp_assert                                      expression (src/tarjan.ml[105,3422+17]..src/tarjan.ml[105,3422+22])
+                                        Texp_construct "false"
+                                        []
+                                ]
+                          ]
+                ]
+              structure_item (src/tarjan.ml[110,3604+2]..src/tarjan.ml[110,3604+32])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[110,3604+6]..src/tarjan.ml[110,3604+15])
+                      Tpat_var "scc_stack/462"
+                    expression (src/tarjan.ml[110,3604+18]..src/tarjan.ml[110,3604+32])
+                      Texp_apply
+                      expression (src/tarjan.ml[110,3604+18]..src/tarjan.ml[110,3604+30])
+                        Texp_ident "Stdlib!.Stack.create"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/tarjan.ml[110,3604+30]..src/tarjan.ml[110,3604+32])
+                            Texp_construct "()"
+                            []
+                      ]
+                ]
+              structure_item (src/tarjan.ml[118,3932+2]..src/tarjan.ml[123,4035+24])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[118,3932+6]..src/tarjan.ml[118,3932+10])
+                      Tpat_var "mark/499"
+                    expression (src/tarjan.ml[119,3945+4]..src/tarjan.ml[123,4035+24])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/tarjan.ml[119,3945+8]..src/tarjan.ml[119,3945+15])
+                            Tpat_var "counter/500"
+                          expression (src/tarjan.ml[119,3945+18]..src/tarjan.ml[119,3945+23])
+                            Texp_apply
+                            expression (src/tarjan.ml[119,3945+18]..src/tarjan.ml[119,3945+21])
+                              Texp_ident "Stdlib!.ref"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[119,3945+22]..src/tarjan.ml[119,3945+23])
+                                  Texp_constant Const_int 0
+                            ]
+                      ]
+                      expression (src/tarjan.ml[120,3972+4]..src/tarjan.ml[123,4035+24])
+                        Texp_function
+                        Nolabel
+                        [
+                          <case>
+                            pattern (src/tarjan.ml[120,3972+8]..src/tarjan.ml[120,3972+10])
+                              Tpat_var "dx/501"
+                            expression (src/tarjan.ml[121,3986+6]..src/tarjan.ml[123,4035+24])
+                              Texp_sequence
+                              expression (src/tarjan.ml[121,3986+6]..src/tarjan.ml[121,3986+18])
+                                Texp_apply
+                                expression (src/tarjan.ml[121,3986+6]..src/tarjan.ml[121,3986+10])
+                                  Texp_ident "Stdlib!.incr"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/tarjan.ml[121,3986+11]..src/tarjan.ml[121,3986+18])
+                                      Texp_ident "counter/500"
+                                ]
+                              expression (src/tarjan.ml[122,4006+6]..src/tarjan.ml[123,4035+24])
+                                Texp_sequence
+                                expression (src/tarjan.ml[122,4006+6]..src/tarjan.ml[122,4006+27])
+                                  Texp_setfield
+                                  expression (src/tarjan.ml[122,4006+6]..src/tarjan.ml[122,4006+8])
+                                    Texp_ident "dx/501"
+                                  "number"
+                                  expression (src/tarjan.ml[122,4006+19]..src/tarjan.ml[122,4006+27])
+                                    Texp_apply
+                                    expression (src/tarjan.ml[122,4006+19]..src/tarjan.ml[122,4006+20])
+                                      Texp_ident "Stdlib!.!"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/tarjan.ml[122,4006+20]..src/tarjan.ml[122,4006+27])
+                                          Texp_ident "counter/500"
+                                    ]
+                                expression (src/tarjan.ml[123,4035+6]..src/tarjan.ml[123,4035+24])
+                                  Texp_setfield
+                                  expression (src/tarjan.ml[123,4035+6]..src/tarjan.ml[123,4035+8])
+                                    Texp_ident "dx/501"
+                                  "low"
+                                  expression (src/tarjan.ml[123,4035+16]..src/tarjan.ml[123,4035+24])
+                                    Texp_apply
+                                    expression (src/tarjan.ml[123,4035+16]..src/tarjan.ml[123,4035+17])
+                                      Texp_ident "Stdlib!.!"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/tarjan.ml[123,4035+17]..src/tarjan.ml[123,4035+24])
+                                          Texp_ident "counter/500"
+                                    ]
+                        ]
+                ]
+              structure_item (src/tarjan.ml[129,4219+2]..src/tarjan.ml[130,4243+10])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[129,4219+6]..src/tarjan.ml[129,4219+21])
+                      Tpat_var "representatives/502"
+                    expression (src/tarjan.ml[130,4243+4]..src/tarjan.ml[130,4243+10])
+                      Texp_apply
+                      expression (src/tarjan.ml[130,4243+4]..src/tarjan.ml[130,4243+7])
+                        Texp_ident "Stdlib!.ref"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/tarjan.ml[130,4243+8]..src/tarjan.ml[130,4243+10])
+                            Texp_construct "[]"
+                            []
+                      ]
+                ]
+              structure_item (src/tarjan.ml[135,4377+2]..src/tarjan.ml[209,6402+3])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[135,4377+6]..src/tarjan.ml[135,4377+8])
+                      Tpat_construct "()"
+                      []
+                      None
+                    expression (src/tarjan.ml[135,4377+11]..src/tarjan.ml[209,6402+3])
+                      Texp_apply
+                      expression (src/tarjan.ml[135,4377+11]..src/tarjan.ml[135,4377+17])
+                        Texp_ident "G/402.iter"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/tarjan.ml[135,4377+18]..src/tarjan.ml[209,6402+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/tarjan.ml[135,4377+23]..src/tarjan.ml[135,4377+27])
+                                  Tpat_var "root/503"
+                                expression (src/tarjan.ml[136,4408+4]..src/tarjan.ml[208,6394+7])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/tarjan.ml[136,4408+8]..src/tarjan.ml[136,4408+13])
+                                        Tpat_var "droot/504"
+                                      expression (src/tarjan.ml[136,4408+16]..src/tarjan.ml[136,4408+26])
+                                        Texp_apply
+                                        expression (src/tarjan.ml[136,4408+16]..src/tarjan.ml[136,4408+21])
+                                          Texp_ident "table/409"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[136,4408+22]..src/tarjan.ml[136,4408+26])
+                                              Texp_ident "root/503"
+                                        ]
+                                  ]
+                                  expression (src/tarjan.ml[138,4439+4]..src/tarjan.ml[208,6394+7])
+                                    Texp_ifthenelse
+                                    expression (src/tarjan.ml[138,4439+7]..src/tarjan.ml[138,4439+23])
+                                      Texp_apply
+                                      expression (src/tarjan.ml[138,4439+20]..src/tarjan.ml[138,4439+21])
+                                        Texp_ident "Stdlib!.="
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/tarjan.ml[138,4439+7]..src/tarjan.ml[138,4439+19])
+                                            Texp_field
+                                            expression (src/tarjan.ml[138,4439+7]..src/tarjan.ml[138,4439+12])
+                                              Texp_ident "droot/504"
+                                            "number"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/tarjan.ml[138,4439+22]..src/tarjan.ml[138,4439+23])
+                                            Texp_constant Const_int 0
+                                      ]
+                                    expression (src/tarjan.ml[138,4439+29]..src/tarjan.ml[208,6394+7])
+                                      Texp_sequence
+                                      expression (src/tarjan.ml[143,4566+6]..src/tarjan.ml[143,4566+16])
+                                        Texp_apply
+                                        expression (src/tarjan.ml[143,4566+6]..src/tarjan.ml[143,4566+10])
+                                          Texp_ident "mark/499"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[143,4566+11]..src/tarjan.ml[143,4566+16])
+                                              Texp_ident "droot/504"
+                                        ]
+                                      expression (src/tarjan.ml[144,4584+6]..src/tarjan.ml[206,6377+15])
+                                        Texp_sequence
+                                        expression (src/tarjan.ml[144,4584+6]..src/tarjan.ml[144,4584+27])
+                                          Texp_setfield
+                                          expression (src/tarjan.ml[144,4584+6]..src/tarjan.ml[144,4584+11])
+                                            Texp_ident "droot/504"
+                                          "stacked"
+                                          expression (src/tarjan.ml[144,4584+23]..src/tarjan.ml[144,4584+27])
+                                            Texp_construct "true"
+                                            []
+                                        expression (src/tarjan.ml[145,4613+6]..src/tarjan.ml[206,6377+15])
+                                          Texp_sequence
+                                          expression (src/tarjan.ml[145,4613+6]..src/tarjan.ml[145,4613+32])
+                                            Texp_apply
+                                            expression (src/tarjan.ml[145,4613+6]..src/tarjan.ml[145,4613+16])
+                                              Texp_ident "Stdlib!.Stack.push"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/tarjan.ml[145,4613+17]..src/tarjan.ml[145,4613+22])
+                                                  Texp_ident "droot/504"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/tarjan.ml[145,4613+23]..src/tarjan.ml[145,4613+32])
+                                                  Texp_ident "scc_stack/462"
+                                            ]
+                                          expression (src/tarjan.ml[147,4648+6]..src/tarjan.ml[206,6377+15])
+                                            Texp_let Rec
+                                            [
+                                              <def>
+                                                pattern (src/tarjan.ml[147,4648+14]..src/tarjan.ml[147,4648+18])
+                                                  Tpat_var "walk/505"
+                                                expression (src/tarjan.ml[147,4648+19]..src/tarjan.ml[204,6361+11]) ghost
+                                                  Texp_function
+                                                  Nolabel
+                                                  [
+                                                    <case>
+                                                      pattern (src/tarjan.ml[147,4648+19]..src/tarjan.ml[147,4648+20])
+                                                        Tpat_var "x/506"
+                                                      expression (src/tarjan.ml[148,4671+8]..src/tarjan.ml[204,6361+11])
+                                                        Texp_let Nonrec
+                                                        [
+                                                          <def>
+                                                            pattern (src/tarjan.ml[148,4671+12]..src/tarjan.ml[148,4671+14])
+                                                              Tpat_var "dx/507"
+                                                            expression (src/tarjan.ml[148,4671+17]..src/tarjan.ml[148,4671+24])
+                                                              Texp_apply
+                                                              expression (src/tarjan.ml[148,4671+17]..src/tarjan.ml[148,4671+22])
+                                                                Texp_ident "table/409"
+                                                              [
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/tarjan.ml[148,4671+23]..src/tarjan.ml[148,4671+24])
+                                                                    Texp_ident "x/506"
+                                                              ]
+                                                        ]
+                                                        expression (src/tarjan.ml[150,4700+8]..src/tarjan.ml[204,6361+11])
+                                                          Texp_sequence
+                                                          expression (src/tarjan.ml[150,4700+8]..src/tarjan.ml[183,5713+11])
+                                                            Texp_apply
+                                                            expression (src/tarjan.ml[150,4700+8]..src/tarjan.ml[150,4700+20])
+                                                              Texp_ident "G/402.successors"
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/tarjan.ml[150,4700+21]..src/tarjan.ml[183,5713+9])
+                                                                  Texp_function
+                                                                  Nolabel
+                                                                  [
+                                                                    <case>
+                                                                      pattern (src/tarjan.ml[150,4700+26]..src/tarjan.ml[150,4700+27])
+                                                                        Tpat_var "y/508"
+                                                                      expression (src/tarjan.ml[151,4731+10]..src/tarjan.ml[181,5698+13])
+                                                                        Texp_let Nonrec
+                                                                        [
+                                                                          <def>
+                                                                            pattern (src/tarjan.ml[151,4731+14]..src/tarjan.ml[151,4731+16])
+                                                                              Tpat_var "dy/509"
+                                                                            expression (src/tarjan.ml[151,4731+19]..src/tarjan.ml[151,4731+26])
+                                                                              Texp_apply
+                                                                              expression (src/tarjan.ml[151,4731+19]..src/tarjan.ml[151,4731+24])
+                                                                                Texp_ident "table/409"
+                                                                              [
+                                                                                <arg>
+                                                                                  Nolabel
+                                                                                  expression (src/tarjan.ml[151,4731+25]..src/tarjan.ml[151,4731+26])
+                                                                                    Texp_ident "y/508"
+                                                                              ]
+                                                                        ]
+                                                                        expression (src/tarjan.ml[153,4762+10]..src/tarjan.ml[181,5698+13])
+                                                                          Texp_ifthenelse
+                                                                          expression (src/tarjan.ml[153,4762+13]..src/tarjan.ml[153,4762+26])
+                                                                            Texp_apply
+                                                                            expression (src/tarjan.ml[153,4762+23]..src/tarjan.ml[153,4762+24])
+                                                                              Texp_ident "Stdlib!.="
+                                                                            [
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/tarjan.ml[153,4762+13]..src/tarjan.ml[153,4762+22])
+                                                                                  Texp_field
+                                                                                  expression (src/tarjan.ml[153,4762+13]..src/tarjan.ml[153,4762+15])
+                                                                                    Texp_ident "dy/509"
+                                                                                  "number"
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/tarjan.ml[153,4762+25]..src/tarjan.ml[153,4762+26])
+                                                                                  Texp_constant Const_int 0
+                                                                            ]
+                                                                          expression (src/tarjan.ml[153,4762+32]..src/tarjan.ml[168,5150+13])
+                                                                            Texp_sequence
+                                                                            expression (src/tarjan.ml[158,4921+12]..src/tarjan.ml[158,4921+19])
+                                                                              Texp_apply
+                                                                              expression (src/tarjan.ml[158,4921+12]..src/tarjan.ml[158,4921+16])
+                                                                                Texp_ident "mark/499"
+                                                                              [
+                                                                                <arg>
+                                                                                  Nolabel
+                                                                                  expression (src/tarjan.ml[158,4921+17]..src/tarjan.ml[158,4921+19])
+                                                                                    Texp_ident "dy/509"
+                                                                              ]
+                                                                            expression (src/tarjan.ml[159,4942+12]..src/tarjan.ml[166,5118+30])
+                                                                              Texp_sequence
+                                                                              expression (src/tarjan.ml[159,4942+12]..src/tarjan.ml[159,4942+30])
+                                                                                Texp_setfield
+                                                                                expression (src/tarjan.ml[159,4942+12]..src/tarjan.ml[159,4942+14])
+                                                                                  Texp_ident "dy/509"
+                                                                                "stacked"
+                                                                                expression (src/tarjan.ml[159,4942+26]..src/tarjan.ml[159,4942+30])
+                                                                                  Texp_construct "true"
+                                                                                  []
+                                                                              expression (src/tarjan.ml[160,4974+12]..src/tarjan.ml[166,5118+30])
+                                                                                Texp_sequence
+                                                                                expression (src/tarjan.ml[160,4974+12]..src/tarjan.ml[160,4974+35])
+                                                                                  Texp_apply
+                                                                                  expression (src/tarjan.ml[160,4974+12]..src/tarjan.ml[160,4974+22])
+                                                                                    Texp_ident "Stdlib!.Stack.push"
+                                                                                  [
+                                                                                    <arg>
+                                                                                      Nolabel
+                                                                                      expression (src/tarjan.ml[160,4974+23]..src/tarjan.ml[160,4974+25])
+                                                                                        Texp_ident "dy/509"
+                                                                                    <arg>
+                                                                                      Nolabel
+                                                                                      expression (src/tarjan.ml[160,4974+26]..src/tarjan.ml[160,4974+35])
+                                                                                        Texp_ident "scc_stack/462"
+                                                                                  ]
+                                                                                expression (src/tarjan.ml[164,5062+12]..src/tarjan.ml[166,5118+30])
+                                                                                  Texp_sequence
+                                                                                  expression (src/tarjan.ml[164,5062+12]..src/tarjan.ml[164,5062+18])
+                                                                                    Texp_apply
+                                                                                    expression (src/tarjan.ml[164,5062+12]..src/tarjan.ml[164,5062+16])
+                                                                                      Texp_ident "walk/505"
+                                                                                    [
+                                                                                      <arg>
+                                                                                        Nolabel
+                                                                                        expression (src/tarjan.ml[164,5062+17]..src/tarjan.ml[164,5062+18])
+                                                                                          Texp_ident "y/508"
+                                                                                    ]
+                                                                                  expression (src/tarjan.ml[165,5082+12]..src/tarjan.ml[166,5118+30])
+                                                                                    Texp_ifthenelse
+                                                                                    expression (src/tarjan.ml[165,5082+15]..src/tarjan.ml[165,5082+30])
+                                                                                      Texp_apply
+                                                                                      expression (src/tarjan.ml[165,5082+22]..src/tarjan.ml[165,5082+23])
+                                                                                        Texp_ident "Stdlib!.<"
+                                                                                      [
+                                                                                        <arg>
+                                                                                          Nolabel
+                                                                                          expression (src/tarjan.ml[165,5082+15]..src/tarjan.ml[165,5082+21])
+                                                                                            Texp_field
+                                                                                            expression (src/tarjan.ml[165,5082+15]..src/tarjan.ml[165,5082+17])
+                                                                                              Texp_ident "dy/509"
+                                                                                            "low"
+                                                                                        <arg>
+                                                                                          Nolabel
+                                                                                          expression (src/tarjan.ml[165,5082+24]..src/tarjan.ml[165,5082+30])
+                                                                                            Texp_field
+                                                                                            expression (src/tarjan.ml[165,5082+24]..src/tarjan.ml[165,5082+26])
+                                                                                              Texp_ident "dx/507"
+                                                                                            "low"
+                                                                                      ]
+                                                                                    expression (src/tarjan.ml[166,5118+14]..src/tarjan.ml[166,5118+30])
+                                                                                      Texp_setfield
+                                                                                      expression (src/tarjan.ml[166,5118+14]..src/tarjan.ml[166,5118+16])
+                                                                                        Texp_ident "dx/507"
+                                                                                      "low"
+                                                                                      expression (src/tarjan.ml[166,5118+24]..src/tarjan.ml[166,5118+30])
+                                                                                        Texp_field
+                                                                                        expression (src/tarjan.ml[166,5118+24]..src/tarjan.ml[166,5118+26])
+                                                                                          Texp_ident "dy/509"
+                                                                                        "low"
+                                                                                    None
+                                                                          Some
+                                                                            expression (src/tarjan.ml[169,5164+15]..src/tarjan.ml[181,5698+13])
+                                                                              Texp_ifthenelse
+                                                                              expression (src/tarjan.ml[169,5164+18]..src/tarjan.ml[169,5164+49])
+                                                                                Texp_apply
+                                                                                expression (src/tarjan.ml[169,5164+36]..src/tarjan.ml[169,5164+38])
+                                                                                  Texp_ident "Stdlib!.&&"
+                                                                                [
+                                                                                  <arg>
+                                                                                    Nolabel
+                                                                                    expression (src/tarjan.ml[169,5164+18]..src/tarjan.ml[169,5164+35])
+                                                                                      Texp_apply
+                                                                                      expression (src/tarjan.ml[169,5164+26]..src/tarjan.ml[169,5164+27])
+                                                                                        Texp_ident "Stdlib!.<"
+                                                                                      [
+                                                                                        <arg>
+                                                                                          Nolabel
+                                                                                          expression (src/tarjan.ml[169,5164+19]..src/tarjan.ml[169,5164+25])
+                                                                                            Texp_field
+                                                                                            expression (src/tarjan.ml[169,5164+19]..src/tarjan.ml[169,5164+21])
+                                                                                              Texp_ident "dy/509"
+                                                                                            "low"
+                                                                                        <arg>
+                                                                                          Nolabel
+                                                                                          expression (src/tarjan.ml[169,5164+28]..src/tarjan.ml[169,5164+34])
+                                                                                            Texp_field
+                                                                                            expression (src/tarjan.ml[169,5164+28]..src/tarjan.ml[169,5164+30])
+                                                                                              Texp_ident "dx/507"
+                                                                                            "low"
+                                                                                      ]
+                                                                                  <arg>
+                                                                                    Nolabel
+                                                                                    expression (src/tarjan.ml[169,5164+39]..src/tarjan.ml[169,5164+49])
+                                                                                      Texp_field
+                                                                                      expression (src/tarjan.ml[169,5164+39]..src/tarjan.ml[169,5164+41])
+                                                                                        Texp_ident "dy/509"
+                                                                                      "stacked"
+                                                                                ]
+                                                                              expression (src/tarjan.ml[169,5164+55]..src/tarjan.ml[181,5698+13])
+                                                                                Texp_ifthenelse
+                                                                                expression (src/tarjan.ml[178,5624+15]..src/tarjan.ml[178,5624+33])
+                                                                                  Texp_apply
+                                                                                  expression (src/tarjan.ml[178,5624+25]..src/tarjan.ml[178,5624+26])
+                                                                                    Texp_ident "Stdlib!.<"
+                                                                                  [
+                                                                                    <arg>
+                                                                                      Nolabel
+                                                                                      expression (src/tarjan.ml[178,5624+15]..src/tarjan.ml[178,5624+24])
+                                                                                        Texp_field
+                                                                                        expression (src/tarjan.ml[178,5624+15]..src/tarjan.ml[178,5624+17])
+                                                                                          Texp_ident "dy/509"
+                                                                                        "number"
+                                                                                    <arg>
+                                                                                      Nolabel
+                                                                                      expression (src/tarjan.ml[178,5624+27]..src/tarjan.ml[178,5624+33])
+                                                                                        Texp_field
+                                                                                        expression (src/tarjan.ml[178,5624+27]..src/tarjan.ml[178,5624+29])
+                                                                                          Texp_ident "dx/507"
+                                                                                        "low"
+                                                                                  ]
+                                                                                expression (src/tarjan.ml[179,5663+14]..src/tarjan.ml[179,5663+33])
+                                                                                  Texp_setfield
+                                                                                  expression (src/tarjan.ml[179,5663+14]..src/tarjan.ml[179,5663+16])
+                                                                                    Texp_ident "dx/507"
+                                                                                  "low"
+                                                                                  expression (src/tarjan.ml[179,5663+24]..src/tarjan.ml[179,5663+33])
+                                                                                    Texp_field
+                                                                                    expression (src/tarjan.ml[179,5663+24]..src/tarjan.ml[179,5663+26])
+                                                                                      Texp_ident "dy/509"
+                                                                                    "number"
+                                                                                None
+                                                                              None
+                                                                  ]
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/tarjan.ml[183,5713+10]..src/tarjan.ml[183,5713+11])
+                                                                  Texp_ident "x/506"
+                                                            ]
+                                                          expression (src/tarjan.ml[187,5780+8]..src/tarjan.ml[204,6361+11])
+                                                            Texp_ifthenelse
+                                                            expression (src/tarjan.ml[187,5780+11]..src/tarjan.ml[187,5780+29])
+                                                              Texp_apply
+                                                              expression (src/tarjan.ml[187,5780+18]..src/tarjan.ml[187,5780+19])
+                                                                Texp_ident "Stdlib!.="
+                                                              [
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/tarjan.ml[187,5780+11]..src/tarjan.ml[187,5780+17])
+                                                                    Texp_field
+                                                                    expression (src/tarjan.ml[187,5780+11]..src/tarjan.ml[187,5780+13])
+                                                                      Texp_ident "dx/507"
+                                                                    "low"
+                                                                <arg>
+                                                                  Nolabel
+                                                                  expression (src/tarjan.ml[187,5780+20]..src/tarjan.ml[187,5780+29])
+                                                                    Texp_field
+                                                                    expression (src/tarjan.ml[187,5780+20]..src/tarjan.ml[187,5780+22])
+                                                                      Texp_ident "dx/507"
+                                                                    "number"
+                                                              ]
+                                                            expression (src/tarjan.ml[187,5780+35]..src/tarjan.ml[204,6361+11])
+                                                              Texp_let Rec
+                                                              [
+                                                                <def>
+                                                                  pattern (src/tarjan.ml[193,6020+18]..src/tarjan.ml[193,6020+22])
+                                                                    Tpat_var "loop/510"
+                                                                  expression (src/tarjan.ml[193,6020+23]..src/tarjan.ml[199,6266+20]) ghost
+                                                                    Texp_function
+                                                                    Nolabel
+                                                                    [
+                                                                      <case>
+                                                                        pattern (src/tarjan.ml[193,6020+23]..src/tarjan.ml[193,6020+25])
+                                                                          Tpat_construct "()"
+                                                                          []
+                                                                          None
+                                                                        expression (src/tarjan.ml[194,6048+12]..src/tarjan.ml[199,6266+20])
+                                                                          Texp_let Nonrec
+                                                                          [
+                                                                            <def>
+                                                                              pattern (src/tarjan.ml[194,6048+16]..src/tarjan.ml[194,6048+23])
+                                                                                Tpat_var "element/511"
+                                                                              expression (src/tarjan.ml[194,6048+26]..src/tarjan.ml[194,6048+45])
+                                                                                Texp_apply
+                                                                                expression (src/tarjan.ml[194,6048+26]..src/tarjan.ml[194,6048+35])
+                                                                                  Texp_ident "Stdlib!.Stack.pop"
+                                                                                [
+                                                                                  <arg>
+                                                                                    Nolabel
+                                                                                    expression (src/tarjan.ml[194,6048+36]..src/tarjan.ml[194,6048+45])
+                                                                                      Texp_ident "scc_stack/462"
+                                                                                ]
+                                                                          ]
+                                                                          expression (src/tarjan.ml[195,6097+12]..src/tarjan.ml[199,6266+20])
+                                                                            Texp_sequence
+                                                                            expression (src/tarjan.ml[195,6097+12]..src/tarjan.ml[195,6097+36])
+                                                                              Texp_setfield
+                                                                              expression (src/tarjan.ml[195,6097+12]..src/tarjan.ml[195,6097+19])
+                                                                                Texp_ident "element/511"
+                                                                              "stacked"
+                                                                              expression (src/tarjan.ml[195,6097+31]..src/tarjan.ml[195,6097+36])
+                                                                                Texp_construct "false"
+                                                                                []
+                                                                            expression (src/tarjan.ml[196,6135+12]..src/tarjan.ml[199,6266+20])
+                                                                              Texp_sequence
+                                                                              expression (src/tarjan.ml[196,6135+12]..src/tarjan.ml[196,6135+54])
+                                                                                Texp_setfield
+                                                                                expression (src/tarjan.ml[196,6135+12]..src/tarjan.ml[196,6135+14])
+                                                                                  Texp_ident "dx/507"
+                                                                                "scc"
+                                                                                expression (src/tarjan.ml[196,6135+22]..src/tarjan.ml[196,6135+54])
+                                                                                  Texp_construct "::"
+                                                                                  [
+                                                                                    expression (src/tarjan.ml[196,6135+22]..src/tarjan.ml[196,6135+44])
+                                                                                      Texp_field
+                                                                                      expression (src/tarjan.ml[196,6135+22]..src/tarjan.ml[196,6135+29])
+                                                                                        Texp_ident "element/511"
+                                                                                      "representative"
+                                                                                    expression (src/tarjan.ml[196,6135+48]..src/tarjan.ml[196,6135+54])
+                                                                                      Texp_field
+                                                                                      expression (src/tarjan.ml[196,6135+48]..src/tarjan.ml[196,6135+50])
+                                                                                        Texp_ident "dx/507"
+                                                                                      "scc"
+                                                                                  ]
+                                                                              expression (src/tarjan.ml[197,6191+12]..src/tarjan.ml[199,6266+20])
+                                                                                Texp_sequence
+                                                                                expression (src/tarjan.ml[197,6191+12]..src/tarjan.ml[197,6191+39])
+                                                                                  Texp_setfield
+                                                                                  expression (src/tarjan.ml[197,6191+12]..src/tarjan.ml[197,6191+19])
+                                                                                    Texp_ident "element/511"
+                                                                                  "representative"
+                                                                                  expression (src/tarjan.ml[197,6191+38]..src/tarjan.ml[197,6191+39])
+                                                                                    Texp_ident "x/506"
+                                                                                expression (src/tarjan.ml[198,6232+12]..src/tarjan.ml[199,6266+20])
+                                                                                  Texp_ifthenelse
+                                                                                  expression (src/tarjan.ml[198,6232+15]..src/tarjan.ml[198,6232+28])
+                                                                                    Texp_apply
+                                                                                    expression (src/tarjan.ml[198,6232+23]..src/tarjan.ml[198,6232+25])
+                                                                                      Texp_ident "Stdlib!.!="
+                                                                                    [
+                                                                                      <arg>
+                                                                                        Nolabel
+                                                                                        expression (src/tarjan.ml[198,6232+15]..src/tarjan.ml[198,6232+22])
+                                                                                          Texp_ident "element/511"
+                                                                                      <arg>
+                                                                                        Nolabel
+                                                                                        expression (src/tarjan.ml[198,6232+26]..src/tarjan.ml[198,6232+28])
+                                                                                          Texp_ident "dx/507"
+                                                                                    ]
+                                                                                  expression (src/tarjan.ml[199,6266+14]..src/tarjan.ml[199,6266+20])
+                                                                                    Texp_apply
+                                                                                    expression (src/tarjan.ml[199,6266+14]..src/tarjan.ml[199,6266+18])
+                                                                                      Texp_ident "loop/510"
+                                                                                    [
+                                                                                      <arg>
+                                                                                        Nolabel
+                                                                                        expression (src/tarjan.ml[199,6266+18]..src/tarjan.ml[199,6266+20])
+                                                                                          Texp_construct "()"
+                                                                                          []
+                                                                                    ]
+                                                                                  None
+                                                                    ]
+                                                              ]
+                                                              expression (src/tarjan.ml[201,6291+10]..src/tarjan.ml[202,6309+50])
+                                                                Texp_sequence
+                                                                expression (src/tarjan.ml[201,6291+10]..src/tarjan.ml[201,6291+16])
+                                                                  Texp_apply
+                                                                  expression (src/tarjan.ml[201,6291+10]..src/tarjan.ml[201,6291+14])
+                                                                    Texp_ident "loop/510"
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/tarjan.ml[201,6291+14]..src/tarjan.ml[201,6291+16])
+                                                                        Texp_construct "()"
+                                                                        []
+                                                                  ]
+                                                                expression (src/tarjan.ml[202,6309+10]..src/tarjan.ml[202,6309+50])
+                                                                  Texp_apply
+                                                                  expression (src/tarjan.ml[202,6309+26]..src/tarjan.ml[202,6309+28])
+                                                                    Texp_ident "Stdlib!.:="
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/tarjan.ml[202,6309+10]..src/tarjan.ml[202,6309+25])
+                                                                        Texp_ident "representatives/502"
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/tarjan.ml[202,6309+29]..src/tarjan.ml[202,6309+50])
+                                                                        Texp_construct "::"
+                                                                        [
+                                                                          expression (src/tarjan.ml[202,6309+29]..src/tarjan.ml[202,6309+30])
+                                                                            Texp_ident "x/506"
+                                                                          expression (src/tarjan.ml[202,6309+34]..src/tarjan.ml[202,6309+50])
+                                                                            Texp_apply
+                                                                            expression (src/tarjan.ml[202,6309+34]..src/tarjan.ml[202,6309+35])
+                                                                              Texp_ident "Stdlib!.!"
+                                                                            [
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/tarjan.ml[202,6309+35]..src/tarjan.ml[202,6309+50])
+                                                                                  Texp_ident "representatives/502"
+                                                                            ]
+                                                                        ]
+                                                                  ]
+                                                            None
+                                                  ]
+                                            ]
+                                            expression (src/tarjan.ml[206,6377+6]..src/tarjan.ml[206,6377+15])
+                                              Texp_apply
+                                              expression (src/tarjan.ml[206,6377+6]..src/tarjan.ml[206,6377+10])
+                                                Texp_ident "walk/505"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/tarjan.ml[206,6377+11]..src/tarjan.ml[206,6377+15])
+                                                    Texp_ident "root/503"
+                                              ]
+                                    None
+                            ]
+                      ]
+                ]
+              structure_item (src/tarjan.ml[213,6482+2]..src/tarjan.ml[214,6507+28])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[213,6482+6]..src/tarjan.ml[213,6482+20])
+                      Tpat_var "representative/513"
+                    expression (src/tarjan.ml[213,6482+21]..src/tarjan.ml[214,6507+28]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/tarjan.ml[213,6482+21]..src/tarjan.ml[213,6482+22])
+                            Tpat_var "x/515"
+                          expression (src/tarjan.ml[214,6507+4]..src/tarjan.ml[214,6507+28])
+                            Texp_field
+                            expression (src/tarjan.ml[214,6507+4]..src/tarjan.ml[214,6507+13])
+                              Texp_apply
+                              expression (src/tarjan.ml[214,6507+5]..src/tarjan.ml[214,6507+10])
+                                Texp_ident "table/409"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/tarjan.ml[214,6507+11]..src/tarjan.ml[214,6507+12])
+                                    Texp_ident "x/515"
+                              ]
+                            "representative"
+                      ]
+                ]
+              structure_item (src/tarjan.ml[216,6537+2]..src/tarjan.ml[217,6551+17])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[216,6537+6]..src/tarjan.ml[216,6537+9])
+                      Tpat_var "scc/516"
+                    expression (src/tarjan.ml[216,6537+10]..src/tarjan.ml[217,6551+17]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/tarjan.ml[216,6537+10]..src/tarjan.ml[216,6537+11])
+                            Tpat_var "x/518"
+                          expression (src/tarjan.ml[217,6551+4]..src/tarjan.ml[217,6551+17])
+                            Texp_field
+                            expression (src/tarjan.ml[217,6551+4]..src/tarjan.ml[217,6551+13])
+                              Texp_apply
+                              expression (src/tarjan.ml[217,6551+5]..src/tarjan.ml[217,6551+10])
+                                Texp_ident "table/409"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/tarjan.ml[217,6551+11]..src/tarjan.ml[217,6551+12])
+                                    Texp_ident "x/518"
+                              ]
+                            "scc"
+                      ]
+                ]
+              structure_item (src/tarjan.ml[219,6570+2]..src/tarjan.ml[220,6594+34])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[219,6570+6]..src/tarjan.ml[219,6570+21])
+                      Tpat_var "representatives/519"
+                    expression (src/tarjan.ml[220,6594+4]..src/tarjan.ml[220,6594+34])
+                      Texp_apply
+                      expression (src/tarjan.ml[220,6594+4]..src/tarjan.ml[220,6594+17])
+                        Texp_ident "Stdlib!.Array.of_list"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/tarjan.ml[220,6594+18]..src/tarjan.ml[220,6594+34])
+                            Texp_apply
+                            expression (src/tarjan.ml[220,6594+18]..src/tarjan.ml[220,6594+19])
+                              Texp_ident "Stdlib!.!"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[220,6594+19]..src/tarjan.ml[220,6594+34])
+                                  Texp_ident "representatives/502"
+                            ]
+                      ]
+                ]
+              structure_item (src/tarjan.ml[227,6933+2]..src/tarjan.ml[231,7108+23])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[227,6933+6]..src/tarjan.ml[227,6933+11])
+                      Tpat_var "yield/520"
+                    expression (src/tarjan.ml[227,6933+12]..src/tarjan.ml[231,7108+23]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/tarjan.ml[227,6933+12]..src/tarjan.ml[227,6933+18])
+                            Tpat_var "action/522"
+                          expression (src/tarjan.ml[227,6933+19]..src/tarjan.ml[231,7108+23]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/tarjan.ml[227,6933+19]..src/tarjan.ml[227,6933+20])
+                                  Tpat_var "x/523"
+                                expression (src/tarjan.ml[228,6956+6]..src/tarjan.ml[231,7108+23])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/tarjan.ml[228,6956+10]..src/tarjan.ml[228,6956+14])
+                                        Tpat_var "data/524"
+                                      expression (src/tarjan.ml[228,6956+17]..src/tarjan.ml[228,6956+24])
+                                        Texp_apply
+                                        expression (src/tarjan.ml[228,6956+17]..src/tarjan.ml[228,6956+22])
+                                          Texp_ident "table/409"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[228,6956+23]..src/tarjan.ml[228,6956+24])
+                                              Texp_ident "x/523"
+                                        ]
+                                  ]
+                                  expression (src/tarjan.ml[229,6984+6]..src/tarjan.ml[231,7108+23])
+                                    Texp_sequence
+                                    expression (src/tarjan.ml[229,6984+6]..src/tarjan.ml[229,6984+39])
+                                      Texp_assert                                      expression (src/tarjan.ml[229,6984+13]..src/tarjan.ml[229,6984+39])
+                                        Texp_apply
+                                        expression (src/tarjan.ml[229,6984+34]..src/tarjan.ml[229,6984+36])
+                                          Texp_ident "Stdlib!.=="
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[229,6984+14]..src/tarjan.ml[229,6984+33])
+                                              Texp_field
+                                              expression (src/tarjan.ml[229,6984+14]..src/tarjan.ml[229,6984+18])
+                                                Texp_ident "data/524"
+                                              "representative"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[229,6984+37]..src/tarjan.ml[229,6984+38])
+                                              Texp_ident "x/523"
+                                        ]
+                                    expression (src/tarjan.ml[230,7046+6]..src/tarjan.ml[231,7108+23])
+                                      Texp_sequence
+                                      expression (src/tarjan.ml[230,7046+6]..src/tarjan.ml[230,7046+29])
+                                        Texp_assert                                        expression (src/tarjan.ml[230,7046+13]..src/tarjan.ml[230,7046+29])
+                                          Texp_apply
+                                          expression (src/tarjan.ml[230,7046+23]..src/tarjan.ml[230,7046+25])
+                                            Texp_ident "Stdlib!.<>"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/tarjan.ml[230,7046+14]..src/tarjan.ml[230,7046+22])
+                                                Texp_field
+                                                expression (src/tarjan.ml[230,7046+14]..src/tarjan.ml[230,7046+18])
+                                                  Texp_ident "data/524"
+                                                "scc"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/tarjan.ml[230,7046+26]..src/tarjan.ml[230,7046+28])
+                                                Texp_construct "[]"
+                                                []
+                                          ]
+                                      expression (src/tarjan.ml[231,7108+6]..src/tarjan.ml[231,7108+23])
+                                        Texp_apply
+                                        expression (src/tarjan.ml[231,7108+6]..src/tarjan.ml[231,7108+12])
+                                          Texp_ident "action/522"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[231,7108+13]..src/tarjan.ml[231,7108+14])
+                                              Texp_ident "x/523"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/tarjan.ml[231,7108+15]..src/tarjan.ml[231,7108+23])
+                                              Texp_field
+                                              expression (src/tarjan.ml[231,7108+15]..src/tarjan.ml[231,7108+19])
+                                                Texp_ident "data/524"
+                                              "scc"
+                                        ]
+                            ]
+                      ]
+                ]
+              structure_item (src/tarjan.ml[233,7133+2]..src/tarjan.ml[234,7153+45])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[233,7133+6]..src/tarjan.ml[233,7133+10])
+                      Tpat_var "iter/525"
+                    expression (src/tarjan.ml[233,7133+11]..src/tarjan.ml[234,7153+45]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/tarjan.ml[233,7133+11]..src/tarjan.ml[233,7133+17])
+                            Tpat_var "action/527"
+                          expression (src/tarjan.ml[234,7153+4]..src/tarjan.ml[234,7153+45])
+                            Texp_apply
+                            expression (src/tarjan.ml[234,7153+4]..src/tarjan.ml[234,7153+14])
+                              Texp_ident "Stdlib!.Array.iter"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[234,7153+15]..src/tarjan.ml[234,7153+29])
+                                  Texp_apply
+                                  expression (src/tarjan.ml[234,7153+16]..src/tarjan.ml[234,7153+21])
+                                    Texp_ident "yield/520"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/tarjan.ml[234,7153+22]..src/tarjan.ml[234,7153+28])
+                                        Texp_ident "action/527"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[234,7153+30]..src/tarjan.ml[234,7153+45])
+                                  Texp_ident "representatives/519"
+                            ]
+                      ]
+                ]
+              structure_item (src/tarjan.ml[236,7200+2]..src/tarjan.ml[237,7236+50])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/tarjan.ml[236,7200+6]..src/tarjan.ml[236,7200+26])
+                      Tpat_var "rev_topological_iter/528"
+                    expression (src/tarjan.ml[236,7200+27]..src/tarjan.ml[237,7236+50]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/tarjan.ml[236,7200+27]..src/tarjan.ml[236,7200+33])
+                            Tpat_var "action/530"
+                          expression (src/tarjan.ml[237,7236+4]..src/tarjan.ml[237,7236+50])
+                            Texp_apply
+                            expression (src/tarjan.ml[237,7236+4]..src/tarjan.ml[237,7236+19])
+                              Texp_ident "Dune__exe!.MArray.iter_rev"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[237,7236+20]..src/tarjan.ml[237,7236+34])
+                                  Texp_apply
+                                  expression (src/tarjan.ml[237,7236+21]..src/tarjan.ml[237,7236+26])
+                                    Texp_ident "yield/520"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/tarjan.ml[237,7236+27]..src/tarjan.ml[237,7236+33])
+                                        Texp_ident "action/530"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/tarjan.ml[237,7236+35]..src/tarjan.ml[237,7236+50])
+                                  Texp_ident "representatives/519"
+                            ]
+                      ]
+                ]
+            ]
+]
+
+{<Dune__exe__Tarjan>
+ "Run"[module] ->
+   Abs<Dune__exe__Tarjan.44>
+      (G/402,
+       {
+        "iter"[value] -> <Dune__exe__Tarjan.40>;
+        "representative"[value] -> <Dune__exe__Tarjan.31>;
+        "rev_topological_iter"[value] -> <Dune__exe__Tarjan.42>;
+        "scc"[value] -> <Dune__exe__Tarjan.33>;
+        });
+ }
+
+(let
+  (Run/595 =
+     (function G/1041 is_a_functor
+       (let
+         (G/402 =a G/1041
+          table/409 =
+            (let (table/410 = (caml_make_vect (field_imm 0 G/402) 0))
+              (seq
+                (apply (field_imm 3 G/402)
+                  (function x/459 : int
+                    (array.set[addr] table/410
+                      (apply (field_imm 1 G/402) x/459)
+                      (makeblock 0
+                        (makemutable 0 (int,int,int,*,*) 0 0 0 x/459 0)))))
+                (function x/460
+                  (let
+                    (*match*/1037 =
+                       (array.get[addr] table/410
+                         (apply (field_imm 1 G/402) x/460)))
+                    (if (isint *match*/1037)
+                      (raise
+                        (makeblock 0 (global Assert_failure/28!)
+                          [0: "src/tarjan.ml" 105 10]))
+                      (let (dx/461 =a (field_imm 0 *match*/1037)) dx/461))))))
+          scc_stack/462 = (apply (field_imm 1 (global Stdlib__Stack!)) 0)
+          mark/499 =
+            (let (counter/500 = (makemutable 0 (int) 0))
+              (function dx/501 : int
+                (seq (+:=1 counter/500)
+                  (setfield_imm 1 dx/501 (field_int 0 counter/500))
+                  (setfield_imm 2 dx/501 (field_int 0 counter/500)))))
+          representatives/502 = (makemutable 0 0)
+          *match*/1040 =
+            (apply (field_imm 3 G/402)
+              (function root/503 : int
+                (let (droot/504 = (apply table/409 root/503))
+                  (if (== (field_int 1 droot/504) 0)
+                    (seq (apply mark/499 droot/504)
+                      (setfield_imm 0 droot/504 1)
+                      (apply (field_imm 2 (global Stdlib__Stack!)) droot/504
+                        scc_stack/462)
+                      (letrec
+                        (walk/505
+                           (function x/506 : int
+                             (let (dx/507 = (apply table/409 x/506))
+                               (seq
+                                 (apply (field_imm 2 G/402)
+                                   (function y/508 : int
+                                     (let (dy/509 = (apply table/409 y/508))
+                                       (if (== (field_int 1 dy/509) 0)
+                                         (seq (apply mark/499 dy/509)
+                                           (setfield_imm 0 dy/509 1)
+                                           (apply
+                                             (field_imm 2
+                                               (global Stdlib__Stack!))
+                                             dy/509 scc_stack/462)
+                                           (apply walk/505 y/508)
+                                           (if
+                                             (< (field_int 2 dy/509)
+                                               (field_int 2 dx/507))
+                                             (setfield_imm 2 dx/507
+                                               (field_int 2 dy/509))
+                                             0))
+                                         (if
+                                           (&&
+                                             (< (field_int 2 dy/509)
+                                               (field_int 2 dx/507))
+                                             (field_int 0 dy/509))
+                                           (if
+                                             (< (field_int 1 dy/509)
+                                               (field_int 2 dx/507))
+                                             (setfield_imm 2 dx/507
+                                               (field_int 1 dy/509))
+                                             0)
+                                           0))))
+                                   x/506)
+                                 (if
+                                   (== (field_int 2 dx/507)
+                                     (field_int 1 dx/507))
+                                   (letrec
+                                     (loop/510
+                                        (function param/512[int] : int
+                                          (let
+                                            (element/511 =
+                                               (apply
+                                                 (field_imm 3
+                                                   (global Stdlib__Stack!))
+                                                 scc_stack/462))
+                                            (seq
+                                              (setfield_imm 0 element/511 0)
+                                              (setfield_ptr 4 dx/507
+                                                (makeblock 0
+                                                  (field_mut 3 element/511)
+                                                  (field_mut 4 dx/507)))
+                                              (setfield_ptr 3 element/511
+                                                x/506)
+                                              (if (!= element/511 dx/507)
+                                                (apply loop/510 0) 0)))))
+                                     (seq (apply loop/510 0)
+                                       (setfield_ptr 0 representatives/502
+                                         (makeblock 0 x/506
+                                           (field_mut 0 representatives/502)))))
+                                   0)))))
+                        (apply walk/505 root/503)))
+                    0))))
+          representative/513 =
+            (function x/515 (field_mut 3 (apply table/409 x/515)))
+          scc/516 = (function x/518 (field_mut 4 (apply table/409 x/518)))
+          representatives/519 =
+            (apply (field_imm 9 (global Stdlib__Array!))
+              (field_mut 0 representatives/502))
+          yield/520 =
+            (function action/522 x/523
+              (let (data/524 = (apply table/409 x/523))
+                (seq
+                  (if (== (field_mut 3 data/524) x/523) 0
+                    (raise
+                      (makeblock 0 (global Assert_failure/28!)
+                        [0: "src/tarjan.ml" 229 6])))
+                  (if (!= (field_mut 4 data/524) 0) 0
+                    (raise
+                      (makeblock 0 (global Assert_failure/28!)
+                        [0: "src/tarjan.ml" 230 6])))
+                  (apply action/522 x/523 (field_mut 4 data/524)))))
+          iter/525 =
+            (function action/527 : int
+              (apply (field_imm 10 (global Stdlib__Array!))
+                (apply yield/520 action/527) representatives/519))
+          rev_topological_iter/528 =
+            (function action/530 : int
+              (apply (field_imm 48 (global Dune__exe__MArray!))
+                (apply yield/520 action/530) representatives/519)))
+         (makeblock 0 table/409 scc_stack/462 mark/499 representative/513
+           scc/516 representatives/519 yield/520 iter/525
+           rev_topological_iter/528))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__Tarjan!)
+      (function funarg/1042 is_a_functor stub
+        (let (let/1043 = (apply Run/595 funarg/1042))
+          (makeblock 0 (field_mut 3 let/1043) (field_mut 4 let/1043)
+            (field_mut 7 let/1043) (field_mut 8 let/1043)))))
+    0))
+(let
+  (Run/595 =
+     (function G/1041 is_a_functor
+       (let
+         (table/409 =
+            (let (table/410 = (caml_make_vect (field_imm 0 G/1041) 0))
+              (seq
+                (apply (field_imm 3 G/1041)
+                  (function x/459 : int
+                    (array.set[addr] table/410
+                      (apply (field_imm 1 G/1041) x/459)
+                      (makeblock 0
+                        (makemutable 0 (int,int,int,*,*) 0 0 0 x/459 0)))))
+                (function x/460
+                  (let
+                    (*match*/1037 =
+                       (array.get[addr] table/410
+                         (apply (field_imm 1 G/1041) x/460)))
+                    (if (isint *match*/1037)
+                      (raise
+                        (makeblock 0 (global Assert_failure/28!)
+                          [0: "src/tarjan.ml" 105 10]))
+                      (field_imm 0 *match*/1037))))))
+          scc_stack/462 = (apply (field_imm 1 (global Stdlib__Stack!)) 0)
+          mark/499 =
+            (let (counter/500 = (makemutable 0 (int) 0))
+              (function dx/501 : int
+                (seq (+:=1 counter/500)
+                  (setfield_imm 1 dx/501 (field_int 0 counter/500))
+                  (setfield_imm 2 dx/501 (field_int 0 counter/500)))))
+          representatives/502 = (makemutable 0 0)
+          *match*/1040 =
+            (apply (field_imm 3 G/1041)
+              (function root/503 : int
+                (let (droot/504 = (apply table/409 root/503))
+                  (if (== (field_int 1 droot/504) 0)
+                    (seq (apply mark/499 droot/504)
+                      (setfield_imm 0 droot/504 1)
+                      (apply (field_imm 2 (global Stdlib__Stack!)) droot/504
+                        scc_stack/462)
+                      (letrec
+                        (walk/505
+                           (function x/506 : int
+                             (let (dx/507 = (apply table/409 x/506))
+                               (seq
+                                 (apply (field_imm 2 G/1041)
+                                   (function y/508 : int
+                                     (let (dy/509 = (apply table/409 y/508))
+                                       (if (== (field_int 1 dy/509) 0)
+                                         (seq (apply mark/499 dy/509)
+                                           (setfield_imm 0 dy/509 1)
+                                           (apply
+                                             (field_imm 2
+                                               (global Stdlib__Stack!))
+                                             dy/509 scc_stack/462)
+                                           (apply walk/505 y/508)
+                                           (if
+                                             (< (field_int 2 dy/509)
+                                               (field_int 2 dx/507))
+                                             (setfield_imm 2 dx/507
+                                               (field_int 2 dy/509))
+                                             0))
+                                         (if
+                                           (&&
+                                             (< (field_int 2 dy/509)
+                                               (field_int 2 dx/507))
+                                             (field_int 0 dy/509))
+                                           (if
+                                             (< (field_int 1 dy/509)
+                                               (field_int 2 dx/507))
+                                             (setfield_imm 2 dx/507
+                                               (field_int 1 dy/509))
+                                             0)
+                                           0))))
+                                   x/506)
+                                 (if
+                                   (== (field_int 2 dx/507)
+                                     (field_int 1 dx/507))
+                                   (letrec
+                                     (loop/510
+                                        (function param/512[int] : int
+                                          (let
+                                            (element/511 =
+                                               (apply
+                                                 (field_imm 3
+                                                   (global Stdlib__Stack!))
+                                                 scc_stack/462))
+                                            (seq
+                                              (setfield_imm 0 element/511 0)
+                                              (setfield_ptr 4 dx/507
+                                                (makeblock 0
+                                                  (field_mut 3 element/511)
+                                                  (field_mut 4 dx/507)))
+                                              (setfield_ptr 3 element/511
+                                                x/506)
+                                              (if (!= element/511 dx/507)
+                                                (apply loop/510 0) 0)))))
+                                     (seq (apply loop/510 0)
+                                       (setfield_ptr 0 representatives/502
+                                         (makeblock 0 x/506
+                                           (field_mut 0 representatives/502)))))
+                                   0)))))
+                        (apply walk/505 root/503)))
+                    0))))
+          representative/513 =
+            (function x/515 (field_mut 3 (apply table/409 x/515)))
+          scc/516 = (function x/518 (field_mut 4 (apply table/409 x/518)))
+          representatives/519 =
+            (apply (field_imm 9 (global Stdlib__Array!))
+              (field_mut 0 representatives/502))
+          yield/520 =
+            (function action/522 x/523
+              (let (data/524 = (apply table/409 x/523))
+                (seq
+                  (if (== (field_mut 3 data/524) x/523) 0
+                    (raise
+                      (makeblock 0 (global Assert_failure/28!)
+                        [0: "src/tarjan.ml" 229 6])))
+                  (if (!= (field_mut 4 data/524) 0) 0
+                    (raise
+                      (makeblock 0 (global Assert_failure/28!)
+                        [0: "src/tarjan.ml" 230 6])))
+                  (apply action/522 x/523 (field_mut 4 data/524)))))
+          iter/525 =
+            (function action/527 : int
+              (apply (field_imm 10 (global Stdlib__Array!))
+                (apply yield/520 action/527) representatives/519))
+          rev_topological_iter/528 =
+            (function action/530 : int
+              (apply (field_imm 48 (global Dune__exe__MArray!))
+                (apply yield/520 action/530) representatives/519)))
+         (makeblock 0 table/409 scc_stack/462 mark/499 representative/513
+           scc/516 representatives/519 yield/520 iter/525
+           rev_topological_iter/528))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__Tarjan!)
+      (function funarg/1042 is_a_functor stub
+        (let (let/1043 = (apply Run/595 funarg/1042))
+          (makeblock 0 (field_mut 3 let/1043) (field_mut 4 let/1043)
+            (field_mut 7 let/1043) (field_mut 8 let/1043)))))
+    0))

@@ -1,0 +1,249 @@
+[
+  signature_item (src/sentenceParser.mli[1,29+0]..[19,393+1])
+    Psig_type Rec
+    [
+      type_declaration "token" (src/sentenceParser.mli[1,29+5]..[1,29+10]) (src/sentenceParser.mli[1,29+0]..[19,393+1])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/sentenceParser.mli[2,42+2]..[2,42+9])
+                "COLON" (src/sentenceParser.mli[2,42+4]..[2,42+9])
+                []
+                None
+              (src/sentenceParser.mli[3,52+2]..[3,52+7])
+                "EOF" (src/sentenceParser.mli[3,52+4]..[3,52+7])
+                []
+                None
+              (src/sentenceParser.mli[4,60+2]..[4,60+7])
+                "EOL" (src/sentenceParser.mli[4,60+4]..[4,60+7])
+                []
+                None
+              (src/sentenceParser.mli[5,68+2]..[9,181+1])
+                "TERMINAL" (src/sentenceParser.mli[5,68+4]..[5,68+12])
+                [
+                  core_type (src/sentenceParser.mly[29,116+7]..[29,116+35])
+                    Ptyp_constr "SentenceParserAux.raw_symbol" (src/sentenceParser.mly[29,116+7]..[29,116+35])
+                    []
+                ]
+                None
+              (src/sentenceParser.mli[10,183+2]..[14,300+1])
+                "NONTERMINAL" (src/sentenceParser.mli[10,183+4]..[10,183+15])
+                [
+                  core_type (src/sentenceParser.mly[30,234+7]..[30,234+35])
+                    Ptyp_constr "SentenceParserAux.raw_symbol" (src/sentenceParser.mly[30,234+7]..[30,234+35])
+                    []
+                ]
+                None
+              (src/sentenceParser.mli[15,302+2]..[19,393+1])
+                "COMMENT" (src/sentenceParser.mli[15,302+4]..[15,302+11])
+                [
+                  core_type (src/sentenceParser.mly[31,349+7]..[31,349+13])
+                    Ptyp_constr "string" (src/sentenceParser.mly[31,349+7]..[31,349+13])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/sentenceParser.mli[21,396+0]..[22,420+85])
+    Psig_value
+    value_description "optional_sentence" (src/sentenceParser.mli[21,396+4]..[21,396+21]) (src/sentenceParser.mli[21,396+0]..[22,420+85])
+      core_type (src/sentenceParser.mli[22,420+2]..[22,420+85])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/sentenceParser.mli[22,420+3]..[22,420+26])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[22,420+3]..[22,420+16])
+            Ptyp_constr "Lexing.lexbuf" (src/sentenceParser.mli[22,420+3]..[22,420+16])
+            []
+          core_type (src/sentenceParser.mli[22,420+21]..[22,420+26])
+            Ptyp_constr "token" (src/sentenceParser.mli[22,420+21]..[22,420+26])
+            []
+        core_type (src/sentenceParser.mli[22,420+31]..[22,420+85])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[22,420+31]..[22,420+44])
+            Ptyp_constr "Lexing.lexbuf" (src/sentenceParser.mli[22,420+31]..[22,420+44])
+            []
+          core_type (src/sentenceParser.mli[22,420+48]..[22,420+85])
+            Ptyp_constr "option" (src/sentenceParser.mli[22,420+79]..[22,420+85])
+            [
+              core_type (src/sentenceParser.mli[22,420+48]..[22,420+78])
+                Ptyp_constr "SentenceParserAux.raw_sentence" (src/sentenceParser.mli[22,420+48]..[22,420+78])
+                []
+            ]
+      []
+  signature_item (src/sentenceParser.mli[23,506+0]..[24,518+120])
+    Psig_value
+    value_description "entry" (src/sentenceParser.mli[23,506+4]..[23,506+9]) (src/sentenceParser.mli[23,506+0]..[24,518+120])
+      core_type (src/sentenceParser.mli[24,518+2]..[24,518+120])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/sentenceParser.mli[24,518+3]..[24,518+26])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[24,518+3]..[24,518+16])
+            Ptyp_constr "Lexing.lexbuf" (src/sentenceParser.mli[24,518+3]..[24,518+16])
+            []
+          core_type (src/sentenceParser.mli[24,518+21]..[24,518+26])
+            Ptyp_constr "token" (src/sentenceParser.mli[24,518+21]..[24,518+26])
+            []
+        core_type (src/sentenceParser.mli[24,518+31]..[24,518+120])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[24,518+31]..[24,518+44])
+            Ptyp_constr "Lexing.lexbuf" (src/sentenceParser.mli[24,518+31]..[24,518+44])
+            []
+          core_type (src/sentenceParser.mli[24,518+48]..[24,518+120])
+            Ptyp_constr "list" (src/sentenceParser.mli[24,518+116]..[24,518+120])
+            [
+              core_type (src/sentenceParser.mli[24,518+48]..[24,518+115])
+                Ptyp_constr "SentenceParserAux.or_comment" (src/sentenceParser.mli[24,518+87]..[24,518+115])
+                [
+                  core_type (src/sentenceParser.mli[24,518+48]..[24,518+86])
+                    Ptyp_constr "SentenceParserAux.located_raw_sentence" (src/sentenceParser.mli[24,518+48]..[24,518+86])
+                    []
+                ]
+            ]
+      []
+]
+
+type token =
+  | COLON 
+  | EOF 
+  | EOL 
+  | TERMINAL of SentenceParserAux.raw_symbol 
+  | NONTERMINAL of SentenceParserAux.raw_symbol 
+  | COMMENT of string 
+val optional_sentence :
+  (Lexing.lexbuf -> token) ->
+    Lexing.lexbuf -> SentenceParserAux.raw_sentence option
+val entry :
+  (Lexing.lexbuf -> token) ->
+    Lexing.lexbuf ->
+      SentenceParserAux.located_raw_sentence SentenceParserAux.or_comment
+        list
+[
+  signature_item (src/sentenceParser.mli[1,29+0]..src/sentenceParser.mli[19,393+1])
+    Tsig_type Rec
+    [
+      type_declaration token/396 (src/sentenceParser.mli[1,29+0]..src/sentenceParser.mli[19,393+1])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/sentenceParser.mli[2,42+2]..src/sentenceParser.mli[2,42+9])
+                COLON/397
+                []
+                None
+              (src/sentenceParser.mli[3,52+2]..src/sentenceParser.mli[3,52+7])
+                EOF/398
+                []
+                None
+              (src/sentenceParser.mli[4,60+2]..src/sentenceParser.mli[4,60+7])
+                EOL/399
+                []
+                None
+              (src/sentenceParser.mli[5,68+2]..src/sentenceParser.mli[9,181+1])
+                TERMINAL/400
+                [
+                  core_type (src/sentenceParser.mly[29,116+7]..src/sentenceParser.mly[29,116+35])
+                    Ttyp_constr "Dune__exe!.SentenceParserAux.raw_symbol"
+                    []
+                ]
+                None
+              (src/sentenceParser.mli[10,183+2]..src/sentenceParser.mli[14,300+1])
+                NONTERMINAL/416
+                [
+                  core_type (src/sentenceParser.mly[30,234+7]..src/sentenceParser.mly[30,234+35])
+                    Ttyp_constr "Dune__exe!.SentenceParserAux.raw_symbol"
+                    []
+                ]
+                None
+              (src/sentenceParser.mli[15,302+2]..src/sentenceParser.mli[19,393+1])
+                COMMENT/417
+                [
+                  core_type (src/sentenceParser.mly[31,349+7]..src/sentenceParser.mly[31,349+13])
+                    Ttyp_constr "string/15!"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/sentenceParser.mli[21,396+0]..src/sentenceParser.mli[22,420+85])
+    Tsig_value
+    value_description optional_sentence/466 (src/sentenceParser.mli[21,396+0]..src/sentenceParser.mli[22,420+85])
+      core_type (src/sentenceParser.mli[22,420+2]..src/sentenceParser.mli[22,420+85])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/sentenceParser.mli[22,420+3]..src/sentenceParser.mli[22,420+26])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[22,420+3]..src/sentenceParser.mli[22,420+16])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (src/sentenceParser.mli[22,420+21]..src/sentenceParser.mli[22,420+26])
+            Ttyp_constr "token/396"
+            []
+        core_type (src/sentenceParser.mli[22,420+31]..src/sentenceParser.mli[22,420+85])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[22,420+31]..src/sentenceParser.mli[22,420+44])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (src/sentenceParser.mli[22,420+48]..src/sentenceParser.mli[22,420+85])
+            Ttyp_constr "option/10!"
+            [
+              core_type (src/sentenceParser.mli[22,420+48]..src/sentenceParser.mli[22,420+78])
+                Ttyp_constr "Dune__exe!.SentenceParserAux.raw_sentence"
+                []
+            ]
+      []
+  signature_item (src/sentenceParser.mli[23,506+0]..src/sentenceParser.mli[24,518+120])
+    Tsig_value
+    value_description entry/467 (src/sentenceParser.mli[23,506+0]..src/sentenceParser.mli[24,518+120])
+      core_type (src/sentenceParser.mli[24,518+2]..src/sentenceParser.mli[24,518+120])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/sentenceParser.mli[24,518+3]..src/sentenceParser.mli[24,518+26])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[24,518+3]..src/sentenceParser.mli[24,518+16])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (src/sentenceParser.mli[24,518+21]..src/sentenceParser.mli[24,518+26])
+            Ttyp_constr "token/396"
+            []
+        core_type (src/sentenceParser.mli[24,518+31]..src/sentenceParser.mli[24,518+120])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/sentenceParser.mli[24,518+31]..src/sentenceParser.mli[24,518+44])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (src/sentenceParser.mli[24,518+48]..src/sentenceParser.mli[24,518+120])
+            Ttyp_constr "list/9!"
+            [
+              core_type (src/sentenceParser.mli[24,518+48]..src/sentenceParser.mli[24,518+115])
+                Ttyp_constr "Dune__exe!.SentenceParserAux.or_comment"
+                [
+                  core_type (src/sentenceParser.mli[24,518+48]..src/sentenceParser.mli[24,518+86])
+                    Ttyp_constr "Dune__exe!.SentenceParserAux.located_raw_sentence"
+                    []
+                ]
+            ]
+      []
+]
+

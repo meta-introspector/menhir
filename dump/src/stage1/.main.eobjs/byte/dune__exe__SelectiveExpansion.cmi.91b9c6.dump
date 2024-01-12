@@ -1,0 +1,118 @@
+[
+  signature_item (src/SelectiveExpansion.mli[14,1009+0]..[14,1009+11])
+    Psig_open Fresh "Syntax" (src/SelectiveExpansion.mli[14,1009+5]..[14,1009+11])
+  signature_item (src/SelectiveExpansion.mli[15,1021+0]..[15,1021+18])
+    Psig_open Fresh "SortInference" (src/SelectiveExpansion.mli[15,1021+5]..[15,1021+18])
+  signature_item (src/SelectiveExpansion.mli[34,1983+0]..[36,2016+13])
+    Psig_type Rec
+    [
+      type_declaration "mode" (src/SelectiveExpansion.mli[34,1983+5]..[34,1983+9]) (src/SelectiveExpansion.mli[34,1983+0]..[36,2016+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/SelectiveExpansion.mli[35,1995+2]..[35,1995+20])
+                "ExpandHigherSort" (src/SelectiveExpansion.mli[35,1995+4]..[35,1995+20])
+                []
+                None
+              (src/SelectiveExpansion.mli[36,2016+2]..[36,2016+13])
+                "ExpandAll" (src/SelectiveExpansion.mli[36,2016+4]..[36,2016+13])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SelectiveExpansion.mli[38,2031+0]..[38,2031+47])
+    Psig_value
+    value_description "expand" (src/SelectiveExpansion.mli[38,2031+4]..[38,2031+10]) (src/SelectiveExpansion.mli[38,2031+0]..[38,2031+47])
+      core_type (src/SelectiveExpansion.mli[38,2031+12]..[38,2031+47])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/SelectiveExpansion.mli[38,2031+12]..[38,2031+16])
+          Ptyp_constr "mode" (src/SelectiveExpansion.mli[38,2031+12]..[38,2031+16])
+          []
+        core_type (src/SelectiveExpansion.mli[38,2031+20]..[38,2031+47])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/SelectiveExpansion.mli[38,2031+20]..[38,2031+25])
+            Ptyp_constr "sorts" (src/SelectiveExpansion.mli[38,2031+20]..[38,2031+25])
+            []
+          core_type (src/SelectiveExpansion.mli[38,2031+29]..[38,2031+47])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/SelectiveExpansion.mli[38,2031+29]..[38,2031+36])
+              Ptyp_constr "grammar" (src/SelectiveExpansion.mli[38,2031+29]..[38,2031+36])
+              []
+            core_type (src/SelectiveExpansion.mli[38,2031+40]..[38,2031+47])
+              Ptyp_constr "grammar" (src/SelectiveExpansion.mli[38,2031+40]..[38,2031+47])
+              []
+      []
+]
+
+open Syntax
+open SortInference
+type mode =
+  | ExpandHigherSort 
+  | ExpandAll 
+val expand : mode -> sorts -> grammar -> grammar
+[
+  signature_item (src/SelectiveExpansion.mli[14,1009+0]..src/SelectiveExpansion.mli[14,1009+11])
+    Tsig_open Fresh "Dune__exe!.Syntax"
+  signature_item (src/SelectiveExpansion.mli[15,1021+0]..src/SelectiveExpansion.mli[15,1021+18])
+    Tsig_open Fresh "Dune__exe!.SortInference"
+  signature_item (src/SelectiveExpansion.mli[34,1983+0]..src/SelectiveExpansion.mli[36,2016+13])
+    Tsig_type Rec
+    [
+      type_declaration mode/433 (src/SelectiveExpansion.mli[34,1983+0]..src/SelectiveExpansion.mli[36,2016+13])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/SelectiveExpansion.mli[35,1995+2]..src/SelectiveExpansion.mli[35,1995+20])
+                ExpandHigherSort/434
+                []
+                None
+              (src/SelectiveExpansion.mli[36,2016+2]..src/SelectiveExpansion.mli[36,2016+13])
+                ExpandAll/435
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/SelectiveExpansion.mli[38,2031+0]..src/SelectiveExpansion.mli[38,2031+47])
+    Tsig_value
+    value_description expand/436 (src/SelectiveExpansion.mli[38,2031+0]..src/SelectiveExpansion.mli[38,2031+47])
+      core_type (src/SelectiveExpansion.mli[38,2031+12]..src/SelectiveExpansion.mli[38,2031+47])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/SelectiveExpansion.mli[38,2031+12]..src/SelectiveExpansion.mli[38,2031+16])
+          Ttyp_constr "mode/433"
+          []
+        core_type (src/SelectiveExpansion.mli[38,2031+20]..src/SelectiveExpansion.mli[38,2031+47])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/SelectiveExpansion.mli[38,2031+20]..src/SelectiveExpansion.mli[38,2031+25])
+            Ttyp_constr "Dune__exe!.SortInference.sorts"
+            []
+          core_type (src/SelectiveExpansion.mli[38,2031+29]..src/SelectiveExpansion.mli[38,2031+47])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/SelectiveExpansion.mli[38,2031+29]..src/SelectiveExpansion.mli[38,2031+36])
+              Ttyp_constr "Dune__exe!.Syntax.grammar"
+              []
+            core_type (src/SelectiveExpansion.mli[38,2031+40]..src/SelectiveExpansion.mli[38,2031+47])
+              Ttyp_constr "Dune__exe!.Syntax.grammar"
+              []
+      []
+]
+

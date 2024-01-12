@@ -1,0 +1,1228 @@
+[
+  signature_item (src/invariant.mli[31,1723+0]..[31,1723+12])
+    Psig_open Fresh "Grammar" (src/invariant.mli[31,1723+5]..[31,1723+12])
+  signature_item (src/invariant.mli[37,1908+0]..[72,3406+1])
+    Psig_type Rec
+    [
+      type_declaration "cell" (src/invariant.mli[37,1908+5]..[37,1908+9]) (src/invariant.mli[37,1908+0]..[72,3406+1])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/invariant.mli[36,1858+0]..[36,1858+49])
+              Pstr_eval
+              expression (src/invariant.mli[36,1858+0]..[36,1858+49])
+                Pexp_constant PConst_string("A cell is a representation of a stack cell. ",(src/invariant.mli[36,1858+0]..[36,1858+49]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/invariant.mli[39,1931+2]..[39,1931+19])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[40,1951+2]..[43,2160+32])
+                      Pstr_eval
+                      expression (src/invariant.mli[40,1951+2]..[43,2160+32])
+                        Pexp_constant PConst_string("The symbol associated with this cell. This symbol determines the\n     presence and the type of the semantic value stored in this cell.\n     It also determines whether a start position and an end position\n     are stored in this cell. ",(src/invariant.mli[40,1951+2]..[43,2160+32]),None)
+                  ]
+                Immutable
+                "symbol" (src/invariant.mli[39,1931+2]..[39,1931+8])                core_type (src/invariant.mli[39,1931+10]..[39,1931+18])
+                  Ptyp_constr "Symbol.t" (src/invariant.mli[39,1931+10]..[39,1931+18])
+                  []
+              (src/invariant.mli[45,2194+2]..[45,2194+24])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[46,2219+2]..[50,2516+60])
+                      Pstr_eval
+                      expression (src/invariant.mli[46,2219+2]..[50,2516+60])
+                        Pexp_constant PConst_string("A set of possible states such that the state that is stored in this\n     cell (or would be stored in this cell) must be a member of this set.\n     The states in this set have the property that either all of them are\n     represented, in which case [holds_state] is [true], or none of them is\n     represented, in which case [holds_state] is [false]. ",(src/invariant.mli[46,2219+2]..[50,2516+60]),None)
+                  ]
+                Immutable
+                "states" (src/invariant.mli[45,2194+2]..[45,2194+8])                core_type (src/invariant.mli[45,2194+10]..[45,2194+23])
+                  Ptyp_constr "Lr1.NodeSet.t" (src/invariant.mli[45,2194+10]..[45,2194+23])
+                  []
+              (src/invariant.mli[52,2578+2]..[52,2578+19])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[53,2598+2]..[59,3026+59])
+                      Pstr_eval
+                      expression (src/invariant.mli[53,2598+2]..[59,3026+59])
+                        Pexp_constant PConst_string("Whether a semantic value is stored in this cell. By convention, if\n     [symbol] is a nonterminal symbol, then a semantic value is stored.\n     (We do not attempt to detect the situation where the semantic value\n     could be omitted because it has type [unit], or the situation where\n     it could be omitted because it is never used.) If [symbol] is a\n     terminal symbol, then a semantic value is stored if and only if\n     the [%token] declaration was annotated with a type. ",(src/invariant.mli[53,2598+2]..[59,3026+59]),None)
+                  ]
+                Immutable
+                "holds_semv" (src/invariant.mli[52,2578+2]..[52,2578+12])                core_type (src/invariant.mli[52,2578+14]..[52,2578+18])
+                  Ptyp_constr "bool" (src/invariant.mli[52,2578+14]..[52,2578+18])
+                  []
+              (src/invariant.mli[61,3087+2]..[61,3087+20])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[62,3108+2]..[62,3108+47])
+                      Pstr_eval
+                      expression (src/invariant.mli[62,3108+2]..[62,3108+47])
+                        Pexp_constant PConst_string("Whether a state is stored in this cell. ",(src/invariant.mli[62,3108+2]..[62,3108+47]),None)
+                  ]
+                Immutable
+                "holds_state" (src/invariant.mli[61,3087+2]..[61,3087+13])                core_type (src/invariant.mli[61,3087+15]..[61,3087+19])
+                  Ptyp_constr "bool" (src/invariant.mli[61,3087+15]..[61,3087+19])
+                  []
+              (src/invariant.mli[64,3157+2]..[64,3157+21])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[65,3179+2]..[66,3247+34])
+                      Pstr_eval
+                      expression (src/invariant.mli[65,3179+2]..[66,3247+34])
+                        Pexp_constant PConst_string("Whether a start position is stored in this cell. This decision\n     is a function of [symbol]. ",(src/invariant.mli[65,3179+2]..[66,3247+34]),None)
+                  ]
+                Immutable
+                "holds_startp" (src/invariant.mli[64,3157+2]..[64,3157+14])                core_type (src/invariant.mli[64,3157+16]..[64,3157+20])
+                  Ptyp_constr "bool" (src/invariant.mli[64,3157+16]..[64,3157+20])
+                  []
+              (src/invariant.mli[68,3283+2]..[68,3283+19])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[69,3303+2]..[70,3370+34])
+                      Pstr_eval
+                      expression (src/invariant.mli[69,3303+2]..[70,3370+34])
+                        Pexp_constant PConst_string("Whether an end position is stored in this cell. This decision\n     is a function of [symbol]. ",(src/invariant.mli[69,3303+2]..[70,3370+34]),None)
+                  ]
+                Immutable
+                "holds_endp" (src/invariant.mli[68,3283+2]..[68,3283+12])                core_type (src/invariant.mli[68,3283+14]..[68,3283+18])
+                  Ptyp_constr "bool" (src/invariant.mli[68,3283+14]..[68,3283+18])
+                  []
+            ]
+        ptype_private = Private
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/invariant.mli[78,3645+0]..[79,3657+12])
+    Psig_type Rec
+    [
+      type_declaration "word" (src/invariant.mli[78,3645+5]..[78,3645+9]) (src/invariant.mli[78,3645+0]..[79,3657+12])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/invariant.mli[74,3409+0]..[77,3628+16])
+              Pstr_eval
+              expression (src/invariant.mli[74,3409+0]..[77,3628+16])
+                Pexp_constant PConst_string("A word is a representation of a stack suffix. A word is an immutable\n   array of cells, whose right end represents the top of the stack. Thus,\n   the index 0 in the array corresponds to the cell that lies deepest in\n   the stack. ",(src/invariant.mli[74,3409+0]..[77,3628+16]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/invariant.mli[79,3657+2]..[79,3657+12])
+              Ptyp_constr "array" (src/invariant.mli[79,3657+7]..[79,3657+12])
+              [
+                core_type (src/invariant.mli[79,3657+2]..[79,3657+6])
+                  Ptyp_constr "cell" (src/invariant.mli[79,3657+2]..[79,3657+6])
+                  []
+              ]
+    ]
+  signature_item (src/invariant.mli[84,3850+0]..[84,3850+33])
+    Psig_value
+    value_description "similar" (src/invariant.mli[84,3850+4]..[84,3850+11]) (src/invariant.mli[84,3850+0]..[84,3850+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[81,3671+0]..[83,3816+33])
+            Pstr_eval
+            expression (src/invariant.mli[81,3671+0]..[83,3816+33])
+              Pexp_constant PConst_string("[similar] determines whether two stack cells have the same layout in\n   memory, that is, the same OCaml type. This is equivalent to comparing\n   all fields except [states]. ",(src/invariant.mli[81,3671+0]..[83,3816+33]),None)
+        ]
+      core_type (src/invariant.mli[84,3850+13]..[84,3850+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[84,3850+13]..[84,3850+17])
+          Ptyp_constr "cell" (src/invariant.mli[84,3850+13]..[84,3850+17])
+          []
+        core_type (src/invariant.mli[84,3850+21]..[84,3850+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/invariant.mli[84,3850+21]..[84,3850+25])
+            Ptyp_constr "cell" (src/invariant.mli[84,3850+21]..[84,3850+25])
+            []
+          core_type (src/invariant.mli[84,3850+29]..[84,3850+33])
+            Ptyp_constr "bool" (src/invariant.mli[84,3850+29]..[84,3850+33])
+            []
+      []
+  signature_item (src/invariant.mli[87,3961+0]..[87,3961+21])
+    Psig_value
+    value_description "pop" (src/invariant.mli[87,3961+4]..[87,3961+7]) (src/invariant.mli[87,3961+0]..[87,3961+21])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[86,3885+0]..[86,3885+75])
+            Pstr_eval
+            expression (src/invariant.mli[86,3885+0]..[86,3885+75])
+              Pexp_constant PConst_string("[pop w] is the stack [w], deprived of its top element (if it exists). ",(src/invariant.mli[86,3885+0]..[86,3885+75]),None)
+        ]
+      core_type (src/invariant.mli[87,3961+9]..[87,3961+21])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[87,3961+9]..[87,3961+13])
+          Ptyp_constr "word" (src/invariant.mli[87,3961+9]..[87,3961+13])
+          []
+        core_type (src/invariant.mli[87,3961+17]..[87,3961+21])
+          Ptyp_constr "word" (src/invariant.mli[87,3961+17]..[87,3961+21])
+          []
+      []
+  signature_item (src/invariant.mli[91,4134+0]..[91,4134+46])
+    Psig_value
+    value_description "fold_top" (src/invariant.mli[91,4134+4]..[91,4134+12]) (src/invariant.mli[91,4134+0]..[91,4134+46])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[89,3984+0]..[90,4057+76])
+            Pstr_eval
+            expression (src/invariant.mli[89,3984+0]..[90,4057+76])
+              Pexp_constant PConst_string("[fold_top f default w] returns [f cell], where [cell] is the top cell\n   in the stack [w], if [w] is nonempty. Otherwise, it returns [default]. ",(src/invariant.mli[89,3984+0]..[90,4057+76]),None)
+        ]
+      core_type (src/invariant.mli[91,4134+14]..[91,4134+46])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[91,4134+15]..[91,4134+25])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/invariant.mli[91,4134+15]..[91,4134+19])
+            Ptyp_constr "cell" (src/invariant.mli[91,4134+15]..[91,4134+19])
+            []
+          core_type (src/invariant.mli[91,4134+23]..[91,4134+25])
+            Ptyp_var a
+        core_type (src/invariant.mli[91,4134+30]..[91,4134+46])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/invariant.mli[91,4134+30]..[91,4134+32])
+            Ptyp_var a
+          core_type (src/invariant.mli[91,4134+36]..[91,4134+46])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/invariant.mli[91,4134+36]..[91,4134+40])
+              Ptyp_constr "word" (src/invariant.mli[91,4134+36]..[91,4134+40])
+              []
+            core_type (src/invariant.mli[91,4134+44]..[91,4134+46])
+              Ptyp_var a
+      []
+  signature_item (src/invariant.mli[96,4298+0]..[115,5178+3])
+    Psig_modtype "STACK" (src/invariant.mli[96,4298+12]..[96,4298+17])
+      module_type (src/invariant.mli[96,4298+20]..[115,5178+3])
+        Pmty_signature
+        [
+          signature_item (src/invariant.mli[99,4388+2]..[99,4388+29])
+            Psig_value
+            value_description "stack" (src/invariant.mli[99,4388+6]..[99,4388+11]) (src/invariant.mli[99,4388+2]..[99,4388+29])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[98,4323+2]..[98,4323+64])
+                    Pstr_eval
+                    expression (src/invariant.mli[98,4323+2]..[98,4323+64])
+                      Pexp_constant PConst_string("[stack s] is the known suffix of the stack at state [s]. ",(src/invariant.mli[98,4323+2]..[98,4323+64]),None)
+                ]
+              core_type (src/invariant.mli[99,4388+13]..[99,4388+29])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/invariant.mli[99,4388+13]..[99,4388+21])
+                  Ptyp_constr "Lr1.node" (src/invariant.mli[99,4388+13]..[99,4388+21])
+                  []
+                core_type (src/invariant.mli[99,4388+25]..[99,4388+29])
+                  Ptyp_constr "word" (src/invariant.mli[99,4388+25]..[99,4388+29])
+                  []
+              []
+          signature_item (src/invariant.mli[106,4778+2]..[106,4778+41])
+            Psig_value
+            value_description "prodstack" (src/invariant.mli[106,4778+6]..[106,4778+15]) (src/invariant.mli[106,4778+2]..[106,4778+41])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[101,4419+2]..[105,4712+65])
+                    Pstr_eval
+                    expression (src/invariant.mli[101,4419+2]..[105,4712+65])
+                      Pexp_constant PConst_string("[prodstack prod] is the known suffix of the stack at a state where\n     production [prod] can be reduced. In the short invariant, the length of\n     this suffix is [Production.length prod]. In the long invariant, its\n     length can be greater. If there are no states where [prod] can be\n     reduced, then every cell contains an empty set of states. ",(src/invariant.mli[101,4419+2]..[105,4712+65]),None)
+                ]
+              core_type (src/invariant.mli[106,4778+17]..[106,4778+41])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/invariant.mli[106,4778+17]..[106,4778+33])
+                  Ptyp_constr "Production.index" (src/invariant.mli[106,4778+17]..[106,4778+33])
+                  []
+                core_type (src/invariant.mli[106,4778+37]..[106,4778+41])
+                  Ptyp_constr "word" (src/invariant.mli[106,4778+37]..[106,4778+41])
+                  []
+              []
+          signature_item (src/invariant.mli[113,5138+2]..[113,5138+38])
+            Psig_value
+            value_description "gotostack" (src/invariant.mli[113,5138+6]..[113,5138+15]) (src/invariant.mli[113,5138+2]..[113,5138+38])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[108,4821+2]..[112,5118+19])
+                    Pstr_eval
+                    expression (src/invariant.mli[108,4821+2]..[112,5118+19])
+                      Pexp_constant PConst_string("[gotostack nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. In the short invariant, the\n     length of this suffix is [1]: indeed, it consists of just one cell,\n     associated with the symbol [nt]. In the long invariant, its length can\n     be greater. ",(src/invariant.mli[108,4821+2]..[112,5118+19]),None)
+                ]
+              core_type (src/invariant.mli[113,5138+17]..[113,5138+38])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/invariant.mli[113,5138+17]..[113,5138+30])
+                  Ptyp_constr "Nonterminal.t" (src/invariant.mli[113,5138+17]..[113,5138+30])
+                  []
+                core_type (src/invariant.mli[113,5138+34]..[113,5138+38])
+                  Ptyp_constr "word" (src/invariant.mli[113,5138+34]..[113,5138+38])
+                  []
+              []
+        ]
+  signature_item (src/invariant.mli[117,5183+0]..[117,5183+13])
+    Psig_include
+    module_type (src/invariant.mli[117,5183+8]..[117,5183+13])
+      Pmty_ident "STACK" (src/invariant.mli[117,5183+8]..[117,5183+13])
+  signature_item (src/invariant.mli[122,5319+0]..[128,5402+29])
+    Psig_type Rec
+    [
+      type_declaration "instruction" (src/invariant.mli[122,5319+5]..[122,5319+16]) (src/invariant.mli[122,5319+0]..[124,5346+26])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/invariant.mli[123,5338+2]..[123,5338+7])
+                "Die" (src/invariant.mli[123,5338+4]..[123,5338+7])
+                []
+                None
+              (src/invariant.mli[124,5346+2]..[124,5346+26])
+                "DownTo" (src/invariant.mli[124,5346+4]..[124,5346+10])
+                [
+                  core_type (src/invariant.mli[124,5346+14]..[124,5346+18])
+                    Ptyp_constr "word" (src/invariant.mli[124,5346+14]..[124,5346+18])
+                    []
+                  core_type (src/invariant.mli[124,5346+21]..[124,5346+26])
+                    Ptyp_constr "state" (src/invariant.mli[124,5346+21]..[124,5346+26])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "state" (src/invariant.mli[126,5374+4]..[126,5374+9]) (src/invariant.mli[126,5374+0]..[128,5402+29])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/invariant.mli[127,5386+2]..[127,5386+15])
+                "Represented" (src/invariant.mli[127,5386+4]..[127,5386+15])
+                []
+                None
+              (src/invariant.mli[128,5402+2]..[128,5402+29])
+                "UnRepresented" (src/invariant.mli[128,5402+4]..[128,5402+17])
+                [
+                  core_type (src/invariant.mli[128,5402+21]..[128,5402+29])
+                    Ptyp_constr "Lr1.node" (src/invariant.mli[128,5402+21]..[128,5402+29])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/invariant.mli[138,5928+0]..[138,5928+35])
+    Psig_value
+    value_description "rewind" (src/invariant.mli[138,5928+4]..[138,5928+10]) (src/invariant.mli[138,5928+0]..[138,5928+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[130,5433+0]..[137,5897+30])
+            Pstr_eval
+            expression (src/invariant.mli[130,5433+0]..[137,5897+30])
+              Pexp_constant PConst_string("[rewind s] explains how to rewind the stack when dealing with an\n   error in state [s]. It produces an instruction to either die\n   (because no state on the stack can handle errors) or pop a suffix\n   of the stack. In the latter case, one reaches a state that is\n   either represented (its identity is physically stored in the\n   bottommost cell that is popped) or unrepresented (its identity is\n   statically known). This function is used only in the [legacy]\n   error-handling strategy. ",(src/invariant.mli[130,5433+0]..[137,5897+30]),None)
+        ]
+      core_type (src/invariant.mli[138,5928+12]..[138,5928+35])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[138,5928+12]..[138,5928+20])
+          Ptyp_constr "Lr1.node" (src/invariant.mli[138,5928+12]..[138,5928+20])
+          []
+        core_type (src/invariant.mli[138,5928+24]..[138,5928+35])
+          Ptyp_constr "instruction" (src/invariant.mli[138,5928+24]..[138,5928+35])
+          []
+      []
+  signature_item (src/invariant.mli[144,6194+0]..[144,6194+33])
+    Psig_value
+    value_description "errorpeeker" (src/invariant.mli[144,6194+4]..[144,6194+15]) (src/invariant.mli[144,6194+0]..[144,6194+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[140,5965+0]..[143,6163+30])
+            Pstr_eval
+            expression (src/invariant.mli[140,5965+0]..[143,6163+30])
+              Pexp_constant PConst_string("[errorpeeker s] tells whether state [s] can potentially peek at an\n   error. This is the case if, in state [s], an error token may be on\n   the stream. This function is used only in the [legacy]\n   error-handling strategy. ",(src/invariant.mli[140,5965+0]..[143,6163+30]),None)
+        ]
+      core_type (src/invariant.mli[144,6194+17]..[144,6194+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[144,6194+17]..[144,6194+25])
+          Ptyp_constr "Lr1.node" (src/invariant.mli[144,6194+17]..[144,6194+25])
+          []
+        core_type (src/invariant.mli[144,6194+29]..[144,6194+33])
+          Ptyp_constr "bool" (src/invariant.mli[144,6194+29]..[144,6194+33])
+          []
+      []
+  signature_item (src/invariant.mli[152,6536+0]..[152,6536+33])
+    Psig_value
+    value_description "represented" (src/invariant.mli[152,6536+4]..[152,6536+15]) (src/invariant.mli[152,6536+0]..[152,6536+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[150,6403+0]..[151,6468+67])
+            Pstr_eval
+            expression (src/invariant.mli[150,6403+0]..[151,6468+67])
+              Pexp_constant PConst_string("[represented s] tells whether state [s] must have an explicit\n   representation, that is, whether it is pushed onto the stack. ",(src/invariant.mli[150,6403+0]..[151,6468+67]),None)
+        ]
+      core_type (src/invariant.mli[152,6536+17]..[152,6536+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[152,6536+17]..[152,6536+25])
+          Ptyp_constr "Lr1.node" (src/invariant.mli[152,6536+17]..[152,6536+25])
+          []
+        core_type (src/invariant.mli[152,6536+29]..[152,6536+33])
+          Ptyp_constr "bool" (src/invariant.mli[152,6536+29]..[152,6536+33])
+          []
+      []
+  signature_item (src/invariant.mli[156,6669+0]..[156,6669+28])
+    Psig_value
+    value_description "startp" (src/invariant.mli[156,6669+4]..[156,6669+10]) (src/invariant.mli[156,6669+0]..[156,6669+28])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[154,6571+0]..[155,6642+26])
+            Pstr_eval
+            expression (src/invariant.mli[154,6571+0]..[155,6642+26])
+              Pexp_constant PConst_string("[startp symbol] tells whether a start position must be recorded for\n   the symbol [symbol]. ",(src/invariant.mli[154,6571+0]..[155,6642+26]),None)
+        ]
+      core_type (src/invariant.mli[156,6669+12]..[156,6669+28])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[156,6669+12]..[156,6669+20])
+          Ptyp_constr "Symbol.t" (src/invariant.mli[156,6669+12]..[156,6669+20])
+          []
+        core_type (src/invariant.mli[156,6669+24]..[156,6669+28])
+          Ptyp_constr "bool" (src/invariant.mli[156,6669+24]..[156,6669+28])
+          []
+      []
+  signature_item (src/invariant.mli[160,6794+0]..[160,6794+26])
+    Psig_value
+    value_description "endp" (src/invariant.mli[160,6794+4]..[160,6794+8]) (src/invariant.mli[160,6794+0]..[160,6794+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[158,6699+0]..[159,6767+26])
+            Pstr_eval
+            expression (src/invariant.mli[158,6699+0]..[159,6767+26])
+              Pexp_constant PConst_string("[endp symbol] tells whether an end position must be recorded for\n   the symbol [symbol]. ",(src/invariant.mli[158,6699+0]..[159,6767+26]),None)
+        ]
+      core_type (src/invariant.mli[160,6794+10]..[160,6794+26])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[160,6794+10]..[160,6794+18])
+          Ptyp_constr "Symbol.t" (src/invariant.mli[160,6794+10]..[160,6794+18])
+          []
+        core_type (src/invariant.mli[160,6794+22]..[160,6794+26])
+          Ptyp_constr "bool" (src/invariant.mli[160,6794+22]..[160,6794+26])
+          []
+      []
+  signature_item (src/invariant.mli[164,6931+0]..[164,6931+31])
+    Psig_value
+    value_description "universal" (src/invariant.mli[164,6931+4]..[164,6931+13]) (src/invariant.mli[164,6931+0]..[164,6931+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[162,6822+0]..[163,6889+41])
+            Pstr_eval
+            expression (src/invariant.mli[162,6822+0]..[163,6889+41])
+              Pexp_constant PConst_string("[universal symbol] tells whether every represented state has an\n   outgoing transition along [symbol]. ",(src/invariant.mli[162,6822+0]..[163,6889+41]),None)
+        ]
+      core_type (src/invariant.mli[164,6931+15]..[164,6931+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[164,6931+15]..[164,6931+23])
+          Ptyp_constr "Symbol.t" (src/invariant.mli[164,6931+15]..[164,6931+23])
+          []
+        core_type (src/invariant.mli[164,6931+27]..[164,6931+31])
+          Ptyp_constr "bool" (src/invariant.mli[164,6931+27]..[164,6931+31])
+          []
+      []
+  signature_item (src/invariant.mli[174,7411+0]..[174,7411+22])
+    Psig_module "Long" (src/invariant.mli[174,7411+7]..[174,7411+11])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[169,7085+0]..[173,7383+27])
+            Pstr_eval
+            expression (src/invariant.mli[169,7085+0]..[173,7383+27])
+              Pexp_constant PConst_string("[Long()] computes a \"long invariant\" where the known suffix of the stack\n   is as long as possible, based on an analysis of the LR(1) automaton. It\n   is possibly longer than the suffix proposed in the \"short invariant\",\n   whose length is always the maximum position of the bullet in the items\n   of the state at hand. ",(src/invariant.mli[169,7085+0]..[173,7383+27]),None)
+        ]
+    module_type (src/invariant.mli[174,7411+12]..[174,7411+22])
+      Pmty_functor ()
+      module_type (src/invariant.mli[174,7411+17]..[174,7411+22])
+        Pmty_ident "STACK" (src/invariant.mli[174,7411+17]..[174,7411+22])
+  signature_item (src/invariant.mli[179,7558+0]..[202,8390+3])
+    Psig_module "Origin" (src/invariant.mli[179,7558+7]..[179,7558+13])
+    module_type (src/invariant.mli[179,7558+16]..[202,8390+3])
+      Pmty_signature
+      [
+        signature_item (src/invariant.mli[185,7847+2]..[188,7910+21])
+          Psig_type Rec
+          [
+            type_declaration "origin" (src/invariant.mli[185,7847+7]..[185,7847+13]) (src/invariant.mli[185,7847+2]..[188,7910+21])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[181,7579+2]..[184,7802+44])
+                    Pstr_eval
+                    expression (src/invariant.mli[181,7579+2]..[184,7802+44])
+                      Pexp_constant PConst_string("The origin [SingleOrigin nt] indicates that the point of interest is\n     reachable only via the start symbol [nt]. The origin [Dead] that this\n     point in unreachable. [MultipleOrigins] indicates that this point is\n     reachable via several start symbols. ",(src/invariant.mli[181,7579+2]..[184,7802+44]),None)
+                ]
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_variant
+                  [
+                    (src/invariant.mli[186,7863+4]..[186,7863+10])
+                      "Dead" (src/invariant.mli[186,7863+6]..[186,7863+10])
+                      []
+                      None
+                    (src/invariant.mli[187,7874+4]..[187,7874+35])
+                      "SingleOrigin" (src/invariant.mli[187,7874+6]..[187,7874+18])
+                      [
+                        core_type (src/invariant.mli[187,7874+22]..[187,7874+35])
+                          Ptyp_constr "Nonterminal.t" (src/invariant.mli[187,7874+22]..[187,7874+35])
+                          []
+                      ]
+                      None
+                    (src/invariant.mli[188,7910+4]..[188,7910+21])
+                      "MultipleOrigins" (src/invariant.mli[188,7910+6]..[188,7910+21])
+                      []
+                      None
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                None
+          ]
+        signature_item (src/invariant.mli[192,8036+2]..[192,8036+29])
+          Psig_value
+          value_description "run" (src/invariant.mli[192,8036+6]..[192,8036+9]) (src/invariant.mli[192,8036+2]..[192,8036+29])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/invariant.mli[190,7933+2]..[191,8010+25])
+                  Pstr_eval
+                  expression (src/invariant.mli[190,7933+2]..[191,8010+25])
+                    Pexp_constant PConst_string("[run s] determines via which start symbols the [run] function for state\n     [s] is reachable. ",(src/invariant.mli[190,7933+2]..[191,8010+25]),None)
+              ]
+            core_type (src/invariant.mli[192,8036+11]..[192,8036+29])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/invariant.mli[192,8036+11]..[192,8036+19])
+                Ptyp_constr "Lr1.node" (src/invariant.mli[192,8036+11]..[192,8036+19])
+                []
+              core_type (src/invariant.mli[192,8036+23]..[192,8036+29])
+                Ptyp_constr "origin" (src/invariant.mli[192,8036+23]..[192,8036+29])
+                []
+            []
+        signature_item (src/invariant.mli[196,8187+2]..[196,8187+40])
+          Psig_value
+          value_description "reduce" (src/invariant.mli[196,8187+6]..[196,8187+12]) (src/invariant.mli[196,8187+2]..[196,8187+40])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/invariant.mli[194,8067+2]..[195,8143+43])
+                  Pstr_eval
+                  expression (src/invariant.mli[194,8067+2]..[195,8143+43])
+                    Pexp_constant PConst_string("[reduce prod] determines via which start symbols the [reduce] function\n     for production [prod] is reachable. ",(src/invariant.mli[194,8067+2]..[195,8143+43]),None)
+              ]
+            core_type (src/invariant.mli[196,8187+14]..[196,8187+40])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/invariant.mli[196,8187+14]..[196,8187+30])
+                Ptyp_constr "Production.index" (src/invariant.mli[196,8187+14]..[196,8187+30])
+                []
+              core_type (src/invariant.mli[196,8187+34]..[196,8187+40])
+                Ptyp_constr "origin" (src/invariant.mli[196,8187+34]..[196,8187+40])
+                []
+            []
+        signature_item (src/invariant.mli[200,8353+2]..[200,8353+35])
+          Psig_value
+          value_description "goto" (src/invariant.mli[200,8353+6]..[200,8353+10]) (src/invariant.mli[200,8353+2]..[200,8353+35])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/invariant.mli[198,8229+2]..[199,8307+45])
+                  Pstr_eval
+                  expression (src/invariant.mli[198,8229+2]..[199,8307+45])
+                    Pexp_constant PConst_string("[goto nt] determines via which start symbols the [goto] function for the\n     nonterminal symbol [nt] is reachable. ",(src/invariant.mli[198,8229+2]..[199,8307+45]),None)
+              ]
+            core_type (src/invariant.mli[200,8353+12]..[200,8353+35])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/invariant.mli[200,8353+12]..[200,8353+25])
+                Ptyp_constr "Nonterminal.t" (src/invariant.mli[200,8353+12]..[200,8353+25])
+                []
+              core_type (src/invariant.mli[200,8353+29]..[200,8353+35])
+                Ptyp_constr "origin" (src/invariant.mli[200,8353+29]..[200,8353+35])
+                []
+            []
+      ]
+]
+
+open Grammar
+type cell = private
+  {
+  symbol: Symbol.t
+    [@ocaml.doc
+      "The symbol associated with this cell. This symbol determines the\n     presence and the type of the semantic value stored in this cell.\n     It also determines whether a start position and an end position\n     are stored in this cell. "];
+  states: Lr1.NodeSet.t
+    [@ocaml.doc
+      "A set of possible states such that the state that is stored in this\n     cell (or would be stored in this cell) must be a member of this set.\n     The states in this set have the property that either all of them are\n     represented, in which case [holds_state] is [true], or none of them is\n     represented, in which case [holds_state] is [false]. "];
+  holds_semv: bool
+    [@ocaml.doc
+      "Whether a semantic value is stored in this cell. By convention, if\n     [symbol] is a nonterminal symbol, then a semantic value is stored.\n     (We do not attempt to detect the situation where the semantic value\n     could be omitted because it has type [unit], or the situation where\n     it could be omitted because it is never used.) If [symbol] is a\n     terminal symbol, then a semantic value is stored if and only if\n     the [%token] declaration was annotated with a type. "];
+  holds_state: bool [@ocaml.doc "Whether a state is stored in this cell. "];
+  holds_startp: bool
+    [@ocaml.doc
+      "Whether a start position is stored in this cell. This decision\n     is a function of [symbol]. "];
+  holds_endp: bool
+    [@ocaml.doc
+      "Whether an end position is stored in this cell. This decision\n     is a function of [symbol]. "]}
+[@@ocaml.doc "A cell is a representation of a stack cell. "]
+type word = cell array[@@ocaml.doc
+                        "A word is a representation of a stack suffix. A word is an immutable\n   array of cells, whose right end represents the top of the stack. Thus,\n   the index 0 in the array corresponds to the cell that lies deepest in\n   the stack. "]
+val similar : cell -> cell -> bool[@@ocaml.doc
+                                    "[similar] determines whether two stack cells have the same layout in\n   memory, that is, the same OCaml type. This is equivalent to comparing\n   all fields except [states]. "]
+val pop : word -> word[@@ocaml.doc
+                        "[pop w] is the stack [w], deprived of its top element (if it exists). "]
+val fold_top : (cell -> 'a) -> 'a -> word -> 'a[@@ocaml.doc
+                                                 "[fold_top f default w] returns [f cell], where [cell] is the top cell\n   in the stack [w], if [w] is nonempty. Otherwise, it returns [default]. "]
+module type STACK  =
+  sig
+    val stack : Lr1.node -> word[@@ocaml.doc
+                                  "[stack s] is the known suffix of the stack at state [s]. "]
+    val prodstack : Production.index -> word[@@ocaml.doc
+                                              "[prodstack prod] is the known suffix of the stack at a state where\n     production [prod] can be reduced. In the short invariant, the length of\n     this suffix is [Production.length prod]. In the long invariant, its\n     length can be greater. If there are no states where [prod] can be\n     reduced, then every cell contains an empty set of states. "]
+    val gotostack : Nonterminal.t -> word[@@ocaml.doc
+                                           "[gotostack nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. In the short invariant, the\n     length of this suffix is [1]: indeed, it consists of just one cell,\n     associated with the symbol [nt]. In the long invariant, its length can\n     be greater. "]
+  end
+include STACK
+type instruction =
+  | Die 
+  | DownTo of word * state 
+and state =
+  | Represented 
+  | UnRepresented of Lr1.node 
+val rewind : Lr1.node -> instruction[@@ocaml.doc
+                                      "[rewind s] explains how to rewind the stack when dealing with an\n   error in state [s]. It produces an instruction to either die\n   (because no state on the stack can handle errors) or pop a suffix\n   of the stack. In the latter case, one reaches a state that is\n   either represented (its identity is physically stored in the\n   bottommost cell that is popped) or unrepresented (its identity is\n   statically known). This function is used only in the [legacy]\n   error-handling strategy. "]
+val errorpeeker : Lr1.node -> bool[@@ocaml.doc
+                                    "[errorpeeker s] tells whether state [s] can potentially peek at an\n   error. This is the case if, in state [s], an error token may be on\n   the stream. This function is used only in the [legacy]\n   error-handling strategy. "]
+val represented : Lr1.node -> bool[@@ocaml.doc
+                                    "[represented s] tells whether state [s] must have an explicit\n   representation, that is, whether it is pushed onto the stack. "]
+val startp : Symbol.t -> bool[@@ocaml.doc
+                               "[startp symbol] tells whether a start position must be recorded for\n   the symbol [symbol]. "]
+val endp : Symbol.t -> bool[@@ocaml.doc
+                             "[endp symbol] tells whether an end position must be recorded for\n   the symbol [symbol]. "]
+val universal : Symbol.t -> bool[@@ocaml.doc
+                                  "[universal symbol] tells whether every represented state has an\n   outgoing transition along [symbol]. "]
+module Long : () -> STACK[@@ocaml.doc
+                           "[Long()] computes a \"long invariant\" where the known suffix of the stack\n   is as long as possible, based on an analysis of the LR(1) automaton. It\n   is possibly longer than the suffix proposed in the \"short invariant\",\n   whose length is always the maximum position of the bullet in the items\n   of the state at hand. "]
+module Origin :
+sig
+  type origin =
+    | Dead 
+    | SingleOrigin of Nonterminal.t 
+    | MultipleOrigins [@@ocaml.doc
+                        "The origin [SingleOrigin nt] indicates that the point of interest is\n     reachable only via the start symbol [nt]. The origin [Dead] that this\n     point in unreachable. [MultipleOrigins] indicates that this point is\n     reachable via several start symbols. "]
+  val run : Lr1.node -> origin[@@ocaml.doc
+                                "[run s] determines via which start symbols the [run] function for state\n     [s] is reachable. "]
+  val reduce : Production.index -> origin[@@ocaml.doc
+                                           "[reduce prod] determines via which start symbols the [reduce] function\n     for production [prod] is reachable. "]
+  val goto : Nonterminal.t -> origin[@@ocaml.doc
+                                      "[goto nt] determines via which start symbols the [goto] function for the\n     nonterminal symbol [nt] is reachable. "]
+end
+[
+  signature_item (src/invariant.mli[31,1723+0]..src/invariant.mli[31,1723+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/invariant.mli[37,1908+0]..src/invariant.mli[72,3406+1])
+    Tsig_type Rec
+    [
+      type_declaration cell/414 (src/invariant.mli[37,1908+0]..src/invariant.mli[72,3406+1])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/invariant.mli[36,1858+0]..[36,1858+49])
+              Pstr_eval
+              expression (src/invariant.mli[36,1858+0]..[36,1858+49])
+                Pexp_constant PConst_string("A cell is a representation of a stack cell. ",(src/invariant.mli[36,1858+0]..[36,1858+49]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/invariant.mli[39,1931+2]..src/invariant.mli[39,1931+19])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[40,1951+2]..[43,2160+32])
+                      Pstr_eval
+                      expression (src/invariant.mli[40,1951+2]..[43,2160+32])
+                        Pexp_constant PConst_string("The symbol associated with this cell. This symbol determines the\n     presence and the type of the semantic value stored in this cell.\n     It also determines whether a start position and an end position\n     are stored in this cell. ",(src/invariant.mli[40,1951+2]..[43,2160+32]),None)
+                  ]
+                Immutable
+                symbol/443                core_type (src/invariant.mli[39,1931+10]..src/invariant.mli[39,1931+18])
+                  Ttyp_poly
+                  core_type (src/invariant.mli[39,1931+10]..src/invariant.mli[39,1931+18])
+                    Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+                    []
+              (src/invariant.mli[45,2194+2]..src/invariant.mli[45,2194+24])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[46,2219+2]..[50,2516+60])
+                      Pstr_eval
+                      expression (src/invariant.mli[46,2219+2]..[50,2516+60])
+                        Pexp_constant PConst_string("A set of possible states such that the state that is stored in this\n     cell (or would be stored in this cell) must be a member of this set.\n     The states in this set have the property that either all of them are\n     represented, in which case [holds_state] is [true], or none of them is\n     represented, in which case [holds_state] is [false]. ",(src/invariant.mli[46,2219+2]..[50,2516+60]),None)
+                  ]
+                Immutable
+                states/573                core_type (src/invariant.mli[45,2194+10]..src/invariant.mli[45,2194+23])
+                  Ttyp_poly
+                  core_type (src/invariant.mli[45,2194+10]..src/invariant.mli[45,2194+23])
+                    Ttyp_constr "Dune__exe!.Lr1.NodeSet.t"
+                    []
+              (src/invariant.mli[52,2578+2]..src/invariant.mli[52,2578+19])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[53,2598+2]..[59,3026+59])
+                      Pstr_eval
+                      expression (src/invariant.mli[53,2598+2]..[59,3026+59])
+                        Pexp_constant PConst_string("Whether a semantic value is stored in this cell. By convention, if\n     [symbol] is a nonterminal symbol, then a semantic value is stored.\n     (We do not attempt to detect the situation where the semantic value\n     could be omitted because it has type [unit], or the situation where\n     it could be omitted because it is never used.) If [symbol] is a\n     terminal symbol, then a semantic value is stored if and only if\n     the [%token] declaration was annotated with a type. ",(src/invariant.mli[53,2598+2]..[59,3026+59]),None)
+                  ]
+                Immutable
+                holds_semv/574                core_type (src/invariant.mli[52,2578+14]..src/invariant.mli[52,2578+18])
+                  Ttyp_poly
+                  core_type (src/invariant.mli[52,2578+14]..src/invariant.mli[52,2578+18])
+                    Ttyp_constr "bool/5!"
+                    []
+              (src/invariant.mli[61,3087+2]..src/invariant.mli[61,3087+20])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[62,3108+2]..[62,3108+47])
+                      Pstr_eval
+                      expression (src/invariant.mli[62,3108+2]..[62,3108+47])
+                        Pexp_constant PConst_string("Whether a state is stored in this cell. ",(src/invariant.mli[62,3108+2]..[62,3108+47]),None)
+                  ]
+                Immutable
+                holds_state/575                core_type (src/invariant.mli[61,3087+15]..src/invariant.mli[61,3087+19])
+                  Ttyp_poly
+                  core_type (src/invariant.mli[61,3087+15]..src/invariant.mli[61,3087+19])
+                    Ttyp_constr "bool/5!"
+                    []
+              (src/invariant.mli[64,3157+2]..src/invariant.mli[64,3157+21])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[65,3179+2]..[66,3247+34])
+                      Pstr_eval
+                      expression (src/invariant.mli[65,3179+2]..[66,3247+34])
+                        Pexp_constant PConst_string("Whether a start position is stored in this cell. This decision\n     is a function of [symbol]. ",(src/invariant.mli[65,3179+2]..[66,3247+34]),None)
+                  ]
+                Immutable
+                holds_startp/576                core_type (src/invariant.mli[64,3157+16]..src/invariant.mli[64,3157+20])
+                  Ttyp_poly
+                  core_type (src/invariant.mli[64,3157+16]..src/invariant.mli[64,3157+20])
+                    Ttyp_constr "bool/5!"
+                    []
+              (src/invariant.mli[68,3283+2]..src/invariant.mli[68,3283+19])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/invariant.mli[69,3303+2]..[70,3370+34])
+                      Pstr_eval
+                      expression (src/invariant.mli[69,3303+2]..[70,3370+34])
+                        Pexp_constant PConst_string("Whether an end position is stored in this cell. This decision\n     is a function of [symbol]. ",(src/invariant.mli[69,3303+2]..[70,3370+34]),None)
+                  ]
+                Immutable
+                holds_endp/577                core_type (src/invariant.mli[68,3283+14]..src/invariant.mli[68,3283+18])
+                  Ttyp_poly
+                  core_type (src/invariant.mli[68,3283+14]..src/invariant.mli[68,3283+18])
+                    Ttyp_constr "bool/5!"
+                    []
+            ]
+        ptype_private = Private
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/invariant.mli[78,3645+0]..src/invariant.mli[79,3657+12])
+    Tsig_type Rec
+    [
+      type_declaration word/636 (src/invariant.mli[78,3645+0]..src/invariant.mli[79,3657+12])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/invariant.mli[74,3409+0]..[77,3628+16])
+              Pstr_eval
+              expression (src/invariant.mli[74,3409+0]..[77,3628+16])
+                Pexp_constant PConst_string("A word is a representation of a stack suffix. A word is an immutable\n   array of cells, whose right end represents the top of the stack. Thus,\n   the index 0 in the array corresponds to the cell that lies deepest in\n   the stack. ",(src/invariant.mli[74,3409+0]..[77,3628+16]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/invariant.mli[79,3657+2]..src/invariant.mli[79,3657+12])
+              Ttyp_constr "array/8!"
+              [
+                core_type (src/invariant.mli[79,3657+2]..src/invariant.mli[79,3657+6])
+                  Ttyp_constr "cell/414"
+                  []
+              ]
+    ]
+  signature_item (src/invariant.mli[84,3850+0]..src/invariant.mli[84,3850+33])
+    Tsig_value
+    value_description similar/637 (src/invariant.mli[84,3850+0]..src/invariant.mli[84,3850+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[81,3671+0]..[83,3816+33])
+            Pstr_eval
+            expression (src/invariant.mli[81,3671+0]..[83,3816+33])
+              Pexp_constant PConst_string("[similar] determines whether two stack cells have the same layout in\n   memory, that is, the same OCaml type. This is equivalent to comparing\n   all fields except [states]. ",(src/invariant.mli[81,3671+0]..[83,3816+33]),None)
+        ]
+      core_type (src/invariant.mli[84,3850+13]..src/invariant.mli[84,3850+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[84,3850+13]..src/invariant.mli[84,3850+17])
+          Ttyp_constr "cell/414"
+          []
+        core_type (src/invariant.mli[84,3850+21]..src/invariant.mli[84,3850+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/invariant.mli[84,3850+21]..src/invariant.mli[84,3850+25])
+            Ttyp_constr "cell/414"
+            []
+          core_type (src/invariant.mli[84,3850+29]..src/invariant.mli[84,3850+33])
+            Ttyp_constr "bool/5!"
+            []
+      []
+  signature_item (src/invariant.mli[87,3961+0]..src/invariant.mli[87,3961+21])
+    Tsig_value
+    value_description pop/638 (src/invariant.mli[87,3961+0]..src/invariant.mli[87,3961+21])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[86,3885+0]..[86,3885+75])
+            Pstr_eval
+            expression (src/invariant.mli[86,3885+0]..[86,3885+75])
+              Pexp_constant PConst_string("[pop w] is the stack [w], deprived of its top element (if it exists). ",(src/invariant.mli[86,3885+0]..[86,3885+75]),None)
+        ]
+      core_type (src/invariant.mli[87,3961+9]..src/invariant.mli[87,3961+21])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[87,3961+9]..src/invariant.mli[87,3961+13])
+          Ttyp_constr "word/636"
+          []
+        core_type (src/invariant.mli[87,3961+17]..src/invariant.mli[87,3961+21])
+          Ttyp_constr "word/636"
+          []
+      []
+  signature_item (src/invariant.mli[91,4134+0]..src/invariant.mli[91,4134+46])
+    Tsig_value
+    value_description fold_top/639 (src/invariant.mli[91,4134+0]..src/invariant.mli[91,4134+46])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[89,3984+0]..[90,4057+76])
+            Pstr_eval
+            expression (src/invariant.mli[89,3984+0]..[90,4057+76])
+              Pexp_constant PConst_string("[fold_top f default w] returns [f cell], where [cell] is the top cell\n   in the stack [w], if [w] is nonempty. Otherwise, it returns [default]. ",(src/invariant.mli[89,3984+0]..[90,4057+76]),None)
+        ]
+      core_type (src/invariant.mli[91,4134+14]..src/invariant.mli[91,4134+46])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[91,4134+15]..src/invariant.mli[91,4134+25])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/invariant.mli[91,4134+15]..src/invariant.mli[91,4134+19])
+            Ttyp_constr "cell/414"
+            []
+          core_type (src/invariant.mli[91,4134+23]..src/invariant.mli[91,4134+25])
+            Ttyp_var a
+        core_type (src/invariant.mli[91,4134+30]..src/invariant.mli[91,4134+46])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/invariant.mli[91,4134+30]..src/invariant.mli[91,4134+32])
+            Ttyp_var a
+          core_type (src/invariant.mli[91,4134+36]..src/invariant.mli[91,4134+46])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/invariant.mli[91,4134+36]..src/invariant.mli[91,4134+40])
+              Ttyp_constr "word/636"
+              []
+            core_type (src/invariant.mli[91,4134+44]..src/invariant.mli[91,4134+46])
+              Ttyp_var a
+      []
+  signature_item (src/invariant.mli[96,4298+0]..src/invariant.mli[115,5178+3])
+    Tsig_modtype "STACK/697"
+      module_type (src/invariant.mli[96,4298+20]..src/invariant.mli[115,5178+3])
+        Tmty_signature
+        [
+          signature_item (src/invariant.mli[99,4388+2]..src/invariant.mli[99,4388+29])
+            Tsig_value
+            value_description stack/640 (src/invariant.mli[99,4388+2]..src/invariant.mli[99,4388+29])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[98,4323+2]..[98,4323+64])
+                    Pstr_eval
+                    expression (src/invariant.mli[98,4323+2]..[98,4323+64])
+                      Pexp_constant PConst_string("[stack s] is the known suffix of the stack at state [s]. ",(src/invariant.mli[98,4323+2]..[98,4323+64]),None)
+                ]
+              core_type (src/invariant.mli[99,4388+13]..src/invariant.mli[99,4388+29])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/invariant.mli[99,4388+13]..src/invariant.mli[99,4388+21])
+                  Ttyp_constr "Dune__exe!.Lr1.node"
+                  []
+                core_type (src/invariant.mli[99,4388+25]..src/invariant.mli[99,4388+29])
+                  Ttyp_constr "word/636"
+                  []
+              []
+          signature_item (src/invariant.mli[106,4778+2]..src/invariant.mli[106,4778+41])
+            Tsig_value
+            value_description prodstack/675 (src/invariant.mli[106,4778+2]..src/invariant.mli[106,4778+41])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[101,4419+2]..[105,4712+65])
+                    Pstr_eval
+                    expression (src/invariant.mli[101,4419+2]..[105,4712+65])
+                      Pexp_constant PConst_string("[prodstack prod] is the known suffix of the stack at a state where\n     production [prod] can be reduced. In the short invariant, the length of\n     this suffix is [Production.length prod]. In the long invariant, its\n     length can be greater. If there are no states where [prod] can be\n     reduced, then every cell contains an empty set of states. ",(src/invariant.mli[101,4419+2]..[105,4712+65]),None)
+                ]
+              core_type (src/invariant.mli[106,4778+17]..src/invariant.mli[106,4778+41])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/invariant.mli[106,4778+17]..src/invariant.mli[106,4778+33])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+                core_type (src/invariant.mli[106,4778+37]..src/invariant.mli[106,4778+41])
+                  Ttyp_constr "word/636"
+                  []
+              []
+          signature_item (src/invariant.mli[113,5138+2]..src/invariant.mli[113,5138+38])
+            Tsig_value
+            value_description gotostack/696 (src/invariant.mli[113,5138+2]..src/invariant.mli[113,5138+38])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[108,4821+2]..[112,5118+19])
+                    Pstr_eval
+                    expression (src/invariant.mli[108,4821+2]..[112,5118+19])
+                      Pexp_constant PConst_string("[gotostack nt] is the known suffix of the stack at a state where an\n     edge labeled [nt] has just been followed. In the short invariant, the\n     length of this suffix is [1]: indeed, it consists of just one cell,\n     associated with the symbol [nt]. In the long invariant, its length can\n     be greater. ",(src/invariant.mli[108,4821+2]..[112,5118+19]),None)
+                ]
+              core_type (src/invariant.mli[113,5138+17]..src/invariant.mli[113,5138+38])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/invariant.mli[113,5138+17]..src/invariant.mli[113,5138+30])
+                  Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                  []
+                core_type (src/invariant.mli[113,5138+34]..src/invariant.mli[113,5138+38])
+                  Ttyp_constr "word/636"
+                  []
+              []
+        ]
+  signature_item (src/invariant.mli[117,5183+0]..src/invariant.mli[117,5183+13])
+    Tsig_include
+    module_type (src/invariant.mli[117,5183+8]..src/invariant.mli[117,5183+13])
+      Tmty_ident "STACK/697"
+  signature_item (src/invariant.mli[122,5319+0]..src/invariant.mli[128,5402+29])
+    Tsig_type Rec
+    [
+      type_declaration instruction/701 (src/invariant.mli[122,5319+0]..src/invariant.mli[124,5346+26])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/invariant.mli[123,5338+2]..src/invariant.mli[123,5338+7])
+                Die/703
+                []
+                None
+              (src/invariant.mli[124,5346+2]..src/invariant.mli[124,5346+26])
+                DownTo/704
+                [
+                  core_type (src/invariant.mli[124,5346+14]..src/invariant.mli[124,5346+18])
+                    Ttyp_constr "word/636"
+                    []
+                  core_type (src/invariant.mli[124,5346+21]..src/invariant.mli[124,5346+26])
+                    Ttyp_constr "state/702"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration state/702 (src/invariant.mli[126,5374+0]..src/invariant.mli[128,5402+29])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/invariant.mli[127,5386+2]..src/invariant.mli[127,5386+15])
+                Represented/705
+                []
+                None
+              (src/invariant.mli[128,5402+2]..src/invariant.mli[128,5402+29])
+                UnRepresented/706
+                [
+                  core_type (src/invariant.mli[128,5402+21]..src/invariant.mli[128,5402+29])
+                    Ttyp_constr "Dune__exe!.Lr1.node"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/invariant.mli[138,5928+0]..src/invariant.mli[138,5928+35])
+    Tsig_value
+    value_description rewind/707 (src/invariant.mli[138,5928+0]..src/invariant.mli[138,5928+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[130,5433+0]..[137,5897+30])
+            Pstr_eval
+            expression (src/invariant.mli[130,5433+0]..[137,5897+30])
+              Pexp_constant PConst_string("[rewind s] explains how to rewind the stack when dealing with an\n   error in state [s]. It produces an instruction to either die\n   (because no state on the stack can handle errors) or pop a suffix\n   of the stack. In the latter case, one reaches a state that is\n   either represented (its identity is physically stored in the\n   bottommost cell that is popped) or unrepresented (its identity is\n   statically known). This function is used only in the [legacy]\n   error-handling strategy. ",(src/invariant.mli[130,5433+0]..[137,5897+30]),None)
+        ]
+      core_type (src/invariant.mli[138,5928+12]..src/invariant.mli[138,5928+35])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[138,5928+12]..src/invariant.mli[138,5928+20])
+          Ttyp_constr "Dune__exe!.Lr1.node"
+          []
+        core_type (src/invariant.mli[138,5928+24]..src/invariant.mli[138,5928+35])
+          Ttyp_constr "instruction/701"
+          []
+      []
+  signature_item (src/invariant.mli[144,6194+0]..src/invariant.mli[144,6194+33])
+    Tsig_value
+    value_description errorpeeker/708 (src/invariant.mli[144,6194+0]..src/invariant.mli[144,6194+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[140,5965+0]..[143,6163+30])
+            Pstr_eval
+            expression (src/invariant.mli[140,5965+0]..[143,6163+30])
+              Pexp_constant PConst_string("[errorpeeker s] tells whether state [s] can potentially peek at an\n   error. This is the case if, in state [s], an error token may be on\n   the stream. This function is used only in the [legacy]\n   error-handling strategy. ",(src/invariant.mli[140,5965+0]..[143,6163+30]),None)
+        ]
+      core_type (src/invariant.mli[144,6194+17]..src/invariant.mli[144,6194+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[144,6194+17]..src/invariant.mli[144,6194+25])
+          Ttyp_constr "Dune__exe!.Lr1.node"
+          []
+        core_type (src/invariant.mli[144,6194+29]..src/invariant.mli[144,6194+33])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/invariant.mli[152,6536+0]..src/invariant.mli[152,6536+33])
+    Tsig_value
+    value_description represented/709 (src/invariant.mli[152,6536+0]..src/invariant.mli[152,6536+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[150,6403+0]..[151,6468+67])
+            Pstr_eval
+            expression (src/invariant.mli[150,6403+0]..[151,6468+67])
+              Pexp_constant PConst_string("[represented s] tells whether state [s] must have an explicit\n   representation, that is, whether it is pushed onto the stack. ",(src/invariant.mli[150,6403+0]..[151,6468+67]),None)
+        ]
+      core_type (src/invariant.mli[152,6536+17]..src/invariant.mli[152,6536+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[152,6536+17]..src/invariant.mli[152,6536+25])
+          Ttyp_constr "Dune__exe!.Lr1.node"
+          []
+        core_type (src/invariant.mli[152,6536+29]..src/invariant.mli[152,6536+33])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/invariant.mli[156,6669+0]..src/invariant.mli[156,6669+28])
+    Tsig_value
+    value_description startp/710 (src/invariant.mli[156,6669+0]..src/invariant.mli[156,6669+28])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[154,6571+0]..[155,6642+26])
+            Pstr_eval
+            expression (src/invariant.mli[154,6571+0]..[155,6642+26])
+              Pexp_constant PConst_string("[startp symbol] tells whether a start position must be recorded for\n   the symbol [symbol]. ",(src/invariant.mli[154,6571+0]..[155,6642+26]),None)
+        ]
+      core_type (src/invariant.mli[156,6669+12]..src/invariant.mli[156,6669+28])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[156,6669+12]..src/invariant.mli[156,6669+20])
+          Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+          []
+        core_type (src/invariant.mli[156,6669+24]..src/invariant.mli[156,6669+28])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/invariant.mli[160,6794+0]..src/invariant.mli[160,6794+26])
+    Tsig_value
+    value_description endp/711 (src/invariant.mli[160,6794+0]..src/invariant.mli[160,6794+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[158,6699+0]..[159,6767+26])
+            Pstr_eval
+            expression (src/invariant.mli[158,6699+0]..[159,6767+26])
+              Pexp_constant PConst_string("[endp symbol] tells whether an end position must be recorded for\n   the symbol [symbol]. ",(src/invariant.mli[158,6699+0]..[159,6767+26]),None)
+        ]
+      core_type (src/invariant.mli[160,6794+10]..src/invariant.mli[160,6794+26])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[160,6794+10]..src/invariant.mli[160,6794+18])
+          Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+          []
+        core_type (src/invariant.mli[160,6794+22]..src/invariant.mli[160,6794+26])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/invariant.mli[164,6931+0]..src/invariant.mli[164,6931+31])
+    Tsig_value
+    value_description universal/712 (src/invariant.mli[164,6931+0]..src/invariant.mli[164,6931+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[162,6822+0]..[163,6889+41])
+            Pstr_eval
+            expression (src/invariant.mli[162,6822+0]..[163,6889+41])
+              Pexp_constant PConst_string("[universal symbol] tells whether every represented state has an\n   outgoing transition along [symbol]. ",(src/invariant.mli[162,6822+0]..[163,6889+41]),None)
+        ]
+      core_type (src/invariant.mli[164,6931+15]..src/invariant.mli[164,6931+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/invariant.mli[164,6931+15]..src/invariant.mli[164,6931+23])
+          Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+          []
+        core_type (src/invariant.mli[164,6931+27]..src/invariant.mli[164,6931+31])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/invariant.mli[174,7411+0]..src/invariant.mli[174,7411+22])
+    Tsig_module "Long/713"
+      attribute "ocaml.doc"
+        [
+          structure_item (src/invariant.mli[169,7085+0]..[173,7383+27])
+            Pstr_eval
+            expression (src/invariant.mli[169,7085+0]..[173,7383+27])
+              Pexp_constant PConst_string("[Long()] computes a \"long invariant\" where the known suffix of the stack\n   is as long as possible, based on an analysis of the LR(1) automaton. It\n   is possibly longer than the suffix proposed in the \"short invariant\",\n   whose length is always the maximum position of the bullet in the items\n   of the state at hand. ",(src/invariant.mli[169,7085+0]..[173,7383+27]),None)
+        ]
+    module_type (src/invariant.mli[174,7411+12]..src/invariant.mli[174,7411+22])
+      Tmty_functor ()
+      module_type (src/invariant.mli[174,7411+17]..src/invariant.mli[174,7411+22])
+        Tmty_ident "STACK/697"
+  signature_item (src/invariant.mli[179,7558+0]..src/invariant.mli[202,8390+3])
+    Tsig_module "Origin/741"
+    module_type (src/invariant.mli[179,7558+16]..src/invariant.mli[202,8390+3])
+      Tmty_signature
+      [
+        signature_item (src/invariant.mli[185,7847+2]..src/invariant.mli[188,7910+21])
+          Tsig_type Rec
+          [
+            type_declaration origin/714 (src/invariant.mli[185,7847+2]..src/invariant.mli[188,7910+21])
+              attribute "ocaml.doc"
+                [
+                  structure_item (src/invariant.mli[181,7579+2]..[184,7802+44])
+                    Pstr_eval
+                    expression (src/invariant.mli[181,7579+2]..[184,7802+44])
+                      Pexp_constant PConst_string("The origin [SingleOrigin nt] indicates that the point of interest is\n     reachable only via the start symbol [nt]. The origin [Dead] that this\n     point in unreachable. [MultipleOrigins] indicates that this point is\n     reachable via several start symbols. ",(src/invariant.mli[181,7579+2]..[184,7802+44]),None)
+                ]
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_variant
+                  [
+                    (src/invariant.mli[186,7863+4]..src/invariant.mli[186,7863+10])
+                      Dead/715
+                      []
+                      None
+                    (src/invariant.mli[187,7874+4]..src/invariant.mli[187,7874+35])
+                      SingleOrigin/716
+                      [
+                        core_type (src/invariant.mli[187,7874+22]..src/invariant.mli[187,7874+35])
+                          Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                          []
+                      ]
+                      None
+                    (src/invariant.mli[188,7910+4]..src/invariant.mli[188,7910+21])
+                      MultipleOrigins/717
+                      []
+                      None
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                None
+          ]
+        signature_item (src/invariant.mli[192,8036+2]..src/invariant.mli[192,8036+29])
+          Tsig_value
+          value_description run/738 (src/invariant.mli[192,8036+2]..src/invariant.mli[192,8036+29])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/invariant.mli[190,7933+2]..[191,8010+25])
+                  Pstr_eval
+                  expression (src/invariant.mli[190,7933+2]..[191,8010+25])
+                    Pexp_constant PConst_string("[run s] determines via which start symbols the [run] function for state\n     [s] is reachable. ",(src/invariant.mli[190,7933+2]..[191,8010+25]),None)
+              ]
+            core_type (src/invariant.mli[192,8036+11]..src/invariant.mli[192,8036+29])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/invariant.mli[192,8036+11]..src/invariant.mli[192,8036+19])
+                Ttyp_constr "Dune__exe!.Lr1.node"
+                []
+              core_type (src/invariant.mli[192,8036+23]..src/invariant.mli[192,8036+29])
+                Ttyp_constr "origin/714"
+                []
+            []
+        signature_item (src/invariant.mli[196,8187+2]..src/invariant.mli[196,8187+40])
+          Tsig_value
+          value_description reduce/739 (src/invariant.mli[196,8187+2]..src/invariant.mli[196,8187+40])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/invariant.mli[194,8067+2]..[195,8143+43])
+                  Pstr_eval
+                  expression (src/invariant.mli[194,8067+2]..[195,8143+43])
+                    Pexp_constant PConst_string("[reduce prod] determines via which start symbols the [reduce] function\n     for production [prod] is reachable. ",(src/invariant.mli[194,8067+2]..[195,8143+43]),None)
+              ]
+            core_type (src/invariant.mli[196,8187+14]..src/invariant.mli[196,8187+40])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/invariant.mli[196,8187+14]..src/invariant.mli[196,8187+30])
+                Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                []
+              core_type (src/invariant.mli[196,8187+34]..src/invariant.mli[196,8187+40])
+                Ttyp_constr "origin/714"
+                []
+            []
+        signature_item (src/invariant.mli[200,8353+2]..src/invariant.mli[200,8353+35])
+          Tsig_value
+          value_description goto/740 (src/invariant.mli[200,8353+2]..src/invariant.mli[200,8353+35])
+            attribute "ocaml.doc"
+              [
+                structure_item (src/invariant.mli[198,8229+2]..[199,8307+45])
+                  Pstr_eval
+                  expression (src/invariant.mli[198,8229+2]..[199,8307+45])
+                    Pexp_constant PConst_string("[goto nt] determines via which start symbols the [goto] function for the\n     nonterminal symbol [nt] is reachable. ",(src/invariant.mli[198,8229+2]..[199,8307+45]),None)
+              ]
+            core_type (src/invariant.mli[200,8353+12]..src/invariant.mli[200,8353+35])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/invariant.mli[200,8353+12]..src/invariant.mli[200,8353+25])
+                Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                []
+              core_type (src/invariant.mli[200,8353+29]..src/invariant.mli[200,8353+35])
+                Ttyp_constr "origin/714"
+                []
+            []
+      ]
+]
+

@@ -1,0 +1,173 @@
+[
+  signature_item (demos/calc-mini/parser.mli[4,28+0]..[10,100+7])
+    Psig_type Rec
+    [
+      type_declaration "token" (demos/calc-mini/parser.mli[4,28+5]..[4,28+10]) (demos/calc-mini/parser.mli[4,28+0]..[10,100+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (demos/calc-mini/parser.mli[5,42+2]..[5,42+9])
+                "TIMES" (demos/calc-mini/parser.mli[5,42+4]..[5,42+9])
+                []
+                None
+              (demos/calc-mini/parser.mli[6,52+2]..[6,52+10])
+                "RPAREN" (demos/calc-mini/parser.mli[6,52+4]..[6,52+10])
+                []
+                None
+              (demos/calc-mini/parser.mli[7,63+2]..[7,63+8])
+                "PLUS" (demos/calc-mini/parser.mli[7,63+4]..[7,63+8])
+                []
+                None
+              (demos/calc-mini/parser.mli[8,72+2]..[8,72+10])
+                "LPAREN" (demos/calc-mini/parser.mli[8,72+4]..[8,72+10])
+                []
+                None
+              (demos/calc-mini/parser.mli[9,83+2]..[9,83+16])
+                "INT" (demos/calc-mini/parser.mli[9,83+4]..[9,83+7])
+                [
+                  core_type (demos/calc-mini/parser.mli[9,83+12]..[9,83+15])
+                    Ptyp_constr "int" (demos/calc-mini/parser.mli[9,83+12]..[9,83+15])
+                    []
+                ]
+                None
+              (demos/calc-mini/parser.mli[10,100+2]..[10,100+7])
+                "EOL" (demos/calc-mini/parser.mli[10,100+4]..[10,100+7])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (demos/calc-mini/parser.mli[14,174+0]..[14,174+15])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/calc-mini/parser.mli[14,174+0]..[14,174+15])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (demos/calc-mini/parser.mli[18,218+0]..[18,218+60])
+    Psig_value
+    value_description "main" (demos/calc-mini/parser.mli[18,218+4]..[18,218+8]) (demos/calc-mini/parser.mli[18,218+0]..[18,218+60])
+      core_type (demos/calc-mini/parser.mli[18,218+10]..[18,218+60])
+        Ptyp_arrow
+        Nolabel
+        core_type (demos/calc-mini/parser.mli[18,218+11]..[18,218+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (demos/calc-mini/parser.mli[18,218+11]..[18,218+24])
+            Ptyp_constr "Lexing.lexbuf" (demos/calc-mini/parser.mli[18,218+11]..[18,218+24])
+            []
+          core_type (demos/calc-mini/parser.mli[18,218+28]..[18,218+33])
+            Ptyp_constr "token" (demos/calc-mini/parser.mli[18,218+28]..[18,218+33])
+            []
+        core_type (demos/calc-mini/parser.mli[18,218+38]..[18,218+60])
+          Ptyp_arrow
+          Nolabel
+          core_type (demos/calc-mini/parser.mli[18,218+38]..[18,218+51])
+            Ptyp_constr "Lexing.lexbuf" (demos/calc-mini/parser.mli[18,218+38]..[18,218+51])
+            []
+          core_type (demos/calc-mini/parser.mli[18,218+56]..[18,218+59])
+            Ptyp_constr "int" (demos/calc-mini/parser.mli[18,218+56]..[18,218+59])
+            []
+      []
+]
+
+type token =
+  | TIMES 
+  | RPAREN 
+  | PLUS 
+  | LPAREN 
+  | INT of int 
+  | EOL 
+exception Error 
+val main : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> int
+[
+  signature_item (demos/calc-mini/parser.mli[4,28+0]..demos/calc-mini/parser.mli[10,100+7])
+    Tsig_type Rec
+    [
+      type_declaration token/272 (demos/calc-mini/parser.mli[4,28+0]..demos/calc-mini/parser.mli[10,100+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (demos/calc-mini/parser.mli[5,42+2]..demos/calc-mini/parser.mli[5,42+9])
+                TIMES/273
+                []
+                None
+              (demos/calc-mini/parser.mli[6,52+2]..demos/calc-mini/parser.mli[6,52+10])
+                RPAREN/274
+                []
+                None
+              (demos/calc-mini/parser.mli[7,63+2]..demos/calc-mini/parser.mli[7,63+8])
+                PLUS/275
+                []
+                None
+              (demos/calc-mini/parser.mli[8,72+2]..demos/calc-mini/parser.mli[8,72+10])
+                LPAREN/276
+                []
+                None
+              (demos/calc-mini/parser.mli[9,83+2]..demos/calc-mini/parser.mli[9,83+16])
+                INT/277
+                [
+                  core_type (demos/calc-mini/parser.mli[9,83+12]..demos/calc-mini/parser.mli[9,83+15])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (demos/calc-mini/parser.mli[10,100+2]..demos/calc-mini/parser.mli[10,100+7])
+                EOL/278
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (demos/calc-mini/parser.mli[14,174+0]..demos/calc-mini/parser.mli[14,174+15])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/calc-mini/parser.mli[14,174+0]..demos/calc-mini/parser.mli[14,174+15])
+          pext_name = "Error/279"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (demos/calc-mini/parser.mli[18,218+0]..demos/calc-mini/parser.mli[18,218+60])
+    Tsig_value
+    value_description main/304 (demos/calc-mini/parser.mli[18,218+0]..demos/calc-mini/parser.mli[18,218+60])
+      core_type (demos/calc-mini/parser.mli[18,218+10]..demos/calc-mini/parser.mli[18,218+60])
+        Ttyp_arrow
+        Nolabel
+        core_type (demos/calc-mini/parser.mli[18,218+11]..demos/calc-mini/parser.mli[18,218+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (demos/calc-mini/parser.mli[18,218+11]..demos/calc-mini/parser.mli[18,218+24])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (demos/calc-mini/parser.mli[18,218+28]..demos/calc-mini/parser.mli[18,218+33])
+            Ttyp_constr "token/272"
+            []
+        core_type (demos/calc-mini/parser.mli[18,218+38]..demos/calc-mini/parser.mli[18,218+60])
+          Ttyp_arrow
+          Nolabel
+          core_type (demos/calc-mini/parser.mli[18,218+38]..demos/calc-mini/parser.mli[18,218+51])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (demos/calc-mini/parser.mli[18,218+56]..demos/calc-mini/parser.mli[18,218+59])
+            Ttyp_constr "int/1!"
+            []
+      []
+]
+

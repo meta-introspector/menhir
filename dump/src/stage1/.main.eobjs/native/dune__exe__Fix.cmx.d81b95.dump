@@ -1,0 +1,65 @@
+[
+  structure_item (src/Fix.ml[23,1425+0]..[23,1425+20])
+    Pstr_include    module_expr (src/Fix.ml[23,1425+8]..[23,1425+20])
+      Pmod_ident "Vendored_fix" (src/Fix.ml[23,1425+8]..[23,1425+20])
+]
+
+include Vendored_fix
+[
+  structure_item (src/Fix.ml[23,1425+0]..src/Fix.ml[23,1425+20])
+    Tstr_include    module_expr (src/Fix.ml[23,1425+8]..src/Fix.ml[23,1425+20])
+      Tmod_ident "Vendored_fix!"
+]
+
+{<Dune__exe__Fix>
+ "DATA_FLOW_GRAPH"[module type] ->
+   CU Vendored_fix . "DATA_FLOW_GRAPH"[module type];
+ "DataFlow"[module] -> CU Vendored_fix . "DataFlow"[module];
+ "FINITE_TYPE"[module type] -> CU Vendored_fix . "FINITE_TYPE"[module type];
+ "Fix"[module] -> CU Vendored_fix . "Fix"[module];
+ "GRAPH"[module type] -> CU Vendored_fix . "GRAPH"[module type];
+ "Gensym"[module] -> CU Vendored_fix . "Gensym"[module];
+ "Glue"[module] -> CU Vendored_fix . "Glue"[module];
+ "GraphNumbering"[module] -> CU Vendored_fix . "GraphNumbering"[module];
+ "HashCons"[module] -> CU Vendored_fix . "HashCons"[module];
+ "HashedType"[module type] -> CU Vendored_fix . "HashedType"[module type];
+ "IMPERATIVE_MAPS"[module type] ->
+   CU Vendored_fix . "IMPERATIVE_MAPS"[module type];
+ "INJECTION"[module type] -> CU Vendored_fix . "INJECTION"[module type];
+ "MEMOIZER"[module type] -> CU Vendored_fix . "MEMOIZER"[module type];
+ "MINIMAL_IMPERATIVE_MAPS"[module type] ->
+   CU Vendored_fix . "MINIMAL_IMPERATIVE_MAPS"[module type];
+ "MINIMAL_SEMI_LATTICE"[module type] ->
+   CU Vendored_fix . "MINIMAL_SEMI_LATTICE"[module type];
+ "Make"[module] -> CU Vendored_fix . "Make"[module];
+ "Memoize"[module] -> CU Vendored_fix . "Memoize"[module];
+ "NUMBERING"[module type] -> CU Vendored_fix . "NUMBERING"[module type];
+ "Numbering"[module] -> CU Vendored_fix . "Numbering"[module];
+ "ONGOING_NUMBERING"[module type] ->
+   CU Vendored_fix . "ONGOING_NUMBERING"[module type];
+ "OrderedType"[module type] -> CU Vendored_fix . "OrderedType"[module type];
+ "PERSISTENT_MAPS"[module type] ->
+   CU Vendored_fix . "PERSISTENT_MAPS"[module type];
+ "PROPERTY"[module type] -> CU Vendored_fix . "PROPERTY"[module type];
+ "Prop"[module] -> CU Vendored_fix . "Prop"[module];
+ "SEMI_LATTICE"[module type] ->
+   CU Vendored_fix . "SEMI_LATTICE"[module type];
+ "SOLUTION"[module type] -> CU Vendored_fix . "SOLUTION"[module type];
+ "SOLVER"[module type] -> CU Vendored_fix . "SOLVER"[module type];
+ "TABULATOR"[module type] -> CU Vendored_fix . "TABULATOR"[module type];
+ "TWO_PHASE_NUMBERING"[module type] ->
+   CU Vendored_fix . "TWO_PHASE_NUMBERING"[module type];
+ "TYPE"[module type] -> CU Vendored_fix . "TYPE"[module type];
+ "Tabulate"[module] -> CU Vendored_fix . "Tabulate"[module];
+ "fix"[type] -> CU Vendored_fix . "fix"[type];
+ }
+
+(let
+  (include/591 = (global Vendored_fix!)
+   Prop/457 =a (field_mut 0 include/591))
+  (seq (setfield_ptr(root-init) 0 (global Dune__exe__Fix!) Prop/457) 0))
+(let (include/591 = (global Vendored_fix!))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__Fix!)
+      (field_mut 0 include/591))
+    0))

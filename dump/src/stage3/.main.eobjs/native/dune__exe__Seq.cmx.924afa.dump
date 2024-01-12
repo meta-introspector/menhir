@@ -1,0 +1,906 @@
+[
+  structure_item (src/Seq.ml[20,1240+0]..[23,1275+28])
+    Pstr_type Rec
+    [
+      type_declaration "seq" (src/Seq.ml[20,1240+8]..[20,1240+11]) (src/Seq.ml[20,1240+0]..[23,1275+28])
+        ptype_params =
+          [
+            core_type (src/Seq.ml[20,1240+5]..[20,1240+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/Seq.ml[21,1254+0]..[21,1254+7])
+                "SZero" (src/Seq.ml[21,1254+2]..[21,1254+7])
+                []
+                None
+              (src/Seq.ml[22,1262+0]..[22,1262+12])
+                "SOne" (src/Seq.ml[22,1262+2]..[22,1262+6])
+                [
+                  core_type (src/Seq.ml[22,1262+10]..[22,1262+12])
+                    Ptyp_var a
+                ]
+                None
+              (src/Seq.ml[23,1275+0]..[23,1275+28])
+                "SConcat" (src/Seq.ml[23,1275+2]..[23,1275+9])
+                [
+                  core_type (src/Seq.ml[23,1275+13]..[23,1275+19])
+                    Ptyp_constr "seq" (src/Seq.ml[23,1275+16]..[23,1275+19])
+                    [
+                      core_type (src/Seq.ml[23,1275+13]..[23,1275+15])
+                        Ptyp_var a
+                    ]
+                  core_type (src/Seq.ml[23,1275+22]..[23,1275+28])
+                    Ptyp_constr "seq" (src/Seq.ml[23,1275+25]..[23,1275+28])
+                    [
+                      core_type (src/Seq.ml[23,1275+22]..[23,1275+24])
+                        Ptyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/Seq.ml[25,1305+0]..[26,1317+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[25,1305+4]..[25,1305+9])
+          Ppat_var "empty" (src/Seq.ml[25,1305+4]..[25,1305+9])
+        expression (src/Seq.ml[26,1317+2]..[26,1317+7])
+          Pexp_construct "SZero" (src/Seq.ml[26,1317+2]..[26,1317+7])
+          None
+    ]
+  structure_item (src/Seq.ml[28,1326+0]..[29,1344+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[28,1326+4]..[28,1326+13])
+          Ppat_var "singleton" (src/Seq.ml[28,1326+4]..[28,1326+13])
+        expression (src/Seq.ml[28,1326+14]..[29,1344+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Seq.ml[28,1326+14]..[28,1326+15])
+            Ppat_var "x" (src/Seq.ml[28,1326+14]..[28,1326+15])
+          expression (src/Seq.ml[29,1344+2]..[29,1344+8])
+            Pexp_construct "SOne" (src/Seq.ml[29,1344+2]..[29,1344+6])
+            Some
+              expression (src/Seq.ml[29,1344+7]..[29,1344+8])
+                Pexp_ident "x" (src/Seq.ml[29,1344+7]..[29,1344+8])
+    ]
+  structure_item (src/Seq.ml[31,1354+0]..[37,1439+22])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[31,1354+4]..[31,1354+10])
+          Ppat_var "append" (src/Seq.ml[31,1354+4]..[31,1354+10])
+        expression (src/Seq.ml[31,1354+11]..[37,1439+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Seq.ml[31,1354+11]..[31,1354+13])
+            Ppat_var "xs" (src/Seq.ml[31,1354+11]..[31,1354+13])
+          expression (src/Seq.ml[31,1354+14]..[37,1439+22]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/Seq.ml[31,1354+14]..[31,1354+16])
+              Ppat_var "ys" (src/Seq.ml[31,1354+14]..[31,1354+16])
+            expression (src/Seq.ml[32,1373+2]..[37,1439+22])
+              Pexp_match
+              expression (src/Seq.ml[32,1373+8]..[32,1373+10])
+                Pexp_ident "xs" (src/Seq.ml[32,1373+8]..[32,1373+10])
+              [
+                <case>
+                  pattern (src/Seq.ml[33,1389+4]..[33,1389+9])
+                    Ppat_construct "SZero" (src/Seq.ml[33,1389+4]..[33,1389+9])
+                    None
+                  expression (src/Seq.ml[34,1402+6]..[34,1402+8])
+                    Pexp_ident "ys" (src/Seq.ml[34,1402+6]..[34,1402+8])
+                <case>
+                  pattern (src/Seq.ml[35,1411+4]..[36,1422+13])
+                    Ppat_or
+                    pattern (src/Seq.ml[35,1411+4]..[35,1411+10])
+                      Ppat_construct "SOne" (src/Seq.ml[35,1411+4]..[35,1411+8])
+                      Some
+                        []
+                        pattern (src/Seq.ml[35,1411+9]..[35,1411+10])
+                          Ppat_any
+                    pattern (src/Seq.ml[36,1422+4]..[36,1422+13])
+                      Ppat_construct "SConcat" (src/Seq.ml[36,1422+4]..[36,1422+11])
+                      Some
+                        []
+                        pattern (src/Seq.ml[36,1422+12]..[36,1422+13])
+                          Ppat_any
+                  expression (src/Seq.ml[37,1439+6]..[37,1439+22])
+                    Pexp_construct "SConcat" (src/Seq.ml[37,1439+6]..[37,1439+13])
+                    Some
+                      expression (src/Seq.ml[37,1439+14]..[37,1439+22])
+                        Pexp_tuple
+                        [
+                          expression (src/Seq.ml[37,1439+15]..[37,1439+17])
+                            Pexp_ident "xs" (src/Seq.ml[37,1439+15]..[37,1439+17])
+                          expression (src/Seq.ml[37,1439+19]..[37,1439+21])
+                            Pexp_ident "ys" (src/Seq.ml[37,1439+19]..[37,1439+21])
+                        ]
+              ]
+    ]
+  structure_item (src/Seq.ml[39,1463+0]..[46,1586+38])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/Seq.ml[39,1463+8]..[39,1463+16])
+          Ppat_var "elements" (src/Seq.ml[39,1463+8]..[39,1463+16])
+        expression (src/Seq.ml[39,1463+17]..[46,1586+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Seq.ml[39,1463+17]..[39,1463+19])
+            Ppat_var "xs" (src/Seq.ml[39,1463+17]..[39,1463+19])
+          expression (src/Seq.ml[39,1463+20]..[46,1586+38]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/Seq.ml[39,1463+20]..[39,1463+24])
+              Ppat_var "accu" (src/Seq.ml[39,1463+20]..[39,1463+24])
+            expression (src/Seq.ml[40,1490+2]..[46,1586+38])
+              Pexp_match
+              expression (src/Seq.ml[40,1490+8]..[40,1490+10])
+                Pexp_ident "xs" (src/Seq.ml[40,1490+8]..[40,1490+10])
+              [
+                <case>
+                  pattern (src/Seq.ml[41,1506+4]..[41,1506+9])
+                    Ppat_construct "SZero" (src/Seq.ml[41,1506+4]..[41,1506+9])
+                    None
+                  expression (src/Seq.ml[42,1519+6]..[42,1519+10])
+                    Pexp_ident "accu" (src/Seq.ml[42,1519+6]..[42,1519+10])
+                <case>
+                  pattern (src/Seq.ml[43,1530+4]..[43,1530+10])
+                    Ppat_construct "SOne" (src/Seq.ml[43,1530+4]..[43,1530+8])
+                    Some
+                      []
+                      pattern (src/Seq.ml[43,1530+9]..[43,1530+10])
+                        Ppat_var "x" (src/Seq.ml[43,1530+9]..[43,1530+10])
+                  expression (src/Seq.ml[44,1544+6]..[44,1544+15])
+                    Pexp_construct "::" (src/Seq.ml[44,1544+8]..[44,1544+10])
+                    Some
+                      expression (src/Seq.ml[44,1544+6]..[44,1544+15]) ghost
+                        Pexp_tuple
+                        [
+                          expression (src/Seq.ml[44,1544+6]..[44,1544+7])
+                            Pexp_ident "x" (src/Seq.ml[44,1544+6]..[44,1544+7])
+                          expression (src/Seq.ml[44,1544+11]..[44,1544+15])
+                            Pexp_ident "accu" (src/Seq.ml[44,1544+11]..[44,1544+15])
+                        ]
+                <case>
+                  pattern (src/Seq.ml[45,1560+4]..[45,1560+22])
+                    Ppat_construct "SConcat" (src/Seq.ml[45,1560+4]..[45,1560+11])
+                    Some
+                      []
+                      pattern (src/Seq.ml[45,1560+12]..[45,1560+22])
+                        Ppat_tuple
+                        [
+                          pattern (src/Seq.ml[45,1560+13]..[45,1560+16])
+                            Ppat_var "xs1" (src/Seq.ml[45,1560+13]..[45,1560+16])
+                          pattern (src/Seq.ml[45,1560+18]..[45,1560+21])
+                            Ppat_var "xs2" (src/Seq.ml[45,1560+18]..[45,1560+21])
+                        ]
+                  expression (src/Seq.ml[46,1586+6]..[46,1586+38])
+                    Pexp_apply
+                    expression (src/Seq.ml[46,1586+6]..[46,1586+14])
+                      Pexp_ident "elements" (src/Seq.ml[46,1586+6]..[46,1586+14])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/Seq.ml[46,1586+15]..[46,1586+18])
+                          Pexp_ident "xs1" (src/Seq.ml[46,1586+15]..[46,1586+18])
+                      <arg>
+                      Nolabel
+                        expression (src/Seq.ml[46,1586+19]..[46,1586+38])
+                          Pexp_apply
+                          expression (src/Seq.ml[46,1586+20]..[46,1586+28])
+                            Pexp_ident "elements" (src/Seq.ml[46,1586+20]..[46,1586+28])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/Seq.ml[46,1586+29]..[46,1586+32])
+                                Pexp_ident "xs2" (src/Seq.ml[46,1586+29]..[46,1586+32])
+                            <arg>
+                            Nolabel
+                              expression (src/Seq.ml[46,1586+33]..[46,1586+37])
+                                Pexp_ident "accu" (src/Seq.ml[46,1586+33]..[46,1586+37])
+                          ]
+                    ]
+              ]
+    ]
+  structure_item (src/Seq.ml[48,1626+0]..[49,1644+16])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[48,1626+4]..[48,1626+12])
+          Ppat_var "elements" (src/Seq.ml[48,1626+4]..[48,1626+12])
+        expression (src/Seq.ml[48,1626+13]..[49,1644+16]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Seq.ml[48,1626+13]..[48,1626+15])
+            Ppat_var "xs" (src/Seq.ml[48,1626+13]..[48,1626+15])
+          expression (src/Seq.ml[49,1644+2]..[49,1644+16])
+            Pexp_apply
+            expression (src/Seq.ml[49,1644+2]..[49,1644+10])
+              Pexp_ident "elements" (src/Seq.ml[49,1644+2]..[49,1644+10])
+            [
+              <arg>
+              Nolabel
+                expression (src/Seq.ml[49,1644+11]..[49,1644+13])
+                  Pexp_ident "xs" (src/Seq.ml[49,1644+11]..[49,1644+13])
+              <arg>
+              Nolabel
+                expression (src/Seq.ml[49,1644+14]..[49,1644+16])
+                  Pexp_construct "[]" (src/Seq.ml[49,1644+14]..[49,1644+16])
+                  None
+            ]
+    ]
+  structure_item (src/Seq.ml[51,1662+0]..[56,1739+28])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/Seq.ml[51,1662+8]..[51,1662+14])
+          Ppat_var "concat" (src/Seq.ml[51,1662+8]..[51,1662+14])
+        expression (src/Seq.ml[51,1662+15]..[56,1739+28]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Seq.ml[51,1662+15]..[51,1662+18])
+            Ppat_var "xss" (src/Seq.ml[51,1662+15]..[51,1662+18])
+          expression (src/Seq.ml[52,1683+2]..[56,1739+28])
+            Pexp_match
+            expression (src/Seq.ml[52,1683+8]..[52,1683+11])
+              Pexp_ident "xss" (src/Seq.ml[52,1683+8]..[52,1683+11])
+            [
+              <case>
+                pattern (src/Seq.ml[53,1700+4]..[53,1700+6])
+                  Ppat_construct "[]" (src/Seq.ml[53,1700+4]..[53,1700+6])
+                  None
+                expression (src/Seq.ml[54,1710+6]..[54,1710+11])
+                  Pexp_ident "empty" (src/Seq.ml[54,1710+6]..[54,1710+11])
+              <case>
+                pattern (src/Seq.ml[55,1722+4]..[55,1722+13])
+                  Ppat_construct "::" (src/Seq.ml[55,1722+7]..[55,1722+9])
+                  Some
+                    []
+                    pattern (src/Seq.ml[55,1722+4]..[55,1722+13]) ghost
+                      Ppat_tuple
+                      [
+                        pattern (src/Seq.ml[55,1722+4]..[55,1722+6])
+                          Ppat_var "xs" (src/Seq.ml[55,1722+4]..[55,1722+6])
+                        pattern (src/Seq.ml[55,1722+10]..[55,1722+13])
+                          Ppat_var "xss" (src/Seq.ml[55,1722+10]..[55,1722+13])
+                      ]
+                expression (src/Seq.ml[56,1739+6]..[56,1739+28])
+                  Pexp_apply
+                  expression (src/Seq.ml[56,1739+6]..[56,1739+12])
+                    Pexp_ident "append" (src/Seq.ml[56,1739+6]..[56,1739+12])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/Seq.ml[56,1739+13]..[56,1739+15])
+                        Pexp_ident "xs" (src/Seq.ml[56,1739+13]..[56,1739+15])
+                    <arg>
+                    Nolabel
+                      expression (src/Seq.ml[56,1739+16]..[56,1739+28])
+                        Pexp_apply
+                        expression (src/Seq.ml[56,1739+17]..[56,1739+23])
+                          Pexp_ident "concat" (src/Seq.ml[56,1739+17]..[56,1739+23])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/Seq.ml[56,1739+24]..[56,1739+27])
+                              Pexp_ident "xss" (src/Seq.ml[56,1739+24]..[56,1739+27])
+                        ]
+                  ]
+            ]
+    ]
+  structure_item (src/Seq.ml[58,1769+0]..[67,2001+15])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/Seq.ml[58,1769+8]..[58,1769+13])
+          Ppat_var "first" (src/Seq.ml[58,1769+8]..[58,1769+13])
+        expression (src/Seq.ml[58,1769+14]..[67,2001+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/Seq.ml[58,1769+14]..[58,1769+16])
+            Ppat_var "xs" (src/Seq.ml[58,1769+14]..[58,1769+16])
+          expression (src/Seq.ml[59,1788+2]..[67,2001+15])
+            Pexp_match
+            expression (src/Seq.ml[59,1788+8]..[59,1788+10])
+              Pexp_ident "xs" (src/Seq.ml[59,1788+8]..[59,1788+10])
+            [
+              <case>
+                pattern (src/Seq.ml[60,1804+4]..[60,1804+9])
+                  Ppat_construct "SZero" (src/Seq.ml[60,1804+4]..[60,1804+9])
+                  None
+                expression (src/Seq.ml[62,1880+6]..[62,1880+18])
+                  Pexp_assert
+                  expression (src/Seq.ml[62,1880+13]..[62,1880+18])
+                    Pexp_construct "false" (src/Seq.ml[62,1880+13]..[62,1880+18])
+                    None
+              <case>
+                pattern (src/Seq.ml[63,1899+4]..[63,1899+10])
+                  Ppat_construct "SOne" (src/Seq.ml[63,1899+4]..[63,1899+8])
+                  Some
+                    []
+                    pattern (src/Seq.ml[63,1899+9]..[63,1899+10])
+                      Ppat_var "x" (src/Seq.ml[63,1899+9]..[63,1899+10])
+                expression (src/Seq.ml[64,1913+6]..[64,1913+7])
+                  Pexp_ident "x" (src/Seq.ml[64,1913+6]..[64,1913+7])
+              <case>
+                pattern (src/Seq.ml[65,1921+4]..[65,1921+20])
+                  Ppat_construct "SConcat" (src/Seq.ml[65,1921+4]..[65,1921+11])
+                  Some
+                    []
+                    pattern (src/Seq.ml[65,1921+12]..[65,1921+20])
+                      Ppat_tuple
+                      [
+                        pattern (src/Seq.ml[65,1921+13]..[65,1921+16])
+                          Ppat_var "xs1" (src/Seq.ml[65,1921+13]..[65,1921+16])
+                        pattern (src/Seq.ml[65,1921+18]..[65,1921+19])
+                          Ppat_any
+                      ]
+                expression (src/Seq.ml[67,2001+6]..[67,2001+15])
+                  Pexp_apply
+                  expression (src/Seq.ml[67,2001+6]..[67,2001+11])
+                    Pexp_ident "first" (src/Seq.ml[67,2001+6]..[67,2001+11])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/Seq.ml[67,2001+12]..[67,2001+15])
+                        Pexp_ident "xs1" (src/Seq.ml[67,2001+12]..[67,2001+15])
+                  ]
+            ]
+    ]
+]
+
+type 'a seq =
+  | SZero 
+  | SOne of 'a 
+  | SConcat of 'a seq * 'a seq 
+let empty = SZero
+let singleton x = SOne x
+let append xs ys =
+  match xs with | SZero -> ys | SOne _ | SConcat _ -> SConcat (xs, ys)
+let rec elements xs accu =
+  match xs with
+  | SZero -> accu
+  | SOne x -> x :: accu
+  | SConcat (xs1, xs2) -> elements xs1 (elements xs2 accu)
+let elements xs = elements xs []
+let rec concat xss =
+  match xss with | [] -> empty | xs::xss -> append xs (concat xss)
+let rec first xs =
+  match xs with
+  | SZero -> assert false
+  | SOne x -> x
+  | SConcat (xs1, _) -> first xs1
+[
+  structure_item (src/Seq.ml[20,1240+0]..src/Seq.ml[23,1275+28])
+    Tstr_type Rec
+    [
+      type_declaration seq/397 (src/Seq.ml[20,1240+0]..src/Seq.ml[23,1275+28])
+        ptype_params =
+          [
+            core_type (src/Seq.ml[20,1240+5]..src/Seq.ml[20,1240+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/Seq.ml[21,1254+0]..src/Seq.ml[21,1254+7])
+                SZero/398
+                []
+                None
+              (src/Seq.ml[22,1262+0]..src/Seq.ml[22,1262+12])
+                SOne/399
+                [
+                  core_type (src/Seq.ml[22,1262+10]..src/Seq.ml[22,1262+12])
+                    Ttyp_var a
+                ]
+                None
+              (src/Seq.ml[23,1275+0]..src/Seq.ml[23,1275+28])
+                SConcat/400
+                [
+                  core_type (src/Seq.ml[23,1275+13]..src/Seq.ml[23,1275+19])
+                    Ttyp_constr "seq/397"
+                    [
+                      core_type (src/Seq.ml[23,1275+13]..src/Seq.ml[23,1275+15])
+                        Ttyp_var a
+                    ]
+                  core_type (src/Seq.ml[23,1275+22]..src/Seq.ml[23,1275+28])
+                    Ttyp_constr "seq/397"
+                    [
+                      core_type (src/Seq.ml[23,1275+22]..src/Seq.ml[23,1275+24])
+                        Ttyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/Seq.ml[25,1305+0]..src/Seq.ml[26,1317+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[25,1305+4]..src/Seq.ml[25,1305+9])
+          Tpat_var "empty/401"
+        expression (src/Seq.ml[26,1317+2]..src/Seq.ml[26,1317+7])
+          Texp_construct "SZero"
+          []
+    ]
+  structure_item (src/Seq.ml[28,1326+0]..src/Seq.ml[29,1344+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[28,1326+4]..src/Seq.ml[28,1326+13])
+          Tpat_var "singleton/402"
+        expression (src/Seq.ml[28,1326+14]..src/Seq.ml[29,1344+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Seq.ml[28,1326+14]..src/Seq.ml[28,1326+15])
+                Tpat_var "x/404"
+              expression (src/Seq.ml[29,1344+2]..src/Seq.ml[29,1344+8])
+                Texp_construct "SOne"
+                [
+                  expression (src/Seq.ml[29,1344+7]..src/Seq.ml[29,1344+8])
+                    Texp_ident "x/404"
+                ]
+          ]
+    ]
+  structure_item (src/Seq.ml[31,1354+0]..src/Seq.ml[37,1439+22])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[31,1354+4]..src/Seq.ml[31,1354+10])
+          Tpat_var "append/405"
+        expression (src/Seq.ml[31,1354+11]..src/Seq.ml[37,1439+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Seq.ml[31,1354+11]..src/Seq.ml[31,1354+13])
+                Tpat_var "xs/407"
+              expression (src/Seq.ml[31,1354+14]..src/Seq.ml[37,1439+22]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Seq.ml[31,1354+14]..src/Seq.ml[31,1354+16])
+                      Tpat_var "ys/408"
+                    expression (src/Seq.ml[32,1373+2]..src/Seq.ml[37,1439+22])
+                      Texp_match
+                      expression (src/Seq.ml[32,1373+8]..src/Seq.ml[32,1373+10])
+                        Texp_ident "xs/407"
+                      [
+                        <case>
+                          pattern (src/Seq.ml[33,1389+4]..src/Seq.ml[33,1389+9])
+                            Tpat_value
+                            pattern (src/Seq.ml[33,1389+4]..src/Seq.ml[33,1389+9])
+                              Tpat_construct "SZero"
+                              []
+                              None
+                          expression (src/Seq.ml[34,1402+6]..src/Seq.ml[34,1402+8])
+                            Texp_ident "ys/408"
+                        <case>
+                          pattern (src/Seq.ml[35,1411+4]..src/Seq.ml[36,1422+13])
+                            Tpat_or
+                            pattern (src/Seq.ml[35,1411+4]..src/Seq.ml[35,1411+10])
+                              Tpat_value
+                              pattern (src/Seq.ml[35,1411+4]..src/Seq.ml[35,1411+10])
+                                Tpat_construct "SOne"
+                                [
+                                  pattern (src/Seq.ml[35,1411+9]..src/Seq.ml[35,1411+10])
+                                    Tpat_any
+                                ]
+                                None
+                            pattern (src/Seq.ml[36,1422+4]..src/Seq.ml[36,1422+13])
+                              Tpat_value
+                              pattern (src/Seq.ml[36,1422+4]..src/Seq.ml[36,1422+13])
+                                Tpat_construct "SConcat"
+                                [
+                                  pattern (src/Seq.ml[36,1422+12]..src/Seq.ml[36,1422+13])
+                                    Tpat_any
+                                  pattern (src/Seq.ml[36,1422+12]..src/Seq.ml[36,1422+13])
+                                    Tpat_any
+                                ]
+                                None
+                          expression (src/Seq.ml[37,1439+6]..src/Seq.ml[37,1439+22])
+                            Texp_construct "SConcat"
+                            [
+                              expression (src/Seq.ml[37,1439+15]..src/Seq.ml[37,1439+17])
+                                Texp_ident "xs/407"
+                              expression (src/Seq.ml[37,1439+19]..src/Seq.ml[37,1439+21])
+                                Texp_ident "ys/408"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Seq.ml[39,1463+0]..src/Seq.ml[46,1586+38])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/Seq.ml[39,1463+8]..src/Seq.ml[39,1463+16])
+          Tpat_var "elements/409"
+        expression (src/Seq.ml[39,1463+17]..src/Seq.ml[46,1586+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Seq.ml[39,1463+17]..src/Seq.ml[39,1463+19])
+                Tpat_var "xs/410"
+              expression (src/Seq.ml[39,1463+20]..src/Seq.ml[46,1586+38]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/Seq.ml[39,1463+20]..src/Seq.ml[39,1463+24])
+                      Tpat_var "accu/411"
+                    expression (src/Seq.ml[40,1490+2]..src/Seq.ml[46,1586+38])
+                      Texp_match
+                      expression (src/Seq.ml[40,1490+8]..src/Seq.ml[40,1490+10])
+                        Texp_ident "xs/410"
+                      [
+                        <case>
+                          pattern (src/Seq.ml[41,1506+4]..src/Seq.ml[41,1506+9])
+                            Tpat_value
+                            pattern (src/Seq.ml[41,1506+4]..src/Seq.ml[41,1506+9])
+                              Tpat_construct "SZero"
+                              []
+                              None
+                          expression (src/Seq.ml[42,1519+6]..src/Seq.ml[42,1519+10])
+                            Texp_ident "accu/411"
+                        <case>
+                          pattern (src/Seq.ml[43,1530+4]..src/Seq.ml[43,1530+10])
+                            Tpat_value
+                            pattern (src/Seq.ml[43,1530+4]..src/Seq.ml[43,1530+10])
+                              Tpat_construct "SOne"
+                              [
+                                pattern (src/Seq.ml[43,1530+9]..src/Seq.ml[43,1530+10])
+                                  Tpat_var "x/412"
+                              ]
+                              None
+                          expression (src/Seq.ml[44,1544+6]..src/Seq.ml[44,1544+15])
+                            Texp_construct "::"
+                            [
+                              expression (src/Seq.ml[44,1544+6]..src/Seq.ml[44,1544+7])
+                                Texp_ident "x/412"
+                              expression (src/Seq.ml[44,1544+11]..src/Seq.ml[44,1544+15])
+                                Texp_ident "accu/411"
+                            ]
+                        <case>
+                          pattern (src/Seq.ml[45,1560+4]..src/Seq.ml[45,1560+22])
+                            Tpat_value
+                            pattern (src/Seq.ml[45,1560+4]..src/Seq.ml[45,1560+22])
+                              Tpat_construct "SConcat"
+                              [
+                                pattern (src/Seq.ml[45,1560+13]..src/Seq.ml[45,1560+16])
+                                  Tpat_var "xs1/413"
+                                pattern (src/Seq.ml[45,1560+18]..src/Seq.ml[45,1560+21])
+                                  Tpat_var "xs2/414"
+                              ]
+                              None
+                          expression (src/Seq.ml[46,1586+6]..src/Seq.ml[46,1586+38])
+                            Texp_apply
+                            expression (src/Seq.ml[46,1586+6]..src/Seq.ml[46,1586+14])
+                              Texp_ident "elements/409"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/Seq.ml[46,1586+15]..src/Seq.ml[46,1586+18])
+                                  Texp_ident "xs1/413"
+                              <arg>
+                                Nolabel
+                                expression (src/Seq.ml[46,1586+19]..src/Seq.ml[46,1586+38])
+                                  Texp_apply
+                                  expression (src/Seq.ml[46,1586+20]..src/Seq.ml[46,1586+28])
+                                    Texp_ident "elements/409"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/Seq.ml[46,1586+29]..src/Seq.ml[46,1586+32])
+                                        Texp_ident "xs2/414"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/Seq.ml[46,1586+33]..src/Seq.ml[46,1586+37])
+                                        Texp_ident "accu/411"
+                                  ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Seq.ml[48,1626+0]..src/Seq.ml[49,1644+16])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/Seq.ml[48,1626+4]..src/Seq.ml[48,1626+12])
+          Tpat_var "elements/415"
+        expression (src/Seq.ml[48,1626+13]..src/Seq.ml[49,1644+16]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Seq.ml[48,1626+13]..src/Seq.ml[48,1626+15])
+                Tpat_var "xs/416"
+              expression (src/Seq.ml[49,1644+2]..src/Seq.ml[49,1644+16])
+                Texp_apply
+                expression (src/Seq.ml[49,1644+2]..src/Seq.ml[49,1644+10])
+                  Texp_ident "elements/409"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/Seq.ml[49,1644+11]..src/Seq.ml[49,1644+13])
+                      Texp_ident "xs/416"
+                  <arg>
+                    Nolabel
+                    expression (src/Seq.ml[49,1644+14]..src/Seq.ml[49,1644+16])
+                      Texp_construct "[]"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/Seq.ml[51,1662+0]..src/Seq.ml[56,1739+28])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/Seq.ml[51,1662+8]..src/Seq.ml[51,1662+14])
+          Tpat_var "concat/417"
+        expression (src/Seq.ml[51,1662+15]..src/Seq.ml[56,1739+28]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Seq.ml[51,1662+15]..src/Seq.ml[51,1662+18])
+                Tpat_var "xss/418"
+              expression (src/Seq.ml[52,1683+2]..src/Seq.ml[56,1739+28])
+                Texp_match
+                expression (src/Seq.ml[52,1683+8]..src/Seq.ml[52,1683+11])
+                  Texp_ident "xss/418"
+                [
+                  <case>
+                    pattern (src/Seq.ml[53,1700+4]..src/Seq.ml[53,1700+6])
+                      Tpat_value
+                      pattern (src/Seq.ml[53,1700+4]..src/Seq.ml[53,1700+6])
+                        Tpat_construct "[]"
+                        []
+                        None
+                    expression (src/Seq.ml[54,1710+6]..src/Seq.ml[54,1710+11])
+                      Texp_ident "empty/401"
+                  <case>
+                    pattern (src/Seq.ml[55,1722+4]..src/Seq.ml[55,1722+13])
+                      Tpat_value
+                      pattern (src/Seq.ml[55,1722+4]..src/Seq.ml[55,1722+13])
+                        Tpat_construct "::"
+                        [
+                          pattern (src/Seq.ml[55,1722+4]..src/Seq.ml[55,1722+6])
+                            Tpat_var "xs/419"
+                          pattern (src/Seq.ml[55,1722+10]..src/Seq.ml[55,1722+13])
+                            Tpat_var "xss/420"
+                        ]
+                        None
+                    expression (src/Seq.ml[56,1739+6]..src/Seq.ml[56,1739+28])
+                      Texp_apply
+                      expression (src/Seq.ml[56,1739+6]..src/Seq.ml[56,1739+12])
+                        Texp_ident "append/405"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/Seq.ml[56,1739+13]..src/Seq.ml[56,1739+15])
+                            Texp_ident "xs/419"
+                        <arg>
+                          Nolabel
+                          expression (src/Seq.ml[56,1739+16]..src/Seq.ml[56,1739+28])
+                            Texp_apply
+                            expression (src/Seq.ml[56,1739+17]..src/Seq.ml[56,1739+23])
+                              Texp_ident "concat/417"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/Seq.ml[56,1739+24]..src/Seq.ml[56,1739+27])
+                                  Texp_ident "xss/420"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/Seq.ml[58,1769+0]..src/Seq.ml[67,2001+15])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/Seq.ml[58,1769+8]..src/Seq.ml[58,1769+13])
+          Tpat_var "first/421"
+        expression (src/Seq.ml[58,1769+14]..src/Seq.ml[67,2001+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/Seq.ml[58,1769+14]..src/Seq.ml[58,1769+16])
+                Tpat_var "xs/422"
+              expression (src/Seq.ml[59,1788+2]..src/Seq.ml[67,2001+15])
+                Texp_match
+                expression (src/Seq.ml[59,1788+8]..src/Seq.ml[59,1788+10])
+                  Texp_ident "xs/422"
+                [
+                  <case>
+                    pattern (src/Seq.ml[60,1804+4]..src/Seq.ml[60,1804+9])
+                      Tpat_value
+                      pattern (src/Seq.ml[60,1804+4]..src/Seq.ml[60,1804+9])
+                        Tpat_construct "SZero"
+                        []
+                        None
+                    expression (src/Seq.ml[62,1880+6]..src/Seq.ml[62,1880+18])
+                      Texp_assert                      expression (src/Seq.ml[62,1880+13]..src/Seq.ml[62,1880+18])
+                        Texp_construct "false"
+                        []
+                  <case>
+                    pattern (src/Seq.ml[63,1899+4]..src/Seq.ml[63,1899+10])
+                      Tpat_value
+                      pattern (src/Seq.ml[63,1899+4]..src/Seq.ml[63,1899+10])
+                        Tpat_construct "SOne"
+                        [
+                          pattern (src/Seq.ml[63,1899+9]..src/Seq.ml[63,1899+10])
+                            Tpat_var "x/423"
+                        ]
+                        None
+                    expression (src/Seq.ml[64,1913+6]..src/Seq.ml[64,1913+7])
+                      Texp_ident "x/423"
+                  <case>
+                    pattern (src/Seq.ml[65,1921+4]..src/Seq.ml[65,1921+20])
+                      Tpat_value
+                      pattern (src/Seq.ml[65,1921+4]..src/Seq.ml[65,1921+20])
+                        Tpat_construct "SConcat"
+                        [
+                          pattern (src/Seq.ml[65,1921+13]..src/Seq.ml[65,1921+16])
+                            Tpat_var "xs1/424"
+                          pattern (src/Seq.ml[65,1921+18]..src/Seq.ml[65,1921+19])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/Seq.ml[67,2001+6]..src/Seq.ml[67,2001+15])
+                      Texp_apply
+                      expression (src/Seq.ml[67,2001+6]..src/Seq.ml[67,2001+11])
+                        Texp_ident "first/421"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/Seq.ml[67,2001+12]..src/Seq.ml[67,2001+15])
+                            Texp_ident "xs1/424"
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Seq>
+ "append"[value] -> <Dune__exe__Seq.7>;
+ "concat"[value] -> <Dune__exe__Seq.18>;
+ "elements"[value] -> <Dune__exe__Seq.16>;
+ "empty"[value] -> <Dune__exe__Seq.4>;
+ "first"[value] -> <Dune__exe__Seq.22>;
+ "seq"[type] -> <Dune__exe__Seq.0>;
+ "singleton"[value] -> <Dune__exe__Seq.5>;
+ }
+
+(seq
+  (let (empty/401 = 0)
+    (setfield_ptr(root-init) 0 (global Dune__exe__Seq!) empty/401))
+  (let (singleton/402 = (function x/404 (makeblock 0 x/404)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Seq!) singleton/402))
+  (let
+    (append/405 =
+       (function xs/407 ys/408
+         (catch
+           (if (isint xs/407) ys/408
+             (let (*match*/851 =a (field_imm 0 xs/407)) (exit 1)))
+          with (1) (makeblock 1 xs/407 ys/408))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Seq!) append/405))
+  (letrec
+    (elements/409
+       (function xs/410 accu/411
+         (switch* xs/410
+          case int 0: accu/411
+          case tag 0:
+           (let (x/412 =a (field_imm 0 xs/410)) (makeblock 0 x/412 accu/411))
+          case tag 1:
+           (let
+             (xs2/414 =a (field_imm 1 xs/410)
+              xs1/413 =a (field_imm 0 xs/410))
+             (apply elements/409 xs1/413
+               (apply elements/409 xs2/414 accu/411))))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Seq!) elements/409))
+  (let
+    (elements/415 =
+       (function xs/416
+         (apply (field_imm 6 (global Dune__exe__Seq!)) xs/416 0)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Seq!) elements/415))
+  (letrec
+    (concat/417
+       (function xss/418
+         (if (isint xss/418) (field_imm 0 (global Dune__exe__Seq!))
+           (let
+             (xss/420 =a (field_imm 1 xss/418)
+              xs/419 =a (field_imm 0 xss/418))
+             (apply (field_imm 2 (global Dune__exe__Seq!)) xs/419
+               (apply concat/417 xss/420))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Seq!) concat/417))
+  (letrec
+    (first/421
+       (function xs/422
+         (switch* xs/422
+          case int 0:
+           (raise
+             (makeblock 0 (global Assert_failure/28!) [0: "src/Seq.ml" 62 6]))
+          case tag 0: (let (x/423 =a (field_imm 0 xs/422)) x/423)
+          case tag 1:
+           (let
+             (*match*/854 =a (field_imm 1 xs/422)
+              xs1/424 =a (field_imm 0 xs/422))
+             (apply first/421 xs1/424)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Seq!) first/421))
+  0)
+(seq
+  (let (empty/401 = 0)
+    (setfield_ptr(root-init) 0 (global Dune__exe__Seq!) empty/401))
+  (let (singleton/402 = (function x/404 (makeblock 0 x/404)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Seq!) singleton/402))
+  (let
+    (append/405 =
+       (function xs/407 ys/408
+         (if (isint xs/407) ys/408 (makeblock 1 xs/407 ys/408))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Seq!) append/405))
+  (letrec
+    (elements/409
+       (function xs/410 accu/411
+         (switch* xs/410
+          case int 0: accu/411
+          case tag 0: (makeblock 0 (field_imm 0 xs/410) accu/411)
+          case tag 1:
+           (apply elements/409 (field_imm 0 xs/410)
+             (apply elements/409 (field_imm 1 xs/410) accu/411)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Seq!) elements/409))
+  (let
+    (elements/415 =
+       (function xs/416
+         (apply (field_imm 6 (global Dune__exe__Seq!)) xs/416 0)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Seq!) elements/415))
+  (letrec
+    (concat/417
+       (function xss/418
+         (if (isint xss/418) (field_imm 0 (global Dune__exe__Seq!))
+           (apply (field_imm 2 (global Dune__exe__Seq!))
+             (field_imm 0 xss/418) (apply concat/417 (field_imm 1 xss/418))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Seq!) concat/417))
+  (letrec
+    (first/421
+       (function xs/422
+         (switch* xs/422
+          case int 0:
+           (raise
+             (makeblock 0 (global Assert_failure/28!) [0: "src/Seq.ml" 62 6]))
+          case tag 0: (field_imm 0 xs/422)
+          case tag 1: (apply first/421 (field_imm 0 xs/422)))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Seq!) first/421))
+  0)

@@ -1,0 +1,147 @@
+[
+  signature_item (src/default.mli[14,998+0]..[14,998+12])
+    Psig_open Fresh "Grammar" (src/default.mli[14,998+5]..[14,998+12])
+  signature_item (src/default.mli[19,1135+0]..[19,1135+81])
+    Psig_value
+    value_description "has_default_reduction" (src/default.mli[19,1135+4]..[19,1135+25]) (src/default.mli[19,1135+0]..[19,1135+81])
+      core_type (src/default.mli[19,1135+28]..[19,1135+81])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/default.mli[19,1135+28]..[19,1135+36])
+          Ptyp_constr "Lr1.node" (src/default.mli[19,1135+28]..[19,1135+36])
+          []
+        core_type (src/default.mli[19,1135+40]..[19,1135+81])
+          Ptyp_constr "option" (src/default.mli[19,1135+75]..[19,1135+81])
+          [
+            core_type (src/default.mli[19,1135+41]..[19,1135+73])
+              Ptyp_tuple
+              [
+                core_type (src/default.mli[19,1135+41]..[19,1135+57])
+                  Ptyp_constr "Production.index" (src/default.mli[19,1135+41]..[19,1135+57])
+                  []
+                core_type (src/default.mli[19,1135+60]..[19,1135+73])
+                  Ptyp_constr "TerminalSet.t" (src/default.mli[19,1135+60]..[19,1135+73])
+                  []
+              ]
+          ]
+      []
+  signature_item (src/default.mli[25,1439+0]..[25,1439+68])
+    Psig_value
+    value_description "has_reduction" (src/default.mli[25,1439+4]..[25,1439+17]) (src/default.mli[25,1439+0]..[25,1439+68])
+      core_type (src/default.mli[25,1439+19]..[25,1439+68])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/default.mli[25,1439+19]..[25,1439+27])
+          Ptyp_constr "Lr1.node" (src/default.mli[25,1439+19]..[25,1439+27])
+          []
+        core_type (src/default.mli[25,1439+31]..[25,1439+68])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/default.mli[25,1439+31]..[25,1439+41])
+            Ptyp_constr "Terminal.t" (src/default.mli[25,1439+31]..[25,1439+41])
+            []
+          core_type (src/default.mli[25,1439+45]..[25,1439+68])
+            Ptyp_constr "option" (src/default.mli[25,1439+62]..[25,1439+68])
+            [
+              core_type (src/default.mli[25,1439+45]..[25,1439+61])
+                Ptyp_constr "Production.index" (src/default.mli[25,1439+45]..[25,1439+61])
+                []
+            ]
+      []
+  signature_item (src/default.mli[30,1635+0]..[30,1635+51])
+    Psig_value
+    value_description "causes_an_error" (src/default.mli[30,1635+4]..[30,1635+19]) (src/default.mli[30,1635+0]..[30,1635+51])
+      core_type (src/default.mli[30,1635+21]..[30,1635+51])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/default.mli[30,1635+21]..[30,1635+29])
+          Ptyp_constr "Lr1.node" (src/default.mli[30,1635+21]..[30,1635+29])
+          []
+        core_type (src/default.mli[30,1635+33]..[30,1635+51])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/default.mli[30,1635+33]..[30,1635+43])
+            Ptyp_constr "Terminal.t" (src/default.mli[30,1635+33]..[30,1635+43])
+            []
+          core_type (src/default.mli[30,1635+47]..[30,1635+51])
+            Ptyp_constr "bool" (src/default.mli[30,1635+47]..[30,1635+51])
+            []
+      []
+]
+
+open Grammar
+val has_default_reduction :
+  Lr1.node -> (Production.index * TerminalSet.t) option
+val has_reduction : Lr1.node -> Terminal.t -> Production.index option
+val causes_an_error : Lr1.node -> Terminal.t -> bool
+[
+  signature_item (src/default.mli[14,998+0]..src/default.mli[14,998+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/default.mli[19,1135+0]..src/default.mli[19,1135+81])
+    Tsig_value
+    value_description has_default_reduction/528 (src/default.mli[19,1135+0]..src/default.mli[19,1135+81])
+      core_type (src/default.mli[19,1135+28]..src/default.mli[19,1135+81])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/default.mli[19,1135+28]..src/default.mli[19,1135+36])
+          Ttyp_constr "Dune__exe!.Lr1.node"
+          []
+        core_type (src/default.mli[19,1135+40]..src/default.mli[19,1135+81])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/default.mli[19,1135+41]..src/default.mli[19,1135+73])
+              Ttyp_tuple
+              [
+                core_type (src/default.mli[19,1135+41]..src/default.mli[19,1135+57])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+                core_type (src/default.mli[19,1135+60]..src/default.mli[19,1135+73])
+                  Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                  []
+              ]
+          ]
+      []
+  signature_item (src/default.mli[25,1439+0]..src/default.mli[25,1439+68])
+    Tsig_value
+    value_description has_reduction/558 (src/default.mli[25,1439+0]..src/default.mli[25,1439+68])
+      core_type (src/default.mli[25,1439+19]..src/default.mli[25,1439+68])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/default.mli[25,1439+19]..src/default.mli[25,1439+27])
+          Ttyp_constr "Dune__exe!.Lr1.node"
+          []
+        core_type (src/default.mli[25,1439+31]..src/default.mli[25,1439+68])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/default.mli[25,1439+31]..src/default.mli[25,1439+41])
+            Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+            []
+          core_type (src/default.mli[25,1439+45]..src/default.mli[25,1439+68])
+            Ttyp_constr "option/10!"
+            [
+              core_type (src/default.mli[25,1439+45]..src/default.mli[25,1439+61])
+                Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                []
+            ]
+      []
+  signature_item (src/default.mli[30,1635+0]..src/default.mli[30,1635+51])
+    Tsig_value
+    value_description causes_an_error/559 (src/default.mli[30,1635+0]..src/default.mli[30,1635+51])
+      core_type (src/default.mli[30,1635+21]..src/default.mli[30,1635+51])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/default.mli[30,1635+21]..src/default.mli[30,1635+29])
+          Ttyp_constr "Dune__exe!.Lr1.node"
+          []
+        core_type (src/default.mli[30,1635+33]..src/default.mli[30,1635+51])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/default.mli[30,1635+33]..src/default.mli[30,1635+43])
+            Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+            []
+          core_type (src/default.mli[30,1635+47]..src/default.mli[30,1635+51])
+            Ttyp_constr "bool/5!"
+            []
+      []
+]
+

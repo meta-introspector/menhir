@@ -1,0 +1,214 @@
+[
+  signature_item (src/cst.mli[14,994+0]..[14,994+12])
+    Psig_open Fresh "Grammar" (src/cst.mli[14,994+5]..[14,994+12])
+  signature_item (src/cst.mli[24,1353+0]..[27,1445+12])
+    Psig_type Rec
+    [
+      type_declaration "cst" (src/cst.mli[24,1353+5]..[24,1353+8]) (src/cst.mli[24,1353+0]..[27,1445+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/cst.mli[25,1364+2]..[25,1364+29])
+                "CstTerminal" (src/cst.mli[25,1364+4]..[25,1364+15])
+                [
+                  core_type (src/cst.mli[25,1364+19]..[25,1364+29])
+                    Ptyp_constr "Terminal.t" (src/cst.mli[25,1364+19]..[25,1364+29])
+                    []
+                ]
+                None
+              (src/cst.mli[26,1394+2]..[26,1394+50])
+                "CstNonTerminal" (src/cst.mli[26,1394+4]..[26,1394+18])
+                [
+                  core_type (src/cst.mli[26,1394+22]..[26,1394+38])
+                    Ptyp_constr "Production.index" (src/cst.mli[26,1394+22]..[26,1394+38])
+                    []
+                  core_type (src/cst.mli[26,1394+41]..[26,1394+50])
+                    Ptyp_constr "array" (src/cst.mli[26,1394+45]..[26,1394+50])
+                    [
+                      core_type (src/cst.mli[26,1394+41]..[26,1394+44])
+                        Ptyp_constr "cst" (src/cst.mli[26,1394+41]..[26,1394+44])
+                        []
+                    ]
+                ]
+                None
+              (src/cst.mli[27,1445+2]..[27,1445+12])
+                "CstError" (src/cst.mli[27,1445+4]..[27,1445+12])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/cst.mli[31,1504+0]..[31,1504+34])
+    Psig_value
+    value_description "fringe" (src/cst.mli[31,1504+4]..[31,1504+10]) (src/cst.mli[31,1504+0]..[31,1504+34])
+      core_type (src/cst.mli[31,1504+12]..[31,1504+34])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/cst.mli[31,1504+12]..[31,1504+15])
+          Ptyp_constr "cst" (src/cst.mli[31,1504+12]..[31,1504+15])
+          []
+        core_type (src/cst.mli[31,1504+19]..[31,1504+34])
+          Ptyp_constr "list" (src/cst.mli[31,1504+30]..[31,1504+34])
+          [
+            core_type (src/cst.mli[31,1504+19]..[31,1504+29])
+              Ptyp_constr "Terminal.t" (src/cst.mli[31,1504+19]..[31,1504+29])
+              []
+          ]
+      []
+  signature_item (src/cst.mli[36,1642+0]..[36,1642+37])
+    Psig_value
+    value_description "print" (src/cst.mli[36,1642+4]..[36,1642+9]) (src/cst.mli[36,1642+0]..[36,1642+37])
+      core_type (src/cst.mli[36,1642+11]..[36,1642+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/cst.mli[36,1642+11]..[36,1642+22])
+          Ptyp_constr "out_channel" (src/cst.mli[36,1642+11]..[36,1642+22])
+          []
+        core_type (src/cst.mli[36,1642+26]..[36,1642+37])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/cst.mli[36,1642+26]..[36,1642+29])
+            Ptyp_constr "cst" (src/cst.mli[36,1642+26]..[36,1642+29])
+            []
+          core_type (src/cst.mli[36,1642+33]..[36,1642+37])
+            Ptyp_constr "unit" (src/cst.mli[36,1642+33]..[36,1642+37])
+            []
+      []
+  signature_item (src/cst.mli[42,1886+0]..[42,1886+36])
+    Psig_value
+    value_description "show" (src/cst.mli[42,1886+4]..[42,1886+8]) (src/cst.mli[42,1886+0]..[42,1886+36])
+      core_type (src/cst.mli[42,1886+10]..[42,1886+36])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/cst.mli[42,1886+10]..[42,1886+21])
+          Ptyp_constr "out_channel" (src/cst.mli[42,1886+10]..[42,1886+21])
+          []
+        core_type (src/cst.mli[42,1886+25]..[42,1886+36])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/cst.mli[42,1886+25]..[42,1886+28])
+            Ptyp_constr "cst" (src/cst.mli[42,1886+25]..[42,1886+28])
+            []
+          core_type (src/cst.mli[42,1886+32]..[42,1886+36])
+            Ptyp_constr "unit" (src/cst.mli[42,1886+32]..[42,1886+36])
+            []
+      []
+]
+
+open Grammar
+type cst =
+  | CstTerminal of Terminal.t 
+  | CstNonTerminal of Production.index * cst array 
+  | CstError 
+val fringe : cst -> Terminal.t list
+val print : out_channel -> cst -> unit
+val show : out_channel -> cst -> unit
+[
+  signature_item (src/cst.mli[14,994+0]..src/cst.mli[14,994+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/cst.mli[24,1353+0]..src/cst.mli[27,1445+12])
+    Tsig_type Rec
+    [
+      type_declaration cst/413 (src/cst.mli[24,1353+0]..src/cst.mli[27,1445+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/cst.mli[25,1364+2]..src/cst.mli[25,1364+29])
+                CstTerminal/414
+                [
+                  core_type (src/cst.mli[25,1364+19]..src/cst.mli[25,1364+29])
+                    Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                    []
+                ]
+                None
+              (src/cst.mli[26,1394+2]..src/cst.mli[26,1394+50])
+                CstNonTerminal/461
+                [
+                  core_type (src/cst.mli[26,1394+22]..src/cst.mli[26,1394+38])
+                    Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                    []
+                  core_type (src/cst.mli[26,1394+41]..src/cst.mli[26,1394+50])
+                    Ttyp_constr "array/8!"
+                    [
+                      core_type (src/cst.mli[26,1394+41]..src/cst.mli[26,1394+44])
+                        Ttyp_constr "cst/413"
+                        []
+                    ]
+                ]
+                None
+              (src/cst.mli[27,1445+2]..src/cst.mli[27,1445+12])
+                CstError/496
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/cst.mli[31,1504+0]..src/cst.mli[31,1504+34])
+    Tsig_value
+    value_description fringe/561 (src/cst.mli[31,1504+0]..src/cst.mli[31,1504+34])
+      core_type (src/cst.mli[31,1504+12]..src/cst.mli[31,1504+34])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/cst.mli[31,1504+12]..src/cst.mli[31,1504+15])
+          Ttyp_constr "cst/413"
+          []
+        core_type (src/cst.mli[31,1504+19]..src/cst.mli[31,1504+34])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/cst.mli[31,1504+19]..src/cst.mli[31,1504+29])
+              Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+              []
+          ]
+      []
+  signature_item (src/cst.mli[36,1642+0]..src/cst.mli[36,1642+37])
+    Tsig_value
+    value_description print/562 (src/cst.mli[36,1642+0]..src/cst.mli[36,1642+37])
+      core_type (src/cst.mli[36,1642+11]..src/cst.mli[36,1642+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/cst.mli[36,1642+11]..src/cst.mli[36,1642+22])
+          Ttyp_constr "Stdlib!.out_channel"
+          []
+        core_type (src/cst.mli[36,1642+26]..src/cst.mli[36,1642+37])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/cst.mli[36,1642+26]..src/cst.mli[36,1642+29])
+            Ttyp_constr "cst/413"
+            []
+          core_type (src/cst.mli[36,1642+33]..src/cst.mli[36,1642+37])
+            Ttyp_constr "unit/6!"
+            []
+      []
+  signature_item (src/cst.mli[42,1886+0]..src/cst.mli[42,1886+36])
+    Tsig_value
+    value_description show/563 (src/cst.mli[42,1886+0]..src/cst.mli[42,1886+36])
+      core_type (src/cst.mli[42,1886+10]..src/cst.mli[42,1886+36])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/cst.mli[42,1886+10]..src/cst.mli[42,1886+21])
+          Ttyp_constr "Stdlib!.out_channel"
+          []
+        core_type (src/cst.mli[42,1886+25]..src/cst.mli[42,1886+36])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/cst.mli[42,1886+25]..src/cst.mli[42,1886+28])
+            Ttyp_constr "cst/413"
+            []
+          core_type (src/cst.mli[42,1886+32]..src/cst.mli[42,1886+36])
+            Ttyp_constr "unit/6!"
+            []
+      []
+]
+

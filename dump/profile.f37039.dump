@@ -1,0 +1,22 @@
+0.183s  276MB 19.8MB 21.6MB src/stage2/codeBackend.ml
+  0.008s 5.97MB 1.01MB 2.78MB parsing
+    0.008s 5.97MB 1.01MB 2.78MB parser
+  0.069s 63.7MB 6.34MB 9.12MB typing
+  0.003s 4.19MB 0.18MB 9.31MB transl
+  0.069s  135MB 11.8MB 21.1MB generate
+    ------ 0.28MB ------ ------ cmm
+    0.050s  108MB 9.81MB 19.1MB compile_phrases
+      0.003s 11.1MB 1.18MB 10.4MB selection
+      ------ 0.59MB ------ ------ comballoc
+      0.001s ------ ------ ------ cse
+      0.002s 4.00MB 0.25MB 10.7MB liveness
+      0.001s 2.19MB 0.37MB 11.1MB deadcode
+      0.004s 6.80MB 0.50MB 11.6MB spill
+      0.001s 2.19MB 0.09MB 11.7MB split
+      0.035s 73.6MB 6.78MB 18.4MB regalloc
+      0.001s 4.00MB 0.25MB 18.7MB emit
+      0.001s 4.00MB 0.37MB 19.1MB other
+    0.009s ------ ------ ------ assemble
+    0.010s 26.1MB 2.03MB 21.1MB other
+  0.033s 67.4MB 0.46MB 21.6MB other
+0.014s 3.08MB 1.76MB ------ other

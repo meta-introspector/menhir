@@ -1,0 +1,462 @@
+[
+  signature_item (src/stringMap.mli[14,1000+0]..[14,1000+36])
+    Psig_include
+    module_type (src/stringMap.mli[14,1000+8]..[14,1000+36])
+      Pmty_with
+      module_type (src/stringMap.mli[14,1000+8]..[14,1000+13])
+        Pmty_ident "Map.S" (src/stringMap.mli[14,1000+8]..[14,1000+13])
+      [
+        Pwith_type "key" (src/stringMap.mli[14,1000+24]..[14,1000+27])
+          type_declaration "key" (src/stringMap.mli[14,1000+24]..[14,1000+27]) (src/stringMap.mli[14,1000+19]..[14,1000+36])
+            ptype_params =
+              []
+            ptype_cstrs =
+              []
+            ptype_kind =
+              Ptype_abstract
+            ptype_private = Public
+            ptype_manifest =
+              Some
+                core_type (src/stringMap.mli[14,1000+30]..[14,1000+36])
+                  Ptyp_constr "string" (src/stringMap.mli[14,1000+30]..[14,1000+36])
+                  []
+      ]
+  signature_item (src/stringMap.mli[17,1089+0]..[17,1089+26])
+    Psig_value
+    value_description "cardinal" (src/stringMap.mli[17,1089+4]..[17,1089+12]) (src/stringMap.mli[17,1089+0]..[17,1089+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[16,1038+0]..[16,1038+50])
+            Pstr_eval
+            expression (src/stringMap.mli[16,1038+0]..[16,1038+50])
+              Pexp_constant PConst_string("[cardinal m] is the cardinal of the map [m]. ",(src/stringMap.mli[16,1038+0]..[16,1038+50]),None)
+        ]
+      core_type (src/stringMap.mli[17,1089+15]..[17,1089+26])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[17,1089+15]..[17,1089+19])
+          Ptyp_constr "t" (src/stringMap.mli[17,1089+18]..[17,1089+19])
+          [
+            core_type (src/stringMap.mli[17,1089+15]..[17,1089+17])
+              Ptyp_var a
+          ]
+        core_type (src/stringMap.mli[17,1089+23]..[17,1089+26])
+          Ptyp_constr "int" (src/stringMap.mli[17,1089+23]..[17,1089+26])
+          []
+      []
+  signature_item (src/stringMap.mli[21,1217+0]..[21,1217+41])
+    Psig_value
+    value_description "restrict" (src/stringMap.mli[21,1217+4]..[21,1217+12]) (src/stringMap.mli[21,1217+0]..[21,1217+41])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[19,1117+0]..[20,1179+37])
+            Pstr_eval
+            expression (src/stringMap.mli[19,1117+0]..[20,1179+37])
+              Pexp_constant PConst_string("[restrict s m] restricts the domain of the map [m] to (its\n   intersection with) the set [s]. ",(src/stringMap.mli[19,1117+0]..[20,1179+37]),None)
+        ]
+      core_type (src/stringMap.mli[21,1217+14]..[21,1217+41])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[21,1217+14]..[21,1217+25])
+          Ptyp_constr "StringSet.t" (src/stringMap.mli[21,1217+14]..[21,1217+25])
+          []
+        core_type (src/stringMap.mli[21,1217+29]..[21,1217+41])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[21,1217+29]..[21,1217+33])
+            Ptyp_constr "t" (src/stringMap.mli[21,1217+32]..[21,1217+33])
+            [
+              core_type (src/stringMap.mli[21,1217+29]..[21,1217+31])
+                Ptyp_var a
+            ]
+          core_type (src/stringMap.mli[21,1217+37]..[21,1217+41])
+            Ptyp_constr "t" (src/stringMap.mli[21,1217+40]..[21,1217+41])
+            [
+              core_type (src/stringMap.mli[21,1217+37]..[21,1217+39])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/stringMap.mli[25,1365+0]..[25,1365+50])
+    Psig_value
+    value_description "filter" (src/stringMap.mli[25,1365+4]..[25,1365+10]) (src/stringMap.mli[25,1365+0]..[25,1365+50])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[23,1260+0]..[24,1318+46])
+            Pstr_eval
+            expression (src/stringMap.mli[23,1260+0]..[24,1318+46])
+              Pexp_constant PConst_string("[filter pred m] restricts the domain of the map [m] to\n   (key, value) couples that verify [pred]. ",(src/stringMap.mli[23,1260+0]..[24,1318+46]),None)
+        ]
+      core_type (src/stringMap.mli[25,1365+12]..[25,1365+50])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[25,1365+13]..[25,1365+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[25,1365+13]..[25,1365+19])
+            Ptyp_constr "string" (src/stringMap.mli[25,1365+13]..[25,1365+19])
+            []
+          core_type (src/stringMap.mli[25,1365+23]..[25,1365+33])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/stringMap.mli[25,1365+23]..[25,1365+25])
+              Ptyp_var a
+            core_type (src/stringMap.mli[25,1365+29]..[25,1365+33])
+              Ptyp_constr "bool" (src/stringMap.mli[25,1365+29]..[25,1365+33])
+              []
+        core_type (src/stringMap.mli[25,1365+38]..[25,1365+50])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[25,1365+38]..[25,1365+42])
+            Ptyp_constr "t" (src/stringMap.mli[25,1365+41]..[25,1365+42])
+            [
+              core_type (src/stringMap.mli[25,1365+38]..[25,1365+40])
+                Ptyp_var a
+            ]
+          core_type (src/stringMap.mli[25,1365+46]..[25,1365+50])
+            Ptyp_constr "t" (src/stringMap.mli[25,1365+49]..[25,1365+50])
+            [
+              core_type (src/stringMap.mli[25,1365+46]..[25,1365+48])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/stringMap.mli[28,1469+0]..[28,1469+31])
+    Psig_value
+    value_description "domain" (src/stringMap.mli[28,1469+4]..[28,1469+10]) (src/stringMap.mli[28,1469+0]..[28,1469+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[27,1417+0]..[27,1417+51])
+            Pstr_eval
+            expression (src/stringMap.mli[27,1417+0]..[27,1417+51])
+              Pexp_constant PConst_string("[domain m] returns the domain of the map [m]. ",(src/stringMap.mli[27,1417+0]..[27,1417+51]),None)
+        ]
+      core_type (src/stringMap.mli[28,1469+12]..[28,1469+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[28,1469+12]..[28,1469+16])
+          Ptyp_constr "t" (src/stringMap.mli[28,1469+15]..[28,1469+16])
+          [
+            core_type (src/stringMap.mli[28,1469+12]..[28,1469+14])
+              Ptyp_var a
+          ]
+        core_type (src/stringMap.mli[28,1469+20]..[28,1469+31])
+          Ptyp_constr "StringSet.t" (src/stringMap.mli[28,1469+20]..[28,1469+31])
+          []
+      []
+  signature_item (src/stringMap.mli[33,1691+0]..[33,1691+53])
+    Psig_value
+    value_description "multiple_add" (src/stringMap.mli[33,1691+4]..[33,1691+16]) (src/stringMap.mli[33,1691+0]..[33,1691+53])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[30,1502+0]..[32,1644+46])
+            Pstr_eval
+            expression (src/stringMap.mli[30,1502+0]..[32,1644+46])
+              Pexp_constant PConst_string("[multiple_add k v m] adds the key-value pair [k, v] to the map [m],\n   which maps keys to *lists* of values. The list currently associated\n   with [k] is extended with the value [v]. ",(src/stringMap.mli[30,1502+0]..[32,1644+46]),None)
+        ]
+      core_type (src/stringMap.mli[33,1691+18]..[33,1691+53])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[33,1691+18]..[33,1691+21])
+          Ptyp_constr "key" (src/stringMap.mli[33,1691+18]..[33,1691+21])
+          []
+        core_type (src/stringMap.mli[33,1691+25]..[33,1691+53])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[33,1691+25]..[33,1691+27])
+            Ptyp_var a
+          core_type (src/stringMap.mli[33,1691+31]..[33,1691+53])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/stringMap.mli[33,1691+31]..[33,1691+40])
+              Ptyp_constr "t" (src/stringMap.mli[33,1691+39]..[33,1691+40])
+              [
+                core_type (src/stringMap.mli[33,1691+31]..[33,1691+38])
+                  Ptyp_constr "list" (src/stringMap.mli[33,1691+34]..[33,1691+38])
+                  [
+                    core_type (src/stringMap.mli[33,1691+31]..[33,1691+33])
+                      Ptyp_var a
+                  ]
+              ]
+            core_type (src/stringMap.mli[33,1691+44]..[33,1691+53])
+              Ptyp_constr "t" (src/stringMap.mli[33,1691+52]..[33,1691+53])
+              [
+                core_type (src/stringMap.mli[33,1691+44]..[33,1691+51])
+                  Ptyp_constr "list" (src/stringMap.mli[33,1691+47]..[33,1691+51])
+                  [
+                    core_type (src/stringMap.mli[33,1691+44]..[33,1691+46])
+                      Ptyp_var a
+                  ]
+              ]
+      []
+  signature_item (src/stringMap.mli[36,1807+0]..[36,1807+36])
+    Psig_value
+    value_description "of_list" (src/stringMap.mli[36,1807+4]..[36,1807+11]) (src/stringMap.mli[36,1807+0]..[36,1807+36])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[35,1746+0]..[35,1746+60])
+            Pstr_eval
+            expression (src/stringMap.mli[35,1746+0]..[35,1746+60])
+              Pexp_constant PConst_string("[of_list] converts a list of key-value pairs to a map. ",(src/stringMap.mli[35,1746+0]..[35,1746+60]),None)
+        ]
+      core_type (src/stringMap.mli[36,1807+13]..[36,1807+36])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[36,1807+13]..[36,1807+28])
+          Ptyp_constr "list" (src/stringMap.mli[36,1807+24]..[36,1807+28])
+          [
+            core_type (src/stringMap.mli[36,1807+14]..[36,1807+22])
+              Ptyp_tuple
+              [
+                core_type (src/stringMap.mli[36,1807+14]..[36,1807+17])
+                  Ptyp_constr "key" (src/stringMap.mli[36,1807+14]..[36,1807+17])
+                  []
+                core_type (src/stringMap.mli[36,1807+20]..[36,1807+22])
+                  Ptyp_var a
+              ]
+          ]
+        core_type (src/stringMap.mli[36,1807+32]..[36,1807+36])
+          Ptyp_constr "t" (src/stringMap.mli[36,1807+35]..[36,1807+36])
+          [
+            core_type (src/stringMap.mli[36,1807+32]..[36,1807+34])
+              Ptyp_var a
+          ]
+      []
+]
+
+include Map.S with type  key =  string
+val cardinal : 'a t -> int[@@ocaml.doc
+                            "[cardinal m] is the cardinal of the map [m]. "]
+val restrict : StringSet.t -> 'a t -> 'a t[@@ocaml.doc
+                                            "[restrict s m] restricts the domain of the map [m] to (its\n   intersection with) the set [s]. "]
+val filter : (string -> 'a -> bool) -> 'a t -> 'a t[@@ocaml.doc
+                                                     "[filter pred m] restricts the domain of the map [m] to\n   (key, value) couples that verify [pred]. "]
+val domain : 'a t -> StringSet.t[@@ocaml.doc
+                                  "[domain m] returns the domain of the map [m]. "]
+val multiple_add : key -> 'a -> 'a list t -> 'a list t[@@ocaml.doc
+                                                        "[multiple_add k v m] adds the key-value pair [k, v] to the map [m],\n   which maps keys to *lists* of values. The list currently associated\n   with [k] is extended with the value [v]. "]
+val of_list : (key * 'a) list -> 'a t[@@ocaml.doc
+                                       "[of_list] converts a list of key-value pairs to a map. "]
+[
+  signature_item (src/stringMap.mli[14,1000+0]..src/stringMap.mli[14,1000+36])
+    Tsig_include
+    module_type (src/stringMap.mli[14,1000+8]..src/stringMap.mli[14,1000+36])
+      Tmty_with
+      module_type (src/stringMap.mli[14,1000+8]..src/stringMap.mli[14,1000+13])
+        Tmty_ident "Stdlib!.Map.S"
+      [
+        "key/405"
+          Twith_type
+            type_declaration key/405 (src/stringMap.mli[14,1000+19]..src/stringMap.mli[14,1000+36])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/stringMap.mli[14,1000+30]..src/stringMap.mli[14,1000+36])
+                    Ttyp_constr "string/15!"
+                    []
+      ]
+  signature_item (src/stringMap.mli[17,1089+0]..src/stringMap.mli[17,1089+26])
+    Tsig_value
+    value_description cardinal/541 (src/stringMap.mli[17,1089+0]..src/stringMap.mli[17,1089+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[16,1038+0]..[16,1038+50])
+            Pstr_eval
+            expression (src/stringMap.mli[16,1038+0]..[16,1038+50])
+              Pexp_constant PConst_string("[cardinal m] is the cardinal of the map [m]. ",(src/stringMap.mli[16,1038+0]..[16,1038+50]),None)
+        ]
+      core_type (src/stringMap.mli[17,1089+15]..src/stringMap.mli[17,1089+26])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[17,1089+15]..src/stringMap.mli[17,1089+19])
+          Ttyp_constr "t/497"
+          [
+            core_type (src/stringMap.mli[17,1089+15]..src/stringMap.mli[17,1089+17])
+              Ttyp_var a
+          ]
+        core_type (src/stringMap.mli[17,1089+23]..src/stringMap.mli[17,1089+26])
+          Ttyp_constr "int/1!"
+          []
+      []
+  signature_item (src/stringMap.mli[21,1217+0]..src/stringMap.mli[21,1217+41])
+    Tsig_value
+    value_description restrict/588 (src/stringMap.mli[21,1217+0]..src/stringMap.mli[21,1217+41])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[19,1117+0]..[20,1179+37])
+            Pstr_eval
+            expression (src/stringMap.mli[19,1117+0]..[20,1179+37])
+              Pexp_constant PConst_string("[restrict s m] restricts the domain of the map [m] to (its\n   intersection with) the set [s]. ",(src/stringMap.mli[19,1117+0]..[20,1179+37]),None)
+        ]
+      core_type (src/stringMap.mli[21,1217+14]..src/stringMap.mli[21,1217+41])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[21,1217+14]..src/stringMap.mli[21,1217+25])
+          Ttyp_constr "Dune__exe!.StringSet.t"
+          []
+        core_type (src/stringMap.mli[21,1217+29]..src/stringMap.mli[21,1217+41])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[21,1217+29]..src/stringMap.mli[21,1217+33])
+            Ttyp_constr "t/497"
+            [
+              core_type (src/stringMap.mli[21,1217+29]..src/stringMap.mli[21,1217+31])
+                Ttyp_var a
+            ]
+          core_type (src/stringMap.mli[21,1217+37]..src/stringMap.mli[21,1217+41])
+            Ttyp_constr "t/497"
+            [
+              core_type (src/stringMap.mli[21,1217+37]..src/stringMap.mli[21,1217+39])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/stringMap.mli[25,1365+0]..src/stringMap.mli[25,1365+50])
+    Tsig_value
+    value_description filter/589 (src/stringMap.mli[25,1365+0]..src/stringMap.mli[25,1365+50])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[23,1260+0]..[24,1318+46])
+            Pstr_eval
+            expression (src/stringMap.mli[23,1260+0]..[24,1318+46])
+              Pexp_constant PConst_string("[filter pred m] restricts the domain of the map [m] to\n   (key, value) couples that verify [pred]. ",(src/stringMap.mli[23,1260+0]..[24,1318+46]),None)
+        ]
+      core_type (src/stringMap.mli[25,1365+12]..src/stringMap.mli[25,1365+50])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[25,1365+13]..src/stringMap.mli[25,1365+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[25,1365+13]..src/stringMap.mli[25,1365+19])
+            Ttyp_constr "string/15!"
+            []
+          core_type (src/stringMap.mli[25,1365+23]..src/stringMap.mli[25,1365+33])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/stringMap.mli[25,1365+23]..src/stringMap.mli[25,1365+25])
+              Ttyp_var a
+            core_type (src/stringMap.mli[25,1365+29]..src/stringMap.mli[25,1365+33])
+              Ttyp_constr "bool/5!"
+              []
+        core_type (src/stringMap.mli[25,1365+38]..src/stringMap.mli[25,1365+50])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[25,1365+38]..src/stringMap.mli[25,1365+42])
+            Ttyp_constr "t/497"
+            [
+              core_type (src/stringMap.mli[25,1365+38]..src/stringMap.mli[25,1365+40])
+                Ttyp_var a
+            ]
+          core_type (src/stringMap.mli[25,1365+46]..src/stringMap.mli[25,1365+50])
+            Ttyp_constr "t/497"
+            [
+              core_type (src/stringMap.mli[25,1365+46]..src/stringMap.mli[25,1365+48])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/stringMap.mli[28,1469+0]..src/stringMap.mli[28,1469+31])
+    Tsig_value
+    value_description domain/590 (src/stringMap.mli[28,1469+0]..src/stringMap.mli[28,1469+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[27,1417+0]..[27,1417+51])
+            Pstr_eval
+            expression (src/stringMap.mli[27,1417+0]..[27,1417+51])
+              Pexp_constant PConst_string("[domain m] returns the domain of the map [m]. ",(src/stringMap.mli[27,1417+0]..[27,1417+51]),None)
+        ]
+      core_type (src/stringMap.mli[28,1469+12]..src/stringMap.mli[28,1469+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[28,1469+12]..src/stringMap.mli[28,1469+16])
+          Ttyp_constr "t/497"
+          [
+            core_type (src/stringMap.mli[28,1469+12]..src/stringMap.mli[28,1469+14])
+              Ttyp_var a
+          ]
+        core_type (src/stringMap.mli[28,1469+20]..src/stringMap.mli[28,1469+31])
+          Ttyp_constr "Dune__exe!.StringSet.t"
+          []
+      []
+  signature_item (src/stringMap.mli[33,1691+0]..src/stringMap.mli[33,1691+53])
+    Tsig_value
+    value_description multiple_add/591 (src/stringMap.mli[33,1691+0]..src/stringMap.mli[33,1691+53])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[30,1502+0]..[32,1644+46])
+            Pstr_eval
+            expression (src/stringMap.mli[30,1502+0]..[32,1644+46])
+              Pexp_constant PConst_string("[multiple_add k v m] adds the key-value pair [k, v] to the map [m],\n   which maps keys to *lists* of values. The list currently associated\n   with [k] is extended with the value [v]. ",(src/stringMap.mli[30,1502+0]..[32,1644+46]),None)
+        ]
+      core_type (src/stringMap.mli[33,1691+18]..src/stringMap.mli[33,1691+53])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[33,1691+18]..src/stringMap.mli[33,1691+21])
+          Ttyp_constr "key/496"
+          []
+        core_type (src/stringMap.mli[33,1691+25]..src/stringMap.mli[33,1691+53])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/stringMap.mli[33,1691+25]..src/stringMap.mli[33,1691+27])
+            Ttyp_var a
+          core_type (src/stringMap.mli[33,1691+31]..src/stringMap.mli[33,1691+53])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/stringMap.mli[33,1691+31]..src/stringMap.mli[33,1691+40])
+              Ttyp_constr "t/497"
+              [
+                core_type (src/stringMap.mli[33,1691+31]..src/stringMap.mli[33,1691+38])
+                  Ttyp_constr "list/9!"
+                  [
+                    core_type (src/stringMap.mli[33,1691+31]..src/stringMap.mli[33,1691+33])
+                      Ttyp_var a
+                  ]
+              ]
+            core_type (src/stringMap.mli[33,1691+44]..src/stringMap.mli[33,1691+53])
+              Ttyp_constr "t/497"
+              [
+                core_type (src/stringMap.mli[33,1691+44]..src/stringMap.mli[33,1691+51])
+                  Ttyp_constr "list/9!"
+                  [
+                    core_type (src/stringMap.mli[33,1691+44]..src/stringMap.mli[33,1691+46])
+                      Ttyp_var a
+                  ]
+              ]
+      []
+  signature_item (src/stringMap.mli[36,1807+0]..src/stringMap.mli[36,1807+36])
+    Tsig_value
+    value_description of_list/592 (src/stringMap.mli[36,1807+0]..src/stringMap.mli[36,1807+36])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/stringMap.mli[35,1746+0]..[35,1746+60])
+            Pstr_eval
+            expression (src/stringMap.mli[35,1746+0]..[35,1746+60])
+              Pexp_constant PConst_string("[of_list] converts a list of key-value pairs to a map. ",(src/stringMap.mli[35,1746+0]..[35,1746+60]),None)
+        ]
+      core_type (src/stringMap.mli[36,1807+13]..src/stringMap.mli[36,1807+36])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/stringMap.mli[36,1807+13]..src/stringMap.mli[36,1807+28])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/stringMap.mli[36,1807+14]..src/stringMap.mli[36,1807+22])
+              Ttyp_tuple
+              [
+                core_type (src/stringMap.mli[36,1807+14]..src/stringMap.mli[36,1807+17])
+                  Ttyp_constr "key/496"
+                  []
+                core_type (src/stringMap.mli[36,1807+20]..src/stringMap.mli[36,1807+22])
+                  Ttyp_var a
+              ]
+          ]
+        core_type (src/stringMap.mli[36,1807+32]..src/stringMap.mli[36,1807+36])
+          Ttyp_constr "t/497"
+          [
+            core_type (src/stringMap.mli[36,1807+32]..src/stringMap.mli[36,1807+34])
+              Ttyp_var a
+          ]
+      []
+]
+

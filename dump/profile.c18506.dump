@@ -1,0 +1,16 @@
+0.110s 62.0MB 5.96MB 7.73MB src/stage3/referenceInterpreter.ml
+  0.006s 2.05MB 0.53MB 2.29MB parsing
+    0.006s 2.05MB 0.53MB 2.29MB parser
+  0.062s 25.3MB 4.12MB 6.41MB typing
+  0.001s ------ ------ ------ transl
+  0.021s 14.9MB 1.06MB 7.48MB generate
+    0.008s 8.66MB 0.75MB 7.16MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.001s 2.29MB 0.21MB 6.63MB cse
+      0.001s 2.00MB 0.15MB 6.79MB liveness
+      0.001s 2.00MB 0.21MB 7.01MB spill
+      0.003s 2.37MB 0.15MB 7.16MB regalloc
+    0.008s ------ ------ ------ assemble
+    0.005s 6.30MB 0.31MB 7.48MB other
+  0.020s 19.6MB 0.25MB 7.73MB other
+0.018s 3.08MB 1.76MB ------ other

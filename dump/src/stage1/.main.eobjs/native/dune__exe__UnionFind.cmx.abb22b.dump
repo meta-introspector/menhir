@@ -1,0 +1,1787 @@
+[
+  structure_item (src/unionFind.ml[14,999+0]..[16,1139+43])
+    Pstr_attribute "ocaml.text"
+    [
+      structure_item (src/unionFind.ml[14,999+0]..[16,1139+43])
+        Pstr_eval
+        expression (src/unionFind.ml[14,999+0]..[16,1139+43])
+          Pexp_constant PConst_string(" This module implements a simple and efficient union/find algorithm.\n    See Robert E. Tarjan, ``Efficiency of a Good But Not Linear Set\n    Union Algorithm'', JACM 22(2), 1975. ",(src/unionFind.ml[14,999+0]..[16,1139+43]),None)
+    ]
+  structure_item (src/unionFind.ml[33,2001+0]..[44,2174+3])
+    Pstr_type Rec
+    [
+      type_declaration "point" (src/unionFind.ml[33,2001+8]..[33,2001+13]) (src/unionFind.ml[33,2001+0]..[35,2045+3])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/unionFind.ml[18,1184+0]..[32,1937+63])
+              Pstr_eval
+              expression (src/unionFind.ml[18,1184+0]..[32,1937+63])
+                Pexp_constant PConst_string(" The abstraction defined by this module is a set of points,\n    partitioned into equivalence classes. With each equivalence class,\n    a piece of information, of abstract type ['a], is associated; we\n    call it a descriptor.\n\n    A point is implemented as a cell, whose (mutable) contents consist\n    of a single link to either information about the equivalence class,\n    or another point. Thus, points form a graph, which must be acyclic,\n    and whose connected components are the equivalence classes. In\n    every equivalence class, exactly one point has no outgoing edge,\n    and carries information about the class instead. It is the class's\n    representative element.\n\n    Information about a class consists of an integer weight (the number\n    of elements in the class) and of the class's descriptor. ",(src/unionFind.ml[18,1184+0]..[32,1937+63]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/unionFind.ml[33,2001+5]..[33,2001+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/unionFind.ml[34,2019+4]..[34,2019+25])
+                Mutable
+                "link" (src/unionFind.ml[34,2019+12]..[34,2019+16])                core_type (src/unionFind.ml[34,2019+18]..[34,2019+25])
+                  Ptyp_constr "link" (src/unionFind.ml[34,2019+21]..[34,2019+25])
+                  [
+                    core_type (src/unionFind.ml[34,2019+18]..[34,2019+20])
+                      Ptyp_var a
+                  ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "link" (src/unionFind.ml[37,2050+7]..[37,2050+11]) (src/unionFind.ml[37,2050+0]..[39,2084+20])
+        ptype_params =
+          [
+            core_type (src/unionFind.ml[37,2050+4]..[37,2050+6])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/unionFind.ml[38,2064+2]..[38,2064+19])
+                "Info" (src/unionFind.ml[38,2064+4]..[38,2064+8])
+                [
+                  core_type (src/unionFind.ml[38,2064+12]..[38,2064+19])
+                    Ptyp_constr "info" (src/unionFind.ml[38,2064+15]..[38,2064+19])
+                    [
+                      core_type (src/unionFind.ml[38,2064+12]..[38,2064+14])
+                        Ptyp_var a
+                    ]
+                ]
+                None
+              (src/unionFind.ml[39,2084+2]..[39,2084+20])
+                "Link" (src/unionFind.ml[39,2084+4]..[39,2084+8])
+                [
+                  core_type (src/unionFind.ml[39,2084+12]..[39,2084+20])
+                    Ptyp_constr "point" (src/unionFind.ml[39,2084+15]..[39,2084+20])
+                    [
+                      core_type (src/unionFind.ml[39,2084+12]..[39,2084+14])
+                        Ptyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration "info" (src/unionFind.ml[41,2106+7]..[41,2106+11]) (src/unionFind.ml[41,2106+0]..[44,2174+3])
+        ptype_params =
+          [
+            core_type (src/unionFind.ml[41,2106+4]..[41,2106+6])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/unionFind.ml[42,2122+4]..[42,2122+24])
+                Mutable
+                "weight" (src/unionFind.ml[42,2122+12]..[42,2122+18])                core_type (src/unionFind.ml[42,2122+20]..[42,2122+23])
+                  Ptyp_constr "int" (src/unionFind.ml[42,2122+20]..[42,2122+23])
+                  []
+              (src/unionFind.ml[43,2147+4]..[43,2147+26])
+                Mutable
+                "descriptor" (src/unionFind.ml[43,2147+12]..[43,2147+22])                core_type (src/unionFind.ml[43,2147+24]..[43,2147+26])
+                  Ptyp_var a
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/unionFind.ml[48,2311+0]..[50,2378+1])
+    Pstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[46,2179+0]..[47,2246+64])
+                Pstr_eval
+                expression (src/unionFind.ml[46,2179+0]..[47,2246+64])
+                  Pexp_constant PConst_string(" [fresh desc] creates a fresh point and returns it. It forms an\n    equivalence class of its own, whose descriptor is [desc]. ",(src/unionFind.ml[46,2179+0]..[47,2246+64]),None)
+            ]
+        pattern (src/unionFind.ml[48,2311+4]..[48,2311+9])
+          Ppat_var "fresh" (src/unionFind.ml[48,2311+4]..[48,2311+9])
+        expression (src/unionFind.ml[48,2311+10]..[50,2378+1]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/unionFind.ml[48,2311+10]..[48,2311+14])
+            Ppat_var "desc" (src/unionFind.ml[48,2311+10]..[48,2311+14])
+          expression (src/unionFind.ml[48,2311+17]..[50,2378+1])
+            Pexp_record
+            [
+              "link" (src/unionFind.ml[49,2330+2]..[49,2330+6])
+                expression (src/unionFind.ml[49,2330+9]..[49,2330+47])
+                  Pexp_construct "Info" (src/unionFind.ml[49,2330+9]..[49,2330+13])
+                  Some
+                    expression (src/unionFind.ml[49,2330+14]..[49,2330+47])
+                      Pexp_record
+                      [
+                        "weight" (src/unionFind.ml[49,2330+16]..[49,2330+22])
+                          expression (src/unionFind.ml[49,2330+25]..[49,2330+26])
+                            Pexp_constant PConst_int (1,None)
+                        "descriptor" (src/unionFind.ml[49,2330+28]..[49,2330+38])
+                          expression (src/unionFind.ml[49,2330+41]..[49,2330+45])
+                            Pexp_ident "desc" (src/unionFind.ml[49,2330+41]..[49,2330+45])
+                      ]
+                      None
+            ]
+            None
+    ]
+  structure_item (src/unionFind.ml[56,2613+0]..[71,3123+11])
+    Pstr_value Rec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[52,2381+0]..[55,2588+24])
+                Pstr_eval
+                expression (src/unionFind.ml[52,2381+0]..[55,2588+24])
+                  Pexp_constant PConst_string(" [repr point] returns the representative element of [point]'s\n    equivalence class. It is found by starting at [point] and following\n    the links. For efficiency, the function performs path compression\n    at the same time. ",(src/unionFind.ml[52,2381+0]..[55,2588+24]),None)
+            ]
+        pattern (src/unionFind.ml[56,2613+8]..[56,2613+12])
+          Ppat_var "repr" (src/unionFind.ml[56,2613+8]..[56,2613+12])
+        expression (src/unionFind.ml[56,2613+13]..[71,3123+11]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/unionFind.ml[56,2613+13]..[56,2613+18])
+            Ppat_var "point" (src/unionFind.ml[56,2613+13]..[56,2613+18])
+          expression (src/unionFind.ml[57,2634+2]..[71,3123+11])
+            Pexp_match
+            expression (src/unionFind.ml[57,2634+8]..[57,2634+18])
+              Pexp_field
+              expression (src/unionFind.ml[57,2634+8]..[57,2634+13])
+                Pexp_ident "point" (src/unionFind.ml[57,2634+8]..[57,2634+13])
+              "link" (src/unionFind.ml[57,2634+14]..[57,2634+18])
+            [
+              <case>
+                pattern (src/unionFind.ml[58,2658+4]..[58,2658+15])
+                  Ppat_construct "Link" (src/unionFind.ml[58,2658+4]..[58,2658+8])
+                  Some
+                    []
+                    pattern (src/unionFind.ml[58,2658+9]..[58,2658+15])
+                      Ppat_var "point'" (src/unionFind.ml[58,2658+9]..[58,2658+15])
+                expression (src/unionFind.ml[59,2677+6]..[69,3095+13])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/unionFind.ml[59,2677+10]..[59,2677+17])
+                        Ppat_var "point''" (src/unionFind.ml[59,2677+10]..[59,2677+17])
+                      expression (src/unionFind.ml[59,2677+20]..[59,2677+31])
+                        Pexp_apply
+                        expression (src/unionFind.ml[59,2677+20]..[59,2677+24])
+                          Pexp_ident "repr" (src/unionFind.ml[59,2677+20]..[59,2677+24])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/unionFind.ml[59,2677+25]..[59,2677+31])
+                              Pexp_ident "point'" (src/unionFind.ml[59,2677+25]..[59,2677+31])
+                        ]
+                  ]
+                  expression (src/unionFind.ml[60,2712+6]..[69,3095+13])
+                    Pexp_sequence
+                    expression (src/unionFind.ml[60,2712+6]..[68,3060+33])
+                      Pexp_ifthenelse
+                      expression (src/unionFind.ml[60,2712+9]..[60,2712+26])
+                        Pexp_apply
+                        expression (src/unionFind.ml[60,2712+17]..[60,2712+19])
+                          Pexp_ident "!=" (src/unionFind.ml[60,2712+17]..[60,2712+19])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/unionFind.ml[60,2712+9]..[60,2712+16])
+                              Pexp_ident "point''" (src/unionFind.ml[60,2712+9]..[60,2712+16])
+                          <arg>
+                          Nolabel
+                            expression (src/unionFind.ml[60,2712+20]..[60,2712+26])
+                              Pexp_ident "point'" (src/unionFind.ml[60,2712+20]..[60,2712+26])
+                        ]
+                      expression (src/unionFind.ml[68,3060+8]..[68,3060+33])
+                        Pexp_setfield
+                        expression (src/unionFind.ml[68,3060+8]..[68,3060+13])
+                          Pexp_ident "point" (src/unionFind.ml[68,3060+8]..[68,3060+13])
+                        "link" (src/unionFind.ml[68,3060+14]..[68,3060+18])
+                        expression (src/unionFind.ml[68,3060+22]..[68,3060+33])
+                          Pexp_field
+                          expression (src/unionFind.ml[68,3060+22]..[68,3060+28])
+                            Pexp_ident "point'" (src/unionFind.ml[68,3060+22]..[68,3060+28])
+                          "link" (src/unionFind.ml[68,3060+29]..[68,3060+33])
+                      None
+                    expression (src/unionFind.ml[69,3095+6]..[69,3095+13])
+                      Pexp_ident "point''" (src/unionFind.ml[69,3095+6]..[69,3095+13])
+              <case>
+                pattern (src/unionFind.ml[70,3109+4]..[70,3109+10])
+                  Ppat_construct "Info" (src/unionFind.ml[70,3109+4]..[70,3109+8])
+                  Some
+                    []
+                    pattern (src/unionFind.ml[70,3109+9]..[70,3109+10])
+                      Ppat_any
+                expression (src/unionFind.ml[71,3123+6]..[71,3123+11])
+                  Pexp_ident "point" (src/unionFind.ml[71,3123+6]..[71,3123+11])
+            ]
+    ]
+  structure_item (src/unionFind.ml[75,3227+0]..[86,3544+22])
+    Pstr_value Rec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[73,3136+0]..[74,3201+25])
+                Pstr_eval
+                expression (src/unionFind.ml[73,3136+0]..[74,3201+25])
+                  Pexp_constant PConst_string(" [get point] returns the descriptor associated with [point]'s\n    equivalence class. ",(src/unionFind.ml[73,3136+0]..[74,3201+25]),None)
+            ]
+        pattern (src/unionFind.ml[75,3227+8]..[75,3227+11])
+          Ppat_var "get" (src/unionFind.ml[75,3227+8]..[75,3227+11])
+        expression (src/unionFind.ml[75,3227+12]..[86,3544+22]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/unionFind.ml[75,3227+12]..[75,3227+17])
+            Ppat_var "point" (src/unionFind.ml[75,3227+12]..[75,3227+17])
+          expression (src/unionFind.ml[81,3421+2]..[86,3544+22])
+            Pexp_match
+            expression (src/unionFind.ml[81,3421+8]..[81,3421+18])
+              Pexp_field
+              expression (src/unionFind.ml[81,3421+8]..[81,3421+13])
+                Pexp_ident "point" (src/unionFind.ml[81,3421+8]..[81,3421+13])
+              "link" (src/unionFind.ml[81,3421+14]..[81,3421+18])
+            [
+              <case>
+                pattern (src/unionFind.ml[82,3445+4]..[83,3459+29])
+                  Ppat_or
+                  pattern (src/unionFind.ml[82,3445+4]..[82,3445+13])
+                    Ppat_construct "Info" (src/unionFind.ml[82,3445+4]..[82,3445+8])
+                    Some
+                      []
+                      pattern (src/unionFind.ml[82,3445+9]..[82,3445+13])
+                        Ppat_var "info" (src/unionFind.ml[82,3445+9]..[82,3445+13])
+                  pattern (src/unionFind.ml[83,3459+4]..[83,3459+29])
+                    Ppat_construct "Link" (src/unionFind.ml[83,3459+4]..[83,3459+8])
+                    Some
+                      []
+                      pattern (src/unionFind.ml[83,3459+9]..[83,3459+29])
+                        Ppat_record Closed
+                        [
+                          "link" (src/unionFind.ml[83,3459+11]..[83,3459+15])
+                            pattern (src/unionFind.ml[83,3459+18]..[83,3459+27])
+                              Ppat_construct "Info" (src/unionFind.ml[83,3459+18]..[83,3459+22])
+                              Some
+                                []
+                                pattern (src/unionFind.ml[83,3459+23]..[83,3459+27])
+                                  Ppat_var "info" (src/unionFind.ml[83,3459+23]..[83,3459+27])
+                        ]
+                expression (src/unionFind.ml[84,3492+6]..[84,3492+21])
+                  Pexp_field
+                  expression (src/unionFind.ml[84,3492+6]..[84,3492+10])
+                    Pexp_ident "info" (src/unionFind.ml[84,3492+6]..[84,3492+10])
+                  "descriptor" (src/unionFind.ml[84,3492+11]..[84,3492+21])
+              <case>
+                pattern (src/unionFind.ml[85,3514+4]..[85,3514+26])
+                  Ppat_construct "Link" (src/unionFind.ml[85,3514+4]..[85,3514+8])
+                  Some
+                    []
+                    pattern (src/unionFind.ml[85,3514+9]..[85,3514+26])
+                      Ppat_record Closed
+                      [
+                        "link" (src/unionFind.ml[85,3514+11]..[85,3514+15])
+                          pattern (src/unionFind.ml[85,3514+18]..[85,3514+24])
+                            Ppat_construct "Link" (src/unionFind.ml[85,3514+18]..[85,3514+22])
+                            Some
+                              []
+                              pattern (src/unionFind.ml[85,3514+23]..[85,3514+24])
+                                Ppat_any
+                      ]
+                expression (src/unionFind.ml[86,3544+6]..[86,3544+22])
+                  Pexp_apply
+                  expression (src/unionFind.ml[86,3544+6]..[86,3544+9])
+                    Pexp_ident "get" (src/unionFind.ml[86,3544+6]..[86,3544+9])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/unionFind.ml[86,3544+10]..[86,3544+22])
+                        Pexp_apply
+                        expression (src/unionFind.ml[86,3544+11]..[86,3544+15])
+                          Pexp_ident "repr" (src/unionFind.ml[86,3544+11]..[86,3544+15])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/unionFind.ml[86,3544+16]..[86,3544+21])
+                              Pexp_ident "point" (src/unionFind.ml[86,3544+16]..[86,3544+21])
+                        ]
+                  ]
+            ]
+    ]
+  structure_item (src/unionFind.ml[88,3568+0]..[94,3718+24])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/unionFind.ml[88,3568+8]..[88,3568+11])
+          Ppat_var "set" (src/unionFind.ml[88,3568+8]..[88,3568+11])
+        expression (src/unionFind.ml[88,3568+12]..[94,3718+24]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/unionFind.ml[88,3568+12]..[88,3568+17])
+            Ppat_var "point" (src/unionFind.ml[88,3568+12]..[88,3568+17])
+          expression (src/unionFind.ml[88,3568+18]..[94,3718+24]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/unionFind.ml[88,3568+18]..[88,3568+19])
+              Ppat_var "v" (src/unionFind.ml[88,3568+18]..[88,3568+19])
+            expression (src/unionFind.ml[89,3590+2]..[94,3718+24])
+              Pexp_match
+              expression (src/unionFind.ml[89,3590+8]..[89,3590+18])
+                Pexp_field
+                expression (src/unionFind.ml[89,3590+8]..[89,3590+13])
+                  Pexp_ident "point" (src/unionFind.ml[89,3590+8]..[89,3590+13])
+                "link" (src/unionFind.ml[89,3590+14]..[89,3590+18])
+              [
+                <case>
+                  pattern (src/unionFind.ml[90,3614+4]..[91,3628+29])
+                    Ppat_or
+                    pattern (src/unionFind.ml[90,3614+4]..[90,3614+13])
+                      Ppat_construct "Info" (src/unionFind.ml[90,3614+4]..[90,3614+8])
+                      Some
+                        []
+                        pattern (src/unionFind.ml[90,3614+9]..[90,3614+13])
+                          Ppat_var "info" (src/unionFind.ml[90,3614+9]..[90,3614+13])
+                    pattern (src/unionFind.ml[91,3628+4]..[91,3628+29])
+                      Ppat_construct "Link" (src/unionFind.ml[91,3628+4]..[91,3628+8])
+                      Some
+                        []
+                        pattern (src/unionFind.ml[91,3628+9]..[91,3628+29])
+                          Ppat_record Closed
+                          [
+                            "link" (src/unionFind.ml[91,3628+11]..[91,3628+15])
+                              pattern (src/unionFind.ml[91,3628+18]..[91,3628+27])
+                                Ppat_construct "Info" (src/unionFind.ml[91,3628+18]..[91,3628+22])
+                                Some
+                                  []
+                                  pattern (src/unionFind.ml[91,3628+23]..[91,3628+27])
+                                    Ppat_var "info" (src/unionFind.ml[91,3628+23]..[91,3628+27])
+                          ]
+                  expression (src/unionFind.ml[92,3661+6]..[92,3661+26])
+                    Pexp_setfield
+                    expression (src/unionFind.ml[92,3661+6]..[92,3661+10])
+                      Pexp_ident "info" (src/unionFind.ml[92,3661+6]..[92,3661+10])
+                    "descriptor" (src/unionFind.ml[92,3661+11]..[92,3661+21])
+                    expression (src/unionFind.ml[92,3661+25]..[92,3661+26])
+                      Pexp_ident "v" (src/unionFind.ml[92,3661+25]..[92,3661+26])
+                <case>
+                  pattern (src/unionFind.ml[93,3688+4]..[93,3688+26])
+                    Ppat_construct "Link" (src/unionFind.ml[93,3688+4]..[93,3688+8])
+                    Some
+                      []
+                      pattern (src/unionFind.ml[93,3688+9]..[93,3688+26])
+                        Ppat_record Closed
+                        [
+                          "link" (src/unionFind.ml[93,3688+11]..[93,3688+15])
+                            pattern (src/unionFind.ml[93,3688+18]..[93,3688+24])
+                              Ppat_construct "Link" (src/unionFind.ml[93,3688+18]..[93,3688+22])
+                              Some
+                                []
+                                pattern (src/unionFind.ml[93,3688+23]..[93,3688+24])
+                                  Ppat_any
+                        ]
+                  expression (src/unionFind.ml[94,3718+6]..[94,3718+24])
+                    Pexp_apply
+                    expression (src/unionFind.ml[94,3718+6]..[94,3718+9])
+                      Pexp_ident "set" (src/unionFind.ml[94,3718+6]..[94,3718+9])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/unionFind.ml[94,3718+10]..[94,3718+22])
+                          Pexp_apply
+                          expression (src/unionFind.ml[94,3718+11]..[94,3718+15])
+                            Pexp_ident "repr" (src/unionFind.ml[94,3718+11]..[94,3718+15])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/unionFind.ml[94,3718+16]..[94,3718+21])
+                                Pexp_ident "point" (src/unionFind.ml[94,3718+16]..[94,3718+21])
+                          ]
+                      <arg>
+                      Nolabel
+                        expression (src/unionFind.ml[94,3718+23]..[94,3718+24])
+                          Pexp_ident "v" (src/unionFind.ml[94,3718+23]..[94,3718+24])
+                    ]
+              ]
+    ]
+  structure_item (src/unionFind.ml[106,4339+0]..[124,4904+20])
+    Pstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[96,3744+0]..[105,4279+59])
+                Pstr_eval
+                expression (src/unionFind.ml[96,3744+0]..[105,4279+59])
+                  Pexp_constant PConst_string(" [union point1 point2] merges the equivalence classes associated\n    with [point1] and [point2] into a single class whose descriptor is\n    that originally associated with [point2]. It does nothing if [point1]\n    and [point2] already are in the same class.\n\n    The weights are used to determine whether [point1] should be made\n    to point to [point2], or vice-versa. By making the representative\n    of the smaller class point to that of the larger class, we\n    guarantee that paths remain of logarithmic length (not accounting\n    for path compression, which makes them yet smaller). ",(src/unionFind.ml[96,3744+0]..[105,4279+59]),None)
+            ]
+        pattern (src/unionFind.ml[106,4339+4]..[106,4339+9])
+          Ppat_var "union" (src/unionFind.ml[106,4339+4]..[106,4339+9])
+        expression (src/unionFind.ml[106,4339+10]..[124,4904+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/unionFind.ml[106,4339+10]..[106,4339+16])
+            Ppat_var "point1" (src/unionFind.ml[106,4339+10]..[106,4339+16])
+          expression (src/unionFind.ml[106,4339+17]..[124,4904+20]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/unionFind.ml[106,4339+17]..[106,4339+23])
+              Ppat_var "point2" (src/unionFind.ml[106,4339+17]..[106,4339+23])
+            expression (src/unionFind.ml[107,4365+2]..[124,4904+20])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/unionFind.ml[107,4365+6]..[107,4365+12])
+                    Ppat_var "point1" (src/unionFind.ml[107,4365+6]..[107,4365+12])
+                  expression (src/unionFind.ml[107,4365+15]..[107,4365+26])
+                    Pexp_apply
+                    expression (src/unionFind.ml[107,4365+15]..[107,4365+19])
+                      Pexp_ident "repr" (src/unionFind.ml[107,4365+15]..[107,4365+19])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/unionFind.ml[107,4365+20]..[107,4365+26])
+                          Pexp_ident "point1" (src/unionFind.ml[107,4365+20]..[107,4365+26])
+                    ]
+                <def>
+                  pattern (src/unionFind.ml[108,4392+6]..[108,4392+12])
+                    Ppat_var "point2" (src/unionFind.ml[108,4392+6]..[108,4392+12])
+                  expression (src/unionFind.ml[108,4392+15]..[108,4392+26])
+                    Pexp_apply
+                    expression (src/unionFind.ml[108,4392+15]..[108,4392+19])
+                      Pexp_ident "repr" (src/unionFind.ml[108,4392+15]..[108,4392+19])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/unionFind.ml[108,4392+20]..[108,4392+26])
+                          Pexp_ident "point2" (src/unionFind.ml[108,4392+20]..[108,4392+26])
+                    ]
+              ]
+              expression (src/unionFind.ml[109,4422+2]..[124,4904+20])
+                Pexp_ifthenelse
+                expression (src/unionFind.ml[109,4422+5]..[109,4422+21])
+                  Pexp_apply
+                  expression (src/unionFind.ml[109,4422+12]..[109,4422+14])
+                    Pexp_ident "!=" (src/unionFind.ml[109,4422+12]..[109,4422+14])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/unionFind.ml[109,4422+5]..[109,4422+11])
+                        Pexp_ident "point1" (src/unionFind.ml[109,4422+5]..[109,4422+11])
+                    <arg>
+                    Nolabel
+                      expression (src/unionFind.ml[109,4422+15]..[109,4422+21])
+                        Pexp_ident "point2" (src/unionFind.ml[109,4422+15]..[109,4422+21])
+                  ]
+                expression (src/unionFind.ml[110,4449+4]..[124,4904+20])
+                  Pexp_match
+                  expression (src/unionFind.ml[110,4449+10]..[110,4449+34])
+                    Pexp_tuple
+                    [
+                      expression (src/unionFind.ml[110,4449+10]..[110,4449+21])
+                        Pexp_field
+                        expression (src/unionFind.ml[110,4449+10]..[110,4449+16])
+                          Pexp_ident "point1" (src/unionFind.ml[110,4449+10]..[110,4449+16])
+                        "link" (src/unionFind.ml[110,4449+17]..[110,4449+21])
+                      expression (src/unionFind.ml[110,4449+23]..[110,4449+34])
+                        Pexp_field
+                        expression (src/unionFind.ml[110,4449+23]..[110,4449+29])
+                          Pexp_ident "point2" (src/unionFind.ml[110,4449+23]..[110,4449+29])
+                        "link" (src/unionFind.ml[110,4449+30]..[110,4449+34])
+                    ]
+                  [
+                    <case>
+                      pattern (src/unionFind.ml[111,4489+6]..[111,4489+28])
+                        Ppat_tuple
+                        [
+                          pattern (src/unionFind.ml[111,4489+6]..[111,4489+16])
+                            Ppat_construct "Info" (src/unionFind.ml[111,4489+6]..[111,4489+10])
+                            Some
+                              []
+                              pattern (src/unionFind.ml[111,4489+11]..[111,4489+16])
+                                Ppat_var "info1" (src/unionFind.ml[111,4489+11]..[111,4489+16])
+                          pattern (src/unionFind.ml[111,4489+18]..[111,4489+28])
+                            Ppat_construct "Info" (src/unionFind.ml[111,4489+18]..[111,4489+22])
+                            Some
+                              []
+                              pattern (src/unionFind.ml[111,4489+23]..[111,4489+28])
+                                Ppat_var "info2" (src/unionFind.ml[111,4489+23]..[111,4489+28])
+                        ]
+                      expression (src/unionFind.ml[112,4521+8]..[122,4878+11])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/unionFind.ml[112,4521+12]..[112,4521+19])
+                              Ppat_var "weight1" (src/unionFind.ml[112,4521+12]..[112,4521+19])
+                            expression (src/unionFind.ml[112,4521+22]..[112,4521+34])
+                              Pexp_field
+                              expression (src/unionFind.ml[112,4521+22]..[112,4521+27])
+                                Pexp_ident "info1" (src/unionFind.ml[112,4521+22]..[112,4521+27])
+                              "weight" (src/unionFind.ml[112,4521+28]..[112,4521+34])
+                          <def>
+                            pattern (src/unionFind.ml[113,4556+12]..[113,4556+19])
+                              Ppat_var "weight2" (src/unionFind.ml[113,4556+12]..[113,4556+19])
+                            expression (src/unionFind.ml[113,4556+22]..[113,4556+34])
+                              Pexp_field
+                              expression (src/unionFind.ml[113,4556+22]..[113,4556+27])
+                                Pexp_ident "info2" (src/unionFind.ml[113,4556+22]..[113,4556+27])
+                              "weight" (src/unionFind.ml[113,4556+28]..[113,4556+34])
+                        ]
+                        expression (src/unionFind.ml[114,4594+8]..[122,4878+11])
+                          Pexp_ifthenelse
+                          expression (src/unionFind.ml[114,4594+11]..[114,4594+29])
+                            Pexp_apply
+                            expression (src/unionFind.ml[114,4594+19]..[114,4594+21])
+                              Pexp_ident ">=" (src/unionFind.ml[114,4594+19]..[114,4594+21])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/unionFind.ml[114,4594+11]..[114,4594+18])
+                                  Pexp_ident "weight1" (src/unionFind.ml[114,4594+11]..[114,4594+18])
+                              <arg>
+                              Nolabel
+                                expression (src/unionFind.ml[114,4594+22]..[114,4594+29])
+                                  Pexp_ident "weight2" (src/unionFind.ml[114,4594+22]..[114,4594+29])
+                            ]
+                          expression (src/unionFind.ml[114,4594+35]..[118,4765+11])
+                            Pexp_sequence
+                            expression (src/unionFind.ml[115,4635+10]..[115,4635+36])
+                              Pexp_setfield
+                              expression (src/unionFind.ml[115,4635+10]..[115,4635+16])
+                                Pexp_ident "point2" (src/unionFind.ml[115,4635+10]..[115,4635+16])
+                              "link" (src/unionFind.ml[115,4635+17]..[115,4635+21])
+                              expression (src/unionFind.ml[115,4635+25]..[115,4635+36])
+                                Pexp_construct "Link" (src/unionFind.ml[115,4635+25]..[115,4635+29])
+                                Some
+                                  expression (src/unionFind.ml[115,4635+30]..[115,4635+36])
+                                    Pexp_ident "point1" (src/unionFind.ml[115,4635+30]..[115,4635+36])
+                            expression (src/unionFind.ml[116,4673+10]..[117,4718+46])
+                              Pexp_sequence
+                              expression (src/unionFind.ml[116,4673+10]..[116,4673+43])
+                                Pexp_setfield
+                                expression (src/unionFind.ml[116,4673+10]..[116,4673+15])
+                                  Pexp_ident "info1" (src/unionFind.ml[116,4673+10]..[116,4673+15])
+                                "weight" (src/unionFind.ml[116,4673+16]..[116,4673+22])
+                                expression (src/unionFind.ml[116,4673+26]..[116,4673+43])
+                                  Pexp_apply
+                                  expression (src/unionFind.ml[116,4673+34]..[116,4673+35])
+                                    Pexp_ident "+" (src/unionFind.ml[116,4673+34]..[116,4673+35])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/unionFind.ml[116,4673+26]..[116,4673+33])
+                                        Pexp_ident "weight1" (src/unionFind.ml[116,4673+26]..[116,4673+33])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/unionFind.ml[116,4673+36]..[116,4673+43])
+                                        Pexp_ident "weight2" (src/unionFind.ml[116,4673+36]..[116,4673+43])
+                                  ]
+                              expression (src/unionFind.ml[117,4718+10]..[117,4718+46])
+                                Pexp_setfield
+                                expression (src/unionFind.ml[117,4718+10]..[117,4718+15])
+                                  Pexp_ident "info1" (src/unionFind.ml[117,4718+10]..[117,4718+15])
+                                "descriptor" (src/unionFind.ml[117,4718+16]..[117,4718+26])
+                                expression (src/unionFind.ml[117,4718+30]..[117,4718+46])
+                                  Pexp_field
+                                  expression (src/unionFind.ml[117,4718+30]..[117,4718+35])
+                                    Pexp_ident "info2" (src/unionFind.ml[117,4718+30]..[117,4718+35])
+                                  "descriptor" (src/unionFind.ml[117,4718+36]..[117,4718+46])
+                          Some
+                            expression (src/unionFind.ml[119,4777+13]..[122,4878+11])
+                              Pexp_sequence
+                              expression (src/unionFind.ml[120,4796+10]..[120,4796+36])
+                                Pexp_setfield
+                                expression (src/unionFind.ml[120,4796+10]..[120,4796+16])
+                                  Pexp_ident "point1" (src/unionFind.ml[120,4796+10]..[120,4796+16])
+                                "link" (src/unionFind.ml[120,4796+17]..[120,4796+21])
+                                expression (src/unionFind.ml[120,4796+25]..[120,4796+36])
+                                  Pexp_construct "Link" (src/unionFind.ml[120,4796+25]..[120,4796+29])
+                                  Some
+                                    expression (src/unionFind.ml[120,4796+30]..[120,4796+36])
+                                      Pexp_ident "point2" (src/unionFind.ml[120,4796+30]..[120,4796+36])
+                              expression (src/unionFind.ml[121,4834+10]..[121,4834+43])
+                                Pexp_setfield
+                                expression (src/unionFind.ml[121,4834+10]..[121,4834+15])
+                                  Pexp_ident "info2" (src/unionFind.ml[121,4834+10]..[121,4834+15])
+                                "weight" (src/unionFind.ml[121,4834+16]..[121,4834+22])
+                                expression (src/unionFind.ml[121,4834+26]..[121,4834+43])
+                                  Pexp_apply
+                                  expression (src/unionFind.ml[121,4834+34]..[121,4834+35])
+                                    Pexp_ident "+" (src/unionFind.ml[121,4834+34]..[121,4834+35])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/unionFind.ml[121,4834+26]..[121,4834+33])
+                                        Pexp_ident "weight1" (src/unionFind.ml[121,4834+26]..[121,4834+33])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/unionFind.ml[121,4834+36]..[121,4834+43])
+                                        Pexp_ident "weight2" (src/unionFind.ml[121,4834+36]..[121,4834+43])
+                                  ]
+                    <case>
+                      pattern (src/unionFind.ml[123,4890+6]..[123,4890+10])
+                        Ppat_tuple
+                        [
+                          pattern (src/unionFind.ml[123,4890+6]..[123,4890+7])
+                            Ppat_any
+                          pattern (src/unionFind.ml[123,4890+9]..[123,4890+10])
+                            Ppat_any
+                        ]
+                      expression (src/unionFind.ml[124,4904+8]..[124,4904+20])
+                        Pexp_assert
+                        expression (src/unionFind.ml[124,4904+15]..[124,4904+20])
+                          Pexp_construct "false" (src/unionFind.ml[124,4904+15]..[124,4904+20])
+                          None
+                  ]
+                None
+    ]
+  structure_item (src/unionFind.ml[128,5092+0]..[129,5123+28])
+    Pstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[126,4980+0]..[127,5047+44])
+                Pstr_eval
+                expression (src/unionFind.ml[126,4980+0]..[127,5047+44])
+                  Pexp_constant PConst_string(" [equivalent point1 point2] tells whether [point1] and [point2]\n    belong to the same equivalence class. ",(src/unionFind.ml[126,4980+0]..[127,5047+44]),None)
+            ]
+        pattern (src/unionFind.ml[128,5092+4]..[128,5092+14])
+          Ppat_var "equivalent" (src/unionFind.ml[128,5092+4]..[128,5092+14])
+        expression (src/unionFind.ml[128,5092+15]..[129,5123+28]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/unionFind.ml[128,5092+15]..[128,5092+21])
+            Ppat_var "point1" (src/unionFind.ml[128,5092+15]..[128,5092+21])
+          expression (src/unionFind.ml[128,5092+22]..[129,5123+28]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/unionFind.ml[128,5092+22]..[128,5092+28])
+              Ppat_var "point2" (src/unionFind.ml[128,5092+22]..[128,5092+28])
+            expression (src/unionFind.ml[129,5123+2]..[129,5123+28])
+              Pexp_apply
+              expression (src/unionFind.ml[129,5123+14]..[129,5123+16])
+                Pexp_ident "==" (src/unionFind.ml[129,5123+14]..[129,5123+16])
+              [
+                <arg>
+                Nolabel
+                  expression (src/unionFind.ml[129,5123+2]..[129,5123+13])
+                    Pexp_apply
+                    expression (src/unionFind.ml[129,5123+2]..[129,5123+6])
+                      Pexp_ident "repr" (src/unionFind.ml[129,5123+2]..[129,5123+6])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/unionFind.ml[129,5123+7]..[129,5123+13])
+                          Pexp_ident "point1" (src/unionFind.ml[129,5123+7]..[129,5123+13])
+                    ]
+                <arg>
+                Nolabel
+                  expression (src/unionFind.ml[129,5123+17]..[129,5123+28])
+                    Pexp_apply
+                    expression (src/unionFind.ml[129,5123+17]..[129,5123+21])
+                      Pexp_ident "repr" (src/unionFind.ml[129,5123+17]..[129,5123+21])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/unionFind.ml[129,5123+22]..[129,5123+28])
+                          Pexp_ident "point2" (src/unionFind.ml[129,5123+22]..[129,5123+28])
+                    ]
+              ]
+    ]
+]
+
+[@@@ocaml.text
+  " This module implements a simple and efficient union/find algorithm.\n    See Robert E. Tarjan, ``Efficiency of a Good But Not Linear Set\n    Union Algorithm'', JACM 22(2), 1975. "]
+type 'a point = {
+  mutable link: 'a link }[@@ocaml.doc
+                           " The abstraction defined by this module is a set of points,\n    partitioned into equivalence classes. With each equivalence class,\n    a piece of information, of abstract type ['a], is associated; we\n    call it a descriptor.\n\n    A point is implemented as a cell, whose (mutable) contents consist\n    of a single link to either information about the equivalence class,\n    or another point. Thus, points form a graph, which must be acyclic,\n    and whose connected components are the equivalence classes. In\n    every equivalence class, exactly one point has no outgoing edge,\n    and carries information about the class instead. It is the class's\n    representative element.\n\n    Information about a class consists of an integer weight (the number\n    of elements in the class) and of the class's descriptor. "]
+and 'a link =
+  | Info of 'a info 
+  | Link of 'a point 
+and 'a info = {
+  mutable weight: int ;
+  mutable descriptor: 'a }
+let fresh desc = { link = (Info { weight = 1; descriptor = desc }) }[@@ocaml.doc
+                                                                    " [fresh desc] creates a fresh point and returns it. It forms an\n    equivalence class of its own, whose descriptor is [desc]. "]
+let rec repr point =
+  match point.link with
+  | Link point' ->
+      let point'' = repr point' in
+      (if point'' != point' then point.link <- (point'.link); point'')
+  | Info _ -> point[@@ocaml.doc
+                     " [repr point] returns the representative element of [point]'s\n    equivalence class. It is found by starting at [point] and following\n    the links. For efficiency, the function performs path compression\n    at the same time. "]
+let rec get point =
+  match point.link with
+  | Info info | Link { link = Info info } -> info.descriptor
+  | Link { link = Link _ } -> get (repr point)[@@ocaml.doc
+                                                " [get point] returns the descriptor associated with [point]'s\n    equivalence class. "]
+let rec set point v =
+  match point.link with
+  | Info info | Link { link = Info info } -> info.descriptor <- v
+  | Link { link = Link _ } -> set (repr point) v
+let union point1 point2 =
+  let point1 = repr point1
+  and point2 = repr point2 in
+  if point1 != point2
+  then
+    match ((point1.link), (point2.link)) with
+    | (Info info1, Info info2) ->
+        let weight1 = info1.weight
+        and weight2 = info2.weight in
+        (if weight1 >= weight2
+         then
+           (point2.link <- (Link point1);
+            info1.weight <- (weight1 + weight2);
+            info1.descriptor <- (info2.descriptor))
+         else
+           (point1.link <- (Link point2); info2.weight <- (weight1 + weight2)))
+    | (_, _) -> assert false[@@ocaml.doc
+                              " [union point1 point2] merges the equivalence classes associated\n    with [point1] and [point2] into a single class whose descriptor is\n    that originally associated with [point2]. It does nothing if [point1]\n    and [point2] already are in the same class.\n\n    The weights are used to determine whether [point1] should be made\n    to point to [point2], or vice-versa. By making the representative\n    of the smaller class point to that of the larger class, we\n    guarantee that paths remain of logarithmic length (not accounting\n    for path compression, which makes them yet smaller). "]
+let equivalent point1 point2 = (repr point1) == (repr point2)[@@ocaml.doc
+                                                               " [equivalent point1 point2] tells whether [point1] and [point2]\n    belong to the same equivalence class. "]
+[
+  structure_item (src/unionFind.ml[14,999+0]..src/unionFind.ml[16,1139+43])
+    Tstr_attribute "ocaml.text"
+    [
+      structure_item (src/unionFind.ml[14,999+0]..[16,1139+43])
+        Pstr_eval
+        expression (src/unionFind.ml[14,999+0]..[16,1139+43])
+          Pexp_constant PConst_string(" This module implements a simple and efficient union/find algorithm.\n    See Robert E. Tarjan, ``Efficiency of a Good But Not Linear Set\n    Union Algorithm'', JACM 22(2), 1975. ",(src/unionFind.ml[14,999+0]..[16,1139+43]),None)
+    ]
+  structure_item (src/unionFind.ml[33,2001+0]..src/unionFind.ml[44,2174+3])
+    Tstr_type Rec
+    [
+      type_declaration point/396 (src/unionFind.ml[33,2001+0]..src/unionFind.ml[35,2045+3])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/unionFind.ml[18,1184+0]..[32,1937+63])
+              Pstr_eval
+              expression (src/unionFind.ml[18,1184+0]..[32,1937+63])
+                Pexp_constant PConst_string(" The abstraction defined by this module is a set of points,\n    partitioned into equivalence classes. With each equivalence class,\n    a piece of information, of abstract type ['a], is associated; we\n    call it a descriptor.\n\n    A point is implemented as a cell, whose (mutable) contents consist\n    of a single link to either information about the equivalence class,\n    or another point. Thus, points form a graph, which must be acyclic,\n    and whose connected components are the equivalence classes. In\n    every equivalence class, exactly one point has no outgoing edge,\n    and carries information about the class instead. It is the class's\n    representative element.\n\n    Information about a class consists of an integer weight (the number\n    of elements in the class) and of the class's descriptor. ",(src/unionFind.ml[18,1184+0]..[32,1937+63]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/unionFind.ml[33,2001+5]..src/unionFind.ml[33,2001+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/unionFind.ml[34,2019+4]..src/unionFind.ml[34,2019+25])
+                Mutable
+                link/399                core_type (src/unionFind.ml[34,2019+18]..src/unionFind.ml[34,2019+25])
+                  Ttyp_poly
+                  core_type (src/unionFind.ml[34,2019+18]..src/unionFind.ml[34,2019+25])
+                    Ttyp_constr "link/397"
+                    [
+                      core_type (src/unionFind.ml[34,2019+18]..src/unionFind.ml[34,2019+20])
+                        Ttyp_var a
+                    ]
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration link/397 (src/unionFind.ml[37,2050+0]..src/unionFind.ml[39,2084+20])
+        ptype_params =
+          [
+            core_type (src/unionFind.ml[37,2050+4]..src/unionFind.ml[37,2050+6])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/unionFind.ml[38,2064+2]..src/unionFind.ml[38,2064+19])
+                Info/400
+                [
+                  core_type (src/unionFind.ml[38,2064+12]..src/unionFind.ml[38,2064+19])
+                    Ttyp_constr "info/398"
+                    [
+                      core_type (src/unionFind.ml[38,2064+12]..src/unionFind.ml[38,2064+14])
+                        Ttyp_var a
+                    ]
+                ]
+                None
+              (src/unionFind.ml[39,2084+2]..src/unionFind.ml[39,2084+20])
+                Link/401
+                [
+                  core_type (src/unionFind.ml[39,2084+12]..src/unionFind.ml[39,2084+20])
+                    Ttyp_constr "point/396"
+                    [
+                      core_type (src/unionFind.ml[39,2084+12]..src/unionFind.ml[39,2084+14])
+                        Ttyp_var a
+                    ]
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+      type_declaration info/398 (src/unionFind.ml[41,2106+0]..src/unionFind.ml[44,2174+3])
+        ptype_params =
+          [
+            core_type (src/unionFind.ml[41,2106+4]..src/unionFind.ml[41,2106+6])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/unionFind.ml[42,2122+4]..src/unionFind.ml[42,2122+24])
+                Mutable
+                weight/402                core_type (src/unionFind.ml[42,2122+20]..src/unionFind.ml[42,2122+23])
+                  Ttyp_poly
+                  core_type (src/unionFind.ml[42,2122+20]..src/unionFind.ml[42,2122+23])
+                    Ttyp_constr "int/1!"
+                    []
+              (src/unionFind.ml[43,2147+4]..src/unionFind.ml[43,2147+26])
+                Mutable
+                descriptor/403                core_type (src/unionFind.ml[43,2147+24]..src/unionFind.ml[43,2147+26])
+                  Ttyp_poly
+                  core_type (src/unionFind.ml[43,2147+24]..src/unionFind.ml[43,2147+26])
+                    Ttyp_var a
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/unionFind.ml[48,2311+0]..src/unionFind.ml[50,2378+1])
+    Tstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[46,2179+0]..[47,2246+64])
+                Pstr_eval
+                expression (src/unionFind.ml[46,2179+0]..[47,2246+64])
+                  Pexp_constant PConst_string(" [fresh desc] creates a fresh point and returns it. It forms an\n    equivalence class of its own, whose descriptor is [desc]. ",(src/unionFind.ml[46,2179+0]..[47,2246+64]),None)
+            ]
+        pattern (src/unionFind.ml[48,2311+4]..src/unionFind.ml[48,2311+9])
+          Tpat_var "fresh/404"
+        expression (src/unionFind.ml[48,2311+10]..src/unionFind.ml[50,2378+1]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/unionFind.ml[48,2311+10]..src/unionFind.ml[48,2311+14])
+                Tpat_var "desc/406"
+              expression (src/unionFind.ml[48,2311+17]..src/unionFind.ml[50,2378+1])
+                Texp_record
+                  fields =
+                    [
+                      "link"
+                        expression (src/unionFind.ml[49,2330+9]..src/unionFind.ml[49,2330+47])
+                          Texp_construct "Info"
+                          [
+                            expression (src/unionFind.ml[49,2330+14]..src/unionFind.ml[49,2330+47])
+                              Texp_record
+                                fields =
+                                  [
+                                    "weight"
+                                      expression (src/unionFind.ml[49,2330+25]..src/unionFind.ml[49,2330+26])
+                                        Texp_constant Const_int 1
+                                    "descriptor"
+                                      expression (src/unionFind.ml[49,2330+41]..src/unionFind.ml[49,2330+45])
+                                        Texp_ident "desc/406"
+                                  ]
+                                representation =
+                                  Record_regular
+                                extended_expression =
+                                  None
+                          ]
+                    ]
+                  representation =
+                    Record_regular
+                  extended_expression =
+                    None
+          ]
+    ]
+  structure_item (src/unionFind.ml[56,2613+0]..src/unionFind.ml[71,3123+11])
+    Tstr_value Rec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[52,2381+0]..[55,2588+24])
+                Pstr_eval
+                expression (src/unionFind.ml[52,2381+0]..[55,2588+24])
+                  Pexp_constant PConst_string(" [repr point] returns the representative element of [point]'s\n    equivalence class. It is found by starting at [point] and following\n    the links. For efficiency, the function performs path compression\n    at the same time. ",(src/unionFind.ml[52,2381+0]..[55,2588+24]),None)
+            ]
+        pattern (src/unionFind.ml[56,2613+8]..src/unionFind.ml[56,2613+12])
+          Tpat_var "repr/407"
+        expression (src/unionFind.ml[56,2613+13]..src/unionFind.ml[71,3123+11]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/unionFind.ml[56,2613+13]..src/unionFind.ml[56,2613+18])
+                Tpat_var "point/408"
+              expression (src/unionFind.ml[57,2634+2]..src/unionFind.ml[71,3123+11])
+                Texp_match
+                expression (src/unionFind.ml[57,2634+8]..src/unionFind.ml[57,2634+18])
+                  Texp_field
+                  expression (src/unionFind.ml[57,2634+8]..src/unionFind.ml[57,2634+13])
+                    Texp_ident "point/408"
+                  "link"
+                [
+                  <case>
+                    pattern (src/unionFind.ml[58,2658+4]..src/unionFind.ml[58,2658+15])
+                      Tpat_value
+                      pattern (src/unionFind.ml[58,2658+4]..src/unionFind.ml[58,2658+15])
+                        Tpat_construct "Link"
+                        [
+                          pattern (src/unionFind.ml[58,2658+9]..src/unionFind.ml[58,2658+15])
+                            Tpat_var "point'/409"
+                        ]
+                        None
+                    expression (src/unionFind.ml[59,2677+6]..src/unionFind.ml[69,3095+13])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/unionFind.ml[59,2677+10]..src/unionFind.ml[59,2677+17])
+                            Tpat_var "point''/410"
+                          expression (src/unionFind.ml[59,2677+20]..src/unionFind.ml[59,2677+31])
+                            Texp_apply
+                            expression (src/unionFind.ml[59,2677+20]..src/unionFind.ml[59,2677+24])
+                              Texp_ident "repr/407"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[59,2677+25]..src/unionFind.ml[59,2677+31])
+                                  Texp_ident "point'/409"
+                            ]
+                      ]
+                      expression (src/unionFind.ml[60,2712+6]..src/unionFind.ml[69,3095+13])
+                        Texp_sequence
+                        expression (src/unionFind.ml[60,2712+6]..src/unionFind.ml[68,3060+33])
+                          Texp_ifthenelse
+                          expression (src/unionFind.ml[60,2712+9]..src/unionFind.ml[60,2712+26])
+                            Texp_apply
+                            expression (src/unionFind.ml[60,2712+17]..src/unionFind.ml[60,2712+19])
+                              Texp_ident "Stdlib!.!="
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[60,2712+9]..src/unionFind.ml[60,2712+16])
+                                  Texp_ident "point''/410"
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[60,2712+20]..src/unionFind.ml[60,2712+26])
+                                  Texp_ident "point'/409"
+                            ]
+                          expression (src/unionFind.ml[68,3060+8]..src/unionFind.ml[68,3060+33])
+                            Texp_setfield
+                            expression (src/unionFind.ml[68,3060+8]..src/unionFind.ml[68,3060+13])
+                              Texp_ident "point/408"
+                            "link"
+                            expression (src/unionFind.ml[68,3060+22]..src/unionFind.ml[68,3060+33])
+                              Texp_field
+                              expression (src/unionFind.ml[68,3060+22]..src/unionFind.ml[68,3060+28])
+                                Texp_ident "point'/409"
+                              "link"
+                          None
+                        expression (src/unionFind.ml[69,3095+6]..src/unionFind.ml[69,3095+13])
+                          Texp_ident "point''/410"
+                  <case>
+                    pattern (src/unionFind.ml[70,3109+4]..src/unionFind.ml[70,3109+10])
+                      Tpat_value
+                      pattern (src/unionFind.ml[70,3109+4]..src/unionFind.ml[70,3109+10])
+                        Tpat_construct "Info"
+                        [
+                          pattern (src/unionFind.ml[70,3109+9]..src/unionFind.ml[70,3109+10])
+                            Tpat_any
+                        ]
+                        None
+                    expression (src/unionFind.ml[71,3123+6]..src/unionFind.ml[71,3123+11])
+                      Texp_ident "point/408"
+                ]
+          ]
+    ]
+  structure_item (src/unionFind.ml[75,3227+0]..src/unionFind.ml[86,3544+22])
+    Tstr_value Rec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[73,3136+0]..[74,3201+25])
+                Pstr_eval
+                expression (src/unionFind.ml[73,3136+0]..[74,3201+25])
+                  Pexp_constant PConst_string(" [get point] returns the descriptor associated with [point]'s\n    equivalence class. ",(src/unionFind.ml[73,3136+0]..[74,3201+25]),None)
+            ]
+        pattern (src/unionFind.ml[75,3227+8]..src/unionFind.ml[75,3227+11])
+          Tpat_var "get/411"
+        expression (src/unionFind.ml[75,3227+12]..src/unionFind.ml[86,3544+22]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/unionFind.ml[75,3227+12]..src/unionFind.ml[75,3227+17])
+                Tpat_var "point/412"
+              expression (src/unionFind.ml[81,3421+2]..src/unionFind.ml[86,3544+22])
+                Texp_match
+                expression (src/unionFind.ml[81,3421+8]..src/unionFind.ml[81,3421+18])
+                  Texp_field
+                  expression (src/unionFind.ml[81,3421+8]..src/unionFind.ml[81,3421+13])
+                    Texp_ident "point/412"
+                  "link"
+                [
+                  <case>
+                    pattern (src/unionFind.ml[82,3445+4]..src/unionFind.ml[83,3459+29])
+                      Tpat_or
+                      pattern (src/unionFind.ml[82,3445+4]..src/unionFind.ml[82,3445+13])
+                        Tpat_value
+                        pattern (src/unionFind.ml[82,3445+4]..src/unionFind.ml[82,3445+13])
+                          Tpat_construct "Info"
+                          [
+                            pattern (src/unionFind.ml[82,3445+9]..src/unionFind.ml[82,3445+13])
+                              Tpat_var "info/413"
+                          ]
+                          None
+                      pattern (src/unionFind.ml[83,3459+4]..src/unionFind.ml[83,3459+29])
+                        Tpat_value
+                        pattern (src/unionFind.ml[83,3459+4]..src/unionFind.ml[83,3459+29])
+                          Tpat_construct "Link"
+                          [
+                            pattern (src/unionFind.ml[83,3459+9]..src/unionFind.ml[83,3459+29])
+                              Tpat_record
+                              [
+                                "link"
+                                  pattern (src/unionFind.ml[83,3459+18]..src/unionFind.ml[83,3459+27])
+                                    Tpat_construct "Info"
+                                    [
+                                      pattern (src/unionFind.ml[83,3459+23]..src/unionFind.ml[83,3459+27])
+                                        Tpat_var "info/413"
+                                    ]
+                                    None
+                              ]
+                          ]
+                          None
+                    expression (src/unionFind.ml[84,3492+6]..src/unionFind.ml[84,3492+21])
+                      Texp_field
+                      expression (src/unionFind.ml[84,3492+6]..src/unionFind.ml[84,3492+10])
+                        Texp_ident "info/413"
+                      "descriptor"
+                  <case>
+                    pattern (src/unionFind.ml[85,3514+4]..src/unionFind.ml[85,3514+26])
+                      Tpat_value
+                      pattern (src/unionFind.ml[85,3514+4]..src/unionFind.ml[85,3514+26])
+                        Tpat_construct "Link"
+                        [
+                          pattern (src/unionFind.ml[85,3514+9]..src/unionFind.ml[85,3514+26])
+                            Tpat_record
+                            [
+                              "link"
+                                pattern (src/unionFind.ml[85,3514+18]..src/unionFind.ml[85,3514+24])
+                                  Tpat_construct "Link"
+                                  [
+                                    pattern (src/unionFind.ml[85,3514+23]..src/unionFind.ml[85,3514+24])
+                                      Tpat_any
+                                  ]
+                                  None
+                            ]
+                        ]
+                        None
+                    expression (src/unionFind.ml[86,3544+6]..src/unionFind.ml[86,3544+22])
+                      Texp_apply
+                      expression (src/unionFind.ml[86,3544+6]..src/unionFind.ml[86,3544+9])
+                        Texp_ident "get/411"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/unionFind.ml[86,3544+10]..src/unionFind.ml[86,3544+22])
+                            Texp_apply
+                            expression (src/unionFind.ml[86,3544+11]..src/unionFind.ml[86,3544+15])
+                              Texp_ident "repr/407"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[86,3544+16]..src/unionFind.ml[86,3544+21])
+                                  Texp_ident "point/412"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/unionFind.ml[88,3568+0]..src/unionFind.ml[94,3718+24])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/unionFind.ml[88,3568+8]..src/unionFind.ml[88,3568+11])
+          Tpat_var "set/415"
+        expression (src/unionFind.ml[88,3568+12]..src/unionFind.ml[94,3718+24]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/unionFind.ml[88,3568+12]..src/unionFind.ml[88,3568+17])
+                Tpat_var "point/416"
+              expression (src/unionFind.ml[88,3568+18]..src/unionFind.ml[94,3718+24]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/unionFind.ml[88,3568+18]..src/unionFind.ml[88,3568+19])
+                      Tpat_var "v/417"
+                    expression (src/unionFind.ml[89,3590+2]..src/unionFind.ml[94,3718+24])
+                      Texp_match
+                      expression (src/unionFind.ml[89,3590+8]..src/unionFind.ml[89,3590+18])
+                        Texp_field
+                        expression (src/unionFind.ml[89,3590+8]..src/unionFind.ml[89,3590+13])
+                          Texp_ident "point/416"
+                        "link"
+                      [
+                        <case>
+                          pattern (src/unionFind.ml[90,3614+4]..src/unionFind.ml[91,3628+29])
+                            Tpat_or
+                            pattern (src/unionFind.ml[90,3614+4]..src/unionFind.ml[90,3614+13])
+                              Tpat_value
+                              pattern (src/unionFind.ml[90,3614+4]..src/unionFind.ml[90,3614+13])
+                                Tpat_construct "Info"
+                                [
+                                  pattern (src/unionFind.ml[90,3614+9]..src/unionFind.ml[90,3614+13])
+                                    Tpat_var "info/418"
+                                ]
+                                None
+                            pattern (src/unionFind.ml[91,3628+4]..src/unionFind.ml[91,3628+29])
+                              Tpat_value
+                              pattern (src/unionFind.ml[91,3628+4]..src/unionFind.ml[91,3628+29])
+                                Tpat_construct "Link"
+                                [
+                                  pattern (src/unionFind.ml[91,3628+9]..src/unionFind.ml[91,3628+29])
+                                    Tpat_record
+                                    [
+                                      "link"
+                                        pattern (src/unionFind.ml[91,3628+18]..src/unionFind.ml[91,3628+27])
+                                          Tpat_construct "Info"
+                                          [
+                                            pattern (src/unionFind.ml[91,3628+23]..src/unionFind.ml[91,3628+27])
+                                              Tpat_var "info/418"
+                                          ]
+                                          None
+                                    ]
+                                ]
+                                None
+                          expression (src/unionFind.ml[92,3661+6]..src/unionFind.ml[92,3661+26])
+                            Texp_setfield
+                            expression (src/unionFind.ml[92,3661+6]..src/unionFind.ml[92,3661+10])
+                              Texp_ident "info/418"
+                            "descriptor"
+                            expression (src/unionFind.ml[92,3661+25]..src/unionFind.ml[92,3661+26])
+                              Texp_ident "v/417"
+                        <case>
+                          pattern (src/unionFind.ml[93,3688+4]..src/unionFind.ml[93,3688+26])
+                            Tpat_value
+                            pattern (src/unionFind.ml[93,3688+4]..src/unionFind.ml[93,3688+26])
+                              Tpat_construct "Link"
+                              [
+                                pattern (src/unionFind.ml[93,3688+9]..src/unionFind.ml[93,3688+26])
+                                  Tpat_record
+                                  [
+                                    "link"
+                                      pattern (src/unionFind.ml[93,3688+18]..src/unionFind.ml[93,3688+24])
+                                        Tpat_construct "Link"
+                                        [
+                                          pattern (src/unionFind.ml[93,3688+23]..src/unionFind.ml[93,3688+24])
+                                            Tpat_any
+                                        ]
+                                        None
+                                  ]
+                              ]
+                              None
+                          expression (src/unionFind.ml[94,3718+6]..src/unionFind.ml[94,3718+24])
+                            Texp_apply
+                            expression (src/unionFind.ml[94,3718+6]..src/unionFind.ml[94,3718+9])
+                              Texp_ident "set/415"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[94,3718+10]..src/unionFind.ml[94,3718+22])
+                                  Texp_apply
+                                  expression (src/unionFind.ml[94,3718+11]..src/unionFind.ml[94,3718+15])
+                                    Texp_ident "repr/407"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/unionFind.ml[94,3718+16]..src/unionFind.ml[94,3718+21])
+                                        Texp_ident "point/416"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[94,3718+23]..src/unionFind.ml[94,3718+24])
+                                  Texp_ident "v/417"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/unionFind.ml[106,4339+0]..src/unionFind.ml[124,4904+20])
+    Tstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[96,3744+0]..[105,4279+59])
+                Pstr_eval
+                expression (src/unionFind.ml[96,3744+0]..[105,4279+59])
+                  Pexp_constant PConst_string(" [union point1 point2] merges the equivalence classes associated\n    with [point1] and [point2] into a single class whose descriptor is\n    that originally associated with [point2]. It does nothing if [point1]\n    and [point2] already are in the same class.\n\n    The weights are used to determine whether [point1] should be made\n    to point to [point2], or vice-versa. By making the representative\n    of the smaller class point to that of the larger class, we\n    guarantee that paths remain of logarithmic length (not accounting\n    for path compression, which makes them yet smaller). ",(src/unionFind.ml[96,3744+0]..[105,4279+59]),None)
+            ]
+        pattern (src/unionFind.ml[106,4339+4]..src/unionFind.ml[106,4339+9])
+          Tpat_var "union/420"
+        expression (src/unionFind.ml[106,4339+10]..src/unionFind.ml[124,4904+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/unionFind.ml[106,4339+10]..src/unionFind.ml[106,4339+16])
+                Tpat_var "point1/422"
+              expression (src/unionFind.ml[106,4339+17]..src/unionFind.ml[124,4904+20]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/unionFind.ml[106,4339+17]..src/unionFind.ml[106,4339+23])
+                      Tpat_var "point2/423"
+                    expression (src/unionFind.ml[107,4365+2]..src/unionFind.ml[124,4904+20])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/unionFind.ml[107,4365+6]..src/unionFind.ml[107,4365+12])
+                            Tpat_var "point1/424"
+                          expression (src/unionFind.ml[107,4365+15]..src/unionFind.ml[107,4365+26])
+                            Texp_apply
+                            expression (src/unionFind.ml[107,4365+15]..src/unionFind.ml[107,4365+19])
+                              Texp_ident "repr/407"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[107,4365+20]..src/unionFind.ml[107,4365+26])
+                                  Texp_ident "point1/422"
+                            ]
+                        <def>
+                          pattern (src/unionFind.ml[108,4392+6]..src/unionFind.ml[108,4392+12])
+                            Tpat_var "point2/425"
+                          expression (src/unionFind.ml[108,4392+15]..src/unionFind.ml[108,4392+26])
+                            Texp_apply
+                            expression (src/unionFind.ml[108,4392+15]..src/unionFind.ml[108,4392+19])
+                              Texp_ident "repr/407"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[108,4392+20]..src/unionFind.ml[108,4392+26])
+                                  Texp_ident "point2/423"
+                            ]
+                      ]
+                      expression (src/unionFind.ml[109,4422+2]..src/unionFind.ml[124,4904+20])
+                        Texp_ifthenelse
+                        expression (src/unionFind.ml[109,4422+5]..src/unionFind.ml[109,4422+21])
+                          Texp_apply
+                          expression (src/unionFind.ml[109,4422+12]..src/unionFind.ml[109,4422+14])
+                            Texp_ident "Stdlib!.!="
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/unionFind.ml[109,4422+5]..src/unionFind.ml[109,4422+11])
+                                Texp_ident "point1/424"
+                            <arg>
+                              Nolabel
+                              expression (src/unionFind.ml[109,4422+15]..src/unionFind.ml[109,4422+21])
+                                Texp_ident "point2/425"
+                          ]
+                        expression (src/unionFind.ml[110,4449+4]..src/unionFind.ml[124,4904+20])
+                          Texp_match
+                          expression (src/unionFind.ml[110,4449+10]..src/unionFind.ml[110,4449+34])
+                            Texp_tuple
+                            [
+                              expression (src/unionFind.ml[110,4449+10]..src/unionFind.ml[110,4449+21])
+                                Texp_field
+                                expression (src/unionFind.ml[110,4449+10]..src/unionFind.ml[110,4449+16])
+                                  Texp_ident "point1/424"
+                                "link"
+                              expression (src/unionFind.ml[110,4449+23]..src/unionFind.ml[110,4449+34])
+                                Texp_field
+                                expression (src/unionFind.ml[110,4449+23]..src/unionFind.ml[110,4449+29])
+                                  Texp_ident "point2/425"
+                                "link"
+                            ]
+                          [
+                            <case>
+                              pattern (src/unionFind.ml[111,4489+6]..src/unionFind.ml[111,4489+28])
+                                Tpat_value
+                                pattern (src/unionFind.ml[111,4489+6]..src/unionFind.ml[111,4489+28])
+                                  Tpat_tuple
+                                  [
+                                    pattern (src/unionFind.ml[111,4489+6]..src/unionFind.ml[111,4489+16])
+                                      Tpat_construct "Info"
+                                      [
+                                        pattern (src/unionFind.ml[111,4489+11]..src/unionFind.ml[111,4489+16])
+                                          Tpat_var "info1/426"
+                                      ]
+                                      None
+                                    pattern (src/unionFind.ml[111,4489+18]..src/unionFind.ml[111,4489+28])
+                                      Tpat_construct "Info"
+                                      [
+                                        pattern (src/unionFind.ml[111,4489+23]..src/unionFind.ml[111,4489+28])
+                                          Tpat_var "info2/427"
+                                      ]
+                                      None
+                                  ]
+                              expression (src/unionFind.ml[112,4521+8]..src/unionFind.ml[122,4878+11])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/unionFind.ml[112,4521+12]..src/unionFind.ml[112,4521+19])
+                                      Tpat_var "weight1/428"
+                                    expression (src/unionFind.ml[112,4521+22]..src/unionFind.ml[112,4521+34])
+                                      Texp_field
+                                      expression (src/unionFind.ml[112,4521+22]..src/unionFind.ml[112,4521+27])
+                                        Texp_ident "info1/426"
+                                      "weight"
+                                  <def>
+                                    pattern (src/unionFind.ml[113,4556+12]..src/unionFind.ml[113,4556+19])
+                                      Tpat_var "weight2/429"
+                                    expression (src/unionFind.ml[113,4556+22]..src/unionFind.ml[113,4556+34])
+                                      Texp_field
+                                      expression (src/unionFind.ml[113,4556+22]..src/unionFind.ml[113,4556+27])
+                                        Texp_ident "info2/427"
+                                      "weight"
+                                ]
+                                expression (src/unionFind.ml[114,4594+8]..src/unionFind.ml[122,4878+11])
+                                  Texp_ifthenelse
+                                  expression (src/unionFind.ml[114,4594+11]..src/unionFind.ml[114,4594+29])
+                                    Texp_apply
+                                    expression (src/unionFind.ml[114,4594+19]..src/unionFind.ml[114,4594+21])
+                                      Texp_ident "Stdlib!.>="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/unionFind.ml[114,4594+11]..src/unionFind.ml[114,4594+18])
+                                          Texp_ident "weight1/428"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/unionFind.ml[114,4594+22]..src/unionFind.ml[114,4594+29])
+                                          Texp_ident "weight2/429"
+                                    ]
+                                  expression (src/unionFind.ml[114,4594+35]..src/unionFind.ml[118,4765+11])
+                                    Texp_sequence
+                                    expression (src/unionFind.ml[115,4635+10]..src/unionFind.ml[115,4635+36])
+                                      Texp_setfield
+                                      expression (src/unionFind.ml[115,4635+10]..src/unionFind.ml[115,4635+16])
+                                        Texp_ident "point2/425"
+                                      "link"
+                                      expression (src/unionFind.ml[115,4635+25]..src/unionFind.ml[115,4635+36])
+                                        Texp_construct "Link"
+                                        [
+                                          expression (src/unionFind.ml[115,4635+30]..src/unionFind.ml[115,4635+36])
+                                            Texp_ident "point1/424"
+                                        ]
+                                    expression (src/unionFind.ml[116,4673+10]..src/unionFind.ml[117,4718+46])
+                                      Texp_sequence
+                                      expression (src/unionFind.ml[116,4673+10]..src/unionFind.ml[116,4673+43])
+                                        Texp_setfield
+                                        expression (src/unionFind.ml[116,4673+10]..src/unionFind.ml[116,4673+15])
+                                          Texp_ident "info1/426"
+                                        "weight"
+                                        expression (src/unionFind.ml[116,4673+26]..src/unionFind.ml[116,4673+43])
+                                          Texp_apply
+                                          expression (src/unionFind.ml[116,4673+34]..src/unionFind.ml[116,4673+35])
+                                            Texp_ident "Stdlib!.+"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/unionFind.ml[116,4673+26]..src/unionFind.ml[116,4673+33])
+                                                Texp_ident "weight1/428"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/unionFind.ml[116,4673+36]..src/unionFind.ml[116,4673+43])
+                                                Texp_ident "weight2/429"
+                                          ]
+                                      expression (src/unionFind.ml[117,4718+10]..src/unionFind.ml[117,4718+46])
+                                        Texp_setfield
+                                        expression (src/unionFind.ml[117,4718+10]..src/unionFind.ml[117,4718+15])
+                                          Texp_ident "info1/426"
+                                        "descriptor"
+                                        expression (src/unionFind.ml[117,4718+30]..src/unionFind.ml[117,4718+46])
+                                          Texp_field
+                                          expression (src/unionFind.ml[117,4718+30]..src/unionFind.ml[117,4718+35])
+                                            Texp_ident "info2/427"
+                                          "descriptor"
+                                  Some
+                                    expression (src/unionFind.ml[119,4777+13]..src/unionFind.ml[122,4878+11])
+                                      Texp_sequence
+                                      expression (src/unionFind.ml[120,4796+10]..src/unionFind.ml[120,4796+36])
+                                        Texp_setfield
+                                        expression (src/unionFind.ml[120,4796+10]..src/unionFind.ml[120,4796+16])
+                                          Texp_ident "point1/424"
+                                        "link"
+                                        expression (src/unionFind.ml[120,4796+25]..src/unionFind.ml[120,4796+36])
+                                          Texp_construct "Link"
+                                          [
+                                            expression (src/unionFind.ml[120,4796+30]..src/unionFind.ml[120,4796+36])
+                                              Texp_ident "point2/425"
+                                          ]
+                                      expression (src/unionFind.ml[121,4834+10]..src/unionFind.ml[121,4834+43])
+                                        Texp_setfield
+                                        expression (src/unionFind.ml[121,4834+10]..src/unionFind.ml[121,4834+15])
+                                          Texp_ident "info2/427"
+                                        "weight"
+                                        expression (src/unionFind.ml[121,4834+26]..src/unionFind.ml[121,4834+43])
+                                          Texp_apply
+                                          expression (src/unionFind.ml[121,4834+34]..src/unionFind.ml[121,4834+35])
+                                            Texp_ident "Stdlib!.+"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/unionFind.ml[121,4834+26]..src/unionFind.ml[121,4834+33])
+                                                Texp_ident "weight1/428"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/unionFind.ml[121,4834+36]..src/unionFind.ml[121,4834+43])
+                                                Texp_ident "weight2/429"
+                                          ]
+                            <case>
+                              pattern (src/unionFind.ml[123,4890+6]..src/unionFind.ml[123,4890+10])
+                                Tpat_value
+                                pattern (src/unionFind.ml[123,4890+6]..src/unionFind.ml[123,4890+10])
+                                  Tpat_tuple
+                                  [
+                                    pattern (src/unionFind.ml[123,4890+6]..src/unionFind.ml[123,4890+7])
+                                      Tpat_any
+                                    pattern (src/unionFind.ml[123,4890+9]..src/unionFind.ml[123,4890+10])
+                                      Tpat_any
+                                  ]
+                              expression (src/unionFind.ml[124,4904+8]..src/unionFind.ml[124,4904+20])
+                                Texp_assert                                expression (src/unionFind.ml[124,4904+15]..src/unionFind.ml[124,4904+20])
+                                  Texp_construct "false"
+                                  []
+                          ]
+                        None
+                ]
+          ]
+    ]
+  structure_item (src/unionFind.ml[128,5092+0]..src/unionFind.ml[129,5123+28])
+    Tstr_value Nonrec
+    [
+      <def>
+          attribute "ocaml.doc"
+            [
+              structure_item (src/unionFind.ml[126,4980+0]..[127,5047+44])
+                Pstr_eval
+                expression (src/unionFind.ml[126,4980+0]..[127,5047+44])
+                  Pexp_constant PConst_string(" [equivalent point1 point2] tells whether [point1] and [point2]\n    belong to the same equivalence class. ",(src/unionFind.ml[126,4980+0]..[127,5047+44]),None)
+            ]
+        pattern (src/unionFind.ml[128,5092+4]..src/unionFind.ml[128,5092+14])
+          Tpat_var "equivalent/430"
+        expression (src/unionFind.ml[128,5092+15]..src/unionFind.ml[129,5123+28]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/unionFind.ml[128,5092+15]..src/unionFind.ml[128,5092+21])
+                Tpat_var "point1/432"
+              expression (src/unionFind.ml[128,5092+22]..src/unionFind.ml[129,5123+28]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/unionFind.ml[128,5092+22]..src/unionFind.ml[128,5092+28])
+                      Tpat_var "point2/433"
+                    expression (src/unionFind.ml[129,5123+2]..src/unionFind.ml[129,5123+28])
+                      Texp_apply
+                      expression (src/unionFind.ml[129,5123+14]..src/unionFind.ml[129,5123+16])
+                        Texp_ident "Stdlib!.=="
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/unionFind.ml[129,5123+2]..src/unionFind.ml[129,5123+13])
+                            Texp_apply
+                            expression (src/unionFind.ml[129,5123+2]..src/unionFind.ml[129,5123+6])
+                              Texp_ident "repr/407"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[129,5123+7]..src/unionFind.ml[129,5123+13])
+                                  Texp_ident "point1/432"
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/unionFind.ml[129,5123+17]..src/unionFind.ml[129,5123+28])
+                            Texp_apply
+                            expression (src/unionFind.ml[129,5123+17]..src/unionFind.ml[129,5123+21])
+                              Texp_ident "repr/407"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/unionFind.ml[129,5123+22]..src/unionFind.ml[129,5123+28])
+                                  Texp_ident "point2/433"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__UnionFind>
+ "equivalent"[value] -> <Dune__exe__UnionFind.30>;
+ "fresh"[value] -> <Dune__exe__UnionFind.8>;
+ "get"[value] -> <Dune__exe__UnionFind.14>;
+ "point"[type] -> <Dune__exe__UnionFind.0>;
+ "set"[value] -> <Dune__exe__UnionFind.17>;
+ "union"[value] -> <Dune__exe__UnionFind.21>;
+ }
+
+(seq
+  (let
+    (fresh/404 =
+       (function desc/406
+         (makemutable 0 (makeblock 0 (makemutable 0 (int,*) 1 desc/406)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__UnionFind!) fresh/404))
+  (letrec
+    (repr/407
+       (function point/408
+         (let (*match*/859 = (field_mut 0 point/408))
+           (switch* *match*/859
+            case tag 0:
+             (let (*match*/860 =a (field_imm 0 *match*/859)) point/408)
+            case tag 1:
+             (let
+               (point'/409 =a (field_imm 0 *match*/859)
+                point''/410 = (apply repr/407 point'/409))
+               (seq
+                 (if (!= point''/410 point'/409)
+                   (setfield_ptr 0 point/408 (field_mut 0 point'/409)) 0)
+                 point''/410))))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__UnionFind!) repr/407))
+  (letrec
+    (get/411
+       (function point/412
+         (let (*match*/861 = (field_mut 0 point/412))
+           (catch
+             (switch* *match*/861
+              case tag 0:
+               (let (info/863 =a (field_imm 0 *match*/861))
+                 (exit 1 info/863))
+              case tag 1:
+               (let
+                 (*match*/864 =a (field_imm 0 *match*/861)
+                  *match*/865 =o (field_mut 0 *match*/864))
+                 (switch* *match*/865
+                  case tag 0:
+                   (let (info/862 =a (field_imm 0 *match*/865))
+                     (exit 1 info/862))
+                  case tag 1:
+                   (let (*match*/866 =a (field_imm 0 *match*/865))
+                     (apply get/411
+                       (apply (field_imm 5 (global Dune__exe__UnionFind!))
+                         point/412))))))
+            with (1 info/413) (field_mut 1 info/413)))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__UnionFind!) get/411))
+  (letrec
+    (set/415
+       (function point/416 v/417 : int
+         (let (*match*/867 = (field_mut 0 point/416))
+           (catch
+             (switch* *match*/867
+              case tag 0:
+               (let (info/869 =a (field_imm 0 *match*/867))
+                 (exit 2 info/869))
+              case tag 1:
+               (let
+                 (*match*/870 =a (field_imm 0 *match*/867)
+                  *match*/871 =o (field_mut 0 *match*/870))
+                 (switch* *match*/871
+                  case tag 0:
+                   (let (info/868 =a (field_imm 0 *match*/871))
+                     (exit 2 info/868))
+                  case tag 1:
+                   (let (*match*/872 =a (field_imm 0 *match*/871))
+                     (apply set/415
+                       (apply (field_imm 5 (global Dune__exe__UnionFind!))
+                         point/416)
+                       v/417)))))
+            with (2 info/418) (setfield_ptr 1 info/418 v/417)))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__UnionFind!) set/415))
+  (let
+    (union/420 =
+       (function point1/422 point2/423 : int
+         (let
+           (point1/424 =
+              (apply (field_imm 5 (global Dune__exe__UnionFind!)) point1/422)
+            point2/425 =
+              (apply (field_imm 5 (global Dune__exe__UnionFind!)) point2/423))
+           (if (!= point1/424 point2/425)
+             (let
+               (*match*/873 = (field_mut 0 point1/424)
+                *match*/874 = (field_mut 0 point2/425))
+               (catch
+                 (switch* *match*/873
+                  case tag 0:
+                   (let (info1/426 =a (field_imm 0 *match*/873))
+                     (switch* *match*/874
+                      case tag 0:
+                       (let
+                         (info2/427 =a (field_imm 0 *match*/874)
+                          weight1/428 =[int] (field_int 0 info1/426)
+                          weight2/429 =[int] (field_int 0 info2/427))
+                         (if (>= weight1/428 weight2/429)
+                           (seq
+                             (setfield_ptr 0 point2/425
+                               (makeblock 1 point1/424))
+                             (setfield_imm 0 info1/426
+                               (+ weight1/428 weight2/429))
+                             (setfield_ptr 1 info1/426
+                               (field_mut 1 info2/427)))
+                           (seq
+                             (setfield_ptr 0 point1/424
+                               (makeblock 1 point2/425))
+                             (setfield_imm 0 info2/427
+                               (+ weight1/428 weight2/429)))))
+                      case tag 1: (exit 3)))
+                  case tag 1: (exit 3))
+                with (3)
+                 (raise
+                   (makeblock 0 (global Assert_failure/28!)
+                     [0: "src/unionFind.ml" 124 8]))))
+             0))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__UnionFind!) union/420))
+  (let
+    (equivalent/430 =
+       (function point1/432 point2/433 : int
+         (== (apply (field_imm 5 (global Dune__exe__UnionFind!)) point1/432)
+           (apply (field_imm 5 (global Dune__exe__UnionFind!)) point2/433))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__UnionFind!) equivalent/430))
+  0)
+(seq
+  (let
+    (fresh/404 =
+       (function desc/406
+         (makemutable 0 (makeblock 0 (makemutable 0 (int,*) 1 desc/406)))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__UnionFind!) fresh/404))
+  (letrec
+    (repr/407
+       (function point/408
+         (let (*match*/859 = (field_mut 0 point/408))
+           (switch* *match*/859
+            case tag 0: point/408
+            case tag 1:
+             (let
+               (point'/409 =a (field_imm 0 *match*/859)
+                point''/410 = (apply repr/407 point'/409))
+               (seq
+                 (if (!= point''/410 point'/409)
+                   (setfield_ptr 0 point/408 (field_mut 0 point'/409)) 0)
+                 point''/410))))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__UnionFind!) repr/407))
+  (letrec
+    (get/411
+       (function point/412
+         (let (*match*/861 = (field_mut 0 point/412))
+           (catch
+             (switch* *match*/861
+              case tag 0: (exit 1 (field_imm 0 *match*/861))
+              case tag 1:
+               (let (*match*/865 =o (field_mut 0 (field_imm 0 *match*/861)))
+                 (switch* *match*/865
+                  case tag 0: (exit 1 (field_imm 0 *match*/865))
+                  case tag 1:
+                   (apply get/411
+                     (apply (field_imm 5 (global Dune__exe__UnionFind!))
+                       point/412)))))
+            with (1 info/413) (field_mut 1 info/413)))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__UnionFind!) get/411))
+  (letrec
+    (set/415
+       (function point/416 v/417 : int
+         (let (*match*/867 = (field_mut 0 point/416))
+           (catch
+             (switch* *match*/867
+              case tag 0: (exit 2 (field_imm 0 *match*/867))
+              case tag 1:
+               (let (*match*/871 =o (field_mut 0 (field_imm 0 *match*/867)))
+                 (switch* *match*/871
+                  case tag 0: (exit 2 (field_imm 0 *match*/871))
+                  case tag 1:
+                   (apply set/415
+                     (apply (field_imm 5 (global Dune__exe__UnionFind!))
+                       point/416)
+                     v/417))))
+            with (2 info/418) (setfield_ptr 1 info/418 v/417)))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__UnionFind!) set/415))
+  (let
+    (union/420 =
+       (function point1/422 point2/423 : int
+         (let
+           (point1/424 =
+              (apply (field_imm 5 (global Dune__exe__UnionFind!)) point1/422)
+            point2/425 =
+              (apply (field_imm 5 (global Dune__exe__UnionFind!)) point2/423))
+           (if (!= point1/424 point2/425)
+             (let
+               (*match*/873 = (field_mut 0 point1/424)
+                *match*/874 = (field_mut 0 point2/425))
+               (catch
+                 (switch* *match*/873
+                  case tag 0:
+                   (let (info1/426 =a (field_imm 0 *match*/873))
+                     (switch* *match*/874
+                      case tag 0:
+                       (let
+                         (info2/427 =a (field_imm 0 *match*/874)
+                          weight1/428 =[int] (field_int 0 info1/426)
+                          weight2/429 =[int] (field_int 0 info2/427))
+                         (if (>= weight1/428 weight2/429)
+                           (seq
+                             (setfield_ptr 0 point2/425
+                               (makeblock 1 point1/424))
+                             (setfield_imm 0 info1/426
+                               (+ weight1/428 weight2/429))
+                             (setfield_ptr 1 info1/426
+                               (field_mut 1 info2/427)))
+                           (seq
+                             (setfield_ptr 0 point1/424
+                               (makeblock 1 point2/425))
+                             (setfield_imm 0 info2/427
+                               (+ weight1/428 weight2/429)))))
+                      case tag 1: (exit 3)))
+                  case tag 1: (exit 3))
+                with (3)
+                 (raise
+                   (makeblock 0 (global Assert_failure/28!)
+                     [0: "src/unionFind.ml" 124 8]))))
+             0))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__UnionFind!) union/420))
+  (let
+    (equivalent/430 =
+       (function point1/432 point2/433 : int
+         (== (apply (field_imm 5 (global Dune__exe__UnionFind!)) point1/432)
+           (apply (field_imm 5 (global Dune__exe__UnionFind!)) point2/433))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__UnionFind!) equivalent/430))
+  0)

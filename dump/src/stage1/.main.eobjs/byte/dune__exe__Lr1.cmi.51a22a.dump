@@ -1,0 +1,1859 @@
+[
+  signature_item (src/lr1.mli[14,994+0]..[14,994+12])
+    Psig_open Fresh "Grammar" (src/lr1.mli[14,994+5]..[14,994+12])
+  signature_item (src/lr1.mli[49,2448+0]..[49,2448+9])
+    Psig_type Rec
+    [
+      type_declaration "node" (src/lr1.mli[49,2448+5]..[49,2448+9]) (src/lr1.mli[49,2448+0]..[49,2448+9])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/lr1.mli[51,2459+0]..[51,2459+48])
+    Psig_module "Node" (src/lr1.mli[51,2459+7]..[51,2459+11])
+    module_type (src/lr1.mli[51,2459+14]..[51,2459+48])
+      Pmty_with
+      module_type (src/lr1.mli[51,2459+14]..[51,2459+29])
+        Pmty_ident "Set.OrderedType" (src/lr1.mli[51,2459+14]..[51,2459+29])
+      [
+        Pwith_type "t" (src/lr1.mli[51,2459+40]..[51,2459+41])
+          type_declaration "t" (src/lr1.mli[51,2459+40]..[51,2459+41]) (src/lr1.mli[51,2459+35]..[51,2459+48])
+            ptype_params =
+              []
+            ptype_cstrs =
+              []
+            ptype_kind =
+              Ptype_abstract
+            ptype_private = Public
+            ptype_manifest =
+              Some
+                core_type (src/lr1.mli[51,2459+44]..[51,2459+48])
+                  Ptyp_constr "node" (src/lr1.mli[51,2459+44]..[51,2459+48])
+                  []
+      ]
+  signature_item (src/lr1.mli[53,2509+0]..[57,2620+3])
+    Psig_module "NodeSet" (src/lr1.mli[53,2509+7]..[53,2509+14])
+    module_type (src/lr1.mli[53,2509+17]..[57,2620+3])
+      Pmty_signature
+      [
+        signature_item (src/lr1.mli[54,2530+2]..[54,2530+36])
+          Psig_include
+          module_type (src/lr1.mli[54,2530+10]..[54,2530+36])
+            Pmty_with
+            module_type (src/lr1.mli[54,2530+10]..[54,2530+15])
+              Pmty_ident "Set.S" (src/lr1.mli[54,2530+10]..[54,2530+15])
+            [
+              Pwith_type "elt" (src/lr1.mli[54,2530+26]..[54,2530+29])
+                type_declaration "elt" (src/lr1.mli[54,2530+26]..[54,2530+29]) (src/lr1.mli[54,2530+21]..[54,2530+36])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (src/lr1.mli[54,2530+32]..[54,2530+36])
+                        Ptyp_constr "node" (src/lr1.mli[54,2530+32]..[54,2530+36])
+                        []
+            ]
+        signature_item (src/lr1.mli[55,2567+2]..[55,2567+27])
+          Psig_value
+          value_description "leq_join" (src/lr1.mli[55,2567+6]..[55,2567+14]) (src/lr1.mli[55,2567+2]..[55,2567+27])
+            core_type (src/lr1.mli[55,2567+16]..[55,2567+27])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[55,2567+16]..[55,2567+17])
+                Ptyp_constr "t" (src/lr1.mli[55,2567+16]..[55,2567+17])
+                []
+              core_type (src/lr1.mli[55,2567+21]..[55,2567+27])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[55,2567+21]..[55,2567+22])
+                  Ptyp_constr "t" (src/lr1.mli[55,2567+21]..[55,2567+22])
+                  []
+                core_type (src/lr1.mli[55,2567+26]..[55,2567+27])
+                  Ptyp_constr "t" (src/lr1.mli[55,2567+26]..[55,2567+27])
+                  []
+            []
+        signature_item (src/lr1.mli[56,2595+2]..[56,2595+24])
+          Psig_value
+          value_description "print" (src/lr1.mli[56,2595+6]..[56,2595+11]) (src/lr1.mli[56,2595+2]..[56,2595+24])
+            core_type (src/lr1.mli[56,2595+13]..[56,2595+24])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[56,2595+13]..[56,2595+14])
+                Ptyp_constr "t" (src/lr1.mli[56,2595+13]..[56,2595+14])
+                []
+              core_type (src/lr1.mli[56,2595+18]..[56,2595+24])
+                Ptyp_constr "string" (src/lr1.mli[56,2595+18]..[56,2595+24])
+                []
+            []
+      ]
+  signature_item (src/lr1.mli[59,2625+0]..[59,2625+43])
+    Psig_module "NodeMap" (src/lr1.mli[59,2625+7]..[59,2625+14])
+    module_type (src/lr1.mli[59,2625+17]..[59,2625+43])
+      Pmty_with
+      module_type (src/lr1.mli[59,2625+17]..[59,2625+22])
+        Pmty_ident "Map.S" (src/lr1.mli[59,2625+17]..[59,2625+22])
+      [
+        Pwith_type "key" (src/lr1.mli[59,2625+33]..[59,2625+36])
+          type_declaration "key" (src/lr1.mli[59,2625+33]..[59,2625+36]) (src/lr1.mli[59,2625+28]..[59,2625+43])
+            ptype_params =
+              []
+            ptype_cstrs =
+              []
+            ptype_kind =
+              Ptype_abstract
+            ptype_private = Public
+            ptype_manifest =
+              Some
+                core_type (src/lr1.mli[59,2625+39]..[59,2625+43])
+                  Ptyp_constr "node" (src/lr1.mli[59,2625+39]..[59,2625+43])
+                  []
+      ]
+  signature_item (src/lr1.mli[61,2670+0]..[62,2697+50])
+    Psig_module "ImperativeNodeMap" (src/lr1.mli[61,2670+7]..[61,2670+24])
+    module_type (src/lr1.mli[62,2697+2]..[62,2697+50])
+      Pmty_with
+      module_type (src/lr1.mli[62,2697+2]..[62,2697+29])
+        Pmty_ident "Fix.MINIMAL_IMPERATIVE_MAPS" (src/lr1.mli[62,2697+2]..[62,2697+29])
+      [
+        Pwith_type "key" (src/lr1.mli[62,2697+40]..[62,2697+43])
+          type_declaration "key" (src/lr1.mli[62,2697+40]..[62,2697+43]) (src/lr1.mli[62,2697+35]..[62,2697+50])
+            ptype_params =
+              []
+            ptype_cstrs =
+              []
+            ptype_kind =
+              Ptype_abstract
+            ptype_private = Public
+            ptype_manifest =
+              Some
+                core_type (src/lr1.mli[62,2697+46]..[62,2697+50])
+                  Ptyp_constr "node" (src/lr1.mli[62,2697+46]..[62,2697+50])
+                  []
+      ]
+  signature_item (src/lr1.mli[66,2830+0]..[66,2830+31])
+    Psig_value
+    value_description "entry" (src/lr1.mli[66,2830+4]..[66,2830+9]) (src/lr1.mli[66,2830+0]..[66,2830+31])
+      core_type (src/lr1.mli[66,2830+11]..[66,2830+31])
+        Ptyp_constr "ProductionMap.t" (src/lr1.mli[66,2830+16]..[66,2830+31])
+        [
+          core_type (src/lr1.mli[66,2830+11]..[66,2830+15])
+            Ptyp_constr "node" (src/lr1.mli[66,2830+11]..[66,2830+15])
+            []
+        ]
+      []
+  signature_item (src/lr1.mli[72,3082+0]..[74,3180+10])
+    Psig_value
+    value_description "fold_entry" (src/lr1.mli[72,3082+4]..[72,3082+14]) (src/lr1.mli[72,3082+0]..[74,3180+10])
+      core_type (src/lr1.mli[73,3098+2]..[74,3180+10])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[73,3098+3]..[73,3098+77])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[73,3098+3]..[73,3098+19])
+            Ptyp_constr "Production.index" (src/lr1.mli[73,3098+3]..[73,3098+19])
+            []
+          core_type (src/lr1.mli[73,3098+23]..[73,3098+77])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[73,3098+23]..[73,3098+27])
+              Ptyp_constr "node" (src/lr1.mli[73,3098+23]..[73,3098+27])
+              []
+            core_type (src/lr1.mli[73,3098+31]..[73,3098+77])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[73,3098+31]..[73,3098+44])
+                Ptyp_constr "Nonterminal.t" (src/lr1.mli[73,3098+31]..[73,3098+44])
+                []
+              core_type (src/lr1.mli[73,3098+48]..[73,3098+77])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[73,3098+48]..[73,3098+65])
+                  Ptyp_constr "Stretch.ocamltype" (src/lr1.mli[73,3098+48]..[73,3098+65])
+                  []
+                core_type (src/lr1.mli[73,3098+69]..[73,3098+77])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/lr1.mli[73,3098+69]..[73,3098+71])
+                    Ptyp_var a
+                  core_type (src/lr1.mli[73,3098+75]..[73,3098+77])
+                    Ptyp_var a
+        core_type (src/lr1.mli[74,3180+2]..[74,3180+10])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[74,3180+2]..[74,3180+4])
+            Ptyp_var a
+          core_type (src/lr1.mli[74,3180+8]..[74,3180+10])
+            Ptyp_var a
+      []
+  signature_item (src/lr1.mli[79,3322+0]..[79,3322+38])
+    Psig_value
+    value_description "entry_of_nt" (src/lr1.mli[79,3322+4]..[79,3322+15]) (src/lr1.mli[79,3322+0]..[79,3322+38])
+      core_type (src/lr1.mli[79,3322+17]..[79,3322+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[79,3322+17]..[79,3322+30])
+          Ptyp_constr "Nonterminal.t" (src/lr1.mli[79,3322+17]..[79,3322+30])
+          []
+        core_type (src/lr1.mli[79,3322+34]..[79,3322+38])
+          Ptyp_constr "node" (src/lr1.mli[79,3322+34]..[79,3322+38])
+          []
+      []
+  signature_item (src/lr1.mli[80,3361+0]..[80,3361+38])
+    Psig_value
+    value_description "nt_of_entry" (src/lr1.mli[80,3361+4]..[80,3361+15]) (src/lr1.mli[80,3361+0]..[80,3361+38])
+      core_type (src/lr1.mli[80,3361+17]..[80,3361+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[80,3361+17]..[80,3361+21])
+          Ptyp_constr "node" (src/lr1.mli[80,3361+17]..[80,3361+21])
+          []
+        core_type (src/lr1.mli[80,3361+25]..[80,3361+38])
+          Ptyp_constr "Nonterminal.t" (src/lr1.mli[80,3361+25]..[80,3361+38])
+          []
+      []
+  signature_item (src/lr1.mli[84,3459+0]..[84,3459+10])
+    Psig_value
+    value_description "n" (src/lr1.mli[84,3459+4]..[84,3459+5]) (src/lr1.mli[84,3459+0]..[84,3459+10])
+      core_type (src/lr1.mli[84,3459+7]..[84,3459+10])
+        Ptyp_constr "int" (src/lr1.mli[84,3459+7]..[84,3459+10])
+        []
+      []
+  signature_item (src/lr1.mli[85,3470+0]..[85,3470+23])
+    Psig_value
+    value_description "number" (src/lr1.mli[85,3470+4]..[85,3470+10]) (src/lr1.mli[85,3470+0]..[85,3470+23])
+      core_type (src/lr1.mli[85,3470+12]..[85,3470+23])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[85,3470+12]..[85,3470+16])
+          Ptyp_constr "node" (src/lr1.mli[85,3470+12]..[85,3470+16])
+          []
+        core_type (src/lr1.mli[85,3470+20]..[85,3470+23])
+          Ptyp_constr "int" (src/lr1.mli[85,3470+20]..[85,3470+23])
+          []
+      []
+  signature_item (src/lr1.mli[89,3543+0]..[89,3543+25])
+    Psig_value
+    value_description "print" (src/lr1.mli[89,3543+4]..[89,3543+9]) (src/lr1.mli[89,3543+0]..[89,3543+25])
+      core_type (src/lr1.mli[89,3543+11]..[89,3543+25])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[89,3543+11]..[89,3543+15])
+          Ptyp_constr "node" (src/lr1.mli[89,3543+11]..[89,3543+15])
+          []
+        core_type (src/lr1.mli[89,3543+19]..[89,3543+25])
+          Ptyp_constr "string" (src/lr1.mli[89,3543+19]..[89,3543+25])
+          []
+      []
+  signature_item (src/lr1.mli[93,3641+0]..[93,3641+31])
+    Psig_value
+    value_description "state" (src/lr1.mli[93,3641+4]..[93,3641+9]) (src/lr1.mli[93,3641+0]..[93,3641+31])
+      core_type (src/lr1.mli[93,3641+11]..[93,3641+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[93,3641+11]..[93,3641+15])
+          Ptyp_constr "node" (src/lr1.mli[93,3641+11]..[93,3641+15])
+          []
+        core_type (src/lr1.mli[93,3641+19]..[93,3641+31])
+          Ptyp_constr "Lr0.lr1state" (src/lr1.mli[93,3641+19]..[93,3641+31])
+          []
+      []
+  signature_item (src/lr1.mli[97,3747+0]..[97,3747+30])
+    Psig_value
+    value_description "start2item" (src/lr1.mli[97,3747+4]..[97,3747+14]) (src/lr1.mli[97,3747+0]..[97,3747+30])
+      core_type (src/lr1.mli[97,3747+16]..[97,3747+30])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[97,3747+16]..[97,3747+20])
+          Ptyp_constr "node" (src/lr1.mli[97,3747+16]..[97,3747+20])
+          []
+        core_type (src/lr1.mli[97,3747+24]..[97,3747+30])
+          Ptyp_constr "Item.t" (src/lr1.mli[97,3747+24]..[97,3747+30])
+          []
+      []
+  signature_item (src/lr1.mli[104,4004+0]..[104,4004+44])
+    Psig_value
+    value_description "incoming_symbol" (src/lr1.mli[104,4004+4]..[104,4004+19]) (src/lr1.mli[104,4004+0]..[104,4004+44])
+      core_type (src/lr1.mli[104,4004+21]..[104,4004+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[104,4004+21]..[104,4004+25])
+          Ptyp_constr "node" (src/lr1.mli[104,4004+21]..[104,4004+25])
+          []
+        core_type (src/lr1.mli[104,4004+29]..[104,4004+44])
+          Ptyp_constr "option" (src/lr1.mli[104,4004+38]..[104,4004+44])
+          [
+            core_type (src/lr1.mli[104,4004+29]..[104,4004+37])
+              Ptyp_constr "Symbol.t" (src/lr1.mli[104,4004+29]..[104,4004+37])
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[108,4114+0]..[108,4114+26])
+    Psig_value
+    value_description "is_start" (src/lr1.mli[108,4114+4]..[108,4114+12]) (src/lr1.mli[108,4114+0]..[108,4114+26])
+      core_type (src/lr1.mli[108,4114+14]..[108,4114+26])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[108,4114+14]..[108,4114+18])
+          Ptyp_constr "node" (src/lr1.mli[108,4114+14]..[108,4114+18])
+          []
+        core_type (src/lr1.mli[108,4114+22]..[108,4114+26])
+          Ptyp_constr "bool" (src/lr1.mli[108,4114+22]..[108,4114+26])
+          []
+      []
+  signature_item (src/lr1.mli[117,4487+0]..[117,4487+50])
+    Psig_value
+    value_description "is_start_or_exit" (src/lr1.mli[117,4487+4]..[117,4487+20]) (src/lr1.mli[117,4487+0]..[117,4487+50])
+      core_type (src/lr1.mli[117,4487+22]..[117,4487+50])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[117,4487+22]..[117,4487+26])
+          Ptyp_constr "node" (src/lr1.mli[117,4487+22]..[117,4487+26])
+          []
+        core_type (src/lr1.mli[117,4487+30]..[117,4487+50])
+          Ptyp_constr "option" (src/lr1.mli[117,4487+44]..[117,4487+50])
+          [
+            core_type (src/lr1.mli[117,4487+30]..[117,4487+43])
+              Ptyp_constr "Nonterminal.t" (src/lr1.mli[117,4487+30]..[117,4487+43])
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[121,4584+0]..[121,4584+35])
+    Psig_value
+    value_description "predecessors" (src/lr1.mli[121,4584+4]..[121,4584+16]) (src/lr1.mli[121,4584+0]..[121,4584+35])
+      core_type (src/lr1.mli[121,4584+18]..[121,4584+35])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[121,4584+18]..[121,4584+22])
+          Ptyp_constr "node" (src/lr1.mli[121,4584+18]..[121,4584+22])
+          []
+        core_type (src/lr1.mli[121,4584+26]..[121,4584+35])
+          Ptyp_constr "list" (src/lr1.mli[121,4584+31]..[121,4584+35])
+          [
+            core_type (src/lr1.mli[121,4584+26]..[121,4584+30])
+              Ptyp_constr "node" (src/lr1.mli[121,4584+26]..[121,4584+30])
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[125,4668+0]..[129,4813+3])
+    Psig_module "ForwardEdges" (src/lr1.mli[125,4668+7]..[125,4668+19])
+    module_type (src/lr1.mli[125,4668+22]..[129,4813+3])
+      Pmty_signature
+      [
+        signature_item (src/lr1.mli[126,4694+2]..[126,4694+25])
+          Psig_type Nonrec
+          [
+            type_declaration "node" (src/lr1.mli[126,4694+14]..[126,4694+18]) (src/lr1.mli[126,4694+2]..[126,4694+25])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[126,4694+21]..[126,4694+25])
+                    Ptyp_constr "node" (src/lr1.mli[126,4694+21]..[126,4694+25])
+                    []
+          ]
+        signature_item (src/lr1.mli[127,4720+2]..[127,4720+23])
+          Psig_type Rec
+          [
+            type_declaration "label" (src/lr1.mli[127,4720+7]..[127,4720+12]) (src/lr1.mli[127,4720+2]..[127,4720+23])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[127,4720+15]..[127,4720+23])
+                    Ptyp_constr "Symbol.t" (src/lr1.mli[127,4720+15]..[127,4720+23])
+                    []
+          ]
+        signature_item (src/lr1.mli[128,4744+2]..[128,4744+68])
+          Psig_value
+          value_description "foreach_outgoing_edge" (src/lr1.mli[128,4744+6]..[128,4744+27]) (src/lr1.mli[128,4744+2]..[128,4744+68])
+            core_type (src/lr1.mli[128,4744+29]..[128,4744+68])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[128,4744+29]..[128,4744+33])
+                Ptyp_constr "node" (src/lr1.mli[128,4744+29]..[128,4744+33])
+                []
+              core_type (src/lr1.mli[128,4744+37]..[128,4744+68])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[128,4744+38]..[128,4744+59])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/lr1.mli[128,4744+38]..[128,4744+43])
+                    Ptyp_constr "label" (src/lr1.mli[128,4744+38]..[128,4744+43])
+                    []
+                  core_type (src/lr1.mli[128,4744+47]..[128,4744+59])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/lr1.mli[128,4744+47]..[128,4744+51])
+                      Ptyp_constr "node" (src/lr1.mli[128,4744+47]..[128,4744+51])
+                      []
+                    core_type (src/lr1.mli[128,4744+55]..[128,4744+59])
+                      Ptyp_constr "unit" (src/lr1.mli[128,4744+55]..[128,4744+59])
+                      []
+                core_type (src/lr1.mli[128,4744+64]..[128,4744+68])
+                  Ptyp_constr "unit" (src/lr1.mli[128,4744+64]..[128,4744+68])
+                  []
+            []
+      ]
+  signature_item (src/lr1.mli[133,4876+0]..[137,5018+3])
+    Psig_module "BackwardEdges" (src/lr1.mli[133,4876+7]..[133,4876+20])
+    module_type (src/lr1.mli[133,4876+23]..[137,5018+3])
+      Pmty_signature
+      [
+        signature_item (src/lr1.mli[134,4903+2]..[134,4903+25])
+          Psig_type Nonrec
+          [
+            type_declaration "node" (src/lr1.mli[134,4903+14]..[134,4903+18]) (src/lr1.mli[134,4903+2]..[134,4903+25])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[134,4903+21]..[134,4903+25])
+                    Ptyp_constr "node" (src/lr1.mli[134,4903+21]..[134,4903+25])
+                    []
+          ]
+        signature_item (src/lr1.mli[135,4929+2]..[135,4929+19])
+          Psig_type Rec
+          [
+            type_declaration "label" (src/lr1.mli[135,4929+7]..[135,4929+12]) (src/lr1.mli[135,4929+2]..[135,4929+19])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[135,4929+15]..[135,4929+19])
+                    Ptyp_constr "unit" (src/lr1.mli[135,4929+15]..[135,4929+19])
+                    []
+          ]
+        signature_item (src/lr1.mli[136,4949+2]..[136,4949+68])
+          Psig_value
+          value_description "foreach_outgoing_edge" (src/lr1.mli[136,4949+6]..[136,4949+27]) (src/lr1.mli[136,4949+2]..[136,4949+68])
+            core_type (src/lr1.mli[136,4949+29]..[136,4949+68])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[136,4949+29]..[136,4949+33])
+                Ptyp_constr "node" (src/lr1.mli[136,4949+29]..[136,4949+33])
+                []
+              core_type (src/lr1.mli[136,4949+37]..[136,4949+68])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[136,4949+38]..[136,4949+59])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/lr1.mli[136,4949+38]..[136,4949+43])
+                    Ptyp_constr "label" (src/lr1.mli[136,4949+38]..[136,4949+43])
+                    []
+                  core_type (src/lr1.mli[136,4949+47]..[136,4949+59])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/lr1.mli[136,4949+47]..[136,4949+51])
+                      Ptyp_constr "node" (src/lr1.mli[136,4949+47]..[136,4949+51])
+                      []
+                    core_type (src/lr1.mli[136,4949+55]..[136,4949+59])
+                      Ptyp_constr "unit" (src/lr1.mli[136,4949+55]..[136,4949+59])
+                      []
+                core_type (src/lr1.mli[136,4949+64]..[136,4949+68])
+                  Ptyp_constr "unit" (src/lr1.mli[136,4949+64]..[136,4949+68])
+                  []
+            []
+      ]
+  signature_item (src/lr1.mli[141,5091+0]..[141,5091+41])
+    Psig_value
+    value_description "transitions" (src/lr1.mli[141,5091+4]..[141,5091+15]) (src/lr1.mli[141,5091+0]..[141,5091+41])
+      core_type (src/lr1.mli[141,5091+17]..[141,5091+41])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[141,5091+17]..[141,5091+21])
+          Ptyp_constr "node" (src/lr1.mli[141,5091+17]..[141,5091+21])
+          []
+        core_type (src/lr1.mli[141,5091+25]..[141,5091+41])
+          Ptyp_constr "SymbolMap.t" (src/lr1.mli[141,5091+30]..[141,5091+41])
+          [
+            core_type (src/lr1.mli[141,5091+25]..[141,5091+29])
+              Ptyp_constr "node" (src/lr1.mli[141,5091+25]..[141,5091+29])
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[143,5134+0]..[143,5134+59])
+    Psig_value
+    value_description "reductions" (src/lr1.mli[143,5134+4]..[143,5134+14]) (src/lr1.mli[143,5134+0]..[143,5134+59])
+      core_type (src/lr1.mli[143,5134+16]..[143,5134+59])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[143,5134+16]..[143,5134+20])
+          Ptyp_constr "node" (src/lr1.mli[143,5134+16]..[143,5134+20])
+          []
+        core_type (src/lr1.mli[143,5134+24]..[143,5134+59])
+          Ptyp_constr "TerminalMap.t" (src/lr1.mli[143,5134+46]..[143,5134+59])
+          [
+            core_type (src/lr1.mli[143,5134+24]..[143,5134+45])
+              Ptyp_constr "list" (src/lr1.mli[143,5134+41]..[143,5134+45])
+              [
+                core_type (src/lr1.mli[143,5134+24]..[143,5134+40])
+                  Ptyp_constr "Production.index" (src/lr1.mli[143,5134+24]..[143,5134+40])
+                  []
+              ]
+          ]
+      []
+  signature_item (src/lr1.mli[150,5435+0]..[150,5435+42])
+    Psig_value
+    value_description "forbid_default_reduction" (src/lr1.mli[150,5435+4]..[150,5435+28]) (src/lr1.mli[150,5435+0]..[150,5435+42])
+      core_type (src/lr1.mli[150,5435+30]..[150,5435+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[150,5435+30]..[150,5435+34])
+          Ptyp_constr "node" (src/lr1.mli[150,5435+30]..[150,5435+34])
+          []
+        core_type (src/lr1.mli[150,5435+38]..[150,5435+42])
+          Ptyp_constr "bool" (src/lr1.mli[150,5435+38]..[150,5435+42])
+          []
+      []
+  signature_item (src/lr1.mli[157,5774+0]..[157,5774+31])
+    Psig_value
+    value_description "has_beforeend" (src/lr1.mli[157,5774+4]..[157,5774+17]) (src/lr1.mli[157,5774+0]..[157,5774+31])
+      core_type (src/lr1.mli[157,5774+19]..[157,5774+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[157,5774+19]..[157,5774+23])
+          Ptyp_constr "node" (src/lr1.mli[157,5774+19]..[157,5774+23])
+          []
+        core_type (src/lr1.mli[157,5774+27]..[157,5774+31])
+          Ptyp_constr "bool" (src/lr1.mli[157,5774+27]..[157,5774+31])
+          []
+      []
+  signature_item (src/lr1.mli[164,5977+0]..[164,5977+44])
+    Psig_value
+    value_description "acceptable_tokens" (src/lr1.mli[164,5977+4]..[164,5977+21]) (src/lr1.mli[164,5977+0]..[164,5977+44])
+      core_type (src/lr1.mli[164,5977+23]..[164,5977+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[164,5977+23]..[164,5977+27])
+          Ptyp_constr "node" (src/lr1.mli[164,5977+23]..[164,5977+27])
+          []
+        core_type (src/lr1.mli[164,5977+31]..[164,5977+44])
+          Ptyp_constr "TerminalSet.t" (src/lr1.mli[164,5977+31]..[164,5977+44])
+          []
+      []
+  signature_item (src/lr1.mli[170,6204+0]..[170,6204+40])
+    Psig_value
+    value_description "fold" (src/lr1.mli[170,6204+4]..[170,6204+8]) (src/lr1.mli[170,6204+0]..[170,6204+40])
+      core_type (src/lr1.mli[170,6204+10]..[170,6204+40])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[170,6204+11]..[170,6204+27])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[170,6204+11]..[170,6204+13])
+            Ptyp_var a
+          core_type (src/lr1.mli[170,6204+17]..[170,6204+27])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[170,6204+17]..[170,6204+21])
+              Ptyp_constr "node" (src/lr1.mli[170,6204+17]..[170,6204+21])
+              []
+            core_type (src/lr1.mli[170,6204+25]..[170,6204+27])
+              Ptyp_var a
+        core_type (src/lr1.mli[170,6204+32]..[170,6204+40])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[170,6204+32]..[170,6204+34])
+            Ptyp_var a
+          core_type (src/lr1.mli[170,6204+38]..[170,6204+40])
+            Ptyp_var a
+      []
+  signature_item (src/lr1.mli[171,6245+0]..[171,6245+32])
+    Psig_value
+    value_description "iter" (src/lr1.mli[171,6245+4]..[171,6245+8]) (src/lr1.mli[171,6245+0]..[171,6245+32])
+      core_type (src/lr1.mli[171,6245+10]..[171,6245+32])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[171,6245+11]..[171,6245+23])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[171,6245+11]..[171,6245+15])
+            Ptyp_constr "node" (src/lr1.mli[171,6245+11]..[171,6245+15])
+            []
+          core_type (src/lr1.mli[171,6245+19]..[171,6245+23])
+            Ptyp_constr "unit" (src/lr1.mli[171,6245+19]..[171,6245+23])
+            []
+        core_type (src/lr1.mli[171,6245+28]..[171,6245+32])
+          Ptyp_constr "unit" (src/lr1.mli[171,6245+28]..[171,6245+32])
+          []
+      []
+  signature_item (src/lr1.mli[172,6278+0]..[172,6278+32])
+    Psig_value
+    value_description "map" (src/lr1.mli[172,6278+4]..[172,6278+7]) (src/lr1.mli[172,6278+0]..[172,6278+32])
+      core_type (src/lr1.mli[172,6278+9]..[172,6278+32])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[172,6278+10]..[172,6278+20])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[172,6278+10]..[172,6278+14])
+            Ptyp_constr "node" (src/lr1.mli[172,6278+10]..[172,6278+14])
+            []
+          core_type (src/lr1.mli[172,6278+18]..[172,6278+20])
+            Ptyp_var a
+        core_type (src/lr1.mli[172,6278+25]..[172,6278+32])
+          Ptyp_constr "list" (src/lr1.mli[172,6278+28]..[172,6278+32])
+          [
+            core_type (src/lr1.mli[172,6278+25]..[172,6278+27])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/lr1.mli[176,6364+0]..[176,6364+42])
+    Psig_value
+    value_description "tabulate" (src/lr1.mli[176,6364+4]..[176,6364+12]) (src/lr1.mli[176,6364+0]..[176,6364+42])
+      core_type (src/lr1.mli[176,6364+14]..[176,6364+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[176,6364+15]..[176,6364+25])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[176,6364+15]..[176,6364+19])
+            Ptyp_constr "node" (src/lr1.mli[176,6364+15]..[176,6364+19])
+            []
+          core_type (src/lr1.mli[176,6364+23]..[176,6364+25])
+            Ptyp_var a
+        core_type (src/lr1.mli[176,6364+31]..[176,6364+41])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[176,6364+31]..[176,6364+35])
+            Ptyp_constr "node" (src/lr1.mli[176,6364+31]..[176,6364+35])
+            []
+          core_type (src/lr1.mli[176,6364+39]..[176,6364+41])
+            Ptyp_var a
+      []
+  signature_item (src/lr1.mli[177,6407+0]..[177,6407+29])
+    Psig_value
+    value_description "sum" (src/lr1.mli[177,6407+4]..[177,6407+7]) (src/lr1.mli[177,6407+0]..[177,6407+29])
+      core_type (src/lr1.mli[177,6407+9]..[177,6407+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[177,6407+10]..[177,6407+21])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[177,6407+10]..[177,6407+14])
+            Ptyp_constr "node" (src/lr1.mli[177,6407+10]..[177,6407+14])
+            []
+          core_type (src/lr1.mli[177,6407+18]..[177,6407+21])
+            Ptyp_constr "int" (src/lr1.mli[177,6407+18]..[177,6407+21])
+            []
+        core_type (src/lr1.mli[177,6407+26]..[177,6407+29])
+          Ptyp_constr "int" (src/lr1.mli[177,6407+26]..[177,6407+29])
+          []
+      []
+  signature_item (src/lr1.mli[180,6475+0]..[180,6475+41])
+    Psig_value
+    value_description "foldx" (src/lr1.mli[180,6475+4]..[180,6475+9]) (src/lr1.mli[180,6475+0]..[180,6475+41])
+      core_type (src/lr1.mli[180,6475+11]..[180,6475+41])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[180,6475+12]..[180,6475+28])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[180,6475+12]..[180,6475+14])
+            Ptyp_var a
+          core_type (src/lr1.mli[180,6475+18]..[180,6475+28])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[180,6475+18]..[180,6475+22])
+              Ptyp_constr "node" (src/lr1.mli[180,6475+18]..[180,6475+22])
+              []
+            core_type (src/lr1.mli[180,6475+26]..[180,6475+28])
+              Ptyp_var a
+        core_type (src/lr1.mli[180,6475+33]..[180,6475+41])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[180,6475+33]..[180,6475+35])
+            Ptyp_var a
+          core_type (src/lr1.mli[180,6475+39]..[180,6475+41])
+            Ptyp_var a
+      []
+  signature_item (src/lr1.mli[181,6517+0]..[181,6517+33])
+    Psig_value
+    value_description "iterx" (src/lr1.mli[181,6517+4]..[181,6517+9]) (src/lr1.mli[181,6517+0]..[181,6517+33])
+      core_type (src/lr1.mli[181,6517+11]..[181,6517+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[181,6517+12]..[181,6517+24])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[181,6517+12]..[181,6517+16])
+            Ptyp_constr "node" (src/lr1.mli[181,6517+12]..[181,6517+16])
+            []
+          core_type (src/lr1.mli[181,6517+20]..[181,6517+24])
+            Ptyp_constr "unit" (src/lr1.mli[181,6517+20]..[181,6517+24])
+            []
+        core_type (src/lr1.mli[181,6517+29]..[181,6517+33])
+          Ptyp_constr "unit" (src/lr1.mli[181,6517+29]..[181,6517+33])
+          []
+      []
+  signature_item (src/lr1.mli[189,6893+0]..[189,6893+68])
+    Psig_value
+    value_description "targets" (src/lr1.mli[189,6893+4]..[189,6893+11]) (src/lr1.mli[189,6893+0]..[189,6893+68])
+      core_type (src/lr1.mli[189,6893+13]..[189,6893+68])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[189,6893+14]..[189,6893+43])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[189,6893+14]..[189,6893+16])
+            Ptyp_var a
+          core_type (src/lr1.mli[189,6893+20]..[189,6893+43])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[189,6893+20]..[189,6893+29])
+              Ptyp_constr "list" (src/lr1.mli[189,6893+25]..[189,6893+29])
+              [
+                core_type (src/lr1.mli[189,6893+20]..[189,6893+24])
+                  Ptyp_constr "node" (src/lr1.mli[189,6893+20]..[189,6893+24])
+                  []
+              ]
+            core_type (src/lr1.mli[189,6893+33]..[189,6893+43])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[189,6893+33]..[189,6893+37])
+                Ptyp_constr "node" (src/lr1.mli[189,6893+33]..[189,6893+37])
+                []
+              core_type (src/lr1.mli[189,6893+41]..[189,6893+43])
+                Ptyp_var a
+        core_type (src/lr1.mli[189,6893+48]..[189,6893+68])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[189,6893+48]..[189,6893+50])
+            Ptyp_var a
+          core_type (src/lr1.mli[189,6893+54]..[189,6893+68])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[189,6893+54]..[189,6893+62])
+              Ptyp_constr "Symbol.t" (src/lr1.mli[189,6893+54]..[189,6893+62])
+              []
+            core_type (src/lr1.mli[189,6893+66]..[189,6893+68])
+              Ptyp_var a
+      []
+  signature_item (src/lr1.mli[194,7052+0]..[194,7052+38])
+    Psig_value
+    value_description "all_sources" (src/lr1.mli[194,7052+4]..[194,7052+15]) (src/lr1.mli[194,7052+0]..[194,7052+38])
+      core_type (src/lr1.mli[194,7052+17]..[194,7052+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[194,7052+17]..[194,7052+25])
+          Ptyp_constr "Symbol.t" (src/lr1.mli[194,7052+17]..[194,7052+25])
+          []
+        core_type (src/lr1.mli[194,7052+29]..[194,7052+38])
+          Ptyp_constr "NodeSet.t" (src/lr1.mli[194,7052+29]..[194,7052+38])
+          []
+      []
+  signature_item (src/lr1.mli[199,7181+0]..[199,7181+38])
+    Psig_value
+    value_description "all_targets" (src/lr1.mli[199,7181+4]..[199,7181+15]) (src/lr1.mli[199,7181+0]..[199,7181+38])
+      core_type (src/lr1.mli[199,7181+17]..[199,7181+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[199,7181+17]..[199,7181+25])
+          Ptyp_constr "Symbol.t" (src/lr1.mli[199,7181+17]..[199,7181+25])
+          []
+        core_type (src/lr1.mli[199,7181+29]..[199,7181+38])
+          Ptyp_constr "NodeSet.t" (src/lr1.mli[199,7181+29]..[199,7181+38])
+          []
+      []
+  signature_item (src/lr1.mli[208,7526+0]..[208,7526+54])
+    Psig_value
+    value_description "conflicts" (src/lr1.mli[208,7526+4]..[208,7526+13]) (src/lr1.mli[208,7526+0]..[208,7526+54])
+      core_type (src/lr1.mli[208,7526+15]..[208,7526+54])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[208,7526+16]..[208,7526+45])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[208,7526+16]..[208,7526+29])
+            Ptyp_constr "TerminalSet.t" (src/lr1.mli[208,7526+16]..[208,7526+29])
+            []
+          core_type (src/lr1.mli[208,7526+33]..[208,7526+45])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[208,7526+33]..[208,7526+37])
+              Ptyp_constr "node" (src/lr1.mli[208,7526+33]..[208,7526+37])
+              []
+            core_type (src/lr1.mli[208,7526+41]..[208,7526+45])
+              Ptyp_constr "unit" (src/lr1.mli[208,7526+41]..[208,7526+45])
+              []
+        core_type (src/lr1.mli[208,7526+50]..[208,7526+54])
+          Ptyp_constr "unit" (src/lr1.mli[208,7526+50]..[208,7526+54])
+          []
+      []
+  signature_item (src/lr1.mli[216,7779+0]..[216,7779+42])
+    Psig_value
+    value_description "conflict_tokens" (src/lr1.mli[216,7779+4]..[216,7779+19]) (src/lr1.mli[216,7779+0]..[216,7779+42])
+      core_type (src/lr1.mli[216,7779+21]..[216,7779+42])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[216,7779+21]..[216,7779+25])
+          Ptyp_constr "node" (src/lr1.mli[216,7779+21]..[216,7779+25])
+          []
+        core_type (src/lr1.mli[216,7779+29]..[216,7779+42])
+          Ptyp_constr "TerminalSet.t" (src/lr1.mli[216,7779+29]..[216,7779+42])
+          []
+      []
+  signature_item (src/lr1.mli[225,8121+0]..[225,8121+76])
+    Psig_value
+    value_description "has_eos_conflict" (src/lr1.mli[225,8121+4]..[225,8121+20]) (src/lr1.mli[225,8121+0]..[225,8121+76])
+      core_type (src/lr1.mli[225,8121+22]..[225,8121+76])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[225,8121+22]..[225,8121+26])
+          Ptyp_constr "node" (src/lr1.mli[225,8121+22]..[225,8121+26])
+          []
+        core_type (src/lr1.mli[225,8121+30]..[225,8121+76])
+          Ptyp_constr "option" (src/lr1.mli[225,8121+70]..[225,8121+76])
+          [
+            core_type (src/lr1.mli[225,8121+31]..[225,8121+68])
+              Ptyp_tuple
+              [
+                core_type (src/lr1.mli[225,8121+31]..[225,8121+52])
+                  Ptyp_constr "list" (src/lr1.mli[225,8121+48]..[225,8121+52])
+                  [
+                    core_type (src/lr1.mli[225,8121+31]..[225,8121+47])
+                      Ptyp_constr "Production.index" (src/lr1.mli[225,8121+31]..[225,8121+47])
+                      []
+                  ]
+                core_type (src/lr1.mli[225,8121+55]..[225,8121+68])
+                  Ptyp_constr "TerminalSet.t" (src/lr1.mli[225,8121+55]..[225,8121+68])
+                  []
+              ]
+          ]
+      []
+  signature_item (src/lr1.mli[243,8828+0]..[243,8828+45])
+    Psig_value
+    value_description "default_conflict_resolution" (src/lr1.mli[243,8828+4]..[243,8828+31]) (src/lr1.mli[243,8828+0]..[243,8828+45])
+      core_type (src/lr1.mli[243,8828+33]..[243,8828+45])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[243,8828+33]..[243,8828+37])
+          Ptyp_constr "unit" (src/lr1.mli[243,8828+33]..[243,8828+37])
+          []
+        core_type (src/lr1.mli[243,8828+41]..[243,8828+45])
+          Ptyp_constr "unit" (src/lr1.mli[243,8828+41]..[243,8828+45])
+          []
+      []
+  signature_item (src/lr1.mli[257,9473+0]..[257,9473+34])
+    Psig_value
+    value_description "extra_reductions" (src/lr1.mli[257,9473+4]..[257,9473+20]) (src/lr1.mli[257,9473+0]..[257,9473+34])
+      core_type (src/lr1.mli[257,9473+22]..[257,9473+34])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[257,9473+22]..[257,9473+26])
+          Ptyp_constr "unit" (src/lr1.mli[257,9473+22]..[257,9473+26])
+          []
+        core_type (src/lr1.mli[257,9473+30]..[257,9473+34])
+          Ptyp_constr "unit" (src/lr1.mli[257,9473+30]..[257,9473+34])
+          []
+      []
+  signature_item (src/lr1.mli[266,9852+0]..[266,9852+51])
+    Psig_value
+    value_description "production_where" (src/lr1.mli[266,9852+4]..[266,9852+20]) (src/lr1.mli[266,9852+0]..[266,9852+51])
+      core_type (src/lr1.mli[266,9852+22]..[266,9852+51])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[266,9852+22]..[266,9852+38])
+          Ptyp_constr "Production.index" (src/lr1.mli[266,9852+22]..[266,9852+38])
+          []
+        core_type (src/lr1.mli[266,9852+42]..[266,9852+51])
+          Ptyp_constr "NodeSet.t" (src/lr1.mli[266,9852+42]..[266,9852+51])
+          []
+      []
+]
+
+open Grammar
+type node
+module Node : Set.OrderedType with type  t =  node
+module NodeSet :
+sig
+  include Set.S with type  elt =  node
+  val leq_join : t -> t -> t
+  val print : t -> string
+end
+module NodeMap : Map.S with type  key =  node
+module ImperativeNodeMap : Fix.MINIMAL_IMPERATIVE_MAPS with type  key =  node
+val entry : node ProductionMap.t
+val fold_entry :
+  (Production.index -> node -> Nonterminal.t -> Stretch.ocamltype -> 'a -> 'a)
+    -> 'a -> 'a
+val entry_of_nt : Nonterminal.t -> node
+val nt_of_entry : node -> Nonterminal.t
+val n : int
+val number : node -> int
+val print : node -> string
+val state : node -> Lr0.lr1state
+val start2item : node -> Item.t
+val incoming_symbol : node -> Symbol.t option
+val is_start : node -> bool
+val is_start_or_exit : node -> Nonterminal.t option
+val predecessors : node -> node list
+module ForwardEdges :
+sig
+  type nonrec node = node
+  type label = Symbol.t
+  val foreach_outgoing_edge : node -> (label -> node -> unit) -> unit
+end
+module BackwardEdges :
+sig
+  type nonrec node = node
+  type label = unit
+  val foreach_outgoing_edge : node -> (label -> node -> unit) -> unit
+end
+val transitions : node -> node SymbolMap.t
+val reductions : node -> Production.index list TerminalMap.t
+val forbid_default_reduction : node -> bool
+val has_beforeend : node -> bool
+val acceptable_tokens : node -> TerminalSet.t
+val fold : ('a -> node -> 'a) -> 'a -> 'a
+val iter : (node -> unit) -> unit
+val map : (node -> 'a) -> 'a list
+val tabulate : (node -> 'a) -> node -> 'a
+val sum : (node -> int) -> int
+val foldx : ('a -> node -> 'a) -> 'a -> 'a
+val iterx : (node -> unit) -> unit
+val targets : ('a -> node list -> node -> 'a) -> 'a -> Symbol.t -> 'a
+val all_sources : Symbol.t -> NodeSet.t
+val all_targets : Symbol.t -> NodeSet.t
+val conflicts : (TerminalSet.t -> node -> unit) -> unit
+val conflict_tokens : node -> TerminalSet.t
+val has_eos_conflict : node -> (Production.index list * TerminalSet.t) option
+val default_conflict_resolution : unit -> unit
+val extra_reductions : unit -> unit
+val production_where : Production.index -> NodeSet.t
+[
+  signature_item (src/lr1.mli[14,994+0]..src/lr1.mli[14,994+12])
+    Tsig_open Fresh "Dune__exe!.Grammar"
+  signature_item (src/lr1.mli[49,2448+0]..src/lr1.mli[49,2448+9])
+    Tsig_type Rec
+    [
+      type_declaration node/413 (src/lr1.mli[49,2448+0]..src/lr1.mli[49,2448+9])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/lr1.mli[51,2459+0]..src/lr1.mli[51,2459+48])
+    Tsig_module "Node/428"
+    module_type (src/lr1.mli[51,2459+14]..src/lr1.mli[51,2459+48])
+      Tmty_with
+      module_type (src/lr1.mli[51,2459+14]..src/lr1.mli[51,2459+29])
+        Tmty_ident "Stdlib!.Set.OrderedType"
+      [
+        "t/423"
+          Twith_type
+            type_declaration t/423 (src/lr1.mli[51,2459+35]..src/lr1.mli[51,2459+48])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[51,2459+44]..src/lr1.mli[51,2459+48])
+                    Ttyp_constr "node/413"
+                    []
+      ]
+  signature_item (src/lr1.mli[53,2509+0]..src/lr1.mli[57,2620+3])
+    Tsig_module "NodeSet/567"
+    module_type (src/lr1.mli[53,2509+17]..src/lr1.mli[57,2620+3])
+      Tmty_signature
+      [
+        signature_item (src/lr1.mli[54,2530+2]..src/lr1.mli[54,2530+36])
+          Tsig_include
+          module_type (src/lr1.mli[54,2530+10]..src/lr1.mli[54,2530+36])
+            Tmty_with
+            module_type (src/lr1.mli[54,2530+10]..src/lr1.mli[54,2530+15])
+              Tmty_ident "Stdlib!.Set.S"
+            [
+              "elt/429"
+                Twith_type
+                  type_declaration elt/429 (src/lr1.mli[54,2530+21]..src/lr1.mli[54,2530+36])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/lr1.mli[54,2530+32]..src/lr1.mli[54,2530+36])
+                          Ttyp_constr "node/413"
+                          []
+            ]
+        signature_item (src/lr1.mli[55,2567+2]..src/lr1.mli[55,2567+27])
+          Tsig_value
+          value_description leq_join/565 (src/lr1.mli[55,2567+2]..src/lr1.mli[55,2567+27])
+            core_type (src/lr1.mli[55,2567+16]..src/lr1.mli[55,2567+27])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[55,2567+16]..src/lr1.mli[55,2567+17])
+                Ttyp_constr "t/521"
+                []
+              core_type (src/lr1.mli[55,2567+21]..src/lr1.mli[55,2567+27])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[55,2567+21]..src/lr1.mli[55,2567+22])
+                  Ttyp_constr "t/521"
+                  []
+                core_type (src/lr1.mli[55,2567+26]..src/lr1.mli[55,2567+27])
+                  Ttyp_constr "t/521"
+                  []
+            []
+        signature_item (src/lr1.mli[56,2595+2]..src/lr1.mli[56,2595+24])
+          Tsig_value
+          value_description print/566 (src/lr1.mli[56,2595+2]..src/lr1.mli[56,2595+24])
+            core_type (src/lr1.mli[56,2595+13]..src/lr1.mli[56,2595+24])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[56,2595+13]..src/lr1.mli[56,2595+14])
+                Ttyp_constr "t/521"
+                []
+              core_type (src/lr1.mli[56,2595+18]..src/lr1.mli[56,2595+24])
+                Ttyp_constr "string/15!"
+                []
+            []
+      ]
+  signature_item (src/lr1.mli[59,2625+0]..src/lr1.mli[59,2625+43])
+    Tsig_module "NodeMap/668"
+    module_type (src/lr1.mli[59,2625+17]..src/lr1.mli[59,2625+43])
+      Tmty_with
+      module_type (src/lr1.mli[59,2625+17]..src/lr1.mli[59,2625+22])
+        Tmty_ident "Stdlib!.Map.S"
+      [
+        "key/577"
+          Twith_type
+            type_declaration key/577 (src/lr1.mli[59,2625+28]..src/lr1.mli[59,2625+43])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[59,2625+39]..src/lr1.mli[59,2625+43])
+                    Ttyp_constr "node/413"
+                    []
+      ]
+  signature_item (src/lr1.mli[61,2670+0]..src/lr1.mli[62,2697+50])
+    Tsig_module "ImperativeNodeMap/797"
+    module_type (src/lr1.mli[62,2697+2]..src/lr1.mli[62,2697+50])
+      Tmty_with
+      module_type (src/lr1.mli[62,2697+2]..src/lr1.mli[62,2697+29])
+        Tmty_ident "Dune__exe!.Fix.MINIMAL_IMPERATIVE_MAPS"
+      [
+        "key/786"
+          Twith_type
+            type_declaration key/786 (src/lr1.mli[62,2697+35]..src/lr1.mli[62,2697+50])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[62,2697+46]..src/lr1.mli[62,2697+50])
+                    Ttyp_constr "node/413"
+                    []
+      ]
+  signature_item (src/lr1.mli[66,2830+0]..src/lr1.mli[66,2830+31])
+    Tsig_value
+    value_description entry/849 (src/lr1.mli[66,2830+0]..src/lr1.mli[66,2830+31])
+      core_type (src/lr1.mli[66,2830+11]..src/lr1.mli[66,2830+31])
+        Ttyp_constr "Dune__exe!.Grammar.ProductionMap.t"
+        [
+          core_type (src/lr1.mli[66,2830+11]..src/lr1.mli[66,2830+15])
+            Ttyp_constr "node/413"
+            []
+        ]
+      []
+  signature_item (src/lr1.mli[72,3082+0]..src/lr1.mli[74,3180+10])
+    Tsig_value
+    value_description fold_entry/906 (src/lr1.mli[72,3082+0]..src/lr1.mli[74,3180+10])
+      core_type (src/lr1.mli[73,3098+2]..src/lr1.mli[74,3180+10])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[73,3098+3]..src/lr1.mli[73,3098+77])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[73,3098+3]..src/lr1.mli[73,3098+19])
+            Ttyp_constr "Dune__exe!.Grammar.Production.index"
+            []
+          core_type (src/lr1.mli[73,3098+23]..src/lr1.mli[73,3098+77])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[73,3098+23]..src/lr1.mli[73,3098+27])
+              Ttyp_constr "node/413"
+              []
+            core_type (src/lr1.mli[73,3098+31]..src/lr1.mli[73,3098+77])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[73,3098+31]..src/lr1.mli[73,3098+44])
+                Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                []
+              core_type (src/lr1.mli[73,3098+48]..src/lr1.mli[73,3098+77])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[73,3098+48]..src/lr1.mli[73,3098+65])
+                  Ttyp_constr "Dune__exe!.Stretch.ocamltype"
+                  []
+                core_type (src/lr1.mli[73,3098+69]..src/lr1.mli[73,3098+77])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/lr1.mli[73,3098+69]..src/lr1.mli[73,3098+71])
+                    Ttyp_var a
+                  core_type (src/lr1.mli[73,3098+75]..src/lr1.mli[73,3098+77])
+                    Ttyp_var a
+        core_type (src/lr1.mli[74,3180+2]..src/lr1.mli[74,3180+10])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[74,3180+2]..src/lr1.mli[74,3180+4])
+            Ttyp_var a
+          core_type (src/lr1.mli[74,3180+8]..src/lr1.mli[74,3180+10])
+            Ttyp_var a
+      []
+  signature_item (src/lr1.mli[79,3322+0]..src/lr1.mli[79,3322+38])
+    Tsig_value
+    value_description entry_of_nt/907 (src/lr1.mli[79,3322+0]..src/lr1.mli[79,3322+38])
+      core_type (src/lr1.mli[79,3322+17]..src/lr1.mli[79,3322+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[79,3322+17]..src/lr1.mli[79,3322+30])
+          Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+          []
+        core_type (src/lr1.mli[79,3322+34]..src/lr1.mli[79,3322+38])
+          Ttyp_constr "node/413"
+          []
+      []
+  signature_item (src/lr1.mli[80,3361+0]..src/lr1.mli[80,3361+38])
+    Tsig_value
+    value_description nt_of_entry/908 (src/lr1.mli[80,3361+0]..src/lr1.mli[80,3361+38])
+      core_type (src/lr1.mli[80,3361+17]..src/lr1.mli[80,3361+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[80,3361+17]..src/lr1.mli[80,3361+21])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[80,3361+25]..src/lr1.mli[80,3361+38])
+          Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+          []
+      []
+  signature_item (src/lr1.mli[84,3459+0]..src/lr1.mli[84,3459+10])
+    Tsig_value
+    value_description n/909 (src/lr1.mli[84,3459+0]..src/lr1.mli[84,3459+10])
+      core_type (src/lr1.mli[84,3459+7]..src/lr1.mli[84,3459+10])
+        Ttyp_constr "int/1!"
+        []
+      []
+  signature_item (src/lr1.mli[85,3470+0]..src/lr1.mli[85,3470+23])
+    Tsig_value
+    value_description number/910 (src/lr1.mli[85,3470+0]..src/lr1.mli[85,3470+23])
+      core_type (src/lr1.mli[85,3470+12]..src/lr1.mli[85,3470+23])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[85,3470+12]..src/lr1.mli[85,3470+16])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[85,3470+20]..src/lr1.mli[85,3470+23])
+          Ttyp_constr "int/1!"
+          []
+      []
+  signature_item (src/lr1.mli[89,3543+0]..src/lr1.mli[89,3543+25])
+    Tsig_value
+    value_description print/911 (src/lr1.mli[89,3543+0]..src/lr1.mli[89,3543+25])
+      core_type (src/lr1.mli[89,3543+11]..src/lr1.mli[89,3543+25])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[89,3543+11]..src/lr1.mli[89,3543+15])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[89,3543+19]..src/lr1.mli[89,3543+25])
+          Ttyp_constr "string/15!"
+          []
+      []
+  signature_item (src/lr1.mli[93,3641+0]..src/lr1.mli[93,3641+31])
+    Tsig_value
+    value_description state/950 (src/lr1.mli[93,3641+0]..src/lr1.mli[93,3641+31])
+      core_type (src/lr1.mli[93,3641+11]..src/lr1.mli[93,3641+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[93,3641+11]..src/lr1.mli[93,3641+15])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[93,3641+19]..src/lr1.mli[93,3641+31])
+          Ttyp_constr "Dune__exe!.Lr0.lr1state"
+          []
+      []
+  signature_item (src/lr1.mli[97,3747+0]..src/lr1.mli[97,3747+30])
+    Tsig_value
+    value_description start2item/965 (src/lr1.mli[97,3747+0]..src/lr1.mli[97,3747+30])
+      core_type (src/lr1.mli[97,3747+16]..src/lr1.mli[97,3747+30])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[97,3747+16]..src/lr1.mli[97,3747+20])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[97,3747+24]..src/lr1.mli[97,3747+30])
+          Ttyp_constr "Dune__exe!.Item.t"
+          []
+      []
+  signature_item (src/lr1.mli[104,4004+0]..src/lr1.mli[104,4004+44])
+    Tsig_value
+    value_description incoming_symbol/977 (src/lr1.mli[104,4004+0]..src/lr1.mli[104,4004+44])
+      core_type (src/lr1.mli[104,4004+21]..src/lr1.mli[104,4004+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[104,4004+21]..src/lr1.mli[104,4004+25])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[104,4004+29]..src/lr1.mli[104,4004+44])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/lr1.mli[104,4004+29]..src/lr1.mli[104,4004+37])
+              Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[108,4114+0]..src/lr1.mli[108,4114+26])
+    Tsig_value
+    value_description is_start/978 (src/lr1.mli[108,4114+0]..src/lr1.mli[108,4114+26])
+      core_type (src/lr1.mli[108,4114+14]..src/lr1.mli[108,4114+26])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[108,4114+14]..src/lr1.mli[108,4114+18])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[108,4114+22]..src/lr1.mli[108,4114+26])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/lr1.mli[117,4487+0]..src/lr1.mli[117,4487+50])
+    Tsig_value
+    value_description is_start_or_exit/979 (src/lr1.mli[117,4487+0]..src/lr1.mli[117,4487+50])
+      core_type (src/lr1.mli[117,4487+22]..src/lr1.mli[117,4487+50])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[117,4487+22]..src/lr1.mli[117,4487+26])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[117,4487+30]..src/lr1.mli[117,4487+50])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/lr1.mli[117,4487+30]..src/lr1.mli[117,4487+43])
+              Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[121,4584+0]..src/lr1.mli[121,4584+35])
+    Tsig_value
+    value_description predecessors/980 (src/lr1.mli[121,4584+0]..src/lr1.mli[121,4584+35])
+      core_type (src/lr1.mli[121,4584+18]..src/lr1.mli[121,4584+35])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[121,4584+18]..src/lr1.mli[121,4584+22])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[121,4584+26]..src/lr1.mli[121,4584+35])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/lr1.mli[121,4584+26]..src/lr1.mli[121,4584+30])
+              Ttyp_constr "node/413"
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[125,4668+0]..src/lr1.mli[129,4813+3])
+    Tsig_module "ForwardEdges/995"
+    module_type (src/lr1.mli[125,4668+22]..src/lr1.mli[129,4813+3])
+      Tmty_signature
+      [
+        signature_item (src/lr1.mli[126,4694+2]..src/lr1.mli[126,4694+25])
+          Tsig_type Nonrec
+          [
+            type_declaration node/981 (src/lr1.mli[126,4694+2]..src/lr1.mli[126,4694+25])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[126,4694+21]..src/lr1.mli[126,4694+25])
+                    Ttyp_constr "node/413"
+                    []
+          ]
+        signature_item (src/lr1.mli[127,4720+2]..src/lr1.mli[127,4720+23])
+          Tsig_type Rec
+          [
+            type_declaration label/982 (src/lr1.mli[127,4720+2]..src/lr1.mli[127,4720+23])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[127,4720+15]..src/lr1.mli[127,4720+23])
+                    Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+                    []
+          ]
+        signature_item (src/lr1.mli[128,4744+2]..src/lr1.mli[128,4744+68])
+          Tsig_value
+          value_description foreach_outgoing_edge/994 (src/lr1.mli[128,4744+2]..src/lr1.mli[128,4744+68])
+            core_type (src/lr1.mli[128,4744+29]..src/lr1.mli[128,4744+68])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[128,4744+29]..src/lr1.mli[128,4744+33])
+                Ttyp_constr "node/981"
+                []
+              core_type (src/lr1.mli[128,4744+37]..src/lr1.mli[128,4744+68])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[128,4744+38]..src/lr1.mli[128,4744+59])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/lr1.mli[128,4744+38]..src/lr1.mli[128,4744+43])
+                    Ttyp_constr "label/982"
+                    []
+                  core_type (src/lr1.mli[128,4744+47]..src/lr1.mli[128,4744+59])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/lr1.mli[128,4744+47]..src/lr1.mli[128,4744+51])
+                      Ttyp_constr "node/981"
+                      []
+                    core_type (src/lr1.mli[128,4744+55]..src/lr1.mli[128,4744+59])
+                      Ttyp_constr "unit/6!"
+                      []
+                core_type (src/lr1.mli[128,4744+64]..src/lr1.mli[128,4744+68])
+                  Ttyp_constr "unit/6!"
+                  []
+            []
+      ]
+  signature_item (src/lr1.mli[133,4876+0]..src/lr1.mli[137,5018+3])
+    Tsig_module "BackwardEdges/999"
+    module_type (src/lr1.mli[133,4876+23]..src/lr1.mli[137,5018+3])
+      Tmty_signature
+      [
+        signature_item (src/lr1.mli[134,4903+2]..src/lr1.mli[134,4903+25])
+          Tsig_type Nonrec
+          [
+            type_declaration node/996 (src/lr1.mli[134,4903+2]..src/lr1.mli[134,4903+25])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[134,4903+21]..src/lr1.mli[134,4903+25])
+                    Ttyp_constr "node/413"
+                    []
+          ]
+        signature_item (src/lr1.mli[135,4929+2]..src/lr1.mli[135,4929+19])
+          Tsig_type Rec
+          [
+            type_declaration label/997 (src/lr1.mli[135,4929+2]..src/lr1.mli[135,4929+19])
+              ptype_params =
+                []
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_abstract
+              ptype_private = Public
+              ptype_manifest =
+                Some
+                  core_type (src/lr1.mli[135,4929+15]..src/lr1.mli[135,4929+19])
+                    Ttyp_constr "unit/6!"
+                    []
+          ]
+        signature_item (src/lr1.mli[136,4949+2]..src/lr1.mli[136,4949+68])
+          Tsig_value
+          value_description foreach_outgoing_edge/998 (src/lr1.mli[136,4949+2]..src/lr1.mli[136,4949+68])
+            core_type (src/lr1.mli[136,4949+29]..src/lr1.mli[136,4949+68])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[136,4949+29]..src/lr1.mli[136,4949+33])
+                Ttyp_constr "node/996"
+                []
+              core_type (src/lr1.mli[136,4949+37]..src/lr1.mli[136,4949+68])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/lr1.mli[136,4949+38]..src/lr1.mli[136,4949+59])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/lr1.mli[136,4949+38]..src/lr1.mli[136,4949+43])
+                    Ttyp_constr "label/997"
+                    []
+                  core_type (src/lr1.mli[136,4949+47]..src/lr1.mli[136,4949+59])
+                    Ttyp_arrow
+                    Nolabel
+                    core_type (src/lr1.mli[136,4949+47]..src/lr1.mli[136,4949+51])
+                      Ttyp_constr "node/996"
+                      []
+                    core_type (src/lr1.mli[136,4949+55]..src/lr1.mli[136,4949+59])
+                      Ttyp_constr "unit/6!"
+                      []
+                core_type (src/lr1.mli[136,4949+64]..src/lr1.mli[136,4949+68])
+                  Ttyp_constr "unit/6!"
+                  []
+            []
+      ]
+  signature_item (src/lr1.mli[141,5091+0]..src/lr1.mli[141,5091+41])
+    Tsig_value
+    value_description transitions/1048 (src/lr1.mli[141,5091+0]..src/lr1.mli[141,5091+41])
+      core_type (src/lr1.mli[141,5091+17]..src/lr1.mli[141,5091+41])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[141,5091+17]..src/lr1.mli[141,5091+21])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[141,5091+25]..src/lr1.mli[141,5091+41])
+          Ttyp_constr "Dune__exe!.Grammar.SymbolMap.t"
+          [
+            core_type (src/lr1.mli[141,5091+25]..src/lr1.mli[141,5091+29])
+              Ttyp_constr "node/413"
+              []
+          ]
+      []
+  signature_item (src/lr1.mli[143,5134+0]..src/lr1.mli[143,5134+59])
+    Tsig_value
+    value_description reductions/1082 (src/lr1.mli[143,5134+0]..src/lr1.mli[143,5134+59])
+      core_type (src/lr1.mli[143,5134+16]..src/lr1.mli[143,5134+59])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[143,5134+16]..src/lr1.mli[143,5134+20])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[143,5134+24]..src/lr1.mli[143,5134+59])
+          Ttyp_constr "Dune__exe!.Grammar.TerminalMap.t"
+          [
+            core_type (src/lr1.mli[143,5134+24]..src/lr1.mli[143,5134+45])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/lr1.mli[143,5134+24]..src/lr1.mli[143,5134+40])
+                  Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                  []
+              ]
+          ]
+      []
+  signature_item (src/lr1.mli[150,5435+0]..src/lr1.mli[150,5435+42])
+    Tsig_value
+    value_description forbid_default_reduction/1083 (src/lr1.mli[150,5435+0]..src/lr1.mli[150,5435+42])
+      core_type (src/lr1.mli[150,5435+30]..src/lr1.mli[150,5435+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[150,5435+30]..src/lr1.mli[150,5435+34])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[150,5435+38]..src/lr1.mli[150,5435+42])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/lr1.mli[157,5774+0]..src/lr1.mli[157,5774+31])
+    Tsig_value
+    value_description has_beforeend/1084 (src/lr1.mli[157,5774+0]..src/lr1.mli[157,5774+31])
+      core_type (src/lr1.mli[157,5774+19]..src/lr1.mli[157,5774+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[157,5774+19]..src/lr1.mli[157,5774+23])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[157,5774+27]..src/lr1.mli[157,5774+31])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/lr1.mli[164,5977+0]..src/lr1.mli[164,5977+44])
+    Tsig_value
+    value_description acceptable_tokens/1107 (src/lr1.mli[164,5977+0]..src/lr1.mli[164,5977+44])
+      core_type (src/lr1.mli[164,5977+23]..src/lr1.mli[164,5977+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[164,5977+23]..src/lr1.mli[164,5977+27])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[164,5977+31]..src/lr1.mli[164,5977+44])
+          Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+          []
+      []
+  signature_item (src/lr1.mli[170,6204+0]..src/lr1.mli[170,6204+40])
+    Tsig_value
+    value_description fold/1108 (src/lr1.mli[170,6204+0]..src/lr1.mli[170,6204+40])
+      core_type (src/lr1.mli[170,6204+10]..src/lr1.mli[170,6204+40])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[170,6204+11]..src/lr1.mli[170,6204+27])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[170,6204+11]..src/lr1.mli[170,6204+13])
+            Ttyp_var a
+          core_type (src/lr1.mli[170,6204+17]..src/lr1.mli[170,6204+27])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[170,6204+17]..src/lr1.mli[170,6204+21])
+              Ttyp_constr "node/413"
+              []
+            core_type (src/lr1.mli[170,6204+25]..src/lr1.mli[170,6204+27])
+              Ttyp_var a
+        core_type (src/lr1.mli[170,6204+32]..src/lr1.mli[170,6204+40])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[170,6204+32]..src/lr1.mli[170,6204+34])
+            Ttyp_var a
+          core_type (src/lr1.mli[170,6204+38]..src/lr1.mli[170,6204+40])
+            Ttyp_var a
+      []
+  signature_item (src/lr1.mli[171,6245+0]..src/lr1.mli[171,6245+32])
+    Tsig_value
+    value_description iter/1109 (src/lr1.mli[171,6245+0]..src/lr1.mli[171,6245+32])
+      core_type (src/lr1.mli[171,6245+10]..src/lr1.mli[171,6245+32])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[171,6245+11]..src/lr1.mli[171,6245+23])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[171,6245+11]..src/lr1.mli[171,6245+15])
+            Ttyp_constr "node/413"
+            []
+          core_type (src/lr1.mli[171,6245+19]..src/lr1.mli[171,6245+23])
+            Ttyp_constr "unit/6!"
+            []
+        core_type (src/lr1.mli[171,6245+28]..src/lr1.mli[171,6245+32])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/lr1.mli[172,6278+0]..src/lr1.mli[172,6278+32])
+    Tsig_value
+    value_description map/1110 (src/lr1.mli[172,6278+0]..src/lr1.mli[172,6278+32])
+      core_type (src/lr1.mli[172,6278+9]..src/lr1.mli[172,6278+32])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[172,6278+10]..src/lr1.mli[172,6278+20])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[172,6278+10]..src/lr1.mli[172,6278+14])
+            Ttyp_constr "node/413"
+            []
+          core_type (src/lr1.mli[172,6278+18]..src/lr1.mli[172,6278+20])
+            Ttyp_var a
+        core_type (src/lr1.mli[172,6278+25]..src/lr1.mli[172,6278+32])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/lr1.mli[172,6278+25]..src/lr1.mli[172,6278+27])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/lr1.mli[176,6364+0]..src/lr1.mli[176,6364+42])
+    Tsig_value
+    value_description tabulate/1111 (src/lr1.mli[176,6364+0]..src/lr1.mli[176,6364+42])
+      core_type (src/lr1.mli[176,6364+14]..src/lr1.mli[176,6364+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[176,6364+15]..src/lr1.mli[176,6364+25])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[176,6364+15]..src/lr1.mli[176,6364+19])
+            Ttyp_constr "node/413"
+            []
+          core_type (src/lr1.mli[176,6364+23]..src/lr1.mli[176,6364+25])
+            Ttyp_var a
+        core_type (src/lr1.mli[176,6364+31]..src/lr1.mli[176,6364+41])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[176,6364+31]..src/lr1.mli[176,6364+35])
+            Ttyp_constr "node/413"
+            []
+          core_type (src/lr1.mli[176,6364+39]..src/lr1.mli[176,6364+41])
+            Ttyp_var a
+      []
+  signature_item (src/lr1.mli[177,6407+0]..src/lr1.mli[177,6407+29])
+    Tsig_value
+    value_description sum/1112 (src/lr1.mli[177,6407+0]..src/lr1.mli[177,6407+29])
+      core_type (src/lr1.mli[177,6407+9]..src/lr1.mli[177,6407+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[177,6407+10]..src/lr1.mli[177,6407+21])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[177,6407+10]..src/lr1.mli[177,6407+14])
+            Ttyp_constr "node/413"
+            []
+          core_type (src/lr1.mli[177,6407+18]..src/lr1.mli[177,6407+21])
+            Ttyp_constr "int/1!"
+            []
+        core_type (src/lr1.mli[177,6407+26]..src/lr1.mli[177,6407+29])
+          Ttyp_constr "int/1!"
+          []
+      []
+  signature_item (src/lr1.mli[180,6475+0]..src/lr1.mli[180,6475+41])
+    Tsig_value
+    value_description foldx/1113 (src/lr1.mli[180,6475+0]..src/lr1.mli[180,6475+41])
+      core_type (src/lr1.mli[180,6475+11]..src/lr1.mli[180,6475+41])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[180,6475+12]..src/lr1.mli[180,6475+28])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[180,6475+12]..src/lr1.mli[180,6475+14])
+            Ttyp_var a
+          core_type (src/lr1.mli[180,6475+18]..src/lr1.mli[180,6475+28])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[180,6475+18]..src/lr1.mli[180,6475+22])
+              Ttyp_constr "node/413"
+              []
+            core_type (src/lr1.mli[180,6475+26]..src/lr1.mli[180,6475+28])
+              Ttyp_var a
+        core_type (src/lr1.mli[180,6475+33]..src/lr1.mli[180,6475+41])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[180,6475+33]..src/lr1.mli[180,6475+35])
+            Ttyp_var a
+          core_type (src/lr1.mli[180,6475+39]..src/lr1.mli[180,6475+41])
+            Ttyp_var a
+      []
+  signature_item (src/lr1.mli[181,6517+0]..src/lr1.mli[181,6517+33])
+    Tsig_value
+    value_description iterx/1114 (src/lr1.mli[181,6517+0]..src/lr1.mli[181,6517+33])
+      core_type (src/lr1.mli[181,6517+11]..src/lr1.mli[181,6517+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[181,6517+12]..src/lr1.mli[181,6517+24])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[181,6517+12]..src/lr1.mli[181,6517+16])
+            Ttyp_constr "node/413"
+            []
+          core_type (src/lr1.mli[181,6517+20]..src/lr1.mli[181,6517+24])
+            Ttyp_constr "unit/6!"
+            []
+        core_type (src/lr1.mli[181,6517+29]..src/lr1.mli[181,6517+33])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/lr1.mli[189,6893+0]..src/lr1.mli[189,6893+68])
+    Tsig_value
+    value_description targets/1115 (src/lr1.mli[189,6893+0]..src/lr1.mli[189,6893+68])
+      core_type (src/lr1.mli[189,6893+13]..src/lr1.mli[189,6893+68])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[189,6893+14]..src/lr1.mli[189,6893+43])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[189,6893+14]..src/lr1.mli[189,6893+16])
+            Ttyp_var a
+          core_type (src/lr1.mli[189,6893+20]..src/lr1.mli[189,6893+43])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[189,6893+20]..src/lr1.mli[189,6893+29])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/lr1.mli[189,6893+20]..src/lr1.mli[189,6893+24])
+                  Ttyp_constr "node/413"
+                  []
+              ]
+            core_type (src/lr1.mli[189,6893+33]..src/lr1.mli[189,6893+43])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/lr1.mli[189,6893+33]..src/lr1.mli[189,6893+37])
+                Ttyp_constr "node/413"
+                []
+              core_type (src/lr1.mli[189,6893+41]..src/lr1.mli[189,6893+43])
+                Ttyp_var a
+        core_type (src/lr1.mli[189,6893+48]..src/lr1.mli[189,6893+68])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[189,6893+48]..src/lr1.mli[189,6893+50])
+            Ttyp_var a
+          core_type (src/lr1.mli[189,6893+54]..src/lr1.mli[189,6893+68])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[189,6893+54]..src/lr1.mli[189,6893+62])
+              Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+              []
+            core_type (src/lr1.mli[189,6893+66]..src/lr1.mli[189,6893+68])
+              Ttyp_var a
+      []
+  signature_item (src/lr1.mli[194,7052+0]..src/lr1.mli[194,7052+38])
+    Tsig_value
+    value_description all_sources/1116 (src/lr1.mli[194,7052+0]..src/lr1.mli[194,7052+38])
+      core_type (src/lr1.mli[194,7052+17]..src/lr1.mli[194,7052+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[194,7052+17]..src/lr1.mli[194,7052+25])
+          Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+          []
+        core_type (src/lr1.mli[194,7052+29]..src/lr1.mli[194,7052+38])
+          Ttyp_constr "NodeSet/567.t"
+          []
+      []
+  signature_item (src/lr1.mli[199,7181+0]..src/lr1.mli[199,7181+38])
+    Tsig_value
+    value_description all_targets/1117 (src/lr1.mli[199,7181+0]..src/lr1.mli[199,7181+38])
+      core_type (src/lr1.mli[199,7181+17]..src/lr1.mli[199,7181+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[199,7181+17]..src/lr1.mli[199,7181+25])
+          Ttyp_constr "Dune__exe!.Grammar.Symbol.t"
+          []
+        core_type (src/lr1.mli[199,7181+29]..src/lr1.mli[199,7181+38])
+          Ttyp_constr "NodeSet/567.t"
+          []
+      []
+  signature_item (src/lr1.mli[208,7526+0]..src/lr1.mli[208,7526+54])
+    Tsig_value
+    value_description conflicts/1118 (src/lr1.mli[208,7526+0]..src/lr1.mli[208,7526+54])
+      core_type (src/lr1.mli[208,7526+15]..src/lr1.mli[208,7526+54])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[208,7526+16]..src/lr1.mli[208,7526+45])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/lr1.mli[208,7526+16]..src/lr1.mli[208,7526+29])
+            Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+            []
+          core_type (src/lr1.mli[208,7526+33]..src/lr1.mli[208,7526+45])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/lr1.mli[208,7526+33]..src/lr1.mli[208,7526+37])
+              Ttyp_constr "node/413"
+              []
+            core_type (src/lr1.mli[208,7526+41]..src/lr1.mli[208,7526+45])
+              Ttyp_constr "unit/6!"
+              []
+        core_type (src/lr1.mli[208,7526+50]..src/lr1.mli[208,7526+54])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/lr1.mli[216,7779+0]..src/lr1.mli[216,7779+42])
+    Tsig_value
+    value_description conflict_tokens/1119 (src/lr1.mli[216,7779+0]..src/lr1.mli[216,7779+42])
+      core_type (src/lr1.mli[216,7779+21]..src/lr1.mli[216,7779+42])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[216,7779+21]..src/lr1.mli[216,7779+25])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[216,7779+29]..src/lr1.mli[216,7779+42])
+          Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+          []
+      []
+  signature_item (src/lr1.mli[225,8121+0]..src/lr1.mli[225,8121+76])
+    Tsig_value
+    value_description has_eos_conflict/1120 (src/lr1.mli[225,8121+0]..src/lr1.mli[225,8121+76])
+      core_type (src/lr1.mli[225,8121+22]..src/lr1.mli[225,8121+76])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[225,8121+22]..src/lr1.mli[225,8121+26])
+          Ttyp_constr "node/413"
+          []
+        core_type (src/lr1.mli[225,8121+30]..src/lr1.mli[225,8121+76])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/lr1.mli[225,8121+31]..src/lr1.mli[225,8121+68])
+              Ttyp_tuple
+              [
+                core_type (src/lr1.mli[225,8121+31]..src/lr1.mli[225,8121+52])
+                  Ttyp_constr "list/9!"
+                  [
+                    core_type (src/lr1.mli[225,8121+31]..src/lr1.mli[225,8121+47])
+                      Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                      []
+                  ]
+                core_type (src/lr1.mli[225,8121+55]..src/lr1.mli[225,8121+68])
+                  Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                  []
+              ]
+          ]
+      []
+  signature_item (src/lr1.mli[243,8828+0]..src/lr1.mli[243,8828+45])
+    Tsig_value
+    value_description default_conflict_resolution/1121 (src/lr1.mli[243,8828+0]..src/lr1.mli[243,8828+45])
+      core_type (src/lr1.mli[243,8828+33]..src/lr1.mli[243,8828+45])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[243,8828+33]..src/lr1.mli[243,8828+37])
+          Ttyp_constr "unit/6!"
+          []
+        core_type (src/lr1.mli[243,8828+41]..src/lr1.mli[243,8828+45])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/lr1.mli[257,9473+0]..src/lr1.mli[257,9473+34])
+    Tsig_value
+    value_description extra_reductions/1122 (src/lr1.mli[257,9473+0]..src/lr1.mli[257,9473+34])
+      core_type (src/lr1.mli[257,9473+22]..src/lr1.mli[257,9473+34])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[257,9473+22]..src/lr1.mli[257,9473+26])
+          Ttyp_constr "unit/6!"
+          []
+        core_type (src/lr1.mli[257,9473+30]..src/lr1.mli[257,9473+34])
+          Ttyp_constr "unit/6!"
+          []
+      []
+  signature_item (src/lr1.mli[266,9852+0]..src/lr1.mli[266,9852+51])
+    Tsig_value
+    value_description production_where/1123 (src/lr1.mli[266,9852+0]..src/lr1.mli[266,9852+51])
+      core_type (src/lr1.mli[266,9852+22]..src/lr1.mli[266,9852+51])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/lr1.mli[266,9852+22]..src/lr1.mli[266,9852+38])
+          Ttyp_constr "Dune__exe!.Grammar.Production.index"
+          []
+        core_type (src/lr1.mli[266,9852+42]..src/lr1.mli[266,9852+51])
+          Ttyp_constr "NodeSet/567.t"
+          []
+      []
+]
+

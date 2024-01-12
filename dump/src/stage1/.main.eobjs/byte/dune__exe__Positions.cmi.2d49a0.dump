@@ -1,0 +1,1868 @@
+[
+  signature_item (src/positions.mli[16,1053+0]..[16,1053+49])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[16,1053+0]..[16,1053+49])
+        Pstr_eval
+        expression (src/positions.mli[16,1053+0]..[16,1053+49])
+          Pexp_constant PConst_string(" Extension of standard library's positions. ",(src/positions.mli[16,1053+0]..[16,1053+49]),None)
+    ]
+  signature_item (src/positions.mli[18,1104+0]..[18,1104+36])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[18,1104+0]..[18,1104+36])
+        Pstr_eval
+        expression (src/positions.mli[18,1104+0]..[18,1104+36])
+          Pexp_constant PConst_string(" {2 Extended lexing positions} ",(src/positions.mli[18,1104+0]..[18,1104+36]),None)
+    ]
+  signature_item (src/positions.mli[21,1208+0]..[21,1208+6])
+    Psig_type Rec
+    [
+      type_declaration "t" (src/positions.mli[21,1208+5]..[21,1208+6]) (src/positions.mli[21,1208+0]..[21,1208+6])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/positions.mli[20,1142+0]..[20,1142+65])
+              Pstr_eval
+              expression (src/positions.mli[20,1142+0]..[20,1142+65])
+                Pexp_constant PConst_string(" Abstract type for pairs of positions in the lexing stream. ",(src/positions.mli[20,1142+0]..[20,1142+65]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/positions.mli[24,1262+0]..[28,1327+5])
+    Psig_type Rec
+    [
+      type_declaration "located" (src/positions.mli[24,1262+8]..[24,1262+15]) (src/positions.mli[24,1262+0]..[28,1327+5])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/positions.mli[23,1216+0]..[23,1216+45])
+              Pstr_eval
+              expression (src/positions.mli[23,1216+0]..[23,1216+45])
+                Pexp_constant PConst_string(" Decoration of a value with a position. ",(src/positions.mli[23,1216+0]..[23,1216+45]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/positions.mli[24,1262+5]..[24,1262+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_record
+            [
+              (src/positions.mli[26,1286+6]..[26,1286+20])
+                Immutable
+                "value" (src/positions.mli[26,1286+6]..[26,1286+11])                core_type (src/positions.mli[26,1286+17]..[26,1286+19])
+                  Ptyp_var a
+              (src/positions.mli[27,1307+6]..[27,1307+19])
+                Immutable
+                "position" (src/positions.mli[27,1307+6]..[27,1307+14])                core_type (src/positions.mli[27,1307+17]..[27,1307+18])
+                  Ptyp_constr "t" (src/positions.mli[27,1307+17]..[27,1307+18])
+                  []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/positions.mli[32,1419+0]..[32,1419+27])
+    Psig_value
+    value_description "value" (src/positions.mli[32,1419+4]..[32,1419+9]) (src/positions.mli[32,1419+0]..[32,1419+27])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[30,1334+0]..[31,1390+28])
+            Pstr_eval
+            expression (src/positions.mli[30,1334+0]..[31,1390+28])
+              Pexp_constant PConst_string(" [value dv] returns the raw value that underlies the\n    decorated value [dv]. ",(src/positions.mli[30,1334+0]..[31,1390+28]),None)
+        ]
+      core_type (src/positions.mli[32,1419+11]..[32,1419+27])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[32,1419+11]..[32,1419+21])
+          Ptyp_constr "located" (src/positions.mli[32,1419+14]..[32,1419+21])
+          [
+            core_type (src/positions.mli[32,1419+11]..[32,1419+13])
+              Ptyp_var a
+          ]
+        core_type (src/positions.mli[32,1419+25]..[32,1419+27])
+          Ptyp_var a
+      []
+  signature_item (src/positions.mli[36,1535+0]..[36,1535+29])
+    Psig_value
+    value_description "position" (src/positions.mli[36,1535+4]..[36,1535+12]) (src/positions.mli[36,1535+0]..[36,1535+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[34,1448+0]..[35,1506+28])
+            Pstr_eval
+            expression (src/positions.mli[34,1448+0]..[35,1506+28])
+              Pexp_constant PConst_string(" [position dv] returns the position that decorates the\n    decorated value [dv]. ",(src/positions.mli[34,1448+0]..[35,1506+28]),None)
+        ]
+      core_type (src/positions.mli[36,1535+14]..[36,1535+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[36,1535+14]..[36,1535+24])
+          Ptyp_constr "located" (src/positions.mli[36,1535+17]..[36,1535+24])
+          [
+            core_type (src/positions.mli[36,1535+14]..[36,1535+16])
+              Ptyp_var a
+          ]
+        core_type (src/positions.mli[36,1535+28]..[36,1535+29])
+          Ptyp_constr "t" (src/positions.mli[36,1535+28]..[36,1535+29])
+          []
+      []
+  signature_item (src/positions.mli[39,1630+0]..[39,1630+35])
+    Psig_value
+    value_description "decompose" (src/positions.mli[39,1630+4]..[39,1630+13]) (src/positions.mli[39,1630+0]..[39,1630+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[38,1566+0]..[38,1566+63])
+            Pstr_eval
+            expression (src/positions.mli[38,1566+0]..[38,1566+63])
+              Pexp_constant PConst_string(" [decompose dv] returns a pair of the value and position. ",(src/positions.mli[38,1566+0]..[38,1566+63]),None)
+        ]
+      core_type (src/positions.mli[39,1630+15]..[39,1630+35])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[39,1630+15]..[39,1630+25])
+          Ptyp_constr "located" (src/positions.mli[39,1630+18]..[39,1630+25])
+          [
+            core_type (src/positions.mli[39,1630+15]..[39,1630+17])
+              Ptyp_var a
+          ]
+        core_type (src/positions.mli[39,1630+29]..[39,1630+35])
+          Ptyp_tuple
+          [
+            core_type (src/positions.mli[39,1630+29]..[39,1630+31])
+              Ptyp_var a
+            core_type (src/positions.mli[39,1630+34]..[39,1630+35])
+              Ptyp_constr "t" (src/positions.mli[39,1630+34]..[39,1630+35])
+              []
+          ]
+      []
+  signature_item (src/positions.mli[42,1724+0]..[42,1724+36])
+    Psig_value
+    value_description "with_pos" (src/positions.mli[42,1724+4]..[42,1724+12]) (src/positions.mli[42,1724+0]..[42,1724+36])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[41,1667+0]..[41,1667+56])
+            Pstr_eval
+            expression (src/positions.mli[41,1667+0]..[41,1667+56])
+              Pexp_constant PConst_string(" [with_pos p v] decorates [v] with a position [p]. ",(src/positions.mli[41,1667+0]..[41,1667+56]),None)
+        ]
+      core_type (src/positions.mli[42,1724+15]..[42,1724+36])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[42,1724+15]..[42,1724+16])
+          Ptyp_constr "t" (src/positions.mli[42,1724+15]..[42,1724+16])
+          []
+        core_type (src/positions.mli[42,1724+20]..[42,1724+36])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[42,1724+20]..[42,1724+22])
+            Ptyp_var a
+          core_type (src/positions.mli[42,1724+26]..[42,1724+36])
+            Ptyp_constr "located" (src/positions.mli[42,1724+29]..[42,1724+36])
+            [
+              core_type (src/positions.mli[42,1724+26]..[42,1724+28])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/positions.mli[43,1761+0]..[43,1761+48])
+    Psig_value
+    value_description "with_cpos" (src/positions.mli[43,1761+4]..[43,1761+13]) (src/positions.mli[43,1761+0]..[43,1761+48])
+      core_type (src/positions.mli[43,1761+15]..[43,1761+48])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[43,1761+15]..[43,1761+28])
+          Ptyp_constr "Lexing.lexbuf" (src/positions.mli[43,1761+15]..[43,1761+28])
+          []
+        core_type (src/positions.mli[43,1761+32]..[43,1761+48])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[43,1761+32]..[43,1761+34])
+            Ptyp_var a
+          core_type (src/positions.mli[43,1761+38]..[43,1761+48])
+            Ptyp_constr "located" (src/positions.mli[43,1761+41]..[43,1761+48])
+            [
+              core_type (src/positions.mli[43,1761+38]..[43,1761+40])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/positions.mli[44,1810+0]..[44,1810+70])
+    Psig_value
+    value_description "with_loc" (src/positions.mli[44,1810+4]..[44,1810+12]) (src/positions.mli[44,1810+0]..[44,1810+70])
+      core_type (src/positions.mli[44,1810+15]..[44,1810+70])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[44,1810+16]..[44,1810+49])
+          Ptyp_tuple
+          [
+            core_type (src/positions.mli[44,1810+16]..[44,1810+31])
+              Ptyp_constr "Lexing.position" (src/positions.mli[44,1810+16]..[44,1810+31])
+              []
+            core_type (src/positions.mli[44,1810+34]..[44,1810+49])
+              Ptyp_constr "Lexing.position" (src/positions.mli[44,1810+34]..[44,1810+49])
+              []
+          ]
+        core_type (src/positions.mli[44,1810+54]..[44,1810+70])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[44,1810+54]..[44,1810+56])
+            Ptyp_var a
+          core_type (src/positions.mli[44,1810+60]..[44,1810+70])
+            Ptyp_constr "located" (src/positions.mli[44,1810+63]..[44,1810+70])
+            [
+              core_type (src/positions.mli[44,1810+60]..[44,1810+62])
+                Ptyp_var a
+            ]
+      []
+  signature_item (src/positions.mli[46,1882+0]..[46,1882+34])
+    Psig_value
+    value_description "unknown_pos" (src/positions.mli[46,1882+4]..[46,1882+15]) (src/positions.mli[46,1882+0]..[46,1882+34])
+      core_type (src/positions.mli[46,1882+18]..[46,1882+34])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[46,1882+18]..[46,1882+20])
+          Ptyp_var a
+        core_type (src/positions.mli[46,1882+24]..[46,1882+34])
+          Ptyp_constr "located" (src/positions.mli[46,1882+27]..[46,1882+34])
+          [
+            core_type (src/positions.mli[46,1882+24]..[46,1882+26])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/positions.mli[49,1977+0]..[49,1977+47])
+    Psig_value
+    value_description "map" (src/positions.mli[49,1977+4]..[49,1977+7]) (src/positions.mli[49,1977+0]..[49,1977+47])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[48,1918+0]..[48,1918+58])
+            Pstr_eval
+            expression (src/positions.mli[48,1918+0]..[48,1918+58])
+              Pexp_constant PConst_string(" [map f v] extends the decoration from [v] to [f v]. ",(src/positions.mli[48,1918+0]..[48,1918+58]),None)
+        ]
+      core_type (src/positions.mli[49,1977+9]..[49,1977+47])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[49,1977+10]..[49,1977+18])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[49,1977+10]..[49,1977+12])
+            Ptyp_var a
+          core_type (src/positions.mli[49,1977+16]..[49,1977+18])
+            Ptyp_var b
+        core_type (src/positions.mli[49,1977+23]..[49,1977+47])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[49,1977+23]..[49,1977+33])
+            Ptyp_constr "located" (src/positions.mli[49,1977+26]..[49,1977+33])
+            [
+              core_type (src/positions.mli[49,1977+23]..[49,1977+25])
+                Ptyp_var a
+            ]
+          core_type (src/positions.mli[49,1977+37]..[49,1977+47])
+            Ptyp_constr "located" (src/positions.mli[49,1977+40]..[49,1977+47])
+            [
+              core_type (src/positions.mli[49,1977+37]..[49,1977+39])
+                Ptyp_var b
+            ]
+      []
+  signature_item (src/positions.mli[50,2025+0]..[50,2025+53])
+    Psig_value
+    value_description "pmap" (src/positions.mli[50,2025+4]..[50,2025+8]) (src/positions.mli[50,2025+0]..[50,2025+53])
+      core_type (src/positions.mli[50,2025+10]..[50,2025+53])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[50,2025+11]..[50,2025+24])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[50,2025+11]..[50,2025+12])
+            Ptyp_constr "t" (src/positions.mli[50,2025+11]..[50,2025+12])
+            []
+          core_type (src/positions.mli[50,2025+16]..[50,2025+24])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/positions.mli[50,2025+16]..[50,2025+18])
+              Ptyp_var a
+            core_type (src/positions.mli[50,2025+22]..[50,2025+24])
+              Ptyp_var b
+        core_type (src/positions.mli[50,2025+29]..[50,2025+53])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[50,2025+29]..[50,2025+39])
+            Ptyp_constr "located" (src/positions.mli[50,2025+32]..[50,2025+39])
+            [
+              core_type (src/positions.mli[50,2025+29]..[50,2025+31])
+                Ptyp_var a
+            ]
+          core_type (src/positions.mli[50,2025+43]..[50,2025+53])
+            Ptyp_constr "located" (src/positions.mli[50,2025+46]..[50,2025+53])
+            [
+              core_type (src/positions.mli[50,2025+43]..[50,2025+45])
+                Ptyp_var b
+            ]
+      []
+  signature_item (src/positions.mli[53,2137+0]..[53,2137+44])
+    Psig_value
+    value_description "iter" (src/positions.mli[53,2137+4]..[53,2137+8]) (src/positions.mli[53,2137+0]..[53,2137+44])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[52,2080+0]..[52,2080+56])
+            Pstr_eval
+            expression (src/positions.mli[52,2080+0]..[52,2080+56])
+              Pexp_constant PConst_string(" [iter f dv] applies [f] to the value inside [dv]. ",(src/positions.mli[52,2080+0]..[52,2080+56]),None)
+        ]
+      core_type (src/positions.mli[53,2137+10]..[53,2137+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[53,2137+11]..[53,2137+21])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[53,2137+11]..[53,2137+13])
+            Ptyp_var a
+          core_type (src/positions.mli[53,2137+17]..[53,2137+21])
+            Ptyp_constr "unit" (src/positions.mli[53,2137+17]..[53,2137+21])
+            []
+        core_type (src/positions.mli[53,2137+26]..[53,2137+44])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[53,2137+26]..[53,2137+36])
+            Ptyp_constr "located" (src/positions.mli[53,2137+29]..[53,2137+36])
+            [
+              core_type (src/positions.mli[53,2137+26]..[53,2137+28])
+                Ptyp_var a
+            ]
+          core_type (src/positions.mli[53,2137+40]..[53,2137+44])
+            Ptyp_constr "unit" (src/positions.mli[53,2137+40]..[53,2137+44])
+            []
+      []
+  signature_item (src/positions.mli[56,2268+0]..[56,2268+70])
+    Psig_value
+    value_description "mapd" (src/positions.mli[56,2268+4]..[56,2268+8]) (src/positions.mli[56,2268+0]..[56,2268+70])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[55,2183+0]..[55,2183+84])
+            Pstr_eval
+            expression (src/positions.mli[55,2183+0]..[55,2183+84])
+              Pexp_constant PConst_string(" [mapd f v] extends the decoration from [v] to both members of the pair [f v]. ",(src/positions.mli[55,2183+0]..[55,2183+84]),None)
+        ]
+      core_type (src/positions.mli[56,2268+10]..[56,2268+70])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[56,2268+11]..[56,2268+26])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[56,2268+11]..[56,2268+13])
+            Ptyp_var a
+          core_type (src/positions.mli[56,2268+17]..[56,2268+26])
+            Ptyp_tuple
+            [
+              core_type (src/positions.mli[56,2268+17]..[56,2268+20])
+                Ptyp_var b1
+              core_type (src/positions.mli[56,2268+23]..[56,2268+26])
+                Ptyp_var b2
+            ]
+        core_type (src/positions.mli[56,2268+31]..[56,2268+70])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[56,2268+31]..[56,2268+41])
+            Ptyp_constr "located" (src/positions.mli[56,2268+34]..[56,2268+41])
+            [
+              core_type (src/positions.mli[56,2268+31]..[56,2268+33])
+                Ptyp_var a
+            ]
+          core_type (src/positions.mli[56,2268+45]..[56,2268+70])
+            Ptyp_tuple
+            [
+              core_type (src/positions.mli[56,2268+45]..[56,2268+56])
+                Ptyp_constr "located" (src/positions.mli[56,2268+49]..[56,2268+56])
+                [
+                  core_type (src/positions.mli[56,2268+45]..[56,2268+48])
+                    Ptyp_var b1
+                ]
+              core_type (src/positions.mli[56,2268+59]..[56,2268+70])
+                Ptyp_constr "located" (src/positions.mli[56,2268+63]..[56,2268+70])
+                [
+                  core_type (src/positions.mli[56,2268+59]..[56,2268+62])
+                    Ptyp_var b2
+                ]
+            ]
+      []
+  signature_item (src/positions.mli[60,2433+0]..[60,2433+12])
+    Psig_value
+    value_description "dummy" (src/positions.mli[60,2433+4]..[60,2433+9]) (src/positions.mli[60,2433+0]..[60,2433+12])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[58,2340+0]..[59,2397+35])
+            Pstr_eval
+            expression (src/positions.mli[58,2340+0]..[59,2397+35])
+              Pexp_constant PConst_string(" This value is used when an object does not come from\n    a particular input location. ",(src/positions.mli[58,2340+0]..[59,2397+35]),None)
+        ]
+      core_type (src/positions.mli[60,2433+11]..[60,2433+12])
+        Ptyp_constr "t" (src/positions.mli[60,2433+11]..[60,2433+12])
+        []
+      []
+  signature_item (src/positions.mli[62,2447+0]..[62,2447+20])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[62,2447+0]..[62,2447+20])
+        Pstr_eval
+        expression (src/positions.mli[62,2447+0]..[62,2447+20])
+          Pexp_constant PConst_string(" {2 Accessors} ",(src/positions.mli[62,2447+0]..[62,2447+20]),None)
+    ]
+  signature_item (src/positions.mli[66,2583+0]..[66,2583+35])
+    Psig_value
+    value_description "column" (src/positions.mli[66,2583+4]..[66,2583+10]) (src/positions.mli[66,2583+0]..[66,2583+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[64,2469+0]..[65,2526+56])
+            Pstr_eval
+            expression (src/positions.mli[64,2469+0]..[65,2526+56])
+              Pexp_constant PConst_string(" [column p] returns the number of characters from the\n    beginning of the line of the Lexing.position [p]. ",(src/positions.mli[64,2469+0]..[65,2526+56]),None)
+        ]
+      core_type (src/positions.mli[66,2583+13]..[66,2583+35])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[66,2583+13]..[66,2583+28])
+          Ptyp_constr "Lexing.position" (src/positions.mli[66,2583+13]..[66,2583+28])
+          []
+        core_type (src/positions.mli[66,2583+32]..[66,2583+35])
+          Ptyp_constr "int" (src/positions.mli[66,2583+32]..[66,2583+35])
+          []
+      []
+  signature_item (src/positions.mli[69,2693+0]..[69,2693+33])
+    Psig_value
+    value_description "line" (src/positions.mli[69,2693+4]..[69,2693+8]) (src/positions.mli[69,2693+0]..[69,2693+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[68,2620+0]..[68,2620+72])
+            Pstr_eval
+            expression (src/positions.mli[68,2620+0]..[68,2620+72])
+              Pexp_constant PConst_string(" [column p] returns the line number of to the Lexing.position [p]. ",(src/positions.mli[68,2620+0]..[68,2620+72]),None)
+        ]
+      core_type (src/positions.mli[69,2693+11]..[69,2693+33])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[69,2693+11]..[69,2693+26])
+          Ptyp_constr "Lexing.position" (src/positions.mli[69,2693+11]..[69,2693+26])
+          []
+        core_type (src/positions.mli[69,2693+30]..[69,2693+33])
+          Ptyp_constr "int" (src/positions.mli[69,2693+30]..[69,2693+33])
+          []
+      []
+  signature_item (src/positions.mli[75,2859+0]..[75,2859+64])
+    Psig_value
+    value_description "characters" (src/positions.mli[75,2859+4]..[75,2859+14]) (src/positions.mli[75,2859+0]..[75,2859+64])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[71,2728+0]..[74,2856+2])
+            Pstr_eval
+            expression (src/positions.mli[71,2728+0]..[74,2856+2])
+              Pexp_constant PConst_string(" [characters p1 p2] returns the character interval\n    between [p1] and [p2] assuming they are located in the same\n    line.\n",(src/positions.mli[71,2728+0]..[74,2856+2]),None)
+        ]
+      core_type (src/positions.mli[75,2859+17]..[75,2859+64])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[75,2859+17]..[75,2859+32])
+          Ptyp_constr "Lexing.position" (src/positions.mli[75,2859+17]..[75,2859+32])
+          []
+        core_type (src/positions.mli[75,2859+36]..[75,2859+64])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[75,2859+36]..[75,2859+51])
+            Ptyp_constr "Lexing.position" (src/positions.mli[75,2859+36]..[75,2859+51])
+            []
+          core_type (src/positions.mli[75,2859+55]..[75,2859+64])
+            Ptyp_tuple
+            [
+              core_type (src/positions.mli[75,2859+55]..[75,2859+58])
+                Ptyp_constr "int" (src/positions.mli[75,2859+55]..[75,2859+58])
+                []
+              core_type (src/positions.mli[75,2859+61]..[75,2859+64])
+                Ptyp_constr "int" (src/positions.mli[75,2859+61]..[75,2859+64])
+                []
+            ]
+      []
+  signature_item (src/positions.mli[77,2925+0]..[77,2925+43])
+    Psig_value
+    value_description "start_of_position" (src/positions.mli[77,2925+4]..[77,2925+21]) (src/positions.mli[77,2925+0]..[77,2925+43])
+      core_type (src/positions.mli[77,2925+23]..[77,2925+43])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[77,2925+23]..[77,2925+24])
+          Ptyp_constr "t" (src/positions.mli[77,2925+23]..[77,2925+24])
+          []
+        core_type (src/positions.mli[77,2925+28]..[77,2925+43])
+          Ptyp_constr "Lexing.position" (src/positions.mli[77,2925+28]..[77,2925+43])
+          []
+      []
+  signature_item (src/positions.mli[79,2970+0]..[79,2970+41])
+    Psig_value
+    value_description "end_of_position" (src/positions.mli[79,2970+4]..[79,2970+19]) (src/positions.mli[79,2970+0]..[79,2970+41])
+      core_type (src/positions.mli[79,2970+21]..[79,2970+41])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[79,2970+21]..[79,2970+22])
+          Ptyp_constr "t" (src/positions.mli[79,2970+21]..[79,2970+22])
+          []
+        core_type (src/positions.mli[79,2970+26]..[79,2970+41])
+          Ptyp_constr "Lexing.position" (src/positions.mli[79,2970+26]..[79,2970+41])
+          []
+      []
+  signature_item (src/positions.mli[81,3013+0]..[81,3013+37])
+    Psig_value
+    value_description "filename_of_position" (src/positions.mli[81,3013+4]..[81,3013+24]) (src/positions.mli[81,3013+0]..[81,3013+37])
+      core_type (src/positions.mli[81,3013+26]..[81,3013+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[81,3013+26]..[81,3013+27])
+          Ptyp_constr "t" (src/positions.mli[81,3013+26]..[81,3013+27])
+          []
+        core_type (src/positions.mli[81,3013+31]..[81,3013+37])
+          Ptyp_constr "string" (src/positions.mli[81,3013+31]..[81,3013+37])
+          []
+      []
+  signature_item (src/positions.mli[83,3052+0]..[83,3052+28])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[83,3052+0]..[83,3052+28])
+        Pstr_eval
+        expression (src/positions.mli[83,3052+0]..[83,3052+28])
+          Pexp_constant PConst_string(" {2 Position handling} ",(src/positions.mli[83,3052+0]..[83,3052+28]),None)
+    ]
+  signature_item (src/positions.mli[87,3183+0]..[87,3183+22])
+    Psig_value
+    value_description "join" (src/positions.mli[87,3183+4]..[87,3183+8]) (src/positions.mli[87,3183+0]..[87,3183+22])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[85,3082+0]..[86,3141+41])
+            Pstr_eval
+            expression (src/positions.mli[85,3082+0]..[86,3141+41])
+              Pexp_constant PConst_string(" [join p1 p2] returns a position that starts where [p1]\n    starts and stops where [p2] stops. ",(src/positions.mli[85,3082+0]..[86,3141+41]),None)
+        ]
+      core_type (src/positions.mli[87,3183+11]..[87,3183+22])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[87,3183+11]..[87,3183+12])
+          Ptyp_constr "t" (src/positions.mli[87,3183+11]..[87,3183+12])
+          []
+        core_type (src/positions.mli[87,3183+16]..[87,3183+22])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[87,3183+16]..[87,3183+17])
+            Ptyp_constr "t" (src/positions.mli[87,3183+16]..[87,3183+17])
+            []
+          core_type (src/positions.mli[87,3183+21]..[87,3183+22])
+            Ptyp_constr "t" (src/positions.mli[87,3183+21]..[87,3183+22])
+            []
+      []
+  signature_item (src/positions.mli[89,3207+0]..[89,3207+51])
+    Psig_value
+    value_description "import" (src/positions.mli[89,3207+4]..[89,3207+10]) (src/positions.mli[89,3207+0]..[89,3207+51])
+      core_type (src/positions.mli[89,3207+13]..[89,3207+51])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[89,3207+13]..[89,3207+46])
+          Ptyp_tuple
+          [
+            core_type (src/positions.mli[89,3207+13]..[89,3207+28])
+              Ptyp_constr "Lexing.position" (src/positions.mli[89,3207+13]..[89,3207+28])
+              []
+            core_type (src/positions.mli[89,3207+31]..[89,3207+46])
+              Ptyp_constr "Lexing.position" (src/positions.mli[89,3207+31]..[89,3207+46])
+              []
+          ]
+        core_type (src/positions.mli[89,3207+50]..[89,3207+51])
+          Ptyp_constr "t" (src/positions.mli[89,3207+50]..[89,3207+51])
+          []
+      []
+  signature_item (src/positions.mli[91,3260+0]..[91,3260+38])
+    Psig_value
+    value_description "ljoinf" (src/positions.mli[91,3260+4]..[91,3260+10]) (src/positions.mli[91,3260+0]..[91,3260+38])
+      core_type (src/positions.mli[91,3260+13]..[91,3260+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[91,3260+14]..[91,3260+21])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[91,3260+14]..[91,3260+16])
+            Ptyp_var a
+          core_type (src/positions.mli[91,3260+20]..[91,3260+21])
+            Ptyp_constr "t" (src/positions.mli[91,3260+20]..[91,3260+21])
+            []
+        core_type (src/positions.mli[91,3260+26]..[91,3260+38])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[91,3260+26]..[91,3260+33])
+            Ptyp_constr "list" (src/positions.mli[91,3260+29]..[91,3260+33])
+            [
+              core_type (src/positions.mli[91,3260+26]..[91,3260+28])
+                Ptyp_var a
+            ]
+          core_type (src/positions.mli[91,3260+37]..[91,3260+38])
+            Ptyp_constr "t" (src/positions.mli[91,3260+37]..[91,3260+38])
+            []
+      []
+  signature_item (src/positions.mli[93,3300+0]..[93,3300+38])
+    Psig_value
+    value_description "joinf" (src/positions.mli[93,3300+4]..[93,3300+9]) (src/positions.mli[93,3300+0]..[93,3300+38])
+      core_type (src/positions.mli[93,3300+12]..[93,3300+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[93,3300+13]..[93,3300+20])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[93,3300+13]..[93,3300+15])
+            Ptyp_var a
+          core_type (src/positions.mli[93,3300+19]..[93,3300+20])
+            Ptyp_constr "t" (src/positions.mli[93,3300+19]..[93,3300+20])
+            []
+        core_type (src/positions.mli[93,3300+25]..[93,3300+38])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[93,3300+25]..[93,3300+27])
+            Ptyp_var a
+          core_type (src/positions.mli[93,3300+31]..[93,3300+38])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/positions.mli[93,3300+31]..[93,3300+33])
+              Ptyp_var a
+            core_type (src/positions.mli[93,3300+37]..[93,3300+38])
+              Ptyp_constr "t" (src/positions.mli[93,3300+37]..[93,3300+38])
+              []
+      []
+  signature_item (src/positions.mli[95,3340+0]..[95,3340+77])
+    Psig_value
+    value_description "join_located" (src/positions.mli[95,3340+4]..[95,3340+16]) (src/positions.mli[95,3340+0]..[95,3340+77])
+      core_type (src/positions.mli[95,3340+19]..[95,3340+77])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[95,3340+19]..[95,3340+29])
+          Ptyp_constr "located" (src/positions.mli[95,3340+22]..[95,3340+29])
+          [
+            core_type (src/positions.mli[95,3340+19]..[95,3340+21])
+              Ptyp_var a
+          ]
+        core_type (src/positions.mli[95,3340+33]..[95,3340+77])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[95,3340+33]..[95,3340+43])
+            Ptyp_constr "located" (src/positions.mli[95,3340+36]..[95,3340+43])
+            [
+              core_type (src/positions.mli[95,3340+33]..[95,3340+35])
+                Ptyp_var b
+            ]
+          core_type (src/positions.mli[95,3340+47]..[95,3340+77])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/positions.mli[95,3340+48]..[95,3340+62])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/positions.mli[95,3340+48]..[95,3340+50])
+                Ptyp_var a
+              core_type (src/positions.mli[95,3340+54]..[95,3340+62])
+                Ptyp_arrow
+                Nolabel
+                core_type (src/positions.mli[95,3340+54]..[95,3340+56])
+                  Ptyp_var b
+                core_type (src/positions.mli[95,3340+60]..[95,3340+62])
+                  Ptyp_var c
+            core_type (src/positions.mli[95,3340+67]..[95,3340+77])
+              Ptyp_constr "located" (src/positions.mli[95,3340+70]..[95,3340+77])
+              [
+                core_type (src/positions.mli[95,3340+67]..[95,3340+69])
+                  Ptyp_var c
+              ]
+      []
+  signature_item (src/positions.mli[97,3419+0]..[98,3443+64])
+    Psig_value
+    value_description "join_located_list" (src/positions.mli[97,3419+4]..[97,3419+21]) (src/positions.mli[97,3419+0]..[98,3443+64])
+      core_type (src/positions.mli[98,3443+2]..[98,3443+64])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[98,3443+2]..[98,3443+19])
+          Ptyp_constr "list" (src/positions.mli[98,3443+15]..[98,3443+19])
+          [
+            core_type (src/positions.mli[98,3443+3]..[98,3443+13])
+              Ptyp_constr "located" (src/positions.mli[98,3443+6]..[98,3443+13])
+              [
+                core_type (src/positions.mli[98,3443+3]..[98,3443+5])
+                  Ptyp_var a
+              ]
+          ]
+        core_type (src/positions.mli[98,3443+23]..[98,3443+64])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/positions.mli[98,3443+24]..[98,3443+42])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/positions.mli[98,3443+24]..[98,3443+31])
+              Ptyp_constr "list" (src/positions.mli[98,3443+27]..[98,3443+31])
+              [
+                core_type (src/positions.mli[98,3443+24]..[98,3443+26])
+                  Ptyp_var a
+              ]
+            core_type (src/positions.mli[98,3443+35]..[98,3443+42])
+              Ptyp_constr "list" (src/positions.mli[98,3443+38]..[98,3443+42])
+              [
+                core_type (src/positions.mli[98,3443+35]..[98,3443+37])
+                  Ptyp_var b
+              ]
+          core_type (src/positions.mli[98,3443+47]..[98,3443+64])
+            Ptyp_constr "located" (src/positions.mli[98,3443+57]..[98,3443+64])
+            [
+              core_type (src/positions.mli[98,3443+48]..[98,3443+55])
+                Ptyp_constr "list" (src/positions.mli[98,3443+51]..[98,3443+55])
+                [
+                  core_type (src/positions.mli[98,3443+48]..[98,3443+50])
+                    Ptyp_var b
+                ]
+            ]
+      []
+  signature_item (src/positions.mli[103,3604+0]..[103,3604+49])
+    Psig_value
+    value_description "string_of_lex_pos" (src/positions.mli[103,3604+4]..[103,3604+21]) (src/positions.mli[103,3604+0]..[103,3604+49])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[101,3510+0]..[102,3572+31])
+            Pstr_eval
+            expression (src/positions.mli[101,3510+0]..[102,3572+31])
+              Pexp_constant PConst_string(" [string_of_lex_pos p] returns a string representation for\n    the lexing position [p]. ",(src/positions.mli[101,3510+0]..[102,3572+31]),None)
+        ]
+      core_type (src/positions.mli[103,3604+24]..[103,3604+49])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[103,3604+24]..[103,3604+39])
+          Ptyp_constr "Lexing.position" (src/positions.mli[103,3604+24]..[103,3604+39])
+          []
+        core_type (src/positions.mli[103,3604+43]..[103,3604+49])
+          Ptyp_constr "string" (src/positions.mli[103,3604+43]..[103,3604+49])
+          []
+      []
+  signature_item (src/positions.mli[107,3754+0]..[107,3754+31])
+    Psig_value
+    value_description "string_of_pos" (src/positions.mli[107,3754+4]..[107,3754+17]) (src/positions.mli[107,3754+0]..[107,3754+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[105,3655+0]..[106,3726+27])
+            Pstr_eval
+            expression (src/positions.mli[105,3655+0]..[106,3726+27])
+              Pexp_constant PConst_string(" [string_of_pos p] returns the standard (Emacs-like) representation\n    of the position [p]. ",(src/positions.mli[105,3655+0]..[106,3726+27]),None)
+        ]
+      core_type (src/positions.mli[107,3754+20]..[107,3754+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[107,3754+20]..[107,3754+21])
+          Ptyp_constr "t" (src/positions.mli[107,3754+20]..[107,3754+21])
+          []
+        core_type (src/positions.mli[107,3754+25]..[107,3754+31])
+          Ptyp_constr "string" (src/positions.mli[107,3754+25]..[107,3754+31])
+          []
+      []
+  signature_item (src/positions.mli[111,3909+0]..[111,3909+32])
+    Psig_value
+    value_description "pos_or_undef" (src/positions.mli[111,3909+4]..[111,3909+16]) (src/positions.mli[111,3909+0]..[111,3909+32])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[109,3787+0]..[110,3855+53])
+            Pstr_eval
+            expression (src/positions.mli[109,3787+0]..[110,3855+53])
+              Pexp_constant PConst_string(" [pos_or_undef po] is the identity function except if po = None,\n    in that case, it returns [undefined_position]. ",(src/positions.mli[109,3787+0]..[110,3855+53]),None)
+        ]
+      core_type (src/positions.mli[111,3909+19]..[111,3909+32])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[111,3909+19]..[111,3909+27])
+          Ptyp_constr "option" (src/positions.mli[111,3909+21]..[111,3909+27])
+          [
+            core_type (src/positions.mli[111,3909+19]..[111,3909+20])
+              Ptyp_constr "t" (src/positions.mli[111,3909+19]..[111,3909+20])
+              []
+          ]
+        core_type (src/positions.mli[111,3909+31]..[111,3909+32])
+          Ptyp_constr "t" (src/positions.mli[111,3909+31]..[111,3909+32])
+          []
+      []
+  signature_item (src/positions.mli[113,3943+0]..[113,3943+45])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[113,3943+0]..[113,3943+45])
+        Pstr_eval
+        expression (src/positions.mli[113,3943+0]..[113,3943+45])
+          Pexp_constant PConst_string(" {2 Interaction with the lexer runtime} ",(src/positions.mli[113,3943+0]..[113,3943+45]),None)
+    ]
+  signature_item (src/positions.mli[116,4054+0]..[116,4054+29])
+    Psig_value
+    value_description "cpos" (src/positions.mli[116,4054+4]..[116,4054+8]) (src/positions.mli[116,4054+0]..[116,4054+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[115,3990+0]..[115,3990+63])
+            Pstr_eval
+            expression (src/positions.mli[115,3990+0]..[115,3990+63])
+              Pexp_constant PConst_string(" [cpos lexbuf] returns the current position of the lexer. ",(src/positions.mli[115,3990+0]..[115,3990+63]),None)
+        ]
+      core_type (src/positions.mli[116,4054+11]..[116,4054+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[116,4054+11]..[116,4054+24])
+          Ptyp_constr "Lexing.lexbuf" (src/positions.mli[116,4054+11]..[116,4054+24])
+          []
+        core_type (src/positions.mli[116,4054+28]..[116,4054+29])
+          Ptyp_constr "t" (src/positions.mli[116,4054+28]..[116,4054+29])
+          []
+      []
+  signature_item (src/positions.mli[120,4180+0]..[120,4180+44])
+    Psig_value
+    value_description "string_of_cpos" (src/positions.mli[120,4180+4]..[120,4180+18]) (src/positions.mli[120,4180+0]..[120,4180+44])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[118,4085+0]..[119,4143+36])
+            Pstr_eval
+            expression (src/positions.mli[118,4085+0]..[119,4143+36])
+              Pexp_constant PConst_string(" [string_of_cpos p] returns a string representation of\n    the lexer's current position. ",(src/positions.mli[118,4085+0]..[119,4143+36]),None)
+        ]
+      core_type (src/positions.mli[120,4180+21]..[120,4180+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[120,4180+21]..[120,4180+34])
+          Ptyp_constr "Lexing.lexbuf" (src/positions.mli[120,4180+21]..[120,4180+34])
+          []
+        core_type (src/positions.mli[120,4180+38]..[120,4180+44])
+          Ptyp_constr "string" (src/positions.mli[120,4180+38]..[120,4180+44])
+          []
+      []
+  signature_item (src/positions.mli[125,4375+0]..[126,4392+10])
+    Psig_type Rec
+    [
+      type_declaration "positions" (src/positions.mli[125,4375+5]..[125,4375+14]) (src/positions.mli[125,4375+0]..[126,4392+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/positions.mli[126,4392+4]..[126,4392+10])
+              Ptyp_constr "list" (src/positions.mli[126,4392+6]..[126,4392+10])
+              [
+                core_type (src/positions.mli[126,4392+4]..[126,4392+5])
+                  Ptyp_constr "t" (src/positions.mli[126,4392+4]..[126,4392+5])
+                  []
+              ]
+    ]
+  signature_item (src/positions.mli[128,4404+0]..[128,4404+37])
+    Psig_value
+    value_description "one" (src/positions.mli[128,4404+4]..[128,4404+7]) (src/positions.mli[128,4404+0]..[128,4404+37])
+      core_type (src/positions.mli[128,4404+9]..[128,4404+37])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[128,4404+9]..[128,4404+24])
+          Ptyp_constr "Lexing.position" (src/positions.mli[128,4404+9]..[128,4404+24])
+          []
+        core_type (src/positions.mli[128,4404+28]..[128,4404+37])
+          Ptyp_constr "positions" (src/positions.mli[128,4404+28]..[128,4404+37])
+          []
+      []
+  signature_item (src/positions.mli[130,4443+0]..[130,4443+38])
+    Psig_value
+    value_description "lexbuf" (src/positions.mli[130,4443+4]..[130,4443+10]) (src/positions.mli[130,4443+0]..[130,4443+38])
+      core_type (src/positions.mli[130,4443+12]..[130,4443+38])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[130,4443+12]..[130,4443+25])
+          Ptyp_constr "Lexing.lexbuf" (src/positions.mli[130,4443+12]..[130,4443+25])
+          []
+        core_type (src/positions.mli[130,4443+29]..[130,4443+38])
+          Ptyp_constr "positions" (src/positions.mli[130,4443+29]..[130,4443+38])
+          []
+      []
+  signature_item (src/positions.mli[133,4533+0]..[133,4533+34])
+    Psig_value
+    value_description "print" (src/positions.mli[133,4533+4]..[133,4533+9]) (src/positions.mli[133,4533+0]..[133,4533+34])
+      core_type (src/positions.mli[133,4533+11]..[133,4533+34])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/positions.mli[133,4533+11]..[133,4533+26])
+          Ptyp_constr "Lexing.position" (src/positions.mli[133,4533+11]..[133,4533+26])
+          []
+        core_type (src/positions.mli[133,4533+30]..[133,4533+34])
+          Ptyp_constr "unit" (src/positions.mli[133,4533+30]..[133,4533+34])
+          []
+      []
+]
+
+[@@@ocaml.text " Extension of standard library's positions. "]
+[@@@ocaml.text " {2 Extended lexing positions} "]
+type t[@@ocaml.doc
+        " Abstract type for pairs of positions in the lexing stream. "]
+type 'a located = {
+  value: 'a ;
+  position: t }[@@ocaml.doc " Decoration of a value with a position. "]
+val value : 'a located -> 'a[@@ocaml.doc
+                              " [value dv] returns the raw value that underlies the\n    decorated value [dv]. "]
+val position : 'a located -> t[@@ocaml.doc
+                                " [position dv] returns the position that decorates the\n    decorated value [dv]. "]
+val decompose : 'a located -> ('a * t)[@@ocaml.doc
+                                        " [decompose dv] returns a pair of the value and position. "]
+val with_pos : t -> 'a -> 'a located[@@ocaml.doc
+                                      " [with_pos p v] decorates [v] with a position [p]. "]
+val with_cpos : Lexing.lexbuf -> 'a -> 'a located
+val with_loc : (Lexing.position * Lexing.position) -> 'a -> 'a located
+val unknown_pos : 'a -> 'a located
+val map : ('a -> 'b) -> 'a located -> 'b located[@@ocaml.doc
+                                                  " [map f v] extends the decoration from [v] to [f v]. "]
+val pmap : (t -> 'a -> 'b) -> 'a located -> 'b located
+val iter : ('a -> unit) -> 'a located -> unit[@@ocaml.doc
+                                               " [iter f dv] applies [f] to the value inside [dv]. "]
+val mapd : ('a -> ('b1 * 'b2)) -> 'a located -> ('b1 located * 'b2 located)
+[@@ocaml.doc
+  " [mapd f v] extends the decoration from [v] to both members of the pair [f v]. "]
+val dummy : t[@@ocaml.doc
+               " This value is used when an object does not come from\n    a particular input location. "]
+[@@@ocaml.text " {2 Accessors} "]
+val column : Lexing.position -> int[@@ocaml.doc
+                                     " [column p] returns the number of characters from the\n    beginning of the line of the Lexing.position [p]. "]
+val line : Lexing.position -> int[@@ocaml.doc
+                                   " [column p] returns the line number of to the Lexing.position [p]. "]
+val characters : Lexing.position -> Lexing.position -> (int * int)[@@ocaml.doc
+                                                                    " [characters p1 p2] returns the character interval\n    between [p1] and [p2] assuming they are located in the same\n    line.\n"]
+val start_of_position : t -> Lexing.position
+val end_of_position : t -> Lexing.position
+val filename_of_position : t -> string
+[@@@ocaml.text " {2 Position handling} "]
+val join : t -> t -> t[@@ocaml.doc
+                        " [join p1 p2] returns a position that starts where [p1]\n    starts and stops where [p2] stops. "]
+val import : (Lexing.position * Lexing.position) -> t
+val ljoinf : ('a -> t) -> 'a list -> t
+val joinf : ('a -> t) -> 'a -> 'a -> t
+val join_located : 'a located -> 'b located -> ('a -> 'b -> 'c) -> 'c located
+val join_located_list :
+  'a located list -> ('a list -> 'b list) -> 'b list located
+val string_of_lex_pos : Lexing.position -> string[@@ocaml.doc
+                                                   " [string_of_lex_pos p] returns a string representation for\n    the lexing position [p]. "]
+val string_of_pos : t -> string[@@ocaml.doc
+                                 " [string_of_pos p] returns the standard (Emacs-like) representation\n    of the position [p]. "]
+val pos_or_undef : t option -> t[@@ocaml.doc
+                                  " [pos_or_undef po] is the identity function except if po = None,\n    in that case, it returns [undefined_position]. "]
+[@@@ocaml.text " {2 Interaction with the lexer runtime} "]
+val cpos : Lexing.lexbuf -> t[@@ocaml.doc
+                               " [cpos lexbuf] returns the current position of the lexer. "]
+val string_of_cpos : Lexing.lexbuf -> string[@@ocaml.doc
+                                              " [string_of_cpos p] returns a string representation of\n    the lexer's current position. "]
+type positions = t list
+val one : Lexing.position -> positions
+val lexbuf : Lexing.lexbuf -> positions
+val print : Lexing.position -> unit
+[
+  signature_item (src/positions.mli[16,1053+0]..src/positions.mli[16,1053+49])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[16,1053+0]..[16,1053+49])
+        Pstr_eval
+        expression (src/positions.mli[16,1053+0]..[16,1053+49])
+          Pexp_constant PConst_string(" Extension of standard library's positions. ",(src/positions.mli[16,1053+0]..[16,1053+49]),None)
+    ]
+  signature_item (src/positions.mli[18,1104+0]..src/positions.mli[18,1104+36])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[18,1104+0]..[18,1104+36])
+        Pstr_eval
+        expression (src/positions.mli[18,1104+0]..[18,1104+36])
+          Pexp_constant PConst_string(" {2 Extended lexing positions} ",(src/positions.mli[18,1104+0]..[18,1104+36]),None)
+    ]
+  signature_item (src/positions.mli[21,1208+0]..src/positions.mli[21,1208+6])
+    Tsig_type Rec
+    [
+      type_declaration t/396 (src/positions.mli[21,1208+0]..src/positions.mli[21,1208+6])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/positions.mli[20,1142+0]..[20,1142+65])
+              Pstr_eval
+              expression (src/positions.mli[20,1142+0]..[20,1142+65])
+                Pexp_constant PConst_string(" Abstract type for pairs of positions in the lexing stream. ",(src/positions.mli[20,1142+0]..[20,1142+65]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/positions.mli[24,1262+0]..src/positions.mli[28,1327+5])
+    Tsig_type Rec
+    [
+      type_declaration located/397 (src/positions.mli[24,1262+0]..src/positions.mli[28,1327+5])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/positions.mli[23,1216+0]..[23,1216+45])
+              Pstr_eval
+              expression (src/positions.mli[23,1216+0]..[23,1216+45])
+                Pexp_constant PConst_string(" Decoration of a value with a position. ",(src/positions.mli[23,1216+0]..[23,1216+45]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/positions.mli[24,1262+5]..src/positions.mli[24,1262+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_record
+            [
+              (src/positions.mli[26,1286+6]..src/positions.mli[26,1286+20])
+                Immutable
+                value/398                core_type (src/positions.mli[26,1286+17]..src/positions.mli[26,1286+19])
+                  Ttyp_poly
+                  core_type (src/positions.mli[26,1286+17]..src/positions.mli[26,1286+19])
+                    Ttyp_var a
+              (src/positions.mli[27,1307+6]..src/positions.mli[27,1307+19])
+                Immutable
+                position/399                core_type (src/positions.mli[27,1307+17]..src/positions.mli[27,1307+18])
+                  Ttyp_poly
+                  core_type (src/positions.mli[27,1307+17]..src/positions.mli[27,1307+18])
+                    Ttyp_constr "t/396"
+                    []
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/positions.mli[32,1419+0]..src/positions.mli[32,1419+27])
+    Tsig_value
+    value_description value/400 (src/positions.mli[32,1419+0]..src/positions.mli[32,1419+27])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[30,1334+0]..[31,1390+28])
+            Pstr_eval
+            expression (src/positions.mli[30,1334+0]..[31,1390+28])
+              Pexp_constant PConst_string(" [value dv] returns the raw value that underlies the\n    decorated value [dv]. ",(src/positions.mli[30,1334+0]..[31,1390+28]),None)
+        ]
+      core_type (src/positions.mli[32,1419+11]..src/positions.mli[32,1419+27])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[32,1419+11]..src/positions.mli[32,1419+21])
+          Ttyp_constr "located/397"
+          [
+            core_type (src/positions.mli[32,1419+11]..src/positions.mli[32,1419+13])
+              Ttyp_var a
+          ]
+        core_type (src/positions.mli[32,1419+25]..src/positions.mli[32,1419+27])
+          Ttyp_var a
+      []
+  signature_item (src/positions.mli[36,1535+0]..src/positions.mli[36,1535+29])
+    Tsig_value
+    value_description position/401 (src/positions.mli[36,1535+0]..src/positions.mli[36,1535+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[34,1448+0]..[35,1506+28])
+            Pstr_eval
+            expression (src/positions.mli[34,1448+0]..[35,1506+28])
+              Pexp_constant PConst_string(" [position dv] returns the position that decorates the\n    decorated value [dv]. ",(src/positions.mli[34,1448+0]..[35,1506+28]),None)
+        ]
+      core_type (src/positions.mli[36,1535+14]..src/positions.mli[36,1535+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[36,1535+14]..src/positions.mli[36,1535+24])
+          Ttyp_constr "located/397"
+          [
+            core_type (src/positions.mli[36,1535+14]..src/positions.mli[36,1535+16])
+              Ttyp_var a
+          ]
+        core_type (src/positions.mli[36,1535+28]..src/positions.mli[36,1535+29])
+          Ttyp_constr "t/396"
+          []
+      []
+  signature_item (src/positions.mli[39,1630+0]..src/positions.mli[39,1630+35])
+    Tsig_value
+    value_description decompose/402 (src/positions.mli[39,1630+0]..src/positions.mli[39,1630+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[38,1566+0]..[38,1566+63])
+            Pstr_eval
+            expression (src/positions.mli[38,1566+0]..[38,1566+63])
+              Pexp_constant PConst_string(" [decompose dv] returns a pair of the value and position. ",(src/positions.mli[38,1566+0]..[38,1566+63]),None)
+        ]
+      core_type (src/positions.mli[39,1630+15]..src/positions.mli[39,1630+35])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[39,1630+15]..src/positions.mli[39,1630+25])
+          Ttyp_constr "located/397"
+          [
+            core_type (src/positions.mli[39,1630+15]..src/positions.mli[39,1630+17])
+              Ttyp_var a
+          ]
+        core_type (src/positions.mli[39,1630+29]..src/positions.mli[39,1630+35])
+          Ttyp_tuple
+          [
+            core_type (src/positions.mli[39,1630+29]..src/positions.mli[39,1630+31])
+              Ttyp_var a
+            core_type (src/positions.mli[39,1630+34]..src/positions.mli[39,1630+35])
+              Ttyp_constr "t/396"
+              []
+          ]
+      []
+  signature_item (src/positions.mli[42,1724+0]..src/positions.mli[42,1724+36])
+    Tsig_value
+    value_description with_pos/403 (src/positions.mli[42,1724+0]..src/positions.mli[42,1724+36])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[41,1667+0]..[41,1667+56])
+            Pstr_eval
+            expression (src/positions.mli[41,1667+0]..[41,1667+56])
+              Pexp_constant PConst_string(" [with_pos p v] decorates [v] with a position [p]. ",(src/positions.mli[41,1667+0]..[41,1667+56]),None)
+        ]
+      core_type (src/positions.mli[42,1724+15]..src/positions.mli[42,1724+36])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[42,1724+15]..src/positions.mli[42,1724+16])
+          Ttyp_constr "t/396"
+          []
+        core_type (src/positions.mli[42,1724+20]..src/positions.mli[42,1724+36])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[42,1724+20]..src/positions.mli[42,1724+22])
+            Ttyp_var a
+          core_type (src/positions.mli[42,1724+26]..src/positions.mli[42,1724+36])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[42,1724+26]..src/positions.mli[42,1724+28])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/positions.mli[43,1761+0]..src/positions.mli[43,1761+48])
+    Tsig_value
+    value_description with_cpos/428 (src/positions.mli[43,1761+0]..src/positions.mli[43,1761+48])
+      core_type (src/positions.mli[43,1761+15]..src/positions.mli[43,1761+48])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[43,1761+15]..src/positions.mli[43,1761+28])
+          Ttyp_constr "Stdlib!.Lexing.lexbuf"
+          []
+        core_type (src/positions.mli[43,1761+32]..src/positions.mli[43,1761+48])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[43,1761+32]..src/positions.mli[43,1761+34])
+            Ttyp_var a
+          core_type (src/positions.mli[43,1761+38]..src/positions.mli[43,1761+48])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[43,1761+38]..src/positions.mli[43,1761+40])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/positions.mli[44,1810+0]..src/positions.mli[44,1810+70])
+    Tsig_value
+    value_description with_loc/429 (src/positions.mli[44,1810+0]..src/positions.mli[44,1810+70])
+      core_type (src/positions.mli[44,1810+15]..src/positions.mli[44,1810+70])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[44,1810+16]..src/positions.mli[44,1810+49])
+          Ttyp_tuple
+          [
+            core_type (src/positions.mli[44,1810+16]..src/positions.mli[44,1810+31])
+              Ttyp_constr "Stdlib!.Lexing.position"
+              []
+            core_type (src/positions.mli[44,1810+34]..src/positions.mli[44,1810+49])
+              Ttyp_constr "Stdlib!.Lexing.position"
+              []
+          ]
+        core_type (src/positions.mli[44,1810+54]..src/positions.mli[44,1810+70])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[44,1810+54]..src/positions.mli[44,1810+56])
+            Ttyp_var a
+          core_type (src/positions.mli[44,1810+60]..src/positions.mli[44,1810+70])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[44,1810+60]..src/positions.mli[44,1810+62])
+                Ttyp_var a
+            ]
+      []
+  signature_item (src/positions.mli[46,1882+0]..src/positions.mli[46,1882+34])
+    Tsig_value
+    value_description unknown_pos/430 (src/positions.mli[46,1882+0]..src/positions.mli[46,1882+34])
+      core_type (src/positions.mli[46,1882+18]..src/positions.mli[46,1882+34])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[46,1882+18]..src/positions.mli[46,1882+20])
+          Ttyp_var a
+        core_type (src/positions.mli[46,1882+24]..src/positions.mli[46,1882+34])
+          Ttyp_constr "located/397"
+          [
+            core_type (src/positions.mli[46,1882+24]..src/positions.mli[46,1882+26])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/positions.mli[49,1977+0]..src/positions.mli[49,1977+47])
+    Tsig_value
+    value_description map/431 (src/positions.mli[49,1977+0]..src/positions.mli[49,1977+47])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[48,1918+0]..[48,1918+58])
+            Pstr_eval
+            expression (src/positions.mli[48,1918+0]..[48,1918+58])
+              Pexp_constant PConst_string(" [map f v] extends the decoration from [v] to [f v]. ",(src/positions.mli[48,1918+0]..[48,1918+58]),None)
+        ]
+      core_type (src/positions.mli[49,1977+9]..src/positions.mli[49,1977+47])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[49,1977+10]..src/positions.mli[49,1977+18])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[49,1977+10]..src/positions.mli[49,1977+12])
+            Ttyp_var a
+          core_type (src/positions.mli[49,1977+16]..src/positions.mli[49,1977+18])
+            Ttyp_var b
+        core_type (src/positions.mli[49,1977+23]..src/positions.mli[49,1977+47])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[49,1977+23]..src/positions.mli[49,1977+33])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[49,1977+23]..src/positions.mli[49,1977+25])
+                Ttyp_var a
+            ]
+          core_type (src/positions.mli[49,1977+37]..src/positions.mli[49,1977+47])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[49,1977+37]..src/positions.mli[49,1977+39])
+                Ttyp_var b
+            ]
+      []
+  signature_item (src/positions.mli[50,2025+0]..src/positions.mli[50,2025+53])
+    Tsig_value
+    value_description pmap/432 (src/positions.mli[50,2025+0]..src/positions.mli[50,2025+53])
+      core_type (src/positions.mli[50,2025+10]..src/positions.mli[50,2025+53])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[50,2025+11]..src/positions.mli[50,2025+24])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[50,2025+11]..src/positions.mli[50,2025+12])
+            Ttyp_constr "t/396"
+            []
+          core_type (src/positions.mli[50,2025+16]..src/positions.mli[50,2025+24])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/positions.mli[50,2025+16]..src/positions.mli[50,2025+18])
+              Ttyp_var a
+            core_type (src/positions.mli[50,2025+22]..src/positions.mli[50,2025+24])
+              Ttyp_var b
+        core_type (src/positions.mli[50,2025+29]..src/positions.mli[50,2025+53])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[50,2025+29]..src/positions.mli[50,2025+39])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[50,2025+29]..src/positions.mli[50,2025+31])
+                Ttyp_var a
+            ]
+          core_type (src/positions.mli[50,2025+43]..src/positions.mli[50,2025+53])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[50,2025+43]..src/positions.mli[50,2025+45])
+                Ttyp_var b
+            ]
+      []
+  signature_item (src/positions.mli[53,2137+0]..src/positions.mli[53,2137+44])
+    Tsig_value
+    value_description iter/433 (src/positions.mli[53,2137+0]..src/positions.mli[53,2137+44])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[52,2080+0]..[52,2080+56])
+            Pstr_eval
+            expression (src/positions.mli[52,2080+0]..[52,2080+56])
+              Pexp_constant PConst_string(" [iter f dv] applies [f] to the value inside [dv]. ",(src/positions.mli[52,2080+0]..[52,2080+56]),None)
+        ]
+      core_type (src/positions.mli[53,2137+10]..src/positions.mli[53,2137+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[53,2137+11]..src/positions.mli[53,2137+21])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[53,2137+11]..src/positions.mli[53,2137+13])
+            Ttyp_var a
+          core_type (src/positions.mli[53,2137+17]..src/positions.mli[53,2137+21])
+            Ttyp_constr "unit/6!"
+            []
+        core_type (src/positions.mli[53,2137+26]..src/positions.mli[53,2137+44])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[53,2137+26]..src/positions.mli[53,2137+36])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[53,2137+26]..src/positions.mli[53,2137+28])
+                Ttyp_var a
+            ]
+          core_type (src/positions.mli[53,2137+40]..src/positions.mli[53,2137+44])
+            Ttyp_constr "unit/6!"
+            []
+      []
+  signature_item (src/positions.mli[56,2268+0]..src/positions.mli[56,2268+70])
+    Tsig_value
+    value_description mapd/434 (src/positions.mli[56,2268+0]..src/positions.mli[56,2268+70])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[55,2183+0]..[55,2183+84])
+            Pstr_eval
+            expression (src/positions.mli[55,2183+0]..[55,2183+84])
+              Pexp_constant PConst_string(" [mapd f v] extends the decoration from [v] to both members of the pair [f v]. ",(src/positions.mli[55,2183+0]..[55,2183+84]),None)
+        ]
+      core_type (src/positions.mli[56,2268+10]..src/positions.mli[56,2268+70])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[56,2268+11]..src/positions.mli[56,2268+26])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[56,2268+11]..src/positions.mli[56,2268+13])
+            Ttyp_var a
+          core_type (src/positions.mli[56,2268+17]..src/positions.mli[56,2268+26])
+            Ttyp_tuple
+            [
+              core_type (src/positions.mli[56,2268+17]..src/positions.mli[56,2268+20])
+                Ttyp_var b1
+              core_type (src/positions.mli[56,2268+23]..src/positions.mli[56,2268+26])
+                Ttyp_var b2
+            ]
+        core_type (src/positions.mli[56,2268+31]..src/positions.mli[56,2268+70])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[56,2268+31]..src/positions.mli[56,2268+41])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[56,2268+31]..src/positions.mli[56,2268+33])
+                Ttyp_var a
+            ]
+          core_type (src/positions.mli[56,2268+45]..src/positions.mli[56,2268+70])
+            Ttyp_tuple
+            [
+              core_type (src/positions.mli[56,2268+45]..src/positions.mli[56,2268+56])
+                Ttyp_constr "located/397"
+                [
+                  core_type (src/positions.mli[56,2268+45]..src/positions.mli[56,2268+48])
+                    Ttyp_var b1
+                ]
+              core_type (src/positions.mli[56,2268+59]..src/positions.mli[56,2268+70])
+                Ttyp_constr "located/397"
+                [
+                  core_type (src/positions.mli[56,2268+59]..src/positions.mli[56,2268+62])
+                    Ttyp_var b2
+                ]
+            ]
+      []
+  signature_item (src/positions.mli[60,2433+0]..src/positions.mli[60,2433+12])
+    Tsig_value
+    value_description dummy/435 (src/positions.mli[60,2433+0]..src/positions.mli[60,2433+12])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[58,2340+0]..[59,2397+35])
+            Pstr_eval
+            expression (src/positions.mli[58,2340+0]..[59,2397+35])
+              Pexp_constant PConst_string(" This value is used when an object does not come from\n    a particular input location. ",(src/positions.mli[58,2340+0]..[59,2397+35]),None)
+        ]
+      core_type (src/positions.mli[60,2433+11]..src/positions.mli[60,2433+12])
+        Ttyp_constr "t/396"
+        []
+      []
+  signature_item (src/positions.mli[62,2447+0]..src/positions.mli[62,2447+20])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[62,2447+0]..[62,2447+20])
+        Pstr_eval
+        expression (src/positions.mli[62,2447+0]..[62,2447+20])
+          Pexp_constant PConst_string(" {2 Accessors} ",(src/positions.mli[62,2447+0]..[62,2447+20]),None)
+    ]
+  signature_item (src/positions.mli[66,2583+0]..src/positions.mli[66,2583+35])
+    Tsig_value
+    value_description column/436 (src/positions.mli[66,2583+0]..src/positions.mli[66,2583+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[64,2469+0]..[65,2526+56])
+            Pstr_eval
+            expression (src/positions.mli[64,2469+0]..[65,2526+56])
+              Pexp_constant PConst_string(" [column p] returns the number of characters from the\n    beginning of the line of the Lexing.position [p]. ",(src/positions.mli[64,2469+0]..[65,2526+56]),None)
+        ]
+      core_type (src/positions.mli[66,2583+13]..src/positions.mli[66,2583+35])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[66,2583+13]..src/positions.mli[66,2583+28])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+        core_type (src/positions.mli[66,2583+32]..src/positions.mli[66,2583+35])
+          Ttyp_constr "int/1!"
+          []
+      []
+  signature_item (src/positions.mli[69,2693+0]..src/positions.mli[69,2693+33])
+    Tsig_value
+    value_description line/437 (src/positions.mli[69,2693+0]..src/positions.mli[69,2693+33])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[68,2620+0]..[68,2620+72])
+            Pstr_eval
+            expression (src/positions.mli[68,2620+0]..[68,2620+72])
+              Pexp_constant PConst_string(" [column p] returns the line number of to the Lexing.position [p]. ",(src/positions.mli[68,2620+0]..[68,2620+72]),None)
+        ]
+      core_type (src/positions.mli[69,2693+11]..src/positions.mli[69,2693+33])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[69,2693+11]..src/positions.mli[69,2693+26])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+        core_type (src/positions.mli[69,2693+30]..src/positions.mli[69,2693+33])
+          Ttyp_constr "int/1!"
+          []
+      []
+  signature_item (src/positions.mli[75,2859+0]..src/positions.mli[75,2859+64])
+    Tsig_value
+    value_description characters/438 (src/positions.mli[75,2859+0]..src/positions.mli[75,2859+64])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[71,2728+0]..[74,2856+2])
+            Pstr_eval
+            expression (src/positions.mli[71,2728+0]..[74,2856+2])
+              Pexp_constant PConst_string(" [characters p1 p2] returns the character interval\n    between [p1] and [p2] assuming they are located in the same\n    line.\n",(src/positions.mli[71,2728+0]..[74,2856+2]),None)
+        ]
+      core_type (src/positions.mli[75,2859+17]..src/positions.mli[75,2859+64])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[75,2859+17]..src/positions.mli[75,2859+32])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+        core_type (src/positions.mli[75,2859+36]..src/positions.mli[75,2859+64])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[75,2859+36]..src/positions.mli[75,2859+51])
+            Ttyp_constr "Stdlib!.Lexing.position"
+            []
+          core_type (src/positions.mli[75,2859+55]..src/positions.mli[75,2859+64])
+            Ttyp_tuple
+            [
+              core_type (src/positions.mli[75,2859+55]..src/positions.mli[75,2859+58])
+                Ttyp_constr "int/1!"
+                []
+              core_type (src/positions.mli[75,2859+61]..src/positions.mli[75,2859+64])
+                Ttyp_constr "int/1!"
+                []
+            ]
+      []
+  signature_item (src/positions.mli[77,2925+0]..src/positions.mli[77,2925+43])
+    Tsig_value
+    value_description start_of_position/439 (src/positions.mli[77,2925+0]..src/positions.mli[77,2925+43])
+      core_type (src/positions.mli[77,2925+23]..src/positions.mli[77,2925+43])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[77,2925+23]..src/positions.mli[77,2925+24])
+          Ttyp_constr "t/396"
+          []
+        core_type (src/positions.mli[77,2925+28]..src/positions.mli[77,2925+43])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+      []
+  signature_item (src/positions.mli[79,2970+0]..src/positions.mli[79,2970+41])
+    Tsig_value
+    value_description end_of_position/440 (src/positions.mli[79,2970+0]..src/positions.mli[79,2970+41])
+      core_type (src/positions.mli[79,2970+21]..src/positions.mli[79,2970+41])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[79,2970+21]..src/positions.mli[79,2970+22])
+          Ttyp_constr "t/396"
+          []
+        core_type (src/positions.mli[79,2970+26]..src/positions.mli[79,2970+41])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+      []
+  signature_item (src/positions.mli[81,3013+0]..src/positions.mli[81,3013+37])
+    Tsig_value
+    value_description filename_of_position/441 (src/positions.mli[81,3013+0]..src/positions.mli[81,3013+37])
+      core_type (src/positions.mli[81,3013+26]..src/positions.mli[81,3013+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[81,3013+26]..src/positions.mli[81,3013+27])
+          Ttyp_constr "t/396"
+          []
+        core_type (src/positions.mli[81,3013+31]..src/positions.mli[81,3013+37])
+          Ttyp_constr "string/15!"
+          []
+      []
+  signature_item (src/positions.mli[83,3052+0]..src/positions.mli[83,3052+28])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[83,3052+0]..[83,3052+28])
+        Pstr_eval
+        expression (src/positions.mli[83,3052+0]..[83,3052+28])
+          Pexp_constant PConst_string(" {2 Position handling} ",(src/positions.mli[83,3052+0]..[83,3052+28]),None)
+    ]
+  signature_item (src/positions.mli[87,3183+0]..src/positions.mli[87,3183+22])
+    Tsig_value
+    value_description join/442 (src/positions.mli[87,3183+0]..src/positions.mli[87,3183+22])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[85,3082+0]..[86,3141+41])
+            Pstr_eval
+            expression (src/positions.mli[85,3082+0]..[86,3141+41])
+              Pexp_constant PConst_string(" [join p1 p2] returns a position that starts where [p1]\n    starts and stops where [p2] stops. ",(src/positions.mli[85,3082+0]..[86,3141+41]),None)
+        ]
+      core_type (src/positions.mli[87,3183+11]..src/positions.mli[87,3183+22])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[87,3183+11]..src/positions.mli[87,3183+12])
+          Ttyp_constr "t/396"
+          []
+        core_type (src/positions.mli[87,3183+16]..src/positions.mli[87,3183+22])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[87,3183+16]..src/positions.mli[87,3183+17])
+            Ttyp_constr "t/396"
+            []
+          core_type (src/positions.mli[87,3183+21]..src/positions.mli[87,3183+22])
+            Ttyp_constr "t/396"
+            []
+      []
+  signature_item (src/positions.mli[89,3207+0]..src/positions.mli[89,3207+51])
+    Tsig_value
+    value_description import/443 (src/positions.mli[89,3207+0]..src/positions.mli[89,3207+51])
+      core_type (src/positions.mli[89,3207+13]..src/positions.mli[89,3207+51])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[89,3207+13]..src/positions.mli[89,3207+46])
+          Ttyp_tuple
+          [
+            core_type (src/positions.mli[89,3207+13]..src/positions.mli[89,3207+28])
+              Ttyp_constr "Stdlib!.Lexing.position"
+              []
+            core_type (src/positions.mli[89,3207+31]..src/positions.mli[89,3207+46])
+              Ttyp_constr "Stdlib!.Lexing.position"
+              []
+          ]
+        core_type (src/positions.mli[89,3207+50]..src/positions.mli[89,3207+51])
+          Ttyp_constr "t/396"
+          []
+      []
+  signature_item (src/positions.mli[91,3260+0]..src/positions.mli[91,3260+38])
+    Tsig_value
+    value_description ljoinf/444 (src/positions.mli[91,3260+0]..src/positions.mli[91,3260+38])
+      core_type (src/positions.mli[91,3260+13]..src/positions.mli[91,3260+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[91,3260+14]..src/positions.mli[91,3260+21])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[91,3260+14]..src/positions.mli[91,3260+16])
+            Ttyp_var a
+          core_type (src/positions.mli[91,3260+20]..src/positions.mli[91,3260+21])
+            Ttyp_constr "t/396"
+            []
+        core_type (src/positions.mli[91,3260+26]..src/positions.mli[91,3260+38])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[91,3260+26]..src/positions.mli[91,3260+33])
+            Ttyp_constr "list/9!"
+            [
+              core_type (src/positions.mli[91,3260+26]..src/positions.mli[91,3260+28])
+                Ttyp_var a
+            ]
+          core_type (src/positions.mli[91,3260+37]..src/positions.mli[91,3260+38])
+            Ttyp_constr "t/396"
+            []
+      []
+  signature_item (src/positions.mli[93,3300+0]..src/positions.mli[93,3300+38])
+    Tsig_value
+    value_description joinf/445 (src/positions.mli[93,3300+0]..src/positions.mli[93,3300+38])
+      core_type (src/positions.mli[93,3300+12]..src/positions.mli[93,3300+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[93,3300+13]..src/positions.mli[93,3300+20])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[93,3300+13]..src/positions.mli[93,3300+15])
+            Ttyp_var a
+          core_type (src/positions.mli[93,3300+19]..src/positions.mli[93,3300+20])
+            Ttyp_constr "t/396"
+            []
+        core_type (src/positions.mli[93,3300+25]..src/positions.mli[93,3300+38])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[93,3300+25]..src/positions.mli[93,3300+27])
+            Ttyp_var a
+          core_type (src/positions.mli[93,3300+31]..src/positions.mli[93,3300+38])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/positions.mli[93,3300+31]..src/positions.mli[93,3300+33])
+              Ttyp_var a
+            core_type (src/positions.mli[93,3300+37]..src/positions.mli[93,3300+38])
+              Ttyp_constr "t/396"
+              []
+      []
+  signature_item (src/positions.mli[95,3340+0]..src/positions.mli[95,3340+77])
+    Tsig_value
+    value_description join_located/446 (src/positions.mli[95,3340+0]..src/positions.mli[95,3340+77])
+      core_type (src/positions.mli[95,3340+19]..src/positions.mli[95,3340+77])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[95,3340+19]..src/positions.mli[95,3340+29])
+          Ttyp_constr "located/397"
+          [
+            core_type (src/positions.mli[95,3340+19]..src/positions.mli[95,3340+21])
+              Ttyp_var a
+          ]
+        core_type (src/positions.mli[95,3340+33]..src/positions.mli[95,3340+77])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[95,3340+33]..src/positions.mli[95,3340+43])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[95,3340+33]..src/positions.mli[95,3340+35])
+                Ttyp_var b
+            ]
+          core_type (src/positions.mli[95,3340+47]..src/positions.mli[95,3340+77])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/positions.mli[95,3340+48]..src/positions.mli[95,3340+62])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/positions.mli[95,3340+48]..src/positions.mli[95,3340+50])
+                Ttyp_var a
+              core_type (src/positions.mli[95,3340+54]..src/positions.mli[95,3340+62])
+                Ttyp_arrow
+                Nolabel
+                core_type (src/positions.mli[95,3340+54]..src/positions.mli[95,3340+56])
+                  Ttyp_var b
+                core_type (src/positions.mli[95,3340+60]..src/positions.mli[95,3340+62])
+                  Ttyp_var c
+            core_type (src/positions.mli[95,3340+67]..src/positions.mli[95,3340+77])
+              Ttyp_constr "located/397"
+              [
+                core_type (src/positions.mli[95,3340+67]..src/positions.mli[95,3340+69])
+                  Ttyp_var c
+              ]
+      []
+  signature_item (src/positions.mli[97,3419+0]..src/positions.mli[98,3443+64])
+    Tsig_value
+    value_description join_located_list/447 (src/positions.mli[97,3419+0]..src/positions.mli[98,3443+64])
+      core_type (src/positions.mli[98,3443+2]..src/positions.mli[98,3443+64])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[98,3443+2]..src/positions.mli[98,3443+19])
+          Ttyp_constr "list/9!"
+          [
+            core_type (src/positions.mli[98,3443+3]..src/positions.mli[98,3443+13])
+              Ttyp_constr "located/397"
+              [
+                core_type (src/positions.mli[98,3443+3]..src/positions.mli[98,3443+5])
+                  Ttyp_var a
+              ]
+          ]
+        core_type (src/positions.mli[98,3443+23]..src/positions.mli[98,3443+64])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/positions.mli[98,3443+24]..src/positions.mli[98,3443+42])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/positions.mli[98,3443+24]..src/positions.mli[98,3443+31])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/positions.mli[98,3443+24]..src/positions.mli[98,3443+26])
+                  Ttyp_var a
+              ]
+            core_type (src/positions.mli[98,3443+35]..src/positions.mli[98,3443+42])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/positions.mli[98,3443+35]..src/positions.mli[98,3443+37])
+                  Ttyp_var b
+              ]
+          core_type (src/positions.mli[98,3443+47]..src/positions.mli[98,3443+64])
+            Ttyp_constr "located/397"
+            [
+              core_type (src/positions.mli[98,3443+48]..src/positions.mli[98,3443+55])
+                Ttyp_constr "list/9!"
+                [
+                  core_type (src/positions.mli[98,3443+48]..src/positions.mli[98,3443+50])
+                    Ttyp_var b
+                ]
+            ]
+      []
+  signature_item (src/positions.mli[103,3604+0]..src/positions.mli[103,3604+49])
+    Tsig_value
+    value_description string_of_lex_pos/448 (src/positions.mli[103,3604+0]..src/positions.mli[103,3604+49])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[101,3510+0]..[102,3572+31])
+            Pstr_eval
+            expression (src/positions.mli[101,3510+0]..[102,3572+31])
+              Pexp_constant PConst_string(" [string_of_lex_pos p] returns a string representation for\n    the lexing position [p]. ",(src/positions.mli[101,3510+0]..[102,3572+31]),None)
+        ]
+      core_type (src/positions.mli[103,3604+24]..src/positions.mli[103,3604+49])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[103,3604+24]..src/positions.mli[103,3604+39])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+        core_type (src/positions.mli[103,3604+43]..src/positions.mli[103,3604+49])
+          Ttyp_constr "string/15!"
+          []
+      []
+  signature_item (src/positions.mli[107,3754+0]..src/positions.mli[107,3754+31])
+    Tsig_value
+    value_description string_of_pos/449 (src/positions.mli[107,3754+0]..src/positions.mli[107,3754+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[105,3655+0]..[106,3726+27])
+            Pstr_eval
+            expression (src/positions.mli[105,3655+0]..[106,3726+27])
+              Pexp_constant PConst_string(" [string_of_pos p] returns the standard (Emacs-like) representation\n    of the position [p]. ",(src/positions.mli[105,3655+0]..[106,3726+27]),None)
+        ]
+      core_type (src/positions.mli[107,3754+20]..src/positions.mli[107,3754+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[107,3754+20]..src/positions.mli[107,3754+21])
+          Ttyp_constr "t/396"
+          []
+        core_type (src/positions.mli[107,3754+25]..src/positions.mli[107,3754+31])
+          Ttyp_constr "string/15!"
+          []
+      []
+  signature_item (src/positions.mli[111,3909+0]..src/positions.mli[111,3909+32])
+    Tsig_value
+    value_description pos_or_undef/450 (src/positions.mli[111,3909+0]..src/positions.mli[111,3909+32])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[109,3787+0]..[110,3855+53])
+            Pstr_eval
+            expression (src/positions.mli[109,3787+0]..[110,3855+53])
+              Pexp_constant PConst_string(" [pos_or_undef po] is the identity function except if po = None,\n    in that case, it returns [undefined_position]. ",(src/positions.mli[109,3787+0]..[110,3855+53]),None)
+        ]
+      core_type (src/positions.mli[111,3909+19]..src/positions.mli[111,3909+32])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[111,3909+19]..src/positions.mli[111,3909+27])
+          Ttyp_constr "option/10!"
+          [
+            core_type (src/positions.mli[111,3909+19]..src/positions.mli[111,3909+20])
+              Ttyp_constr "t/396"
+              []
+          ]
+        core_type (src/positions.mli[111,3909+31]..src/positions.mli[111,3909+32])
+          Ttyp_constr "t/396"
+          []
+      []
+  signature_item (src/positions.mli[113,3943+0]..src/positions.mli[113,3943+45])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/positions.mli[113,3943+0]..[113,3943+45])
+        Pstr_eval
+        expression (src/positions.mli[113,3943+0]..[113,3943+45])
+          Pexp_constant PConst_string(" {2 Interaction with the lexer runtime} ",(src/positions.mli[113,3943+0]..[113,3943+45]),None)
+    ]
+  signature_item (src/positions.mli[116,4054+0]..src/positions.mli[116,4054+29])
+    Tsig_value
+    value_description cpos/451 (src/positions.mli[116,4054+0]..src/positions.mli[116,4054+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[115,3990+0]..[115,3990+63])
+            Pstr_eval
+            expression (src/positions.mli[115,3990+0]..[115,3990+63])
+              Pexp_constant PConst_string(" [cpos lexbuf] returns the current position of the lexer. ",(src/positions.mli[115,3990+0]..[115,3990+63]),None)
+        ]
+      core_type (src/positions.mli[116,4054+11]..src/positions.mli[116,4054+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[116,4054+11]..src/positions.mli[116,4054+24])
+          Ttyp_constr "Stdlib!.Lexing.lexbuf"
+          []
+        core_type (src/positions.mli[116,4054+28]..src/positions.mli[116,4054+29])
+          Ttyp_constr "t/396"
+          []
+      []
+  signature_item (src/positions.mli[120,4180+0]..src/positions.mli[120,4180+44])
+    Tsig_value
+    value_description string_of_cpos/452 (src/positions.mli[120,4180+0]..src/positions.mli[120,4180+44])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/positions.mli[118,4085+0]..[119,4143+36])
+            Pstr_eval
+            expression (src/positions.mli[118,4085+0]..[119,4143+36])
+              Pexp_constant PConst_string(" [string_of_cpos p] returns a string representation of\n    the lexer's current position. ",(src/positions.mli[118,4085+0]..[119,4143+36]),None)
+        ]
+      core_type (src/positions.mli[120,4180+21]..src/positions.mli[120,4180+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[120,4180+21]..src/positions.mli[120,4180+34])
+          Ttyp_constr "Stdlib!.Lexing.lexbuf"
+          []
+        core_type (src/positions.mli[120,4180+38]..src/positions.mli[120,4180+44])
+          Ttyp_constr "string/15!"
+          []
+      []
+  signature_item (src/positions.mli[125,4375+0]..src/positions.mli[126,4392+10])
+    Tsig_type Rec
+    [
+      type_declaration positions/453 (src/positions.mli[125,4375+0]..src/positions.mli[126,4392+10])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/positions.mli[126,4392+4]..src/positions.mli[126,4392+10])
+              Ttyp_constr "list/9!"
+              [
+                core_type (src/positions.mli[126,4392+4]..src/positions.mli[126,4392+5])
+                  Ttyp_constr "t/396"
+                  []
+              ]
+    ]
+  signature_item (src/positions.mli[128,4404+0]..src/positions.mli[128,4404+37])
+    Tsig_value
+    value_description one/454 (src/positions.mli[128,4404+0]..src/positions.mli[128,4404+37])
+      core_type (src/positions.mli[128,4404+9]..src/positions.mli[128,4404+37])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[128,4404+9]..src/positions.mli[128,4404+24])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+        core_type (src/positions.mli[128,4404+28]..src/positions.mli[128,4404+37])
+          Ttyp_constr "positions/453"
+          []
+      []
+  signature_item (src/positions.mli[130,4443+0]..src/positions.mli[130,4443+38])
+    Tsig_value
+    value_description lexbuf/455 (src/positions.mli[130,4443+0]..src/positions.mli[130,4443+38])
+      core_type (src/positions.mli[130,4443+12]..src/positions.mli[130,4443+38])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[130,4443+12]..src/positions.mli[130,4443+25])
+          Ttyp_constr "Stdlib!.Lexing.lexbuf"
+          []
+        core_type (src/positions.mli[130,4443+29]..src/positions.mli[130,4443+38])
+          Ttyp_constr "positions/453"
+          []
+      []
+  signature_item (src/positions.mli[133,4533+0]..src/positions.mli[133,4533+34])
+    Tsig_value
+    value_description print/456 (src/positions.mli[133,4533+0]..src/positions.mli[133,4533+34])
+      core_type (src/positions.mli[133,4533+11]..src/positions.mli[133,4533+34])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/positions.mli[133,4533+11]..src/positions.mli[133,4533+26])
+          Ttyp_constr "Stdlib!.Lexing.position"
+          []
+        core_type (src/positions.mli[133,4533+30]..src/positions.mli[133,4533+34])
+          Ttyp_constr "unit/6!"
+          []
+      []
+]
+

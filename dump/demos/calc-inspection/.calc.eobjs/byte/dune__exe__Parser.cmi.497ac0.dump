@@ -1,0 +1,878 @@
+[
+  signature_item (demos/calc-inspection/parser.mli[4,28+0]..[12,118+7])
+    Psig_type Rec
+    [
+      type_declaration "token" (demos/calc-inspection/parser.mli[4,28+5]..[4,28+10]) (demos/calc-inspection/parser.mli[4,28+0]..[12,118+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (demos/calc-inspection/parser.mli[5,42+2]..[5,42+9])
+                "TIMES" (demos/calc-inspection/parser.mli[5,42+4]..[5,42+9])
+                []
+                None
+              (demos/calc-inspection/parser.mli[6,52+2]..[6,52+10])
+                "RPAREN" (demos/calc-inspection/parser.mli[6,52+4]..[6,52+10])
+                []
+                None
+              (demos/calc-inspection/parser.mli[7,63+2]..[7,63+8])
+                "PLUS" (demos/calc-inspection/parser.mli[7,63+4]..[7,63+8])
+                []
+                None
+              (demos/calc-inspection/parser.mli[8,72+2]..[8,72+9])
+                "MINUS" (demos/calc-inspection/parser.mli[8,72+4]..[8,72+9])
+                []
+                None
+              (demos/calc-inspection/parser.mli[9,82+2]..[9,82+10])
+                "LPAREN" (demos/calc-inspection/parser.mli[9,82+4]..[9,82+10])
+                []
+                None
+              (demos/calc-inspection/parser.mli[10,93+2]..[10,93+16])
+                "INT" (demos/calc-inspection/parser.mli[10,93+4]..[10,93+7])
+                [
+                  core_type (demos/calc-inspection/parser.mli[10,93+12]..[10,93+15])
+                    Ptyp_constr "int" (demos/calc-inspection/parser.mli[10,93+12]..[10,93+15])
+                    []
+                ]
+                None
+              (demos/calc-inspection/parser.mli[11,110+2]..[11,110+7])
+                "EOL" (demos/calc-inspection/parser.mli[11,110+4]..[11,110+7])
+                []
+                None
+              (demos/calc-inspection/parser.mli[12,118+2]..[12,118+7])
+                "DIV" (demos/calc-inspection/parser.mli[12,118+4]..[12,118+7])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (demos/calc-inspection/parser.mli[16,192+0]..[16,192+15])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/calc-inspection/parser.mli[16,192+0]..[16,192+15])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (demos/calc-inspection/parser.mli[20,236+0]..[20,236+60])
+    Psig_value
+    value_description "main" (demos/calc-inspection/parser.mli[20,236+4]..[20,236+8]) (demos/calc-inspection/parser.mli[20,236+0]..[20,236+60])
+      core_type (demos/calc-inspection/parser.mli[20,236+10]..[20,236+60])
+        Ptyp_arrow
+        Nolabel
+        core_type (demos/calc-inspection/parser.mli[20,236+11]..[20,236+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (demos/calc-inspection/parser.mli[20,236+11]..[20,236+24])
+            Ptyp_constr "Lexing.lexbuf" (demos/calc-inspection/parser.mli[20,236+11]..[20,236+24])
+            []
+          core_type (demos/calc-inspection/parser.mli[20,236+28]..[20,236+33])
+            Ptyp_constr "token" (demos/calc-inspection/parser.mli[20,236+28]..[20,236+33])
+            []
+        core_type (demos/calc-inspection/parser.mli[20,236+38]..[20,236+60])
+          Ptyp_arrow
+          Nolabel
+          core_type (demos/calc-inspection/parser.mli[20,236+38]..[20,236+51])
+            Ptyp_constr "Lexing.lexbuf" (demos/calc-inspection/parser.mli[20,236+38]..[20,236+51])
+            []
+          core_type (demos/calc-inspection/parser.mli[20,236+56]..[20,236+59])
+            Ptyp_constr "int" (demos/calc-inspection/parser.mli[20,236+56]..[20,236+59])
+            []
+      []
+  signature_item (demos/calc-inspection/parser.mli[22,298+0]..[57,1218+3])
+    Psig_module "MenhirInterpreter" (demos/calc-inspection/parser.mli[22,298+7]..[22,298+24])
+    module_type (demos/calc-inspection/parser.mli[22,298+27]..[57,1218+3])
+      Pmty_signature
+      [
+        signature_item (demos/calc-inspection/parser.mli[26,364+2]..[27,421+27])
+          Psig_include
+          module_type (demos/calc-inspection/parser.mli[26,364+10]..[27,421+27])
+            Pmty_with
+            module_type (demos/calc-inspection/parser.mli[26,364+10]..[26,364+56])
+              Pmty_ident "MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE" (demos/calc-inspection/parser.mli[26,364+10]..[26,364+56])
+            [
+              Pwith_type "token" (demos/calc-inspection/parser.mli[27,421+14]..[27,421+19])
+                type_declaration "token" (demos/calc-inspection/parser.mli[27,421+14]..[27,421+19]) (demos/calc-inspection/parser.mli[27,421+9]..[27,421+27])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (demos/calc-inspection/parser.mli[27,421+22]..[27,421+27])
+                        Ptyp_constr "token" (demos/calc-inspection/parser.mli[27,421+22]..[27,421+27])
+                        []
+            ]
+        signature_item (demos/calc-inspection/parser.mli[31,501+2]..[40,760+27])
+          Psig_type Rec
+          [
+            type_declaration "terminal" (demos/calc-inspection/parser.mli[31,501+9]..[31,501+17]) (demos/calc-inspection/parser.mli[31,501+2]..[40,760+27])
+              ptype_params =
+                [
+                  core_type (demos/calc-inspection/parser.mli[31,501+7]..[31,501+8])
+                    Ptyp_any
+                ]
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_variant
+                  [
+                    (demos/calc-inspection/parser.mli[32,522+4]..[32,522+29])
+                      "T_error" (demos/calc-inspection/parser.mli[32,522+6]..[32,522+13])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[32,522+16]..[32,522+29])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[32,522+21]..[32,522+29])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[32,522+16]..[32,522+20])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[32,522+16]..[32,522+20])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[33,552+4]..[33,552+29])
+                      "T_TIMES" (demos/calc-inspection/parser.mli[33,552+6]..[33,552+13])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[33,552+16]..[33,552+29])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[33,552+21]..[33,552+29])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[33,552+16]..[33,552+20])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[33,552+16]..[33,552+20])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[34,582+4]..[34,582+30])
+                      "T_RPAREN" (demos/calc-inspection/parser.mli[34,582+6]..[34,582+14])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[34,582+17]..[34,582+30])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[34,582+22]..[34,582+30])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[34,582+17]..[34,582+21])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[34,582+17]..[34,582+21])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[35,613+4]..[35,613+28])
+                      "T_PLUS" (demos/calc-inspection/parser.mli[35,613+6]..[35,613+12])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[35,613+15]..[35,613+28])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[35,613+20]..[35,613+28])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[35,613+15]..[35,613+19])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[35,613+15]..[35,613+19])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[36,642+4]..[36,642+29])
+                      "T_MINUS" (demos/calc-inspection/parser.mli[36,642+6]..[36,642+13])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[36,642+16]..[36,642+29])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[36,642+21]..[36,642+29])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[36,642+16]..[36,642+20])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[36,642+16]..[36,642+20])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[37,672+4]..[37,672+30])
+                      "T_LPAREN" (demos/calc-inspection/parser.mli[37,672+6]..[37,672+14])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[37,672+17]..[37,672+30])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[37,672+22]..[37,672+30])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[37,672+17]..[37,672+21])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[37,672+17]..[37,672+21])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[38,703+4]..[38,703+28])
+                      "T_INT" (demos/calc-inspection/parser.mli[38,703+6]..[38,703+11])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[38,703+14]..[38,703+28])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[38,703+20]..[38,703+28])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[38,703+15]..[38,703+18])
+                              Ptyp_constr "int" (demos/calc-inspection/parser.mli[38,703+15]..[38,703+18])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[39,732+4]..[39,732+27])
+                      "T_EOL" (demos/calc-inspection/parser.mli[39,732+6]..[39,732+11])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[39,732+14]..[39,732+27])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[39,732+19]..[39,732+27])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[39,732+14]..[39,732+18])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[39,732+14]..[39,732+18])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[40,760+4]..[40,760+27])
+                      "T_DIV" (demos/calc-inspection/parser.mli[40,760+6]..[40,760+11])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[40,760+14]..[40,760+27])
+                          Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[40,760+19]..[40,760+27])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[40,760+14]..[40,760+18])
+                              Ptyp_constr "unit" (demos/calc-inspection/parser.mli[40,760+14]..[40,760+18])
+                              []
+                          ]
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                None
+          ]
+        signature_item (demos/calc-inspection/parser.mli[44,843+2]..[46,900+32])
+          Psig_type Rec
+          [
+            type_declaration "nonterminal" (demos/calc-inspection/parser.mli[44,843+9]..[44,843+20]) (demos/calc-inspection/parser.mli[44,843+2]..[46,900+32])
+              ptype_params =
+                [
+                  core_type (demos/calc-inspection/parser.mli[44,843+7]..[44,843+8])
+                    Ptyp_any
+                ]
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ptype_variant
+                  [
+                    (demos/calc-inspection/parser.mli[45,867+4]..[45,867+32])
+                      "N_main" (demos/calc-inspection/parser.mli[45,867+6]..[45,867+12])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[45,867+15]..[45,867+32])
+                          Ptyp_constr "nonterminal" (demos/calc-inspection/parser.mli[45,867+21]..[45,867+32])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[45,867+16]..[45,867+19])
+                              Ptyp_constr "int" (demos/calc-inspection/parser.mli[45,867+16]..[45,867+19])
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[46,900+4]..[46,900+32])
+                      "N_expr" (demos/calc-inspection/parser.mli[46,900+6]..[46,900+12])
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[46,900+15]..[46,900+32])
+                          Ptyp_constr "nonterminal" (demos/calc-inspection/parser.mli[46,900+21]..[46,900+32])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[46,900+16]..[46,900+19])
+                              Ptyp_constr "int" (demos/calc-inspection/parser.mli[46,900+16]..[46,900+19])
+                              []
+                          ]
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                None
+          ]
+        signature_item (demos/calc-inspection/parser.mli[50,967+2]..[55,1184+30])
+          Psig_include
+          module_type (demos/calc-inspection/parser.mli[50,967+10]..[55,1184+30])
+            Pmty_with
+            module_type (demos/calc-inspection/parser.mli[50,967+10]..[54,1137+46])
+              Pmty_with
+              module_type (demos/calc-inspection/parser.mli[50,967+10]..[53,1096+40])
+                Pmty_with
+                module_type (demos/calc-inspection/parser.mli[50,967+10]..[52,1057+38])
+                  Pmty_with
+                  module_type (demos/calc-inspection/parser.mli[50,967+10]..[51,1016+40])
+                    Pmty_with
+                    module_type (demos/calc-inspection/parser.mli[50,967+10]..[50,967+48])
+                      Pmty_ident "MenhirLib.IncrementalEngine.INSPECTION" (demos/calc-inspection/parser.mli[50,967+10]..[50,967+48])
+                    [
+                      Pwith_typesubst "lr1state" (demos/calc-inspection/parser.mli[51,1016+17]..[51,1016+25])
+                        type_declaration "lr1state" (demos/calc-inspection/parser.mli[51,1016+17]..[51,1016+25]) (demos/calc-inspection/parser.mli[51,1016+9]..[51,1016+40])
+                          ptype_params =
+                            [
+                              core_type (demos/calc-inspection/parser.mli[51,1016+14]..[51,1016+16])
+                                Ptyp_var a
+                            ]
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ptype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (demos/calc-inspection/parser.mli[51,1016+29]..[51,1016+40])
+                                Ptyp_constr "lr1state" (demos/calc-inspection/parser.mli[51,1016+32]..[51,1016+40])
+                                [
+                                  core_type (demos/calc-inspection/parser.mli[51,1016+29]..[51,1016+31])
+                                    Ptyp_var a
+                                ]
+                    ]
+                  [
+                    Pwith_typesubst "production" (demos/calc-inspection/parser.mli[52,1057+14]..[52,1057+24])
+                      type_declaration "production" (demos/calc-inspection/parser.mli[52,1057+14]..[52,1057+24]) (demos/calc-inspection/parser.mli[52,1057+9]..[52,1057+38])
+                        ptype_params =
+                          []
+                        ptype_cstrs =
+                          []
+                        ptype_kind =
+                          Ptype_abstract
+                        ptype_private = Public
+                        ptype_manifest =
+                          Some
+                            core_type (demos/calc-inspection/parser.mli[52,1057+28]..[52,1057+38])
+                              Ptyp_constr "production" (demos/calc-inspection/parser.mli[52,1057+28]..[52,1057+38])
+                              []
+                  ]
+                [
+                  Pwith_typesubst "terminal" (demos/calc-inspection/parser.mli[53,1096+17]..[53,1096+25])
+                    type_declaration "terminal" (demos/calc-inspection/parser.mli[53,1096+17]..[53,1096+25]) (demos/calc-inspection/parser.mli[53,1096+9]..[53,1096+40])
+                      ptype_params =
+                        [
+                          core_type (demos/calc-inspection/parser.mli[53,1096+14]..[53,1096+16])
+                            Ptyp_var a
+                        ]
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ptype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (demos/calc-inspection/parser.mli[53,1096+29]..[53,1096+40])
+                            Ptyp_constr "terminal" (demos/calc-inspection/parser.mli[53,1096+32]..[53,1096+40])
+                            [
+                              core_type (demos/calc-inspection/parser.mli[53,1096+29]..[53,1096+31])
+                                Ptyp_var a
+                            ]
+                ]
+              [
+                Pwith_typesubst "nonterminal" (demos/calc-inspection/parser.mli[54,1137+17]..[54,1137+28])
+                  type_declaration "nonterminal" (demos/calc-inspection/parser.mli[54,1137+17]..[54,1137+28]) (demos/calc-inspection/parser.mli[54,1137+9]..[54,1137+46])
+                    ptype_params =
+                      [
+                        core_type (demos/calc-inspection/parser.mli[54,1137+14]..[54,1137+16])
+                          Ptyp_var a
+                      ]
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ptype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[54,1137+32]..[54,1137+46])
+                          Ptyp_constr "nonterminal" (demos/calc-inspection/parser.mli[54,1137+35]..[54,1137+46])
+                          [
+                            core_type (demos/calc-inspection/parser.mli[54,1137+32]..[54,1137+34])
+                              Ptyp_var a
+                          ]
+              ]
+            [
+              Pwith_typesubst "env" (demos/calc-inspection/parser.mli[55,1184+17]..[55,1184+20])
+                type_declaration "env" (demos/calc-inspection/parser.mli[55,1184+17]..[55,1184+20]) (demos/calc-inspection/parser.mli[55,1184+9]..[55,1184+30])
+                  ptype_params =
+                    [
+                      core_type (demos/calc-inspection/parser.mli[55,1184+14]..[55,1184+16])
+                        Ptyp_var a
+                    ]
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (demos/calc-inspection/parser.mli[55,1184+24]..[55,1184+30])
+                        Ptyp_constr "env" (demos/calc-inspection/parser.mli[55,1184+27]..[55,1184+30])
+                        [
+                          core_type (demos/calc-inspection/parser.mli[55,1184+24]..[55,1184+26])
+                            Ptyp_var a
+                        ]
+            ]
+      ]
+  signature_item (demos/calc-inspection/parser.mli[61,1273+0]..[65,1370+3])
+    Psig_module "Incremental" (demos/calc-inspection/parser.mli[61,1273+7]..[61,1273+18])
+    module_type (demos/calc-inspection/parser.mli[61,1273+21]..[65,1370+3])
+      Pmty_signature
+      [
+        signature_item (demos/calc-inspection/parser.mli[63,1301+2]..[63,1301+65])
+          Psig_value
+          value_description "main" (demos/calc-inspection/parser.mli[63,1301+6]..[63,1301+10]) (demos/calc-inspection/parser.mli[63,1301+2]..[63,1301+65])
+            core_type (demos/calc-inspection/parser.mli[63,1301+12]..[63,1301+65])
+              Ptyp_arrow
+              Nolabel
+              core_type (demos/calc-inspection/parser.mli[63,1301+12]..[63,1301+27])
+                Ptyp_constr "Lexing.position" (demos/calc-inspection/parser.mli[63,1301+12]..[63,1301+27])
+                []
+              core_type (demos/calc-inspection/parser.mli[63,1301+31]..[63,1301+65])
+                Ptyp_constr "MenhirInterpreter.checkpoint" (demos/calc-inspection/parser.mli[63,1301+37]..[63,1301+65])
+                [
+                  core_type (demos/calc-inspection/parser.mli[63,1301+32]..[63,1301+35])
+                    Ptyp_constr "int" (demos/calc-inspection/parser.mli[63,1301+32]..[63,1301+35])
+                    []
+                ]
+            []
+      ]
+]
+
+type token =
+  | TIMES 
+  | RPAREN 
+  | PLUS 
+  | MINUS 
+  | LPAREN 
+  | INT of int 
+  | EOL 
+  | DIV 
+exception Error 
+val main : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> int
+module MenhirInterpreter :
+sig
+  include
+    MenhirLib.IncrementalEngine.INCREMENTAL_ENGINE with type  token =  token
+  type _ terminal =
+    | T_error: unit terminal 
+    | T_TIMES: unit terminal 
+    | T_RPAREN: unit terminal 
+    | T_PLUS: unit terminal 
+    | T_MINUS: unit terminal 
+    | T_LPAREN: unit terminal 
+    | T_INT: int terminal 
+    | T_EOL: unit terminal 
+    | T_DIV: unit terminal 
+  type _ nonterminal =
+    | N_main: int nonterminal 
+    | N_expr: int nonterminal 
+  include
+    ((((MenhirLib.IncrementalEngine.INSPECTION with type 'a  lr1state := 
+          'a lr1state) with type  production :=  production) with type
+        'a  terminal :=  'a terminal) with type 'a  nonterminal := 
+       'a nonterminal) with type 'a  env :=  'a env
+end
+module Incremental :
+sig val main : Lexing.position -> int MenhirInterpreter.checkpoint end
+[
+  signature_item (demos/calc-inspection/parser.mli[4,28+0]..demos/calc-inspection/parser.mli[12,118+7])
+    Tsig_type Rec
+    [
+      type_declaration token/275 (demos/calc-inspection/parser.mli[4,28+0]..demos/calc-inspection/parser.mli[12,118+7])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (demos/calc-inspection/parser.mli[5,42+2]..demos/calc-inspection/parser.mli[5,42+9])
+                TIMES/276
+                []
+                None
+              (demos/calc-inspection/parser.mli[6,52+2]..demos/calc-inspection/parser.mli[6,52+10])
+                RPAREN/277
+                []
+                None
+              (demos/calc-inspection/parser.mli[7,63+2]..demos/calc-inspection/parser.mli[7,63+8])
+                PLUS/278
+                []
+                None
+              (demos/calc-inspection/parser.mli[8,72+2]..demos/calc-inspection/parser.mli[8,72+9])
+                MINUS/279
+                []
+                None
+              (demos/calc-inspection/parser.mli[9,82+2]..demos/calc-inspection/parser.mli[9,82+10])
+                LPAREN/280
+                []
+                None
+              (demos/calc-inspection/parser.mli[10,93+2]..demos/calc-inspection/parser.mli[10,93+16])
+                INT/281
+                [
+                  core_type (demos/calc-inspection/parser.mli[10,93+12]..demos/calc-inspection/parser.mli[10,93+15])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+                None
+              (demos/calc-inspection/parser.mli[11,110+2]..demos/calc-inspection/parser.mli[11,110+7])
+                EOL/282
+                []
+                None
+              (demos/calc-inspection/parser.mli[12,118+2]..demos/calc-inspection/parser.mli[12,118+7])
+                DIV/283
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (demos/calc-inspection/parser.mli[16,192+0]..demos/calc-inspection/parser.mli[16,192+15])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/calc-inspection/parser.mli[16,192+0]..demos/calc-inspection/parser.mli[16,192+15])
+          pext_name = "Error/284"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (demos/calc-inspection/parser.mli[20,236+0]..demos/calc-inspection/parser.mli[20,236+60])
+    Tsig_value
+    value_description main/309 (demos/calc-inspection/parser.mli[20,236+0]..demos/calc-inspection/parser.mli[20,236+60])
+      core_type (demos/calc-inspection/parser.mli[20,236+10]..demos/calc-inspection/parser.mli[20,236+60])
+        Ttyp_arrow
+        Nolabel
+        core_type (demos/calc-inspection/parser.mli[20,236+11]..demos/calc-inspection/parser.mli[20,236+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (demos/calc-inspection/parser.mli[20,236+11]..demos/calc-inspection/parser.mli[20,236+24])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (demos/calc-inspection/parser.mli[20,236+28]..demos/calc-inspection/parser.mli[20,236+33])
+            Ttyp_constr "token/275"
+            []
+        core_type (demos/calc-inspection/parser.mli[20,236+38]..demos/calc-inspection/parser.mli[20,236+60])
+          Ttyp_arrow
+          Nolabel
+          core_type (demos/calc-inspection/parser.mli[20,236+38]..demos/calc-inspection/parser.mli[20,236+51])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (demos/calc-inspection/parser.mli[20,236+56]..demos/calc-inspection/parser.mli[20,236+59])
+            Ttyp_constr "int/1!"
+            []
+      []
+  signature_item (demos/calc-inspection/parser.mli[22,298+0]..demos/calc-inspection/parser.mli[57,1218+3])
+    Tsig_module "MenhirInterpreter/688"
+    module_type (demos/calc-inspection/parser.mli[22,298+27]..demos/calc-inspection/parser.mli[57,1218+3])
+      Tmty_signature
+      [
+        signature_item (demos/calc-inspection/parser.mli[26,364+2]..demos/calc-inspection/parser.mli[27,421+27])
+          Tsig_include
+          module_type (demos/calc-inspection/parser.mli[26,364+10]..demos/calc-inspection/parser.mli[27,421+27])
+            Tmty_with
+            module_type (demos/calc-inspection/parser.mli[26,364+10]..demos/calc-inspection/parser.mli[26,364+56])
+              Tmty_ident "MenhirLib!.IncrementalEngine.INCREMENTAL_ENGINE"
+            [
+              "token/332"
+                Twith_type
+                  type_declaration token/332 (demos/calc-inspection/parser.mli[27,421+9]..demos/calc-inspection/parser.mli[27,421+27])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[27,421+22]..demos/calc-inspection/parser.mli[27,421+27])
+                          Ttyp_constr "token/275"
+                          []
+            ]
+        signature_item (demos/calc-inspection/parser.mli[31,501+2]..demos/calc-inspection/parser.mli[40,760+27])
+          Tsig_type Rec
+          [
+            type_declaration terminal/429 (demos/calc-inspection/parser.mli[31,501+2]..demos/calc-inspection/parser.mli[40,760+27])
+              ptype_params =
+                [
+                  core_type (demos/calc-inspection/parser.mli[31,501+7]..demos/calc-inspection/parser.mli[31,501+8])
+                    Ttyp_any
+                ]
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_variant
+                  [
+                    (demos/calc-inspection/parser.mli[32,522+4]..demos/calc-inspection/parser.mli[32,522+29])
+                      T_error/430
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[32,522+16]..demos/calc-inspection/parser.mli[32,522+29])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[32,522+16]..demos/calc-inspection/parser.mli[32,522+20])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[33,552+4]..demos/calc-inspection/parser.mli[33,552+29])
+                      T_TIMES/431
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[33,552+16]..demos/calc-inspection/parser.mli[33,552+29])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[33,552+16]..demos/calc-inspection/parser.mli[33,552+20])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[34,582+4]..demos/calc-inspection/parser.mli[34,582+30])
+                      T_RPAREN/432
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[34,582+17]..demos/calc-inspection/parser.mli[34,582+30])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[34,582+17]..demos/calc-inspection/parser.mli[34,582+21])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[35,613+4]..demos/calc-inspection/parser.mli[35,613+28])
+                      T_PLUS/433
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[35,613+15]..demos/calc-inspection/parser.mli[35,613+28])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[35,613+15]..demos/calc-inspection/parser.mli[35,613+19])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[36,642+4]..demos/calc-inspection/parser.mli[36,642+29])
+                      T_MINUS/434
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[36,642+16]..demos/calc-inspection/parser.mli[36,642+29])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[36,642+16]..demos/calc-inspection/parser.mli[36,642+20])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[37,672+4]..demos/calc-inspection/parser.mli[37,672+30])
+                      T_LPAREN/435
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[37,672+17]..demos/calc-inspection/parser.mli[37,672+30])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[37,672+17]..demos/calc-inspection/parser.mli[37,672+21])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[38,703+4]..demos/calc-inspection/parser.mli[38,703+28])
+                      T_INT/436
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[38,703+14]..demos/calc-inspection/parser.mli[38,703+28])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[38,703+15]..demos/calc-inspection/parser.mli[38,703+18])
+                              Ttyp_constr "int/1!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[39,732+4]..demos/calc-inspection/parser.mli[39,732+27])
+                      T_EOL/437
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[39,732+14]..demos/calc-inspection/parser.mli[39,732+27])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[39,732+14]..demos/calc-inspection/parser.mli[39,732+18])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[40,760+4]..demos/calc-inspection/parser.mli[40,760+27])
+                      T_DIV/438
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[40,760+14]..demos/calc-inspection/parser.mli[40,760+27])
+                          Ttyp_constr "terminal/429"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[40,760+14]..demos/calc-inspection/parser.mli[40,760+18])
+                              Ttyp_constr "unit/6!"
+                              []
+                          ]
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                None
+          ]
+        signature_item (demos/calc-inspection/parser.mli[44,843+2]..demos/calc-inspection/parser.mli[46,900+32])
+          Tsig_type Rec
+          [
+            type_declaration nonterminal/439 (demos/calc-inspection/parser.mli[44,843+2]..demos/calc-inspection/parser.mli[46,900+32])
+              ptype_params =
+                [
+                  core_type (demos/calc-inspection/parser.mli[44,843+7]..demos/calc-inspection/parser.mli[44,843+8])
+                    Ttyp_any
+                ]
+              ptype_cstrs =
+                []
+              ptype_kind =
+                Ttype_variant
+                  [
+                    (demos/calc-inspection/parser.mli[45,867+4]..demos/calc-inspection/parser.mli[45,867+32])
+                      N_main/440
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[45,867+15]..demos/calc-inspection/parser.mli[45,867+32])
+                          Ttyp_constr "nonterminal/439"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[45,867+16]..demos/calc-inspection/parser.mli[45,867+19])
+                              Ttyp_constr "int/1!"
+                              []
+                          ]
+                    (demos/calc-inspection/parser.mli[46,900+4]..demos/calc-inspection/parser.mli[46,900+32])
+                      N_expr/441
+                      []
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[46,900+15]..demos/calc-inspection/parser.mli[46,900+32])
+                          Ttyp_constr "nonterminal/439"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[46,900+16]..demos/calc-inspection/parser.mli[46,900+19])
+                              Ttyp_constr "int/1!"
+                              []
+                          ]
+                  ]
+              ptype_private = Public
+              ptype_manifest =
+                None
+          ]
+        signature_item (demos/calc-inspection/parser.mli[50,967+2]..demos/calc-inspection/parser.mli[55,1184+30])
+          Tsig_include
+          module_type (demos/calc-inspection/parser.mli[50,967+10]..demos/calc-inspection/parser.mli[55,1184+30])
+            Tmty_with
+            module_type (demos/calc-inspection/parser.mli[50,967+10]..demos/calc-inspection/parser.mli[54,1137+46])
+              Tmty_with
+              module_type (demos/calc-inspection/parser.mli[50,967+10]..demos/calc-inspection/parser.mli[53,1096+40])
+                Tmty_with
+                module_type (demos/calc-inspection/parser.mli[50,967+10]..demos/calc-inspection/parser.mli[52,1057+38])
+                  Tmty_with
+                  module_type (demos/calc-inspection/parser.mli[50,967+10]..demos/calc-inspection/parser.mli[51,1016+40])
+                    Tmty_with
+                    module_type (demos/calc-inspection/parser.mli[50,967+10]..demos/calc-inspection/parser.mli[50,967+48])
+                      Tmty_ident "MenhirLib!.IncrementalEngine.INSPECTION"
+                    [
+                      "lr1state/446"
+                        Twith_typesubst
+                          type_declaration lr1state/446 (demos/calc-inspection/parser.mli[51,1016+9]..demos/calc-inspection/parser.mli[51,1016+40])
+                            ptype_params =
+                              [
+                                core_type (demos/calc-inspection/parser.mli[51,1016+14]..demos/calc-inspection/parser.mli[51,1016+16])
+                                  Ttyp_var a
+                              ]
+                            ptype_cstrs =
+                              []
+                            ptype_kind =
+                              Ttype_abstract
+                            ptype_private = Public
+                            ptype_manifest =
+                              Some
+                                core_type (demos/calc-inspection/parser.mli[51,1016+29]..demos/calc-inspection/parser.mli[51,1016+40])
+                                  Ttyp_constr "lr1state/411"
+                                  [
+                                    core_type (demos/calc-inspection/parser.mli[51,1016+29]..demos/calc-inspection/parser.mli[51,1016+31])
+                                      Ttyp_var a
+                                  ]
+                    ]
+                  [
+                    "production/492"
+                      Twith_typesubst
+                        type_declaration production/492 (demos/calc-inspection/parser.mli[52,1057+9]..demos/calc-inspection/parser.mli[52,1057+38])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ttype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (demos/calc-inspection/parser.mli[52,1057+28]..demos/calc-inspection/parser.mli[52,1057+38])
+                                Ttyp_constr "production/398"
+                                []
+                  ]
+                [
+                  "terminal/532"
+                    Twith_typesubst
+                      type_declaration terminal/532 (demos/calc-inspection/parser.mli[53,1096+9]..demos/calc-inspection/parser.mli[53,1096+40])
+                        ptype_params =
+                          [
+                            core_type (demos/calc-inspection/parser.mli[53,1096+14]..demos/calc-inspection/parser.mli[53,1096+16])
+                              Ttyp_var a
+                          ]
+                        ptype_cstrs =
+                          []
+                        ptype_kind =
+                          Ttype_abstract
+                        ptype_private = Public
+                        ptype_manifest =
+                          Some
+                            core_type (demos/calc-inspection/parser.mli[53,1096+29]..demos/calc-inspection/parser.mli[53,1096+40])
+                              Ttyp_constr "terminal/429"
+                              [
+                                core_type (demos/calc-inspection/parser.mli[53,1096+29]..demos/calc-inspection/parser.mli[53,1096+31])
+                                  Ttyp_var a
+                              ]
+                ]
+              [
+                "nonterminal/574"
+                  Twith_typesubst
+                    type_declaration nonterminal/574 (demos/calc-inspection/parser.mli[54,1137+9]..demos/calc-inspection/parser.mli[54,1137+46])
+                      ptype_params =
+                        [
+                          core_type (demos/calc-inspection/parser.mli[54,1137+14]..demos/calc-inspection/parser.mli[54,1137+16])
+                            Ttyp_var a
+                        ]
+                      ptype_cstrs =
+                        []
+                      ptype_kind =
+                        Ttype_abstract
+                      ptype_private = Public
+                      ptype_manifest =
+                        Some
+                          core_type (demos/calc-inspection/parser.mli[54,1137+32]..demos/calc-inspection/parser.mli[54,1137+46])
+                            Ttyp_constr "nonterminal/439"
+                            [
+                              core_type (demos/calc-inspection/parser.mli[54,1137+32]..demos/calc-inspection/parser.mli[54,1137+34])
+                                Ttyp_var a
+                            ]
+              ]
+            [
+              "env/631"
+                Twith_typesubst
+                  type_declaration env/631 (demos/calc-inspection/parser.mli[55,1184+9]..demos/calc-inspection/parser.mli[55,1184+30])
+                    ptype_params =
+                      [
+                        core_type (demos/calc-inspection/parser.mli[55,1184+14]..demos/calc-inspection/parser.mli[55,1184+16])
+                          Ttyp_var a
+                      ]
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (demos/calc-inspection/parser.mli[55,1184+24]..demos/calc-inspection/parser.mli[55,1184+30])
+                          Ttyp_constr "env/399"
+                          [
+                            core_type (demos/calc-inspection/parser.mli[55,1184+24]..demos/calc-inspection/parser.mli[55,1184+26])
+                              Ttyp_var a
+                          ]
+            ]
+      ]
+  signature_item (demos/calc-inspection/parser.mli[61,1273+0]..demos/calc-inspection/parser.mli[65,1370+3])
+    Tsig_module "Incremental/690"
+    module_type (demos/calc-inspection/parser.mli[61,1273+21]..demos/calc-inspection/parser.mli[65,1370+3])
+      Tmty_signature
+      [
+        signature_item (demos/calc-inspection/parser.mli[63,1301+2]..demos/calc-inspection/parser.mli[63,1301+65])
+          Tsig_value
+          value_description main/689 (demos/calc-inspection/parser.mli[63,1301+2]..demos/calc-inspection/parser.mli[63,1301+65])
+            core_type (demos/calc-inspection/parser.mli[63,1301+12]..demos/calc-inspection/parser.mli[63,1301+65])
+              Ttyp_arrow
+              Nolabel
+              core_type (demos/calc-inspection/parser.mli[63,1301+12]..demos/calc-inspection/parser.mli[63,1301+27])
+                Ttyp_constr "Stdlib!.Lexing.position"
+                []
+              core_type (demos/calc-inspection/parser.mli[63,1301+31]..demos/calc-inspection/parser.mli[63,1301+65])
+                Ttyp_constr "MenhirInterpreter/688.checkpoint"
+                [
+                  core_type (demos/calc-inspection/parser.mli[63,1301+32]..demos/calc-inspection/parser.mli[63,1301+35])
+                    Ttyp_constr "int/1!"
+                    []
+                ]
+            []
+      ]
+]
+

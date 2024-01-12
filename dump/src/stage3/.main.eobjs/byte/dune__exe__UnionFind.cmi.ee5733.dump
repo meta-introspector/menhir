@@ -1,0 +1,356 @@
+[
+  signature_item (src/unionFind.mli[14,1000+0]..[16,1140+43])
+    Psig_attribute "ocaml.text"
+    [
+      structure_item (src/unionFind.mli[14,1000+0]..[16,1140+43])
+        Pstr_eval
+        expression (src/unionFind.mli[14,1000+0]..[16,1140+43])
+          Pexp_constant PConst_string(" This module implements a simple and efficient union/find algorithm.\n    See Robert E. Tarjan, ``Efficiency of a Good But Not Linear Set\n    Union Algorithm'', JACM 22(2), 1975. ",(src/unionFind.mli[14,1000+0]..[16,1140+43]),None)
+    ]
+  signature_item (src/unionFind.mli[22,1417+0]..[22,1417+13])
+    Psig_type Rec
+    [
+      type_declaration "point" (src/unionFind.mli[22,1417+8]..[22,1417+13]) (src/unionFind.mli[22,1417+0]..[22,1417+13])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/unionFind.mli[18,1185+0]..[21,1388+28])
+              Pstr_eval
+              expression (src/unionFind.mli[18,1185+0]..[21,1388+28])
+                Pexp_constant PConst_string(" The abstraction defined by this module is a set of points,\n    partitioned into equivalence classes. With each equivalence class,\n    a piece of information, of abstract type ['a], is associated; we\n    call it a descriptor. ",(src/unionFind.mli[18,1185+0]..[21,1388+28]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/unionFind.mli[22,1417+5]..[22,1417+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/unionFind.mli[26,1564+0]..[26,1564+25])
+    Psig_value
+    value_description "fresh" (src/unionFind.mli[26,1564+4]..[26,1564+9]) (src/unionFind.mli[26,1564+0]..[26,1564+25])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[24,1432+0]..[25,1499+64])
+            Pstr_eval
+            expression (src/unionFind.mli[24,1432+0]..[25,1499+64])
+              Pexp_constant PConst_string(" [fresh desc] creates a fresh point and returns it. It forms an\n    equivalence class of its own, whose descriptor is [desc]. ",(src/unionFind.mli[24,1432+0]..[25,1499+64]),None)
+        ]
+      core_type (src/unionFind.mli[26,1564+11]..[26,1564+25])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[26,1564+11]..[26,1564+13])
+          Ptyp_var a
+        core_type (src/unionFind.mli[26,1564+17]..[26,1564+25])
+          Ptyp_constr "point" (src/unionFind.mli[26,1564+20]..[26,1564+25])
+          [
+            core_type (src/unionFind.mli[26,1564+17]..[26,1564+19])
+              Ptyp_var a
+          ]
+      []
+  signature_item (src/unionFind.mli[30,1682+0]..[30,1682+23])
+    Psig_value
+    value_description "get" (src/unionFind.mli[30,1682+4]..[30,1682+7]) (src/unionFind.mli[30,1682+0]..[30,1682+23])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[28,1591+0]..[29,1656+25])
+            Pstr_eval
+            expression (src/unionFind.mli[28,1591+0]..[29,1656+25])
+              Pexp_constant PConst_string(" [get point] returns the descriptor associated with [point]'s\n    equivalence class. ",(src/unionFind.mli[28,1591+0]..[29,1656+25]),None)
+        ]
+      core_type (src/unionFind.mli[30,1682+9]..[30,1682+23])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[30,1682+9]..[30,1682+17])
+          Ptyp_constr "point" (src/unionFind.mli[30,1682+12]..[30,1682+17])
+          [
+            core_type (src/unionFind.mli[30,1682+9]..[30,1682+11])
+              Ptyp_var a
+          ]
+        core_type (src/unionFind.mli[30,1682+21]..[30,1682+23])
+          Ptyp_var a
+      []
+  signature_item (src/unionFind.mli[36,1971+0]..[36,1971+39])
+    Psig_value
+    value_description "union" (src/unionFind.mli[36,1971+4]..[36,1971+9]) (src/unionFind.mli[36,1971+0]..[36,1971+39])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[32,1707+0]..[35,1920+50])
+            Pstr_eval
+            expression (src/unionFind.mli[32,1707+0]..[35,1920+50])
+              Pexp_constant PConst_string(" [union point1 point2] merges the equivalence classes associated\n    with [point1] and [point2] into a single class whose descriptor is\n    that originally associated with [point2]. It does nothing if [point1]\n    and [point2] already are in the same class. ",(src/unionFind.mli[32,1707+0]..[35,1920+50]),None)
+        ]
+      core_type (src/unionFind.mli[36,1971+11]..[36,1971+39])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[36,1971+11]..[36,1971+19])
+          Ptyp_constr "point" (src/unionFind.mli[36,1971+14]..[36,1971+19])
+          [
+            core_type (src/unionFind.mli[36,1971+11]..[36,1971+13])
+              Ptyp_var a
+          ]
+        core_type (src/unionFind.mli[36,1971+23]..[36,1971+39])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/unionFind.mli[36,1971+23]..[36,1971+31])
+            Ptyp_constr "point" (src/unionFind.mli[36,1971+26]..[36,1971+31])
+            [
+              core_type (src/unionFind.mli[36,1971+23]..[36,1971+25])
+                Ptyp_var a
+            ]
+          core_type (src/unionFind.mli[36,1971+35]..[36,1971+39])
+            Ptyp_constr "unit" (src/unionFind.mli[36,1971+35]..[36,1971+39])
+            []
+      []
+  signature_item (src/unionFind.mli[40,2124+0]..[40,2124+44])
+    Psig_value
+    value_description "equivalent" (src/unionFind.mli[40,2124+4]..[40,2124+14]) (src/unionFind.mli[40,2124+0]..[40,2124+44])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[38,2012+0]..[39,2079+44])
+            Pstr_eval
+            expression (src/unionFind.mli[38,2012+0]..[39,2079+44])
+              Pexp_constant PConst_string(" [equivalent point1 point2] tells whether [point1] and [point2]\n    belong to the same equivalence class. ",(src/unionFind.mli[38,2012+0]..[39,2079+44]),None)
+        ]
+      core_type (src/unionFind.mli[40,2124+16]..[40,2124+44])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[40,2124+16]..[40,2124+24])
+          Ptyp_constr "point" (src/unionFind.mli[40,2124+19]..[40,2124+24])
+          [
+            core_type (src/unionFind.mli[40,2124+16]..[40,2124+18])
+              Ptyp_var a
+          ]
+        core_type (src/unionFind.mli[40,2124+28]..[40,2124+44])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/unionFind.mli[40,2124+28]..[40,2124+36])
+            Ptyp_constr "point" (src/unionFind.mli[40,2124+31]..[40,2124+36])
+            [
+              core_type (src/unionFind.mli[40,2124+28]..[40,2124+30])
+                Ptyp_var a
+            ]
+          core_type (src/unionFind.mli[40,2124+40]..[40,2124+44])
+            Ptyp_constr "bool" (src/unionFind.mli[40,2124+40]..[40,2124+44])
+            []
+      []
+  signature_item (src/unionFind.mli[43,2225+0]..[43,2225+31])
+    Psig_value
+    value_description "set" (src/unionFind.mli[43,2225+4]..[43,2225+7]) (src/unionFind.mli[43,2225+0]..[43,2225+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[42,2170+0]..[42,2170+54])
+            Pstr_eval
+            expression (src/unionFind.mli[42,2170+0]..[42,2170+54])
+              Pexp_constant PConst_string(" [set p d] updates the descriptor of [p] to [d]. ",(src/unionFind.mli[42,2170+0]..[42,2170+54]),None)
+        ]
+      core_type (src/unionFind.mli[43,2225+9]..[43,2225+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[43,2225+9]..[43,2225+17])
+          Ptyp_constr "point" (src/unionFind.mli[43,2225+12]..[43,2225+17])
+          [
+            core_type (src/unionFind.mli[43,2225+9]..[43,2225+11])
+              Ptyp_var a
+          ]
+        core_type (src/unionFind.mli[43,2225+21]..[43,2225+31])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/unionFind.mli[43,2225+21]..[43,2225+23])
+            Ptyp_var a
+          core_type (src/unionFind.mli[43,2225+27]..[43,2225+31])
+            Ptyp_constr "unit" (src/unionFind.mli[43,2225+27]..[43,2225+31])
+            []
+      []
+]
+
+[@@@ocaml.text
+  " This module implements a simple and efficient union/find algorithm.\n    See Robert E. Tarjan, ``Efficiency of a Good But Not Linear Set\n    Union Algorithm'', JACM 22(2), 1975. "]
+type 'a point[@@ocaml.doc
+               " The abstraction defined by this module is a set of points,\n    partitioned into equivalence classes. With each equivalence class,\n    a piece of information, of abstract type ['a], is associated; we\n    call it a descriptor. "]
+val fresh : 'a -> 'a point[@@ocaml.doc
+                            " [fresh desc] creates a fresh point and returns it. It forms an\n    equivalence class of its own, whose descriptor is [desc]. "]
+val get : 'a point -> 'a[@@ocaml.doc
+                          " [get point] returns the descriptor associated with [point]'s\n    equivalence class. "]
+val union : 'a point -> 'a point -> unit[@@ocaml.doc
+                                          " [union point1 point2] merges the equivalence classes associated\n    with [point1] and [point2] into a single class whose descriptor is\n    that originally associated with [point2]. It does nothing if [point1]\n    and [point2] already are in the same class. "]
+val equivalent : 'a point -> 'a point -> bool[@@ocaml.doc
+                                               " [equivalent point1 point2] tells whether [point1] and [point2]\n    belong to the same equivalence class. "]
+val set : 'a point -> 'a -> unit[@@ocaml.doc
+                                  " [set p d] updates the descriptor of [p] to [d]. "]
+[
+  signature_item (src/unionFind.mli[14,1000+0]..src/unionFind.mli[16,1140+43])
+    Tsig_attribute "ocaml.text"
+    [
+      structure_item (src/unionFind.mli[14,1000+0]..[16,1140+43])
+        Pstr_eval
+        expression (src/unionFind.mli[14,1000+0]..[16,1140+43])
+          Pexp_constant PConst_string(" This module implements a simple and efficient union/find algorithm.\n    See Robert E. Tarjan, ``Efficiency of a Good But Not Linear Set\n    Union Algorithm'', JACM 22(2), 1975. ",(src/unionFind.mli[14,1000+0]..[16,1140+43]),None)
+    ]
+  signature_item (src/unionFind.mli[22,1417+0]..src/unionFind.mli[22,1417+13])
+    Tsig_type Rec
+    [
+      type_declaration point/397 (src/unionFind.mli[22,1417+0]..src/unionFind.mli[22,1417+13])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/unionFind.mli[18,1185+0]..[21,1388+28])
+              Pstr_eval
+              expression (src/unionFind.mli[18,1185+0]..[21,1388+28])
+                Pexp_constant PConst_string(" The abstraction defined by this module is a set of points,\n    partitioned into equivalence classes. With each equivalence class,\n    a piece of information, of abstract type ['a], is associated; we\n    call it a descriptor. ",(src/unionFind.mli[18,1185+0]..[21,1388+28]),None)
+          ]
+        ptype_params =
+          [
+            core_type (src/unionFind.mli[22,1417+5]..src/unionFind.mli[22,1417+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/unionFind.mli[26,1564+0]..src/unionFind.mli[26,1564+25])
+    Tsig_value
+    value_description fresh/398 (src/unionFind.mli[26,1564+0]..src/unionFind.mli[26,1564+25])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[24,1432+0]..[25,1499+64])
+            Pstr_eval
+            expression (src/unionFind.mli[24,1432+0]..[25,1499+64])
+              Pexp_constant PConst_string(" [fresh desc] creates a fresh point and returns it. It forms an\n    equivalence class of its own, whose descriptor is [desc]. ",(src/unionFind.mli[24,1432+0]..[25,1499+64]),None)
+        ]
+      core_type (src/unionFind.mli[26,1564+11]..src/unionFind.mli[26,1564+25])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[26,1564+11]..src/unionFind.mli[26,1564+13])
+          Ttyp_var a
+        core_type (src/unionFind.mli[26,1564+17]..src/unionFind.mli[26,1564+25])
+          Ttyp_constr "point/397"
+          [
+            core_type (src/unionFind.mli[26,1564+17]..src/unionFind.mli[26,1564+19])
+              Ttyp_var a
+          ]
+      []
+  signature_item (src/unionFind.mli[30,1682+0]..src/unionFind.mli[30,1682+23])
+    Tsig_value
+    value_description get/399 (src/unionFind.mli[30,1682+0]..src/unionFind.mli[30,1682+23])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[28,1591+0]..[29,1656+25])
+            Pstr_eval
+            expression (src/unionFind.mli[28,1591+0]..[29,1656+25])
+              Pexp_constant PConst_string(" [get point] returns the descriptor associated with [point]'s\n    equivalence class. ",(src/unionFind.mli[28,1591+0]..[29,1656+25]),None)
+        ]
+      core_type (src/unionFind.mli[30,1682+9]..src/unionFind.mli[30,1682+23])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[30,1682+9]..src/unionFind.mli[30,1682+17])
+          Ttyp_constr "point/397"
+          [
+            core_type (src/unionFind.mli[30,1682+9]..src/unionFind.mli[30,1682+11])
+              Ttyp_var a
+          ]
+        core_type (src/unionFind.mli[30,1682+21]..src/unionFind.mli[30,1682+23])
+          Ttyp_var a
+      []
+  signature_item (src/unionFind.mli[36,1971+0]..src/unionFind.mli[36,1971+39])
+    Tsig_value
+    value_description union/400 (src/unionFind.mli[36,1971+0]..src/unionFind.mli[36,1971+39])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[32,1707+0]..[35,1920+50])
+            Pstr_eval
+            expression (src/unionFind.mli[32,1707+0]..[35,1920+50])
+              Pexp_constant PConst_string(" [union point1 point2] merges the equivalence classes associated\n    with [point1] and [point2] into a single class whose descriptor is\n    that originally associated with [point2]. It does nothing if [point1]\n    and [point2] already are in the same class. ",(src/unionFind.mli[32,1707+0]..[35,1920+50]),None)
+        ]
+      core_type (src/unionFind.mli[36,1971+11]..src/unionFind.mli[36,1971+39])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[36,1971+11]..src/unionFind.mli[36,1971+19])
+          Ttyp_constr "point/397"
+          [
+            core_type (src/unionFind.mli[36,1971+11]..src/unionFind.mli[36,1971+13])
+              Ttyp_var a
+          ]
+        core_type (src/unionFind.mli[36,1971+23]..src/unionFind.mli[36,1971+39])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/unionFind.mli[36,1971+23]..src/unionFind.mli[36,1971+31])
+            Ttyp_constr "point/397"
+            [
+              core_type (src/unionFind.mli[36,1971+23]..src/unionFind.mli[36,1971+25])
+                Ttyp_var a
+            ]
+          core_type (src/unionFind.mli[36,1971+35]..src/unionFind.mli[36,1971+39])
+            Ttyp_constr "unit/6!"
+            []
+      []
+  signature_item (src/unionFind.mli[40,2124+0]..src/unionFind.mli[40,2124+44])
+    Tsig_value
+    value_description equivalent/401 (src/unionFind.mli[40,2124+0]..src/unionFind.mli[40,2124+44])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[38,2012+0]..[39,2079+44])
+            Pstr_eval
+            expression (src/unionFind.mli[38,2012+0]..[39,2079+44])
+              Pexp_constant PConst_string(" [equivalent point1 point2] tells whether [point1] and [point2]\n    belong to the same equivalence class. ",(src/unionFind.mli[38,2012+0]..[39,2079+44]),None)
+        ]
+      core_type (src/unionFind.mli[40,2124+16]..src/unionFind.mli[40,2124+44])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[40,2124+16]..src/unionFind.mli[40,2124+24])
+          Ttyp_constr "point/397"
+          [
+            core_type (src/unionFind.mli[40,2124+16]..src/unionFind.mli[40,2124+18])
+              Ttyp_var a
+          ]
+        core_type (src/unionFind.mli[40,2124+28]..src/unionFind.mli[40,2124+44])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/unionFind.mli[40,2124+28]..src/unionFind.mli[40,2124+36])
+            Ttyp_constr "point/397"
+            [
+              core_type (src/unionFind.mli[40,2124+28]..src/unionFind.mli[40,2124+30])
+                Ttyp_var a
+            ]
+          core_type (src/unionFind.mli[40,2124+40]..src/unionFind.mli[40,2124+44])
+            Ttyp_constr "bool/5!"
+            []
+      []
+  signature_item (src/unionFind.mli[43,2225+0]..src/unionFind.mli[43,2225+31])
+    Tsig_value
+    value_description set/402 (src/unionFind.mli[43,2225+0]..src/unionFind.mli[43,2225+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/unionFind.mli[42,2170+0]..[42,2170+54])
+            Pstr_eval
+            expression (src/unionFind.mli[42,2170+0]..[42,2170+54])
+              Pexp_constant PConst_string(" [set p d] updates the descriptor of [p] to [d]. ",(src/unionFind.mli[42,2170+0]..[42,2170+54]),None)
+        ]
+      core_type (src/unionFind.mli[43,2225+9]..src/unionFind.mli[43,2225+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/unionFind.mli[43,2225+9]..src/unionFind.mli[43,2225+17])
+          Ttyp_constr "point/397"
+          [
+            core_type (src/unionFind.mli[43,2225+9]..src/unionFind.mli[43,2225+11])
+              Ttyp_var a
+          ]
+        core_type (src/unionFind.mli[43,2225+21]..src/unionFind.mli[43,2225+31])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/unionFind.mli[43,2225+21]..src/unionFind.mli[43,2225+23])
+            Ttyp_var a
+          core_type (src/unionFind.mli[43,2225+27]..src/unionFind.mli[43,2225+31])
+            Ttyp_constr "unit/6!"
+            []
+      []
+]
+

@@ -1,0 +1,20 @@
+0.049s 94.3MB 8.29MB 8.29MB sdk/cmly_read.ml
+  0.002s 2.94MB 1.60MB 1.60MB parsing
+    0.002s 2.94MB 1.60MB 1.60MB parser
+  0.013s 21.8MB 2.87MB 4.47MB typing
+  0.001s ------ ------ ------ transl
+  0.026s 39.1MB 3.43MB 7.91MB generate
+    ------ 0.21MB ------ ------ cmm
+    0.016s 28.2MB 2.84MB 7.32MB compile_phrases
+      0.001s 2.30MB 0.12MB 4.60MB selection
+      0.001s 0.16MB ------ ------ liveness
+      ------ 2.00MB 0.34MB 4.94MB deadcode
+      0.001s 2.00MB 0.15MB 5.10MB spill
+      0.011s 19.3MB 2.06MB 7.16MB regalloc
+      ------ 2.00MB 0.15MB 7.32MB linearize
+      0.001s 0.24MB ------ ------ emit
+      0.001s 0.20MB ------ ------ other
+    0.005s ------ ------ ------ assemble
+    0.005s 10.6MB 0.59MB 7.91MB other
+  0.008s 30.4MB 0.37MB 8.29MB other
+0.006s ------ ------ ------ other

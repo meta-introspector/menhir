@@ -1,0 +1,2114 @@
+[
+  structure_item (src/cst.ml[14,993+0]..[14,993+12])
+    Pstr_open Fresh
+    module_expr (src/cst.ml[14,993+5]..[14,993+12])
+      Pmod_ident "Grammar" (src/cst.ml[14,993+5]..[14,993+12])
+  structure_item (src/cst.ml[24,1352+0]..[27,1444+12])
+    Pstr_type Rec
+    [
+      type_declaration "cst" (src/cst.ml[24,1352+5]..[24,1352+8]) (src/cst.ml[24,1352+0]..[27,1444+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/cst.ml[25,1363+2]..[25,1363+29])
+                "CstTerminal" (src/cst.ml[25,1363+4]..[25,1363+15])
+                [
+                  core_type (src/cst.ml[25,1363+19]..[25,1363+29])
+                    Ptyp_constr "Terminal.t" (src/cst.ml[25,1363+19]..[25,1363+29])
+                    []
+                ]
+                None
+              (src/cst.ml[26,1393+2]..[26,1393+50])
+                "CstNonTerminal" (src/cst.ml[26,1393+4]..[26,1393+18])
+                [
+                  core_type (src/cst.ml[26,1393+22]..[26,1393+38])
+                    Ptyp_constr "Production.index" (src/cst.ml[26,1393+22]..[26,1393+38])
+                    []
+                  core_type (src/cst.ml[26,1393+41]..[26,1393+50])
+                    Ptyp_constr "array" (src/cst.ml[26,1393+45]..[26,1393+50])
+                    [
+                      core_type (src/cst.ml[26,1393+41]..[26,1393+44])
+                        Ptyp_constr "cst" (src/cst.ml[26,1393+41]..[26,1393+44])
+                        []
+                    ]
+                ]
+                None
+              (src/cst.ml[27,1444+2]..[27,1444+12])
+                "CstError" (src/cst.ml[27,1444+4]..[27,1444+12])
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/cst.ml[31,1503+0]..[45,1822+52])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/cst.ml[31,1503+8]..[31,1503+14])
+          Ppat_var "fringe" (src/cst.ml[31,1503+8]..[31,1503+14])
+        expression (src/cst.ml[31,1503+15]..[39,1729+28]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[31,1503+15]..[31,1503+18])
+            Ppat_var "cst" (src/cst.ml[31,1503+15]..[31,1503+18])
+          expression (src/cst.ml[31,1503+19]..[39,1729+28]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/cst.ml[31,1503+19]..[31,1503+23])
+              Ppat_var "accu" (src/cst.ml[31,1503+19]..[31,1503+23])
+            expression (src/cst.ml[32,1529+2]..[39,1729+28])
+              Pexp_match
+              expression (src/cst.ml[32,1529+8]..[32,1529+11])
+                Pexp_ident "cst" (src/cst.ml[32,1529+8]..[32,1529+11])
+              [
+                <case>
+                  pattern (src/cst.ml[33,1546+4]..[33,1546+19])
+                    Ppat_construct "CstTerminal" (src/cst.ml[33,1546+4]..[33,1546+15])
+                    Some
+                      []
+                      pattern (src/cst.ml[33,1546+16]..[33,1546+19])
+                        Ppat_var "tok" (src/cst.ml[33,1546+16]..[33,1546+19])
+                  expression (src/cst.ml[34,1569+6]..[34,1569+17])
+                    Pexp_construct "::" (src/cst.ml[34,1569+10]..[34,1569+12])
+                    Some
+                      expression (src/cst.ml[34,1569+6]..[34,1569+17]) ghost
+                        Pexp_tuple
+                        [
+                          expression (src/cst.ml[34,1569+6]..[34,1569+9])
+                            Pexp_ident "tok" (src/cst.ml[34,1569+6]..[34,1569+9])
+                          expression (src/cst.ml[34,1569+13]..[34,1569+17])
+                            Pexp_ident "accu" (src/cst.ml[34,1569+13]..[34,1569+17])
+                        ]
+                <case>
+                  pattern (src/cst.ml[35,1587+4]..[35,1587+28])
+                    Ppat_construct "CstNonTerminal" (src/cst.ml[35,1587+4]..[35,1587+18])
+                    Some
+                      []
+                      pattern (src/cst.ml[35,1587+19]..[35,1587+28])
+                        Ppat_tuple
+                        [
+                          pattern (src/cst.ml[35,1587+20]..[35,1587+21])
+                            Ppat_any
+                          pattern (src/cst.ml[35,1587+23]..[35,1587+27])
+                            Ppat_var "csts" (src/cst.ml[35,1587+23]..[35,1587+27])
+                        ]
+                  expression (src/cst.ml[36,1619+6]..[36,1619+48])
+                    Pexp_apply
+                    expression (src/cst.ml[36,1619+6]..[36,1619+16])
+                      Pexp_ident "fringe_rhs" (src/cst.ml[36,1619+6]..[36,1619+16])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[36,1619+17]..[36,1619+21])
+                          Pexp_ident "csts" (src/cst.ml[36,1619+17]..[36,1619+21])
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[36,1619+22]..[36,1619+41])
+                          Pexp_apply
+                          expression (src/cst.ml[36,1619+23]..[36,1619+35])
+                            Pexp_ident "Array.length" (src/cst.ml[36,1619+23]..[36,1619+35])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/cst.ml[36,1619+36]..[36,1619+40])
+                                Pexp_ident "csts" (src/cst.ml[36,1619+36]..[36,1619+40])
+                          ]
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[36,1619+42]..[36,1619+43])
+                          Pexp_constant PConst_int (0,None)
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[36,1619+44]..[36,1619+48])
+                          Pexp_ident "accu" (src/cst.ml[36,1619+44]..[36,1619+48])
+                    ]
+                <case>
+                  pattern (src/cst.ml[37,1668+4]..[37,1668+12])
+                    Ppat_construct "CstError" (src/cst.ml[37,1668+4]..[37,1668+12])
+                    None
+                  expression (src/cst.ml[39,1729+6]..[39,1729+28])
+                    Pexp_construct "::" (src/cst.ml[39,1729+21]..[39,1729+23])
+                    Some
+                      expression (src/cst.ml[39,1729+6]..[39,1729+28]) ghost
+                        Pexp_tuple
+                        [
+                          expression (src/cst.ml[39,1729+6]..[39,1729+20])
+                            Pexp_ident "Terminal.error" (src/cst.ml[39,1729+6]..[39,1729+20])
+                          expression (src/cst.ml[39,1729+24]..[39,1729+28])
+                            Pexp_ident "accu" (src/cst.ml[39,1729+24]..[39,1729+28])
+                        ]
+              ]
+      <def>
+        pattern (src/cst.ml[41,1759+4]..[41,1759+14])
+          Ppat_var "fringe_rhs" (src/cst.ml[41,1759+4]..[41,1759+14])
+        expression (src/cst.ml[41,1759+15]..[45,1822+52]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[41,1759+15]..[41,1759+19])
+            Ppat_var "csts" (src/cst.ml[41,1759+15]..[41,1759+19])
+          expression (src/cst.ml[41,1759+20]..[45,1822+52]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/cst.ml[41,1759+20]..[41,1759+21])
+              Ppat_var "n" (src/cst.ml[41,1759+20]..[41,1759+21])
+            expression (src/cst.ml[41,1759+22]..[45,1822+52]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/cst.ml[41,1759+22]..[41,1759+23])
+                Ppat_var "i" (src/cst.ml[41,1759+22]..[41,1759+23])
+              expression (src/cst.ml[41,1759+24]..[45,1822+52]) ghost
+                Pexp_fun
+                Nolabel
+                None
+                pattern (src/cst.ml[41,1759+24]..[41,1759+28])
+                  Ppat_var "accu" (src/cst.ml[41,1759+24]..[41,1759+28])
+                expression (src/cst.ml[42,1790+2]..[45,1822+52])
+                  Pexp_ifthenelse
+                  expression (src/cst.ml[42,1790+5]..[42,1790+10])
+                    Pexp_apply
+                    expression (src/cst.ml[42,1790+7]..[42,1790+8])
+                      Pexp_ident "=" (src/cst.ml[42,1790+7]..[42,1790+8])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[42,1790+5]..[42,1790+6])
+                          Pexp_ident "i" (src/cst.ml[42,1790+5]..[42,1790+6])
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[42,1790+9]..[42,1790+10])
+                          Pexp_ident "n" (src/cst.ml[42,1790+9]..[42,1790+10])
+                    ]
+                  expression (src/cst.ml[43,1806+4]..[43,1806+8])
+                    Pexp_ident "accu" (src/cst.ml[43,1806+4]..[43,1806+8])
+                  Some
+                    expression (src/cst.ml[45,1822+4]..[45,1822+52])
+                      Pexp_apply
+                      expression (src/cst.ml[45,1822+4]..[45,1822+10])
+                        Pexp_ident "fringe" (src/cst.ml[45,1822+4]..[45,1822+10])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[45,1822+11]..[45,1822+19])
+                            Pexp_apply
+                            expression (src/cst.ml[45,1822+11]..[45,1822+19]) ghost
+                              Pexp_ident "Array.get" (src/cst.ml[45,1822+11]..[45,1822+19]) ghost
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[45,1822+11]..[45,1822+15])
+                                  Pexp_ident "csts" (src/cst.ml[45,1822+11]..[45,1822+15])
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[45,1822+17]..[45,1822+18])
+                                  Pexp_ident "i" (src/cst.ml[45,1822+17]..[45,1822+18])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[45,1822+20]..[45,1822+52])
+                            Pexp_apply
+                            expression (src/cst.ml[45,1822+21]..[45,1822+31])
+                              Pexp_ident "fringe_rhs" (src/cst.ml[45,1822+21]..[45,1822+31])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[45,1822+32]..[45,1822+36])
+                                  Pexp_ident "csts" (src/cst.ml[45,1822+32]..[45,1822+36])
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[45,1822+37]..[45,1822+38])
+                                  Pexp_ident "n" (src/cst.ml[45,1822+37]..[45,1822+38])
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[45,1822+39]..[45,1822+46])
+                                  Pexp_apply
+                                  expression (src/cst.ml[45,1822+42]..[45,1822+43])
+                                    Pexp_ident "+" (src/cst.ml[45,1822+42]..[45,1822+43])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/cst.ml[45,1822+40]..[45,1822+41])
+                                        Pexp_ident "i" (src/cst.ml[45,1822+40]..[45,1822+41])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/cst.ml[45,1822+44]..[45,1822+45])
+                                        Pexp_constant PConst_int (1,None)
+                                  ]
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[45,1822+47]..[45,1822+51])
+                                  Pexp_ident "accu" (src/cst.ml[45,1822+47]..[45,1822+51])
+                            ]
+                      ]
+    ]
+  structure_item (src/cst.ml[47,1876+0]..[48,1893+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[47,1876+4]..[47,1876+10])
+          Ppat_var "fringe" (src/cst.ml[47,1876+4]..[47,1876+10])
+        expression (src/cst.ml[47,1876+11]..[48,1893+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[47,1876+11]..[47,1876+14])
+            Ppat_var "cst" (src/cst.ml[47,1876+11]..[47,1876+14])
+          expression (src/cst.ml[48,1893+2]..[48,1893+15])
+            Pexp_apply
+            expression (src/cst.ml[48,1893+2]..[48,1893+8])
+              Pexp_ident "fringe" (src/cst.ml[48,1893+2]..[48,1893+8])
+            [
+              <arg>
+              Nolabel
+                expression (src/cst.ml[48,1893+9]..[48,1893+12])
+                  Pexp_ident "cst" (src/cst.ml[48,1893+9]..[48,1893+12])
+              <arg>
+              Nolabel
+                expression (src/cst.ml[48,1893+13]..[48,1893+15])
+                  Pexp_construct "[]" (src/cst.ml[48,1893+13]..[48,1893+15])
+                  None
+            ]
+    ]
+  structure_item (src/cst.ml[53,2012+0]..[87,3087+8])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/cst.ml[53,2012+8]..[53,2012+12])
+          Ppat_var "pcst" (src/cst.ml[53,2012+8]..[53,2012+12])
+        expression (src/cst.ml[53,2012+13]..[82,2961+30]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[53,2012+13]..[53,2012+14])
+            Ppat_var "b" (src/cst.ml[53,2012+13]..[53,2012+14])
+          expression (src/cst.ml[53,2012+17]..[82,2961+30])
+            Pexp_function
+            [
+              <case>
+                pattern (src/cst.ml[54,2038+4]..[54,2038+19])
+                  Ppat_construct "CstTerminal" (src/cst.ml[54,2038+4]..[54,2038+15])
+                  Some
+                    []
+                    pattern (src/cst.ml[54,2038+16]..[54,2038+19])
+                      Ppat_var "tok" (src/cst.ml[54,2038+16]..[54,2038+19])
+                expression (src/cst.ml[58,2115+6]..[58,2115+48])
+                  Pexp_apply
+                  expression (src/cst.ml[58,2115+6]..[58,2115+20])
+                    Pexp_ident "Printf.bprintf" (src/cst.ml[58,2115+6]..[58,2115+20])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[58,2115+21]..[58,2115+22])
+                        Pexp_ident "b" (src/cst.ml[58,2115+21]..[58,2115+22])
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[58,2115+23]..[58,2115+27])
+                        Pexp_constant PConst_string("%s",(src/cst.ml[58,2115+24]..[58,2115+26]),None)
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[58,2115+28]..[58,2115+48])
+                        Pexp_apply
+                        expression (src/cst.ml[58,2115+29]..[58,2115+43])
+                          Pexp_ident "Terminal.print" (src/cst.ml[58,2115+29]..[58,2115+43])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/cst.ml[58,2115+44]..[58,2115+47])
+                              Pexp_ident "tok" (src/cst.ml[58,2115+44]..[58,2115+47])
+                        ]
+                  ]
+              <case>
+                pattern (src/cst.ml[60,2165+4]..[60,2165+31])
+                  Ppat_construct "CstNonTerminal" (src/cst.ml[60,2165+4]..[60,2165+18])
+                  Some
+                    []
+                    pattern (src/cst.ml[60,2165+19]..[60,2165+31])
+                      Ppat_tuple
+                      [
+                        pattern (src/cst.ml[60,2165+20]..[60,2165+24])
+                          Ppat_var "prod" (src/cst.ml[60,2165+20]..[60,2165+24])
+                        pattern (src/cst.ml[60,2165+26]..[60,2165+30])
+                          Ppat_var "csts" (src/cst.ml[60,2165+26]..[60,2165+30])
+                      ]
+                expression (src/cst.ml[74,2786+6]..[76,2874+18])
+                  Pexp_apply
+                  expression (src/cst.ml[74,2786+6]..[74,2786+20])
+                    Pexp_ident "Printf.bprintf" (src/cst.ml[74,2786+6]..[74,2786+20])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[74,2786+21]..[74,2786+22])
+                        Pexp_ident "b" (src/cst.ml[74,2786+21]..[74,2786+22])
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[74,2786+23]..[74,2786+32])
+                        Pexp_constant PConst_string("[%s:%a]",(src/cst.ml[74,2786+24]..[74,2786+31]),None)
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[75,2819+8]..[75,2819+54])
+                        Pexp_apply
+                        expression (src/cst.ml[75,2819+9]..[75,2819+26])
+                          Pexp_ident "Nonterminal.print" (src/cst.ml[75,2819+9]..[75,2819+26])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/cst.ml[75,2819+27]..[75,2819+32])
+                              Pexp_construct "false" (src/cst.ml[75,2819+27]..[75,2819+32])
+                              None
+                          <arg>
+                          Nolabel
+                            expression (src/cst.ml[75,2819+33]..[75,2819+53])
+                              Pexp_apply
+                              expression (src/cst.ml[75,2819+34]..[75,2819+47])
+                                Pexp_ident "Production.nt" (src/cst.ml[75,2819+34]..[75,2819+47])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/cst.ml[75,2819+48]..[75,2819+52])
+                                    Pexp_ident "prod" (src/cst.ml[75,2819+48]..[75,2819+52])
+                              ]
+                        ]
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[76,2874+8]..[76,2874+13])
+                        Pexp_ident "pcsts" (src/cst.ml[76,2874+8]..[76,2874+13])
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[76,2874+14]..[76,2874+18])
+                        Pexp_ident "csts" (src/cst.ml[76,2874+14]..[76,2874+18])
+                  ]
+              <case>
+                pattern (src/cst.ml[78,2894+4]..[78,2894+12])
+                  Ppat_construct "CstError" (src/cst.ml[78,2894+4]..[78,2894+12])
+                  None
+                expression (src/cst.ml[82,2961+6]..[82,2961+30])
+                  Pexp_apply
+                  expression (src/cst.ml[82,2961+6]..[82,2961+20])
+                    Pexp_ident "Printf.bprintf" (src/cst.ml[82,2961+6]..[82,2961+20])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[82,2961+21]..[82,2961+22])
+                        Pexp_ident "b" (src/cst.ml[82,2961+21]..[82,2961+22])
+                    <arg>
+                    Nolabel
+                      expression (src/cst.ml[82,2961+23]..[82,2961+30])
+                        Pexp_constant PConst_string("error",(src/cst.ml[82,2961+24]..[82,2961+29]),None)
+                  ]
+            ]
+      <def>
+        pattern (src/cst.ml[84,2993+4]..[84,2993+9])
+          Ppat_var "pcsts" (src/cst.ml[84,2993+4]..[84,2993+9])
+        expression (src/cst.ml[84,2993+10]..[87,3087+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[84,2993+10]..[84,2993+11])
+            Ppat_var "b" (src/cst.ml[84,2993+10]..[84,2993+11])
+          expression (src/cst.ml[84,2993+12]..[87,3087+8]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/cst.ml[84,2993+12]..[84,2993+30])
+              Ppat_constraint
+              pattern (src/cst.ml[84,2993+13]..[84,2993+17])
+                Ppat_var "csts" (src/cst.ml[84,2993+13]..[84,2993+17])
+              core_type (src/cst.ml[84,2993+20]..[84,2993+29])
+                Ptyp_constr "array" (src/cst.ml[84,2993+24]..[84,2993+29])
+                [
+                  core_type (src/cst.ml[84,2993+20]..[84,2993+23])
+                    Ptyp_constr "cst" (src/cst.ml[84,2993+20]..[84,2993+23])
+                    []
+                ]
+            expression (src/cst.ml[85,3026+2]..[87,3087+8])
+              Pexp_apply
+              expression (src/cst.ml[85,3026+2]..[85,3026+12])
+                Pexp_ident "Array.iter" (src/cst.ml[85,3026+2]..[85,3026+12])
+              [
+                <arg>
+                Nolabel
+                  expression (src/cst.ml[85,3026+13]..[87,3087+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/cst.ml[85,3026+18]..[85,3026+21])
+                      Ppat_var "cst" (src/cst.ml[85,3026+18]..[85,3026+21])
+                    expression (src/cst.ml[86,3051+4]..[86,3051+35])
+                      Pexp_apply
+                      expression (src/cst.ml[86,3051+4]..[86,3051+18])
+                        Pexp_ident "Printf.bprintf" (src/cst.ml[86,3051+4]..[86,3051+18])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[86,3051+19]..[86,3051+20])
+                            Pexp_ident "b" (src/cst.ml[86,3051+19]..[86,3051+20])
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[86,3051+21]..[86,3051+26])
+                            Pexp_constant PConst_string(" %a",(src/cst.ml[86,3051+22]..[86,3051+25]),None)
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[86,3051+27]..[86,3051+31])
+                            Pexp_ident "pcst" (src/cst.ml[86,3051+27]..[86,3051+31])
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[86,3051+32]..[86,3051+35])
+                            Pexp_ident "cst" (src/cst.ml[86,3051+32]..[86,3051+35])
+                      ]
+                <arg>
+                Nolabel
+                  expression (src/cst.ml[87,3087+4]..[87,3087+8])
+                    Pexp_ident "csts" (src/cst.ml[87,3087+4]..[87,3087+8])
+              ]
+    ]
+  structure_item (src/cst.ml[91,3134+0]..[94,3201+26])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[91,3134+4]..[91,3134+8])
+          Ppat_var "wrap" (src/cst.ml[91,3134+4]..[91,3134+8])
+        expression (src/cst.ml[91,3134+9]..[94,3201+26]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[91,3134+9]..[91,3134+14])
+            Ppat_var "print" (src/cst.ml[91,3134+9]..[91,3134+14])
+          expression (src/cst.ml[91,3134+15]..[94,3201+26]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/cst.ml[91,3134+15]..[91,3134+16])
+              Ppat_var "f" (src/cst.ml[91,3134+15]..[91,3134+16])
+            expression (src/cst.ml[91,3134+17]..[94,3201+26]) ghost
+              Pexp_fun
+              Nolabel
+              None
+              pattern (src/cst.ml[91,3134+17]..[91,3134+18])
+                Ppat_var "x" (src/cst.ml[91,3134+17]..[91,3134+18])
+              expression (src/cst.ml[92,3155+2]..[94,3201+26])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/cst.ml[92,3155+6]..[92,3155+7])
+                      Ppat_var "b" (src/cst.ml[92,3155+6]..[92,3155+7])
+                    expression (src/cst.ml[92,3155+10]..[92,3155+29])
+                      Pexp_apply
+                      expression (src/cst.ml[92,3155+10]..[92,3155+23])
+                        Pexp_ident "Buffer.create" (src/cst.ml[92,3155+10]..[92,3155+23])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[92,3155+24]..[92,3155+29])
+                            Pexp_constant PConst_int (32768,None)
+                      ]
+                ]
+                expression (src/cst.ml[93,3188+2]..[94,3201+26])
+                  Pexp_sequence
+                  expression (src/cst.ml[93,3188+2]..[93,3188+11])
+                    Pexp_apply
+                    expression (src/cst.ml[93,3188+2]..[93,3188+7])
+                      Pexp_ident "print" (src/cst.ml[93,3188+2]..[93,3188+7])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[93,3188+8]..[93,3188+9])
+                          Pexp_ident "b" (src/cst.ml[93,3188+8]..[93,3188+9])
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[93,3188+10]..[93,3188+11])
+                          Pexp_ident "x" (src/cst.ml[93,3188+10]..[93,3188+11])
+                    ]
+                  expression (src/cst.ml[94,3201+2]..[94,3201+26])
+                    Pexp_apply
+                    expression (src/cst.ml[94,3201+2]..[94,3201+22])
+                      Pexp_ident "Buffer.output_buffer" (src/cst.ml[94,3201+2]..[94,3201+22])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[94,3201+23]..[94,3201+24])
+                          Pexp_ident "f" (src/cst.ml[94,3201+23]..[94,3201+24])
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[94,3201+25]..[94,3201+26])
+                          Pexp_ident "b" (src/cst.ml[94,3201+25]..[94,3201+26])
+                    ]
+    ]
+  structure_item (src/cst.ml[96,3229+0]..[97,3241+11])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[96,3229+4]..[96,3229+9])
+          Ppat_var "print" (src/cst.ml[96,3229+4]..[96,3229+9])
+        expression (src/cst.ml[97,3241+2]..[97,3241+11])
+          Pexp_apply
+          expression (src/cst.ml[97,3241+2]..[97,3241+6])
+            Pexp_ident "wrap" (src/cst.ml[97,3241+2]..[97,3241+6])
+          [
+            <arg>
+            Nolabel
+              expression (src/cst.ml[97,3241+7]..[97,3241+11])
+                Pexp_ident "pcst" (src/cst.ml[97,3241+7]..[97,3241+11])
+          ]
+    ]
+  structure_item (src/cst.ml[103,3459+0]..[103,3459+11])
+    Pstr_open Fresh
+    module_expr (src/cst.ml[103,3459+5]..[103,3459+11])
+      Pmod_ident "PPrint" (src/cst.ml[103,3459+5]..[103,3459+11])
+  structure_item (src/cst.ml[105,3472+0]..[124,3953+20])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/cst.ml[105,3472+8]..[105,3472+13])
+          Ppat_var "build" (src/cst.ml[105,3472+8]..[105,3472+13])
+        core_type (src/cst.ml[105,3472+16]..[105,3472+31])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/cst.ml[105,3472+16]..[105,3472+19])
+            Ptyp_constr "cst" (src/cst.ml[105,3472+16]..[105,3472+19])
+            []
+          core_type (src/cst.ml[105,3472+23]..[105,3472+31])
+            Ptyp_constr "document" (src/cst.ml[105,3472+23]..[105,3472+31])
+            []
+        expression (src/cst.ml[105,3472+34]..[124,3953+20])
+          Pexp_function
+          [
+            <case>
+              pattern (src/cst.ml[106,3515+4]..[106,3515+19])
+                Ppat_construct "CstTerminal" (src/cst.ml[106,3515+4]..[106,3515+15])
+                Some
+                  []
+                  pattern (src/cst.ml[106,3515+16]..[106,3515+19])
+                    Ppat_var "tok" (src/cst.ml[106,3515+16]..[106,3515+19])
+              expression (src/cst.ml[107,3538+6]..[107,3538+33])
+                Pexp_apply
+                expression (src/cst.ml[107,3538+6]..[107,3538+12])
+                  Pexp_ident "string" (src/cst.ml[107,3538+6]..[107,3538+12])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/cst.ml[107,3538+13]..[107,3538+33])
+                      Pexp_apply
+                      expression (src/cst.ml[107,3538+14]..[107,3538+28])
+                        Pexp_ident "Terminal.print" (src/cst.ml[107,3538+14]..[107,3538+28])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[107,3538+29]..[107,3538+32])
+                            Pexp_ident "tok" (src/cst.ml[107,3538+29]..[107,3538+32])
+                      ]
+                ]
+            <case>
+              pattern (src/cst.ml[108,3572+4]..[108,3572+31])
+                Ppat_construct "CstNonTerminal" (src/cst.ml[108,3572+4]..[108,3572+18])
+                Some
+                  []
+                  pattern (src/cst.ml[108,3572+19]..[108,3572+31])
+                    Ppat_tuple
+                    [
+                      pattern (src/cst.ml[108,3572+20]..[108,3572+24])
+                        Ppat_var "prod" (src/cst.ml[108,3572+20]..[108,3572+24])
+                      pattern (src/cst.ml[108,3572+26]..[108,3572+30])
+                        Ppat_var "csts" (src/cst.ml[108,3572+26]..[108,3572+30])
+                    ]
+              expression (src/cst.ml[109,3607+6]..[122,3929+7])
+                Pexp_apply
+                expression (src/cst.ml[109,3607+6]..[109,3607+14])
+                  Pexp_ident "brackets" (src/cst.ml[109,3607+6]..[109,3607+14])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/cst.ml[109,3607+15]..[122,3929+7])
+                      Pexp_apply
+                      expression (src/cst.ml[110,3624+8]..[110,3624+13])
+                        Pexp_ident "group" (src/cst.ml[110,3624+8]..[110,3624+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/cst.ml[110,3624+14]..[121,3919+9])
+                            Pexp_apply
+                            expression (src/cst.ml[111,3640+64]..[111,3640+66])
+                              Pexp_ident "^^" (src/cst.ml[111,3640+64]..[111,3640+66])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[111,3640+10]..[111,3640+63])
+                                  Pexp_apply
+                                  expression (src/cst.ml[111,3640+10]..[111,3640+16])
+                                    Pexp_ident "string" (src/cst.ml[111,3640+10]..[111,3640+16])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/cst.ml[111,3640+17]..[111,3640+63])
+                                        Pexp_apply
+                                        expression (src/cst.ml[111,3640+18]..[111,3640+35])
+                                          Pexp_ident "Nonterminal.print" (src/cst.ml[111,3640+18]..[111,3640+35])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/cst.ml[111,3640+36]..[111,3640+41])
+                                              Pexp_construct "false" (src/cst.ml[111,3640+36]..[111,3640+41])
+                                              None
+                                          <arg>
+                                          Nolabel
+                                            expression (src/cst.ml[111,3640+42]..[111,3640+62])
+                                              Pexp_apply
+                                              expression (src/cst.ml[111,3640+43]..[111,3640+56])
+                                                Pexp_ident "Production.nt" (src/cst.ml[111,3640+43]..[111,3640+56])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/cst.ml[111,3640+57]..[111,3640+61])
+                                                    Pexp_ident "prod" (src/cst.ml[111,3640+57]..[111,3640+61])
+                                              ]
+                                        ]
+                                  ]
+                              <arg>
+                              Nolabel
+                                expression (src/cst.ml[112,3707+10]..[120,3901+17])
+                                  Pexp_apply
+                                  expression (src/cst.ml[112,3707+16]..[112,3707+18])
+                                    Pexp_ident "^^" (src/cst.ml[112,3707+16]..[112,3707+18])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/cst.ml[112,3707+10]..[112,3707+15])
+                                        Pexp_ident "colon" (src/cst.ml[112,3707+10]..[112,3707+15])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/cst.ml[113,3726+10]..[120,3901+17])
+                                        Pexp_apply
+                                        expression (src/cst.ml[119,3886+12]..[119,3886+14])
+                                          Pexp_ident "^^" (src/cst.ml[119,3886+12]..[119,3886+14])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/cst.ml[113,3726+10]..[119,3886+11])
+                                              Pexp_apply
+                                              expression (src/cst.ml[113,3726+10]..[113,3726+15])
+                                                Pexp_ident "group" (src/cst.ml[113,3726+10]..[113,3726+15])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/cst.ml[113,3726+16]..[119,3886+11])
+                                                    Pexp_apply
+                                                    expression (src/cst.ml[114,3744+12]..[114,3744+16])
+                                                      Pexp_ident "nest" (src/cst.ml[114,3744+12]..[114,3744+16])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/cst.ml[114,3744+17]..[114,3744+18])
+                                                          Pexp_constant PConst_int (2,None)
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/cst.ml[114,3744+19]..[118,3872+13])
+                                                          Pexp_apply
+                                                          expression (src/cst.ml[115,3765+14]..[115,3765+29])
+                                                            Pexp_ident "Array.fold_left" (src/cst.ml[115,3765+14]..[115,3765+29])
+                                                          [
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/cst.ml[115,3765+30]..[117,3845+15])
+                                                                Pexp_fun
+                                                                Nolabel
+                                                                None
+                                                                pattern (src/cst.ml[115,3765+35]..[115,3765+38])
+                                                                  Ppat_var "doc" (src/cst.ml[115,3765+35]..[115,3765+38])
+                                                                expression (src/cst.ml[115,3765+39]..[116,3811+33]) ghost
+                                                                  Pexp_fun
+                                                                  Nolabel
+                                                                  None
+                                                                  pattern (src/cst.ml[115,3765+39]..[115,3765+42])
+                                                                    Ppat_var "cst" (src/cst.ml[115,3765+39]..[115,3765+42])
+                                                                  expression (src/cst.ml[116,3811+16]..[116,3811+33])
+                                                                    Pexp_apply
+                                                                    expression (src/cst.ml[116,3811+20]..[116,3811+23])
+                                                                      Pexp_ident "^/^" (src/cst.ml[116,3811+20]..[116,3811+23])
+                                                                    [
+                                                                      <arg>
+                                                                      Nolabel
+expression (src/cst.ml[116,3811+16]..[116,3811+19])
+  Pexp_ident "doc" (src/cst.ml[116,3811+16]..[116,3811+19])
+                                                                      <arg>
+                                                                      Nolabel
+expression (src/cst.ml[116,3811+24]..[116,3811+33])
+  Pexp_apply
+  expression (src/cst.ml[116,3811+24]..[116,3811+29])
+    Pexp_ident "build" (src/cst.ml[116,3811+24]..[116,3811+29])
+  [
+    <arg>
+    Nolabel
+      expression (src/cst.ml[116,3811+30]..[116,3811+33])
+        Pexp_ident "cst" (src/cst.ml[116,3811+30]..[116,3811+33])
+  ]
+                                                                    ]
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/cst.ml[117,3845+16]..[117,3845+21])
+                                                                Pexp_ident "empty" (src/cst.ml[117,3845+16]..[117,3845+21])
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/cst.ml[117,3845+22]..[117,3845+26])
+                                                                Pexp_ident "csts" (src/cst.ml[117,3845+22]..[117,3845+26])
+                                                          ]
+                                                    ]
+                                              ]
+                                          <arg>
+                                          Nolabel
+                                            expression (src/cst.ml[120,3901+10]..[120,3901+17])
+                                              Pexp_apply
+                                              expression (src/cst.ml[120,3901+10]..[120,3901+15])
+                                                Pexp_ident "break" (src/cst.ml[120,3901+10]..[120,3901+15])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/cst.ml[120,3901+16]..[120,3901+17])
+                                                    Pexp_constant PConst_int (0,None)
+                                              ]
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+            <case>
+              pattern (src/cst.ml[123,3937+4]..[123,3937+12])
+                Ppat_construct "CstError" (src/cst.ml[123,3937+4]..[123,3937+12])
+                None
+              expression (src/cst.ml[124,3953+6]..[124,3953+20])
+                Pexp_apply
+                expression (src/cst.ml[124,3953+6]..[124,3953+12])
+                  Pexp_ident "string" (src/cst.ml[124,3953+6]..[124,3953+12])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/cst.ml[124,3953+13]..[124,3953+20])
+                      Pexp_constant PConst_string("error",(src/cst.ml[124,3953+14]..[124,3953+19]),None)
+                ]
+          ]
+    ]
+  structure_item (src/cst.ml[126,3975+0]..[127,3992+39])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[126,3975+4]..[126,3975+8])
+          Ppat_var "show" (src/cst.ml[126,3975+4]..[126,3975+8])
+        expression (src/cst.ml[126,3975+9]..[127,3992+39]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/cst.ml[126,3975+9]..[126,3975+10])
+            Ppat_var "f" (src/cst.ml[126,3975+9]..[126,3975+10])
+          expression (src/cst.ml[126,3975+11]..[127,3992+39]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/cst.ml[126,3975+11]..[126,3975+14])
+              Ppat_var "cst" (src/cst.ml[126,3975+11]..[126,3975+14])
+            expression (src/cst.ml[127,3992+2]..[127,3992+39])
+              Pexp_apply
+              expression (src/cst.ml[127,3992+2]..[127,3992+18])
+                Pexp_ident "ToChannel.pretty" (src/cst.ml[127,3992+2]..[127,3992+18])
+              [
+                <arg>
+                Nolabel
+                  expression (src/cst.ml[127,3992+19]..[127,3992+22])
+                    Pexp_constant PConst_float (0.8,None)
+                <arg>
+                Nolabel
+                  expression (src/cst.ml[127,3992+23]..[127,3992+25])
+                    Pexp_constant PConst_int (80,None)
+                <arg>
+                Nolabel
+                  expression (src/cst.ml[127,3992+26]..[127,3992+27])
+                    Pexp_ident "f" (src/cst.ml[127,3992+26]..[127,3992+27])
+                <arg>
+                Nolabel
+                  expression (src/cst.ml[127,3992+28]..[127,3992+39])
+                    Pexp_apply
+                    expression (src/cst.ml[127,3992+29]..[127,3992+34])
+                      Pexp_ident "build" (src/cst.ml[127,3992+29]..[127,3992+34])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/cst.ml[127,3992+35]..[127,3992+38])
+                          Pexp_ident "cst" (src/cst.ml[127,3992+35]..[127,3992+38])
+                    ]
+              ]
+    ]
+]
+
+open Grammar
+type cst =
+  | CstTerminal of Terminal.t 
+  | CstNonTerminal of Production.index * cst array 
+  | CstError 
+let rec fringe cst accu =
+  match cst with
+  | CstTerminal tok -> tok :: accu
+  | CstNonTerminal (_, csts) -> fringe_rhs csts (Array.length csts) 0 accu
+  | CstError -> Terminal.error :: accu
+and fringe_rhs csts n i accu =
+  if i = n then accu else fringe (csts.(i)) (fringe_rhs csts n (i + 1) accu)
+let fringe cst = fringe cst []
+let rec pcst b =
+  function
+  | CstTerminal tok -> Printf.bprintf b "%s" (Terminal.print tok)
+  | CstNonTerminal (prod, csts) ->
+      Printf.bprintf b "[%s:%a]"
+        (Nonterminal.print false (Production.nt prod)) pcsts csts
+  | CstError -> Printf.bprintf b "error"
+and pcsts b (csts : cst array) =
+  Array.iter (fun cst -> Printf.bprintf b " %a" pcst cst) csts
+let wrap print f x =
+  let b = Buffer.create 32768 in print b x; Buffer.output_buffer f b
+let print = wrap pcst
+open PPrint
+let rec build : cst -> document =
+  function
+  | CstTerminal tok -> string (Terminal.print tok)
+  | CstNonTerminal (prod, csts) ->
+      brackets
+        (group
+           ((string (Nonterminal.print false (Production.nt prod))) ^^
+              (colon ^^
+                 ((group
+                     (nest 2
+                        (Array.fold_left
+                           (fun doc -> fun cst -> doc ^/^ (build cst)) empty
+                           csts)))
+                    ^^ (break 0)))))
+  | CstError -> string "error"
+let show f cst = ToChannel.pretty 0.8 80 f (build cst)
+[
+  structure_item (src/cst.ml[14,993+0]..src/cst.ml[14,993+12])
+    Tstr_open Fresh
+    module_expr (src/cst.ml[14,993+5]..src/cst.ml[14,993+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/cst.ml[24,1352+0]..src/cst.ml[27,1444+12])
+    Tstr_type Rec
+    [
+      type_declaration cst/413 (src/cst.ml[24,1352+0]..src/cst.ml[27,1444+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/cst.ml[25,1363+2]..src/cst.ml[25,1363+29])
+                CstTerminal/414
+                [
+                  core_type (src/cst.ml[25,1363+19]..src/cst.ml[25,1363+29])
+                    Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                    []
+                ]
+                None
+              (src/cst.ml[26,1393+2]..src/cst.ml[26,1393+50])
+                CstNonTerminal/461
+                [
+                  core_type (src/cst.ml[26,1393+22]..src/cst.ml[26,1393+38])
+                    Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                    []
+                  core_type (src/cst.ml[26,1393+41]..src/cst.ml[26,1393+50])
+                    Ttyp_constr "array/8!"
+                    [
+                      core_type (src/cst.ml[26,1393+41]..src/cst.ml[26,1393+44])
+                        Ttyp_constr "cst/413"
+                        []
+                    ]
+                ]
+                None
+              (src/cst.ml[27,1444+2]..src/cst.ml[27,1444+12])
+                CstError/496
+                []
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/cst.ml[31,1503+0]..src/cst.ml[45,1822+52])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/cst.ml[31,1503+8]..src/cst.ml[31,1503+14])
+          Tpat_var "fringe/561"
+        expression (src/cst.ml[31,1503+15]..src/cst.ml[39,1729+28]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[31,1503+15]..src/cst.ml[31,1503+18])
+                Tpat_var "cst/563"
+              expression (src/cst.ml[31,1503+19]..src/cst.ml[39,1729+28]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/cst.ml[31,1503+19]..src/cst.ml[31,1503+23])
+                      Tpat_var "accu/564"
+                    expression (src/cst.ml[32,1529+2]..src/cst.ml[39,1729+28])
+                      Texp_match
+                      expression (src/cst.ml[32,1529+8]..src/cst.ml[32,1529+11])
+                        Texp_ident "cst/563"
+                      [
+                        <case>
+                          pattern (src/cst.ml[33,1546+4]..src/cst.ml[33,1546+19])
+                            Tpat_value
+                            pattern (src/cst.ml[33,1546+4]..src/cst.ml[33,1546+19])
+                              Tpat_construct "CstTerminal"
+                              [
+                                pattern (src/cst.ml[33,1546+16]..src/cst.ml[33,1546+19])
+                                  Tpat_var "tok/565"
+                              ]
+                              None
+                          expression (src/cst.ml[34,1569+6]..src/cst.ml[34,1569+17])
+                            Texp_construct "::"
+                            [
+                              expression (src/cst.ml[34,1569+6]..src/cst.ml[34,1569+9])
+                                Texp_ident "tok/565"
+                              expression (src/cst.ml[34,1569+13]..src/cst.ml[34,1569+17])
+                                Texp_ident "accu/564"
+                            ]
+                        <case>
+                          pattern (src/cst.ml[35,1587+4]..src/cst.ml[35,1587+28])
+                            Tpat_value
+                            pattern (src/cst.ml[35,1587+4]..src/cst.ml[35,1587+28])
+                              Tpat_construct "CstNonTerminal"
+                              [
+                                pattern (src/cst.ml[35,1587+20]..src/cst.ml[35,1587+21])
+                                  Tpat_any
+                                pattern (src/cst.ml[35,1587+23]..src/cst.ml[35,1587+27])
+                                  Tpat_var "csts/566"
+                              ]
+                              None
+                          expression (src/cst.ml[36,1619+6]..src/cst.ml[36,1619+48])
+                            Texp_apply
+                            expression (src/cst.ml[36,1619+6]..src/cst.ml[36,1619+16])
+                              Texp_ident "fringe_rhs/562"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[36,1619+17]..src/cst.ml[36,1619+21])
+                                  Texp_ident "csts/566"
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[36,1619+22]..src/cst.ml[36,1619+41])
+                                  Texp_apply
+                                  expression (src/cst.ml[36,1619+23]..src/cst.ml[36,1619+35])
+                                    Texp_ident "Stdlib!.Array.length"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[36,1619+36]..src/cst.ml[36,1619+40])
+                                        Texp_ident "csts/566"
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[36,1619+42]..src/cst.ml[36,1619+43])
+                                  Texp_constant Const_int 0
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[36,1619+44]..src/cst.ml[36,1619+48])
+                                  Texp_ident "accu/564"
+                            ]
+                        <case>
+                          pattern (src/cst.ml[37,1668+4]..src/cst.ml[37,1668+12])
+                            Tpat_value
+                            pattern (src/cst.ml[37,1668+4]..src/cst.ml[37,1668+12])
+                              Tpat_construct "CstError"
+                              []
+                              None
+                          expression (src/cst.ml[39,1729+6]..src/cst.ml[39,1729+28])
+                            Texp_construct "::"
+                            [
+                              expression (src/cst.ml[39,1729+6]..src/cst.ml[39,1729+20])
+                                Texp_ident "Dune__exe!.Grammar.Terminal.error"
+                              expression (src/cst.ml[39,1729+24]..src/cst.ml[39,1729+28])
+                                Texp_ident "accu/564"
+                            ]
+                      ]
+                ]
+          ]
+      <def>
+        pattern (src/cst.ml[41,1759+4]..src/cst.ml[41,1759+14])
+          Tpat_var "fringe_rhs/562"
+        expression (src/cst.ml[41,1759+15]..src/cst.ml[45,1822+52]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[41,1759+15]..src/cst.ml[41,1759+19])
+                Tpat_var "csts/615"
+              expression (src/cst.ml[41,1759+20]..src/cst.ml[45,1822+52]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/cst.ml[41,1759+20]..src/cst.ml[41,1759+21])
+                      Tpat_var "n/616"
+                    expression (src/cst.ml[41,1759+22]..src/cst.ml[45,1822+52]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/cst.ml[41,1759+22]..src/cst.ml[41,1759+23])
+                            Tpat_var "i/617"
+                          expression (src/cst.ml[41,1759+24]..src/cst.ml[45,1822+52]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/cst.ml[41,1759+24]..src/cst.ml[41,1759+28])
+                                  Tpat_var "accu/618"
+                                expression (src/cst.ml[42,1790+2]..src/cst.ml[45,1822+52])
+                                  Texp_ifthenelse
+                                  expression (src/cst.ml[42,1790+5]..src/cst.ml[42,1790+10])
+                                    Texp_apply
+                                    expression (src/cst.ml[42,1790+7]..src/cst.ml[42,1790+8])
+                                      Texp_ident "Stdlib!.="
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/cst.ml[42,1790+5]..src/cst.ml[42,1790+6])
+                                          Texp_ident "i/617"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/cst.ml[42,1790+9]..src/cst.ml[42,1790+10])
+                                          Texp_ident "n/616"
+                                    ]
+                                  expression (src/cst.ml[43,1806+4]..src/cst.ml[43,1806+8])
+                                    Texp_ident "accu/618"
+                                  Some
+                                    expression (src/cst.ml[45,1822+4]..src/cst.ml[45,1822+52])
+                                      Texp_apply
+                                      expression (src/cst.ml[45,1822+4]..src/cst.ml[45,1822+10])
+                                        Texp_ident "fringe/561"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/cst.ml[45,1822+11]..src/cst.ml[45,1822+19])
+                                            Texp_apply
+                                            expression (src/cst.ml[45,1822+11]..src/cst.ml[45,1822+19]) ghost
+                                              Texp_ident "Stdlib!.Array.get"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/cst.ml[45,1822+11]..src/cst.ml[45,1822+15])
+                                                  Texp_ident "csts/615"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/cst.ml[45,1822+17]..src/cst.ml[45,1822+18])
+                                                  Texp_ident "i/617"
+                                            ]
+                                        <arg>
+                                          Nolabel
+                                          expression (src/cst.ml[45,1822+20]..src/cst.ml[45,1822+52])
+                                            Texp_apply
+                                            expression (src/cst.ml[45,1822+21]..src/cst.ml[45,1822+31])
+                                              Texp_ident "fringe_rhs/562"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/cst.ml[45,1822+32]..src/cst.ml[45,1822+36])
+                                                  Texp_ident "csts/615"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/cst.ml[45,1822+37]..src/cst.ml[45,1822+38])
+                                                  Texp_ident "n/616"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/cst.ml[45,1822+39]..src/cst.ml[45,1822+46])
+                                                  Texp_apply
+                                                  expression (src/cst.ml[45,1822+42]..src/cst.ml[45,1822+43])
+                                                    Texp_ident "Stdlib!.+"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/cst.ml[45,1822+40]..src/cst.ml[45,1822+41])
+                                                        Texp_ident "i/617"
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/cst.ml[45,1822+44]..src/cst.ml[45,1822+45])
+                                                        Texp_constant Const_int 1
+                                                  ]
+                                              <arg>
+                                                Nolabel
+                                                expression (src/cst.ml[45,1822+47]..src/cst.ml[45,1822+51])
+                                                  Texp_ident "accu/618"
+                                            ]
+                                      ]
+                            ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/cst.ml[47,1876+0]..src/cst.ml[48,1893+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[47,1876+4]..src/cst.ml[47,1876+10])
+          Tpat_var "fringe/619"
+        expression (src/cst.ml[47,1876+11]..src/cst.ml[48,1893+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[47,1876+11]..src/cst.ml[47,1876+14])
+                Tpat_var "cst/620"
+              expression (src/cst.ml[48,1893+2]..src/cst.ml[48,1893+15])
+                Texp_apply
+                expression (src/cst.ml[48,1893+2]..src/cst.ml[48,1893+8])
+                  Texp_ident "fringe/561"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/cst.ml[48,1893+9]..src/cst.ml[48,1893+12])
+                      Texp_ident "cst/620"
+                  <arg>
+                    Nolabel
+                    expression (src/cst.ml[48,1893+13]..src/cst.ml[48,1893+15])
+                      Texp_construct "[]"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/cst.ml[53,2012+0]..src/cst.ml[87,3087+8])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/cst.ml[53,2012+8]..src/cst.ml[53,2012+12])
+          Tpat_var "pcst/621"
+        expression (src/cst.ml[53,2012+13]..src/cst.ml[82,2961+30]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[53,2012+13]..src/cst.ml[53,2012+14])
+                Tpat_var "b/623"
+              expression (src/cst.ml[53,2012+17]..src/cst.ml[82,2961+30])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/cst.ml[54,2038+4]..src/cst.ml[54,2038+19])
+                      Tpat_construct "CstTerminal"
+                      [
+                        pattern (src/cst.ml[54,2038+16]..src/cst.ml[54,2038+19])
+                          Tpat_var "tok/624"
+                      ]
+                      None
+                    expression (src/cst.ml[58,2115+6]..src/cst.ml[58,2115+48])
+                      Texp_apply
+                      expression (src/cst.ml[58,2115+6]..src/cst.ml[58,2115+20])
+                        Texp_ident "Stdlib!.Printf.bprintf"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[58,2115+21]..src/cst.ml[58,2115+22])
+                            Texp_ident "b/623"
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[58,2115+23]..src/cst.ml[58,2115+27])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (src/cst.ml[58,2115+23]..src/cst.ml[58,2115+27]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String"
+                                [
+                                  expression (src/cst.ml[58,2115+23]..src/cst.ml[58,2115+27]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                    []
+                                  expression (src/cst.ml[58,2115+23]..src/cst.ml[58,2115+27]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                    []
+                                ]
+                              expression (src/cst.ml[58,2115+23]..src/cst.ml[58,2115+27]) ghost
+                                Texp_constant Const_string("%s",(src/cst.ml[58,2115+23]..src/cst.ml[58,2115+27]) ghost,None)
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[58,2115+28]..src/cst.ml[58,2115+48])
+                            Texp_apply
+                            expression (src/cst.ml[58,2115+29]..src/cst.ml[58,2115+43])
+                              Texp_ident "Dune__exe!.Grammar.Terminal.print"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[58,2115+44]..src/cst.ml[58,2115+47])
+                                  Texp_ident "tok/624"
+                            ]
+                      ]
+                  <case>
+                    pattern (src/cst.ml[60,2165+4]..src/cst.ml[60,2165+31])
+                      Tpat_construct "CstNonTerminal"
+                      [
+                        pattern (src/cst.ml[60,2165+20]..src/cst.ml[60,2165+24])
+                          Tpat_var "prod/625"
+                        pattern (src/cst.ml[60,2165+26]..src/cst.ml[60,2165+30])
+                          Tpat_var "csts/626"
+                      ]
+                      None
+                    expression (src/cst.ml[74,2786+6]..src/cst.ml[76,2874+18])
+                      Texp_apply
+                      expression (src/cst.ml[74,2786+6]..src/cst.ml[74,2786+20])
+                        Texp_ident "Stdlib!.Printf.bprintf"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[74,2786+21]..src/cst.ml[74,2786+22])
+                            Texp_ident "b/623"
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                [
+                                  expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                    Texp_constant Const_char 5b
+                                  expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.String"
+                                    [
+                                      expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.No_padding"
+                                        []
+                                      expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                        [
+                                          expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                            Texp_constant Const_char 3a
+                                          expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Alpha"
+                                            [
+                                              expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                [
+                                                  expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                                    Texp_constant Const_char 5d
+                                                  expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                              expression (src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost
+                                Texp_constant Const_string("[%s:%a]",(src/cst.ml[74,2786+23]..src/cst.ml[74,2786+32]) ghost,None)
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[75,2819+8]..src/cst.ml[75,2819+54])
+                            Texp_apply
+                            expression (src/cst.ml[75,2819+9]..src/cst.ml[75,2819+26])
+                              Texp_ident "Dune__exe!.Grammar.Nonterminal.print"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[75,2819+27]..src/cst.ml[75,2819+32])
+                                  Texp_construct "false"
+                                  []
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[75,2819+33]..src/cst.ml[75,2819+53])
+                                  Texp_apply
+                                  expression (src/cst.ml[75,2819+34]..src/cst.ml[75,2819+47])
+                                    Texp_ident "Dune__exe!.Grammar.Production.nt"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[75,2819+48]..src/cst.ml[75,2819+52])
+                                        Texp_ident "prod/625"
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[76,2874+8]..src/cst.ml[76,2874+13])
+                            Texp_ident "pcsts/622"
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[76,2874+14]..src/cst.ml[76,2874+18])
+                            Texp_ident "csts/626"
+                      ]
+                  <case>
+                    pattern (src/cst.ml[78,2894+4]..src/cst.ml[78,2894+12])
+                      Tpat_construct "CstError"
+                      []
+                      None
+                    expression (src/cst.ml[82,2961+6]..src/cst.ml[82,2961+30])
+                      Texp_apply
+                      expression (src/cst.ml[82,2961+6]..src/cst.ml[82,2961+20])
+                        Texp_ident "Stdlib!.Printf.bprintf"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[82,2961+21]..src/cst.ml[82,2961+22])
+                            Texp_ident "b/623"
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30])
+                            Texp_construct "CamlinternalFormatBasics.Format"
+                            [
+                              expression (src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30]) ghost
+                                Texp_construct "CamlinternalFormatBasics.String_literal"
+                                [
+                                  expression (src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30]) ghost
+                                    Texp_constant Const_string("error",(src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30]) ghost,None)
+                                  expression (src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30]) ghost
+                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                    []
+                                ]
+                              expression (src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30]) ghost
+                                Texp_constant Const_string("error",(src/cst.ml[82,2961+23]..src/cst.ml[82,2961+30]) ghost,None)
+                            ]
+                      ]
+                ]
+          ]
+      <def>
+        pattern (src/cst.ml[84,2993+4]..src/cst.ml[84,2993+9])
+          Tpat_var "pcsts/622"
+        expression (src/cst.ml[84,2993+10]..src/cst.ml[87,3087+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[84,2993+10]..src/cst.ml[84,2993+11])
+                Tpat_var "b/786"
+              expression (src/cst.ml[84,2993+12]..src/cst.ml[87,3087+8]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/cst.ml[84,2993+13]..src/cst.ml[84,2993+17])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/cst.ml[84,2993+20]..src/cst.ml[84,2993+29])
+                          Ttyp_constr "array/8!"
+                          [
+                            core_type (src/cst.ml[84,2993+20]..src/cst.ml[84,2993+23])
+                              Ttyp_constr "cst/413"
+                              []
+                          ]
+                      Tpat_alias "csts/787"
+                      pattern (src/cst.ml[84,2993+13]..src/cst.ml[84,2993+17])
+                        Tpat_any
+                    expression (src/cst.ml[85,3026+2]..src/cst.ml[87,3087+8])
+                      Texp_apply
+                      expression (src/cst.ml[85,3026+2]..src/cst.ml[85,3026+12])
+                        Texp_ident "Stdlib!.Array.iter"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[85,3026+13]..src/cst.ml[87,3087+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/cst.ml[85,3026+18]..src/cst.ml[85,3026+21])
+                                  Tpat_var "cst/788"
+                                expression (src/cst.ml[86,3051+4]..src/cst.ml[86,3051+35])
+                                  Texp_apply
+                                  expression (src/cst.ml[86,3051+4]..src/cst.ml[86,3051+18])
+                                    Texp_ident "Stdlib!.Printf.bprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[86,3051+19]..src/cst.ml[86,3051+20])
+                                        Texp_ident "b/786"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                            [
+                                              expression (src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26]) ghost
+                                                Texp_constant Const_char 20
+                                              expression (src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Alpha"
+                                                [
+                                                  expression (src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                    []
+                                                ]
+                                            ]
+                                          expression (src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26]) ghost
+                                            Texp_constant Const_string(" %a",(src/cst.ml[86,3051+21]..src/cst.ml[86,3051+26]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[86,3051+27]..src/cst.ml[86,3051+31])
+                                        Texp_ident "pcst/621"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[86,3051+32]..src/cst.ml[86,3051+35])
+                                        Texp_ident "cst/788"
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[87,3087+4]..src/cst.ml[87,3087+8])
+                            Texp_ident "csts/787"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/cst.ml[91,3134+0]..src/cst.ml[94,3201+26])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[91,3134+4]..src/cst.ml[91,3134+8])
+          Tpat_var "wrap/789"
+        expression (src/cst.ml[91,3134+9]..src/cst.ml[94,3201+26]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[91,3134+9]..src/cst.ml[91,3134+14])
+                Tpat_var "print/791"
+              expression (src/cst.ml[91,3134+15]..src/cst.ml[94,3201+26]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/cst.ml[91,3134+15]..src/cst.ml[91,3134+16])
+                      Tpat_var "f/792"
+                    expression (src/cst.ml[91,3134+17]..src/cst.ml[94,3201+26]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/cst.ml[91,3134+17]..src/cst.ml[91,3134+18])
+                            Tpat_var "x/793"
+                          expression (src/cst.ml[92,3155+2]..src/cst.ml[94,3201+26])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/cst.ml[92,3155+6]..src/cst.ml[92,3155+7])
+                                  Tpat_var "b/794"
+                                expression (src/cst.ml[92,3155+10]..src/cst.ml[92,3155+29])
+                                  Texp_apply
+                                  expression (src/cst.ml[92,3155+10]..src/cst.ml[92,3155+23])
+                                    Texp_ident "Stdlib!.Buffer.create"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[92,3155+24]..src/cst.ml[92,3155+29])
+                                        Texp_constant Const_int 32768
+                                  ]
+                            ]
+                            expression (src/cst.ml[93,3188+2]..src/cst.ml[94,3201+26])
+                              Texp_sequence
+                              expression (src/cst.ml[93,3188+2]..src/cst.ml[93,3188+11])
+                                Texp_apply
+                                expression (src/cst.ml[93,3188+2]..src/cst.ml[93,3188+7])
+                                  Texp_ident "print/791"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/cst.ml[93,3188+8]..src/cst.ml[93,3188+9])
+                                      Texp_ident "b/794"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/cst.ml[93,3188+10]..src/cst.ml[93,3188+11])
+                                      Texp_ident "x/793"
+                                ]
+                              expression (src/cst.ml[94,3201+2]..src/cst.ml[94,3201+26])
+                                Texp_apply
+                                expression (src/cst.ml[94,3201+2]..src/cst.ml[94,3201+22])
+                                  Texp_ident "Stdlib!.Buffer.output_buffer"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/cst.ml[94,3201+23]..src/cst.ml[94,3201+24])
+                                      Texp_ident "f/792"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/cst.ml[94,3201+25]..src/cst.ml[94,3201+26])
+                                      Texp_ident "b/794"
+                                ]
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/cst.ml[96,3229+0]..src/cst.ml[97,3241+11])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[96,3229+4]..src/cst.ml[96,3229+9])
+          Tpat_var "print/795"
+        expression (src/cst.ml[97,3241+2]..src/cst.ml[97,3241+11])
+          Texp_apply
+          expression (src/cst.ml[97,3241+2]..src/cst.ml[97,3241+6])
+            Texp_ident "wrap/789"
+          [
+            <arg>
+              Nolabel
+              expression (src/cst.ml[97,3241+7]..src/cst.ml[97,3241+11])
+                Texp_ident "pcst/621"
+          ]
+    ]
+  structure_item (src/cst.ml[103,3459+0]..src/cst.ml[103,3459+11])
+    Tstr_open Fresh
+    module_expr (src/cst.ml[103,3459+5]..src/cst.ml[103,3459+11])
+      Tmod_ident "Dune__exe!.PPrint"
+  structure_item (src/cst.ml[105,3472+0]..src/cst.ml[124,3953+20])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/cst.ml[105,3472+8]..src/cst.ml[105,3472+13])
+          extra
+            Tpat_extra_constraint
+            core_type (src/cst.ml[105,3472+16]..src/cst.ml[105,3472+31])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/cst.ml[105,3472+16]..src/cst.ml[105,3472+19])
+                Ttyp_constr "cst/413"
+                []
+              core_type (src/cst.ml[105,3472+23]..src/cst.ml[105,3472+31])
+                Ttyp_constr "Dune__exe!.PPrint.document"
+                []
+          Tpat_alias "build/900"
+          pattern (src/cst.ml[105,3472+8]..src/cst.ml[105,3472+13])
+            Tpat_any
+        expression (src/cst.ml[105,3472+34]..src/cst.ml[124,3953+20])
+          extra
+            Texp_constraint
+            core_type (src/cst.ml[105,3472+16]..src/cst.ml[105,3472+31])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/cst.ml[105,3472+16]..src/cst.ml[105,3472+19])
+                Ttyp_constr "cst/413"
+                []
+              core_type (src/cst.ml[105,3472+23]..src/cst.ml[105,3472+31])
+                Ttyp_constr "Dune__exe!.PPrint.document"
+                []
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[106,3515+4]..src/cst.ml[106,3515+19])
+                Tpat_construct "CstTerminal"
+                [
+                  pattern (src/cst.ml[106,3515+16]..src/cst.ml[106,3515+19])
+                    Tpat_var "tok/901"
+                ]
+                None
+              expression (src/cst.ml[107,3538+6]..src/cst.ml[107,3538+33])
+                Texp_apply
+                expression (src/cst.ml[107,3538+6]..src/cst.ml[107,3538+12])
+                  Texp_ident "Dune__exe!.PPrint.string"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/cst.ml[107,3538+13]..src/cst.ml[107,3538+33])
+                      Texp_apply
+                      expression (src/cst.ml[107,3538+14]..src/cst.ml[107,3538+28])
+                        Texp_ident "Dune__exe!.Grammar.Terminal.print"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[107,3538+29]..src/cst.ml[107,3538+32])
+                            Texp_ident "tok/901"
+                      ]
+                ]
+            <case>
+              pattern (src/cst.ml[108,3572+4]..src/cst.ml[108,3572+31])
+                Tpat_construct "CstNonTerminal"
+                [
+                  pattern (src/cst.ml[108,3572+20]..src/cst.ml[108,3572+24])
+                    Tpat_var "prod/902"
+                  pattern (src/cst.ml[108,3572+26]..src/cst.ml[108,3572+30])
+                    Tpat_var "csts/903"
+                ]
+                None
+              expression (src/cst.ml[109,3607+6]..src/cst.ml[122,3929+7])
+                Texp_apply
+                expression (src/cst.ml[109,3607+6]..src/cst.ml[109,3607+14])
+                  Texp_ident "Dune__exe!.PPrint.brackets"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/cst.ml[109,3607+15]..src/cst.ml[122,3929+7])
+                      Texp_apply
+                      expression (src/cst.ml[110,3624+8]..src/cst.ml[110,3624+13])
+                        Texp_ident "Dune__exe!.PPrint.group"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[110,3624+14]..src/cst.ml[121,3919+9])
+                            Texp_apply
+                            expression (src/cst.ml[111,3640+64]..src/cst.ml[111,3640+66])
+                              Texp_ident "Dune__exe!.PPrint.^^"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[111,3640+10]..src/cst.ml[111,3640+63])
+                                  Texp_apply
+                                  expression (src/cst.ml[111,3640+10]..src/cst.ml[111,3640+16])
+                                    Texp_ident "Dune__exe!.PPrint.string"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[111,3640+17]..src/cst.ml[111,3640+63])
+                                        Texp_apply
+                                        expression (src/cst.ml[111,3640+18]..src/cst.ml[111,3640+35])
+                                          Texp_ident "Dune__exe!.Grammar.Nonterminal.print"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/cst.ml[111,3640+36]..src/cst.ml[111,3640+41])
+                                              Texp_construct "false"
+                                              []
+                                          <arg>
+                                            Nolabel
+                                            expression (src/cst.ml[111,3640+42]..src/cst.ml[111,3640+62])
+                                              Texp_apply
+                                              expression (src/cst.ml[111,3640+43]..src/cst.ml[111,3640+56])
+                                                Texp_ident "Dune__exe!.Grammar.Production.nt"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/cst.ml[111,3640+57]..src/cst.ml[111,3640+61])
+                                                    Texp_ident "prod/902"
+                                              ]
+                                        ]
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[112,3707+10]..src/cst.ml[120,3901+17])
+                                  Texp_apply
+                                  expression (src/cst.ml[112,3707+16]..src/cst.ml[112,3707+18])
+                                    Texp_ident "Dune__exe!.PPrint.^^"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[112,3707+10]..src/cst.ml[112,3707+15])
+                                        Texp_ident "Dune__exe!.PPrint.colon"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/cst.ml[113,3726+10]..src/cst.ml[120,3901+17])
+                                        Texp_apply
+                                        expression (src/cst.ml[119,3886+12]..src/cst.ml[119,3886+14])
+                                          Texp_ident "Dune__exe!.PPrint.^^"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/cst.ml[113,3726+10]..src/cst.ml[119,3886+11])
+                                              Texp_apply
+                                              expression (src/cst.ml[113,3726+10]..src/cst.ml[113,3726+15])
+                                                Texp_ident "Dune__exe!.PPrint.group"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/cst.ml[113,3726+16]..src/cst.ml[119,3886+11])
+                                                    Texp_apply
+                                                    expression (src/cst.ml[114,3744+12]..src/cst.ml[114,3744+16])
+                                                      Texp_ident "Dune__exe!.PPrint.nest"
+                                                    [
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/cst.ml[114,3744+17]..src/cst.ml[114,3744+18])
+                                                          Texp_constant Const_int 2
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/cst.ml[114,3744+19]..src/cst.ml[118,3872+13])
+                                                          Texp_apply
+                                                          expression (src/cst.ml[115,3765+14]..src/cst.ml[115,3765+29])
+                                                            Texp_ident "Stdlib!.Array.fold_left"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/cst.ml[115,3765+30]..src/cst.ml[117,3845+15])
+                                                                Texp_function
+                                                                Nolabel
+                                                                [
+                                                                  <case>
+                                                                    pattern (src/cst.ml[115,3765+35]..src/cst.ml[115,3765+38])
+                                                                      Tpat_var "doc/938"
+                                                                    expression (src/cst.ml[115,3765+39]..src/cst.ml[116,3811+33]) ghost
+                                                                      Texp_function
+                                                                      Nolabel
+                                                                      [
+                                                                        <case>
+                                                                          pattern (src/cst.ml[115,3765+39]..src/cst.ml[115,3765+42])
+                                                                            Tpat_var "cst/939"
+                                                                          expression (src/cst.ml[116,3811+16]..src/cst.ml[116,3811+33])
+                                                                            Texp_apply
+                                                                            expression (src/cst.ml[116,3811+20]..src/cst.ml[116,3811+23])
+                                                                              Texp_ident "Dune__exe!.PPrint.^/^"
+                                                                            [
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/cst.ml[116,3811+16]..src/cst.ml[116,3811+19])
+                                                                                  Texp_ident "doc/938"
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/cst.ml[116,3811+24]..src/cst.ml[116,3811+33])
+                                                                                  Texp_apply
+                                                                                  expression (src/cst.ml[116,3811+24]..src/cst.ml[116,3811+29])
+                                                                                    Texp_ident "build/900"
+                                                                                  [
+                                                                                    <arg>
+                                                                                      Nolabel
+                                                                                      expression (src/cst.ml[116,3811+30]..src/cst.ml[116,3811+33])
+                                                                                        Texp_ident "cst/939"
+                                                                                  ]
+                                                                            ]
+                                                                      ]
+                                                                ]
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/cst.ml[117,3845+16]..src/cst.ml[117,3845+21])
+                                                                Texp_ident "Dune__exe!.PPrint.empty"
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/cst.ml[117,3845+22]..src/cst.ml[117,3845+26])
+                                                                Texp_ident "csts/903"
+                                                          ]
+                                                    ]
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/cst.ml[120,3901+10]..src/cst.ml[120,3901+17])
+                                              Texp_apply
+                                              expression (src/cst.ml[120,3901+10]..src/cst.ml[120,3901+15])
+                                                Texp_ident "Dune__exe!.PPrint.break"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/cst.ml[120,3901+16]..src/cst.ml[120,3901+17])
+                                                    Texp_constant Const_int 0
+                                              ]
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+            <case>
+              pattern (src/cst.ml[123,3937+4]..src/cst.ml[123,3937+12])
+                Tpat_construct "CstError"
+                []
+                None
+              expression (src/cst.ml[124,3953+6]..src/cst.ml[124,3953+20])
+                Texp_apply
+                expression (src/cst.ml[124,3953+6]..src/cst.ml[124,3953+12])
+                  Texp_ident "Dune__exe!.PPrint.string"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/cst.ml[124,3953+13]..src/cst.ml[124,3953+20])
+                      Texp_constant Const_string("error",(src/cst.ml[124,3953+14]..src/cst.ml[124,3953+19]),None)
+                ]
+          ]
+    ]
+  structure_item (src/cst.ml[126,3975+0]..src/cst.ml[127,3992+39])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/cst.ml[126,3975+4]..src/cst.ml[126,3975+8])
+          Tpat_var "show/941"
+        expression (src/cst.ml[126,3975+9]..src/cst.ml[127,3992+39]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/cst.ml[126,3975+9]..src/cst.ml[126,3975+10])
+                Tpat_var "f/943"
+              expression (src/cst.ml[126,3975+11]..src/cst.ml[127,3992+39]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/cst.ml[126,3975+11]..src/cst.ml[126,3975+14])
+                      Tpat_var "cst/944"
+                    expression (src/cst.ml[127,3992+2]..src/cst.ml[127,3992+39])
+                      Texp_apply
+                      expression (src/cst.ml[127,3992+2]..src/cst.ml[127,3992+18])
+                        Texp_ident "Dune__exe!.PPrint.ToChannel.pretty"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[127,3992+19]..src/cst.ml[127,3992+22])
+                            Texp_constant Const_float 0.8
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[127,3992+23]..src/cst.ml[127,3992+25])
+                            Texp_constant Const_int 80
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[127,3992+26]..src/cst.ml[127,3992+27])
+                            Texp_ident "f/943"
+                        <arg>
+                          Nolabel
+                          expression (src/cst.ml[127,3992+28]..src/cst.ml[127,3992+39])
+                            Texp_apply
+                            expression (src/cst.ml[127,3992+29]..src/cst.ml[127,3992+34])
+                              Texp_ident "build/900"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/cst.ml[127,3992+35]..src/cst.ml[127,3992+38])
+                                  Texp_ident "cst/944"
+                            ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Cst>
+ "cst"[type] -> <Dune__exe__Cst.0>;
+ "fringe"[value] -> <Dune__exe__Cst.14>;
+ "print"[value] -> <Dune__exe__Cst.30>;
+ "show"[value] -> <Dune__exe__Cst.37>;
+ }
+
+(seq
+  (letrec
+    (fringe/561
+       (function cst/563 accu/564
+         (switch* cst/563
+          case int 0:
+           (makeblock 0
+             (field_imm 10 (field_imm 2 (global Dune__exe__Grammar!)))
+             accu/564)
+          case tag 0:
+           (let (tok/565 =a (field_imm 0 cst/563))
+             (makeblock 0 tok/565 accu/564))
+          case tag 1:
+           (let
+             (csts/566 =a (field_imm 1 cst/563)
+              *match*/2413 =a (field_imm 0 cst/563))
+             (apply fringe_rhs/562 csts/566 (array.length[addr] csts/566) 0
+               accu/564))))
+      fringe_rhs/562
+        (function csts/615 n/616[int] i/617[int] accu/618
+          (if (== i/617 n/616) accu/618
+            (apply fringe/561 (array.get[addr] csts/615 i/617)
+              (apply fringe_rhs/562 csts/615 n/616 (+ i/617 1) accu/618)))))
+    (seq (setfield_ptr(root-init) 3 (global Dune__exe__Cst!) fringe/561)
+      (setfield_ptr(root-init) 4 (global Dune__exe__Cst!) fringe_rhs/562)))
+  (let
+    (fringe/619 =
+       (function cst/620
+         (apply (field_imm 3 (global Dune__exe__Cst!)) cst/620 0)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Cst!) fringe/619))
+  (letrec
+    (pcst/621
+       (function b/623 param/785 : int
+         (switch* param/785
+          case int 0:
+           (apply (field_imm 4 (global Stdlib__Printf!)) b/623
+             [0: [11: "error" 0] "error"])
+          case tag 0:
+           (let (tok/624 =a (field_imm 0 param/785))
+             (apply (field_imm 4 (global Stdlib__Printf!)) b/623
+               [0: [2: 0 0] "%s"]
+               (apply
+                 (field_imm 6 (field_imm 2 (global Dune__exe__Grammar!)))
+                 tok/624)))
+          case tag 1:
+           (let
+             (csts/626 =a (field_imm 1 param/785)
+              prod/625 =a (field_imm 0 param/785))
+             (apply (field_imm 4 (global Stdlib__Printf!)) b/623
+               [0: [12: '[' [2: 0 [12: ':' [15: [12: ']' 0]]]]] "[%s:%a]"]
+               (apply
+                 (field_imm 5 (field_imm 0 (global Dune__exe__Grammar!))) 0
+                 (apply
+                   (field_imm 5 (field_imm 8 (global Dune__exe__Grammar!)))
+                   prod/625))
+               pcsts/622 csts/626))))
+      pcsts/622
+        (function b/786 csts/787 : int
+          (apply (field_imm 10 (global Stdlib__Array!))
+            (function cst/788 : int
+              (apply (field_imm 4 (global Stdlib__Printf!)) b/786
+                [0: [12: ' ' [15: 0]] " %a"] pcst/621 cst/788))
+            csts/787)))
+    (seq (setfield_ptr(root-init) 5 (global Dune__exe__Cst!) pcst/621)
+      (setfield_ptr(root-init) 6 (global Dune__exe__Cst!) pcsts/622)))
+  (let
+    (wrap/789 =
+       (function print/791 f/792 x/793 : int
+         (let (b/794 = (apply (field_imm 0 (global Stdlib__Buffer!)) 32768))
+           (seq (apply print/791 b/794 x/793)
+             (apply (field_imm 9 (global Stdlib__Buffer!)) f/792 b/794)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Cst!) wrap/789))
+  (let
+    (print/795 =
+       (apply (field_imm 7 (global Dune__exe__Cst!))
+         (field_imm 5 (global Dune__exe__Cst!))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Cst!) print/795))
+  (letrec
+    (build/900
+       (function param/940
+         (switch* param/940
+          case int 0:
+           (apply (field_imm 2 (global Dune__exe__PPrint!)) "error")
+          case tag 0:
+           (let (tok/901 =a (field_imm 0 param/940))
+             (apply (field_imm 2 (global Dune__exe__PPrint!))
+               (apply
+                 (field_imm 6 (field_imm 2 (global Dune__exe__Grammar!)))
+                 tok/901)))
+          case tag 1:
+           (let
+             (csts/903 =a (field_imm 1 param/940)
+              prod/902 =a (field_imm 0 param/940))
+             (apply (field_imm 67 (global Dune__exe__PPrint!))
+               (apply (field_imm 13 (global Dune__exe__PPrint!))
+                 (apply (field_imm 11 (global Dune__exe__PPrint!))
+                   (apply (field_imm 2 (global Dune__exe__PPrint!))
+                     (apply
+                       (field_imm 5
+                         (field_imm 0 (global Dune__exe__Grammar!)))
+                       0
+                       (apply
+                         (field_imm 5
+                           (field_imm 8 (global Dune__exe__Grammar!)))
+                         prod/902)))
+                   (apply (field_imm 11 (global Dune__exe__PPrint!))
+                     (field_imm 37 (global Dune__exe__PPrint!))
+                     (apply (field_imm 11 (global Dune__exe__PPrint!))
+                       (apply (field_imm 13 (global Dune__exe__PPrint!))
+                         (apply (field_imm 12 (global Dune__exe__PPrint!)) 2
+                           (apply (field_imm 16 (global Stdlib__Array!))
+                             (function doc/938 cst/939
+                               (apply
+                                 (field_imm 92 (global Dune__exe__PPrint!))
+                                 doc/938 (apply build/900 cst/939)))
+                             (field_imm 0 (global Dune__exe__PPrint!))
+                             csts/903)))
+                       (apply (field_imm 10 (global Dune__exe__PPrint!)) 0))))))))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Cst!) build/900))
+  (let
+    (show/941 =
+       (function f/943 cst/944 : int
+         (apply (field_imm 0 (field_imm 17 (global Dune__exe__PPrint!))) 0.8
+           80 f/943 (apply (field_imm 8 (global Dune__exe__Cst!)) cst/944))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Cst!) show/941))
+  0)
+(seq
+  (letrec
+    (fringe/561
+       (function cst/563 accu/564
+         (switch* cst/563
+          case int 0:
+           (makeblock 0
+             (field_imm 10 (field_imm 2 (global Dune__exe__Grammar!)))
+             accu/564)
+          case tag 0: (makeblock 0 (field_imm 0 cst/563) accu/564)
+          case tag 1:
+           (let (csts/566 =a (field_imm 1 cst/563))
+             (apply fringe_rhs/562 csts/566 (array.length[addr] csts/566) 0
+               accu/564))))
+      fringe_rhs/562
+        (function csts/615 n/616[int] i/617[int] accu/618
+          (if (== i/617 n/616) accu/618
+            (apply fringe/561 (array.get[addr] csts/615 i/617)
+              (apply fringe_rhs/562 csts/615 n/616 (+ i/617 1) accu/618)))))
+    (seq (setfield_ptr(root-init) 3 (global Dune__exe__Cst!) fringe/561)
+      (setfield_ptr(root-init) 4 (global Dune__exe__Cst!) fringe_rhs/562)))
+  (let
+    (fringe/619 =
+       (function cst/620
+         (apply (field_imm 3 (global Dune__exe__Cst!)) cst/620 0)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Cst!) fringe/619))
+  (letrec
+    (pcst/621
+       (function b/623 param/785 : int
+         (switch* param/785
+          case int 0:
+           (apply (field_imm 4 (global Stdlib__Printf!)) b/623
+             [0: [11: "error" 0] "error"])
+          case tag 0:
+           (apply (field_imm 4 (global Stdlib__Printf!)) b/623
+             [0: [2: 0 0] "%s"]
+             (apply (field_imm 6 (field_imm 2 (global Dune__exe__Grammar!)))
+               (field_imm 0 param/785)))
+          case tag 1:
+           (apply (field_imm 4 (global Stdlib__Printf!)) b/623
+             [0: [12: '[' [2: 0 [12: ':' [15: [12: ']' 0]]]]] "[%s:%a]"]
+             (apply (field_imm 5 (field_imm 0 (global Dune__exe__Grammar!)))
+               0
+               (apply
+                 (field_imm 5 (field_imm 8 (global Dune__exe__Grammar!)))
+                 (field_imm 0 param/785)))
+             pcsts/622 (field_imm 1 param/785))))
+      pcsts/622
+        (function b/786 csts/787 : int
+          (apply (field_imm 10 (global Stdlib__Array!))
+            (function cst/788 : int
+              (apply (field_imm 4 (global Stdlib__Printf!)) b/786
+                [0: [12: ' ' [15: 0]] " %a"] pcst/621 cst/788))
+            csts/787)))
+    (seq (setfield_ptr(root-init) 5 (global Dune__exe__Cst!) pcst/621)
+      (setfield_ptr(root-init) 6 (global Dune__exe__Cst!) pcsts/622)))
+  (let
+    (wrap/789 =
+       (function print/791 f/792 x/793 : int
+         (let (b/794 = (apply (field_imm 0 (global Stdlib__Buffer!)) 32768))
+           (seq (apply print/791 b/794 x/793)
+             (apply (field_imm 9 (global Stdlib__Buffer!)) f/792 b/794)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Cst!) wrap/789))
+  (let
+    (print/795 =
+       (apply (field_imm 7 (global Dune__exe__Cst!))
+         (field_imm 5 (global Dune__exe__Cst!))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Cst!) print/795))
+  (letrec
+    (build/900
+       (function param/940
+         (switch* param/940
+          case int 0:
+           (apply (field_imm 2 (global Dune__exe__PPrint!)) "error")
+          case tag 0:
+           (apply (field_imm 2 (global Dune__exe__PPrint!))
+             (apply (field_imm 6 (field_imm 2 (global Dune__exe__Grammar!)))
+               (field_imm 0 param/940)))
+          case tag 1:
+           (apply (field_imm 67 (global Dune__exe__PPrint!))
+             (apply (field_imm 13 (global Dune__exe__PPrint!))
+               (apply (field_imm 11 (global Dune__exe__PPrint!))
+                 (apply (field_imm 2 (global Dune__exe__PPrint!))
+                   (apply
+                     (field_imm 5 (field_imm 0 (global Dune__exe__Grammar!)))
+                     0
+                     (apply
+                       (field_imm 5
+                         (field_imm 8 (global Dune__exe__Grammar!)))
+                       (field_imm 0 param/940))))
+                 (apply (field_imm 11 (global Dune__exe__PPrint!))
+                   (field_imm 37 (global Dune__exe__PPrint!))
+                   (apply (field_imm 11 (global Dune__exe__PPrint!))
+                     (apply (field_imm 13 (global Dune__exe__PPrint!))
+                       (apply (field_imm 12 (global Dune__exe__PPrint!)) 2
+                         (apply (field_imm 16 (global Stdlib__Array!))
+                           (function doc/938 cst/939
+                             (apply
+                               (field_imm 92 (global Dune__exe__PPrint!))
+                               doc/938 (apply build/900 cst/939)))
+                           (field_imm 0 (global Dune__exe__PPrint!))
+                           (field_imm 1 param/940))))
+                     (apply (field_imm 10 (global Dune__exe__PPrint!)) 0)))))))))
+    (setfield_ptr(root-init) 8 (global Dune__exe__Cst!) build/900))
+  (let
+    (show/941 =
+       (function f/943 cst/944 : int
+         (apply (field_imm 0 (field_imm 17 (global Dune__exe__PPrint!))) 0.8
+           80 f/943 (apply (field_imm 8 (global Dune__exe__Cst!)) cst/944))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Cst!) show/941))
+  0)

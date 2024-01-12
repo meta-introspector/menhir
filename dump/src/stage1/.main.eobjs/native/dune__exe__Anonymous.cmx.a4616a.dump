@@ -1,0 +1,2635 @@
+[
+  structure_item (src/anonymous.ml[14,999+0]..[14,999+11])
+    Pstr_open Fresh
+    module_expr (src/anonymous.ml[14,999+5]..[14,999+11])
+      Pmod_ident "Syntax" (src/anonymous.ml[14,999+5]..[14,999+11])
+  structure_item (src/anonymous.ml[25,1412+0]..[32,1646+37])
+    Pstr_value Rec
+    [
+      <def>
+        pattern (src/anonymous.ml[25,1412+8]..[25,1412+20])
+          Ppat_var "fn_parameter" (src/anonymous.ml[25,1412+8]..[25,1412+20])
+        expression (src/anonymous.ml[25,1412+21]..[29,1593+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/anonymous.ml[25,1412+21]..[25,1412+25])
+            Ppat_var "accu" (src/anonymous.ml[25,1412+21]..[25,1412+25])
+          expression (src/anonymous.ml[25,1412+26]..[29,1593+23]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/anonymous.ml[25,1412+26]..[25,1412+41])
+              Ppat_constraint
+              pattern (src/anonymous.ml[25,1412+27]..[25,1412+28])
+                Ppat_var "p" (src/anonymous.ml[25,1412+27]..[25,1412+28])
+              core_type (src/anonymous.ml[25,1412+31]..[25,1412+40])
+                Ptyp_constr "parameter" (src/anonymous.ml[25,1412+31]..[25,1412+40])
+                []
+            expression (src/anonymous.ml[27,1502+2]..[29,1593+23])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[27,1502+6]..[27,1502+11])
+                    Ppat_tuple
+                    [
+                      pattern (src/anonymous.ml[27,1502+6]..[27,1502+7])
+                        Ppat_var "x" (src/anonymous.ml[27,1502+6]..[27,1502+7])
+                      pattern (src/anonymous.ml[27,1502+9]..[27,1502+11])
+                        Ppat_var "ps" (src/anonymous.ml[27,1502+9]..[27,1502+11])
+                    ]
+                  expression (src/anonymous.ml[27,1502+14]..[27,1502+32])
+                    Pexp_apply
+                    expression (src/anonymous.ml[27,1502+14]..[27,1502+30])
+                      Pexp_ident "Parameters.unapp" (src/anonymous.ml[27,1502+14]..[27,1502+30])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/anonymous.ml[27,1502+31]..[27,1502+32])
+                          Pexp_ident "p" (src/anonymous.ml[27,1502+31]..[27,1502+32])
+                    ]
+              ]
+              expression (src/anonymous.ml[28,1538+2]..[29,1593+23])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/anonymous.ml[28,1538+6]..[28,1538+10])
+                      Ppat_var "accu" (src/anonymous.ml[28,1538+6]..[28,1538+10])
+                    expression (src/anonymous.ml[28,1538+13]..[28,1538+51])
+                      Pexp_apply
+                      expression (src/anonymous.ml[28,1538+13]..[28,1538+26])
+                        Pexp_ident "StringSet.add" (src/anonymous.ml[28,1538+13]..[28,1538+26])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/anonymous.ml[28,1538+27]..[28,1538+46])
+                            Pexp_apply
+                            expression (src/anonymous.ml[28,1538+28]..[28,1538+43])
+                              Pexp_ident "Positions.value" (src/anonymous.ml[28,1538+28]..[28,1538+43])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[28,1538+44]..[28,1538+45])
+                                  Pexp_ident "x" (src/anonymous.ml[28,1538+44]..[28,1538+45])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/anonymous.ml[28,1538+47]..[28,1538+51])
+                            Pexp_ident "accu" (src/anonymous.ml[28,1538+47]..[28,1538+51])
+                      ]
+                ]
+                expression (src/anonymous.ml[29,1593+2]..[29,1593+23])
+                  Pexp_apply
+                  expression (src/anonymous.ml[29,1593+2]..[29,1593+15])
+                    Pexp_ident "fn_parameters" (src/anonymous.ml[29,1593+2]..[29,1593+15])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/anonymous.ml[29,1593+16]..[29,1593+20])
+                        Pexp_ident "accu" (src/anonymous.ml[29,1593+16]..[29,1593+20])
+                    <arg>
+                    Nolabel
+                      expression (src/anonymous.ml[29,1593+21]..[29,1593+23])
+                        Pexp_ident "ps" (src/anonymous.ml[29,1593+21]..[29,1593+23])
+                  ]
+      <def>
+        pattern (src/anonymous.ml[31,1618+4]..[31,1618+17])
+          Ppat_var "fn_parameters" (src/anonymous.ml[31,1618+4]..[31,1618+17])
+        expression (src/anonymous.ml[31,1618+18]..[32,1646+37]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/anonymous.ml[31,1618+18]..[31,1618+22])
+            Ppat_var "accu" (src/anonymous.ml[31,1618+18]..[31,1618+22])
+          expression (src/anonymous.ml[31,1618+23]..[32,1646+37]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/anonymous.ml[31,1618+23]..[31,1618+25])
+              Ppat_var "ps" (src/anonymous.ml[31,1618+23]..[31,1618+25])
+            expression (src/anonymous.ml[32,1646+2]..[32,1646+37])
+              Pexp_apply
+              expression (src/anonymous.ml[32,1646+2]..[32,1646+16])
+                Pexp_ident "List.fold_left" (src/anonymous.ml[32,1646+2]..[32,1646+16])
+              [
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[32,1646+17]..[32,1646+29])
+                    Pexp_ident "fn_parameter" (src/anonymous.ml[32,1646+17]..[32,1646+29])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[32,1646+30]..[32,1646+34])
+                    Pexp_ident "accu" (src/anonymous.ml[32,1646+30]..[32,1646+34])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[32,1646+35]..[32,1646+37])
+                    Pexp_ident "ps" (src/anonymous.ml[32,1646+35]..[32,1646+37])
+              ]
+    ]
+  structure_item (src/anonymous.ml[34,1685+0]..[35,1731+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[34,1685+4]..[34,1685+15])
+          Ppat_var "fn_producer" (src/anonymous.ml[34,1685+4]..[34,1685+15])
+        expression (src/anonymous.ml[34,1685+16]..[35,1731+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/anonymous.ml[34,1685+16]..[34,1685+20])
+            Ppat_var "accu" (src/anonymous.ml[34,1685+16]..[34,1685+20])
+          expression (src/anonymous.ml[34,1685+21]..[35,1731+21]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/anonymous.ml[34,1685+21]..[34,1685+43])
+              Ppat_constraint
+              pattern (src/anonymous.ml[34,1685+22]..[34,1685+31])
+                Ppat_tuple
+                [
+                  pattern (src/anonymous.ml[34,1685+23]..[34,1685+24])
+                    Ppat_any
+                  pattern (src/anonymous.ml[34,1685+26]..[34,1685+27])
+                    Ppat_var "p" (src/anonymous.ml[34,1685+26]..[34,1685+27])
+                  pattern (src/anonymous.ml[34,1685+29]..[34,1685+30])
+                    Ppat_any
+                ]
+              core_type (src/anonymous.ml[34,1685+34]..[34,1685+42])
+                Ptyp_constr "producer" (src/anonymous.ml[34,1685+34]..[34,1685+42])
+                []
+            expression (src/anonymous.ml[35,1731+2]..[35,1731+21])
+              Pexp_apply
+              expression (src/anonymous.ml[35,1731+2]..[35,1731+14])
+                Pexp_ident "fn_parameter" (src/anonymous.ml[35,1731+2]..[35,1731+14])
+              [
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[35,1731+15]..[35,1731+19])
+                    Pexp_ident "accu" (src/anonymous.ml[35,1731+15]..[35,1731+19])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[35,1731+20]..[35,1731+21])
+                    Pexp_ident "p" (src/anonymous.ml[35,1731+20]..[35,1731+21])
+              ]
+    ]
+  structure_item (src/anonymous.ml[37,1754+0]..[38,1782+53])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[37,1754+4]..[37,1754+13])
+          Ppat_var "fn_branch" (src/anonymous.ml[37,1754+4]..[37,1754+13])
+        expression (src/anonymous.ml[37,1754+14]..[38,1782+53]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/anonymous.ml[37,1754+14]..[37,1754+18])
+            Ppat_var "accu" (src/anonymous.ml[37,1754+14]..[37,1754+18])
+          expression (src/anonymous.ml[37,1754+19]..[38,1782+53]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/anonymous.ml[37,1754+19]..[37,1754+25])
+              Ppat_var "branch" (src/anonymous.ml[37,1754+19]..[37,1754+25])
+            expression (src/anonymous.ml[38,1782+2]..[38,1782+53])
+              Pexp_apply
+              expression (src/anonymous.ml[38,1782+2]..[38,1782+16])
+                Pexp_ident "List.fold_left" (src/anonymous.ml[38,1782+2]..[38,1782+16])
+              [
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[38,1782+17]..[38,1782+28])
+                    Pexp_ident "fn_producer" (src/anonymous.ml[38,1782+17]..[38,1782+28])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[38,1782+29]..[38,1782+33])
+                    Pexp_ident "accu" (src/anonymous.ml[38,1782+29]..[38,1782+33])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[38,1782+34]..[38,1782+53])
+                    Pexp_field
+                    expression (src/anonymous.ml[38,1782+34]..[38,1782+40])
+                      Pexp_ident "branch" (src/anonymous.ml[38,1782+34]..[38,1782+40])
+                    "pr_producers" (src/anonymous.ml[38,1782+41]..[38,1782+53])
+              ]
+    ]
+  structure_item (src/anonymous.ml[40,1837+0]..[41,1869+40])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[40,1837+4]..[40,1837+15])
+          Ppat_var "fn_branches" (src/anonymous.ml[40,1837+4]..[40,1837+15])
+        expression (src/anonymous.ml[40,1837+16]..[41,1869+40]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/anonymous.ml[40,1837+16]..[40,1837+20])
+            Ppat_var "accu" (src/anonymous.ml[40,1837+16]..[40,1837+20])
+          expression (src/anonymous.ml[40,1837+21]..[41,1869+40]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/anonymous.ml[40,1837+21]..[40,1837+29])
+              Ppat_var "branches" (src/anonymous.ml[40,1837+21]..[40,1837+29])
+            expression (src/anonymous.ml[41,1869+2]..[41,1869+40])
+              Pexp_apply
+              expression (src/anonymous.ml[41,1869+2]..[41,1869+16])
+                Pexp_ident "List.fold_left" (src/anonymous.ml[41,1869+2]..[41,1869+16])
+              [
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[41,1869+17]..[41,1869+26])
+                    Pexp_ident "fn_branch" (src/anonymous.ml[41,1869+17]..[41,1869+26])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[41,1869+27]..[41,1869+31])
+                    Pexp_ident "accu" (src/anonymous.ml[41,1869+27]..[41,1869+31])
+                <arg>
+                Nolabel
+                  expression (src/anonymous.ml[41,1869+32]..[41,1869+40])
+                    Pexp_ident "branches" (src/anonymous.ml[41,1869+32]..[41,1869+40])
+              ]
+    ]
+  structure_item (src/anonymous.ml[48,2095+0]..[140,5617+3])
+    Pstr_module
+    "Run" (src/anonymous.ml[48,2095+7]..[48,2095+10])
+      module_expr (src/anonymous.ml[48,2095+11]..[140,5617+3])
+        Pmod_functor "X" (src/anonymous.ml[48,2095+12]..[48,2095+13])
+        module_type (src/anonymous.ml[48,2095+16]..[48,2095+23])
+          Pmty_signature
+          []
+        module_expr (src/anonymous.ml[48,2095+27]..[140,5617+3])
+          Pmod_structure
+          [
+            structure_item (src/anonymous.ml[54,2241+0]..[57,2304+61])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[54,2241+4]..[54,2241+9])
+                    Ppat_var "fresh" (src/anonymous.ml[54,2241+4]..[54,2241+9])
+                  core_type (src/anonymous.ml[54,2241+12]..[54,2241+26])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/anonymous.ml[54,2241+12]..[54,2241+16])
+                      Ptyp_constr "unit" (src/anonymous.ml[54,2241+12]..[54,2241+16])
+                      []
+                    core_type (src/anonymous.ml[54,2241+20]..[54,2241+26])
+                      Ptyp_constr "string" (src/anonymous.ml[54,2241+20]..[54,2241+26])
+                      []
+                  expression (src/anonymous.ml[55,2270+2]..[57,2304+61])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/anonymous.ml[55,2270+6]..[55,2270+10])
+                          Ppat_var "next" (src/anonymous.ml[55,2270+6]..[55,2270+10])
+                        expression (src/anonymous.ml[55,2270+13]..[55,2270+18])
+                          Pexp_apply
+                          expression (src/anonymous.ml[55,2270+13]..[55,2270+16])
+                            Pexp_ident "ref" (src/anonymous.ml[55,2270+13]..[55,2270+16])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/anonymous.ml[55,2270+17]..[55,2270+18])
+                                Pexp_constant PConst_int (0,None)
+                          ]
+                    ]
+                    expression (src/anonymous.ml[56,2292+2]..[57,2304+61])
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/anonymous.ml[56,2292+6]..[56,2292+8])
+                        Ppat_construct "()" (src/anonymous.ml[56,2292+6]..[56,2292+8])
+                        None
+                      expression (src/anonymous.ml[57,2304+4]..[57,2304+61])
+                        Pexp_apply
+                        expression (src/anonymous.ml[57,2304+4]..[57,2304+18])
+                          Pexp_ident "Printf.sprintf" (src/anonymous.ml[57,2304+4]..[57,2304+18])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/anonymous.ml[57,2304+19]..[57,2304+35])
+                              Pexp_constant PConst_string("__anonymous_%d",(src/anonymous.ml[57,2304+20]..[57,2304+34]),None)
+                          <arg>
+                          Nolabel
+                            expression (src/anonymous.ml[57,2304+36]..[57,2304+61])
+                              Pexp_apply
+                              expression (src/anonymous.ml[57,2304+37]..[57,2304+55])
+                                Pexp_ident "Misc.postincrement" (src/anonymous.ml[57,2304+37]..[57,2304+55])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/anonymous.ml[57,2304+56]..[57,2304+60])
+                                    Pexp_ident "next" (src/anonymous.ml[57,2304+56]..[57,2304+60])
+                              ]
+                        ]
+              ]
+            structure_item (src/anonymous.ml[64,2532+0]..[65,2544+8])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[64,2532+4]..[64,2532+9])
+                    Ppat_var "rules" (src/anonymous.ml[64,2532+4]..[64,2532+9])
+                  expression (src/anonymous.ml[65,2544+2]..[65,2544+8])
+                    Pexp_apply
+                    expression (src/anonymous.ml[65,2544+2]..[65,2544+5])
+                      Pexp_ident "ref" (src/anonymous.ml[65,2544+2]..[65,2544+5])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/anonymous.ml[65,2544+6]..[65,2544+8])
+                          Pexp_construct "[]" (src/anonymous.ml[65,2544+6]..[65,2544+8])
+                          None
+                    ]
+              ]
+            structure_item (src/anonymous.ml[76,2997+0]..[77,3037+45])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[76,2997+4]..[76,2997+7])
+                    Ppat_var "var" (src/anonymous.ml[76,2997+4]..[76,2997+7])
+                  expression (src/anonymous.ml[76,2997+8]..[77,3037+45]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/anonymous.ml[76,2997+8]..[76,2997+25])
+                      Ppat_constraint
+                      pattern (src/anonymous.ml[76,2997+9]..[76,2997+15])
+                        Ppat_var "symbol" (src/anonymous.ml[76,2997+9]..[76,2997+15])
+                      core_type (src/anonymous.ml[76,2997+18]..[76,2997+24])
+                        Ptyp_constr "symbol" (src/anonymous.ml[76,2997+18]..[76,2997+24])
+                        []
+                    expression (src/anonymous.ml[76,2997+26]..[77,3037+45])
+                      Pexp_constraint
+                      expression (src/anonymous.ml[77,3037+2]..[77,3037+45])
+                        Pexp_construct "ParameterVar" (src/anonymous.ml[77,3037+2]..[77,3037+14])
+                        Some
+                          expression (src/anonymous.ml[77,3037+15]..[77,3037+45])
+                            Pexp_apply
+                            expression (src/anonymous.ml[77,3037+16]..[77,3037+37])
+                              Pexp_ident "Positions.unknown_pos" (src/anonymous.ml[77,3037+16]..[77,3037+37])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[77,3037+38]..[77,3037+44])
+                                  Pexp_ident "symbol" (src/anonymous.ml[77,3037+38]..[77,3037+44])
+                            ]
+                      core_type (src/anonymous.ml[76,2997+28]..[76,2997+37])
+                        Ptyp_constr "parameter" (src/anonymous.ml[76,2997+28]..[76,2997+37])
+                        []
+              ]
+            structure_item (src/anonymous.ml[79,3084+0]..[105,4392+74])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[79,3084+4]..[79,3084+13])
+                    Ppat_var "anonymous" (src/anonymous.ml[79,3084+4]..[79,3084+13])
+                  expression (src/anonymous.ml[79,3084+14]..[105,4392+74]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/anonymous.ml[79,3084+14]..[79,3084+17])
+                      Ppat_var "pos" (src/anonymous.ml[79,3084+14]..[79,3084+17])
+                    expression (src/anonymous.ml[79,3084+18]..[105,4392+74]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/anonymous.ml[79,3084+18]..[79,3084+44])
+                        Ppat_constraint
+                        pattern (src/anonymous.ml[79,3084+19]..[79,3084+29])
+                          Ppat_var "parameters" (src/anonymous.ml[79,3084+19]..[79,3084+29])
+                        core_type (src/anonymous.ml[79,3084+32]..[79,3084+43])
+                          Ptyp_constr "list" (src/anonymous.ml[79,3084+39]..[79,3084+43])
+                          [
+                            core_type (src/anonymous.ml[79,3084+32]..[79,3084+38])
+                              Ptyp_constr "symbol" (src/anonymous.ml[79,3084+32]..[79,3084+38])
+                              []
+                          ]
+                      expression (src/anonymous.ml[79,3084+45]..[105,4392+74]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/anonymous.ml[79,3084+45]..[79,3084+83])
+                          Ppat_constraint
+                          pattern (src/anonymous.ml[79,3084+46]..[79,3084+54])
+                            Ppat_var "branches" (src/anonymous.ml[79,3084+46]..[79,3084+54])
+                          core_type (src/anonymous.ml[79,3084+57]..[79,3084+82])
+                            Ptyp_constr "list" (src/anonymous.ml[79,3084+78]..[79,3084+82])
+                            [
+                              core_type (src/anonymous.ml[79,3084+57]..[79,3084+77])
+                                Ptyp_constr "parameterized_branch" (src/anonymous.ml[79,3084+57]..[79,3084+77])
+                                []
+                            ]
+                        expression (src/anonymous.ml[79,3084+84]..[105,4392+74])
+                          Pexp_constraint
+                          expression (src/anonymous.ml[86,3612+2]..[105,4392+74])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/anonymous.ml[86,3612+6]..[86,3612+10])
+                                  Ppat_var "used" (src/anonymous.ml[86,3612+6]..[86,3612+10])
+                                expression (src/anonymous.ml[86,3612+13]..[86,3612+49])
+                                  Pexp_apply
+                                  expression (src/anonymous.ml[86,3612+13]..[86,3612+24])
+                                    Pexp_ident "fn_branches" (src/anonymous.ml[86,3612+13]..[86,3612+24])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/anonymous.ml[86,3612+25]..[86,3612+40])
+                                        Pexp_ident "StringSet.empty" (src/anonymous.ml[86,3612+25]..[86,3612+40])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/anonymous.ml[86,3612+41]..[86,3612+49])
+                                        Pexp_ident "branches" (src/anonymous.ml[86,3612+41]..[86,3612+49])
+                                  ]
+                            ]
+                            expression (src/anonymous.ml[87,3665+2]..[105,4392+74])
+                              Pexp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/anonymous.ml[87,3665+6]..[87,3665+16])
+                                    Ppat_var "parameters" (src/anonymous.ml[87,3665+6]..[87,3665+16])
+                                  expression (src/anonymous.ml[87,3665+19]..[87,3665+73])
+                                    Pexp_apply
+                                    expression (src/anonymous.ml[87,3665+19]..[87,3665+30])
+                                      Pexp_ident "List.filter" (src/anonymous.ml[87,3665+19]..[87,3665+30])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/anonymous.ml[87,3665+31]..[87,3665+62])
+                                          Pexp_fun
+                                          Nolabel
+                                          None
+                                          pattern (src/anonymous.ml[87,3665+36]..[87,3665+37])
+                                            Ppat_var "x" (src/anonymous.ml[87,3665+36]..[87,3665+37])
+                                          expression (src/anonymous.ml[87,3665+41]..[87,3665+61])
+                                            Pexp_apply
+                                            expression (src/anonymous.ml[87,3665+41]..[87,3665+54])
+                                              Pexp_ident "StringSet.mem" (src/anonymous.ml[87,3665+41]..[87,3665+54])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/anonymous.ml[87,3665+55]..[87,3665+56])
+                                                  Pexp_ident "x" (src/anonymous.ml[87,3665+55]..[87,3665+56])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/anonymous.ml[87,3665+57]..[87,3665+61])
+                                                  Pexp_ident "used" (src/anonymous.ml[87,3665+57]..[87,3665+61])
+                                            ]
+                                      <arg>
+                                      Nolabel
+                                        expression (src/anonymous.ml[87,3665+63]..[87,3665+73])
+                                          Pexp_ident "parameters" (src/anonymous.ml[87,3665+63]..[87,3665+73])
+                                    ]
+                              ]
+                              expression (src/anonymous.ml[89,3788+2]..[105,4392+74])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/anonymous.ml[89,3788+6]..[89,3788+12])
+                                      Ppat_var "symbol" (src/anonymous.ml[89,3788+6]..[89,3788+12])
+                                    expression (src/anonymous.ml[89,3788+15]..[89,3788+22])
+                                      Pexp_apply
+                                      expression (src/anonymous.ml[89,3788+15]..[89,3788+20])
+                                        Pexp_ident "fresh" (src/anonymous.ml[89,3788+15]..[89,3788+20])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[89,3788+20]..[89,3788+22])
+                                            Pexp_construct "()" (src/anonymous.ml[89,3788+20]..[89,3788+22])
+                                            None
+                                      ]
+                                ]
+                                expression (src/anonymous.ml[93,4020+2]..[105,4392+74])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/anonymous.ml[93,4020+6]..[93,4020+10])
+                                        Ppat_var "rule" (src/anonymous.ml[93,4020+6]..[93,4020+10])
+                                      expression (src/anonymous.ml[93,4020+13]..[101,4280+3])
+                                        Pexp_record
+                                        [
+                                          "pr_public_flag" (src/anonymous.ml[94,4035+4]..[94,4035+18])
+                                            expression (src/anonymous.ml[94,4035+21]..[94,4035+26])
+                                              Pexp_construct "false" (src/anonymous.ml[94,4035+21]..[94,4035+26])
+                                              None
+                                          "pr_inline_flag" (src/anonymous.ml[95,4063+4]..[95,4063+18])
+                                            expression (src/anonymous.ml[95,4063+21]..[95,4063+25])
+                                              Pexp_construct "true" (src/anonymous.ml[95,4063+21]..[95,4063+25])
+                                              None
+                                          "pr_nt" (src/anonymous.ml[96,4090+4]..[96,4090+9])
+                                            expression (src/anonymous.ml[96,4090+21]..[96,4090+27])
+                                              Pexp_ident "symbol" (src/anonymous.ml[96,4090+21]..[96,4090+27])
+                                          "pr_positions" (src/anonymous.ml[97,4119+4]..[97,4119+16])
+                                            expression (src/anonymous.ml[97,4119+21]..[97,4119+28])
+                                              Pexp_construct "::" (src/anonymous.ml[97,4119+23]..[97,4119+28]) ghost
+                                              Some
+                                                expression (src/anonymous.ml[97,4119+23]..[97,4119+28]) ghost
+                                                  Pexp_tuple
+                                                  [
+                                                    expression (src/anonymous.ml[97,4119+23]..[97,4119+26])
+                                                      Pexp_ident "pos" (src/anonymous.ml[97,4119+23]..[97,4119+26])
+                                                    expression (src/anonymous.ml[97,4119+27]..[97,4119+28]) ghost
+                                                      Pexp_construct "[]" (src/anonymous.ml[97,4119+27]..[97,4119+28]) ghost
+                                                      None
+                                                  ]
+                                          "pr_attributes" (src/anonymous.ml[98,4192+4]..[98,4192+17])
+                                            expression (src/anonymous.ml[98,4192+21]..[98,4192+23])
+                                              Pexp_construct "[]" (src/anonymous.ml[98,4192+21]..[98,4192+23])
+                                              None
+                                          "pr_parameters" (src/anonymous.ml[99,4217+4]..[99,4217+17])
+                                            expression (src/anonymous.ml[99,4217+21]..[99,4217+31])
+                                              Pexp_ident "parameters" (src/anonymous.ml[99,4217+21]..[99,4217+31])
+                                          "pr_branches" (src/anonymous.ml[100,4250+4]..[100,4250+15])
+                                            expression (src/anonymous.ml[100,4250+21]..[100,4250+29])
+                                              Pexp_ident "branches" (src/anonymous.ml[100,4250+21]..[100,4250+29])
+                                        ]
+                                        None
+                                  ]
+                                  expression (src/anonymous.ml[103,4319+2]..[105,4392+74])
+                                    Pexp_sequence
+                                    expression (src/anonymous.ml[103,4319+2]..[103,4319+25])
+                                      Pexp_apply
+                                      expression (src/anonymous.ml[103,4319+8]..[103,4319+10])
+                                        Pexp_ident ":=" (src/anonymous.ml[103,4319+8]..[103,4319+10])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[103,4319+2]..[103,4319+7])
+                                            Pexp_ident "rules" (src/anonymous.ml[103,4319+2]..[103,4319+7])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[103,4319+11]..[103,4319+25])
+                                            Pexp_construct "::" (src/anonymous.ml[103,4319+16]..[103,4319+18])
+                                            Some
+                                              expression (src/anonymous.ml[103,4319+11]..[103,4319+25]) ghost
+                                                Pexp_tuple
+                                                [
+                                                  expression (src/anonymous.ml[103,4319+11]..[103,4319+15])
+                                                    Pexp_ident "rule" (src/anonymous.ml[103,4319+11]..[103,4319+15])
+                                                  expression (src/anonymous.ml[103,4319+19]..[103,4319+25])
+                                                    Pexp_apply
+                                                    expression (src/anonymous.ml[103,4319+19]..[103,4319+20])
+                                                      Pexp_ident "!" (src/anonymous.ml[103,4319+19]..[103,4319+20])
+                                                    [
+                                                      <arg>
+                                                      Nolabel
+                                                        expression (src/anonymous.ml[103,4319+20]..[103,4319+25])
+                                                          Pexp_ident "rules" (src/anonymous.ml[103,4319+20]..[103,4319+25])
+                                                    ]
+                                                ]
+                                      ]
+                                    expression (src/anonymous.ml[105,4392+2]..[105,4392+74])
+                                      Pexp_apply
+                                      expression (src/anonymous.ml[105,4392+2]..[105,4392+16])
+                                        Pexp_ident "Parameters.app" (src/anonymous.ml[105,4392+2]..[105,4392+16])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[105,4392+17]..[105,4392+48])
+                                            Pexp_apply
+                                            expression (src/anonymous.ml[105,4392+18]..[105,4392+36])
+                                              Pexp_ident "Positions.with_pos" (src/anonymous.ml[105,4392+18]..[105,4392+36])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/anonymous.ml[105,4392+37]..[105,4392+40])
+                                                  Pexp_ident "pos" (src/anonymous.ml[105,4392+37]..[105,4392+40])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/anonymous.ml[105,4392+41]..[105,4392+47])
+                                                  Pexp_ident "symbol" (src/anonymous.ml[105,4392+41]..[105,4392+47])
+                                            ]
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[105,4392+49]..[105,4392+74])
+                                            Pexp_apply
+                                            expression (src/anonymous.ml[105,4392+50]..[105,4392+58])
+                                              Pexp_ident "List.map" (src/anonymous.ml[105,4392+50]..[105,4392+58])
+                                            [
+                                              <arg>
+                                              Nolabel
+                                                expression (src/anonymous.ml[105,4392+59]..[105,4392+62])
+                                                  Pexp_ident "var" (src/anonymous.ml[105,4392+59]..[105,4392+62])
+                                              <arg>
+                                              Nolabel
+                                                expression (src/anonymous.ml[105,4392+63]..[105,4392+73])
+                                                  Pexp_ident "parameters" (src/anonymous.ml[105,4392+63]..[105,4392+73])
+                                            ]
+                                      ]
+                          core_type (src/anonymous.ml[79,3084+86]..[79,3084+95])
+                            Ptyp_constr "parameter" (src/anonymous.ml[79,3084+86]..[79,3084+95])
+                            []
+              ]
+            structure_item (src/anonymous.ml[111,4571+0]..[132,5409+30])
+              Pstr_value Rec
+              [
+                <def>
+                  pattern (src/anonymous.ml[111,4571+8]..[111,4571+27])
+                    Ppat_var "transform_parameter" (src/anonymous.ml[111,4571+8]..[111,4571+27])
+                  expression (src/anonymous.ml[111,4571+28]..[123,5113+39]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/anonymous.ml[111,4571+28]..[111,4571+54])
+                      Ppat_constraint
+                      pattern (src/anonymous.ml[111,4571+29]..[111,4571+39])
+                        Ppat_var "parameters" (src/anonymous.ml[111,4571+29]..[111,4571+39])
+                      core_type (src/anonymous.ml[111,4571+42]..[111,4571+53])
+                        Ptyp_constr "list" (src/anonymous.ml[111,4571+49]..[111,4571+53])
+                        [
+                          core_type (src/anonymous.ml[111,4571+42]..[111,4571+48])
+                            Ptyp_constr "symbol" (src/anonymous.ml[111,4571+42]..[111,4571+48])
+                            []
+                        ]
+                    expression (src/anonymous.ml[111,4571+55]..[123,5113+39]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/anonymous.ml[111,4571+55]..[111,4571+70])
+                        Ppat_constraint
+                        pattern (src/anonymous.ml[111,4571+56]..[111,4571+57])
+                          Ppat_var "p" (src/anonymous.ml[111,4571+56]..[111,4571+57])
+                        core_type (src/anonymous.ml[111,4571+60]..[111,4571+69])
+                          Ptyp_constr "parameter" (src/anonymous.ml[111,4571+60]..[111,4571+69])
+                          []
+                      expression (src/anonymous.ml[111,4571+71]..[123,5113+39])
+                        Pexp_constraint
+                        expression (src/anonymous.ml[112,4656+2]..[123,5113+39])
+                          Pexp_match
+                          expression (src/anonymous.ml[112,4656+8]..[112,4656+9])
+                            Pexp_ident "p" (src/anonymous.ml[112,4656+8]..[112,4656+9])
+                          [
+                            <case>
+                              pattern (src/anonymous.ml[113,4671+4]..[113,4671+18])
+                                Ppat_construct "ParameterVar" (src/anonymous.ml[113,4671+4]..[113,4671+16])
+                                Some
+                                  []
+                                  pattern (src/anonymous.ml[113,4671+17]..[113,4671+18])
+                                    Ppat_any
+                              expression (src/anonymous.ml[114,4693+6]..[114,4693+7])
+                                Pexp_ident "p" (src/anonymous.ml[114,4693+6]..[114,4693+7])
+                            <case>
+                              pattern (src/anonymous.ml[115,4701+4]..[115,4701+24])
+                                Ppat_construct "ParameterApp" (src/anonymous.ml[115,4701+4]..[115,4701+16])
+                                Some
+                                  []
+                                  pattern (src/anonymous.ml[115,4701+17]..[115,4701+24])
+                                    Ppat_tuple
+                                    [
+                                      pattern (src/anonymous.ml[115,4701+18]..[115,4701+19])
+                                        Ppat_var "x" (src/anonymous.ml[115,4701+18]..[115,4701+19])
+                                      pattern (src/anonymous.ml[115,4701+21]..[115,4701+23])
+                                        Ppat_var "ps" (src/anonymous.ml[115,4701+21]..[115,4701+23])
+                                    ]
+                              expression (src/anonymous.ml[116,4729+6]..[116,4729+68])
+                                Pexp_construct "ParameterApp" (src/anonymous.ml[116,4729+6]..[116,4729+18])
+                                Some
+                                  expression (src/anonymous.ml[116,4729+19]..[116,4729+68])
+                                    Pexp_tuple
+                                    [
+                                      expression (src/anonymous.ml[116,4729+20]..[116,4729+21])
+                                        Pexp_ident "x" (src/anonymous.ml[116,4729+20]..[116,4729+21])
+                                      expression (src/anonymous.ml[116,4729+23]..[116,4729+67])
+                                        Pexp_apply
+                                        expression (src/anonymous.ml[116,4729+23]..[116,4729+31])
+                                          Pexp_ident "List.map" (src/anonymous.ml[116,4729+23]..[116,4729+31])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/anonymous.ml[116,4729+32]..[116,4729+64])
+                                              Pexp_apply
+                                              expression (src/anonymous.ml[116,4729+33]..[116,4729+52])
+                                                Pexp_ident "transform_parameter" (src/anonymous.ml[116,4729+33]..[116,4729+52])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/anonymous.ml[116,4729+53]..[116,4729+63])
+                                                    Pexp_ident "parameters" (src/anonymous.ml[116,4729+53]..[116,4729+63])
+                                              ]
+                                          <arg>
+                                          Nolabel
+                                            expression (src/anonymous.ml[116,4729+65]..[116,4729+67])
+                                              Pexp_ident "ps" (src/anonymous.ml[116,4729+65]..[116,4729+67])
+                                        ]
+                                    ]
+                            <case>
+                              pattern (src/anonymous.ml[117,4798+4]..[117,4798+31])
+                                Ppat_construct "ParameterAnonymous" (src/anonymous.ml[117,4798+4]..[117,4798+22])
+                                Some
+                                  []
+                                  pattern (src/anonymous.ml[117,4798+23]..[117,4798+31])
+                                    Ppat_var "branches" (src/anonymous.ml[117,4798+23]..[117,4798+31])
+                              expression (src/anonymous.ml[118,4833+6]..[123,5113+39])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/anonymous.ml[118,4833+10]..[118,4833+13])
+                                      Ppat_var "pos" (src/anonymous.ml[118,4833+10]..[118,4833+13])
+                                    expression (src/anonymous.ml[118,4833+16]..[118,4833+43])
+                                      Pexp_apply
+                                      expression (src/anonymous.ml[118,4833+16]..[118,4833+34])
+                                        Pexp_ident "Positions.position" (src/anonymous.ml[118,4833+16]..[118,4833+34])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[118,4833+35]..[118,4833+43])
+                                            Pexp_ident "branches" (src/anonymous.ml[118,4833+35]..[118,4833+43])
+                                      ]
+                                  <def>
+                                    pattern (src/anonymous.ml[119,4877+10]..[119,4877+18])
+                                      Ppat_var "branches" (src/anonymous.ml[119,4877+10]..[119,4877+18])
+                                    expression (src/anonymous.ml[119,4877+21]..[119,4877+45])
+                                      Pexp_apply
+                                      expression (src/anonymous.ml[119,4877+21]..[119,4877+36])
+                                        Pexp_ident "Positions.value" (src/anonymous.ml[119,4877+21]..[119,4877+36])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/anonymous.ml[119,4877+37]..[119,4877+45])
+                                            Pexp_ident "branches" (src/anonymous.ml[119,4877+37]..[119,4877+45])
+                                      ]
+                                ]
+                                expression (src/anonymous.ml[121,4978+6]..[123,5113+39])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/anonymous.ml[121,4978+10]..[121,4978+18])
+                                        Ppat_var "branches" (src/anonymous.ml[121,4978+10]..[121,4978+18])
+                                      expression (src/anonymous.ml[121,4978+21]..[121,4978+82])
+                                        Pexp_apply
+                                        expression (src/anonymous.ml[121,4978+21]..[121,4978+29])
+                                          Pexp_ident "List.map" (src/anonymous.ml[121,4978+21]..[121,4978+29])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/anonymous.ml[121,4978+30]..[121,4978+73])
+                                              Pexp_apply
+                                              expression (src/anonymous.ml[121,4978+31]..[121,4978+61])
+                                                Pexp_ident "transform_parameterized_branch" (src/anonymous.ml[121,4978+31]..[121,4978+61])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/anonymous.ml[121,4978+62]..[121,4978+72])
+                                                    Pexp_ident "parameters" (src/anonymous.ml[121,4978+62]..[121,4978+72])
+                                              ]
+                                          <arg>
+                                          Nolabel
+                                            expression (src/anonymous.ml[121,4978+74]..[121,4978+82])
+                                              Pexp_ident "branches" (src/anonymous.ml[121,4978+74]..[121,4978+82])
+                                        ]
+                                  ]
+                                  expression (src/anonymous.ml[123,5113+6]..[123,5113+39])
+                                    Pexp_apply
+                                    expression (src/anonymous.ml[123,5113+6]..[123,5113+15])
+                                      Pexp_ident "anonymous" (src/anonymous.ml[123,5113+6]..[123,5113+15])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/anonymous.ml[123,5113+16]..[123,5113+19])
+                                          Pexp_ident "pos" (src/anonymous.ml[123,5113+16]..[123,5113+19])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/anonymous.ml[123,5113+20]..[123,5113+30])
+                                          Pexp_ident "parameters" (src/anonymous.ml[123,5113+20]..[123,5113+30])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/anonymous.ml[123,5113+31]..[123,5113+39])
+                                          Pexp_ident "branches" (src/anonymous.ml[123,5113+31]..[123,5113+39])
+                                    ]
+                          ]
+                        core_type (src/anonymous.ml[111,4571+73]..[111,4571+82])
+                          Ptyp_constr "parameter" (src/anonymous.ml[111,4571+73]..[111,4571+82])
+                          []
+                <def>
+                  pattern (src/anonymous.ml[125,5154+4]..[125,5154+22])
+                    Ppat_var "transform_producer" (src/anonymous.ml[125,5154+4]..[125,5154+22])
+                  expression (src/anonymous.ml[125,5154+23]..[126,5217+44]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/anonymous.ml[125,5154+23]..[125,5154+33])
+                      Ppat_var "parameters" (src/anonymous.ml[125,5154+23]..[125,5154+33])
+                    expression (src/anonymous.ml[125,5154+34]..[126,5217+44]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/anonymous.ml[125,5154+34]..[125,5154+60])
+                        Ppat_constraint
+                        pattern (src/anonymous.ml[125,5154+35]..[125,5154+48])
+                          Ppat_tuple
+                          [
+                            pattern (src/anonymous.ml[125,5154+36]..[125,5154+37])
+                              Ppat_var "x" (src/anonymous.ml[125,5154+36]..[125,5154+37])
+                            pattern (src/anonymous.ml[125,5154+39]..[125,5154+40])
+                              Ppat_var "p" (src/anonymous.ml[125,5154+39]..[125,5154+40])
+                            pattern (src/anonymous.ml[125,5154+42]..[125,5154+47])
+                              Ppat_var "attrs" (src/anonymous.ml[125,5154+42]..[125,5154+47])
+                          ]
+                        core_type (src/anonymous.ml[125,5154+51]..[125,5154+59])
+                          Ptyp_constr "producer" (src/anonymous.ml[125,5154+51]..[125,5154+59])
+                          []
+                      expression (src/anonymous.ml[126,5217+2]..[126,5217+44])
+                        Pexp_tuple
+                        [
+                          expression (src/anonymous.ml[126,5217+2]..[126,5217+3])
+                            Pexp_ident "x" (src/anonymous.ml[126,5217+2]..[126,5217+3])
+                          expression (src/anonymous.ml[126,5217+5]..[126,5217+37])
+                            Pexp_apply
+                            expression (src/anonymous.ml[126,5217+5]..[126,5217+24])
+                              Pexp_ident "transform_parameter" (src/anonymous.ml[126,5217+5]..[126,5217+24])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[126,5217+25]..[126,5217+35])
+                                  Pexp_ident "parameters" (src/anonymous.ml[126,5217+25]..[126,5217+35])
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[126,5217+36]..[126,5217+37])
+                                  Pexp_ident "p" (src/anonymous.ml[126,5217+36]..[126,5217+37])
+                            ]
+                          expression (src/anonymous.ml[126,5217+39]..[126,5217+44])
+                            Pexp_ident "attrs" (src/anonymous.ml[126,5217+39]..[126,5217+44])
+                        ]
+                <def>
+                  pattern (src/anonymous.ml[128,5263+4]..[128,5263+34])
+                    Ppat_var "transform_parameterized_branch" (src/anonymous.ml[128,5263+4]..[128,5263+34])
+                  expression (src/anonymous.ml[128,5263+35]..[132,5409+30]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/anonymous.ml[128,5263+35]..[128,5263+45])
+                      Ppat_var "parameters" (src/anonymous.ml[128,5263+35]..[128,5263+45])
+                    expression (src/anonymous.ml[128,5263+46]..[132,5409+30]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/anonymous.ml[128,5263+46]..[128,5263+52])
+                        Ppat_var "branch" (src/anonymous.ml[128,5263+46]..[128,5263+52])
+                      expression (src/anonymous.ml[129,5318+2]..[132,5409+30])
+                        Pexp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/anonymous.ml[129,5318+6]..[129,5318+18])
+                              Ppat_var "pr_producers" (src/anonymous.ml[129,5318+6]..[129,5318+18])
+                            expression (src/anonymous.ml[130,5339+4]..[130,5339+64])
+                              Pexp_apply
+                              expression (src/anonymous.ml[130,5339+4]..[130,5339+12])
+                                Pexp_ident "List.map" (src/anonymous.ml[130,5339+4]..[130,5339+12])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/anonymous.ml[130,5339+13]..[130,5339+44])
+                                    Pexp_apply
+                                    expression (src/anonymous.ml[130,5339+14]..[130,5339+32])
+                                      Pexp_ident "transform_producer" (src/anonymous.ml[130,5339+14]..[130,5339+32])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/anonymous.ml[130,5339+33]..[130,5339+43])
+                                          Pexp_ident "parameters" (src/anonymous.ml[130,5339+33]..[130,5339+43])
+                                    ]
+                                <arg>
+                                Nolabel
+                                  expression (src/anonymous.ml[130,5339+45]..[130,5339+64])
+                                    Pexp_field
+                                    expression (src/anonymous.ml[130,5339+45]..[130,5339+51])
+                                      Pexp_ident "branch" (src/anonymous.ml[130,5339+45]..[130,5339+51])
+                                    "pr_producers" (src/anonymous.ml[130,5339+52]..[130,5339+64])
+                              ]
+                        ]
+                        expression (src/anonymous.ml[132,5409+2]..[132,5409+30])
+                          Pexp_record
+                          [
+                            "pr_producers" (src/anonymous.ml[132,5409+16]..[132,5409+28]) ghost
+                              expression (src/anonymous.ml[132,5409+16]..[132,5409+28])
+                                Pexp_ident "pr_producers" (src/anonymous.ml[132,5409+16]..[132,5409+28])
+                          ]
+                          Some
+                            expression (src/anonymous.ml[132,5409+4]..[132,5409+10])
+                              Pexp_ident "branch" (src/anonymous.ml[132,5409+4]..[132,5409+10])
+              ]
+            structure_item (src/anonymous.ml[134,5441+0]..[138,5588+27])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[134,5441+4]..[134,5441+32])
+                    Ppat_var "transform_parameterized_rule" (src/anonymous.ml[134,5441+4]..[134,5441+32])
+                  expression (src/anonymous.ml[134,5441+33]..[138,5588+27]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/anonymous.ml[134,5441+33]..[134,5441+37])
+                      Ppat_var "rule" (src/anonymous.ml[134,5441+33]..[134,5441+37])
+                    expression (src/anonymous.ml[135,5481+2]..[138,5588+27])
+                      Pexp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/anonymous.ml[135,5481+6]..[135,5481+17])
+                            Ppat_var "pr_branches" (src/anonymous.ml[135,5481+6]..[135,5481+17])
+                          expression (src/anonymous.ml[136,5501+4]..[136,5501+81])
+                            Pexp_apply
+                            expression (src/anonymous.ml[136,5501+4]..[136,5501+12])
+                              Pexp_ident "List.map" (src/anonymous.ml[136,5501+4]..[136,5501+12])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[136,5501+13]..[136,5501+64])
+                                  Pexp_apply
+                                  expression (src/anonymous.ml[136,5501+14]..[136,5501+44])
+                                    Pexp_ident "transform_parameterized_branch" (src/anonymous.ml[136,5501+14]..[136,5501+44])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/anonymous.ml[136,5501+45]..[136,5501+63])
+                                        Pexp_field
+                                        expression (src/anonymous.ml[136,5501+45]..[136,5501+49])
+                                          Pexp_ident "rule" (src/anonymous.ml[136,5501+45]..[136,5501+49])
+                                        "pr_parameters" (src/anonymous.ml[136,5501+50]..[136,5501+63])
+                                  ]
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[136,5501+65]..[136,5501+81])
+                                  Pexp_field
+                                  expression (src/anonymous.ml[136,5501+65]..[136,5501+69])
+                                    Pexp_ident "rule" (src/anonymous.ml[136,5501+65]..[136,5501+69])
+                                  "pr_branches" (src/anonymous.ml[136,5501+70]..[136,5501+81])
+                            ]
+                      ]
+                      expression (src/anonymous.ml[138,5588+2]..[138,5588+27])
+                        Pexp_record
+                        [
+                          "pr_branches" (src/anonymous.ml[138,5588+14]..[138,5588+25]) ghost
+                            expression (src/anonymous.ml[138,5588+14]..[138,5588+25])
+                              Pexp_ident "pr_branches" (src/anonymous.ml[138,5588+14]..[138,5588+25])
+                        ]
+                        Some
+                          expression (src/anonymous.ml[138,5588+4]..[138,5588+8])
+                            Pexp_ident "rule" (src/anonymous.ml[138,5588+4]..[138,5588+8])
+              ]
+          ]
+  structure_item (src/anonymous.ml[146,5772+0]..[150,5953+21])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[146,5772+4]..[146,5772+29])
+          Ppat_var "transform_partial_grammar" (src/anonymous.ml[146,5772+4]..[146,5772+29])
+        expression (src/anonymous.ml[146,5772+30]..[150,5953+21]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/anonymous.ml[146,5772+30]..[146,5772+31])
+            Ppat_var "g" (src/anonymous.ml[146,5772+30]..[146,5772+31])
+          expression (src/anonymous.ml[147,5806+2]..[150,5953+21])
+            Pexp_letmodule "R" (src/anonymous.ml[147,5806+13]..[147,5806+14])
+            module_expr (src/anonymous.ml[147,5806+17]..[147,5806+32])
+              Pmod_apply
+              module_expr (src/anonymous.ml[147,5806+17]..[147,5806+20])
+                Pmod_ident "Run" (src/anonymous.ml[147,5806+17]..[147,5806+20])
+              module_expr (src/anonymous.ml[147,5806+21]..[147,5806+31])
+                Pmod_structure
+                []
+            expression (src/anonymous.ml[148,5842+2]..[150,5953+21])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[148,5842+6]..[148,5842+14])
+                    Ppat_var "pg_rules" (src/anonymous.ml[148,5842+6]..[148,5842+14])
+                  expression (src/anonymous.ml[148,5842+17]..[148,5842+67])
+                    Pexp_apply
+                    expression (src/anonymous.ml[148,5842+17]..[148,5842+25])
+                      Pexp_ident "List.map" (src/anonymous.ml[148,5842+17]..[148,5842+25])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/anonymous.ml[148,5842+26]..[148,5842+56])
+                          Pexp_ident "R.transform_parameterized_rule" (src/anonymous.ml[148,5842+26]..[148,5842+56])
+                      <arg>
+                      Nolabel
+                        expression (src/anonymous.ml[148,5842+57]..[148,5842+67])
+                          Pexp_field
+                          expression (src/anonymous.ml[148,5842+57]..[148,5842+58])
+                            Pexp_ident "g" (src/anonymous.ml[148,5842+57]..[148,5842+58])
+                          "pg_rules" (src/anonymous.ml[148,5842+59]..[148,5842+67])
+                    ]
+              ]
+              expression (src/anonymous.ml[149,5913+2]..[150,5953+21])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/anonymous.ml[149,5913+6]..[149,5913+14])
+                      Ppat_var "pg_rules" (src/anonymous.ml[149,5913+6]..[149,5913+14])
+                    expression (src/anonymous.ml[149,5913+17]..[149,5913+36])
+                      Pexp_apply
+                      expression (src/anonymous.ml[149,5913+26]..[149,5913+27])
+                        Pexp_ident "@" (src/anonymous.ml[149,5913+26]..[149,5913+27])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/anonymous.ml[149,5913+17]..[149,5913+25])
+                            Pexp_apply
+                            expression (src/anonymous.ml[149,5913+17]..[149,5913+18])
+                              Pexp_ident "!" (src/anonymous.ml[149,5913+17]..[149,5913+18])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/anonymous.ml[149,5913+18]..[149,5913+25])
+                                  Pexp_ident "R.rules" (src/anonymous.ml[149,5913+18]..[149,5913+25])
+                            ]
+                        <arg>
+                        Nolabel
+                          expression (src/anonymous.ml[149,5913+28]..[149,5913+36])
+                            Pexp_ident "pg_rules" (src/anonymous.ml[149,5913+28]..[149,5913+36])
+                      ]
+                ]
+                expression (src/anonymous.ml[150,5953+2]..[150,5953+21])
+                  Pexp_record
+                  [
+                    "pg_rules" (src/anonymous.ml[150,5953+11]..[150,5953+19]) ghost
+                      expression (src/anonymous.ml[150,5953+11]..[150,5953+19])
+                        Pexp_ident "pg_rules" (src/anonymous.ml[150,5953+11]..[150,5953+19])
+                  ]
+                  Some
+                    expression (src/anonymous.ml[150,5953+4]..[150,5953+5])
+                      Pexp_ident "g" (src/anonymous.ml[150,5953+4]..[150,5953+5])
+    ]
+]
+
+open Syntax
+let rec fn_parameter accu (p : parameter) =
+  let (x, ps) = Parameters.unapp p in
+  let accu = StringSet.add (Positions.value x) accu in fn_parameters accu ps
+and fn_parameters accu ps = List.fold_left fn_parameter accu ps
+let fn_producer accu ((_, p, _) : producer) = fn_parameter accu p
+let fn_branch accu branch =
+  List.fold_left fn_producer accu branch.pr_producers
+let fn_branches accu branches = List.fold_left fn_branch accu branches
+module Run(X:sig  end) =
+  struct
+    let fresh : unit -> string =
+      let next = ref 0 in
+      fun () -> Printf.sprintf "__anonymous_%d" (Misc.postincrement next)
+    let rules = ref []
+    let var (symbol : symbol) =
+      (ParameterVar (Positions.unknown_pos symbol) : parameter)
+    let anonymous pos (parameters : symbol list)
+      (branches : parameterized_branch list) =
+      (let used = fn_branches StringSet.empty branches in
+       let parameters =
+         List.filter (fun x -> StringSet.mem x used) parameters in
+       let symbol = fresh () in
+       let rule =
+         {
+           pr_public_flag = false;
+           pr_inline_flag = true;
+           pr_nt = symbol;
+           pr_positions = [pos];
+           pr_attributes = [];
+           pr_parameters = parameters;
+           pr_branches = branches
+         } in
+       rules := (rule :: (!rules));
+       Parameters.app (Positions.with_pos pos symbol)
+         (List.map var parameters) : parameter)
+    let rec transform_parameter (parameters : symbol list) (p : parameter) =
+      (match p with
+       | ParameterVar _ -> p
+       | ParameterApp (x, ps) ->
+           ParameterApp (x, (List.map (transform_parameter parameters) ps))
+       | ParameterAnonymous branches ->
+           let pos = Positions.position branches
+           and branches = Positions.value branches in
+           let branches =
+             List.map (transform_parameterized_branch parameters) branches in
+           anonymous pos parameters branches : parameter)
+    and transform_producer parameters ((x, p, attrs) : producer) =
+      (x, (transform_parameter parameters p), attrs)
+    and transform_parameterized_branch parameters branch =
+      let pr_producers =
+        List.map (transform_producer parameters) branch.pr_producers in
+      { branch with pr_producers }
+    let transform_parameterized_rule rule =
+      let pr_branches =
+        List.map (transform_parameterized_branch rule.pr_parameters)
+          rule.pr_branches in
+      { rule with pr_branches }
+  end
+let transform_partial_grammar g =
+  let module R = (Run)(struct  end) in
+    let pg_rules = List.map R.transform_parameterized_rule g.pg_rules in
+    let pg_rules = (!R.rules) @ pg_rules in { g with pg_rules }
+[
+  structure_item (src/anonymous.ml[14,999+0]..src/anonymous.ml[14,999+11])
+    Tstr_open Fresh
+    module_expr (src/anonymous.ml[14,999+5]..src/anonymous.ml[14,999+11])
+      Tmod_ident "Dune__exe!.Syntax"
+  structure_item (src/anonymous.ml[25,1412+0]..src/anonymous.ml[32,1646+37])
+    Tstr_value Rec
+    [
+      <def>
+        pattern (src/anonymous.ml[25,1412+8]..src/anonymous.ml[25,1412+20])
+          Tpat_var "fn_parameter/431"
+        expression (src/anonymous.ml[25,1412+21]..src/anonymous.ml[29,1593+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/anonymous.ml[25,1412+21]..src/anonymous.ml[25,1412+25])
+                Tpat_var "accu/433"
+              expression (src/anonymous.ml[25,1412+26]..src/anonymous.ml[29,1593+23]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/anonymous.ml[25,1412+27]..src/anonymous.ml[25,1412+28])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/anonymous.ml[25,1412+31]..src/anonymous.ml[25,1412+40])
+                          Ttyp_constr "Dune__exe!.Syntax.parameter"
+                          []
+                      Tpat_alias "p/434"
+                      pattern (src/anonymous.ml[25,1412+27]..src/anonymous.ml[25,1412+28])
+                        Tpat_any
+                    expression (src/anonymous.ml[27,1502+2]..src/anonymous.ml[29,1593+23])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/anonymous.ml[27,1502+6]..src/anonymous.ml[27,1502+11])
+                            Tpat_tuple
+                            [
+                              pattern (src/anonymous.ml[27,1502+6]..src/anonymous.ml[27,1502+7])
+                                Tpat_var "x/435"
+                              pattern (src/anonymous.ml[27,1502+9]..src/anonymous.ml[27,1502+11])
+                                Tpat_var "ps/436"
+                            ]
+                          expression (src/anonymous.ml[27,1502+14]..src/anonymous.ml[27,1502+32])
+                            Texp_apply
+                            expression (src/anonymous.ml[27,1502+14]..src/anonymous.ml[27,1502+30])
+                              Texp_ident "Dune__exe!.Parameters.unapp"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/anonymous.ml[27,1502+31]..src/anonymous.ml[27,1502+32])
+                                  Texp_ident "p/434"
+                            ]
+                      ]
+                      expression (src/anonymous.ml[28,1538+2]..src/anonymous.ml[29,1593+23])
+                        Texp_let Nonrec
+                        [
+                          <def>
+                            pattern (src/anonymous.ml[28,1538+6]..src/anonymous.ml[28,1538+10])
+                              Tpat_var "accu/522"
+                            expression (src/anonymous.ml[28,1538+13]..src/anonymous.ml[28,1538+51])
+                              Texp_apply
+                              expression (src/anonymous.ml[28,1538+13]..src/anonymous.ml[28,1538+26])
+                                Texp_ident "Dune__exe!.StringSet.add"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/anonymous.ml[28,1538+27]..src/anonymous.ml[28,1538+46])
+                                    Texp_apply
+                                    expression (src/anonymous.ml[28,1538+28]..src/anonymous.ml[28,1538+43])
+                                      Texp_ident "Dune__exe!.Positions.value"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/anonymous.ml[28,1538+44]..src/anonymous.ml[28,1538+45])
+                                          Texp_ident "x/435"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/anonymous.ml[28,1538+47]..src/anonymous.ml[28,1538+51])
+                                    Texp_ident "accu/433"
+                              ]
+                        ]
+                        expression (src/anonymous.ml[29,1593+2]..src/anonymous.ml[29,1593+23])
+                          Texp_apply
+                          expression (src/anonymous.ml[29,1593+2]..src/anonymous.ml[29,1593+15])
+                            Texp_ident "fn_parameters/432"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/anonymous.ml[29,1593+16]..src/anonymous.ml[29,1593+20])
+                                Texp_ident "accu/522"
+                            <arg>
+                              Nolabel
+                              expression (src/anonymous.ml[29,1593+21]..src/anonymous.ml[29,1593+23])
+                                Texp_ident "ps/436"
+                          ]
+                ]
+          ]
+      <def>
+        pattern (src/anonymous.ml[31,1618+4]..src/anonymous.ml[31,1618+17])
+          Tpat_var "fn_parameters/432"
+        expression (src/anonymous.ml[31,1618+18]..src/anonymous.ml[32,1646+37]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/anonymous.ml[31,1618+18]..src/anonymous.ml[31,1618+22])
+                Tpat_var "accu/650"
+              expression (src/anonymous.ml[31,1618+23]..src/anonymous.ml[32,1646+37]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/anonymous.ml[31,1618+23]..src/anonymous.ml[31,1618+25])
+                      Tpat_var "ps/651"
+                    expression (src/anonymous.ml[32,1646+2]..src/anonymous.ml[32,1646+37])
+                      Texp_apply
+                      expression (src/anonymous.ml[32,1646+2]..src/anonymous.ml[32,1646+16])
+                        Texp_ident "Stdlib!.List.fold_left"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[32,1646+17]..src/anonymous.ml[32,1646+29])
+                            Texp_ident "fn_parameter/431"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[32,1646+30]..src/anonymous.ml[32,1646+34])
+                            Texp_ident "accu/650"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[32,1646+35]..src/anonymous.ml[32,1646+37])
+                            Texp_ident "ps/651"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/anonymous.ml[34,1685+0]..src/anonymous.ml[35,1731+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[34,1685+4]..src/anonymous.ml[34,1685+15])
+          Tpat_var "fn_producer/718"
+        expression (src/anonymous.ml[34,1685+16]..src/anonymous.ml[35,1731+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/anonymous.ml[34,1685+16]..src/anonymous.ml[34,1685+20])
+                Tpat_var "accu/720"
+              expression (src/anonymous.ml[34,1685+21]..src/anonymous.ml[35,1731+21]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/anonymous.ml[34,1685+22]..src/anonymous.ml[34,1685+31])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/anonymous.ml[34,1685+34]..src/anonymous.ml[34,1685+42])
+                          Ttyp_constr "Dune__exe!.Syntax.producer"
+                          []
+                      Tpat_tuple
+                      [
+                        pattern (src/anonymous.ml[34,1685+23]..src/anonymous.ml[34,1685+24])
+                          Tpat_any
+                        pattern (src/anonymous.ml[34,1685+26]..src/anonymous.ml[34,1685+27])
+                          Tpat_var "p/721"
+                        pattern (src/anonymous.ml[34,1685+29]..src/anonymous.ml[34,1685+30])
+                          Tpat_any
+                      ]
+                    expression (src/anonymous.ml[35,1731+2]..src/anonymous.ml[35,1731+21])
+                      Texp_apply
+                      expression (src/anonymous.ml[35,1731+2]..src/anonymous.ml[35,1731+14])
+                        Texp_ident "fn_parameter/431"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[35,1731+15]..src/anonymous.ml[35,1731+19])
+                            Texp_ident "accu/720"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[35,1731+20]..src/anonymous.ml[35,1731+21])
+                            Texp_ident "p/721"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/anonymous.ml[37,1754+0]..src/anonymous.ml[38,1782+53])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[37,1754+4]..src/anonymous.ml[37,1754+13])
+          Tpat_var "fn_branch/723"
+        expression (src/anonymous.ml[37,1754+14]..src/anonymous.ml[38,1782+53]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/anonymous.ml[37,1754+14]..src/anonymous.ml[37,1754+18])
+                Tpat_var "accu/725"
+              expression (src/anonymous.ml[37,1754+19]..src/anonymous.ml[38,1782+53]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/anonymous.ml[37,1754+19]..src/anonymous.ml[37,1754+25])
+                      Tpat_var "branch/726"
+                    expression (src/anonymous.ml[38,1782+2]..src/anonymous.ml[38,1782+53])
+                      Texp_apply
+                      expression (src/anonymous.ml[38,1782+2]..src/anonymous.ml[38,1782+16])
+                        Texp_ident "Stdlib!.List.fold_left"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[38,1782+17]..src/anonymous.ml[38,1782+28])
+                            Texp_ident "fn_producer/718"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[38,1782+29]..src/anonymous.ml[38,1782+33])
+                            Texp_ident "accu/725"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[38,1782+34]..src/anonymous.ml[38,1782+53])
+                            Texp_field
+                            expression (src/anonymous.ml[38,1782+34]..src/anonymous.ml[38,1782+40])
+                              Texp_ident "branch/726"
+                            "pr_producers"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/anonymous.ml[40,1837+0]..src/anonymous.ml[41,1869+40])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[40,1837+4]..src/anonymous.ml[40,1837+15])
+          Tpat_var "fn_branches/727"
+        expression (src/anonymous.ml[40,1837+16]..src/anonymous.ml[41,1869+40]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/anonymous.ml[40,1837+16]..src/anonymous.ml[40,1837+20])
+                Tpat_var "accu/729"
+              expression (src/anonymous.ml[40,1837+21]..src/anonymous.ml[41,1869+40]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/anonymous.ml[40,1837+21]..src/anonymous.ml[40,1837+29])
+                      Tpat_var "branches/730"
+                    expression (src/anonymous.ml[41,1869+2]..src/anonymous.ml[41,1869+40])
+                      Texp_apply
+                      expression (src/anonymous.ml[41,1869+2]..src/anonymous.ml[41,1869+16])
+                        Texp_ident "Stdlib!.List.fold_left"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[41,1869+17]..src/anonymous.ml[41,1869+26])
+                            Texp_ident "fn_branch/723"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[41,1869+27]..src/anonymous.ml[41,1869+31])
+                            Texp_ident "accu/729"
+                        <arg>
+                          Nolabel
+                          expression (src/anonymous.ml[41,1869+32]..src/anonymous.ml[41,1869+40])
+                            Texp_ident "branches/730"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/anonymous.ml[48,2095+0]..src/anonymous.ml[140,5617+3])
+    Tstr_module
+    Run/844
+      module_expr (src/anonymous.ml[48,2095+11]..src/anonymous.ml[140,5617+3])
+        Tmod_functor "X/731"
+        module_type (src/anonymous.ml[48,2095+16]..src/anonymous.ml[48,2095+23])
+          Tmty_signature
+          []
+        module_expr (src/anonymous.ml[48,2095+27]..src/anonymous.ml[140,5617+3])
+          Tmod_structure
+          [
+            structure_item (src/anonymous.ml[54,2241+0]..src/anonymous.ml[57,2304+61])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[54,2241+4]..src/anonymous.ml[54,2241+9])
+                    extra
+                      Tpat_extra_constraint
+                      core_type (src/anonymous.ml[54,2241+12]..src/anonymous.ml[54,2241+26])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/anonymous.ml[54,2241+12]..src/anonymous.ml[54,2241+16])
+                          Ttyp_constr "unit/6!"
+                          []
+                        core_type (src/anonymous.ml[54,2241+20]..src/anonymous.ml[54,2241+26])
+                          Ttyp_constr "string/15!"
+                          []
+                    Tpat_alias "fresh/732"
+                    pattern (src/anonymous.ml[54,2241+4]..src/anonymous.ml[54,2241+9])
+                      Tpat_any
+                  expression (src/anonymous.ml[55,2270+2]..src/anonymous.ml[57,2304+61])
+                    extra
+                      Texp_constraint
+                      core_type (src/anonymous.ml[54,2241+12]..src/anonymous.ml[54,2241+26])
+                        Ttyp_arrow
+                        Nolabel
+                        core_type (src/anonymous.ml[54,2241+12]..src/anonymous.ml[54,2241+16])
+                          Ttyp_constr "unit/6!"
+                          []
+                        core_type (src/anonymous.ml[54,2241+20]..src/anonymous.ml[54,2241+26])
+                          Ttyp_constr "string/15!"
+                          []
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/anonymous.ml[55,2270+6]..src/anonymous.ml[55,2270+10])
+                          Tpat_var "next/733"
+                        expression (src/anonymous.ml[55,2270+13]..src/anonymous.ml[55,2270+18])
+                          Texp_apply
+                          expression (src/anonymous.ml[55,2270+13]..src/anonymous.ml[55,2270+16])
+                            Texp_ident "Stdlib!.ref"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/anonymous.ml[55,2270+17]..src/anonymous.ml[55,2270+18])
+                                Texp_constant Const_int 0
+                          ]
+                    ]
+                    expression (src/anonymous.ml[56,2292+2]..src/anonymous.ml[57,2304+61])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/anonymous.ml[56,2292+6]..src/anonymous.ml[56,2292+8])
+                            Tpat_construct "()"
+                            []
+                            None
+                          expression (src/anonymous.ml[57,2304+4]..src/anonymous.ml[57,2304+61])
+                            Texp_apply
+                            expression (src/anonymous.ml[57,2304+4]..src/anonymous.ml[57,2304+18])
+                              Texp_ident "Stdlib!.Printf.sprintf"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35])
+                                  Texp_construct "CamlinternalFormatBasics.Format"
+                                  [
+                                    expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                      [
+                                        expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                          Texp_constant Const_string("__anonymous_",(src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost,None)
+                                        expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.Int"
+                                          [
+                                            expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.Int_d"
+                                              []
+                                            expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                              []
+                                            expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.No_precision"
+                                              []
+                                            expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                              []
+                                          ]
+                                      ]
+                                    expression (src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost
+                                      Texp_constant Const_string("__anonymous_%d",(src/anonymous.ml[57,2304+19]..src/anonymous.ml[57,2304+35]) ghost,None)
+                                  ]
+                              <arg>
+                                Nolabel
+                                expression (src/anonymous.ml[57,2304+36]..src/anonymous.ml[57,2304+61])
+                                  Texp_apply
+                                  expression (src/anonymous.ml[57,2304+37]..src/anonymous.ml[57,2304+55])
+                                    Texp_ident "Dune__exe!.Misc.postincrement"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/anonymous.ml[57,2304+56]..src/anonymous.ml[57,2304+60])
+                                        Texp_ident "next/733"
+                                  ]
+                            ]
+                      ]
+              ]
+            structure_item (src/anonymous.ml[64,2532+0]..src/anonymous.ml[65,2544+8])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[64,2532+4]..src/anonymous.ml[64,2532+9])
+                    Tpat_var "rules/807"
+                  expression (src/anonymous.ml[65,2544+2]..src/anonymous.ml[65,2544+8])
+                    Texp_apply
+                    expression (src/anonymous.ml[65,2544+2]..src/anonymous.ml[65,2544+5])
+                      Texp_ident "Stdlib!.ref"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/anonymous.ml[65,2544+6]..src/anonymous.ml[65,2544+8])
+                          Texp_construct "[]"
+                          []
+                    ]
+              ]
+            structure_item (src/anonymous.ml[76,2997+0]..src/anonymous.ml[77,3037+45])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[76,2997+4]..src/anonymous.ml[76,2997+7])
+                    Tpat_var "var/808"
+                  expression (src/anonymous.ml[76,2997+8]..src/anonymous.ml[77,3037+45]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (src/anonymous.ml[76,2997+9]..src/anonymous.ml[76,2997+15])
+                          extra
+                            Tpat_extra_constraint
+                            core_type (src/anonymous.ml[76,2997+18]..src/anonymous.ml[76,2997+24])
+                              Ttyp_constr "Dune__exe!.Syntax.symbol"
+                              []
+                          Tpat_alias "symbol/810"
+                          pattern (src/anonymous.ml[76,2997+9]..src/anonymous.ml[76,2997+15])
+                            Tpat_any
+                        expression (src/anonymous.ml[77,3037+2]..src/anonymous.ml[77,3037+45])
+                          extra
+                            Texp_constraint
+                            core_type (src/anonymous.ml[76,2997+28]..src/anonymous.ml[76,2997+37])
+                              Ttyp_constr "Dune__exe!.Syntax.parameter"
+                              []
+                          Texp_construct "ParameterVar"
+                          [
+                            expression (src/anonymous.ml[77,3037+15]..src/anonymous.ml[77,3037+45])
+                              Texp_apply
+                              expression (src/anonymous.ml[77,3037+16]..src/anonymous.ml[77,3037+37])
+                                Texp_ident "Dune__exe!.Positions.unknown_pos"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/anonymous.ml[77,3037+38]..src/anonymous.ml[77,3037+44])
+                                    Texp_ident "symbol/810"
+                              ]
+                          ]
+                    ]
+              ]
+            structure_item (src/anonymous.ml[79,3084+0]..src/anonymous.ml[105,4392+74])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[79,3084+4]..src/anonymous.ml[79,3084+13])
+                    Tpat_var "anonymous/811"
+                  expression (src/anonymous.ml[79,3084+14]..src/anonymous.ml[105,4392+74]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (src/anonymous.ml[79,3084+14]..src/anonymous.ml[79,3084+17])
+                          Tpat_var "pos/813"
+                        expression (src/anonymous.ml[79,3084+18]..src/anonymous.ml[105,4392+74]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (src/anonymous.ml[79,3084+19]..src/anonymous.ml[79,3084+29])
+                                extra
+                                  Tpat_extra_constraint
+                                  core_type (src/anonymous.ml[79,3084+32]..src/anonymous.ml[79,3084+43])
+                                    Ttyp_constr "list/9!"
+                                    [
+                                      core_type (src/anonymous.ml[79,3084+32]..src/anonymous.ml[79,3084+38])
+                                        Ttyp_constr "Dune__exe!.Syntax.symbol"
+                                        []
+                                    ]
+                                Tpat_alias "parameters/814"
+                                pattern (src/anonymous.ml[79,3084+19]..src/anonymous.ml[79,3084+29])
+                                  Tpat_any
+                              expression (src/anonymous.ml[79,3084+45]..src/anonymous.ml[105,4392+74]) ghost
+                                Texp_function
+                                Nolabel
+                                [
+                                  <case>
+                                    pattern (src/anonymous.ml[79,3084+46]..src/anonymous.ml[79,3084+54])
+                                      extra
+                                        Tpat_extra_constraint
+                                        core_type (src/anonymous.ml[79,3084+57]..src/anonymous.ml[79,3084+82])
+                                          Ttyp_constr "list/9!"
+                                          [
+                                            core_type (src/anonymous.ml[79,3084+57]..src/anonymous.ml[79,3084+77])
+                                              Ttyp_constr "Dune__exe!.Syntax.parameterized_branch"
+                                              []
+                                          ]
+                                      Tpat_alias "branches/815"
+                                      pattern (src/anonymous.ml[79,3084+46]..src/anonymous.ml[79,3084+54])
+                                        Tpat_any
+                                    expression (src/anonymous.ml[86,3612+2]..src/anonymous.ml[105,4392+74])
+                                      extra
+                                        Texp_constraint
+                                        core_type (src/anonymous.ml[79,3084+86]..src/anonymous.ml[79,3084+95])
+                                          Ttyp_constr "Dune__exe!.Syntax.parameter"
+                                          []
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (src/anonymous.ml[86,3612+6]..src/anonymous.ml[86,3612+10])
+                                            Tpat_var "used/816"
+                                          expression (src/anonymous.ml[86,3612+13]..src/anonymous.ml[86,3612+49])
+                                            Texp_apply
+                                            expression (src/anonymous.ml[86,3612+13]..src/anonymous.ml[86,3612+24])
+                                              Texp_ident "fn_branches/727"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/anonymous.ml[86,3612+25]..src/anonymous.ml[86,3612+40])
+                                                  Texp_ident "Dune__exe!.StringSet.empty"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/anonymous.ml[86,3612+41]..src/anonymous.ml[86,3612+49])
+                                                  Texp_ident "branches/815"
+                                            ]
+                                      ]
+                                      expression (src/anonymous.ml[87,3665+2]..src/anonymous.ml[105,4392+74])
+                                        Texp_let Nonrec
+                                        [
+                                          <def>
+                                            pattern (src/anonymous.ml[87,3665+6]..src/anonymous.ml[87,3665+16])
+                                              Tpat_var "parameters/817"
+                                            expression (src/anonymous.ml[87,3665+19]..src/anonymous.ml[87,3665+73])
+                                              Texp_apply
+                                              expression (src/anonymous.ml[87,3665+19]..src/anonymous.ml[87,3665+30])
+                                                Texp_ident "Stdlib!.List.filter"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/anonymous.ml[87,3665+31]..src/anonymous.ml[87,3665+62])
+                                                    Texp_function
+                                                    Nolabel
+                                                    [
+                                                      <case>
+                                                        pattern (src/anonymous.ml[87,3665+36]..src/anonymous.ml[87,3665+37])
+                                                          Tpat_var "x/818"
+                                                        expression (src/anonymous.ml[87,3665+41]..src/anonymous.ml[87,3665+61])
+                                                          Texp_apply
+                                                          expression (src/anonymous.ml[87,3665+41]..src/anonymous.ml[87,3665+54])
+                                                            Texp_ident "Dune__exe!.StringSet.mem"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/anonymous.ml[87,3665+55]..src/anonymous.ml[87,3665+56])
+                                                                Texp_ident "x/818"
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/anonymous.ml[87,3665+57]..src/anonymous.ml[87,3665+61])
+                                                                Texp_ident "used/816"
+                                                          ]
+                                                    ]
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/anonymous.ml[87,3665+63]..src/anonymous.ml[87,3665+73])
+                                                    Texp_ident "parameters/814"
+                                              ]
+                                        ]
+                                        expression (src/anonymous.ml[89,3788+2]..src/anonymous.ml[105,4392+74])
+                                          Texp_let Nonrec
+                                          [
+                                            <def>
+                                              pattern (src/anonymous.ml[89,3788+6]..src/anonymous.ml[89,3788+12])
+                                                Tpat_var "symbol/819"
+                                              expression (src/anonymous.ml[89,3788+15]..src/anonymous.ml[89,3788+22])
+                                                Texp_apply
+                                                expression (src/anonymous.ml[89,3788+15]..src/anonymous.ml[89,3788+20])
+                                                  Texp_ident "fresh/732"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/anonymous.ml[89,3788+20]..src/anonymous.ml[89,3788+22])
+                                                      Texp_construct "()"
+                                                      []
+                                                ]
+                                          ]
+                                          expression (src/anonymous.ml[93,4020+2]..src/anonymous.ml[105,4392+74])
+                                            Texp_let Nonrec
+                                            [
+                                              <def>
+                                                pattern (src/anonymous.ml[93,4020+6]..src/anonymous.ml[93,4020+10])
+                                                  Tpat_var "rule/820"
+                                                expression (src/anonymous.ml[93,4020+13]..src/anonymous.ml[101,4280+3])
+                                                  Texp_record
+                                                    fields =
+                                                      [
+                                                        "pr_public_flag"
+                                                          expression (src/anonymous.ml[94,4035+21]..src/anonymous.ml[94,4035+26])
+                                                            Texp_construct "false"
+                                                            []
+                                                        "pr_inline_flag"
+                                                          expression (src/anonymous.ml[95,4063+21]..src/anonymous.ml[95,4063+25])
+                                                            Texp_construct "true"
+                                                            []
+                                                        "pr_nt"
+                                                          expression (src/anonymous.ml[96,4090+21]..src/anonymous.ml[96,4090+27])
+                                                            Texp_ident "symbol/819"
+                                                        "pr_positions"
+                                                          expression (src/anonymous.ml[97,4119+21]..src/anonymous.ml[97,4119+28])
+                                                            Texp_construct "::"
+                                                            [
+                                                              expression (src/anonymous.ml[97,4119+23]..src/anonymous.ml[97,4119+26])
+                                                                Texp_ident "pos/813"
+                                                              expression (src/anonymous.ml[97,4119+27]..src/anonymous.ml[97,4119+28]) ghost
+                                                                Texp_construct "[]"
+                                                                []
+                                                            ]
+                                                        "pr_attributes"
+                                                          expression (src/anonymous.ml[98,4192+21]..src/anonymous.ml[98,4192+23])
+                                                            Texp_construct "[]"
+                                                            []
+                                                        "pr_parameters"
+                                                          expression (src/anonymous.ml[99,4217+21]..src/anonymous.ml[99,4217+31])
+                                                            Texp_ident "parameters/817"
+                                                        "pr_branches"
+                                                          expression (src/anonymous.ml[100,4250+21]..src/anonymous.ml[100,4250+29])
+                                                            Texp_ident "branches/815"
+                                                      ]
+                                                    representation =
+                                                      Record_regular
+                                                    extended_expression =
+                                                      None
+                                            ]
+                                            expression (src/anonymous.ml[103,4319+2]..src/anonymous.ml[105,4392+74])
+                                              Texp_sequence
+                                              expression (src/anonymous.ml[103,4319+2]..src/anonymous.ml[103,4319+25])
+                                                Texp_apply
+                                                expression (src/anonymous.ml[103,4319+8]..src/anonymous.ml[103,4319+10])
+                                                  Texp_ident "Stdlib!.:="
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/anonymous.ml[103,4319+2]..src/anonymous.ml[103,4319+7])
+                                                      Texp_ident "rules/807"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/anonymous.ml[103,4319+11]..src/anonymous.ml[103,4319+25])
+                                                      Texp_construct "::"
+                                                      [
+                                                        expression (src/anonymous.ml[103,4319+11]..src/anonymous.ml[103,4319+15])
+                                                          Texp_ident "rule/820"
+                                                        expression (src/anonymous.ml[103,4319+19]..src/anonymous.ml[103,4319+25])
+                                                          Texp_apply
+                                                          expression (src/anonymous.ml[103,4319+19]..src/anonymous.ml[103,4319+20])
+                                                            Texp_ident "Stdlib!.!"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/anonymous.ml[103,4319+20]..src/anonymous.ml[103,4319+25])
+                                                                Texp_ident "rules/807"
+                                                          ]
+                                                      ]
+                                                ]
+                                              expression (src/anonymous.ml[105,4392+2]..src/anonymous.ml[105,4392+74])
+                                                Texp_apply
+                                                expression (src/anonymous.ml[105,4392+2]..src/anonymous.ml[105,4392+16])
+                                                  Texp_ident "Dune__exe!.Parameters.app"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/anonymous.ml[105,4392+17]..src/anonymous.ml[105,4392+48])
+                                                      Texp_apply
+                                                      expression (src/anonymous.ml[105,4392+18]..src/anonymous.ml[105,4392+36])
+                                                        Texp_ident "Dune__exe!.Positions.with_pos"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/anonymous.ml[105,4392+37]..src/anonymous.ml[105,4392+40])
+                                                            Texp_ident "pos/813"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/anonymous.ml[105,4392+41]..src/anonymous.ml[105,4392+47])
+                                                            Texp_ident "symbol/819"
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/anonymous.ml[105,4392+49]..src/anonymous.ml[105,4392+74])
+                                                      Texp_apply
+                                                      expression (src/anonymous.ml[105,4392+50]..src/anonymous.ml[105,4392+58])
+                                                        Texp_ident "Stdlib!.List.map"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/anonymous.ml[105,4392+59]..src/anonymous.ml[105,4392+62])
+                                                            Texp_ident "var/808"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/anonymous.ml[105,4392+63]..src/anonymous.ml[105,4392+73])
+                                                            Texp_ident "parameters/817"
+                                                      ]
+                                                ]
+                                ]
+                          ]
+                    ]
+              ]
+            structure_item (src/anonymous.ml[111,4571+0]..src/anonymous.ml[132,5409+30])
+              Tstr_value Rec
+              [
+                <def>
+                  pattern (src/anonymous.ml[111,4571+8]..src/anonymous.ml[111,4571+27])
+                    Tpat_var "transform_parameter/821"
+                  expression (src/anonymous.ml[111,4571+28]..src/anonymous.ml[123,5113+39]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (src/anonymous.ml[111,4571+29]..src/anonymous.ml[111,4571+39])
+                          extra
+                            Tpat_extra_constraint
+                            core_type (src/anonymous.ml[111,4571+42]..src/anonymous.ml[111,4571+53])
+                              Ttyp_constr "list/9!"
+                              [
+                                core_type (src/anonymous.ml[111,4571+42]..src/anonymous.ml[111,4571+48])
+                                  Ttyp_constr "Dune__exe!.Syntax.symbol"
+                                  []
+                              ]
+                          Tpat_alias "parameters/824"
+                          pattern (src/anonymous.ml[111,4571+29]..src/anonymous.ml[111,4571+39])
+                            Tpat_any
+                        expression (src/anonymous.ml[111,4571+55]..src/anonymous.ml[123,5113+39]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (src/anonymous.ml[111,4571+56]..src/anonymous.ml[111,4571+57])
+                                extra
+                                  Tpat_extra_constraint
+                                  core_type (src/anonymous.ml[111,4571+60]..src/anonymous.ml[111,4571+69])
+                                    Ttyp_constr "Dune__exe!.Syntax.parameter"
+                                    []
+                                Tpat_alias "p/825"
+                                pattern (src/anonymous.ml[111,4571+56]..src/anonymous.ml[111,4571+57])
+                                  Tpat_any
+                              expression (src/anonymous.ml[112,4656+2]..src/anonymous.ml[123,5113+39])
+                                extra
+                                  Texp_constraint
+                                  core_type (src/anonymous.ml[111,4571+73]..src/anonymous.ml[111,4571+82])
+                                    Ttyp_constr "Dune__exe!.Syntax.parameter"
+                                    []
+                                Texp_match
+                                expression (src/anonymous.ml[112,4656+8]..src/anonymous.ml[112,4656+9])
+                                  Texp_ident "p/825"
+                                [
+                                  <case>
+                                    pattern (src/anonymous.ml[113,4671+4]..src/anonymous.ml[113,4671+18])
+                                      Tpat_value
+                                      pattern (src/anonymous.ml[113,4671+4]..src/anonymous.ml[113,4671+18])
+                                        Tpat_construct "ParameterVar"
+                                        [
+                                          pattern (src/anonymous.ml[113,4671+17]..src/anonymous.ml[113,4671+18])
+                                            Tpat_any
+                                        ]
+                                        None
+                                    expression (src/anonymous.ml[114,4693+6]..src/anonymous.ml[114,4693+7])
+                                      Texp_ident "p/825"
+                                  <case>
+                                    pattern (src/anonymous.ml[115,4701+4]..src/anonymous.ml[115,4701+24])
+                                      Tpat_value
+                                      pattern (src/anonymous.ml[115,4701+4]..src/anonymous.ml[115,4701+24])
+                                        Tpat_construct "ParameterApp"
+                                        [
+                                          pattern (src/anonymous.ml[115,4701+18]..src/anonymous.ml[115,4701+19])
+                                            Tpat_var "x/826"
+                                          pattern (src/anonymous.ml[115,4701+21]..src/anonymous.ml[115,4701+23])
+                                            Tpat_var "ps/827"
+                                        ]
+                                        None
+                                    expression (src/anonymous.ml[116,4729+6]..src/anonymous.ml[116,4729+68])
+                                      Texp_construct "ParameterApp"
+                                      [
+                                        expression (src/anonymous.ml[116,4729+20]..src/anonymous.ml[116,4729+21])
+                                          Texp_ident "x/826"
+                                        expression (src/anonymous.ml[116,4729+23]..src/anonymous.ml[116,4729+67])
+                                          Texp_apply
+                                          expression (src/anonymous.ml[116,4729+23]..src/anonymous.ml[116,4729+31])
+                                            Texp_ident "Stdlib!.List.map"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/anonymous.ml[116,4729+32]..src/anonymous.ml[116,4729+64])
+                                                Texp_apply
+                                                expression (src/anonymous.ml[116,4729+33]..src/anonymous.ml[116,4729+52])
+                                                  Texp_ident "transform_parameter/821"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/anonymous.ml[116,4729+53]..src/anonymous.ml[116,4729+63])
+                                                      Texp_ident "parameters/824"
+                                                ]
+                                            <arg>
+                                              Nolabel
+                                              expression (src/anonymous.ml[116,4729+65]..src/anonymous.ml[116,4729+67])
+                                                Texp_ident "ps/827"
+                                          ]
+                                      ]
+                                  <case>
+                                    pattern (src/anonymous.ml[117,4798+4]..src/anonymous.ml[117,4798+31])
+                                      Tpat_value
+                                      pattern (src/anonymous.ml[117,4798+4]..src/anonymous.ml[117,4798+31])
+                                        Tpat_construct "ParameterAnonymous"
+                                        [
+                                          pattern (src/anonymous.ml[117,4798+23]..src/anonymous.ml[117,4798+31])
+                                            Tpat_var "branches/828"
+                                        ]
+                                        None
+                                    expression (src/anonymous.ml[118,4833+6]..src/anonymous.ml[123,5113+39])
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (src/anonymous.ml[118,4833+10]..src/anonymous.ml[118,4833+13])
+                                            Tpat_var "pos/829"
+                                          expression (src/anonymous.ml[118,4833+16]..src/anonymous.ml[118,4833+43])
+                                            Texp_apply
+                                            expression (src/anonymous.ml[118,4833+16]..src/anonymous.ml[118,4833+34])
+                                              Texp_ident "Dune__exe!.Positions.position"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/anonymous.ml[118,4833+35]..src/anonymous.ml[118,4833+43])
+                                                  Texp_ident "branches/828"
+                                            ]
+                                        <def>
+                                          pattern (src/anonymous.ml[119,4877+10]..src/anonymous.ml[119,4877+18])
+                                            Tpat_var "branches/830"
+                                          expression (src/anonymous.ml[119,4877+21]..src/anonymous.ml[119,4877+45])
+                                            Texp_apply
+                                            expression (src/anonymous.ml[119,4877+21]..src/anonymous.ml[119,4877+36])
+                                              Texp_ident "Dune__exe!.Positions.value"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/anonymous.ml[119,4877+37]..src/anonymous.ml[119,4877+45])
+                                                  Texp_ident "branches/828"
+                                            ]
+                                      ]
+                                      expression (src/anonymous.ml[121,4978+6]..src/anonymous.ml[123,5113+39])
+                                        Texp_let Nonrec
+                                        [
+                                          <def>
+                                            pattern (src/anonymous.ml[121,4978+10]..src/anonymous.ml[121,4978+18])
+                                              Tpat_var "branches/831"
+                                            expression (src/anonymous.ml[121,4978+21]..src/anonymous.ml[121,4978+82])
+                                              Texp_apply
+                                              expression (src/anonymous.ml[121,4978+21]..src/anonymous.ml[121,4978+29])
+                                                Texp_ident "Stdlib!.List.map"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/anonymous.ml[121,4978+30]..src/anonymous.ml[121,4978+73])
+                                                    Texp_apply
+                                                    expression (src/anonymous.ml[121,4978+31]..src/anonymous.ml[121,4978+61])
+                                                      Texp_ident "transform_parameterized_branch/823"
+                                                    [
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/anonymous.ml[121,4978+62]..src/anonymous.ml[121,4978+72])
+                                                          Texp_ident "parameters/824"
+                                                    ]
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/anonymous.ml[121,4978+74]..src/anonymous.ml[121,4978+82])
+                                                    Texp_ident "branches/830"
+                                              ]
+                                        ]
+                                        expression (src/anonymous.ml[123,5113+6]..src/anonymous.ml[123,5113+39])
+                                          Texp_apply
+                                          expression (src/anonymous.ml[123,5113+6]..src/anonymous.ml[123,5113+15])
+                                            Texp_ident "anonymous/811"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/anonymous.ml[123,5113+16]..src/anonymous.ml[123,5113+19])
+                                                Texp_ident "pos/829"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/anonymous.ml[123,5113+20]..src/anonymous.ml[123,5113+30])
+                                                Texp_ident "parameters/824"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/anonymous.ml[123,5113+31]..src/anonymous.ml[123,5113+39])
+                                                Texp_ident "branches/831"
+                                          ]
+                                ]
+                          ]
+                    ]
+                <def>
+                  pattern (src/anonymous.ml[125,5154+4]..src/anonymous.ml[125,5154+22])
+                    Tpat_var "transform_producer/822"
+                  expression (src/anonymous.ml[125,5154+23]..src/anonymous.ml[126,5217+44]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (src/anonymous.ml[125,5154+23]..src/anonymous.ml[125,5154+33])
+                          Tpat_var "parameters/832"
+                        expression (src/anonymous.ml[125,5154+34]..src/anonymous.ml[126,5217+44]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (src/anonymous.ml[125,5154+35]..src/anonymous.ml[125,5154+48])
+                                extra
+                                  Tpat_extra_constraint
+                                  core_type (src/anonymous.ml[125,5154+51]..src/anonymous.ml[125,5154+59])
+                                    Ttyp_constr "Dune__exe!.Syntax.producer"
+                                    []
+                                Tpat_tuple
+                                [
+                                  pattern (src/anonymous.ml[125,5154+36]..src/anonymous.ml[125,5154+37])
+                                    Tpat_var "x/833"
+                                  pattern (src/anonymous.ml[125,5154+39]..src/anonymous.ml[125,5154+40])
+                                    Tpat_var "p/834"
+                                  pattern (src/anonymous.ml[125,5154+42]..src/anonymous.ml[125,5154+47])
+                                    Tpat_var "attrs/835"
+                                ]
+                              expression (src/anonymous.ml[126,5217+2]..src/anonymous.ml[126,5217+44])
+                                Texp_tuple
+                                [
+                                  expression (src/anonymous.ml[126,5217+2]..src/anonymous.ml[126,5217+3])
+                                    Texp_ident "x/833"
+                                  expression (src/anonymous.ml[126,5217+5]..src/anonymous.ml[126,5217+37])
+                                    Texp_apply
+                                    expression (src/anonymous.ml[126,5217+5]..src/anonymous.ml[126,5217+24])
+                                      Texp_ident "transform_parameter/821"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/anonymous.ml[126,5217+25]..src/anonymous.ml[126,5217+35])
+                                          Texp_ident "parameters/832"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/anonymous.ml[126,5217+36]..src/anonymous.ml[126,5217+37])
+                                          Texp_ident "p/834"
+                                    ]
+                                  expression (src/anonymous.ml[126,5217+39]..src/anonymous.ml[126,5217+44])
+                                    Texp_ident "attrs/835"
+                                ]
+                          ]
+                    ]
+                <def>
+                  pattern (src/anonymous.ml[128,5263+4]..src/anonymous.ml[128,5263+34])
+                    Tpat_var "transform_parameterized_branch/823"
+                  expression (src/anonymous.ml[128,5263+35]..src/anonymous.ml[132,5409+30]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (src/anonymous.ml[128,5263+35]..src/anonymous.ml[128,5263+45])
+                          Tpat_var "parameters/837"
+                        expression (src/anonymous.ml[128,5263+46]..src/anonymous.ml[132,5409+30]) ghost
+                          Texp_function
+                          Nolabel
+                          [
+                            <case>
+                              pattern (src/anonymous.ml[128,5263+46]..src/anonymous.ml[128,5263+52])
+                                Tpat_var "branch/838"
+                              expression (src/anonymous.ml[129,5318+2]..src/anonymous.ml[132,5409+30])
+                                Texp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/anonymous.ml[129,5318+6]..src/anonymous.ml[129,5318+18])
+                                      Tpat_var "pr_producers/839"
+                                    expression (src/anonymous.ml[130,5339+4]..src/anonymous.ml[130,5339+64])
+                                      Texp_apply
+                                      expression (src/anonymous.ml[130,5339+4]..src/anonymous.ml[130,5339+12])
+                                        Texp_ident "Stdlib!.List.map"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/anonymous.ml[130,5339+13]..src/anonymous.ml[130,5339+44])
+                                            Texp_apply
+                                            expression (src/anonymous.ml[130,5339+14]..src/anonymous.ml[130,5339+32])
+                                              Texp_ident "transform_producer/822"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/anonymous.ml[130,5339+33]..src/anonymous.ml[130,5339+43])
+                                                  Texp_ident "parameters/837"
+                                            ]
+                                        <arg>
+                                          Nolabel
+                                          expression (src/anonymous.ml[130,5339+45]..src/anonymous.ml[130,5339+64])
+                                            Texp_field
+                                            expression (src/anonymous.ml[130,5339+45]..src/anonymous.ml[130,5339+51])
+                                              Texp_ident "branch/838"
+                                            "pr_producers"
+                                      ]
+                                ]
+                                expression (src/anonymous.ml[132,5409+2]..src/anonymous.ml[132,5409+30])
+                                  Texp_record
+                                    fields =
+                                      [
+                                        <kept>                                        "pr_producers"
+                                          expression (src/anonymous.ml[132,5409+16]..src/anonymous.ml[132,5409+28])
+                                            Texp_ident "pr_producers/839"
+                                        <kept>                                        <kept>                                        <kept>                                      ]
+                                    representation =
+                                      Record_regular
+                                    extended_expression =
+                                      Some
+                                        expression (src/anonymous.ml[132,5409+4]..src/anonymous.ml[132,5409+10])
+                                          Texp_ident "branch/838"
+                          ]
+                    ]
+              ]
+            structure_item (src/anonymous.ml[134,5441+0]..src/anonymous.ml[138,5588+27])
+              Tstr_value Nonrec
+              [
+                <def>
+                  pattern (src/anonymous.ml[134,5441+4]..src/anonymous.ml[134,5441+32])
+                    Tpat_var "transform_parameterized_rule/840"
+                  expression (src/anonymous.ml[134,5441+33]..src/anonymous.ml[138,5588+27]) ghost
+                    Texp_function
+                    Nolabel
+                    [
+                      <case>
+                        pattern (src/anonymous.ml[134,5441+33]..src/anonymous.ml[134,5441+37])
+                          Tpat_var "rule/842"
+                        expression (src/anonymous.ml[135,5481+2]..src/anonymous.ml[138,5588+27])
+                          Texp_let Nonrec
+                          [
+                            <def>
+                              pattern (src/anonymous.ml[135,5481+6]..src/anonymous.ml[135,5481+17])
+                                Tpat_var "pr_branches/843"
+                              expression (src/anonymous.ml[136,5501+4]..src/anonymous.ml[136,5501+81])
+                                Texp_apply
+                                expression (src/anonymous.ml[136,5501+4]..src/anonymous.ml[136,5501+12])
+                                  Texp_ident "Stdlib!.List.map"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/anonymous.ml[136,5501+13]..src/anonymous.ml[136,5501+64])
+                                      Texp_apply
+                                      expression (src/anonymous.ml[136,5501+14]..src/anonymous.ml[136,5501+44])
+                                        Texp_ident "transform_parameterized_branch/823"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/anonymous.ml[136,5501+45]..src/anonymous.ml[136,5501+63])
+                                            Texp_field
+                                            expression (src/anonymous.ml[136,5501+45]..src/anonymous.ml[136,5501+49])
+                                              Texp_ident "rule/842"
+                                            "pr_parameters"
+                                      ]
+                                  <arg>
+                                    Nolabel
+                                    expression (src/anonymous.ml[136,5501+65]..src/anonymous.ml[136,5501+81])
+                                      Texp_field
+                                      expression (src/anonymous.ml[136,5501+65]..src/anonymous.ml[136,5501+69])
+                                        Texp_ident "rule/842"
+                                      "pr_branches"
+                                ]
+                          ]
+                          expression (src/anonymous.ml[138,5588+2]..src/anonymous.ml[138,5588+27])
+                            Texp_record
+                              fields =
+                                [
+                                  <kept>                                  <kept>                                  <kept>                                  <kept>                                  <kept>                                  <kept>                                  "pr_branches"
+                                    expression (src/anonymous.ml[138,5588+14]..src/anonymous.ml[138,5588+25])
+                                      Texp_ident "pr_branches/843"
+                                ]
+                              representation =
+                                Record_regular
+                              extended_expression =
+                                Some
+                                  expression (src/anonymous.ml[138,5588+4]..src/anonymous.ml[138,5588+8])
+                                    Texp_ident "rule/842"
+                    ]
+              ]
+          ]
+  structure_item (src/anonymous.ml[146,5772+0]..src/anonymous.ml[150,5953+21])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/anonymous.ml[146,5772+4]..src/anonymous.ml[146,5772+29])
+          Tpat_var "transform_partial_grammar/845"
+        expression (src/anonymous.ml[146,5772+30]..src/anonymous.ml[150,5953+21]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/anonymous.ml[146,5772+30]..src/anonymous.ml[146,5772+31])
+                Tpat_var "g/847"
+              expression (src/anonymous.ml[147,5806+2]..src/anonymous.ml[150,5953+21])
+                Texp_letmodule "R/856"
+                module_expr (src/anonymous.ml[147,5806+17]..src/anonymous.ml[147,5806+32])
+                  Tmod_apply
+                  module_expr (src/anonymous.ml[147,5806+17]..src/anonymous.ml[147,5806+20])
+                    Tmod_ident "Run/844"
+                  module_expr (src/anonymous.ml[147,5806+21]..src/anonymous.ml[147,5806+31])
+                    Tmod_structure
+                    []
+                expression (src/anonymous.ml[148,5842+2]..src/anonymous.ml[150,5953+21])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/anonymous.ml[148,5842+6]..src/anonymous.ml[148,5842+14])
+                        Tpat_var "pg_rules/857"
+                      expression (src/anonymous.ml[148,5842+17]..src/anonymous.ml[148,5842+67])
+                        Texp_apply
+                        expression (src/anonymous.ml[148,5842+17]..src/anonymous.ml[148,5842+25])
+                          Texp_ident "Stdlib!.List.map"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/anonymous.ml[148,5842+26]..src/anonymous.ml[148,5842+56])
+                              Texp_ident "R/856.transform_parameterized_rule"
+                          <arg>
+                            Nolabel
+                            expression (src/anonymous.ml[148,5842+57]..src/anonymous.ml[148,5842+67])
+                              Texp_field
+                              expression (src/anonymous.ml[148,5842+57]..src/anonymous.ml[148,5842+58])
+                                Texp_ident "g/847"
+                              "pg_rules"
+                        ]
+                  ]
+                  expression (src/anonymous.ml[149,5913+2]..src/anonymous.ml[150,5953+21])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/anonymous.ml[149,5913+6]..src/anonymous.ml[149,5913+14])
+                          Tpat_var "pg_rules/858"
+                        expression (src/anonymous.ml[149,5913+17]..src/anonymous.ml[149,5913+36])
+                          Texp_apply
+                          expression (src/anonymous.ml[149,5913+26]..src/anonymous.ml[149,5913+27])
+                            Texp_ident "Stdlib!.@"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/anonymous.ml[149,5913+17]..src/anonymous.ml[149,5913+25])
+                                Texp_apply
+                                expression (src/anonymous.ml[149,5913+17]..src/anonymous.ml[149,5913+18])
+                                  Texp_ident "Stdlib!.!"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/anonymous.ml[149,5913+18]..src/anonymous.ml[149,5913+25])
+                                      Texp_ident "R/856.rules"
+                                ]
+                            <arg>
+                              Nolabel
+                              expression (src/anonymous.ml[149,5913+28]..src/anonymous.ml[149,5913+36])
+                                Texp_ident "pg_rules/857"
+                          ]
+                    ]
+                    expression (src/anonymous.ml[150,5953+2]..src/anonymous.ml[150,5953+21])
+                      Texp_record
+                        fields =
+                          [
+                            <kept>                            <kept>                            <kept>                            "pg_rules"
+                              expression (src/anonymous.ml[150,5953+11]..src/anonymous.ml[150,5953+19])
+                                Texp_ident "pg_rules/858"
+                          ]
+                        representation =
+                          Record_regular
+                        extended_expression =
+                          Some
+                            expression (src/anonymous.ml[150,5953+4]..src/anonymous.ml[150,5953+5])
+                              Texp_ident "g/847"
+          ]
+    ]
+]
+
+{<Dune__exe__Anonymous>
+ "transform_partial_grammar"[value] -> <Dune__exe__Anonymous.55>;
+ }
+
+(seq
+  (letrec
+    (fn_parameter/431
+       (function accu/433 p/434
+         (let
+           (*match*/2301 =
+              (apply (field_imm 1 (global Dune__exe__Parameters!)) p/434)
+            ps/436 =a (field_imm 1 *match*/2301)
+            x/435 =a (field_imm 0 *match*/2301)
+            accu/522 =
+              (apply (field_imm 1 (global Dune__exe__StringSet!))
+                (apply (field_imm 0 (global Dune__exe__Positions!)) x/435)
+                accu/433))
+           (apply fn_parameters/432 accu/522 ps/436)))
+      fn_parameters/432
+        (function accu/650 ps/651
+          (apply (field_imm 25 (global Stdlib__List!)) fn_parameter/431
+            accu/650 ps/651)))
+    (seq
+      (setfield_ptr(root-init) 1 (global Dune__exe__Anonymous!)
+        fn_parameter/431)
+      (setfield_ptr(root-init) 2 (global Dune__exe__Anonymous!)
+        fn_parameters/432)))
+  (let
+    (fn_producer/718 =
+       (function accu/720 param/722
+         (let
+           (*match*/2303 =a (field_imm 2 param/722)
+            p/721 =a (field_imm 1 param/722)
+            *match*/2302 =a (field_imm 0 param/722))
+           (apply (field_imm 1 (global Dune__exe__Anonymous!)) accu/720
+             p/721))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Anonymous!)
+      fn_producer/718))
+  (let
+    (fn_branch/723 =
+       (function accu/725 branch/726
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 3 (global Dune__exe__Anonymous!)) accu/725
+           (field_imm 1 branch/726))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Anonymous!) fn_branch/723))
+  (let
+    (fn_branches/727 =
+       (function accu/729 branches/730
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 4 (global Dune__exe__Anonymous!)) accu/729
+           branches/730)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Anonymous!)
+      fn_branches/727))
+  (let
+    (Run/844 =
+       (function X/2309 is_a_functor
+         (let
+           (X/731 =a X/2309
+            fresh/732 =
+              (let (next/733 = (makemutable 0 (int) 0))
+                (function param/806[int]
+                  (apply (field_imm 3 (global Stdlib__Printf!))
+                    [0: [11: "__anonymous_" [4: 0 0 0 0]] "__anonymous_%d"]
+                    (apply (field_imm 22 (global Dune__exe__Misc!)) next/733))))
+            rules/807 = (makemutable 0 0)
+            var/808 =
+              (function symbol/810
+                (makeblock 0
+                  (apply (field_imm 6 (global Dune__exe__Positions!))
+                    symbol/810)))
+            anonymous/811 =
+              (function pos/813 parameters/814 branches/815
+                (let
+                  (used/816 =
+                     (apply (field_imm 5 (global Dune__exe__Anonymous!))
+                       (field_imm 0 (global Dune__exe__StringSet!))
+                       branches/815)
+                   parameters/817 =
+                     (apply (field_imm 43 (global Stdlib__List!))
+                       (function x/818 : int
+                         (apply (field_imm 29 (global Dune__exe__StringSet!))
+                           x/818 used/816))
+                       parameters/814)
+                   symbol/819 = (apply fresh/732 0)
+                   rule/820 =
+                     (makeblock 0 (int,int,*,*,*,*,*) 0 1 symbol/819
+                       (makeblock 0 pos/813 0) 0 parameters/817 branches/815))
+                  (seq
+                    (setfield_ptr 0 rules/807
+                      (makeblock 0 rule/820 (field_mut 0 rules/807)))
+                    (apply (field_imm 0 (global Dune__exe__Parameters!))
+                      (apply (field_imm 3 (global Dune__exe__Positions!))
+                        pos/813 symbol/819)
+                      (apply (field_imm 19 (global Stdlib__List!)) var/808
+                        parameters/817))))))
+           (letrec
+             (transform_parameter/821
+                (function parameters/824 p/825
+                  (switch* p/825
+                   case tag 0:
+                    (let (*match*/2305 =a (field_imm 0 p/825)) p/825)
+                   case tag 1:
+                    (let
+                      (ps/827 =a (field_imm 1 p/825)
+                       x/826 =a (field_imm 0 p/825))
+                      (makeblock 1 x/826
+                        (apply (field_imm 19 (global Stdlib__List!))
+                          (apply transform_parameter/821 parameters/824)
+                          ps/827)))
+                   case tag 2:
+                    (let
+                      (branches/828 =a (field_imm 0 p/825)
+                       pos/829 =
+                         (apply (field_imm 1 (global Dune__exe__Positions!))
+                           branches/828)
+                       branches/830 =
+                         (apply (field_imm 0 (global Dune__exe__Positions!))
+                           branches/828)
+                       branches/831 =
+                         (apply (field_imm 19 (global Stdlib__List!))
+                           (apply transform_parameterized_branch/823
+                             parameters/824)
+                           branches/830))
+                      (apply anonymous/811 pos/829 parameters/824
+                        branches/831))))
+               transform_producer/822
+                 (function parameters/832 param/836
+                   (let
+                     (attrs/835 =a (field_imm 2 param/836)
+                      p/834 =a (field_imm 1 param/836)
+                      x/833 =a (field_imm 0 param/836))
+                     (makeblock 0 x/833
+                       (apply transform_parameter/821 parameters/832 p/834)
+                       attrs/835)))
+               transform_parameterized_branch/823
+                 (function parameters/837 branch/838
+                   (let
+                     (pr_producers/839 =
+                        (apply (field_imm 19 (global Stdlib__List!))
+                          (apply transform_producer/822 parameters/837)
+                          (field_imm 1 branch/838))
+                      init/2306 = branch/838)
+                     (makeblock 0 (field_imm 0 init/2306) pr_producers/839
+                       (field_imm 2 init/2306) (field_imm 3 init/2306)
+                       (field_imm 4 init/2306)))))
+             (let
+               (transform_parameterized_rule/840 =
+                  (function rule/842
+                    (let
+                      (pr_branches/843 =
+                         (apply (field_imm 19 (global Stdlib__List!))
+                           (apply transform_parameterized_branch/823
+                             (field_imm 5 rule/842))
+                           (field_imm 6 rule/842))
+                       init/2307 = rule/842)
+                      (makeblock 0 (int,int,*,*,*,*,*)
+                        (field_int 0 init/2307) (field_int 1 init/2307)
+                        (field_imm 2 init/2307) (field_imm 3 init/2307)
+                        (field_imm 4 init/2307) (field_imm 5 init/2307)
+                        pr_branches/843))))
+               (makeblock 0 fresh/732 rules/807 var/808 anonymous/811
+                 transform_parameter/821 transform_producer/822
+                 transform_parameterized_branch/823
+                 transform_parameterized_rule/840))))))
+    (seq (setfield_ptr(root-init) 6 (global Dune__exe__Anonymous!) Run/844)
+      (let
+        (transform_partial_grammar/845 =
+           (function g/847
+             (let
+               (R/856 =
+                  (apply (field_imm 6 (global Dune__exe__Anonymous!))
+                    (makeblock 0))
+                pg_rules/857 =
+                  (apply (field_imm 19 (global Stdlib__List!))
+                    (field_imm 7 R/856) (field_imm 3 g/847))
+                pg_rules/858 =
+                  (apply (field_imm 36 (global Stdlib!))
+                    (field_mut 0 (field_imm 1 R/856)) pg_rules/857)
+                init/2310 = g/847)
+               (makeblock 0 (field_imm 0 init/2310) (field_imm 1 init/2310)
+                 (field_imm 2 init/2310) pg_rules/858))))
+        (setfield_ptr(root-init) 0 (global Dune__exe__Anonymous!)
+          transform_partial_grammar/845))
+      0)))
+(seq
+  (letrec
+    (fn_parameter/431
+       (function accu/433 p/434
+         (let
+           (*match*/2301 =
+              (apply (field_imm 1 (global Dune__exe__Parameters!)) p/434)
+            accu/522 =
+              (apply (field_imm 1 (global Dune__exe__StringSet!))
+                (apply (field_imm 0 (global Dune__exe__Positions!))
+                  (field_imm 0 *match*/2301))
+                accu/433))
+           (apply fn_parameters/432 accu/522 (field_imm 1 *match*/2301))))
+      fn_parameters/432
+        (function accu/650 ps/651
+          (apply (field_imm 25 (global Stdlib__List!)) fn_parameter/431
+            accu/650 ps/651)))
+    (seq
+      (setfield_ptr(root-init) 1 (global Dune__exe__Anonymous!)
+        fn_parameter/431)
+      (setfield_ptr(root-init) 2 (global Dune__exe__Anonymous!)
+        fn_parameters/432)))
+  (let
+    (fn_producer/718 =
+       (function accu/720 param/722
+         (apply (field_imm 1 (global Dune__exe__Anonymous!)) accu/720
+           (field_imm 1 param/722))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Anonymous!)
+      fn_producer/718))
+  (let
+    (fn_branch/723 =
+       (function accu/725 branch/726
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 3 (global Dune__exe__Anonymous!)) accu/725
+           (field_imm 1 branch/726))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Anonymous!) fn_branch/723))
+  (let
+    (fn_branches/727 =
+       (function accu/729 branches/730
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 4 (global Dune__exe__Anonymous!)) accu/729
+           branches/730)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Anonymous!)
+      fn_branches/727))
+  (let
+    (Run/844 =
+       (function X/2309 is_a_functor
+         (let
+           (fresh/732 =
+              (let (next/733 = (makemutable 0 (int) 0))
+                (function param/806[int]
+                  (apply (field_imm 3 (global Stdlib__Printf!))
+                    [0: [11: "__anonymous_" [4: 0 0 0 0]] "__anonymous_%d"]
+                    (apply (field_imm 22 (global Dune__exe__Misc!)) next/733))))
+            rules/807 = (makemutable 0 0)
+            var/808 =
+              (function symbol/810
+                (makeblock 0
+                  (apply (field_imm 6 (global Dune__exe__Positions!))
+                    symbol/810)))
+            anonymous/811 =
+              (function pos/813 parameters/814 branches/815
+                (let
+                  (used/816 =
+                     (apply (field_imm 5 (global Dune__exe__Anonymous!))
+                       (field_imm 0 (global Dune__exe__StringSet!))
+                       branches/815)
+                   parameters/817 =
+                     (apply (field_imm 43 (global Stdlib__List!))
+                       (function x/818 : int
+                         (apply (field_imm 29 (global Dune__exe__StringSet!))
+                           x/818 used/816))
+                       parameters/814)
+                   symbol/819 = (apply fresh/732 0)
+                   rule/820 =
+                     (makeblock 0 (int,int,*,*,*,*,*) 0 1 symbol/819
+                       (makeblock 0 pos/813 0) 0 parameters/817 branches/815))
+                  (seq
+                    (setfield_ptr 0 rules/807
+                      (makeblock 0 rule/820 (field_mut 0 rules/807)))
+                    (apply (field_imm 0 (global Dune__exe__Parameters!))
+                      (apply (field_imm 3 (global Dune__exe__Positions!))
+                        pos/813 symbol/819)
+                      (apply (field_imm 19 (global Stdlib__List!)) var/808
+                        parameters/817))))))
+           (letrec
+             (transform_parameter/821
+                (function parameters/824 p/825
+                  (switch* p/825
+                   case tag 0: p/825
+                   case tag 1:
+                    (makeblock 1 (field_imm 0 p/825)
+                      (apply (field_imm 19 (global Stdlib__List!))
+                        (apply transform_parameter/821 parameters/824)
+                        (field_imm 1 p/825)))
+                   case tag 2:
+                    (let
+                      (branches/828 =a (field_imm 0 p/825)
+                       pos/829 =
+                         (apply (field_imm 1 (global Dune__exe__Positions!))
+                           branches/828)
+                       branches/830 =
+                         (apply (field_imm 0 (global Dune__exe__Positions!))
+                           branches/828)
+                       branches/831 =
+                         (apply (field_imm 19 (global Stdlib__List!))
+                           (apply transform_parameterized_branch/823
+                             parameters/824)
+                           branches/830))
+                      (apply anonymous/811 pos/829 parameters/824
+                        branches/831))))
+               transform_producer/822
+                 (function parameters/832 param/836
+                   (makeblock 0 (field_imm 0 param/836)
+                     (apply transform_parameter/821 parameters/832
+                       (field_imm 1 param/836))
+                     (field_imm 2 param/836)))
+               transform_parameterized_branch/823
+                 (function parameters/837 branch/838
+                   (let
+                     (pr_producers/839 =
+                        (apply (field_imm 19 (global Stdlib__List!))
+                          (apply transform_producer/822 parameters/837)
+                          (field_imm 1 branch/838)))
+                     (makeblock 0 (field_imm 0 branch/838) pr_producers/839
+                       (field_imm 2 branch/838) (field_imm 3 branch/838)
+                       (field_imm 4 branch/838)))))
+             (let
+               (transform_parameterized_rule/840 =
+                  (function rule/842
+                    (let
+                      (pr_branches/843 =
+                         (apply (field_imm 19 (global Stdlib__List!))
+                           (apply transform_parameterized_branch/823
+                             (field_imm 5 rule/842))
+                           (field_imm 6 rule/842)))
+                      (makeblock 0 (int,int,*,*,*,*,*) (field_int 0 rule/842)
+                        (field_int 1 rule/842) (field_imm 2 rule/842)
+                        (field_imm 3 rule/842) (field_imm 4 rule/842)
+                        (field_imm 5 rule/842) pr_branches/843))))
+               (makeblock 0 fresh/732 rules/807 var/808 anonymous/811
+                 transform_parameter/821 transform_producer/822
+                 transform_parameterized_branch/823
+                 transform_parameterized_rule/840))))))
+    (seq (setfield_ptr(root-init) 6 (global Dune__exe__Anonymous!) Run/844)
+      (let
+        (transform_partial_grammar/845 =
+           (function g/847
+             (let
+               (R/856 =
+                  (apply (field_imm 6 (global Dune__exe__Anonymous!))
+                    (makeblock 0))
+                pg_rules/857 =
+                  (apply (field_imm 19 (global Stdlib__List!))
+                    (field_imm 7 R/856) (field_imm 3 g/847))
+                pg_rules/858 =
+                  (apply (field_imm 36 (global Stdlib!))
+                    (field_mut 0 (field_imm 1 R/856)) pg_rules/857))
+               (makeblock 0 (field_imm 0 g/847) (field_imm 1 g/847)
+                 (field_imm 2 g/847) pg_rules/858))))
+        (setfield_ptr(root-init) 0 (global Dune__exe__Anonymous!)
+          transform_partial_grammar/845))
+      0)))

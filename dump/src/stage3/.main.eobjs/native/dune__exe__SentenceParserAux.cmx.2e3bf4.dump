@@ -1,0 +1,1211 @@
+[
+  structure_item (src/sentenceParserAux.ml[14,1007+0]..[14,1007+12])
+    Pstr_open Fresh
+    module_expr (src/sentenceParserAux.ml[14,1007+5]..[14,1007+12])
+      Pmod_ident "Grammar" (src/sentenceParserAux.ml[14,1007+5]..[14,1007+12])
+  structure_item (src/sentenceParserAux.ml[16,1021+0]..[17,1039+44])
+    Pstr_type Rec
+    [
+      type_declaration "raw_symbol" (src/sentenceParserAux.ml[16,1021+5]..[16,1021+15]) (src/sentenceParserAux.ml[16,1021+0]..[17,1039+44])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[17,1039+2]..[17,1039+44])
+              Ptyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[17,1039+2]..[17,1039+8])
+                  Ptyp_constr "string" (src/sentenceParserAux.ml[17,1039+2]..[17,1039+8])
+                  []
+                core_type (src/sentenceParserAux.ml[17,1039+11]..[17,1039+26])
+                  Ptyp_constr "Lexing.position" (src/sentenceParserAux.ml[17,1039+11]..[17,1039+26])
+                  []
+                core_type (src/sentenceParserAux.ml[17,1039+29]..[17,1039+44])
+                  Ptyp_constr "Lexing.position" (src/sentenceParserAux.ml[17,1039+29]..[17,1039+44])
+                  []
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[19,1085+0]..[20,1108+12])
+    Pstr_type Rec
+    [
+      type_declaration "raw_nonterminal" (src/sentenceParserAux.ml[19,1085+5]..[19,1085+20]) (src/sentenceParserAux.ml[19,1085+0]..[20,1108+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[20,1108+2]..[20,1108+12])
+              Ptyp_constr "raw_symbol" (src/sentenceParserAux.ml[20,1108+2]..[20,1108+12])
+              []
+    ]
+  structure_item (src/sentenceParserAux.ml[22,1122+0]..[23,1142+12])
+    Pstr_type Rec
+    [
+      type_declaration "raw_terminal" (src/sentenceParserAux.ml[22,1122+5]..[22,1122+17]) (src/sentenceParserAux.ml[22,1122+0]..[23,1142+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[23,1142+2]..[23,1142+12])
+              Ptyp_constr "raw_symbol" (src/sentenceParserAux.ml[23,1142+2]..[23,1142+12])
+              []
+    ]
+  structure_item (src/sentenceParserAux.ml[25,1156+0]..[26,1176+44])
+    Pstr_type Rec
+    [
+      type_declaration "raw_sentence" (src/sentenceParserAux.ml[25,1156+5]..[25,1156+17]) (src/sentenceParserAux.ml[25,1156+0]..[26,1176+44])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[26,1176+2]..[26,1176+44])
+              Ptyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[26,1176+2]..[26,1176+24])
+                  Ptyp_constr "option" (src/sentenceParserAux.ml[26,1176+18]..[26,1176+24])
+                  [
+                    core_type (src/sentenceParserAux.ml[26,1176+2]..[26,1176+17])
+                      Ptyp_constr "raw_nonterminal" (src/sentenceParserAux.ml[26,1176+2]..[26,1176+17])
+                      []
+                  ]
+                core_type (src/sentenceParserAux.ml[26,1176+27]..[26,1176+44])
+                  Ptyp_constr "list" (src/sentenceParserAux.ml[26,1176+40]..[26,1176+44])
+                  [
+                    core_type (src/sentenceParserAux.ml[26,1176+27]..[26,1176+39])
+                      Ptyp_constr "raw_terminal" (src/sentenceParserAux.ml[26,1176+27]..[26,1176+39])
+                      []
+                  ]
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[28,1222+0]..[29,1250+36])
+    Pstr_type Rec
+    [
+      type_declaration "located_raw_sentence" (src/sentenceParserAux.ml[28,1222+5]..[28,1222+25]) (src/sentenceParserAux.ml[28,1222+0]..[29,1250+36])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[29,1250+2]..[29,1250+36])
+              Ptyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[29,1250+2]..[29,1250+21])
+                  Ptyp_constr "Positions.positions" (src/sentenceParserAux.ml[29,1250+2]..[29,1250+21])
+                  []
+                core_type (src/sentenceParserAux.ml[29,1250+24]..[29,1250+36])
+                  Ptyp_constr "raw_sentence" (src/sentenceParserAux.ml[29,1250+24]..[29,1250+36])
+                  []
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[31,1288+0]..[32,1304+40])
+    Pstr_type Rec
+    [
+      type_declaration "sentence" (src/sentenceParserAux.ml[31,1288+5]..[31,1288+13]) (src/sentenceParserAux.ml[31,1288+0]..[32,1304+40])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[32,1304+2]..[32,1304+40])
+              Ptyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[32,1304+2]..[32,1304+22])
+                  Ptyp_constr "option" (src/sentenceParserAux.ml[32,1304+16]..[32,1304+22])
+                  [
+                    core_type (src/sentenceParserAux.ml[32,1304+2]..[32,1304+15])
+                      Ptyp_constr "Nonterminal.t" (src/sentenceParserAux.ml[32,1304+2]..[32,1304+15])
+                      []
+                  ]
+                core_type (src/sentenceParserAux.ml[32,1304+25]..[32,1304+40])
+                  Ptyp_constr "list" (src/sentenceParserAux.ml[32,1304+36]..[32,1304+40])
+                  [
+                    core_type (src/sentenceParserAux.ml[32,1304+25]..[32,1304+35])
+                      Ptyp_constr "Terminal.t" (src/sentenceParserAux.ml[32,1304+25]..[32,1304+35])
+                      []
+                  ]
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[34,1346+0]..[35,1370+32])
+    Pstr_type Rec
+    [
+      type_declaration "located_sentence" (src/sentenceParserAux.ml[34,1346+5]..[34,1346+21]) (src/sentenceParserAux.ml[34,1346+0]..[35,1370+32])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[35,1370+2]..[35,1370+32])
+              Ptyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[35,1370+2]..[35,1370+21])
+                  Ptyp_constr "Positions.positions" (src/sentenceParserAux.ml[35,1370+2]..[35,1370+21])
+                  []
+                core_type (src/sentenceParserAux.ml[35,1370+24]..[35,1370+32])
+                  Ptyp_constr "sentence" (src/sentenceParserAux.ml[35,1370+24]..[35,1370+32])
+                  []
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[37,1404+0]..[38,1419+8])
+    Pstr_type Rec
+    [
+      type_declaration "comment" (src/sentenceParserAux.ml[37,1404+5]..[37,1404+12]) (src/sentenceParserAux.ml[37,1404+0]..[38,1419+8])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[38,1419+2]..[38,1419+8])
+              Ptyp_constr "string" (src/sentenceParserAux.ml[38,1419+2]..[38,1419+8])
+              []
+    ]
+  structure_item (src/sentenceParserAux.ml[40,1429+0]..[42,1464+20])
+    Pstr_type Rec
+    [
+      type_declaration "or_comment" (src/sentenceParserAux.ml[40,1429+8]..[40,1429+18]) (src/sentenceParserAux.ml[40,1429+0]..[42,1464+20])
+        ptype_params =
+          [
+            core_type (src/sentenceParserAux.ml[40,1429+5]..[40,1429+7])
+              Ptyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_variant
+            [
+              (src/sentenceParserAux.ml[41,1450+0]..[41,1450+13])
+                "Thing" (src/sentenceParserAux.ml[41,1450+2]..[41,1450+7])
+                [
+                  core_type (src/sentenceParserAux.ml[41,1450+11]..[41,1450+13])
+                    Ptyp_var a
+                ]
+                None
+              (src/sentenceParserAux.ml[42,1464+0]..[42,1464+20])
+                "Comment" (src/sentenceParserAux.ml[42,1464+2]..[42,1464+9])
+                [
+                  core_type (src/sentenceParserAux.ml[42,1464+13]..[42,1464+20])
+                    Ptyp_constr "comment" (src/sentenceParserAux.ml[42,1464+13]..[42,1464+20])
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/sentenceParserAux.ml[44,1486+0]..[48,1561+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[44,1486+4]..[44,1486+19])
+          Ppat_var "or_comment_iter" (src/sentenceParserAux.ml[44,1486+4]..[44,1486+19])
+        expression (src/sentenceParserAux.ml[44,1486+20]..[48,1561+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceParserAux.ml[44,1486+20]..[44,1486+21])
+            Ppat_var "f" (src/sentenceParserAux.ml[44,1486+20]..[44,1486+21])
+          expression (src/sentenceParserAux.ml[44,1486+24]..[48,1561+8])
+            Pexp_function
+            [
+              <case>
+                pattern (src/sentenceParserAux.ml[45,1519+4]..[45,1519+11])
+                  Ppat_construct "Thing" (src/sentenceParserAux.ml[45,1519+4]..[45,1519+9])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[45,1519+10]..[45,1519+11])
+                      Ppat_var "s" (src/sentenceParserAux.ml[45,1519+10]..[45,1519+11])
+                expression (src/sentenceParserAux.ml[46,1534+6]..[46,1534+9])
+                  Pexp_apply
+                  expression (src/sentenceParserAux.ml[46,1534+6]..[46,1534+7])
+                    Pexp_ident "f" (src/sentenceParserAux.ml[46,1534+6]..[46,1534+7])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/sentenceParserAux.ml[46,1534+8]..[46,1534+9])
+                        Pexp_ident "s" (src/sentenceParserAux.ml[46,1534+8]..[46,1534+9])
+                  ]
+              <case>
+                pattern (src/sentenceParserAux.ml[47,1544+4]..[47,1544+13])
+                  Ppat_construct "Comment" (src/sentenceParserAux.ml[47,1544+4]..[47,1544+11])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[47,1544+12]..[47,1544+13])
+                      Ppat_any
+                expression (src/sentenceParserAux.ml[48,1561+6]..[48,1561+8])
+                  Pexp_construct "()" (src/sentenceParserAux.ml[48,1561+6]..[48,1561+8])
+                  None
+            ]
+    ]
+  structure_item (src/sentenceParserAux.ml[50,1571+0]..[54,1656+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[50,1571+4]..[50,1571+19])
+          Ppat_var "or_comment_fold" (src/sentenceParserAux.ml[50,1571+4]..[50,1571+19])
+        expression (src/sentenceParserAux.ml[50,1571+20]..[54,1656+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceParserAux.ml[50,1571+20]..[50,1571+21])
+            Ppat_var "f" (src/sentenceParserAux.ml[50,1571+20]..[50,1571+21])
+          expression (src/sentenceParserAux.ml[50,1571+22]..[54,1656+10]) ghost
+            Pexp_fun
+            Nolabel
+            None
+            pattern (src/sentenceParserAux.ml[50,1571+22]..[50,1571+26])
+              Ppat_var "accu" (src/sentenceParserAux.ml[50,1571+22]..[50,1571+26])
+            expression (src/sentenceParserAux.ml[50,1571+29]..[54,1656+10])
+              Pexp_function
+              [
+                <case>
+                  pattern (src/sentenceParserAux.ml[51,1609+4]..[51,1609+11])
+                    Ppat_construct "Thing" (src/sentenceParserAux.ml[51,1609+4]..[51,1609+9])
+                    Some
+                      []
+                      pattern (src/sentenceParserAux.ml[51,1609+10]..[51,1609+11])
+                        Ppat_var "s" (src/sentenceParserAux.ml[51,1609+10]..[51,1609+11])
+                  expression (src/sentenceParserAux.ml[52,1624+6]..[52,1624+14])
+                    Pexp_apply
+                    expression (src/sentenceParserAux.ml[52,1624+6]..[52,1624+7])
+                      Pexp_ident "f" (src/sentenceParserAux.ml[52,1624+6]..[52,1624+7])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/sentenceParserAux.ml[52,1624+8]..[52,1624+12])
+                          Pexp_ident "accu" (src/sentenceParserAux.ml[52,1624+8]..[52,1624+12])
+                      <arg>
+                      Nolabel
+                        expression (src/sentenceParserAux.ml[52,1624+13]..[52,1624+14])
+                          Pexp_ident "s" (src/sentenceParserAux.ml[52,1624+13]..[52,1624+14])
+                    ]
+                <case>
+                  pattern (src/sentenceParserAux.ml[53,1639+4]..[53,1639+13])
+                    Ppat_construct "Comment" (src/sentenceParserAux.ml[53,1639+4]..[53,1639+11])
+                    Some
+                      []
+                      pattern (src/sentenceParserAux.ml[53,1639+12]..[53,1639+13])
+                        Ppat_any
+                  expression (src/sentenceParserAux.ml[54,1656+6]..[54,1656+10])
+                    Pexp_ident "accu" (src/sentenceParserAux.ml[54,1656+6]..[54,1656+10])
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[56,1668+0]..[60,1750+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[56,1668+4]..[56,1668+18])
+          Ppat_var "or_comment_map" (src/sentenceParserAux.ml[56,1668+4]..[56,1668+18])
+        expression (src/sentenceParserAux.ml[56,1668+19]..[60,1750+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceParserAux.ml[56,1668+19]..[56,1668+20])
+            Ppat_var "f" (src/sentenceParserAux.ml[56,1668+19]..[56,1668+20])
+          expression (src/sentenceParserAux.ml[56,1668+23]..[60,1750+15])
+            Pexp_function
+            [
+              <case>
+                pattern (src/sentenceParserAux.ml[57,1700+4]..[57,1700+11])
+                  Ppat_construct "Thing" (src/sentenceParserAux.ml[57,1700+4]..[57,1700+9])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[57,1700+10]..[57,1700+11])
+                      Ppat_var "s" (src/sentenceParserAux.ml[57,1700+10]..[57,1700+11])
+                expression (src/sentenceParserAux.ml[58,1715+6]..[58,1715+17])
+                  Pexp_construct "Thing" (src/sentenceParserAux.ml[58,1715+6]..[58,1715+11])
+                  Some
+                    expression (src/sentenceParserAux.ml[58,1715+12]..[58,1715+17])
+                      Pexp_apply
+                      expression (src/sentenceParserAux.ml[58,1715+13]..[58,1715+14])
+                        Pexp_ident "f" (src/sentenceParserAux.ml[58,1715+13]..[58,1715+14])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceParserAux.ml[58,1715+15]..[58,1715+16])
+                            Pexp_ident "s" (src/sentenceParserAux.ml[58,1715+15]..[58,1715+16])
+                      ]
+              <case>
+                pattern (src/sentenceParserAux.ml[59,1733+4]..[59,1733+13])
+                  Ppat_construct "Comment" (src/sentenceParserAux.ml[59,1733+4]..[59,1733+11])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[59,1733+12]..[59,1733+13])
+                      Ppat_var "c" (src/sentenceParserAux.ml[59,1733+12]..[59,1733+13])
+                expression (src/sentenceParserAux.ml[60,1750+6]..[60,1750+15])
+                  Pexp_construct "Comment" (src/sentenceParserAux.ml[60,1750+6]..[60,1750+13])
+                  Some
+                    expression (src/sentenceParserAux.ml[60,1750+14]..[60,1750+15])
+                      Pexp_ident "c" (src/sentenceParserAux.ml[60,1750+14]..[60,1750+15])
+            ]
+    ]
+  structure_item (src/sentenceParserAux.ml[62,1767+0]..[66,1855+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[62,1767+4]..[62,1767+25])
+          Ppat_var "or_comment_filter_map" (src/sentenceParserAux.ml[62,1767+4]..[62,1767+25])
+        expression (src/sentenceParserAux.ml[62,1767+26]..[66,1855+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceParserAux.ml[62,1767+26]..[62,1767+27])
+            Ppat_var "f" (src/sentenceParserAux.ml[62,1767+26]..[62,1767+27])
+          expression (src/sentenceParserAux.ml[62,1767+30]..[66,1855+10])
+            Pexp_function
+            [
+              <case>
+                pattern (src/sentenceParserAux.ml[63,1806+4]..[63,1806+11])
+                  Ppat_construct "Thing" (src/sentenceParserAux.ml[63,1806+4]..[63,1806+9])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[63,1806+10]..[63,1806+11])
+                      Ppat_var "s" (src/sentenceParserAux.ml[63,1806+10]..[63,1806+11])
+                expression (src/sentenceParserAux.ml[64,1821+6]..[64,1821+16])
+                  Pexp_construct "Some" (src/sentenceParserAux.ml[64,1821+6]..[64,1821+10])
+                  Some
+                    expression (src/sentenceParserAux.ml[64,1821+11]..[64,1821+16])
+                      Pexp_apply
+                      expression (src/sentenceParserAux.ml[64,1821+12]..[64,1821+13])
+                        Pexp_ident "f" (src/sentenceParserAux.ml[64,1821+12]..[64,1821+13])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/sentenceParserAux.ml[64,1821+14]..[64,1821+15])
+                            Pexp_ident "s" (src/sentenceParserAux.ml[64,1821+14]..[64,1821+15])
+                      ]
+              <case>
+                pattern (src/sentenceParserAux.ml[65,1838+4]..[65,1838+13])
+                  Ppat_construct "Comment" (src/sentenceParserAux.ml[65,1838+4]..[65,1838+11])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[65,1838+12]..[65,1838+13])
+                      Ppat_any
+                expression (src/sentenceParserAux.ml[66,1855+6]..[66,1855+10])
+                  Pexp_construct "None" (src/sentenceParserAux.ml[66,1855+6]..[66,1855+10])
+                  None
+            ]
+    ]
+  structure_item (src/sentenceParserAux.ml[68,1867+0]..[72,1951+10])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[68,1867+4]..[68,1867+20])
+          Ppat_var "or_comment_count" (src/sentenceParserAux.ml[68,1867+4]..[68,1867+20])
+        expression (src/sentenceParserAux.ml[68,1867+21]..[72,1951+10]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceParserAux.ml[68,1867+21]..[68,1867+25])
+            Ppat_var "accu" (src/sentenceParserAux.ml[68,1867+21]..[68,1867+25])
+          expression (src/sentenceParserAux.ml[68,1867+28]..[72,1951+10])
+            Pexp_function
+            [
+              <case>
+                pattern (src/sentenceParserAux.ml[69,1904+4]..[69,1904+11])
+                  Ppat_construct "Thing" (src/sentenceParserAux.ml[69,1904+4]..[69,1904+9])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[69,1904+10]..[69,1904+11])
+                      Ppat_any
+                expression (src/sentenceParserAux.ml[70,1919+6]..[70,1919+14])
+                  Pexp_apply
+                  expression (src/sentenceParserAux.ml[70,1919+11]..[70,1919+12])
+                    Pexp_ident "+" (src/sentenceParserAux.ml[70,1919+11]..[70,1919+12])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/sentenceParserAux.ml[70,1919+6]..[70,1919+10])
+                        Pexp_ident "accu" (src/sentenceParserAux.ml[70,1919+6]..[70,1919+10])
+                    <arg>
+                    Nolabel
+                      expression (src/sentenceParserAux.ml[70,1919+13]..[70,1919+14])
+                        Pexp_constant PConst_int (1,None)
+                  ]
+              <case>
+                pattern (src/sentenceParserAux.ml[71,1934+4]..[71,1934+13])
+                  Ppat_construct "Comment" (src/sentenceParserAux.ml[71,1934+4]..[71,1934+11])
+                  Some
+                    []
+                    pattern (src/sentenceParserAux.ml[71,1934+12]..[71,1934+13])
+                      Ppat_any
+                expression (src/sentenceParserAux.ml[72,1951+6]..[72,1951+10])
+                  Pexp_ident "accu" (src/sentenceParserAux.ml[72,1951+6]..[72,1951+10])
+            ]
+    ]
+  structure_item (src/sentenceParserAux.ml[74,1963+0]..[75,2008+38])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[74,1963+4]..[74,1963+16])
+          Ppat_var "count_things" (src/sentenceParserAux.ml[74,1963+4]..[74,1963+16])
+        expression (src/sentenceParserAux.ml[74,1963+17]..[75,2008+38]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/sentenceParserAux.ml[74,1963+17]..[74,1963+42])
+            Ppat_constraint
+            pattern (src/sentenceParserAux.ml[74,1963+18]..[74,1963+20])
+              Ppat_var "xs" (src/sentenceParserAux.ml[74,1963+18]..[74,1963+20])
+            core_type (src/sentenceParserAux.ml[74,1963+23]..[74,1963+41])
+              Ptyp_constr "list" (src/sentenceParserAux.ml[74,1963+37]..[74,1963+41])
+              [
+                core_type (src/sentenceParserAux.ml[74,1963+23]..[74,1963+36])
+                  Ptyp_constr "or_comment" (src/sentenceParserAux.ml[74,1963+26]..[74,1963+36])
+                  [
+                    core_type (src/sentenceParserAux.ml[74,1963+23]..[74,1963+25])
+                      Ptyp_var a
+                  ]
+              ]
+          expression (src/sentenceParserAux.ml[75,2008+2]..[75,2008+38])
+            Pexp_apply
+            expression (src/sentenceParserAux.ml[75,2008+2]..[75,2008+16])
+              Pexp_ident "List.fold_left" (src/sentenceParserAux.ml[75,2008+2]..[75,2008+16])
+            [
+              <arg>
+              Nolabel
+                expression (src/sentenceParserAux.ml[75,2008+17]..[75,2008+33])
+                  Pexp_ident "or_comment_count" (src/sentenceParserAux.ml[75,2008+17]..[75,2008+33])
+              <arg>
+              Nolabel
+                expression (src/sentenceParserAux.ml[75,2008+34]..[75,2008+35])
+                  Pexp_constant PConst_int (0,None)
+              <arg>
+              Nolabel
+                expression (src/sentenceParserAux.ml[75,2008+36]..[75,2008+38])
+                  Pexp_ident "xs" (src/sentenceParserAux.ml[75,2008+36]..[75,2008+38])
+            ]
+    ]
+]
+
+open Grammar
+type raw_symbol = (string * Lexing.position * Lexing.position)
+type raw_nonterminal = raw_symbol
+type raw_terminal = raw_symbol
+type raw_sentence = (raw_nonterminal option * raw_terminal list)
+type located_raw_sentence = (Positions.positions * raw_sentence)
+type sentence = (Nonterminal.t option * Terminal.t list)
+type located_sentence = (Positions.positions * sentence)
+type comment = string
+type 'a or_comment =
+  | Thing of 'a 
+  | Comment of comment 
+let or_comment_iter f = function | Thing s -> f s | Comment _ -> ()
+let or_comment_fold f accu =
+  function | Thing s -> f accu s | Comment _ -> accu
+let or_comment_map f =
+  function | Thing s -> Thing (f s) | Comment c -> Comment c
+let or_comment_filter_map f =
+  function | Thing s -> Some (f s) | Comment _ -> None
+let or_comment_count accu =
+  function | Thing _ -> accu + 1 | Comment _ -> accu
+let count_things (xs : 'a or_comment list) =
+  List.fold_left or_comment_count 0 xs
+[
+  structure_item (src/sentenceParserAux.ml[14,1007+0]..src/sentenceParserAux.ml[14,1007+12])
+    Tstr_open Fresh
+    module_expr (src/sentenceParserAux.ml[14,1007+5]..src/sentenceParserAux.ml[14,1007+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/sentenceParserAux.ml[16,1021+0]..src/sentenceParserAux.ml[17,1039+44])
+    Tstr_type Rec
+    [
+      type_declaration raw_symbol/414 (src/sentenceParserAux.ml[16,1021+0]..src/sentenceParserAux.ml[17,1039+44])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[17,1039+2]..src/sentenceParserAux.ml[17,1039+44])
+              Ttyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[17,1039+2]..src/sentenceParserAux.ml[17,1039+8])
+                  Ttyp_constr "string/15!"
+                  []
+                core_type (src/sentenceParserAux.ml[17,1039+11]..src/sentenceParserAux.ml[17,1039+26])
+                  Ttyp_constr "Stdlib!.Lexing.position"
+                  []
+                core_type (src/sentenceParserAux.ml[17,1039+29]..src/sentenceParserAux.ml[17,1039+44])
+                  Ttyp_constr "Stdlib!.Lexing.position"
+                  []
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[19,1085+0]..src/sentenceParserAux.ml[20,1108+12])
+    Tstr_type Rec
+    [
+      type_declaration raw_nonterminal/463 (src/sentenceParserAux.ml[19,1085+0]..src/sentenceParserAux.ml[20,1108+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[20,1108+2]..src/sentenceParserAux.ml[20,1108+12])
+              Ttyp_constr "raw_symbol/414"
+              []
+    ]
+  structure_item (src/sentenceParserAux.ml[22,1122+0]..src/sentenceParserAux.ml[23,1142+12])
+    Tstr_type Rec
+    [
+      type_declaration raw_terminal/464 (src/sentenceParserAux.ml[22,1122+0]..src/sentenceParserAux.ml[23,1142+12])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[23,1142+2]..src/sentenceParserAux.ml[23,1142+12])
+              Ttyp_constr "raw_symbol/414"
+              []
+    ]
+  structure_item (src/sentenceParserAux.ml[25,1156+0]..src/sentenceParserAux.ml[26,1176+44])
+    Tstr_type Rec
+    [
+      type_declaration raw_sentence/465 (src/sentenceParserAux.ml[25,1156+0]..src/sentenceParserAux.ml[26,1176+44])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[26,1176+2]..src/sentenceParserAux.ml[26,1176+44])
+              Ttyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[26,1176+2]..src/sentenceParserAux.ml[26,1176+24])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (src/sentenceParserAux.ml[26,1176+2]..src/sentenceParserAux.ml[26,1176+17])
+                      Ttyp_constr "raw_nonterminal/463"
+                      []
+                  ]
+                core_type (src/sentenceParserAux.ml[26,1176+27]..src/sentenceParserAux.ml[26,1176+44])
+                  Ttyp_constr "list/9!"
+                  [
+                    core_type (src/sentenceParserAux.ml[26,1176+27]..src/sentenceParserAux.ml[26,1176+39])
+                      Ttyp_constr "raw_terminal/464"
+                      []
+                  ]
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[28,1222+0]..src/sentenceParserAux.ml[29,1250+36])
+    Tstr_type Rec
+    [
+      type_declaration located_raw_sentence/466 (src/sentenceParserAux.ml[28,1222+0]..src/sentenceParserAux.ml[29,1250+36])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[29,1250+2]..src/sentenceParserAux.ml[29,1250+36])
+              Ttyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[29,1250+2]..src/sentenceParserAux.ml[29,1250+21])
+                  Ttyp_constr "Dune__exe!.Positions.positions"
+                  []
+                core_type (src/sentenceParserAux.ml[29,1250+24]..src/sentenceParserAux.ml[29,1250+36])
+                  Ttyp_constr "raw_sentence/465"
+                  []
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[31,1288+0]..src/sentenceParserAux.ml[32,1304+40])
+    Tstr_type Rec
+    [
+      type_declaration sentence/537 (src/sentenceParserAux.ml[31,1288+0]..src/sentenceParserAux.ml[32,1304+40])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[32,1304+2]..src/sentenceParserAux.ml[32,1304+40])
+              Ttyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[32,1304+2]..src/sentenceParserAux.ml[32,1304+22])
+                  Ttyp_constr "option/10!"
+                  [
+                    core_type (src/sentenceParserAux.ml[32,1304+2]..src/sentenceParserAux.ml[32,1304+15])
+                      Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                      []
+                  ]
+                core_type (src/sentenceParserAux.ml[32,1304+25]..src/sentenceParserAux.ml[32,1304+40])
+                  Ttyp_constr "list/9!"
+                  [
+                    core_type (src/sentenceParserAux.ml[32,1304+25]..src/sentenceParserAux.ml[32,1304+35])
+                      Ttyp_constr "Dune__exe!.Grammar.Terminal.t"
+                      []
+                  ]
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[34,1346+0]..src/sentenceParserAux.ml[35,1370+32])
+    Tstr_type Rec
+    [
+      type_declaration located_sentence/654 (src/sentenceParserAux.ml[34,1346+0]..src/sentenceParserAux.ml[35,1370+32])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[35,1370+2]..src/sentenceParserAux.ml[35,1370+32])
+              Ttyp_tuple
+              [
+                core_type (src/sentenceParserAux.ml[35,1370+2]..src/sentenceParserAux.ml[35,1370+21])
+                  Ttyp_constr "Dune__exe!.Positions.positions"
+                  []
+                core_type (src/sentenceParserAux.ml[35,1370+24]..src/sentenceParserAux.ml[35,1370+32])
+                  Ttyp_constr "sentence/537"
+                  []
+              ]
+    ]
+  structure_item (src/sentenceParserAux.ml[37,1404+0]..src/sentenceParserAux.ml[38,1419+8])
+    Tstr_type Rec
+    [
+      type_declaration comment/655 (src/sentenceParserAux.ml[37,1404+0]..src/sentenceParserAux.ml[38,1419+8])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (src/sentenceParserAux.ml[38,1419+2]..src/sentenceParserAux.ml[38,1419+8])
+              Ttyp_constr "string/15!"
+              []
+    ]
+  structure_item (src/sentenceParserAux.ml[40,1429+0]..src/sentenceParserAux.ml[42,1464+20])
+    Tstr_type Rec
+    [
+      type_declaration or_comment/656 (src/sentenceParserAux.ml[40,1429+0]..src/sentenceParserAux.ml[42,1464+20])
+        ptype_params =
+          [
+            core_type (src/sentenceParserAux.ml[40,1429+5]..src/sentenceParserAux.ml[40,1429+7])
+              Ttyp_var a
+          ]
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_variant
+            [
+              (src/sentenceParserAux.ml[41,1450+0]..src/sentenceParserAux.ml[41,1450+13])
+                Thing/657
+                [
+                  core_type (src/sentenceParserAux.ml[41,1450+11]..src/sentenceParserAux.ml[41,1450+13])
+                    Ttyp_var a
+                ]
+                None
+              (src/sentenceParserAux.ml[42,1464+0]..src/sentenceParserAux.ml[42,1464+20])
+                Comment/658
+                [
+                  core_type (src/sentenceParserAux.ml[42,1464+13]..src/sentenceParserAux.ml[42,1464+20])
+                    Ttyp_constr "comment/655"
+                    []
+                ]
+                None
+            ]
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  structure_item (src/sentenceParserAux.ml[44,1486+0]..src/sentenceParserAux.ml[48,1561+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[44,1486+4]..src/sentenceParserAux.ml[44,1486+19])
+          Tpat_var "or_comment_iter/659"
+        expression (src/sentenceParserAux.ml[44,1486+20]..src/sentenceParserAux.ml[48,1561+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceParserAux.ml[44,1486+20]..src/sentenceParserAux.ml[44,1486+21])
+                Tpat_var "f/661"
+              expression (src/sentenceParserAux.ml[44,1486+24]..src/sentenceParserAux.ml[48,1561+8])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/sentenceParserAux.ml[45,1519+4]..src/sentenceParserAux.ml[45,1519+11])
+                      Tpat_construct "Thing"
+                      [
+                        pattern (src/sentenceParserAux.ml[45,1519+10]..src/sentenceParserAux.ml[45,1519+11])
+                          Tpat_var "s/662"
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[46,1534+6]..src/sentenceParserAux.ml[46,1534+9])
+                      Texp_apply
+                      expression (src/sentenceParserAux.ml[46,1534+6]..src/sentenceParserAux.ml[46,1534+7])
+                        Texp_ident "f/661"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/sentenceParserAux.ml[46,1534+8]..src/sentenceParserAux.ml[46,1534+9])
+                            Texp_ident "s/662"
+                      ]
+                  <case>
+                    pattern (src/sentenceParserAux.ml[47,1544+4]..src/sentenceParserAux.ml[47,1544+13])
+                      Tpat_construct "Comment"
+                      [
+                        pattern (src/sentenceParserAux.ml[47,1544+12]..src/sentenceParserAux.ml[47,1544+13])
+                          Tpat_any
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[48,1561+6]..src/sentenceParserAux.ml[48,1561+8])
+                      Texp_construct "()"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/sentenceParserAux.ml[50,1571+0]..src/sentenceParserAux.ml[54,1656+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[50,1571+4]..src/sentenceParserAux.ml[50,1571+19])
+          Tpat_var "or_comment_fold/664"
+        expression (src/sentenceParserAux.ml[50,1571+20]..src/sentenceParserAux.ml[54,1656+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceParserAux.ml[50,1571+20]..src/sentenceParserAux.ml[50,1571+21])
+                Tpat_var "f/666"
+              expression (src/sentenceParserAux.ml[50,1571+22]..src/sentenceParserAux.ml[54,1656+10]) ghost
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/sentenceParserAux.ml[50,1571+22]..src/sentenceParserAux.ml[50,1571+26])
+                      Tpat_var "accu/667"
+                    expression (src/sentenceParserAux.ml[50,1571+29]..src/sentenceParserAux.ml[54,1656+10])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/sentenceParserAux.ml[51,1609+4]..src/sentenceParserAux.ml[51,1609+11])
+                            Tpat_construct "Thing"
+                            [
+                              pattern (src/sentenceParserAux.ml[51,1609+10]..src/sentenceParserAux.ml[51,1609+11])
+                                Tpat_var "s/668"
+                            ]
+                            None
+                          expression (src/sentenceParserAux.ml[52,1624+6]..src/sentenceParserAux.ml[52,1624+14])
+                            Texp_apply
+                            expression (src/sentenceParserAux.ml[52,1624+6]..src/sentenceParserAux.ml[52,1624+7])
+                              Texp_ident "f/666"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/sentenceParserAux.ml[52,1624+8]..src/sentenceParserAux.ml[52,1624+12])
+                                  Texp_ident "accu/667"
+                              <arg>
+                                Nolabel
+                                expression (src/sentenceParserAux.ml[52,1624+13]..src/sentenceParserAux.ml[52,1624+14])
+                                  Texp_ident "s/668"
+                            ]
+                        <case>
+                          pattern (src/sentenceParserAux.ml[53,1639+4]..src/sentenceParserAux.ml[53,1639+13])
+                            Tpat_construct "Comment"
+                            [
+                              pattern (src/sentenceParserAux.ml[53,1639+12]..src/sentenceParserAux.ml[53,1639+13])
+                                Tpat_any
+                            ]
+                            None
+                          expression (src/sentenceParserAux.ml[54,1656+6]..src/sentenceParserAux.ml[54,1656+10])
+                            Texp_ident "accu/667"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/sentenceParserAux.ml[56,1668+0]..src/sentenceParserAux.ml[60,1750+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[56,1668+4]..src/sentenceParserAux.ml[56,1668+18])
+          Tpat_var "or_comment_map/670"
+        expression (src/sentenceParserAux.ml[56,1668+19]..src/sentenceParserAux.ml[60,1750+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceParserAux.ml[56,1668+19]..src/sentenceParserAux.ml[56,1668+20])
+                Tpat_var "f/672"
+              expression (src/sentenceParserAux.ml[56,1668+23]..src/sentenceParserAux.ml[60,1750+15])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/sentenceParserAux.ml[57,1700+4]..src/sentenceParserAux.ml[57,1700+11])
+                      Tpat_construct "Thing"
+                      [
+                        pattern (src/sentenceParserAux.ml[57,1700+10]..src/sentenceParserAux.ml[57,1700+11])
+                          Tpat_var "s/673"
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[58,1715+6]..src/sentenceParserAux.ml[58,1715+17])
+                      Texp_construct "Thing"
+                      [
+                        expression (src/sentenceParserAux.ml[58,1715+12]..src/sentenceParserAux.ml[58,1715+17])
+                          Texp_apply
+                          expression (src/sentenceParserAux.ml[58,1715+13]..src/sentenceParserAux.ml[58,1715+14])
+                            Texp_ident "f/672"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/sentenceParserAux.ml[58,1715+15]..src/sentenceParserAux.ml[58,1715+16])
+                                Texp_ident "s/673"
+                          ]
+                      ]
+                  <case>
+                    pattern (src/sentenceParserAux.ml[59,1733+4]..src/sentenceParserAux.ml[59,1733+13])
+                      Tpat_construct "Comment"
+                      [
+                        pattern (src/sentenceParserAux.ml[59,1733+12]..src/sentenceParserAux.ml[59,1733+13])
+                          Tpat_var "c/674"
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[60,1750+6]..src/sentenceParserAux.ml[60,1750+15])
+                      Texp_construct "Comment"
+                      [
+                        expression (src/sentenceParserAux.ml[60,1750+14]..src/sentenceParserAux.ml[60,1750+15])
+                          Texp_ident "c/674"
+                      ]
+                ]
+          ]
+    ]
+  structure_item (src/sentenceParserAux.ml[62,1767+0]..src/sentenceParserAux.ml[66,1855+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[62,1767+4]..src/sentenceParserAux.ml[62,1767+25])
+          Tpat_var "or_comment_filter_map/676"
+        expression (src/sentenceParserAux.ml[62,1767+26]..src/sentenceParserAux.ml[66,1855+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceParserAux.ml[62,1767+26]..src/sentenceParserAux.ml[62,1767+27])
+                Tpat_var "f/678"
+              expression (src/sentenceParserAux.ml[62,1767+30]..src/sentenceParserAux.ml[66,1855+10])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/sentenceParserAux.ml[63,1806+4]..src/sentenceParserAux.ml[63,1806+11])
+                      Tpat_construct "Thing"
+                      [
+                        pattern (src/sentenceParserAux.ml[63,1806+10]..src/sentenceParserAux.ml[63,1806+11])
+                          Tpat_var "s/679"
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[64,1821+6]..src/sentenceParserAux.ml[64,1821+16])
+                      Texp_construct "Some"
+                      [
+                        expression (src/sentenceParserAux.ml[64,1821+11]..src/sentenceParserAux.ml[64,1821+16])
+                          Texp_apply
+                          expression (src/sentenceParserAux.ml[64,1821+12]..src/sentenceParserAux.ml[64,1821+13])
+                            Texp_ident "f/678"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/sentenceParserAux.ml[64,1821+14]..src/sentenceParserAux.ml[64,1821+15])
+                                Texp_ident "s/679"
+                          ]
+                      ]
+                  <case>
+                    pattern (src/sentenceParserAux.ml[65,1838+4]..src/sentenceParserAux.ml[65,1838+13])
+                      Tpat_construct "Comment"
+                      [
+                        pattern (src/sentenceParserAux.ml[65,1838+12]..src/sentenceParserAux.ml[65,1838+13])
+                          Tpat_any
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[66,1855+6]..src/sentenceParserAux.ml[66,1855+10])
+                      Texp_construct "None"
+                      []
+                ]
+          ]
+    ]
+  structure_item (src/sentenceParserAux.ml[68,1867+0]..src/sentenceParserAux.ml[72,1951+10])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[68,1867+4]..src/sentenceParserAux.ml[68,1867+20])
+          Tpat_var "or_comment_count/681"
+        expression (src/sentenceParserAux.ml[68,1867+21]..src/sentenceParserAux.ml[72,1951+10]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceParserAux.ml[68,1867+21]..src/sentenceParserAux.ml[68,1867+25])
+                Tpat_var "accu/683"
+              expression (src/sentenceParserAux.ml[68,1867+28]..src/sentenceParserAux.ml[72,1951+10])
+                Texp_function
+                Nolabel
+                [
+                  <case>
+                    pattern (src/sentenceParserAux.ml[69,1904+4]..src/sentenceParserAux.ml[69,1904+11])
+                      Tpat_construct "Thing"
+                      [
+                        pattern (src/sentenceParserAux.ml[69,1904+10]..src/sentenceParserAux.ml[69,1904+11])
+                          Tpat_any
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[70,1919+6]..src/sentenceParserAux.ml[70,1919+14])
+                      Texp_apply
+                      expression (src/sentenceParserAux.ml[70,1919+11]..src/sentenceParserAux.ml[70,1919+12])
+                        Texp_ident "Stdlib!.+"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/sentenceParserAux.ml[70,1919+6]..src/sentenceParserAux.ml[70,1919+10])
+                            Texp_ident "accu/683"
+                        <arg>
+                          Nolabel
+                          expression (src/sentenceParserAux.ml[70,1919+13]..src/sentenceParserAux.ml[70,1919+14])
+                            Texp_constant Const_int 1
+                      ]
+                  <case>
+                    pattern (src/sentenceParserAux.ml[71,1934+4]..src/sentenceParserAux.ml[71,1934+13])
+                      Tpat_construct "Comment"
+                      [
+                        pattern (src/sentenceParserAux.ml[71,1934+12]..src/sentenceParserAux.ml[71,1934+13])
+                          Tpat_any
+                      ]
+                      None
+                    expression (src/sentenceParserAux.ml[72,1951+6]..src/sentenceParserAux.ml[72,1951+10])
+                      Texp_ident "accu/683"
+                ]
+          ]
+    ]
+  structure_item (src/sentenceParserAux.ml[74,1963+0]..src/sentenceParserAux.ml[75,2008+38])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/sentenceParserAux.ml[74,1963+4]..src/sentenceParserAux.ml[74,1963+16])
+          Tpat_var "count_things/685"
+        expression (src/sentenceParserAux.ml[74,1963+17]..src/sentenceParserAux.ml[75,2008+38]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/sentenceParserAux.ml[74,1963+18]..src/sentenceParserAux.ml[74,1963+20])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/sentenceParserAux.ml[74,1963+23]..src/sentenceParserAux.ml[74,1963+41])
+                    Ttyp_constr "list/9!"
+                    [
+                      core_type (src/sentenceParserAux.ml[74,1963+23]..src/sentenceParserAux.ml[74,1963+36])
+                        Ttyp_constr "or_comment/656"
+                        [
+                          core_type (src/sentenceParserAux.ml[74,1963+23]..src/sentenceParserAux.ml[74,1963+25])
+                            Ttyp_var a
+                        ]
+                    ]
+                Tpat_alias "xs/687"
+                pattern (src/sentenceParserAux.ml[74,1963+18]..src/sentenceParserAux.ml[74,1963+20])
+                  Tpat_any
+              expression (src/sentenceParserAux.ml[75,2008+2]..src/sentenceParserAux.ml[75,2008+38])
+                Texp_apply
+                expression (src/sentenceParserAux.ml[75,2008+2]..src/sentenceParserAux.ml[75,2008+16])
+                  Texp_ident "Stdlib!.List.fold_left"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/sentenceParserAux.ml[75,2008+17]..src/sentenceParserAux.ml[75,2008+33])
+                      Texp_ident "or_comment_count/681"
+                  <arg>
+                    Nolabel
+                    expression (src/sentenceParserAux.ml[75,2008+34]..src/sentenceParserAux.ml[75,2008+35])
+                      Texp_constant Const_int 0
+                  <arg>
+                    Nolabel
+                    expression (src/sentenceParserAux.ml[75,2008+36]..src/sentenceParserAux.ml[75,2008+38])
+                      Texp_ident "xs/687"
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__SentenceParserAux>
+ "comment"[type] -> <Dune__exe__SentenceParserAux.7>;
+ "count_things"[value] -> <Dune__exe__SentenceParserAux.27>;
+ "located_raw_sentence"[type] -> <Dune__exe__SentenceParserAux.4>;
+ "located_sentence"[type] -> <Dune__exe__SentenceParserAux.6>;
+ "or_comment"[type] -> <Dune__exe__SentenceParserAux.8>;
+ "or_comment_count"[value] -> <Dune__exe__SentenceParserAux.25>;
+ "or_comment_filter_map"[value] -> <Dune__exe__SentenceParserAux.22>;
+ "or_comment_fold"[value] -> <Dune__exe__SentenceParserAux.14>;
+ "or_comment_iter"[value] -> <Dune__exe__SentenceParserAux.11>;
+ "or_comment_map"[value] -> <Dune__exe__SentenceParserAux.18>;
+ "raw_nonterminal"[type] -> <Dune__exe__SentenceParserAux.1>;
+ "raw_sentence"[type] -> <Dune__exe__SentenceParserAux.3>;
+ "raw_symbol"[type] -> <Dune__exe__SentenceParserAux.0>;
+ "raw_terminal"[type] -> <Dune__exe__SentenceParserAux.2>;
+ "sentence"[type] -> <Dune__exe__SentenceParserAux.5>;
+ }
+
+(seq
+  (let
+    (or_comment_iter/659 =
+       (function f/661 param/663 : int
+         (switch* param/663
+          case tag 0:
+           (let (s/662 =a (field_imm 0 param/663)) (apply f/661 s/662))
+          case tag 1: (let (*match*/1218 =a (field_imm 0 param/663)) 0))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__SentenceParserAux!)
+      or_comment_iter/659))
+  (let
+    (or_comment_fold/664 =
+       (function f/666 accu/667 param/669
+         (switch* param/669
+          case tag 0:
+           (let (s/668 =a (field_imm 0 param/669))
+             (apply f/666 accu/667 s/668))
+          case tag 1:
+           (let (*match*/1219 =a (field_imm 0 param/669)) accu/667))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__SentenceParserAux!)
+      or_comment_fold/664))
+  (let
+    (or_comment_map/670 =
+       (function f/672 param/675
+         (switch* param/675
+          case tag 0:
+           (let (s/673 =a (field_imm 0 param/675))
+             (makeblock 0 (apply f/672 s/673)))
+          case tag 1:
+           (let (c/674 =a (field_imm 0 param/675)) (makeblock 1 c/674)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__SentenceParserAux!)
+      or_comment_map/670))
+  (let
+    (or_comment_filter_map/676 =
+       (function f/678 param/680
+         (switch* param/680
+          case tag 0:
+           (let (s/679 =a (field_imm 0 param/680))
+             (makeblock 0 (apply f/678 s/679)))
+          case tag 1: (let (*match*/1220 =a (field_imm 0 param/680)) 0))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__SentenceParserAux!)
+      or_comment_filter_map/676))
+  (let
+    (or_comment_count/681 =
+       (function accu/683[int] param/684 : int
+         (switch* param/684
+          case tag 0:
+           (let (*match*/1221 =a (field_imm 0 param/684)) (+ accu/683 1))
+          case tag 1:
+           (let (*match*/1222 =a (field_imm 0 param/684)) accu/683))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__SentenceParserAux!)
+      or_comment_count/681))
+  (let
+    (count_things/685 =
+       (function xs/687 : int
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 4 (global Dune__exe__SentenceParserAux!)) 0 xs/687)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__SentenceParserAux!)
+      count_things/685))
+  0)
+(seq
+  (let
+    (or_comment_iter/659 =
+       (function f/661 param/663 : int
+         (switch* param/663
+          case tag 0: (apply f/661 (field_imm 0 param/663))
+          case tag 1: 0)))
+    (setfield_ptr(root-init) 0 (global Dune__exe__SentenceParserAux!)
+      or_comment_iter/659))
+  (let
+    (or_comment_fold/664 =
+       (function f/666 accu/667 param/669
+         (switch* param/669
+          case tag 0: (apply f/666 accu/667 (field_imm 0 param/669))
+          case tag 1: accu/667)))
+    (setfield_ptr(root-init) 1 (global Dune__exe__SentenceParserAux!)
+      or_comment_fold/664))
+  (let
+    (or_comment_map/670 =
+       (function f/672 param/675
+         (switch* param/675
+          case tag 0: (makeblock 0 (apply f/672 (field_imm 0 param/675)))
+          case tag 1: (makeblock 1 (field_imm 0 param/675)))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__SentenceParserAux!)
+      or_comment_map/670))
+  (let
+    (or_comment_filter_map/676 =
+       (function f/678 param/680
+         (switch* param/680
+          case tag 0: (makeblock 0 (apply f/678 (field_imm 0 param/680)))
+          case tag 1: 0)))
+    (setfield_ptr(root-init) 3 (global Dune__exe__SentenceParserAux!)
+      or_comment_filter_map/676))
+  (let
+    (or_comment_count/681 =
+       (function accu/683[int] param/684 : int
+         (switch* param/684 case tag 0: (+ accu/683 1)
+                            case tag 1: accu/683)))
+    (setfield_ptr(root-init) 4 (global Dune__exe__SentenceParserAux!)
+      or_comment_count/681))
+  (let
+    (count_things/685 =
+       (function xs/687 : int
+         (apply (field_imm 25 (global Stdlib__List!))
+           (field_imm 4 (global Dune__exe__SentenceParserAux!)) 0 xs/687)))
+    (setfield_ptr(root-init) 5 (global Dune__exe__SentenceParserAux!)
+      count_things/685))
+  0)

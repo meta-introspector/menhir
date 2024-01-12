@@ -1,0 +1,2927 @@
+[
+  structure_item (src/StackStates.ml[14,1001+0]..[14,1001+12])
+    Pstr_open Fresh
+    module_expr (src/StackStates.ml[14,1001+5]..[14,1001+12])
+      Pmod_ident "Grammar" (src/StackStates.ml[14,1001+5]..[14,1001+12])
+  structure_item (src/StackStates.ml[16,1015+0]..[181,5890+3])
+    Pstr_module
+    "Run" (src/StackStates.ml[16,1015+7]..[16,1015+10])
+      module_expr (src/StackStates.ml[16,1015+11]..[181,5890+3])
+        Pmod_functor "S" (src/StackStates.ml[16,1015+12]..[16,1015+13])
+        module_type (src/StackStates.ml[16,1015+16]..[30,1530+3])
+          Pmty_signature
+          [
+            signature_item (src/StackStates.ml[20,1127+2]..[20,1127+35])
+              Psig_value
+              value_description "stack_height" (src/StackStates.ml[20,1127+6]..[20,1127+18]) (src/StackStates.ml[20,1127+2]..[20,1127+35])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.ml[18,1036+2]..[19,1105+21])
+                      Pstr_eval
+                      expression (src/StackStates.ml[18,1036+2]..[19,1105+21])
+                        Pexp_constant PConst_string("[stack_height s] is the height of the known suffix of the stack\n     at state [s]. ",(src/StackStates.ml[18,1036+2]..[19,1105+21]),None)
+                  ]
+                core_type (src/StackStates.ml[20,1127+20]..[20,1127+35])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.ml[20,1127+20]..[20,1127+28])
+                    Ptyp_constr "Lr1.node" (src/StackStates.ml[20,1127+20]..[20,1127+28])
+                    []
+                  core_type (src/StackStates.ml[20,1127+32]..[20,1127+35])
+                    Ptyp_constr "int" (src/StackStates.ml[20,1127+32]..[20,1127+35])
+                    []
+                []
+            signature_item (src/StackStates.ml[24,1300+2]..[24,1300+48])
+              Psig_value
+              value_description "production_height" (src/StackStates.ml[24,1300+6]..[24,1300+23]) (src/StackStates.ml[24,1300+2]..[24,1300+48])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.ml[22,1164+2]..[23,1241+58])
+                      Pstr_eval
+                      expression (src/StackStates.ml[22,1164+2]..[23,1241+58])
+                        Pexp_constant PConst_string("[production_height prod] is the height of the known suffix of the stack\n     at a state where production [prod] can be reduced. ",(src/StackStates.ml[22,1164+2]..[23,1241+58]),None)
+                  ]
+                core_type (src/StackStates.ml[24,1300+25]..[24,1300+48])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.ml[24,1300+25]..[24,1300+41])
+                    Ptyp_constr "Production.index" (src/StackStates.ml[24,1300+25]..[24,1300+41])
+                    []
+                  core_type (src/StackStates.ml[24,1300+45]..[24,1300+48])
+                    Ptyp_constr "int" (src/StackStates.ml[24,1300+45]..[24,1300+48])
+                    []
+                []
+            signature_item (src/StackStates.ml[28,1489+2]..[28,1489+39])
+              Psig_value
+              value_description "goto_height" (src/StackStates.ml[28,1489+6]..[28,1489+17]) (src/StackStates.ml[28,1489+2]..[28,1489+39])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.ml[26,1350+2]..[27,1424+64])
+                      Pstr_eval
+                      expression (src/StackStates.ml[26,1350+2]..[27,1424+64])
+                        Pexp_constant PConst_string("[goto_height nt] is the height of the known suffix of the stack at a\n     state where an edge labeled [nt] has just been followed. ",(src/StackStates.ml[26,1350+2]..[27,1424+64]),None)
+                  ]
+                core_type (src/StackStates.ml[28,1489+19]..[28,1489+39])
+                  Ptyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.ml[28,1489+19]..[28,1489+32])
+                    Ptyp_constr "Nonterminal.t" (src/StackStates.ml[28,1489+19]..[28,1489+32])
+                    []
+                  core_type (src/StackStates.ml[28,1489+36]..[28,1489+39])
+                    Ptyp_constr "int" (src/StackStates.ml[28,1489+36]..[28,1489+39])
+                    []
+                []
+          ]
+        module_expr (src/StackStates.ml[30,1530+7]..[181,5890+3])
+          Pmod_structure
+          [
+            structure_item (src/StackStates.ml[32,1545+0]..[32,1545+6])
+              Pstr_open Fresh
+              module_expr (src/StackStates.ml[32,1545+5]..[32,1545+6])
+                Pmod_ident "S" (src/StackStates.ml[32,1545+5]..[32,1545+6])
+            structure_item (src/StackStates.ml[39,1703+0]..[63,2325+3])
+              Pstr_module
+              "StateSetVector" (src/StackStates.ml[39,1703+7]..[39,1703+21])
+                module_expr (src/StackStates.ml[39,1703+24]..[63,2325+3])
+                  Pmod_structure
+                  [
+                    structure_item (src/StackStates.ml[45,1884+2]..[46,1904+24])
+                      Pstr_value Nonrec
+                      [
+                        <def>
+                          pattern (src/StackStates.ml[45,1884+6]..[45,1884+17])
+                            Ppat_tuple
+                            [
+                              pattern (src/StackStates.ml[45,1884+6]..[45,1884+11])
+                                Ppat_var "empty" (src/StackStates.ml[45,1884+6]..[45,1884+11])
+                              pattern (src/StackStates.ml[45,1884+13]..[45,1884+17])
+                                Ppat_var "push" (src/StackStates.ml[45,1884+13]..[45,1884+17])
+                            ]
+                          expression (src/StackStates.ml[46,1904+4]..[46,1904+24])
+                            Pexp_open Fresh
+                            module_expr (src/StackStates.ml[46,1904+4]..[46,1904+10])
+                              Pmod_ident "MArray" (src/StackStates.ml[46,1904+4]..[46,1904+10])
+                            expression (src/StackStates.ml[46,1904+12]..[46,1904+23])
+                              Pexp_tuple
+                              [
+                                expression (src/StackStates.ml[46,1904+12]..[46,1904+17])
+                                  Pexp_ident "empty" (src/StackStates.ml[46,1904+12]..[46,1904+17])
+                                expression (src/StackStates.ml[46,1904+19]..[46,1904+23])
+                                  Pexp_ident "push" (src/StackStates.ml[46,1904+19]..[46,1904+23])
+                              ]
+                      ]
+                    structure_item (src/StackStates.ml[48,1930+2]..[50,1985+23])
+                      Pstr_value Nonrec
+                      [
+                        <def>
+                          pattern (src/StackStates.ml[48,1930+6]..[48,1930+14])
+                            Ppat_var "truncate" (src/StackStates.ml[48,1930+6]..[48,1930+14])
+                          expression (src/StackStates.ml[48,1930+15]..[50,1985+23]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/StackStates.ml[48,1930+15]..[48,1930+16])
+                              Ppat_var "k" (src/StackStates.ml[48,1930+15]..[48,1930+16])
+                            expression (src/StackStates.ml[48,1930+17]..[50,1985+23]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/StackStates.ml[48,1930+17]..[48,1930+18])
+                                Ppat_var "v" (src/StackStates.ml[48,1930+17]..[48,1930+18])
+                              expression (src/StackStates.ml[49,1951+4]..[50,1985+23])
+                                Pexp_sequence
+                                expression (src/StackStates.ml[49,1951+4]..[49,1951+32])
+                                  Pexp_assert
+                                  expression (src/StackStates.ml[49,1951+11]..[49,1951+32])
+                                    Pexp_apply
+                                    expression (src/StackStates.ml[49,1951+14]..[49,1951+16])
+                                      Pexp_ident "<=" (src/StackStates.ml[49,1951+14]..[49,1951+16])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[49,1951+12]..[49,1951+13])
+                                          Pexp_ident "k" (src/StackStates.ml[49,1951+12]..[49,1951+13])
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[49,1951+17]..[49,1951+31])
+                                          Pexp_apply
+                                          expression (src/StackStates.ml[49,1951+17]..[49,1951+29])
+                                            Pexp_ident "Array.length" (src/StackStates.ml[49,1951+17]..[49,1951+29])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/StackStates.ml[49,1951+30]..[49,1951+31])
+                                                Pexp_ident "v" (src/StackStates.ml[49,1951+30]..[49,1951+31])
+                                          ]
+                                    ]
+                                expression (src/StackStates.ml[50,1985+4]..[50,1985+23])
+                                  Pexp_apply
+                                  expression (src/StackStates.ml[50,1985+4]..[50,1985+19])
+                                    Pexp_ident "MArray.truncate" (src/StackStates.ml[50,1985+4]..[50,1985+19])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[50,1985+20]..[50,1985+21])
+                                        Pexp_ident "k" (src/StackStates.ml[50,1985+20]..[50,1985+21])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[50,1985+22]..[50,1985+23])
+                                        Pexp_ident "v" (src/StackStates.ml[50,1985+22]..[50,1985+23])
+                                  ]
+                      ]
+                    structure_item (src/StackStates.ml[52,2010+2]..[53,2028+23])
+                      Pstr_type Rec
+                      [
+                        type_declaration "property" (src/StackStates.ml[52,2010+7]..[52,2010+15]) (src/StackStates.ml[52,2010+2]..[53,2028+23])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ptype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (src/StackStates.ml[53,2028+4]..[53,2028+23])
+                                Ptyp_constr "array" (src/StackStates.ml[53,2028+18]..[53,2028+23])
+                                [
+                                  core_type (src/StackStates.ml[53,2028+4]..[53,2028+17])
+                                    Ptyp_constr "Lr1.NodeSet.t" (src/StackStates.ml[53,2028+4]..[53,2028+17])
+                                    []
+                                ]
+                      ]
+                    structure_item (src/StackStates.ml[55,2053+2]..[56,2075+39])
+                      Pstr_value Nonrec
+                      [
+                        <def>
+                          pattern (src/StackStates.ml[55,2053+6]..[55,2053+12])
+                            Ppat_var "bottom" (src/StackStates.ml[55,2053+6]..[55,2053+12])
+                          expression (src/StackStates.ml[55,2053+13]..[56,2075+39]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/StackStates.ml[55,2053+13]..[55,2053+19])
+                              Ppat_var "height" (src/StackStates.ml[55,2053+13]..[55,2053+19])
+                            expression (src/StackStates.ml[56,2075+4]..[56,2075+39])
+                              Pexp_apply
+                              expression (src/StackStates.ml[56,2075+4]..[56,2075+14])
+                                Pexp_ident "Array.make" (src/StackStates.ml[56,2075+4]..[56,2075+14])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/StackStates.ml[56,2075+15]..[56,2075+21])
+                                    Pexp_ident "height" (src/StackStates.ml[56,2075+15]..[56,2075+21])
+                                <arg>
+                                Nolabel
+                                  expression (src/StackStates.ml[56,2075+22]..[56,2075+39])
+                                    Pexp_ident "Lr1.NodeSet.empty" (src/StackStates.ml[56,2075+22]..[56,2075+39])
+                              ]
+                      ]
+                    structure_item (src/StackStates.ml[58,2116+2]..[59,2139+46])
+                      Pstr_value Nonrec
+                      [
+                        <def>
+                          pattern (src/StackStates.ml[58,2116+6]..[58,2116+14])
+                            Ppat_var "leq_join" (src/StackStates.ml[58,2116+6]..[58,2116+14])
+                          expression (src/StackStates.ml[58,2116+15]..[59,2139+46]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/StackStates.ml[58,2116+15]..[58,2116+17])
+                              Ppat_var "v1" (src/StackStates.ml[58,2116+15]..[58,2116+17])
+                            expression (src/StackStates.ml[58,2116+18]..[59,2139+46]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/StackStates.ml[58,2116+18]..[58,2116+20])
+                                Ppat_var "v2" (src/StackStates.ml[58,2116+18]..[58,2116+20])
+                              expression (src/StackStates.ml[59,2139+4]..[59,2139+46])
+                                Pexp_apply
+                                expression (src/StackStates.ml[59,2139+4]..[59,2139+19])
+                                  Pexp_ident "MArray.leq_join" (src/StackStates.ml[59,2139+4]..[59,2139+19])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[59,2139+20]..[59,2139+40])
+                                      Pexp_ident "Lr1.NodeSet.leq_join" (src/StackStates.ml[59,2139+20]..[59,2139+40])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[59,2139+41]..[59,2139+43])
+                                      Pexp_ident "v1" (src/StackStates.ml[59,2139+41]..[59,2139+43])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[59,2139+44]..[59,2139+46])
+                                      Pexp_ident "v2" (src/StackStates.ml[59,2139+44]..[59,2139+46])
+                                ]
+                      ]
+                  ]
+            structure_item (src/StackStates.ml[65,2330+0]..[65,2330+19])
+              Pstr_open Fresh
+              module_expr (src/StackStates.ml[65,2330+5]..[65,2330+19])
+                Pmod_ident "StateSetVector" (src/StackStates.ml[65,2330+5]..[65,2330+19])
+            structure_item (src/StackStates.ml[71,2444+0]..[99,3433+3])
+              Pstr_module
+              "G" (src/StackStates.ml[71,2444+7]..[71,2444+8])
+                module_expr (src/StackStates.ml[71,2444+11]..[99,3433+3])
+                  Pmod_structure
+                  [
+                    structure_item (src/StackStates.ml[73,2463+2]..[73,2463+26])
+                      Pstr_type Rec
+                      [
+                        type_declaration "variable" (src/StackStates.ml[73,2463+7]..[73,2463+15]) (src/StackStates.ml[73,2463+2]..[73,2463+26])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ptype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (src/StackStates.ml[73,2463+18]..[73,2463+26])
+                                Ptyp_constr "Lr1.node" (src/StackStates.ml[73,2463+18]..[73,2463+26])
+                                []
+                      ]
+                    structure_item (src/StackStates.ml[75,2491+2]..[75,2491+41])
+                      Pstr_type Rec
+                      [
+                        type_declaration "property" (src/StackStates.ml[75,2491+7]..[75,2491+15]) (src/StackStates.ml[75,2491+2]..[75,2491+41])
+                          ptype_params =
+                            []
+                          ptype_cstrs =
+                            []
+                          ptype_kind =
+                            Ptype_abstract
+                          ptype_private = Public
+                          ptype_manifest =
+                            Some
+                              core_type (src/StackStates.ml[75,2491+18]..[75,2491+41])
+                                Ptyp_constr "StateSetVector.property" (src/StackStates.ml[75,2491+18]..[75,2491+41])
+                                []
+                      ]
+                    structure_item (src/StackStates.ml[79,2601+2]..[83,2754+5])
+                      Pstr_value Nonrec
+                      [
+                        <def>
+                          pattern (src/StackStates.ml[79,2601+6]..[79,2601+18])
+                            Ppat_var "foreach_root" (src/StackStates.ml[79,2601+6]..[79,2601+18])
+                          expression (src/StackStates.ml[79,2601+19]..[83,2754+5]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/StackStates.ml[79,2601+19]..[79,2601+29])
+                              Ppat_var "contribute" (src/StackStates.ml[79,2601+19]..[79,2601+29])
+                            expression (src/StackStates.ml[80,2633+4]..[83,2754+5])
+                              Pexp_apply
+                              expression (src/StackStates.ml[80,2633+14]..[80,2633+16])
+                                Pexp_ident "|>" (src/StackStates.ml[80,2633+14]..[80,2633+16])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/StackStates.ml[80,2633+4]..[80,2633+13])
+                                    Pexp_ident "Lr1.entry" (src/StackStates.ml[80,2633+4]..[80,2633+13])
+                                <arg>
+                                Nolabel
+                                  expression (src/StackStates.ml[80,2633+17]..[83,2754+5])
+                                    Pexp_apply
+                                    expression (src/StackStates.ml[80,2633+17]..[80,2633+35])
+                                      Pexp_ident "ProductionMap.iter" (src/StackStates.ml[80,2633+17]..[80,2633+35])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[80,2633+36]..[83,2754+5])
+                                          Pexp_fun
+                                          Nolabel
+                                          None
+                                          pattern (src/StackStates.ml[80,2633+41]..[80,2633+46])
+                                            Ppat_var "_prod" (src/StackStates.ml[80,2633+41]..[80,2633+46])
+                                          expression (src/StackStates.ml[80,2633+47]..[82,2726+27]) ghost
+                                            Pexp_fun
+                                            Nolabel
+                                            None
+                                            pattern (src/StackStates.ml[80,2633+47]..[80,2633+51])
+                                              Ppat_var "root" (src/StackStates.ml[80,2633+47]..[80,2633+51])
+                                            expression (src/StackStates.ml[81,2688+6]..[82,2726+27])
+                                              Pexp_sequence
+                                              expression (src/StackStates.ml[81,2688+6]..[81,2688+36])
+                                                Pexp_assert
+                                                expression (src/StackStates.ml[81,2688+13]..[81,2688+36])
+                                                  Pexp_apply
+                                                  expression (src/StackStates.ml[81,2688+32]..[81,2688+33])
+                                                    Pexp_ident "=" (src/StackStates.ml[81,2688+32]..[81,2688+33])
+                                                  [
+                                                    <arg>
+                                                    Nolabel
+                                                      expression (src/StackStates.ml[81,2688+14]..[81,2688+31])
+                                                        Pexp_apply
+                                                        expression (src/StackStates.ml[81,2688+14]..[81,2688+26])
+                                                          Pexp_ident "stack_height" (src/StackStates.ml[81,2688+14]..[81,2688+26])
+                                                        [
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/StackStates.ml[81,2688+27]..[81,2688+31])
+                                                              Pexp_ident "root" (src/StackStates.ml[81,2688+27]..[81,2688+31])
+                                                        ]
+                                                    <arg>
+                                                    Nolabel
+                                                      expression (src/StackStates.ml[81,2688+34]..[81,2688+35])
+                                                        Pexp_constant PConst_int (0,None)
+                                                  ]
+                                              expression (src/StackStates.ml[82,2726+6]..[82,2726+27])
+                                                Pexp_apply
+                                                expression (src/StackStates.ml[82,2726+6]..[82,2726+16])
+                                                  Pexp_ident "contribute" (src/StackStates.ml[82,2726+6]..[82,2726+16])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/StackStates.ml[82,2726+17]..[82,2726+21])
+                                                      Pexp_ident "root" (src/StackStates.ml[82,2726+17]..[82,2726+21])
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/StackStates.ml[82,2726+22]..[82,2726+27])
+                                                      Pexp_ident "empty" (src/StackStates.ml[82,2726+22]..[82,2726+27])
+                                                ]
+                                    ]
+                              ]
+                      ]
+                    structure_item (src/StackStates.ml[87,2841+2]..[97,3426+5])
+                      Pstr_value Nonrec
+                      [
+                        <def>
+                          pattern (src/StackStates.ml[87,2841+6]..[87,2841+23])
+                            Ppat_var "foreach_successor" (src/StackStates.ml[87,2841+6]..[87,2841+23])
+                          expression (src/StackStates.ml[87,2841+24]..[97,3426+5]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/StackStates.ml[87,2841+24]..[87,2841+30])
+                              Ppat_var "source" (src/StackStates.ml[87,2841+24]..[87,2841+30])
+                            expression (src/StackStates.ml[87,2841+31]..[97,3426+5]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/StackStates.ml[87,2841+31]..[87,2841+36])
+                                Ppat_var "stack" (src/StackStates.ml[87,2841+31]..[87,2841+36])
+                              expression (src/StackStates.ml[87,2841+37]..[97,3426+5]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/StackStates.ml[87,2841+37]..[87,2841+47])
+                                  Ppat_var "contribute" (src/StackStates.ml[87,2841+37]..[87,2841+47])
+                                expression (src/StackStates.ml[88,2891+4]..[97,3426+5])
+                                  Pexp_apply
+                                  expression (src/StackStates.ml[88,2891+27]..[88,2891+29])
+                                    Pexp_ident "|>" (src/StackStates.ml[88,2891+27]..[88,2891+29])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[88,2891+4]..[88,2891+26])
+                                        Pexp_apply
+                                        expression (src/StackStates.ml[88,2891+4]..[88,2891+19])
+                                          Pexp_ident "Lr1.transitions" (src/StackStates.ml[88,2891+4]..[88,2891+19])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/StackStates.ml[88,2891+20]..[88,2891+26])
+                                              Pexp_ident "source" (src/StackStates.ml[88,2891+20]..[88,2891+26])
+                                        ]
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[88,2891+30]..[97,3426+5])
+                                        Pexp_apply
+                                        expression (src/StackStates.ml[88,2891+30]..[88,2891+44])
+                                          Pexp_ident "SymbolMap.iter" (src/StackStates.ml[88,2891+30]..[88,2891+44])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/StackStates.ml[88,2891+45]..[97,3426+5])
+                                              Pexp_fun
+                                              Nolabel
+                                              None
+                                              pattern (src/StackStates.ml[88,2891+50]..[88,2891+57])
+                                                Ppat_var "_symbol" (src/StackStates.ml[88,2891+50]..[88,2891+57])
+                                              expression (src/StackStates.ml[88,2891+58]..[96,3378+47]) ghost
+                                                Pexp_fun
+                                                Nolabel
+                                                None
+                                                pattern (src/StackStates.ml[88,2891+58]..[88,2891+64])
+                                                  Ppat_var "target" (src/StackStates.ml[88,2891+58]..[88,2891+64])
+                                                expression (src/StackStates.ml[93,3253+6]..[96,3378+47])
+                                                  Pexp_let Nonrec
+                                                  [
+                                                    <def>
+                                                      pattern (src/StackStates.ml[93,3253+10]..[93,3253+14])
+                                                        Ppat_var "cell" (src/StackStates.ml[93,3253+10]..[93,3253+14])
+                                                      expression (src/StackStates.ml[93,3253+17]..[93,3253+45])
+                                                        Pexp_apply
+                                                        expression (src/StackStates.ml[93,3253+17]..[93,3253+38])
+                                                          Pexp_ident "Lr1.NodeSet.singleton" (src/StackStates.ml[93,3253+17]..[93,3253+38])
+                                                        [
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/StackStates.ml[93,3253+39]..[93,3253+45])
+                                                              Pexp_ident "source" (src/StackStates.ml[93,3253+39]..[93,3253+45])
+                                                        ]
+                                                    <def>
+                                                      pattern (src/StackStates.ml[94,3299+10]..[94,3299+16])
+                                                        Ppat_var "height" (src/StackStates.ml[94,3299+10]..[94,3299+16])
+                                                      expression (src/StackStates.ml[94,3299+19]..[94,3299+38])
+                                                        Pexp_apply
+                                                        expression (src/StackStates.ml[94,3299+19]..[94,3299+31])
+                                                          Pexp_ident "stack_height" (src/StackStates.ml[94,3299+19]..[94,3299+31])
+                                                        [
+                                                          <arg>
+                                                          Nolabel
+                                                            expression (src/StackStates.ml[94,3299+32]..[94,3299+38])
+                                                              Pexp_ident "target" (src/StackStates.ml[94,3299+32]..[94,3299+38])
+                                                        ]
+                                                  ]
+                                                  expression (src/StackStates.ml[95,3341+6]..[96,3378+47])
+                                                    Pexp_let Nonrec
+                                                    [
+                                                      <def>
+                                                        pattern (src/StackStates.ml[95,3341+10]..[95,3341+15])
+                                                          Ppat_var "stack" (src/StackStates.ml[95,3341+10]..[95,3341+15])
+                                                        expression (src/StackStates.ml[95,3341+18]..[95,3341+33])
+                                                          Pexp_apply
+                                                          expression (src/StackStates.ml[95,3341+18]..[95,3341+22])
+                                                            Pexp_ident "push" (src/StackStates.ml[95,3341+18]..[95,3341+22])
+                                                          [
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/StackStates.ml[95,3341+23]..[95,3341+28])
+                                                                Pexp_ident "stack" (src/StackStates.ml[95,3341+23]..[95,3341+28])
+                                                            <arg>
+                                                            Nolabel
+                                                              expression (src/StackStates.ml[95,3341+29]..[95,3341+33])
+                                                                Pexp_ident "cell" (src/StackStates.ml[95,3341+29]..[95,3341+33])
+                                                          ]
+                                                    ]
+                                                    expression (src/StackStates.ml[96,3378+6]..[96,3378+47])
+                                                      Pexp_apply
+                                                      expression (src/StackStates.ml[96,3378+6]..[96,3378+16])
+                                                        Pexp_ident "contribute" (src/StackStates.ml[96,3378+6]..[96,3378+16])
+                                                      [
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/StackStates.ml[96,3378+17]..[96,3378+23])
+                                                            Pexp_ident "target" (src/StackStates.ml[96,3378+17]..[96,3378+23])
+                                                        <arg>
+                                                        Nolabel
+                                                          expression (src/StackStates.ml[96,3378+24]..[96,3378+47])
+                                                            Pexp_apply
+                                                            expression (src/StackStates.ml[96,3378+25]..[96,3378+33])
+                                                              Pexp_ident "truncate" (src/StackStates.ml[96,3378+25]..[96,3378+33])
+                                                            [
+                                                              <arg>
+                                                              Nolabel
+                                                                expression (src/StackStates.ml[96,3378+34]..[96,3378+40])
+                                                                  Pexp_ident "height" (src/StackStates.ml[96,3378+34]..[96,3378+40])
+                                                              <arg>
+                                                              Nolabel
+                                                                expression (src/StackStates.ml[96,3378+41]..[96,3378+46])
+                                                                  Pexp_ident "stack" (src/StackStates.ml[96,3378+41]..[96,3378+46])
+                                                            ]
+                                                      ]
+                                        ]
+                                  ]
+                      ]
+                  ]
+            structure_item (src/StackStates.ml[103,3476+0]..[105,3604+12])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[103,3476+4]..[103,3476+16])
+                    Ppat_var "stack_states" (src/StackStates.ml[103,3476+4]..[103,3476+16])
+                  core_type (src/StackStates.ml[103,3476+19]..[103,3476+46])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/StackStates.ml[103,3476+19]..[103,3476+27])
+                      Ptyp_constr "Lr1.node" (src/StackStates.ml[103,3476+19]..[103,3476+27])
+                      []
+                    core_type (src/StackStates.ml[103,3476+31]..[103,3476+46])
+                      Ptyp_constr "option" (src/StackStates.ml[103,3476+40]..[103,3476+46])
+                      [
+                        core_type (src/StackStates.ml[103,3476+31]..[103,3476+39])
+                          Ptyp_constr "property" (src/StackStates.ml[103,3476+31]..[103,3476+39])
+                          []
+                      ]
+                  expression (src/StackStates.ml[104,3525+2]..[105,3604+12])
+                    Pexp_letmodule "F" (src/StackStates.ml[104,3525+13]..[104,3525+14])
+                    module_expr (src/StackStates.ml[104,3525+17]..[104,3525+75])
+                      Pmod_apply
+                      module_expr (src/StackStates.ml[104,3525+17]..[104,3525+72])
+                        Pmod_apply
+                        module_expr (src/StackStates.ml[104,3525+17]..[104,3525+56])
+                          Pmod_apply
+                          module_expr (src/StackStates.ml[104,3525+17]..[104,3525+33])
+                            Pmod_ident "Fix.DataFlow.Run" (src/StackStates.ml[104,3525+17]..[104,3525+33])
+                          module_expr (src/StackStates.ml[104,3525+34]..[104,3525+55])
+                            Pmod_ident "Lr1.ImperativeNodeMap" (src/StackStates.ml[104,3525+34]..[104,3525+55])
+                        module_expr (src/StackStates.ml[104,3525+57]..[104,3525+71])
+                          Pmod_ident "StateSetVector" (src/StackStates.ml[104,3525+57]..[104,3525+71])
+                      module_expr (src/StackStates.ml[104,3525+73]..[104,3525+74])
+                        Pmod_ident "G" (src/StackStates.ml[104,3525+73]..[104,3525+74])
+                    expression (src/StackStates.ml[105,3604+2]..[105,3604+12])
+                      Pexp_ident "F.solution" (src/StackStates.ml[105,3604+2]..[105,3604+12])
+              ]
+            structure_item (src/StackStates.ml[111,3792+0]..[117,3965+7])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[111,3792+4]..[111,3792+16])
+                    Ppat_var "stack_states" (src/StackStates.ml[111,3792+4]..[111,3792+16])
+                  expression (src/StackStates.ml[111,3792+17]..[117,3965+7]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/StackStates.ml[111,3792+17]..[111,3792+34])
+                      Ppat_constraint
+                      pattern (src/StackStates.ml[111,3792+18]..[111,3792+22])
+                        Ppat_var "node" (src/StackStates.ml[111,3792+18]..[111,3792+22])
+                      core_type (src/StackStates.ml[111,3792+25]..[111,3792+33])
+                        Ptyp_constr "Lr1.node" (src/StackStates.ml[111,3792+25]..[111,3792+33])
+                        []
+                    expression (src/StackStates.ml[111,3792+35]..[117,3965+7])
+                      Pexp_constraint
+                      expression (src/StackStates.ml[112,3840+2]..[117,3965+7])
+                        Pexp_match
+                        expression (src/StackStates.ml[112,3840+8]..[112,3840+25])
+                          Pexp_apply
+                          expression (src/StackStates.ml[112,3840+8]..[112,3840+20])
+                            Pexp_ident "stack_states" (src/StackStates.ml[112,3840+8]..[112,3840+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[112,3840+21]..[112,3840+25])
+                                Pexp_ident "node" (src/StackStates.ml[112,3840+21]..[112,3840+25])
+                          ]
+                        [
+                          <case>
+                            pattern (src/StackStates.ml[113,3871+4]..[113,3871+8])
+                              Ppat_construct "None" (src/StackStates.ml[113,3871+4]..[113,3871+8])
+                              None
+                            expression (src/StackStates.ml[115,3932+6]..[115,3932+18])
+                              Pexp_assert
+                              expression (src/StackStates.ml[115,3932+13]..[115,3932+18])
+                                Pexp_construct "false" (src/StackStates.ml[115,3932+13]..[115,3932+18])
+                                None
+                          <case>
+                            pattern (src/StackStates.ml[116,3951+4]..[116,3951+10])
+                              Ppat_construct "Some" (src/StackStates.ml[116,3951+4]..[116,3951+8])
+                              Some
+                                []
+                                pattern (src/StackStates.ml[116,3951+9]..[116,3951+10])
+                                  Ppat_var "v" (src/StackStates.ml[116,3951+9]..[116,3951+10])
+                            expression (src/StackStates.ml[117,3965+6]..[117,3965+7])
+                              Pexp_ident "v" (src/StackStates.ml[117,3965+6]..[117,3965+7])
+                        ]
+                      core_type (src/StackStates.ml[111,3792+37]..[111,3792+45])
+                        Ptyp_constr "property" (src/StackStates.ml[111,3792+37]..[111,3792+45])
+                        []
+              ]
+            structure_item (src/StackStates.ml[122,4120+0]..[125,4237+25])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[122,4120+4]..[122,4120+17])
+                    Ppat_var "truncate_join" (src/StackStates.ml[122,4120+4]..[122,4120+17])
+                  expression (src/StackStates.ml[122,4120+18]..[125,4237+25]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/StackStates.ml[122,4120+18]..[122,4120+24])
+                      Ppat_var "height" (src/StackStates.ml[122,4120+18]..[122,4120+24])
+                    expression (src/StackStates.ml[122,4120+25]..[125,4237+25]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/StackStates.ml[122,4120+25]..[122,4120+26])
+                        Ppat_var "f" (src/StackStates.ml[122,4120+25]..[122,4120+26])
+                      expression (src/StackStates.ml[122,4120+27]..[125,4237+25]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/StackStates.ml[122,4120+27]..[122,4120+32])
+                          Ppat_var "nodes" (src/StackStates.ml[122,4120+27]..[122,4120+32])
+                        expression (src/StackStates.ml[123,4155+2]..[125,4237+25])
+                          Pexp_apply
+                          expression (src/StackStates.ml[123,4155+2]..[123,4155+18])
+                            Pexp_ident "Lr1.NodeSet.fold" (src/StackStates.ml[123,4155+2]..[123,4155+18])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[123,4155+19]..[125,4237+3])
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/StackStates.ml[123,4155+24]..[123,4155+28])
+                                  Ppat_var "node" (src/StackStates.ml[123,4155+24]..[123,4155+28])
+                                expression (src/StackStates.ml[123,4155+29]..[124,4192+44]) ghost
+                                  Pexp_fun
+                                  Nolabel
+                                  None
+                                  pattern (src/StackStates.ml[123,4155+29]..[123,4155+33])
+                                    Ppat_var "accu" (src/StackStates.ml[123,4155+29]..[123,4155+33])
+                                  expression (src/StackStates.ml[124,4192+4]..[124,4192+44])
+                                    Pexp_apply
+                                    expression (src/StackStates.ml[124,4192+4]..[124,4192+12])
+                                      Pexp_ident "leq_join" (src/StackStates.ml[124,4192+4]..[124,4192+12])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[124,4192+13]..[124,4192+39])
+                                          Pexp_apply
+                                          expression (src/StackStates.ml[124,4192+14]..[124,4192+22])
+                                            Pexp_ident "truncate" (src/StackStates.ml[124,4192+14]..[124,4192+22])
+                                          [
+                                            <arg>
+                                            Nolabel
+                                              expression (src/StackStates.ml[124,4192+23]..[124,4192+29])
+                                                Pexp_ident "height" (src/StackStates.ml[124,4192+23]..[124,4192+29])
+                                            <arg>
+                                            Nolabel
+                                              expression (src/StackStates.ml[124,4192+30]..[124,4192+38])
+                                                Pexp_apply
+                                                expression (src/StackStates.ml[124,4192+31]..[124,4192+32])
+                                                  Pexp_ident "f" (src/StackStates.ml[124,4192+31]..[124,4192+32])
+                                                [
+                                                  <arg>
+                                                  Nolabel
+                                                    expression (src/StackStates.ml[124,4192+33]..[124,4192+37])
+                                                      Pexp_ident "node" (src/StackStates.ml[124,4192+33]..[124,4192+37])
+                                                ]
+                                          ]
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[124,4192+40]..[124,4192+44])
+                                          Pexp_ident "accu" (src/StackStates.ml[124,4192+40]..[124,4192+44])
+                                    ]
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[125,4237+4]..[125,4237+9])
+                                Pexp_ident "nodes" (src/StackStates.ml[125,4237+4]..[125,4237+9])
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[125,4237+10]..[125,4237+25])
+                                Pexp_apply
+                                expression (src/StackStates.ml[125,4237+11]..[125,4237+17])
+                                  Pexp_ident "bottom" (src/StackStates.ml[125,4237+11]..[125,4237+17])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[125,4237+18]..[125,4237+24])
+                                      Pexp_ident "height" (src/StackStates.ml[125,4237+18]..[125,4237+24])
+                                ]
+                          ]
+              ]
+            structure_item (src/StackStates.ml[133,4531+0]..[138,4753+3])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[133,4531+4]..[133,4531+21])
+                    Ppat_var "production_states" (src/StackStates.ml[133,4531+4]..[133,4531+21])
+                  core_type (src/StackStates.ml[133,4531+24]..[133,4531+52])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/StackStates.ml[133,4531+24]..[133,4531+40])
+                      Ptyp_constr "Production.index" (src/StackStates.ml[133,4531+24]..[133,4531+40])
+                      []
+                    core_type (src/StackStates.ml[133,4531+44]..[133,4531+52])
+                      Ptyp_constr "property" (src/StackStates.ml[133,4531+44]..[133,4531+52])
+                      []
+                  expression (src/StackStates.ml[134,4586+2]..[138,4753+3])
+                    Pexp_apply
+                    expression (src/StackStates.ml[134,4586+2]..[134,4586+21])
+                      Pexp_ident "Production.tabulate" (src/StackStates.ml[134,4586+2]..[134,4586+21])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/StackStates.ml[134,4586+22]..[138,4753+3])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/StackStates.ml[134,4586+27]..[134,4586+31])
+                            Ppat_var "prod" (src/StackStates.ml[134,4586+27]..[134,4586+31])
+                          expression (src/StackStates.ml[135,4621+4]..[137,4709+43])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/StackStates.ml[135,4621+8]..[135,4621+13])
+                                  Ppat_var "sites" (src/StackStates.ml[135,4621+8]..[135,4621+13])
+                                expression (src/StackStates.ml[135,4621+16]..[135,4621+41])
+                                  Pexp_apply
+                                  expression (src/StackStates.ml[135,4621+16]..[135,4621+36])
+                                    Pexp_ident "Lr1.production_where" (src/StackStates.ml[135,4621+16]..[135,4621+36])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[135,4621+37]..[135,4621+41])
+                                        Pexp_ident "prod" (src/StackStates.ml[135,4621+37]..[135,4621+41])
+                                  ]
+                            ]
+                            expression (src/StackStates.ml[136,4666+4]..[137,4709+43])
+                              Pexp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/StackStates.ml[136,4666+8]..[136,4666+14])
+                                    Ppat_var "height" (src/StackStates.ml[136,4666+8]..[136,4666+14])
+                                  expression (src/StackStates.ml[136,4666+17]..[136,4666+39])
+                                    Pexp_apply
+                                    expression (src/StackStates.ml[136,4666+17]..[136,4666+34])
+                                      Pexp_ident "production_height" (src/StackStates.ml[136,4666+17]..[136,4666+34])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[136,4666+35]..[136,4666+39])
+                                          Pexp_ident "prod" (src/StackStates.ml[136,4666+35]..[136,4666+39])
+                                    ]
+                              ]
+                              expression (src/StackStates.ml[137,4709+4]..[137,4709+43])
+                                Pexp_apply
+                                expression (src/StackStates.ml[137,4709+4]..[137,4709+17])
+                                  Pexp_ident "truncate_join" (src/StackStates.ml[137,4709+4]..[137,4709+17])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[137,4709+18]..[137,4709+24])
+                                      Pexp_ident "height" (src/StackStates.ml[137,4709+18]..[137,4709+24])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[137,4709+25]..[137,4709+37])
+                                      Pexp_ident "stack_states" (src/StackStates.ml[137,4709+25]..[137,4709+37])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[137,4709+38]..[137,4709+43])
+                                      Pexp_ident "sites" (src/StackStates.ml[137,4709+38]..[137,4709+43])
+                                ]
+                    ]
+              ]
+            structure_item (src/StackStates.ml[146,4994+0]..[154,5331+3])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[146,4994+4]..[146,4994+15])
+                    Ppat_var "goto_states" (src/StackStates.ml[146,4994+4]..[146,4994+15])
+                  core_type (src/StackStates.ml[146,4994+18]..[146,4994+43])
+                    Ptyp_arrow
+                    Nolabel
+                    core_type (src/StackStates.ml[146,4994+18]..[146,4994+31])
+                      Ptyp_constr "Nonterminal.t" (src/StackStates.ml[146,4994+18]..[146,4994+31])
+                      []
+                    core_type (src/StackStates.ml[146,4994+35]..[146,4994+43])
+                      Ptyp_constr "property" (src/StackStates.ml[146,4994+35]..[146,4994+43])
+                      []
+                  expression (src/StackStates.ml[147,5040+2]..[154,5331+3])
+                    Pexp_apply
+                    expression (src/StackStates.ml[147,5040+2]..[147,5040+22])
+                      Pexp_ident "Nonterminal.tabulate" (src/StackStates.ml[147,5040+2]..[147,5040+22])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/StackStates.ml[147,5040+23]..[154,5331+3])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/StackStates.ml[147,5040+28]..[147,5040+30])
+                            Ppat_var "nt" (src/StackStates.ml[147,5040+28]..[147,5040+30])
+                          expression (src/StackStates.ml[148,5074+4]..[153,5285+45])
+                            Pexp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/StackStates.ml[148,5074+8]..[148,5074+14])
+                                  Ppat_var "symbol" (src/StackStates.ml[148,5074+8]..[148,5074+14])
+                                expression (src/StackStates.ml[148,5074+17]..[148,5074+28])
+                                  Pexp_construct "Symbol.N" (src/StackStates.ml[148,5074+17]..[148,5074+25])
+                                  Some
+                                    expression (src/StackStates.ml[148,5074+26]..[148,5074+28])
+                                      Pexp_ident "nt" (src/StackStates.ml[148,5074+26]..[148,5074+28])
+                            ]
+                            expression (src/StackStates.ml[151,5206+4]..[153,5285+45])
+                              Pexp_let Nonrec
+                              [
+                                <def>
+                                  pattern (src/StackStates.ml[151,5206+8]..[151,5206+15])
+                                    Ppat_var "targets" (src/StackStates.ml[151,5206+8]..[151,5206+15])
+                                  expression (src/StackStates.ml[151,5206+18]..[151,5206+40])
+                                    Pexp_apply
+                                    expression (src/StackStates.ml[151,5206+18]..[151,5206+33])
+                                      Pexp_ident "Lr1.all_targets" (src/StackStates.ml[151,5206+18]..[151,5206+33])
+                                    [
+                                      <arg>
+                                      Nolabel
+                                        expression (src/StackStates.ml[151,5206+34]..[151,5206+40])
+                                          Pexp_ident "symbol" (src/StackStates.ml[151,5206+34]..[151,5206+40])
+                                    ]
+                              ]
+                              expression (src/StackStates.ml[152,5250+4]..[153,5285+45])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/StackStates.ml[152,5250+8]..[152,5250+14])
+                                      Ppat_var "height" (src/StackStates.ml[152,5250+8]..[152,5250+14])
+                                    expression (src/StackStates.ml[152,5250+17]..[152,5250+31])
+                                      Pexp_apply
+                                      expression (src/StackStates.ml[152,5250+17]..[152,5250+28])
+                                        Pexp_ident "goto_height" (src/StackStates.ml[152,5250+17]..[152,5250+28])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/StackStates.ml[152,5250+29]..[152,5250+31])
+                                            Pexp_ident "nt" (src/StackStates.ml[152,5250+29]..[152,5250+31])
+                                      ]
+                                ]
+                                expression (src/StackStates.ml[153,5285+4]..[153,5285+45])
+                                  Pexp_apply
+                                  expression (src/StackStates.ml[153,5285+4]..[153,5285+17])
+                                    Pexp_ident "truncate_join" (src/StackStates.ml[153,5285+4]..[153,5285+17])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[153,5285+18]..[153,5285+24])
+                                        Pexp_ident "height" (src/StackStates.ml[153,5285+18]..[153,5285+24])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[153,5285+25]..[153,5285+37])
+                                        Pexp_ident "stack_states" (src/StackStates.ml[153,5285+25]..[153,5285+37])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[153,5285+38]..[153,5285+45])
+                                        Pexp_ident "targets" (src/StackStates.ml[153,5285+38]..[153,5285+45])
+                                  ]
+                    ]
+              ]
+            structure_item (src/StackStates.ml[156,5336+0]..[157,5352+21])
+              Pstr_type Rec
+              [
+                type_declaration "property" (src/StackStates.ml[156,5336+5]..[156,5336+13]) (src/StackStates.ml[156,5336+0]..[157,5352+21])
+                  ptype_params =
+                    []
+                  ptype_cstrs =
+                    []
+                  ptype_kind =
+                    Ptype_abstract
+                  ptype_private = Public
+                  ptype_manifest =
+                    Some
+                      core_type (src/StackStates.ml[157,5352+2]..[157,5352+21])
+                        Ptyp_constr "array" (src/StackStates.ml[157,5352+16]..[157,5352+21])
+                        [
+                          core_type (src/StackStates.ml[157,5352+2]..[157,5352+15])
+                            Ptyp_constr "Lr1.NodeSet.t" (src/StackStates.ml[157,5352+2]..[157,5352+15])
+                            []
+                        ]
+              ]
+            structure_item (src/StackStates.ml[161,5400+0]..[165,5477+74])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[161,5400+4]..[161,5400+9])
+                    Ppat_var "print" (src/StackStates.ml[161,5400+4]..[161,5400+9])
+                  expression (src/StackStates.ml[161,5400+10]..[165,5477+74]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/StackStates.ml[161,5400+10]..[161,5400+24])
+                      Ppat_constraint
+                      pattern (src/StackStates.ml[161,5400+11]..[161,5400+12])
+                        Ppat_var "v" (src/StackStates.ml[161,5400+11]..[161,5400+12])
+                      core_type (src/StackStates.ml[161,5400+15]..[161,5400+23])
+                        Ptyp_constr "property" (src/StackStates.ml[161,5400+15]..[161,5400+23])
+                        []
+                    expression (src/StackStates.ml[162,5427+2]..[165,5477+74])
+                      Pexp_ifthenelse
+                      expression (src/StackStates.ml[162,5427+5]..[162,5427+23])
+                        Pexp_apply
+                        expression (src/StackStates.ml[162,5427+20]..[162,5427+21])
+                          Pexp_ident "=" (src/StackStates.ml[162,5427+20]..[162,5427+21])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/StackStates.ml[162,5427+5]..[162,5427+19])
+                              Pexp_apply
+                              expression (src/StackStates.ml[162,5427+5]..[162,5427+17])
+                                Pexp_ident "Array.length" (src/StackStates.ml[162,5427+5]..[162,5427+17])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/StackStates.ml[162,5427+18]..[162,5427+19])
+                                    Pexp_ident "v" (src/StackStates.ml[162,5427+18]..[162,5427+19])
+                              ]
+                          <arg>
+                          Nolabel
+                            expression (src/StackStates.ml[162,5427+22]..[162,5427+23])
+                              Pexp_constant PConst_int (0,None)
+                        ]
+                      expression (src/StackStates.ml[163,5456+4]..[163,5456+13])
+                        Pexp_constant PConst_string("epsilon",(src/StackStates.ml[163,5456+5]..[163,5456+12]),None)
+                      Some
+                        expression (src/StackStates.ml[165,5477+4]..[165,5477+74])
+                          Pexp_apply
+                          expression (src/StackStates.ml[165,5477+4]..[165,5477+33])
+                            Pexp_ident "Misc.separated_list_to_string" (src/StackStates.ml[165,5477+4]..[165,5477+33])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[165,5477+34]..[165,5477+51])
+                                Pexp_ident "Lr1.NodeSet.print" (src/StackStates.ml[165,5477+34]..[165,5477+51])
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[165,5477+52]..[165,5477+56])
+                                Pexp_constant PConst_string("; ",(src/StackStates.ml[165,5477+53]..[165,5477+55]),None)
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[165,5477+57]..[165,5477+74])
+                                Pexp_apply
+                                expression (src/StackStates.ml[165,5477+58]..[165,5477+71])
+                                  Pexp_ident "Array.to_list" (src/StackStates.ml[165,5477+58]..[165,5477+71])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/StackStates.ml[165,5477+72]..[165,5477+73])
+                                      Pexp_ident "v" (src/StackStates.ml[165,5477+72]..[165,5477+73])
+                                ]
+                          ]
+              ]
+            structure_item (src/StackStates.ml[167,5553+0]..[179,5885+3])
+              Pstr_value Nonrec
+              [
+                <def>
+                  pattern (src/StackStates.ml[167,5553+4]..[167,5553+8])
+                    Ppat_var "dump" (src/StackStates.ml[167,5553+4]..[167,5553+8])
+                  expression (src/StackStates.ml[167,5553+9]..[179,5885+3]) ghost
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/StackStates.ml[167,5553+9]..[167,5553+26])
+                      Ppat_constraint
+                      pattern (src/StackStates.ml[167,5553+10]..[167,5553+16])
+                        Ppat_var "prefix" (src/StackStates.ml[167,5553+10]..[167,5553+16])
+                      core_type (src/StackStates.ml[167,5553+19]..[167,5553+25])
+                        Ptyp_constr "string" (src/StackStates.ml[167,5553+19]..[167,5553+25])
+                        []
+                    expression (src/StackStates.ml[167,5553+27]..[179,5885+3]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/StackStates.ml[167,5553+27]..[167,5553+28])
+                        Ppat_var "f" (src/StackStates.ml[167,5553+27]..[167,5553+28])
+                      expression (src/StackStates.ml[168,5584+2]..[179,5885+3])
+                        Pexp_sequence
+                        expression (src/StackStates.ml[168,5584+2]..[173,5720+3])
+                          Pexp_apply
+                          expression (src/StackStates.ml[168,5584+2]..[168,5584+10])
+                            Pexp_ident "Lr1.iter" (src/StackStates.ml[168,5584+2]..[168,5584+10])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[168,5584+11]..[173,5720+3])
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/StackStates.ml[168,5584+16]..[168,5584+20])
+                                  Ppat_var "node" (src/StackStates.ml[168,5584+16]..[168,5584+20])
+                                expression (src/StackStates.ml[169,5608+4]..[172,5686+33])
+                                  Pexp_apply
+                                  expression (src/StackStates.ml[169,5608+4]..[169,5608+18])
+                                    Pexp_ident "Printf.fprintf" (src/StackStates.ml[169,5608+4]..[169,5608+18])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[169,5608+19]..[169,5608+20])
+                                        Pexp_ident "f" (src/StackStates.ml[169,5608+19]..[169,5608+20])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[169,5608+21]..[169,5608+41])
+                                        Pexp_constant PConst_string("%sstack(%s) = %s\n",(src/StackStates.ml[169,5608+22]..[169,5608+40]),None)
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[170,5650+6]..[170,5650+12])
+                                        Pexp_ident "prefix" (src/StackStates.ml[170,5650+6]..[170,5650+12])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[171,5663+6]..[171,5663+22])
+                                        Pexp_apply
+                                        expression (src/StackStates.ml[171,5663+7]..[171,5663+16])
+                                          Pexp_ident "Lr1.print" (src/StackStates.ml[171,5663+7]..[171,5663+16])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/StackStates.ml[171,5663+17]..[171,5663+21])
+                                              Pexp_ident "node" (src/StackStates.ml[171,5663+17]..[171,5663+21])
+                                        ]
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[172,5686+6]..[172,5686+33])
+                                        Pexp_apply
+                                        expression (src/StackStates.ml[172,5686+7]..[172,5686+12])
+                                          Pexp_ident "print" (src/StackStates.ml[172,5686+7]..[172,5686+12])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/StackStates.ml[172,5686+13]..[172,5686+32])
+                                              Pexp_apply
+                                              expression (src/StackStates.ml[172,5686+14]..[172,5686+26])
+                                                Pexp_ident "stack_states" (src/StackStates.ml[172,5686+14]..[172,5686+26])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/StackStates.ml[172,5686+27]..[172,5686+31])
+                                                    Pexp_ident "node" (src/StackStates.ml[172,5686+27]..[172,5686+31])
+                                              ]
+                                        ]
+                                  ]
+                          ]
+                        expression (src/StackStates.ml[174,5725+2]..[179,5885+3])
+                          Pexp_apply
+                          expression (src/StackStates.ml[174,5725+2]..[174,5725+18])
+                            Pexp_ident "Production.iterx" (src/StackStates.ml[174,5725+2]..[174,5725+18])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/StackStates.ml[174,5725+19]..[179,5885+3])
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/StackStates.ml[174,5725+24]..[174,5725+28])
+                                  Ppat_var "prod" (src/StackStates.ml[174,5725+24]..[174,5725+28])
+                                expression (src/StackStates.ml[175,5757+4]..[178,5846+38])
+                                  Pexp_apply
+                                  expression (src/StackStates.ml[175,5757+4]..[175,5757+18])
+                                    Pexp_ident "Printf.fprintf" (src/StackStates.ml[175,5757+4]..[175,5757+18])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[175,5757+19]..[175,5757+20])
+                                        Pexp_ident "f" (src/StackStates.ml[175,5757+19]..[175,5757+20])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[175,5757+21]..[175,5757+45])
+                                        Pexp_constant PConst_string("%sprodstack(%s) = %s\n",(src/StackStates.ml[175,5757+22]..[175,5757+44]),None)
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[176,5803+6]..[176,5803+12])
+                                        Pexp_ident "prefix" (src/StackStates.ml[176,5803+6]..[176,5803+12])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[177,5816+6]..[177,5816+29])
+                                        Pexp_apply
+                                        expression (src/StackStates.ml[177,5816+7]..[177,5816+23])
+                                          Pexp_ident "Production.print" (src/StackStates.ml[177,5816+7]..[177,5816+23])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/StackStates.ml[177,5816+24]..[177,5816+28])
+                                              Pexp_ident "prod" (src/StackStates.ml[177,5816+24]..[177,5816+28])
+                                        ]
+                                    <arg>
+                                    Nolabel
+                                      expression (src/StackStates.ml[178,5846+6]..[178,5846+38])
+                                        Pexp_apply
+                                        expression (src/StackStates.ml[178,5846+7]..[178,5846+12])
+                                          Pexp_ident "print" (src/StackStates.ml[178,5846+7]..[178,5846+12])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/StackStates.ml[178,5846+13]..[178,5846+37])
+                                              Pexp_apply
+                                              expression (src/StackStates.ml[178,5846+14]..[178,5846+31])
+                                                Pexp_ident "production_states" (src/StackStates.ml[178,5846+14]..[178,5846+31])
+                                              [
+                                                <arg>
+                                                Nolabel
+                                                  expression (src/StackStates.ml[178,5846+32]..[178,5846+36])
+                                                    Pexp_ident "prod" (src/StackStates.ml[178,5846+32]..[178,5846+36])
+                                              ]
+                                        ]
+                                  ]
+                          ]
+              ]
+          ]
+]
+
+open Grammar
+module Run(S:sig
+               val stack_height : Lr1.node -> int[@@ocaml.doc
+                                                   "[stack_height s] is the height of the known suffix of the stack\n     at state [s]. "]
+               val production_height : Production.index -> int[@@ocaml.doc
+                                                                "[production_height prod] is the height of the known suffix of the stack\n     at a state where production [prod] can be reduced. "]
+               val goto_height : Nonterminal.t -> int[@@ocaml.doc
+                                                       "[goto_height nt] is the height of the known suffix of the stack at a\n     state where an edge labeled [nt] has just been followed. "]
+             end) =
+  struct
+    open S
+    module StateSetVector =
+      struct
+        let (empty, push) = let open MArray in (empty, push)
+        let truncate k v =
+          assert (k <= (Array.length v)); MArray.truncate k v
+        type property = Lr1.NodeSet.t array
+        let bottom height = Array.make height Lr1.NodeSet.empty
+        let leq_join v1 v2 = MArray.leq_join Lr1.NodeSet.leq_join v1 v2
+      end
+    open StateSetVector
+    module G =
+      struct
+        type variable = Lr1.node
+        type property = StateSetVector.property
+        let foreach_root contribute =
+          Lr1.entry |>
+            (ProductionMap.iter
+               (fun _prod ->
+                  fun root ->
+                    assert ((stack_height root) = 0); contribute root empty))
+        let foreach_successor source stack contribute =
+          (Lr1.transitions source) |>
+            (SymbolMap.iter
+               (fun _symbol ->
+                  fun target ->
+                    let cell = Lr1.NodeSet.singleton source
+                    and height = stack_height target in
+                    let stack = push stack cell in
+                    contribute target (truncate height stack)))
+      end
+    let stack_states : Lr1.node -> property option =
+      let module F =
+        (((Fix.DataFlow.Run)(Lr1.ImperativeNodeMap))(StateSetVector))(G) in
+        F.solution
+    let stack_states (node : Lr1.node) =
+      (match stack_states node with | None -> assert false | Some v -> v : 
+      property)
+    let truncate_join height f nodes =
+      Lr1.NodeSet.fold
+        (fun node -> fun accu -> leq_join (truncate height (f node)) accu)
+        nodes (bottom height)
+    let production_states : Production.index -> property =
+      Production.tabulate
+        (fun prod ->
+           let sites = Lr1.production_where prod in
+           let height = production_height prod in
+           truncate_join height stack_states sites)
+    let goto_states : Nonterminal.t -> property =
+      Nonterminal.tabulate
+        (fun nt ->
+           let symbol = Symbol.N nt in
+           let targets = Lr1.all_targets symbol in
+           let height = goto_height nt in
+           truncate_join height stack_states targets)
+    type property = Lr1.NodeSet.t array
+    let print (v : property) =
+      if (Array.length v) = 0
+      then "epsilon"
+      else
+        Misc.separated_list_to_string Lr1.NodeSet.print "; "
+          (Array.to_list v)
+    let dump (prefix : string) f =
+      Lr1.iter
+        (fun node ->
+           Printf.fprintf f "%sstack(%s) = %s\n" prefix (Lr1.print node)
+             (print (stack_states node)));
+      Production.iterx
+        (fun prod ->
+           Printf.fprintf f "%sprodstack(%s) = %s\n" prefix
+             (Production.print prod) (print (production_states prod)))
+  end
+[
+  structure_item (src/StackStates.ml[14,1001+0]..src/StackStates.ml[14,1001+12])
+    Tstr_open Fresh
+    module_expr (src/StackStates.ml[14,1001+5]..src/StackStates.ml[14,1001+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/StackStates.ml[16,1015+0]..src/StackStates.ml[181,5890+3])
+    Tstr_module
+    Run/1317
+      module_expr (src/StackStates.ml[16,1015+11]..src/StackStates.ml[181,5890+3])
+        Tmod_functor "S/528"
+        module_type (src/StackStates.ml[16,1015+16]..src/StackStates.ml[30,1530+3])
+          Tmty_signature
+          [
+            signature_item (src/StackStates.ml[20,1127+2]..src/StackStates.ml[20,1127+35])
+              Tsig_value
+              value_description stack_height/454 (src/StackStates.ml[20,1127+2]..src/StackStates.ml[20,1127+35])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.ml[18,1036+2]..[19,1105+21])
+                      Pstr_eval
+                      expression (src/StackStates.ml[18,1036+2]..[19,1105+21])
+                        Pexp_constant PConst_string("[stack_height s] is the height of the known suffix of the stack\n     at state [s]. ",(src/StackStates.ml[18,1036+2]..[19,1105+21]),None)
+                  ]
+                core_type (src/StackStates.ml[20,1127+20]..src/StackStates.ml[20,1127+35])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.ml[20,1127+20]..src/StackStates.ml[20,1127+28])
+                    Ttyp_constr "Dune__exe!.Lr1.node"
+                    []
+                  core_type (src/StackStates.ml[20,1127+32]..src/StackStates.ml[20,1127+35])
+                    Ttyp_constr "int/1!"
+                    []
+                []
+            signature_item (src/StackStates.ml[24,1300+2]..src/StackStates.ml[24,1300+48])
+              Tsig_value
+              value_description production_height/506 (src/StackStates.ml[24,1300+2]..src/StackStates.ml[24,1300+48])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.ml[22,1164+2]..[23,1241+58])
+                      Pstr_eval
+                      expression (src/StackStates.ml[22,1164+2]..[23,1241+58])
+                        Pexp_constant PConst_string("[production_height prod] is the height of the known suffix of the stack\n     at a state where production [prod] can be reduced. ",(src/StackStates.ml[22,1164+2]..[23,1241+58]),None)
+                  ]
+                core_type (src/StackStates.ml[24,1300+25]..src/StackStates.ml[24,1300+48])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.ml[24,1300+25]..src/StackStates.ml[24,1300+41])
+                    Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                    []
+                  core_type (src/StackStates.ml[24,1300+45]..src/StackStates.ml[24,1300+48])
+                    Ttyp_constr "int/1!"
+                    []
+                []
+            signature_item (src/StackStates.ml[28,1489+2]..src/StackStates.ml[28,1489+39])
+              Tsig_value
+              value_description goto_height/527 (src/StackStates.ml[28,1489+2]..src/StackStates.ml[28,1489+39])
+                attribute "ocaml.doc"
+                  [
+                    structure_item (src/StackStates.ml[26,1350+2]..[27,1424+64])
+                      Pstr_eval
+                      expression (src/StackStates.ml[26,1350+2]..[27,1424+64])
+                        Pexp_constant PConst_string("[goto_height nt] is the height of the known suffix of the stack at a\n     state where an edge labeled [nt] has just been followed. ",(src/StackStates.ml[26,1350+2]..[27,1424+64]),None)
+                  ]
+                core_type (src/StackStates.ml[28,1489+19]..src/StackStates.ml[28,1489+39])
+                  Ttyp_arrow
+                  Nolabel
+                  core_type (src/StackStates.ml[28,1489+19]..src/StackStates.ml[28,1489+32])
+                    Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                    []
+                  core_type (src/StackStates.ml[28,1489+36]..src/StackStates.ml[28,1489+39])
+                    Ttyp_constr "int/1!"
+                    []
+                []
+          ]
+        module_expr (src/StackStates.ml[30,1530+7]..src/StackStates.ml[181,5890+3])
+          module_expr (src/StackStates.ml[30,1530+7]..src/StackStates.ml[181,5890+3])
+            Tmod_structure
+            [
+              structure_item (src/StackStates.ml[32,1545+0]..src/StackStates.ml[32,1545+6])
+                Tstr_open Fresh
+                module_expr (src/StackStates.ml[32,1545+5]..src/StackStates.ml[32,1545+6])
+                  Tmod_ident "S/528"
+              structure_item (src/StackStates.ml[39,1703+0]..src/StackStates.ml[63,2325+3])
+                Tstr_module
+                StateSetVector/789
+                  module_expr (src/StackStates.ml[39,1703+24]..src/StackStates.ml[63,2325+3])
+                    Tmod_structure
+                    [
+                      structure_item (src/StackStates.ml[45,1884+2]..src/StackStates.ml[46,1904+24])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/StackStates.ml[45,1884+6]..src/StackStates.ml[45,1884+17])
+                              Tpat_tuple
+                              [
+                                pattern (src/StackStates.ml[45,1884+6]..src/StackStates.ml[45,1884+11])
+                                  Tpat_var "empty/529"
+                                pattern (src/StackStates.ml[45,1884+13]..src/StackStates.ml[45,1884+17])
+                                  Tpat_var "push/530"
+                              ]
+                            expression (src/StackStates.ml[46,1904+4]..src/StackStates.ml[46,1904+24])
+                              Texp_open Fresh
+                              module_expr (src/StackStates.ml[46,1904+4]..src/StackStates.ml[46,1904+10])
+                                Tmod_ident "Dune__exe!.MArray"
+                              expression (src/StackStates.ml[46,1904+12]..src/StackStates.ml[46,1904+23])
+                                Texp_tuple
+                                [
+                                  expression (src/StackStates.ml[46,1904+12]..src/StackStates.ml[46,1904+17])
+                                    Texp_ident "Dune__exe!.MArray.empty"
+                                  expression (src/StackStates.ml[46,1904+19]..src/StackStates.ml[46,1904+23])
+                                    Texp_ident "Dune__exe!.MArray.push"
+                                ]
+                        ]
+                      structure_item (src/StackStates.ml[48,1930+2]..src/StackStates.ml[50,1985+23])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/StackStates.ml[48,1930+6]..src/StackStates.ml[48,1930+14])
+                              Tpat_var "truncate/595"
+                            expression (src/StackStates.ml[48,1930+15]..src/StackStates.ml[50,1985+23]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/StackStates.ml[48,1930+15]..src/StackStates.ml[48,1930+16])
+                                    Tpat_var "k/596"
+                                  expression (src/StackStates.ml[48,1930+17]..src/StackStates.ml[50,1985+23]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/StackStates.ml[48,1930+17]..src/StackStates.ml[48,1930+18])
+                                          Tpat_var "v/597"
+                                        expression (src/StackStates.ml[49,1951+4]..src/StackStates.ml[50,1985+23])
+                                          Texp_sequence
+                                          expression (src/StackStates.ml[49,1951+4]..src/StackStates.ml[49,1951+32])
+                                            Texp_assert                                            expression (src/StackStates.ml[49,1951+11]..src/StackStates.ml[49,1951+32])
+                                              Texp_apply
+                                              expression (src/StackStates.ml[49,1951+14]..src/StackStates.ml[49,1951+16])
+                                                Texp_ident "Stdlib!.<="
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/StackStates.ml[49,1951+12]..src/StackStates.ml[49,1951+13])
+                                                    Texp_ident "k/596"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/StackStates.ml[49,1951+17]..src/StackStates.ml[49,1951+31])
+                                                    Texp_apply
+                                                    expression (src/StackStates.ml[49,1951+17]..src/StackStates.ml[49,1951+29])
+                                                      Texp_ident "Stdlib!.Array.length"
+                                                    [
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/StackStates.ml[49,1951+30]..src/StackStates.ml[49,1951+31])
+                                                          Texp_ident "v/597"
+                                                    ]
+                                              ]
+                                          expression (src/StackStates.ml[50,1985+4]..src/StackStates.ml[50,1985+23])
+                                            Texp_apply
+                                            expression (src/StackStates.ml[50,1985+4]..src/StackStates.ml[50,1985+19])
+                                              Texp_ident "Dune__exe!.MArray.truncate"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/StackStates.ml[50,1985+20]..src/StackStates.ml[50,1985+21])
+                                                  Texp_ident "k/596"
+                                              <arg>
+                                                Nolabel
+                                                expression (src/StackStates.ml[50,1985+22]..src/StackStates.ml[50,1985+23])
+                                                  Texp_ident "v/597"
+                                            ]
+                                    ]
+                              ]
+                        ]
+                      structure_item (src/StackStates.ml[52,2010+2]..src/StackStates.ml[53,2028+23])
+                        Tstr_type Rec
+                        [
+                          type_declaration property/646 (src/StackStates.ml[52,2010+2]..src/StackStates.ml[53,2028+23])
+                            ptype_params =
+                              []
+                            ptype_cstrs =
+                              []
+                            ptype_kind =
+                              Ttype_abstract
+                            ptype_private = Public
+                            ptype_manifest =
+                              Some
+                                core_type (src/StackStates.ml[53,2028+4]..src/StackStates.ml[53,2028+23])
+                                  Ttyp_constr "array/8!"
+                                  [
+                                    core_type (src/StackStates.ml[53,2028+4]..src/StackStates.ml[53,2028+17])
+                                      Ttyp_constr "Dune__exe!.Lr1.NodeSet.t"
+                                      []
+                                  ]
+                        ]
+                      structure_item (src/StackStates.ml[55,2053+2]..src/StackStates.ml[56,2075+39])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/StackStates.ml[55,2053+6]..src/StackStates.ml[55,2053+12])
+                              Tpat_var "bottom/782"
+                            expression (src/StackStates.ml[55,2053+13]..src/StackStates.ml[56,2075+39]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/StackStates.ml[55,2053+13]..src/StackStates.ml[55,2053+19])
+                                    Tpat_var "height/784"
+                                  expression (src/StackStates.ml[56,2075+4]..src/StackStates.ml[56,2075+39])
+                                    Texp_apply
+                                    expression (src/StackStates.ml[56,2075+4]..src/StackStates.ml[56,2075+14])
+                                      Texp_ident "Stdlib!.Array.make"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/StackStates.ml[56,2075+15]..src/StackStates.ml[56,2075+21])
+                                          Texp_ident "height/784"
+                                      <arg>
+                                        Nolabel
+                                        expression (src/StackStates.ml[56,2075+22]..src/StackStates.ml[56,2075+39])
+                                          Texp_ident "Dune__exe!.Lr1.NodeSet.empty"
+                                    ]
+                              ]
+                        ]
+                      structure_item (src/StackStates.ml[58,2116+2]..src/StackStates.ml[59,2139+46])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/StackStates.ml[58,2116+6]..src/StackStates.ml[58,2116+14])
+                              Tpat_var "leq_join/785"
+                            expression (src/StackStates.ml[58,2116+15]..src/StackStates.ml[59,2139+46]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/StackStates.ml[58,2116+15]..src/StackStates.ml[58,2116+17])
+                                    Tpat_var "v1/787"
+                                  expression (src/StackStates.ml[58,2116+18]..src/StackStates.ml[59,2139+46]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/StackStates.ml[58,2116+18]..src/StackStates.ml[58,2116+20])
+                                          Tpat_var "v2/788"
+                                        expression (src/StackStates.ml[59,2139+4]..src/StackStates.ml[59,2139+46])
+                                          Texp_apply
+                                          expression (src/StackStates.ml[59,2139+4]..src/StackStates.ml[59,2139+19])
+                                            Texp_ident "Dune__exe!.MArray.leq_join"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/StackStates.ml[59,2139+20]..src/StackStates.ml[59,2139+40])
+                                                Texp_ident "Dune__exe!.Lr1.NodeSet.leq_join"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/StackStates.ml[59,2139+41]..src/StackStates.ml[59,2139+43])
+                                                Texp_ident "v1/787"
+                                            <arg>
+                                              Nolabel
+                                              expression (src/StackStates.ml[59,2139+44]..src/StackStates.ml[59,2139+46])
+                                                Texp_ident "v2/788"
+                                          ]
+                                    ]
+                              ]
+                        ]
+                    ]
+              structure_item (src/StackStates.ml[65,2330+0]..src/StackStates.ml[65,2330+19])
+                Tstr_open Fresh
+                module_expr (src/StackStates.ml[65,2330+5]..src/StackStates.ml[65,2330+19])
+                  Tmod_ident "StateSetVector/789"
+              structure_item (src/StackStates.ml[71,2444+0]..src/StackStates.ml[99,3433+3])
+                Tstr_module
+                G/971
+                  module_expr (src/StackStates.ml[71,2444+11]..src/StackStates.ml[99,3433+3])
+                    Tmod_structure
+                    [
+                      structure_item (src/StackStates.ml[73,2463+2]..src/StackStates.ml[73,2463+26])
+                        Tstr_type Rec
+                        [
+                          type_declaration variable/790 (src/StackStates.ml[73,2463+2]..src/StackStates.ml[73,2463+26])
+                            ptype_params =
+                              []
+                            ptype_cstrs =
+                              []
+                            ptype_kind =
+                              Ttype_abstract
+                            ptype_private = Public
+                            ptype_manifest =
+                              Some
+                                core_type (src/StackStates.ml[73,2463+18]..src/StackStates.ml[73,2463+26])
+                                  Ttyp_constr "Dune__exe!.Lr1.node"
+                                  []
+                        ]
+                      structure_item (src/StackStates.ml[75,2491+2]..src/StackStates.ml[75,2491+41])
+                        Tstr_type Rec
+                        [
+                          type_declaration property/791 (src/StackStates.ml[75,2491+2]..src/StackStates.ml[75,2491+41])
+                            ptype_params =
+                              []
+                            ptype_cstrs =
+                              []
+                            ptype_kind =
+                              Ttype_abstract
+                            ptype_private = Public
+                            ptype_manifest =
+                              Some
+                                core_type (src/StackStates.ml[75,2491+18]..src/StackStates.ml[75,2491+41])
+                                  Ttyp_constr "StateSetVector/789.property"
+                                  []
+                        ]
+                      structure_item (src/StackStates.ml[79,2601+2]..src/StackStates.ml[83,2754+5])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/StackStates.ml[79,2601+6]..src/StackStates.ml[79,2601+18])
+                              Tpat_var "foreach_root/792"
+                            expression (src/StackStates.ml[79,2601+19]..src/StackStates.ml[83,2754+5]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/StackStates.ml[79,2601+19]..src/StackStates.ml[79,2601+29])
+                                    Tpat_var "contribute/794"
+                                  expression (src/StackStates.ml[80,2633+4]..src/StackStates.ml[83,2754+5])
+                                    Texp_apply
+                                    expression (src/StackStates.ml[80,2633+17]..src/StackStates.ml[83,2754+5])
+                                      Texp_apply
+                                      expression (src/StackStates.ml[80,2633+17]..src/StackStates.ml[80,2633+35])
+                                        Texp_ident "Dune__exe!.Grammar.ProductionMap.iter"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/StackStates.ml[80,2633+36]..src/StackStates.ml[83,2754+5])
+                                            Texp_function
+                                            Nolabel
+                                            [
+                                              <case>
+                                                pattern (src/StackStates.ml[80,2633+41]..src/StackStates.ml[80,2633+46])
+                                                  Tpat_var "_prod/829"
+                                                expression (src/StackStates.ml[80,2633+47]..src/StackStates.ml[82,2726+27]) ghost
+                                                  Texp_function
+                                                  Nolabel
+                                                  [
+                                                    <case>
+                                                      pattern (src/StackStates.ml[80,2633+47]..src/StackStates.ml[80,2633+51])
+                                                        Tpat_var "root/830"
+                                                      expression (src/StackStates.ml[81,2688+6]..src/StackStates.ml[82,2726+27])
+                                                        Texp_sequence
+                                                        expression (src/StackStates.ml[81,2688+6]..src/StackStates.ml[81,2688+36])
+                                                          Texp_assert                                                          expression (src/StackStates.ml[81,2688+13]..src/StackStates.ml[81,2688+36])
+                                                            Texp_apply
+                                                            expression (src/StackStates.ml[81,2688+32]..src/StackStates.ml[81,2688+33])
+                                                              Texp_ident "Stdlib!.="
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/StackStates.ml[81,2688+14]..src/StackStates.ml[81,2688+31])
+                                                                  Texp_apply
+                                                                  expression (src/StackStates.ml[81,2688+14]..src/StackStates.ml[81,2688+26])
+                                                                    Texp_ident "S/528.stack_height"
+                                                                  [
+                                                                    <arg>
+                                                                      Nolabel
+                                                                      expression (src/StackStates.ml[81,2688+27]..src/StackStates.ml[81,2688+31])
+                                                                        Texp_ident "root/830"
+                                                                  ]
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/StackStates.ml[81,2688+34]..src/StackStates.ml[81,2688+35])
+                                                                  Texp_constant Const_int 0
+                                                            ]
+                                                        expression (src/StackStates.ml[82,2726+6]..src/StackStates.ml[82,2726+27])
+                                                          Texp_apply
+                                                          expression (src/StackStates.ml[82,2726+6]..src/StackStates.ml[82,2726+16])
+                                                            Texp_ident "contribute/794"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/StackStates.ml[82,2726+17]..src/StackStates.ml[82,2726+21])
+                                                                Texp_ident "root/830"
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/StackStates.ml[82,2726+22]..src/StackStates.ml[82,2726+27])
+                                                                Texp_ident "StateSetVector/789.empty"
+                                                          ]
+                                                  ]
+                                            ]
+                                      ]
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/StackStates.ml[80,2633+4]..src/StackStates.ml[80,2633+13])
+                                          Texp_ident "Dune__exe!.Lr1.entry"
+                                    ]
+                              ]
+                        ]
+                      structure_item (src/StackStates.ml[87,2841+2]..src/StackStates.ml[97,3426+5])
+                        Tstr_value Nonrec
+                        [
+                          <def>
+                            pattern (src/StackStates.ml[87,2841+6]..src/StackStates.ml[87,2841+23])
+                              Tpat_var "foreach_successor/865"
+                            expression (src/StackStates.ml[87,2841+24]..src/StackStates.ml[97,3426+5]) ghost
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/StackStates.ml[87,2841+24]..src/StackStates.ml[87,2841+30])
+                                    Tpat_var "source/867"
+                                  expression (src/StackStates.ml[87,2841+31]..src/StackStates.ml[97,3426+5]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/StackStates.ml[87,2841+31]..src/StackStates.ml[87,2841+36])
+                                          Tpat_var "stack/868"
+                                        expression (src/StackStates.ml[87,2841+37]..src/StackStates.ml[97,3426+5]) ghost
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/StackStates.ml[87,2841+37]..src/StackStates.ml[87,2841+47])
+                                                Tpat_var "contribute/869"
+                                              expression (src/StackStates.ml[88,2891+4]..src/StackStates.ml[97,3426+5])
+                                                Texp_apply
+                                                expression (src/StackStates.ml[88,2891+30]..src/StackStates.ml[97,3426+5])
+                                                  Texp_apply
+                                                  expression (src/StackStates.ml[88,2891+30]..src/StackStates.ml[88,2891+44])
+                                                    Texp_ident "Dune__exe!.Grammar.SymbolMap.iter"
+                                                  [
+                                                    <arg>
+                                                      Nolabel
+                                                      expression (src/StackStates.ml[88,2891+45]..src/StackStates.ml[97,3426+5])
+                                                        Texp_function
+                                                        Nolabel
+                                                        [
+                                                          <case>
+                                                            pattern (src/StackStates.ml[88,2891+50]..src/StackStates.ml[88,2891+57])
+                                                              Tpat_var "_symbol/918"
+                                                            expression (src/StackStates.ml[88,2891+58]..src/StackStates.ml[96,3378+47]) ghost
+                                                              Texp_function
+                                                              Nolabel
+                                                              [
+                                                                <case>
+                                                                  pattern (src/StackStates.ml[88,2891+58]..src/StackStates.ml[88,2891+64])
+                                                                    Tpat_var "target/919"
+                                                                  expression (src/StackStates.ml[93,3253+6]..src/StackStates.ml[96,3378+47])
+                                                                    Texp_let Nonrec
+                                                                    [
+                                                                      <def>
+                                                                        pattern (src/StackStates.ml[93,3253+10]..src/StackStates.ml[93,3253+14])
+                                                                          Tpat_var "cell/920"
+                                                                        expression (src/StackStates.ml[93,3253+17]..src/StackStates.ml[93,3253+45])
+                                                                          Texp_apply
+                                                                          expression (src/StackStates.ml[93,3253+17]..src/StackStates.ml[93,3253+38])
+                                                                            Texp_ident "Dune__exe!.Lr1.NodeSet.singleton"
+                                                                          [
+                                                                            <arg>
+                                                                              Nolabel
+                                                                              expression (src/StackStates.ml[93,3253+39]..src/StackStates.ml[93,3253+45])
+                                                                                Texp_ident "source/867"
+                                                                          ]
+                                                                      <def>
+                                                                        pattern (src/StackStates.ml[94,3299+10]..src/StackStates.ml[94,3299+16])
+                                                                          Tpat_var "height/921"
+                                                                        expression (src/StackStates.ml[94,3299+19]..src/StackStates.ml[94,3299+38])
+                                                                          Texp_apply
+                                                                          expression (src/StackStates.ml[94,3299+19]..src/StackStates.ml[94,3299+31])
+                                                                            Texp_ident "S/528.stack_height"
+                                                                          [
+                                                                            <arg>
+                                                                              Nolabel
+                                                                              expression (src/StackStates.ml[94,3299+32]..src/StackStates.ml[94,3299+38])
+                                                                                Texp_ident "target/919"
+                                                                          ]
+                                                                    ]
+                                                                    expression (src/StackStates.ml[95,3341+6]..src/StackStates.ml[96,3378+47])
+                                                                      Texp_let Nonrec
+                                                                      [
+                                                                        <def>
+                                                                          pattern (src/StackStates.ml[95,3341+10]..src/StackStates.ml[95,3341+15])
+                                                                            Tpat_var "stack/922"
+                                                                          expression (src/StackStates.ml[95,3341+18]..src/StackStates.ml[95,3341+33])
+                                                                            Texp_apply
+                                                                            expression (src/StackStates.ml[95,3341+18]..src/StackStates.ml[95,3341+22])
+                                                                              Texp_ident "StateSetVector/789.push"
+                                                                            [
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/StackStates.ml[95,3341+23]..src/StackStates.ml[95,3341+28])
+                                                                                  Texp_ident "stack/868"
+                                                                              <arg>
+                                                                                Nolabel
+                                                                                expression (src/StackStates.ml[95,3341+29]..src/StackStates.ml[95,3341+33])
+                                                                                  Texp_ident "cell/920"
+                                                                            ]
+                                                                      ]
+                                                                      expression (src/StackStates.ml[96,3378+6]..src/StackStates.ml[96,3378+47])
+                                                                        Texp_apply
+                                                                        expression (src/StackStates.ml[96,3378+6]..src/StackStates.ml[96,3378+16])
+                                                                          Texp_ident "contribute/869"
+                                                                        [
+                                                                          <arg>
+                                                                            Nolabel
+                                                                            expression (src/StackStates.ml[96,3378+17]..src/StackStates.ml[96,3378+23])
+                                                                              Texp_ident "target/919"
+                                                                          <arg>
+                                                                            Nolabel
+                                                                            expression (src/StackStates.ml[96,3378+24]..src/StackStates.ml[96,3378+47])
+                                                                              Texp_apply
+                                                                              expression (src/StackStates.ml[96,3378+25]..src/StackStates.ml[96,3378+33])
+                                                                                Texp_ident "StateSetVector/789.truncate"
+                                                                              [
+                                                                                <arg>
+                                                                                  Nolabel
+                                                                                  expression (src/StackStates.ml[96,3378+34]..src/StackStates.ml[96,3378+40])
+                                                                                    Texp_ident "height/921"
+                                                                                <arg>
+                                                                                  Nolabel
+                                                                                  expression (src/StackStates.ml[96,3378+41]..src/StackStates.ml[96,3378+46])
+                                                                                    Texp_ident "stack/922"
+                                                                              ]
+                                                                        ]
+                                                              ]
+                                                        ]
+                                                  ]
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[88,2891+4]..src/StackStates.ml[88,2891+26])
+                                                      Texp_apply
+                                                      expression (src/StackStates.ml[88,2891+4]..src/StackStates.ml[88,2891+19])
+                                                        Texp_ident "Dune__exe!.Lr1.transitions"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/StackStates.ml[88,2891+20]..src/StackStates.ml[88,2891+26])
+                                                            Texp_ident "source/867"
+                                                      ]
+                                                ]
+                                          ]
+                                    ]
+                              ]
+                        ]
+                    ]
+              structure_item (src/StackStates.ml[103,3476+0]..src/StackStates.ml[105,3604+12])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[103,3476+4]..src/StackStates.ml[103,3476+16])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/StackStates.ml[103,3476+19]..src/StackStates.ml[103,3476+46])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/StackStates.ml[103,3476+19]..src/StackStates.ml[103,3476+27])
+                            Ttyp_constr "Dune__exe!.Lr1.node"
+                            []
+                          core_type (src/StackStates.ml[103,3476+31]..src/StackStates.ml[103,3476+46])
+                            Ttyp_constr "option/10!"
+                            [
+                              core_type (src/StackStates.ml[103,3476+31]..src/StackStates.ml[103,3476+39])
+                                Ttyp_constr "StateSetVector/789.property"
+                                []
+                            ]
+                      Tpat_alias "stack_states/972"
+                      pattern (src/StackStates.ml[103,3476+4]..src/StackStates.ml[103,3476+16])
+                        Tpat_any
+                    expression (src/StackStates.ml[104,3525+2]..src/StackStates.ml[105,3604+12])
+                      extra
+                        Texp_constraint
+                        core_type (src/StackStates.ml[103,3476+19]..src/StackStates.ml[103,3476+46])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/StackStates.ml[103,3476+19]..src/StackStates.ml[103,3476+27])
+                            Ttyp_constr "Dune__exe!.Lr1.node"
+                            []
+                          core_type (src/StackStates.ml[103,3476+31]..src/StackStates.ml[103,3476+46])
+                            Ttyp_constr "option/10!"
+                            [
+                              core_type (src/StackStates.ml[103,3476+31]..src/StackStates.ml[103,3476+39])
+                                Ttyp_constr "StateSetVector/789.property"
+                                []
+                            ]
+                      Texp_letmodule "F/1139"
+                      module_expr (src/StackStates.ml[104,3525+17]..src/StackStates.ml[104,3525+75])
+                        Tmod_apply
+                        module_expr (src/StackStates.ml[104,3525+17]..src/StackStates.ml[104,3525+72])
+                          Tmod_apply
+                          module_expr (src/StackStates.ml[104,3525+17]..src/StackStates.ml[104,3525+56])
+                            Tmod_apply
+                            module_expr (src/StackStates.ml[104,3525+17]..src/StackStates.ml[104,3525+33])
+                              module_expr (src/StackStates.ml[104,3525+17]..src/StackStates.ml[104,3525+33])
+                                Tmod_ident "Dune__exe!.Fix.DataFlow.Run"
+                            module_expr (src/StackStates.ml[104,3525+34]..src/StackStates.ml[104,3525+55])
+                              module_expr (src/StackStates.ml[104,3525+34]..src/StackStates.ml[104,3525+55])
+                                Tmod_ident "Dune__exe!.Lr1.ImperativeNodeMap"
+                          module_expr (src/StackStates.ml[104,3525+57]..src/StackStates.ml[104,3525+71])
+                            Tmod_ident "StateSetVector/789"
+                        module_expr (src/StackStates.ml[104,3525+73]..src/StackStates.ml[104,3525+74])
+                          Tmod_ident "G/971"
+                      expression (src/StackStates.ml[105,3604+2]..src/StackStates.ml[105,3604+12])
+                        Texp_ident "F/1139.solution"
+                ]
+              structure_item (src/StackStates.ml[111,3792+0]..src/StackStates.ml[117,3965+7])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[111,3792+4]..src/StackStates.ml[111,3792+16])
+                      Tpat_var "stack_states/1140"
+                    expression (src/StackStates.ml[111,3792+17]..src/StackStates.ml[117,3965+7]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/StackStates.ml[111,3792+18]..src/StackStates.ml[111,3792+22])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (src/StackStates.ml[111,3792+25]..src/StackStates.ml[111,3792+33])
+                                Ttyp_constr "Dune__exe!.Lr1.node"
+                                []
+                            Tpat_alias "node/1141"
+                            pattern (src/StackStates.ml[111,3792+18]..src/StackStates.ml[111,3792+22])
+                              Tpat_any
+                          expression (src/StackStates.ml[112,3840+2]..src/StackStates.ml[117,3965+7])
+                            extra
+                              Texp_constraint
+                              core_type (src/StackStates.ml[111,3792+37]..src/StackStates.ml[111,3792+45])
+                                Ttyp_constr "StateSetVector/789.property"
+                                []
+                            Texp_match
+                            expression (src/StackStates.ml[112,3840+8]..src/StackStates.ml[112,3840+25])
+                              Texp_apply
+                              expression (src/StackStates.ml[112,3840+8]..src/StackStates.ml[112,3840+20])
+                                Texp_ident "stack_states/972"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/StackStates.ml[112,3840+21]..src/StackStates.ml[112,3840+25])
+                                    Texp_ident "node/1141"
+                              ]
+                            [
+                              <case>
+                                pattern (src/StackStates.ml[113,3871+4]..src/StackStates.ml[113,3871+8])
+                                  Tpat_value
+                                  pattern (src/StackStates.ml[113,3871+4]..src/StackStates.ml[113,3871+8])
+                                    Tpat_construct "None"
+                                    []
+                                    None
+                                expression (src/StackStates.ml[115,3932+6]..src/StackStates.ml[115,3932+18])
+                                  Texp_assert                                  expression (src/StackStates.ml[115,3932+13]..src/StackStates.ml[115,3932+18])
+                                    Texp_construct "false"
+                                    []
+                              <case>
+                                pattern (src/StackStates.ml[116,3951+4]..src/StackStates.ml[116,3951+10])
+                                  Tpat_value
+                                  pattern (src/StackStates.ml[116,3951+4]..src/StackStates.ml[116,3951+10])
+                                    Tpat_construct "Some"
+                                    [
+                                      pattern (src/StackStates.ml[116,3951+9]..src/StackStates.ml[116,3951+10])
+                                        Tpat_var "v/1142"
+                                    ]
+                                    None
+                                expression (src/StackStates.ml[117,3965+6]..src/StackStates.ml[117,3965+7])
+                                  Texp_ident "v/1142"
+                            ]
+                      ]
+                ]
+              structure_item (src/StackStates.ml[122,4120+0]..src/StackStates.ml[125,4237+25])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[122,4120+4]..src/StackStates.ml[122,4120+17])
+                      Tpat_var "truncate_join/1143"
+                    expression (src/StackStates.ml[122,4120+18]..src/StackStates.ml[125,4237+25]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/StackStates.ml[122,4120+18]..src/StackStates.ml[122,4120+24])
+                            Tpat_var "height/1145"
+                          expression (src/StackStates.ml[122,4120+25]..src/StackStates.ml[125,4237+25]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/StackStates.ml[122,4120+25]..src/StackStates.ml[122,4120+26])
+                                  Tpat_var "f/1146"
+                                expression (src/StackStates.ml[122,4120+27]..src/StackStates.ml[125,4237+25]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/StackStates.ml[122,4120+27]..src/StackStates.ml[122,4120+32])
+                                        Tpat_var "nodes/1147"
+                                      expression (src/StackStates.ml[123,4155+2]..src/StackStates.ml[125,4237+25])
+                                        Texp_apply
+                                        expression (src/StackStates.ml[123,4155+2]..src/StackStates.ml[123,4155+18])
+                                          Texp_ident "Dune__exe!.Lr1.NodeSet.fold"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[123,4155+19]..src/StackStates.ml[125,4237+3])
+                                              Texp_function
+                                              Nolabel
+                                              [
+                                                <case>
+                                                  pattern (src/StackStates.ml[123,4155+24]..src/StackStates.ml[123,4155+28])
+                                                    Tpat_var "node/1148"
+                                                  expression (src/StackStates.ml[123,4155+29]..src/StackStates.ml[124,4192+44]) ghost
+                                                    Texp_function
+                                                    Nolabel
+                                                    [
+                                                      <case>
+                                                        pattern (src/StackStates.ml[123,4155+29]..src/StackStates.ml[123,4155+33])
+                                                          Tpat_var "accu/1149"
+                                                        expression (src/StackStates.ml[124,4192+4]..src/StackStates.ml[124,4192+44])
+                                                          Texp_apply
+                                                          expression (src/StackStates.ml[124,4192+4]..src/StackStates.ml[124,4192+12])
+                                                            Texp_ident "StateSetVector/789.leq_join"
+                                                          [
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/StackStates.ml[124,4192+13]..src/StackStates.ml[124,4192+39])
+                                                                Texp_apply
+                                                                expression (src/StackStates.ml[124,4192+14]..src/StackStates.ml[124,4192+22])
+                                                                  Texp_ident "StateSetVector/789.truncate"
+                                                                [
+                                                                  <arg>
+                                                                    Nolabel
+                                                                    expression (src/StackStates.ml[124,4192+23]..src/StackStates.ml[124,4192+29])
+                                                                      Texp_ident "height/1145"
+                                                                  <arg>
+                                                                    Nolabel
+                                                                    expression (src/StackStates.ml[124,4192+30]..src/StackStates.ml[124,4192+38])
+                                                                      Texp_apply
+                                                                      expression (src/StackStates.ml[124,4192+31]..src/StackStates.ml[124,4192+32])
+                                                                        Texp_ident "f/1146"
+                                                                      [
+                                                                        <arg>
+                                                                          Nolabel
+                                                                          expression (src/StackStates.ml[124,4192+33]..src/StackStates.ml[124,4192+37])
+                                                                            Texp_ident "node/1148"
+                                                                      ]
+                                                                ]
+                                                            <arg>
+                                                              Nolabel
+                                                              expression (src/StackStates.ml[124,4192+40]..src/StackStates.ml[124,4192+44])
+                                                                Texp_ident "accu/1149"
+                                                          ]
+                                                    ]
+                                              ]
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[125,4237+4]..src/StackStates.ml[125,4237+9])
+                                              Texp_ident "nodes/1147"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[125,4237+10]..src/StackStates.ml[125,4237+25])
+                                              Texp_apply
+                                              expression (src/StackStates.ml[125,4237+11]..src/StackStates.ml[125,4237+17])
+                                                Texp_ident "StateSetVector/789.bottom"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/StackStates.ml[125,4237+18]..src/StackStates.ml[125,4237+24])
+                                                    Texp_ident "height/1145"
+                                              ]
+                                        ]
+                                  ]
+                            ]
+                      ]
+                ]
+              structure_item (src/StackStates.ml[133,4531+0]..src/StackStates.ml[138,4753+3])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[133,4531+4]..src/StackStates.ml[133,4531+21])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/StackStates.ml[133,4531+24]..src/StackStates.ml[133,4531+52])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/StackStates.ml[133,4531+24]..src/StackStates.ml[133,4531+40])
+                            Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                            []
+                          core_type (src/StackStates.ml[133,4531+44]..src/StackStates.ml[133,4531+52])
+                            Ttyp_constr "StateSetVector/789.property"
+                            []
+                      Tpat_alias "production_states/1150"
+                      pattern (src/StackStates.ml[133,4531+4]..src/StackStates.ml[133,4531+21])
+                        Tpat_any
+                    expression (src/StackStates.ml[134,4586+2]..src/StackStates.ml[138,4753+3])
+                      extra
+                        Texp_constraint
+                        core_type (src/StackStates.ml[133,4531+24]..src/StackStates.ml[133,4531+52])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/StackStates.ml[133,4531+24]..src/StackStates.ml[133,4531+40])
+                            Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                            []
+                          core_type (src/StackStates.ml[133,4531+44]..src/StackStates.ml[133,4531+52])
+                            Ttyp_constr "StateSetVector/789.property"
+                            []
+                      Texp_apply
+                      expression (src/StackStates.ml[134,4586+2]..src/StackStates.ml[134,4586+21])
+                        Texp_ident "Dune__exe!.Grammar.Production.tabulate"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/StackStates.ml[134,4586+22]..src/StackStates.ml[138,4753+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/StackStates.ml[134,4586+27]..src/StackStates.ml[134,4586+31])
+                                  Tpat_var "prod/1151"
+                                expression (src/StackStates.ml[135,4621+4]..src/StackStates.ml[137,4709+43])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/StackStates.ml[135,4621+8]..src/StackStates.ml[135,4621+13])
+                                        Tpat_var "sites/1152"
+                                      expression (src/StackStates.ml[135,4621+16]..src/StackStates.ml[135,4621+41])
+                                        Texp_apply
+                                        expression (src/StackStates.ml[135,4621+16]..src/StackStates.ml[135,4621+36])
+                                          Texp_ident "Dune__exe!.Lr1.production_where"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[135,4621+37]..src/StackStates.ml[135,4621+41])
+                                              Texp_ident "prod/1151"
+                                        ]
+                                  ]
+                                  expression (src/StackStates.ml[136,4666+4]..src/StackStates.ml[137,4709+43])
+                                    Texp_let Nonrec
+                                    [
+                                      <def>
+                                        pattern (src/StackStates.ml[136,4666+8]..src/StackStates.ml[136,4666+14])
+                                          Tpat_var "height/1187"
+                                        expression (src/StackStates.ml[136,4666+17]..src/StackStates.ml[136,4666+39])
+                                          Texp_apply
+                                          expression (src/StackStates.ml[136,4666+17]..src/StackStates.ml[136,4666+34])
+                                            Texp_ident "S/528.production_height"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/StackStates.ml[136,4666+35]..src/StackStates.ml[136,4666+39])
+                                                Texp_ident "prod/1151"
+                                          ]
+                                    ]
+                                    expression (src/StackStates.ml[137,4709+4]..src/StackStates.ml[137,4709+43])
+                                      Texp_apply
+                                      expression (src/StackStates.ml[137,4709+4]..src/StackStates.ml[137,4709+17])
+                                        Texp_ident "truncate_join/1143"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/StackStates.ml[137,4709+18]..src/StackStates.ml[137,4709+24])
+                                            Texp_ident "height/1187"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/StackStates.ml[137,4709+25]..src/StackStates.ml[137,4709+37])
+                                            Texp_ident "stack_states/1140"
+                                        <arg>
+                                          Nolabel
+                                          expression (src/StackStates.ml[137,4709+38]..src/StackStates.ml[137,4709+43])
+                                            Texp_ident "sites/1152"
+                                      ]
+                            ]
+                      ]
+                ]
+              structure_item (src/StackStates.ml[146,4994+0]..src/StackStates.ml[154,5331+3])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[146,4994+4]..src/StackStates.ml[146,4994+15])
+                      extra
+                        Tpat_extra_constraint
+                        core_type (src/StackStates.ml[146,4994+18]..src/StackStates.ml[146,4994+43])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/StackStates.ml[146,4994+18]..src/StackStates.ml[146,4994+31])
+                            Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                            []
+                          core_type (src/StackStates.ml[146,4994+35]..src/StackStates.ml[146,4994+43])
+                            Ttyp_constr "StateSetVector/789.property"
+                            []
+                      Tpat_alias "goto_states/1188"
+                      pattern (src/StackStates.ml[146,4994+4]..src/StackStates.ml[146,4994+15])
+                        Tpat_any
+                    expression (src/StackStates.ml[147,5040+2]..src/StackStates.ml[154,5331+3])
+                      extra
+                        Texp_constraint
+                        core_type (src/StackStates.ml[146,4994+18]..src/StackStates.ml[146,4994+43])
+                          Ttyp_arrow
+                          Nolabel
+                          core_type (src/StackStates.ml[146,4994+18]..src/StackStates.ml[146,4994+31])
+                            Ttyp_constr "Dune__exe!.Grammar.Nonterminal.t"
+                            []
+                          core_type (src/StackStates.ml[146,4994+35]..src/StackStates.ml[146,4994+43])
+                            Ttyp_constr "StateSetVector/789.property"
+                            []
+                      Texp_apply
+                      expression (src/StackStates.ml[147,5040+2]..src/StackStates.ml[147,5040+22])
+                        Texp_ident "Dune__exe!.Grammar.Nonterminal.tabulate"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/StackStates.ml[147,5040+23]..src/StackStates.ml[154,5331+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/StackStates.ml[147,5040+28]..src/StackStates.ml[147,5040+30])
+                                  Tpat_var "nt/1189"
+                                expression (src/StackStates.ml[148,5074+4]..src/StackStates.ml[153,5285+45])
+                                  Texp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/StackStates.ml[148,5074+8]..src/StackStates.ml[148,5074+14])
+                                        Tpat_var "symbol/1190"
+                                      expression (src/StackStates.ml[148,5074+17]..src/StackStates.ml[148,5074+28])
+                                        Texp_construct "Symbol.N"
+                                        [
+                                          expression (src/StackStates.ml[148,5074+26]..src/StackStates.ml[148,5074+28])
+                                            Texp_ident "nt/1189"
+                                        ]
+                                  ]
+                                  expression (src/StackStates.ml[151,5206+4]..src/StackStates.ml[153,5285+45])
+                                    Texp_let Nonrec
+                                    [
+                                      <def>
+                                        pattern (src/StackStates.ml[151,5206+8]..src/StackStates.ml[151,5206+15])
+                                          Tpat_var "targets/1222"
+                                        expression (src/StackStates.ml[151,5206+18]..src/StackStates.ml[151,5206+40])
+                                          Texp_apply
+                                          expression (src/StackStates.ml[151,5206+18]..src/StackStates.ml[151,5206+33])
+                                            Texp_ident "Dune__exe!.Lr1.all_targets"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/StackStates.ml[151,5206+34]..src/StackStates.ml[151,5206+40])
+                                                Texp_ident "symbol/1190"
+                                          ]
+                                    ]
+                                    expression (src/StackStates.ml[152,5250+4]..src/StackStates.ml[153,5285+45])
+                                      Texp_let Nonrec
+                                      [
+                                        <def>
+                                          pattern (src/StackStates.ml[152,5250+8]..src/StackStates.ml[152,5250+14])
+                                            Tpat_var "height/1234"
+                                          expression (src/StackStates.ml[152,5250+17]..src/StackStates.ml[152,5250+31])
+                                            Texp_apply
+                                            expression (src/StackStates.ml[152,5250+17]..src/StackStates.ml[152,5250+28])
+                                              Texp_ident "S/528.goto_height"
+                                            [
+                                              <arg>
+                                                Nolabel
+                                                expression (src/StackStates.ml[152,5250+29]..src/StackStates.ml[152,5250+31])
+                                                  Texp_ident "nt/1189"
+                                            ]
+                                      ]
+                                      expression (src/StackStates.ml[153,5285+4]..src/StackStates.ml[153,5285+45])
+                                        Texp_apply
+                                        expression (src/StackStates.ml[153,5285+4]..src/StackStates.ml[153,5285+17])
+                                          Texp_ident "truncate_join/1143"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[153,5285+18]..src/StackStates.ml[153,5285+24])
+                                              Texp_ident "height/1234"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[153,5285+25]..src/StackStates.ml[153,5285+37])
+                                              Texp_ident "stack_states/1140"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/StackStates.ml[153,5285+38]..src/StackStates.ml[153,5285+45])
+                                              Texp_ident "targets/1222"
+                                        ]
+                            ]
+                      ]
+                ]
+              structure_item (src/StackStates.ml[156,5336+0]..src/StackStates.ml[157,5352+21])
+                Tstr_type Rec
+                [
+                  type_declaration property/1235 (src/StackStates.ml[156,5336+0]..src/StackStates.ml[157,5352+21])
+                    ptype_params =
+                      []
+                    ptype_cstrs =
+                      []
+                    ptype_kind =
+                      Ttype_abstract
+                    ptype_private = Public
+                    ptype_manifest =
+                      Some
+                        core_type (src/StackStates.ml[157,5352+2]..src/StackStates.ml[157,5352+21])
+                          Ttyp_constr "array/8!"
+                          [
+                            core_type (src/StackStates.ml[157,5352+2]..src/StackStates.ml[157,5352+15])
+                              Ttyp_constr "Dune__exe!.Lr1.NodeSet.t"
+                              []
+                          ]
+                ]
+              structure_item (src/StackStates.ml[161,5400+0]..src/StackStates.ml[165,5477+74])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[161,5400+4]..src/StackStates.ml[161,5400+9])
+                      Tpat_var "print/1236"
+                    expression (src/StackStates.ml[161,5400+10]..src/StackStates.ml[165,5477+74]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/StackStates.ml[161,5400+11]..src/StackStates.ml[161,5400+12])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (src/StackStates.ml[161,5400+15]..src/StackStates.ml[161,5400+23])
+                                Ttyp_constr "property/1235"
+                                []
+                            Tpat_alias "v/1238"
+                            pattern (src/StackStates.ml[161,5400+11]..src/StackStates.ml[161,5400+12])
+                              Tpat_any
+                          expression (src/StackStates.ml[162,5427+2]..src/StackStates.ml[165,5477+74])
+                            Texp_ifthenelse
+                            expression (src/StackStates.ml[162,5427+5]..src/StackStates.ml[162,5427+23])
+                              Texp_apply
+                              expression (src/StackStates.ml[162,5427+20]..src/StackStates.ml[162,5427+21])
+                                Texp_ident "Stdlib!.="
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/StackStates.ml[162,5427+5]..src/StackStates.ml[162,5427+19])
+                                    Texp_apply
+                                    expression (src/StackStates.ml[162,5427+5]..src/StackStates.ml[162,5427+17])
+                                      Texp_ident "Stdlib!.Array.length"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/StackStates.ml[162,5427+18]..src/StackStates.ml[162,5427+19])
+                                          Texp_ident "v/1238"
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/StackStates.ml[162,5427+22]..src/StackStates.ml[162,5427+23])
+                                    Texp_constant Const_int 0
+                              ]
+                            expression (src/StackStates.ml[163,5456+4]..src/StackStates.ml[163,5456+13])
+                              Texp_constant Const_string("epsilon",(src/StackStates.ml[163,5456+5]..src/StackStates.ml[163,5456+12]),None)
+                            Some
+                              expression (src/StackStates.ml[165,5477+4]..src/StackStates.ml[165,5477+74])
+                                Texp_apply
+                                expression (src/StackStates.ml[165,5477+4]..src/StackStates.ml[165,5477+33])
+                                  Texp_ident "Dune__exe!.Misc.separated_list_to_string"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/StackStates.ml[165,5477+34]..src/StackStates.ml[165,5477+51])
+                                      Texp_ident "Dune__exe!.Lr1.NodeSet.print"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/StackStates.ml[165,5477+52]..src/StackStates.ml[165,5477+56])
+                                      Texp_constant Const_string("; ",(src/StackStates.ml[165,5477+53]..src/StackStates.ml[165,5477+55]),None)
+                                  <arg>
+                                    Nolabel
+                                    expression (src/StackStates.ml[165,5477+57]..src/StackStates.ml[165,5477+74])
+                                      Texp_apply
+                                      expression (src/StackStates.ml[165,5477+58]..src/StackStates.ml[165,5477+71])
+                                        Texp_ident "Stdlib!.Array.to_list"
+                                      [
+                                        <arg>
+                                          Nolabel
+                                          expression (src/StackStates.ml[165,5477+72]..src/StackStates.ml[165,5477+73])
+                                            Texp_ident "v/1238"
+                                      ]
+                                ]
+                      ]
+                ]
+              structure_item (src/StackStates.ml[167,5553+0]..src/StackStates.ml[179,5885+3])
+                Tstr_value Nonrec
+                [
+                  <def>
+                    pattern (src/StackStates.ml[167,5553+4]..src/StackStates.ml[167,5553+8])
+                      Tpat_var "dump/1275"
+                    expression (src/StackStates.ml[167,5553+9]..src/StackStates.ml[179,5885+3]) ghost
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/StackStates.ml[167,5553+10]..src/StackStates.ml[167,5553+16])
+                            extra
+                              Tpat_extra_constraint
+                              core_type (src/StackStates.ml[167,5553+19]..src/StackStates.ml[167,5553+25])
+                                Ttyp_constr "string/15!"
+                                []
+                            Tpat_alias "prefix/1277"
+                            pattern (src/StackStates.ml[167,5553+10]..src/StackStates.ml[167,5553+16])
+                              Tpat_any
+                          expression (src/StackStates.ml[167,5553+27]..src/StackStates.ml[179,5885+3]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/StackStates.ml[167,5553+27]..src/StackStates.ml[167,5553+28])
+                                  Tpat_var "f/1278"
+                                expression (src/StackStates.ml[168,5584+2]..src/StackStates.ml[179,5885+3])
+                                  Texp_sequence
+                                  expression (src/StackStates.ml[168,5584+2]..src/StackStates.ml[173,5720+3])
+                                    Texp_apply
+                                    expression (src/StackStates.ml[168,5584+2]..src/StackStates.ml[168,5584+10])
+                                      Texp_ident "Dune__exe!.Lr1.iter"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/StackStates.ml[168,5584+11]..src/StackStates.ml[173,5720+3])
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/StackStates.ml[168,5584+16]..src/StackStates.ml[168,5584+20])
+                                                Tpat_var "node/1279"
+                                              expression (src/StackStates.ml[169,5608+4]..src/StackStates.ml[172,5686+33])
+                                                Texp_apply
+                                                expression (src/StackStates.ml[169,5608+4]..src/StackStates.ml[169,5608+18])
+                                                  Texp_ident "Stdlib!.Printf.fprintf"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[169,5608+19]..src/StackStates.ml[169,5608+20])
+                                                      Texp_ident "f/1278"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41])
+                                                      Texp_construct "CamlinternalFormatBasics.Format"
+                                                      [
+                                                        expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String"
+                                                          [
+                                                            expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                              []
+                                                            expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                              [
+                                                                expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                  Texp_constant Const_string("stack(",(src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost,None)
+                                                                expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                  Texp_construct "CamlinternalFormatBasics.String"
+                                                                  [
+                                                                    expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                      []
+                                                                    expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                                      [
+                                                                        expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                          Texp_constant Const_string(") = ",(src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost,None)
+                                                                        expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                          Texp_construct "CamlinternalFormatBasics.String"
+                                                                          [
+                                                                            expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                              []
+                                                                            expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                              Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                                              [
+                                                                                expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                                  Texp_constant Const_char 0a
+                                                                                expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                                  []
+                                                                              ]
+                                                                          ]
+                                                                      ]
+                                                                  ]
+                                                              ]
+                                                          ]
+                                                        expression (src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost
+                                                          Texp_constant Const_string("%sstack(%s) = %s\n",(src/StackStates.ml[169,5608+21]..src/StackStates.ml[169,5608+41]) ghost,None)
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[170,5650+6]..src/StackStates.ml[170,5650+12])
+                                                      Texp_ident "prefix/1277"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[171,5663+6]..src/StackStates.ml[171,5663+22])
+                                                      Texp_apply
+                                                      expression (src/StackStates.ml[171,5663+7]..src/StackStates.ml[171,5663+16])
+                                                        Texp_ident "Dune__exe!.Lr1.print"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/StackStates.ml[171,5663+17]..src/StackStates.ml[171,5663+21])
+                                                            Texp_ident "node/1279"
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[172,5686+6]..src/StackStates.ml[172,5686+33])
+                                                      Texp_apply
+                                                      expression (src/StackStates.ml[172,5686+7]..src/StackStates.ml[172,5686+12])
+                                                        Texp_ident "print/1236"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/StackStates.ml[172,5686+13]..src/StackStates.ml[172,5686+32])
+                                                            Texp_apply
+                                                            expression (src/StackStates.ml[172,5686+14]..src/StackStates.ml[172,5686+26])
+                                                              Texp_ident "stack_states/1140"
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/StackStates.ml[172,5686+27]..src/StackStates.ml[172,5686+31])
+                                                                  Texp_ident "node/1279"
+                                                            ]
+                                                      ]
+                                                ]
+                                          ]
+                                    ]
+                                  expression (src/StackStates.ml[174,5725+2]..src/StackStates.ml[179,5885+3])
+                                    Texp_apply
+                                    expression (src/StackStates.ml[174,5725+2]..src/StackStates.ml[174,5725+18])
+                                      Texp_ident "Dune__exe!.Grammar.Production.iterx"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/StackStates.ml[174,5725+19]..src/StackStates.ml[179,5885+3])
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/StackStates.ml[174,5725+24]..src/StackStates.ml[174,5725+28])
+                                                Tpat_var "prod/1316"
+                                              expression (src/StackStates.ml[175,5757+4]..src/StackStates.ml[178,5846+38])
+                                                Texp_apply
+                                                expression (src/StackStates.ml[175,5757+4]..src/StackStates.ml[175,5757+18])
+                                                  Texp_ident "Stdlib!.Printf.fprintf"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[175,5757+19]..src/StackStates.ml[175,5757+20])
+                                                      Texp_ident "f/1278"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45])
+                                                      Texp_construct "CamlinternalFormatBasics.Format"
+                                                      [
+                                                        expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                          Texp_construct "CamlinternalFormatBasics.String"
+                                                          [
+                                                            expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                              []
+                                                            expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                              Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                              [
+                                                                expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                  Texp_constant Const_string("prodstack(",(src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost,None)
+                                                                expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                  Texp_construct "CamlinternalFormatBasics.String"
+                                                                  [
+                                                                    expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                      Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                      []
+                                                                    expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                      Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                                      [
+                                                                        expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                          Texp_constant Const_string(") = ",(src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost,None)
+                                                                        expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                          Texp_construct "CamlinternalFormatBasics.String"
+                                                                          [
+                                                                            expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                              Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                                              []
+                                                                            expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                              Texp_construct "CamlinternalFormatBasics.Char_literal"
+                                                                              [
+                                                                                expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                                  Texp_constant Const_char 0a
+                                                                                expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                                                  Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                                                  []
+                                                                              ]
+                                                                          ]
+                                                                      ]
+                                                                  ]
+                                                              ]
+                                                          ]
+                                                        expression (src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost
+                                                          Texp_constant Const_string("%sprodstack(%s) = %s\n",(src/StackStates.ml[175,5757+21]..src/StackStates.ml[175,5757+45]) ghost,None)
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[176,5803+6]..src/StackStates.ml[176,5803+12])
+                                                      Texp_ident "prefix/1277"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[177,5816+6]..src/StackStates.ml[177,5816+29])
+                                                      Texp_apply
+                                                      expression (src/StackStates.ml[177,5816+7]..src/StackStates.ml[177,5816+23])
+                                                        Texp_ident "Dune__exe!.Grammar.Production.print"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/StackStates.ml[177,5816+24]..src/StackStates.ml[177,5816+28])
+                                                            Texp_ident "prod/1316"
+                                                      ]
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/StackStates.ml[178,5846+6]..src/StackStates.ml[178,5846+38])
+                                                      Texp_apply
+                                                      expression (src/StackStates.ml[178,5846+7]..src/StackStates.ml[178,5846+12])
+                                                        Texp_ident "print/1236"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/StackStates.ml[178,5846+13]..src/StackStates.ml[178,5846+37])
+                                                            Texp_apply
+                                                            expression (src/StackStates.ml[178,5846+14]..src/StackStates.ml[178,5846+31])
+                                                              Texp_ident "production_states/1150"
+                                                            [
+                                                              <arg>
+                                                                Nolabel
+                                                                expression (src/StackStates.ml[178,5846+32]..src/StackStates.ml[178,5846+36])
+                                                                  Texp_ident "prod/1316"
+                                                            ]
+                                                      ]
+                                                ]
+                                          ]
+                                    ]
+                            ]
+                      ]
+                ]
+            ]
+]
+
+{<Dune__exe__StackStates>
+ "Run"[module] ->
+   Abs<Dune__exe__StackStates.60>
+      (S/528,
+       {
+        "dump"[value] -> <Dune__exe__StackStates.55>;
+        "goto_states"[value] -> <Dune__exe__StackStates.47>;
+        "print"[value] -> <Dune__exe__StackStates.53>;
+        "production_states"[value] -> <Dune__exe__StackStates.43>;
+        "property"[type] -> <Dune__exe__StackStates.52>;
+        "stack_states"[value] -> <Dune__exe__StackStates.34>;
+        });
+ }
+
+(let
+  (Run/1317 =
+     (function S/4302 is_a_functor
+       (let
+         (S/528 =a S/4302
+          StateSetVector/789 =
+            (catch
+              (let
+                (push/4295 = (field_imm 41 (global Dune__exe__MArray!))
+                 empty/4294 = (field_imm 38 (global Dune__exe__MArray!)))
+                (exit 1 empty/4294 push/4295))
+             with (1 empty/529 push/530)
+              (let
+                (truncate/595 =
+                   (function k/596[int] v/597
+                     (seq
+                       (if (<= k/596 (array.length[gen] v/597)) 0
+                         (raise
+                           (makeblock 0 (global Assert_failure/28!)
+                             [0: "src/StackStates.ml" 49 4])))
+                       (apply (field_imm 42 (global Dune__exe__MArray!))
+                         k/596 v/597)))
+                 bottom/782 =
+                   (function height/784[int]
+                     (caml_make_vect height/784
+                       (field_imm 0 (field_imm 1 (global Dune__exe__Lr1!)))))
+                 leq_join/785 =
+                   (function v1/787 v2/788
+                     (apply (field_imm 54 (global Dune__exe__MArray!))
+                       (field_imm 43 (field_imm 1 (global Dune__exe__Lr1!)))
+                       v1/787 v2/788)))
+                (makeblock 0 empty/529 push/530 truncate/595 bottom/782
+                  leq_join/785)))
+          G/971 =
+            (let
+              (foreach_root/792 =
+                 (function contribute/794 : int
+                   (apply
+                     (field_imm 18
+                       (field_imm 9 (global Dune__exe__Grammar!)))
+                     (function _prod/829 root/830 : int
+                       (seq
+                         (if (== (apply (field_imm 0 S/528) root/830) 0) 0
+                           (raise
+                             (makeblock 0 (global Assert_failure/28!)
+                               [0: "src/StackStates.ml" 81 6])))
+                         (apply contribute/794 root/830
+                           (field_imm 0 StateSetVector/789))))
+                     (field_imm 4 (global Dune__exe__Lr1!))))
+               foreach_successor/865 =
+                 (function source/867 stack/868 contribute/869 : int
+                   (apply
+                     (field_imm 22
+                       (field_imm 7 (global Dune__exe__Grammar!)))
+                     (function _symbol/918 target/919 : int
+                       (let
+                         (cell/920 =
+                            (apply
+                              (field_imm 2
+                                (field_imm 1 (global Dune__exe__Lr1!)))
+                              source/867)
+                          height/921 =[int]
+                            (apply (field_imm 0 S/528) target/919)
+                          stack/922 =
+                            (apply (field_imm 1 StateSetVector/789) stack/868
+                              cell/920))
+                         (apply contribute/869 target/919
+                           (apply (field_imm 2 StateSetVector/789) height/921
+                             stack/922))))
+                     (apply (field_imm 19 (global Dune__exe__Lr1!))
+                       source/867))))
+              (makeblock 0 foreach_root/792 foreach_successor/865))
+          stack_states/972 =
+            (let
+              (F/1139 =
+                 (apply
+                   (apply
+                     (apply
+                       (let
+                         (let/4297 =
+                            (field_imm 0 (global Vendored_fix__DataFlow!)))
+                         (field_imm 0 (global Vendored_fix__DataFlow!)))
+                       (let
+                         (let/4296 = (field_imm 3 (global Dune__exe__Lr1!)))
+                         (field_imm 3 (global Dune__exe__Lr1!))))
+                     (makeblock 0 (field_mut 4 StateSetVector/789)))
+                   G/971))
+              (field_imm 0 F/1139))
+          stack_states/1140 =
+            (function node/1141
+              (let (*match*/4298 = (apply stack_states/972 node/1141))
+                (if (isint *match*/4298)
+                  (raise
+                    (makeblock 0 (global Assert_failure/28!)
+                      [0: "src/StackStates.ml" 115 6]))
+                  (let (v/1142 =a (field_imm 0 *match*/4298)) v/1142))))
+          truncate_join/1143 =
+            (function height/1145[int] f/1146 nodes/1147
+              (apply (field_imm 23 (field_imm 1 (global Dune__exe__Lr1!)))
+                (function node/1148 accu/1149
+                  (apply (field_imm 4 StateSetVector/789)
+                    (apply (field_imm 2 StateSetVector/789) height/1145
+                      (apply f/1146 node/1148))
+                    accu/1149))
+                nodes/1147
+                (apply (field_imm 3 StateSetVector/789) height/1145)))
+          production_states/1150 =
+            (apply (field_imm 31 (field_imm 8 (global Dune__exe__Grammar!)))
+              (function prod/1151
+                (let
+                  (sites/1152 =
+                     (apply (field_imm 39 (global Dune__exe__Lr1!))
+                       prod/1151)
+                   height/1187 =[int] (apply (field_imm 1 S/528) prod/1151))
+                  (apply truncate_join/1143 height/1187 stack_states/1140
+                    sites/1152))))
+          goto_states/1188 =
+            (apply (field_imm 14 (field_imm 0 (global Dune__exe__Grammar!)))
+              (function nt/1189
+                (let
+                  (symbol/1190 = (makeblock 0 nt/1189)
+                   targets/1222 =
+                     (apply (field_imm 33 (global Dune__exe__Lr1!))
+                       symbol/1190)
+                   height/1234 =[int] (apply (field_imm 2 S/528) nt/1189))
+                  (apply truncate_join/1143 height/1234 stack_states/1140
+                    targets/1222))))
+          print/1236 =
+            (function v/1238
+              (if (== (array.length[gen] v/1238) 0) "epsilon"
+                (apply (field_imm 6 (global Dune__exe__Misc!))
+                  (field_imm 44 (field_imm 1 (global Dune__exe__Lr1!))) "; "
+                  (apply (field_imm 8 (global Stdlib__Array!)) v/1238))))
+          dump/1275 =
+            (function prefix/1277 f/1278 : int
+              (seq
+                (apply (field_imm 25 (global Dune__exe__Lr1!))
+                  (function node/1279 : int
+                    (apply (field_imm 0 (global Stdlib__Printf!)) f/1278
+                      [0:
+                       [2:
+                        0
+                        [11:
+                         "stack(" [2: 0 [11: ") = " [2: 0 [12: '\n' 0]]]]]]
+                       "%sstack(%s) = %s\n"]
+                      prefix/1277
+                      (apply (field_imm 10 (global Dune__exe__Lr1!))
+                        node/1279)
+                      (apply print/1236 (apply stack_states/1140 node/1279)))))
+                (apply
+                  (field_imm 18 (field_imm 8 (global Dune__exe__Grammar!)))
+                  (function prod/1316 : int
+                    (apply (field_imm 0 (global Stdlib__Printf!)) f/1278
+                      [0:
+                       [2:
+                        0
+                        [11:
+                         "prodstack(" [2: 0 [11: ") = " [2: 0 [12: '\n' 0]]]]]]
+                       "%sprodstack(%s) = %s\n"]
+                      prefix/1277
+                      (apply
+                        (field_imm 29
+                          (field_imm 8 (global Dune__exe__Grammar!)))
+                        prod/1316)
+                      (apply print/1236
+                        (apply production_states/1150 prod/1316))))))))
+         (makeblock 0 StateSetVector/789 G/971 stack_states/1140
+           truncate_join/1143 production_states/1150 goto_states/1188
+           print/1236 dump/1275))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__StackStates!)
+      (function funarg/4303 is_a_functor stub
+        (let (let/4304 = (apply Run/1317 funarg/4303))
+          (makeblock 0 (field_mut 6 let/4304) (field_mut 2 let/4304)
+            (field_mut 4 let/4304) (field_mut 5 let/4304)
+            (field_mut 7 let/4304)))))
+    0))
+(let
+  (Run/1317 =
+     (function S/4302 is_a_functor
+       (let
+         (StateSetVector/789 =
+            (let
+              (push/4295 = (field_imm 41 (global Dune__exe__MArray!))
+               empty/4294 = (field_imm 38 (global Dune__exe__MArray!))
+               truncate/595 =
+                 (function k/596[int] v/597
+                   (seq
+                     (if (<= k/596 (array.length[gen] v/597)) 0
+                       (raise
+                         (makeblock 0 (global Assert_failure/28!)
+                           [0: "src/StackStates.ml" 49 4])))
+                     (apply (field_imm 42 (global Dune__exe__MArray!)) k/596
+                       v/597)))
+               bottom/782 =
+                 (function height/784[int]
+                   (caml_make_vect height/784
+                     (field_imm 0 (field_imm 1 (global Dune__exe__Lr1!)))))
+               leq_join/785 =
+                 (function v1/787 v2/788
+                   (apply (field_imm 54 (global Dune__exe__MArray!))
+                     (field_imm 43 (field_imm 1 (global Dune__exe__Lr1!)))
+                     v1/787 v2/788)))
+              (makeblock 0 empty/4294 push/4295 truncate/595 bottom/782
+                leq_join/785))
+          G/971 =
+            (let
+              (foreach_root/792 =
+                 (function contribute/794 : int
+                   (apply
+                     (field_imm 18
+                       (field_imm 9 (global Dune__exe__Grammar!)))
+                     (function _prod/829 root/830 : int
+                       (seq
+                         (if (== (apply (field_imm 0 S/4302) root/830) 0) 0
+                           (raise
+                             (makeblock 0 (global Assert_failure/28!)
+                               [0: "src/StackStates.ml" 81 6])))
+                         (apply contribute/794 root/830
+                           (field_imm 0 StateSetVector/789))))
+                     (field_imm 4 (global Dune__exe__Lr1!))))
+               foreach_successor/865 =
+                 (function source/867 stack/868 contribute/869 : int
+                   (apply
+                     (field_imm 22
+                       (field_imm 7 (global Dune__exe__Grammar!)))
+                     (function _symbol/918 target/919 : int
+                       (let
+                         (cell/920 =
+                            (apply
+                              (field_imm 2
+                                (field_imm 1 (global Dune__exe__Lr1!)))
+                              source/867)
+                          height/921 =[int]
+                            (apply (field_imm 0 S/4302) target/919)
+                          stack/922 =
+                            (apply (field_imm 1 StateSetVector/789) stack/868
+                              cell/920))
+                         (apply contribute/869 target/919
+                           (apply (field_imm 2 StateSetVector/789) height/921
+                             stack/922))))
+                     (apply (field_imm 19 (global Dune__exe__Lr1!))
+                       source/867))))
+              (makeblock 0 foreach_root/792 foreach_successor/865))
+          stack_states/972 =
+            (let
+              (F/1139 =
+                 (apply
+                   (apply
+                     (apply
+                       (let
+                         (let/4297 =
+                            (field_imm 0 (global Vendored_fix__DataFlow!)))
+                         (field_imm 0 (global Vendored_fix__DataFlow!)))
+                       (let
+                         (let/4296 = (field_imm 3 (global Dune__exe__Lr1!)))
+                         (field_imm 3 (global Dune__exe__Lr1!))))
+                     (makeblock 0 (field_mut 4 StateSetVector/789)))
+                   G/971))
+              (field_imm 0 F/1139))
+          stack_states/1140 =
+            (function node/1141
+              (let (*match*/4298 = (apply stack_states/972 node/1141))
+                (if (isint *match*/4298)
+                  (raise
+                    (makeblock 0 (global Assert_failure/28!)
+                      [0: "src/StackStates.ml" 115 6]))
+                  (field_imm 0 *match*/4298))))
+          truncate_join/1143 =
+            (function height/1145[int] f/1146 nodes/1147
+              (apply (field_imm 23 (field_imm 1 (global Dune__exe__Lr1!)))
+                (function node/1148 accu/1149
+                  (apply (field_imm 4 StateSetVector/789)
+                    (apply (field_imm 2 StateSetVector/789) height/1145
+                      (apply f/1146 node/1148))
+                    accu/1149))
+                nodes/1147
+                (apply (field_imm 3 StateSetVector/789) height/1145)))
+          production_states/1150 =
+            (apply (field_imm 31 (field_imm 8 (global Dune__exe__Grammar!)))
+              (function prod/1151
+                (let
+                  (sites/1152 =
+                     (apply (field_imm 39 (global Dune__exe__Lr1!))
+                       prod/1151)
+                   height/1187 =[int] (apply (field_imm 1 S/4302) prod/1151))
+                  (apply truncate_join/1143 height/1187 stack_states/1140
+                    sites/1152))))
+          goto_states/1188 =
+            (apply (field_imm 14 (field_imm 0 (global Dune__exe__Grammar!)))
+              (function nt/1189
+                (let
+                  (symbol/1190 = (makeblock 0 nt/1189)
+                   targets/1222 =
+                     (apply (field_imm 33 (global Dune__exe__Lr1!))
+                       symbol/1190)
+                   height/1234 =[int] (apply (field_imm 2 S/4302) nt/1189))
+                  (apply truncate_join/1143 height/1234 stack_states/1140
+                    targets/1222))))
+          print/1236 =
+            (function v/1238
+              (if (== (array.length[gen] v/1238) 0) "epsilon"
+                (apply (field_imm 6 (global Dune__exe__Misc!))
+                  (field_imm 44 (field_imm 1 (global Dune__exe__Lr1!))) "; "
+                  (apply (field_imm 8 (global Stdlib__Array!)) v/1238))))
+          dump/1275 =
+            (function prefix/1277 f/1278 : int
+              (seq
+                (apply (field_imm 25 (global Dune__exe__Lr1!))
+                  (function node/1279 : int
+                    (apply (field_imm 0 (global Stdlib__Printf!)) f/1278
+                      [0:
+                       [2:
+                        0
+                        [11:
+                         "stack(" [2: 0 [11: ") = " [2: 0 [12: '\n' 0]]]]]]
+                       "%sstack(%s) = %s\n"]
+                      prefix/1277
+                      (apply (field_imm 10 (global Dune__exe__Lr1!))
+                        node/1279)
+                      (apply print/1236 (apply stack_states/1140 node/1279)))))
+                (apply
+                  (field_imm 18 (field_imm 8 (global Dune__exe__Grammar!)))
+                  (function prod/1316 : int
+                    (apply (field_imm 0 (global Stdlib__Printf!)) f/1278
+                      [0:
+                       [2:
+                        0
+                        [11:
+                         "prodstack(" [2: 0 [11: ") = " [2: 0 [12: '\n' 0]]]]]]
+                       "%sprodstack(%s) = %s\n"]
+                      prefix/1277
+                      (apply
+                        (field_imm 29
+                          (field_imm 8 (global Dune__exe__Grammar!)))
+                        prod/1316)
+                      (apply print/1236
+                        (apply production_states/1150 prod/1316))))))))
+         (makeblock 0 StateSetVector/789 G/971 stack_states/1140
+           truncate_join/1143 production_states/1150 goto_states/1188
+           print/1236 dump/1275))))
+  (seq
+    (setfield_ptr(root-init) 0 (global Dune__exe__StackStates!)
+      (function funarg/4303 is_a_functor stub
+        (let (let/4304 = (apply Run/1317 funarg/4303))
+          (makeblock 0 (field_mut 6 let/4304) (field_mut 2 let/4304)
+            (field_mut 4 let/4304) (field_mut 5 let/4304)
+            (field_mut 7 let/4304)))))
+    0))

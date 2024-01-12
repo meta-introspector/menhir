@@ -1,0 +1,361 @@
+[
+  structure_item (src/stage3/anonymize/anonymize.ml[19,1143+0]..[20,1164+36])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage3/anonymize/anonymize.ml[19,1143+4]..[19,1143+18])
+          Ppat_var "line_directive" (src/stage3/anonymize/anonymize.ml[19,1143+4]..[19,1143+18])
+        expression (src/stage3/anonymize/anonymize.ml[20,1164+2]..[20,1164+36])
+          Pexp_apply
+          expression (src/stage3/anonymize/anonymize.ml[20,1164+2]..[20,1164+12])
+            Pexp_ident "Str.regexp" (src/stage3/anonymize/anonymize.ml[20,1164+2]..[20,1164+12])
+          [
+            <arg>
+            Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[20,1164+13]..[20,1164+36])
+                Pexp_constant PConst_string ("^# \\([0-9]+\\) \".*\"$",(src/stage3/anonymize/anonymize.ml[20,1164+15]..[20,1164+34]),Some "")
+          ]
+    ]
+  structure_item (src/stage3/anonymize/anonymize.ml[22,1202+0]..[30,1399+15])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage3/anonymize/anonymize.ml[22,1202+4]..[22,1202+11])
+          Ppat_var "process" (src/stage3/anonymize/anonymize.ml[22,1202+4]..[22,1202+11])
+        expression (src/stage3/anonymize/anonymize.ml[22,1202+12]..[30,1399+15]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/stage3/anonymize/anonymize.ml[22,1202+12]..[22,1202+14])
+            Ppat_var "fn" (src/stage3/anonymize/anonymize.ml[22,1202+12]..[22,1202+14])
+          expression (src/stage3/anonymize/anonymize.ml[23,1219+2]..[30,1399+15])
+            Pexp_let Nonrec
+            [
+              <def>
+                pattern (src/stage3/anonymize/anonymize.ml[23,1219+6]..[23,1219+8])
+                  Ppat_var "ic" (src/stage3/anonymize/anonymize.ml[23,1219+6]..[23,1219+8])
+                expression (src/stage3/anonymize/anonymize.ml[23,1219+11]..[23,1219+21])
+                  Pexp_apply
+                  expression (src/stage3/anonymize/anonymize.ml[23,1219+11]..[23,1219+18])
+                    Pexp_ident "open_in" (src/stage3/anonymize/anonymize.ml[23,1219+11]..[23,1219+18])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/stage3/anonymize/anonymize.ml[23,1219+19]..[23,1219+21])
+                        Pexp_ident "fn" (src/stage3/anonymize/anonymize.ml[23,1219+19]..[23,1219+21])
+                  ]
+            ]
+            expression (src/stage3/anonymize/anonymize.ml[24,1244+2]..[30,1399+15])
+              Pexp_try
+              expression (src/stage3/anonymize/anonymize.ml[25,1250+4]..[28,1368+8])
+                Pexp_while
+                expression (src/stage3/anonymize/anonymize.ml[25,1250+10]..[25,1250+14])
+                  Pexp_construct "true" (src/stage3/anonymize/anonymize.ml[25,1250+10]..[25,1250+14])
+                  None
+                expression (src/stage3/anonymize/anonymize.ml[26,1268+6]..[27,1299+68])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/stage3/anonymize/anonymize.ml[26,1268+10]..[26,1268+11])
+                        Ppat_var "s" (src/stage3/anonymize/anonymize.ml[26,1268+10]..[26,1268+11])
+                      expression (src/stage3/anonymize/anonymize.ml[26,1268+14]..[26,1268+27])
+                        Pexp_apply
+                        expression (src/stage3/anonymize/anonymize.ml[26,1268+14]..[26,1268+24])
+                          Pexp_ident "input_line" (src/stage3/anonymize/anonymize.ml[26,1268+14]..[26,1268+24])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/stage3/anonymize/anonymize.ml[26,1268+25]..[26,1268+27])
+                              Pexp_ident "ic" (src/stage3/anonymize/anonymize.ml[26,1268+25]..[26,1268+27])
+                        ]
+                  ]
+                  expression (src/stage3/anonymize/anonymize.ml[27,1299+6]..[27,1299+68])
+                    Pexp_apply
+                    expression (src/stage3/anonymize/anonymize.ml[27,1299+6]..[27,1299+19])
+                      Pexp_ident "print_endline" (src/stage3/anonymize/anonymize.ml[27,1299+6]..[27,1299+19])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/stage3/anonymize/anonymize.ml[27,1299+20]..[27,1299+68])
+                          Pexp_apply
+                          expression (src/stage3/anonymize/anonymize.ml[27,1299+21]..[27,1299+38])
+                            Pexp_ident "Str.replace_first" (src/stage3/anonymize/anonymize.ml[27,1299+21]..[27,1299+38])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/stage3/anonymize/anonymize.ml[27,1299+39]..[27,1299+53])
+                                Pexp_ident "line_directive" (src/stage3/anonymize/anonymize.ml[27,1299+39]..[27,1299+53])
+                            <arg>
+                            Nolabel
+                              expression (src/stage3/anonymize/anonymize.ml[27,1299+54]..[27,1299+65])
+                                Pexp_constant PConst_string ("# \\1 \"\"",(src/stage3/anonymize/anonymize.ml[27,1299+56]..[27,1299+63]),Some "")
+                            <arg>
+                            Nolabel
+                              expression (src/stage3/anonymize/anonymize.ml[27,1299+66]..[27,1299+67])
+                                Pexp_ident "s" (src/stage3/anonymize/anonymize.ml[27,1299+66]..[27,1299+67])
+                          ]
+                    ]
+              [
+                <case>
+                  pattern (src/stage3/anonymize/anonymize.ml[29,1377+7]..[29,1377+18])
+                    Ppat_construct "End_of_file" (src/stage3/anonymize/anonymize.ml[29,1377+7]..[29,1377+18])
+                    None
+                  expression (src/stage3/anonymize/anonymize.ml[30,1399+4]..[30,1399+15])
+                    Pexp_apply
+                    expression (src/stage3/anonymize/anonymize.ml[30,1399+4]..[30,1399+12])
+                      Pexp_ident "close_in" (src/stage3/anonymize/anonymize.ml[30,1399+4]..[30,1399+12])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/stage3/anonymize/anonymize.ml[30,1399+13]..[30,1399+15])
+                          Pexp_ident "ic" (src/stage3/anonymize/anonymize.ml[30,1399+13]..[30,1399+15])
+                    ]
+              ]
+    ]
+  structure_item (src/stage3/anonymize/anonymize.ml[32,1416+0]..[33,1425+25])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage3/anonymize/anonymize.ml[32,1416+4]..[32,1416+6])
+          Ppat_construct "()" (src/stage3/anonymize/anonymize.ml[32,1416+4]..[32,1416+6])
+          None
+        expression (src/stage3/anonymize/anonymize.ml[33,1425+2]..[33,1425+25])
+          Pexp_apply
+          expression (src/stage3/anonymize/anonymize.ml[33,1425+2]..[33,1425+11])
+            Pexp_ident "Arg.parse" (src/stage3/anonymize/anonymize.ml[33,1425+2]..[33,1425+11])
+          [
+            <arg>
+            Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[33,1425+12]..[33,1425+14])
+                Pexp_construct "[]" (src/stage3/anonymize/anonymize.ml[33,1425+12]..[33,1425+14])
+                None
+            <arg>
+            Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[33,1425+15]..[33,1425+22])
+                Pexp_ident "process" (src/stage3/anonymize/anonymize.ml[33,1425+15]..[33,1425+22])
+            <arg>
+            Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[33,1425+23]..[33,1425+25])
+                Pexp_constant PConst_string("",(src/stage3/anonymize/anonymize.ml[33,1425+24]..[33,1425+24]),None)
+          ]
+    ]
+]
+
+let line_directive = Str.regexp {|^# \([0-9]+\) ".*"$|}
+let process fn =
+  let ic = open_in fn in
+  try
+    while true do
+      let s = input_line ic in
+      print_endline (Str.replace_first line_directive {|# \1 ""|} s) done
+  with | End_of_file -> close_in ic
+let () = Arg.parse [] process ""
+[
+  structure_item (src/stage3/anonymize/anonymize.ml[19,1143+0]..src/stage3/anonymize/anonymize.ml[20,1164+36])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage3/anonymize/anonymize.ml[19,1143+4]..src/stage3/anonymize/anonymize.ml[19,1143+18])
+          Tpat_var "line_directive/269"
+        expression (src/stage3/anonymize/anonymize.ml[20,1164+2]..src/stage3/anonymize/anonymize.ml[20,1164+36])
+          Texp_apply
+          expression (src/stage3/anonymize/anonymize.ml[20,1164+2]..src/stage3/anonymize/anonymize.ml[20,1164+12])
+            Texp_ident "Str!.regexp"
+          [
+            <arg>
+              Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[20,1164+13]..src/stage3/anonymize/anonymize.ml[20,1164+36])
+                Texp_constant Const_string ("^# \\([0-9]+\\) \".*\"$",(src/stage3/anonymize/anonymize.ml[20,1164+15]..src/stage3/anonymize/anonymize.ml[20,1164+34]),Some "")
+          ]
+    ]
+  structure_item (src/stage3/anonymize/anonymize.ml[22,1202+0]..src/stage3/anonymize/anonymize.ml[30,1399+15])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage3/anonymize/anonymize.ml[22,1202+4]..src/stage3/anonymize/anonymize.ml[22,1202+11])
+          Tpat_var "process/302"
+        expression (src/stage3/anonymize/anonymize.ml[22,1202+12]..src/stage3/anonymize/anonymize.ml[30,1399+15]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/stage3/anonymize/anonymize.ml[22,1202+12]..src/stage3/anonymize/anonymize.ml[22,1202+14])
+                Tpat_var "fn/304"
+              expression (src/stage3/anonymize/anonymize.ml[23,1219+2]..src/stage3/anonymize/anonymize.ml[30,1399+15])
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/stage3/anonymize/anonymize.ml[23,1219+6]..src/stage3/anonymize/anonymize.ml[23,1219+8])
+                      Tpat_var "ic/305"
+                    expression (src/stage3/anonymize/anonymize.ml[23,1219+11]..src/stage3/anonymize/anonymize.ml[23,1219+21])
+                      Texp_apply
+                      expression (src/stage3/anonymize/anonymize.ml[23,1219+11]..src/stage3/anonymize/anonymize.ml[23,1219+18])
+                        Texp_ident "Stdlib!.open_in"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/stage3/anonymize/anonymize.ml[23,1219+19]..src/stage3/anonymize/anonymize.ml[23,1219+21])
+                            Texp_ident "fn/304"
+                      ]
+                ]
+                expression (src/stage3/anonymize/anonymize.ml[24,1244+2]..src/stage3/anonymize/anonymize.ml[30,1399+15])
+                  Texp_try
+                  expression (src/stage3/anonymize/anonymize.ml[25,1250+4]..src/stage3/anonymize/anonymize.ml[28,1368+8])
+                    Texp_while
+                    expression (src/stage3/anonymize/anonymize.ml[25,1250+10]..src/stage3/anonymize/anonymize.ml[25,1250+14])
+                      Texp_construct "true"
+                      []
+                    expression (src/stage3/anonymize/anonymize.ml[26,1268+6]..src/stage3/anonymize/anonymize.ml[27,1299+68])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/stage3/anonymize/anonymize.ml[26,1268+10]..src/stage3/anonymize/anonymize.ml[26,1268+11])
+                            Tpat_var "s/306"
+                          expression (src/stage3/anonymize/anonymize.ml[26,1268+14]..src/stage3/anonymize/anonymize.ml[26,1268+27])
+                            Texp_apply
+                            expression (src/stage3/anonymize/anonymize.ml[26,1268+14]..src/stage3/anonymize/anonymize.ml[26,1268+24])
+                              Texp_ident "Stdlib!.input_line"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/stage3/anonymize/anonymize.ml[26,1268+25]..src/stage3/anonymize/anonymize.ml[26,1268+27])
+                                  Texp_ident "ic/305"
+                            ]
+                      ]
+                      expression (src/stage3/anonymize/anonymize.ml[27,1299+6]..src/stage3/anonymize/anonymize.ml[27,1299+68])
+                        Texp_apply
+                        expression (src/stage3/anonymize/anonymize.ml[27,1299+6]..src/stage3/anonymize/anonymize.ml[27,1299+19])
+                          Texp_ident "Stdlib!.print_endline"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/stage3/anonymize/anonymize.ml[27,1299+20]..src/stage3/anonymize/anonymize.ml[27,1299+68])
+                              Texp_apply
+                              expression (src/stage3/anonymize/anonymize.ml[27,1299+21]..src/stage3/anonymize/anonymize.ml[27,1299+38])
+                                Texp_ident "Str!.replace_first"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage3/anonymize/anonymize.ml[27,1299+39]..src/stage3/anonymize/anonymize.ml[27,1299+53])
+                                    Texp_ident "line_directive/269"
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage3/anonymize/anonymize.ml[27,1299+54]..src/stage3/anonymize/anonymize.ml[27,1299+65])
+                                    Texp_constant Const_string ("# \\1 \"\"",(src/stage3/anonymize/anonymize.ml[27,1299+56]..src/stage3/anonymize/anonymize.ml[27,1299+63]),Some "")
+                                <arg>
+                                  Nolabel
+                                  expression (src/stage3/anonymize/anonymize.ml[27,1299+66]..src/stage3/anonymize/anonymize.ml[27,1299+67])
+                                    Texp_ident "s/306"
+                              ]
+                        ]
+                  [
+                    <case>
+                      pattern (src/stage3/anonymize/anonymize.ml[29,1377+7]..src/stage3/anonymize/anonymize.ml[29,1377+18])
+                        Tpat_construct "End_of_file"
+                        []
+                        None
+                      expression (src/stage3/anonymize/anonymize.ml[30,1399+4]..src/stage3/anonymize/anonymize.ml[30,1399+15])
+                        Texp_apply
+                        expression (src/stage3/anonymize/anonymize.ml[30,1399+4]..src/stage3/anonymize/anonymize.ml[30,1399+12])
+                          Texp_ident "Stdlib!.close_in"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/stage3/anonymize/anonymize.ml[30,1399+13]..src/stage3/anonymize/anonymize.ml[30,1399+15])
+                              Texp_ident "ic/305"
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (src/stage3/anonymize/anonymize.ml[32,1416+0]..src/stage3/anonymize/anonymize.ml[33,1425+25])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/stage3/anonymize/anonymize.ml[32,1416+4]..src/stage3/anonymize/anonymize.ml[32,1416+6])
+          Tpat_construct "()"
+          []
+          None
+        expression (src/stage3/anonymize/anonymize.ml[33,1425+2]..src/stage3/anonymize/anonymize.ml[33,1425+25])
+          Texp_apply
+          expression (src/stage3/anonymize/anonymize.ml[33,1425+2]..src/stage3/anonymize/anonymize.ml[33,1425+11])
+            Texp_ident "Stdlib!.Arg.parse"
+          [
+            <arg>
+              Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[33,1425+12]..src/stage3/anonymize/anonymize.ml[33,1425+14])
+                Texp_construct "[]"
+                []
+            <arg>
+              Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[33,1425+15]..src/stage3/anonymize/anonymize.ml[33,1425+22])
+                Texp_ident "process/302"
+            <arg>
+              Nolabel
+              expression (src/stage3/anonymize/anonymize.ml[33,1425+23]..src/stage3/anonymize/anonymize.ml[33,1425+25])
+                Texp_constant Const_string("",(src/stage3/anonymize/anonymize.ml[33,1425+24]..src/stage3/anonymize/anonymize.ml[33,1425+24]),None)
+          ]
+    ]
+]
+
+{<Dune__exe__Anonymize>
+ "line_directive"[value] -> <Dune__exe__Anonymize.0>;
+ "process"[value] -> <Dune__exe__Anonymize.1>;
+ }
+
+(seq
+  (let
+    (line_directive/269 =
+       (apply (field_imm 0 (global Str!)) "^# \\([0-9]+\\) \".*\"$"))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Anonymize!)
+      line_directive/269))
+  (let
+    (process/302 =
+       (function fn/304 : int
+         (let (ic/305 = (apply (field_imm 78 (global Stdlib!)) fn/304))
+           (try
+             (while 1
+               (let (s/306 = (apply (field_imm 82 (global Stdlib!)) ic/305))
+                 (apply (field_imm 45 (global Stdlib!))
+                   (apply (field_imm 16 (global Str!))
+                     (field_imm 0 (global Dune__exe__Anonymize!))
+                     "# \\1 \"\"" s/306))))
+            with exn/520
+             (catch
+               (if (== exn/520 (field_imm 11 (global Stdlib!)))
+                 (apply (field_imm 92 (global Stdlib!)) ic/305) (exit 1))
+              with (1) (reraise exn/520))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Anonymize!) process/302))
+  (let
+    (*match*/522 =
+       (apply (field_imm 0 (global Stdlib__Arg!)) 0
+         (field_imm 1 (global Dune__exe__Anonymize!)) ""))
+    0)
+  0)
+(seq
+  (let
+    (line_directive/269 =
+       (apply (field_imm 0 (global Str!)) "^# \\([0-9]+\\) \".*\"$"))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Anonymize!)
+      line_directive/269))
+  (let
+    (process/302 =
+       (function fn/304 : int
+         (let (ic/305 = (apply (field_imm 78 (global Stdlib!)) fn/304))
+           (try
+             (while 1
+               (let (s/306 = (apply (field_imm 82 (global Stdlib!)) ic/305))
+                 (apply (field_imm 45 (global Stdlib!))
+                   (apply (field_imm 16 (global Str!))
+                     (field_imm 0 (global Dune__exe__Anonymize!))
+                     "# \\1 \"\"" s/306))))
+            with exn/520
+             (if (== exn/520 (field_imm 11 (global Stdlib!)))
+               (apply (field_imm 92 (global Stdlib!)) ic/305)
+               (reraise exn/520))))))
+    (setfield_ptr(root-init) 1 (global Dune__exe__Anonymize!) process/302))
+  (let
+    (*match*/522 =
+       (apply (field_imm 0 (global Stdlib__Arg!)) 0
+         (field_imm 1 (global Dune__exe__Anonymize!)) ""))
+    0)
+  0)

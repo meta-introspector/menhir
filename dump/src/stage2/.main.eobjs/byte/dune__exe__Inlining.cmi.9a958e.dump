@@ -1,0 +1,53 @@
+[
+  signature_item (src/inlining.mli[14,999+0]..[14,999+16])
+    Psig_open Fresh "BasicSyntax" (src/inlining.mli[14,999+5]..[14,999+16])
+  signature_item (src/inlining.mli[19,1213+0]..[19,1213+30])
+    Psig_value
+    value_description "inline" (src/inlining.mli[19,1213+4]..[19,1213+10]) (src/inlining.mli[19,1213+0]..[19,1213+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/inlining.mli[16,1017+0]..[18,1167+45])
+            Pstr_eval
+            expression (src/inlining.mli[16,1017+0]..[18,1167+45])
+              Pexp_constant PConst_string(" [inline g] traverses the grammar [g] and inlines away the nonterminal\n    symbols whose definitions are marked [%inline]. The result is a grammar\n    where no symbols are marked [%inline]. ",(src/inlining.mli[16,1017+0]..[18,1167+45]),None)
+        ]
+      core_type (src/inlining.mli[19,1213+12]..[19,1213+30])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/inlining.mli[19,1213+12]..[19,1213+19])
+          Ptyp_constr "grammar" (src/inlining.mli[19,1213+12]..[19,1213+19])
+          []
+        core_type (src/inlining.mli[19,1213+23]..[19,1213+30])
+          Ptyp_constr "grammar" (src/inlining.mli[19,1213+23]..[19,1213+30])
+          []
+      []
+]
+
+open BasicSyntax
+val inline : grammar -> grammar[@@ocaml.doc
+                                 " [inline g] traverses the grammar [g] and inlines away the nonterminal\n    symbols whose definitions are marked [%inline]. The result is a grammar\n    where no symbols are marked [%inline]. "]
+[
+  signature_item (src/inlining.mli[14,999+0]..src/inlining.mli[14,999+16])
+    Tsig_open Fresh "Dune__exe!.BasicSyntax"
+  signature_item (src/inlining.mli[19,1213+0]..src/inlining.mli[19,1213+30])
+    Tsig_value
+    value_description inline/417 (src/inlining.mli[19,1213+0]..src/inlining.mli[19,1213+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/inlining.mli[16,1017+0]..[18,1167+45])
+            Pstr_eval
+            expression (src/inlining.mli[16,1017+0]..[18,1167+45])
+              Pexp_constant PConst_string(" [inline g] traverses the grammar [g] and inlines away the nonterminal\n    symbols whose definitions are marked [%inline]. The result is a grammar\n    where no symbols are marked [%inline]. ",(src/inlining.mli[16,1017+0]..[18,1167+45]),None)
+        ]
+      core_type (src/inlining.mli[19,1213+12]..src/inlining.mli[19,1213+30])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/inlining.mli[19,1213+12]..src/inlining.mli[19,1213+19])
+          Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+          []
+        core_type (src/inlining.mli[19,1213+23]..src/inlining.mli[19,1213+30])
+          Ttyp_constr "Dune__exe!.BasicSyntax.grammar"
+          []
+      []
+]
+

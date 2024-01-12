@@ -1,0 +1,20 @@
+0.088s 71.6MB 5.15MB 6.94MB src/stage2/misc.ml
+  0.003s 2.05MB 0.53MB 2.32MB parsing
+    0.003s 2.05MB 0.53MB 2.32MB parser
+  0.035s 23.1MB 2.84MB 5.16MB typing
+  0.002s ------ ------ ------ transl
+  0.022s 18.7MB 1.59MB 6.76MB generate
+    ------ 2.00MB 0.40MB 5.57MB cmm
+    0.010s 8.18MB 0.78MB 6.35MB compile_phrases
+      0.001s ------ ------ ------ selection
+      0.001s 0.28MB ------ ------ liveness
+      0.001s 2.00MB 0.21MB 5.79MB deadcode
+      0.001s 2.20MB 0.28MB 6.07MB spill
+      0.001s 2.00MB 0.21MB 6.29MB split
+      0.002s 0.39MB ------ ------ regalloc
+      0.001s 1.30MB 0.06MB 6.35MB emit
+      0.001s ------ ------ ------ other
+    0.006s ------ ------ ------ assemble
+    0.006s 8.51MB 0.40MB 6.76MB other
+  0.026s 27.7MB 0.18MB 6.94MB other
+0.013s 3.07MB 1.79MB ------ other

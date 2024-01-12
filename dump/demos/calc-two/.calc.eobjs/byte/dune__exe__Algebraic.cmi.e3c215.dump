@@ -1,0 +1,113 @@
+[
+  signature_item (demos/calc-two/algebraic.mli[4,28+0]..[4,28+25])
+    Psig_type Rec
+    [
+      type_declaration "token" (demos/calc-two/algebraic.mli[4,28+5]..[4,28+10]) (demos/calc-two/algebraic.mli[4,28+0]..[4,28+25])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (demos/calc-two/algebraic.mli[4,28+13]..[4,28+25])
+              Ptyp_constr "Tokens.token" (demos/calc-two/algebraic.mli[4,28+13]..[4,28+25])
+              []
+    ]
+  signature_item (demos/calc-two/algebraic.mli[8,120+0]..[8,120+15])
+    Psig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/calc-two/algebraic.mli[8,120+0]..[8,120+15])
+          pext_name = "Error"
+          pext_kind =
+            Pext_decl
+              []
+              None
+  signature_item (demos/calc-two/algebraic.mli[12,164+0]..[12,164+60])
+    Psig_value
+    value_description "main" (demos/calc-two/algebraic.mli[12,164+4]..[12,164+8]) (demos/calc-two/algebraic.mli[12,164+0]..[12,164+60])
+      core_type (demos/calc-two/algebraic.mli[12,164+10]..[12,164+60])
+        Ptyp_arrow
+        Nolabel
+        core_type (demos/calc-two/algebraic.mli[12,164+11]..[12,164+33])
+          Ptyp_arrow
+          Nolabel
+          core_type (demos/calc-two/algebraic.mli[12,164+11]..[12,164+24])
+            Ptyp_constr "Lexing.lexbuf" (demos/calc-two/algebraic.mli[12,164+11]..[12,164+24])
+            []
+          core_type (demos/calc-two/algebraic.mli[12,164+28]..[12,164+33])
+            Ptyp_constr "token" (demos/calc-two/algebraic.mli[12,164+28]..[12,164+33])
+            []
+        core_type (demos/calc-two/algebraic.mli[12,164+38]..[12,164+60])
+          Ptyp_arrow
+          Nolabel
+          core_type (demos/calc-two/algebraic.mli[12,164+38]..[12,164+51])
+            Ptyp_constr "Lexing.lexbuf" (demos/calc-two/algebraic.mli[12,164+38]..[12,164+51])
+            []
+          core_type (demos/calc-two/algebraic.mli[12,164+56]..[12,164+59])
+            Ptyp_constr "int" (demos/calc-two/algebraic.mli[12,164+56]..[12,164+59])
+            []
+      []
+]
+
+type token = Tokens.token
+exception Error 
+val main : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> int
+[
+  signature_item (demos/calc-two/algebraic.mli[4,28+0]..demos/calc-two/algebraic.mli[4,28+25])
+    Tsig_type Rec
+    [
+      type_declaration token/274 (demos/calc-two/algebraic.mli[4,28+0]..demos/calc-two/algebraic.mli[4,28+25])
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          Some
+            core_type (demos/calc-two/algebraic.mli[4,28+13]..demos/calc-two/algebraic.mli[4,28+25])
+              Ttyp_constr "Dune__exe!.Tokens.token"
+              []
+    ]
+  signature_item (demos/calc-two/algebraic.mli[8,120+0]..demos/calc-two/algebraic.mli[8,120+15])
+    Tsig_exception
+    type_exception
+      ptyext_constructor =
+        extension_constructor (demos/calc-two/algebraic.mli[8,120+0]..demos/calc-two/algebraic.mli[8,120+15])
+          pext_name = "Error/277"
+          pext_kind =
+            Text_decl
+              []
+              None
+  signature_item (demos/calc-two/algebraic.mli[12,164+0]..demos/calc-two/algebraic.mli[12,164+60])
+    Tsig_value
+    value_description main/302 (demos/calc-two/algebraic.mli[12,164+0]..demos/calc-two/algebraic.mli[12,164+60])
+      core_type (demos/calc-two/algebraic.mli[12,164+10]..demos/calc-two/algebraic.mli[12,164+60])
+        Ttyp_arrow
+        Nolabel
+        core_type (demos/calc-two/algebraic.mli[12,164+11]..demos/calc-two/algebraic.mli[12,164+33])
+          Ttyp_arrow
+          Nolabel
+          core_type (demos/calc-two/algebraic.mli[12,164+11]..demos/calc-two/algebraic.mli[12,164+24])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (demos/calc-two/algebraic.mli[12,164+28]..demos/calc-two/algebraic.mli[12,164+33])
+            Ttyp_constr "token/274"
+            []
+        core_type (demos/calc-two/algebraic.mli[12,164+38]..demos/calc-two/algebraic.mli[12,164+60])
+          Ttyp_arrow
+          Nolabel
+          core_type (demos/calc-two/algebraic.mli[12,164+38]..demos/calc-two/algebraic.mli[12,164+51])
+            Ttyp_constr "Stdlib!.Lexing.lexbuf"
+            []
+          core_type (demos/calc-two/algebraic.mli[12,164+56]..demos/calc-two/algebraic.mli[12,164+59])
+            Ttyp_constr "int/1!"
+            []
+      []
+]
+

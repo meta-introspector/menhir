@@ -1,0 +1,2487 @@
+[
+  structure_item (src/slr.ml[22,1372+0]..[22,1372+12])
+    Pstr_open Fresh
+    module_expr (src/slr.ml[22,1372+5]..[22,1372+12])
+      Pmod_ident "Grammar" (src/slr.ml[22,1372+5]..[22,1372+12])
+  structure_item (src/slr.ml[27,1511+0]..[28,1536+7])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[27,1511+4]..[27,1511+22])
+          Ppat_var "tell_me_everything" (src/slr.ml[27,1511+4]..[27,1511+22])
+        expression (src/slr.ml[28,1536+2]..[28,1536+7])
+          Pexp_construct "false" (src/slr.ml[28,1536+2]..[28,1536+7])
+          None
+    ]
+  structure_item (src/slr.ml[32,1618+0]..[65,3044+20])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[32,1618+4]..[32,1618+18])
+          Ppat_var "make_slr_state" (src/slr.ml[32,1618+4]..[32,1618+18])
+        expression (src/slr.ml[32,1618+19]..[65,3044+20]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[32,1618+19]..[32,1618+33])
+            Ppat_constraint
+            pattern (src/slr.ml[32,1618+20]..[32,1618+21])
+              Ppat_var "s" (src/slr.ml[32,1618+20]..[32,1618+21])
+            core_type (src/slr.ml[32,1618+24]..[32,1618+32])
+              Ptyp_constr "Lr0.node" (src/slr.ml[32,1618+24]..[32,1618+32])
+              []
+          expression (src/slr.ml[32,1618+34]..[65,3044+20])
+            Pexp_constraint
+            expression (src/slr.ml[36,1748+2]..[65,3044+20])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/slr.ml[36,1748+6]..[36,1748+11])
+                    Ppat_var "items" (src/slr.ml[36,1748+6]..[36,1748+11])
+                  expression (src/slr.ml[36,1748+14]..[36,1748+25])
+                    Pexp_apply
+                    expression (src/slr.ml[36,1748+14]..[36,1748+23])
+                      Pexp_ident "Lr0.items" (src/slr.ml[36,1748+14]..[36,1748+23])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[36,1748+24]..[36,1748+25])
+                          Pexp_ident "s" (src/slr.ml[36,1748+24]..[36,1748+25])
+                    ]
+              ]
+              expression (src/slr.ml[49,2396+2]..[65,3044+20])
+                Pexp_let Nonrec
+                [
+                  <def>
+                    pattern (src/slr.ml[49,2396+6]..[49,2396+7])
+                      Ppat_var "s" (src/slr.ml[49,2396+6]..[49,2396+7])
+                    expression (src/slr.ml[49,2396+10]..[49,2396+62])
+                      Pexp_apply
+                      expression (src/slr.ml[49,2396+10]..[49,2396+23])
+                        Pexp_ident "Item.Map.lift" (src/slr.ml[49,2396+10]..[49,2396+23])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[49,2396+24]..[49,2396+56])
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/slr.ml[49,2396+29]..[49,2396+34])
+                              Ppat_var "_item" (src/slr.ml[49,2396+29]..[49,2396+34])
+                            expression (src/slr.ml[49,2396+38]..[49,2396+55])
+                              Pexp_ident "TerminalSet.empty" (src/slr.ml[49,2396+38]..[49,2396+55])
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[49,2396+57]..[49,2396+62])
+                            Pexp_ident "items" (src/slr.ml[49,2396+57]..[49,2396+62])
+                      ]
+                ]
+                expression (src/slr.ml[53,2499+2]..[65,3044+20])
+                  Pexp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/slr.ml[53,2499+6]..[53,2499+7])
+                        Ppat_var "s" (src/slr.ml[53,2499+6]..[53,2499+7])
+                      expression (src/slr.ml[53,2499+10]..[53,2499+23])
+                        Pexp_apply
+                        expression (src/slr.ml[53,2499+10]..[53,2499+21])
+                          Pexp_ident "Lr0.closure" (src/slr.ml[53,2499+10]..[53,2499+21])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/slr.ml[53,2499+22]..[53,2499+23])
+                              Pexp_ident "s" (src/slr.ml[53,2499+22]..[53,2499+23])
+                        ]
+                  ]
+                  expression (src/slr.ml[60,2817+2]..[65,3044+20])
+                    Pexp_apply
+                    expression (src/slr.ml[60,2817+2]..[60,2817+15])
+                      Pexp_ident "Item.Map.fold" (src/slr.ml[60,2817+2]..[60,2817+15])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[60,2817+16]..[65,3044+3])
+                          Pexp_fun
+                          Nolabel
+                          None
+                          pattern (src/slr.ml[60,2817+21]..[60,2817+25])
+                            Ppat_var "item" (src/slr.ml[60,2817+21]..[60,2817+25])
+                          expression (src/slr.ml[60,2817+26]..[64,3007+36]) ghost
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/slr.ml[60,2817+26]..[60,2817+30])
+                              Ppat_var "toks" (src/slr.ml[60,2817+26]..[60,2817+30])
+                            expression (src/slr.ml[60,2817+31]..[64,3007+36]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/slr.ml[60,2817+31]..[60,2817+35])
+                                Ppat_var "accu" (src/slr.ml[60,2817+31]..[60,2817+35])
+                              expression (src/slr.ml[61,2856+4]..[64,3007+36])
+                                Pexp_let Nonrec
+                                [
+                                  <def>
+                                    pattern (src/slr.ml[61,2856+8]..[61,2856+22])
+                                      Ppat_tuple
+                                      [
+                                        pattern (src/slr.ml[61,2856+8]..[61,2856+9])
+                                          Ppat_any
+                                        pattern (src/slr.ml[61,2856+11]..[61,2856+13])
+                                          Ppat_var "nt" (src/slr.ml[61,2856+11]..[61,2856+13])
+                                        pattern (src/slr.ml[61,2856+15]..[61,2856+16])
+                                          Ppat_any
+                                        pattern (src/slr.ml[61,2856+18]..[61,2856+19])
+                                          Ppat_any
+                                        pattern (src/slr.ml[61,2856+21]..[61,2856+22])
+                                          Ppat_any
+                                      ]
+                                    expression (src/slr.ml[61,2856+25]..[61,2856+38])
+                                      Pexp_apply
+                                      expression (src/slr.ml[61,2856+25]..[61,2856+33])
+                                        Pexp_ident "Item.def" (src/slr.ml[61,2856+25]..[61,2856+33])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/slr.ml[61,2856+34]..[61,2856+38])
+                                            Pexp_ident "item" (src/slr.ml[61,2856+34]..[61,2856+38])
+                                      ]
+                                ]
+                                expression (src/slr.ml[62,2898+4]..[64,3007+36])
+                                  Pexp_let Nonrec
+                                  [
+                                    <def>
+                                      pattern (src/slr.ml[62,2898+8]..[62,2898+17])
+                                        Ppat_var "follow_nt" (src/slr.ml[62,2898+8]..[62,2898+17])
+                                      expression (src/slr.ml[62,2898+20]..[62,2898+38])
+                                        Pexp_apply
+                                        expression (src/slr.ml[62,2898+20]..[62,2898+35])
+                                          Pexp_ident "Analysis.follow" (src/slr.ml[62,2898+20]..[62,2898+35])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/slr.ml[62,2898+36]..[62,2898+38])
+                                              Pexp_ident "nt" (src/slr.ml[62,2898+36]..[62,2898+38])
+                                        ]
+                                  ]
+                                  expression (src/slr.ml[63,2940+4]..[64,3007+36])
+                                    Pexp_sequence
+                                    expression (src/slr.ml[63,2940+4]..[63,2940+46])
+                                      Pexp_assert
+                                      expression (src/slr.ml[63,2940+11]..[63,2940+46])
+                                        Pexp_apply
+                                        expression (src/slr.ml[63,2940+12]..[63,2940+30])
+                                          Pexp_ident "TerminalSet.subset" (src/slr.ml[63,2940+12]..[63,2940+30])
+                                        [
+                                          <arg>
+                                          Nolabel
+                                            expression (src/slr.ml[63,2940+31]..[63,2940+35])
+                                              Pexp_ident "toks" (src/slr.ml[63,2940+31]..[63,2940+35])
+                                          <arg>
+                                          Nolabel
+                                            expression (src/slr.ml[63,2940+36]..[63,2940+45])
+                                              Pexp_ident "follow_nt" (src/slr.ml[63,2940+36]..[63,2940+45])
+                                        ]
+                                    expression (src/slr.ml[64,3007+4]..[64,3007+36])
+                                      Pexp_apply
+                                      expression (src/slr.ml[64,3007+4]..[64,3007+16])
+                                        Pexp_ident "Item.Map.add" (src/slr.ml[64,3007+4]..[64,3007+16])
+                                      [
+                                        <arg>
+                                        Nolabel
+                                          expression (src/slr.ml[64,3007+17]..[64,3007+21])
+                                            Pexp_ident "item" (src/slr.ml[64,3007+17]..[64,3007+21])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/slr.ml[64,3007+22]..[64,3007+31])
+                                            Pexp_ident "follow_nt" (src/slr.ml[64,3007+22]..[64,3007+31])
+                                        <arg>
+                                        Nolabel
+                                          expression (src/slr.ml[64,3007+32]..[64,3007+36])
+                                            Pexp_ident "accu" (src/slr.ml[64,3007+32]..[64,3007+36])
+                                      ]
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[65,3044+4]..[65,3044+5])
+                          Pexp_ident "s" (src/slr.ml[65,3044+4]..[65,3044+5])
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[65,3044+6]..[65,3044+20])
+                          Pexp_ident "Item.Map.empty" (src/slr.ml[65,3044+6]..[65,3044+20])
+                    ]
+            core_type (src/slr.ml[32,1618+36]..[32,1618+56])
+              Ptyp_constr "Lr0.concretelr1state" (src/slr.ml[32,1618+36]..[32,1618+56])
+              []
+    ]
+  structure_item (src/slr.ml[70,3220+0]..[77,3496+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[70,3220+4]..[70,3220+14])
+          Ppat_var "reductions" (src/slr.ml[70,3220+4]..[70,3220+14])
+        expression (src/slr.ml[70,3220+15]..[77,3496+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[70,3220+15]..[70,3220+41])
+            Ppat_constraint
+            pattern (src/slr.ml[70,3220+16]..[70,3220+17])
+              Ppat_var "s" (src/slr.ml[70,3220+16]..[70,3220+17])
+            core_type (src/slr.ml[70,3220+20]..[70,3220+40])
+              Ptyp_constr "Lr0.concretelr1state" (src/slr.ml[70,3220+20]..[70,3220+40])
+              []
+          expression (src/slr.ml[70,3220+42]..[77,3496+23])
+            Pexp_constraint
+            expression (src/slr.ml[71,3302+2]..[77,3496+23])
+              Pexp_apply
+              expression (src/slr.ml[71,3302+2]..[71,3302+15])
+                Pexp_ident "Item.Map.fold" (src/slr.ml[71,3302+2]..[71,3302+15])
+              [
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[71,3302+16]..[77,3496+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/slr.ml[71,3302+21]..[71,3302+25])
+                      Ppat_var "item" (src/slr.ml[71,3302+21]..[71,3302+25])
+                    expression (src/slr.ml[71,3302+26]..[76,3477+18]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/slr.ml[71,3302+26]..[71,3302+30])
+                        Ppat_var "toks" (src/slr.ml[71,3302+26]..[71,3302+30])
+                      expression (src/slr.ml[71,3302+31]..[76,3477+18]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/slr.ml[71,3302+31]..[71,3302+41])
+                          Ppat_var "reductions" (src/slr.ml[71,3302+31]..[71,3302+41])
+                        expression (src/slr.ml[72,3347+4]..[76,3477+18])
+                          Pexp_match
+                          expression (src/slr.ml[72,3347+10]..[72,3347+28])
+                            Pexp_apply
+                            expression (src/slr.ml[72,3347+10]..[72,3347+23])
+                              Pexp_ident "Item.classify" (src/slr.ml[72,3347+10]..[72,3347+23])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/slr.ml[72,3347+24]..[72,3347+28])
+                                  Pexp_ident "item" (src/slr.ml[72,3347+24]..[72,3347+28])
+                            ]
+                          [
+                            <case>
+                              pattern (src/slr.ml[73,3381+6]..[73,3381+22])
+                                Ppat_construct "Item.Reduce" (src/slr.ml[73,3381+6]..[73,3381+17])
+                                Some
+                                  []
+                                  pattern (src/slr.ml[73,3381+18]..[73,3381+22])
+                                    Ppat_var "prod" (src/slr.ml[73,3381+18]..[73,3381+22])
+                              expression (src/slr.ml[74,3407+8]..[74,3407+47])
+                                Pexp_apply
+                                expression (src/slr.ml[74,3407+8]..[74,3407+26])
+                                  Pexp_ident "Lr0.add_reductions" (src/slr.ml[74,3407+8]..[74,3407+26])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/slr.ml[74,3407+27]..[74,3407+31])
+                                      Pexp_ident "prod" (src/slr.ml[74,3407+27]..[74,3407+31])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/slr.ml[74,3407+32]..[74,3407+36])
+                                      Pexp_ident "toks" (src/slr.ml[74,3407+32]..[74,3407+36])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/slr.ml[74,3407+37]..[74,3407+47])
+                                      Pexp_ident "reductions" (src/slr.ml[74,3407+37]..[74,3407+47])
+                                ]
+                            <case>
+                              pattern (src/slr.ml[75,3455+6]..[75,3455+18])
+                                Ppat_construct "Item.Shift" (src/slr.ml[75,3455+6]..[75,3455+16])
+                                Some
+                                  []
+                                  pattern (src/slr.ml[75,3455+17]..[75,3455+18])
+                                    Ppat_any
+                              expression (src/slr.ml[76,3477+8]..[76,3477+18])
+                                Pexp_ident "reductions" (src/slr.ml[76,3477+8]..[76,3477+18])
+                          ]
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[77,3496+4]..[77,3496+5])
+                    Pexp_ident "s" (src/slr.ml[77,3496+4]..[77,3496+5])
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[77,3496+6]..[77,3496+23])
+                    Pexp_ident "TerminalMap.empty" (src/slr.ml[77,3496+6]..[77,3496+23])
+              ]
+            core_type (src/slr.ml[70,3220+44]..[70,3220+79])
+              Ptyp_constr "TerminalMap.t" (src/slr.ml[70,3220+66]..[70,3220+79])
+              [
+                core_type (src/slr.ml[70,3220+44]..[70,3220+65])
+                  Ptyp_constr "list" (src/slr.ml[70,3220+61]..[70,3220+65])
+                  [
+                    core_type (src/slr.ml[70,3220+44]..[70,3220+60])
+                      Ptyp_constr "Production.index" (src/slr.ml[70,3220+44]..[70,3220+60])
+                      []
+                  ]
+              ]
+    ]
+  structure_item (src/slr.ml[82,3610+0]..[90,3902+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[82,3610+4]..[82,3610+15])
+          Ppat_var "transitions" (src/slr.ml[82,3610+4]..[82,3610+15])
+        expression (src/slr.ml[82,3610+16]..[90,3902+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[82,3610+16]..[82,3610+42])
+            Ppat_constraint
+            pattern (src/slr.ml[82,3610+17]..[82,3610+18])
+              Ppat_var "s" (src/slr.ml[82,3610+17]..[82,3610+18])
+            core_type (src/slr.ml[82,3610+21]..[82,3610+41])
+              Ptyp_constr "Lr0.concretelr1state" (src/slr.ml[82,3610+21]..[82,3610+41])
+              []
+          expression (src/slr.ml[82,3610+43]..[90,3902+23])
+            Pexp_constraint
+            expression (src/slr.ml[83,3671+2]..[90,3902+23])
+              Pexp_apply
+              expression (src/slr.ml[83,3671+2]..[83,3671+15])
+                Pexp_ident "Item.Map.fold" (src/slr.ml[83,3671+2]..[83,3671+15])
+              [
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[83,3671+16]..[90,3902+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/slr.ml[83,3671+21]..[83,3671+25])
+                      Ppat_var "item" (src/slr.ml[83,3671+21]..[83,3671+25])
+                    expression (src/slr.ml[83,3671+26]..[89,3882+19]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/slr.ml[83,3671+26]..[83,3671+27])
+                        Ppat_any
+                      expression (src/slr.ml[83,3671+28]..[89,3882+19]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/slr.ml[83,3671+28]..[83,3671+39])
+                          Ppat_var "transitions" (src/slr.ml[83,3671+28]..[83,3671+39])
+                        expression (src/slr.ml[84,3714+4]..[89,3882+19])
+                          Pexp_match
+                          expression (src/slr.ml[84,3714+10]..[84,3714+28])
+                            Pexp_apply
+                            expression (src/slr.ml[84,3714+10]..[84,3714+23])
+                              Pexp_ident "Item.classify" (src/slr.ml[84,3714+10]..[84,3714+23])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/slr.ml[84,3714+24]..[84,3714+28])
+                                  Pexp_ident "item" (src/slr.ml[84,3714+24]..[84,3714+28])
+                            ]
+                          [
+                            <case>
+                              pattern (src/slr.ml[85,3748+6]..[85,3748+34])
+                                Ppat_construct "Item.Shift" (src/slr.ml[85,3748+6]..[85,3748+16])
+                                Some
+                                  []
+                                  pattern (src/slr.ml[85,3748+17]..[85,3748+34])
+                                    Ppat_tuple
+                                    [
+                                      pattern (src/slr.ml[85,3748+18]..[85,3748+30])
+                                        Ppat_construct "Symbol.T" (src/slr.ml[85,3748+18]..[85,3748+26])
+                                        Some
+                                          []
+                                          pattern (src/slr.ml[85,3748+27]..[85,3748+30])
+                                            Ppat_var "tok" (src/slr.ml[85,3748+27]..[85,3748+30])
+                                      pattern (src/slr.ml[85,3748+32]..[85,3748+33])
+                                        Ppat_any
+                                    ]
+                              expression (src/slr.ml[86,3786+8]..[86,3786+39])
+                                Pexp_apply
+                                expression (src/slr.ml[86,3786+8]..[86,3786+23])
+                                  Pexp_ident "TerminalSet.add" (src/slr.ml[86,3786+8]..[86,3786+23])
+                                [
+                                  <arg>
+                                  Nolabel
+                                    expression (src/slr.ml[86,3786+24]..[86,3786+27])
+                                      Pexp_ident "tok" (src/slr.ml[86,3786+24]..[86,3786+27])
+                                  <arg>
+                                  Nolabel
+                                    expression (src/slr.ml[86,3786+28]..[86,3786+39])
+                                      Pexp_ident "transitions" (src/slr.ml[86,3786+28]..[86,3786+39])
+                                ]
+                            <case>
+                              pattern (src/slr.ml[87,3826+6]..[88,3859+19])
+                                Ppat_or
+                                pattern (src/slr.ml[87,3826+6]..[87,3826+32])
+                                  Ppat_construct "Item.Shift" (src/slr.ml[87,3826+6]..[87,3826+16])
+                                  Some
+                                    []
+                                    pattern (src/slr.ml[87,3826+17]..[87,3826+32])
+                                      Ppat_tuple
+                                      [
+                                        pattern (src/slr.ml[87,3826+18]..[87,3826+28])
+                                          Ppat_construct "Symbol.N" (src/slr.ml[87,3826+18]..[87,3826+26])
+                                          Some
+                                            []
+                                            pattern (src/slr.ml[87,3826+27]..[87,3826+28])
+                                              Ppat_any
+                                        pattern (src/slr.ml[87,3826+30]..[87,3826+31])
+                                          Ppat_any
+                                      ]
+                                pattern (src/slr.ml[88,3859+6]..[88,3859+19])
+                                  Ppat_construct "Item.Reduce" (src/slr.ml[88,3859+6]..[88,3859+17])
+                                  Some
+                                    []
+                                    pattern (src/slr.ml[88,3859+18]..[88,3859+19])
+                                      Ppat_any
+                              expression (src/slr.ml[89,3882+8]..[89,3882+19])
+                                Pexp_ident "transitions" (src/slr.ml[89,3882+8]..[89,3882+19])
+                          ]
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[90,3902+4]..[90,3902+5])
+                    Pexp_ident "s" (src/slr.ml[90,3902+4]..[90,3902+5])
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[90,3902+6]..[90,3902+23])
+                    Pexp_ident "TerminalSet.empty" (src/slr.ml[90,3902+6]..[90,3902+23])
+              ]
+            core_type (src/slr.ml[82,3610+45]..[82,3610+58])
+              Ptyp_constr "TerminalSet.t" (src/slr.ml[82,3610+45]..[82,3610+58])
+              []
+    ]
+  structure_item (src/slr.ml[95,4016+0]..[98,4135+23])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[95,4016+4]..[95,4016+10])
+          Ppat_var "domain" (src/slr.ml[95,4016+4]..[95,4016+10])
+        expression (src/slr.ml[95,4016+11]..[98,4135+23]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[95,4016+11]..[95,4016+33])
+            Ppat_constraint
+            pattern (src/slr.ml[95,4016+12]..[95,4016+13])
+              Ppat_var "m" (src/slr.ml[95,4016+12]..[95,4016+13])
+            core_type (src/slr.ml[95,4016+16]..[95,4016+32])
+              Ptyp_constr "TerminalMap.t" (src/slr.ml[95,4016+19]..[95,4016+32])
+              [
+                core_type (src/slr.ml[95,4016+16]..[95,4016+18])
+                  Ptyp_var a
+              ]
+          expression (src/slr.ml[95,4016+34]..[98,4135+23])
+            Pexp_constraint
+            expression (src/slr.ml[96,4068+2]..[98,4135+23])
+              Pexp_apply
+              expression (src/slr.ml[96,4068+2]..[96,4068+18])
+                Pexp_ident "TerminalMap.fold" (src/slr.ml[96,4068+2]..[96,4068+18])
+              [
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[96,4068+19]..[98,4135+3])
+                    Pexp_fun
+                    Nolabel
+                    None
+                    pattern (src/slr.ml[96,4068+24]..[96,4068+27])
+                      Ppat_var "tok" (src/slr.ml[96,4068+24]..[96,4068+27])
+                    expression (src/slr.ml[96,4068+28]..[97,4106+28]) ghost
+                      Pexp_fun
+                      Nolabel
+                      None
+                      pattern (src/slr.ml[96,4068+28]..[96,4068+29])
+                        Ppat_any
+                      expression (src/slr.ml[96,4068+30]..[97,4106+28]) ghost
+                        Pexp_fun
+                        Nolabel
+                        None
+                        pattern (src/slr.ml[96,4068+30]..[96,4068+34])
+                          Ppat_var "accu" (src/slr.ml[96,4068+30]..[96,4068+34])
+                        expression (src/slr.ml[97,4106+4]..[97,4106+28])
+                          Pexp_apply
+                          expression (src/slr.ml[97,4106+4]..[97,4106+19])
+                            Pexp_ident "TerminalSet.add" (src/slr.ml[97,4106+4]..[97,4106+19])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[97,4106+20]..[97,4106+23])
+                                Pexp_ident "tok" (src/slr.ml[97,4106+20]..[97,4106+23])
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[97,4106+24]..[97,4106+28])
+                                Pexp_ident "accu" (src/slr.ml[97,4106+24]..[97,4106+28])
+                          ]
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[98,4135+4]..[98,4135+5])
+                    Pexp_ident "m" (src/slr.ml[98,4135+4]..[98,4135+5])
+                <arg>
+                Nolabel
+                  expression (src/slr.ml[98,4135+6]..[98,4135+23])
+                    Pexp_ident "TerminalSet.empty" (src/slr.ml[98,4135+6]..[98,4135+23])
+              ]
+            core_type (src/slr.ml[95,4016+36]..[95,4016+49])
+              Ptyp_constr "TerminalSet.t" (src/slr.ml[95,4016+36]..[95,4016+49])
+              []
+    ]
+  structure_item (src/slr.ml[103,4251+0]..[121,4657+19])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[103,4251+4]..[103,4251+15])
+          Ppat_var "state_is_ok" (src/slr.ml[103,4251+4]..[103,4251+15])
+        expression (src/slr.ml[103,4251+16]..[121,4657+19]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[103,4251+16]..[103,4251+42])
+            Ppat_constraint
+            pattern (src/slr.ml[103,4251+17]..[103,4251+18])
+              Ppat_var "s" (src/slr.ml[103,4251+17]..[103,4251+18])
+            core_type (src/slr.ml[103,4251+21]..[103,4251+41])
+              Ptyp_constr "Lr0.concretelr1state" (src/slr.ml[103,4251+21]..[103,4251+41])
+              []
+          expression (src/slr.ml[103,4251+43]..[121,4657+19])
+            Pexp_constraint
+            expression (src/slr.ml[105,4304+2]..[121,4657+19])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/slr.ml[105,4304+6]..[105,4304+16])
+                    Ppat_var "reductions" (src/slr.ml[105,4304+6]..[105,4304+16])
+                  expression (src/slr.ml[105,4304+19]..[105,4304+31])
+                    Pexp_apply
+                    expression (src/slr.ml[105,4304+19]..[105,4304+29])
+                      Pexp_ident "reductions" (src/slr.ml[105,4304+19]..[105,4304+29])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[105,4304+30]..[105,4304+31])
+                          Pexp_ident "s" (src/slr.ml[105,4304+30]..[105,4304+31])
+                    ]
+                <def>
+                  pattern (src/slr.ml[106,4336+6]..[106,4336+17])
+                    Ppat_var "transitions" (src/slr.ml[106,4336+6]..[106,4336+17])
+                  expression (src/slr.ml[106,4336+20]..[106,4336+33])
+                    Pexp_apply
+                    expression (src/slr.ml[106,4336+20]..[106,4336+31])
+                      Pexp_ident "transitions" (src/slr.ml[106,4336+20]..[106,4336+31])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[106,4336+32]..[106,4336+33])
+                          Pexp_ident "s" (src/slr.ml[106,4336+32]..[106,4336+33])
+                    ]
+              ]
+              expression (src/slr.ml[110,4417+2]..[121,4657+19])
+                Pexp_apply
+                expression (src/slr.ml[110,4417+55]..[110,4417+57])
+                  Pexp_ident "&&" (src/slr.ml[110,4417+55]..[110,4417+57])
+                [
+                  <arg>
+                  Nolabel
+                    expression (src/slr.ml[110,4417+2]..[110,4417+54])
+                      Pexp_apply
+                      expression (src/slr.ml[110,4417+2]..[110,4417+22])
+                        Pexp_ident "TerminalSet.disjoint" (src/slr.ml[110,4417+2]..[110,4417+22])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[110,4417+23]..[110,4417+34])
+                            Pexp_ident "transitions" (src/slr.ml[110,4417+23]..[110,4417+34])
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[110,4417+35]..[110,4417+54])
+                            Pexp_apply
+                            expression (src/slr.ml[110,4417+36]..[110,4417+42])
+                              Pexp_ident "domain" (src/slr.ml[110,4417+36]..[110,4417+42])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/slr.ml[110,4417+43]..[110,4417+53])
+                                  Pexp_ident "reductions" (src/slr.ml[110,4417+43]..[110,4417+53])
+                            ]
+                      ]
+                  <arg>
+                  Nolabel
+                    expression (src/slr.ml[114,4520+2]..[121,4657+19])
+                      Pexp_apply
+                      expression (src/slr.ml[114,4520+2]..[114,4520+18])
+                        Pexp_ident "TerminalMap.fold" (src/slr.ml[114,4520+2]..[114,4520+18])
+                      [
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[114,4520+19]..[121,4657+3])
+                            Pexp_fun
+                            Nolabel
+                            None
+                            pattern (src/slr.ml[114,4520+24]..[114,4520+25])
+                              Ppat_any
+                            expression (src/slr.ml[114,4520+26]..[120,4643+13]) ghost
+                              Pexp_fun
+                              Nolabel
+                              None
+                              pattern (src/slr.ml[114,4520+26]..[114,4520+31])
+                                Ppat_var "prods" (src/slr.ml[114,4520+26]..[114,4520+31])
+                              expression (src/slr.ml[114,4520+32]..[120,4643+13]) ghost
+                                Pexp_fun
+                                Nolabel
+                                None
+                                pattern (src/slr.ml[114,4520+32]..[114,4520+34])
+                                  Ppat_var "ok" (src/slr.ml[114,4520+32]..[114,4520+34])
+                                expression (src/slr.ml[115,4558+4]..[120,4643+13])
+                                  Pexp_apply
+                                  expression (src/slr.ml[115,4558+7]..[115,4558+9])
+                                    Pexp_ident "&&" (src/slr.ml[115,4558+7]..[115,4558+9])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/slr.ml[115,4558+4]..[115,4558+6])
+                                        Pexp_ident "ok" (src/slr.ml[115,4558+4]..[115,4558+6])
+                                    <arg>
+                                    Nolabel
+                                      expression (src/slr.ml[115,4558+10]..[120,4643+13])
+                                        Pexp_match
+                                        expression (src/slr.ml[115,4558+16]..[115,4558+21])
+                                          Pexp_ident "prods" (src/slr.ml[115,4558+16]..[115,4558+21])
+                                        [
+                                          <case>
+                                            pattern (src/slr.ml[116,4585+6]..[117,4594+11])
+                                              Ppat_or
+                                              pattern (src/slr.ml[116,4585+6]..[116,4585+8])
+                                                Ppat_construct "[]" (src/slr.ml[116,4585+6]..[116,4585+8])
+                                                None
+                                              pattern (src/slr.ml[117,4594+6]..[117,4594+11])
+                                                Ppat_construct "::" (src/slr.ml[117,4594+8]..[117,4594+11]) ghost
+                                                Some
+                                                  []
+                                                  pattern (src/slr.ml[117,4594+8]..[117,4594+11]) ghost
+                                                    Ppat_tuple
+                                                    [
+                                                      pattern (src/slr.ml[117,4594+8]..[117,4594+9])
+                                                        Ppat_any
+                                                      pattern (src/slr.ml[117,4594+10]..[117,4594+11]) ghost
+                                                        Ppat_construct "[]" (src/slr.ml[117,4594+10]..[117,4594+11]) ghost
+                                                        None
+                                                    ]
+                                            expression (src/slr.ml[118,4609+8]..[118,4609+12])
+                                              Pexp_construct "true" (src/slr.ml[118,4609+8]..[118,4609+12])
+                                              None
+                                          <case>
+                                            pattern (src/slr.ml[119,4622+6]..[119,4622+17])
+                                              Ppat_construct "::" (src/slr.ml[119,4622+8]..[119,4622+10])
+                                              Some
+                                                []
+                                                pattern (src/slr.ml[119,4622+6]..[119,4622+17]) ghost
+                                                  Ppat_tuple
+                                                  [
+                                                    pattern (src/slr.ml[119,4622+6]..[119,4622+7])
+                                                      Ppat_any
+                                                    pattern (src/slr.ml[119,4622+11]..[119,4622+17])
+                                                      Ppat_construct "::" (src/slr.ml[119,4622+13]..[119,4622+15])
+                                                      Some
+                                                        []
+                                                        pattern (src/slr.ml[119,4622+11]..[119,4622+17]) ghost
+                                                          Ppat_tuple
+                                                          [
+                                                            pattern (src/slr.ml[119,4622+11]..[119,4622+12])
+                                                              Ppat_any
+                                                            pattern (src/slr.ml[119,4622+16]..[119,4622+17])
+                                                              Ppat_any
+                                                          ]
+                                                  ]
+                                            expression (src/slr.ml[120,4643+8]..[120,4643+13])
+                                              Pexp_construct "false" (src/slr.ml[120,4643+8]..[120,4643+13])
+                                              None
+                                        ]
+                                  ]
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[121,4657+4]..[121,4657+14])
+                            Pexp_ident "reductions" (src/slr.ml[121,4657+4]..[121,4657+14])
+                        <arg>
+                        Nolabel
+                          expression (src/slr.ml[121,4657+15]..[121,4657+19])
+                            Pexp_construct "true" (src/slr.ml[121,4657+15]..[121,4657+19])
+                            None
+                      ]
+                ]
+            core_type (src/slr.ml[103,4251+45]..[103,4251+49])
+              Ptyp_constr "bool" (src/slr.ml[103,4251+45]..[103,4251+49])
+              []
+    ]
+  structure_item (src/slr.ml[126,4785+0]..[142,5147+8])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[126,4785+4]..[126,4785+24])
+          Ppat_var "count_slr_violations" (src/slr.ml[126,4785+4]..[126,4785+24])
+        expression (src/slr.ml[126,4785+25]..[142,5147+8]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[126,4785+25]..[126,4785+27])
+            Ppat_construct "()" (src/slr.ml[126,4785+25]..[126,4785+27])
+            None
+          expression (src/slr.ml[126,4785+28]..[142,5147+8])
+            Pexp_constraint
+            expression (src/slr.ml[128,4822+2]..[142,5147+8])
+              Pexp_let Nonrec
+              [
+                <def>
+                  pattern (src/slr.ml[128,4822+6]..[128,4822+11])
+                    Ppat_var "count" (src/slr.ml[128,4822+6]..[128,4822+11])
+                  expression (src/slr.ml[128,4822+14]..[128,4822+19])
+                    Pexp_apply
+                    expression (src/slr.ml[128,4822+14]..[128,4822+17])
+                      Pexp_ident "ref" (src/slr.ml[128,4822+14]..[128,4822+17])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[128,4822+18]..[128,4822+19])
+                          Pexp_constant PConst_int (0,None)
+                    ]
+              ]
+              expression (src/slr.ml[130,4846+2]..[142,5147+8])
+                Pexp_sequence
+                expression (src/slr.ml[130,4846+2]..[140,5138+6])
+                  Pexp_for Up
+                  pattern (src/slr.ml[130,4846+6]..[130,4846+7])
+                    Ppat_var "s" (src/slr.ml[130,4846+6]..[130,4846+7])
+                  expression (src/slr.ml[130,4846+10]..[130,4846+11])
+                    Pexp_constant PConst_int (0,None)
+                  expression (src/slr.ml[130,4846+15]..[130,4846+24])
+                    Pexp_apply
+                    expression (src/slr.ml[130,4846+21]..[130,4846+22])
+                      Pexp_ident "-" (src/slr.ml[130,4846+21]..[130,4846+22])
+                    [
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[130,4846+15]..[130,4846+20])
+                          Pexp_ident "Lr0.n" (src/slr.ml[130,4846+15]..[130,4846+20])
+                      <arg>
+                      Nolabel
+                        expression (src/slr.ml[130,4846+23]..[130,4846+24])
+                          Pexp_constant PConst_int (1,None)
+                    ]
+                  expression (src/slr.ml[131,4874+4]..[139,5130+7])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/slr.ml[131,4874+8]..[131,4874+9])
+                          Ppat_var "s" (src/slr.ml[131,4874+8]..[131,4874+9])
+                        expression (src/slr.ml[131,4874+12]..[131,4874+28])
+                          Pexp_apply
+                          expression (src/slr.ml[131,4874+12]..[131,4874+26])
+                            Pexp_ident "make_slr_state" (src/slr.ml[131,4874+12]..[131,4874+26])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[131,4874+27]..[131,4874+28])
+                                Pexp_ident "s" (src/slr.ml[131,4874+27]..[131,4874+28])
+                          ]
+                    ]
+                    expression (src/slr.ml[132,4906+4]..[139,5130+7])
+                      Pexp_ifthenelse
+                      expression (src/slr.ml[132,4906+7]..[132,4906+26])
+                        Pexp_apply
+                        expression (src/slr.ml[132,4906+7]..[132,4906+10])
+                          Pexp_ident "not" (src/slr.ml[132,4906+7]..[132,4906+10])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/slr.ml[132,4906+11]..[132,4906+26])
+                              Pexp_apply
+                              expression (src/slr.ml[132,4906+12]..[132,4906+23])
+                                Pexp_ident "state_is_ok" (src/slr.ml[132,4906+12]..[132,4906+23])
+                              [
+                                <arg>
+                                Nolabel
+                                  expression (src/slr.ml[132,4906+24]..[132,4906+25])
+                                    Pexp_ident "s" (src/slr.ml[132,4906+24]..[132,4906+25])
+                              ]
+                        ]
+                      expression (src/slr.ml[132,4906+32]..[139,5130+7])
+                        Pexp_sequence
+                        expression (src/slr.ml[133,4944+6]..[133,4944+16])
+                          Pexp_apply
+                          expression (src/slr.ml[133,4944+6]..[133,4944+10])
+                            Pexp_ident "incr" (src/slr.ml[133,4944+6]..[133,4944+10])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[133,4944+11]..[133,4944+16])
+                                Pexp_ident "count" (src/slr.ml[133,4944+11]..[133,4944+16])
+                          ]
+                        expression (src/slr.ml[134,4962+6]..[138,5094+35])
+                          Pexp_ifthenelse
+                          expression (src/slr.ml[134,4962+9]..[134,4962+27])
+                            Pexp_ident "tell_me_everything" (src/slr.ml[134,4962+9]..[134,4962+27])
+                          expression (src/slr.ml[135,4995+8]..[138,5094+35])
+                            Pexp_apply
+                            expression (src/slr.ml[135,4995+8]..[135,4995+22])
+                              Pexp_ident "Printf.fprintf" (src/slr.ml[135,4995+8]..[135,4995+22])
+                            [
+                              <arg>
+                              Nolabel
+                                expression (src/slr.ml[136,5018+10]..[136,5018+16])
+                                  Pexp_ident "stderr" (src/slr.ml[136,5018+10]..[136,5018+16])
+                              <arg>
+                              Nolabel
+                                expression (src/slr.ml[137,5035+10]..[137,5035+58])
+                                  Pexp_constant PConst_string("The following SLR(1) state has a conflict:\n%s",(src/slr.ml[137,5035+11]..[137,5035+57]),None)
+                              <arg>
+                              Nolabel
+                                expression (src/slr.ml[138,5094+10]..[138,5094+35])
+                                  Pexp_apply
+                                  expression (src/slr.ml[138,5094+11]..[138,5094+29])
+                                    Pexp_ident "Lr0.print_concrete" (src/slr.ml[138,5094+11]..[138,5094+29])
+                                  [
+                                    <arg>
+                                    Nolabel
+                                      expression (src/slr.ml[138,5094+30]..[138,5094+32])
+                                        Pexp_constant PConst_string("",(src/slr.ml[138,5094+31]..[138,5094+31]),None)
+                                    <arg>
+                                    Nolabel
+                                      expression (src/slr.ml[138,5094+33]..[138,5094+34])
+                                        Pexp_ident "s" (src/slr.ml[138,5094+33]..[138,5094+34])
+                                  ]
+                            ]
+                          None
+                      None
+                expression (src/slr.ml[142,5147+2]..[142,5147+8])
+                  Pexp_apply
+                  expression (src/slr.ml[142,5147+2]..[142,5147+3])
+                    Pexp_ident "!" (src/slr.ml[142,5147+2]..[142,5147+3])
+                  [
+                    <arg>
+                    Nolabel
+                      expression (src/slr.ml[142,5147+3]..[142,5147+8])
+                        Pexp_ident "count" (src/slr.ml[142,5147+3]..[142,5147+8])
+                  ]
+            core_type (src/slr.ml[126,4785+30]..[126,4785+33])
+              Ptyp_constr "int" (src/slr.ml[126,4785+30]..[126,4785+33])
+              []
+    ]
+  structure_item (src/slr.ml[146,5220+0]..[153,5472+3])
+    Pstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[146,5220+4]..[146,5220+9])
+          Ppat_var "check" (src/slr.ml[146,5220+4]..[146,5220+9])
+        expression (src/slr.ml[146,5220+10]..[153,5472+3]) ghost
+          Pexp_fun
+          Nolabel
+          None
+          pattern (src/slr.ml[146,5220+10]..[146,5220+12])
+            Ppat_construct "()" (src/slr.ml[146,5220+10]..[146,5220+12])
+            None
+          expression (src/slr.ml[147,5235+2]..[153,5472+3])
+            Pexp_apply
+            expression (src/slr.ml[147,5235+2]..[147,5235+12])
+              Pexp_ident "Error.logG" (src/slr.ml[147,5235+2]..[147,5235+12])
+            [
+              <arg>
+              Nolabel
+                expression (src/slr.ml[147,5235+13]..[147,5235+14])
+                  Pexp_constant PConst_int (1,None)
+              <arg>
+              Nolabel
+                expression (src/slr.ml[147,5235+15]..[153,5472+3])
+                  Pexp_fun
+                  Nolabel
+                  None
+                  pattern (src/slr.ml[147,5235+20]..[147,5235+21])
+                    Ppat_var "f" (src/slr.ml[147,5235+20]..[147,5235+21])
+                  expression (src/slr.ml[148,5260+4]..[152,5383+88])
+                    Pexp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/slr.ml[148,5260+8]..[148,5260+13])
+                          Ppat_var "count" (src/slr.ml[148,5260+8]..[148,5260+13])
+                        expression (src/slr.ml[148,5260+16]..[148,5260+38])
+                          Pexp_apply
+                          expression (src/slr.ml[148,5260+16]..[148,5260+36])
+                            Pexp_ident "count_slr_violations" (src/slr.ml[148,5260+16]..[148,5260+36])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[148,5260+36]..[148,5260+38])
+                                Pexp_construct "()" (src/slr.ml[148,5260+36]..[148,5260+38])
+                                None
+                          ]
+                    ]
+                    expression (src/slr.ml[149,5302+4]..[152,5383+88])
+                      Pexp_ifthenelse
+                      expression (src/slr.ml[149,5302+7]..[149,5302+16])
+                        Pexp_apply
+                        expression (src/slr.ml[149,5302+13]..[149,5302+14])
+                          Pexp_ident "=" (src/slr.ml[149,5302+13]..[149,5302+14])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/slr.ml[149,5302+7]..[149,5302+12])
+                              Pexp_ident "count" (src/slr.ml[149,5302+7]..[149,5302+12])
+                          <arg>
+                          Nolabel
+                            expression (src/slr.ml[149,5302+15]..[149,5302+16])
+                              Pexp_constant PConst_int (0,None)
+                        ]
+                      expression (src/slr.ml[150,5324+6]..[150,5324+49])
+                        Pexp_apply
+                        expression (src/slr.ml[150,5324+6]..[150,5324+20])
+                          Pexp_ident "Printf.fprintf" (src/slr.ml[150,5324+6]..[150,5324+20])
+                        [
+                          <arg>
+                          Nolabel
+                            expression (src/slr.ml[150,5324+21]..[150,5324+22])
+                              Pexp_ident "f" (src/slr.ml[150,5324+21]..[150,5324+22])
+                          <arg>
+                          Nolabel
+                            expression (src/slr.ml[150,5324+23]..[150,5324+49])
+                              Pexp_constant PConst_string("The grammar is SLR(1).\n",(src/slr.ml[150,5324+24]..[150,5324+48]),None)
+                        ]
+                      Some
+                        expression (src/slr.ml[152,5383+6]..[152,5383+88])
+                          Pexp_apply
+                          expression (src/slr.ml[152,5383+6]..[152,5383+20])
+                            Pexp_ident "Printf.fprintf" (src/slr.ml[152,5383+6]..[152,5383+20])
+                          [
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[152,5383+21]..[152,5383+22])
+                                Pexp_ident "f" (src/slr.ml[152,5383+21]..[152,5383+22])
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[152,5383+23]..[152,5383+82])
+                                Pexp_constant PConst_string("The grammar is not SLR(1) -- %d states have a conflict.\n",(src/slr.ml[152,5383+24]..[152,5383+81]),None)
+                            <arg>
+                            Nolabel
+                              expression (src/slr.ml[152,5383+83]..[152,5383+88])
+                                Pexp_ident "count" (src/slr.ml[152,5383+83]..[152,5383+88])
+                          ]
+            ]
+    ]
+]
+
+open Grammar
+let tell_me_everything = false
+let make_slr_state (s : Lr0.node) =
+  (let items = Lr0.items s in
+   let s = Item.Map.lift (fun _item -> TerminalSet.empty) items in
+   let s = Lr0.closure s in
+   Item.Map.fold
+     (fun item ->
+        fun toks ->
+          fun accu ->
+            let (_, nt, _, _, _) = Item.def item in
+            let follow_nt = Analysis.follow nt in
+            assert (TerminalSet.subset toks follow_nt);
+            Item.Map.add item follow_nt accu) s Item.Map.empty : Lr0.concretelr1state)
+let reductions (s : Lr0.concretelr1state) =
+  (Item.Map.fold
+     (fun item ->
+        fun toks ->
+          fun reductions ->
+            match Item.classify item with
+            | Item.Reduce prod -> Lr0.add_reductions prod toks reductions
+            | Item.Shift _ -> reductions) s TerminalMap.empty : Production.index
+                                                                  list
+                                                                  TerminalMap.t)
+let transitions (s : Lr0.concretelr1state) =
+  (Item.Map.fold
+     (fun item ->
+        fun _ ->
+          fun transitions ->
+            match Item.classify item with
+            | Item.Shift (Symbol.T tok, _) -> TerminalSet.add tok transitions
+            | Item.Shift (Symbol.N _, _) | Item.Reduce _ -> transitions) s
+     TerminalSet.empty : TerminalSet.t)
+let domain (m : 'a TerminalMap.t) =
+  (TerminalMap.fold
+     (fun tok -> fun _ -> fun accu -> TerminalSet.add tok accu) m
+     TerminalSet.empty : TerminalSet.t)
+let state_is_ok (s : Lr0.concretelr1state) =
+  (let reductions = reductions s
+   and transitions = transitions s in
+   (TerminalSet.disjoint transitions (domain reductions)) &&
+     (TerminalMap.fold
+        (fun _ ->
+           fun prods ->
+             fun ok ->
+               ok &&
+                 (match prods with | [] | _::[] -> true | _::_::_ -> false))
+        reductions true) : bool)
+let count_slr_violations () =
+  (let count = ref 0 in
+   for s = 0 to Lr0.n - 1 do
+     (let s = make_slr_state s in
+      if not (state_is_ok s)
+      then
+        (incr count;
+         if tell_me_everything
+         then
+           Printf.fprintf stderr
+             "The following SLR(1) state has a conflict:\n%s"
+             (Lr0.print_concrete "" s)))
+   done;
+   !count : int)
+let check () =
+  Error.logG 1
+    (fun f ->
+       let count = count_slr_violations () in
+       if count = 0
+       then Printf.fprintf f "The grammar is SLR(1).\n"
+       else
+         Printf.fprintf f
+           "The grammar is not SLR(1) -- %d states have a conflict.\n" count)
+[
+  structure_item (src/slr.ml[22,1372+0]..src/slr.ml[22,1372+12])
+    Tstr_open Fresh
+    module_expr (src/slr.ml[22,1372+5]..src/slr.ml[22,1372+12])
+      Tmod_ident "Dune__exe!.Grammar"
+  structure_item (src/slr.ml[27,1511+0]..src/slr.ml[28,1536+7])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[27,1511+4]..src/slr.ml[27,1511+22])
+          Tpat_var "tell_me_everything/413"
+        expression (src/slr.ml[28,1536+2]..src/slr.ml[28,1536+7])
+          Texp_construct "false"
+          []
+    ]
+  structure_item (src/slr.ml[32,1618+0]..src/slr.ml[65,3044+20])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[32,1618+4]..src/slr.ml[32,1618+18])
+          Tpat_var "make_slr_state/414"
+        expression (src/slr.ml[32,1618+19]..src/slr.ml[65,3044+20]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[32,1618+20]..src/slr.ml[32,1618+21])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/slr.ml[32,1618+24]..src/slr.ml[32,1618+32])
+                    Ttyp_constr "Dune__exe!.Lr0.node"
+                    []
+                Tpat_alias "s/454"
+                pattern (src/slr.ml[32,1618+20]..src/slr.ml[32,1618+21])
+                  Tpat_any
+              expression (src/slr.ml[36,1748+2]..src/slr.ml[65,3044+20])
+                extra
+                  Texp_constraint
+                  core_type (src/slr.ml[32,1618+36]..src/slr.ml[32,1618+56])
+                    Ttyp_constr "Dune__exe!.Lr0.concretelr1state"
+                    []
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/slr.ml[36,1748+6]..src/slr.ml[36,1748+11])
+                      Tpat_var "items/455"
+                    expression (src/slr.ml[36,1748+14]..src/slr.ml[36,1748+25])
+                      Texp_apply
+                      expression (src/slr.ml[36,1748+14]..src/slr.ml[36,1748+23])
+                        Texp_ident "Dune__exe!.Lr0.items"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[36,1748+24]..src/slr.ml[36,1748+25])
+                            Texp_ident "s/454"
+                      ]
+                ]
+                expression (src/slr.ml[49,2396+2]..src/slr.ml[65,3044+20])
+                  Texp_let Nonrec
+                  [
+                    <def>
+                      pattern (src/slr.ml[49,2396+6]..src/slr.ml[49,2396+7])
+                        Tpat_var "s/525"
+                      expression (src/slr.ml[49,2396+10]..src/slr.ml[49,2396+62])
+                        Texp_apply
+                        expression (src/slr.ml[49,2396+10]..src/slr.ml[49,2396+23])
+                          Texp_ident "Dune__exe!.Item.Map.lift"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[49,2396+24]..src/slr.ml[49,2396+56])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/slr.ml[49,2396+29]..src/slr.ml[49,2396+34])
+                                    Tpat_var "_item/592"
+                                  expression (src/slr.ml[49,2396+38]..src/slr.ml[49,2396+55])
+                                    Texp_ident "Dune__exe!.Grammar.TerminalSet.empty"
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[49,2396+57]..src/slr.ml[49,2396+62])
+                              Texp_ident "items/455"
+                        ]
+                  ]
+                  expression (src/slr.ml[53,2499+2]..src/slr.ml[65,3044+20])
+                    Texp_let Nonrec
+                    [
+                      <def>
+                        pattern (src/slr.ml[53,2499+6]..src/slr.ml[53,2499+7])
+                          Tpat_var "s/652"
+                        expression (src/slr.ml[53,2499+10]..src/slr.ml[53,2499+23])
+                          Texp_apply
+                          expression (src/slr.ml[53,2499+10]..src/slr.ml[53,2499+21])
+                            Texp_ident "Dune__exe!.Lr0.closure"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/slr.ml[53,2499+22]..src/slr.ml[53,2499+23])
+                                Texp_ident "s/525"
+                          ]
+                    ]
+                    expression (src/slr.ml[60,2817+2]..src/slr.ml[65,3044+20])
+                      Texp_apply
+                      expression (src/slr.ml[60,2817+2]..src/slr.ml[60,2817+15])
+                        Texp_ident "Dune__exe!.Item.Map.fold"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[60,2817+16]..src/slr.ml[65,3044+3])
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/slr.ml[60,2817+21]..src/slr.ml[60,2817+25])
+                                  Tpat_var "item/653"
+                                expression (src/slr.ml[60,2817+26]..src/slr.ml[64,3007+36]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/slr.ml[60,2817+26]..src/slr.ml[60,2817+30])
+                                        Tpat_var "toks/654"
+                                      expression (src/slr.ml[60,2817+31]..src/slr.ml[64,3007+36]) ghost
+                                        Texp_function
+                                        Nolabel
+                                        [
+                                          <case>
+                                            pattern (src/slr.ml[60,2817+31]..src/slr.ml[60,2817+35])
+                                              Tpat_var "accu/655"
+                                            expression (src/slr.ml[61,2856+4]..src/slr.ml[64,3007+36])
+                                              Texp_let Nonrec
+                                              [
+                                                <def>
+                                                  pattern (src/slr.ml[61,2856+8]..src/slr.ml[61,2856+22])
+                                                    Tpat_tuple
+                                                    [
+                                                      pattern (src/slr.ml[61,2856+8]..src/slr.ml[61,2856+9])
+                                                        Tpat_any
+                                                      pattern (src/slr.ml[61,2856+11]..src/slr.ml[61,2856+13])
+                                                        Tpat_var "nt/656"
+                                                      pattern (src/slr.ml[61,2856+15]..src/slr.ml[61,2856+16])
+                                                        Tpat_any
+                                                      pattern (src/slr.ml[61,2856+18]..src/slr.ml[61,2856+19])
+                                                        Tpat_any
+                                                      pattern (src/slr.ml[61,2856+21]..src/slr.ml[61,2856+22])
+                                                        Tpat_any
+                                                    ]
+                                                  expression (src/slr.ml[61,2856+25]..src/slr.ml[61,2856+38])
+                                                    Texp_apply
+                                                    expression (src/slr.ml[61,2856+25]..src/slr.ml[61,2856+33])
+                                                      Texp_ident "Dune__exe!.Item.def"
+                                                    [
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/slr.ml[61,2856+34]..src/slr.ml[61,2856+38])
+                                                          Texp_ident "item/653"
+                                                    ]
+                                              ]
+                                              expression (src/slr.ml[62,2898+4]..src/slr.ml[64,3007+36])
+                                                Texp_let Nonrec
+                                                [
+                                                  <def>
+                                                    pattern (src/slr.ml[62,2898+8]..src/slr.ml[62,2898+17])
+                                                      Tpat_var "follow_nt/657"
+                                                    expression (src/slr.ml[62,2898+20]..src/slr.ml[62,2898+38])
+                                                      Texp_apply
+                                                      expression (src/slr.ml[62,2898+20]..src/slr.ml[62,2898+35])
+                                                        Texp_ident "Dune__exe!.Grammar.Analysis.follow"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/slr.ml[62,2898+36]..src/slr.ml[62,2898+38])
+                                                            Texp_ident "nt/656"
+                                                      ]
+                                                ]
+                                                expression (src/slr.ml[63,2940+4]..src/slr.ml[64,3007+36])
+                                                  Texp_sequence
+                                                  expression (src/slr.ml[63,2940+4]..src/slr.ml[63,2940+46])
+                                                    Texp_assert                                                    expression (src/slr.ml[63,2940+11]..src/slr.ml[63,2940+46])
+                                                      Texp_apply
+                                                      expression (src/slr.ml[63,2940+12]..src/slr.ml[63,2940+30])
+                                                        Texp_ident "Dune__exe!.Grammar.TerminalSet.subset"
+                                                      [
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/slr.ml[63,2940+31]..src/slr.ml[63,2940+35])
+                                                            Texp_ident "toks/654"
+                                                        <arg>
+                                                          Nolabel
+                                                          expression (src/slr.ml[63,2940+36]..src/slr.ml[63,2940+45])
+                                                            Texp_ident "follow_nt/657"
+                                                      ]
+                                                  expression (src/slr.ml[64,3007+4]..src/slr.ml[64,3007+36])
+                                                    Texp_apply
+                                                    expression (src/slr.ml[64,3007+4]..src/slr.ml[64,3007+16])
+                                                      Texp_ident "Dune__exe!.Item.Map.add"
+                                                    [
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/slr.ml[64,3007+17]..src/slr.ml[64,3007+21])
+                                                          Texp_ident "item/653"
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/slr.ml[64,3007+22]..src/slr.ml[64,3007+31])
+                                                          Texp_ident "follow_nt/657"
+                                                      <arg>
+                                                        Nolabel
+                                                        expression (src/slr.ml[64,3007+32]..src/slr.ml[64,3007+36])
+                                                          Texp_ident "accu/655"
+                                                    ]
+                                        ]
+                                  ]
+                            ]
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[65,3044+4]..src/slr.ml[65,3044+5])
+                            Texp_ident "s/652"
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[65,3044+6]..src/slr.ml[65,3044+20])
+                            Texp_ident "Dune__exe!.Item.Map.empty"
+                      ]
+          ]
+    ]
+  structure_item (src/slr.ml[70,3220+0]..src/slr.ml[77,3496+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[70,3220+4]..src/slr.ml[70,3220+14])
+          Tpat_var "reductions/733"
+        expression (src/slr.ml[70,3220+15]..src/slr.ml[77,3496+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[70,3220+16]..src/slr.ml[70,3220+17])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/slr.ml[70,3220+20]..src/slr.ml[70,3220+40])
+                    Ttyp_constr "Dune__exe!.Lr0.concretelr1state"
+                    []
+                Tpat_alias "s/735"
+                pattern (src/slr.ml[70,3220+16]..src/slr.ml[70,3220+17])
+                  Tpat_any
+              expression (src/slr.ml[71,3302+2]..src/slr.ml[77,3496+23])
+                extra
+                  Texp_constraint
+                  core_type (src/slr.ml[70,3220+44]..src/slr.ml[70,3220+79])
+                    Ttyp_constr "Dune__exe!.Grammar.TerminalMap.t"
+                    [
+                      core_type (src/slr.ml[70,3220+44]..src/slr.ml[70,3220+65])
+                        Ttyp_constr "list/9!"
+                        [
+                          core_type (src/slr.ml[70,3220+44]..src/slr.ml[70,3220+60])
+                            Ttyp_constr "Dune__exe!.Grammar.Production.index"
+                            []
+                        ]
+                    ]
+                Texp_apply
+                expression (src/slr.ml[71,3302+2]..src/slr.ml[71,3302+15])
+                  Texp_ident "Dune__exe!.Item.Map.fold"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[71,3302+16]..src/slr.ml[77,3496+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/slr.ml[71,3302+21]..src/slr.ml[71,3302+25])
+                            Tpat_var "item/836"
+                          expression (src/slr.ml[71,3302+26]..src/slr.ml[76,3477+18]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/slr.ml[71,3302+26]..src/slr.ml[71,3302+30])
+                                  Tpat_var "toks/837"
+                                expression (src/slr.ml[71,3302+31]..src/slr.ml[76,3477+18]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/slr.ml[71,3302+31]..src/slr.ml[71,3302+41])
+                                        Tpat_var "reductions/838"
+                                      expression (src/slr.ml[72,3347+4]..src/slr.ml[76,3477+18])
+                                        Texp_match
+                                        expression (src/slr.ml[72,3347+10]..src/slr.ml[72,3347+28])
+                                          Texp_apply
+                                          expression (src/slr.ml[72,3347+10]..src/slr.ml[72,3347+23])
+                                            Texp_ident "Dune__exe!.Item.classify"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/slr.ml[72,3347+24]..src/slr.ml[72,3347+28])
+                                                Texp_ident "item/836"
+                                          ]
+                                        [
+                                          <case>
+                                            pattern (src/slr.ml[73,3381+6]..src/slr.ml[73,3381+22])
+                                              Tpat_value
+                                              pattern (src/slr.ml[73,3381+6]..src/slr.ml[73,3381+22])
+                                                Tpat_construct "Item.Reduce"
+                                                [
+                                                  pattern (src/slr.ml[73,3381+18]..src/slr.ml[73,3381+22])
+                                                    Tpat_var "prod/839"
+                                                ]
+                                                None
+                                            expression (src/slr.ml[74,3407+8]..src/slr.ml[74,3407+47])
+                                              Texp_apply
+                                              expression (src/slr.ml[74,3407+8]..src/slr.ml[74,3407+26])
+                                                Texp_ident "Dune__exe!.Lr0.add_reductions"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/slr.ml[74,3407+27]..src/slr.ml[74,3407+31])
+                                                    Texp_ident "prod/839"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/slr.ml[74,3407+32]..src/slr.ml[74,3407+36])
+                                                    Texp_ident "toks/837"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/slr.ml[74,3407+37]..src/slr.ml[74,3407+47])
+                                                    Texp_ident "reductions/838"
+                                              ]
+                                          <case>
+                                            pattern (src/slr.ml[75,3455+6]..src/slr.ml[75,3455+18])
+                                              Tpat_value
+                                              pattern (src/slr.ml[75,3455+6]..src/slr.ml[75,3455+18])
+                                                Tpat_construct "Item.Shift"
+                                                [
+                                                  pattern (src/slr.ml[75,3455+17]..src/slr.ml[75,3455+18])
+                                                    Tpat_any
+                                                  pattern (src/slr.ml[75,3455+17]..src/slr.ml[75,3455+18])
+                                                    Tpat_any
+                                                ]
+                                                None
+                                            expression (src/slr.ml[76,3477+8]..src/slr.ml[76,3477+18])
+                                              Texp_ident "reductions/838"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[77,3496+4]..src/slr.ml[77,3496+5])
+                      Texp_ident "s/735"
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[77,3496+6]..src/slr.ml[77,3496+23])
+                      Texp_ident "Dune__exe!.Grammar.TerminalMap.empty"
+                ]
+          ]
+    ]
+  structure_item (src/slr.ml[82,3610+0]..src/slr.ml[90,3902+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[82,3610+4]..src/slr.ml[82,3610+15])
+          Tpat_var "transitions/885"
+        expression (src/slr.ml[82,3610+16]..src/slr.ml[90,3902+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[82,3610+17]..src/slr.ml[82,3610+18])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/slr.ml[82,3610+21]..src/slr.ml[82,3610+41])
+                    Ttyp_constr "Dune__exe!.Lr0.concretelr1state"
+                    []
+                Tpat_alias "s/887"
+                pattern (src/slr.ml[82,3610+17]..src/slr.ml[82,3610+18])
+                  Tpat_any
+              expression (src/slr.ml[83,3671+2]..src/slr.ml[90,3902+23])
+                extra
+                  Texp_constraint
+                  core_type (src/slr.ml[82,3610+45]..src/slr.ml[82,3610+58])
+                    Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                    []
+                Texp_apply
+                expression (src/slr.ml[83,3671+2]..src/slr.ml[83,3671+15])
+                  Texp_ident "Dune__exe!.Item.Map.fold"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[83,3671+16]..src/slr.ml[90,3902+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/slr.ml[83,3671+21]..src/slr.ml[83,3671+25])
+                            Tpat_var "item/888"
+                          expression (src/slr.ml[83,3671+26]..src/slr.ml[89,3882+19]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/slr.ml[83,3671+26]..src/slr.ml[83,3671+27])
+                                  Tpat_any
+                                expression (src/slr.ml[83,3671+28]..src/slr.ml[89,3882+19]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/slr.ml[83,3671+28]..src/slr.ml[83,3671+39])
+                                        Tpat_var "transitions/889"
+                                      expression (src/slr.ml[84,3714+4]..src/slr.ml[89,3882+19])
+                                        Texp_match
+                                        expression (src/slr.ml[84,3714+10]..src/slr.ml[84,3714+28])
+                                          Texp_apply
+                                          expression (src/slr.ml[84,3714+10]..src/slr.ml[84,3714+23])
+                                            Texp_ident "Dune__exe!.Item.classify"
+                                          [
+                                            <arg>
+                                              Nolabel
+                                              expression (src/slr.ml[84,3714+24]..src/slr.ml[84,3714+28])
+                                                Texp_ident "item/888"
+                                          ]
+                                        [
+                                          <case>
+                                            pattern (src/slr.ml[85,3748+6]..src/slr.ml[85,3748+34])
+                                              Tpat_value
+                                              pattern (src/slr.ml[85,3748+6]..src/slr.ml[85,3748+34])
+                                                Tpat_construct "Item.Shift"
+                                                [
+                                                  pattern (src/slr.ml[85,3748+18]..src/slr.ml[85,3748+30])
+                                                    Tpat_construct "Symbol.T"
+                                                    [
+                                                      pattern (src/slr.ml[85,3748+27]..src/slr.ml[85,3748+30])
+                                                        Tpat_var "tok/901"
+                                                    ]
+                                                    None
+                                                  pattern (src/slr.ml[85,3748+32]..src/slr.ml[85,3748+33])
+                                                    Tpat_any
+                                                ]
+                                                None
+                                            expression (src/slr.ml[86,3786+8]..src/slr.ml[86,3786+39])
+                                              Texp_apply
+                                              expression (src/slr.ml[86,3786+8]..src/slr.ml[86,3786+23])
+                                                Texp_ident "Dune__exe!.Grammar.TerminalSet.add"
+                                              [
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/slr.ml[86,3786+24]..src/slr.ml[86,3786+27])
+                                                    Texp_ident "tok/901"
+                                                <arg>
+                                                  Nolabel
+                                                  expression (src/slr.ml[86,3786+28]..src/slr.ml[86,3786+39])
+                                                    Texp_ident "transitions/889"
+                                              ]
+                                          <case>
+                                            pattern (src/slr.ml[87,3826+6]..src/slr.ml[88,3859+19])
+                                              Tpat_or
+                                              pattern (src/slr.ml[87,3826+6]..src/slr.ml[87,3826+32])
+                                                Tpat_value
+                                                pattern (src/slr.ml[87,3826+6]..src/slr.ml[87,3826+32])
+                                                  Tpat_construct "Item.Shift"
+                                                  [
+                                                    pattern (src/slr.ml[87,3826+18]..src/slr.ml[87,3826+28])
+                                                      Tpat_construct "Symbol.N"
+                                                      [
+                                                        pattern (src/slr.ml[87,3826+27]..src/slr.ml[87,3826+28])
+                                                          Tpat_any
+                                                      ]
+                                                      None
+                                                    pattern (src/slr.ml[87,3826+30]..src/slr.ml[87,3826+31])
+                                                      Tpat_any
+                                                  ]
+                                                  None
+                                              pattern (src/slr.ml[88,3859+6]..src/slr.ml[88,3859+19])
+                                                Tpat_value
+                                                pattern (src/slr.ml[88,3859+6]..src/slr.ml[88,3859+19])
+                                                  Tpat_construct "Item.Reduce"
+                                                  [
+                                                    pattern (src/slr.ml[88,3859+18]..src/slr.ml[88,3859+19])
+                                                      Tpat_any
+                                                  ]
+                                                  None
+                                            expression (src/slr.ml[89,3882+8]..src/slr.ml[89,3882+19])
+                                              Texp_ident "transitions/889"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[90,3902+4]..src/slr.ml[90,3902+5])
+                      Texp_ident "s/887"
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[90,3902+6]..src/slr.ml[90,3902+23])
+                      Texp_ident "Dune__exe!.Grammar.TerminalSet.empty"
+                ]
+          ]
+    ]
+  structure_item (src/slr.ml[95,4016+0]..src/slr.ml[98,4135+23])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[95,4016+4]..src/slr.ml[95,4016+10])
+          Tpat_var "domain/933"
+        expression (src/slr.ml[95,4016+11]..src/slr.ml[98,4135+23]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[95,4016+12]..src/slr.ml[95,4016+13])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/slr.ml[95,4016+16]..src/slr.ml[95,4016+32])
+                    Ttyp_constr "Dune__exe!.Grammar.TerminalMap.t"
+                    [
+                      core_type (src/slr.ml[95,4016+16]..src/slr.ml[95,4016+18])
+                        Ttyp_var a
+                    ]
+                Tpat_alias "m/935"
+                pattern (src/slr.ml[95,4016+12]..src/slr.ml[95,4016+13])
+                  Tpat_any
+              expression (src/slr.ml[96,4068+2]..src/slr.ml[98,4135+23])
+                extra
+                  Texp_constraint
+                  core_type (src/slr.ml[95,4016+36]..src/slr.ml[95,4016+49])
+                    Ttyp_constr "Dune__exe!.Grammar.TerminalSet.t"
+                    []
+                Texp_apply
+                expression (src/slr.ml[96,4068+2]..src/slr.ml[96,4068+18])
+                  Texp_ident "Dune__exe!.Grammar.TerminalMap.fold"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[96,4068+19]..src/slr.ml[98,4135+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/slr.ml[96,4068+24]..src/slr.ml[96,4068+27])
+                            Tpat_var "tok/936"
+                          expression (src/slr.ml[96,4068+28]..src/slr.ml[97,4106+28]) ghost
+                            Texp_function
+                            Nolabel
+                            [
+                              <case>
+                                pattern (src/slr.ml[96,4068+28]..src/slr.ml[96,4068+29])
+                                  Tpat_any
+                                expression (src/slr.ml[96,4068+30]..src/slr.ml[97,4106+28]) ghost
+                                  Texp_function
+                                  Nolabel
+                                  [
+                                    <case>
+                                      pattern (src/slr.ml[96,4068+30]..src/slr.ml[96,4068+34])
+                                        Tpat_var "accu/937"
+                                      expression (src/slr.ml[97,4106+4]..src/slr.ml[97,4106+28])
+                                        Texp_apply
+                                        expression (src/slr.ml[97,4106+4]..src/slr.ml[97,4106+19])
+                                          Texp_ident "Dune__exe!.Grammar.TerminalSet.add"
+                                        [
+                                          <arg>
+                                            Nolabel
+                                            expression (src/slr.ml[97,4106+20]..src/slr.ml[97,4106+23])
+                                              Texp_ident "tok/936"
+                                          <arg>
+                                            Nolabel
+                                            expression (src/slr.ml[97,4106+24]..src/slr.ml[97,4106+28])
+                                              Texp_ident "accu/937"
+                                        ]
+                                  ]
+                            ]
+                      ]
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[98,4135+4]..src/slr.ml[98,4135+5])
+                      Texp_ident "m/935"
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[98,4135+6]..src/slr.ml[98,4135+23])
+                      Texp_ident "Dune__exe!.Grammar.TerminalSet.empty"
+                ]
+          ]
+    ]
+  structure_item (src/slr.ml[103,4251+0]..src/slr.ml[121,4657+19])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[103,4251+4]..src/slr.ml[103,4251+15])
+          Tpat_var "state_is_ok/939"
+        expression (src/slr.ml[103,4251+16]..src/slr.ml[121,4657+19]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[103,4251+17]..src/slr.ml[103,4251+18])
+                extra
+                  Tpat_extra_constraint
+                  core_type (src/slr.ml[103,4251+21]..src/slr.ml[103,4251+41])
+                    Ttyp_constr "Dune__exe!.Lr0.concretelr1state"
+                    []
+                Tpat_alias "s/941"
+                pattern (src/slr.ml[103,4251+17]..src/slr.ml[103,4251+18])
+                  Tpat_any
+              expression (src/slr.ml[105,4304+2]..src/slr.ml[121,4657+19])
+                extra
+                  Texp_constraint
+                  core_type (src/slr.ml[103,4251+45]..src/slr.ml[103,4251+49])
+                    Ttyp_constr "bool/5!"
+                    []
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/slr.ml[105,4304+6]..src/slr.ml[105,4304+16])
+                      Tpat_var "reductions/942"
+                    expression (src/slr.ml[105,4304+19]..src/slr.ml[105,4304+31])
+                      Texp_apply
+                      expression (src/slr.ml[105,4304+19]..src/slr.ml[105,4304+29])
+                        Texp_ident "reductions/733"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[105,4304+30]..src/slr.ml[105,4304+31])
+                            Texp_ident "s/941"
+                      ]
+                  <def>
+                    pattern (src/slr.ml[106,4336+6]..src/slr.ml[106,4336+17])
+                      Tpat_var "transitions/943"
+                    expression (src/slr.ml[106,4336+20]..src/slr.ml[106,4336+33])
+                      Texp_apply
+                      expression (src/slr.ml[106,4336+20]..src/slr.ml[106,4336+31])
+                        Texp_ident "transitions/885"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[106,4336+32]..src/slr.ml[106,4336+33])
+                            Texp_ident "s/941"
+                      ]
+                ]
+                expression (src/slr.ml[110,4417+2]..src/slr.ml[121,4657+19])
+                  Texp_apply
+                  expression (src/slr.ml[110,4417+55]..src/slr.ml[110,4417+57])
+                    Texp_ident "Stdlib!.&&"
+                  [
+                    <arg>
+                      Nolabel
+                      expression (src/slr.ml[110,4417+2]..src/slr.ml[110,4417+54])
+                        Texp_apply
+                        expression (src/slr.ml[110,4417+2]..src/slr.ml[110,4417+22])
+                          Texp_ident "Dune__exe!.Grammar.TerminalSet.disjoint"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[110,4417+23]..src/slr.ml[110,4417+34])
+                              Texp_ident "transitions/943"
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[110,4417+35]..src/slr.ml[110,4417+54])
+                              Texp_apply
+                              expression (src/slr.ml[110,4417+36]..src/slr.ml[110,4417+42])
+                                Texp_ident "domain/933"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/slr.ml[110,4417+43]..src/slr.ml[110,4417+53])
+                                    Texp_ident "reductions/942"
+                              ]
+                        ]
+                    <arg>
+                      Nolabel
+                      expression (src/slr.ml[114,4520+2]..src/slr.ml[121,4657+19])
+                        Texp_apply
+                        expression (src/slr.ml[114,4520+2]..src/slr.ml[114,4520+18])
+                          Texp_ident "Dune__exe!.Grammar.TerminalMap.fold"
+                        [
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[114,4520+19]..src/slr.ml[121,4657+3])
+                              Texp_function
+                              Nolabel
+                              [
+                                <case>
+                                  pattern (src/slr.ml[114,4520+24]..src/slr.ml[114,4520+25])
+                                    Tpat_any
+                                  expression (src/slr.ml[114,4520+26]..src/slr.ml[120,4643+13]) ghost
+                                    Texp_function
+                                    Nolabel
+                                    [
+                                      <case>
+                                        pattern (src/slr.ml[114,4520+26]..src/slr.ml[114,4520+31])
+                                          Tpat_var "prods/944"
+                                        expression (src/slr.ml[114,4520+32]..src/slr.ml[120,4643+13]) ghost
+                                          Texp_function
+                                          Nolabel
+                                          [
+                                            <case>
+                                              pattern (src/slr.ml[114,4520+32]..src/slr.ml[114,4520+34])
+                                                Tpat_var "ok/945"
+                                              expression (src/slr.ml[115,4558+4]..src/slr.ml[120,4643+13])
+                                                Texp_apply
+                                                expression (src/slr.ml[115,4558+7]..src/slr.ml[115,4558+9])
+                                                  Texp_ident "Stdlib!.&&"
+                                                [
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/slr.ml[115,4558+4]..src/slr.ml[115,4558+6])
+                                                      Texp_ident "ok/945"
+                                                  <arg>
+                                                    Nolabel
+                                                    expression (src/slr.ml[115,4558+10]..src/slr.ml[120,4643+13])
+                                                      Texp_match
+                                                      expression (src/slr.ml[115,4558+16]..src/slr.ml[115,4558+21])
+                                                        Texp_ident "prods/944"
+                                                      [
+                                                        <case>
+                                                          pattern (src/slr.ml[116,4585+6]..src/slr.ml[117,4594+11])
+                                                            Tpat_or
+                                                            pattern (src/slr.ml[116,4585+6]..src/slr.ml[116,4585+8])
+                                                              Tpat_value
+                                                              pattern (src/slr.ml[116,4585+6]..src/slr.ml[116,4585+8])
+                                                                Tpat_construct "[]"
+                                                                []
+                                                                None
+                                                            pattern (src/slr.ml[117,4594+6]..src/slr.ml[117,4594+11])
+                                                              Tpat_value
+                                                              pattern (src/slr.ml[117,4594+6]..src/slr.ml[117,4594+11])
+                                                                Tpat_construct "::"
+                                                                [
+                                                                  pattern (src/slr.ml[117,4594+8]..src/slr.ml[117,4594+9])
+                                                                    Tpat_any
+                                                                  pattern (src/slr.ml[117,4594+10]..src/slr.ml[117,4594+11]) ghost
+                                                                    Tpat_construct "[]"
+                                                                    []
+                                                                    None
+                                                                ]
+                                                                None
+                                                          expression (src/slr.ml[118,4609+8]..src/slr.ml[118,4609+12])
+                                                            Texp_construct "true"
+                                                            []
+                                                        <case>
+                                                          pattern (src/slr.ml[119,4622+6]..src/slr.ml[119,4622+17])
+                                                            Tpat_value
+                                                            pattern (src/slr.ml[119,4622+6]..src/slr.ml[119,4622+17])
+                                                              Tpat_construct "::"
+                                                              [
+                                                                pattern (src/slr.ml[119,4622+6]..src/slr.ml[119,4622+7])
+                                                                  Tpat_any
+                                                                pattern (src/slr.ml[119,4622+11]..src/slr.ml[119,4622+17])
+                                                                  Tpat_construct "::"
+                                                                  [
+                                                                    pattern (src/slr.ml[119,4622+11]..src/slr.ml[119,4622+12])
+                                                                      Tpat_any
+                                                                    pattern (src/slr.ml[119,4622+16]..src/slr.ml[119,4622+17])
+                                                                      Tpat_any
+                                                                  ]
+                                                                  None
+                                                              ]
+                                                              None
+                                                          expression (src/slr.ml[120,4643+8]..src/slr.ml[120,4643+13])
+                                                            Texp_construct "false"
+                                                            []
+                                                      ]
+                                                ]
+                                          ]
+                                    ]
+                              ]
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[121,4657+4]..src/slr.ml[121,4657+14])
+                              Texp_ident "reductions/942"
+                          <arg>
+                            Nolabel
+                            expression (src/slr.ml[121,4657+15]..src/slr.ml[121,4657+19])
+                              Texp_construct "true"
+                              []
+                        ]
+                  ]
+          ]
+    ]
+  structure_item (src/slr.ml[126,4785+0]..src/slr.ml[142,5147+8])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[126,4785+4]..src/slr.ml[126,4785+24])
+          Tpat_var "count_slr_violations/947"
+        expression (src/slr.ml[126,4785+25]..src/slr.ml[142,5147+8]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[126,4785+25]..src/slr.ml[126,4785+27])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/slr.ml[128,4822+2]..src/slr.ml[142,5147+8])
+                extra
+                  Texp_constraint
+                  core_type (src/slr.ml[126,4785+30]..src/slr.ml[126,4785+33])
+                    Ttyp_constr "int/1!"
+                    []
+                Texp_let Nonrec
+                [
+                  <def>
+                    pattern (src/slr.ml[128,4822+6]..src/slr.ml[128,4822+11])
+                      Tpat_var "count/949"
+                    expression (src/slr.ml[128,4822+14]..src/slr.ml[128,4822+19])
+                      Texp_apply
+                      expression (src/slr.ml[128,4822+14]..src/slr.ml[128,4822+17])
+                        Texp_ident "Stdlib!.ref"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[128,4822+18]..src/slr.ml[128,4822+19])
+                            Texp_constant Const_int 0
+                      ]
+                ]
+                expression (src/slr.ml[130,4846+2]..src/slr.ml[142,5147+8])
+                  Texp_sequence
+                  expression (src/slr.ml[130,4846+2]..src/slr.ml[140,5138+6])
+                    Texp_for "s/950" Up
+                    expression (src/slr.ml[130,4846+10]..src/slr.ml[130,4846+11])
+                      Texp_constant Const_int 0
+                    expression (src/slr.ml[130,4846+15]..src/slr.ml[130,4846+24])
+                      Texp_apply
+                      expression (src/slr.ml[130,4846+21]..src/slr.ml[130,4846+22])
+                        Texp_ident "Stdlib!.-"
+                      [
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[130,4846+15]..src/slr.ml[130,4846+20])
+                            Texp_ident "Dune__exe!.Lr0.n"
+                        <arg>
+                          Nolabel
+                          expression (src/slr.ml[130,4846+23]..src/slr.ml[130,4846+24])
+                            Texp_constant Const_int 1
+                      ]
+                    expression (src/slr.ml[131,4874+4]..src/slr.ml[139,5130+7])
+                      Texp_let Nonrec
+                      [
+                        <def>
+                          pattern (src/slr.ml[131,4874+8]..src/slr.ml[131,4874+9])
+                            Tpat_var "s/951"
+                          expression (src/slr.ml[131,4874+12]..src/slr.ml[131,4874+28])
+                            Texp_apply
+                            expression (src/slr.ml[131,4874+12]..src/slr.ml[131,4874+26])
+                              Texp_ident "make_slr_state/414"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/slr.ml[131,4874+27]..src/slr.ml[131,4874+28])
+                                  Texp_ident "s/950"
+                            ]
+                      ]
+                      expression (src/slr.ml[132,4906+4]..src/slr.ml[139,5130+7])
+                        Texp_ifthenelse
+                        expression (src/slr.ml[132,4906+7]..src/slr.ml[132,4906+26])
+                          Texp_apply
+                          expression (src/slr.ml[132,4906+7]..src/slr.ml[132,4906+10])
+                            Texp_ident "Stdlib!.not"
+                          [
+                            <arg>
+                              Nolabel
+                              expression (src/slr.ml[132,4906+11]..src/slr.ml[132,4906+26])
+                                Texp_apply
+                                expression (src/slr.ml[132,4906+12]..src/slr.ml[132,4906+23])
+                                  Texp_ident "state_is_ok/939"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/slr.ml[132,4906+24]..src/slr.ml[132,4906+25])
+                                      Texp_ident "s/951"
+                                ]
+                          ]
+                        expression (src/slr.ml[132,4906+32]..src/slr.ml[139,5130+7])
+                          Texp_sequence
+                          expression (src/slr.ml[133,4944+6]..src/slr.ml[133,4944+16])
+                            Texp_apply
+                            expression (src/slr.ml[133,4944+6]..src/slr.ml[133,4944+10])
+                              Texp_ident "Stdlib!.incr"
+                            [
+                              <arg>
+                                Nolabel
+                                expression (src/slr.ml[133,4944+11]..src/slr.ml[133,4944+16])
+                                  Texp_ident "count/949"
+                            ]
+                          expression (src/slr.ml[134,4962+6]..src/slr.ml[138,5094+35])
+                            Texp_ifthenelse
+                            expression (src/slr.ml[134,4962+9]..src/slr.ml[134,4962+27])
+                              Texp_ident "tell_me_everything/413"
+                            expression (src/slr.ml[135,4995+8]..src/slr.ml[138,5094+35])
+                              Texp_apply
+                              expression (src/slr.ml[135,4995+8]..src/slr.ml[135,4995+22])
+                                Texp_ident "Stdlib!.Printf.fprintf"
+                              [
+                                <arg>
+                                  Nolabel
+                                  expression (src/slr.ml[136,5018+10]..src/slr.ml[136,5018+16])
+                                    Texp_ident "Stdlib!.stderr"
+                                <arg>
+                                  Nolabel
+                                  expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58])
+                                    Texp_construct "CamlinternalFormatBasics.Format"
+                                    [
+                                      expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost
+                                        Texp_construct "CamlinternalFormatBasics.String_literal"
+                                        [
+                                          expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost
+                                            Texp_constant Const_string("The following SLR(1) state has a conflict:\n",(src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost,None)
+                                          expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String"
+                                            [
+                                              expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                []
+                                              expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                []
+                                            ]
+                                        ]
+                                      expression (src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost
+                                        Texp_constant Const_string("The following SLR(1) state has a conflict:\n%s",(src/slr.ml[137,5035+10]..src/slr.ml[137,5035+58]) ghost,None)
+                                    ]
+                                <arg>
+                                  Nolabel
+                                  expression (src/slr.ml[138,5094+10]..src/slr.ml[138,5094+35])
+                                    Texp_apply
+                                    expression (src/slr.ml[138,5094+11]..src/slr.ml[138,5094+29])
+                                      Texp_ident "Dune__exe!.Lr0.print_concrete"
+                                    [
+                                      <arg>
+                                        Nolabel
+                                        expression (src/slr.ml[138,5094+30]..src/slr.ml[138,5094+32])
+                                          Texp_constant Const_string("",(src/slr.ml[138,5094+31]..src/slr.ml[138,5094+31]),None)
+                                      <arg>
+                                        Nolabel
+                                        expression (src/slr.ml[138,5094+33]..src/slr.ml[138,5094+34])
+                                          Texp_ident "s/951"
+                                    ]
+                              ]
+                            None
+                        None
+                  expression (src/slr.ml[142,5147+2]..src/slr.ml[142,5147+8])
+                    Texp_apply
+                    expression (src/slr.ml[142,5147+2]..src/slr.ml[142,5147+3])
+                      Texp_ident "Stdlib!.!"
+                    [
+                      <arg>
+                        Nolabel
+                        expression (src/slr.ml[142,5147+3]..src/slr.ml[142,5147+8])
+                          Texp_ident "count/949"
+                    ]
+          ]
+    ]
+  structure_item (src/slr.ml[146,5220+0]..src/slr.ml[153,5472+3])
+    Tstr_value Nonrec
+    [
+      <def>
+        pattern (src/slr.ml[146,5220+4]..src/slr.ml[146,5220+9])
+          Tpat_var "check/989"
+        expression (src/slr.ml[146,5220+10]..src/slr.ml[153,5472+3]) ghost
+          Texp_function
+          Nolabel
+          [
+            <case>
+              pattern (src/slr.ml[146,5220+10]..src/slr.ml[146,5220+12])
+                Tpat_construct "()"
+                []
+                None
+              expression (src/slr.ml[147,5235+2]..src/slr.ml[153,5472+3])
+                Texp_apply
+                expression (src/slr.ml[147,5235+2]..src/slr.ml[147,5235+12])
+                  Texp_ident "Dune__exe!.Error.logG"
+                [
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[147,5235+13]..src/slr.ml[147,5235+14])
+                      Texp_constant Const_int 1
+                  <arg>
+                    Nolabel
+                    expression (src/slr.ml[147,5235+15]..src/slr.ml[153,5472+3])
+                      Texp_function
+                      Nolabel
+                      [
+                        <case>
+                          pattern (src/slr.ml[147,5235+20]..src/slr.ml[147,5235+21])
+                            Tpat_var "f/1006"
+                          expression (src/slr.ml[148,5260+4]..src/slr.ml[152,5383+88])
+                            Texp_let Nonrec
+                            [
+                              <def>
+                                pattern (src/slr.ml[148,5260+8]..src/slr.ml[148,5260+13])
+                                  Tpat_var "count/1007"
+                                expression (src/slr.ml[148,5260+16]..src/slr.ml[148,5260+38])
+                                  Texp_apply
+                                  expression (src/slr.ml[148,5260+16]..src/slr.ml[148,5260+36])
+                                    Texp_ident "count_slr_violations/947"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/slr.ml[148,5260+36]..src/slr.ml[148,5260+38])
+                                        Texp_construct "()"
+                                        []
+                                  ]
+                            ]
+                            expression (src/slr.ml[149,5302+4]..src/slr.ml[152,5383+88])
+                              Texp_ifthenelse
+                              expression (src/slr.ml[149,5302+7]..src/slr.ml[149,5302+16])
+                                Texp_apply
+                                expression (src/slr.ml[149,5302+13]..src/slr.ml[149,5302+14])
+                                  Texp_ident "Stdlib!.="
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/slr.ml[149,5302+7]..src/slr.ml[149,5302+12])
+                                      Texp_ident "count/1007"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/slr.ml[149,5302+15]..src/slr.ml[149,5302+16])
+                                      Texp_constant Const_int 0
+                                ]
+                              expression (src/slr.ml[150,5324+6]..src/slr.ml[150,5324+49])
+                                Texp_apply
+                                expression (src/slr.ml[150,5324+6]..src/slr.ml[150,5324+20])
+                                  Texp_ident "Stdlib!.Printf.fprintf"
+                                [
+                                  <arg>
+                                    Nolabel
+                                    expression (src/slr.ml[150,5324+21]..src/slr.ml[150,5324+22])
+                                      Texp_ident "f/1006"
+                                  <arg>
+                                    Nolabel
+                                    expression (src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49])
+                                      Texp_construct "CamlinternalFormatBasics.Format"
+                                      [
+                                        expression (src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49]) ghost
+                                          Texp_construct "CamlinternalFormatBasics.String_literal"
+                                          [
+                                            expression (src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49]) ghost
+                                              Texp_constant Const_string("The grammar is SLR(1).\n",(src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49]) ghost,None)
+                                            expression (src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49]) ghost
+                                              Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                              []
+                                          ]
+                                        expression (src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49]) ghost
+                                          Texp_constant Const_string("The grammar is SLR(1).\n",(src/slr.ml[150,5324+23]..src/slr.ml[150,5324+49]) ghost,None)
+                                      ]
+                                ]
+                              Some
+                                expression (src/slr.ml[152,5383+6]..src/slr.ml[152,5383+88])
+                                  Texp_apply
+                                  expression (src/slr.ml[152,5383+6]..src/slr.ml[152,5383+20])
+                                    Texp_ident "Stdlib!.Printf.fprintf"
+                                  [
+                                    <arg>
+                                      Nolabel
+                                      expression (src/slr.ml[152,5383+21]..src/slr.ml[152,5383+22])
+                                        Texp_ident "f/1006"
+                                    <arg>
+                                      Nolabel
+                                      expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82])
+                                        Texp_construct "CamlinternalFormatBasics.Format"
+                                        [
+                                          expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                            Texp_construct "CamlinternalFormatBasics.String_literal"
+                                            [
+                                              expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                Texp_constant Const_string("The grammar is not SLR(1) -- ",(src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost,None)
+                                              expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                Texp_construct "CamlinternalFormatBasics.Int"
+                                                [
+                                                  expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.Int_d"
+                                                    []
+                                                  expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_padding"
+                                                    []
+                                                  expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.No_precision"
+                                                    []
+                                                  expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                    Texp_construct "CamlinternalFormatBasics.String_literal"
+                                                    [
+                                                      expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                        Texp_constant Const_string(" states have a conflict.\n",(src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost,None)
+                                                      expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                                        Texp_construct "CamlinternalFormatBasics.End_of_format"
+                                                        []
+                                                    ]
+                                                ]
+                                            ]
+                                          expression (src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost
+                                            Texp_constant Const_string("The grammar is not SLR(1) -- %d states have a conflict.\n",(src/slr.ml[152,5383+23]..src/slr.ml[152,5383+82]) ghost,None)
+                                        ]
+                                    <arg>
+                                      Nolabel
+                                      expression (src/slr.ml[152,5383+83]..src/slr.ml[152,5383+88])
+                                        Texp_ident "count/1007"
+                                  ]
+                      ]
+                ]
+          ]
+    ]
+]
+
+{<Dune__exe__Slr>
+ "check"[value] -> <Dune__exe__Slr.37>;
+ }
+
+(seq
+  (let (tell_me_everything/413 =[int] 0)
+    (setfield_ptr(root-init) 1 (global Dune__exe__Slr!)
+      tell_me_everything/413))
+  (let
+    (make_slr_state/414 =
+       (function s/454[int]
+         (let
+           (items/455 = (apply (field_imm 2 (global Dune__exe__Lr0!)) s/454)
+            s/525 =
+              (apply (field_imm 28 (field_imm 9 (global Dune__exe__Item!)))
+                (function _item/592
+                  (field_imm 0 (field_imm 3 (global Dune__exe__Grammar!))))
+                items/455)
+            s/652 = (apply (field_imm 10 (global Dune__exe__Lr0!)) s/525))
+           (apply (field_imm 19 (field_imm 9 (global Dune__exe__Item!)))
+             (function item/653 toks/654 accu/655
+               (let
+                 (*match*/1803 =
+                    (apply (field_imm 4 (global Dune__exe__Item!)) item/653)
+                  *match*/1807 =a (field_imm 4 *match*/1803)
+                  *match*/1806 =a (field_imm 3 *match*/1803)
+                  *match*/1805 =a (field_imm 2 *match*/1803)
+                  nt/656 =a (field_imm 1 *match*/1803)
+                  *match*/1804 =a (field_imm 0 *match*/1803)
+                  follow_nt/657 =
+                    (apply
+                      (field_imm 7
+                        (field_imm 11 (global Dune__exe__Grammar!)))
+                      nt/656))
+                 (seq
+                   (if
+                     (apply
+                       (field_imm 17
+                         (field_imm 3 (global Dune__exe__Grammar!)))
+                       toks/654 follow_nt/657)
+                     0
+                     (raise
+                       (makeblock 0 (global Assert_failure/28!)
+                         [0: "src/slr.ml" 63 4])))
+                   (apply
+                     (field_imm 3 (field_imm 9 (global Dune__exe__Item!)))
+                     item/653 follow_nt/657 accu/655))))
+             s/652 (field_imm 0 (field_imm 9 (global Dune__exe__Item!)))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Slr!) make_slr_state/414))
+  (let
+    (reductions/733 =
+       (function s/735
+         (apply (field_imm 19 (field_imm 9 (global Dune__exe__Item!)))
+           (function item/836 toks/837 reductions/838
+             (let
+               (*match*/1808 =
+                  (apply (field_imm 7 (global Dune__exe__Item!)) item/836))
+               (switch* *match*/1808
+                case tag 0:
+                 (let
+                   (*match*/1810 =a (field_imm 1 *match*/1808)
+                    *match*/1809 =a (field_imm 0 *match*/1808))
+                   reductions/838)
+                case tag 1:
+                 (let (prod/839 =a (field_imm 0 *match*/1808))
+                   (apply (field_imm 28 (global Dune__exe__Lr0!)) prod/839
+                     toks/837 reductions/838)))))
+           s/735 (field_imm 0 (field_imm 4 (global Dune__exe__Grammar!))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Slr!) reductions/733))
+  (let
+    (transitions/885 =
+       (function s/887
+         (apply (field_imm 19 (field_imm 9 (global Dune__exe__Item!)))
+           (function item/888 param/932 transitions/889
+             (let
+               (*match*/1811 =
+                  (apply (field_imm 7 (global Dune__exe__Item!)) item/888))
+               (catch
+                 (switch* *match*/1811
+                  case tag 0:
+                   (let (*match*/1812 =a (field_imm 0 *match*/1811))
+                     (switch* *match*/1812
+                      case tag 0:
+                       (let
+                         (*match*/1815 =a (field_imm 1 *match*/1811)
+                          *match*/1814 =a (field_imm 0 *match*/1812))
+                         (exit 4))
+                      case tag 1:
+                       (let
+                         (*match*/1813 =a (field_imm 1 *match*/1811)
+                          tok/901 =a (field_imm 0 *match*/1812))
+                         (apply
+                           (field_imm 7
+                             (field_imm 3 (global Dune__exe__Grammar!)))
+                           tok/901 transitions/889))))
+                  case tag 1:
+                   (let (*match*/1816 =a (field_imm 0 *match*/1811))
+                     (exit 4)))
+                with (4) transitions/889)))
+           s/887 (field_imm 0 (field_imm 3 (global Dune__exe__Grammar!))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Slr!) transitions/885))
+  (let
+    (domain/933 =
+       (function m/935
+         (apply (field_imm 19 (field_imm 4 (global Dune__exe__Grammar!)))
+           (function tok/936 param/938 accu/937
+             (apply (field_imm 7 (field_imm 3 (global Dune__exe__Grammar!)))
+               tok/936 accu/937))
+           m/935 (field_imm 0 (field_imm 3 (global Dune__exe__Grammar!))))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Slr!) domain/933))
+  (let
+    (state_is_ok/939 =
+       (function s/941 : int
+         (let
+           (reductions/942 =
+              (apply (field_imm 3 (global Dune__exe__Slr!)) s/941)
+            transitions/943 =
+              (apply (field_imm 4 (global Dune__exe__Slr!)) s/941))
+           (&&
+             (apply (field_imm 11 (field_imm 3 (global Dune__exe__Grammar!)))
+               transitions/943
+               (apply (field_imm 5 (global Dune__exe__Slr!)) reductions/942))
+             (apply (field_imm 19 (field_imm 4 (global Dune__exe__Grammar!)))
+               (function param/946 prods/944 ok/945[int] : int
+                 (&& ok/945
+                   (catch
+                     (if (isint prods/944) (exit 5)
+                       (let (*match*/1818 =a (field_imm 1 prods/944))
+                         (if (isint *match*/1818) (exit 5)
+                           (let
+                             (*match*/1820 =a (field_imm 1 *match*/1818)
+                              *match*/1819 =a (field_imm 0 *match*/1818))
+                             0))))
+                    with (5) 1)))
+               reductions/942 1)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Slr!) state_is_ok/939))
+  (let
+    (count_slr_violations/947 =
+       (function param/988[int] : int
+         (let (count/949 = (makemutable 0 (int) 0))
+           (seq
+             (for s/950 0 to (- (field_imm 0 (global Dune__exe__Lr0!)) 1)
+               (let
+                 (s/951 =
+                    (apply (field_imm 2 (global Dune__exe__Slr!)) s/950))
+                 (if
+                   (not (apply (field_imm 6 (global Dune__exe__Slr!)) s/951))
+                   (seq (+:=1 count/949)
+                     (if (field_imm 1 (global Dune__exe__Slr!))
+                       (apply (field_imm 0 (global Stdlib__Printf!))
+                         (field_imm 39 (global Stdlib!))
+                         [0:
+                          [11:
+                           "The following SLR(1) state has a conflict:\n"
+                           [2: 0 0]]
+                          "The following SLR(1) state has a conflict:\n%s"]
+                         (apply (field_imm 24 (global Dune__exe__Lr0!)) ""
+                           s/951))
+                       0))
+                   0)))
+             (field_int 0 count/949)))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Slr!)
+      count_slr_violations/947))
+  (let
+    (check/989 =
+       (function param/1008[int] : int
+         (apply (field_imm 2 (global Dune__exe__Error!)) 1
+           (function f/1006 : int
+             (let
+               (count/1007 =[int]
+                  (apply (field_imm 7 (global Dune__exe__Slr!)) 0))
+               (if (== count/1007 0)
+                 (apply (field_imm 0 (global Stdlib__Printf!)) f/1006
+                   [0:
+                    [11: "The grammar is SLR(1).\n" 0]
+                    "The grammar is SLR(1).\n"])
+                 (apply (field_imm 0 (global Stdlib__Printf!)) f/1006
+                   [0:
+                    [11:
+                     "The grammar is not SLR(1) -- "
+                     [4: 0 0 0 [11: " states have a conflict.\n" 0]]]
+                    "The grammar is not SLR(1) -- %d states have a conflict.\n"]
+                   count/1007)))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Slr!) check/989))
+  0)
+(seq
+  (let (tell_me_everything/413 =[int] 0)
+    (setfield_ptr(root-init) 1 (global Dune__exe__Slr!)
+      tell_me_everything/413))
+  (let
+    (make_slr_state/414 =
+       (function s/454[int]
+         (let
+           (items/455 = (apply (field_imm 2 (global Dune__exe__Lr0!)) s/454)
+            s/525 =
+              (apply (field_imm 28 (field_imm 9 (global Dune__exe__Item!)))
+                (function _item/592
+                  (field_imm 0 (field_imm 3 (global Dune__exe__Grammar!))))
+                items/455)
+            s/652 = (apply (field_imm 10 (global Dune__exe__Lr0!)) s/525))
+           (apply (field_imm 19 (field_imm 9 (global Dune__exe__Item!)))
+             (function item/653 toks/654 accu/655
+               (let
+                 (*match*/1803 =
+                    (apply (field_imm 4 (global Dune__exe__Item!)) item/653)
+                  follow_nt/657 =
+                    (apply
+                      (field_imm 7
+                        (field_imm 11 (global Dune__exe__Grammar!)))
+                      (field_imm 1 *match*/1803)))
+                 (seq
+                   (if
+                     (apply
+                       (field_imm 17
+                         (field_imm 3 (global Dune__exe__Grammar!)))
+                       toks/654 follow_nt/657)
+                     0
+                     (raise
+                       (makeblock 0 (global Assert_failure/28!)
+                         [0: "src/slr.ml" 63 4])))
+                   (apply
+                     (field_imm 3 (field_imm 9 (global Dune__exe__Item!)))
+                     item/653 follow_nt/657 accu/655))))
+             s/652 (field_imm 0 (field_imm 9 (global Dune__exe__Item!)))))))
+    (setfield_ptr(root-init) 2 (global Dune__exe__Slr!) make_slr_state/414))
+  (let
+    (reductions/733 =
+       (function s/735
+         (apply (field_imm 19 (field_imm 9 (global Dune__exe__Item!)))
+           (function item/836 toks/837 reductions/838
+             (let
+               (*match*/1808 =
+                  (apply (field_imm 7 (global Dune__exe__Item!)) item/836))
+               (switch* *match*/1808
+                case tag 0: reductions/838
+                case tag 1:
+                 (apply (field_imm 28 (global Dune__exe__Lr0!))
+                   (field_imm 0 *match*/1808) toks/837 reductions/838))))
+           s/735 (field_imm 0 (field_imm 4 (global Dune__exe__Grammar!))))))
+    (setfield_ptr(root-init) 3 (global Dune__exe__Slr!) reductions/733))
+  (let
+    (transitions/885 =
+       (function s/887
+         (apply (field_imm 19 (field_imm 9 (global Dune__exe__Item!)))
+           (function item/888 param/932 transitions/889
+             (let
+               (*match*/1811 =
+                  (apply (field_imm 7 (global Dune__exe__Item!)) item/888))
+               (catch
+                 (switch* *match*/1811
+                  case tag 0:
+                   (let (*match*/1812 =a (field_imm 0 *match*/1811))
+                     (switch* *match*/1812
+                      case tag 0: (exit 4)
+                      case tag 1:
+                       (apply
+                         (field_imm 7
+                           (field_imm 3 (global Dune__exe__Grammar!)))
+                         (field_imm 0 *match*/1812) transitions/889)))
+                  case tag 1: (exit 4))
+                with (4) transitions/889)))
+           s/887 (field_imm 0 (field_imm 3 (global Dune__exe__Grammar!))))))
+    (setfield_ptr(root-init) 4 (global Dune__exe__Slr!) transitions/885))
+  (let
+    (domain/933 =
+       (function m/935
+         (apply (field_imm 19 (field_imm 4 (global Dune__exe__Grammar!)))
+           (function tok/936 param/938 accu/937
+             (apply (field_imm 7 (field_imm 3 (global Dune__exe__Grammar!)))
+               tok/936 accu/937))
+           m/935 (field_imm 0 (field_imm 3 (global Dune__exe__Grammar!))))))
+    (setfield_ptr(root-init) 5 (global Dune__exe__Slr!) domain/933))
+  (let
+    (state_is_ok/939 =
+       (function s/941 : int
+         (let
+           (reductions/942 =
+              (apply (field_imm 3 (global Dune__exe__Slr!)) s/941)
+            transitions/943 =
+              (apply (field_imm 4 (global Dune__exe__Slr!)) s/941))
+           (&&
+             (apply (field_imm 11 (field_imm 3 (global Dune__exe__Grammar!)))
+               transitions/943
+               (apply (field_imm 5 (global Dune__exe__Slr!)) reductions/942))
+             (apply (field_imm 19 (field_imm 4 (global Dune__exe__Grammar!)))
+               (function param/946 prods/944 ok/945[int] : int
+                 (&& ok/945
+                   (catch
+                     (if (isint prods/944) (exit 5)
+                       (if (isint (field_imm 1 prods/944)) (exit 5) 0))
+                    with (5) 1)))
+               reductions/942 1)))))
+    (setfield_ptr(root-init) 6 (global Dune__exe__Slr!) state_is_ok/939))
+  (let
+    (count_slr_violations/947 =
+       (function param/988[int] : int
+         (let (count/949 =mut[int] 0)
+           (seq
+             (for s/950 0 to (- (field_imm 0 (global Dune__exe__Lr0!)) 1)
+               (let
+                 (s/951 =
+                    (apply (field_imm 2 (global Dune__exe__Slr!)) s/950))
+                 (if
+                   (not (apply (field_imm 6 (global Dune__exe__Slr!)) s/951))
+                   (seq (assign count/949 (1+ *count/949))
+                     (if (field_imm 1 (global Dune__exe__Slr!))
+                       (apply (field_imm 0 (global Stdlib__Printf!))
+                         (field_imm 39 (global Stdlib!))
+                         [0:
+                          [11:
+                           "The following SLR(1) state has a conflict:\n"
+                           [2: 0 0]]
+                          "The following SLR(1) state has a conflict:\n%s"]
+                         (apply (field_imm 24 (global Dune__exe__Lr0!)) ""
+                           s/951))
+                       0))
+                   0)))
+             *count/949))))
+    (setfield_ptr(root-init) 7 (global Dune__exe__Slr!)
+      count_slr_violations/947))
+  (let
+    (check/989 =
+       (function param/1008[int] : int
+         (apply (field_imm 2 (global Dune__exe__Error!)) 1
+           (function f/1006 : int
+             (let
+               (count/1007 =[int]
+                  (apply (field_imm 7 (global Dune__exe__Slr!)) 0))
+               (if (== count/1007 0)
+                 (apply (field_imm 0 (global Stdlib__Printf!)) f/1006
+                   [0:
+                    [11: "The grammar is SLR(1).\n" 0]
+                    "The grammar is SLR(1).\n"])
+                 (apply (field_imm 0 (global Stdlib__Printf!)) f/1006
+                   [0:
+                    [11:
+                     "The grammar is not SLR(1) -- "
+                     [4: 0 0 0 [11: " states have a conflict.\n" 0]]]
+                    "The grammar is not SLR(1) -- %d states have a conflict.\n"]
+                   count/1007)))))))
+    (setfield_ptr(root-init) 0 (global Dune__exe__Slr!) check/989))
+  0)

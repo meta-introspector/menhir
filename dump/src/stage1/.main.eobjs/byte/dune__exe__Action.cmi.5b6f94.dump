@@ -1,0 +1,964 @@
+[
+  signature_item (src/action.mli[14,997+0]..[14,997+12])
+    Psig_open Fresh "Keyword" (src/action.mli[14,997+5]..[14,997+12])
+  signature_item (src/action.mli[21,1358+0]..[21,1358+6])
+    Psig_type Rec
+    [
+      type_declaration "t" (src/action.mli[21,1358+5]..[21,1358+6]) (src/action.mli[21,1358+0]..[21,1358+6])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/action.mli[16,1027+0]..[20,1331+26])
+              Pstr_eval
+              expression (src/action.mli[16,1027+0]..[20,1331+26])
+                Pexp_constant PConst_string(" A semantic action is a piece of OCaml code together with information about\n   the free variables that appear in this code (which refer to semantic\n   values) and information about the keywords that appear in this code. The\n   code can be represented internally as a piece of text or (more generally)\n   as an IL expression. ",(src/action.mli[16,1027+0]..[20,1331+26]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/action.mli[30,1666+0]..[30,1666+47])
+    Psig_value
+    value_description "from_stretch" (src/action.mli[30,1666+4]..[30,1666+16]) (src/action.mli[30,1666+0]..[30,1666+47])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[27,1469+0]..[29,1608+57])
+            Pstr_eval
+            expression (src/action.mli[27,1469+0]..[29,1608+57])
+              Pexp_constant PConst_string(" [from_stretch xs s] builds an action out of a textual piece of code.\n   The set [xs] must contain all of the variables that occur free\n   in the semantic action and denote a semantic value. ",(src/action.mli[27,1469+0]..[29,1608+57]),None)
+        ]
+      core_type (src/action.mli[30,1666+18]..[30,1666+47])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[30,1666+18]..[30,1666+29])
+          Ptyp_constr "StringSet.t" (src/action.mli[30,1666+18]..[30,1666+29])
+          []
+        core_type (src/action.mli[30,1666+33]..[30,1666+47])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[30,1666+33]..[30,1666+42])
+            Ptyp_constr "Stretch.t" (src/action.mli[30,1666+33]..[30,1666+42])
+            []
+          core_type (src/action.mli[30,1666+46]..[30,1666+47])
+            Ptyp_constr "t" (src/action.mli[30,1666+46]..[30,1666+47])
+            []
+      []
+  signature_item (src/action.mli[35,1880+0]..[35,1880+30])
+    Psig_value
+    value_description "from_il_expr" (src/action.mli[35,1880+4]..[35,1880+16]) (src/action.mli[35,1880+0]..[35,1880+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[32,1715+0]..[34,1864+15])
+            Pstr_eval
+            expression (src/action.mli[32,1715+0]..[34,1864+15])
+              Pexp_constant PConst_string(" [from_il_expr] builds an action out of an IL expression. Not every IL\n   expression is accepted; only the expressions built by NewRuleSyntax are\n   accepted. ",(src/action.mli[32,1715+0]..[34,1864+15]),None)
+        ]
+      core_type (src/action.mli[35,1880+18]..[35,1880+30])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[35,1880+18]..[35,1880+25])
+          Ptyp_constr "IL.expr" (src/action.mli[35,1880+18]..[35,1880+25])
+          []
+        core_type (src/action.mli[35,1880+29]..[35,1880+30])
+          Ptyp_constr "t" (src/action.mli[35,1880+29]..[35,1880+30])
+          []
+      []
+  signature_item (src/action.mli[39,2065+0]..[39,2065+35])
+    Psig_value
+    value_description "compose" (src/action.mli[39,2065+4]..[39,2065+11]) (src/action.mli[39,2065+0]..[39,2065+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[37,1912+0]..[38,1991+73])
+            Pstr_eval
+            expression (src/action.mli[37,1912+0]..[38,1991+73])
+              Pexp_constant PConst_string(" [compose x a1 a2] builds the action [let x = a1 in a2]. This combinator is\n   used during inlining (that is, while eliminating %inlined symbols). ",(src/action.mli[37,1912+0]..[38,1991+73]),None)
+        ]
+      core_type (src/action.mli[39,2065+14]..[39,2065+35])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[39,2065+14]..[39,2065+20])
+          Ptyp_constr "string" (src/action.mli[39,2065+14]..[39,2065+20])
+          []
+        core_type (src/action.mli[39,2065+24]..[39,2065+35])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[39,2065+24]..[39,2065+25])
+            Ptyp_constr "t" (src/action.mli[39,2065+24]..[39,2065+25])
+            []
+          core_type (src/action.mli[39,2065+29]..[39,2065+35])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/action.mli[39,2065+29]..[39,2065+30])
+              Ptyp_constr "t" (src/action.mli[39,2065+29]..[39,2065+30])
+              []
+            core_type (src/action.mli[39,2065+34]..[39,2065+35])
+              Ptyp_constr "t" (src/action.mli[39,2065+34]..[39,2065+35])
+              []
+      []
+  signature_item (src/action.mli[45,2345+0]..[45,2345+40])
+    Psig_value
+    value_description "bind" (src/action.mli[45,2345+4]..[45,2345+8]) (src/action.mli[45,2345+0]..[45,2345+40])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[41,2102+0]..[44,2325+19])
+            Pstr_eval
+            expression (src/action.mli[41,2102+0]..[44,2325+19])
+              Pexp_constant PConst_string(" [bind p x a] binds the OCaml pattern [p] to the OCaml variable [x] in the\n   semantic action [a]. Therefore, it builds the action [let p = x in a].\n   Not every IL pattern is accepted; only those built by NewRuleSyntax\n   are accepted. ",(src/action.mli[41,2102+0]..[44,2325+19]),None)
+        ]
+      core_type (src/action.mli[45,2345+10]..[45,2345+40])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[45,2345+10]..[45,2345+20])
+          Ptyp_constr "IL.pattern" (src/action.mli[45,2345+10]..[45,2345+20])
+          []
+        core_type (src/action.mli[45,2345+24]..[45,2345+40])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[45,2345+24]..[45,2345+30])
+            Ptyp_constr "string" (src/action.mli[45,2345+24]..[45,2345+30])
+            []
+          core_type (src/action.mli[45,2345+34]..[45,2345+40])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/action.mli[45,2345+34]..[45,2345+35])
+              Ptyp_constr "t" (src/action.mli[45,2345+34]..[45,2345+35])
+              []
+            core_type (src/action.mli[45,2345+39]..[45,2345+40])
+              Ptyp_constr "t" (src/action.mli[45,2345+39]..[45,2345+40])
+              []
+      []
+  signature_item (src/action.mli[52,2547+0]..[52,2547+28])
+    Psig_value
+    value_description "to_il_expr" (src/action.mli[52,2547+4]..[52,2547+14]) (src/action.mli[52,2547+0]..[52,2547+28])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[51,2487+0]..[51,2487+59])
+            Pstr_eval
+            expression (src/action.mli[51,2487+0]..[51,2487+59])
+              Pexp_constant PConst_string(" [to_il_expr] converts an action to an IL expression. ",(src/action.mli[51,2487+0]..[51,2487+59]),None)
+        ]
+      core_type (src/action.mli[52,2547+16]..[52,2547+28])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[52,2547+16]..[52,2547+17])
+          Ptyp_constr "t" (src/action.mli[52,2547+16]..[52,2547+17])
+          []
+        core_type (src/action.mli[52,2547+21]..[52,2547+28])
+          Ptyp_constr "IL.expr" (src/action.mli[52,2547+21]..[52,2547+28])
+          []
+      []
+  signature_item (src/action.mli[57,2774+0]..[57,2774+26])
+    Psig_value
+    value_description "is_standard" (src/action.mli[57,2774+4]..[57,2774+15]) (src/action.mli[57,2774+0]..[57,2774+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[54,2577+0]..[56,2732+41])
+            Pstr_eval
+            expression (src/action.mli[54,2577+0]..[56,2732+41])
+              Pexp_constant PConst_string(" [is_standard a] indicates whether the action [a] originates from Menhir's\n   standard library. Via inlining, several actions can be combined into one;\n   in that case, we take a conjunction ",(src/action.mli[54,2577+0]..[56,2732+41]),None)
+        ]
+      core_type (src/action.mli[57,2774+17]..[57,2774+26])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[57,2774+17]..[57,2774+18])
+          Ptyp_constr "t" (src/action.mli[57,2774+17]..[57,2774+18])
+          []
+        core_type (src/action.mli[57,2774+22]..[57,2774+26])
+          Ptyp_constr "bool" (src/action.mli[57,2774+22]..[57,2774+26])
+          []
+      []
+  signature_item (src/action.mli[61,2922+0]..[61,2922+29])
+    Psig_value
+    value_description "semvars" (src/action.mli[61,2922+4]..[61,2922+11]) (src/action.mli[61,2922+0]..[61,2922+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[59,2802+0]..[60,2877+44])
+            Pstr_eval
+            expression (src/action.mli[59,2802+0]..[60,2877+44])
+              Pexp_constant PConst_string(" [semvars a] is a superset of the free variables that may appear in the\n   action [a] to denote a semantic value. ",(src/action.mli[59,2802+0]..[60,2877+44]),None)
+        ]
+      core_type (src/action.mli[61,2922+13]..[61,2922+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[61,2922+13]..[61,2922+14])
+          Ptyp_constr "t" (src/action.mli[61,2922+13]..[61,2922+14])
+          []
+        core_type (src/action.mli[61,2922+18]..[61,2922+29])
+          Ptyp_constr "StringSet.t" (src/action.mli[61,2922+18]..[61,2922+29])
+          []
+      []
+  signature_item (src/action.mli[64,3020+0]..[64,3020+31])
+    Psig_value
+    value_description "keywords" (src/action.mli[64,3020+4]..[64,3020+12]) (src/action.mli[64,3020+0]..[64,3020+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[63,2953+0]..[63,2953+66])
+            Pstr_eval
+            expression (src/action.mli[63,2953+0]..[63,2953+66])
+              Pexp_constant PConst_string(" [keywords a] is the set of keywords used in the action [a]. ",(src/action.mli[63,2953+0]..[63,2953+66]),None)
+        ]
+      core_type (src/action.mli[64,3020+14]..[64,3020+31])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[64,3020+14]..[64,3020+15])
+          Ptyp_constr "t" (src/action.mli[64,3020+14]..[64,3020+15])
+          []
+        core_type (src/action.mli[64,3020+19]..[64,3020+31])
+          Ptyp_constr "KeywordSet.t" (src/action.mli[64,3020+19]..[64,3020+31])
+          []
+      []
+  signature_item (src/action.mli[68,3157+0]..[68,3157+30])
+    Psig_value
+    value_description "has_syntaxerror" (src/action.mli[68,3157+4]..[68,3157+19]) (src/action.mli[68,3157+0]..[68,3157+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[66,3053+0]..[67,3126+30])
+            Pstr_eval
+            expression (src/action.mli[66,3053+0]..[67,3126+30])
+              Pexp_constant PConst_string(" [has_syntaxerror a] tests whether the keyword [$syntaxerror] appears\n   in the set [keywords a]. ",(src/action.mli[66,3053+0]..[67,3126+30]),None)
+        ]
+      core_type (src/action.mli[68,3157+21]..[68,3157+30])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[68,3157+21]..[68,3157+22])
+          Ptyp_constr "t" (src/action.mli[68,3157+21]..[68,3157+22])
+          []
+        core_type (src/action.mli[68,3157+26]..[68,3157+30])
+          Ptyp_constr "bool" (src/action.mli[68,3157+26]..[68,3157+30])
+          []
+      []
+  signature_item (src/action.mli[72,3290+0]..[72,3290+28])
+    Psig_value
+    value_description "has_beforeend" (src/action.mli[72,3290+4]..[72,3290+17]) (src/action.mli[72,3290+0]..[72,3290+28])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[70,3189+0]..[71,3262+27])
+            Pstr_eval
+            expression (src/action.mli[70,3189+0]..[71,3262+27])
+              Pexp_constant PConst_string(" [has_beforeend a] tests whether the keyword [$endpos($0)] appears in\n   the set [keywords a]. ",(src/action.mli[70,3189+0]..[71,3262+27]),None)
+        ]
+      core_type (src/action.mli[72,3290+19]..[72,3290+28])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[72,3290+19]..[72,3290+20])
+          Ptyp_constr "t" (src/action.mli[72,3290+19]..[72,3290+20])
+          []
+        core_type (src/action.mli[72,3290+24]..[72,3290+28])
+          Ptyp_constr "bool" (src/action.mli[72,3290+24]..[72,3290+28])
+          []
+      []
+  signature_item (src/action.mli[76,3453+0]..[76,3453+29])
+    Psig_value
+    value_description "posvars" (src/action.mli[76,3453+4]..[76,3453+11]) (src/action.mli[76,3453+0]..[76,3453+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[74,3320+0]..[75,3398+54])
+            Pstr_eval
+            expression (src/action.mli[74,3320+0]..[75,3398+54])
+              Pexp_constant PConst_string(" [posvars a] is the set of conventional position variables that correspond\n   to the position keywords used in the action [a]. ",(src/action.mli[74,3320+0]..[75,3398+54]),None)
+        ]
+      core_type (src/action.mli[76,3453+13]..[76,3453+29])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[76,3453+13]..[76,3453+14])
+          Ptyp_constr "t" (src/action.mli[76,3453+13]..[76,3453+14])
+          []
+        core_type (src/action.mli[76,3453+18]..[76,3453+29])
+          Ptyp_constr "StringSet.t" (src/action.mli[76,3453+18]..[76,3453+29])
+          []
+      []
+  signature_item (src/action.mli[79,3545+0]..[79,3545+26])
+    Psig_value
+    value_description "vars" (src/action.mli[79,3545+4]..[79,3545+8]) (src/action.mli[79,3545+0]..[79,3545+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[78,3484+0]..[78,3484+60])
+            Pstr_eval
+            expression (src/action.mli[78,3484+0]..[78,3484+60])
+              Pexp_constant PConst_string(" [vars a] is the union of [semvars a] and [posvars a]. ",(src/action.mli[78,3484+0]..[78,3484+60]),None)
+        ]
+      core_type (src/action.mli[79,3545+10]..[79,3545+26])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[79,3545+10]..[79,3545+11])
+          Ptyp_constr "t" (src/action.mli[79,3545+10]..[79,3545+11])
+          []
+        core_type (src/action.mli[79,3545+15]..[79,3545+26])
+          Ptyp_constr "StringSet.t" (src/action.mli[79,3545+15]..[79,3545+26])
+          []
+      []
+  signature_item (src/action.mli[90,4002+0]..[90,4002+69])
+    Psig_value
+    value_description "define" (src/action.mli[90,4002+4]..[90,4002+10]) (src/action.mli[90,4002+0]..[90,4002+69])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[85,3681+0]..[89,3986+15])
+            Pstr_eval
+            expression (src/action.mli[85,3681+0]..[89,3986+15])
+              Pexp_constant PConst_string(" [define keyword keywords f a] defines away the keyword [keyword]. This\n   keyword is removed from the set of keywords of the action [a]; the set\n   [keywords] is added in its place. The code of the action [a] is transformed\n   by the function [f], which typically wraps its argument in some new [let]\n   bindings. ",(src/action.mli[85,3681+0]..[89,3986+15]),None)
+        ]
+      core_type (src/action.mli[90,4002+12]..[90,4002+69])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[90,4002+12]..[90,4002+19])
+          Ptyp_constr "keyword" (src/action.mli[90,4002+12]..[90,4002+19])
+          []
+        core_type (src/action.mli[90,4002+23]..[90,4002+69])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[90,4002+23]..[90,4002+35])
+            Ptyp_constr "KeywordSet.t" (src/action.mli[90,4002+23]..[90,4002+35])
+            []
+          core_type (src/action.mli[90,4002+39]..[90,4002+69])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/action.mli[90,4002+40]..[90,4002+58])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/action.mli[90,4002+40]..[90,4002+47])
+                Ptyp_constr "IL.expr" (src/action.mli[90,4002+40]..[90,4002+47])
+                []
+              core_type (src/action.mli[90,4002+51]..[90,4002+58])
+                Ptyp_constr "IL.expr" (src/action.mli[90,4002+51]..[90,4002+58])
+                []
+            core_type (src/action.mli[90,4002+63]..[90,4002+69])
+              Ptyp_arrow
+              Nolabel
+              core_type (src/action.mli[90,4002+63]..[90,4002+64])
+                Ptyp_constr "t" (src/action.mli[90,4002+63]..[90,4002+64])
+                []
+              core_type (src/action.mli[90,4002+68]..[90,4002+69])
+                Ptyp_constr "t" (src/action.mli[90,4002+68]..[90,4002+69])
+                []
+      []
+  signature_item (src/action.mli[107,4890+0]..[107,4890+10])
+    Psig_type Rec
+    [
+      type_declaration "subst" (src/action.mli[107,4890+5]..[107,4890+10]) (src/action.mli[107,4890+0]..[107,4890+10])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/action.mli[104,4691+0]..[106,4838+51])
+              Pstr_eval
+              expression (src/action.mli[104,4691+0]..[106,4838+51])
+                Pexp_constant PConst_string(" A variable-to-variable substitution is a finite map of variables to\n   variables. It can be semantically interpreted as a simultaneous binding\n   construct, that is, as a [let/and] construct. ",(src/action.mli[104,4691+0]..[106,4838+51]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ptype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/action.mli[110,4933+0]..[110,4933+16])
+    Psig_value
+    value_description "empty" (src/action.mli[110,4933+4]..[110,4933+9]) (src/action.mli[110,4933+0]..[110,4933+16])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[109,4902+0]..[109,4902+30])
+            Pstr_eval
+            expression (src/action.mli[109,4902+0]..[109,4902+30])
+              Pexp_constant PConst_string(" The empty substitution. ",(src/action.mli[109,4902+0]..[109,4902+30]),None)
+        ]
+      core_type (src/action.mli[110,4933+11]..[110,4933+16])
+        Ptyp_constr "subst" (src/action.mli[110,4933+11]..[110,4933+16])
+        []
+      []
+  signature_item (src/action.mli[113,4984+0]..[113,4984+46])
+    Psig_value
+    value_description "extend" (src/action.mli[113,4984+4]..[113,4984+10]) (src/action.mli[113,4984+0]..[113,4984+46])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[112,4951+0]..[112,4951+32])
+            Pstr_eval
+            expression (src/action.mli[112,4951+0]..[112,4951+32])
+              Pexp_constant PConst_string(" Extending a substitution. ",(src/action.mli[112,4951+0]..[112,4951+32]),None)
+        ]
+      core_type (src/action.mli[113,4984+12]..[113,4984+46])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[113,4984+12]..[113,4984+18])
+          Ptyp_constr "string" (src/action.mli[113,4984+12]..[113,4984+18])
+          []
+        core_type (src/action.mli[113,4984+22]..[113,4984+46])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[113,4984+22]..[113,4984+28])
+            Ptyp_constr "string" (src/action.mli[113,4984+22]..[113,4984+28])
+            []
+          core_type (src/action.mli[113,4984+32]..[113,4984+46])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/action.mli[113,4984+32]..[113,4984+37])
+              Ptyp_constr "subst" (src/action.mli[113,4984+32]..[113,4984+37])
+              []
+            core_type (src/action.mli[113,4984+41]..[113,4984+46])
+              Ptyp_constr "subst" (src/action.mli[113,4984+41]..[113,4984+46])
+              []
+      []
+  signature_item (src/action.mli[122,5439+0]..[124,5502+17])
+    Psig_value
+    value_description "rename" (src/action.mli[122,5439+4]..[122,5439+10]) (src/action.mli[122,5439+0]..[124,5502+17])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[115,5032+0]..[121,5409+29])
+            Pstr_eval
+            expression (src/action.mli[115,5032+0]..[121,5409+29])
+              Pexp_constant PConst_string(" [rename f phi a] transforms the action [a] by applying the renaming [phi]\n   as well as the keyword transformations determined by the function [f].\n\n   The function [f] is applied to each (not-yet-renamed) keyword and may\n   decide to transform it into another keyword, by returning [Some _], or to\n   not transform it, by returning [None]. In the latter case, [phi] still\n   applies to the keyword. ",(src/action.mli[115,5032+0]..[121,5409+29]),None)
+        ]
+      core_type (src/action.mli[123,5451+2]..[124,5502+17])
+        Ptyp_arrow
+        Nolabel
+        core_type (src/action.mli[123,5451+3]..[123,5451+46])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[123,5451+3]..[123,5451+18])
+            Ptyp_tuple
+            [
+              core_type (src/action.mli[123,5451+3]..[123,5451+10])
+                Ptyp_constr "subject" (src/action.mli[123,5451+3]..[123,5451+10])
+                []
+              core_type (src/action.mli[123,5451+13]..[123,5451+18])
+                Ptyp_constr "where" (src/action.mli[123,5451+13]..[123,5451+18])
+                []
+            ]
+          core_type (src/action.mli[123,5451+22]..[123,5451+46])
+            Ptyp_constr "option" (src/action.mli[123,5451+40]..[123,5451+46])
+            [
+              core_type (src/action.mli[123,5451+23]..[123,5451+38])
+                Ptyp_tuple
+                [
+                  core_type (src/action.mli[123,5451+23]..[123,5451+30])
+                    Ptyp_constr "subject" (src/action.mli[123,5451+23]..[123,5451+30])
+                    []
+                  core_type (src/action.mli[123,5451+33]..[123,5451+38])
+                    Ptyp_constr "where" (src/action.mli[123,5451+33]..[123,5451+38])
+                    []
+                ]
+            ]
+        core_type (src/action.mli[124,5502+2]..[124,5502+17])
+          Ptyp_arrow
+          Nolabel
+          core_type (src/action.mli[124,5502+2]..[124,5502+7])
+            Ptyp_constr "subst" (src/action.mli[124,5502+2]..[124,5502+7])
+            []
+          core_type (src/action.mli[124,5502+11]..[124,5502+17])
+            Ptyp_arrow
+            Nolabel
+            core_type (src/action.mli[124,5502+11]..[124,5502+12])
+              Ptyp_constr "t" (src/action.mli[124,5502+11]..[124,5502+12])
+              []
+            core_type (src/action.mli[124,5502+16]..[124,5502+17])
+              Ptyp_constr "t" (src/action.mli[124,5502+16]..[124,5502+17])
+              []
+      []
+]
+
+open Keyword
+type t[@@ocaml.doc
+        " A semantic action is a piece of OCaml code together with information about\n   the free variables that appear in this code (which refer to semantic\n   values) and information about the keywords that appear in this code. The\n   code can be represented internally as a piece of text or (more generally)\n   as an IL expression. "]
+val from_stretch : StringSet.t -> Stretch.t -> t[@@ocaml.doc
+                                                  " [from_stretch xs s] builds an action out of a textual piece of code.\n   The set [xs] must contain all of the variables that occur free\n   in the semantic action and denote a semantic value. "]
+val from_il_expr : IL.expr -> t[@@ocaml.doc
+                                 " [from_il_expr] builds an action out of an IL expression. Not every IL\n   expression is accepted; only the expressions built by NewRuleSyntax are\n   accepted. "]
+val compose : string -> t -> t -> t[@@ocaml.doc
+                                     " [compose x a1 a2] builds the action [let x = a1 in a2]. This combinator is\n   used during inlining (that is, while eliminating %inlined symbols). "]
+val bind : IL.pattern -> string -> t -> t[@@ocaml.doc
+                                           " [bind p x a] binds the OCaml pattern [p] to the OCaml variable [x] in the\n   semantic action [a]. Therefore, it builds the action [let p = x in a].\n   Not every IL pattern is accepted; only those built by NewRuleSyntax\n   are accepted. "]
+val to_il_expr : t -> IL.expr[@@ocaml.doc
+                               " [to_il_expr] converts an action to an IL expression. "]
+val is_standard : t -> bool[@@ocaml.doc
+                             " [is_standard a] indicates whether the action [a] originates from Menhir's\n   standard library. Via inlining, several actions can be combined into one;\n   in that case, we take a conjunction "]
+val semvars : t -> StringSet.t[@@ocaml.doc
+                                " [semvars a] is a superset of the free variables that may appear in the\n   action [a] to denote a semantic value. "]
+val keywords : t -> KeywordSet.t[@@ocaml.doc
+                                  " [keywords a] is the set of keywords used in the action [a]. "]
+val has_syntaxerror : t -> bool[@@ocaml.doc
+                                 " [has_syntaxerror a] tests whether the keyword [$syntaxerror] appears\n   in the set [keywords a]. "]
+val has_beforeend : t -> bool[@@ocaml.doc
+                               " [has_beforeend a] tests whether the keyword [$endpos($0)] appears in\n   the set [keywords a]. "]
+val posvars : t -> StringSet.t[@@ocaml.doc
+                                " [posvars a] is the set of conventional position variables that correspond\n   to the position keywords used in the action [a]. "]
+val vars : t -> StringSet.t[@@ocaml.doc
+                             " [vars a] is the union of [semvars a] and [posvars a]. "]
+val define : keyword -> KeywordSet.t -> (IL.expr -> IL.expr) -> t -> t
+[@@ocaml.doc
+  " [define keyword keywords f a] defines away the keyword [keyword]. This\n   keyword is removed from the set of keywords of the action [a]; the set\n   [keywords] is added in its place. The code of the action [a] is transformed\n   by the function [f], which typically wraps its argument in some new [let]\n   bindings. "]
+type subst[@@ocaml.doc
+            " A variable-to-variable substitution is a finite map of variables to\n   variables. It can be semantically interpreted as a simultaneous binding\n   construct, that is, as a [let/and] construct. "]
+val empty : subst[@@ocaml.doc " The empty substitution. "]
+val extend : string -> string -> subst -> subst[@@ocaml.doc
+                                                 " Extending a substitution. "]
+val rename :
+  ((subject * where) -> (subject * where) option) -> subst -> t -> t[@@ocaml.doc
+                                                                    " [rename f phi a] transforms the action [a] by applying the renaming [phi]\n   as well as the keyword transformations determined by the function [f].\n\n   The function [f] is applied to each (not-yet-renamed) keyword and may\n   decide to transform it into another keyword, by returning [Some _], or to\n   not transform it, by returning [None]. In the latter case, [phi] still\n   applies to the keyword. "]
+[
+  signature_item (src/action.mli[14,997+0]..src/action.mli[14,997+12])
+    Tsig_open Fresh "MenhirSdk!.Keyword"
+  signature_item (src/action.mli[21,1358+0]..src/action.mli[21,1358+6])
+    Tsig_type Rec
+    [
+      type_declaration t/402 (src/action.mli[21,1358+0]..src/action.mli[21,1358+6])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/action.mli[16,1027+0]..[20,1331+26])
+              Pstr_eval
+              expression (src/action.mli[16,1027+0]..[20,1331+26])
+                Pexp_constant PConst_string(" A semantic action is a piece of OCaml code together with information about\n   the free variables that appear in this code (which refer to semantic\n   values) and information about the keywords that appear in this code. The\n   code can be represented internally as a piece of text or (more generally)\n   as an IL expression. ",(src/action.mli[16,1027+0]..[20,1331+26]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/action.mli[30,1666+0]..src/action.mli[30,1666+47])
+    Tsig_value
+    value_description from_stretch/451 (src/action.mli[30,1666+0]..src/action.mli[30,1666+47])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[27,1469+0]..[29,1608+57])
+            Pstr_eval
+            expression (src/action.mli[27,1469+0]..[29,1608+57])
+              Pexp_constant PConst_string(" [from_stretch xs s] builds an action out of a textual piece of code.\n   The set [xs] must contain all of the variables that occur free\n   in the semantic action and denote a semantic value. ",(src/action.mli[27,1469+0]..[29,1608+57]),None)
+        ]
+      core_type (src/action.mli[30,1666+18]..src/action.mli[30,1666+47])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[30,1666+18]..src/action.mli[30,1666+29])
+          Ttyp_constr "Dune__exe!.StringSet.t"
+          []
+        core_type (src/action.mli[30,1666+33]..src/action.mli[30,1666+47])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[30,1666+33]..src/action.mli[30,1666+42])
+            Ttyp_constr "Dune__exe!.Stretch.t"
+            []
+          core_type (src/action.mli[30,1666+46]..src/action.mli[30,1666+47])
+            Ttyp_constr "t/402"
+            []
+      []
+  signature_item (src/action.mli[35,1880+0]..src/action.mli[35,1880+30])
+    Tsig_value
+    value_description from_il_expr/479 (src/action.mli[35,1880+0]..src/action.mli[35,1880+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[32,1715+0]..[34,1864+15])
+            Pstr_eval
+            expression (src/action.mli[32,1715+0]..[34,1864+15])
+              Pexp_constant PConst_string(" [from_il_expr] builds an action out of an IL expression. Not every IL\n   expression is accepted; only the expressions built by NewRuleSyntax are\n   accepted. ",(src/action.mli[32,1715+0]..[34,1864+15]),None)
+        ]
+      core_type (src/action.mli[35,1880+18]..src/action.mli[35,1880+30])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[35,1880+18]..src/action.mli[35,1880+25])
+          Ttyp_constr "Dune__exe!.IL.expr"
+          []
+        core_type (src/action.mli[35,1880+29]..src/action.mli[35,1880+30])
+          Ttyp_constr "t/402"
+          []
+      []
+  signature_item (src/action.mli[39,2065+0]..src/action.mli[39,2065+35])
+    Tsig_value
+    value_description compose/480 (src/action.mli[39,2065+0]..src/action.mli[39,2065+35])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[37,1912+0]..[38,1991+73])
+            Pstr_eval
+            expression (src/action.mli[37,1912+0]..[38,1991+73])
+              Pexp_constant PConst_string(" [compose x a1 a2] builds the action [let x = a1 in a2]. This combinator is\n   used during inlining (that is, while eliminating %inlined symbols). ",(src/action.mli[37,1912+0]..[38,1991+73]),None)
+        ]
+      core_type (src/action.mli[39,2065+14]..src/action.mli[39,2065+35])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[39,2065+14]..src/action.mli[39,2065+20])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/action.mli[39,2065+24]..src/action.mli[39,2065+35])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[39,2065+24]..src/action.mli[39,2065+25])
+            Ttyp_constr "t/402"
+            []
+          core_type (src/action.mli[39,2065+29]..src/action.mli[39,2065+35])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/action.mli[39,2065+29]..src/action.mli[39,2065+30])
+              Ttyp_constr "t/402"
+              []
+            core_type (src/action.mli[39,2065+34]..src/action.mli[39,2065+35])
+              Ttyp_constr "t/402"
+              []
+      []
+  signature_item (src/action.mli[45,2345+0]..src/action.mli[45,2345+40])
+    Tsig_value
+    value_description bind/481 (src/action.mli[45,2345+0]..src/action.mli[45,2345+40])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[41,2102+0]..[44,2325+19])
+            Pstr_eval
+            expression (src/action.mli[41,2102+0]..[44,2325+19])
+              Pexp_constant PConst_string(" [bind p x a] binds the OCaml pattern [p] to the OCaml variable [x] in the\n   semantic action [a]. Therefore, it builds the action [let p = x in a].\n   Not every IL pattern is accepted; only those built by NewRuleSyntax\n   are accepted. ",(src/action.mli[41,2102+0]..[44,2325+19]),None)
+        ]
+      core_type (src/action.mli[45,2345+10]..src/action.mli[45,2345+40])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[45,2345+10]..src/action.mli[45,2345+20])
+          Ttyp_constr "Dune__exe!.IL.pattern"
+          []
+        core_type (src/action.mli[45,2345+24]..src/action.mli[45,2345+40])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[45,2345+24]..src/action.mli[45,2345+30])
+            Ttyp_constr "string/15!"
+            []
+          core_type (src/action.mli[45,2345+34]..src/action.mli[45,2345+40])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/action.mli[45,2345+34]..src/action.mli[45,2345+35])
+              Ttyp_constr "t/402"
+              []
+            core_type (src/action.mli[45,2345+39]..src/action.mli[45,2345+40])
+              Ttyp_constr "t/402"
+              []
+      []
+  signature_item (src/action.mli[52,2547+0]..src/action.mli[52,2547+28])
+    Tsig_value
+    value_description to_il_expr/482 (src/action.mli[52,2547+0]..src/action.mli[52,2547+28])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[51,2487+0]..[51,2487+59])
+            Pstr_eval
+            expression (src/action.mli[51,2487+0]..[51,2487+59])
+              Pexp_constant PConst_string(" [to_il_expr] converts an action to an IL expression. ",(src/action.mli[51,2487+0]..[51,2487+59]),None)
+        ]
+      core_type (src/action.mli[52,2547+16]..src/action.mli[52,2547+28])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[52,2547+16]..src/action.mli[52,2547+17])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[52,2547+21]..src/action.mli[52,2547+28])
+          Ttyp_constr "Dune__exe!.IL.expr"
+          []
+      []
+  signature_item (src/action.mli[57,2774+0]..src/action.mli[57,2774+26])
+    Tsig_value
+    value_description is_standard/483 (src/action.mli[57,2774+0]..src/action.mli[57,2774+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[54,2577+0]..[56,2732+41])
+            Pstr_eval
+            expression (src/action.mli[54,2577+0]..[56,2732+41])
+              Pexp_constant PConst_string(" [is_standard a] indicates whether the action [a] originates from Menhir's\n   standard library. Via inlining, several actions can be combined into one;\n   in that case, we take a conjunction ",(src/action.mli[54,2577+0]..[56,2732+41]),None)
+        ]
+      core_type (src/action.mli[57,2774+17]..src/action.mli[57,2774+26])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[57,2774+17]..src/action.mli[57,2774+18])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[57,2774+22]..src/action.mli[57,2774+26])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/action.mli[61,2922+0]..src/action.mli[61,2922+29])
+    Tsig_value
+    value_description semvars/484 (src/action.mli[61,2922+0]..src/action.mli[61,2922+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[59,2802+0]..[60,2877+44])
+            Pstr_eval
+            expression (src/action.mli[59,2802+0]..[60,2877+44])
+              Pexp_constant PConst_string(" [semvars a] is a superset of the free variables that may appear in the\n   action [a] to denote a semantic value. ",(src/action.mli[59,2802+0]..[60,2877+44]),None)
+        ]
+      core_type (src/action.mli[61,2922+13]..src/action.mli[61,2922+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[61,2922+13]..src/action.mli[61,2922+14])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[61,2922+18]..src/action.mli[61,2922+29])
+          Ttyp_constr "Dune__exe!.StringSet.t"
+          []
+      []
+  signature_item (src/action.mli[64,3020+0]..src/action.mli[64,3020+31])
+    Tsig_value
+    value_description keywords/536 (src/action.mli[64,3020+0]..src/action.mli[64,3020+31])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[63,2953+0]..[63,2953+66])
+            Pstr_eval
+            expression (src/action.mli[63,2953+0]..[63,2953+66])
+              Pexp_constant PConst_string(" [keywords a] is the set of keywords used in the action [a]. ",(src/action.mli[63,2953+0]..[63,2953+66]),None)
+        ]
+      core_type (src/action.mli[64,3020+14]..src/action.mli[64,3020+31])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[64,3020+14]..src/action.mli[64,3020+15])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[64,3020+19]..src/action.mli[64,3020+31])
+          Ttyp_constr "MenhirSdk!.Keyword.KeywordSet.t"
+          []
+      []
+  signature_item (src/action.mli[68,3157+0]..src/action.mli[68,3157+30])
+    Tsig_value
+    value_description has_syntaxerror/537 (src/action.mli[68,3157+0]..src/action.mli[68,3157+30])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[66,3053+0]..[67,3126+30])
+            Pstr_eval
+            expression (src/action.mli[66,3053+0]..[67,3126+30])
+              Pexp_constant PConst_string(" [has_syntaxerror a] tests whether the keyword [$syntaxerror] appears\n   in the set [keywords a]. ",(src/action.mli[66,3053+0]..[67,3126+30]),None)
+        ]
+      core_type (src/action.mli[68,3157+21]..src/action.mli[68,3157+30])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[68,3157+21]..src/action.mli[68,3157+22])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[68,3157+26]..src/action.mli[68,3157+30])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/action.mli[72,3290+0]..src/action.mli[72,3290+28])
+    Tsig_value
+    value_description has_beforeend/538 (src/action.mli[72,3290+0]..src/action.mli[72,3290+28])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[70,3189+0]..[71,3262+27])
+            Pstr_eval
+            expression (src/action.mli[70,3189+0]..[71,3262+27])
+              Pexp_constant PConst_string(" [has_beforeend a] tests whether the keyword [$endpos($0)] appears in\n   the set [keywords a]. ",(src/action.mli[70,3189+0]..[71,3262+27]),None)
+        ]
+      core_type (src/action.mli[72,3290+19]..src/action.mli[72,3290+28])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[72,3290+19]..src/action.mli[72,3290+20])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[72,3290+24]..src/action.mli[72,3290+28])
+          Ttyp_constr "bool/5!"
+          []
+      []
+  signature_item (src/action.mli[76,3453+0]..src/action.mli[76,3453+29])
+    Tsig_value
+    value_description posvars/539 (src/action.mli[76,3453+0]..src/action.mli[76,3453+29])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[74,3320+0]..[75,3398+54])
+            Pstr_eval
+            expression (src/action.mli[74,3320+0]..[75,3398+54])
+              Pexp_constant PConst_string(" [posvars a] is the set of conventional position variables that correspond\n   to the position keywords used in the action [a]. ",(src/action.mli[74,3320+0]..[75,3398+54]),None)
+        ]
+      core_type (src/action.mli[76,3453+13]..src/action.mli[76,3453+29])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[76,3453+13]..src/action.mli[76,3453+14])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[76,3453+18]..src/action.mli[76,3453+29])
+          Ttyp_constr "Dune__exe!.StringSet.t"
+          []
+      []
+  signature_item (src/action.mli[79,3545+0]..src/action.mli[79,3545+26])
+    Tsig_value
+    value_description vars/540 (src/action.mli[79,3545+0]..src/action.mli[79,3545+26])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[78,3484+0]..[78,3484+60])
+            Pstr_eval
+            expression (src/action.mli[78,3484+0]..[78,3484+60])
+              Pexp_constant PConst_string(" [vars a] is the union of [semvars a] and [posvars a]. ",(src/action.mli[78,3484+0]..[78,3484+60]),None)
+        ]
+      core_type (src/action.mli[79,3545+10]..src/action.mli[79,3545+26])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[79,3545+10]..src/action.mli[79,3545+11])
+          Ttyp_constr "t/402"
+          []
+        core_type (src/action.mli[79,3545+15]..src/action.mli[79,3545+26])
+          Ttyp_constr "Dune__exe!.StringSet.t"
+          []
+      []
+  signature_item (src/action.mli[90,4002+0]..src/action.mli[90,4002+69])
+    Tsig_value
+    value_description define/541 (src/action.mli[90,4002+0]..src/action.mli[90,4002+69])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[85,3681+0]..[89,3986+15])
+            Pstr_eval
+            expression (src/action.mli[85,3681+0]..[89,3986+15])
+              Pexp_constant PConst_string(" [define keyword keywords f a] defines away the keyword [keyword]. This\n   keyword is removed from the set of keywords of the action [a]; the set\n   [keywords] is added in its place. The code of the action [a] is transformed\n   by the function [f], which typically wraps its argument in some new [let]\n   bindings. ",(src/action.mli[85,3681+0]..[89,3986+15]),None)
+        ]
+      core_type (src/action.mli[90,4002+12]..src/action.mli[90,4002+69])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[90,4002+12]..src/action.mli[90,4002+19])
+          Ttyp_constr "MenhirSdk!.Keyword.keyword"
+          []
+        core_type (src/action.mli[90,4002+23]..src/action.mli[90,4002+69])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[90,4002+23]..src/action.mli[90,4002+35])
+            Ttyp_constr "MenhirSdk!.Keyword.KeywordSet.t"
+            []
+          core_type (src/action.mli[90,4002+39]..src/action.mli[90,4002+69])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/action.mli[90,4002+40]..src/action.mli[90,4002+58])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/action.mli[90,4002+40]..src/action.mli[90,4002+47])
+                Ttyp_constr "Dune__exe!.IL.expr"
+                []
+              core_type (src/action.mli[90,4002+51]..src/action.mli[90,4002+58])
+                Ttyp_constr "Dune__exe!.IL.expr"
+                []
+            core_type (src/action.mli[90,4002+63]..src/action.mli[90,4002+69])
+              Ttyp_arrow
+              Nolabel
+              core_type (src/action.mli[90,4002+63]..src/action.mli[90,4002+64])
+                Ttyp_constr "t/402"
+                []
+              core_type (src/action.mli[90,4002+68]..src/action.mli[90,4002+69])
+                Ttyp_constr "t/402"
+                []
+      []
+  signature_item (src/action.mli[107,4890+0]..src/action.mli[107,4890+10])
+    Tsig_type Rec
+    [
+      type_declaration subst/542 (src/action.mli[107,4890+0]..src/action.mli[107,4890+10])
+        attribute "ocaml.doc"
+          [
+            structure_item (src/action.mli[104,4691+0]..[106,4838+51])
+              Pstr_eval
+              expression (src/action.mli[104,4691+0]..[106,4838+51])
+                Pexp_constant PConst_string(" A variable-to-variable substitution is a finite map of variables to\n   variables. It can be semantically interpreted as a simultaneous binding\n   construct, that is, as a [let/and] construct. ",(src/action.mli[104,4691+0]..[106,4838+51]),None)
+          ]
+        ptype_params =
+          []
+        ptype_cstrs =
+          []
+        ptype_kind =
+          Ttype_abstract
+        ptype_private = Public
+        ptype_manifest =
+          None
+    ]
+  signature_item (src/action.mli[110,4933+0]..src/action.mli[110,4933+16])
+    Tsig_value
+    value_description empty/543 (src/action.mli[110,4933+0]..src/action.mli[110,4933+16])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[109,4902+0]..[109,4902+30])
+            Pstr_eval
+            expression (src/action.mli[109,4902+0]..[109,4902+30])
+              Pexp_constant PConst_string(" The empty substitution. ",(src/action.mli[109,4902+0]..[109,4902+30]),None)
+        ]
+      core_type (src/action.mli[110,4933+11]..src/action.mli[110,4933+16])
+        Ttyp_constr "subst/542"
+        []
+      []
+  signature_item (src/action.mli[113,4984+0]..src/action.mli[113,4984+46])
+    Tsig_value
+    value_description extend/544 (src/action.mli[113,4984+0]..src/action.mli[113,4984+46])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[112,4951+0]..[112,4951+32])
+            Pstr_eval
+            expression (src/action.mli[112,4951+0]..[112,4951+32])
+              Pexp_constant PConst_string(" Extending a substitution. ",(src/action.mli[112,4951+0]..[112,4951+32]),None)
+        ]
+      core_type (src/action.mli[113,4984+12]..src/action.mli[113,4984+46])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[113,4984+12]..src/action.mli[113,4984+18])
+          Ttyp_constr "string/15!"
+          []
+        core_type (src/action.mli[113,4984+22]..src/action.mli[113,4984+46])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[113,4984+22]..src/action.mli[113,4984+28])
+            Ttyp_constr "string/15!"
+            []
+          core_type (src/action.mli[113,4984+32]..src/action.mli[113,4984+46])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/action.mli[113,4984+32]..src/action.mli[113,4984+37])
+              Ttyp_constr "subst/542"
+              []
+            core_type (src/action.mli[113,4984+41]..src/action.mli[113,4984+46])
+              Ttyp_constr "subst/542"
+              []
+      []
+  signature_item (src/action.mli[122,5439+0]..src/action.mli[124,5502+17])
+    Tsig_value
+    value_description rename/545 (src/action.mli[122,5439+0]..src/action.mli[124,5502+17])
+      attribute "ocaml.doc"
+        [
+          structure_item (src/action.mli[115,5032+0]..[121,5409+29])
+            Pstr_eval
+            expression (src/action.mli[115,5032+0]..[121,5409+29])
+              Pexp_constant PConst_string(" [rename f phi a] transforms the action [a] by applying the renaming [phi]\n   as well as the keyword transformations determined by the function [f].\n\n   The function [f] is applied to each (not-yet-renamed) keyword and may\n   decide to transform it into another keyword, by returning [Some _], or to\n   not transform it, by returning [None]. In the latter case, [phi] still\n   applies to the keyword. ",(src/action.mli[115,5032+0]..[121,5409+29]),None)
+        ]
+      core_type (src/action.mli[123,5451+2]..src/action.mli[124,5502+17])
+        Ttyp_arrow
+        Nolabel
+        core_type (src/action.mli[123,5451+3]..src/action.mli[123,5451+46])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[123,5451+3]..src/action.mli[123,5451+18])
+            Ttyp_tuple
+            [
+              core_type (src/action.mli[123,5451+3]..src/action.mli[123,5451+10])
+                Ttyp_constr "MenhirSdk!.Keyword.subject"
+                []
+              core_type (src/action.mli[123,5451+13]..src/action.mli[123,5451+18])
+                Ttyp_constr "MenhirSdk!.Keyword.where"
+                []
+            ]
+          core_type (src/action.mli[123,5451+22]..src/action.mli[123,5451+46])
+            Ttyp_constr "option/10!"
+            [
+              core_type (src/action.mli[123,5451+23]..src/action.mli[123,5451+38])
+                Ttyp_tuple
+                [
+                  core_type (src/action.mli[123,5451+23]..src/action.mli[123,5451+30])
+                    Ttyp_constr "MenhirSdk!.Keyword.subject"
+                    []
+                  core_type (src/action.mli[123,5451+33]..src/action.mli[123,5451+38])
+                    Ttyp_constr "MenhirSdk!.Keyword.where"
+                    []
+                ]
+            ]
+        core_type (src/action.mli[124,5502+2]..src/action.mli[124,5502+17])
+          Ttyp_arrow
+          Nolabel
+          core_type (src/action.mli[124,5502+2]..src/action.mli[124,5502+7])
+            Ttyp_constr "subst/542"
+            []
+          core_type (src/action.mli[124,5502+11]..src/action.mli[124,5502+17])
+            Ttyp_arrow
+            Nolabel
+            core_type (src/action.mli[124,5502+11]..src/action.mli[124,5502+12])
+              Ttyp_constr "t/402"
+              []
+            core_type (src/action.mli[124,5502+16]..src/action.mli[124,5502+17])
+              Ttyp_constr "t/402"
+              []
+      []
+]
+
